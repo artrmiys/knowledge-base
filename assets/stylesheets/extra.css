@@ -1,0 +1,119 @@
+/* ==== ФОН САЙТА ==== */
+:root {
+  --md-default-bg-color: transparent;
+}
+
+body {
+  background: url("../images/background.jpg") no-repeat center top;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+/* ==== ЦВЕТ ТЕКСТА ==== */
+.md-content,
+.md-nav,
+.md-nav__link,
+h1, h2, h3, h4, h5, h6,
+a {
+  color: #0e0e0e !important;
+}
+
+/* ==== ЦЕНТРАЛЬНЫЙ КОНТЕНТ ==== */
+.md-content {
+  background: rgba(59, 125, 158, 0.378);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* ==== ЛЕВОЕ МЕНЮ ==== */
+.md-sidebar--primary {
+  background: rgba(57, 64, 109, 0) !important;
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  padding-top: 10px;
+}
+
+/* ==== УБИРАЕМ ВСЕ ЧЕРНЫЕ ГРАДИЕНТЫ И ТЕНИ ==== */
+.md-sidebar--primary::before,
+.md-sidebar--primary::after,
+.md-sidebar__scrollwrap::before,
+.md-sidebar__scrollwrap::after,
+.md-nav--primary::before,
+.md-nav--primary::after,
+.md-nav__title::before,
+.md-nav__title::after {
+  display: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Полностью убираем фон-градиент у списка */
+.md-nav--primary {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-top: none !important;
+}
+
+/* Скроллбар убираем у левой панели */
+.md-sidebar__scrollwrap {
+  background: none !important;
+  box-shadow: none !important;
+  overflow: auto !important;
+}
+
+/* ==== ШАПКА (HEADER) ==== */
+.md-header {
+  background: rgba(255, 255, 255, 0.0) !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+
+/* ЛЕВАЯ ПАНЕЛЬ НА МОБИЛЕ */
+.md-sidebar--primary .md-sidebar__scrollwrap {
+  background: rgba(59, 125, 158, 0.378) !important;
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+
+}
+
+/* Убираем верхнюю чёрную полосу у меню окончательно */
+.md-nav--primary > .md-nav__list::before {
+    display: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* На всякий случай убираем фон заголовков меню */
+.md-nav__title {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Убираем чёрный градиент в первой строке меню */
+.md-sidebar__scrollwrap {
+    background-image: none !important;
+}
+
+
+/* Уменьшаем расстояние между пунктами в меню */
+.md-nav__link {
+  line-height: 1 !important;   /* Высота строки */
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+}
+
+/* Уменьшаем отступы внутри уровней меню */
+.md-nav__item {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Подправим вложенные пункты, чтобы всё было ровно */
+.md-nav__list {
+  gap: 0 !important;
+}
