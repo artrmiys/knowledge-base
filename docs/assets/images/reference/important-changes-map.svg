@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="360" viewBox="0 0 980 360" role="img" aria-labelledby="title desc">
+  <title id="title">Important changes visual map</title>
+  <desc id="desc">Map of important estimating change categories: formulas, framing, naming, notes, and QA.</desc>
+  <defs>
+    <style>
+      .center{fill:#e8f5e9;stroke:#2e7d32;stroke-width:3;rx:10}
+      .box{fill:#fff;stroke:#7cb342;stroke-width:2;rx:8}
+      .text{font-family:Inter,Arial,sans-serif;font-size:18px;fill:#1b1f1d}
+      .small{font-family:Inter,Arial,sans-serif;font-size:14px;fill:#34423a}
+      .line{stroke:#2e7d32;stroke-width:3}
+    </style>
+  </defs>
+  <rect x="36" y="36" width="908" height="288" fill="#fff" stroke="#cfd8d3" stroke-width="2" rx="8"/>
+  <rect x="370" y="126" width="240" height="92" class="center"/>
+  <text x="413" y="166" class="text">Important Changes</text>
+  <text x="414" y="194" class="small">Use as visual QA before output</text>
+
+  <rect x="70" y="58" width="230" height="76" class="box"/>
+  <text x="92" y="91" class="text">Formulas</text>
+  <text x="92" y="116" class="small">Suspended ceiling, precut</text>
+  <path d="M300 96 H370" class="line"/>
+
+  <rect x="680" y="58" width="230" height="76" class="box"/>
+  <text x="702" y="91" class="text">Framing Rules</text>
+  <text x="702" y="116" class="small">Sleepers, AJS, blocking</text>
+  <path d="M610 96 H680" class="line"/>
+
+  <rect x="70" y="226" width="230" height="76" class="box"/>
+  <text x="92" y="259" class="text">Naming</text>
+  <text x="92" y="284" class="small">LVL, spaces, labels</text>
+  <path d="M300 264 H370" class="line"/>
+
+  <rect x="680" y="226" width="230" height="76" class="box"/>
+  <text x="702" y="259" class="text">Notes and QA</text>
+  <text x="702" y="284" class="small">By others, washers, post notes</text>
+  <path d="M610 264 H680" class="line"/>
+</svg>

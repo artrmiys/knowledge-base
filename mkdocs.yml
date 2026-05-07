@@ -1,33 +1,78 @@
-site_name: " "
-site_description: "Estimating"
+site_name: E-Wood Knowledge Base
+site_description: Estimating wiki — takeoff workflow, COM/EWP rules, QA checklists
+site_url: https://artrmiys.github.io/knowledge-base-e-wood/
+site_author: E-Wood
+docs_dir: docs
 
 theme:
   name: material
+  custom_dir: overrides
   language: ru
   logo: assets/images/logo.png
+  favicon: assets/images/logo.png
   features:
-    #- navigation.expand
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
+    - navigation.indexes
     - navigation.top
-    - toc.integrate
+    - navigation.tracking
+    - navigation.footer
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
+    - content.tabs.link
+    - toc.follow
   palette:
-    - scheme: slate
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: green
       accent: lime
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: lime
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
 
-extra_css: 
-    - assets/stylesheets/extra.css
-    
+repo_url: https://github.com/artrmiys/knowledge-base-e-wood
+repo_name: artrmiys/knowledge-base-e-wood
+edit_uri: edit/main/docs/
+
+extra_css:
+  - assets/stylesheets/extra.css
+
 nav:
-  - Home: index.md
-  - Work:
-      - Vertical Constructions:
+  - Главная: index.md
+
+  - Старт:
+      - start/how-to-use.md
+      - Workflow: start/workflow.md
+      - Takeoff Structure: start/takeoff-structure.md
+      - Quality Checklist: start/quality-checklist.md
+      - Client Rules: start/client-rules.md
+      - Картинки и схемы: start/images-and-schemas.md
+      - Maintenance: start/maintenance.md
+
+  - Работа:
+      - Типы работ:
+          - Residential: work-types/residential.md
+          - COM Commercial: work-types/com.md
+          - EWP / Capital: work-types/ewp-capital.md
+      - Vertical:
           - Walls:
-              - ◼️ Sill Plates: work/vertical/walls/sill-plates.md
-              - Unit: work/vertical/walls/unit.md
+              - Sill Plates: work/vertical/walls/sill-plates.md
+              - Unit / Interior: work/vertical/walls/unit.md
               - Exterior: work/vertical/walls/exterior.md
               - Corridor: work/vertical/walls/corridor.md
               - Demising: work/vertical/walls/demising.md
@@ -39,43 +84,19 @@ nav:
           - Openings:
               - Windows and Doors: work/vertical/openings/windows-doors.md
               - Headers: work/vertical/openings/headers.md
-          - Sheathing:
-              - Wall Sheathing: work/vertical/sheathing/wall-sheathing.md
-              - Floor: work/vertical/sheathing/floor.md
-              - Gable: work/vertical/sheathing/gable.md
-              - Duplicate of Gable: work/vertical/sheathing/duplicate-of-gable.md
-              - Box Sheathing: work/vertical/sheathing/box-sheathing.md
-              - Truss Heel: work/vertical/sheathing/truss-heel.md
-              - Shear Wall: work/vertical/sheathing/shear-wall.md
-      - SQFTs:
-          - Basement: work/sqfts/basement.md
-          - 1st-5th Floors: work/sqfts/1st2nd.md
-          - Loft: work/sqfts/loft.md
-          - Roof: work/sqfts/roof.md
-          - Deck: work/sqfts/deck.md
-          - Porch: work/sqfts/porch.md
-          - Balcony: work/sqfts/balcony.md
-          - Cantilevered: work/sqfts/cantilevered.md
-      - Sheathing and Misc:
-          - Eve: work/sheathing-and-misc/eve.md
-          - Rake: work/sheathing-and-misc/rake.md
-          - Returns: work/sheathing-and-misc/returns.md
-          - Roof Types: work/sheathing-and-misc/rooftype.md
-          - Ridge Valley Hip: work/sheathing-and-misc/ridgevalleyhip.md
-          - Flashing: work/sheathing-and-misc/flashing.md
-      - Horizontal Constructions:
+      - Horizontal:
           - Floor Framing:
               - Post: work/horizontal/floor-framing/post.md
               - Beam: work/horizontal/floor-framing/beam.md
               - Joist: work/horizontal/floor-framing/joist.md
               - Stair: work/horizontal/floor-framing/stair.md
-              - Subfloor Sheathing: work/horizontal/floor-framing/subfloor.md
+              - Subfloor: work/horizontal/floor-framing/subfloor.md
               - Details:
                   - Rim Board: work/horizontal/floor-framing/details/rim.md
                   - Ribbon Board: work/horizontal/floor-framing/details/ribbon.md
                   - Blocking: work/horizontal/floor-framing/details/blocking.md
-                  - Blocking oc: work/horizontal/floor-framing/details/blockingoc.md
-                  - Bracing for drywall: work/horizontal/floor-framing/details/bracingdrywall.md
+                  - Blocking OC: work/horizontal/floor-framing/details/blockingoc.md
+                  - Bracing for Drywall: work/horizontal/floor-framing/details/bracingdrywall.md
                   - Bolts: work/horizontal/floor-framing/details/bolts.md
                   - Screws: work/horizontal/floor-framing/details/screws.md
                   - Steel Beam Web Fillers: work/horizontal/floor-framing/details/steelbeams.md
@@ -86,20 +107,99 @@ nav:
               - Valley: work/horizontal/roof-framing/valley.md
               - Dormer: work/horizontal/roof-framing/dormer.md
               - Overframes: work/horizontal/roof-framing/overframes.md
-              - Dbl Trpl Rafters: work/horizontal/roof-framing/dbl-trpl-rafters.md
+              - Dbl / Trpl Rafters: work/horizontal/roof-framing/dbl-trpl-rafters.md
               - Canopy: work/horizontal/roof-framing/canopy.md
-              - Roof Sheathing: work/horizontal/roof-framing/roof-sheathing.md
-      - Deck-Porch-Balcony:
+      - Sheathing:
+          - Wall Sheathing: work/vertical/sheathing/wall-sheathing.md
+          - Floor Sheathing: work/vertical/sheathing/floor.md
+          - Roof Sheathing: work/horizontal/roof-framing/roof-sheathing.md
+          - Gable Sheathing: work/vertical/sheathing/gable.md
+          - Box Sheathing: work/vertical/sheathing/box-sheathing.md
+          - Truss Heel: work/vertical/sheathing/truss-heel.md
+          - Shear Wall: work/vertical/sheathing/shear-wall.md
+      - Roof Misc:
+          - Eve: work/sheathing-and-misc/eve.md
+          - Rake: work/sheathing-and-misc/rake.md
+          - Returns: work/sheathing-and-misc/returns.md
+          - Roof Types: work/sheathing-and-misc/rooftype.md
+          - Ridge / Valley / Hip: work/sheathing-and-misc/ridgevalleyhip.md
+          - Flashing: work/sheathing-and-misc/flashing.md
+      - SQFTs:
+          - Basement: work/sqfts/basement.md
+          - 1st-5th Floors: work/sqfts/1st2nd.md
+          - Loft: work/sqfts/loft.md
+          - Roof: work/sqfts/roof.md
+          - Deck: work/sqfts/deck.md
+          - Porch: work/sqfts/porch.md
+          - Balcony: work/sqfts/balcony.md
+          - Cantilevered: work/sqfts/cantilevered.md
+      - Deck / Porch / Balcony:
           - Railing: work/deck/railing.md
           - Balcony Trims: work/deck/balcony-trims.md
           - Anchor Bolts: work/deck/anchor-bolts.md
+      - Interior Trims:
+          - Overview: work/interior-trims/overview.md
+          - Base: work/interior-trims/base.md
+          - Casing: work/interior-trims/casing.md
+          - Crown: work/interior-trims/crown.md
+          - Door and Window Trim: work/interior-trims/door-window-trim.md
+          - Room Schedule: work/interior-trims/room-schedule.md
+
+  - Справочник:
+      - Советы и важные вещи: reference/boss-feedback-rules.md
+      - Hangers: reference/hangers.md
+      - Formulas and Factors: reference/formulas.md
+      - Tilda Site Map: reference/tilda-site-map.md
+      - Confluence Source Map: reference/confluence-source-map.md
+      - Trello Source Map: reference/trello-source-map.md
+      - Source Map: reference/source-map.md
 
 plugins:
-  - search
+  - search:
+      lang:
+        - en
+        - ru
 
 markdown_extensions:
-  - tables
+  - abbr
+  - admonition
   - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
   - toc:
       permalink: true
+      permalink_title: Прямая ссылка на раздел
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/artrmiys/knowledge-base-e-wood
+
+# Файлы вне навигации (доступны по прямой ссылке, но скрыты из меню)
+not_in_nav: |
+  /work/vertical/sheathing/duplicate-of-gable.md
+  /work/interior-trims/trello-import-pending.md
+  /start/important-changes.md
+  /reference/confluence-image-archive.md

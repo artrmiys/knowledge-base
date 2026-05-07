@@ -1,3 +1,22 @@
 
 # mkdocs build
 site/
+mkdocs-serve*.log
+
+# local tooling
+.venv/
+__pycache__/
+imports/
+.playwright-mcp/
+1.txt
+
+# local visual/browser checks
+*-check.png
+confluence-gallery-*.png
+confluence-*.json
+trello-*.json
+
+# private source snapshots (never commit — see CLAUDE.md §8)
+twist-*.md
+twist-*.json
+probe-twist-*.json

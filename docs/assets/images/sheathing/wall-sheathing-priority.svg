@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="title desc">
+  <title id="title">Wall sheathing source priority diagram</title>
+  <desc id="desc">Decision flow for exterior wall sheathing notes: Arch, energy, Zip, Structural, and shear wall schedule.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2e7d32"/>
+    </marker>
+    <style>
+      .bg{fill:#f8faf8}.card{fill:#fff;stroke:#d7e5d4;stroke-width:2}.primary{fill:#d9f2d8;stroke:#2e7d32;stroke-width:3}
+      .warn{fill:#fff3c4;stroke:#c78b00;stroke-width:2}.blue{fill:#d8ecff;stroke:#2c7fb8;stroke-width:2}
+      .label{font:700 18px Arial, sans-serif;fill:#1f2a1f}.small{font:14px Arial, sans-serif;fill:#374237}
+      .rule{font:700 15px Arial, sans-serif;fill:#2e7d32}.line{stroke:#2e7d32;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="920" height="520" rx="16"/>
+  <rect class="card" x="36" y="34" width="848" height="452" rx="14"/>
+  <text class="label" x="70" y="78">Wall Sheathing: source priority</text>
+  <text class="small" x="70" y="105">Use this to decide what goes into the takeoff and what needs a note.</text>
+
+  <rect class="primary" x="78" y="150" width="190" height="86" rx="10"/>
+  <text class="label" x="106" y="184">1. Arch / Energy</text>
+  <text class="small" x="106" y="210">Wall type, exterior notes, Zip</text>
+
+  <rect class="blue" x="365" y="150" width="190" height="86" rx="10"/>
+  <text class="label" x="395" y="184">2. Structural</text>
+  <text class="small" x="395" y="210">Shear schedule, bracing, details</text>
+
+  <rect class="warn" x="652" y="150" width="190" height="86" rx="10"/>
+  <text class="label" x="685" y="184">3. Exception</text>
+  <text class="small" x="685" y="210">Stronger non-Zip requirement</text>
+
+  <line class="line" x1="268" y1="193" x2="365" y2="193"/>
+  <line class="line" x1="555" y1="193" x2="652" y2="193"/>
+
+  <rect class="card" x="108" y="310" width="214" height="110" rx="10"/>
+  <text class="rule" x="132" y="342">Exterior Zip / WRB</text>
+  <text class="small" x="132" y="366">Zip usually controls exterior</text>
+  <text class="small" x="132" y="390">but keep Structural note.</text>
+
+  <rect class="card" x="354" y="310" width="214" height="110" rx="10"/>
+  <text class="rule" x="378" y="342">Interior shear wall</text>
+  <text class="small" x="378" y="366">Use Structural schedule:</text>
+  <text class="small" x="378" y="390">one side / both sides / full height.</text>
+
+  <rect class="card" x="600" y="310" width="214" height="110" rx="10"/>
+  <text class="rule" x="624" y="342">Thickness check</text>
+  <text class="small" x="624" y="366">19/32&quot; = 5/8&quot;</text>
+  <text class="small" x="624" y="390">Do not convert to 1/2&quot;.</text>
+
+  <line class="line" x1="175" y1="236" x2="210" y2="310"/>
+  <line class="line" x1="460" y1="236" x2="460" y2="310"/>
+  <line class="line" x1="747" y1="236" x2="707" y2="310"/>
+</svg>

@@ -1,119 +1,381 @@
-/* ==== ФОН САЙТА ==== */
+/* ==========================================================================
+   E-Wood Knowledge Base — clean readable layout on top of Material defaults.
+   Никаких тяжелых overlay-фонов: контент должен читаться в первую очередь.
+   ========================================================================== */
+
+/* --- Брендовые цвета (зелёный, как было) ----------------------------------- */
 :root {
-  --md-default-bg-color: transparent;
+  --md-primary-fg-color:        #2e7d32;
+  --md-primary-fg-color--light: #60ad5e;
+  --md-primary-fg-color--dark:  #005005;
+  --md-accent-fg-color:         #aed581;
 }
 
-body {
-  background: url("../images/background.jpg") no-repeat center top;
-  background-size: cover;
-  background-attachment: scroll;
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #43a047;
+  --md-accent-fg-color:         #c5e1a5;
 }
 
-/* ==== ЦВЕТ ТЕКСТА ==== */
-.md-content,
-.md-nav,
-.md-nav__link,
-h1, h2, h3, h4, h5, h6,
-a {
-  color: #0e0e0e !important;
+/* --- Типографика ----------------------------------------------------------- */
+.md-typeset {
+  font-size: 0.78rem;
+  line-height: 1.7;
 }
 
-/* ==== ЦЕНТРАЛЬНЫЙ КОНТЕНТ ==== */
-.md-content {
-  background: rgba(59, 125, 158, 0.378);
-  backdrop-filter: blur(6px);
-  border-radius: 12px;
-  padding: 20px;
-  margin: 20px;
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
-/* ==== ЛЕВОЕ МЕНЮ ==== */
-.md-sidebar--primary {
-  background: rgba(57, 64, 109, 0) !important;
-  backdrop-filter: blur(8px);
-  border-radius: 8px;
-  padding-top: 10px;
+.md-typeset h2 {
+  margin-top: 1.6em;
+  padding-top: 0.4em;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  font-weight: 600;
 }
 
-/* ==== УБИРАЕМ ВСЕ ЧЕРНЫЕ ГРАДИЕНТЫ И ТЕНИ ==== */
-.md-sidebar--primary::before,
-.md-sidebar--primary::after,
-.md-sidebar__scrollwrap::before,
-.md-sidebar__scrollwrap::after,
-.md-nav--primary::before,
-.md-nav--primary::after,
-.md-nav__title::before,
-.md-nav__title::after {
-  display: none !important;
-  background: none !important;
-  box-shadow: none !important;
-  border: none !important;
+.md-typeset h3 {
+  margin-top: 1.4em;
+  font-weight: 600;
 }
 
-/* Полностью убираем фон-градиент у списка */
-.md-nav--primary {
-  background: transparent !important;
-  box-shadow: none !important;
-  border-top: none !important;
+/* --- Таблицы — основное представление контента в этой wiki ----------------- */
+.md-typeset table:not([class]) {
+  font-size: 0.74rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 6px;
+  overflow: hidden;
 }
 
-/* Скроллбар убираем у левой панели */
-.md-sidebar__scrollwrap {
-  background: none !important;
-  box-shadow: none !important;
-  overflow: auto !important;
+.md-typeset table:not([class]) th {
+  background: var(--md-default-fg-color--lightest);
+  font-weight: 600;
 }
 
-/* ==== ШАПКА (HEADER) ==== */
-.md-header {
-  background: rgba(255, 255, 255, 0.0) !important;
-  backdrop-filter: none !important;
-  box-shadow: none !important;
+.md-typeset table:not([class]) tr:hover td {
+  background: var(--md-accent-fg-color--transparent);
 }
 
-
-/* ЛЕВАЯ ПАНЕЛЬ НА МОБИЛЕ */
-.md-sidebar--primary .md-sidebar__scrollwrap {
-  background: rgba(59, 125, 158, 0.378) !important;
-  backdrop-filter: blur(8px);
-  border-radius: 12px;
-
+/* --- Списки задач ---------------------------------------------------------- */
+.md-typeset .task-list-indicator::before {
+  background-color: var(--md-default-fg-color--lighter);
 }
 
-/* Убираем верхнюю чёрную полосу у меню окончательно */
-.md-nav--primary > .md-nav__list::before {
-    display: none !important;
-    background: none !important;
-    box-shadow: none !important;
-    border: none !important;
+.md-typeset .task-list-item [type="checkbox"]:checked + .task-list-indicator::before {
+  background-color: var(--md-primary-fg-color);
 }
 
-/* На всякий случай убираем фон заголовков меню */
-.md-nav__title {
-    background: transparent !important;
-    box-shadow: none !important;
+/* --- Inline-код и блоки кода ---------------------------------------------- */
+.md-typeset code {
+  font-size: 0.85em;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
 }
 
-/* Убираем чёрный градиент в первой строке меню */
-.md-sidebar__scrollwrap {
-    background-image: none !important;
-}
-
-
-/* Уменьшаем расстояние между пунктами в меню */
+/* --- Навигация: компактнее, чтобы дерево takeoff влезало без скролла ---- */
 .md-nav__link {
-  line-height: 1 !important;   /* Высота строки */
-  padding-top: 1px !important;
-  padding-bottom: 1px !important;
+  margin-top: 0.35em;
+  margin-bottom: 0.35em;
 }
 
-/* Уменьшаем отступы внутри уровней меню */
-.md-nav__item {
-  margin: 0 !important;
-  padding: 0 !important;
+.md-nav__item--section > .md-nav__link {
+  font-weight: 600;
 }
 
-/* Подправим вложенные пункты, чтобы всё было ровно */
-.md-nav__list {
-  gap: 0 !important;
+/* --- Шапка страницы: чуть выраженнее лого --------------------------------- */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 1.6rem;
+  width: auto;
+}
+
+/* --- Static GitHub source link: no live repo facts/API calls --------------- */
+.kb-source {
+  display: flex;
+  align-items: center;
+  color: currentColor;
+  font-size: 0.65rem;
+  line-height: 1.2;
+  outline-color: currentColor;
+  text-decoration: none;
+}
+
+.kb-source__icon {
+  flex-shrink: 0;
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+.kb-source__icon svg {
+  display: block;
+  fill: currentColor;
+  height: 100%;
+  width: 100%;
+}
+
+.kb-source__repository {
+  margin-left: 0.6rem;
+  max-width: 11rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --- Главная: hero -------------------------------------------------------- */
+.kb-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 36px 28px;
+  margin: 0 0 2rem;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(67, 160, 71, 0.18), transparent 55%),
+    radial-gradient(circle at 15% 85%, rgba(46, 125, 50, 0.18), transparent 50%),
+    linear-gradient(135deg, var(--md-primary-fg-color--dark), var(--md-primary-fg-color));
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.kb-hero__eyebrow {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+  margin: 0;
+}
+
+.md-typeset .kb-hero__title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+  line-height: 1.15;
+  color: #fff;
+}
+
+.kb-hero__lede {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 60ch;
+  opacity: 0.92;
+}
+
+.kb-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.kb-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.kb-hero__btn--primary {
+  background: #fff;
+  color: var(--md-primary-fg-color--dark) !important;
+}
+
+.kb-hero__btn--ghost {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.kb-hero__btn:hover {
+  transform: translateY(-1px);
+}
+
+.kb-hero__btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+[data-md-color-scheme="slate"] .kb-hero {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Главная: секционный заголовок ---------------------------------------- */
+.kb-section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 2.2rem 0 1rem !important;
+  padding-top: 0 !important;
+  border-top: none !important;
+  font-size: 1rem !important;
+  font-weight: 600;
+}
+
+.kb-section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--md-default-fg-color--lightest);
+}
+
+/* --- Material grid cards: усилим вид -------------------------------------- */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid > .card {
+  border-radius: 10px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid > .card:hover {
+  border-color: var(--md-primary-fg-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.md-typeset .grid.cards > ul > li > hr {
+  margin: 0.6em 0;
+  border-color: var(--md-default-fg-color--lightest);
+}
+
+.md-typeset .grid.cards .twemoji,
+.md-typeset .grid.cards svg {
+  fill: var(--md-primary-fg-color);
+}
+
+/* --- Картинки и схемы (везде) --------------------------------------------- */
+/* Базовое: любая картинка в контенте — отзывчивая, аккуратная.              */
+.md-typeset img:not(.kb-hero img):not(.md-logo img) {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background: #fff;
+  display: block;
+}
+
+/* <figure markdown> + <figcaption> — Material поддерживает из коробки */
+.md-typeset figure {
+  margin: 1.2rem auto;
+  text-align: center;
+}
+
+.md-typeset figure img {
+  margin: 0 auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+[data-md-color-scheme="slate"] .md-typeset figure img {
+  background: #f5f5f5;
+}
+
+.md-typeset figcaption {
+  margin-top: 0.5em;
+  font-size: 0.74rem;
+  color: var(--md-default-fg-color--light);
+  font-style: italic;
+}
+
+/* --- Галерея схем/картинок (используется на главной и любых страницах) --- */
+.kb-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+  margin: 1.2rem 0 2rem;
+}
+
+.kb-gallery__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 10px;
+  background: var(--md-default-bg-color);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.kb-gallery__item:hover {
+  transform: translateY(-2px);
+  border-color: var(--md-primary-fg-color);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.kb-gallery__item--placeholder {
+  border-style: dashed;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.kb-gallery__item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  aspect-ratio: 16 / 10;
+  background: #fff;
+}
+
+.kb-gallery__caption {
+  font-size: 0.74rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.4;
+}
+
+/* --- Inline-ряд иконок-плейсхолдеров (для plain text) -------------------- */
+.kb-gallery__item--placeholder .twemoji,
+.kb-gallery__item--placeholder svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--md-default-fg-color--lighter);
+  margin-bottom: 4px;
+}
+
+/* --- Двухколоночный layout «текст слева — схема справа» ------------------ */
+.kb-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+  margin: 1rem 0;
+}
+
+@media (max-width: 720px) {
+  .kb-split { grid-template-columns: 1fr; }
+}
+
+/* --- Схема, которая занимает всю ширину контента ------------------------- */
+.kb-schema-full img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Footer: убрать лишний воздух ----------------------------------------- */
+.md-footer-meta {
+  font-size: 0.7rem;
+}
+
+/* --- Печатная версия (вдруг распечатают чек-лист) ------------------------- */
+@media print {
+  .md-sidebar,
+  .md-header,
+  .md-footer,
+  .md-tabs {
+    display: none !important;
+  }
+  .md-content {
+    margin: 0 !important;
+  }
 }
