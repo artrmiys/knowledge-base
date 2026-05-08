@@ -1,4 +1,4 @@
-﻿# Base
+# Base
 
 <figure markdown>
   ![Baseboard and crown perimeter rules](../../assets/images/trims/base-crown-perimeter.svg)
@@ -45,6 +45,21 @@
 - Typical no-base spaces: garage, mechanical/equipment rooms, crawl space, and
   other unfinished rooms.
 
+## Picture Guide
+
+Use these images as the visual proof for each rule:
+
+| Image | Rule | How to write/check it |
+| --- | --- | --- |
+| [07](../../assets/images/trims/int-trims-07.png) | No `Baseboard` behind kitchen cabinets. | Subtract cabinet-backed wall runs from the perimeter formula. |
+| [08](../../assets/images/trims/int-trims-08.png) | `Baseboard` still runs below windows. | Keep the under-window segment unless finish notes say otherwise. |
+| [09](../../assets/images/trims/int-trims-09.png) | No base at stair-wall junction where trim is not applicable. | Stop the perimeter at the stair trim condition; add a note if unclear. |
+| [10](../../assets/images/trims/int-trims-10.png) | Toilets / shower rooms may still have base. | Check material: wood base counts; tile base does not. |
+| [11](../../assets/images/trims/int-trims-11.png) | No base in unfinished/non-living rooms. | Exclude garage, mechanical/equipment rooms, crawl space, unfinished storage. |
+| [12](../../assets/images/trims/int-trims-12.png) - [14](../../assets/images/trims/int-trims-14.png) | Excel formula should show all measured segments. | Write visible segment values in the formula, not just one final number. |
+| [15](../../assets/images/trims/int-trims-15.png) | `TBD Base` / unspecified material. | Keep a visible material note instead of choosing a product. |
+| [16](../../assets/images/trims/int-trims-16.png) | Baseboard Excel output. | Check that the output line matches the visible formula/material. |
+
 ## Visual Examples
 
 <div class="kb-gallery">
@@ -71,6 +86,22 @@
   <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-12.png">
     <img src="../../../assets/images/trims/int-trims-12.png" alt="Baseboard Excel formula values">
     <div class="kb-gallery__caption">Excel formula values</div>
+  </a>
+  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-13.png">
+    <img src="../../../assets/images/trims/int-trims-13.png" alt="Baseboard Excel formula continuation">
+    <div class="kb-gallery__caption">Formula continuation</div>
+  </a>
+  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-14.png">
+    <img src="../../../assets/images/trims/int-trims-14.png" alt="Baseboard Excel formula example">
+    <div class="kb-gallery__caption">Formula example</div>
+  </a>
+  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-15.png">
+    <img src="../../../assets/images/trims/int-trims-15.png" alt="TBD Base material check">
+    <div class="kb-gallery__caption">Check `TBD Base`</div>
+  </a>
+  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-16.png">
+    <img src="../../../assets/images/trims/int-trims-16.png" alt="Baseboard Excel output">
+    <div class="kb-gallery__caption">Excel output</div>
   </a>
 </div>
 

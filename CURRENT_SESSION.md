@@ -286,3 +286,24 @@ Continued the remaining import cleanup:
 - Checked Confluence image metadata for better gallery captions. The manifest
   and raw image pages only carried generic attachment filenames/page titles, not
   useful `<ac:caption>` text, so no safe bulk caption rewrite was made.
+
+---
+
+## Resume pass 3 — 2026-05-08
+
+Improved the Interior Trims section after user feedback that rules were not
+connected clearly enough to pictures:
+
+- Added a `Picture Map` and `Workflow Pictures` table to
+  `docs/work/interior-trims/overview.md`.
+- Added `Picture Guide` tables to:
+  - `docs/work/interior-trims/base.md`
+  - `docs/work/interior-trims/crown.md`
+  - `docs/work/interior-trims/door-window-trim.md`
+- Expanded the visual galleries on Base, Crown, and Door/Window Trim so the
+  topic pages show the relevant Trello images directly instead of relying only
+  on the full visual archive.
+- Added a door-notation table explaining `2680`, `(2)2680`, `2680 Pocket`,
+  `(2)3080 Slider`, `2680 Metal F.R. S.C.`, and `4080 C.O.`.
+- Clarified that door `F.R.` means fire-rated and should not be confused with
+  `FRT` lumber.

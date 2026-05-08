@@ -1,4 +1,4 @@
-﻿# Crown
+# Crown
 
 <figure markdown>
   ![Crown and base perimeter exclusions](../../assets/images/trims/base-crown-perimeter.svg)
@@ -40,6 +40,21 @@ Crowns should be included when interior trim scope is active.
 - Write each measured segment into the Excel formula, not only the final total.
 - If the crown material is `TBD`, keep the material note visible.
 
+## Picture Guide
+
+Use these images as the visual proof for each rule:
+
+| Image | Rule | How to write/check it |
+| --- | --- | --- |
+| [17](../../assets/images/trims/int-trims-17.png) | No `Crowns` in closets. | Exclude `Closet` / `CLO.` unless trim scope explicitly includes it. |
+| [18](../../assets/images/trims/int-trims-18.png) / [19](../../assets/images/trims/int-trims-19.png) | No crowns in sloped-ceiling rooms. | Check ceiling/roof condition before carrying a room perimeter. |
+| [20](../../assets/images/trims/int-trims-20.png) | No crowns in no-finish rooms. | Exclude garage, mechanical/equipment rooms, crawl space, unfinished storage. |
+| [21](../../assets/images/trims/int-trims-21.png) | Bathrooms can have crowns. | Do not auto-exclude bathrooms; follow finish/trim scope. |
+| [22](../../assets/images/trims/int-trims-22.png) | Second level crown rule. | Count only `Hall`, foyer, and large guest rooms when that rule applies. |
+| [23](../../assets/images/trims/int-trims-23.png) | Crown Excel formula values. | Write each measured segment into the formula. |
+| [24](../../assets/images/trims/int-trims-24.png) | `TBD Crowns` / unspecified material. | Keep material note visible instead of guessing. |
+| [25](../../assets/images/trims/int-trims-25.png) | Crown Excel output. | Confirm output line matches formula/material. |
+
 ## Visual Examples
 
 <div class="kb-gallery">
@@ -50,6 +65,10 @@ Crowns should be included when interior trim scope is active.
   <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-18.png">
     <img src="../../../assets/images/trims/int-trims-18.png" alt="No crowns in slope ceiling rooms">
     <div class="kb-gallery__caption">No slope-ceiling crowns</div>
+  </a>
+  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-19.png">
+    <img src="../../../assets/images/trims/int-trims-19.png" alt="Sloped ceiling crown example">
+    <div class="kb-gallery__caption">Slope ceiling example</div>
   </a>
   <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-20.png">
     <img src="../../../assets/images/trims/int-trims-20.png" alt="No crowns in unfinished rooms">
@@ -66,6 +85,14 @@ Crowns should be included when interior trim scope is active.
   <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-23.png">
     <img src="../../../assets/images/trims/int-trims-23.png" alt="Crown Excel formula values">
     <div class="kb-gallery__caption">Excel formula values</div>
+  </a>
+  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-24.png">
+    <img src="../../../assets/images/trims/int-trims-24.png" alt="TBD Crown material check">
+    <div class="kb-gallery__caption">Check `TBD Crowns`</div>
+  </a>
+  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-25.png">
+    <img src="../../../assets/images/trims/int-trims-25.png" alt="Crown Excel output">
+    <div class="kb-gallery__caption">Excel output</div>
   </a>
 </div>
 

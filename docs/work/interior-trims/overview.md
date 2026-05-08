@@ -1,4 +1,4 @@
-﻿# Interior Trims
+# Interior Trims
 
 <figure markdown>
   ![Interior trim workflow: PDF plans to measured perimeters and Excel output](../../assets/images/trims/interior-trim-workflow.svg)
@@ -42,6 +42,27 @@ schedules, or finish plans.
 Trello `int trims` was imported from the logged-in browser session:
 44 cards and 43 images. The full visual archive is here:
 [Trello Visual Archive](trello-import-pending.md).
+
+## Picture Map
+
+Use the numbered images as examples, not as a separate hidden archive:
+
+| Images | Topic | Open page |
+| --- | --- | --- |
+| `01` - `06` | Overall workflow: create PDFs, measure perimeter, casing automation | This page |
+| `07` - `16` | Baseboard rules and Excel checks | [Base](base.md) |
+| `17` - `25` | Crown rules and Excel checks | [Crown](crown.md) |
+| `26` - `43` | Interior doors, `F.R. S.C.`, cased openings, and Excel entry | [Door and Window Trim](door-window-trim.md) |
+
+## Workflow Pictures
+
+| Image | What it explains | What to do |
+| --- | --- | --- |
+| [01](../../assets/images/trims/int-trims-01.png) | Create PDF files for interior trims. | Prepare separate review PDFs/sheets before measuring. |
+| [02](../../assets/images/trims/int-trims-02.png) | Baseboard and crowns are perimeter items. | Trace continuously; do not count disconnected fragments from memory. |
+| [03](../../assets/images/trims/int-trims-03.png) / [04](../../assets/images/trims/int-trims-04.png) | Perimeter example and measurement note. | Start from the entry door and keep the path reviewable. |
+| [05](../../assets/images/trims/int-trims-05.png) | Interior door casing automation. | Enter all interior doors first, then let casing formulas fill. |
+| [06](../../assets/images/trims/int-trims-06.png) | Exterior doors/windows casing automation. | Exterior openings feed the exterior casing/window trim side, not interior doors. |
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-02.png">
