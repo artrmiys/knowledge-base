@@ -45,6 +45,20 @@
 - Typical no-base spaces: garage, mechanical/equipment rooms, crawl space, and
   other unfinished rooms.
 
+## External Cross-Check
+
+<figure markdown>
+  ![Finish schedule trim check](../../assets/images/trims/finish-schedule-trim-check.svg)
+  <figcaption>Baseboard check: finish schedule first, then LF perimeter with exclusions.</figcaption>
+</figure>
+
+- General trim guides also treat base as a linear/wall-run item; this matches
+  the current perimeter method.
+- The finish schedule `Base` column controls the material. If it says tile,
+  rubber/vinyl, metal, or `TBD`, keep that visible instead of forcing wood base.
+- E-Wood rule still overrides the generic method: no base behind kitchen
+  cabinets, no-finish rooms excluded, toilets/shower rooms verified by material.
+
 ## Picture Guide
 
 Use these images as the visual proof for each rule:

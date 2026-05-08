@@ -33,6 +33,20 @@ This wiki was built from the local Obsidian vault:
 | Tilda `https://ewood.tilda.ws/gables` | Gables checklist |
 | Trello `https://trello.com/b/wDztpnZg/изменения-очень-важно` | Full Trello API export: 75 cards, 20 attachments. See [Trello Source Map](trello-source-map.md). |
 
+## External Web References
+
+These are sanity-check references only. They do not replace E-Wood estimating
+rules, source drawings, project specifications, or AHJ/code requirements.
+
+| Source | Used for |
+| --- | --- |
+| [UL fire-rated doors guide](https://www.ul.com/thecodeauthority/knowledge/ul-fire-rated-doors-guide) | Fire-rated door assembly terminology and label/check mindset. |
+| [NAAMM/HMMA hollow metal fire doors checklist](https://www.naamm.org/news/31/hollow-metal-doors-and-frames-fire-rating-checklist) | Hollow-metal fire-rated door notes: self-closing and positive latching. |
+| [Steel Door Institute fire door assembly tips](https://steeldoor.org/tips-for-specifying-fire-door-assemblies/) | Steel fire door schedule/spec terminology: latching, closers, labels. |
+| [American Wood Council FRTW FAQ](https://awc.org/faq/can-surface-coated-wood-products-be-approved-for-use-in-applications-where-fire-retardant-treated-wood-is-permitted/) | Difference between `F.R.` door notation and `FRTW` lumber/material scope. |
+| [Helonic finish schedule guide](https://helonic.com/knowledge-base/finish-schedule-guide) | Finish schedule column sanity-check: Base / Ceiling / Remarks. |
+| [Metrie measuring guide](https://www.metrie.com/how-do-i-measure) | General trim measuring sanity-check: wall-by-wall / linear run. |
+
 ## Redacted / Not Published
 
 - Employee email, UID, salary history, and private payment tables.

@@ -29,6 +29,11 @@
 
 ## Door Notation
 
+<figure markdown>
+  ![Door notation MTL FR SC](../../assets/images/trims/door-fr-sc-notation.svg)
+  <figcaption>MTL F.R. S.C. sanity-check: metal / fire-rated / self-closing door note.</figcaption>
+</figure>
+
 | Example | Meaning | Use |
 | --- | --- | --- |
 | `2680` | 2'-6" wide x 8'-0" high | Regular single interior door |
@@ -40,6 +45,15 @@
 
 `F.R.` on a door means **fire-rated**. Do not confuse it with `FRT` lumber /
 fire-retardant-treated framing material.
+
+## External Cross-Check
+
+| Check | What it means for takeoff | Source |
+| --- | --- | --- |
+| Fire-rated door is an assembly. | Keep the rating note visible; door, frame, hardware, glazing/label can matter. | [UL fire-rated doors guide](https://www.ul.com/thecodeauthority/knowledge/ul-fire-rated-doors-guide) |
+| Hollow-metal fire doors need closing/latching hardware. | `F.R. S.C.` should stay in the door note; do not flatten it to a plain `2680`. | [NAAMM/HMMA checklist](https://www.naamm.org/news/31/hollow-metal-doors-and-frames-fire-rating-checklist) |
+| Steel fire door specs call for positive latching and usually closers. | If the plan/schedule shows `MTL`, `HM`, `FR`, or `SC`, preserve those terms. | [Steel Door Institute](https://steeldoor.org/tips-for-specifying-fire-door-assemblies/) |
+| `FRT` is treated wood, not a door fire-rating mark. | Do not mix `F.R.` door notation with `FRTW` lumber/material scope. | [American Wood Council FRTW FAQ](https://awc.org/faq/can-surface-coated-wood-products-be-approved-for-use-in-applications-where-fire-retardant-treated-wood-is-permitted/) |
 
 ## Trello Rules
 

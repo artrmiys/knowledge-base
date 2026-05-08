@@ -40,6 +40,20 @@ Crowns should be included when interior trim scope is active.
 - Write each measured segment into the Excel formula, not only the final total.
 - If the crown material is `TBD`, keep the material note visible.
 
+## External Cross-Check
+
+<figure markdown>
+  ![Finish schedule trim check](../../assets/images/trims/finish-schedule-trim-check.svg)
+  <figcaption>Crown check: use scope / ceiling / remarks before carrying the room perimeter.</figcaption>
+</figure>
+
+- Crown is also a linear room-run item, but it should not be inferred from base
+  alone.
+- Check finish schedule, ceiling notes, RCP/finish plans, and remarks before
+  counting the perimeter.
+- E-Wood exclusions remain the working rule: closets, sloped-ceiling rooms, and
+  no-finish rooms are not counted unless scope clearly says otherwise.
+
 ## Picture Guide
 
 Use these images as the visual proof for each rule:

@@ -307,3 +307,25 @@ connected clearly enough to pictures:
   `(2)3080 Slider`, `2680 Metal F.R. S.C.`, and `4080 C.O.`.
 - Clarified that door `F.R.` means fire-rated and should not be confused with
   `FRT` lumber.
+
+---
+
+## Resume pass 4 -- 2026-05-08
+
+Added a small internet sanity-check pass for Interior Trims, with restrained
+scope so external references do not override E-Wood takeoff rules:
+
+- Added two original SVG diagrams:
+  - `docs/assets/images/trims/finish-schedule-trim-check.svg`
+  - `docs/assets/images/trims/door-fr-sc-notation.svg`
+- Added `External Cross-Check` sections to:
+  - `docs/work/interior-trims/overview.md`
+  - `docs/work/interior-trims/base.md`
+  - `docs/work/interior-trims/crown.md`
+  - `docs/work/interior-trims/door-window-trim.md`
+- Added web-reference links to `docs/reference/source-map.md`.
+- Sources used only as terminology/sanity checks:
+  UL fire-rated doors guide, NAAMM/HMMA hollow metal fire-door checklist,
+  Steel Door Institute fire-door assembly notes, AWC FRTW FAQ, Helonic finish
+  schedule guide, and Metrie measuring guide.
+- Confirmed all external URLs returned HTTP 200 before committing the links.

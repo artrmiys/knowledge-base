@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="430" viewBox="0 0 980 430" role="img" aria-labelledby="title desc">
+  <title id="title">Door notation: MTL F.R. S.C.</title>
+  <desc id="desc">Diagram explaining how to read a door schedule note such as 2680 MTL F.R. S.C.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2e7d32"/>
+    </marker>
+    <style>
+      .bg{fill:#fff;stroke:#cfd8d3;stroke-width:2;rx:8}
+      .panel{fill:#f8fbf8;stroke:#7cb342;stroke-width:2;rx:8}
+      .door{fill:#eceff1;stroke:#455a64;stroke-width:4}
+      .frame{fill:none;stroke:#1f2421;stroke-width:8;stroke-linejoin:round}
+      .swing{fill:none;stroke:#ef6c00;stroke-width:4;stroke-linecap:round}
+      .callout{fill:#fffdf7;stroke:#f9a825;stroke-width:2;rx:6}
+      .line{stroke:#2e7d32;stroke-width:3;marker-end:url(#arrow)}
+      .text{font-family:Inter,Arial,sans-serif;font-size:18px;fill:#1b1f1d}
+      .small{font-family:Inter,Arial,sans-serif;font-size:14px;fill:#34423a}
+      .mono{font-family:"JetBrains Mono",Consolas,monospace;font-size:20px;fill:#1b1f1d}
+      .mono-small{font-family:"JetBrains Mono",Consolas,monospace;font-size:15px;fill:#1b1f1d}
+    </style>
+  </defs>
+
+  <rect x="28" y="28" width="924" height="360" class="bg"/>
+  <text x="60" y="67" class="text">Door schedule / plan note</text>
+  <rect x="58" y="90" width="430" height="64" class="panel"/>
+  <text x="82" y="131" class="mono">2680 MTL F.R. S.C.</text>
+
+  <line x1="120" y1="158" x2="120" y2="205" class="line"/>
+  <line x1="218" y1="158" x2="218" y2="205" class="line"/>
+  <line x1="316" y1="158" x2="316" y2="205" class="line"/>
+  <line x1="414" y1="158" x2="414" y2="205" class="line"/>
+
+  <rect x="62" y="215" width="128" height="70" class="callout"/>
+  <text x="82" y="242" class="mono-small">2680</text>
+  <text x="82" y="266" class="small">2'-6&quot; x 8'-0&quot;</text>
+
+  <rect x="204" y="215" width="128" height="70" class="callout"/>
+  <text x="224" y="242" class="mono-small">MTL / HM</text>
+  <text x="224" y="266" class="small">metal / hollow metal</text>
+
+  <rect x="346" y="215" width="128" height="70" class="callout"/>
+  <text x="366" y="242" class="mono-small">F.R.</text>
+  <text x="366" y="266" class="small">fire-rated door</text>
+
+  <rect x="62" y="300" width="412" height="54" class="callout"/>
+  <text x="82" y="331" class="small">S.C. = self-closing. Keep this note visible in takeoff.</text>
+
+  <g transform="translate(600 86)">
+    <text x="-8" y="-18" class="text">Visual check</text>
+    <path d="M0 40 H210 V285 H0 Z" class="frame"/>
+    <rect x="28" y="50" width="154" height="222" class="door"/>
+    <path d="M28 272 A154 154 0 0 0 182 118" class="swing"/>
+    <rect x="54" y="88" width="102" height="36" fill="#fff" stroke="#455a64" stroke-width="2" rx="4"/>
+    <text x="68" y="111" class="mono-small">UL label</text>
+    <circle cx="158" cy="174" r="7" fill="#2e7d32"/>
+    <text x="232" y="108" class="small">Rated door = assembly:</text>
+    <text x="232" y="132" class="small">door leaf + frame +</text>
+    <text x="232" y="156" class="small">hardware + label.</text>
+    <text x="232" y="212" class="small">Estimator note:</text>
+    <text x="232" y="236" class="small">do not flatten to</text>
+    <text x="232" y="260" class="small">a plain interior door.</text>
+  </g>
+
+  <text x="58" y="414" class="small">Internet sanity check: fire-rated hollow-metal doors usually need labeled/certified assembly components, closing, and positive latching.</text>
+</svg>

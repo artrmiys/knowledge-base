@@ -37,6 +37,22 @@ schedules, or finish plans.
   casing for exterior doors/windows is filled after exterior openings are
   entered.
 
+## External Cross-Check
+
+<figure markdown>
+  ![Finish schedule trim check](../../assets/images/trims/finish-schedule-trim-check.svg)
+  <figcaption>Finish schedule sanity-check: Base / Ceiling / Remarks control trim scope.</figcaption>
+</figure>
+
+Internet references are used here only as a terminology check. E-Wood/Trello
+rules still control what to count.
+
+| Check | What it confirms | Source |
+| --- | --- | --- |
+| Finish schedule | Typical finish schedules include Base, Ceiling, and Remarks columns; do not rely only on room name. | [Helonic finish schedule guide](https://helonic.com/knowledge-base/finish-schedule-guide) |
+| Linear measurement | Base/crown trim is normally checked wall-by-wall / by room run, not by room area. | [Metrie measuring guide](https://www.metrie.com/how-do-i-measure) |
+| E-Wood exceptions | Kitchen cabinets, closets, slope ceilings, no-finish rooms, and `TBD` material notes remain project-specific estimating rules. | [Trello Source Map](../../reference/trello-source-map.md) |
+
 ## Visual Sources
 
 Trello `int trims` was imported from the logged-in browser session:
