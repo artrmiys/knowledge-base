@@ -3552,21 +3552,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#picture-guide" class="md-nav__link">
+  <a href="#visual-rules" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Picture Guide
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#visual-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Visual Examples
+        Visual Rules
       
     </span>
   </a>
@@ -4084,21 +4073,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#picture-guide" class="md-nav__link">
+  <a href="#visual-rules" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Picture Guide
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#visual-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Visual Examples
+        Visual Rules
       
     </span>
   </a>
@@ -4137,11 +4115,6 @@
 
 
 <h1 id="base">Base<a class="headerlink" href="#base" title="Прямая ссылка на раздел">&para;</a></h1>
-<figure>
-<p><img alt="Baseboard and crown perimeter rules" src="../../../assets/images/trims/base-crown-perimeter.svg" />
-  </p>
-<figcaption>Baseboard — measure the perimeter, then subtract excluded segments.</figcaption>
-</figure>
 <h2 id="count">Count<a class="headerlink" href="#count" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Wood base marked <code>Wd</code>, <code>Wood</code>, or equivalent in room schedules.</li>
@@ -4225,11 +4198,6 @@
   other unfinished rooms.</li>
 </ul>
 <h2 id="external-cross-check">External Cross-Check<a class="headerlink" href="#external-cross-check" title="Прямая ссылка на раздел">&para;</a></h2>
-<figure>
-<p><img alt="Finish schedule trim check" src="../../../assets/images/trims/finish-schedule-trim-check.svg" />
-  </p>
-<figcaption>Baseboard check: finish schedule first, then LF perimeter with exclusions.</figcaption>
-</figure>
 <ul>
 <li>General trim guides also treat base as a linear/wall-run item; this matches
   the current perimeter method.</li>
@@ -4238,100 +4206,87 @@
 <li>E-Wood rule still overrides the generic method: no base behind kitchen
   cabinets, no-finish rooms excluded, toilets/shower rooms verified by material.</li>
 </ul>
-<h2 id="picture-guide">Picture Guide<a class="headerlink" href="#picture-guide" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Use these images as the visual proof for each rule:</p>
-<table>
-<thead>
-<tr>
-<th>Image</th>
-<th>Rule</th>
-<th>How to write/check it</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../../../assets/images/trims/int-trims-07.png">07</a></td>
-<td>No <code>Baseboard</code> behind kitchen cabinets.</td>
-<td>Subtract cabinet-backed wall runs from the perimeter formula.</td>
-</tr>
-<tr>
-<td><a href="../../../assets/images/trims/int-trims-08.png">08</a></td>
-<td><code>Baseboard</code> still runs below windows.</td>
-<td>Keep the under-window segment unless finish notes say otherwise.</td>
-</tr>
-<tr>
-<td><a href="../../../assets/images/trims/int-trims-09.png">09</a></td>
-<td>No base at stair-wall junction where trim is not applicable.</td>
-<td>Stop the perimeter at the stair trim condition; add a note if unclear.</td>
-</tr>
-<tr>
-<td><a href="../../../assets/images/trims/int-trims-10.png">10</a></td>
-<td>Toilets / shower rooms may still have base.</td>
-<td>Check material: wood base counts; tile base does not.</td>
-</tr>
-<tr>
-<td><a href="../../../assets/images/trims/int-trims-11.png">11</a></td>
-<td>No base in unfinished/non-living rooms.</td>
-<td>Exclude garage, mechanical/equipment rooms, crawl space, unfinished storage.</td>
-</tr>
-<tr>
-<td><a href="../../../assets/images/trims/int-trims-12.png">12</a> - <a href="../../../assets/images/trims/int-trims-14.png">14</a></td>
-<td>Excel formula should show all measured segments.</td>
-<td>Write visible segment values in the formula, not just one final number.</td>
-</tr>
-<tr>
-<td><a href="../../../assets/images/trims/int-trims-15.png">15</a></td>
-<td><code>TBD Base</code> / unspecified material.</td>
-<td>Keep a visible material note instead of choosing a product.</td>
-</tr>
-<tr>
-<td><a href="../../../assets/images/trims/int-trims-16.png">16</a></td>
-<td>Baseboard Excel output.</td>
-<td>Check that the output line matches the visible formula/material.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="visual-examples">Visual Examples<a class="headerlink" href="#visual-examples" title="Прямая ссылка на раздел">&para;</a></h2>
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-07.png">
+<h2 id="visual-rules">Visual Rules<a class="headerlink" href="#visual-rules" title="Прямая ссылка на раздел">&para;</a></h2>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-07.png">
     <img src="../../../assets/images/trims/int-trims-07.png" alt="No baseboard behind kitchen cabinets">
-    <div class="kb-gallery__caption">No base behind kitchen cabinets</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">No base behind kitchen cabinets</div>
+      <div class="kb-rule-card__rule">Subtract cabinet-backed wall runs.</div>
+      <div class="kb-rule-card__note">Do not carry base through the cabinet line just because the room perimeter continues.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-08.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-08.png">
     <img src="../../../assets/images/trims/int-trims-08.png" alt="Baseboard below windows">
-    <div class="kb-gallery__caption">Base below windows</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Base below windows</div>
+      <div class="kb-rule-card__rule">Keep under-window runs unless notes exclude them.</div>
+      <div class="kb-rule-card__note">Window openings do not automatically remove the base segment below.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-09.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-09.png">
     <img src="../../../assets/images/trims/int-trims-09.png" alt="No baseboard at stair wall junction">
-    <div class="kb-gallery__caption">No stair-wall junction base</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Stair / wall junction</div>
+      <div class="kb-rule-card__rule">Stop base where stair trim makes it not applicable.</div>
+      <div class="kb-rule-card__note">Add a note if the stair condition is unclear.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-10.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-10.png">
     <img src="../../../assets/images/trims/int-trims-10.png" alt="Baseboard in toilet and shower rooms">
-    <div class="kb-gallery__caption">Check toilets / shower rooms</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Toilets / shower rooms</div>
+      <div class="kb-rule-card__rule">Verify material before excluding.</div>
+      <div class="kb-rule-card__note">Wood base counts; tile base does not count as wood base.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-11.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-11.png">
     <img src="../../../assets/images/trims/int-trims-11.png" alt="No baseboard in unfinished rooms">
-    <div class="kb-gallery__caption">No finish / non-living rooms</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">No finish / garage / service rooms</div>
+      <div class="kb-rule-card__rule">No Baseboard in garage or unfinished/service spaces.</div>
+      <div class="kb-rule-card__note">Exclude garage, mechanical/equipment rooms, crawl space, unfinished storage.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-12.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-12.png">
     <img src="../../../assets/images/trims/int-trims-12.png" alt="Baseboard Excel formula values">
-    <div class="kb-gallery__caption">Excel formula values</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Excel formula values</div>
+      <div class="kb-rule-card__rule">Show measured segments, not only a final number.</div>
+      <div class="kb-rule-card__note">The reviewer should be able to trace each value back to the plan.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-13.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-13.png">
     <img src="../../../assets/images/trims/int-trims-13.png" alt="Baseboard Excel formula continuation">
-    <div class="kb-gallery__caption">Formula continuation</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Formula continuation</div>
+      <div class="kb-rule-card__rule">Keep long formulas inspectable.</div>
+      <div class="kb-rule-card__note">Do not hide deductions or repeated room segments.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-14.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-14.png">
     <img src="../../../assets/images/trims/int-trims-14.png" alt="Baseboard Excel formula example">
-    <div class="kb-gallery__caption">Formula example</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Formula example</div>
+      <div class="kb-rule-card__rule">Use visible arithmetic for perimeter runs.</div>
+      <div class="kb-rule-card__note">This is the audit trail for the base output.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-15.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-15.png">
     <img src="../../../assets/images/trims/int-trims-15.png" alt="TBD Base material check">
-    <div class="kb-gallery__caption">Check `TBD Base`</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">TBD Base</div>
+      <div class="kb-rule-card__rule">Keep material uncertainty visible.</div>
+      <div class="kb-rule-card__note">Write a note instead of choosing a product that is not specified.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-16.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-16.png">
     <img src="../../../assets/images/trims/int-trims-16.png" alt="Baseboard Excel output">
-    <div class="kb-gallery__caption">Excel output</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Baseboard Excel output</div>
+      <div class="kb-rule-card__rule">Final output must match formula and material note.</div>
+      <div class="kb-rule-card__note">Check line description before sending the takeoff.</div>
+    </div>
   </a>
 </div>
 
