@@ -1,10 +1,5 @@
 # Door and Window Trim
 
-<figure markdown>
-  ![Interior door and cased opening schedule rules](../../assets/images/trims/door-opening-schedule.svg)
-  <figcaption>Interior doors and cased openings — read plan tags, convert sizes, then fill Excel.</figcaption>
-</figure>
-
 ## Door Trim
 
 - Unit entry doors may be fire-rated and should be labeled clearly in door
@@ -28,11 +23,6 @@
   instead of flattening the opening to a generic size.
 
 ## Door Notation
-
-<figure markdown>
-  ![Door notation MTL FR SC](../../assets/images/trims/door-fr-sc-notation.svg)
-  <figcaption>MTL F.R. S.C. sanity-check: metal / fire-rated / self-closing door note.</figcaption>
-</figure>
 
 | Example | Meaning | Use |
 | --- | --- | --- |
@@ -83,103 +73,152 @@ fire-retardant-treated framing material.
 - Before output, select the entered door/opening cells and check the status-bar
   sum against the takeoff count.
 
-## Picture Guide
+## Visual Rules
 
-| Image | Rule | How to write/check it |
-| --- | --- | --- |
-| [26](../../assets/images/trims/int-trims-26.png) | Measure by open door symbol. | Count the actual swing/opening, not only a nearby wall label. |
-| [27](../../assets/images/trims/int-trims-27.png) | Door size notation. | `2680` = 2'-6" x 8'-0". |
-| [28](../../assets/images/trims/int-trims-28.png) | Double doors. | Write `(2)2680`, keeping the pair marker. |
-| [29](../../assets/images/trims/int-trims-29.png) | Pocket doors. | Write `2680 Pocket`. |
-| [30](../../assets/images/trims/int-trims-30.png) | Slider doors. | Write `(2)3080 Slider` or matching size/type. |
-| [31](../../assets/images/trims/int-trims-31.png) | Shower glass doors. | Do not count as interior doors. |
-| [32](../../assets/images/trims/int-trims-32.png) | French doors. | Keep `French` / glass-door note visible when shown. |
-| [33](../../assets/images/trims/int-trims-33.png) | Bi-Fold door. | Keep `Bi-Fold` in the mark; do not flatten to a plain door. |
-| [34](../../assets/images/trims/int-trims-34.png) | Cased openings. | C.O. is an opening without a door. |
-| [35](../../assets/images/trims/int-trims-35.png) | Excel by level. | Enter doors and C.O. separately for each floor/level. |
-| [36](../../assets/images/trims/int-trims-36.png) | Helper table copy. | Copy mark + quantity columns into the right-side helper table. |
-| [37](../../assets/images/trims/int-trims-37.png) | Excel door/opening table. | Use the table to drive casing formulas. |
-| [38](../../assets/images/trims/int-trims-38.png) | Rewrite into left table. | Cleanly re-enter door/opening marks before output. |
-| [39](../../assets/images/trims/int-trims-39.png) | Feet to inches conversion. | `2'-0" x 6'-8"` -> `24 x 80`. |
-| [40](../../assets/images/trims/int-trims-40.png) | Many repeated doors. | Use formulas to avoid missing repeated quantities. |
-| [41](../../assets/images/trims/int-trims-41.png) | Sum check. | Select cells and compare status-bar sum to takeoff count. |
-| [42](../../assets/images/trims/int-trims-42.png) | Excel output. | Confirm final output matches the entered table. |
-| [43](../../assets/images/trims/int-trims-43.png) | Door schedule exists. | Fill from schedule first; plan view is secondary. |
-
-## Visual Examples
-
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-26.png">
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-26.png">
     <img src="../../../assets/images/trims/int-trims-26.png" alt="Interior door measured by open door symbol">
-    <div class="kb-gallery__caption">Measure by open door</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Measure by open door symbol</div>
+      <div class="kb-rule-card__rule">Count the actual swing/opening.</div>
+      <div class="kb-rule-card__note">Do not count from a nearby wall note only.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-27.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-27.png">
     <img src="../../../assets/images/trims/int-trims-27.png" alt="Door size notation 2680">
-    <div class="kb-gallery__caption">Size notation: 2680</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Size notation: 2680</div>
+      <div class="kb-rule-card__rule"><code>2680</code> = 2'-6" x 8'-0".</div>
+      <div class="kb-rule-card__note">Keep size notation consistent before Excel conversion.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-28.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-28.png">
     <img src="../../../assets/images/trims/int-trims-28.png" alt="Double door notation">
-    <div class="kb-gallery__caption">Double door: (2)2680</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Double doors</div>
+      <div class="kb-rule-card__rule">Write <code>(2)2680</code>.</div>
+      <div class="kb-rule-card__note">Keep the pair marker; do not flatten to one regular door.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-29.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-29.png">
     <img src="../../../assets/images/trims/int-trims-29.png" alt="Pocket door notation">
-    <div class="kb-gallery__caption">Pocket door</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Pocket door</div>
+      <div class="kb-rule-card__rule">Write <code>2680 Pocket</code>.</div>
+      <div class="kb-rule-card__note">Preserve the door type in the mark.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-30.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-30.png">
     <img src="../../../assets/images/trims/int-trims-30.png" alt="Slider door notation">
-    <div class="kb-gallery__caption">Slider door</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Slider door</div>
+      <div class="kb-rule-card__rule">Write <code>(2)3080 Slider</code> or matching size/type.</div>
+      <div class="kb-rule-card__note">Keep both quantity and type.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-31.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-31.png">
     <img src="../../../assets/images/trims/int-trims-31.png" alt="Do not count shower glass doors">
-    <div class="kb-gallery__caption">No shower glass doors</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Shower glass doors</div>
+      <div class="kb-rule-card__rule">Do not enter as interior doors.</div>
+      <div class="kb-rule-card__note">This belongs to shower/glass scope, not interior door casing.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-32.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-32.png">
     <img src="../../../assets/images/trims/int-trims-32.png" alt="French doors in large guest rooms">
-    <div class="kb-gallery__caption">French doors</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">French doors</div>
+      <div class="kb-rule-card__rule">Keep <code>French</code> / glass-door note visible.</div>
+      <div class="kb-rule-card__note">Do not simplify to a plain interior door when the plan names the type.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-33.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-33.png">
     <img src="../../../assets/images/trims/int-trims-33.png" alt="Bi-Fold door notation">
-    <div class="kb-gallery__caption">Bi-Fold</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Bi-Fold door</div>
+      <div class="kb-rule-card__rule">Keep <code>Bi-Fold</code> in the mark.</div>
+      <div class="kb-rule-card__note">Door type can affect review and casing notes.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-34.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-34.png">
     <img src="../../../assets/images/trims/int-trims-34.png" alt="Cased opening example">
-    <div class="kb-gallery__caption">Cased opening</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Cased opening</div>
+      <div class="kb-rule-card__rule"><code>C.O.</code> is an opening without a door.</div>
+      <div class="kb-rule-card__note">Enter it on the cased-opening side, not as a door.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-35.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-35.png">
     <img src="../../../assets/images/trims/int-trims-35.png" alt="Doors and cased openings entered by level">
-    <div class="kb-gallery__caption">Enter by level</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Enter by level</div>
+      <div class="kb-rule-card__rule">Separate doors and C.O. by floor/level.</div>
+      <div class="kb-rule-card__note">This keeps formulas and review output aligned.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-36.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-36.png">
     <img src="../../../assets/images/trims/int-trims-36.png" alt="Copy helper columns for Excel entry">
-    <div class="kb-gallery__caption">Copy helper columns</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Copy helper columns</div>
+      <div class="kb-rule-card__rule">Copy mark + quantity into the helper table.</div>
+      <div class="kb-rule-card__note">The helper table drives casing formulas.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-37.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-37.png">
     <img src="../../../assets/images/trims/int-trims-37.png" alt="Doors and cased openings Excel table">
-    <div class="kb-gallery__caption">Excel table</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Excel door/opening table</div>
+      <div class="kb-rule-card__rule">Use the table to drive casing formulas.</div>
+      <div class="kb-rule-card__note">Do not leave door marks only in the plan notes.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-38.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-38.png">
     <img src="../../../assets/images/trims/int-trims-38.png" alt="Rewrite openings and doors into left table">
-    <div class="kb-gallery__caption">Rewrite left table</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Rewrite into left table</div>
+      <div class="kb-rule-card__rule">Cleanly re-enter door/opening marks before output.</div>
+      <div class="kb-rule-card__note">This prevents half-cleaned helper data from reaching final output.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-39.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-39.png">
     <img src="../../../assets/images/trims/int-trims-39.png" alt="Door size inches conversion">
-    <div class="kb-gallery__caption">Size conversion to inches</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Feet to inches conversion</div>
+      <div class="kb-rule-card__rule"><code>2'-0" x 6'-8"</code> becomes <code>24 x 80</code>.</div>
+      <div class="kb-rule-card__note">Use inches in the formula table when required by the workbook.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-40.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-40.png">
     <img src="../../../assets/images/trims/int-trims-40.png" alt="Use formulas for many doors">
-    <div class="kb-gallery__caption">Use formulas</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Many repeated doors</div>
+      <div class="kb-rule-card__rule">Use formulas to avoid missing repeated quantities.</div>
+      <div class="kb-rule-card__note">Manual repeated typing is where counts drift.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-41.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-41.png">
     <img src="../../../assets/images/trims/int-trims-41.png" alt="Check selected cell sum">
-    <div class="kb-gallery__caption">Check sum</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Sum check</div>
+      <div class="kb-rule-card__rule">Compare selected-cell sum against takeoff count.</div>
+      <div class="kb-rule-card__note">Catch missing doors before output.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-42.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-42.png">
     <img src="../../../assets/images/trims/int-trims-42.png" alt="Doors and openings Excel output">
-    <div class="kb-gallery__caption">Excel output</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Excel output</div>
+      <div class="kb-rule-card__rule">Final output must match the entered table.</div>
+      <div class="kb-rule-card__note">Review size, quantity, and note before sending.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-43.png">
+  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-43.png">
     <img src="../../../assets/images/trims/int-trims-43.png" alt="Fill from door schedule when present">
-    <div class="kb-gallery__caption">Use door schedule</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Door schedule exists</div>
+      <div class="kb-rule-card__rule">Fill from schedule first.</div>
+      <div class="kb-rule-card__note">Plan view is secondary when schedule data is available.</div>
+    </div>
   </a>
 </div>
 

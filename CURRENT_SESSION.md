@@ -352,3 +352,17 @@ hard to find:
   `joist series/reference 01`.
 - Clarified the EWP material rule: count engineered joists only; do not convert
   every regular `2x` joist into an EWP line unless the scope says so.
+
+Follow-up cleanup after user feedback that the page still looked disconnected:
+
+- Removed unclear generated SVG diagrams from visible docs and deleted the
+  unused generated SVG assets.
+- Removed the remaining generated `joist-run-rim-blocking.svg` from the Joist
+  page so the page starts with real source pictures.
+- Added CSS rule-card layout (`.kb-rule-gallery`, `.kb-rule-card`) so each
+  screenshot sits directly with its estimating rule and action note.
+- Rebuilt Joist, Interior Trims Overview, Base, Crown, and Door/Window Trim
+  around real imported screenshots instead of separate image tables plus
+  detached galleries.
+- Removed the duplicate raw Confluence gallery from Joist after all useful
+  Joist Series images were integrated into rule cards.

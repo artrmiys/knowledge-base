@@ -1,64 +1,114 @@
 # Joist
 
-<figure markdown>
-  ![Joist run, rim, blocking, and support checkpoints](../../../assets/images/framing/joist-run-rim-blocking.svg)
-  <figcaption>Joist runs: keep spacing, rim, blocking, supports, and hangers reviewable.</figcaption>
-</figure>
-
 ## Joist Type Pictures
 
-<figure markdown>
-  ![Joist type overview](../../../assets/images/framing/joist-types-overview.svg)
-  <figcaption>Joist types: I-Joist, LVL, PSL/LSL, GL/Glulam. For EWP, count engineered joists only.</figcaption>
-</figure>
+These are the real source pictures from Confluence. Use them when the plan or
+schedule names a joist product family.
 
-Use this section when the plan/schedule names a joist product family. The
-picture block below is pulled from the Confluence `Joist Series` source and is
-easier to find than the raw gallery at the bottom.
-
-| Product / mark | Picture | Estimating note |
-| --- | --- | --- |
-| `TJI` | [TJI series](../../../assets/images/confluence/confluence-007.png) | Includes 110 / 210 / 230 / 360 / 560 families; keep series visible. |
-| `RED` | [Red-I series](../../../assets/images/confluence/confluence-009.png) | Do not rewrite to TJI; keep Red-I mark and depth. |
-| `LP` / `LPI` | [LP chart](../../../assets/images/confluence/confluence-006.png) / [LPI profile](../../../assets/images/confluence/confluence-005.png) | LP SolidStart / LPI profiles; keep exact family from schedule. |
-| `RFPI` | [RFPI dimensions](../../../assets/images/confluence/confluence-008.png) | RFPI has LVL-flange and solid-sawn-flange variants. |
-| `BCI` / `BCI + s` | [BCI profiles](../../../assets/images/confluence/confluence-004.png) / [BCI chart](../../../assets/images/confluence/confluence-003.png) | `BCI + s` is its own notation; do not drop the `s`. |
-| `Nordic Joist` | [Nordic NI series](../../../assets/images/confluence/confluence-002.png) | `NI-20`, `NI-40x`, `NI-60`, `NI-80`, `NI-90`; keep `NI` series visible. |
-
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-007.png">
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-007.png">
     <img src="../../../../assets/images/confluence/confluence-007.png" alt="TJI joist series">
-    <div class="kb-gallery__caption">TJI series: 110 / 210 / 230 / 360 / 560</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">TJI series</div>
+      <div class="kb-rule-card__rule">Keep exact family: 110 / 210 / 230 / 360 / 560.</div>
+      <div class="kb-rule-card__note">Write the row like <code>11-7/8 TJI 230</code>, not just generic <code>TJI</code>.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-009.png">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-009.png">
     <img src="../../../../assets/images/confluence/confluence-009.png" alt="Red-I joist series">
-    <div class="kb-gallery__caption">RED / Red-I series</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">RED / Red-I series</div>
+      <div class="kb-rule-card__rule">Do not rewrite RED into TJI.</div>
+      <div class="kb-rule-card__note">Keep Red-I mark, depth, and series as shown in the schedule.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-006.png">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-006.png">
     <img src="../../../../assets/images/confluence/confluence-006.png" alt="LP SolidStart I-joist product specifications">
-    <div class="kb-gallery__caption">LP SolidStart I-Joist</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">LP SolidStart</div>
+      <div class="kb-rule-card__rule">LP / LPI profiles are their own product family.</div>
+      <div class="kb-rule-card__note">Use this when the schedule calls out LP, LPI, LPI 20Plus, 32Plus, 36, 42Plus, 52Plus, or 56.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-005.png">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-005.png">
     <img src="../../../../assets/images/confluence/confluence-005.png" alt="LPI joist profile details">
-    <div class="kb-gallery__caption">LPI profile details</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">LPI profile details</div>
+      <div class="kb-rule-card__rule">Check flange/web profile before selecting hanger family.</div>
+      <div class="kb-rule-card__note">Depth and flange width can change hanger choice and output naming.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-008.png">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-008.png">
     <img src="../../../../assets/images/confluence/confluence-008.png" alt="RFPI joist dimensions">
-    <div class="kb-gallery__caption">RFPI dimensions</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">RFPI dimensions</div>
+      <div class="kb-rule-card__rule">RFPI has LVL-flange and solid-sawn-flange variants.</div>
+      <div class="kb-rule-card__note">Keep the RFPI series and depth visible; do not flatten to generic I-joist.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-004.png">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-004.png">
     <img src="../../../../assets/images/confluence/confluence-004.png" alt="BCI and engineered wood product profiles">
-    <div class="kb-gallery__caption">BCI / Boise profiles</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">BCI / Boise profiles</div>
+      <div class="kb-rule-card__rule">BCI is not TJI; keep Boise / BCI naming.</div>
+      <div class="kb-rule-card__note">This picture also shows related Boise LVL / glulam profiles for reference.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-002.png">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-003.png">
+    <img src="../../../../assets/images/confluence/confluence-003.png" alt="BCI joist chart">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">BCI + s chart</div>
+      <div class="kb-rule-card__rule">If the mark includes <code>+ s</code>, keep it.</div>
+      <div class="kb-rule-card__note">Do not drop the suffix during cleanup or Excel output.</div>
+    </div>
+  </a>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-002.png">
     <img src="../../../../assets/images/confluence/confluence-002.png" alt="Nordic Joist NI series">
-    <div class="kb-gallery__caption">Nordic Joist NI series</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Nordic Joist NI series</div>
+      <div class="kb-rule-card__rule">Keep NI series visible: NI-20 / NI-40x / NI-60 / NI-80 / NI-90.</div>
+      <div class="kb-rule-card__note">Nordic schedule names drive both joist row and hanger checks.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-075.png">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-001.png">
+    <img src="../../../../assets/images/confluence/confluence-001.png" alt="Nordic Joist hanger reference">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Nordic hanger reference</div>
+      <div class="kb-rule-card__rule">Use when Nordic joists need hanger cross-check.</div>
+      <div class="kb-rule-card__note">Hanger type depends on depth, mount condition, skew, and header/support.</div>
+    </div>
+  </a>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-010.png">
+    <img src="../../../../assets/images/confluence/confluence-010.png" alt="TJI design properties table">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">TJI design properties table</div>
+      <div class="kb-rule-card__rule">Reference only; takeoff still follows plan/schedule labels.</div>
+      <div class="kb-rule-card__note">Useful when checking why a series/depth matters.</div>
+    </div>
+  </a>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-075.png">
     <img src="../../../../assets/images/confluence/confluence-075.png" alt="Joist spacing diagram">
-    <div class="kb-gallery__caption">Spacing: 12 / 16 / 19.2 / 24 o.c.</div>
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">O.C. spacing diagram</div>
+      <div class="kb-rule-card__rule">Spacing is measured center-to-center.</div>
+      <div class="kb-rule-card__note">Use 12 / 16 / 19.2 / 24 o.c. only as shown by plan or notes.</div>
+    </div>
   </a>
 </div>
+
+## Official Product References
+
+Use these links only to confirm product family / series names. Takeoff output
+still follows the project framing plan, joist schedule, and structural notes.
+
+| Product family | Official reference | Takeoff use |
+| --- | --- | --- |
+| TJI | [Weyerhaeuser TJI 110/210/230/360/560 Specifier's Guide](https://www.weyerhaeuser.com/woodproducts/document-library/document_library_detail/tj-4000/) | Verify exact TJI series and depth. |
+| LP / LPI / SolidStart | [Pacific Woodtech SolidStart I-Joist Technical Guide](https://www.pwtewp.com/wp-content/uploads/2022/09/SolidStart-IJ-Residential-Technical-Guide-US.pdf) | Keep LPI / Plus / SolidStart naming when shown. |
+| BCI | [Boise Cascade BCI Joists](https://www.bc.com/ewp/bci-joists/) | Keep BCI / Boise naming; do not convert to TJI. |
+| RFPI | [Roseburg RFPI Joist](https://www.roseburg.com/Product/rfpi-joist/) | Keep RFPI series and flange/profile note visible. |
+| Nordic NI | [Nordic I-Joists](https://www.nordic.ca/en/products/nordic-i-joist) | Keep NI series visible and cross-check Nordic hanger notes. |
+| General I-joist reports | [APA I-Joist product reports](https://www.apawood.org/i-joist) | Use only as reference when manufacturer/product report matters. |
 
 ## Count
 
@@ -159,63 +209,3 @@ Spacing измеряется **on center (O.C.)**: от центра одног�
 | Attic `EWP by others` | Add note: `LVLs by others` |
 | `EWP by others` with steel-beam blocking | Blocking can be `LVL` / `LSL`; scale and note it |
 | `EWP by others` with one `LVL` in floor | Add a visible note instead of hiding it |
-
-
-<!-- confluence-gallery:start -->
-## Confluence Images
-
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
-
-| Source group | Images | Confluence |
-| --- | ---: | --- |
-| Joist - Ригели | 1 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/3735565/Joist+-) |
-| Joist Series | 10 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/11796606/Joist+Series) |
-
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-001.png" title="image-20260225-174526.png">
-    <img src="../../../../assets/images/confluence/confluence-001.png" alt="Nordic Joist hanger reference">
-    <div class="kb-gallery__caption">Nordic Joist hanger reference</div>
-  </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-002.png" title="image-20260225-174331.png">
-    <img src="../../../../assets/images/confluence/confluence-002.png" alt="Nordic Joist NI series">
-    <div class="kb-gallery__caption">Nordic Joist: NI-20 / NI-40x / NI-60 / NI-80 / NI-90</div>
-  </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-003.png" title="image-20250414-190026.png">
-    <img src="../../../../assets/images/confluence/confluence-003.png" alt="BCI joist chart">
-    <div class="kb-gallery__caption">BCI chart / BCI + s reference</div>
-  </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-004.png" title="image-20250303-145752.png">
-    <img src="../../../../assets/images/confluence/confluence-004.png" alt="BCI and Boise engineered wood product profiles">
-    <div class="kb-gallery__caption">BCI / Boise profiles</div>
-  </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-005.png" title="image-20250224-002107.png">
-    <img src="../../../../assets/images/confluence/confluence-005.png" alt="LPI joist profile details">
-    <div class="kb-gallery__caption">LPI profile details</div>
-  </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-006.png" title="image-20250224-001906.png">
-    <img src="../../../../assets/images/confluence/confluence-006.png" alt="LP SolidStart I-joist product specifications">
-    <div class="kb-gallery__caption">LP SolidStart I-Joist</div>
-  </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-007.png" title="image-20250224-001558.png">
-    <img src="../../../../assets/images/confluence/confluence-007.png" alt="TJI joist series">
-    <div class="kb-gallery__caption">TJI series: 110 / 210 / 230 / 360 / 560</div>
-  </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-008.png" title="image-20250224-001240.png">
-    <img src="../../../../assets/images/confluence/confluence-008.png" alt="RFPI joist dimensions">
-    <div class="kb-gallery__caption">RFPI dimensions</div>
-  </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-009.png" title="image-20250224-001144.png">
-    <img src="../../../../assets/images/confluence/confluence-009.png" alt="Red-I joist series">
-    <div class="kb-gallery__caption">RED / Red-I series</div>
-  </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-010.png" title="image-20250224-000933.png">
-    <img src="../../../../assets/images/confluence/confluence-010.png" alt="TJI design properties table">
-    <div class="kb-gallery__caption">TJI design properties table</div>
-  </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-075.png" title="image-20250211-185836.png">
-    <img src="../../../../assets/images/confluence/confluence-075.png" alt="Joist spacing diagram">
-    <div class="kb-gallery__caption">Spacing: 12 / 16 / 19.2 / 24 o.c.</div>
-  </a>
-</div>
-<!-- confluence-gallery:end -->
