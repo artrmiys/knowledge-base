@@ -1,11 +1,11 @@
 # Ridge Valley Hip
 
-## Count
+## Что считать
 
 - Ridge, valley, and hip framing/trim/materials where the scope requires them.
 
-## Check
+## Проверить
 
-- Keep roof framing members separate from roof finish trim if the output template
+- Roof framing members держи отдельно от roof finish trim, если output template
   prices them separately.
-- Verify whether members are dimensional lumber, LVL/PSL/GL, or truss by others.
+- Проверь, являются ли members dimensional lumber, LVL/PSL/GL или truss by others.

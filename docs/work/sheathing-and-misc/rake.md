@@ -1,11 +1,11 @@
 # Rake
 
-## Count
+## Что считать
 
 - Rake trim, sheathing edge treatment, and related fascia/subfascia.
 
-## Check
+## Проверить
 
-- Keep rake separate from eve and returns when the output template expects
+- Rake держи отдельно от eve и returns, когда output template ожидает
   separate lines.
 - Confirm FRT/exterior treatment for exposed wood.

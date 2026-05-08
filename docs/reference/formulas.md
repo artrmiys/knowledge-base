@@ -1,28 +1,28 @@
-# Formulas and Factors
+# Формулы и факторы
 
-## Joist / Stud Spacing Factors
+## Joist / Stud spacing factors
 
-| Spacing | Factor |
+| Spacing | Фактор |
 | --- | ---: |
 | 12" o.c. | 1.4667 |
 | 16" o.c. | 1.1 |
 | 24" o.c. | 0.625 |
 
-For studs at 16" o.c., boss feedback says use 1:1 plus 10% waste rather than
-0.75. For 24" o.c., use 0.5 plus 25% waste.
+Для studs at 16" o.c. boss feedback говорит использовать 1:1 плюс 10% waste,
+а не 0.75. Для 24" o.c. используй 0.5 плюс 25% waste.
 
-## Rim and Blocking
+## Rim и Blocking
 
-| Item | Unit | Factor |
+| Item | Unit | Фактор |
 | --- | --- | --- |
 | Rim Board | LFT | 1.05 |
-| Blocking | LFT | no factor if continuous |
-| Ribbons / ledgers / bracing | pieces | use 16' ceiling when required |
+| Blocking | LFT | без factor, если continuous |
+| Ribbons / ledgers / bracing | pieces | используй 16' ceiling, когда требуется |
 
 ## COM Waste
 
-- Use 1.1 for formulas unless the source value already includes the 1.1.
-- Do not double-count waste through chained formulas.
+- Используй 1.1 в formulas, если source value уже не содержит 1.1.
+- Не дублируй waste через chained formulas.
 
 ## Shaft Walls
 
@@ -38,7 +38,7 @@ Shaft panels          = LFT * 0.5 * 1.1, listed as 2x12
 12" C-type metal joists = Area * 0.75 * 1.1 LF
 ```
 
-## Blocking Formulas
+## Blocking formulas
 
 ```excel
 Flat 48" o.c.     = CEILING(G * 12 / 48 * 2 * 1.1 / D, 1)
@@ -47,7 +47,7 @@ Diagonal 48" o.c. = CEILING(G * 12 / 48 * 2.5 * 1.1 / D, 1)
 
 ## Kitchen and Bath Blocking
 
-| Location | Rule |
+| Location | Правило |
 | --- | --- |
-| Kitchen | 2x6 blocking, 4 pieces of 14' per kitchen |
-| Bathroom | 2x6 blocking, 1 piece of 14' per bathroom |
+| Kitchen | 2x6 blocking, 4 pieces of 14' на kitchen |
+| Bathroom | 2x6 blocking, 1 piece of 14' на bathroom |

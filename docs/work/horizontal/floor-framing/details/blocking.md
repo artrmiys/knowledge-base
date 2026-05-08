@@ -1,27 +1,26 @@
 # Blocking
 
-## Count
+## Что считать
 
-- Wall blocking, joist blocking, drywall blocking, roof/floor blocking, and
+- Wall blocking, joist blocking, drywall blocking, roof/floor blocking и
   special detail blocking.
 
-## Rules
+## Правила
 
-- Walls 10' and above need two rows of blocking.
-- Blocking stays in LFT unless pieces are required.
-- Blocking has no factor when continuous, unless job-specific output says
-  otherwise.
-- Exterior blocking is FRT when exterior walls are FRT.
-- `Bracing` is typically `2x4` unless a detail says otherwise.
-- For truss bracing, count every 10' as blocking when the note says
+- Walls 10' и выше требуют two rows of blocking.
+- Blocking остаётся в LFT, если pieces не требуются.
+- Continuous blocking без factor, если job-specific output не говорит иначе.
+- Exterior blocking = FRT, когда exterior walls = FRT.
+- `Bracing` обычно `2x4`, если detail не говорит иначе.
+- Для truss bracing считай каждые 10' как blocking, когда note говорит
   `Trusses - Bracing 2x6`.
-- I-joist cross bridging / `TB27`: use `length * 2 * 12 / 16` pcs.
+- I-joist cross bridging / `TB27`: используй `length * 2 * 12 / 16` pcs.
 
-## Check
+## Проверить
 
-- Drywall blocking/ledger at demising and exterior walls parallel with framing.
+- Drywall blocking/ledger на demising и exterior walls parallel with framing.
 - Kitchen and bath blocking.
 - Blocking under FRT subfloor perimeter.
 - Parapet FRT blocking.
-- If `EWP are by others` but blocking for steel beams is called out, keep the
-  `LVL` / `LSL` blocking note visible and scaled.
+- Если `EWP are by others`, но blocking for steel beams called out, оставь
+  `LVL` / `LSL` blocking note видимой и scaled.

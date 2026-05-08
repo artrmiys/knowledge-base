@@ -6,67 +6,67 @@
 
 ## Rim Board
 
-| Wrong | Correct |
+| Ошибка | Как правильно |
 | --- | --- |
-| `1-3/4 LVL Rim` when not specified | `11-7/8" Rim` or product marked as assumed |
-| Splitting rim into 16' pieces | Keep rim in LFT with 1.05 factor |
+| `1-3/4 LVL Rim`, когда LVL не указан | `11-7/8" Rim` или product с пометкой assumed |
+| Rim разбит на 16' pieces | Держать rim в LFT с factor 1.05 |
 
-- If LSL is called out, write `11-7/8" LSL Rim`.
-- `1-3/4 LVL Rim` is used only when something attaches to it for strength,
-  such as deck or corridor frame.
-- Rim is needed at roof TJI too, not only at floors.
+- Если LSL указан, пиши `11-7/8" LSL Rim`.
+- `1-3/4 LVL Rim` используется только когда к нему что-то крепится for strength,
+  например deck или corridor frame.
+- Rim нужен и at roof TJI, не только на floors.
 
 ## Blocking
 
-- Walls 10' and above need two rows of blocking.
-- Blocking stays in LFT unless the output specifically needs pieces.
-- Use 10% waste for framing elements such as drywall blocking, rim, and upper
-  walls.
-- For top chord bearing trusses, do not add 2x4 ribbon board; use blocking
-  between trusses, often `(2) 2x6`.
+- Walls 10' и выше требуют two rows of blocking.
+- Blocking остаётся в LFT, если output прямо не требует pieces.
+- Для framing elements вроде drywall blocking, rim и upper walls используй 10%
+  waste.
+- Для top chord bearing trusses не добавляй 2x4 ribbon board; используй
+  blocking between trusses, часто `(2) 2x6`.
 
 ## FRT
 
-| Element | Rule |
+| Элемент | Правило |
 | --- | --- |
-| Exterior blocking | FRT if exterior wall material is FRT |
-| Parapets | FRT if exterior walls are FRT |
-| Subfloor perimeter | Check 2' or 4' FRT perimeter notes |
-| Demising shear wall sheathing | Regular sheathing unless schedule says FRT |
-| Stair / CMU two-hour walls | Often FRT; verify details |
+| Exterior blocking | FRT, если exterior wall material = FRT |
+| Parapets | FRT, если exterior walls = FRT |
+| Subfloor perimeter | Проверить 2' или 4' FRT perimeter notes |
+| Demising shear wall sheathing | Regular sheathing, если schedule не говорит FRT |
+| Stair / CMU two-hour walls | Часто FRT; проверять details |
 
 ## DHU / DGU vs ITS
 
-- DHU/DGU only where joists hang over firewall conditions at stairs, elevators,
-  or shafts.
-- Regular demising conditions where gypsum stops under the floor usually use ITS.
-- DHU can cost several times more than ITS, so verify details before listing.
-- Mark Stair / Elevator / Shaft hangers separately so review is clear.
+- DHU/DGU только там, где joists hang over firewall conditions at stairs,
+  elevators или shafts.
+- Regular demising conditions, где gypsum stops under the floor, обычно используют ITS.
+- DHU может стоить в разы больше ITS, поэтому перед listing проверяй details.
+- Stair / Elevator / Shaft hangers помечай отдельно, чтобы review был ясным.
 
 ## Studs
 
-| Spacing | Factor | Waste |
+| Spacing | Фактор | Waste |
 | --- | ---: | ---: |
 | 16" o.c. | 1:1 | 10% |
 | 24" o.c. | 0.5 | 25% |
 
-- Use exact heights on large COM jobs: `9'0-3/8"`, `9'1-1/8"`, etc.
-- Example math: `11'1" wall - 22" truss - 3/4" subfloor = 9'2" stud`.
-- Corridor 2x4 staggered means two rows at 16" o.c.; plates should be 2x6.
-- Bearing walls on lower floors may require double studs by structural notes.
+- На больших COM jobs используй exact heights: `9'0-3/8"`, `9'1-1/8"` и т.д.
+- Пример math: `11'1" wall - 22" truss - 3/4" subfloor = 9'2" stud`.
+- Corridor 2x4 staggered означает two rows at 16" o.c.; plates должны быть 2x6.
+- Bearing walls on lower floors могут требовать double studs по structural notes.
 
 ## Sheathing
 
 - `19/32"` equals `5/8"`, not `1/2"`.
-- Exterior sheathing follows Arch / energy / Zip notes unless Structural gives
-  stronger non-Zip requirement.
-- Interior sheathing follows Structural.
-- Zip sheathing on exterior walls supersedes structural sheathing notes, but keep
-  a note.
-- Optional walls may need full-height sheathing while loose/box sheathing stays
-  box only.
+- Exterior sheathing идёт по Arch / energy / Zip notes, если Structural не даёт
+  более сильное non-Zip requirement.
+- Interior sheathing идёт по Structural.
+- Zip sheathing на exterior walls перекрывает structural sheathing notes, но
+  оставляй note.
+- Optional walls могут требовать full-height sheathing, а loose/box sheathing
+  остаётся box only.
 
-## Commonly Missed Items
+## Частые пропуски
 
 - `1/2" plywood underlayment` per floor assembly.
 - Piggy truss sleepers: often 2x6 between upper truss parts.
@@ -82,24 +82,23 @@
 
 ## Doors
 
-- Unit entry doors from corridors are fire rated.
-- Use labels such as `3070 Entry`, `2670 FCW`, or `3070 HM C-lbl`.
-- Door hardware numbers usually do not belong in the takeoff list.
-- Interior door jamb trim can use casing divided by 2 where that is the local
-  estimating method.
+- Unit entry doors from corridors обычно fire rated.
+- Используй labels вроде `3070 Entry`, `2670 FCW` или `3070 HM C-lbl`.
+- Door hardware numbers обычно не идут в takeoff list.
+- Interior door jamb trim может использовать casing divided by 2, если это
+  local estimating method.
 
 ## Interior Trims
 
-- Room schedule: include only wood base / `Wd`; exclude tile base.
-- Corridors, lobbies, and other common areas should be listed separately because
-  trim type can differ from units.
-- Crowns should be included when interior trim scope is active.
-- If trims are not specified, write that they are not specified instead of
-  inventing a trim type.
+- Room schedule: включай только wood base / `Wd`; tile base исключай.
+- Corridors, lobbies и другие common areas перечисляй отдельно, потому что trim
+  type может отличаться от units.
+- Crowns включаются, когда interior trim scope активен.
+- Если trims не указаны, пиши `not specified`, а не придумывай trim type.
 
 ## Client Metal Rule
 
-| Include metal | Exclude / by others |
+| Считать metal | Исключить / by others |
 | --- | --- |
 | WM | EBS |
 | Timberline | Probuild |
@@ -107,33 +106,33 @@
 |  | Interstate |
 |  | Bliffert |
 
-When excluded, still note metal locations as `by others`.
+Когда metal исключён, всё равно отмечай locations как `by others`.
 
-## Formatting and Output
+## Formatting и output
 
-- Do not combine floors even if they are the same; copy data separately.
-- Add a note when a floor frame is identical to another floor.
-- Stair treads: list `2x12 Tread` and add `1x8 Riser`.
-- Do not count nails; list bolts and Simpson screws where required.
-- Do not leave copied detail labels uncorrected.
-- Use `Schedule`, not `Shedule`.
-- Floor labels use `1st`, `2nd`, `3rd`, `4th`, etc.
-- If material comes from a separate specification PDF, add a note such as
+- Не объединяй floors, даже если они одинаковые; copy data отдельно.
+- Добавляй note, когда floor frame identical to another floor.
+- Stair treads: указывай `2x12 Tread` и добавляй `1x8 Riser`.
+- Nails не считай; bolts и Simpson screws указывай, где они required.
+- Не оставляй copied detail labels без правки.
+- Пиши `Schedule`, не `Shedule`.
+- Floor labels: `1st`, `2nd`, `3rd`, `4th` и т.д.
+- Если material приходит из отдельного specification PDF, добавляй note вроде
   `per customer note`.
-- Remove unused rows/items from output, except formulas that still drive wall
+- Убирай unused rows/items из output, кроме formulas, которые всё ещё drive wall
   calculations.
-- Do not swap count and length columns for joists or similar repeated members.
-- For duplex / repeated-building jobs, check multipliers twice so half a
-  building is not missed.
+- Не меняй местами count и length columns для joists и похожих repeated members.
+- Для duplex / repeated-building jobs проверяй multipliers дважды, чтобы не
+  пропустить half a building.
 
 
 <!-- confluence-gallery:start -->
-## Confluence Images
+## Картинки из Confluence
 
 Изображения из Confluence размещены на этой странице по исходной теме.
 Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
 
-| Source group | Images | Confluence |
+| Группа источника | Картинки | Confluence |
 | --- | ---: | --- |
 | --- | 19 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/11796656/---) |
 | Need to sort | 4 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/229638146/Need+to+sort) |
@@ -141,95 +140,95 @@ When excluded, still note metal locations as `by others`.
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-011.png" title="image-20250224-003901.png">
     <img src="../../assets/images/confluence/confluence-011.png" alt="--- - unsorted field rule/reference 01">
-    <div class="kb-gallery__caption">unsorted field rule/reference 01 (image, 168 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 01</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-012.png" title="image-20250224-003844.png">
     <img src="../../assets/images/confluence/confluence-012.png" alt="--- - unsorted field rule/reference 02">
-    <div class="kb-gallery__caption">unsorted field rule/reference 02 (image, 158 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 02</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-013.png" title="image-20250224-003828.png">
     <img src="../../assets/images/confluence/confluence-013.png" alt="--- - unsorted field rule/reference 03">
-    <div class="kb-gallery__caption">unsorted field rule/reference 03 (image, 223 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 03</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-014.png" title="image-20250224-003817.png">
     <img src="../../assets/images/confluence/confluence-014.png" alt="--- - unsorted field rule/reference 04">
-    <div class="kb-gallery__caption">unsorted field rule/reference 04 (image, 290 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 04</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-015.png" title="image-20250224-003802.png">
     <img src="../../assets/images/confluence/confluence-015.png" alt="--- - unsorted field rule/reference 05">
-    <div class="kb-gallery__caption">unsorted field rule/reference 05 (image, 36 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 05</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-016.png" title="image-20250224-003754.png">
     <img src="../../assets/images/confluence/confluence-016.png" alt="--- - unsorted field rule/reference 06">
-    <div class="kb-gallery__caption">unsorted field rule/reference 06 (image, 218 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 06</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-017.png" title="image-20250224-003754.png">
     <img src="../../assets/images/confluence/confluence-017.png" alt="--- - unsorted field rule/reference 07">
-    <div class="kb-gallery__caption">unsorted field rule/reference 07 (image, 218 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 07</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-018.png" title="image-20250224-003743.png">
     <img src="../../assets/images/confluence/confluence-018.png" alt="--- - unsorted field rule/reference 08">
-    <div class="kb-gallery__caption">unsorted field rule/reference 08 (image, 16 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 08</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-019.png" title="image-20250224-003657.png">
     <img src="../../assets/images/confluence/confluence-019.png" alt="--- - unsorted field rule/reference 09">
-    <div class="kb-gallery__caption">unsorted field rule/reference 09 (image, 16 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 09</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-020.png" title="image-20250224-003439.png">
     <img src="../../assets/images/confluence/confluence-020.png" alt="--- - unsorted field rule/reference 10">
-    <div class="kb-gallery__caption">unsorted field rule/reference 10 (image, 16 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 10</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-021.png" title="image-20250224-003424.png">
     <img src="../../assets/images/confluence/confluence-021.png" alt="--- - unsorted field rule/reference 11">
-    <div class="kb-gallery__caption">unsorted field rule/reference 11 (image, 205 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 11</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-022.png" title="image-20250224-003400.png">
     <img src="../../assets/images/confluence/confluence-022.png" alt="--- - unsorted field rule/reference 12">
-    <div class="kb-gallery__caption">unsorted field rule/reference 12 (image, 94 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 12</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-023.png" title="image-20250224-002726.png">
     <img src="../../assets/images/confluence/confluence-023.png" alt="--- - unsorted field rule/reference 13">
-    <div class="kb-gallery__caption">unsorted field rule/reference 13 (image, 254 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 13</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-024.png" title="image-20250224-002706.png">
     <img src="../../assets/images/confluence/confluence-024.png" alt="--- - unsorted field rule/reference 14">
-    <div class="kb-gallery__caption">unsorted field rule/reference 14 (image, 157 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 14</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-025.png" title="image-20250224-002653.png">
     <img src="../../assets/images/confluence/confluence-025.png" alt="--- - unsorted field rule/reference 15">
-    <div class="kb-gallery__caption">unsorted field rule/reference 15 (image, 81 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 15</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-026.png" title="image-20250224-002632.png">
     <img src="../../assets/images/confluence/confluence-026.png" alt="--- - unsorted field rule/reference 16">
-    <div class="kb-gallery__caption">unsorted field rule/reference 16 (image, 42 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 16</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-027.png" title="image-20250224-002609.png">
     <img src="../../assets/images/confluence/confluence-027.png" alt="--- - unsorted field rule/reference 17">
-    <div class="kb-gallery__caption">unsorted field rule/reference 17 (image, 155 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 17</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-028.png" title="image-20250224-002542.png">
     <img src="../../assets/images/confluence/confluence-028.png" alt="--- - unsorted field rule/reference 18">
-    <div class="kb-gallery__caption">unsorted field rule/reference 18 (image, 139 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 18</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-029.png" title="image-20250224-002525.png">
     <img src="../../assets/images/confluence/confluence-029.png" alt="--- - unsorted field rule/reference 19">
-    <div class="kb-gallery__caption">unsorted field rule/reference 19 (image, 18 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 19</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-049.png" title="image-20250214-155931.png">
     <img src="../../assets/images/confluence/confluence-049.png" alt="Need to sort - unsorted field rule/reference 01">
-    <div class="kb-gallery__caption">unsorted field rule/reference 01 (image, 133 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 01</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-050.png" title="image-20250214-155410.png">
     <img src="../../assets/images/confluence/confluence-050.png" alt="Need to sort - unsorted field rule/reference 02">
-    <div class="kb-gallery__caption">unsorted field rule/reference 02 (image, 173 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 02</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-051.png" title="image-20250214-150802.png">
     <img src="../../assets/images/confluence/confluence-051.png" alt="Need to sort - unsorted field rule/reference 03">
-    <div class="kb-gallery__caption">unsorted field rule/reference 03 (image, 87 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 03</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-052.png" title="image-20250224-004123.png">
     <img src="../../assets/images/confluence/confluence-052.png" alt="Need to sort - unsorted field rule/reference 04">
-    <div class="kb-gallery__caption">unsorted field rule/reference 04 (image, 22 KB raw)</div>
+    <div class="kb-gallery__caption">unsorted field rule/reference 04</div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

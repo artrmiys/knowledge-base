@@ -1,144 +1,145 @@
 # Base
 
-## Count
+## Что считать
 
-- Wood base marked `Wd`, `Wood`, or equivalent in room schedules.
-- Unit base separately from corridors, lobby, and other common areas.
-- Floor-by-floor quantities when finish schedules differ.
+- Wood base, помеченный `Wd`, `Wood` или аналогично в room schedules.
+- Unit base отдельно от corridors, lobby и других common areas.
+- Количества по floor, если finish schedules отличаются.
 
-## Exclude
+## Что исключать
 
-- Garage: no `Baseboard`.
-- Tile base when the scope asks for wood base.
-- Rubber/vinyl/metal base unless specifically part of the trim scope.
-- Rooms where finish schedule clearly says no wood base.
+- Garage: нет `Baseboard`.
+- Tile base, если scope просит wood base.
+- Rubber/vinyl/metal base, если это не отдельная часть trim scope.
+- Rooms, где finish schedule прямо говорит no wood base.
 
-## Check
+## Проверить
 
-- Room schedule may have multiple finish columns; verify the base column rather
-  than relying on room name.
-- Bathrooms often have tile base and should be excluded from wood-base counts.
-- Common areas must be separated because they may use another base type.
+- Room schedule может иметь несколько finish columns; проверяй column `Base`,
+  а не только room name.
+- Bathrooms часто имеют tile base; исключай их из wood-base counts, если так
+  показано.
+- Common areas отделяй, потому что там может быть другой base type.
 
-## Trello Rules
+## Правила из Trello
 
-| Rule | What to check | Source |
+| Правило | Что проверить | Источник |
 | --- | --- | --- |
-| No `Baseboard` behind kitchen cabinets. | Remove cabinet-backed wall segments from base formula. | [Trello](https://trello.com/c/gKHc74Lu) |
-| `Baseboard` is present below windows unless the finish notes say otherwise. | Do not accidentally skip short under-window runs. | [Trello](https://trello.com/c/6Eg4OGuD) |
-| No `Baseboard` where stair trim/wall junction makes it not applicable. | Check stair-to-wall intersections visually. | [Trello](https://trello.com/c/zCvVfJN2) |
-| `Baseboard` is counted in toilets and shower rooms when shown by finish scope. | Verify against base material, because tile base may override wood base. | [Trello](https://trello.com/c/EZBqumHc) |
-| No `Baseboard` in garage. | Do not carry the room perimeter through garage walls. | E-Wood rule |
-| No `Baseboard` in non-living rooms or rooms without finish. | Exclude unfinished / service spaces unless schedule says otherwise. | [Trello](https://trello.com/c/bf2p8wqf) |
-| In Excel, write all measured values into the formula. | Keep formula inspectable, not just a final number. | [Trello](https://trello.com/c/Zu0NI5a3) |
-| Check material such as `TBD Base`. | Leave a visible note if material is not specified. | [Trello](https://trello.com/c/Q8YQ3KtC) |
+| За kitchen cabinets нет `Baseboard`. | Убрать wall segments behind cabinets из base formula. | [Trello](https://trello.com/c/gKHc74Lu) |
+| `Baseboard` под windows считается, если finish notes не говорят обратное. | Не пропускать короткие under-window runs случайно. | [Trello](https://trello.com/c/6Eg4OGuD) |
+| Нет `Baseboard`, где stair trim / wall junction делает его неприменимым. | Визуально проверить stair-to-wall intersections. | [Trello](https://trello.com/c/zCvVfJN2) |
+| `Baseboard` в toilets и shower rooms считается, если это показано finish scope. | Проверить base material: tile base может заменить wood base. | [Trello](https://trello.com/c/EZBqumHc) |
+| В garage нет `Baseboard`. | Не вести room perimeter через garage walls. | E-Wood rule |
+| В non-living rooms или rooms without finish нет `Baseboard`. | Исключать unfinished / service spaces, если schedule не говорит обратное. | [Trello](https://trello.com/c/bf2p8wqf) |
+| В Excel вписывай все measured values в formula. | Formula должна быть проверяемой, не только final number. | [Trello](https://trello.com/c/Zu0NI5a3) |
+| Проверяй material вроде `TBD Base`. | Оставляй видимую note, если material не указан. | [Trello](https://trello.com/c/Q8YQ3KtC) |
 
-## Takeoff Method
+## Метод takeoff
 
-- Baseboard and crowns are measured by perimeter. Start at the entry door and
-  trace continuously so breaks are intentional, not accidental.
-- Garage perimeter is not counted for `Baseboard`.
-- Bathroom / shower-room base can be separated from the main base quantity when
-  review needs it.
-- Typical no-base spaces: garage, mechanical/equipment rooms, crawl space, and
-  other unfinished rooms.
+- Baseboard и Crowns меряются по perimeter. Начинай от entry door и веди trace
+  непрерывно, чтобы breaks были намеренными.
+- Garage perimeter не считается для `Baseboard`.
+- Bathroom / shower-room base можно отделить от main base quantity, если так
+  проще проверить.
+- Типовые no-base spaces: garage, mechanical/equipment rooms, crawl space и
+  другие unfinished rooms.
 
-## External Cross-Check
+## Внешняя проверка
 
-- General trim guides also treat base as a linear/wall-run item; this matches
-  the current perimeter method.
-- The finish schedule `Base` column controls the material. If it says tile,
-  rubber/vinyl, metal, or `TBD`, keep that visible instead of forcing wood base.
-- E-Wood rule still overrides the generic method: no base behind kitchen
-  cabinets, no-finish rooms excluded, toilets/shower rooms verified by material.
+- General trim guides тоже считают base как linear/wall-run item; это совпадает
+  с текущим perimeter method.
+- Finish schedule column `Base` управляет material. Если там tile,
+  rubber/vinyl, metal или `TBD`, оставляй это видимым, не подставляй wood base.
+- E-Wood rule важнее generic method: за kitchen cabinets base не считаем,
+  no-finish rooms исключаем, toilets/shower rooms проверяем по material.
 
-## Visual Rules
+## Визуальные правила
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-07.png">
     <img src="../../../assets/images/trims/int-trims-07.png" alt="No baseboard behind kitchen cabinets">
     <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">No base behind kitchen cabinets</div>
-      <div class="kb-rule-card__rule">Subtract cabinet-backed wall runs.</div>
-      <div class="kb-rule-card__note">Do not carry base through the cabinet line just because the room perimeter continues.</div>
+      <div class="kb-rule-card__title">Нет base behind kitchen cabinets</div>
+      <div class="kb-rule-card__rule">Вычитай cabinet-backed wall runs.</div>
+      <div class="kb-rule-card__note">Не продолжай base через cabinet line только потому, что room perimeter идёт дальше.</div>
     </div>
   </a>
   <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-08.png">
     <img src="../../../assets/images/trims/int-trims-08.png" alt="Baseboard below windows">
     <div class="kb-rule-card__body">
       <div class="kb-rule-card__title">Base below windows</div>
-      <div class="kb-rule-card__rule">Keep under-window runs unless notes exclude them.</div>
-      <div class="kb-rule-card__note">Window openings do not automatically remove the base segment below.</div>
+      <div class="kb-rule-card__rule">Оставляй under-window runs, если notes не исключают их.</div>
+      <div class="kb-rule-card__note">Window openings сами по себе не убирают base segment below.</div>
     </div>
   </a>
   <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-09.png">
     <img src="../../../assets/images/trims/int-trims-09.png" alt="No baseboard at stair wall junction">
     <div class="kb-rule-card__body">
       <div class="kb-rule-card__title">Stair / wall junction</div>
-      <div class="kb-rule-card__rule">Stop base where stair trim makes it not applicable.</div>
-      <div class="kb-rule-card__note">Add a note if the stair condition is unclear.</div>
+      <div class="kb-rule-card__rule">Останавливай base там, где stair trim делает его неприменимым.</div>
+      <div class="kb-rule-card__note">Добавь note, если stair condition неясен.</div>
     </div>
   </a>
   <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-10.png">
     <img src="../../../assets/images/trims/int-trims-10.png" alt="Baseboard in toilet and shower rooms">
     <div class="kb-rule-card__body">
       <div class="kb-rule-card__title">Toilets / shower rooms</div>
-      <div class="kb-rule-card__rule">Verify material before excluding.</div>
-      <div class="kb-rule-card__note">Wood base counts; tile base does not count as wood base.</div>
+      <div class="kb-rule-card__rule">Перед исключением проверь material.</div>
+      <div class="kb-rule-card__note">Wood base считается; tile base не считается как wood base.</div>
     </div>
   </a>
   <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-11.png">
     <img src="../../../assets/images/trims/int-trims-11.png" alt="No baseboard in unfinished rooms">
     <div class="kb-rule-card__body">
       <div class="kb-rule-card__title">No finish / garage / service rooms</div>
-      <div class="kb-rule-card__rule">No Baseboard in garage or unfinished/service spaces.</div>
-      <div class="kb-rule-card__note">Exclude garage, mechanical/equipment rooms, crawl space, unfinished storage.</div>
+      <div class="kb-rule-card__rule">В garage и unfinished/service spaces нет Baseboard.</div>
+      <div class="kb-rule-card__note">Исключай garage, mechanical/equipment rooms, crawl space, unfinished storage.</div>
     </div>
   </a>
   <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-12.png">
     <img src="../../../assets/images/trims/int-trims-12.png" alt="Baseboard Excel formula values">
     <div class="kb-rule-card__body">
       <div class="kb-rule-card__title">Excel formula values</div>
-      <div class="kb-rule-card__rule">Show measured segments, not only a final number.</div>
-      <div class="kb-rule-card__note">The reviewer should be able to trace each value back to the plan.</div>
+      <div class="kb-rule-card__rule">Показывай measured segments, а не только final number.</div>
+      <div class="kb-rule-card__note">Reviewer должен видеть, откуда взялось каждое значение на plan.</div>
     </div>
   </a>
   <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-13.png">
     <img src="../../../assets/images/trims/int-trims-13.png" alt="Baseboard Excel formula continuation">
     <div class="kb-rule-card__body">
       <div class="kb-rule-card__title">Formula continuation</div>
-      <div class="kb-rule-card__rule">Keep long formulas inspectable.</div>
-      <div class="kb-rule-card__note">Do not hide deductions or repeated room segments.</div>
+      <div class="kb-rule-card__rule">Держи длинные formulas проверяемыми.</div>
+      <div class="kb-rule-card__note">Не прячь deductions или repeated room segments.</div>
     </div>
   </a>
   <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-14.png">
     <img src="../../../assets/images/trims/int-trims-14.png" alt="Baseboard Excel formula example">
     <div class="kb-rule-card__body">
       <div class="kb-rule-card__title">Formula example</div>
-      <div class="kb-rule-card__rule">Use visible arithmetic for perimeter runs.</div>
-      <div class="kb-rule-card__note">This is the audit trail for the base output.</div>
+      <div class="kb-rule-card__rule">Используй видимую арифметику для perimeter runs.</div>
+      <div class="kb-rule-card__note">Это audit trail для base output.</div>
     </div>
   </a>
   <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-15.png">
     <img src="../../../assets/images/trims/int-trims-15.png" alt="TBD Base material check">
     <div class="kb-rule-card__body">
       <div class="kb-rule-card__title">TBD Base</div>
-      <div class="kb-rule-card__rule">Keep material uncertainty visible.</div>
-      <div class="kb-rule-card__note">Write a note instead of choosing a product that is not specified.</div>
+      <div class="kb-rule-card__rule">Оставляй uncertainty по material видимой.</div>
+      <div class="kb-rule-card__note">Пиши note вместо выбора product, который не указан.</div>
     </div>
   </a>
   <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-16.png">
     <img src="../../../assets/images/trims/int-trims-16.png" alt="Baseboard Excel output">
     <div class="kb-rule-card__body">
       <div class="kb-rule-card__title">Baseboard Excel output</div>
-      <div class="kb-rule-card__rule">Final output must match formula and material note.</div>
-      <div class="kb-rule-card__note">Check line description before sending the takeoff.</div>
+      <div class="kb-rule-card__rule">Final output должен совпадать с formula и material note.</div>
+      <div class="kb-rule-card__note">Перед отправкой takeoff проверь line description.</div>
     </div>
   </a>
 </div>
 
-## Output Notes
+## Заметки по выводу
 
-If base type is unclear, keep a note such as `Base not specified in room
-schedule` instead of assigning a material.
+Если base type неясен, оставь note вроде `Base not specified in room schedule`
+вместо назначения material наугад.
 

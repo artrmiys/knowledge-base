@@ -1,10 +1,10 @@
 # Returns
 
-## Count
+## Что считать
 
 - Roof/eave returns, framing, trim, and sheathing.
 
-## Check
+## Проверить
 
 - Returns often appear in architectural details rather than structural plans.
-- Separate returns from rake/eve if pricing lines differ.
+- Returns отделяй от rake/eve, если pricing lines differ.

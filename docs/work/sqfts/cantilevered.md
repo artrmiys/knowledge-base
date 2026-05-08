@@ -1,14 +1,14 @@
 # Cantilevered SQFT
 
-## Count
+## Что считать
 
-- Cantilevered floor/roof/deck areas and their sheathing, blocking, insulation,
-  and rim conditions.
+- Cantilevered floor/roof/deck areas и их sheathing, blocking, insulation и rim
+  conditions.
 
-## Check
+## Проверить
 
-- Cantilever conditions often change rim/edge material.
-- Exterior FRT rules may apply.
-- Verify details for extra blocking, bracing, or holdowns.
-- Keep the visible label `Cantilevered` in the output so the reviewer can see
-  why the SQFT is separated.
+- Cantilever conditions часто меняют rim/edge material.
+- Exterior FRT rules могут применяться.
+- Проверь details на extra blocking, bracing или holdowns.
+- В output оставляй видимый label `Cantilevered`, чтобы reviewer видел, почему
+  SQFT отделён.

@@ -97,12 +97,12 @@ empty `href` values at the time of import.
 
 
 <!-- confluence-gallery:start -->
-## Confluence Images
+## Картинки из Confluence
 
 Изображения из Confluence размещены на этой странице по исходной теме.
 Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
 
-| Source group | Images | Confluence |
+| Группа источника | Картинки | Confluence |
 | --- | ---: | --- |
 | dictionary | 3 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/1933726/dictionary) |
 | Materials | 3 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/1933821/Materials) |
@@ -110,27 +110,27 @@ empty `href` values at the time of import.
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-043.png" title="image-20250210-055520.png">
     <img src="../../assets/images/confluence/confluence-043.png" alt="dictionary - dictionary reference 01">
-    <div class="kb-gallery__caption">dictionary reference 01 (image, 151 KB raw)</div>
+    <div class="kb-gallery__caption">dictionary reference 01</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-044.png" title="image-20250210-055504.png">
     <img src="../../assets/images/confluence/confluence-044.png" alt="dictionary - dictionary reference 02">
-    <div class="kb-gallery__caption">dictionary reference 02 (image, 151 KB raw)</div>
+    <div class="kb-gallery__caption">dictionary reference 02</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-045.png" title="image-20250210-055338.png">
     <img src="../../assets/images/confluence/confluence-045.png" alt="dictionary - dictionary reference 03">
-    <div class="kb-gallery__caption">dictionary reference 03 (image, 462 KB raw)</div>
+    <div class="kb-gallery__caption">dictionary reference 03</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-046.png" title="image-20250210-120404.png">
     <img src="../../assets/images/confluence/confluence-046.png" alt="Materials - material reference 01">
-    <div class="kb-gallery__caption">material reference 01 (image, 134 KB raw)</div>
+    <div class="kb-gallery__caption">material reference 01</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-047.png" title="image-20250210-112058.png">
     <img src="../../assets/images/confluence/confluence-047.png" alt="Materials - material reference 02">
-    <div class="kb-gallery__caption">material reference 02 (image, 47 KB raw)</div>
+    <div class="kb-gallery__caption">material reference 02</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-048.png" title="image-20250210-111922.png">
     <img src="../../assets/images/confluence/confluence-048.png" alt="Materials - material reference 03">
-    <div class="kb-gallery__caption">material reference 03 (image, 87 KB raw)</div>
+    <div class="kb-gallery__caption">material reference 03</div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

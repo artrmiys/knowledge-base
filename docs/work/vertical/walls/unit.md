@@ -1,32 +1,32 @@
 # Unit / Interior Walls
 
-## Count
+## Что считать
 
-- Interior apartment walls by type and height.
-- Studs, plates, blocking, and openings unless panelized or by others.
-- Jamb blocking for interior doors.
+- Interior apartment walls по type и height.
+- Studs, plates, blocking и openings, если не panelized / by others.
+- Jamb blocking для interior doors.
 
-## Rules
+## Правила
 
-- Typical unit walls are 2x4, but structural schedules can override this.
-- Exact stud heights matter on large COM jobs.
-- Do not include gypsum for normal wall faces unless scope specifically asks.
-- Split interior walls by floor when plans separate basement, first floor,
-  second floor, attic/loft, chimney, dormer, or garage conditions.
+- Typical unit walls — 2x4, но structural schedules могут override.
+- Exact stud heights важны на больших COM jobs.
+- Не включай gypsum для normal wall faces, если scope прямо не просит.
+- Interior walls разделяй by floor, когда plans отдельно показывают basement,
+  first floor, second floor, attic/loft, chimney, dormer или garage conditions.
 
-## Check
+## Проверить
 
 - Kitchen blocking: 2x6, 4 pieces of 14' per kitchen.
 - Bath blocking: 2x6, 1 piece of 14' per bathroom.
-- Tile base in room schedules should be excluded when only wood base is needed.
-- Studs PreCut should be visible on the left/output side when the Tilda checklist
-  calls for it.
+- Tile base в room schedules исключается, когда нужен только wood base.
+- Studs PreCut должен быть видим на left/output side, если этого требует Tilda
+  checklist.
 - Сначала смотри на спецификацию стен — **из металла или из дерева** делаются интерьерные стены.
 - Если в notes написано **`walls are panels`** — НЕ считаем (панели поставляются отдельно).
-- If unit interior walls are metal studs, verify the spacing. Do not carry
-  `24" o.c.` forward if the notes/spec require `16" o.c.`.
-- Metal-stud door jambs inside units should match the metal-stud wall size
-  (`2x4` or `2x6`) instead of using a generic jamb.
+- Если unit interior walls — metal studs, проверь spacing. Не переноси
+  `24" o.c.`, если notes/spec требуют `16" o.c.`.
+- Metal-stud door jambs inside units должны совпадать с metal-stud wall size
+  (`2x4` или `2x6`), а не generic jamb.
 
 ## Разметка по юнитам в PlanSwift (A 2x4 / A 2x6)
 
@@ -56,19 +56,19 @@ Unit A
 Используй чёткие имена групп (например, `Unit A — A 2x4`) — так удобнее экспортировать и анализировать.
 
 <!-- confluence-gallery:start -->
-## Confluence Images
+## Картинки из Confluence
 
 Изображения из Confluence размещены на этой странице по исходной теме.
 Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
 
-| Source group | Images | Confluence |
+| Группа источника | Картинки | Confluence |
 | --- | ---: | --- |
 | Unit (внутрикомнатные стены) | 1 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/65077308/Unit) |
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-095.png" title="image-20250623-135522.png">
     <img src="../../../../assets/images/confluence/confluence-095.png" alt="Unit (внутрикомнатные стены) - unit/interior wall reference 01">
-    <div class="kb-gallery__caption">unit/interior wall reference 01 (image, 50 KB raw)</div>
+    <div class="kb-gallery__caption">unit/interior wall reference 01</div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

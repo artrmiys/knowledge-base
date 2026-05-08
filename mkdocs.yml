@@ -1,5 +1,5 @@
 site_name: E-Wood Knowledge Base
-site_description: Estimating wiki — takeoff workflow, COM/EWP rules, QA checklists
+site_description: "Рабочая wiki для estimating: takeoff workflow, COM/EWP rules, QA checklists"
 site_url: https://artrmiys.github.io/knowledge-base-e-wood/
 site_author: E-Wood
 docs_dir: docs
@@ -31,14 +31,14 @@ theme:
       accent: lime
       toggle:
         icon: material/weather-sunny
-        name: Switch to dark mode
+        name: Включить тёмный режим
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: green
       accent: lime
       toggle:
         icon: material/weather-night
-        name: Switch to light mode
+        name: Включить светлый режим
   font:
     text: Inter
     code: JetBrains Mono
@@ -56,20 +56,20 @@ nav:
   - Главная: index.md
 
   - Старт:
-      - start/how-to-use.md
+      - Как пользоваться: start/how-to-use.md
       - Workflow: start/workflow.md
-      - Takeoff Structure: start/takeoff-structure.md
-      - Quality Checklist: start/quality-checklist.md
-      - Client Rules: start/client-rules.md
+      - Структура takeoff: start/takeoff-structure.md
+      - QA checklist: start/quality-checklist.md
+      - Правила клиентов: start/client-rules.md
       - Картинки и схемы: start/images-and-schemas.md
-      - Maintenance: start/maintenance.md
+      - Поддержка: start/maintenance.md
 
   - Работа:
       - Типы работ:
           - Residential: work-types/residential.md
           - COM Commercial: work-types/com.md
           - EWP / Capital: work-types/ewp-capital.md
-      - Vertical:
+      - Вертикальные работы:
           - Walls:
               - Sill Plates: work/vertical/walls/sill-plates.md
               - Unit / Interior: work/vertical/walls/unit.md
@@ -84,14 +84,14 @@ nav:
           - Openings:
               - Windows and Doors: work/vertical/openings/windows-doors.md
               - Headers: work/vertical/openings/headers.md
-      - Horizontal:
+      - Горизонтальные работы:
           - Floor Framing:
               - Post: work/horizontal/floor-framing/post.md
               - Beam: work/horizontal/floor-framing/beam.md
               - Joist: work/horizontal/floor-framing/joist.md
               - Stair: work/horizontal/floor-framing/stair.md
               - Subfloor: work/horizontal/floor-framing/subfloor.md
-              - Details:
+              - Details / мелкие элементы:
                   - Rim Board: work/horizontal/floor-framing/details/rim.md
                   - Ribbon Board: work/horizontal/floor-framing/details/ribbon.md
                   - Blocking: work/horizontal/floor-framing/details/blocking.md
@@ -117,7 +117,7 @@ nav:
           - Box Sheathing: work/vertical/sheathing/box-sheathing.md
           - Truss Heel: work/vertical/sheathing/truss-heel.md
           - Shear Wall: work/vertical/sheathing/shear-wall.md
-      - Roof Misc:
+      - Roof Misc / прочее:
           - Eve: work/sheathing-and-misc/eve.md
           - Rake: work/sheathing-and-misc/rake.md
           - Returns: work/sheathing-and-misc/returns.md
@@ -138,7 +138,7 @@ nav:
           - Balcony Trims: work/deck/balcony-trims.md
           - Anchor Bolts: work/deck/anchor-bolts.md
       - Interior Trims:
-          - Overview: work/interior-trims/overview.md
+          - Обзор: work/interior-trims/overview.md
           - Base: work/interior-trims/base.md
           - Casing: work/interior-trims/casing.md
           - Crown: work/interior-trims/crown.md
@@ -148,11 +148,11 @@ nav:
   - Справочник:
       - Советы и важные вещи: reference/boss-feedback-rules.md
       - Hangers: reference/hangers.md
-      - Formulas and Factors: reference/formulas.md
-      - Tilda Site Map: reference/tilda-site-map.md
-      - Confluence Source Map: reference/confluence-source-map.md
-      - Trello Source Map: reference/trello-source-map.md
-      - Source Map: reference/source-map.md
+      - Формулы и факторы: reference/formulas.md
+      - Tilda source map: reference/tilda-site-map.md
+      - Confluence source map: reference/confluence-source-map.md
+      - Trello source map: reference/trello-source-map.md
+      - Общая source map: reference/source-map.md
 
 plugins:
   - search:

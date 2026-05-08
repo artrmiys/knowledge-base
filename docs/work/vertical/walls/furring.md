@@ -2,25 +2,24 @@
 
 Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65306681/Furring`
 
-## Count
+## Что считать
 
-- Furring strips/studs at CMU or concrete walls only when the scope calls for
-  them.
-- Rigid insulation separately when shown.
+- Furring strips/studs at CMU или concrete walls — только когда scope просит их.
+- Rigid insulation отдельно, когда показан.
 
-## Rules
+## Правила
 
-- Do not add 2x4 furring at exterior CMU walls when the detail only needs
+- Не добавляй 2x4 furring at exterior CMU walls, когда detail требует только
   1-1/2" insulation.
-- Metal resilient channels under floor frames are usually by others unless the
-  client wants metal shown.
-- `1x3 strapping` under roof trusses or siding panels should be included when
+- Metal resilient channels under floor frames обычно by others, если client не
+  хочет видеть metal.
+- `1x3 strapping` under roof trusses или siding panels включается, когда
   specified.
 
-## Check
+## Проверить
 
-- MA / RI jobs often need strapping review.
-- RCP pages can show soffit/furring scope missed by structural plans.
+- MA / RI jobs часто требуют strapping review.
+- RCP pages могут показать soffit/furring scope, которого нет на structural plans.
 
 ## Где Искать Furring
 

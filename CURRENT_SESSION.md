@@ -366,3 +366,41 @@ Follow-up cleanup after user feedback that the page still looked disconnected:
   detached galleries.
 - Removed the duplicate raw Confluence gallery from Joist after all useful
   Joist Series images were integrated into rule cards.
+
+---
+
+## Resume pass 6 -- 2026-05-08
+
+Large Russian-language upgrade after user feedback that the site should be in
+Russian except for estimating/construction terms:
+
+- Updated `mkdocs.yml` navigation labels and theme toggle labels to Russian
+  where they were workflow/UI text, while keeping trade terms such as `Joist`,
+  `Sheathing`, `Hangers`, `Interior Trims`, `COM`, `EWP`, and `PlanSwift`.
+- Converted common H2 headings and table columns across docs to Russian:
+  `Что считать`, `Проверить`, `Правила`, `Критические правила`,
+  `Визуальные правила`, `Внешняя проверка`, `Где смотреть`, etc.
+- Rewrote the most visible English prose on:
+  - `docs/index.md`
+  - `docs/start/how-to-use.md`
+  - `docs/start/client-rules.md`
+  - `docs/start/quality-checklist.md`
+  - `docs/start/maintenance.md`
+  - `docs/start/takeoff-structure.md`
+  - `docs/start/important-changes.md`
+  - `docs/reference/boss-feedback-rules.md`
+  - `docs/reference/formulas.md`
+  - `docs/reference/hangers.md`
+  - `docs/work-types/*.md`
+  - all visible `docs/work/**` topic pages
+  - `docs/work/interior-trims/*`
+- Rewrote Joist and Interior Trims rule cards into RU explanations while
+  preserving technical terms/code labels in English.
+- Removed noisy gallery suffixes like `(image, 222 KB raw)` / `(preview, ... KB raw)`
+  from captions so image captions are cleaner on the public site.
+
+Need after this note:
+
+1. Run `.\.venv\Scripts\python.exe -m mkdocs build --strict`.
+2. Review any broken anchors caused by heading translation.
+3. Commit and deploy to `main` / `gh-pages`.

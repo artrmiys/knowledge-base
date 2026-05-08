@@ -1,16 +1,16 @@
 # Screws
 
-## Count
+## Что считать
 
-- Simpson screws and structural screws called out by details.
+- Simpson screws и structural screws, которые called out by details.
 
-## Rules
+## Правила
 
-- Screws are counted when details specifically call them out.
-- Do not mix screw and bolt detail labels.
-- Nails are usually excluded.
+- Screws считаются, когда details specifically call them out.
+- Не смешивай screw и bolt detail labels.
+- Nails обычно excluded.
 
-## Check
+## Проверить
 
-- Detail 1 and detail 3 may look similar but use different fasteners.
-- Keep screw notes close to the related connection item.
+- Detail 1 и detail 3 могут выглядеть похоже, но использовать different fasteners.
+- Screw notes держи рядом с related connection item.

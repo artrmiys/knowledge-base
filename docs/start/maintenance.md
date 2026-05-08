@@ -1,34 +1,34 @@
-# Maintenance
+# Поддержка
 
 ## Repo
 
-This wiki is a MkDocs Material project.
+Эта wiki — MkDocs Material project.
 
 ```powershell
 python -m mkdocs serve
 python -m mkdocs build --strict
 ```
 
-GitHub Actions deploys to `gh-pages` on push to `main`.
+GitHub Actions деплоит `gh-pages` при push в `main`.
 
-## Update Rules
+## Правила обновления
 
-- Keep pages short enough to scan during work.
-- Put reusable rules in `Reference`.
-- Put task-specific instructions in the closest `Work` page.
-- Prefer tables for selection rules, factors, and client exceptions.
-- Add assumptions explicitly; do not hide them in prose.
+- Страницы должны быть короткими, чтобы их можно было быстро просканировать во время работы.
+- Reusable rules клади в `Справочник`.
+- Task-specific instructions клади в ближайшую страницу раздела `Работа`.
+- Для selection rules, factors и client exceptions предпочитай таблицы.
+- Assumptions добавляй явно; не прячь их в длинном тексте.
 
-## Redaction Rules
+## Правила редактирования приватного
 
-Do not publish:
+Не публиковать:
 
-- Employee emails or UIDs.
-- Salary history or private payroll tables.
-- Dropbox links and private chat links.
-- Credentials, API keys, server passwords, or personal contact data.
+- Employee emails или UIDs.
+- Salary history или private payroll tables.
+- Dropbox links и private chat links.
+- Credentials, API keys, server passwords или personal contact data.
 
-If a private source contains a useful rule, rewrite the rule without the private
+Если private source содержит полезное rule, перепиши rule без private
 identifier.
 
 ## Регламент работы над ошибками
@@ -60,4 +60,4 @@ identifier.
 
 ### Финальная проверка («было/стало»)
 
-См. [Quality Checklist → Финальная проверка](quality-checklist.md).
+См. [QA checklist → Финальная проверка](quality-checklist.md).

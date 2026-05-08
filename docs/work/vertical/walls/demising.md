@@ -1,28 +1,28 @@
 # Demising Walls
 
-## Count
+## Что считать
 
-- Demising wall studs, plates, blocking, bracing, sheathing, and drywall ledgers
-  when in scope.
-- Double demising walls separately.
+- Demising wall studs, plates, blocking, bracing, sheathing и drywall ledgers,
+  когда in scope.
+- Double demising walls отдельно.
 
-## Rules
+## Правила
 
-- Some demising walls are double; do not average them into regular walls.
-- Shear wall sheathing at demising walls may be one side only or half the wall
-  length; follow the schedule.
-- Regular demising hanger conditions usually use ITS, not DHU/DGU, when gypsum
-  stops below floor level.
+- Some demising walls are double; не усредняй их в regular walls.
+- Shear wall sheathing at demising walls может быть one side only или half the
+  wall length; следуй schedule.
+- Regular demising hanger conditions обычно используют ITS, не DHU/DGU, когда
+  gypsum stops below floor level.
 
-## Check
+## Проверить
 
-- Drywall ledger: 2x4 at both sides of demising walls where parallel with framing.
-- Double studs on lower bearing levels if structural notes call for them.
-- Draft stop sheathing at party/demising walls is separate from shear wall
-  sheathing. If structural details call for draft stop, count it at the wall and
-  at floor-framing levels as separate measurements.
-- Do not assume draft stop material is P.T.; use regular material unless the
-  detail/spec explicitly calls for P.T.
+- Drywall ledger: 2x4 at both sides of demising walls, где parallel with framing.
+- Double studs на lower bearing levels, если structural notes требуют их.
+- Draft stop sheathing at party/demising walls — отдельно от shear wall
+  sheathing. Если structural details требуют draft stop, считай его на wall и
+  на floor-framing levels отдельными measurements.
+- Не assume draft stop material = P.T.; используй regular material, если
+  detail/spec явно не calls for P.T.
 
 ## PlanSwift Записи (двойные demising)
 
@@ -38,19 +38,19 @@
 Если обе стены идентичны — короткая запись `dem (2) 2x6 10.5`. Если стены разные — пиши **толщины подряд, потом высоты подряд**.
 
 <!-- confluence-gallery:start -->
-## Confluence Images
+## Картинки из Confluence
 
 Изображения из Confluence размещены на этой странице по исходной теме.
 Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
 
-| Source group | Images | Confluence |
+| Группа источника | Картинки | Confluence |
 | --- | ---: | --- |
 | Demising (меж-секционные стены - двойные) | 1 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/65306639/Demising+-+-) |
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-126.png" title="image-20251030-161646.png">
     <img src="../../../../assets/images/confluence/confluence-126.png" alt="Demising (меж-секционные стены - двойные) - demising wall reference 01">
-    <div class="kb-gallery__caption">demising wall reference 01 (image, 110 KB raw)</div>
+    <div class="kb-gallery__caption">demising wall reference 01</div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

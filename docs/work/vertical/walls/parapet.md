@@ -1,22 +1,22 @@
 # Parapet Walls
 
-## Count
+## Что считать
 
-- Parapet framing, cap plates, inside/outside sheathing, insulation adjustments,
-  and EPDM where required.
-- FRT blocking/plates when exterior wall FRT rules apply.
+- Parapet framing, cap plates, inside/outside sheathing, insulation adjustments
+  и EPDM, где required.
+- FRT blocking/plates, когда exterior wall FRT rules применяются.
 
-## Rules
+## Правила
 
-- Parapets are FRT when exterior walls are FRT.
-- Parapet sheathing can be both sides; outside may subtract insulation board.
-- Top chord bearing truss conditions may need blocking between trusses rather
-  than ribbon board.
+- Parapets = FRT, когда exterior walls = FRT.
+- Parapet sheathing может быть both sides; outside может subtract insulation board.
+- Top chord bearing truss conditions могут требовать blocking between trusses,
+  а не ribbon board.
 
-## Common Misses
+## Частые пропуски
 
-- Detail callouts such as `(2) 2x8 FRT blocking at parapets`.
-- Cap plate treatment, often 2x6 PT.
+- Detail callouts вроде `(2) 2x8 FRT blocking at parapets`.
+- Cap plate treatment, часто 2x6 PT.
 
 ## Parapet vs. Truss System
 
@@ -28,23 +28,23 @@
     - **Параллельное опирание** — стену последнего этажа **продли вверх** до высоты парапета (продолжение exterior wall).
 
 <!-- confluence-gallery:start -->
-## Confluence Images
+## Картинки из Confluence
 
 Изображения из Confluence размещены на этой странице по исходной теме.
 Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
 
-| Source group | Images | Confluence |
+| Группа источника | Картинки | Confluence |
 | --- | ---: | --- |
 | Parapet (парапет, стены крыши) | 2 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/65306653/Parapet) |
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-127.png" title="image-20251030-151131.png">
     <img src="../../../../assets/images/confluence/confluence-127.png" alt="Parapet (парапет, стены крыши) - parapet wall reference 01">
-    <div class="kb-gallery__caption">parapet wall reference 01 (image, 83 KB raw)</div>
+    <div class="kb-gallery__caption">parapet wall reference 01</div>
   </a>
   <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-128.png" title="image-20251030-150702.png">
     <img src="../../../../assets/images/confluence/confluence-128.png" alt="Parapet (парапет, стены крыши) - parapet wall reference 02">
-    <div class="kb-gallery__caption">parapet wall reference 02 (image, 199 KB raw)</div>
+    <div class="kb-gallery__caption">parapet wall reference 02</div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

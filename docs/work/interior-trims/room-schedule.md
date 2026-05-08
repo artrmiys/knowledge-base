@@ -1,22 +1,22 @@
 # Room Schedule
 
-## What to Read
+## Что читать
 
 - Room finish schedule.
 - Door schedule.
-- Finish plans and interior elevations.
-- Notes for common areas, corridors, lobby, bathrooms, and units.
+- Finish plans и interior elevations.
+- Notes для common areas, corridors, lobby, bathrooms и units.
 
-## Rules
+## Правила
 
-- Include wood base only when the schedule marks base as `Wd` or equivalent.
-- Exclude tile base from wood-base counts.
-- Common areas should be separate because their trim type can differ.
-- If a finish line is unclear, add a note rather than guessing.
+- Wood base включай только когда schedule помечает base как `Wd` или equivalent.
+- Tile base исключай из wood-base counts.
+- Common areas держи отдельно, потому что trim type может отличаться.
+- Если finish line неясна, добавь note вместо guessing.
 
-## Review Questions
+## Вопросы для проверки
 
-- Are bathrooms tile base?
-- Are corridors/lobbies a different base or casing type?
-- Is crown required everywhere, only common areas, or only specific rooms?
-- Are door/window trims specified or omitted?
+- Bathrooms имеют tile base?
+- Corridors/lobbies имеют другой base или casing type?
+- Crown нужен везде, только common areas или только specific rooms?
+- Door/window trims указаны или omitted?

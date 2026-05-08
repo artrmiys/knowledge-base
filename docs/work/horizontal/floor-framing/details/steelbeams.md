@@ -1,17 +1,17 @@
 # Steel Beam Web Fillers
 
-## Count
+## Что считать
 
-- Wood fillers, nailers, bolts/screws/washers, and attachment material at steel
-  beams where shown.
+- Wood fillers, nailers, bolts/screws/washers и attachment material at steel
+  beams там, где shown.
 
-## Rules
+## Правила
 
-- Steel top nailers can drive top-mount hanger conditions.
-- Filler steel anchors may need washers, but do not over-specify washer size
-  unless called out.
+- Steel top nailers могут задавать top-mount hanger conditions.
+- Filler steel anchors могут требовать washers, но не over-specify washer size,
+  если он не called out.
 
-## Check
+## Проверить
 
-- Hangers may bear on top of steel or wood nailer; this changes hanger type.
-- Keep assumptions visible.
+- Hangers могут bear on top of steel или wood nailer; это меняет hanger type.
+- Assumptions держи видимыми.

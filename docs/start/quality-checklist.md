@@ -1,54 +1,54 @@
-# Quality Checklist
+# QA checklist
 
-Use this before sending a job.
+Используй перед отправкой job.
 
-## Global
+## Общая проверка
 
-- Scale verified on each drawing set used for takeoff.
-- Arch, Structural, specs, schedules, wall types, RCP pages checked.
-- All new formulas tested immediately.
-- Identical floors noted, but materials still listed per floor.
-- No double 1.1 waste from formulas feeding other formulas.
-- Notes added where assumptions are made.
+- Scale проверен на каждом drawing set, который использовался для takeoff.
+- Arch, Structural, specs, schedules, wall types и RCP pages проверены.
+- Все новые formulas сразу протестированы.
+- Identical floors отмечены, но materials всё равно перечислены per floor.
+- Нет двойного 1.1 waste из formulas, которые ссылаются на другие formulas.
+- Notes добавлены там, где есть assumptions.
 
-## COM Critical Checks
+## Критические проверки COM
 
-1. FRT scope checked in specs and details.
-2. If exterior wall materials are FRT, exterior blocking and parapets are FRT too.
-3. Multi-layer sheathing, underlayment, sound membrane checked.
-4. Edge sheathing around floor/roof perimeter checked.
-5. Gypcrete floors checked for double bottom plates.
-6. Rigid insulation checked.
-7. Interior sheathing and holdowns checked.
-8. Parapet inside/outside sheathing checked.
-9. Piggy trusses and sleepers checked.
-10. Flat roof curb blocking checked.
-11. Exact stud heights calculated.
-12. S-details followed when present.
-13. Exterior sheathing checked against Arch/energy notes.
-14. Window blocking checked, especially Zip R or insulation.
-15. `1x3 PT strapping` checked for Hardi paneling.
-16. Exterior buildouts checked as stick framed.
-17. Shaft walls checked.
-18. Dropped soffits checked on RCP pages.
-19. Soffit plywood under roof trusses checked.
-20. Under podium / existing conditions checked; do not assume panels.
+1. FRT scope проверен в specs и details.
+2. Если exterior wall materials = FRT, exterior blocking и parapets тоже FRT.
+3. Multi-layer sheathing, underlayment, sound membrane проверены.
+4. Edge sheathing around floor/roof perimeter проверен.
+5. Gypcrete floors проверены на double bottom plates.
+6. Rigid insulation проверен.
+7. Interior sheathing и holdowns проверены.
+8. Parapet inside/outside sheathing проверен.
+9. Piggy trusses и sleepers проверены.
+10. Flat roof curb blocking проверен.
+11. Exact stud heights рассчитаны.
+12. S-details соблюдены, если они есть.
+13. Exterior sheathing сверен с Arch/energy notes.
+14. Window blocking проверен, особенно Zip R или insulation.
+15. `1x3 PT strapping` проверен для Hardi paneling.
+16. Exterior buildouts проверены как stick framed.
+17. Shaft walls проверены.
+18. Dropped soffits проверены на RCP pages.
+19. Soffit plywood under roof trusses проверен.
+20. Under podium / existing conditions проверены; panels не предполагаем.
 
-## Frequent Misses
+## Частые пропуски
 
 - Rim at roof TJI.
-- Two rows of blocking for walls 10' and above.
-- A35 clips at shearwall-to-shearwall connections.
+- Two rows of blocking для walls 10' и выше.
+- A35 clips на shearwall-to-shearwall connections.
 - Holdowns per details.
-- Jamb blocking for windows and interior doors.
+- Jamb blocking для windows и interior doors.
 - Kitchen blocking: 2x6, 4 pieces of 14' per kitchen.
 - Bath blocking: 2x6, 1 piece of 14' per bathroom.
-- Densedeck or glass mat protection board at flat roofs.
+- Densedeck или glass mat protection board на flat roofs.
 - Extra rigid XPS layer.
-- Metal studs marked by others when excluded by client.
-- Interior trims checked against room schedule.
-- Tile base excluded when only wood base is needed.
-- Crowns included when the trim scope is active.
+- Metal studs помечены by others, если client исключает их.
+- Interior trims сверены с room schedule.
+- Tile base исключён, если нужен только wood base.
+- Crowns включены, когда trim scope активен.
 
 ## Финальная проверка «было/стало»
 

@@ -1,4 +1,4 @@
-# Takeoff Structure
+# Структура takeoff
 
 Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65961989/Deck+Porch+Balcony+-`
 
@@ -83,15 +83,15 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65961989/Deck+Porch+
 - Door and Window Trim
 - Room Schedule
 
-## Naming Notes
+## Заметки по naming
 
-- Keep floors separate even when identical.
-- If a floor is identical, add a note such as `4th floor frame is identical to 3rd floor`,
-  but still list materials separately.
-- Panelized wall jobs need different counting rules; see [COM Commercial](../work-types/com.md).
-- Interior trims should be separated from exterior trims and gypsum.
-- The old Tilda source had many menu items as labels without active links. Current
-  confirmed active work pages were Walls and Gables.
+- Floors держи отдельно, даже когда identical.
+- Если floor identical, добавь note вроде `4th floor frame is identical to 3rd floor`,
+  но materials всё равно list separately.
+- Panelized wall jobs требуют других counting rules; см. [COM Commercial](../work-types/com.md).
+- Interior trims отделяй от exterior trims и gypsum.
+- Старый Tilda source имел много menu items как labels без active links. Сейчас
+  подтверждённые active work pages: Walls и Gables.
 
 ## Vertical Constructions — что входит
 
@@ -186,12 +186,12 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65961989/Deck+Porch+
 | `l 1` | `2x10` |
 
 <!-- confluence-gallery:start -->
-## Confluence Images
+## Картинки из Confluence
 
 Изображения из Confluence размещены на этой странице по исходной теме.
 Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
 
-| Source group | Images | Confluence |
+| Группа источника | Картинки | Confluence |
 | --- | ---: | --- |
 | Roof Framing - конструкции крыши | 2 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/65962048/Roof+Framing+-) |
 | Vertical Constructions | 10 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/65110035/Vertical+Constructions) |
@@ -202,107 +202,107 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65961989/Deck+Porch+
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-032.jpg" title="3.gif">
     <img src="../../assets/images/confluence/confluence-032.jpg" alt="work - large GIF attachments - takeoff structure reference 01">
-    <div class="kb-gallery__caption">takeoff structure reference 01 (preview, 87734 KB raw)</div>
+    <div class="kb-gallery__caption">takeoff structure reference 01</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-033.jpg" title="1.gif">
     <img src="../../assets/images/confluence/confluence-033.jpg" alt="work - large GIF attachments - takeoff structure reference 02">
-    <div class="kb-gallery__caption">takeoff structure reference 02 (preview, 19363 KB raw)</div>
+    <div class="kb-gallery__caption">takeoff structure reference 02</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-034.png" title="image-20251103-183255.png">
     <img src="../../assets/images/confluence/confluence-034.png" alt="work - takeoff structure reference 01">
-    <div class="kb-gallery__caption">takeoff structure reference 01 (image, 21 KB raw)</div>
+    <div class="kb-gallery__caption">takeoff structure reference 01</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-035.jpg" title="struct.jpg">
     <img src="../../assets/images/confluence/confluence-035.jpg" alt="work - takeoff structure reference 02">
-    <div class="kb-gallery__caption">takeoff structure reference 02 (image, 155 KB raw)</div>
+    <div class="kb-gallery__caption">takeoff structure reference 02</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-036.png" title="image-20250619-200240.png">
     <img src="../../assets/images/confluence/confluence-036.png" alt="work - takeoff structure reference 03">
-    <div class="kb-gallery__caption">takeoff structure reference 03 (image, 25 KB raw)</div>
+    <div class="kb-gallery__caption">takeoff structure reference 03</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-037.png" title="image-20250619-200019.png">
     <img src="../../assets/images/confluence/confluence-037.png" alt="work - takeoff structure reference 04">
-    <div class="kb-gallery__caption">takeoff structure reference 04 (image, 25 KB raw)</div>
+    <div class="kb-gallery__caption">takeoff structure reference 04</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-038.png" title="image-20250524-215800.png">
     <img src="../../assets/images/confluence/confluence-038.png" alt="work - takeoff structure reference 05">
-    <div class="kb-gallery__caption">takeoff structure reference 05 (image, 121 KB raw)</div>
+    <div class="kb-gallery__caption">takeoff structure reference 05</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-039.png" title="Без-имени-2.png">
     <img src="../../assets/images/confluence/confluence-039.png" alt="work - takeoff structure reference 06">
-    <div class="kb-gallery__caption">takeoff structure reference 06 (image, 275 KB raw)</div>
+    <div class="kb-gallery__caption">takeoff structure reference 06</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-040.png" title="c27beda1-ce6d-4252-98d2-63be7f261548.png">
     <img src="../../assets/images/confluence/confluence-040.png" alt="work - takeoff structure reference 07">
-    <div class="kb-gallery__caption">takeoff structure reference 07 (image, 13 KB raw)</div>
+    <div class="kb-gallery__caption">takeoff structure reference 07</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-041.png" title="e8eea12d-25c0-4ac0-99ca-8bd8764ab780.png">
     <img src="../../assets/images/confluence/confluence-041.png" alt="work - takeoff structure reference 08">
-    <div class="kb-gallery__caption">takeoff structure reference 08 (image, 13 KB raw)</div>
+    <div class="kb-gallery__caption">takeoff structure reference 08</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-042.png" title="image-20250210-113643.png">
     <img src="../../assets/images/confluence/confluence-042.png" alt="work - takeoff structure reference 09">
-    <div class="kb-gallery__caption">takeoff structure reference 09 (image, 20 KB raw)</div>
+    <div class="kb-gallery__caption">takeoff structure reference 09</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-096.png" title="image-20250625-035545.png">
     <img src="../../assets/images/confluence/confluence-096.png" alt="Vertical Constructions - vertical construction overview 01">
-    <div class="kb-gallery__caption">vertical construction overview 01 (image, 342 KB raw)</div>
+    <div class="kb-gallery__caption">vertical construction overview 01</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-097.png" title="image-20250625-035410.png">
     <img src="../../assets/images/confluence/confluence-097.png" alt="Vertical Constructions - vertical construction overview 02">
-    <div class="kb-gallery__caption">vertical construction overview 02 (image, 267 KB raw)</div>
+    <div class="kb-gallery__caption">vertical construction overview 02</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-098.png" title="image-20250625-035202.png">
     <img src="../../assets/images/confluence/confluence-098.png" alt="Vertical Constructions - vertical construction overview 03">
-    <div class="kb-gallery__caption">vertical construction overview 03 (image, 267 KB raw)</div>
+    <div class="kb-gallery__caption">vertical construction overview 03</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-099.png" title="image-20250625-034853.png">
     <img src="../../assets/images/confluence/confluence-099.png" alt="Vertical Constructions - vertical construction overview 04">
-    <div class="kb-gallery__caption">vertical construction overview 04 (image, 97 KB raw)</div>
+    <div class="kb-gallery__caption">vertical construction overview 04</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-100.png" title="image-20250625-034719.png">
     <img src="../../assets/images/confluence/confluence-100.png" alt="Vertical Constructions - vertical construction overview 05">
-    <div class="kb-gallery__caption">vertical construction overview 05 (image, 188 KB raw)</div>
+    <div class="kb-gallery__caption">vertical construction overview 05</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-101.png" title="image-20250625-034639.png">
     <img src="../../assets/images/confluence/confluence-101.png" alt="Vertical Constructions - vertical construction overview 06">
-    <div class="kb-gallery__caption">vertical construction overview 06 (image, 320 KB raw)</div>
+    <div class="kb-gallery__caption">vertical construction overview 06</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-102.png" title="image-20250625-034357.png">
     <img src="../../assets/images/confluence/confluence-102.png" alt="Vertical Constructions - vertical construction overview 07">
-    <div class="kb-gallery__caption">vertical construction overview 07 (image, 67 KB raw)</div>
+    <div class="kb-gallery__caption">vertical construction overview 07</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-103.png" title="image-20250625-034132.png">
     <img src="../../assets/images/confluence/confluence-103.png" alt="Vertical Constructions - vertical construction overview 08">
-    <div class="kb-gallery__caption">vertical construction overview 08 (image, 87 KB raw)</div>
+    <div class="kb-gallery__caption">vertical construction overview 08</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-104.png" title="image-20250625-033747.png">
     <img src="../../assets/images/confluence/confluence-104.png" alt="Vertical Constructions - vertical construction overview 09">
-    <div class="kb-gallery__caption">vertical construction overview 09 (image, 102 KB raw)</div>
+    <div class="kb-gallery__caption">vertical construction overview 09</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-105.png" title="image-20250625-033553.png">
     <img src="../../assets/images/confluence/confluence-105.png" alt="Vertical Constructions - vertical construction overview 10">
-    <div class="kb-gallery__caption">vertical construction overview 10 (image, 75 KB raw)</div>
+    <div class="kb-gallery__caption">vertical construction overview 10</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-106.png" title="image-20250625-041034.png">
     <img src="../../assets/images/confluence/confluence-106.png" alt="Walls - wall type overview 01">
-    <div class="kb-gallery__caption">wall type overview 01 (image, 76 KB raw)</div>
+    <div class="kb-gallery__caption">wall type overview 01</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-107.png" title="image-20250625-035805.png">
     <img src="../../assets/images/confluence/confluence-107.png" alt="Walls - wall type overview 02">
-    <div class="kb-gallery__caption">wall type overview 02 (image, 92 KB raw)</div>
+    <div class="kb-gallery__caption">wall type overview 02</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-108.png" title="image-20250625-035800.png">
     <img src="../../assets/images/confluence/confluence-108.png" alt="Walls - wall type overview 03">
-    <div class="kb-gallery__caption">wall type overview 03 (image, 92 KB raw)</div>
+    <div class="kb-gallery__caption">wall type overview 03</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-135.png" title="image-20250603-180752.png">
     <img src="../../assets/images/confluence/confluence-135.png" alt="Roof Framing - конструкции крыши - roof framing overview 01">
-    <div class="kb-gallery__caption">roof framing overview 01 (image, 11 KB raw)</div>
+    <div class="kb-gallery__caption">roof framing overview 01</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-136.png" title="image-20250603-180924.png">
     <img src="../../assets/images/confluence/confluence-136.png" alt="Roof Framing - конструкции крыши - roof framing overview 02">
-    <div class="kb-gallery__caption">roof framing overview 02 (image, 28 KB raw)</div>
+    <div class="kb-gallery__caption">roof framing overview 02</div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

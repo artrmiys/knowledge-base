@@ -1,12 +1,12 @@
 # Deck SQFT
 
-## Count
+## Что считать
 
 - Decking, sleepers, sheathing/underlayment, framing, railings, trims, and
-  attachment details when in scope.
+  attachment details, когда in scope.
 
-## Check
+## Проверить
 
 - Deck assemblies can call for 1/2" underlayment.
-- LVL rim is only used when specifically required for deck/corridor strength.
-- Exterior attachment details may require bolts or Simpson screws.
+- LVL rim используется только когда specifically required for deck/corridor strength.
+- Exterior attachment details могут требовать bolts или Simpson screws.

@@ -1,11 +1,11 @@
 # Loft SQFT
 
-## Count
+## Что считать
 
 - Loft floor area.
-- Related guards, stairs, openings, and roof interface materials when shown.
+- Related guards, stairs, openings и roof interface materials, когда shown.
 
-## Check
+## Проверить
 
 - Loft areas can be hidden on architectural sheets while framing details live on
   structural sheets.

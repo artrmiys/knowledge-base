@@ -1,23 +1,23 @@
 # Box Sheathing
 
-## Count
+## Что считать
 
-- Box-only sheathing areas around floor/roof transitions, parapets, and loose
-  wall conditions.
+- Box-only sheathing areas around floor/roof transitions, parapets и loose wall
+  conditions.
 
-## Rules
+## Правила
 
-- Do not label box sheathing as truss heel.
-- For panelized wall jobs, box sheathing can remain in scope even when wall
-  panels are by others.
-- Optional walls may require full-height sheathing instead of box-only.
-- Tilda wall checklist says to check hidden box sheathing in sections/details,
-  not only in plan view.
-- At attic conditions, add floor height to box sheathing only for the first
-  height when the local rule calls for it.
-- Attic subfloor can be built from `extra plate + box = subfloor`; do not miss
-  the subfloor line when the box/plate detail is the clue.
+- Не называй box sheathing как truss heel.
+- Для panelized wall jobs box sheathing может оставаться in scope, даже когда
+  wall panels are by others.
+- Optional walls могут требовать full-height sheathing вместо box-only.
+- Tilda wall checklist говорит проверять hidden box sheathing в sections/details,
+  а не только на plan view.
+- At attic conditions добавляй floor height к box sheathing только для first
+  height, когда local rule требует это.
+- Attic subfloor может быть из `extra plate + box = subfloor`; не пропусти
+  subfloor line, когда box/plate detail — это clue.
 
-## Check
+## Проверить
 
-- Match labels to details; copied detail labels are a recurring error.
+- Сопоставляй labels с details; copied detail labels — recurring error.

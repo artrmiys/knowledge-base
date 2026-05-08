@@ -1,16 +1,16 @@
 # Flashing
 
-## Count
+## Что считать
 
 - Exterior opening flashing, wall/roof flashing, deck/balcony flashing, and
   related jamb logic.
 
-## Rules
+## Правила
 
 - Exterior door/window jamb quantities can use flashing-style formulas.
-- If the template separates trims and flashing, keep them separate.
+- Если template разделяет trims и flashing, держи их отдельно.
 
-## Check
+## Проверить
 
-- Rake/eve/parapet trim and flashing may be called out on architectural sheets,
+- Rake/eve/parapet trim и flashing могут быть called out на architectural sheets,
   not structural.

@@ -1,22 +1,22 @@
-﻿# Trello Visual Archive — Interior Trims
+# Trello Visual Archive — Interior Trims
 
 Source board:
 `https://trello.com/b/TyUKA0Zw/int-trims`
 
-Imported from the logged-in browser session: **44 cards** and **43 images**.
-This page is the full visual archive. Keep it as the source shelf; move only the
-clean rules into topic pages.
+Импортировано из logged-in browser session: **44 cards** и **43 images**.
+Эта страница — полный visual archive. Держи её как source shelf; в topic pages
+переноси только clean rules.
 
-## Visual Index
+## Визуальный индекс
 
-| Range | Topic |
+| Диапазон | Тема |
 | --- | --- |
 | `int-trims-01` - `int-trims-06` | Overall interior-trim workflow, PDFs, casing automation |
-| `int-trims-07` - `int-trims-16` | `Baseboard` rules and Excel checks |
-| `int-trims-17` - `int-trims-25` | `Crowns` rules and Excel checks |
-| `int-trims-26` - `int-trims-43` | Interior doors, cased openings, and Excel entry |
+| `int-trims-07` - `int-trims-16` | `Baseboard` rules и Excel checks |
+| `int-trims-17` - `int-trims-25` | `Crowns` rules и Excel checks |
+| `int-trims-26` - `int-trims-43` | Interior doors, cased openings и Excel entry |
 
-## Full Gallery
+## Полная галерея
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-01.png">
@@ -76,8 +76,8 @@ clean rules into topic pages.
     <div class="kb-gallery__caption">14. Base Excel: formula example</div>
   </a>
   <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-15.png">
-    <img src="../../../assets/images/trims/int-trims-15.png" alt="Check TBD Base material">
-    <div class="kb-gallery__caption">15. Check `TBD Base` material</div>
+    <img src="../../../assets/images/trims/int-trims-15.png" alt="Проверка TBD Base material">
+    <div class="kb-gallery__caption">15. Проверка `TBD Base` material</div>
   </a>
   <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-16.png">
     <img src="../../../assets/images/trims/int-trims-16.png" alt="Baseboard Excel output">
@@ -112,8 +112,8 @@ clean rules into topic pages.
     <div class="kb-gallery__caption">23. Crown Excel: formula values</div>
   </a>
   <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-24.png">
-    <img src="../../../assets/images/trims/int-trims-24.png" alt="Check TBD Crown material">
-    <div class="kb-gallery__caption">24. Check `TBD Crowns` material</div>
+    <img src="../../../assets/images/trims/int-trims-24.png" alt="Проверка TBD Crown material">
+    <div class="kb-gallery__caption">24. Проверка `TBD Crowns` material</div>
   </a>
   <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-25.png">
     <img src="../../../assets/images/trims/int-trims-25.png" alt="Crowns Excel output">
@@ -140,8 +140,8 @@ clean rules into topic pages.
     <div class="kb-gallery__caption">30. Slider door notation</div>
   </a>
   <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-31.png">
-    <img src="../../../assets/images/trims/int-trims-31.png" alt="Do not count shower glass doors">
-    <div class="kb-gallery__caption">31. Do not count shower glass doors</div>
+    <img src="../../../assets/images/trims/int-trims-31.png" alt="Shower glass doors не считать как interior doors">
+    <div class="kb-gallery__caption">31. Shower glass doors не считать как interior doors</div>
   </a>
   <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-32.png">
     <img src="../../../assets/images/trims/int-trims-32.png" alt="French doors in large guest rooms">
@@ -176,24 +176,24 @@ clean rules into topic pages.
     <div class="kb-gallery__caption">39. Convert feet to inches</div>
   </a>
   <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-40.png">
-    <img src="../../../assets/images/trims/int-trims-40.png" alt="Use formulas for many doors">
-    <div class="kb-gallery__caption">40. Use formulas for many doors</div>
+    <img src="../../../assets/images/trims/int-trims-40.png" alt="Formulas для many doors">
+    <div class="kb-gallery__caption">40. Formulas для many doors</div>
   </a>
   <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-41.png">
-    <img src="../../../assets/images/trims/int-trims-41.png" alt="Check selected cell sum">
-    <div class="kb-gallery__caption">41. Check selected cell sum</div>
+    <img src="../../../assets/images/trims/int-trims-41.png" alt="Проверка selected cell sum">
+    <div class="kb-gallery__caption">41. Проверка selected cell sum</div>
   </a>
   <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-42.png">
     <img src="../../../assets/images/trims/int-trims-42.png" alt="Doors and openings Excel output">
     <div class="kb-gallery__caption">42. Excel output</div>
   </a>
   <a class="kb-gallery__item" href="../../../assets/images/trims/int-trims-43.png">
-    <img src="../../../assets/images/trims/int-trims-43.png" alt="Fill from door schedule when present">
-    <div class="kb-gallery__caption">43. Fill from door schedule</div>
+    <img src="../../../assets/images/trims/int-trims-43.png" alt="Заполнять из door schedule, если он есть">
+    <div class="kb-gallery__caption">43. Заполнять из door schedule</div>
   </a>
 </div>
 
-## Raw Import
+## Raw import
 
 Raw markdown copies are stored in:
 

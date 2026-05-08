@@ -1,27 +1,27 @@
 # Casing
 
-## Count
+## Что считать
 
 - Door casing.
 - Window casing.
-- Interior jamb trim where the estimating method uses casing.
+- Interior jamb trim там, где estimating method использует casing.
 
-## Local Rule
+## Локальное правило
 
-For interior door jambs, local feedback says casing can be used divided by 2:
+Для interior door jambs local feedback говорит: можно использовать casing / 2:
 
 ```text
 Interior door jamb trim = casing / 2
 ```
 
-Use this only where it matches the current template/scope.
+Используй это только там, где совпадает current template/scope.
 
-## Check
+## Проверить
 
-- Door schedule may provide size/material/fire rating, but not trim type.
-- Separate interior casing from exterior trims and flashing.
-- Do not count hardware numbers as trim.
+- Door schedule может дать size/material/fire rating, но не trim type.
+- Interior casing отделяй от exterior trims и flashing.
+- Hardware numbers не считай как trim.
 
-## Output
+## Вывод
 
-Keep casing grouped by location/type if common areas differ from units.
+Casing держи grouped by location/type, если common areas отличаются от units.

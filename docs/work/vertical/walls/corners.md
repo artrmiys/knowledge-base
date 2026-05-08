@@ -2,21 +2,20 @@
 
 Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65273871/Corners`
 
-## Count
+## Что считать
 
-- Corner studs, extra studs, holdowns, and structural corner details when called
-  out.
-- Sheathing/trim conditions that differ at corners.
+- Corner studs, extra studs, holdowns и structural corner details, когда called out.
+- Sheathing/trim conditions, которые отличаются на corners.
 
-## Critical Rules
+## Критические правила
 
 - **Wall stick** — внешние углы **необходимо подсчитать** отдельной позицией.
 - **Wall panels** — углы **НЕ считаем** (они уже входят в panel).
 - Считай углы по этажам — corners by floor должны выдаваться отдельной строкой.
 
-## Check
+## Проверить
 
 - Structural details override generic wall assumptions.
-- If corners belong to panelized walls, verify what is in the loose material
+- Если corners относятся к panelized walls, проверь, что входит в loose material
   scope.
-- Keep notes visible when corner material is assumed rather than specified.
+- Notes держи видимыми, когда corner material assumed, а не specified.

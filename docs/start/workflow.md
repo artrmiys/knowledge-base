@@ -42,5 +42,5 @@
 
 ## 5. Перед отправкой
 
-Пройти [Quality Checklist](quality-checklist.md). Для больших COM jobs делать
+Пройти [QA checklist](quality-checklist.md). Для больших COM jobs делать
 PDF sketch/markups, если есть риск забыть детали.

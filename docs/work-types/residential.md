@@ -1,24 +1,24 @@
 # Residential
 
-Residential jobs follow the standard takeoff flow unless the plans introduce
-commercial-style assemblies, shaft walls, or panelized scope.
+Residential jobs идут по стандартному takeoff flow, если plans не добавляют
+commercial-style assemblies, shaft walls или panelized scope.
 
-## Default Scope
+## Типовой scope
 
-- Walls and openings.
-- Floor and roof framing.
+- Walls и openings.
+- Floor и roof framing.
 - Sheathing, SQFT, roof/deck/porch materials.
-- Details, hangers, bolts, screws when called out.
+- Details, hangers, bolts, screws, когда они called out.
 
-## Check Anyway
+## Всё равно проверить
 
 - Structural vs Arch wall sizes.
-- Exact stud heights where schedules differ.
-- Shaft walls in duplex or townhouse plans.
+- Exact stud heights, если schedules отличаются.
+- Shaft walls в duplex или townhouse plans.
 - Exterior sheathing vs energy/Zip notes.
-- Roof overframes, canopies, dormers, and truss heel conditions.
+- Roof overframes, canopies, dormers и truss heel conditions.
 
-## Output
+## Вывод
 
-Keep assumptions visible. If a detail is unclear, add a note rather than hiding
-the decision in a quantity.
+Assumptions держи видимыми. Если detail неясен, добавь note, а не прячь
+решение в quantity.

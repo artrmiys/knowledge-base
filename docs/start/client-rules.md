@@ -1,33 +1,33 @@
-# Client Rules
+# Правила клиентов
 
-These rules come from local Obsidian/E-Wood notes and boss feedback. Recheck
-against current specs when a project contradicts the default.
+Эти правила собраны из локальных Obsidian/E-Wood notes и boss feedback. Если
+текущий проект противоречит default-правилу, перепроверяй по specs/drawings.
 
 ## Metal Studs
 
-| Client | Default metal-stud treatment |
+| Client | Default treatment для metal studs |
 | --- | --- |
-| WM | Include / show metal |
-| Timberline | Include / show metal |
-| Littleton | Include / show metal |
-| EBS | By others / do not include |
-| Probuild | By others / do not include |
-| Triangle | By others / do not include |
-| Interstate | By others / do not include |
-| Bliffert | By others / do not include |
+| WM | Считать / показывать metal |
+| Timberline | Считать / показывать metal |
+| Littleton | Считать / показывать metal |
+| EBS | By others / не включать |
+| Probuild | By others / не включать |
+| Triangle | By others / не включать |
+| Interstate | By others / не включать |
+| Bliffert | By others / не включать |
 
-Even when excluded, note where metal studs/floors are used and mark them as
-`by others`.
+Даже когда metal исключается, отмечай, где metal studs/floors используются, и
+пиши `by others`.
 
 ## Bosfa-Type Notes
 
-- Room schedule: include wood base only; exclude tile base.
-- Door list: hardware numbers are not needed, but material and fire rating are.
-- Example labels: `2670 FCW`, `3070 HM C-lbl`.
-- Deflection tracks only at full-height walls touching ceiling above.
-- Dropped soffits use regular top tracks.
+- Room schedule: включать только wood base; tile base исключать.
+- Door list: hardware numbers не нужны, но material и fire rating нужны.
+- Примеры labels: `2670 FCW`, `3070 HM C-lbl`.
+- Deflection tracks — только на full-height walls, которые доходят до ceiling above.
+- Dropped soffits используют regular top tracks.
 
 ## Capital / EWP
 
-Capital-type EWP jobs usually list only EWP materials: joists, beams, and
-associated hangers. Do not count ordinary 2x material unless the scope says so.
+Capital-type EWP jobs обычно включают только EWP materials: joists, beams и
+associated hangers. Обычный 2x material не считай, если scope прямо не просит.

@@ -1,17 +1,17 @@
 # Bolts
 
-## Count
+## Что считать
 
-- Bolts, anchor bolts, holdown bolts, and detail-specific bolts.
+- Bolts, anchor bolts, holdown bolts и detail-specific bolts.
 
-## Rules
+## Правила
 
-- Count bolts and Simpson screws where details require them.
-- Do not count nails by default; they buy boxes and the quantity becomes noise.
-- Washers for filler steel anchors do not need to be listed as 3" square unless
-  details require that; a plain washer note can be enough.
+- Bolts и Simpson screws считай там, где details требуют их.
+- Nails по умолчанию не считай: их покупают boxes, quantity только создаёт шум.
+- Washers for filler steel anchors не обязательно писать как 3" square, если
+  details не требуют это; plain washer note часто достаточно.
 
-## Check
+## Проверить
 
-- Do not use the same label for a screw detail and a bolt detail.
-- ATS rod systems can be by others; verify before counting.
+- Не используй один label для screw detail и bolt detail.
+- ATS rod systems могут быть by others; перед count проверь scope.

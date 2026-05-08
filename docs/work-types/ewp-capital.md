@@ -2,36 +2,36 @@
 
 Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/2162791/EWP+Capital+Job`
 
-EWP jobs list engineered wood products only unless the project scope says
-otherwise.
+EWP jobs включают только engineered wood products, если project scope не говорит
+иначе.
 
-## Count
+## Что считать
 
 - I-joists: TJI, LPI, RED, BCI, RFPI, Nordic.
 - Beams: LVL, PSL, GL.
 - Associated hangers.
-- Rim board and blocking in LFT.
+- Rim board и blocking в LFT.
 
-## Do Not Count By Default
+## По умолчанию не считать
 
-- Ordinary 2x lumber.
+- Обычный 2x lumber.
 - Trusses.
-- Ties such as CS, MST, etc., unless specifically requested.
+- Ties вроде CS, MST и т.д., если их прямо не попросили.
 - Nails.
 
-## Key Rules
+## Главные правила
 
-- TJI 110 series is not converted into 230; list it as shown.
-- Most hangers are top mount on these jobs.
+- TJI 110 series не превращается в 230; пиши как показано.
+- Большинство hangers на таких jobs — top mount.
 - Rim factor: 1.05.
-- Blocking: no factor if continuous.
-- Joists over 16" use HIT hangers, not ITS.
-- If a floor is identical, note it but still list the materials.
+- Blocking: без factor, если continuous.
+- Joists over 16" используют HIT hangers, не ITS.
+- Если floor identical, добавь note, но всё равно перечисли materials.
 
 ## Rim Sizing
 
-If nothing clearly specifies LVL, do not assume `1-3/4 LVL Rim`. Use `Rim` or
-note the product as assumed.
+Если LVL нигде явно не указан, не предполагаем `1-3/4 LVL Rim`. Используй `Rim`
+или помечай product как assumed.
 
 Типичные размеры 24" Rim в порядке предпочтения:
 
@@ -47,13 +47,13 @@ note the product as assumed.
 - В архитектурных чертежах указаны стены с **двойным гипсокартоном (double gypsum / firewall)** — в этих местах могут быть специальные крепления `DGU` или `DGT`. Их выписывать отдельной строкой.
 - TIES (`CS`, `MST` и подобные) на EWP не учитываем — только Hangers.
 
-## Identical Floors
+## Identical floors
 
 Если один этаж идентичен другому, добавляй пометку сверху, но **всё равно перечисляй все материалы**, чтобы не дублировать инфу:
 
 > `4th floor frame is identical to 3rd floor`
 
-## Scope Recap
+## Scope recap
 
 - **Включает**: перекрытия, возможно колонны, косоуры лестниц (`stringers`).
 - **Не считаем**: 2x материалы, соединители для лестниц, Trusses (их ставят другие).

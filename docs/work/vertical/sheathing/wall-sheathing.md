@@ -4,51 +4,52 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/90144770/Wall+Sheath
 
 <figure markdown>
   ![Wall sheathing source priority flow](../../../assets/images/sheathing/wall-sheathing-priority.svg)
-  <figcaption>Wall sheathing priority: Arch/Energy can control exterior, Structural controls shear.</figcaption>
+  <figcaption>Wall Sheathing priority: Arch/Energy может управлять exterior, Structural управляет shear.</figcaption>
 </figure>
 
-## Count
+## Что считать
 
-- Exterior sheathing by Arch / energy / Zip notes.
-- Interior shear wall sheathing by Structural.
-- Loose/box/full-height sheathing separately when project scope distinguishes it.
-- Densglass, FRT, Zip, plywood/OSB, and gypsum-based sheathing as separate lines
-  when the drawings call out different products.
+- Exterior sheathing по Arch / energy / Zip notes.
+- Interior shear wall sheathing по Structural.
+- Loose/box/full-height sheathing отдельно, когда project scope различает их.
+- Densglass, FRT, Zip, plywood/OSB и gypsum-based sheathing отдельными lines,
+  когда drawings показывают разные products.
 
-## Rules
+## Правила
 
-- `19/32"` is `5/8"`, not `1/2"`.
-- Zip on exterior walls supersedes structural sheathing notes, but keep a note.
-- Non-Zip exception: if Arch says 1/2" and Structural says 5/8", use 5/8" for
-  strength.
-- Optional walls may need full-height sheathing; loose sheathing may be box only.
-- Interior shear wall sheathing follows the shear wall schedule, including
-  one-side vs both-sides requirements.
-- Do not hide sheathing inside generic wall SQFT when the reviewer needs product,
-  thickness, side, or location.
+- `19/32"` = `5/8"`, не `1/2"`.
+- Zip на exterior walls перекрывает structural sheathing notes, но оставляй note.
+- Non-Zip exception: если Arch говорит 1/2", а Structural говорит 5/8", бери
+  5/8" для strength.
+- Optional walls могут требовать full-height sheathing; loose sheathing может
+  быть box only.
+- Interior shear wall sheathing идёт по shear wall schedule, включая one-side vs
+  both-sides requirements.
+- Не прячь sheathing в generic wall SQFT, когда reviewer нужны product,
+  thickness, side или location.
 
-## Source Priority
+## Приоритет источников
 
 | Situation | Default takeoff decision |
 | --- | --- |
-| Exterior wall has Zip note | Use Zip; keep Structural conflict as note |
-| Exterior wall has no Zip, Arch 1/2" vs Structural 5/8" | Use 5/8" |
-| Shear wall schedule says both sides | Count both sides, not wall area once |
-| Wall type/elevation calls Densglass | Separate Densglass by level/elevation |
-| FRT exterior wall material | Check if sheathing/blocking/parapet also changes |
+| Exterior wall has Zip note | Используй Zip; Structural conflict оставь как note |
+| Exterior wall has no Zip, Arch 1/2" vs Structural 5/8" | Используй 5/8" |
+| Shear wall schedule says both sides | Считай both sides, не wall area один раз |
+| Wall type/elevation calls Densglass | Разделяй Densglass by level/elevation |
+| FRT exterior wall material | Проверь, меняются ли sheathing/blocking/parapet |
 
-## Check
+## Проверить
 
-- FRT sheathing notes at exterior walls.
-- Densglass at metal walls or specific elevations.
-- Shear wall schedule one-side vs both-sides requirements.
-- Full-height vs box-only sheathing at optional walls.
-- Floor-height sheathing around panelized COM jobs where loose material is still
+- FRT sheathing notes на exterior walls.
+- Densglass на metal walls или specific elevations.
+- Shear wall schedule: one-side vs both-sides requirements.
+- Full-height vs box-only sheathing на optional walls.
+- Floor-height sheathing вокруг panelized COM jobs, где loose material всё ещё
   in scope.
-- Draft stop sheathing at party/demising walls is not the same as shear wall
-  sheathing. Keep draft stop and shear wall quantities separate.
-- Draft stop can appear at walls and between floors; count each supplied scope
-  in the matching section rather than combining it into one wall line.
+- Draft stop sheathing at party/demising walls — это не shear wall sheathing.
+  Draft stop и shear wall quantities держи отдельно.
+- Draft stop может быть на walls и between floors; считай каждый supplied scope
+  в своей section, а не объединяй в одну wall line.
 
 ## Sheathing Material Variants
 
@@ -66,23 +67,23 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/90144770/Wall+Sheath
 - `Zip Tape` идёт **только** в паре с Zip-обшивкой; не забывай добавить отдельную строку.
 
 <!-- confluence-gallery:start -->
-## Confluence Images
+## Картинки из Confluence
 
 Изображения из Confluence размещены на этой странице по исходной теме.
 Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
 
-| Source group | Images | Confluence |
+| Группа источника | Картинки | Confluence |
 | --- | ---: | --- |
 | Sheathing | 2 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/65044604/Sheathing) |
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-093.jpg" title="image-20251030-155040.png">
     <img src="../../../../assets/images/confluence/confluence-093.jpg" alt="Sheathing - wall sheathing reference 01">
-    <div class="kb-gallery__caption">wall sheathing reference 01 (preview, 1299 KB raw)</div>
+    <div class="kb-gallery__caption">wall sheathing reference 01</div>
   </a>
   <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-094.jpg" title="image-20251030-155003.png">
     <img src="../../../../assets/images/confluence/confluence-094.jpg" alt="Sheathing - wall sheathing reference 02">
-    <div class="kb-gallery__caption">wall sheathing reference 02 (preview, 5480 KB raw)</div>
+    <div class="kb-gallery__caption">wall sheathing reference 02</div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

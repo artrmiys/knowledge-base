@@ -2,34 +2,34 @@
 
 <figure markdown>
   ![Hanger selection flow for common estimating decisions](../assets/images/hangers/hanger-selection-flow.svg)
-  <figcaption>Fast hanger selection: start with mount condition, then depth, skew, and firewall condition.</figcaption>
+  <figcaption>Быстрый выбор hanger: сначала mount condition, потом depth, skew и firewall condition.</figcaption>
 </figure>
 
-## Core Selection Rules
+## Основные правила выбора
 
-- Joists 16" and below can use ITS when top-flange hanger is appropriate.
-- Joists over 16" use HIT hangers such as HIT420.
-- ITS cannot be skewed.
-- Skewed top mount: use WP / HUTF family.
-- Skewed face mount: use SUR / HSUR family.
-- DHU/DGU is only for double-gypsum/firewall conditions; verify details.
+- Joists 16" и ниже могут использовать ITS, если подходит top-flange hanger.
+- Joists over 16" используют HIT hangers, например HIT420.
+- ITS нельзя skew.
+- Skewed top mount: используй WP / HUTF family.
+- Skewed face mount: используй SUR / HSUR family.
+- DHU/DGU — только для double-gypsum/firewall conditions; проверяй details.
 
-## Quick Checks
+## Быстрые проверки
 
-| Question | Why it matters |
+| Вопрос | Почему важно |
 | --- | --- |
-| Is the joist deeper than 16"? | Usually changes ITS to HIT |
-| Is the hanger skewed? | ITS is not skewable; use WP/HUTF or SUR/HSUR family |
-| Is it face mount or top flange? | Changes HU/HUC/IUS vs ITS/WP/GLTV |
-| Is there double gypsum/firewall? | DHU/DGU only belongs at those conditions |
-| Is it a beam, glulam, or Cedar member? | May require HHUS/HGUS/CBH/CJTZ special item |
+| Joist глубже 16"? | Обычно это меняет ITS на HIT |
+| Hanger skewed? | ITS не skewable; используй WP/HUTF или SUR/HSUR family |
+| Это face mount или top flange? | Меняет HU/HUC/IUS vs ITS/WP/GLTV |
+| Есть double gypsum/firewall? | DHU/DGU относится только к таким conditions |
+| Это beam, glulam или Cedar member? | Может требовать HHUS/HGUS/CBH/CJTZ special item |
 
-## Reading ITS
+## Как читать ITS
 
 `ITS2.37/11.88`
 
 - `ITS` = I-joist top-flange hanger.
-- `2.37` = joist flange width, about 2 5/16".
+- `2.37` = joist flange width, примерно 2 5/16".
 - `11.88` = joist height, 11 7/8".
 
 ## Beam Face Mount
@@ -100,22 +100,22 @@
 
 ## Special
 
-- CJTZ for Cedar beams/posts.
-- CBH2.37X9.75C-KT for glulam.
-- A35 clips at shearwall connections when required by general notes.
-- After converting repeated hanger counts, re-check the hanger quantity. A
-  framing repeat change can double the hanger count too.
-- `Simpson HDU4-SDS2.5`: use double when it sits on a wall at upper floors; use
-  single when it sits directly on an LVL/steel beam.
+- CJTZ для Cedar beams/posts.
+- CBH2.37X9.75C-KT для glulam.
+- A35 clips на shearwall connections, если требуют general notes.
+- После converting repeated hanger counts перепроверь hanger quantity. Framing
+  repeat change может удвоить hanger count тоже.
+- `Simpson HDU4-SDS2.5`: double, когда sits on a wall at upper floors; single,
+  когда sits directly on an LVL/steel beam.
 
 
 <!-- confluence-gallery:start -->
-## Confluence Images
+## Картинки из Confluence
 
 Изображения из Confluence размещены на этой странице по исходной теме.
 Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
 
-| Source group | Images | Confluence |
+| Группа источника | Картинки | Confluence |
 | --- | ---: | --- |
 | Hangers - Крепления | 4 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/4816897/Hangers+-) |
 | Hangers and Ties Schedule | 2 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/12124257/Hangers+and+Ties+Schedule) |
@@ -123,27 +123,27 @@
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-030.png" title="image-20250224-000530.png">
     <img src="../../assets/images/confluence/confluence-030.png" alt="Hangers and Ties Schedule - hanger schedule/detail reference 01">
-    <div class="kb-gallery__caption">hanger schedule/detail reference 01 (image, 190 KB raw)</div>
+    <div class="kb-gallery__caption">hanger schedule/detail reference 01</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-031.png" title="image-20250224-000451.png">
     <img src="../../assets/images/confluence/confluence-031.png" alt="Hangers and Ties Schedule - hanger schedule/detail reference 02">
-    <div class="kb-gallery__caption">hanger schedule/detail reference 02 (image, 194 KB raw)</div>
+    <div class="kb-gallery__caption">hanger schedule/detail reference 02</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-079.png" title="image-20250211-180817.png">
     <img src="../../assets/images/confluence/confluence-079.png" alt="Hangers - Крепления - hanger schedule/detail reference 01">
-    <div class="kb-gallery__caption">hanger schedule/detail reference 01 (image, 119 KB raw)</div>
+    <div class="kb-gallery__caption">hanger schedule/detail reference 01</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-080.png" title="image-20250211-180929.png">
     <img src="../../assets/images/confluence/confluence-080.png" alt="Hangers - Крепления - hanger schedule/detail reference 02">
-    <div class="kb-gallery__caption">hanger schedule/detail reference 02 (image, 119 KB raw)</div>
+    <div class="kb-gallery__caption">hanger schedule/detail reference 02</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-081.png" title="image-20250211-181023.png">
     <img src="../../assets/images/confluence/confluence-081.png" alt="Hangers - Крепления - hanger schedule/detail reference 03">
-    <div class="kb-gallery__caption">hanger schedule/detail reference 03 (image, 77 KB raw)</div>
+    <div class="kb-gallery__caption">hanger schedule/detail reference 03</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-082.png" title="image-20250211-181056.png">
     <img src="../../assets/images/confluence/confluence-082.png" alt="Hangers - Крепления - hanger schedule/detail reference 04">
-    <div class="kb-gallery__caption">hanger schedule/detail reference 04 (image, 121 KB raw)</div>
+    <div class="kb-gallery__caption">hanger schedule/detail reference 04</div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

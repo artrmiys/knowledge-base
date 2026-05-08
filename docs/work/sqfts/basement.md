@@ -1,13 +1,13 @@
 # Basement SQFT
 
-## Count
+## Что считать
 
 - Basement floor/wall areas that drive sheathing, sleepers, insulation, or
   finish assemblies.
 
-## Check
+## Проверить
 
 - Basement SQFT plywood and sleepers are easy to skip.
-- Under slab / over slab assemblies may still call for underlayment.
-- Existing/podium conditions should not be treated as standard panels without
+- Under slab / over slab assemblies всё ещё могут требовать underlayment.
+- Existing/podium conditions нельзя считать standard panels без
   checking details.

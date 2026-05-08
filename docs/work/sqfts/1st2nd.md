@@ -1,14 +1,14 @@
 # 1st-5th Floor SQFT
 
-## Count
+## Что считать
 
-- Floor areas by level.
-- Assemblies that drive subfloor, underlayment, sound mat, gypcrete, or other
-  material.
+- Floor areas по level.
+- Assemblies, которые управляют subfloor, underlayment, sound mat, gypcrete или
+  other material.
 
-## Rules
+## Правила
 
-- Keep floors separate even when identical.
-- Add a note when a floor is identical to another floor, but list materials
-  separately.
-- Check lower bearing wall notes; 1st/2nd floor walls may need double studs.
+- Floors держи отдельно, даже когда identical.
+- Добавляй note, когда floor identical to another floor, но materials всё равно
+  list separately.
+- Проверяй lower bearing wall notes; 1st/2nd floor walls могут требовать double studs.

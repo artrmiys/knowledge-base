@@ -1,9 +1,9 @@
 # COM Commercial
 
-Commercial jobs are large jobs such as multifamily, office, hotel, and mixed-use
+Commercial jobs — это большие проекты: multifamily, office, hotel, mixed-use
 buildings.
 
-## Default Order
+## Порядок COM
 
 1. Exterior walls.
 2. Corridor walls.
@@ -16,33 +16,33 @@ buildings.
 9. Roof framing.
 10. Deck / porch / balcony / misc.
 
-## Two COM Plan Types
+## Два типа COM plans
 
-| Type | Count | Do not count |
+| Тип | Что считать | Что не считать |
 | --- | --- | --- |
-| Normal walls | Studs, plates, blocking, sheathing, bracing, headers, openings | Items explicitly by others |
+| Normal walls | Studs, plates, blocking, sheathing, bracing, headers, openings | Items, которые явно by others |
 | Panelized walls | Exterior/corridor/demising bracing, floor-height plywood, box sheathing, truss heel, parapet | Studs, plates, blocking, most plywood inside panels |
 
-For panelized exterior walls, usually only Tyvek is counted on exterior walls
-unless drawings/specs call out additional loose material.
+Для panelized exterior walls обычно считаем только Tyvek на exterior walls, если
+drawings/specs не показывают дополнительный loose material.
 
 ## Multipliers
 
-- COM generally uses 1.1 waste on formulas.
-- Do not apply 1.1 twice when a formula references another formula already using
-  waste.
-- Blocking in COM notes may be listed with factor 1, depending on scope.
+- COM обычно использует 1.1 waste в formulas.
+- Не применяй 1.1 дважды, когда formula ссылается на другую formula, где waste
+  уже учтён.
+- Blocking в COM notes может идти с factor 1 — зависит от scope.
 
-## Watch Items
+## Что не пропустить
 
 - FRT scope.
-- Double studs at lower bearing walls.
-- Wall schedule and structural notes.
-- Arch details that complement structural details.
+- Double studs на lower bearing walls.
+- Wall schedule и structural notes.
+- Arch details, которые дополняют structural details.
 - RCP dropped soffits.
-- Underlayment and sound membrane.
+- Underlayment и sound membrane.
 - Shafts, stairs, elevators.
-- Metal studs by client rule.
+- Metal studs по client rule.
 
 ## Wall Order и состав
 
@@ -118,67 +118,67 @@ unless drawings/specs call out additional loose material.
 - Под **Podium** или внутри существующего здания — **не панели**.
 
 <!-- confluence-gallery:start -->
-## Confluence Images
+## Картинки из Confluence
 
 Изображения из Confluence размещены на этой странице по исходной теме.
 Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
 
-| Source group | Images | Confluence |
+| Группа источника | Картинки | Confluence |
 | --- | ---: | --- |
 | COM Commercial Job | 13 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/2359297/COM+Commercial+Job) |
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-053.png" title="image-20250722-030816.png">
     <img src="../../assets/images/confluence/confluence-053.png" alt="COM Commercial Job - COM takeoff workflow/reference 01">
-    <div class="kb-gallery__caption">COM takeoff workflow/reference 01 (image, 323 KB raw)</div>
+    <div class="kb-gallery__caption">COM takeoff workflow/reference 01</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-054.png" title="image-20250717-232520.png">
     <img src="../../assets/images/confluence/confluence-054.png" alt="COM Commercial Job - COM takeoff workflow/reference 02">
-    <div class="kb-gallery__caption">COM takeoff workflow/reference 02 (image, 136 KB raw)</div>
+    <div class="kb-gallery__caption">COM takeoff workflow/reference 02</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-055.png" title="image-20250619-192434.png">
     <img src="../../assets/images/confluence/confluence-055.png" alt="COM Commercial Job - COM takeoff workflow/reference 03">
-    <div class="kb-gallery__caption">COM takeoff workflow/reference 03 (image, 116 KB raw)</div>
+    <div class="kb-gallery__caption">COM takeoff workflow/reference 03</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-056.png" title="image-20250619-192242.png">
     <img src="../../assets/images/confluence/confluence-056.png" alt="COM Commercial Job - COM takeoff workflow/reference 04">
-    <div class="kb-gallery__caption">COM takeoff workflow/reference 04 (image, 95 KB raw)</div>
+    <div class="kb-gallery__caption">COM takeoff workflow/reference 04</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-057.png" title="image-20250619-192221.png">
     <img src="../../assets/images/confluence/confluence-057.png" alt="COM Commercial Job - COM takeoff workflow/reference 05">
-    <div class="kb-gallery__caption">COM takeoff workflow/reference 05 (image, 102 KB raw)</div>
+    <div class="kb-gallery__caption">COM takeoff workflow/reference 05</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-058.png" title="image-20250619-192136.png">
     <img src="../../assets/images/confluence/confluence-058.png" alt="COM Commercial Job - COM takeoff workflow/reference 06">
-    <div class="kb-gallery__caption">COM takeoff workflow/reference 06 (image, 101 KB raw)</div>
+    <div class="kb-gallery__caption">COM takeoff workflow/reference 06</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-059.png" title="image-20250619-191959.png">
     <img src="../../assets/images/confluence/confluence-059.png" alt="COM Commercial Job - COM takeoff workflow/reference 07">
-    <div class="kb-gallery__caption">COM takeoff workflow/reference 07 (image, 57 KB raw)</div>
+    <div class="kb-gallery__caption">COM takeoff workflow/reference 07</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-060.png" title="image-20250619-191937.png">
     <img src="../../assets/images/confluence/confluence-060.png" alt="COM Commercial Job - COM takeoff workflow/reference 08">
-    <div class="kb-gallery__caption">COM takeoff workflow/reference 08 (image, 40 KB raw)</div>
+    <div class="kb-gallery__caption">COM takeoff workflow/reference 08</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-061.png" title="image-20250210-115947.png">
     <img src="../../assets/images/confluence/confluence-061.png" alt="COM Commercial Job - COM takeoff workflow/reference 09">
-    <div class="kb-gallery__caption">COM takeoff workflow/reference 09 (image, 84 KB raw)</div>
+    <div class="kb-gallery__caption">COM takeoff workflow/reference 09</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-062.png" title="image-20250210-115939.png">
     <img src="../../assets/images/confluence/confluence-062.png" alt="COM Commercial Job - COM takeoff workflow/reference 10">
-    <div class="kb-gallery__caption">COM takeoff workflow/reference 10 (image, 156 KB raw)</div>
+    <div class="kb-gallery__caption">COM takeoff workflow/reference 10</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-063.png" title="image-20250210-115920.png">
     <img src="../../assets/images/confluence/confluence-063.png" alt="COM Commercial Job - COM takeoff workflow/reference 11">
-    <div class="kb-gallery__caption">COM takeoff workflow/reference 11 (image, 7 KB raw)</div>
+    <div class="kb-gallery__caption">COM takeoff workflow/reference 11</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-064.png" title="image-20250210-115909.png">
     <img src="../../assets/images/confluence/confluence-064.png" alt="COM Commercial Job - COM takeoff workflow/reference 12">
-    <div class="kb-gallery__caption">COM takeoff workflow/reference 12 (image, 5 KB raw)</div>
+    <div class="kb-gallery__caption">COM takeoff workflow/reference 12</div>
   </a>
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-065.png" title="image-20250210-115855.png">
     <img src="../../assets/images/confluence/confluence-065.png" alt="COM Commercial Job - COM takeoff workflow/reference 13">
-    <div class="kb-gallery__caption">COM takeoff workflow/reference 13 (image, 11 KB raw)</div>
+    <div class="kb-gallery__caption">COM takeoff workflow/reference 13</div>
   </a>
 </div>
 <!-- confluence-gallery:end -->
