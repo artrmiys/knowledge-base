@@ -29,19 +29,23 @@ Corridor walls — это **не только стены вдоль коридо
 Запись в PlanSwift — `cor 2x6 x` / `corr 2x6 x` (см. [Exterior → PlanSwift Wall Names](exterior.md#planswift-wall-names)). Двойной коридор — `cor (2) 2x6 x`.
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Corridor (коридорные стены) | 1 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/65306625/Corridor) |
+??? info "Источник картинок"
+    - Corridor (коридорные стены): [1 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65306625/Corridor)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-125.png" title="image-20251030-161559.png">
-    <img src="../../../../assets/images/confluence/confluence-125.png" alt="Corridor (коридорные стены) - corridor wall reference 01">
-    <div class="kb-gallery__caption">corridor wall reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-125.png" title="image-20251030-161559.png">
+    <img src="../../../../assets/images/confluence/confluence-125.png" alt="Corridor Wall - визуальная проверка: Проверь corridor side, double-wall condition, height и fire/sound requirements.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Corridor Wall - визуальная проверка</div>
+      <div class="kb-rule-card__rule">Проверь corridor side, double-wall condition, height и fire/sound requirements.</div>
+      <div class="kb-rule-card__note">Corridor walls часто отличаются от unit walls по layers и output naming.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

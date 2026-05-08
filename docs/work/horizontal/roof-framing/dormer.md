@@ -14,19 +14,23 @@
 
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Dormer, Shed Dormer (надстроенная крыша) | 1 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/66125835/Dormer+Shed+Dormer) |
+??? info "Источник картинок"
+    - Dormer, Shed Dormer (надстроенная крыша): [1 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/66125835/Dormer+Shed+Dormer)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-148.png" title="image-20250608-051026.png">
-    <img src="../../../../assets/images/confluence/confluence-148.png" alt="Dormer, Shed Dormer (надстроенная крыша) - dormer framing reference 01">
-    <div class="kb-gallery__caption">dormer framing reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-148.png" title="image-20250608-051026.png">
+    <img src="../../../../assets/images/confluence/confluence-148.png" alt="Dormer - визуальная проверка: Проверь dormer walls, roof framing, headers и sheathing scope.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Dormer - визуальная проверка</div>
+      <div class="kb-rule-card__rule">Проверь dormer walls, roof framing, headers и sheathing scope.</div>
+      <div class="kb-rule-card__note">Dormer обычно затрагивает и walls, и roof, поэтому не прячь всё в один item.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

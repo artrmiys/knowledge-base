@@ -37,19 +37,23 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65044582/Openings`
 - Все openings **вырезаются из sheathing** — не забывай subtract при подсчёте Wall Sheathing SQFT.
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Openings | 1 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/65044582/Openings) |
+??? info "Источник картинок"
+    - Openings: [1 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65044582/Openings)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-092.png" title="image-20251030-161759.png">
-    <img src="../../../../assets/images/confluence/confluence-092.png" alt="Openings - opening schedule/reference 01">
-    <div class="kb-gallery__caption">opening schedule/reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-092.png" title="image-20251030-161759.png">
+    <img src="../../../../assets/images/confluence/confluence-092.png" alt="Window/Door Opening - визуальная проверка: Проверь schedule, rough opening, header need и exterior-only scope.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Window/Door Opening - визуальная проверка</div>
+      <div class="kb-rule-card__rule">Проверь schedule, rough opening, header need и exterior-only scope.</div>
+      <div class="kb-rule-card__note">Openings не считай по символам вслепую, если schedule даёт размер/material/fire notes.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

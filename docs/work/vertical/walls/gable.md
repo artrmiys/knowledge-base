@@ -73,51 +73,87 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/63799300/Gable`
 | Tape | `Zip Tape` | `=ОКРВВЕРХ((SQFT*0.4)*1.1;10)` | LFT |
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Gable (треугольные фронтоны) | 9 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/63799300/Gable) |
+??? info "Источник картинок"
+    - Gable (треугольные фронтоны): [9 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/63799300/Gable)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-083.png" title="image-20250603-181446.png">
-    <img src="../../../../assets/images/confluence/confluence-083.png" alt="Gable (треугольные фронтоны) - gable wall reference 01">
-    <div class="kb-gallery__caption">gable wall reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-083.png" title="image-20250603-181446.png">
+    <img src="../../../../assets/images/confluence/confluence-083.png" alt="Gable Wall - визуальная проверка 01: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 01</div>
+      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
+      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-084.png" title="image-20250603-181146.png">
-    <img src="../../../../assets/images/confluence/confluence-084.png" alt="Gable (треугольные фронтоны) - gable wall reference 02">
-    <div class="kb-gallery__caption">gable wall reference 02</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-084.png" title="image-20250603-181146.png">
+    <img src="../../../../assets/images/confluence/confluence-084.png" alt="Gable Wall - визуальная проверка 02: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 02</div>
+      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
+      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-085.png" title="image-20250603-180924.png">
-    <img src="../../../../assets/images/confluence/confluence-085.png" alt="Gable (треугольные фронтоны) - gable wall reference 03">
-    <div class="kb-gallery__caption">gable wall reference 03</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-085.png" title="image-20250603-180924.png">
+    <img src="../../../../assets/images/confluence/confluence-085.png" alt="Gable Wall - визуальная проверка 03: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 03</div>
+      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
+      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-086.png" title="image-20250603-180752.png">
-    <img src="../../../../assets/images/confluence/confluence-086.png" alt="Gable (треугольные фронтоны) - gable wall reference 04">
-    <div class="kb-gallery__caption">gable wall reference 04</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-086.png" title="image-20250603-180752.png">
+    <img src="../../../../assets/images/confluence/confluence-086.png" alt="Gable Wall - визуальная проверка 04: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 04</div>
+      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
+      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-087.png" title="image-20250603-180136.png">
-    <img src="../../../../assets/images/confluence/confluence-087.png" alt="Gable (треугольные фронтоны) - gable wall reference 05">
-    <div class="kb-gallery__caption">gable wall reference 05</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-087.png" title="image-20250603-180136.png">
+    <img src="../../../../assets/images/confluence/confluence-087.png" alt="Gable Wall - визуальная проверка 05: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 05</div>
+      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
+      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-088.png" title="image-20250603-174813.png">
-    <img src="../../../../assets/images/confluence/confluence-088.png" alt="Gable (треугольные фронтоны) - gable wall reference 06">
-    <div class="kb-gallery__caption">gable wall reference 06</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-088.png" title="image-20250603-174813.png">
+    <img src="../../../../assets/images/confluence/confluence-088.png" alt="Gable Wall - визуальная проверка 06: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 06</div>
+      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
+      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-089.png" title="image-20250603-172238.png">
-    <img src="../../../../assets/images/confluence/confluence-089.png" alt="Gable (треугольные фронтоны) - gable wall reference 07">
-    <div class="kb-gallery__caption">gable wall reference 07</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-089.png" title="image-20250603-172238.png">
+    <img src="../../../../assets/images/confluence/confluence-089.png" alt="Gable Wall - визуальная проверка 07: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 07</div>
+      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
+      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-090.png" title="image-20250603-172109.png">
-    <img src="../../../../assets/images/confluence/confluence-090.png" alt="Gable (треугольные фронтоны) - gable wall reference 08">
-    <div class="kb-gallery__caption">gable wall reference 08</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-090.png" title="image-20250603-172109.png">
+    <img src="../../../../assets/images/confluence/confluence-090.png" alt="Gable Wall - визуальная проверка 08: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 08</div>
+      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
+      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-091.png" title="image-20250603-172051.png">
-    <img src="../../../../assets/images/confluence/confluence-091.png" alt="Gable (треугольные фронтоны) - gable wall reference 09">
-    <div class="kb-gallery__caption">gable wall reference 09</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-091.png" title="image-20250603-172051.png">
+    <img src="../../../../assets/images/confluence/confluence-091.png" alt="Gable Wall - визуальная проверка 09: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 09</div>
+      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
+      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

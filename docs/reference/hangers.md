@@ -110,40 +110,64 @@
 
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Hangers - Крепления | 4 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/4816897/Hangers+-) |
-| Hangers and Ties Schedule | 2 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/12124257/Hangers+and+Ties+Schedule) |
+??? info "Источник картинок"
+    - Hangers - Крепления: [4 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/4816897/Hangers+-)
+    - Hangers and Ties Schedule: [2 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/12124257/Hangers+and+Ties+Schedule)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-030.png" title="image-20250224-000530.png">
-    <img src="../../assets/images/confluence/confluence-030.png" alt="Hangers and Ties Schedule - hanger schedule/detail reference 01">
-    <div class="kb-gallery__caption">hanger schedule/detail reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-030.png" title="image-20250224-000530.png">
+    <img src="../../assets/images/confluence/confluence-030.png" alt="Hanger - schedule/detail проверка 01: Сверь hanger family, size, skew, top/face mount и support condition.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Hanger - schedule/detail проверка 01</div>
+      <div class="kb-rule-card__rule">Сверь hanger family, size, skew, top/face mount и support condition.</div>
+      <div class="kb-rule-card__note">Hanger не выбирается только по ширине: смотри material, bearing и detail.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-031.png" title="image-20250224-000451.png">
-    <img src="../../assets/images/confluence/confluence-031.png" alt="Hangers and Ties Schedule - hanger schedule/detail reference 02">
-    <div class="kb-gallery__caption">hanger schedule/detail reference 02</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-031.png" title="image-20250224-000451.png">
+    <img src="../../assets/images/confluence/confluence-031.png" alt="Hanger - schedule/detail проверка 02: Сверь hanger family, size, skew, top/face mount и support condition.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Hanger - schedule/detail проверка 02</div>
+      <div class="kb-rule-card__rule">Сверь hanger family, size, skew, top/face mount и support condition.</div>
+      <div class="kb-rule-card__note">Hanger не выбирается только по ширине: смотри material, bearing и detail.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-079.png" title="image-20250211-180817.png">
-    <img src="../../assets/images/confluence/confluence-079.png" alt="Hangers - Крепления - hanger schedule/detail reference 01">
-    <div class="kb-gallery__caption">hanger schedule/detail reference 01</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-079.png" title="image-20250211-180817.png">
+    <img src="../../assets/images/confluence/confluence-079.png" alt="Hanger - schedule/detail проверка 03: Сверь hanger family, size, skew, top/face mount и support condition.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Hanger - schedule/detail проверка 03</div>
+      <div class="kb-rule-card__rule">Сверь hanger family, size, skew, top/face mount и support condition.</div>
+      <div class="kb-rule-card__note">Hanger не выбирается только по ширине: смотри material, bearing и detail.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-080.png" title="image-20250211-180929.png">
-    <img src="../../assets/images/confluence/confluence-080.png" alt="Hangers - Крепления - hanger schedule/detail reference 02">
-    <div class="kb-gallery__caption">hanger schedule/detail reference 02</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-080.png" title="image-20250211-180929.png">
+    <img src="../../assets/images/confluence/confluence-080.png" alt="Hanger - schedule/detail проверка 04: Сверь hanger family, size, skew, top/face mount и support condition.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Hanger - schedule/detail проверка 04</div>
+      <div class="kb-rule-card__rule">Сверь hanger family, size, skew, top/face mount и support condition.</div>
+      <div class="kb-rule-card__note">Hanger не выбирается только по ширине: смотри material, bearing и detail.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-081.png" title="image-20250211-181023.png">
-    <img src="../../assets/images/confluence/confluence-081.png" alt="Hangers - Крепления - hanger schedule/detail reference 03">
-    <div class="kb-gallery__caption">hanger schedule/detail reference 03</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-081.png" title="image-20250211-181023.png">
+    <img src="../../assets/images/confluence/confluence-081.png" alt="Hanger - schedule/detail проверка 05: Сверь hanger family, size, skew, top/face mount и support condition.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Hanger - schedule/detail проверка 05</div>
+      <div class="kb-rule-card__rule">Сверь hanger family, size, skew, top/face mount и support condition.</div>
+      <div class="kb-rule-card__note">Hanger не выбирается только по ширине: смотри material, bearing и detail.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-082.png" title="image-20250211-181056.png">
-    <img src="../../assets/images/confluence/confluence-082.png" alt="Hangers - Крепления - hanger schedule/detail reference 04">
-    <div class="kb-gallery__caption">hanger schedule/detail reference 04</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-082.png" title="image-20250211-181056.png">
+    <img src="../../assets/images/confluence/confluence-082.png" alt="Hanger - schedule/detail проверка 06: Сверь hanger family, size, skew, top/face mount и support condition.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Hanger - schedule/detail проверка 06</div>
+      <div class="kb-rule-card__rule">Сверь hanger family, size, skew, top/face mount и support condition.</div>
+      <div class="kb-rule-card__note">Hanger не выбирается только по ширине: смотри material, bearing и detail.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

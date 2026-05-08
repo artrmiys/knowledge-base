@@ -127,108 +127,200 @@
 
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| --- | 19 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/11796656/---) |
-| Need to sort | 4 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/229638146/Need+to+sort) |
+??? info "Источник картинок"
+    - ---: [19 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/11796656/---)
+    - Need to sort: [4 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/229638146/Need+to+sort)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-011.png" title="image-20250224-003901.png">
-    <img src="../../assets/images/confluence/confluence-011.png" alt="--- - unsorted field rule/reference 01">
-    <div class="kb-gallery__caption">unsorted field rule/reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-011.png" title="image-20250224-003901.png">
+    <img src="../../assets/images/confluence/confluence-011.png" alt="QA feedback - визуальная проверка 01: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 01</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-012.png" title="image-20250224-003844.png">
-    <img src="../../assets/images/confluence/confluence-012.png" alt="--- - unsorted field rule/reference 02">
-    <div class="kb-gallery__caption">unsorted field rule/reference 02</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-012.png" title="image-20250224-003844.png">
+    <img src="../../assets/images/confluence/confluence-012.png" alt="QA feedback - визуальная проверка 02: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 02</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-013.png" title="image-20250224-003828.png">
-    <img src="../../assets/images/confluence/confluence-013.png" alt="--- - unsorted field rule/reference 03">
-    <div class="kb-gallery__caption">unsorted field rule/reference 03</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-013.png" title="image-20250224-003828.png">
+    <img src="../../assets/images/confluence/confluence-013.png" alt="QA feedback - визуальная проверка 03: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 03</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-014.png" title="image-20250224-003817.png">
-    <img src="../../assets/images/confluence/confluence-014.png" alt="--- - unsorted field rule/reference 04">
-    <div class="kb-gallery__caption">unsorted field rule/reference 04</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-014.png" title="image-20250224-003817.png">
+    <img src="../../assets/images/confluence/confluence-014.png" alt="QA feedback - визуальная проверка 04: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 04</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-015.png" title="image-20250224-003802.png">
-    <img src="../../assets/images/confluence/confluence-015.png" alt="--- - unsorted field rule/reference 05">
-    <div class="kb-gallery__caption">unsorted field rule/reference 05</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-015.png" title="image-20250224-003802.png">
+    <img src="../../assets/images/confluence/confluence-015.png" alt="QA feedback - визуальная проверка 05: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 05</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-016.png" title="image-20250224-003754.png">
-    <img src="../../assets/images/confluence/confluence-016.png" alt="--- - unsorted field rule/reference 06">
-    <div class="kb-gallery__caption">unsorted field rule/reference 06</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-016.png" title="image-20250224-003754.png">
+    <img src="../../assets/images/confluence/confluence-016.png" alt="QA feedback - визуальная проверка 06: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 06</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-017.png" title="image-20250224-003754.png">
-    <img src="../../assets/images/confluence/confluence-017.png" alt="--- - unsorted field rule/reference 07">
-    <div class="kb-gallery__caption">unsorted field rule/reference 07</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-017.png" title="image-20250224-003754.png">
+    <img src="../../assets/images/confluence/confluence-017.png" alt="QA feedback - визуальная проверка 07: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 07</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-018.png" title="image-20250224-003743.png">
-    <img src="../../assets/images/confluence/confluence-018.png" alt="--- - unsorted field rule/reference 08">
-    <div class="kb-gallery__caption">unsorted field rule/reference 08</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-018.png" title="image-20250224-003743.png">
+    <img src="../../assets/images/confluence/confluence-018.png" alt="QA feedback - визуальная проверка 08: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 08</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-019.png" title="image-20250224-003657.png">
-    <img src="../../assets/images/confluence/confluence-019.png" alt="--- - unsorted field rule/reference 09">
-    <div class="kb-gallery__caption">unsorted field rule/reference 09</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-019.png" title="image-20250224-003657.png">
+    <img src="../../assets/images/confluence/confluence-019.png" alt="QA feedback - визуальная проверка 09: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 09</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-020.png" title="image-20250224-003439.png">
-    <img src="../../assets/images/confluence/confluence-020.png" alt="--- - unsorted field rule/reference 10">
-    <div class="kb-gallery__caption">unsorted field rule/reference 10</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-020.png" title="image-20250224-003439.png">
+    <img src="../../assets/images/confluence/confluence-020.png" alt="QA feedback - визуальная проверка 10: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 10</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-021.png" title="image-20250224-003424.png">
-    <img src="../../assets/images/confluence/confluence-021.png" alt="--- - unsorted field rule/reference 11">
-    <div class="kb-gallery__caption">unsorted field rule/reference 11</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-021.png" title="image-20250224-003424.png">
+    <img src="../../assets/images/confluence/confluence-021.png" alt="QA feedback - визуальная проверка 11: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 11</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-022.png" title="image-20250224-003400.png">
-    <img src="../../assets/images/confluence/confluence-022.png" alt="--- - unsorted field rule/reference 12">
-    <div class="kb-gallery__caption">unsorted field rule/reference 12</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-022.png" title="image-20250224-003400.png">
+    <img src="../../assets/images/confluence/confluence-022.png" alt="QA feedback - визуальная проверка 12: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 12</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-023.png" title="image-20250224-002726.png">
-    <img src="../../assets/images/confluence/confluence-023.png" alt="--- - unsorted field rule/reference 13">
-    <div class="kb-gallery__caption">unsorted field rule/reference 13</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-023.png" title="image-20250224-002726.png">
+    <img src="../../assets/images/confluence/confluence-023.png" alt="QA feedback - визуальная проверка 13: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 13</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-024.png" title="image-20250224-002706.png">
-    <img src="../../assets/images/confluence/confluence-024.png" alt="--- - unsorted field rule/reference 14">
-    <div class="kb-gallery__caption">unsorted field rule/reference 14</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-024.png" title="image-20250224-002706.png">
+    <img src="../../assets/images/confluence/confluence-024.png" alt="QA feedback - визуальная проверка 14: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 14</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-025.png" title="image-20250224-002653.png">
-    <img src="../../assets/images/confluence/confluence-025.png" alt="--- - unsorted field rule/reference 15">
-    <div class="kb-gallery__caption">unsorted field rule/reference 15</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-025.png" title="image-20250224-002653.png">
+    <img src="../../assets/images/confluence/confluence-025.png" alt="QA feedback - визуальная проверка 15: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 15</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-026.png" title="image-20250224-002632.png">
-    <img src="../../assets/images/confluence/confluence-026.png" alt="--- - unsorted field rule/reference 16">
-    <div class="kb-gallery__caption">unsorted field rule/reference 16</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-026.png" title="image-20250224-002632.png">
+    <img src="../../assets/images/confluence/confluence-026.png" alt="QA feedback - визуальная проверка 16: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 16</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-027.png" title="image-20250224-002609.png">
-    <img src="../../assets/images/confluence/confluence-027.png" alt="--- - unsorted field rule/reference 17">
-    <div class="kb-gallery__caption">unsorted field rule/reference 17</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-027.png" title="image-20250224-002609.png">
+    <img src="../../assets/images/confluence/confluence-027.png" alt="QA feedback - визуальная проверка 17: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 17</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-028.png" title="image-20250224-002542.png">
-    <img src="../../assets/images/confluence/confluence-028.png" alt="--- - unsorted field rule/reference 18">
-    <div class="kb-gallery__caption">unsorted field rule/reference 18</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-028.png" title="image-20250224-002542.png">
+    <img src="../../assets/images/confluence/confluence-028.png" alt="QA feedback - визуальная проверка 18: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 18</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-029.png" title="image-20250224-002525.png">
-    <img src="../../assets/images/confluence/confluence-029.png" alt="--- - unsorted field rule/reference 19">
-    <div class="kb-gallery__caption">unsorted field rule/reference 19</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-029.png" title="image-20250224-002525.png">
+    <img src="../../assets/images/confluence/confluence-029.png" alt="QA feedback - визуальная проверка 19: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 19</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-049.png" title="image-20250214-155931.png">
-    <img src="../../assets/images/confluence/confluence-049.png" alt="Need to sort - unsorted field rule/reference 01">
-    <div class="kb-gallery__caption">unsorted field rule/reference 01</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-049.png" title="image-20250214-155931.png">
+    <img src="../../assets/images/confluence/confluence-049.png" alt="QA feedback - визуальная проверка 20: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 20</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-050.png" title="image-20250214-155410.png">
-    <img src="../../assets/images/confluence/confluence-050.png" alt="Need to sort - unsorted field rule/reference 02">
-    <div class="kb-gallery__caption">unsorted field rule/reference 02</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-050.png" title="image-20250214-155410.png">
+    <img src="../../assets/images/confluence/confluence-050.png" alt="QA feedback - визуальная проверка 21: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 21</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-051.png" title="image-20250214-150802.png">
-    <img src="../../assets/images/confluence/confluence-051.png" alt="Need to sort - unsorted field rule/reference 03">
-    <div class="kb-gallery__caption">unsorted field rule/reference 03</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-051.png" title="image-20250214-150802.png">
+    <img src="../../assets/images/confluence/confluence-051.png" alt="QA feedback - визуальная проверка 22: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 22</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-052.png" title="image-20250224-004123.png">
-    <img src="../../assets/images/confluence/confluence-052.png" alt="Need to sort - unsorted field rule/reference 04">
-    <div class="kb-gallery__caption">unsorted field rule/reference 04</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-052.png" title="image-20250224-004123.png">
+    <img src="../../assets/images/confluence/confluence-052.png" alt="QA feedback - визуальная проверка 23: Преврати замечание в конкретный check перед отправкой.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">QA feedback - визуальная проверка 23</div>
+      <div class="kb-rule-card__rule">Преврати замечание в конкретный check перед отправкой.</div>
+      <div class="kb-rule-card__note">Если feedback повторяется, держи правило в основной секции страницы.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

@@ -67,23 +67,31 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/90144770/Wall+Sheath
 - `Zip Tape` идёт **только** в паре с Zip-обшивкой; не забывай добавить отдельную строку.
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Sheathing | 2 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/65044604/Sheathing) |
+??? info "Источник картинок"
+    - Sheathing: [2 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65044604/Sheathing)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-093.jpg" title="image-20251030-155040.png">
-    <img src="../../../../assets/images/confluence/confluence-093.jpg" alt="Sheathing - wall sheathing reference 01">
-    <div class="kb-gallery__caption">wall sheathing reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-093.jpg" title="image-20251030-155040.png">
+    <img src="../../../../assets/images/confluence/confluence-093.jpg" alt="Wall Sheathing - визуальная проверка 01: Проверь material/thickness, side, Zip/Densglass/FRT и shear schedule.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Wall Sheathing - визуальная проверка 01</div>
+      <div class="kb-rule-card__rule">Проверь material/thickness, side, Zip/Densglass/FRT и shear schedule.</div>
+      <div class="kb-rule-card__note">Sheathing держи отдельной строкой, если product, side или location важны для review.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-094.jpg" title="image-20251030-155003.png">
-    <img src="../../../../assets/images/confluence/confluence-094.jpg" alt="Sheathing - wall sheathing reference 02">
-    <div class="kb-gallery__caption">wall sheathing reference 02</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-094.jpg" title="image-20251030-155003.png">
+    <img src="../../../../assets/images/confluence/confluence-094.jpg" alt="Wall Sheathing - визуальная проверка 02: Проверь material/thickness, side, Zip/Densglass/FRT и shear schedule.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Wall Sheathing - визуальная проверка 02</div>
+      <div class="kb-rule-card__rule">Проверь material/thickness, side, Zip/Densglass/FRT и shear schedule.</div>
+      <div class="kb-rule-card__note">Sheathing держи отдельной строкой, если product, side или location важны для review.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

@@ -33,23 +33,31 @@
 
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Dbl Trpl Rafters (двойные тройные стропила) | 2 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/66093077/Dbl+Trpl+Rafters) |
+??? info "Источник картинок"
+    - Dbl Trpl Rafters (двойные тройные стропила): [2 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/66093077/Dbl+Trpl+Rafters)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-140.png" title="image-20250608-052309.png">
-    <img src="../../../../assets/images/confluence/confluence-140.png" alt="Dbl Trpl Rafters (двойные тройные стропила) - double/triple rafter reference 01">
-    <div class="kb-gallery__caption">double/triple rafter reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-140.png" title="image-20250608-052309.png">
+    <img src="../../../../assets/images/confluence/confluence-140.png" alt="Double/Triple Rafters - визуальная проверка 01: Проверь где rafters doubled/tripled, длину и support/hanger condition.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Double/Triple Rafters - визуальная проверка 01</div>
+      <div class="kb-rule-card__rule">Проверь где rafters doubled/tripled, длину и support/hanger condition.</div>
+      <div class="kb-rule-card__note">Не считай как обычные rafters, если detail/schedule показывает built-up condition.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-141.png" title="image-20250608-052021.png">
-    <img src="../../../../assets/images/confluence/confluence-141.png" alt="Dbl Trpl Rafters (двойные тройные стропила) - double/triple rafter reference 02">
-    <div class="kb-gallery__caption">double/triple rafter reference 02</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-141.png" title="image-20250608-052021.png">
+    <img src="../../../../assets/images/confluence/confluence-141.png" alt="Double/Triple Rafters - визуальная проверка 02: Проверь где rafters doubled/tripled, длину и support/hanger condition.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Double/Triple Rafters - визуальная проверка 02</div>
+      <div class="kb-rule-card__rule">Проверь где rafters doubled/tripled, длину и support/hanger condition.</div>
+      <div class="kb-rule-card__note">Не считай как обычные rafters, если detail/schedule показывает built-up condition.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

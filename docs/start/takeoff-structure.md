@@ -186,123 +186,227 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65961989/Deck+Porch+
 | `l 1` | `2x10` |
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Roof Framing - конструкции крыши | 2 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/65962048/Roof+Framing+-) |
-| Vertical Constructions | 10 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/65110035/Vertical+Constructions) |
-| Walls | 3 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/65175555/Walls) |
-| work | 9 | [source](https://ewood.atlassian.net/wiki/spaces/work/overview) |
-| work - large GIF attachments | 2 | [source](https://ewood.atlassian.net/wiki/spaces/work/overview) |
+??? info "Источник картинок"
+    - Roof Framing - конструкции крыши: [2 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65962048/Roof+Framing+-)
+    - Vertical Constructions: [10 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65110035/Vertical+Constructions)
+    - Walls: [3 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65175555/Walls)
+    - work: [9 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/overview)
+    - work - large GIF attachments: [2 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/overview)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-032.jpg" title="3.gif">
-    <img src="../../assets/images/confluence/confluence-032.jpg" alt="work - large GIF attachments - takeoff structure reference 01">
-    <div class="kb-gallery__caption">takeoff structure reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-032.jpg" title="3.gif">
+    <img src="../../assets/images/confluence/confluence-032.jpg" alt="PlanSwift structure - визуальная проверка 01: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 01</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-033.jpg" title="1.gif">
-    <img src="../../assets/images/confluence/confluence-033.jpg" alt="work - large GIF attachments - takeoff structure reference 02">
-    <div class="kb-gallery__caption">takeoff structure reference 02</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-033.jpg" title="1.gif">
+    <img src="../../assets/images/confluence/confluence-033.jpg" alt="PlanSwift structure - визуальная проверка 02: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 02</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-034.png" title="image-20251103-183255.png">
-    <img src="../../assets/images/confluence/confluence-034.png" alt="work - takeoff structure reference 01">
-    <div class="kb-gallery__caption">takeoff structure reference 01</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-034.png" title="image-20251103-183255.png">
+    <img src="../../assets/images/confluence/confluence-034.png" alt="PlanSwift structure - визуальная проверка 03: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 03</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-035.jpg" title="struct.jpg">
-    <img src="../../assets/images/confluence/confluence-035.jpg" alt="work - takeoff structure reference 02">
-    <div class="kb-gallery__caption">takeoff structure reference 02</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-035.jpg" title="struct.jpg">
+    <img src="../../assets/images/confluence/confluence-035.jpg" alt="PlanSwift structure - визуальная проверка 04: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 04</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-036.png" title="image-20250619-200240.png">
-    <img src="../../assets/images/confluence/confluence-036.png" alt="work - takeoff structure reference 03">
-    <div class="kb-gallery__caption">takeoff structure reference 03</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-036.png" title="image-20250619-200240.png">
+    <img src="../../assets/images/confluence/confluence-036.png" alt="PlanSwift structure - визуальная проверка 05: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 05</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-037.png" title="image-20250619-200019.png">
-    <img src="../../assets/images/confluence/confluence-037.png" alt="work - takeoff structure reference 04">
-    <div class="kb-gallery__caption">takeoff structure reference 04</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-037.png" title="image-20250619-200019.png">
+    <img src="../../assets/images/confluence/confluence-037.png" alt="PlanSwift structure - визуальная проверка 06: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 06</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-038.png" title="image-20250524-215800.png">
-    <img src="../../assets/images/confluence/confluence-038.png" alt="work - takeoff structure reference 05">
-    <div class="kb-gallery__caption">takeoff structure reference 05</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-038.png" title="image-20250524-215800.png">
+    <img src="../../assets/images/confluence/confluence-038.png" alt="PlanSwift structure - визуальная проверка 07: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 07</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-039.png" title="Без-имени-2.png">
-    <img src="../../assets/images/confluence/confluence-039.png" alt="work - takeoff structure reference 06">
-    <div class="kb-gallery__caption">takeoff structure reference 06</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-039.png" title="Без-имени-2.png">
+    <img src="../../assets/images/confluence/confluence-039.png" alt="PlanSwift structure - визуальная проверка 08: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 08</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-040.png" title="c27beda1-ce6d-4252-98d2-63be7f261548.png">
-    <img src="../../assets/images/confluence/confluence-040.png" alt="work - takeoff structure reference 07">
-    <div class="kb-gallery__caption">takeoff structure reference 07</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-040.png" title="c27beda1-ce6d-4252-98d2-63be7f261548.png">
+    <img src="../../assets/images/confluence/confluence-040.png" alt="PlanSwift structure - визуальная проверка 09: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 09</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-041.png" title="e8eea12d-25c0-4ac0-99ca-8bd8764ab780.png">
-    <img src="../../assets/images/confluence/confluence-041.png" alt="work - takeoff structure reference 08">
-    <div class="kb-gallery__caption">takeoff structure reference 08</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-041.png" title="e8eea12d-25c0-4ac0-99ca-8bd8764ab780.png">
+    <img src="../../assets/images/confluence/confluence-041.png" alt="PlanSwift structure - визуальная проверка 10: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 10</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-042.png" title="image-20250210-113643.png">
-    <img src="../../assets/images/confluence/confluence-042.png" alt="work - takeoff structure reference 09">
-    <div class="kb-gallery__caption">takeoff structure reference 09</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-042.png" title="image-20250210-113643.png">
+    <img src="../../assets/images/confluence/confluence-042.png" alt="PlanSwift structure - визуальная проверка 11: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 11</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-096.png" title="image-20250625-035545.png">
-    <img src="../../assets/images/confluence/confluence-096.png" alt="Vertical Constructions - vertical construction overview 01">
-    <div class="kb-gallery__caption">vertical construction overview 01</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-096.png" title="image-20250625-035545.png">
+    <img src="../../assets/images/confluence/confluence-096.png" alt="PlanSwift structure - визуальная проверка 12: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 12</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-097.png" title="image-20250625-035410.png">
-    <img src="../../assets/images/confluence/confluence-097.png" alt="Vertical Constructions - vertical construction overview 02">
-    <div class="kb-gallery__caption">vertical construction overview 02</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-097.png" title="image-20250625-035410.png">
+    <img src="../../assets/images/confluence/confluence-097.png" alt="PlanSwift structure - визуальная проверка 13: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 13</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-098.png" title="image-20250625-035202.png">
-    <img src="../../assets/images/confluence/confluence-098.png" alt="Vertical Constructions - vertical construction overview 03">
-    <div class="kb-gallery__caption">vertical construction overview 03</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-098.png" title="image-20250625-035202.png">
+    <img src="../../assets/images/confluence/confluence-098.png" alt="PlanSwift structure - визуальная проверка 14: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 14</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-099.png" title="image-20250625-034853.png">
-    <img src="../../assets/images/confluence/confluence-099.png" alt="Vertical Constructions - vertical construction overview 04">
-    <div class="kb-gallery__caption">vertical construction overview 04</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-099.png" title="image-20250625-034853.png">
+    <img src="../../assets/images/confluence/confluence-099.png" alt="PlanSwift structure - визуальная проверка 15: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 15</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-100.png" title="image-20250625-034719.png">
-    <img src="../../assets/images/confluence/confluence-100.png" alt="Vertical Constructions - vertical construction overview 05">
-    <div class="kb-gallery__caption">vertical construction overview 05</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-100.png" title="image-20250625-034719.png">
+    <img src="../../assets/images/confluence/confluence-100.png" alt="PlanSwift structure - визуальная проверка 16: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 16</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-101.png" title="image-20250625-034639.png">
-    <img src="../../assets/images/confluence/confluence-101.png" alt="Vertical Constructions - vertical construction overview 06">
-    <div class="kb-gallery__caption">vertical construction overview 06</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-101.png" title="image-20250625-034639.png">
+    <img src="../../assets/images/confluence/confluence-101.png" alt="PlanSwift structure - визуальная проверка 17: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 17</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-102.png" title="image-20250625-034357.png">
-    <img src="../../assets/images/confluence/confluence-102.png" alt="Vertical Constructions - vertical construction overview 07">
-    <div class="kb-gallery__caption">vertical construction overview 07</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-102.png" title="image-20250625-034357.png">
+    <img src="../../assets/images/confluence/confluence-102.png" alt="PlanSwift structure - визуальная проверка 18: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 18</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-103.png" title="image-20250625-034132.png">
-    <img src="../../assets/images/confluence/confluence-103.png" alt="Vertical Constructions - vertical construction overview 08">
-    <div class="kb-gallery__caption">vertical construction overview 08</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-103.png" title="image-20250625-034132.png">
+    <img src="../../assets/images/confluence/confluence-103.png" alt="PlanSwift structure - визуальная проверка 19: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 19</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-104.png" title="image-20250625-033747.png">
-    <img src="../../assets/images/confluence/confluence-104.png" alt="Vertical Constructions - vertical construction overview 09">
-    <div class="kb-gallery__caption">vertical construction overview 09</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-104.png" title="image-20250625-033747.png">
+    <img src="../../assets/images/confluence/confluence-104.png" alt="PlanSwift structure - визуальная проверка 20: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 20</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-105.png" title="image-20250625-033553.png">
-    <img src="../../assets/images/confluence/confluence-105.png" alt="Vertical Constructions - vertical construction overview 10">
-    <div class="kb-gallery__caption">vertical construction overview 10</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-105.png" title="image-20250625-033553.png">
+    <img src="../../assets/images/confluence/confluence-105.png" alt="PlanSwift structure - визуальная проверка 21: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 21</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-106.png" title="image-20250625-041034.png">
-    <img src="../../assets/images/confluence/confluence-106.png" alt="Walls - wall type overview 01">
-    <div class="kb-gallery__caption">wall type overview 01</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-106.png" title="image-20250625-041034.png">
+    <img src="../../assets/images/confluence/confluence-106.png" alt="PlanSwift structure - визуальная проверка 22: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 22</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-107.png" title="image-20250625-035805.png">
-    <img src="../../assets/images/confluence/confluence-107.png" alt="Walls - wall type overview 02">
-    <div class="kb-gallery__caption">wall type overview 02</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-107.png" title="image-20250625-035805.png">
+    <img src="../../assets/images/confluence/confluence-107.png" alt="PlanSwift structure - визуальная проверка 23: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 23</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-108.png" title="image-20250625-035800.png">
-    <img src="../../assets/images/confluence/confluence-108.png" alt="Walls - wall type overview 03">
-    <div class="kb-gallery__caption">wall type overview 03</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-108.png" title="image-20250625-035800.png">
+    <img src="../../assets/images/confluence/confluence-108.png" alt="PlanSwift structure - визуальная проверка 24: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 24</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-135.png" title="image-20250603-180752.png">
-    <img src="../../assets/images/confluence/confluence-135.png" alt="Roof Framing - конструкции крыши - roof framing overview 01">
-    <div class="kb-gallery__caption">roof framing overview 01</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-135.png" title="image-20250603-180752.png">
+    <img src="../../assets/images/confluence/confluence-135.png" alt="PlanSwift structure - визуальная проверка 25: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 25</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-136.png" title="image-20250603-180924.png">
-    <img src="../../assets/images/confluence/confluence-136.png" alt="Roof Framing - конструкции крыши - roof framing overview 02">
-    <div class="kb-gallery__caption">roof framing overview 02</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-136.png" title="image-20250603-180924.png">
+    <img src="../../assets/images/confluence/confluence-136.png" alt="PlanSwift structure - визуальная проверка 26: Сверь folders, naming и vertical/horizontal split перед output.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">PlanSwift structure - визуальная проверка 26</div>
+      <div class="kb-rule-card__rule">Сверь folders, naming и vertical/horizontal split перед output.</div>
+      <div class="kb-rule-card__note">Картинки нужны как контроль структуры, чтобы не смешать work types.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

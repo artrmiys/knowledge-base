@@ -11,19 +11,23 @@
 
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Valley (балка примыкания крыши внутрь) | 1 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/66093097/Valley) |
+??? info "Источник картинок"
+    - Valley (балка примыкания крыши внутрь): [1 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/66093097/Valley)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-143.png" title="image-20250608-030703.png">
-    <img src="../../../../assets/images/confluence/confluence-143.png" alt="Valley (балка примыкания крыши внутрь) - valley rafter/reference 01">
-    <div class="kb-gallery__caption">valley rafter/reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-143.png" title="image-20250608-030703.png">
+    <img src="../../../../assets/images/confluence/confluence-143.png" alt="Valley - визуальная проверка: Проверь inside roof intersection, length и material callout.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Valley - визуальная проверка</div>
+      <div class="kb-rule-card__rule">Проверь inside roof intersection, length и material callout.</div>
+      <div class="kb-rule-card__note">Valley не смешивай с Hip: это внутреннее примыкание roof planes.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

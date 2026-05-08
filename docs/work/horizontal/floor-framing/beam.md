@@ -55,31 +55,47 @@
 См. [Hangers](../../../reference/hangers.md) для подбора крепления под ширину/высоту built-up.
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Beam - Балки | 4 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/3735554/Beam+-) |
+??? info "Источник картинок"
+    - Beam - Балки: [4 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/3735554/Beam+-)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-071.png" title="image-20250211-181056.png">
-    <img src="../../../../assets/images/confluence/confluence-071.png" alt="Beam - Балки - beam takeoff/reference 01">
-    <div class="kb-gallery__caption">beam takeoff/reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-071.png" title="image-20250211-181056.png">
+    <img src="../../../../assets/images/confluence/confluence-071.png" alt="Beam - визуальная проверка 01: Проверь size, ply count, length, bearing и hanger condition.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Beam - визуальная проверка 01</div>
+      <div class="kb-rule-card__rule">Проверь size, ply count, length, bearing и hanger condition.</div>
+      <div class="kb-rule-card__note">Если картинка показывает special condition, перенеси его в output row или note.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-072.png" title="image-20250211-181023.png">
-    <img src="../../../../assets/images/confluence/confluence-072.png" alt="Beam - Балки - beam takeoff/reference 02">
-    <div class="kb-gallery__caption">beam takeoff/reference 02</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-072.png" title="image-20250211-181023.png">
+    <img src="../../../../assets/images/confluence/confluence-072.png" alt="Beam - визуальная проверка 02: Проверь size, ply count, length, bearing и hanger condition.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Beam - визуальная проверка 02</div>
+      <div class="kb-rule-card__rule">Проверь size, ply count, length, bearing и hanger condition.</div>
+      <div class="kb-rule-card__note">Если картинка показывает special condition, перенеси его в output row или note.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-073.png" title="image-20250211-180929.png">
-    <img src="../../../../assets/images/confluence/confluence-073.png" alt="Beam - Балки - beam takeoff/reference 03">
-    <div class="kb-gallery__caption">beam takeoff/reference 03</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-073.png" title="image-20250211-180929.png">
+    <img src="../../../../assets/images/confluence/confluence-073.png" alt="Beam - визуальная проверка 03: Проверь size, ply count, length, bearing и hanger condition.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Beam - визуальная проверка 03</div>
+      <div class="kb-rule-card__rule">Проверь size, ply count, length, bearing и hanger condition.</div>
+      <div class="kb-rule-card__note">Если картинка показывает special condition, перенеси его в output row или note.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-074.png" title="image-20250211-180817.png">
-    <img src="../../../../assets/images/confluence/confluence-074.png" alt="Beam - Балки - beam takeoff/reference 04">
-    <div class="kb-gallery__caption">beam takeoff/reference 04</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-074.png" title="image-20250211-180817.png">
+    <img src="../../../../assets/images/confluence/confluence-074.png" alt="Beam - визуальная проверка 04: Проверь size, ply count, length, bearing и hanger condition.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Beam - визуальная проверка 04</div>
+      <div class="kb-rule-card__rule">Проверь size, ply count, length, bearing и hanger condition.</div>
+      <div class="kb-rule-card__note">Если картинка показывает special condition, перенеси его в output row или note.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

@@ -19,23 +19,31 @@
 
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Roof Sheathing (обшивка) | 2 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/66125845/Roof+Sheathing) |
+??? info "Источник картинок"
+    - Roof Sheathing (обшивка): [2 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/66125845/Roof+Sheathing)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-149.png" title="image-20250608-054015.png">
-    <img src="../../../../assets/images/confluence/confluence-149.png" alt="Roof Sheathing (обшивка) - roof sheathing reference 01">
-    <div class="kb-gallery__caption">roof sheathing reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-149.png" title="image-20250608-054015.png">
+    <img src="../../../../assets/images/confluence/confluence-149.png" alt="Roof Sheathing - визуальная проверка 01: Сверь roof planes, openings, overhangs и sheathing material/thickness.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Roof Sheathing - визуальная проверка 01</div>
+      <div class="kb-rule-card__rule">Сверь roof planes, openings, overhangs и sheathing material/thickness.</div>
+      <div class="kb-rule-card__note">Не считай roof sheathing как простую footprint area, если planes/details дают другое.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-150.png" title="image-20250608-053831.png">
-    <img src="../../../../assets/images/confluence/confluence-150.png" alt="Roof Sheathing (обшивка) - roof sheathing reference 02">
-    <div class="kb-gallery__caption">roof sheathing reference 02</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-150.png" title="image-20250608-053831.png">
+    <img src="../../../../assets/images/confluence/confluence-150.png" alt="Roof Sheathing - визуальная проверка 02: Сверь roof planes, openings, overhangs и sheathing material/thickness.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Roof Sheathing - визуальная проверка 02</div>
+      <div class="kb-rule-card__rule">Сверь roof planes, openings, overhangs и sheathing material/thickness.</div>
+      <div class="kb-rule-card__note">Не считай roof sheathing как простую footprint area, если planes/details дают другое.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

@@ -19,27 +19,39 @@ not rely only on structural floor framing plans; check assemblies and details.
 
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Floor (обшивка перекрытия снаружи) | 3 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/89948162/Floor) |
+??? info "Источник картинок"
+    - Floor (обшивка перекрытия снаружи): [3 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/89948162/Floor)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-172.png" title="image-20251030-155530.png">
-    <img src="../../../../assets/images/confluence/confluence-172.png" alt="Floor (обшивка перекрытия снаружи) - floor-height sheathing reference 01">
-    <div class="kb-gallery__caption">floor-height sheathing reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-172.png" title="image-20251030-155530.png">
+    <img src="../../../../assets/images/confluence/confluence-172.png" alt="Floor-height Sheathing - визуальная проверка 01: Проверь floor-height strips, box/full-height condition и supplied scope.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Floor-height Sheathing - визуальная проверка 01</div>
+      <div class="kb-rule-card__rule">Проверь floor-height strips, box/full-height condition и supplied scope.</div>
+      <div class="kb-rule-card__note">Floor-height sheathing часто относится к COM loose material и требует отдельной строки.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-173.png" title="image-20251030-155404.png">
-    <img src="../../../../assets/images/confluence/confluence-173.png" alt="Floor (обшивка перекрытия снаружи) - floor-height sheathing reference 02">
-    <div class="kb-gallery__caption">floor-height sheathing reference 02</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-173.png" title="image-20251030-155404.png">
+    <img src="../../../../assets/images/confluence/confluence-173.png" alt="Floor-height Sheathing - визуальная проверка 02: Проверь floor-height strips, box/full-height condition и supplied scope.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Floor-height Sheathing - визуальная проверка 02</div>
+      <div class="kb-rule-card__rule">Проверь floor-height strips, box/full-height condition и supplied scope.</div>
+      <div class="kb-rule-card__note">Floor-height sheathing часто относится к COM loose material и требует отдельной строки.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-174.png" title="image-20251030-155323.png">
-    <img src="../../../../assets/images/confluence/confluence-174.png" alt="Floor (обшивка перекрытия снаружи) - floor-height sheathing reference 03">
-    <div class="kb-gallery__caption">floor-height sheathing reference 03</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-174.png" title="image-20251030-155323.png">
+    <img src="../../../../assets/images/confluence/confluence-174.png" alt="Floor-height Sheathing - визуальная проверка 03: Проверь floor-height strips, box/full-height condition и supplied scope.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Floor-height Sheathing - визуальная проверка 03</div>
+      <div class="kb-rule-card__rule">Проверь floor-height strips, box/full-height condition и supplied scope.</div>
+      <div class="kb-rule-card__note">Floor-height sheathing часто относится к COM loose material и требует отдельной строки.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

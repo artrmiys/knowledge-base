@@ -97,40 +97,64 @@ empty `href` values at the time of import.
 
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| dictionary | 3 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/1933726/dictionary) |
-| Materials | 3 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/1933821/Materials) |
+??? info "Источник картинок"
+    - dictionary: [3 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/1933726/dictionary)
+    - Materials: [3 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/1933821/Materials)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-043.png" title="image-20250210-055520.png">
-    <img src="../../assets/images/confluence/confluence-043.png" alt="dictionary - dictionary reference 01">
-    <div class="kb-gallery__caption">dictionary reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-043.png" title="image-20250210-055520.png">
+    <img src="../../assets/images/confluence/confluence-043.png" alt="Source Map - исходные screenshots 01: Используй как карту источников, а не как рабочую страницу takeoff.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Source Map - исходные screenshots 01</div>
+      <div class="kb-rule-card__rule">Используй как карту источников, а не как рабочую страницу takeoff.</div>
+      <div class="kb-rule-card__note">Правила из source map переносим в topic pages; private данные не публикуем.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-044.png" title="image-20250210-055504.png">
-    <img src="../../assets/images/confluence/confluence-044.png" alt="dictionary - dictionary reference 02">
-    <div class="kb-gallery__caption">dictionary reference 02</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-044.png" title="image-20250210-055504.png">
+    <img src="../../assets/images/confluence/confluence-044.png" alt="Source Map - исходные screenshots 02: Используй как карту источников, а не как рабочую страницу takeoff.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Source Map - исходные screenshots 02</div>
+      <div class="kb-rule-card__rule">Используй как карту источников, а не как рабочую страницу takeoff.</div>
+      <div class="kb-rule-card__note">Правила из source map переносим в topic pages; private данные не публикуем.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-045.png" title="image-20250210-055338.png">
-    <img src="../../assets/images/confluence/confluence-045.png" alt="dictionary - dictionary reference 03">
-    <div class="kb-gallery__caption">dictionary reference 03</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-045.png" title="image-20250210-055338.png">
+    <img src="../../assets/images/confluence/confluence-045.png" alt="Source Map - исходные screenshots 03: Используй как карту источников, а не как рабочую страницу takeoff.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Source Map - исходные screenshots 03</div>
+      <div class="kb-rule-card__rule">Используй как карту источников, а не как рабочую страницу takeoff.</div>
+      <div class="kb-rule-card__note">Правила из source map переносим в topic pages; private данные не публикуем.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-046.png" title="image-20250210-120404.png">
-    <img src="../../assets/images/confluence/confluence-046.png" alt="Materials - material reference 01">
-    <div class="kb-gallery__caption">material reference 01</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-046.png" title="image-20250210-120404.png">
+    <img src="../../assets/images/confluence/confluence-046.png" alt="Source Map - исходные screenshots 04: Используй как карту источников, а не как рабочую страницу takeoff.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Source Map - исходные screenshots 04</div>
+      <div class="kb-rule-card__rule">Используй как карту источников, а не как рабочую страницу takeoff.</div>
+      <div class="kb-rule-card__note">Правила из source map переносим в topic pages; private данные не публикуем.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-047.png" title="image-20250210-112058.png">
-    <img src="../../assets/images/confluence/confluence-047.png" alt="Materials - material reference 02">
-    <div class="kb-gallery__caption">material reference 02</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-047.png" title="image-20250210-112058.png">
+    <img src="../../assets/images/confluence/confluence-047.png" alt="Source Map - исходные screenshots 05: Используй как карту источников, а не как рабочую страницу takeoff.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Source Map - исходные screenshots 05</div>
+      <div class="kb-rule-card__rule">Используй как карту источников, а не как рабочую страницу takeoff.</div>
+      <div class="kb-rule-card__note">Правила из source map переносим в topic pages; private данные не публикуем.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-048.png" title="image-20250210-111922.png">
-    <img src="../../assets/images/confluence/confluence-048.png" alt="Materials - material reference 03">
-    <div class="kb-gallery__caption">material reference 03</div>
+  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-048.png" title="image-20250210-111922.png">
+    <img src="../../assets/images/confluence/confluence-048.png" alt="Source Map - исходные screenshots 06: Используй как карту источников, а не как рабочую страницу takeoff.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Source Map - исходные screenshots 06</div>
+      <div class="kb-rule-card__rule">Используй как карту источников, а не как рабочую страницу takeoff.</div>
+      <div class="kb-rule-card__note">Правила из source map переносим в topic pages; private данные не публикуем.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

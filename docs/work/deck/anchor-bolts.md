@@ -20,23 +20,31 @@
 
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Anchor Bolts (анкерные болты) | 2 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/72482856/Anchor+Bolts) |
+??? info "Источник картинок"
+    - Anchor Bolts (анкерные болты): [2 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/72482856/Anchor+Bolts)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../assets/images/confluence/confluence-153.png" title="image-20251030-160235.png">
-    <img src="../../../assets/images/confluence/confluence-153.png" alt="Anchor Bolts (анкерные болты) - anchor bolt detail/reference 01">
-    <div class="kb-gallery__caption">anchor bolt detail/reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../assets/images/confluence/confluence-153.png" title="image-20251030-160235.png">
+    <img src="../../../assets/images/confluence/confluence-153.png" alt="Anchor Bolt - визуальная проверка 01: Проверь spacing, edge/corner conditions, washers и plate connection.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Anchor Bolt - визуальная проверка 01</div>
+      <div class="kb-rule-card__rule">Проверь spacing, edge/corner conditions, washers и plate connection.</div>
+      <div class="kb-rule-card__note">Anchor bolts идут вместе с Sill Plates/Btm Plate rules, но output может быть отдельной строкой.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../assets/images/confluence/confluence-154.png" title="image-20251030-160116.png">
-    <img src="../../../assets/images/confluence/confluence-154.png" alt="Anchor Bolts (анкерные болты) - anchor bolt detail/reference 02">
-    <div class="kb-gallery__caption">anchor bolt detail/reference 02</div>
+  <a class="kb-rule-card" href="../../../assets/images/confluence/confluence-154.png" title="image-20251030-160116.png">
+    <img src="../../../assets/images/confluence/confluence-154.png" alt="Anchor Bolt - визуальная проверка 02: Проверь spacing, edge/corner conditions, washers и plate connection.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Anchor Bolt - визуальная проверка 02</div>
+      <div class="kb-rule-card__rule">Проверь spacing, edge/corner conditions, washers и plate connection.</div>
+      <div class="kb-rule-card__note">Anchor bolts идут вместе с Sill Plates/Btm Plate rules, но output может быть отдельной строкой.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

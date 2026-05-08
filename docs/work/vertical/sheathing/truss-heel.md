@@ -23,19 +23,23 @@
 - На **Eave**-сторонах (длинная сторона свеса) heel-обшивка **часто забывается** — это отдельная вертикальная полоска по периметру здания между Top Plate стены и нижом overhang. Проверяй её отдельной строкой.
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Truss Heel (обшивка ферм крыши, вертикальной части) | 1 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/89948190/Truss+Heel) |
+??? info "Источник картинок"
+    - Truss Heel (обшивка ферм крыши, вертикальной части): [1 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/89948190/Truss+Heel)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-175.png" title="image-20251030-150249.png">
-    <img src="../../../../assets/images/confluence/confluence-175.png" alt="Truss Heel (обшивка ферм крыши, вертикальной части) - truss heel sheathing reference 01">
-    <div class="kb-gallery__caption">truss heel sheathing reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-175.png" title="image-20251030-150249.png">
+    <img src="../../../../assets/images/confluence/confluence-175.png" alt="Truss Heel - визуальная проверка: Проверь vertical heel area, height и sheathing material.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Truss Heel - визуальная проверка</div>
+      <div class="kb-rule-card__rule">Проверь vertical heel area, height и sheathing material.</div>
+      <div class="kb-rule-card__note">Truss Heel sheathing не прячь в roof sheathing или wall sheathing без note.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

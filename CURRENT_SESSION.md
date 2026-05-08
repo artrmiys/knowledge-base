@@ -404,3 +404,27 @@ Need after this note:
 1. Run `.\.venv\Scripts\python.exe -m mkdocs build --strict`.
 2. Review any broken anchors caused by heading translation.
 3. Commit and deploy to `main` / `gh-pages`.
+
+---
+
+## Resume pass 7 -- 2026-05-08
+
+Follow-up after user asked to structure the rest of the site like the improved
+`Joist` and `Interior Trims` pages:
+
+- Converted all remaining visible Confluence image blocks from loose
+  `Картинки из Confluence` galleries into `## Визуальная проверка` sections
+  using the same `.kb-rule-gallery` / `.kb-rule-card` pattern.
+- Updated 32 pages across COM, Start, Reference, Deck, Roof Framing, Floor
+  Framing, Openings, Walls, and Sheathing.
+- Each imported image now has a visible rule and note tied to the page topic:
+  what to verify on plan/schedule and how it should affect output/takeoff.
+- Kept source links in a collapsed `Источник картинок` block so the page stays
+  readable but the Confluence origin remains traceable.
+- Added `tools/organize_confluence_rule_galleries.py` so the same conversion can
+  be regenerated if Confluence galleries are rebuilt later.
+- Verified:
+  `.\.venv\Scripts\python.exe -m mkdocs build --strict` passed in 1.23s
+  (only the standard MkDocs Material marketing warning).
+  `git diff --check` had no whitespace errors, only existing Windows LF/CRLF
+  notices.

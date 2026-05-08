@@ -38,19 +38,23 @@
 Если обе стены идентичны — короткая запись `dem (2) 2x6 10.5`. Если стены разные — пиши **толщины подряд, потом высоты подряд**.
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Demising (меж-секционные стены - двойные) | 1 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/65306639/Demising+-+-) |
+??? info "Источник картинок"
+    - Demising (меж-секционные стены - двойные): [1 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65306639/Demising+-+-)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-126.png" title="image-20251030-161646.png">
-    <img src="../../../../assets/images/confluence/confluence-126.png" alt="Demising (меж-секционные стены - двойные) - demising wall reference 01">
-    <div class="kb-gallery__caption">demising wall reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-126.png" title="image-20251030-161646.png">
+    <img src="../../../../assets/images/confluence/confluence-126.png" alt="Demising Wall - визуальная проверка: Проверь double wall, fire/acoustic layers, height и side requirements.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Demising Wall - визуальная проверка</div>
+      <div class="kb-rule-card__rule">Проверь double wall, fire/acoustic layers, height и side requirements.</div>
+      <div class="kb-rule-card__note">Demising не смешивай с Corridor или Unit wall, даже если stud size похож.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

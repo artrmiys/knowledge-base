@@ -43,19 +43,23 @@
 
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Post (колоны) | 1 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/65831004/Post) |
+??? info "Источник картинок"
+    - Post (колоны): [1 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65831004/Post)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-134.png" title="image-20250608-021518.png">
-    <img src="../../../../assets/images/confluence/confluence-134.png" alt="Post (колоны) - post/column reference 01">
-    <div class="kb-gallery__caption">post/column reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-134.png" title="image-20250608-021518.png">
+    <img src="../../../../assets/images/confluence/confluence-134.png" alt="Post / Column - визуальная проверка: Проверь post size, height, material и connection to beam/foundation.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Post / Column - визуальная проверка</div>
+      <div class="kb-rule-card__rule">Проверь post size, height, material и connection to beam/foundation.</div>
+      <div class="kb-rule-card__note">Post может быть wood, steel или by others; не угадывай без schedule/detail.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

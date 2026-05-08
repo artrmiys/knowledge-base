@@ -18,27 +18,39 @@
 
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Overframes (скрытая части крыши) | 3 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/66093107/Overframes) |
+??? info "Источник картинок"
+    - Overframes (скрытая части крыши): [3 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/66093107/Overframes)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-144.png" title="image-20250608-053326.png">
-    <img src="../../../../assets/images/confluence/confluence-144.png" alt="Overframes (скрытая части крыши) - overframe reference 01">
-    <div class="kb-gallery__caption">overframe reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-144.png" title="image-20250608-053326.png">
+    <img src="../../../../assets/images/confluence/confluence-144.png" alt="Overframe - визуальная проверка 01: Проверь hidden/framed-over roof areas, sleeper condition и sheathing overlap.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Overframe - визуальная проверка 01</div>
+      <div class="kb-rule-card__rule">Проверь hidden/framed-over roof areas, sleeper condition и sheathing overlap.</div>
+      <div class="kb-rule-card__note">Overframes легко пропустить, потому что они часто выглядят как второстепенная roof geometry.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-145.png" title="image-20250608-053236.png">
-    <img src="../../../../assets/images/confluence/confluence-145.png" alt="Overframes (скрытая части крыши) - overframe reference 02">
-    <div class="kb-gallery__caption">overframe reference 02</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-145.png" title="image-20250608-053236.png">
+    <img src="../../../../assets/images/confluence/confluence-145.png" alt="Overframe - визуальная проверка 02: Проверь hidden/framed-over roof areas, sleeper condition и sheathing overlap.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Overframe - визуальная проверка 02</div>
+      <div class="kb-rule-card__rule">Проверь hidden/framed-over roof areas, sleeper condition и sheathing overlap.</div>
+      <div class="kb-rule-card__note">Overframes легко пропустить, потому что они часто выглядят как второстепенная roof geometry.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-146.png" title="image-20250608-052839.png">
-    <img src="../../../../assets/images/confluence/confluence-146.png" alt="Overframes (скрытая части крыши) - overframe reference 03">
-    <div class="kb-gallery__caption">overframe reference 03</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-146.png" title="image-20250608-052839.png">
+    <img src="../../../../assets/images/confluence/confluence-146.png" alt="Overframe - визуальная проверка 03: Проверь hidden/framed-over roof areas, sleeper condition и sheathing overlap.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Overframe - визуальная проверка 03</div>
+      <div class="kb-rule-card__rule">Проверь hidden/framed-over roof areas, sleeper condition и sheathing overlap.</div>
+      <div class="kb-rule-card__note">Overframes легко пропустить, потому что они часто выглядят как второстепенная roof geometry.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

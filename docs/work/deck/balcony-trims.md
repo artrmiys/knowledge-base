@@ -15,19 +15,23 @@
 
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Balcony Trims - отделка для балконов | 1 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/67469321/Balcony+Trims+-) |
+??? info "Источник картинок"
+    - Balcony Trims - отделка для балконов: [1 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/67469321/Balcony+Trims+-)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../assets/images/confluence/confluence-152.png" title="image-20250610-142411.png">
-    <img src="../../../assets/images/confluence/confluence-152.png" alt="Balcony Trims - отделка для балконов - balcony trim reference 01">
-    <div class="kb-gallery__caption">balcony trim reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../assets/images/confluence/confluence-152.png" title="image-20250610-142411.png">
+    <img src="../../../assets/images/confluence/confluence-152.png" alt="Balcony Trim - визуальная проверка: Сверь fascia/trim runs, exposed edges и finish material.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Balcony Trim - визуальная проверка</div>
+      <div class="kb-rule-card__rule">Сверь fascia/trim runs, exposed edges и finish material.</div>
+      <div class="kb-rule-card__note">Trim на balcony держи отдельно от interior trims и framing.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

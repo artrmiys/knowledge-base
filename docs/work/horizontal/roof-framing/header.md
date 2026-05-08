@@ -33,23 +33,31 @@
 
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Header (горизонтальная балка в крыше) | 2 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/66093067/Header) |
+??? info "Источник картинок"
+    - Header (горизонтальная балка в крыше): [2 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/66093067/Header)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-138.png" title="image-20250608-030154.png">
-    <img src="../../../../assets/images/confluence/confluence-138.png" alt="Header (горизонтальная балка в крыше) - roof header reference 01">
-    <div class="kb-gallery__caption">roof header reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-138.png" title="image-20250608-030154.png">
+    <img src="../../../../assets/images/confluence/confluence-138.png" alt="Roof Header - визуальная проверка 01: Проверь opening/support condition, header size и connected rafters/hangers.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Roof Header - визуальная проверка 01</div>
+      <div class="kb-rule-card__rule">Проверь opening/support condition, header size и connected rafters/hangers.</div>
+      <div class="kb-rule-card__note">Roof Header часто влияет на hangers и adjacent doubled rafters.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-139.png" title="image-20250608-025101.png">
-    <img src="../../../../assets/images/confluence/confluence-139.png" alt="Header (горизонтальная балка в крыше) - roof header reference 02">
-    <div class="kb-gallery__caption">roof header reference 02</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-139.png" title="image-20250608-025101.png">
+    <img src="../../../../assets/images/confluence/confluence-139.png" alt="Roof Header - визуальная проверка 02: Проверь opening/support condition, header size и connected rafters/hangers.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Roof Header - визуальная проверка 02</div>
+      <div class="kb-rule-card__rule">Проверь opening/support condition, header size и connected rafters/hangers.</div>
+      <div class="kb-rule-card__note">Roof Header часто влияет на hangers и adjacent doubled rafters.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->

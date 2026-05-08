@@ -39,35 +39,55 @@ Shaft wall почти всегда fire-rated и собирается из CH-st
   всех levels, минус dropped metal-frame areas; проверь RCP/ceiling notes.
 
 <!-- confluence-gallery:start -->
-## Картинки из Confluence
+## Визуальная проверка
 
-Изображения из Confluence размещены на этой странице по исходной теме.
-Подпись сохраняет группу-источник, чтобы можно было быстро проверить контекст.
+Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
+checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
+карточку и проверь похожий condition на плане/schedule.
 
-| Группа источника | Картинки | Confluence |
-| --- | ---: | --- |
-| Shaft (противопожарные стены) | 5 | [source](https://ewood.atlassian.net/wiki/spaces/work/pages/65306667/Shaft) |
+??? info "Источник картинок"
+    - Shaft (противопожарные стены): [5 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65306667/Shaft)
 
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-129.png" title="image-20251030-153706.png">
-    <img src="../../../../assets/images/confluence/confluence-129.png" alt="Shaft (противопожарные стены) - shaft/fire wall reference 01">
-    <div class="kb-gallery__caption">shaft/fire wall reference 01</div>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-129.png" title="image-20251030-153706.png">
+    <img src="../../../../assets/images/confluence/confluence-129.png" alt="Shaft Wall - визуальная проверка 01: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Shaft Wall - визуальная проверка 01</div>
+      <div class="kb-rule-card__rule">Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.</div>
+      <div class="kb-rule-card__note">Shaft walls не смешивай с обычными demising/unit walls.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-130.png" title="image-20251030-153647.png">
-    <img src="../../../../assets/images/confluence/confluence-130.png" alt="Shaft (противопожарные стены) - shaft/fire wall reference 02">
-    <div class="kb-gallery__caption">shaft/fire wall reference 02</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-130.png" title="image-20251030-153647.png">
+    <img src="../../../../assets/images/confluence/confluence-130.png" alt="Shaft Wall - визуальная проверка 02: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Shaft Wall - визуальная проверка 02</div>
+      <div class="kb-rule-card__rule">Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.</div>
+      <div class="kb-rule-card__note">Shaft walls не смешивай с обычными demising/unit walls.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-131.png" title="image-20251030-153459.png">
-    <img src="../../../../assets/images/confluence/confluence-131.png" alt="Shaft (противопожарные стены) - shaft/fire wall reference 03">
-    <div class="kb-gallery__caption">shaft/fire wall reference 03</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-131.png" title="image-20251030-153459.png">
+    <img src="../../../../assets/images/confluence/confluence-131.png" alt="Shaft Wall - визуальная проверка 03: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Shaft Wall - визуальная проверка 03</div>
+      <div class="kb-rule-card__rule">Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.</div>
+      <div class="kb-rule-card__note">Shaft walls не смешивай с обычными demising/unit walls.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-132.png" title="image-20251030-153049.png">
-    <img src="../../../../assets/images/confluence/confluence-132.png" alt="Shaft (противопожарные стены) - shaft/fire wall reference 04">
-    <div class="kb-gallery__caption">shaft/fire wall reference 04</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-132.png" title="image-20251030-153049.png">
+    <img src="../../../../assets/images/confluence/confluence-132.png" alt="Shaft Wall - визуальная проверка 04: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Shaft Wall - визуальная проверка 04</div>
+      <div class="kb-rule-card__rule">Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.</div>
+      <div class="kb-rule-card__note">Shaft walls не смешивай с обычными demising/unit walls.</div>
+    </div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-133.png" title="image-20251030-152801.png">
-    <img src="../../../../assets/images/confluence/confluence-133.png" alt="Shaft (противопожарные стены) - shaft/fire wall reference 05">
-    <div class="kb-gallery__caption">shaft/fire wall reference 05</div>
+  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-133.png" title="image-20251030-152801.png">
+    <img src="../../../../assets/images/confluence/confluence-133.png" alt="Shaft Wall - визуальная проверка 05: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Shaft Wall - визуальная проверка 05</div>
+      <div class="kb-rule-card__rule">Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.</div>
+      <div class="kb-rule-card__note">Shaft walls не смешивай с обычными demising/unit walls.</div>
+    </div>
   </a>
 </div>
 <!-- confluence-gallery:end -->
