@@ -335,3 +335,20 @@ Follow-up content note:
 - Made the garage trim rule explicit on Interior Trims overview, Base, and Crown:
   garage has no `Baseboard` and no `Crowns`; do not carry those perimeters
   through garage walls.
+
+---
+
+## Resume pass 5 -- 2026-05-08
+
+Improved the Joist page after user feedback that `joist type` pictures were
+hard to find:
+
+- Added `docs/assets/images/framing/joist-types-overview.svg`.
+- Added a `Joist Type Pictures` section near the top of
+  `docs/work/horizontal/floor-framing/joist.md`.
+- Pulled the existing Confluence joist-series images up into a visible gallery:
+  `TJI`, `RED`, `LP/LPI`, `RFPI`, `BCI`, `Nordic Joist`, and spacing.
+- Re-captioned the old Confluence gallery entries so they no longer say generic
+  `joist series/reference 01`.
+- Clarified the EWP material rule: count engineered joists only; do not convert
+  every regular `2x` joist into an EWP line unless the scope says so.
