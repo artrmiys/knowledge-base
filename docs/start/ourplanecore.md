@@ -31,6 +31,26 @@ OurPlaneCore должен стать рабочим местом estimator / tak
 окнами, меньше забытых sheets, меньше сломанного scale, больше проверяемых
 evidence links.
 
+### Для кого
+
+| Пользователь | Что ему нужно | Как помогает OurPlaneCore |
+| --- | --- | --- |
+| Estimator | Быстро считать quantities и не терять структуру | PlanSwift-like Pages/Takeoffs, sections, totals, exports |
+| Lead estimator | Проверять чужой takeoff и видеть, откуда quantity | Sheet links, source page, selected sections, notes, review tables |
+| Developer / automation | Понимать, куда подключать rules и AI | Local files, JSON drafts, explicit services, no hidden cloud state |
+| New team member | Быстро войти в E-Wood workflow | Standard folders, wiki links, names/scale checks, planned rule hints |
+
+### Какие проблемы закрывает
+
+| Проблема | Что происходит без программы | Что должно быть в программе |
+| --- | --- | --- |
+| Sheets названы хаотично | Нельзя быстро найти floor/section/detail | `Auto Name` + review + folders |
+| Scale не проверен | `lf`/`sf` quantity становится мусором | `Auto Scale`, scale badge, Line/Area blocked without scale |
+| Takeoff размазан | Непонятно, где стены, SQFTs, framing, trims | Standard folder templates and future auto routing |
+| Excel ручной | Легко вставить не туда или потерять notes | `Current Excel`, `Report Builder`, preview before write |
+| AI непроверяемый | Риск тихо применить неправильную geometry | AI Inbox, crops, drafts, accept/reject, source links |
+| PDF scan не vector | Snap вроде включен, но не ловит линии | Separate `PDF Snap` status and future `Image Snap` |
+
 ## Карта продукта
 
 <div class="grid cards" markdown>
@@ -120,6 +140,42 @@ evidence links.
     что именно считается. `Measurement` связывает их: на каком sheet, с каким
     scale и в какой item записана геометрия.
 
+### Data flow
+
+```text
+PDF import
+  -> Pages tree
+  -> source.json / source_pdf.json / layers.json
+  -> Sheet Manager review
+  -> checked rename/scale/folder apply
+  -> active sheet in viewport
+  -> Record into active takeoff item
+  -> measurements.json / Data.xml
+  -> Estimating / Takeoff Manager / Export
+```
+
+AI flow идет отдельно:
+
+```text
+User marker or crop
+  -> AI_Context/crops + AI_Context/markers
+  -> AI request JSON
+  -> model response
+  -> action draft
+  -> user review
+  -> accepted geometry or feedback only
+```
+
+### Что считается source of truth
+
+| Данные | Source of truth | Почему |
+| --- | --- | --- |
+| Sheet name / scale | Page metadata after review | Sheet Manager показывает source, confidence и warning |
+| Quantity | Measurements under takeoff item | Геометрия и scale сохраняются с measurement |
+| Export rows | Takeoff tree + estimating rows | Export не должен считать по картинке заново |
+| AI proposal | Action draft | Пока user не принял, это не реальный takeoff |
+| Learning | Accepted/rejected feedback | Правила улучшаются только через проверенные решения |
+
 ## Основной workflow
 
 1. Открыть или создать job.
@@ -147,6 +203,21 @@ evidence links.
 | Digitizer Record пишет в активный item | `Record` держит active target locked, случайный клик по другому item не перенаправляет измерения |
 | Estimating показывает item totals | `Estimating` и `Takeoff Manager` показывают quantities, units, sections, notes, cost |
 | Copy/paste помогает повторять geometry | `Select`, `Ctrl+C`, `Ctrl+V` переносят measurements на текущий sheet |
+
+## UI philosophy
+
+OurPlaneCore должен выглядеть как плотный рабочий инструмент, ближе к
+PlanSwift / Bluebeam, а не как SaaS landing page.
+
+- Верх: compact commands и status, без больших hero-панелей внутри app.
+- Слева: Pages, Layers, sheet organization.
+- Центр: PDF canvas, максимум пространства под drawing.
+- Справа: Takeoffs, Properties, Estimating, Report Builder.
+- Низ: status / AI Inbox / manager tabs, когда нужно.
+- Все totals и coordinates должны быть tabular, чтобы числа не прыгали.
+- Active tool, active target и Record state должны быть видны всегда.
+- Ошибка должна говорить действие: `Set scale first`, `Select compatible item`,
+  `Review warnings before apply`.
 
 ## Main View
 
@@ -177,6 +248,34 @@ Main View - главный экран для ручного takeoff.
 - `Ctrl+C` / `Ctrl+V` копирует и вставляет выбранную геометрию.
 - Body drag двигает весь выбранный measurement или группу.
 - Vertex handles редактируют форму line/area.
+
+### Command Palette и hotkeys
+
+| Command | Shortcut | Статус / смысл |
+| --- | --- | --- |
+| `Command Palette` | `Ctrl+Shift+P` | Найти command без охоты по меню |
+| `Save` | `Ctrl+S` | Явно сохранить job state |
+| `Open Job Picker` | `Ctrl+Shift+O` | Recent jobs, pinned jobs, browse/create |
+| `Count` | `P` | Quick-create Count target and Record |
+| `Line` | `L` | Quick-create Line target and Record |
+| `Area` | `A` | Quick-create Area target and Record |
+| `J Area` | `J` | Quick-create joist Area target and Record |
+| `Snap` | `F3` | Snap to app-created measurement geometry |
+| `PDF Snap` | `Ctrl+F3` | Snap to vector PDF/overlay geometry |
+| `Ortho` | `F8` | 90/45 degree constraint |
+| `Copy / Paste` | `Ctrl+C` / `Ctrl+V` | Reuse selected measurements |
+| `Delete` | `Delete` | Delete selected measurement/markup rows |
+
+### Display / viewport rules
+
+- Sheet paper может быть белым, серым или dark для комфорта.
+- PDF export всегда должен использовать white paper, даже если viewport dark.
+- Legend можно hide/show per sheet.
+- Legend order сохраняется в page metadata.
+- Hidden takeoffs on this sheet не рисуются на viewport и не попадают в PDF
+  export.
+- Cursor guide rays помогают попадать в точки на плотном drawing.
+- Live dimensions при Line/Area/Ruler показывают feedback до finish.
 
 ## Pages и Sheet Manager
 
@@ -216,6 +315,29 @@ Main View - главный экран для ручного takeoff.
 - `Auto Folders` может создавать типовые COM/EWP folders.
 - Pages и folders можно двигать, rename/copy/cut/paste/duplicate/delete.
 
+### Sheet metadata lifecycle
+
+| Step | Что создается | Что проверять |
+| --- | --- | --- |
+| Import PDF | `source.json` | Original PDF, page index, imported page folder |
+| Analyze | `source_pdf.json` | Sheet label, title, suffix, scale candidate, warnings |
+| Layers scan | `layers.json` | Layer names, visible/hidden state, AI layer context |
+| Preview | Sheet Manager rows | `Why`, confidence, duplicates, no-scale rows |
+| Apply checked | Page rename/scale updates | Только verified rows |
+| Learn | project/global learned rules | Conflict rules should remain reviewable |
+
+### Folder templates
+
+| Mode | Для чего | Что создает |
+| --- | --- | --- |
+| `Auto` | Быстро выбрать по job name | COM or EWP folders by detected naming |
+| `COM` | Commercial jobs | Pages/Takeoffs folders for walls, framing, SQFTs, trims, etc. |
+| `EWP` | EWP / Capital jobs | Arch/Struct/details/framing oriented folders |
+| Manual | Когда job нестандартный | User сам создает/двигает folders |
+
+Future routing should never replace manual control. Если item auto-routed wrong,
+user must be able to move it back without fighting the app.
+
 ## Takeoff tools
 
 | Tool | Quantity | Когда использовать |
@@ -248,6 +370,28 @@ Main View - главный экран для ручного takeoff.
 `PDF Snap` работает только если PDF реально содержит vector geometry. Если sheet
 это scan/raster image, у него может не быть PDF line/corner data. Для такого
 случая нужен отдельный будущий `Image Snap`.
+
+### Production scenarios
+
+| Scenario | Recommended path |
+| --- | --- |
+| Exterior walls | `Line`, active `walls / floor walls` item, scale required |
+| Windows / doors | `Count`, schedule cross-check, possible AI marker samples later |
+| Wall sheathing | `Area` or `Line` depending on rule/source page |
+| Roof SQFT | `Area`, verify pitch/slope rules before export |
+| Joists | `J Area`, set direction, spacing, pitch and rounding |
+| Interior trims | `Line` for Base/Crown, `Count` or schedule for doors/openings |
+| Hardware / hangers | `Count`, future rule-check against joist/beam context |
+| Existing to remain | Mark as note/status, do not count blindly |
+
+### Measurement quality rules
+
+- Every `Line` and `Area` needs known scale.
+- Every `J Area` needs joist direction before ordered length is trusted.
+- Repeated floors can reuse geometry, but floors should stay separate in output
+  when the E-Wood rule says not to combine them.
+- Count items should use user-facing `Count`, not internal `Point` wording.
+- Notes should stay visible in manager/export so review comments are not lost.
 
 ## Joist Area
 
@@ -291,6 +435,31 @@ settings и сразу запускает area record.
 - Current-sheet filter помогает проверять только активный sheet.
 - Notes экспортируются, чтобы не терять рабочие комментарии.
 
+### Takeoff tree behavior
+
+- Folders can store defaults: color, measurement type, unit price, notes,
+  prefix.
+- New items inherit nearest folder defaults where useful.
+- Multi-select supports move/copy/cut/paste/delete.
+- Section/count rows are editable and can be moved between compatible items.
+- A folder selection can select all nested active-sheet measurements.
+- Sheet-linked rows under a page control legend order, not item identity.
+
+### Future auto-routing
+
+Auto-routing should help with naming, not trap the user.
+
+| New item name | Target idea | Notes |
+| --- | --- | --- |
+| `1st`, `2nd`, `3rd`, `4th`, `5th`, `6th` | `sqfts` | Floor SQFT order should be stable |
+| `deck`, `porch`, `blcny`, `balcony`, `cant` | `sqfts` | Exterior area groups after floors |
+| `flat`, `rf`, `rf mtl` | `sqfts` / roof area group | Needs clear export ordering |
+| `ext`, `cor`, `corr`, `dem`, `2x4`, `2x6`, `2x8` | `walls / <floor> walls` | Only when active sheet suffix is clear |
+| unknown | Current selected folder | Better no-routing than wrong-routing |
+
+Rule: match tokens, not random substrings. `cor` must not accidentally match
+`corners`.
+
 ## Export и Excel
 
 | Export | Статус | Для чего |
@@ -303,6 +472,29 @@ settings и сразу запускает area record.
 
 `Current Excel` не делает auto-save. Это правильно: программа пишет строки, а
 пользователь сам проверяет workbook и сохраняет его.
+
+### Export principles
+
+- Export should be boring and predictable.
+- Export should include notes when notes exist.
+- Export should not silently combine floors or sections.
+- Export should preserve enough page/section context to audit quantity later.
+- Excel write should show where it wrote and should not save over user work.
+
+### Report-ready output target
+
+The long-term goal is not just "export table"; the real target is an E-Wood
+report workflow:
+
+```text
+Takeoff tree
+  -> normalized source rows
+  -> report mapping
+  -> preview target cells
+  -> write to workbook
+  -> user checks workbook
+  -> user saves final file
+```
 
 ## Report Builder
 
@@ -334,6 +526,28 @@ settings и сразу запускает area record.
     `Report Builder` пока не должен ломать обычные CSV/TXT/Excel exports.
     Это отдельная поверхность для будущего Excel workflow.
 
+### Report Builder target sections
+
+| Section | Future mapping needs |
+| --- | --- |
+| `SQFTs` | Floors, deck, porch, balcony, cantilevered, roof, flat roof |
+| `Walls` | Exterior, corridor, demising, furring, shaft, parapet, gable |
+| `Openings` | Windows, doors, garage doors, MTL doors, headers |
+| `Framing` | Beam, Joist, Post, blocking, rim/ribbon, steel beams |
+| `Roof framing` | Ridge, hip, valley, rafters, overframes, canopy, dormer |
+| `Sheathing` | Wall, floor, roof, gable, truss heel, shear wall |
+| `Trims` | Base, Casing, Crown, door/window trims, balcony trims |
+| `Hardware` | Hangers, bolts, washers, screws, anchor bolts |
+
+### What "good" looks like
+
+- User can see source takeoff rows.
+- User can see target Excel cells.
+- User can see formulas/values that will be written.
+- User can apply only selected groups.
+- User can reopen mapping and understand why a row went there.
+- If workbook/template is missing, the app explains what file is expected.
+
 ## AI Inbox
 
 AI в OurPlaneCore должен работать как помощник с evidence и review.
@@ -360,6 +574,35 @@ source/crop/JSON, а пользователь решает, что apply.
 4. Запустить `Find Similar From Marker` или собрать marker set.
 5. Проверить candidates.
 6. Accepted/rejected feedback идет в learning.
+
+### AI safety rules
+
+- AI output is draft until accepted.
+- AI should save request/response JSON.
+- AI should keep crop evidence.
+- AI should show confidence and uncertainty.
+- AI should create review rows, not direct quantities.
+- AI should learn from accepted/rejected feedback.
+- AI should not expose secrets, private paths, emails, UID, salary, or pricing.
+
+### Good AI jobs
+
+| Job | Why it fits |
+| --- | --- |
+| Find similar symbols | User gives marker examples, AI finds candidates |
+| Title block fallback | Deterministic parser failed, AI reads crop |
+| Missing-scope checklist | AI compares sheets/markers/wiki rules and asks questions |
+| Roof draft hints | AI proposes roof guide candidates for review |
+| Opening samples | AI groups similar windows/doors before user accepts |
+
+### Bad AI jobs for now
+
+| Job | Why not yet |
+| --- | --- |
+| Fully automatic estimate | Too risky without review and source links |
+| Complex roof solver | Needs geometry review and human correction |
+| Counting from blurred scan | Needs image-specific pipeline and confidence gates |
+| Writing final workbook silently | Must preview and avoid overwriting user work |
 
 ## 3D Massing
 
@@ -390,6 +633,28 @@ building shape и связать plan/elevation/roof evidence.
 Будущая польза: если 3D draft reviewable, его можно использовать как project
 context для AI, roof checks, opening consistency и missing-scope warnings.
 
+### 3D Massing inputs
+
+| Marker / source | Used for |
+| --- | --- |
+| `exterior_corner` | Footprint draft |
+| `wall_height_sample` | Wall extrusion height |
+| `roof_edge_sample` | Roof guide evidence |
+| `ridge_sample` / `valley_sample` | Roof planes and guide direction |
+| `roof_high_edge` / `roof_low_edge` | Shed/low-slope direction |
+| `window_sample` / `door_sample` | Opening projection to wall faces |
+| reviewed roof notes | Type, pitch, confidence, assumptions |
+
+### 3D review checklist
+
+- Footprint corners are in the right order.
+- Wall height source is visible.
+- Roof type is marked as reviewed or uncertain.
+- Openings are on plausible wall faces.
+- Rejected openings remain as evidence, not deleted history.
+- Accepted 3D draft writes a timestamped snapshot.
+- 3D geometry does not create estimating quantities by itself.
+
 ## Что уже работает
 
 | Область | Статус |
@@ -419,6 +684,31 @@ context для AI, roof checks, opening consistency и missing-scope warnings.
 - Separate horizontal/vertical scale еще не основной workflow.
 - Финальный product name пока не закреплен публично.
 
+## E-Wood rule engine idea
+
+The wiki should eventually feed lightweight warnings into the program. Это не
+должно быть hard-coded "AI magic"; это должны быть понятные rules with source
+links.
+
+| Rule idea | Warning example |
+| --- | --- |
+| Garage trim | Если room/sheet похож на garage и item `Base` / `Crown` добавлен, показать: `Garage usually has no Base/Crown unless plan/spec says otherwise` |
+| MTL doors | Если schedule содержит `MTL Door`, проверить, что door count/report row не потерян |
+| FRT | Если material/tag содержит `FRT`, подсветить, что это отдельный material/report bucket |
+| Hangers | Если joists/beams counted but no hangers reviewed, предложить проверить Hangers page |
+| Repeated floors | Если floor geometry copied, не объединять output floors без явного решения |
+| Roof pitch | Если roof/joist quantity uses pitch, показать slope factor / rounding note |
+| Existing to remain | Если note says existing/remain/by others, не count как new work без confirmation |
+
+### Rule severity
+
+| Severity | Meaning | UI behavior |
+| --- | --- | --- |
+| `info` | Просто подсказка | Small note in manager |
+| `warning` | Нужно проверить перед export | Yellow row warning |
+| `block` | Нельзя auto-apply | Row unchecked by default |
+| `private` | Нельзя публиковать/export в wiki | Redacted or skipped |
+
 ## Roadmap
 
 ### Ближайшие задачи
@@ -429,6 +719,8 @@ context для AI, roof checks, opening consistency и missing-scope warnings.
 - Усилить learned-rule conflict details в Sheet Manager.
 - Доделать complex roof / valley plane generation в `3D Massing`.
 - Добавить snapshot/history picker для accepted 3D drafts.
+- Добавить first-pass rule warnings: garage Base/Crown, FRT, MTL doors.
+- Сделать auto-routing для SQFT and walls как reviewable behavior.
 
 ### Средний горизонт
 
@@ -438,6 +730,8 @@ context для AI, roof checks, opening consistency и missing-scope warnings.
 - Dedicated bulk marker review panel.
 - Richer Report Builder preview: source rows, target cells, validation messages.
 - Client/project rule packs для COM/EWP/Residential workflows.
+- Better packaging/update flow for non-developer users.
+- Saved UI profiles for dense / focus / review modes.
 
 ### Большие идеи
 
@@ -452,6 +746,159 @@ context для AI, roof checks, opening consistency и missing-scope warnings.
   программа должна подсветить это как подозрительное.
 - Semi-automatic takeoff drafts: AI предлагает geometry, user принимает только
   проверенные pieces.
+- Wiki-connected assistant: спросить "что проверить по Hangers / FRT / Trims"
+  and get source-backed checklist.
+- Cross-sheet consistency check: floor plan openings vs elevations vs door
+  schedule.
+- Client-specific packs: different defaults/rules for COM, EWP, Residential.
+- Pattern transfer: copy reviewed marker definitions to a similar job without
+  copying private drawings.
+
+### Phase plan
+
+| Phase | Goal | Done when |
+| --- | --- | --- |
+| 1. Manual takeoff core | Fast reliable drawing and editing | Count/Line/Area/J Area stable, scale safe, export works |
+| 2. Sheet automation | Reduce setup time | Auto Name/Scale review catches most sheets and warnings are clear |
+| 3. Takeoff organization | Less tree cleanup | Templates, auto-routing, folder defaults work without trapping user |
+| 4. Report Builder MVP | Reduce Excel handwork | Source rows map to previewed workbook blocks with manual approval |
+| 5. AI review workflow | Draft assistance | Markers/crops/actions are reviewable and feedback is stored |
+| 6. 3D QA | Visual sanity check | Reviewed massing highlights footprint/roof/opening issues |
+| 7. Rule engine | E-Wood knowledge inside app | Warnings are source-backed and never silently change quantities |
+| 8. Packaging | Usable by non-developer | Install/update/run path does not require coding tools |
+
+## QA matrix
+
+| Area | Smoke test |
+| --- | --- |
+| Docs page | `mkdocs build --strict` and live page loads |
+| App build | `dotnet build .\ourplanecore.sln /p:OutDir=.\cache\verify_build\ /p:UseAppHost=false` |
+| PDF import | Import PDF, open first sheet, verify page render |
+| Sheet Manager | Analyze, preview, apply checked rename/scale only |
+| Scale | Line/Area blocked on unscaled sheet, Count allowed |
+| Takeoff drawing | Count/Line/Area/J Area totals update |
+| Edit/copy | Select, move, copy/paste to another sheet |
+| PDF Snap | Vector sheet snaps to point/line; raster limitation is visible |
+| Export | CSV/TXT/Excel and Current Excel preserve selected scope |
+| AI | Request creates JSON, response creates draft, draft requires review |
+| 3D | Build draft, review roof/openings, accept snapshot |
+| Privacy | No unredacted screenshots or private source data in public docs |
+
+## Release notes template
+
+Каждый публичный или internal build should answer:
+
+| Question | Answer should say |
+| --- | --- |
+| What changed? | User-facing behavior, not only file names |
+| What is safe to use? | Confirmed workflows |
+| What is still draft? | AI/3D/Report Builder limitations |
+| What was verified? | Build/test/manual smoke commands |
+| What can break? | Known risks and rollback notes |
+| What data is private? | Screenshots, crops, job names, source PDFs |
+
+## Module backlog
+
+This is the practical "what to improve next" map. It is intentionally written
+by module, so work can be split safely.
+
+| Module | Next useful work |
+| --- | --- |
+| Job Picker | Better thumbnails, recent cleanup, job-root profiles, sample jobs by trade |
+| Pages tree | Stronger drag/drop cues, folder templates by client, batch repair preview |
+| Sheet Manager | Richer conflict explanations, retry failed AI fill, compare old/new names |
+| PDF Layers | Better layer grouping, save layer meaning samples, layer-based takeoff hints |
+| Viewport | Image Snap, magnifier, arc tool, cleaner high-zoom labels |
+| Select/Edit | More predictable group transform, better undo stack, visible edit history |
+| Takeoffs tree | Safer auto-routing, bulk properties, clearer invalid drop messages |
+| Estimating | Sticky totals, richer filters, templates, export profiles |
+| Report Builder | Full section mappings, preview target cells, write audit log |
+| AI Inbox | Bulk review, confidence filters, source/evidence diff view |
+| 3D Massing | Complex roof planes, snapshot comparison, source-linked object list |
+| Rule engine | Garage trim warning, FRT/MTL/hanger checks, wiki source links |
+| Packaging | Installer/update path, portable build, crash logs, user settings migration |
+
+## Open decisions
+
+| Decision | Why it matters | Current leaning |
+| --- | --- | --- |
+| Public product name | App says `OurPlaneCore`, older docs mention SmartTakeoffs | Keep neutral until final name is chosen |
+| Exact Report Builder scope | Could become huge if it tries to replace Excel fully | Start as preview/write helper, not full spreadsheet clone |
+| AI auto-apply | Faster but risky | Keep review-gated by default |
+| Image Snap approach | Raster PDF needs different logic than vector PDF | Add separate mode, not inside `PDF Snap` |
+| Rule source storage | Rules can live in code, wiki, JSON, or all three | Start with readable JSON linked back to wiki pages |
+| Client profiles | COM/EWP/Residential rules differ | Use explicit profile, avoid guessing when uncertain |
+| 3D geometry trust | 3D can look authoritative even when approximate | Always show assumptions/confidence/source markers |
+| Workbook write strategy | Direct Excel write is powerful but dangerous | Preview first, write selected, never auto-save |
+
+## Glossary
+
+| Term | Meaning in this program |
+| --- | --- |
+| `Job` | Local project folder with Pages, Takeoffs, source PDFs and context files |
+| `Page` / `Sheet` | One imported PDF page shown in the viewport |
+| `Pages tree` | Left tree for sheets, folders, layers and sheet-linked takeoff rows |
+| `Takeoffs tree` | Right tree for takeoff folders, items, sections and quantities |
+| `Takeoff item` | Fixed-type container: Count, Line, Area or Joist Area |
+| `Measurement` | Actual geometry on a sheet: points, line, polygon or count marker |
+| `Section` | One completed measurement under an item; an item can have many sections |
+| `Record` | Mode where clicks create new measurement geometry into active target |
+| `Active target` | The takeoff item that receives new measurements |
+| `ScaleMetersPerPt` | Stored conversion from PDF points to real-world units |
+| `PDF Snap` | Snap mode that uses vector geometry extracted from the PDF itself |
+| `Snap` | Snap mode that uses geometry already drawn in the app |
+| `J Area` | Area item with joist layout settings and direction line |
+| `Sheet Manager` | Review table for Auto Name / Auto Scale / warnings |
+| `AI Inbox` | Review surface for AI requests, markers, crops and draft actions |
+| `Action draft` | AI-proposed geometry or command that is not applied yet |
+| `3D Massing` | Approximate source-linked 3D review model, not estimating-grade BIM |
+| `Report Builder` | Future Excel-like report assembly workspace |
+| `Current Excel` | Write selected takeoff rows into already open workbook at active cell |
+
+## Example future workflows
+
+### COM wall takeoff
+
+1. Import plan set.
+2. Run `Auto Name + Scale`.
+3. Review names/scales and apply checked.
+4. `Sort A/S` and `D/Sec/WT`.
+5. Create standard COM Takeoffs folders.
+6. On `1st` sheet, create `ext 2x6 x`; future auto-routing places it under
+   `walls / 1st floor walls`.
+7. Draw exterior wall lines with scale + PDF Snap.
+8. Add `cor`, `dem`, `shaft`, `parapet` separately.
+9. Check Takeoff Manager totals by floor.
+10. Send rows to Report Builder / Current Excel.
+
+### Interior trims review
+
+1. Create `Interior Trims` folder.
+2. Add `Base`, `Casing`, `Crown`, door/window trim items.
+3. Use room/schedule evidence where available.
+4. Rule engine checks: garage usually has no `Base` and no `Crown` unless
+   plans/spec explicitly say otherwise.
+5. MTL doors and special openings get separate review notes.
+6. Export keeps notes so exceptions are not lost.
+
+### AI-assisted openings
+
+1. User marks a typical `window_sample` and `door_sample`.
+2. AI runs `Find Similar From Marker`.
+3. Candidates appear as review rows and dashed preview geometry.
+4. User accepts/rejects candidates.
+5. Accepted candidates become real Count measurements.
+6. Rejected examples go into feedback so next run improves.
+
+### 3D massing sanity check
+
+1. User places exterior corner markers.
+2. User adds wall height samples from elevation/section.
+3. User adds roof/ridge/valley markers where obvious.
+4. Build `3D Massing` draft.
+5. Review footprint, roof guides and projected openings.
+6. Accept snapshot as project context.
+7. Use it for visual QA and future AI prompts, not direct quantity.
 
 ## Принципы разработки
 
