@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="title desc">
+  <title id="title">Hanger selection flow diagram</title>
+  <desc id="desc">Decision flow for choosing common I-joist and beam hangers: ITS, HIT, WP, SUR, HU, HUC, and DHU.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2e7d32"/>
+    </marker>
+    <style>
+      .bg{fill:#f8faf8}.card{fill:#fff;stroke:#d7e5d4;stroke-width:2}.good{fill:#d9f2d8;stroke:#2e7d32;stroke-width:3}
+      .warn{fill:#fff3c4;stroke:#c78b00;stroke-width:2}.blue{fill:#d8ecff;stroke:#2c7fb8;stroke-width:2}
+      .label{font:700 18px Arial, sans-serif;fill:#1f2a1f}.small{font:14px Arial, sans-serif;fill:#374237}
+      .choice{font:700 15px Arial, sans-serif;fill:#2e7d32}.line{stroke:#2e7d32;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="920" height="520" rx="16"/>
+  <rect class="card" x="36" y="34" width="848" height="452" rx="14"/>
+  <text class="label" x="70" y="78">Hanger Selection: quick estimating flow</text>
+  <text class="small" x="70" y="105">Choose by joist depth, mount condition, skew, and firewall condition.</text>
+
+  <rect class="good" x="72" y="150" width="180" height="72" rx="10"/>
+  <text class="label" x="108" y="181">Start</text>
+  <text class="small" x="108" y="204">What is supported?</text>
+
+  <rect class="card" x="326" y="125" width="210" height="82" rx="10"/>
+  <text class="choice" x="352" y="158">I-joist top flange?</text>
+  <text class="small" x="352" y="184">Check depth and skew.</text>
+
+  <rect class="card" x="326" y="250" width="210" height="82" rx="10"/>
+  <text class="choice" x="352" y="283">Beam face mount?</text>
+  <text class="small" x="352" y="309">Use HU / HHUS / HGUS.</text>
+
+  <rect class="card" x="326" y="375" width="210" height="82" rx="10"/>
+  <text class="choice" x="352" y="408">Concealed flange?</text>
+  <text class="small" x="352" y="434">Use HUC family.</text>
+
+  <rect class="blue" x="640" y="88" width="210" height="72" rx="10"/>
+  <text class="label" x="672" y="119">ITS</text>
+  <text class="small" x="672" y="142">16&quot; and below, no skew.</text>
+
+  <rect class="warn" x="640" y="180" width="210" height="72" rx="10"/>
+  <text class="label" x="672" y="211">HIT / WP</text>
+  <text class="small" x="672" y="234">&gt;16&quot; or skewed top mount.</text>
+
+  <rect class="blue" x="640" y="272" width="210" height="72" rx="10"/>
+  <text class="label" x="672" y="303">SUR / HSUR</text>
+  <text class="small" x="672" y="326">Skewed face mount.</text>
+
+  <rect class="warn" x="640" y="364" width="210" height="72" rx="10"/>
+  <text class="label" x="672" y="395">DHU / DGU</text>
+  <text class="small" x="672" y="418">Only firewall / double gypsum.</text>
+
+  <line class="line" x1="252" y1="186" x2="326" y2="166"/>
+  <line class="line" x1="252" y1="190" x2="326" y2="291"/>
+  <line class="line" x1="252" y1="194" x2="326" y2="416"/>
+  <line class="line" x1="536" y1="150" x2="640" y2="124"/>
+  <line class="line" x1="536" y1="178" x2="640" y2="216"/>
+  <line class="line" x1="536" y1="291" x2="640" y2="308"/>
+  <line class="line" x1="536" y1="416" x2="640" y2="400"/>
+</svg>

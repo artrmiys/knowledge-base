@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="title desc">
+  <title id="title">Exterior wall section takeoff diagram</title>
+  <desc id="desc">Layered exterior wall section with takeoff checkpoints for WRB, sheathing, studs, blocking, insulation, and plates.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2e7d32"/>
+    </marker>
+    <style>
+      .bg{fill:#f8faf8}.panel{fill:#fff;stroke:#d7e5d4;stroke-width:2}.frame{fill:#f1c27d;stroke:#9a6b32;stroke-width:2}
+      .sheath{fill:#d8ecff;stroke:#2c7fb8;stroke-width:2}.wrb{fill:#d9f2d8;stroke:#2e7d32;stroke-width:2}
+      .insul{fill:#fff3c4;stroke:#c78b00;stroke-width:2}.pt{fill:#c7a27b;stroke:#6c4b2a;stroke-width:2}
+      .label{font:600 18px Arial, sans-serif;fill:#1f2a1f}.small{font:14px Arial, sans-serif;fill:#374237}
+      .rule{font:600 15px Arial, sans-serif;fill:#2e7d32}.line{stroke:#2e7d32;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="920" height="520" rx="16"/>
+  <rect class="panel" x="36" y="34" width="848" height="452" rx="14"/>
+  <text class="label" x="70" y="78">Exterior Wall: count by layer, not as one lump</text>
+  <text class="small" x="70" y="105">Use Arch / Energy / Wall Type notes first; verify Structural exceptions.</text>
+
+  <rect class="wrb" x="136" y="145" width="26" height="260"/>
+  <rect class="sheath" x="162" y="145" width="42" height="260"/>
+  <rect class="insul" x="204" y="145" width="42" height="260"/>
+  <rect class="frame" x="246" y="145" width="150" height="260"/>
+  <rect class="panel" x="396" y="145" width="42" height="260"/>
+
+  <rect class="frame" x="256" y="158" width="18" height="234"/>
+  <rect class="frame" x="316" y="158" width="18" height="234"/>
+  <rect class="frame" x="376" y="158" width="18" height="234"/>
+  <rect class="frame" x="246" y="145" width="150" height="18"/>
+  <rect class="pt" x="246" y="387" width="150" height="18"/>
+  <rect class="frame" x="246" y="265" width="150" height="14"/>
+  <rect class="frame" x="246" y="315" width="150" height="14"/>
+
+  <text class="small" x="114" y="430">Exterior</text>
+  <text class="small" x="392" y="430">Interior</text>
+
+  <line class="line" x1="600" y1="155" x2="166" y2="170"/>
+  <text class="rule" x="620" y="160">WRB / Tyvek / Zip tape</text>
+  <text class="small" x="620" y="182">Count as separate line when scope asks.</text>
+
+  <line class="line" x1="600" y1="215" x2="184" y2="210"/>
+  <text class="rule" x="620" y="220">Sheathing thickness</text>
+  <text class="small" x="620" y="242">19/32&quot; = 5/8&quot;; Zip can override.</text>
+
+  <line class="line" x1="600" y1="277" x2="322" y2="275"/>
+  <text class="rule" x="620" y="282">Studs and blocking</text>
+  <text class="small" x="620" y="304">Check 2x4 / 2x6 / 2x8 and wall height.</text>
+
+  <line class="line" x1="600" y1="337" x2="322" y2="322"/>
+  <text class="rule" x="620" y="342">Tall-wall blocking</text>
+  <text class="small" x="620" y="364">10 ft+ walls often need two rows.</text>
+
+  <line class="line" x1="600" y1="397" x2="320" y2="396"/>
+  <text class="rule" x="620" y="402">Plate material</text>
+  <text class="small" x="620" y="424">Separate P.T. bottom plate if called out.</text>
+</svg>
