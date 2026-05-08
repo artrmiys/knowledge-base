@@ -16,6 +16,11 @@ confluence-gallery-*.png
 confluence-*.json
 trello-*.json
 
+# public app docs: keep redacted screenshots only
+docs/assets/images/ourplanecore/ourplanecore-main-view.png
+docs/assets/images/ourplanecore/ourplanecore-sheet-manager.png
+docs/assets/images/ourplanecore/ourplanecore-takeoff-manager.png
+
 # private source snapshots (never commit — see CLAUDE.md §8)
 twist-*.md
 twist-*.json

@@ -57,6 +57,7 @@ nav:
 
   - Старт:
       - Как пользоваться: start/how-to-use.md
+      - Программа: start/ourplanecore.md
       - Workflow: start/workflow.md
       - Структура takeoff: start/takeoff-structure.md
       - QA checklist: start/quality-checklist.md
