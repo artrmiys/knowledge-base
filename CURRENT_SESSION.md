@@ -329,3 +329,9 @@ scope so external references do not override E-Wood takeoff rules:
   Steel Door Institute fire-door assembly notes, AWC FRTW FAQ, Helonic finish
   schedule guide, and Metrie measuring guide.
 - Confirmed all external URLs returned HTTP 200 before committing the links.
+
+Follow-up content note:
+
+- Made the garage trim rule explicit on Interior Trims overview, Base, and Crown:
+  garage has no `Baseboard` and no `Crowns`; do not carry those perimeters
+  through garage walls.

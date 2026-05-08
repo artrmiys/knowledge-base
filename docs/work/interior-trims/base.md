@@ -13,6 +13,7 @@
 
 ## Exclude
 
+- Garage: no `Baseboard`.
 - Tile base when the scope asks for wood base.
 - Rubber/vinyl/metal base unless specifically part of the trim scope.
 - Rooms where finish schedule clearly says no wood base.
@@ -32,6 +33,7 @@
 | `Baseboard` is present below windows unless the finish notes say otherwise. | Do not accidentally skip short under-window runs. | [Trello](https://trello.com/c/6Eg4OGuD) |
 | No `Baseboard` where stair trim/wall junction makes it not applicable. | Check stair-to-wall intersections visually. | [Trello](https://trello.com/c/zCvVfJN2) |
 | `Baseboard` is counted in toilets and shower rooms when shown by finish scope. | Verify against base material, because tile base may override wood base. | [Trello](https://trello.com/c/EZBqumHc) |
+| No `Baseboard` in garage. | Do not carry the room perimeter through garage walls. | E-Wood rule |
 | No `Baseboard` in non-living rooms or rooms without finish. | Exclude unfinished / service spaces unless schedule says otherwise. | [Trello](https://trello.com/c/bf2p8wqf) |
 | In Excel, write all measured values into the formula. | Keep formula inspectable, not just a final number. | [Trello](https://trello.com/c/Zu0NI5a3) |
 | Check material such as `TBD Base`. | Leave a visible note if material is not specified. | [Trello](https://trello.com/c/Q8YQ3KtC) |
@@ -40,6 +42,7 @@
 
 - Baseboard and crowns are measured by perimeter. Start at the entry door and
   trace continuously so breaks are intentional, not accidental.
+- Garage perimeter is not counted for `Baseboard`.
 - Bathroom / shower-room base can be separated from the main base quantity when
   review needs it.
 - Typical no-base spaces: garage, mechanical/equipment rooms, crawl space, and

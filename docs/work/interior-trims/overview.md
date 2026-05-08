@@ -26,6 +26,7 @@ schedules, or finish plans.
 ## Core Rules
 
 - If trims are not specified, write `not specified`.
+- Garage: no `Baseboard` and no `Crowns`.
 - Room schedules can have tile base; exclude tile base when the takeoff needs
   wood base only.
 - Common areas such as corridors and lobbies should be separate because trim type

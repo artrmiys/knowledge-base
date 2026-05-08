@@ -17,6 +17,7 @@ Crowns should be included when interior trim scope is active.
 ## Check
 
 - Crown may appear in finish notes instead of plan view.
+- Garage: no `Crowns`.
 - Do not confuse crown with exterior cornice, fascia, frieze, or rake trim.
 - If trim scope exists but crown is unclear, add a visible note.
 - Typical no-crown spaces: garage, mechanical/equipment rooms, crawl space, and
@@ -28,6 +29,7 @@ Crowns should be included when interior trim scope is active.
 | --- | --- | --- |
 | No `Crowns` in closets. | Exclude `Closet` / `CLO.` spaces unless scope says otherwise. | [Trello](https://trello.com/c/Iz1T4E1L) |
 | No `Crowns` in rooms with sloped ceilings. | Watch rooms marked `slope ceiling` / sloped roof conditions. | [Trello](https://trello.com/c/a2x8EuZA) |
+| No `Crowns` in garage. | Do not carry crown perimeter through garage walls. | E-Wood rule |
 | No `Crowns` in rooms without finish. | Exclude unfinished areas. | [Trello](https://trello.com/c/L54HVTxD) |
 | `Crowns` are counted in bathrooms when trim scope requires it. | Do not automatically exclude bathrooms. | [Trello](https://trello.com/c/nV0U6Z32) |
 | On the second level, count crowns only in `Hall`, foyer, and large guest rooms where required. | Separate second-floor crown logic from first-floor living areas. | [Trello](https://trello.com/c/EImvQgbn) |
@@ -37,6 +39,7 @@ Crowns should be included when interior trim scope is active.
 ## Takeoff Method
 
 - Measure crowns by the same room perimeter logic as baseboard.
+- Garage perimeter is not counted for `Crowns`.
 - Write each measured segment into the Excel formula, not only the final total.
 - If the crown material is `TBD`, keep the material note visible.
 
