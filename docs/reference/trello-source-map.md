@@ -7,6 +7,17 @@
 Карточки с приватными/tooling ссылками редактируются в публичной таблице,
 но остаются в локальном raw archive.
 
+## Integration Status
+
+- Interior Trims text rules are folded into the trim topic pages:
+  [Base](../work/interior-trims/base.md),
+  [Crown](../work/interior-trims/crown.md), and
+  [Door and Window Trim](../work/interior-trims/door-window-trim.md).
+- Important Changes text-only cards are summarized on
+  [Important Changes](../start/important-changes.md) and copied into the closest
+  framing/sheathing/QA topic pages when the rule belongs there.
+- Private/tooling link cards stay raw-only.
+
 ## Interior Trims
 
 Source board: `https://trello.com/b/TyUKA0Zw/int-trims`

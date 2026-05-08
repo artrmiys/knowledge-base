@@ -18,6 +18,11 @@
 
 - Drywall ledger: 2x4 at both sides of demising walls where parallel with framing.
 - Double studs on lower bearing levels if structural notes call for them.
+- Draft stop sheathing at party/demising walls is separate from shear wall
+  sheathing. If structural details call for draft stop, count it at the wall and
+  at floor-framing levels as separate measurements.
+- Do not assume draft stop material is P.T.; use regular material unless the
+  detail/spec explicitly calls for P.T.
 
 ## PlanSwift Записи (двойные demising)
 

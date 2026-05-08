@@ -30,6 +30,42 @@ This page is the visual shelf for high-priority rule changes.
 | `Cantilevered` needs that label. | SQFT / Label | [Trello](https://trello.com/c/TKGVrLrE) |
 | Use the `precut` formula because manual errors are common. | Formula / Precut | [Trello](https://trello.com/c/dM3K1XRD) |
 
+## Text Rules From Full Export
+
+These cards did not always have useful screenshots, but the card titles are
+the rule. Keep them as QA prompts before output.
+
+| Rule / reminder | Topic | Source |
+| --- | --- | --- |
+| Keep `Porch Trims` in one place so review is not split across unrelated rows. | Porch / Deck | [Trello](https://trello.com/c/ysvvsf9o) |
+| Write `Ledger` and `Box` as separate rows. | Ledger / Box | [Trello](https://trello.com/c/frKKbKGO) |
+| Remove unused rows/items, except wall formulas that still drive the workbook. | Output QA | [Trello](https://trello.com/c/JcZI6vlz) |
+| Always check the specification and write a note when material comes from specs. | Specs / Notes | [Trello](https://trello.com/c/6UUhGGJy) |
+| Distinguish `EWP Floor` from `All EWP`; do not treat one as the other. | EWP | [Trello](https://trello.com/c/tm4fd98q) |
+| Copy repeated areas carefully, especially porches and decks. | QA | [Trello](https://trello.com/c/ESB3FC12) |
+| `8'-1"` studs are not `9'` precut; fix the visible wall heights/output. | Studs / Precut | [Trello](https://trello.com/c/AR3c3a3x) |
+| Do not swap joist count and joist length. | Joist | [Trello](https://trello.com/c/I8YQv3Qv) |
+| Measure first, then write the value immediately. | QA | [Trello](https://trello.com/c/4NIJDE9d) |
+| For headers, `(3)` means three plies; do not enter one board for a triple header. | Headers | [Trello](https://trello.com/c/OtYBicSr) |
+| After converting repeated hanger counts, re-check hanger quantities too. | Hangers | [Trello](https://trello.com/c/PRZtikXb) |
+| `Vinyl Soffits` belong in SQFT. | SQFT / Soffit | [Trello](https://trello.com/c/1oja6xP0) |
+| If materials are in a separate specification PDF, add `per customer note`. | Specs / Notes | [Trello](https://trello.com/c/FaECF5m9) |
+| Long 2x ceiling joists may be split and imply supporting vertical joists. | Ceiling Joist | [Trello](https://trello.com/c/JzOsk0WD) |
+| For `Tri-Force` and beams with steel plates, write nearest foot sizes, not inches. | Beam | [Trello](https://trello.com/c/HVOouirh) |
+| Do not create `Posts` / `Post Caps` for every built-up beam; only when actual `6x6`, `4x4`, etc. posts are called out. | Post | [Trello](https://trello.com/c/xiypSXYv) |
+| `Bracing` is always `2x4` unless a detail says otherwise. | Bracing | [Trello](https://trello.com/c/h8RfM3yY) |
+| If a 28' wide house has a dropped beam, joists may be longer than 14'; verify span labels. | Joist | [Trello](https://trello.com/c/GkDZ6tIa) |
+| Use the spelling `Schedule` and floor labels like `1st`, `2nd`, `3rd`. | Output QA | [Trello](https://trello.com/c/NpMOAHXq) |
+| `Cross bridging for I-joists` / `TB27`: `length * 2 * 12 / 16` pcs. | Joist / Blocking | [Trello](https://trello.com/c/xRuW48W7) |
+| For attic `EWP by others`, write note `LVLs by others`. | EWP / Notes | [Trello](https://trello.com/c/OCcTs5F6) |
+| On duplex jobs, check multipliers twice; missing half a building is a common failure. | QA | [Trello](https://trello.com/c/dlxjgOtF) |
+| Box sheathing: attic floor height is added only to the first height. | Box Sheathing | [Trello](https://trello.com/c/8q6E009W) |
+| Attic subfloor can be `extra plate + box = subfloor`. | Box / Subfloor | [Trello](https://trello.com/c/QGOJY6TC) |
+| `TJI 9 1/2` does not use 360 / 560 series. | Joist | [Trello](https://trello.com/c/EfzVvi99) |
+| If `Soffit Eve Vinyl` is shown, enter it in SQFT. | SQFT / Soffit | [Trello](https://trello.com/c/FJ8pga6c) |
+| For `AJS Rafters`, count rafters manually instead of `Rake` when it behaves like an exposed floor overhang. | Roof / Rake | [Trello](https://trello.com/c/Bf9qwCpI) |
+| `Simpson HDU4-SDS2.5`: double when it sits on a wall at upper floors; single when it sits on LVL/steel. | Holdowns | [Trello](https://trello.com/c/73iLEt4M) |
+
 ## Full Gallery
 
 <div class="kb-gallery">

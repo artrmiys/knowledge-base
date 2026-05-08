@@ -31,6 +31,11 @@ schedules, or finish plans.
 - Common areas such as corridors and lobbies should be separate because trim type
   can differ.
 - Crowns should be included when interior trim scope is active.
+- First make the interior-trim PDFs/sheets, then measure baseboard and crowns by
+  continuous room perimeter.
+- Casing for interior doors is filled after the interior-door list is entered;
+  casing for exterior doors/windows is filled after exterior openings are
+  entered.
 
 ## Visual Sources
 

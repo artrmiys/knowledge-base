@@ -25,6 +25,8 @@
 
 - Steel top nailers or steel beam web fillers can drive separate material lines.
 - Hanger selection depends on face/top/concealed/skewed condition.
+- For `Tri-Force` and beams with steel plates, write nearest foot sizes; do not
+  leave noisy inch fractions in the size.
 
 ## EWP Materials
 

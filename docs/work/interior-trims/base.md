@@ -36,6 +36,15 @@
 | In Excel, write all measured values into the formula. | Keep formula inspectable, not just a final number. | [Trello](https://trello.com/c/Zu0NI5a3) |
 | Check material such as `TBD Base`. | Leave a visible note if material is not specified. | [Trello](https://trello.com/c/Q8YQ3KtC) |
 
+## Takeoff Method
+
+- Baseboard and crowns are measured by perimeter. Start at the entry door and
+  trace continuously so breaks are intentional, not accidental.
+- Bathroom / shower-room base can be separated from the main base quantity when
+  review needs it.
+- Typical no-base spaces: garage, mechanical/equipment rooms, crawl space, and
+  other unfinished rooms.
+
 ## Visual Examples
 
 <div class="kb-gallery">

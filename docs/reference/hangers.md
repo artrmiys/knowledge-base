@@ -103,6 +103,10 @@
 - CJTZ for Cedar beams/posts.
 - CBH2.37X9.75C-KT for glulam.
 - A35 clips at shearwall connections when required by general notes.
+- After converting repeated hanger counts, re-check the hanger quantity. A
+  framing repeat change can double the hanger count too.
+- `Simpson HDU4-SDS2.5`: use double when it sits on a wall at upper floors; use
+  single when it sits directly on an LVL/steel beam.
 
 
 <!-- confluence-gallery:start -->

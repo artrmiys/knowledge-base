@@ -20,3 +20,6 @@
 ## Check
 
 If product is assumed, say `assumed` in the note.
+
+At demising conditions, extra rim may be required on both sides. Do not count
+only one side when the detail/plan implies both sides of the demising line.

@@ -45,6 +45,10 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/90144770/Wall+Sheath
 - Full-height vs box-only sheathing at optional walls.
 - Floor-height sheathing around panelized COM jobs where loose material is still
   in scope.
+- Draft stop sheathing at party/demising walls is not the same as shear wall
+  sheathing. Keep draft stop and shear wall quantities separate.
+- Draft stop can appear at walls and between floors; count each supplied scope
+  in the matching section rather than combining it into one wall line.
 
 ## Sheathing Material Variants
 

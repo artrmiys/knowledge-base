@@ -10,6 +10,8 @@
 - Balcony trims should not disappear into general exterior trim.
 - Verify whether details show decking without sheathing.
 - Keep trim, flashing, and structural material separate.
+- Balcony framing can require 2-ply framing and two layers of sleepers; keep
+  framing/sleeper notes visible instead of hiding them in trim.
 
 
 <!-- confluence-gallery:start -->

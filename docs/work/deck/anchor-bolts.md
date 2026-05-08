@@ -15,6 +15,8 @@
 - ATS rod systems are often by others; do not count unless scope says so.
 - Use detail-specific bolt sizes.
 - Keep bolts separate from screws.
+- Washers are not a copy/paste item: update the spacing/count from the current
+  detail instead of leaving the previous spacing unchanged.
 
 
 <!-- confluence-gallery:start -->

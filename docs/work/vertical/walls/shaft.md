@@ -31,6 +31,14 @@ When not otherwise specified, notes often use:
 - Chute Shaft wall A201/A806, wall type 7A, is a recurring miss.
 - DHU/DGU hanger conditions belong here when joists hang over the firewall.
 - Mark shaft hangers separately by floor for review.
+- Typical shaft details are not enough by themselves; find the actual shaft
+  location on plans. Start around trash/vent/mechanical shafts, then verify the
+  referenced detail.
+- If the wall type shows a shaft assembly but the plan only calls out resilient
+  channel, count the resilient channel condition separately instead of forcing a
+  full shaft-wall quantity.
+- `7/8"` resilient channel can be a ceiling/strapping item and may apply at all
+  levels, minus dropped metal-frame areas; verify RCP/ceiling notes.
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

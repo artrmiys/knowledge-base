@@ -19,6 +19,8 @@ Crowns should be included when interior trim scope is active.
 - Crown may appear in finish notes instead of plan view.
 - Do not confuse crown with exterior cornice, fascia, frieze, or rake trim.
 - If trim scope exists but crown is unclear, add a visible note.
+- Typical no-crown spaces: garage, mechanical/equipment rooms, crawl space, and
+  other rooms without finish.
 
 ## Trello Rules
 
@@ -31,6 +33,12 @@ Crowns should be included when interior trim scope is active.
 | On the second level, count crowns only in `Hall`, foyer, and large guest rooms where required. | Separate second-floor crown logic from first-floor living areas. | [Trello](https://trello.com/c/EImvQgbn) |
 | In Excel, write all measured values into the formula. | Keep the formula reviewable. | [Trello](https://trello.com/c/x4SZ0PZN) |
 | Check material such as `TBD Crowns`. | Leave a visible note if material is not specified. | [Trello](https://trello.com/c/KvJvp48a) |
+
+## Takeoff Method
+
+- Measure crowns by the same room perimeter logic as baseboard.
+- Write each measured segment into the Excel formula, not only the final total.
+- If the crown material is `TBD`, keep the material note visible.
 
 ## Visual Examples
 

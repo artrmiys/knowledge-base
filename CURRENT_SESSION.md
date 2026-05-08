@@ -255,5 +255,34 @@ Completed the Confluence integration cleanup after the interrupted session:
 Next content still worth doing later:
 
 1. Improve generic gallery captions.
-2. Review Twist `WORK_EXTRACT_DRAFT.md` carefully and copy only non-private estimating rules.
-3. Extract text rules from the full Trello exports, not just the images.
+
+---
+
+## Resume pass 2 — 2026-05-08
+
+Continued the remaining import cleanup:
+
+- Extracted text rules from `imports/live-sources/trello-int-trims-full/pages/`
+  into interior-trim topic pages:
+  - `docs/work/interior-trims/base.md`
+  - `docs/work/interior-trims/crown.md`
+  - `docs/work/interior-trims/door-window-trim.md`
+  - `docs/work/interior-trims/overview.md`
+- Extracted high-signal text-only cards from
+  `imports/live-sources/trello-important-changes-full/pages/` into
+  `docs/start/important-changes.md`.
+- Copied the same Trello rules into closest topic pages where useful:
+  joist, post, beam, blocking, rim, roof sheathing, box sheathing, headers,
+  anchor bolts, balcony trims, eve/soffit, cantilevered SQFT, hangers, and
+  boss-feedback QA.
+- Reviewed `imports/live-sources/twist-1337560-private/WORK_EXTRACT_DRAFT.md`
+  and copied only non-private estimating rules into topic pages:
+  - draft stop vs shear wall sheathing;
+  - shaft detail/resilient-channel checks;
+  - metal-stud unit wall spacing/jamb checks;
+  - demising rim counted on both sides.
+- Did not copy project names, due dates, people names, screenshots, or raw Twist
+  chat text into public docs.
+- Checked Confluence image metadata for better gallery captions. The manifest
+  and raw image pages only carried generic attachment filenames/page titles, not
+  useful `<ac:caption>` text, so no safe bulk caption rewrite was made.

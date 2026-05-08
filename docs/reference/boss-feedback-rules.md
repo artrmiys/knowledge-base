@@ -116,6 +116,15 @@ When excluded, still note metal locations as `by others`.
 - Stair treads: list `2x12 Tread` and add `1x8 Riser`.
 - Do not count nails; list bolts and Simpson screws where required.
 - Do not leave copied detail labels uncorrected.
+- Use `Schedule`, not `Shedule`.
+- Floor labels use `1st`, `2nd`, `3rd`, `4th`, etc.
+- If material comes from a separate specification PDF, add a note such as
+  `per customer note`.
+- Remove unused rows/items from output, except formulas that still drive wall
+  calculations.
+- Do not swap count and length columns for joists or similar repeated members.
+- For duplex / repeated-building jobs, check multipliers twice so half a
+  building is not missed.
 
 
 <!-- confluence-gallery:start -->

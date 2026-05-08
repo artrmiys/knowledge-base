@@ -14,3 +14,4 @@
 ## Check
 
 - RCP and architectural sections can show soffits missing from structural plans.
+- `Vinyl Soffits` / `Soffit Eve Vinyl` belong in SQFT, not as a framing line.

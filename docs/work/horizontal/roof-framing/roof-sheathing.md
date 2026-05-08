@@ -12,6 +12,10 @@
 - Extra rigid XPS layer is a recurring miss.
 - Piggy truss sleepers can be hidden in roof details.
 - 1x3 strapping under roof trusses may be required.
+- For roofs framed with `AJS Rafters`, count rafters manually instead of `Rake`
+  when the condition behaves like an exposed floor overhang.
+- Some details call for every other rafter to be doubled; do not average this
+  into a generic rafter run.
 
 
 <!-- confluence-gallery:start -->

@@ -18,3 +18,5 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65339407/Headers`
 
 - Higher floors may have larger exterior headers than lower floors.
 - Structural schedules override architectural wall assumptions.
+- `(3)` means a three-ply header; do not enter only one board for a triple
+  header.

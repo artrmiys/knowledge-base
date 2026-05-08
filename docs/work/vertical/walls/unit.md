@@ -23,6 +23,10 @@
   calls for it.
 - Сначала смотри на спецификацию стен — **из металла или из дерева** делаются интерьерные стены.
 - Если в notes написано **`walls are panels`** — НЕ считаем (панели поставляются отдельно).
+- If unit interior walls are metal studs, verify the spacing. Do not carry
+  `24" o.c.` forward if the notes/spec require `16" o.c.`.
+- Metal-stud door jambs inside units should match the metal-stud wall size
+  (`2x4` or `2x6`) instead of using a generic jamb.
 
 ## Разметка по юнитам в PlanSwift (A 2x4 / A 2x6)
 

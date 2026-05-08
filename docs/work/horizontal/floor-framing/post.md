@@ -19,6 +19,11 @@
 - Posts in panelized wall systems may be by others unless shown as loose
   structural material.
 - Verify load path details before assuming a post is included in wall panels.
+- Do not create `Posts` / `Post Caps` for every built-up beam. Count them only
+  when actual post material is called out, such as `6x6`, `4x4`, PSL, steel, or
+  another explicit post.
+- If a post is not specified, leave a visible note instead of guessing a post and
+  cap.
 
 ## Connectors
 

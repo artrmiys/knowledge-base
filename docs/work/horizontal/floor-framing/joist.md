@@ -49,6 +49,12 @@
 - Check that rim is still counted at roof TJI conditions.
 - Do not split rim into 16' pieces unless the output format specifically asks
   for pieces.
+- Do not swap joist count and joist length in Excel/output.
+- If the house is about 28' wide and a beam is dropped, verify the joist span
+  labels; joists may be longer than 14'.
+- `TJI 9 1/2` does not use 360 / 560 series.
+- Long 2x ceiling joists may be split and imply supporting vertical joists; look
+  for notes/details before assuming one continuous member.
 
 ## EWP Joist Materials
 
@@ -82,6 +88,15 @@
 | Hangers | `ITS2.37/11.88` | `=ЧЁТН(lft * 12/16)` | pcs |
 
 Формула для hangers по joists 16" O.C.: `=ЧЁТН(lft * 12 / spacing)` — округление вверх до чётного.
+
+## Trello QA Formulas
+
+| Item | Formula / note |
+| --- | --- |
+| I-joist cross bridging / `TB27` | `length * 2 * 12 / 16` pcs |
+| Attic `EWP by others` | Add note: `LVLs by others` |
+| `EWP by others` with steel-beam blocking | Blocking can be `LVL` / `LSL`; scale and note it |
+| `EWP by others` with one `LVL` in floor | Add a visible note instead of hiding it |
 
 
 <!-- confluence-gallery:start -->

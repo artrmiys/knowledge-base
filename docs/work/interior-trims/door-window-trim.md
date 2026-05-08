@@ -24,6 +24,8 @@
 - Door/window trim can be hidden in finish schedules, interior elevations, or
   details rather than framing sheets.
 - Keep trim notes separate from blocking/jamb framing notes.
+- If the schedule names a manufacturer or special product, keep it in the note
+  instead of flattening the opening to a generic size.
 
 ## Trello Rules
 
@@ -41,6 +43,17 @@
 | `4080 C.O.` is a cased-opening notation. | Convert and enter it in the cased-opening side, not doors. | [Trello](https://trello.com/c/XYT9cr0q) |
 | Enter interior doors and cased openings for each level in Excel. | Separate floors before trim formulas. | [Trello](https://trello.com/c/Zy0M8kcH) |
 | If a door schedule exists, fill from the schedule. | Prefer schedule data over manual plan-only entry. | [Trello](https://trello.com/c/C0LHSgXl) |
+
+## Excel Entry
+
+- After all doors/openings are written, copy the opening mark and quantity
+  columns into the right-side Excel helper table for casing formulas.
+- Rewrite all door and cased-opening sizes into the left table in inches:
+  `2'-0" x 6'-8"` becomes `24 x 80`.
+- For many repeated doors, use an Excel formula instead of manual repeated
+  typing.
+- Before output, select the entered door/opening cells and check the status-bar
+  sum against the takeoff count.
 
 ## Visual Examples
 
