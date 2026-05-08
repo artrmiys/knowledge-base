@@ -46,48 +46,20 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/90144770/Wall+Sheath
 - Floor-height sheathing around panelized COM jobs where loose material is still
   in scope.
 
-<!-- confluence-context:start -->
-## Confluence Context
+## Sheathing Material Variants
 
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
+Стандартные продукты, которые встречаются на чертежах:
 
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Sheathing](https://ewood.atlassian.net/wiki/spaces/work/pages/65044604/Sheathing) | content + images | 2 | `imports/live-sources/confluence-work/pages/01-65044604-sheathing.md`<br>`imports/live-sources/confluence-work-images/pages/01-65044604-sheathing.md` |
-| [Wall Sheathing (обшивка стен)](https://ewood.atlassian.net/wiki/spaces/work/pages/90144770/Wall+Sheathing) | content | 0 | `imports/live-sources/confluence-work/pages/01-90144770-wall-sheathing-обшивка-стен.md` |
-
-### Related Wiki Pages
-
-| Wiki page | Why it is connected |
+| Запись на чертеже | Что брать |
 | --- | --- |
-| [reference/source-map.md](../../../reference/source-map.md) | linked from `Wall Sheathing (обшивка стен)` |
-| [start/takeoff-structure.md](../../../start/takeoff-structure.md) | linked from `Sheathing, Wall Sheathing (обшивка стен)` |
-| [work-types/ewp-capital.md](../../../work-types/ewp-capital.md) | linked from `Sheathing` |
-| [work/horizontal/roof-framing/dbl-trpl-rafters.md](../../horizontal/roof-framing/dbl-trpl-rafters.md) | linked from `Sheathing` |
-| [work/vertical/walls/exterior.md](../walls/exterior.md) | linked from `Sheathing, Wall Sheathing (обшивка стен)` |
-| [work/vertical/walls/gable.md](../walls/gable.md) | linked from `Sheathing` |
-| [work/vertical/walls/parapet.md](../walls/parapet.md) | linked from `Sheathing, Wall Sheathing (обшивка стен)` |
-| [work/vertical/walls/unit.md](../walls/unit.md) | linked from `Wall Sheathing (обшивка стен)` |
+| `1/2" CDX Ply` | Plywood CDX, 1/2" |
+| `1/2" OSB` | OSB, 1/2" |
+| `1/2" Ply` (или просто **APA RATED**) | Plywood APA-rated, 1/2" |
+| `7/16" Zip` | Huber Zip System, 7/16" |
+| `Zip Tape` | Лента Zip — отдельной строкой к Zip-обшивке |
 
-### Source Notes
-
-??? note "Sheathing"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65044604/Sheathing`
-    Updated in Confluence: `апр. 18`
-
-    - Варианты:
-    - 1/2" CDX Ply
-    - 1/2” OSB
-    - 1/2” Ply (если написано, просто APA RATED)
-    - 7/16" Zip
-    - Zip Tape
-
-??? note "Wall Sheathing (обшивка стен)"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/90144770/Wall+Sheathing`
-
-    - Опубликовано июл. 28, 2025
-
-<!-- confluence-context:end -->
+- Если на плане только `APA RATED` без указания материала — это **Plywood**, не OSB.
+- `Zip Tape` идёт **только** в паре с Zip-обшивкой; не забывай добавить отдельную строку.
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

@@ -18,36 +18,15 @@
 - Do not use DHU/DGU hangers just because wall is demising/corridor. Use DHU/DGU
   only where joists hang over true fire wall conditions per details.
 
-<!-- confluence-context:start -->
-## Confluence Context
+## Что считается corridor wall
 
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
+Corridor walls — это **не только стены вдоль коридоров**. Сюда же относятся стены, разделяющие жилые помещения от нежилых:
 
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Corridor (коридорные стены)](https://ewood.atlassian.net/wiki/spaces/work/pages/65306625/Corridor) | content + images | 1 | `imports/live-sources/confluence-work/pages/01-65306625-corridor-коридорные-стены.md`<br>`imports/live-sources/confluence-work-images/pages/01-65306625-corridor-коридорные-стены.md` |
+- между лестницей (stair) и жилым помещением;
+- между гаражом и жилым помещением;
+- любые fire-rated перегородки common-area от unit-зоны.
 
-### Related Wiki Pages
-
-| Wiki page | Why it is connected |
-| --- | --- |
-| [reference/source-map.md](../../../reference/source-map.md) | linked from `Corridor (коридорные стены)` |
-| [start/takeoff-structure.md](../../../start/takeoff-structure.md) | linked from `Corridor (коридорные стены)` |
-| [work/horizontal/floor-framing/post.md](../../horizontal/floor-framing/post.md) | linked from `Corridor (коридорные стены)` |
-| [work/horizontal/roof-framing/header.md](../../horizontal/roof-framing/header.md) | linked from `Corridor (коридорные стены)` |
-| [work/horizontal/roof-framing/ridge.md](../../horizontal/roof-framing/ridge.md) | linked from `Corridor (коридорные стены)` |
-| [work/vertical/walls/exterior.md](exterior.md) | linked from `Corridor (коридорные стены)` |
-| [work/vertical/walls/unit.md](unit.md) | linked from `Corridor (коридорные стены)` |
-
-### Source Notes
-
-??? note "Corridor (коридорные стены)"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65306625/Corridor`
-    Updated in Confluence: `окт. 30, 2025`
-
-    - Corridor walls - коридорные стены, не только коридора, но и стены разделяющие жилые помещания от не жилых. Например, между лестницей и жилюпомещением. гаражом и жилю помещением.
-
-<!-- confluence-context:end -->
+Запись в PlanSwift — `cor 2x6 x` / `corr 2x6 x` (см. [Exterior → PlanSwift Wall Names](exterior.md#planswift-wall-names)). Двойной коридор — `cor (2) 2x6 x`.
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

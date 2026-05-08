@@ -158,3 +158,96 @@ Next content step:
    hand-written estimating rules on the topic pages.
 3. Keep `docs/reference/confluence-source-map.md` in nav so every source/page
    relationship stays visible.
+
+---
+
+## Session handoff — 2026-05-07 (Confluence integration pass)
+
+### Что было сделано в сессии
+
+**Push 1 (commit `4cad4d7`)** — выкачено всё накопленное содержимое в гит:
+- 175/175 публичных Confluence-картинок в `docs/assets/images/confluence/`
+- 43 Trello int-trims + 20 important-changes картинки
+- Полный source-map (Confluence + Trello + Tilda)
+- Все docs/work/* страницы с auto-generated `<!-- confluence-context -->` и `<!-- confluence-gallery -->` блоками
+- Конфиг (mkdocs.yml, overrides/, tools/), мета-доки (CLAUDE.md, AGENTS.md, IMPORT_SOURCES.md)
+- `.gitignore` пополнен: `twist-*.md`, `twist-*.json`, `probe-twist-*.json` (приватные снапшоты)
+
+**Confluence integration pass (в процессе)** — встраивание контента из raw Confluence в hand-written секции docs/-страниц + удаление дублирующих `<!-- confluence-context -->` блоков (галереи `<!-- confluence-gallery -->` НЕ трогать).
+
+Pilot и завершённые batch'и:
+
+- **Pilot** (`docs/work/vertical/walls/exterior.md`) — добавлены секции `## Wall Sizing & Height` и `## Под Bottom Plate (на бетоне)`. Используй как style reference для остальных страниц.
+- **Walls batch (8 страниц)** — completed: corners, corridor, demising, parapet, shaft, furring, gable, sill-plates, unit. Конкретика: PlanSwift `dem (2) 2x6 10.5` запись, parapet vs truss decision tree, gable stick-vs-truss, sill plate vs btm plate, unit `A 2x4`/`A 2x6` с letter prefixes.
+- **Openings + Sheathing batch (8 страниц)** — completed: windows-doors (macro `F_Openings`, mark `d`/`gd`), wall-sheathing (Sheathing Material Variants table — CDX/OSB/Zip/APA), truss-heel (heel height 1'-7"), headers/floor/gable/shear-wall/dup-of-gable (Confluence stubs — только удалён context block).
+
+В фоне на момент паузы работали 2 агента — их writes идут напрямую на диск, должны были закончиться:
+
+- **Floor + Roof + Deck batch (13 страниц)**: `docs/work/horizontal/floor-framing/{beam,joist,post}.md` + `docs/work/horizontal/roof-framing/{ridge,header,dbl-trpl-rafters,hip,valley,overframes,canopy,dormer,roof-sheathing}.md` + `docs/work/deck/{anchor-bolts,balcony-trims,railing}.md`
+- **Reference + Job-types + Start batch (~10 страниц)**: `docs/work-types/{com,ewp-capital,residential}.md`, `docs/start/{takeoff-structure,quality-checklist,maintenance,how-to-use}.md`, `docs/reference/hangers.md`
+
+### Что нужно сделать после возобновления
+
+1. **Проверить, что 2 фоновых агента закончили работу:**
+   ```powershell
+   git status --short
+   ```
+   Если изменены файлы из batch'ей выше — агенты закончили. Если нет — перезапустить их (см. раздел "Если агенты не закончили" ниже).
+
+2. **Build + проверить:**
+   ```powershell
+   .\.venv\Scripts\python.exe -m mkdocs build --strict
+   ```
+   Должно быть 0 warnings/errors (Material marketing notice — ignore, см. CLAUDE.md §13.2).
+
+3. **Commit + push:**
+   ```powershell
+   git add docs/
+   git commit -m "content: интегрировать конкретику из Confluence raw в docs/-страницы"
+   git push origin main
+   ```
+   GitHub Actions автоматически передеплоит сайт.
+
+4. **Если нужно — handle box-sheathing.md:** у него нет Confluence-источника, проверь что `<!-- confluence-context -->` блок там либо отсутствует, либо тоже удалён.
+
+### Если агенты не закончили
+
+Возможно при паузе сессии 2 фоновых агента (`floor+roof+deck` и `reference+job-types`) были прерваны до завершения. Проверка:
+
+```powershell
+git diff --stat docs/ | grep -E "(beam|joist|post|ridge|header|dbl-trpl|hip|valley|overframes|canopy|dormer|roof-sheathing|anchor-bolts|balcony-trims|railing|com\.md|ewp-capital|residential|takeoff-structure|quality-checklist|maintenance|how-to-use|hangers)"
+```
+
+Если этих файлов в diff нет — нужно перезапустить недостающие batch'и. Инструкции были такие (одинаковые для всех):
+
+> Для каждой docs/-страницы: прочитать raw Confluence MD из `imports/live-sources/confluence-work-full/pages-public/`, извлечь конкретные правила/числа/PlanSwift записи которые ЕСТЬ в Confluence но НЕТ в hand-written секциях текущей docs/-страницы, добавить в существующие `## Critical Rules`/`## Count` или новые H2-секции (между шапкой и `<!-- confluence-context -->`). После — УДАЛИТЬ блок `<!-- confluence-context:start -->` ... `<!-- confluence-context:end -->`. Блок `<!-- confluence-gallery -->` — НЕ трогать. Пилот: `docs/work/vertical/walls/exterior.md`. НЕ цитировать salary/email/UID/private. Финальный build `--strict`.
+
+Полные таблицы (docs ↔ raw Confluence MD) для каждого batch — см. начало сессии (используй `imports/live-sources/confluence-work-full/pages-public/` + `docs/reference/confluence-source-map.md` для маппинга).
+
+### Что НЕ сделано в этой сессии (next sessions)
+
+1. **Captions у gallery картинок** — все ещё generic ("exterior wall detail/reference 01"). Можно улучшить вытянув `<ac:caption>` из Confluence storage HTML.
+2. **Twist `WORK_EXTRACT_DRAFT.md`** — `imports/live-sources/twist-1337560-private/WORK_EXTRACT_DRAFT.md` ещё не разобран. Содержит и приватное (нельзя в публичный docs), и полезные правила (можно).
+3. **Trello-карточки** (44 int-trims + 75 important-changes) — raw в `imports/live-sources/trello-*-full/`. Картинки уже в публичном docs, текстовые правила из карточек ещё не извлечены.
+4. **Confluence Context дублирование на reference/source-map.md** — resolved in the resume pass below.
+
+---
+
+## Resume pass — 2026-05-08
+
+Completed the Confluence integration cleanup after the interrupted session:
+
+- Confirmed the two late batches wrote to disk:
+  - Floor + Roof + Deck pages.
+  - Reference + Job Types + Start pages.
+- Removed every remaining `<!-- confluence-context:start -->` / `<!-- confluence-context:end -->`
+  block from `docs/`; galleries were left in place.
+- Fixed the stale `maintenance.md` anchor link to `quality-checklist.md`.
+- Verified there are no remaining `confluence-context` blocks in `docs/`.
+- Verified `.\.venv\Scripts\python.exe -m mkdocs build --strict` passes.
+
+Next content still worth doing later:
+
+1. Improve generic gallery captions.
+2. Review Twist `WORK_EXTRACT_DRAFT.md` carefully and copy only non-private estimating rules.
+3. Extract text rules from the full Trello exports, not just the images.

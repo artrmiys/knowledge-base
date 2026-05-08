@@ -12,34 +12,6 @@
 - Do not hide dormer materials inside generic roof lines if pricing needs them
   separate.
 
-<!-- confluence-context:start -->
-## Confluence Context
-
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
-
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Dormer, Shed Dormer (надстроенная крыша)](https://ewood.atlassian.net/wiki/spaces/work/pages/66125835/Dormer+Shed+Dormer) | content + images | 1 | `imports/live-sources/confluence-work/pages/01-66125835-dormer-shed-dormer-надстроенная-крыша.md`<br>`imports/live-sources/confluence-work-images/pages/01-66125835-dormer-shed-dormer-надстроенная-крыша.md` |
-
-### Related Wiki Pages
-
-| Wiki page | Why it is connected |
-| --- | --- |
-| [reference/hangers.md](../../../reference/hangers.md) | linked from `Dormer, Shed Dormer (надстроенная крыша)` |
-| [start/takeoff-structure.md](../../../start/takeoff-structure.md) | linked from `Dormer, Shed Dormer (надстроенная крыша)` |
-| [work/horizontal/floor-framing/post.md](../floor-framing/post.md) | linked from `Dormer, Shed Dormer (надстроенная крыша)` |
-| [work/horizontal/roof-framing/ridge.md](ridge.md) | linked from `Dormer, Shed Dormer (надстроенная крыша)` |
-| [work/vertical/walls/exterior.md](../../vertical/walls/exterior.md) | linked from `Dormer, Shed Dormer (надстроенная крыша)` |
-
-### Source Notes
-
-??? note "Dormer, Shed Dormer (надстроенная крыша)"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/66125835/Dormer+Shed+Dormer`
-    Updated in Confluence: `июн. 08, 2025`
-
-    - No reusable text notes were detected in the raw export.
-
-<!-- confluence-context:end -->
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

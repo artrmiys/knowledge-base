@@ -25,6 +25,22 @@
 - Check wall size by floor: 2x4, 2x6, or 2x8.
 - Bottom plates may need to be separated when the lower plate is P.T.
 
+## Wall Sizing & Height
+
+- На плане толщина стен: **5 1/2"** для 2x6, **3 1/2"** для 2x4.
+- Высота стены — от нижней доски **Btm Plate** до верхних досок **Top Plates** (включая обе доски). Брать с **elevation** или **section**, не с плана.
+- В PlanSwift запись: `ext <толщина> <высота>`, например **`ext 2x6 9.0`**.
+
+## Под Bottom Plate (на бетоне)
+
+При посадке экстерьерной стены на бетон/фундамент в takeoff попадают три позиции — их легко забыть, потому что на плане они не показаны:
+
+- **Sill Sealer** — поролоновая прокладка между бетоном и нижней доской.
+- **Termite Shield** — металлическая защита от термитов между бетоном и Btm Plate.
+- **Washers** — шайбы под анкерные болты Btm Plate к фундаменту.
+
+См. [Anchor Bolts](../../deck/anchor-bolts.md) и [Sill Plates](sill-plates.md) для bolts/plates конкретики.
+
 ## Where To Look
 
 | Drawing area | What to pull from it |
@@ -73,106 +89,6 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65175555/Walls`
 - Exterior blocking changing to FRT because the exterior wall material is FRT.
 - Parapet framing that follows the exterior wall material rule.
 
-<!-- confluence-context:start -->
-## Confluence Context
-
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
-
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Exterior (наружные стены)](https://ewood.atlassian.net/wiki/spaces/work/pages/65273857/Exterior) | content + images | 16 | `imports/live-sources/confluence-work/pages/01-65273857-exterior-наружные-стены.md`<br>`imports/live-sources/confluence-work-images/pages/01-65273857-exterior-наружные-стены.md` |
-| [Walls](https://ewood.atlassian.net/wiki/spaces/work/pages/65175555/Walls) | content | 3 | `imports/live-sources/confluence-work/pages/01-65175555-walls.md`<br>`imports/live-sources/confluence-work-images/pages/01-65175555-walls.md` |
-
-### Related Wiki Pages
-
-| Wiki page | Why it is connected |
-| --- | --- |
-| [reference/source-map.md](../../../reference/source-map.md) | linked from `Exterior (наружные стены)` |
-| [start/takeoff-structure.md](../../../start/takeoff-structure.md) | linked from `Exterior (наружные стены), Walls` |
-| [work/horizontal/roof-framing/dbl-trpl-rafters.md](../../horizontal/roof-framing/dbl-trpl-rafters.md) | linked from `Walls` |
-| [work/vertical/walls/unit.md](unit.md) | linked from `Exterior (наружные стены), Walls` |
-
-### Source Notes
-
-??? note "Walls"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65175555/Walls`
-    Updated in Confluence: `апр. 09`
-
-    - Основные компоненты каркасной стены:
-    - Bottom Plate / Нижняя доска – лежит на перекрытии или бетоне, служит основанием стены.
-    - Top Plate / Верхняя доска – завершает стену сверху, обычно двойная.
-    - Studs / Стойки – вертикальные элементы, обычно 2x4 или 2x6, шаг 16" или 24".
-    - Headers / Перемычки – устанавливаются над проёмами (окна, двери), перераспределяют нагрузку.
-    - Bracing / Раскосы – временные или постоянные укосины для жёсткости.
-    - Blocking / Перемычки между стойками – для крепления отделки, противопожарные преграды.
-    - Sheathing / Обшивка – OSB или аналог для жёсткости и крепления внешней отделки.
-    - Tyvek/ Бумага – служит для защиты от ветра и влаги
-    - Insulation/ Утеплитель –  наружный утеплитель фасада
-    - Exterior – наружные стены.
-    - Отделяют здание от внешней среды. Требуют утепления, ветро- и влагозащиты (Tyvek), внешней обшивки (OSB, сайдинг), часто содержат оконные и дверные проёмы.
-    - Corridor – коридорные стены.
-    - Разделяют юниты и общие коридоры. часто строятся с двумя слоями гипса или слоем Plywood
-    - Demising – разделяющие стены между юнитами.
-    - Обеспечивают шумоизоляцию и пожарную защиту между жильцами. Часто двойной каркас, по 2 слоя гипса с каждой стороны или слой Plywood
-    - Furring – облицовочные (вдоль бетонных стен).
-    - Не несущие. Используются для выравнивания и прокладки инженерии. Как правило: металлический или деревянный тонкий каркас + гипс.
-    - Shaft – шахтные стены.
-    - Ограждают коммуникационные шахты (лифты, вентиляция, сантехника). Требуют огнестойкости (до 2 часов), спец. гипс, усиленные крепления.
-    - Units / Interior – внутренние стены в юнитах.
-    - Разделяют комнаты внутри квартиры. Обычно простые, без огнестойких требований, каркас 2x4 или металлокаркас, один слой гипса с каждой стороны
-    - Shear Walls – сейсмостойкие/сопротивляющиеся сдвигу стены.
-    - Обеспечивают жёсткость здания при ветровых и сейсмических нагрузках. Обычно: 2x6 каркас + структурный OSB/plywood, спец. крепежи и анкеры.
-    - Walls - запись в Planswift
-    - ext x
-    - cor 2x6 x
-    - corr 2x6 x
-    - cor 2x4 x
-    - corr 2x6 x
-    - dem 2x6 x
-    - dem 2x4 x
-    - cor (2) 2x6 x
-    - corr (2) 2x6 x
-    - cor (2) 2x4 x
-    - corr (2) 2x4 x
-    - dem (2) 2x6 x
-    - dem (2) 2x4 x
-    - 2x4 x
-    - 2x6 x
-    - 2x4 half
-    - 2x6 half
-
-    Source tables:
-
-    ### Table 1
-    
-    | Walls - запись в Planswift |
-    | --- |
-
-    ### Table 2
-    
-    | Walls - запись в Planswift |
-    | --- |
-    | ext x<br>cor 2x6 x<br>corr 2x6 x<br>cor 2x4 x<br>corr 2x6 x<br>dem 2x6 x<br>dem 2x4 x<br>cor (2) 2x6 x<br>corr (2) 2x6 x<br>cor (2) 2x4 x<br>corr (2) 2x4 x<br>dem (2) 2x6 x<br>dem (2) 2x4 x<br>2x4 x<br>2x6 x<br>2x4 half<br>2x6 half |
-
-
-??? note "Exterior (наружные стены)"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65273857/Exterior`
-    Updated in Confluence: `апр. 09`
-
-    - Exterior Walls - экстерьерные стены, обычно используют 2x6 или 2x4 сечения
-    - на плане толщину стен указывают 5 1/2” для 2x6 и 3 1/2” для 2x4
-    - Ext Walls
-    - ширина стен 2х6 и 2х4
-    - нужно определить высоту стен, по фасаду или разрезу (elevation or section).
-    - высота стены начинается с нижней доски Btm Plate до верхних досок Top Plates (включая эти доски)
-    - в Planswift на плане Exterior Walls записывается как ext толщина стены высота стены
-    - например ext 2x6 9.0
-    - Sill Sealer
-    - Termite Shield
-    - Washers
-    - ---
-
-<!-- confluence-context:end -->
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

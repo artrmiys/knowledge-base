@@ -1,5 +1,26 @@
 # Gable Walls
 
+Gables делятся на **два типа**, и от этого зависит весь takeoff:
+
+- **gable stick** — продолжение каркасной стены вверх. Считаем plates, studs, blocking, bracing, sheathing.
+- **gable trusses** — собран из ферм. Считаем **только sheathing** (фермы — by others).
+
+### Как определить тип
+
+1. На плане крыши найди заметки про **Rafters**.
+2. Если написано **Trusses** — крыша из ферм → **gable trusses**.
+3. Если написано `2x8`, `2x10`, `2x12`, `TJI 360` или `stick` — крыша stick → **gable stick**.
+
+## Workflow в PlanSwift
+
+Для каждого треугольника gable замерь:
+
+- **SQFT** — площадь треугольника gable. Брать **от верхней грани TOP верхней доски стены** (не от низа стены).
+- **BTM** — длина нижней грани (по верху стены).
+- **TOP** — длина двух верхних наклонных граней.
+
+Все gables на здании заводи **одной площадью SQFT, одним BTM и одним TOP**, даже если треугольников несколько. Где заканчивается стена и начинается gable — смотри на разрезах/фасадах (sections / elevations).
+
 ## Count
 
 - Gable wall framing, sheathing, and SQFT where shown.
@@ -51,168 +72,6 @@ When gable end trusses are **by others**, only the sheathing package is included
 | Insulation | `1 1/2" Insulation` | `=ОКРВВЕРХ(SQFT*1.1;10)` | SQ FT |
 | Wall Sheathing | `7/16" Zip` | `=ОКРВВЕРХ(SQFT/32*1.1;1)` | 4x8 |
 | Tape | `Zip Tape` | `=ОКРВВЕРХ((SQFT*0.4)*1.1;10)` | LFT |
-
-<!-- confluence-context:start -->
-## Confluence Context
-
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
-
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Gable (треугольные фронтоны)](https://ewood.atlassian.net/wiki/spaces/work/pages/63799300/Gable) | content + images | 9 | `imports/live-sources/confluence-work/pages/01-63799300-gable-треугольные-фронтоны.md`<br>`imports/live-sources/confluence-work-images/pages/01-63799300-gable-треугольные-фронтоны.md` |
-
-### Related Wiki Pages
-
-| Wiki page | Why it is connected |
-| --- | --- |
-| [start/takeoff-structure.md](../../../start/takeoff-structure.md) | linked from `Gable (треугольные фронтоны)` |
-| [work/horizontal/roof-framing/dbl-trpl-rafters.md](../../horizontal/roof-framing/dbl-trpl-rafters.md) | linked from `Gable (треугольные фронтоны)` |
-| [work/vertical/walls/exterior.md](exterior.md) | linked from `Gable (треугольные фронтоны)` |
-| [work/vertical/walls/parapet.md](parapet.md) | linked from `Gable (треугольные фронтоны)` |
-| [work/vertical/walls/sill-plates.md](sill-plates.md) | linked from `Gable (треугольные фронтоны)` |
-
-### Source Notes
-
-??? note "Gable (треугольные фронтоны)"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/63799300/Gable`
-    Updated in Confluence: `июн. 24, 2025`
-
-    - gables делятся на два типа:
-    - gable stick - как стена
-    - gable trusses - из ферм
-    - определить из чего сделана крыша, на плане крыши найти заметки о Rafters - будет написано Trusses либо 2x8….2x12…..TJI360…. stick
-    - крыша из досок trusses
-    - крыша из досок stick
-    - от этого зависит будут ли gables продолжением стены stick
-    - или gables будут из ферм trusses
-    - gable stick - как стена
-    - plates (горизонтальные доски)
-    - studs (вертикальные доски)
-    - blocking и bracing (усиление)
-    - sheathing (обшивка)
-    - нужно в planswift измерить площадь SQFT, нижнюю грань BTM  и две верхние TOP как на примере ниже, вписать эти данные в excel как на примере ниже
-    - площадь SQFT треугольника gable  брать от верхней грани стены TOP верхней доски ,
-    - определить где заканчивается стена и начинается gable
-    - посмотреть на разрезах/фасадах
-    - все Gables треугольники (может быть несколько)  должны быть в planswift одной площадью, одной нижней доской BTM  и верхней TOP  - внесены в excel
-    - Gable Walls
-    - B
-    - C
-    - D
-    - E
-    - F
-    - G
-    - Plates Ext (3) btm and dbl top
-    - 2x6
-    - =ЧЁТН((( BTM + DBL TOP )*1)*1,1)
-    - LFT
-    - = BTM + TOP *2
-    - Studs for Gables
-    - 2x6
-    - =ЧЁТН( SQFT / height )
-    - height
-    - = SQFT
-    - Blocking
-    - 2x6
-    - =ЧЁТН(( BTM )/2*1)
-    - LFT
-    - = BTM
-    - Bracing Ext Walls
-    - 2x4
-    - =( BTM )/8*1,1
-    - 14
-    - = BTM
-    - Wall Sheathing
-    - 1/2" CDX Ply
-    - =ОКРВВЕРХ( SQFT *1,1/32;1)
-    - 4x8
-    - per page
-    - = SQFT
-    - Vapor Barrier
-    - Tyvek
-    - =ОКРВВЕРХ( SQFT  *1,1;10)
-    - SQ FT
-    - Insulation
-    - 1 1/2" Insulation
-    - =ОКРВВЕРХ( SQFT  *1,1;10)
-    - SQ FT
-    - Wall Sheathing
-    - 7/16" Zip
-    - =ОКРВВЕРХ( SQFT /32*1,1;1)
-    - 4x8
-    - per page
-    - = SQFT
-    - Tape
-    - Zip Tape
-    - =ОКРВВЕРХ(( SQFT *0,4)*1,1;10)
-    - LFT
-    - gable trusses - из ферм
-    - sheathing (обшивка)
-    - нужно в planswift измерить площадь SQFT, вписать эти данные в excel как на примере ниже
-    - Note: Gables Ends Trusses are by
-    - others; only sheathing is
-    - included
-    - D
-    - E
-    - F
-    - G
-    - Wall Sheathing
-    - 1/2" CDX Ply
-    - =ОКРВВЕРХ( SQFT *1,1/32;1)
-    - 4x8
-    - per page
-    - = SQFT
-    - Vapor Barrier
-    - Tyvek
-    - =ОКРВВЕРХ( SQFT  *1,1;10)
-    - SQ FT
-    - Insulation
-    - 1 1/2" Insulation
-    - =ОКРВВЕРХ( SQFT  *1,1;10)
-    - SQ FT
-    - Wall Sheathing
-    - 7/16" Zip
-    - =ОКРВВЕРХ( SQFT /32*1,1;1)
-    - 4x8
-    - per page
-    - = SQFT
-    - Tape
-    - Zip Tape
-    - =ОКРВВЕРХ(( SQFT *0,4)*1,1;10)
-    - LFT
-
-    Source tables:
-
-    ### Table 1
-    
-    | Gable Walls | B | C | D | E | F | G |  |
-    | --- | --- | --- | --- | --- | --- | --- | --- |
-    | Plates Ext (3) btm and dbl top | 2x6 | =ЧЁТН((( BTM + DBL TOP )*1)*1,1) | LFT |  |  | = BTM + TOP *2 |  |
-    | Studs for Gables | 2x6 | =ЧЁТН( SQFT / height ) | height |  |  | = SQFT |  |
-    |  |  |  |  |  |  |  |  |
-    | Blocking | 2x6 | =ЧЁТН(( BTM )/2*1) | LFT |  |  | = BTM |  |
-    | Bracing Ext Walls | 2x4 | =( BTM )/8*1,1 | 14 |  |  | = BTM |  |
-    |  |  |  |  |  |  |  |  |
-    | Wall Sheathing | 1/2" CDX Ply | =ОКРВВЕРХ( SQFT *1,1/32;1) | 4x8 | per page |  | = SQFT |  |
-    | Vapor Barrier | Tyvek | =ОКРВВЕРХ( SQFT  *1,1;10) | SQ FT |  |  |  |  |
-    | Insulation | 1 1/2" Insulation | =ОКРВВЕРХ( SQFT  *1,1;10) | SQ FT |  |  |  |  |
-    |  |  |  |  |  |  |  |  |
-    | Wall Sheathing | 7/16" Zip | =ОКРВВЕРХ( SQFT /32*1,1;1) | 4x8 | per page |  | = SQFT |  |
-    | Tape | Zip Tape | =ОКРВВЕРХ(( SQFT *0,4)*1,1;10) | LFT |  |  |  |  |
-
-    ### Table 2
-    
-    | Note: Gables Ends Trusses are by | others; only sheathing is | included | D | E | F | G |  |
-    | --- | --- | --- | --- | --- | --- | --- | --- |
-    | Wall Sheathing | 1/2" CDX Ply | =ОКРВВЕРХ( SQFT *1,1/32;1) | 4x8 | per page |  | = SQFT |  |
-    | Vapor Barrier | Tyvek | =ОКРВВЕРХ( SQFT  *1,1;10) | SQ FT |  |  |  |  |
-    | Insulation | 1 1/2" Insulation | =ОКРВВЕРХ( SQFT  *1,1;10) | SQ FT |  |  |  |  |
-    |  |  |  |  |  |  |  |  |
-    | Wall Sheathing | 7/16" Zip | =ОКРВВЕРХ( SQFT /32*1,1;1) | 4x8 | per page |  | = SQFT |  |
-    | Tape | Zip Tape | =ОКРВВЕРХ(( SQFT *0,4)*1,1;10) | LFT |  |  |  |  |
-
-
-<!-- confluence-context:end -->
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

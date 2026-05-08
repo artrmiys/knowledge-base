@@ -12,36 +12,15 @@
 - Check if top chord bearing truss condition removes ribbon board and requires
   blocking between trusses.
 
-<!-- confluence-context:start -->
-## Confluence Context
+## Typical Heel Height
 
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
+- Стандартная высота `truss heel` ≈ **1'-7"** (берётся от верха стены до верха верхнего пояса фермы по краю).
+- Используй это как sanity-check, если на чертеже высота heel не подписана; конкретное число — всегда из truss-package, если он есть.
 
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Truss Heel (обшивка ферм крыши, вертикальной части)](https://ewood.atlassian.net/wiki/spaces/work/pages/89948190/Truss+Heel) | content + images | 1 | `imports/live-sources/confluence-work/pages/01-89948190-truss-heel-обшивка-ферм-крыши-вертикальной-части.md`<br>`imports/live-sources/confluence-work-images/pages/01-89948190-truss-heel-обшивка-ферм-крыши-вертикальной-части.md` |
+## Где не пропустить heel sheathing
 
-### Related Wiki Pages
-
-| Wiki page | Why it is connected |
-| --- | --- |
-| [reference/hangers.md](../../../reference/hangers.md) | linked from `Truss Heel (обшивка ферм крыши, вертикальной части)` |
-| [start/takeoff-structure.md](../../../start/takeoff-structure.md) | linked from `Truss Heel (обшивка ферм крыши, вертикальной части)` |
-| [work/horizontal/roof-framing/dbl-trpl-rafters.md](../../horizontal/roof-framing/dbl-trpl-rafters.md) | linked from `Truss Heel (обшивка ферм крыши, вертикальной части)` |
-| [work/horizontal/roof-framing/ridge.md](../../horizontal/roof-framing/ridge.md) | linked from `Truss Heel (обшивка ферм крыши, вертикальной части)` |
-| [work/vertical/walls/gable.md](../walls/gable.md) | linked from `Truss Heel (обшивка ферм крыши, вертикальной части)` |
-| [work/vertical/walls/parapet.md](../walls/parapet.md) | linked from `Truss Heel (обшивка ферм крыши, вертикальной части)` |
-
-### Source Notes
-
-??? note "Truss Heel (обшивка ферм крыши, вертикальной части)"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/89948190/Truss+Heel`
-    Updated in Confluence: `окт. 30, 2025`
-
-    - Truss heel 1'-7”
-    - Как правило учтен в gable, но не учтен в местах Eave
-
-<!-- confluence-context:end -->
+- На **gable**-сторонах heel-обшивка обычно уже **учтена** в Gable Sheathing (треугольник + полоска heel под ним идут одной плоскостью).
+- На **Eave**-сторонах (длинная сторона свеса) heel-обшивка **часто забывается** — это отдельная вертикальная полоска по периметру здания между Top Plate стены и нижом overhang. Проверяй её отдельной строкой.
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

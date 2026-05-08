@@ -16,34 +16,6 @@
 - Sleeper spacing and length.
 - Cover board and roof layers above overframed areas.
 
-<!-- confluence-context:start -->
-## Confluence Context
-
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
-
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Overframes (скрытая части крыши)](https://ewood.atlassian.net/wiki/spaces/work/pages/66093107/Overframes) | content + images | 3 | `imports/live-sources/confluence-work/pages/01-66093107-overframes-скрытая-части-крыши.md`<br>`imports/live-sources/confluence-work-images/pages/01-66093107-overframes-скрытая-части-крыши.md` |
-
-### Related Wiki Pages
-
-| Wiki page | Why it is connected |
-| --- | --- |
-| [work/horizontal/floor-framing/post.md](../floor-framing/post.md) | linked from `Overframes (скрытая части крыши)` |
-| [work/horizontal/roof-framing/header.md](header.md) | linked from `Overframes (скрытая части крыши)` |
-| [work/horizontal/roof-framing/ridge.md](ridge.md) | linked from `Overframes (скрытая части крыши)` |
-| [work/vertical/walls/parapet.md](../../vertical/walls/parapet.md) | linked from `Overframes (скрытая части крыши)` |
-| [work/vertical/walls/unit.md](../../vertical/walls/unit.md) | linked from `Overframes (скрытая части крыши)` |
-
-### Source Notes
-
-??? note "Overframes (скрытая части крыши)"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/66093107/Overframes`
-    Updated in Confluence: `июн. 08, 2025`
-
-    - No reusable text notes were detected in the raw export.
-
-<!-- confluence-context:end -->
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

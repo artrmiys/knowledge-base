@@ -93,190 +93,97 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65961989/Deck+Porch+
 - The old Tilda source had many menu items as labels without active links. Current
   confirmed active work pages were Walls and Gables.
 
-<!-- confluence-context:start -->
-## Confluence Context
+## Vertical Constructions — что входит
 
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
+Вертикалка ≈ **50% здания**, важно ничего не пропустить:
 
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Building Types](https://ewood.atlassian.net/spaces/work/pages/154828836/Building+Types) | content | 0 | `imports/live-sources/confluence-work/pages/01-154828836-building-types.md` |
-| [Deck Porch Balcony - веранды, балконы](https://ewood.atlassian.net/wiki/spaces/work/pages/65961989/Deck+Porch+Balcony+-) | content | 0 | `imports/live-sources/confluence-work/pages/01-65961989-deck-porch-balcony-веранды-балконы.md` |
-| [Horizontal Constructions](https://ewood.atlassian.net/spaces/work/pages/65863695/Horizontal+Constructions) | content | 0 | `imports/live-sources/confluence-work/pages/01-65863695-horizontal-constructions.md` |
-| [Roof Framing - конструкции крыши](https://ewood.atlassian.net/wiki/spaces/work/pages/65962048/Roof+Framing+-) | content + images | 2 | `imports/live-sources/confluence-work/pages/01-65962048-roof-framing-конструкции-крыши.md`<br>`imports/live-sources/confluence-work-images/pages/01-65962048-roof-framing-конструкции-крыши.md` |
-| [Vertical Constructions](https://ewood.atlassian.net/wiki/spaces/work/pages/65110035/Vertical+Constructions) | content + images | 10 | `imports/live-sources/confluence-work/pages/01-65110035-vertical-constructions.md`<br>`imports/live-sources/confluence-work-images/pages/01-65110035-vertical-constructions.md` |
-| [Walls](https://ewood.atlassian.net/wiki/spaces/work/pages/65175555/Walls) | content + images | 3 | `imports/live-sources/confluence-work/pages/01-65175555-walls.md`<br>`imports/live-sources/confluence-work-images/pages/01-65175555-walls.md` |
-| [work - large GIF attachments](https://ewood.atlassian.net/wiki/spaces/work/overview) | images | 11 | `imports/live-sources/confluence-work-images/pages/01-1933591-large-work-large-gif-attachments.md`<br>`imports/live-sources/confluence-work-images/pages/01-1933591-work.md` |
-| [Структура в Planswift](https://ewood.atlassian.net/spaces/work/pages/72876034/Planswift) | content | 0 | `imports/live-sources/confluence-work/pages/01-72876034-структура-в-planswift.md` |
+- Несущие и ненесущие стены: `Ext`, `Unit`, `Corr`, `Demising` walls.
+- Фронтоны — `Gables`.
+- Наружная и внутренняя обшивка: `Plywood`, `OSB`, siding, gypsum.
+- Обшивка торцов перекрытия — `Floor Height`.
+- Обшивка торцов перекрытия — `Eve Heel` / `Truss Heel`.
+- Ветроизоляция — `Tyvek`.
+- Утеплитель — `Insulation`.
 
-### Related Wiki Pages
+## Структура файла в PlanSwift
 
-| Wiki page | Why it is connected |
+В PlanSwift сначала идут общие layers (без счёта), потом — группы по этажам и
+типам. Общая идея — каждая ячейка `xxx` — это место для своей цифры.
+
+### Background layers (не считаются)
+
+- `wall type`, `beam schedule`, `shear wall schedule`
+- `details struct`, `details arch`
+- `rcp`, `sections`, `others`
+
+### Группы (порядок в файле)
+
+- **walls + gables**: `units`, `base`, `1st`, `2nd`, `3rd`, `4th`, `roof`, `parapet`, `el gables` (×2), `wall materials (insulation etc.)`.
+- **sqfts + balconies + porch**: `1st`, `2nd`, `3rd`, `4th`.
+- **roof - eve rakes**: `roof`.
+- **framing + headers**: `base`, `1st`, `2nd`, `3rd`.
+- **balconies / porches**: `balconies`, `porches`.
+- **shear walls / holdowns / ties**: `shear walls`, `shear`, `holddowns`.
+- **siding / trims**: `siding` (×2), `trims` (×2).
+- **interior trims**, **drywall**.
+
+## Floor Abbreviations
+
+| Сокращение | Что |
 | --- | --- |
-| [reference/hangers.md](../reference/hangers.md) | linked from `Roof Framing - конструкции крыши` |
-| [work/deck/anchor-bolts.md](../work/deck/anchor-bolts.md) | linked from `Deck Porch Balcony - веранды, балконы` |
-| [work/deck/balcony-trims.md](../work/deck/balcony-trims.md) | linked from `Deck Porch Balcony - веранды, балконы` |
-| [work/deck/railing.md](../work/deck/railing.md) | linked from `Deck Porch Balcony - веранды, балконы` |
-| [work/horizontal/roof-framing/dbl-trpl-rafters.md](../work/horizontal/roof-framing/dbl-trpl-rafters.md) | linked from `Roof Framing - конструкции крыши, Walls` |
-| [work/vertical/walls/exterior.md](../work/vertical/walls/exterior.md) | linked from `Deck Porch Balcony - веранды, балконы, Roof Framing - конструкции крыши, Vertical Constructions, Walls` |
-| [work/vertical/walls/gable.md](../work/vertical/walls/gable.md) | linked from `Deck Porch Balcony - веранды, балконы, Roof Framing - конструкции крыши` |
-| [work/vertical/walls/parapet.md](../work/vertical/walls/parapet.md) | linked from `Deck Porch Balcony - веранды, балконы, Roof Framing - конструкции крыши` |
-| [work/vertical/walls/unit.md](../work/vertical/walls/unit.md) | linked from `Vertical Constructions, Walls` |
+| `f` | foundation — фундамент |
+| `1st` | first floor |
+| `2nd` | second floor |
+| `3rd` | third floor |
+| `5th–8th` | fifth to eighth floors |
+| `el` | elevation — фасад |
+| `sec` | section — разрез |
+| `sec d` | section details |
+| `rcp` | reflected ceiling plan |
+| `wt` | wall type |
+| `u` | units |
+| `ext` | exterior |
+| `int` | interior |
+| `dem` | demising |
+| `cor` | corridor |
+| `str` | stair |
 
-### Source Notes
+## SQFT-сокращения в PlanSwift
 
-??? note "Building Types"
-    Source: `https://ewood.atlassian.net/spaces/work/pages/154828836/Building+Types`
-    Updated in Confluence: `2025-11-20T20:38:54.404Z`
+`deck`, `blcny`, `porch`, `cant`, `base`, `1st`, `2nd`, `3rd`, `4th`, `flat`,
+`rf x`, `rf mtl x`, `overframe x`, `gable truss`, `gable stick`.
 
-    - _No text extracted._
+## Details — короткие коды
 
-??? note "Vertical Constructions"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65110035/Vertical+Constructions`
-    Updated in Confluence: `июн. 25, 2025`
+| Код | Что |
+| --- | --- |
+| `r` | rim board |
+| `rr` | rim board × 2 |
+| `l` | ledger |
+| `ll` | ledger × 2 |
+| `b` | blocking |
+| `bи` | blocking × 2 |
+| `b48` | blocking 48" o.c. |
+| `bb48` | blocking 48" o.c. × 2 |
+| `rb` | ribbon board |
+| `bd` | blocking for drywall |
+| `bft` | bracing for trusses |
+| `h16` | hangers 16" o.c. |
+| `hh16` | hangers 16" o.c. × 2 |
 
-    - Вертикальные конструкции включают в себя:
-    - несущие и ненесущие стены Ext Unit Corr Demm Walls
-    - фронтоны Gables,
-    - наружную и внутреннюю обшивку (Plywood OSB, сайдинг, гипсокартон и др.),
-    - обшивку торцов перекрытия Floor Height
-    - обшивку торцов перекрытия Eve Heel - Truss Heel
-    - ветроизоляционные материалы (например, Tyvek),
-    - утеплитель Insulation
-    - Эти элементы 50% здания - очень важно внести все в ексель и ничего не пропустить
-    - Walls
-    - Gables
-    - Tyvek
-    - Plywood
-    - Floor Height
-    - Eve Heel - Truss Heel
-    - Insulation
+## Material Override Legend
 
-??? note "Walls"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65175555/Walls`
-    Updated in Confluence: `апр. 09`
+В конце выделения добавляется override для конкретного материала. Формат:
 
-    - Основные компоненты каркасной стены:
-    - Bottom Plate / Нижняя доска – лежит на перекрытии или бетоне, служит основанием стены.
-    - Top Plate / Верхняя доска – завершает стену сверху, обычно двойная.
-    - Studs / Стойки – вертикальные элементы, обычно 2x4 или 2x6, шаг 16" или 24".
-    - Headers / Перемычки – устанавливаются над проёмами (окна, двери), перераспределяют нагрузку.
-    - Bracing / Раскосы – временные или постоянные укосины для жёсткости.
-    - Blocking / Перемычки между стойками – для крепления отделки, противопожарные преграды.
-    - Sheathing / Обшивка – OSB или аналог для жёсткости и крепления внешней отделки.
-    - Tyvek/ Бумага – служит для защиты от ветра и влаги
-    - Insulation/ Утеплитель –  наружный утеплитель фасада
-    - Exterior – наружные стены.
-    - Отделяют здание от внешней среды. Требуют утепления, ветро- и влагозащиты (Tyvek), внешней обшивки (OSB, сайдинг), часто содержат оконные и дверные проёмы.
-    - Corridor – коридорные стены.
-    - Разделяют юниты и общие коридоры. часто строятся с двумя слоями гипса или слоем Plywood
-    - Demising – разделяющие стены между юнитами.
-    - Обеспечивают шумоизоляцию и пожарную защиту между жильцами. Часто двойной каркас, по 2 слоя гипса с каждой стороны или слой Plywood
-    - Furring – облицовочные (вдоль бетонных стен).
-    - Не несущие. Используются для выравнивания и прокладки инженерии. Как правило: металлический или деревянный тонкий каркас + гипс.
-    - Shaft – шахтные стены.
-    - Ограждают коммуникационные шахты (лифты, вентиляция, сантехника). Требуют огнестойкости (до 2 часов), спец. гипс, усиленные крепления.
-    - Units / Interior – внутренние стены в юнитах.
-    - Разделяют комнаты внутри квартиры. Обычно простые, без огнестойких требований, каркас 2x4 или металлокаркас, один слой гипса с каждой стороны
-    - Shear Walls – сейсмостойкие/сопротивляющиеся сдвигу стены.
-    - Обеспечивают жёсткость здания при ветровых и сейсмических нагрузках. Обычно: 2x6 каркас + структурный OSB/plywood, спец. крепежи и анкеры.
-    - Walls - запись в Planswift
-    - ext x
-    - cor 2x6 x
-    - corr 2x6 x
-    - cor 2x4 x
-    - corr 2x6 x
-    - dem 2x6 x
-    - dem 2x4 x
-    - cor (2) 2x6 x
-    - corr (2) 2x6 x
-    - cor (2) 2x4 x
-    - corr (2) 2x4 x
-    - dem (2) 2x6 x
-    - dem (2) 2x4 x
-    - 2x4 x
-    - 2x6 x
-    - 2x4 half
-    - 2x6 half
-
-    Source tables:
-
-    ### Table 1
-    
-    | Walls - запись в Planswift |
-    | --- |
-
-    ### Table 2
-    
-    | Walls - запись в Planswift |
-    | --- |
-    | ext x<br>cor 2x6 x<br>corr 2x6 x<br>cor 2x4 x<br>corr 2x6 x<br>dem 2x6 x<br>dem 2x4 x<br>cor (2) 2x6 x<br>corr (2) 2x6 x<br>cor (2) 2x4 x<br>corr (2) 2x4 x<br>dem (2) 2x6 x<br>dem (2) 2x4 x<br>2x4 x<br>2x6 x<br>2x4 half<br>2x6 half |
-
-
-??? note "Horizontal Constructions"
-    Source: `https://ewood.atlassian.net/spaces/work/pages/65863695/Horizontal+Constructions`
-    Updated in Confluence: `2025-06-06T22:31:44.312Z`
-
-    - ➡️ back_to_main_page
-
-??? note "Deck Porch Balcony - веранды, балконы"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65961989/Deck+Porch+Balcony+-`
-    Updated in Confluence: `апр. 18`
-
-    - balconies.xlsm  -  пример
-    - интересный сайт -
-    - Replacing Rotted Beams on a Seaside Condo
-    - отделка по балконам -
-    - ◼️Balcony Trims - отделка для балконов
-
-??? note "Roof Framing - конструкции крыши"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65962048/Roof+Framing+-`
-    Updated in Confluence: `июн. 10, 2025`
-
-    - Roof Framing делится на три типа:
-    - stick - полностью из сборных досок
-    - trusses - из ферм
-    - JLC Field Guide: Roof Trusses
-    - flat- плоская крыша, может быть как из сборных досок так и из из ферм
-    - определить из чего сделана крыша, на плане крыши найти заметки о Rafters - будет написано Trusses либо 2x8….2x12…..TJI360…. stick
-    - крыша из досок trusses
-    - крыша из досок stick
-    - очень важно помнить что элементы крыши находятся под наклоном, на чертежах мы видим только проекцию сверху
-    - всегда нужно смотреть разрезы и фасады для ВСЕХ элементов, чтобы правильно определить расположение кол-во и длину
-    - все что видно на плане с конструкциями должно быть внесено, чтобы не запутаться нужно идти строго по списку
-    - скрытые элементы будут видны когда все элементы будут рассмотрены с разных сторон
-    - Последовательность stick - полностью из сборных досок:
-    - Ridge - начинать с главной крыши (самой большой) и заканчивая маленькими
-    - Headers и Dbl Trpl Rafters - в местах где есть dormers, overframes или проемы в крыше
-    - Posts - если подписано, или Ridge является (2-3) балкой (чаще всего посты Posts сделаны из нескольких стадов Studs)
-    - Rafters - начинать с главной крыши (самой большой) и заканчивая маленькими
-    - Dbl Trpl Rafters - длина, сравнить с Rafters
-    - Eve Plate - блокинг по Rafters, двойной или одинарный
-    - Hip Valley - балки в наклонных стыхах крыши
-    - Ledger - места где Rafters примыкают к стене (опираются вертикально)
-    - детали для лифта - если есть
-    - детали для крыши лестницы  - если есть
-    - детали для Eve Rake - внимательно
-    - FRT plywood
-    - Demising - Shear Wall Connection
-
-??? note "Структура в Planswift"
-    Source: `https://ewood.atlassian.net/spaces/work/pages/72876034/Planswift`
-    Updated in Confluence: `2026-01-19T03:39:22.156Z`
-
-    - -wall type-beam schedule-shear wall schedule-details struct-details archrcpsections----otherswalls + gables    - units    - xxx base    - xxx 1st    - xxx 2nd    - xxx 3rd    - xxx 4th    - xxx roof    - xxx parapet    - xxx el gables    - xxx el gables    - xxx wall materials (insulation etc.)sqfts + balconies + porch  - xxx 1st  - xxx 2nd  - xxx 3rd  - xxx 4throof - eve rakes  - xxx roofframing + headers  - xxx base  - xxx 1st  - xxx 2nd  - xxx 3rdbalconies porches etc.  - xxx balconies  - xxx porchesshear walls - holdowns - ties  - xxx shear walls  - xxx shear  - xxx holddownssiding - trims  - xxx siding  - xxx siding  - xxx trims  - xxx trimsinterior trimsdrywallWallsext xcor 2x6 xcorr 2x6 xcor 2x4 xcorr 2x6 xdem 2x6 xdem 2x4 xcor (2) 2x6 xcorr (2) 2x6 xcor (2) 2x4 xcorr (2) 2x4 xdem (2) 2x6 xdem (2) 2x4 x2x4 x2x6 x2x4 half2x6 halfSQFT's deckblcnyporchcantbase1st2nd3rd4thflatrf xrf mtl xoverframe xgable trussgable stickf - foundation -фундамент1st - first floor -первый этаж2nd - second floor - второй этаж3rd - third floor - третий этаж5th–8th - fifth to eighth floors - пятый – восьмой этажиel - elevation - фасад / высотное изображениеsec - section - разрезsec d - section details - подробности разрезаrcp - reflected ceiling plan - план потолкаwt - wall type - тип стеныu - units - квартиры / помещенияext - exterior - внешнийint - interior - внутреннийdem - demising - разделительная стенаcor - corridor - коридорstr - stair - лестницаDetailsr - rim boardrr - rim board * 2l - ledgerll - ledger * 2b - blockingbи - blocking * 2bb48 - blocking 48" o.c. * 2b48 - blocking 48" o.c.rb - ribbon boardbd - blocking for drywallbft - bracing for trussesh16 - hangers 16" o.c.hh16 - hangers 16" o.c. * 2Legend (material override) — в конце выделенияFormat:r - 1 3/4 x 11 7/8 LVLr 1 - 1 3/4 x 18 LVLb - 11 7/8 TJI 230b48 - 2x10h16 - ITS2.56/9.5l - 2x12 P.T.l 1 - 2x10
-
-    Source tables:
-
-    ### Table 1
-    
-    |  |  |
-    | --- | --- |
-    | -wall type-beam schedule-shear wall schedule-details struct-details archrcpsections----otherswalls + gables - units - xxx base - xxx 1st - xxx 2nd - xxx 3rd - xxx 4th - xxx roof - xxx parapet - xxx el gables - xxx el gables - xxx wall materials (insulation etc.)sqfts + balconies + porch - xxx 1st - xxx 2nd - xxx 3rd - xxx 4throof - eve rakes - xxx roofframing + headers - xxx base - xxx 1st - xxx 2nd - xxx 3rdbalconies porches etc. - xxx balconies - xxx porchesshear walls - holdowns - ties - xxx shear walls - xxx shear - xxx holddownssiding - trims - xxx siding - xxx siding - xxx trims - xxx trimsinterior trimsdrywall | Wallsext xcor 2x6 xcorr 2x6 xcor 2x4 xcorr 2x6 xdem 2x6 xdem 2x4 xcor (2) 2x6 xcorr (2) 2x6 xcor (2) 2x4 xcorr (2) 2x4 xdem (2) 2x6 xdem (2) 2x4 x2x4 x2x6 x2x4 half2x6 halfSQFT's deckblcnyporchcantbase1st2nd3rd4thflatrf xrf mtl xoverframe xgable trussgable stickf - foundation -фундамент1st - first floor -первый этаж2nd - second floor - второй этаж3rd - third floor - третий этаж5th–8th - fifth to eighth floors - пятый – восьмой этажиel - elevation - фасад / высотное изображениеsec - section - разрезsec d - section details - подробности разрезаrcp - reflected ceiling plan - план потолкаwt - wall type - тип стеныu - units - квартиры / помещенияext - exterior - внешнийint - interior - внутреннийdem - demising - разделительная стенаcor - corridor - коридорstr - stair - лестницаDetailsr - rim boardrr - rim board * 2l - ledgerll - ledger * 2b - blockingbи - blocking * 2bb48 - blocking 48" o.c. * 2b48 - blocking 48" o.c.rb - ribbon boardbd - blocking for drywallbft - bracing for trussesh16 - hangers 16" o.c.hh16 - hangers 16" o.c. * 2Legend (material override) — в конце выделенияFormat:r - 1 3/4 x 11 7/8 LVLr 1 - 1 3/4 x 18 LVLb - 11 7/8 TJI 230b48 - 2x10h16 - ITS2.56/9.5l - 2x12 P.T.l 1 - 2x10 |
-    |  |  |
-
-
-<!-- confluence-context:end -->
+| Код | Что записать |
+| --- | --- |
+| `r` | `1 3/4 x 11 7/8 LVL` |
+| `r 1` | `1 3/4 x 18 LVL` |
+| `b` | `11 7/8 TJI 230` |
+| `b48` | `2x10` |
+| `h16` | `ITS2.56/9.5` |
+| `l` | `2x12 P.T.` |
+| `l 1` | `2x10` |
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

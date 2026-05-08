@@ -26,15 +26,31 @@
 - Steel top nailers or steel beam web fillers can drive separate material lines.
 - Hanger selection depends on face/top/concealed/skewed condition.
 
-<!-- confluence-context:start -->
-## Confluence Context
+## EWP Materials
 
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
+Для **EWP** (Engineered Wood Products) обычные деревянные балки **2x10 / 4x12 / 6x14** не учитываем — только инженерные:
 
-| Source | Role here | Images | Raw MD |
+- **LVL** (Laminated Veneer Lumber, Versa Lam) — клееный брус, прочный, устойчив к деформациям.
+- **PSL** (Parallel Strand Lumber) — параллельные волокна, высокая несущая способность.
+- **GL** (Glued Laminated Timber, Glu Lam) — многослойный клееный брус из ламелей.
+
+## Output Example
+
+Запись балок и hangers в Excel/PlanSwift (поля: **Description**, **Size**, **Quantities**, **Units**):
+
+| Description | Size | Qty | Units |
 | --- | --- | ---: | --- |
-| [Beam - Балки](https://ewood.atlassian.net/wiki/spaces/work/pages/3735554/Beam+-) | images | 4 | `imports/live-sources/confluence-work-images/pages/01-3735554-beam-балки.md` |
-<!-- confluence-context:end -->
+| Beam `(3)` | `1 3/4 x 9 1/2 LVL` | 3 | 12 |
+| Beam `(1)` | `5 1/2 x 11 7/8 GL` | 1 | 20 |
+| Beam `(2)` | `1 3/4 x 11 7/8 LVL` | 2 | 10 |
+| Hangers | `HU412` | 10 | pcs |
+| Hangers | `HGUS7.25/12` | 20 | pcs |
+| Hangers | `GLTV3.514` | 5 | pcs |
+| Hangers | `for 7 x 11 7/8` | 10 | pcs |
+
+Длины snap-ятся при scaling — например `scaled 12' 0 1/8"` округляем до `12`.
+
+См. [Hangers](../../../reference/hangers.md) для подбора крепления под ширину/высоту built-up.
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

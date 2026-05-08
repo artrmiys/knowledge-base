@@ -50,16 +50,39 @@
 - Do not split rim into 16' pieces unless the output format specifically asks
   for pieces.
 
-<!-- confluence-context:start -->
-## Confluence Context
+## EWP Joist Materials
 
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
+Для **EWP** учитываем только инженерные joists (обычные деревянные 2x — не считаем):
 
-| Source | Role here | Images | Raw MD |
+- **I-Joists** (двутавровые, OSB-стенка + LVL/OSB полки) — самый частый вариант.
+- **LVL Joists** — для больших пролётов, прочные на изгиб.
+- **PSL Joists** — высокие нагрузки, residential + COM.
+- **GL Joists** — открытые балки, архитектурные решения.
+
+### Common I-Joist series
+
+`TJI` · `RED` · `LP` / `LPI` · `RFPI` · `BCI` (+ `s`) · `Nordic Joist` (`NI-20` / `NI-40x` / `NI-60`).
+
+## Standard O.C. Spacing
+
+Шаг (Spacing) меряется **on center (O.C.)** — от центра одной балки до центра следующей. Стандарты:
+
+- `12" O.C.`
+- `16" O.C.`
+- `19.2" O.C.`
+- `24" O.C.`
+
+## Output Example
+
+| Description | Size | Qty | Units |
 | --- | --- | ---: | --- |
-| [Joist - Ригели](https://ewood.atlassian.net/wiki/spaces/work/pages/3735565/Joist+-) | images | 1 | `imports/live-sources/confluence-work-images/pages/01-3735565-joist-ригели.md` |
-| [Joist Series](https://ewood.atlassian.net/wiki/spaces/work/pages/11796606/Joist+Series) | images | 10 | `imports/live-sources/confluence-work-images/pages/01-11796606-joist-series.md` |
-<!-- confluence-context:end -->
+| Joists `16" o.c.` | `11 7/8 TJI 230` | 3 | 12 |
+| Joists `16" o.c.` | `11 7/8 TJI 230` | 36 | 20 |
+| Joists `16" o.c.` | `11 7/8 TJI 230` | 2 | 10 |
+| Hangers | `ITS2.37/11.88` | `=ЧЁТН(lft * 12/16)` | pcs |
+
+Формула для hangers по joists 16" O.C.: `=ЧЁТН(lft * 12 / spacing)` — округление вверх до чётного.
+
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

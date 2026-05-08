@@ -1,5 +1,22 @@
 # Sill Plates
 
+**Sill Plate** — нижняя горизонтальная доска, которая укладывается на бетонный фундамент или цоколь, и к которой крепится каркас стены. По сути это переходный элемент между бетоном и деревянной конструкцией.
+
+- Sill Plate бывает **одинарной, двойной и даже тройной** — смотри детали.
+- Типичный материал — **`2x6 P.T.`**, но возможен любой размер (по детали).
+- **Sill Plate ≠ Btm Plate.** Sill Plate лежит **под перекрытием** (на бетоне), а **Btm Plate стены находится на перекрытии** (выше Sill Plate). Обе доски являются частью стены и проходят отдельными строками.
+- Над Sill Plate может идти **Dbl Btm Plate (2) — `2x6 P.T.`** (двойная нижняя доска стены).
+
+## Что считать вместе с Sill Plate
+
+При посадке стены на бетон (foundation / slab) обязательно проверь и добавь в takeoff три позиции — на плане их не показывают:
+
+- **Sill Sealer** — поролоновая прокладка между бетоном и Sill Plate.
+- **Termite Shield** — металлическая защита от термитов.
+- **Washers** — шайбы под анкерные болты.
+
+Подробнее по болтам — [Anchor Bolts](../../deck/anchor-bolts.md).
+
 ## Count
 
 - Bottom plates at walls, especially on concrete/slab conditions.
@@ -20,47 +37,6 @@
 
 When plate species/treatment is unclear, keep a visible assumption note instead
 of silently choosing SPF/PT/FRT.
-
-<!-- confluence-context:start -->
-## Confluence Context
-
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
-
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Sill Plates (доска для бетона)](https://ewood.atlassian.net/wiki/spaces/work/pages/75333633/Sill+Plates) | content + images | 17 | `imports/live-sources/confluence-work/pages/01-75333633-sill-plates-доска-для-бетона.md`<br>`imports/live-sources/confluence-work-images/pages/01-75333633-sill-plates-доска-для-бетона.md` |
-
-### Related Wiki Pages
-
-| Wiki page | Why it is connected |
-| --- | --- |
-| [work/horizontal/floor-framing/beam.md](../../horizontal/floor-framing/beam.md) | linked from `Sill Plates (доска для бетона)` |
-| [work/horizontal/roof-framing/dbl-trpl-rafters.md](../../horizontal/roof-framing/dbl-trpl-rafters.md) | linked from `Sill Plates (доска для бетона)` |
-| [work/horizontal/roof-framing/ridge.md](../../horizontal/roof-framing/ridge.md) | linked from `Sill Plates (доска для бетона)` |
-| [work/vertical/walls/exterior.md](exterior.md) | linked from `Sill Plates (доска для бетона)` |
-| [work/vertical/walls/gable.md](gable.md) | linked from `Sill Plates (доска для бетона)` |
-| [work/vertical/walls/parapet.md](parapet.md) | linked from `Sill Plates (доска для бетона)` |
-
-### Source Notes
-
-??? note "Sill Plates (доска для бетона)"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/75333633/Sill+Plates`
-    Updated in Confluence: `апр. 09`
-
-    - Нижняя горизонтальная доска, которая укладывается на бетонный фундамент или цоколь и к которой крепятся стены каркаса.
-    - По сути, это переходный элемент между бетоном и деревянной конструкцией.
-    - Sill Plate может быть одинарной и двойной, бывает даже тройной (смотреть детали)
-    - обычно для SIll Plate используют 2x6 P.T. но так же может быть любой размер (смотреть детали)
-    - Sill Plate под перекрытием, и Btm Plate стены находиться на перекрытии
-    - Sill Plate (1) - 2x6 P.T.
-    - Sill Plate и Btm Plate являются частью стены
-    - Dbl Btm Plate (2) - 2x6 P.T.
-    - Sill Sealer
-    - Termite Shield
-    - Washers
-    - ---
-
-<!-- confluence-context:end -->
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

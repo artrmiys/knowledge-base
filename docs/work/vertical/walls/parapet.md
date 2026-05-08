@@ -18,35 +18,14 @@
 - Detail callouts such as `(2) 2x8 FRT blocking at parapets`.
 - Cap plate treatment, often 2x6 PT.
 
-<!-- confluence-context:start -->
-## Confluence Context
+## Parapet vs. Truss System
 
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
+Главная развилка — входит ли парапет в truss-систему крыши:
 
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Parapet (парапет, стены крыши)](https://ewood.atlassian.net/wiki/spaces/work/pages/65306653/Parapet) | content + images | 2 | `imports/live-sources/confluence-work/pages/01-65306653-parapet-парапет-стены-крыши.md`<br>`imports/live-sources/confluence-work-images/pages/01-65306653-parapet-парапет-стены-крыши.md` |
-
-### Related Wiki Pages
-
-| Wiki page | Why it is connected |
-| --- | --- |
-| [start/takeoff-structure.md](../../../start/takeoff-structure.md) | linked from `Parapet (парапет, стены крыши)` |
-| [work/horizontal/roof-framing/dbl-trpl-rafters.md](../../horizontal/roof-framing/dbl-trpl-rafters.md) | linked from `Parapet (парапет, стены крыши)` |
-| [work/vertical/walls/exterior.md](exterior.md) | linked from `Parapet (парапет, стены крыши)` |
-| [work/vertical/walls/gable.md](gable.md) | linked from `Parapet (парапет, стены крыши)` |
-| [work/vertical/walls/sill-plates.md](sill-plates.md) | linked from `Parapet (парапет, стены крыши)` |
-
-### Source Notes
-
-??? note "Parapet (парапет, стены крыши)"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65306653/Parapet`
-    Updated in Confluence: `апр. 07`
-
-    - Parapet integral  with roof  truss. Система парапетов включена в truss. Но не обшивка.
-    - Но в случае, если parapet не включен в систему truss, при перпендикулярном опирании парапет выполнить отдельно stud, при паралельном опирании стены последнего этажа продлить до высоты parapet
-
-<!-- confluence-context:end -->
+- **Parapet integral with roof truss** — система парапетов уже включена в truss. **Обшивка (sheathing) при этом НЕ включена в truss** — её всё равно надо считать отдельно.
+- **Parapet НЕ включён в truss** — смотри на ориентацию опирания truss/rafters относительно стены:
+    - **Перпендикулярное опирание** — парапет выполняй отдельным каркасом (stud wall).
+    - **Параллельное опирание** — стену последнего этажа **продли вверх** до высоты парапета (продолжение exterior wall).
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

@@ -44,75 +44,78 @@ unless drawings/specs call out additional loose material.
 - Shafts, stairs, elevators.
 - Metal studs by client rule.
 
-<!-- confluence-context:start -->
-## Confluence Context
+## Wall Order и состав
 
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
+- Сначала каркас в порядке: `Ext` → `Corridor` → `Demising`. Юнитовые `int walls` идут после.
+- `Demising` стены могут быть двойные — выписывать отдельной строкой.
+- На масштабе **1/4"** SQFT берется от общей площади — внимательно.
+- `Siding` и `Ext trims` бывают редко — но появляются в commercial.
 
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Check list 01 2026](https://ewood.atlassian.net/spaces/work/pages/227934223/Check+list+01+2026) | content | 0 | `imports/live-sources/confluence-work/pages/01-227934223-check-list-01-2026.md` |
-| [COM Commercial Job](https://ewood.atlassian.net/wiki/spaces/work/pages/2359297/COM+Commercial+Job) | content + images | 13 | `imports/live-sources/confluence-work/pages/01-2359297-com-commercial-job.md`<br>`imports/live-sources/confluence-work-images/pages/01-2359297-com-commercial-job.md` |
+## Panelized Walls — что считаем и не считаем
 
-### Related Wiki Pages
+Панели делает другой подрядчик. Наш scope — только то, что не упаковано в панель:
 
-| Wiki page | Why it is connected |
+- **Не считаем**: `Studs`, `Plates`, `Blocking`, `Plywood` внутри панели, интерьерные стены, `Corners`, `Headers`.
+- **Считаем для Bracing**: только `Exterior Walls` + несущие (`Corridor Walls`, `Demising Walls`).
+- **На Exterior Walls** считаем только **Tyvek** (если в спеках не указано доп. loose-материала).
+- **Plywood** идёт только на Floor Height, Box Sheathing, Truss Heel, Parapet Walls — то, что не входит в стеновую панель.
+- **Plywood на панелях** — только с одной стороны. У `Shear walls` — тоже одна сторона.
+- На `Trusses` считаем `Gables` для Plywood.
+- `Holdowns`, `Strapping`, `Straps` — отдельно.
+- `Blocking` иногда делают из `Plywood` — проверять детали.
+- `Hurricane Ties` в деталях — не пропускать.
+- `Beams` LVL — считать и учитывать.
+- Под подиумом или внутри существующего здания **панели не применяются** — там стик-фрейм.
+
+## Bracing — высота стены → длина
+
+| Высота стены | Bracing length |
 | --- | --- |
-| [reference/boss-feedback-rules.md](../reference/boss-feedback-rules.md) | linked from `COM Commercial Job` |
-| [start/takeoff-structure.md](../start/takeoff-structure.md) | linked from `COM Commercial Job` |
-| [work/vertical/walls/exterior.md](../work/vertical/walls/exterior.md) | linked from `COM Commercial Job` |
+| `16'` | `20'` |
+| `12'` и выше | `18'` |
+| `10'–12'` | `16'` |
+| Всё остальное | `14'` |
 
-### Source Notes
+`Bracing for Trusses` — каждые `10'`, `2x6` в LFT.
 
-??? note "Check list 01 2026"
-    Source: `https://ewood.atlassian.net/spaces/work/pages/227934223/Check+list+01+2026`
-    Updated in Confluence: `2026-04-18T03:08:04.019Z`
+## Blocking-формулы (panelized walls)
 
-    - COM jobs Check ListCheck specificationsa)      FRT (Fire treated) lumber anywhere in specs. Important. Can be only Wall sheathing or could be entire exterior wall (sheathing; studs, plates, headers). If second most likely all exterior elements such as blocking, parapets can be FRT.Watch OSB Ext sheathing to be called “Flame Block” or Denseglas Sheathing.Denseglas is common at metal wallsb)      Glulam grades. Architectural 24F-V3, etc. Wording like “camber”c)      Stud and Plates specifications: SP plates; SPF studs vs DF, or DF#2 or HF or MSR, LSLd)      Bearing wall spacing and qnt specification. Lower levels double studs, etc. Demising studs. List as extra in a separate line.Watch for multi-layer sheathing and subfloor. Underlayment. Sound membrane.Edge sheathing can be FRT 4’ or 2’ around. Floor&Roof – see notes. Above demising alsoGypcrete floors most likely double bottom platesRigid InsulationsInterior sheathing and Holdowns! If no location called – assume each side of SW.Parapet sheathing inside is same as outside minus insulation board.Tall Trusses w Piggy trusses require 2x6 bearing plates 4’ ocFlat curb blocking at Flat roofs (2) 2x6 PT if nothing specified or if no detail.10.  Exact stud height – do math if need it. 9’, 9’1-1/8”, 9’1-1/4” etc.11.  Always follow S-details when provided.12.  Exterior Sheathing per Arch plans (unless Structural has more info); Interior sheathing per structural.13.  Watch for Blocking around windows, especially when Insulation or Zip R sheathing used.14.  Watch for 1x3 PT strapping at siding like Hardi paneling when specified.15.  Any Exterior buildouts stick framed, not panels16.  Check all new formulas immediately, not after.17.  Shaft walls18.  Check Dropped Soffits. RCP pages. Can be 2x4 soffit frame at baths or corridor.19.  Check Soffit plywood under Roof trusses. Possible.20.  Under Podium or inside existing can not be panels.
+- `Blocking Flat 48" o.c.` = `=ОКРВВЕРХ(G242*12/48*2*1.1/D242;1)`
+- `Blocking Diagonal 48" o.c.` = `=ОКРВВЕРХ(G241*12/48*2.5*1.1/D241;1)`
 
-??? note "COM Commercial Job"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/2359297/COM+Commercial+Job`
-    Updated in Confluence: `апр. 18`
+## Corridor
 
-    - exterior внешние стены
-    - corridor коридорные стены
-    - demising меж секционные стены
-    - Сначала каркас Ext Corridor Demising walls Потом по Units int walls
-    - Siding Ext trims очень редко но бывает
-    - Demising стены могут быть двойные - выписывать отдельно
-    - Внимательнее с масштабом 1/4 SQFT от общей площади
-    - Вся продукция для Commercial House умножается на 1,1
-    - 2 типа Коммерческих планов
-    - Стены обычные
-    - Стены из панелей
-    - Стены из панелей:
-    - детали для перекрытия из ферм
-    - Blocking Flat 48" o.c. =ОКРВВЕРХ(G242*12/48*2*1,1/D242;1)
-    - Blocking Diagonal 48" o.c. =ОКРВВЕРХ(G241*12/48*2,5*1,1/D241;1)
-    - На Trusses нужно считать Gables для Plywood
-    - Shear walls -тоже нужно , Panel walls идет только с одной стороны Plywood
-    - Holdowns Strapping Straps и тд
-    - Bracing for Trusses каждые 10' 2x6 в LFT
-    - Blocking могут делать из Plywood
-    - детали внимательнее Huricane Ties не пропускать
-    - Beams LVL нужно считать и учитывать
-    - на Коридор смотреть внимательнее
-    - обычно коридор 6-7' перекрывается 2x10 крепится на ledger
-    - Bracing
-    - 16' высота стены - 20'
-    - 12' и выше - 18'
-    - 10'-12' - 16'
-    - все остальное - 14'
-    - Самое главное это Structural Detail
-    - Направление Joists перпендикулярно или параллельно
-    - Trusses на полу и на крыше отличаются по высоте
-    - Accessories for Trusses все что находится по периметру сначала по Structural plans (опирание - параллельно перпендикулярно и внутри на стенах)
-    - Parapets
-    - Balconies
-    - Staggered Walls
-    - 2x4 Ribbon Board
+- Смотреть внимательнее — обычно коридор `6'–7'` перекрывается `2x10`, крепится на `ledger`.
+- Trusses на полу и на крыше отличаются по высоте — не путать.
+- Направление Joists (перпендикулярно или параллельно стенам) определять по `Structural Detail` — это самое главное.
+- Accessories for Trusses (всё по периметру) — сначала по Structural plans (опирание параллельно/перпендикулярно и внутри на стенах).
 
-<!-- confluence-context:end -->
+## Specs Check (приходит на каждый COM)
+
+- **FRT (Fire Treated)** — может быть только на Wall Sheathing, либо на всю экстерьерную стену (sheathing + studs + plates + headers). Если второе — то и blocking/parapets обычно тоже FRT.
+- Watch OSB Ext sheathing с названиями `Flame Block` или `Densglass Sheathing`. `Densglass` часто на metal walls.
+- **Glulam grades**: Architectural `24F-V3` и т.п. Слова вроде `camber` — отметить.
+- **Stud / Plates specs**: `SP plates`; `SPF` studs vs `DF`, `DF#2`, `HF`, `MSR`, `LSL`.
+- **Bearing walls** — spacing и количество. На нижних этажах часто **double studs**, demising studs — выписывать отдельной строкой.
+- Multi-layer sheathing, subfloor, underlayment, sound membrane — проверить.
+- Edge sheathing может быть `FRT 4'` или `2'` по периметру (Floor & Roof — see notes; над demising тоже).
+- `Gypcrete` floors — чаще всего **double bottom plates**.
+- `Rigid Insulation` — проверить.
+- **Interior sheathing** и **Holdowns**: если location не указан — assume каждая сторона SW.
+- **Parapet** sheathing внутри = снаружи минус insulation board.
+- **Tall Trusses w Piggy trusses** требуют `2x6 bearing plates` `4' o.c.`
+- **Flat curb blocking** на flat roofs — `(2) 2x6 PT`, если ничего не указано и нет детали.
+- **Exact stud height** — считать вручную: `9'`, `9'1-1/8"`, `9'1-1/4"` и т.п.
+- Всегда следовать **S-details**, когда они есть.
+- **Exterior Sheathing** по Arch plans (если Structural не даёт более точную инфу). **Interior sheathing** — по Structural.
+- **Blocking around windows** — особенно когда используется Insulation или Zip R sheathing.
+- `1x3 PT strapping` под siding типа Hardi paneling — если указано.
+- **Любые Exterior buildouts** — стик-фрейм, не панели.
+- Все новые формулы **проверять сразу**, не потом.
+- **Shaft walls** — не пропускать.
+- **Dropped Soffits** — проверять RCP pages. Может быть `2x4 soffit frame` в bath или в коридоре.
+- **Soffit plywood** под Roof trusses — возможно.
+- Под **Podium** или внутри существующего здания — **не панели**.
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

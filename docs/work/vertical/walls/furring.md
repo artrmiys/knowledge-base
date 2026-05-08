@@ -22,30 +22,7 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65306681/Furring`
 - MA / RI jobs often need strapping review.
 - RCP pages can show soffit/furring scope missed by structural plans.
 
-<!-- confluence-context:start -->
-## Confluence Context
+## Где Искать Furring
 
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
-
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Furring (примыкающие к бетону)](https://ewood.atlassian.net/wiki/spaces/work/pages/65306681/Furring) | content | 0 | `imports/live-sources/confluence-work/pages/01-65306681-furring-примыкающие-к-бетону.md` |
-
-### Related Wiki Pages
-
-| Wiki page | Why it is connected |
-| --- | --- |
-| [work/horizontal/floor-framing/post.md](../../horizontal/floor-framing/post.md) | linked from `Furring (примыкающие к бетону)` |
-| [work/horizontal/roof-framing/header.md](../../horizontal/roof-framing/header.md) | linked from `Furring (примыкающие к бетону)` |
-| [work/horizontal/roof-framing/ridge.md](../../horizontal/roof-framing/ridge.md) | linked from `Furring (примыкающие к бетону)` |
-| [work/vertical/walls/parapet.md](parapet.md) | linked from `Furring (примыкающие к бетону)` |
-
-### Source Notes
-
-??? note "Furring (примыкающие к бетону)"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65306681/Furring`
-    Updated in Confluence: `окт. 30, 2025`
-
-    - Как правило рядом с elevator, но смотреть по деталям указаны ли P.T.
-
-<!-- confluence-context:end -->
+- Furring к бетонным стенам **типично возле elevator-шахт** и других бетонных core-конструкций.
+- Смотри детали — указано ли в спецификации **P.T.** (Pressure Treated) для досок, прилегающих к бетону. Если P.T. в детали есть, считай его отдельно от обычного SPF furring.

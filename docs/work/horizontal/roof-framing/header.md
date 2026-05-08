@@ -4,6 +4,15 @@
 
 - Roof opening headers, dormer/canopy headers, and support beams.
 
+## Critical Rules
+
+- **Header (в крыше)** — горизонтальная балка в горизонтальных стыках крыши или внутренняя балка. **Не путать** с оконной перемычкой (window header).
+- Может быть **одинарной**, двойной или тройной балкой: `1 3/4 x 11 7/8 LVL`, `2x12`, `(2) 2x10`.
+- Опирание Header — на [Dbl/Trpl Rafters](dbl-trpl-rafters.md) или на [Posts](../floor-framing/post.md).
+- **Длина Header** определяется **между Dbl/Trpl Rafters**.
+- Указывать кол-во и длину **в футах с округлением до 2'**.
+- Header требует [Hangers](../../../reference/hangers.md) — крепления подбираются по ширине и высоте built-up.
+
 ## Check
 
 - Header sizes may differ by roof area or floor.
@@ -11,8 +20,6 @@
 - Hanger type depends on face/top/skewed condition.
 
 ## Output Tables
-
-Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/66093067/Header`
 
 | Name | Size | Count | Length / pcs |
 | --- | --- | --- | --- |
@@ -24,76 +31,6 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/66093067/Header`
 | Hangers | `LUS210-2` | `1` | pcs |
 | Hangers | `HU5.50/10` | `1` | pcs |
 
-<!-- confluence-context:start -->
-## Confluence Context
-
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
-
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Header (горизонтальная балка в крыше)](https://ewood.atlassian.net/wiki/spaces/work/pages/66093067/Header) | content + images | 2 | `imports/live-sources/confluence-work/pages/01-66093067-header-горизонтальная-балка-в-крыше.md`<br>`imports/live-sources/confluence-work-images/pages/01-66093067-header-горизонтальная-балка-в-крыше.md` |
-
-### Related Wiki Pages
-
-| Wiki page | Why it is connected |
-| --- | --- |
-| [reference/hangers.md](../../../reference/hangers.md) | linked from `Header (горизонтальная балка в крыше)` |
-| [work/horizontal/floor-framing/post.md](../floor-framing/post.md) | linked from `Header (горизонтальная балка в крыше)` |
-| [work/horizontal/roof-framing/dbl-trpl-rafters.md](dbl-trpl-rafters.md) | linked from `Header (горизонтальная балка в крыше)` |
-| [work/vertical/walls/exterior.md](../../vertical/walls/exterior.md) | linked from `Header (горизонтальная балка в крыше)` |
-| [work/vertical/walls/unit.md](../../vertical/walls/unit.md) | linked from `Header (горизонтальная балка в крыше)` |
-
-### Source Notes
-
-??? note "Header (горизонтальная балка в крыше)"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/66093067/Header`
-    Updated in Confluence: `июн. 08, 2025`
-
-    - Header (горизонтальная балка в крыше, не путать с перемычкой) применяется в горизонтальных стыках крыши, или как внутренняя балка
-    - Header может быть различного материала и сечения, двойной, тройной или одинарной балкой
-    - 1 3/4 x 11 7/8 LVL… 2x12 … (2) 2x10
-    - опирание у Header на двойные или тройные стропила Dbl Trpl Rafters (смотреть тут) или на посты Posts (смотреть тут)
-    - длина Header определяется между Dbl Trpl Rafters
-    - указывать кол-во и длину в футах с округлением до 2'
-    - так же нужны Hangers (смотреть тут) крепления для Header
-    - name (наименование)
-    - size (размер)
-    - count (кол-во)
-    - length (длина)/pcs(штуки)
-    - Header (2)
-    - 2x12
-    - 2
-    - 10
-    - Header (3)
-    - 1 3/4 x 11 7/8 LVL
-    - 3
-    - 12
-    - Hangers
-    - LUS210-2
-    - 1
-    - pcs
-    - Hangers
-    - HU5.50/10
-    - 1
-    - pcs
-
-    Source tables:
-
-    ### Table 1
-    
-    | name (наименование) | size (размер) | count (кол-во) | length (длина)/pcs(штуки) |  |  |
-    | --- | --- | --- | --- | --- | --- |
-    | Header (2) | 2x12 | 2 | 10 |  |  |
-    | Header (3) | 1 3/4 x 11 7/8 LVL | 3 | 12 |  |  |
-
-    ### Table 2
-    
-    | Hangers | LUS210-2 | 1 | pcs |  |  |
-    | --- | --- | --- | --- | --- | --- |
-    | Hangers | HU5.50/10 | 1 | pcs |  |  |
-
-
-<!-- confluence-context:end -->
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

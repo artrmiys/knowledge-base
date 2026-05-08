@@ -28,57 +28,13 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65044582/Openings`
 | --- | --- |
 | Window Flashing | Sill Flashing |
 
-<!-- confluence-context:start -->
-## Confluence Context
+## PlanSwift Marking & Macro
 
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
-
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Openings](https://ewood.atlassian.net/wiki/spaces/work/pages/65044582/Openings) | content + images | 1 | `imports/live-sources/confluence-work/pages/01-65044582-openings.md`<br>`imports/live-sources/confluence-work-images/pages/01-65044582-openings.md` |
-| [Windows Doors (только для наружных стен)](https://ewood.atlassian.net/wiki/spaces/work/pages/65339393/Windows+Doors) | content | 0 | `imports/live-sources/confluence-work/pages/01-65339393-windows-doors-только-для-наружных-стен.md` |
-
-### Related Wiki Pages
-
-| Wiki page | Why it is connected |
-| --- | --- |
-| [start/takeoff-structure.md](../../../start/takeoff-structure.md) | linked from `Openings, Windows Doors (только для наружных стен)` |
-| [work-types/com.md](../../../work-types/com.md) | linked from `Openings` |
-| [work/horizontal/floor-framing/post.md](../../horizontal/floor-framing/post.md) | linked from `Openings, Windows Doors (только для наружных стен)` |
-| [work/horizontal/roof-framing/header.md](../../horizontal/roof-framing/header.md) | linked from `Windows Doors (только для наружных стен)` |
-| [work/vertical/walls/exterior.md](../walls/exterior.md) | linked from `Openings, Windows Doors (только для наружных стен)` |
-| [work/vertical/walls/unit.md](../walls/unit.md) | linked from `Windows Doors (только для наружных стен)` |
-
-### Source Notes
-
-??? note "Openings"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65044582/Openings`
-    Updated in Confluence: `окт. 30, 2025`
-
-    - Подсчет макрос F_Openings
-    - Необходим для подсчета
-    - Window Flashing
-    - Sill Flashing
-    - также вырезать из обшивки
-    - важно у дверей ставить d
-    - у гаражных дверей gd
-    - Внимательно если дверь и окно совмещены единым хэдером считать вместе. и ставить пометку d
-
-    Source tables:
-
-    ### Table 1
-    
-    | Window Flashing |
-    | --- |
-    | Sill Flashing |
-
-
-??? note "Windows Doors (только для наружных стен)"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65339393/Windows+Doors`
-
-    - Опубликовано июн. 06, 2025
-
-<!-- confluence-context:end -->
+- Подсчёт всех openings — макрос **`F_Openings`** (даёт Window Flashing + Sill Flashing).
+- У всех **дверей** обязательно ставь пометку **`d`**.
+- У **гаражных** дверей — пометка **`gd`**.
+- Если **окно и дверь объединены одним хэдером** (например, sliding patio в blocks с фиксом сбоку) — считай их **вместе** одним openings, ставь **`d`**.
+- Все openings **вырезаются из sheathing** — не забывай subtract при подсчёте Wall Sheathing SQFT.
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

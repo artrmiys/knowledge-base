@@ -1,5 +1,14 @@
 # Shaft Walls
 
+**Shaft wall** — это стена шахты, ограждение **вертикальных шахт** в здании. На чертежах под `shaft wall` обычно понимают:
+
+- **elevator shaft** — шахты лифтов;
+- **vent shaft** — вентиляционные каналы;
+- **trash chute** — мусоропроводы;
+- **mechanical/communications shafts** — pipes, cables, ducts.
+
+Shaft wall почти всегда fire-rated и собирается из CH-stud + shaft liner.
+
 ## Count
 
 - CH studs.
@@ -22,43 +31,6 @@ When not otherwise specified, notes often use:
 - Chute Shaft wall A201/A806, wall type 7A, is a recurring miss.
 - DHU/DGU hanger conditions belong here when joists hang over the firewall.
 - Mark shaft hangers separately by floor for review.
-
-<!-- confluence-context:start -->
-## Confluence Context
-
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
-
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Shaft (противопожарные стены)](https://ewood.atlassian.net/wiki/spaces/work/pages/65306667/Shaft) | content + images | 5 | `imports/live-sources/confluence-work/pages/01-65306667-shaft-противопожарные-стены.md`<br>`imports/live-sources/confluence-work-images/pages/01-65306667-shaft-противопожарные-стены.md` |
-
-### Related Wiki Pages
-
-| Wiki page | Why it is connected |
-| --- | --- |
-| [reference/hangers.md](../../../reference/hangers.md) | linked from `Shaft (противопожарные стены)` |
-| [work/horizontal/floor-framing/post.md](../../horizontal/floor-framing/post.md) | linked from `Shaft (противопожарные стены)` |
-| [work/horizontal/roof-framing/header.md](../../horizontal/roof-framing/header.md) | linked from `Shaft (противопожарные стены)` |
-| [work/horizontal/roof-framing/ridge.md](../../horizontal/roof-framing/ridge.md) | linked from `Shaft (противопожарные стены)` |
-| [work/vertical/walls/parapet.md](parapet.md) | linked from `Shaft (противопожарные стены)` |
-
-### Source Notes
-
-??? note "Shaft (противопожарные стены)"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65306667/Shaft`
-    Updated in Confluence: `окт. 30, 2025`
-
-    - 🔹 Shaft wall — это стена шахты.
-    - В строительных чертежах под shaft wall обычно понимают ограждение вертикальных шахт, таких как:
-    - шахты лифтов (elevator shaft),
-    - вентиляционные каналы (vent shaft),
-    - мусоропроводы,
-    - шахты коммуникаций (pipes, cables, ducts и т. д.).
-    - Wall type
-    - Shaft liner
-    - C-H Studs
-
-<!-- confluence-context:end -->
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

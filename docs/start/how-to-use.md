@@ -31,26 +31,6 @@
 - Если правило повторяется в разных местах, держи короткую версию на topic page
   и полную версию в reference page.
 
-<!-- confluence-context:start -->
-## Confluence Context
-
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
-
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Excel](https://ewood.atlassian.net/wiki/spaces/work/pages/3276801/Excel) | images | 5 | `imports/live-sources/confluence-work-images/pages/01-3276801-excel.md` |
-| [PlanSwift - large GIF attachments](https://ewood.atlassian.net/wiki/spaces/work/pages/4292609/PlanSwift) | images | 3 | `imports/live-sources/confluence-work-images/pages/01-4292609-large-planswift-large-gif-attachments.md`<br>`imports/live-sources/confluence-work-images/pages/01-4292609-planswift.md` |
-| [Technical Tools](https://ewood.atlassian.net/spaces/work/pages/154665001/Technical+Tools) | content | 0 | `imports/live-sources/confluence-work/pages/01-154665001-technical-tools.md` |
-
-### Source Notes
-
-??? note "Technical Tools"
-    Source: `https://ewood.atlassian.net/spaces/work/pages/154665001/Technical+Tools`
-    Updated in Confluence: `2025-11-21T17:46:29.765Z`
-
-    - _No text extracted._
-
-<!-- confluence-context:end -->
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

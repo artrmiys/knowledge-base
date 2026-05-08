@@ -19,38 +19,18 @@
 - Drywall ledger: 2x4 at both sides of demising walls where parallel with framing.
 - Double studs on lower bearing levels if structural notes call for them.
 
-<!-- confluence-context:start -->
-## Confluence Context
+## PlanSwift Записи (двойные demising)
 
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
+Для demising стен с двумя рядами стоек указывай **обе толщины и обе высоты**, если они отличаются:
 
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Demising (меж-секционные стены - двойные)](https://ewood.atlassian.net/wiki/spaces/work/pages/65306639/Demising+-+-) | content + images | 1 | `imports/live-sources/confluence-work/pages/01-65306639-demising-меж-секционные-стены-двойные.md`<br>`imports/live-sources/confluence-work-images/pages/01-65306639-demising-меж-секционные-стены-двойные.md` |
-
-### Related Wiki Pages
-
-| Wiki page | Why it is connected |
+| Запись | Что значит |
 | --- | --- |
-| [reference/source-map.md](../../../reference/source-map.md) | linked from `Demising (меж-секционные стены - двойные)` |
-| [start/takeoff-structure.md](../../../start/takeoff-structure.md) | linked from `Demising (меж-секционные стены - двойные)` |
-| [work/horizontal/floor-framing/post.md](../../horizontal/floor-framing/post.md) | linked from `Demising (меж-секционные стены - двойные)` |
-| [work/horizontal/roof-framing/ridge.md](../../horizontal/roof-framing/ridge.md) | linked from `Demising (меж-секционные стены - двойные)` |
-| [work/vertical/walls/sill-plates.md](sill-plates.md) | linked from `Demising (меж-секционные стены - двойные)` |
-| [work/vertical/walls/unit.md](unit.md) | linked from `Demising (меж-секционные стены - двойные)` |
+| `dem (2) 2x6 10.5` | Двойной demising 2x6, обе стены высотой 10.5' |
+| `dem 2x4 2x6 9 10.5` | Двойной demising: одна стена 2x4 высотой 9', вторая 2x6 высотой 10.5' |
+| `dem 2x4 2x4 10.5 9` | Двойной demising 2x4/2x4 разной высоты |
+| `dem 2x6 2x6 11 12` | Двойной demising 2x6/2x6 разной высоты |
 
-### Source Notes
-
-??? note "Demising (меж-секционные стены - двойные)"
-    Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65306639/Demising+-+-`
-    Updated in Confluence: `окт. 30, 2025`
-
-    - dem (2) 2x6 10.5
-    - dem 2x4 2x6 9     10.5
-    - dem 2x4 2x4 10.5 9
-    - dem 2x6 2x6 11     12
-
-<!-- confluence-context:end -->
+Если обе стены идентичны — короткая запись `dem (2) 2x6 10.5`. Если стены разные — пиши **толщины подряд, потом высоты подряд**.
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

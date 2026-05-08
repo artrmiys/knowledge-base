@@ -117,16 +117,6 @@ When excluded, still note metal locations as `by others`.
 - Do not count nails; list bolts and Simpson screws where required.
 - Do not leave copied detail labels uncorrected.
 
-<!-- confluence-context:start -->
-## Confluence Context
-
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
-
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [---](https://ewood.atlassian.net/wiki/spaces/work/pages/11796656/---) | images | 19 | `imports/live-sources/confluence-work-images/pages/01-11796656-page.md` |
-| [Need to sort](https://ewood.atlassian.net/wiki/spaces/work/pages/229638146/Need+to+sort) | images | 4 | `imports/live-sources/confluence-work-images/pages/01-229638146-need-to-sort.md` |
-<!-- confluence-context:end -->
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

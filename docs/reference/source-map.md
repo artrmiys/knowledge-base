@@ -81,26 +81,6 @@ The public Tilda site was checked from the homepage. Only `Walls` and `Gables`
 were active internal work links; the other menu items were visible labels with
 empty `href` values at the time of import.
 
-<!-- confluence-context:start -->
-## Confluence Context
-
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
-
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Building Materials](https://ewood.atlassian.net/spaces/work/pages/154665008/Building+Materials) | content | 0 | `imports/live-sources/confluence-work/pages/01-154665008-building-materials.md` |
-| [dictionary](https://ewood.atlassian.net/wiki/spaces/work/pages/1933726/dictionary) | images | 3 | `imports/live-sources/confluence-work-images/pages/01-1933726-dictionary.md` |
-| [Materials](https://ewood.atlassian.net/wiki/spaces/work/pages/1933821/Materials) | images | 3 | `imports/live-sources/confluence-work-images/pages/01-1933821-materials.md` |
-
-### Source Notes
-
-??? note "Building Materials"
-    Source: `https://ewood.atlassian.net/spaces/work/pages/154665008/Building+Materials`
-    Updated in Confluence: `2025-11-20T20:44:00.286Z`
-
-    - _No text extracted._
-
-<!-- confluence-context:end -->
 
 <!-- confluence-gallery:start -->
 ## Confluence Images

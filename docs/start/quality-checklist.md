@@ -50,28 +50,24 @@ Use this before sending a job.
 - Tile base excluded when only wood base is needed.
 - Crowns included when the trim scope is active.
 
-<!-- confluence-context:start -->
-## Confluence Context
+## Финальная проверка «было/стало»
 
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
+Перед отправкой готового takeoff проверяй пять файлов параллельно:
 
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Check list 01 2026](https://ewood.atlassian.net/spaces/work/pages/227934223/Check+list+01+2026) | content | 0 | `imports/live-sources/confluence-work/pages/01-227934223-check-list-01-2026.md` |
-| [регламент работы над ошибками](https://ewood.atlassian.net/spaces/work/pages/92110850) | content | 0 | `imports/live-sources/confluence-work/pages/01-92110850-регламент-работы-над-ошибками.md` |
+1. Открыть **готовый PlanSwift** (с финальными правками).
+2. Открыть свой **локальный Excel «до»** (или из папки `old`, если есть).
+3. Открыть **готовый Excel** из `Example`.
+4. Сравнить **Excel «было/стало»**: оформление, что добавлено/удалено, формулировки.
+5. Сравнить **PDF «было/стало»**: оформление, что добавлено/удалено, формулировки.
 
-### Source Notes
+На разбор ошибок и финальную проверку резервируй **30–60 минут** — этот этап не пропускать.
 
-??? note "Check list 01 2026"
-    Source: `https://ewood.atlassian.net/spaces/work/pages/227934223/Check+list+01+2026`
-    Updated in Confluence: `2026-04-18T03:08:04.019Z`
+## Цикл правок (worker side)
 
-    - COM jobs Check ListCheck specificationsa)      FRT (Fire treated) lumber anywhere in specs. Important. Can be only Wall sheathing or could be entire exterior wall (sheathing; studs, plates, headers). If second most likely all exterior elements such as blocking, parapets can be FRT.Watch OSB Ext sheathing to be called “Flame Block” or Denseglas Sheathing.Denseglas is common at metal wallsb)      Glulam grades. Architectural 24F-V3, etc. Wording like “camber”c)      Stud and Plates specifications: SP plates; SPF studs vs DF, or DF#2 or HF or MSR, LSLd)      Bearing wall spacing and qnt specification. Lower levels double studs, etc. Demising studs. List as extra in a separate line.Watch for multi-layer sheathing and subfloor. Underlayment. Sound membrane.Edge sheathing can be FRT 4’ or 2’ around. Floor&Roof – see notes. Above demising alsoGypcrete floors most likely double bottom platesRigid InsulationsInterior sheathing and Holdowns! If no location called – assume each side of SW.Parapet sheathing inside is same as outside minus insulation board.Tall Trusses w Piggy trusses require 2x6 bearing plates 4’ ocFlat curb blocking at Flat roofs (2) 2x6 PT if nothing specified or if no detail.10.  Exact stud height – do math if need it. 9’, 9’1-1/8”, 9’1-1/4” etc.11.  Always follow S-details when provided.12.  Exterior Sheathing per Arch plans (unless Structural has more info); Interior sheathing per structural.13.  Watch for Blocking around windows, especially when Insulation or Zip R sheathing used.14.  Watch for 1x3 PT strapping at siding like Hardi paneling when specified.15.  Any Exterior buildouts stick framed, not panels16.  Check all new formulas immediately, not after.17.  Shaft walls18.  Check Dropped Soffits. RCP pages. Can be 2x4 soffit frame at baths or corridor.19.  Check Soffit plywood under Roof trusses. Possible.20.  Under Podium or inside existing can not be panels.
+- Открыть PlanSwift и начинать правки, параллельно задавать вопросы.
+- В Trello — **жёлтая метка** + примерная дата готовности.
+- Excel править.
+- После завершения правок — **зелёная метка**.
+- Цикл может повториться **2–3 раза** до полного согласования.
 
-??? note "регламент работы над ошибками"
-    Source: `https://ewood.atlassian.net/spaces/work/pages/92110850`
-    Updated in Confluence: `2026-04-20T19:33:35.743Z`
-
-    - 📦 Где лежат файлыВсё храним в MEGA (облако). Готовый PlanSwift и прочие финальные файлы — только в облаке.👨‍💻(проверяющий)Открываю PlanSwift и Excel, проверяю, пишу ошибки в облаке (в соответствующей заметке/файле).Если есть ошибки — в Trello ставлю 🔴 красную метку, убираю 🟢 зелёную, снимаю даты.В Telegram пишу: номер дома + “нужно/не нужно править” (ВАЖНО!).Всегда указываю, где править Excel: [локальный] или [облачный]. Пишу, какие правки я уже сделал (в облаке).Если срочно — сам ставлю дедлайн и пишу: правим всё или отправляем как есть (в этом случае коротко описать, что сделано).👩‍🦰👨‍🔧 (работник)Открывает PlanSwift и начинает правки, параллельно задаёт вопросы.В Trello 🟡 жёлтую метку и примерную дату готовности.Excel править.После завершения правок: 🟢 зелёную метку.🔁 ИтерацииЦикл может повториться 2–3 раза до полного согласования.🗂️ Финальная выкладкаГотовый PlanSwift всегда в облаке (MEGA). Все файлы — в MEGA.⏳ Время на разбор ошибокПланируем на проверку и разбор 30–60 минут.🧪 Финальная проверка “было/стало” (чек-лист)Открыть готовый PlanSwift (с финальными правками от Артёма).Открыть ваш локальный Excel “до” (или из папки old, если есть).Открыть готовый Excel из Example.Сравнить Excel “было/стало”: оформление, что добавлено/удалено, формулировки.Сравнить PDF “было/стало”: оформление, что добавлено/удалено, формулировки.
-
-<!-- confluence-context:end -->
+Готовые файлы (PlanSwift, Excel) — всегда хранятся в облаке (MEGA), не локально.

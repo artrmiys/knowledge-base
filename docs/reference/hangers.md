@@ -42,15 +42,21 @@
 | 3 1/2 x 9 1/2 | HU410 |
 | 3 1/2 x 11 7/8 | HU412 |
 | 3 1/2 x 14 | HU414 |
+| 5 1/2 x 11 7/8 | HU612 |
+| 3 1/2 x 9 1/2 | HHUS410 |
 | 5 1/4 x 9 1/2 | HHUS5.50/10 |
 | 7 x 11 7/8 | HGUS7.25/12 |
-| 1 3/4 x 11 7/8 skew left | SUL1.81/11 |
-| 1 3/4 x 11 7/8 skew right | SUR1.81/11 |
+| 1 3/4 x 11 7/8 skew left 45 | SUL1.81/11 |
+| 1 3/4 x 11 7/8 skew right 45 | SUR1.81/11 |
 
 ## Beam Concealed
 
 | Section | Hanger |
 | --- | --- |
+| 1 3/4 x 9 1/2 | HUCQ1.81/9 |
+| 1 3/4 x 11 7/8 | HUCQ1.81/11 |
+| 3 1/2 x 11 7/8 | HUCQ412 SDS |
+| 5 1/2 x 9 1/2 | HUCQ610 |
 | 3 1/2 x 9 1/2 | HUC410 |
 | 3 1/2 x 11 7/8 | HUC412 |
 | 3 1/2 x 14 | HUC414 |
@@ -98,16 +104,6 @@
 - CBH2.37X9.75C-KT for glulam.
 - A35 clips at shearwall connections when required by general notes.
 
-<!-- confluence-context:start -->
-## Confluence Context
-
-Эта секция показывает, какие Confluence-страницы питают эту wiki-страницу и какие соседние темы связаны с ней через исходники.
-
-| Source | Role here | Images | Raw MD |
-| --- | --- | ---: | --- |
-| [Hangers - Крепления](https://ewood.atlassian.net/wiki/spaces/work/pages/4816897/Hangers+-) | images | 4 | `imports/live-sources/confluence-work-images/pages/01-4816897-hangers-крепления.md` |
-| [Hangers and Ties Schedule](https://ewood.atlassian.net/wiki/spaces/work/pages/12124257/Hangers+and+Ties+Schedule) | images | 2 | `imports/live-sources/confluence-work-images/pages/01-12124257-hangers-and-ties-schedule.md` |
-<!-- confluence-context:end -->
 
 <!-- confluence-gallery:start -->
 ## Confluence Images
