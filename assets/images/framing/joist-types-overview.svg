@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520" role="img" aria-labelledby="title desc">
+  <title id="title">Joist types overview</title>
+  <desc id="desc">Overview diagram comparing common joist types used in EWP takeoff: I-joist, LVL joist, PSL or LSL joist, glulam joist, and regular dimensional lumber.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f8faf8}
+      .panel{fill:#fff;stroke:#d7e5d4;stroke-width:2;rx:12}
+      .note{fill:#fffdf7;stroke:#f9a825;stroke-width:2;rx:8}
+      .steel{fill:#e7edf3;stroke:#53606b;stroke-width:2}
+      .web{fill:#d8c4a7;stroke:#7b5b37;stroke-width:2}
+      .wood{fill:#f0c27b;stroke:#8b5d25;stroke-width:2}
+      .lvl{fill:#d5b27c;stroke:#7b4c1d;stroke-width:2}
+      .psl{fill:#c6955c;stroke:#6d3b15;stroke-width:2}
+      .gl{fill:#e8bc79;stroke:#8b5d25;stroke-width:2}
+      .text{font-family:Inter,Arial,sans-serif;font-size:18px;font-weight:600;fill:#1b1f1d}
+      .small{font-family:Inter,Arial,sans-serif;font-size:14px;fill:#34423a}
+      .mono{font-family:"JetBrains Mono",Consolas,monospace;font-size:14px;fill:#1b1f1d}
+      .rule{font-family:Inter,Arial,sans-serif;font-size:15px;font-weight:700;fill:#2e7d32}
+    </style>
+  </defs>
+
+  <rect class="bg" width="980" height="520" rx="16"/>
+  <text class="text" x="48" y="48">Joist Types for EWP Takeoff</text>
+  <text class="small" x="48" y="74">Use the plan/schedule label first. For EWP jobs, count engineered joists; do not turn every 2x into an EWP line.</text>
+
+  <rect class="panel" x="44" y="105" width="202" height="255"/>
+  <text class="text" x="72" y="140">I-Joist</text>
+  <rect class="wood" x="112" y="166" width="68" height="20" rx="3"/>
+  <rect class="web" x="137" y="184" width="18" height="92"/>
+  <rect class="wood" x="112" y="276" width="68" height="20" rx="3"/>
+  <text class="small" x="72" y="325">OSB web + flanges</text>
+  <text class="mono" x="72" y="348">TJI / RED / LPI / RFPI</text>
+
+  <rect class="panel" x="272" y="105" width="202" height="255"/>
+  <text class="text" x="300" y="140">LVL Joist</text>
+  <rect class="lvl" x="352" y="166" width="48" height="130" rx="4"/>
+  <path d="M360 176 H392 M360 196 H392 M360 216 H392 M360 236 H392 M360 256 H392 M360 276 H392" stroke="#7b4c1d" stroke-width="1.5"/>
+  <text class="small" x="300" y="325">Laminated veneer lumber</text>
+  <text class="mono" x="300" y="348">LVL, depth by schedule</text>
+
+  <rect class="panel" x="500" y="105" width="202" height="255"/>
+  <text class="text" x="528" y="140">PSL / LSL</text>
+  <rect class="psl" x="580" y="166" width="48" height="130" rx="4"/>
+  <path d="M588 174 C610 185 598 198 624 208 M586 206 C610 220 598 236 626 250 M586 258 C606 268 604 282 624 292" fill="none" stroke="#6d3b15" stroke-width="2"/>
+  <text class="small" x="528" y="325">Engineered strand/parallel</text>
+  <text class="mono" x="528" y="348">PSL / LSL if shown</text>
+
+  <rect class="panel" x="728" y="105" width="202" height="255"/>
+  <text class="text" x="756" y="140">GL / Glulam</text>
+  <rect class="gl" x="806" y="166" width="50" height="130" rx="4"/>
+  <path d="M806 190 H856 M806 214 H856 M806 238 H856 M806 262 H856" stroke="#8b5d25" stroke-width="2"/>
+  <text class="small" x="756" y="325">Glued laminated timber</text>
+  <text class="mono" x="756" y="348">GL / GLB / Glulam</text>
+
+  <rect class="note" x="44" y="392" width="886" height="78"/>
+  <text class="rule" x="70" y="424">Estimator shortcut</text>
+  <text class="small" x="70" y="450">I-joists are the normal EWP joist line. LVL / PSL / GL joists are counted only when the structural schedule or label calls them out.</text>
+  <text class="small" x="70" y="474">Regular dimensional 2x joists can appear on plans, but they are not converted into EWP material unless the scope says so.</text>
+</svg>
