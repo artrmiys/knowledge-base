@@ -1812,6 +1812,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#trello-qa-formulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trello QA Formulas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#confluence-images" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4142,6 +4153,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#trello-qa-formulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trello QA Formulas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#confluence-images" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4255,6 +4277,12 @@
 <li>Check that rim is still counted at roof TJI conditions.</li>
 <li>Do not split rim into 16' pieces unless the output format specifically asks
   for pieces.</li>
+<li>Do not swap joist count and joist length in Excel/output.</li>
+<li>If the house is about 28' wide and a beam is dropped, verify the joist span
+  labels; joists may be longer than 14'.</li>
+<li><code>TJI 9 1/2</code> does not use 360 / 560 series.</li>
+<li>Long 2x ceiling joists may be split and imply supporting vertical joists; look
+  for notes/details before assuming one continuous member.</li>
 </ul>
 <h2 id="ewp-joist-materials">EWP Joist Materials<a class="headerlink" href="#ewp-joist-materials" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Для <strong>EWP</strong> учитываем только инженерные joists (обычные деревянные 2x — не считаем):</p>
@@ -4312,6 +4340,33 @@
 </tbody>
 </table>
 <p>Формула для hangers по joists 16" O.C.: <code>=ЧЁТН(lft * 12 / spacing)</code> — округление вверх до чётного.</p>
+<h2 id="trello-qa-formulas">Trello QA Formulas<a class="headerlink" href="#trello-qa-formulas" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Formula / note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I-joist cross bridging / <code>TB27</code></td>
+<td><code>length * 2 * 12 / 16</code> pcs</td>
+</tr>
+<tr>
+<td>Attic <code>EWP by others</code></td>
+<td>Add note: <code>LVLs by others</code></td>
+</tr>
+<tr>
+<td><code>EWP by others</code> with steel-beam blocking</td>
+<td>Blocking can be <code>LVL</code> / <code>LSL</code>; scale and note it</td>
+</tr>
+<tr>
+<td><code>EWP by others</code> with one <code>LVL</code> in floor</td>
+<td>Add a visible note instead of hiding it</td>
+</tr>
+</tbody>
+</table>
 <!-- confluence-gallery:start -->
 <h2 id="confluence-images">Confluence Images<a class="headerlink" href="#confluence-images" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Изображения из Confluence размещены на этой странице по исходной теме.
