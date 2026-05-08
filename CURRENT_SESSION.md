@@ -245,6 +245,12 @@ Completed the Confluence integration cleanup after the interrupted session:
 - Fixed the stale `maintenance.md` anchor link to `quality-checklist.md`.
 - Verified there are no remaining `confluence-context` blocks in `docs/`.
 - Verified `.\.venv\Scripts\python.exe -m mkdocs build --strict` passes.
+- Committed the integration to `main` as `67424e5`.
+- Pushed `main` to GitHub. The GitHub Actions API did not show a fresh run
+  after the push, so a one-off manual deploy was run with:
+  `.\.venv\Scripts\python.exe -m mkdocs gh-deploy --force --clean --remote-branch gh-pages`.
+- Verified the live exterior page returned HTTP 200, contained `Wall Sizing`,
+  and did not contain a `confluence-context` marker.
 
 Next content still worth doing later:
 
