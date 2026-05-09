@@ -2,18 +2,42 @@
   <title id="title">Excel macro hotkeys map</title>
   <desc id="desc">Grouped macro hotkeys for PlanSwift formatting, cleanup, forms and output checks.</desc>
   <defs>
+    <linearGradient id="pageWash" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff8ed"/>
+      <stop offset="1" stop-color="#efe1cc"/>
+    </linearGradient>
+    <pattern id="woodBody" width="180" height="80" patternUnits="userSpaceOnUse">
+      <rect width="180" height="80" fill="#d8aa72"/>
+      <path d="M0 14 C30 8, 55 22, 86 14 S142 6, 180 18" stroke="#b47738" stroke-width="2" opacity=".34" fill="none"/>
+      <path d="M0 33 C38 42, 68 25, 104 36 S154 49, 180 38" stroke="#8f5b2d" stroke-width="1.4" opacity=".28" fill="none"/>
+      <path d="M0 54 C24 47, 64 58, 94 52 S144 43, 180 55" stroke="#f1c996" stroke-width="1.5" opacity=".45" fill="none"/>
+      <path d="M0 70 C36 76, 70 63, 106 71 S154 80, 180 69" stroke="#7c4a23" stroke-width="1" opacity=".18" fill="none"/>
+      <ellipse cx="138" cy="34" rx="17" ry="7" fill="none" stroke="#7b4a23" stroke-width="1.3" opacity=".22"/>
+      <ellipse cx="138" cy="34" rx="7" ry="3" fill="#986133" opacity=".18"/>
+    </pattern>
+    <pattern id="woodHead" width="180" height="54" patternUnits="userSpaceOnUse">
+      <rect width="180" height="54" fill="#b7793c"/>
+      <path d="M0 9 C36 2, 72 17, 108 9 S150 0, 180 11" stroke="#e8b678" stroke-width="2" opacity=".38" fill="none"/>
+      <path d="M0 25 C28 32, 65 18, 98 28 S145 38, 180 27" stroke="#6f3d18" stroke-width="1.2" opacity=".35" fill="none"/>
+      <path d="M0 43 C40 36, 70 48, 104 42 S148 34, 180 44" stroke="#f1c996" stroke-width="1.2" opacity=".3" fill="none"/>
+    </pattern>
+    <pattern id="woodKey" width="90" height="44" patternUnits="userSpaceOnUse">
+      <rect width="90" height="44" fill="#f1d2a4"/>
+      <path d="M0 12 C20 7, 40 15, 58 11 S78 5, 90 12" stroke="#b47a3e" stroke-width="1" opacity=".28" fill="none"/>
+      <path d="M0 28 C22 33, 42 22, 62 29 S80 36, 90 30" stroke="#8a5728" stroke-width=".9" opacity=".22" fill="none"/>
+    </pattern>
     <style>
-      .bg { fill: #f6faf6; }
-      .panel { fill: #ffffff; stroke: #bfd4bf; stroke-width: 2; }
-      .group { fill: #f8fcf8; stroke: #8caf8c; stroke-width: 1.6; }
-      .head { fill: #dff3df; stroke: #498a49; stroke-width: 1.5; }
-      .title { fill: #1f3321; font-family: Inter, Arial, sans-serif; font-size: 24px; font-weight: 700; }
-      .subtitle { fill: #334a35; font-family: Inter, Arial, sans-serif; font-size: 15px; }
-      .label { fill: #1f3321; font-family: Inter, Arial, sans-serif; font-size: 16px; font-weight: 700; }
-      .text { fill: #344936; font-family: Inter, Arial, sans-serif; font-size: 14px; }
-      .key { fill: #e8f7d6; stroke: #87aa54; stroke-width: 1.3; rx: 9; }
-      .key2 { fill: #eef5ee; stroke: #8aae8a; stroke-width: 1.3; rx: 9; }
-      .kbd { fill: #243925; font-family: JetBrains Mono, Consolas, monospace; font-size: 13px; font-weight: 700; }
+      .bg { fill: url(#pageWash); }
+      .panel { fill: #fffaf1; stroke: #c69457; stroke-width: 2; }
+      .group { fill: url(#woodBody); stroke: #8b5628; stroke-width: 1.8; }
+      .head { fill: url(#woodHead); stroke: #714019; stroke-width: 1.5; }
+      .title { fill: #3b2513; font-family: Inter, Arial, sans-serif; font-size: 24px; font-weight: 700; }
+      .subtitle { fill: #624123; font-family: Inter, Arial, sans-serif; font-size: 15px; }
+      .label { fill: #fff7e8; font-family: Inter, Arial, sans-serif; font-size: 16px; font-weight: 700; }
+      .text { fill: #35210f; font-family: Inter, Arial, sans-serif; font-size: 14px; }
+      .key { fill: url(#woodKey); stroke: #8d5a2a; stroke-width: 1.3; rx: 9; }
+      .key2 { fill: #f6dfbb; stroke: #9c6731; stroke-width: 1.3; rx: 9; }
+      .kbd { fill: #2e1c0d; font-family: JetBrains Mono, Consolas, monospace; font-size: 13px; font-weight: 700; }
     </style>
   </defs>
 
