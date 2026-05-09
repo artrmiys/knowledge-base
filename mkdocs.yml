@@ -63,11 +63,13 @@ nav:
       - QA checklist: start/quality-checklist.md
       - Правила клиентов: start/client-rules.md
       - Картинки и схемы: start/images-and-schemas.md
+      - Preview страницы: start/site-preview.md
       - Поддержка: start/maintenance.md
 
   - Работа:
       - Типы работ:
           - Residential: work-types/residential.md
+          - Reconstruction / Реконструкция: work-types/reconstruction.md
           - COM Commercial: work-types/com.md
           - EWP / Capital: work-types/ewp-capital.md
       - Вертикальные работы:

@@ -53,19 +53,78 @@ drawings/specs не показывают дополнительный loose mate
 
 ## Panelized Walls — что считаем и не считаем
 
-Панели делает другой подрядчик. Наш scope — только то, что не упаковано в панель:
+Panelized COM значит: основные wall panels делает другой подрядчик. Мы не
+пересчитываем panel как обычную stick-framed wall. Наш takeoff — только
+материал, который остаётся **outside panel package** или прямо показан как
+loose/additional detail.
 
-- **Не считаем**: `Studs`, `Plates`, `Blocking`, `Plywood` внутри панели, интерьерные стены, `Corners`, `Headers`.
-- **Считаем для Bracing**: только `Exterior Walls` + несущие (`Corridor Walls`, `Demising Walls`).
-- **На Exterior Walls** считаем только **Tyvek** (если в спеках не указано доп. loose-материала).
-- **Plywood** идёт только на Floor Height, Box Sheathing, Truss Heel, Parapet Walls — то, что не входит в стеновую панель.
-- **Plywood на панелях** — только с одной стороны. У `Shear walls` — тоже одна сторона.
-- На `Trusses` считаем `Gables` для Plywood.
-- `Holdowns`, `Strapping`, `Straps` — отдельно.
-- `Blocking` иногда делают из `Plywood` — проверять детали.
-- `Hurricane Ties` в деталях — не пропускать.
-- `Beams` LVL — считать и учитывать.
-- Под подиумом или внутри существующего здания **панели не применяются** — там стик-фрейм.
+!!! warning "Не превращай panel job в обычные стены"
+    Если notes/specs говорят, что walls are panels, не считай заново весь
+    каркас стены. `Studs`, `Plates`, in-panel `Blocking`, in-panel `Plywood`,
+    `Corners` и типовые `Headers` уже относятся к wall panel package.
+
+### Что обычно внутри wall panel
+
+| Элемент | Считать отдельно? | Как понимать |
+| --- | --- | --- |
+| `Studs` | Нет | Вертикальные стойки входят в panel. |
+| `Bottom/Top Plates` | Нет | Plates внутри panel package; отдельные sill/anchor детали считать только если они shown as loose scope. |
+| In-panel `Blocking` | Нет | Blocking между studs для самой panel не выносится отдельной строкой. |
+| In-panel `Plywood` / `Sheathing` | Нет | Обшивка, которая является частью wall panel, уже в panel. |
+| `Corners` | Нет | Углы panelized walls не считать как отдельные corners. |
+| Типовые `Headers` над openings | Нет | Перемычки внутри panel не считать отдельно, если schedule/detail не говорит, что они loose/not included. |
+| `Unit / Interior walls` | Обычно нет | В panelized COM они часто outside our scope; считай только если scope явно возвращает interior walls в takeoff. |
+
+### Что считать outside panel package
+
+| Item | Когда считать | Note для output |
+| --- | --- | --- |
+| `Exterior Walls` для bracing | Только exterior wall runs, которые нужны для bracing length | Не добавляй studs/plates как обычную wall line. |
+| `Corridor Walls` и `Demising Walls` для bracing | Только несущие corridor/demising walls | Demising может быть double wall; показывай отдельной строкой. |
+| `Tyvek` / WRB | Обычно на exterior walls | Если specs дают только Tyvek для panels, не добавляй plywood/studs. |
+| Floor-height plywood | Когда это отдельная loose zone, не часть panel | Держи отдельной строкой от wall panel. |
+| `Box Sheathing` | Когда box sheathing показан вне panel | Смотри детали и elevations. |
+| `Truss Heel` sheathing | Когда heel/sheathing shown as loose material | Часто остаётся in scope даже при panelized walls. |
+| `Parapet Walls` / parapet sheathing | Когда parapet не входит в panel package | Проверяй FRT и blocking/bolts по details. |
+| `Gable` plywood at trusses | Когда gables относятся к truss/roof condition | Не путай с обычной wall panel sheathing. |
+| `Shear Walls` plywood | Когда shear wall plywood shown отдельно | Вносить с одной стороны, если detail не показывает иначе. |
+| `Holdowns`, `Strapping`, `Straps` | Когда показаны в structural details | Не прятать в wall count; это отдельные items. |
+| `Hurricane Ties` | Когда есть в details | Проверять отдельно, особенно около trusses/roof. |
+| `LVL Beams` | Когда beam shown in structural | Считать и учитывать даже в panelized job. |
+
+### Headers / openings в panelized walls
+
+- Если opening находится в wall panel и drawings не говорят обратного, header
+  внутри этой panel **не считается отдельной строкой**.
+- Если detail/schedule явно показывает `flush header`, special header, metal
+  header, extra jamb blocking или пишет `not included in panels`, тогда это
+  становится loose scope и считается отдельно.
+- Для проверки смотри [Headers](../work/vertical/openings/headers.md) и
+  opening schedule. Не бери header только из архитектурного размера двери/окна,
+  если panel package уже включает openings.
+
+### Blocking в panelized COM
+
+`Blocking` в panel job бывает двух разных типов. Их нельзя смешивать:
+
+| Blocking type | Считать? | Что это значит |
+| --- | --- | --- |
+| In-panel blocking | Нет | Blocking между studs внутри wall panel уже включён в panel. |
+| Drywall/ribbon blocking at truss/floor detail | Да, если shown | `blocking for drywall`, `ribbon board`, `ribbon board interior`, `ribbon board interior + drywall`. |
+| `Bracing for Trusses` | Да | Каждые `10'`, обычно `2x6` в LFT. |
+| Flat/diagonal blocking `48" o.c.` | Да, если относится к loose detail | Используй отдельные formulas ниже. |
+| Parapet / roof edge blocking | Да, если detail shows | Может быть FRT/PT и идти вместе с bolts/plates. |
+| Plywood blocking | Да, если detail shows | Иногда blocking делают из `Plywood`; проверяй материал в detail. |
+
+### Как быстро решить: считать или нет
+
+1. Сначала найди note/scope: `panelized`, `wall panels`, `panels by others`.
+2. Если item physically inside wall panel — не считай отдельно.
+3. Если item is outside panel package или shown as loose detail — считай.
+4. Если сомневаешься, добавь visible note в output: `Assumed included in wall
+   panels unless noted otherwise`.
+5. Под подиумом или внутри existing building панели обычно **не применяются** —
+   там проверяй stick-framed scope отдельно.
 
 ## Bracing — высота стены → длина
 
@@ -82,6 +141,9 @@ drawings/specs не показывают дополнительный loose mate
 
 - `Blocking Flat 48" o.c.` = `=ОКРВВЕРХ(G242*12/48*2*1.1/D242;1)`
 - `Blocking Diagonal 48" o.c.` = `=ОКРВВЕРХ(G241*12/48*2.5*1.1/D241;1)`
+
+Эти formulas применять только к loose blocking/bracing details. Не применяй их
+к обычному in-panel blocking, потому что он уже входит в wall panels.
 
 ## Corridor
 

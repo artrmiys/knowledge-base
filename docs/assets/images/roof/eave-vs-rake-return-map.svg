@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">Eave versus rake and returns map</title>
+  <desc id="desc">Simple roof plan showing eave edges, rake edges, returns, and truss heel as separate takeoff buckets.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7fbf7; }
+      .roof { fill: #e8f5e9; stroke: #607d8b; stroke-width: 4; }
+      .ridge { stroke: #546e7a; stroke-width: 3; stroke-dasharray: 12 10; }
+      .eave { stroke: #2e7d32; stroke-width: 12; stroke-linecap: round; }
+      .rake { stroke: #ef6c00; stroke-width: 10; stroke-linecap: round; }
+      .return { fill: #d7ecff; stroke: #0277bd; stroke-width: 4; }
+      .heel { fill: #fff3cd; stroke: #a66b00; stroke-width: 4; }
+      .label { font: 700 25px Arial, sans-serif; fill: #1b1f23; }
+      .note { font: 20px Arial, sans-serif; fill: #344054; }
+      .legend { font: 19px Arial, sans-serif; fill: #344054; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1100" height="620" rx="18"/>
+
+  <polygon class="roof" points="160,300 360,155 550,300 360,445"/>
+  <polygon class="roof" points="550,300 740,155 940,300 740,445"/>
+  <line class="ridge" x1="360" y1="155" x2="740" y2="155"/>
+  <line class="ridge" x1="360" y1="445" x2="740" y2="445"/>
+
+  <!-- Eaves -->
+  <line class="eave" x1="170" y1="300" x2="540" y2="300"/>
+  <line class="eave" x1="560" y1="300" x2="930" y2="300"/>
+
+  <!-- Rakes -->
+  <line class="rake" x1="360" y1="155" x2="160" y2="300"/>
+  <line class="rake" x1="160" y1="300" x2="360" y2="445"/>
+  <line class="rake" x1="740" y1="155" x2="940" y2="300"/>
+  <line class="rake" x1="940" y1="300" x2="740" y2="445"/>
+
+  <!-- Returns -->
+  <rect class="return" x="275" y="256" width="70" height="88" rx="6"/>
+  <rect class="return" x="755" y="256" width="70" height="88" rx="6"/>
+
+  <!-- Truss heel strip -->
+  <rect class="heel" x="165" y="332" width="372" height="28" rx="4"/>
+  <rect class="heel" x="563" y="332" width="372" height="28" rx="4"/>
+
+  <text class="label" x="105" y="78">Do not mix these buckets</text>
+  <text class="note" x="105" y="114">Eave, Rake, Return, and Truss Heel can all sit near the roof edge, but they are different takeoff lines.</text>
+
+  <rect x="100" y="470" width="900" height="104" rx="12" fill="#ffffff" stroke="#c8d8c8" stroke-width="3"/>
+  <line x1="130" y1="506" x2="210" y2="506" class="eave"/>
+  <text class="legend" x="230" y="513">Eave: horizontal lower roof edge. Soffit SQFT and fascia/subfascia LFT live here.</text>
+  <line x1="130" y1="545" x2="210" y2="545" class="rake"/>
+  <text class="legend" x="230" y="552">Rake: sloped gable edge. Keep separate from eave unless template says otherwise.</text>
+
+  <rect x="730" y="65" width="280" height="164" rx="12" fill="#ffffff" stroke="#c8d8c8" stroke-width="3"/>
+  <rect class="return" x="756" y="95" width="46" height="35" rx="4"/>
+  <text class="legend" x="820" y="120">Return: boxed eave/rake corner.</text>
+  <rect class="heel" x="756" y="158" width="46" height="22" rx="3"/>
+  <text class="legend" x="820" y="176">Truss Heel: vertical strip, not soffit.</text>
+
+  <text class="label" x="265" y="292">Return</text>
+  <text class="label" x="745" y="292">Return</text>
+  <text class="label" x="410" y="335">Eave</text>
+  <text class="label" x="650" y="335">Eave</text>
+</svg>
