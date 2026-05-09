@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Knowledge base logo</title>
+  <rect width="128" height="128" rx="22" fill="#2e7d32"/>
+  <path d="M32 30h45c12 0 21 8 21 19 0 7-4 13-10 16 8 3 14 10 14 20 0 13-10 23-24 23H32V30zm18 16v13h24c4 0 7-3 7-7s-3-6-7-6H50zm0 29v17h27c5 0 8-4 8-9s-3-8-8-8H50z" fill="#fff"/>
+  <path d="M20 24h88v80H20z" fill="none" stroke="#ffffff" stroke-width="6" stroke-linejoin="round" opacity=".35"/>
+</svg>

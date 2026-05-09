@@ -40,7 +40,7 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - Dbl Trpl Rafters (двойные тройные стропила): [2 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/66093077/Dbl+Trpl+Rafters)
+    - Dbl Trpl Rafters (двойные тройные стропила): [2 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/66093077/Dbl+Trpl+Rafters)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-140.png" title="image-20250608-052309.png">

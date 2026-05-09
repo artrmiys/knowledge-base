@@ -38,7 +38,7 @@ evidence links.
 | Estimator | Быстро считать quantities и не терять структуру | PlanSwift-like Pages/Takeoffs, sections, totals, exports |
 | Lead estimator | Проверять чужой takeoff и видеть, откуда quantity | Sheet links, source page, selected sections, notes, review tables |
 | Developer / automation | Понимать, куда подключать rules и AI | Local files, JSON drafts, explicit services, no hidden cloud state |
-| New team member | Быстро войти в E-Wood workflow | Standard folders, wiki links, names/scale checks, planned rule hints |
+| New team member | Быстро войти в Estimating workflow | Standard folders, wiki links, names/scale checks, planned rule hints |
 
 ### Какие проблемы закрывает
 
@@ -389,7 +389,7 @@ user must be able to move it back without fighting the app.
 - Every `Line` and `Area` needs known scale.
 - Every `J Area` needs joist direction before ordered length is trusted.
 - Repeated floors can reuse geometry, but floors should stay separate in output
-  when the E-Wood rule says not to combine them.
+  when the Estimating rule says not to combine them.
 - Count items should use user-facing `Count`, not internal `Point` wording.
 - Notes should stay visible in manager/export so review comments are not lost.
 
@@ -483,7 +483,7 @@ Rule: match tokens, not random substrings. `cor` must not accidentally match
 
 ### Report-ready output target
 
-The long-term goal is not just "export table"; the real target is an E-Wood
+The long-term goal is not just "export table"; the real target is an Estimating
 report workflow:
 
 ```text
@@ -684,7 +684,7 @@ context для AI, roof checks, opening consistency и missing-scope warnings.
 - Separate horizontal/vertical scale еще не основной workflow.
 - Финальный product name пока не закреплен публично.
 
-## E-Wood rule engine idea
+## Estimating rule engine idea
 
 The wiki should eventually feed lightweight warnings into the program. Это не
 должно быть hard-coded "AI magic"; это должны быть понятные rules with source
@@ -713,7 +713,7 @@ links.
 
 ### Ближайшие задачи
 
-- Довести `Report Builder` до рабочих mappings по основным E-Wood sections.
+- Довести `Report Builder` до рабочих mappings по основным Estimating sections.
 - Улучшить review UI для SmartTrace action drafts.
 - Добавить cross-sheet batch search для marker-assisted `Find Similar`.
 - Усилить learned-rule conflict details в Sheet Manager.
@@ -764,7 +764,7 @@ links.
 | 4. Report Builder MVP | Reduce Excel handwork | Source rows map to previewed workbook blocks with manual approval |
 | 5. AI review workflow | Draft assistance | Markers/crops/actions are reviewable and feedback is stored |
 | 6. 3D QA | Visual sanity check | Reviewed massing highlights footprint/roof/opening issues |
-| 7. Rule engine | E-Wood knowledge inside app | Warnings are source-backed and never silently change quantities |
+| 7. Rule engine | Estimating knowledge inside app | Warnings are source-backed and never silently change quantities |
 | 8. Packaging | Usable by non-developer | Install/update/run path does not require coding tools |
 
 ## QA matrix

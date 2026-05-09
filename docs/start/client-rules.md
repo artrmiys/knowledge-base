@@ -1,6 +1,6 @@
 # Правила клиентов
 
-Эти правила собраны из локальных Obsidian/E-Wood notes и boss feedback. Если
+Эти правила собраны из локальных Obsidian/Estimating notes и boss feedback. Если
 текущий проект противоречит default-правилу, перепроверяй по specs/drawings.
 
 ## Metal Studs

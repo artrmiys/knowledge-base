@@ -16,7 +16,7 @@ Use normal crawling:
 4. Convert page text to Markdown.
 5. Merge useful rules into existing topic pages.
 
-This worked for `https://ewood.tilda.ws/`, where only `Walls` and `Gables` had
+This worked for `https://redacted.example/source-site/`, where only `Walls` and `Gables` had
 active work links.
 
 ### 2. Trello boards

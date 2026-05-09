@@ -35,7 +35,7 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - Ridge (конек): [1 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/66093057/Ridge)
+    - Ridge (конек): [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/66093057/Ridge)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-137.png" title="image-20250608-022309.png">

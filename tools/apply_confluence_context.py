@@ -104,7 +104,7 @@ def extract_updated(text: str) -> str:
 
 def extract_links(text: str) -> list[str]:
     urls: list[str] = []
-    for url in re.findall(r"https://ewood\.atlassian\.net/wiki/spaces/work/(?:pages/\d+/[^)\s]+|overview)", text):
+    for url in re.findall(r"https://redacted\.atlassian\.net/wiki/spaces/work/(?:pages/\d+/[^)\s]+|overview)", text):
         if "/download/attachments/" in url or "/history/" in url:
             continue
         urls.append(url.rstrip(")"))

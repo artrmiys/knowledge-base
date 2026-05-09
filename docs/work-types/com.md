@@ -187,7 +187,7 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - COM Commercial Job: [13 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/2359297/COM+Commercial+Job)
+    - COM Commercial Job: [13 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/2359297/COM+Commercial+Job)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../assets/images/confluence/confluence-053.png" title="image-20250722-030816.png">

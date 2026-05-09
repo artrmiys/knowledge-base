@@ -1,15 +1,14 @@
-site_name: E-Wood Knowledge Base
+site_name: Estimating Knowledge Base
 site_description: "Рабочая wiki для estimating: takeoff workflow, COM/EWP rules, QA checklists"
-site_url: https://artrmiys.github.io/knowledge-base-e-wood/
-site_author: E-Wood
+site_author: Estimating Team
 docs_dir: docs
 
 theme:
   name: material
   custom_dir: overrides
   language: ru
-  logo: assets/images/logo.png
-  favicon: assets/images/logo.png
+  logo: assets/images/logo.svg
+  favicon: assets/images/logo.svg
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -42,13 +41,6 @@ theme:
   font:
     text: Inter
     code: JetBrains Mono
-  icon:
-    repo: fontawesome/brands/github
-
-repo_url: https://github.com/artrmiys/knowledge-base-e-wood
-repo_name: artrmiys/knowledge-base-e-wood
-edit_uri: edit/main/docs/
-
 extra_css:
   - assets/stylesheets/extra.css
 
@@ -196,9 +188,6 @@ markdown_extensions:
 
 extra:
   generator: false
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/artrmiys/knowledge-base-e-wood
 
 # Файлы вне навигации (доступны по прямой ссылке, но скрыты из меню)
 not_in_nav: |

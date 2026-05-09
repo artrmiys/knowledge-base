@@ -1,6 +1,6 @@
 # Gable Sheathing
 
-Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/89948176/Gable`
+Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/89948176/Gable`
 
 ## Что считать
 

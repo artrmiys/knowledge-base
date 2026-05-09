@@ -1,6 +1,6 @@
 # Confluence Image Archive
 
-Source: `https://ewood.atlassian.net/wiki/spaces/work/overview?homepageId=1933591`
+Source: `https://redacted.atlassian.net/wiki/spaces/work/overview?homepageId=1933591`
 
 Imported working Confluence images: **175**.
 
@@ -12,7 +12,7 @@ The private `salary - conditions` page is intentionally excluded.
 
 ## Joist Series
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/11796606/Joist+Series`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/11796606/Joist+Series`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-001.png">
@@ -59,7 +59,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/11796606/Joist+
 
 ## ---
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/11796656/---`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/11796656/---`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-011.png">
@@ -142,7 +142,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/11796656/---`
 
 ## Hangers and Ties Schedule
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/12124257/Hangers+and+Ties+Schedule`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/12124257/Hangers+and+Ties+Schedule`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-030.png">
@@ -157,7 +157,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/12124257/Hanger
 
 ## work - large GIF attachments
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/overview`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/overview`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-032.jpg">
@@ -172,7 +172,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/overview`
 
 ## work
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/overview`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/overview`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-034.png">
@@ -215,7 +215,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/overview`
 
 ## dictionary
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/1933726/dictionary`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/1933726/dictionary`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-043.png">
@@ -234,7 +234,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/1933726/diction
 
 ## Materials
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/1933821/Materials`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/1933821/Materials`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-046.png">
@@ -253,7 +253,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/1933821/Materia
 
 ## Need to sort
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/229638146/Need+to+sort`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/229638146/Need+to+sort`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-049.png">
@@ -276,7 +276,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/229638146/Need+
 
 ## COM Commercial Job
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/2359297/COM+Commercial+Job`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/2359297/COM+Commercial+Job`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-053.png">
@@ -335,7 +335,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/2359297/COM+Com
 
 ## Excel
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/3276801/Excel`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/3276801/Excel`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-066.gif">
@@ -362,7 +362,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/3276801/Excel`
 
 ## Beam - Балки
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/3735554/Beam+-`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/3735554/Beam+-`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-071.png">
@@ -385,7 +385,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/3735554/Beam+-`
 
 ## Joist - Ригели
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/3735565/Joist+-`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/3735565/Joist+-`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-075.png">
@@ -396,7 +396,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/3735565/Joist+-
 
 ## PlanSwift - large GIF attachments
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/4292609/PlanSwift`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/4292609/PlanSwift`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-076.jpg">
@@ -407,7 +407,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/4292609/PlanSwi
 
 ## PlanSwift
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/4292609/PlanSwift`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/4292609/PlanSwift`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-077.jpg">
@@ -422,7 +422,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/4292609/PlanSwi
 
 ## Hangers - Крепления
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/4816897/Hangers+-`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/4816897/Hangers+-`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-079.png">
@@ -445,7 +445,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/4816897/Hangers
 
 ## Gable (треугольные фронтоны)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/63799300/Gable`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/63799300/Gable`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-083.png">
@@ -488,7 +488,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/63799300/Gable`
 
 ## Openings
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65044582/Openings`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/65044582/Openings`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-092.png">
@@ -499,7 +499,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65044582/Openin
 
 ## Sheathing
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65044604/Sheathing`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/65044604/Sheathing`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-093.jpg">
@@ -514,7 +514,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65044604/Sheath
 
 ## Unit (внутрикомнатные стены)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65077308/Unit`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/65077308/Unit`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-095.png">
@@ -525,7 +525,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65077308/Unit`
 
 ## Vertical Constructions
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65110035/Vertical+Constructions`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/65110035/Vertical+Constructions`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-096.png">
@@ -572,7 +572,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65110035/Vertic
 
 ## Walls
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65175555/Walls`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/65175555/Walls`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-106.png">
@@ -591,7 +591,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65175555/Walls`
 
 ## Exterior (наружные стены)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65273857/Exterior`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/65273857/Exterior`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-109.png">
@@ -662,7 +662,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65273857/Exteri
 
 ## Corridor (коридорные стены)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65306625/Corridor`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/65306625/Corridor`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-125.png">
@@ -673,7 +673,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65306625/Corrid
 
 ## Demising (меж-секционные стены - двойные)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65306639/Demising+-+-`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/65306639/Demising+-+-`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-126.png">
@@ -684,7 +684,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65306639/Demisi
 
 ## Parapet (парапет, стены крыши)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65306653/Parapet`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/65306653/Parapet`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-127.png">
@@ -699,7 +699,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65306653/Parape
 
 ## Shaft (противопожарные стены)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65306667/Shaft`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/65306667/Shaft`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-129.png">
@@ -726,7 +726,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65306667/Shaft`
 
 ## ◼️Post (колоны)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65831004/Post`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/65831004/Post`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-134.png">
@@ -737,7 +737,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65831004/Post`
 
 ## Roof Framing - конструкции крыши
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65962048/Roof+Framing+-`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/65962048/Roof+Framing+-`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-135.png">
@@ -752,7 +752,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/65962048/Roof+F
 
 ## ◼️Ridge (конек)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66093057/Ridge`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/66093057/Ridge`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-137.png">
@@ -763,7 +763,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66093057/Ridge`
 
 ## ◼️Header (горизонтальная балка в крыше)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66093067/Header`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/66093067/Header`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-138.png">
@@ -778,7 +778,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66093067/Header
 
 ## ◼️Dbl Trpl Rafters (двойные тройные стропила)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66093077/Dbl+Trpl+Rafters`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/66093077/Dbl+Trpl+Rafters`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-140.png">
@@ -793,7 +793,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66093077/Dbl+Tr
 
 ## ◼️Hip (балка примыкания крыши наружу)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66093087/Hip`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/66093087/Hip`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-142.png">
@@ -804,7 +804,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66093087/Hip`
 
 ## ◼️Valley (балка примыкания крыши внутрь)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66093097/Valley`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/66093097/Valley`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-143.png">
@@ -815,7 +815,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66093097/Valley
 
 ## ◼️Overframes (скрытая части крыши)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66093107/Overframes`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/66093107/Overframes`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-144.png">
@@ -834,7 +834,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66093107/Overfr
 
 ## ◼️Canopy (маленький навес)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66125825/Canopy`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/66125825/Canopy`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-147.png">
@@ -845,7 +845,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66125825/Canopy
 
 ## ◼️Dormer, Shed Dormer (надстроенная крыша)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66125835/Dormer+Shed+Dormer`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/66125835/Dormer+Shed+Dormer`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-148.png">
@@ -856,7 +856,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66125835/Dormer
 
 ## ◼️Roof Sheathing (обшивка)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66125845/Roof+Sheathing`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/66125845/Roof+Sheathing`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-149.png">
@@ -871,7 +871,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/66125845/Roof+S
 
 ## ◼️Railing - перила
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/67043361/Railing+-`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/67043361/Railing+-`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-151.png">
@@ -882,7 +882,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/67043361/Railin
 
 ## ◼️Balcony Trims - отделка для балконов
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/67469321/Balcony+Trims+-`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/67469321/Balcony+Trims+-`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-152.png">
@@ -893,7 +893,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/67469321/Balcon
 
 ## ◼️ Anchor Bolts (анкерные болты)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/72482856/Anchor+Bolts`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/72482856/Anchor+Bolts`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-153.png">
@@ -908,7 +908,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/72482856/Anchor
 
 ## Sill Plates (доска для бетона)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/75333633/Sill+Plates`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/75333633/Sill+Plates`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-155.png">
@@ -983,7 +983,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/75333633/Sill+P
 
 ## Floor (обшивка перекрытия снаружи)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/89948162/Floor`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/89948162/Floor`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-172.png">
@@ -1002,7 +1002,7 @@ Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/89948162/Floor`
 
 ## Truss Heel (обшивка ферм крыши, вертикальной части)
 
-Source page: `https://ewood.atlassian.net/wiki/spaces/work/pages/89948190/Truss+Heel`
+Source page: `https://redacted.atlassian.net/wiki/spaces/work/pages/89948190/Truss+Heel`
 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../assets/images/confluence/confluence-175.png">

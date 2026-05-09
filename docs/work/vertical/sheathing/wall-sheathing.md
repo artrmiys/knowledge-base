@@ -1,6 +1,6 @@
 # Wall Sheathing
 
-Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/90144770/Wall+Sheathing`
+Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/90144770/Wall+Sheathing`
 
 <figure markdown>
   ![Wall sheathing source priority flow](../../../assets/images/sheathing/wall-sheathing-priority.svg)
@@ -74,7 +74,7 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - Sheathing: [2 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65044604/Sheathing)
+    - Sheathing: [2 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65044604/Sheathing)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-093.jpg" title="image-20251030-155040.png">

@@ -30,7 +30,7 @@ def sensitive_title(title: str) -> bool:
             "join.slack",
             "shared_invite",
             "slack.com",
-            "ewood.atlassian.net/l/c",
+            "redacted.atlassian.net/l/c",
             "password",
             "token",
             "ssh",

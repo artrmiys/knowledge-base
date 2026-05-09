@@ -8,10 +8,10 @@ This wiki was built from the local Obsidian vault:
 
 | Obsidian path | Used for |
 | --- | --- |
-| `E-Wood/notes.md` | Project #84/#87 mistakes and reminders |
-| `E-Wood/Mistakes_my.md` | Boss feedback rules, COM/EWP mistakes |
-| `E-Wood/from_twist.md` | DHU/ITS clarification, client and output rules |
-| `E-Wood/---.md` | Joist factors and recurring correction notes |
+| `Estimating/notes.md` | Project #84/#87 mistakes and reminders |
+| `Estimating/Mistakes_my.md` | Boss feedback rules, COM/EWP mistakes |
+| `Estimating/from_twist.md` | DHU/ITS clarification, client and output rules |
+| `Estimating/---.md` | Joist factors and recurring correction notes |
 | `wiki/sources/Boss Feedback - Mistakes.md` | Synthesized feedback source |
 | `wiki/sources/Check list COM 2026.md` | COM checklist |
 | `wiki/sources/COM Commercial Job.md` | COM workflow |
@@ -28,14 +28,14 @@ This wiki was built from the local Obsidian vault:
 | `raw/clippings/--- - work.md` | Misc rules including crowns |
 | Confluence `work` space pages and image attachments | [Confluence Source Map](confluence-source-map.md) and [Confluence Image Archive](confluence-image-archive.md) |
 | Trello `https://trello.com/b/TyUKA0Zw/int-trims` | Full Trello API export: 44 cards, 43 attachments. See [Trello Source Map](trello-source-map.md). |
-| Tilda `https://ewood.tilda.ws/` | Site menu and active work links |
-| Tilda `https://ewood.tilda.ws/page22624825.html` | Walls checklist |
-| Tilda `https://ewood.tilda.ws/gables` | Gables checklist |
+| Tilda `https://redacted.example/source-site/` | Site menu and active work links |
+| Tilda `https://redacted.example/source-site/page22624825.html` | Walls checklist |
+| Tilda `https://redacted.example/source-site/gables` | Gables checklist |
 | Trello `https://trello.com/b/wDztpnZg/изменения-очень-важно` | Full Trello API export: 75 cards, 20 attachments. See [Trello Source Map](trello-source-map.md). |
 
 ## External Web References
 
-These are sanity-check references only. They do not replace E-Wood estimating
+These are sanity-check references only. They do not replace Estimating estimating
 rules, source drawings, project specifications, or AHJ/code requirements.
 
 | Source | Used for |
@@ -56,7 +56,7 @@ rules, source drawings, project specifications, or AHJ/code requirements.
 
 ## Refresh Process
 
-1. Search the Obsidian vault for new E-Wood work notes.
+1. Search the Obsidian vault for new Estimating work notes.
 2. Extract only reusable estimating rules.
 3. Add the rule to the closest topic page.
 4. Update the relevant reference page.
@@ -104,8 +104,8 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - dictionary: [3 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/1933726/dictionary)
-    - Materials: [3 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/1933821/Materials)
+    - dictionary: [3 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/1933726/dictionary)
+    - Materials: [3 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/1933821/Materials)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../assets/images/confluence/confluence-043.png" title="image-20250210-055520.png">

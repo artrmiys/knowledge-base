@@ -62,7 +62,7 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - Beam - Балки: [4 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/3735554/Beam+-)
+    - Beam - Балки: [4 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/3735554/Beam+-)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-071.png" title="image-20250211-181056.png">

@@ -1,6 +1,6 @@
 # EWP / Capital
 
-Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/2162791/EWP+Capital+Job`
+Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/2162791/EWP+Capital+Job`
 
 EWP jobs включают только engineered wood products, если project scope не говорит
 иначе.

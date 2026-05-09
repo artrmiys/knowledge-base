@@ -1,6 +1,6 @@
 # Shear Wall
 
-Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/90210306/Shear+Wall+Sheathing`
+Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/90210306/Shear+Wall+Sheathing`
 
 ## Что считать
 

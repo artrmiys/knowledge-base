@@ -22,7 +22,7 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - Balcony Trims - отделка для балконов: [1 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/67469321/Balcony+Trims+-)
+    - Balcony Trims - отделка для балконов: [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/67469321/Balcony+Trims+-)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../../assets/images/confluence/confluence-152.png" title="image-20250610-142411.png">

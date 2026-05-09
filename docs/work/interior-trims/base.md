@@ -29,7 +29,7 @@
 | `Baseboard` под windows считается, если finish notes не говорят обратное. | Не пропускать короткие under-window runs случайно. | [Trello](https://trello.com/c/6Eg4OGuD) |
 | Нет `Baseboard`, где stair trim / wall junction делает его неприменимым. | Визуально проверить stair-to-wall intersections. | [Trello](https://trello.com/c/zCvVfJN2) |
 | `Baseboard` в toilets и shower rooms считается, если это показано finish scope. | Проверить base material: tile base может заменить wood base. | [Trello](https://trello.com/c/EZBqumHc) |
-| В garage нет `Baseboard`. | Не вести room perimeter через garage walls. | E-Wood rule |
+| В garage нет `Baseboard`. | Не вести room perimeter через garage walls. | Estimating rule |
 | В non-living rooms или rooms without finish нет `Baseboard`. | Исключать unfinished / service spaces, если schedule не говорит обратное. | [Trello](https://trello.com/c/bf2p8wqf) |
 | В Excel вписывай все measured values в formula. | Formula должна быть проверяемой, не только final number. | [Trello](https://trello.com/c/Zu0NI5a3) |
 | Проверяй material вроде `TBD Base`. | Оставляй видимую note, если material не указан. | [Trello](https://trello.com/c/Q8YQ3KtC) |
@@ -50,7 +50,7 @@
   с текущим perimeter method.
 - Finish schedule column `Base` управляет material. Если там tile,
   rubber/vinyl, metal или `TBD`, оставляй это видимым, не подставляй wood base.
-- E-Wood rule важнее generic method: за kitchen cabinets base не считаем,
+- Estimating rule важнее generic method: за kitchen cabinets base не считаем,
   no-finish rooms исключаем, toilets/shower rooms проверяем по material.
 
 ## Визуальные правила

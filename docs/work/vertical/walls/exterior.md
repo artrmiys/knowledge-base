@@ -62,7 +62,7 @@
 
 ## PlanSwift Wall Names
 
-Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65175555/Walls`
+Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65175555/Walls`
 
 | Wall output name | Для чего |
 | --- | --- |
@@ -98,7 +98,7 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - Exterior (наружные стены): [16 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65273857/Exterior)
+    - Exterior (наружные стены): [16 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65273857/Exterior)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-109.png" title="image-20260408-222831.png">

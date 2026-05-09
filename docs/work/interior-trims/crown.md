@@ -24,7 +24,7 @@
 | --- | --- | --- |
 | В closets нет `Crowns`. | Исключай `Closet` / `CLO.` spaces, если scope не говорит обратное. | [Trello](https://trello.com/c/Iz1T4E1L) |
 | В rooms with sloped ceilings нет `Crowns`. | Следи за `slope ceiling` / sloped roof conditions. | [Trello](https://trello.com/c/a2x8EuZA) |
-| В garage нет `Crowns`. | Не веди crown perimeter через garage walls. | E-Wood rule |
+| В garage нет `Crowns`. | Не веди crown perimeter через garage walls. | Estimating rule |
 | В rooms without finish нет `Crowns`. | Исключай unfinished areas. | [Trello](https://trello.com/c/L54HVTxD) |
 | `Crowns` в bathrooms считаются, если trim scope требует это. | Не исключай bathrooms автоматически. | [Trello](https://trello.com/c/nV0U6Z32) |
 | На second level считай crowns только в `Hall`, foyer и large guest rooms, где это требуется. | Держи second-floor crown logic отдельно от first-floor living areas. | [Trello](https://trello.com/c/EImvQgbn) |
@@ -43,7 +43,7 @@
 - Crown тоже linear room-run item, но его нельзя выводить только из base.
 - Перед perimeter count проверь finish schedule, ceiling notes, RCP/finish plans
   и remarks.
-- E-Wood exclusions остаются рабочим правилом: closets, sloped-ceiling rooms и
+- Estimating exclusions остаются рабочим правилом: closets, sloped-ceiling rooms и
   no-finish rooms не считаются, если scope явно не говорит обратное.
 
 ## Визуальные правила

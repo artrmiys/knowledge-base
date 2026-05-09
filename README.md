@@ -1,6 +1,6 @@
-# E-Wood Knowledge Base
+# Estimating Knowledge Base
 
-Human-readable MkDocs wiki for E-Wood estimating rules, takeoff workflow,
+Human-readable MkDocs wiki for estimating rules, takeoff workflow,
 COM/EWP job logic, recurring QA checks, and boss-feedback rules extracted from
 the local Obsidian vault.
 

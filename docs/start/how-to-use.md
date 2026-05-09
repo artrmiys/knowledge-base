@@ -40,9 +40,9 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - Excel: [5 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/3276801/Excel)
-    - PlanSwift: [2 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/4292609/PlanSwift)
-    - PlanSwift - large GIF attachments: [1 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/4292609/PlanSwift)
+    - Excel: [5 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/3276801/Excel)
+    - PlanSwift: [2 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/4292609/PlanSwift)
+    - PlanSwift - large GIF attachments: [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/4292609/PlanSwift)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../assets/images/confluence/confluence-066.gif" title="ываывп.gif">

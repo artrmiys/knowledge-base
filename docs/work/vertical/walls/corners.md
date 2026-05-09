@@ -1,6 +1,6 @@
 # Corners
 
-Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65273871/Corners`
+Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65273871/Corners`
 
 ## Что считать
 

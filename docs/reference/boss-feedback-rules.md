@@ -134,8 +134,8 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - ---: [19 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/11796656/---)
-    - Need to sort: [4 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/229638146/Need+to+sort)
+    - ---: [19 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/11796656/---)
+    - Need to sort: [4 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/229638146/Need+to+sort)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../assets/images/confluence/confluence-011.png" title="image-20250224-003901.png">

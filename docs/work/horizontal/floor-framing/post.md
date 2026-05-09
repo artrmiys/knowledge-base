@@ -50,7 +50,7 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - Post (колоны): [1 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65831004/Post)
+    - Post (колоны): [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65831004/Post)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-134.png" title="image-20250608-021518.png">

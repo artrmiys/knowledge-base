@@ -1,6 +1,6 @@
 # Структура takeoff
 
-Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65961989/Deck+Porch+Balcony+-`
+Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65961989/Deck+Porch+Balcony+-`
 
 Эта структура повторяет рабочий порядок COM takeoff.
 
@@ -193,11 +193,11 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - Roof Framing - конструкции крыши: [2 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65962048/Roof+Framing+-)
-    - Vertical Constructions: [10 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65110035/Vertical+Constructions)
-    - Walls: [3 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65175555/Walls)
-    - work: [9 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/overview)
-    - work - large GIF attachments: [2 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/overview)
+    - Roof Framing - конструкции крыши: [2 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65962048/Roof+Framing+-)
+    - Vertical Constructions: [10 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65110035/Vertical+Constructions)
+    - Walls: [3 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65175555/Walls)
+    - work: [9 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/overview)
+    - work - large GIF attachments: [2 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/overview)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../assets/images/confluence/confluence-032.jpg" title="3.gif">

@@ -31,7 +31,7 @@ docs/
 ```
 
 <figure markdown>
-  ![Заглушка](../assets/images/logo.png){ width="120" }
+  ![Заглушка](../assets/images/logo.svg){ width="120" }
   <figcaption>Так выглядит figure + figcaption.</figcaption>
 </figure>
 

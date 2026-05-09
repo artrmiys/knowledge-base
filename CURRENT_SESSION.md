@@ -6,7 +6,7 @@ Updated: 2026-05-06 / 2026-05-07 live import session.
 
 The user wants this wiki to keep the current design/structure and be filled
 with estimating content, tables, schemes, and useful pictures from the logged-in
-E-Wood sources.
+Estimating sources.
 
 Important: do not change design, theme, nav, CSS, `mkdocs.yml`, or the hero
 unless the user explicitly asks. The user was upset when the design changed.
@@ -14,9 +14,9 @@ Continue with content-only imports and page enrichment.
 
 ## Workspace
 
-- Project root: `E:\---\Work\knowledge-base-e-wood`
+- Project root: `current repo root`
 - Site stack: MkDocs + Material.
-- Local preview URL: `http://127.0.0.1:8000/knowledge-base-e-wood/`
+- Local preview URL: `http://127.0.0.1:8000/`
 - Build check: `.\.venv\Scripts\python.exe -m mkdocs build --strict`
 
 ## Live browser sources
@@ -24,7 +24,7 @@ Continue with content-only imports and page enrichment.
 Open these with Playwright/browser after the user is logged in:
 
 - Confluence work overview:
-  `https://ewood.atlassian.net/wiki/spaces/work/overview?homepageId=1933591`
+  `https://redacted.atlassian.net/wiki/spaces/work/overview?homepageId=1933591`
 - Trello important changes:
   `https://trello.com/b/wDztpnZg/%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BE%D1%87%D0%B5%D0%BD%D1%8C-%D0%B2%D0%B0%D0%B6%D0%BD%D0%BE`
 - Trello int trims:
@@ -313,7 +313,7 @@ connected clearly enough to pictures:
 ## Resume pass 4 -- 2026-05-08
 
 Added a small internet sanity-check pass for Interior Trims, with restrained
-scope so external references do not override E-Wood takeoff rules:
+scope so external references do not override Estimating takeoff rules:
 
 - Added two original SVG diagrams:
   - `docs/assets/images/trims/finish-schedule-trim-check.svg`

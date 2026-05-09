@@ -35,7 +35,7 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - Parapet (парапет, стены крыши): [2 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65306653/Parapet)
+    - Parapet (парапет, стены крыши): [2 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65306653/Parapet)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-127.png" title="image-20251030-151131.png">

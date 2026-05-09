@@ -5,7 +5,7 @@ hide:
 ---
 
 <div class="kb-hero" markdown>
-<p class="kb-hero__eyebrow">E-Wood · Estimating wiki</p>
+<p class="kb-hero__eyebrow">Estimating wiki</p>
 <h1 class="kb-hero__title">База знаний по takeoff и estimating</h1>
 <p class="kb-hero__lede">
 Workflow, чек-листы, правила COM/EWP, советы из реальных правок и таблицы по Walls, Framing, Sheathing, Hangers — в одном месте.
@@ -202,4 +202,3 @@ Workflow, чек-листы, правила COM/EWP, советы из реал�
 ---
 
 :material-magnify: Поиск (Ctrl/Cmd + K) индексируется на русском и английском.
-:material-github: Исходники и edit-режим: [github.com/artrmiys/knowledge-base-e-wood](https://github.com/artrmiys/knowledge-base-e-wood).

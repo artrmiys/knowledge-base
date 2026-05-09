@@ -26,7 +26,7 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - Roof Sheathing (обшивка): [2 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/66125845/Roof+Sheathing)
+    - Roof Sheathing (обшивка): [2 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/66125845/Roof+Sheathing)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-149.png" title="image-20250608-054015.png">

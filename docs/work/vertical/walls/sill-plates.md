@@ -46,7 +46,7 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - Sill Plates (доска для бетона): [17 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/75333633/Sill+Plates)
+    - Sill Plates (доска для бетона): [17 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/75333633/Sill+Plates)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-155.png" title="image-20260408-211626.png">

@@ -26,7 +26,7 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - Floor (обшивка перекрытия снаружи): [3 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/89948162/Floor)
+    - Floor (обшивка перекрытия снаружи): [3 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/89948162/Floor)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-172.png" title="image-20251030-155530.png">

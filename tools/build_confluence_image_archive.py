@@ -122,7 +122,7 @@ def build_markdown(items: list[ImageItem]) -> str:
     lines = [
         "# Confluence Image Archive",
         "",
-        "Source: `https://ewood.atlassian.net/wiki/spaces/work/overview?homepageId=1933591`",
+        "Source: `https://redacted.atlassian.net/wiki/spaces/work/overview?homepageId=1933591`",
         "",
         f"Imported working Confluence images: **{len(items)}**.",
         "",

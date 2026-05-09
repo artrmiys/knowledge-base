@@ -1,6 +1,6 @@
 # Tilda Site Map
 
-Source: `https://ewood.tilda.ws/`
+Source: `https://redacted.example/source-site/`
 
 ## Import Result
 
@@ -9,8 +9,8 @@ only two internal work items had active links at import time:
 
 | Menu item | Status | URL |
 | --- | --- | --- |
-| Walls | Active | `https://ewood.tilda.ws/page22624825.html` |
-| Gables | Active | `https://ewood.tilda.ws/gables` |
+| Walls | Active | `https://redacted.example/source-site/page22624825.html` |
+| Gables | Active | `https://redacted.example/source-site/gables` |
 
 The remaining work menu items were visible labels with empty `href` values:
 
@@ -34,7 +34,7 @@ The remaining work menu items were visible labels with empty `href` values:
 - Others
 
 External Tilda platform/help links were not imported because they are website
-builder links, not E-Wood estimating content.
+builder links, not Estimating estimating content.
 
 ## Walls Page Summary
 

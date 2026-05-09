@@ -1,6 +1,6 @@
 # Windows and Doors
 
-Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65339393/Windows+Doors`
+Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65339393/Windows+Doors`
 
 ## Что считать
 
@@ -22,7 +22,7 @@ Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65339393/Windows+Doo
 
 ## Flashing Table
 
-Source: `https://ewood.atlassian.net/wiki/spaces/work/pages/65044582/Openings`
+Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65044582/Openings`
 
 | Opening item | Output |
 | --- | --- |
@@ -44,7 +44,7 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - Openings: [1 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65044582/Openings)
+    - Openings: [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65044582/Openings)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-092.png" title="image-20251030-161759.png">

@@ -21,7 +21,7 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - Dormer, Shed Dormer (надстроенная крыша): [1 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/66125835/Dormer+Shed+Dormer)
+    - Dormer, Shed Dormer (надстроенная крыша): [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/66125835/Dormer+Shed+Dormer)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-148.png" title="image-20250608-051026.png">

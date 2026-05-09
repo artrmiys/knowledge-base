@@ -46,7 +46,7 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - Shaft (противопожарные стены): [5 карт. Confluence](https://ewood.atlassian.net/wiki/spaces/work/pages/65306667/Shaft)
+    - Shaft (противопожарные стены): [5 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65306667/Shaft)
 
 <div class="kb-rule-gallery">
   <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-129.png" title="image-20251030-153706.png">

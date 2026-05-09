@@ -64,7 +64,7 @@ def page_url(page: dict[str, Any]) -> str:
     webui = links.get("webui") or ""
     if webui.startswith("http"):
         return webui
-    base = links.get("base") or "https://ewood.atlassian.net/wiki"
+    base = links.get("base") or "https://redacted.atlassian.net/wiki"
     return base.rstrip("/") + "/" + webui.lstrip("/")
 
 
