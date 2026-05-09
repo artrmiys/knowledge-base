@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eve" class="md-skip">
+        <a href="#eve-eave" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -424,6 +424,8 @@
       
         
       
+        
+      
     
     
     
@@ -672,6 +674,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../start/site-preview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preview страницы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../start/maintenance/" class="md-nav__link">
         
   
@@ -790,6 +820,8 @@
       
         
       
+        
+      
     
     
     
@@ -853,6 +885,34 @@
     
   
     Residential
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../work-types/reconstruction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reconstruction / Реконструкция
   
 
     
@@ -2797,7 +2857,18 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Правила
+        Что не смешивать
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Правила takeoff
       
     </span>
   </a>
@@ -2808,7 +2879,51 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
+        Где искать
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как мерить
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
         Проверить
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пример output
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Источники правил
       
     </span>
   </a>
@@ -3996,7 +4111,18 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Правила
+        Что не смешивать
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Правила takeoff
       
     </span>
   </a>
@@ -4007,7 +4133,51 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
+        Где искать
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как мерить
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
         Проверить
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пример output
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Источники правил
       
     </span>
   </a>
@@ -4034,22 +4204,266 @@
   
 
 
-<h1 id="eve">Eve<a class="headerlink" href="#eve" title="Прямая ссылка на раздел">&para;</a></h1>
+<h1 id="eve-eave">Eve / Eave<a class="headerlink" href="#eve-eave" title="Прямая ссылка на раздел">&para;</a></h1>
+<p><code>Eve</code> / <code>Eave</code> — нижний горизонтальный край крыши вдоль стены. В takeoff это не
+один item: там могут быть framing, soffit material, fascia/subfascia, trims,
+vented/vinyl soffit и отдельные roof-edge details.</p>
+<figure>
+<p><img alt="Eave takeoff parts" src="../../../assets/images/roof/eave-parts-takeoff.svg" />
+  </p>
+<figcaption>Eave состоит из разных buckets: LFT для edge/framing, SQFT для soffit material.</figcaption>
+</figure>
 <h2 id="_1">Что считать<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li>Eve framing, soffit frames, soffit plywood/gypsum, subfascia, and trim where
-  shown.</li>
+<li><code>Eve</code> framing / rafter-tail framing / soffit frame, когда shown.</li>
+<li><code>Soffit</code> material: vinyl, beadboard, plywood, exterior gypsum, Denseglas /
+  Densglass, vented soffit panels.</li>
+<li><code>Subfascia</code> и <code>Fascia</code> / trim, если это часть scope.</li>
+<li><code>Frieze</code> / wall trim под eave, если drawings/specs показывают отдельную line.</li>
+<li>Blocking, backing, strapping и vents только когда они called out.</li>
+<li><code>Soffit plywood</code> under roof trusses, если detail/RCP/section показывает его.</li>
+<li>Canopy/porch eave material, если это не отдельная page/line в output.</li>
 </ul>
-<h2 id="_2">Правила<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
+<h2 id="_2">Что не смешивать<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
+<div class="kb-rule-gallery">
+  <a class="kb-rule-card" href="../../../assets/images/roof/eave-vs-rake-return-map.svg">
+    <img src="../../../assets/images/roof/eave-vs-rake-return-map.svg" alt="Eave versus rake and returns map">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Eave / Rake / Return / Truss Heel</div>
+      <div class="kb-rule-card__rule">Держи buckets отдельно, если output template не просит объединить.</div>
+      <div class="kb-rule-card__note">Eave = горизонтальный нижний edge; Rake = sloped gable edge; Return = boxed corner; Truss Heel = вертикальная полоска.</div>
+    </div>
+  </a>
+  <a class="kb-rule-card" href="../../../assets/images/confluence/confluence-175.png">
+    <img src="../../../assets/images/confluence/confluence-175.png" alt="Truss heel visual reference">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">Truss Heel near Eave</div>
+      <div class="kb-rule-card__rule">На eave side heel sheathing часто забывается.</div>
+      <div class="kb-rule-card__note">Это вертикальная полоска между Top Plate и низом overhang; не прячь её в soffit SQFT.</div>
+    </div>
+  </a>
+  <a class="kb-rule-card" href="../../../assets/images/reference/important-change-03.png">
+    <img src="../../../assets/images/reference/important-change-03.png" alt="AJS rafters manual roof edge rule">
+    <div class="kb-rule-card__body">
+      <div class="kb-rule-card__title">AJS Rafters edge condition</div>
+      <div class="kb-rule-card__rule">Если roof framed with AJS Rafters ведёт себя как exposed overhang, считай rafters manually.</div>
+      <div class="kb-rule-card__note">Не заменяй это простым `Rake`, когда detail требует отдельные rafters.</div>
+    </div>
+  </a>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Bucket</th>
+<th>Что это</th>
+<th>Где считать</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Eave</code></td>
+<td>Горизонтальный нижний edge roof overhang</td>
+<td>LFT по длине eave</td>
+</tr>
+<tr>
+<td><code>Rake</code></td>
+<td>Наклонный edge на gable side</td>
+<td>Отдельная Rake line</td>
+</tr>
+<tr>
+<td><code>Returns</code></td>
+<td>Boxed corner, где eave/rake возвращается</td>
+<td>Отдельная Returns line</td>
+</tr>
+<tr>
+<td><code>Truss Heel</code></td>
+<td>Вертикальная strip у края truss</td>
+<td><a href="../../vertical/sheathing/truss-heel/">Truss Heel</a>, не soffit</td>
+</tr>
+<tr>
+<td><code>Canopy / Porch soffit</code></td>
+<td>Soffit under canopy/porch</td>
+<td>Считать в canopy/porch scope, если output так разделён</td>
+</tr>
+</tbody>
+</table>
+<h2 id="takeoff">Правила takeoff<a class="headerlink" href="#takeoff" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li>Eve soffit frames can be 2x6, not 2x4, if drawings show it.</li>
-<li>Если 30% или больше soffit = beadboard, считай full soffit SQFT as beadboard
-  когда используешь это local rule.</li>
+<li><code>Eave</code> line обычно меряется <strong>LFT</strong> по наружному периметру roof edge.</li>
+<li><code>Soffit</code> material обычно считается <strong>SQFT</strong>: <code>eave length × overhang width</code>.</li>
+<li><code>Fascia</code>, <code>subfascia</code>, frieze trim и edge trims обычно считаются <strong>LFT</strong>.</li>
+<li><code>Vinyl Soffits</code> / <code>Soffit Eve Vinyl</code> вводи в <strong>SQFT</strong>, не как framing line.</li>
+<li>Если <code>30%+</code> soffit = beadboard, считай весь soffit SQFT как beadboard и
+  добавь note, что это local rule.</li>
+<li>Eve soffit frames can be <code>2x6</code>, not <code>2x4</code>, if drawings show it.</li>
+<li>Canopies и porch soffits могут требовать <code>5/8" exterior-grade gypsum</code>,
+  Denseglas/Densglass или похожий exterior soffit material.</li>
+<li>Для roofs framed with <code>AJS Rafters</code>: если edge behaves like exposed floor
+  overhang, считай rafters manually instead of simple <code>Rake</code>.</li>
+<li>Если <code>FRT</code>/exterior treatment applies to exposed roof edge, проверь fascia,
+  subfascia, blocking и trim material.</li>
 </ul>
-<h2 id="_3">Проверить<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
+<h2 id="_3">Где искать<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Лист / источник</th>
+<th>Что взять</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Roof plan</td>
+<td>Eave runs, overhang zones, main roof vs porch/canopy</td>
+</tr>
+<tr>
+<td>Exterior elevations</td>
+<td>Fascia/subfascia, frieze, trim profiles, material changes</td>
+</tr>
+<tr>
+<td>Architectural sections</td>
+<td>Overhang depth, soffit thickness, boxed eave construction</td>
+</tr>
+<tr>
+<td>RCP</td>
+<td>Dropped soffits, canopy/porch soffits, hidden soffit frames</td>
+</tr>
+<tr>
+<td>Structural roof framing</td>
+<td>Rafter tails, truss condition, AJS rafters, blocking</td>
+</tr>
+<tr>
+<td>Truss package/details</td>
+<td>Heel height, eave side vertical sheathing, bearing condition</td>
+</tr>
+<tr>
+<td>Exterior finish schedule/specs</td>
+<td>Vinyl, beadboard, vented soffit, Denseglas/Densglass</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">Как мерить<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Unit</th>
+<th>Метод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eave framing</td>
+<td>LFT</td>
+<td>По eave run, split by size/material.</td>
+</tr>
+<tr>
+<td>Soffit material</td>
+<td>SQFT</td>
+<td><code>eave LFT × overhang width</code>; split by material.</td>
+</tr>
+<tr>
+<td>Vinyl soffit</td>
+<td>SQFT</td>
+<td>Вносить как SQFT, даже если на plan подписано <code>Soffit Eve Vinyl</code>.</td>
+</tr>
+<tr>
+<td>Beadboard soffit</td>
+<td>SQFT</td>
+<td>Если 30%+ beadboard, local rule: full soffit SQFT as beadboard.</td>
+</tr>
+<tr>
+<td>Fascia / subfascia</td>
+<td>LFT</td>
+<td>По exposed roof edge; отделяй eave от rake.</td>
+</tr>
+<tr>
+<td>Soffit frame</td>
+<td>LFT / PCS</td>
+<td>По detail: 2x4/2x6, spacing или continuous run.</td>
+</tr>
+<tr>
+<td>Vented soffit</td>
+<td>SQFT / LFT</td>
+<td>Следуй spec/template; note if counted by SQFT.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">Проверить<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>RCP and architectural sections can show soffits missing from structural plans.</li>
 <li><code>Vinyl Soffits</code> / <code>Soffit Eve Vinyl</code> belong in SQFT, not as a framing line.</li>
+<li>Не включай <code>Rake</code> в <code>Eve</code>, если template ожидает separate roof edge lines.</li>
+<li>Не включай <code>Returns</code> в обычный eave run, если return trim/framing differs.</li>
+<li>Не считай <code>Truss Heel</code> как soffit; это separate vertical sheathing strip.</li>
+<li>Для porch/canopy проверь, не должен ли soffit идти в
+  <a href="../../horizontal/roof-framing/canopy/">Canopy</a> или <a href="../../sqfts/porch/">Porch SQFT</a>.</li>
+<li>Если eave material меняется по elevation, разбивай line by material.</li>
+<li>Если soffit depth меняется, считай SQFT отдельными участками.</li>
+<li>Если note говорит <code>vented</code>, <code>solid</code>, <code>beadboard</code>, <code>vinyl</code>, <code>fiber cement</code>,
+  <code>gypsum</code>, не заменяй generic <code>soffit</code>.</li>
+<li>Если drawings молчат по size, не подставляй <code>2x4</code> frame автоматически:
+  сначала проверь section/detail.</li>
+</ul>
+<h2 id="output">Пример output<a class="headerlink" href="#output" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Size / material</th>
+<th style="text-align: right;">Qty</th>
+<th>Unit</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eave subfascia</td>
+<td><code>2x6</code></td>
+<td style="text-align: right;">148</td>
+<td>LFT</td>
+<td>Main roof eave only</td>
+</tr>
+<tr>
+<td>Soffit Eve Vinyl</td>
+<td>Vinyl</td>
+<td style="text-align: right;">296</td>
+<td>SQFT</td>
+<td><code>148 LFT × 2'-0"</code></td>
+</tr>
+<tr>
+<td>Soffit frame</td>
+<td><code>2x6</code></td>
+<td style="text-align: right;">148</td>
+<td>LFT</td>
+<td>Per A-section</td>
+</tr>
+<tr>
+<td>Beadboard soffit</td>
+<td>Beadboard</td>
+<td style="text-align: right;">296</td>
+<td>SQFT</td>
+<td>Full soffit by 30%+ local rule</td>
+</tr>
+<tr>
+<td>Truss Heel sheathing</td>
+<td>OSB / plywood</td>
+<td style="text-align: right;">148</td>
+<td>LFT/SQFT</td>
+<td>Separate from soffit</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_6">Источники правил<a class="headerlink" href="#_6" title="Прямая ссылка на раздел">&para;</a></h2>
+<ul>
+<li>Trello: <code>Vinel Soffits только в SQFT</code>.</li>
+<li>Trello: <code>Если Soffit Eve Vinyl то нужно вписать в SQFT</code>.</li>
+<li>Trello: <code>Для крыши из AJS Rafters считать вместо Rake вручную Rafters</code>.</li>
+<li>Related pages: <a href="../rake/">Rake</a>, <a href="../returns/">Returns</a>,
+  <a href="../../vertical/sheathing/truss-heel/">Truss Heel</a>,
+  <a href="../../horizontal/roof-framing/roof-sheathing/">Roof Sheathing</a>,
+  <a href="../../horizontal/roof-framing/canopy/">Canopy</a>.</li>
 </ul>
 
 

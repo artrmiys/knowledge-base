@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">Eave takeoff parts</title>
+  <desc id="desc">Roof eave cross section with soffit, fascia, subfascia, rafter tail, roof sheathing, wall, and overhang width labels.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-dark" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#263238"/>
+    </marker>
+    <style>
+      .bg { fill: #f7fbf7; }
+      .roof { fill: #d6e9d5; stroke: #2e7d32; stroke-width: 4; }
+      .wood { fill: #f4d7a1; stroke: #8d6e3b; stroke-width: 4; }
+      .wall { fill: #e8ecef; stroke: #546e7a; stroke-width: 4; }
+      .soffit { fill: #fff3cd; stroke: #a66b00; stroke-width: 4; }
+      .trim { fill: #d7ecff; stroke: #0277bd; stroke-width: 4; }
+      .label { font: 700 24px Arial, sans-serif; fill: #1b1f23; }
+      .note { font: 20px Arial, sans-serif; fill: #344054; }
+      .small { font: 18px Arial, sans-serif; fill: #344054; }
+      .call { fill: none; stroke: #2e7d32; stroke-width: 3; marker-end: url(#arrow); }
+      .dim { fill: none; stroke: #263238; stroke-width: 3; marker-start: url(#arrow-dark); marker-end: url(#arrow-dark); }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1100" height="620" rx="18"/>
+
+  <!-- Wall -->
+  <rect class="wall" x="520" y="280" width="150" height="285" rx="4"/>
+  <line x1="552" y1="280" x2="552" y2="565" stroke="#b0bec5" stroke-width="3"/>
+  <line x1="610" y1="280" x2="610" y2="565" stroke="#b0bec5" stroke-width="3"/>
+  <text class="label" x="706" y="420">Wall / exterior face</text>
+  <path class="call" d="M700 410 C675 395 666 372 650 345"/>
+
+  <!-- Roof sheathing -->
+  <polygon class="roof" points="170,210 715,80 733,128 190,258"/>
+  <text class="label" x="160" y="95">Roof sheathing</text>
+  <path class="call" d="M330 105 C360 128 376 150 410 165"/>
+
+  <!-- Rafter/truss tail -->
+  <polygon class="wood" points="205,267 715,145 733,205 225,327"/>
+  <text class="label" x="130" y="360">Rafter / truss tail</text>
+  <path class="call" d="M340 345 C380 315 405 292 462 270"/>
+
+  <!-- Subfascia and fascia -->
+  <rect class="wood" x="155" y="228" width="42" height="138" transform="rotate(-13 176 297)"/>
+  <rect class="trim" x="105" y="222" width="50" height="168" transform="rotate(-13 130 306)"/>
+  <text class="label" x="42" y="450">Fascia / subfascia</text>
+  <path class="call" d="M220 430 C190 390 165 360 140 326"/>
+
+  <!-- Soffit -->
+  <polygon class="soffit" points="142,365 525,365 525,407 126,407"/>
+  <text class="label" x="215" y="493">Soffit material</text>
+  <text class="note" x="215" y="524">SQFT when vinyl / beadboard / plywood / gypsum</text>
+  <path class="call" d="M410 480 C405 445 390 417 360 392"/>
+
+  <!-- Frieze / trim -->
+  <rect class="trim" x="520" y="365" width="40" height="100"/>
+  <text class="label" x="610" y="505">Frieze / wall trim</text>
+  <path class="call" d="M610 492 C585 470 565 445 548 410"/>
+
+  <!-- Dimensions -->
+  <line class="dim" x1="135" y1="550" x2="520" y2="550"/>
+  <line x1="135" y1="530" x2="135" y2="566" stroke="#263238" stroke-width="3"/>
+  <line x1="520" y1="530" x2="520" y2="566" stroke="#263238" stroke-width="3"/>
+  <text class="label" x="215" y="586">Overhang width</text>
+
+  <line class="dim" x1="775" y1="154" x2="1020" y2="154"/>
+  <text class="label" x="775" y="125">Eave length = run along roof edge</text>
+  <text class="small" x="775" y="188">Use LFT for fascia/subfascia/framing lines.</text>
+  <text class="small" x="775" y="216">Use LFT x overhang width for soffit SQFT.</text>
+
+  <rect x="760" y="275" width="285" height="165" rx="10" fill="#ffffff" stroke="#c8d8c8" stroke-width="3"/>
+  <text class="label" x="786" y="315">Takeoff rule</text>
+  <text class="note" x="786" y="352">1. Measure eave run.</text>
+  <text class="note" x="786" y="384">2. Confirm overhang depth.</text>
+  <text class="note" x="786" y="416">3. Split material by detail.</text>
+</svg>
