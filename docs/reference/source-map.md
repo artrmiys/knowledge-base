@@ -26,6 +26,7 @@ This wiki was built from the local Obsidian vault:
 | `wiki/sources/Hangers and Ties Schedule.md` | Hanger tables |
 | `raw/clippings/work - work.md` | Interior/Exterior trim placeholders and trim categories |
 | `raw/clippings/--- - work.md` | Misc rules including crowns |
+| User-provided Excel macro hotkeys list | Custom Excel VBA shortcuts for PlanSwift output and cleanup |
 | Confluence `work` space pages and image attachments | [Confluence Source Map](confluence-source-map.md) and [Confluence Image Archive](confluence-image-archive.md) |
 | Trello `https://trello.com/b/TyUKA0Zw/int-trims` | Full Trello API export: 44 cards, 43 attachments. See [Trello Source Map](trello-source-map.md). |
 | Tilda `https://redacted.example/source-site/` | Site menu and active work links |
