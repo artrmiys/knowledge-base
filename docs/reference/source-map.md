@@ -109,54 +109,15 @@ checkpoint-ы перед output: сначала прочитай правило 
     - dictionary: [3 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/1933726/dictionary)
     - Materials: [3 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/1933821/Materials)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-043.png" title="image-20250210-055520.png">
-    <img src="../../assets/images/confluence/confluence-043.png" alt="Source Map - исходные screenshots 01: Используй как карту источников, а не как рабочую страницу takeoff.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Source Map - исходные screenshots 01</div>
-      <div class="kb-rule-card__rule">Используй как карту источников, а не как рабочую страницу takeoff.</div>
-      <div class="kb-rule-card__note">Правила из source map переносим в topic pages; private данные не публикуем.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-044.png" title="image-20250210-055504.png">
-    <img src="../../assets/images/confluence/confluence-044.png" alt="Source Map - исходные screenshots 02: Используй как карту источников, а не как рабочую страницу takeoff.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Source Map - исходные screenshots 02</div>
-      <div class="kb-rule-card__rule">Используй как карту источников, а не как рабочую страницу takeoff.</div>
-      <div class="kb-rule-card__note">Правила из source map переносим в topic pages; private данные не публикуем.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-045.png" title="image-20250210-055338.png">
-    <img src="../../assets/images/confluence/confluence-045.png" alt="Source Map - исходные screenshots 03: Используй как карту источников, а не как рабочую страницу takeoff.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Source Map - исходные screenshots 03</div>
-      <div class="kb-rule-card__rule">Используй как карту источников, а не как рабочую страницу takeoff.</div>
-      <div class="kb-rule-card__note">Правила из source map переносим в topic pages; private данные не публикуем.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-046.png" title="image-20250210-120404.png">
-    <img src="../../assets/images/confluence/confluence-046.png" alt="Source Map - исходные screenshots 04: Используй как карту источников, а не как рабочую страницу takeoff.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Source Map - исходные screenshots 04</div>
-      <div class="kb-rule-card__rule">Используй как карту источников, а не как рабочую страницу takeoff.</div>
-      <div class="kb-rule-card__note">Правила из source map переносим в topic pages; private данные не публикуем.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-047.png" title="image-20250210-112058.png">
-    <img src="../../assets/images/confluence/confluence-047.png" alt="Source Map - исходные screenshots 05: Используй как карту источников, а не как рабочую страницу takeoff.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Source Map - исходные screenshots 05</div>
-      <div class="kb-rule-card__rule">Используй как карту источников, а не как рабочую страницу takeoff.</div>
-      <div class="kb-rule-card__note">Правила из source map переносим в topic pages; private данные не публикуем.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-048.png" title="image-20250210-111922.png">
-    <img src="../../assets/images/confluence/confluence-048.png" alt="Source Map - исходные screenshots 06: Используй как карту источников, а не как рабочую страницу takeoff.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Source Map - исходные screenshots 06</div>
-      <div class="kb-rule-card__rule">Используй как карту источников, а не как рабочую страницу takeoff.</div>
-      <div class="kb-rule-card__note">Правила из source map переносим в topic pages; private данные не публикуем.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures">
+  <summary>Показать 6 иллюстраций</summary>
+  <div class="kb-figure-grid">
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-043.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-043.png" alt="Source Map - исходные screenshots 01: Используй как карту источников, а не как рабочую страницу takeoff." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-044.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-044.png" alt="Source Map - исходные screenshots 02: Используй как карту источников, а не как рабочую страницу takeoff." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-045.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-045.png" alt="Source Map - исходные screenshots 03: Используй как карту источников, а не как рабочую страницу takeoff." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-046.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-046.png" alt="Source Map - исходные screenshots 04: Используй как карту источников, а не как рабочую страницу takeoff." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-047.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-047.png" alt="Source Map - исходные screenshots 05: Используй как карту источников, а не как рабочую страницу takeoff." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-048.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-048.png" alt="Source Map - исходные screenshots 06: Используй как карту источников, а не как рабочую страницу takeoff." loading="lazy"></a>
+  </div>
+</details>
 <!-- confluence-gallery:end -->

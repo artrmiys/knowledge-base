@@ -22,14 +22,15 @@ checkpoint-ы перед output: сначала прочитай правило 
 ??? info "Источник картинок"
     - Canopy (маленький навес): [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/66125825/Canopy)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-147.png" title="image-20250608-051536.png">
-    <img src="../../../../assets/images/confluence/confluence-147.png" alt="Canopy - визуальная проверка: Проверь small roof/canopy frame, attachment и sheathing/trim scope.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Canopy - визуальная проверка</div>
-      <div class="kb-rule-card__rule">Проверь small roof/canopy frame, attachment и sheathing/trim scope.</div>
-      <div class="kb-rule-card__note">Canopy часто отдельный scope: не теряй его внутри main roof.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures kb-figures--rows" open>
+  <summary>Скрыть 1 правил с иллюстрациями</summary>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Canopy - визуальная проверка</div>
+      <div class="kb-figure-row__rule">Проверь small roof/canopy frame, attachment и sheathing/trim scope.</div>
+      <div class="kb-figure-row__note">Canopy часто отдельный scope: не теряй его внутри main roof.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-147.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-147.png" alt="Canopy - визуальная проверка: Проверь small roof/canopy frame, attachment и sheathing/trim scope." loading="lazy"></a>
+  </figure>
+</details>
 <!-- confluence-gallery:end -->

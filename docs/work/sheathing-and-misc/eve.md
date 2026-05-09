@@ -22,32 +22,33 @@ vented/vinyl soffit и отдельные roof-edge details.
 
 ## Что не смешивать
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../assets/images/roof/eave-vs-rake-return-map.svg">
-    <img src="../../../assets/images/roof/eave-vs-rake-return-map.svg" alt="Eave versus rake and returns map">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Eave / Rake / Return / Truss Heel</div>
-      <div class="kb-rule-card__rule">Держи buckets отдельно, если output template не просит объединить.</div>
-      <div class="kb-rule-card__note">Eave = горизонтальный нижний edge; Rake = sloped gable edge; Return = boxed corner; Truss Heel = вертикальная полоска.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/confluence/confluence-175.png">
-    <img src="../../../assets/images/confluence/confluence-175.png" alt="Truss heel visual reference">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Truss Heel near Eave</div>
-      <div class="kb-rule-card__rule">На eave side heel sheathing часто забывается.</div>
-      <div class="kb-rule-card__note">Это вертикальная полоска между Top Plate и низом overhang; не прячь её в soffit SQFT.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/reference/important-change-03.png">
-    <img src="../../../assets/images/reference/important-change-03.png" alt="AJS rafters manual roof edge rule">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">AJS Rafters edge condition</div>
-      <div class="kb-rule-card__rule">Если roof framed with AJS Rafters ведёт себя как exposed overhang, считай rafters manually.</div>
-      <div class="kb-rule-card__note">Не заменяй это простым `Rake`, когда detail требует отдельные rafters.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures kb-figures--rows" open>
+  <summary>Скрыть 3 правил с иллюстрациями</summary>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Eave / Rake / Return / Truss Heel</div>
+      <div class="kb-figure-row__rule">Держи buckets отдельно, если output template не просит объединить.</div>
+      <div class="kb-figure-row__note">Eave = горизонтальный нижний edge; Rake = sloped gable edge; Return = boxed corner; Truss Heel = вертикальная полоска.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/roof/eave-vs-rake-return-map.svg" target="_blank" rel="noopener"><img src="../../../assets/images/roof/eave-vs-rake-return-map.svg" alt="Eave versus rake and returns map" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Truss Heel near Eave</div>
+      <div class="kb-figure-row__rule">На eave side heel sheathing часто забывается.</div>
+      <div class="kb-figure-row__note">Это вертикальная полоска между Top Plate и низом overhang; не прячь её в soffit SQFT.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/confluence/confluence-175.png" target="_blank" rel="noopener"><img src="../../../assets/images/confluence/confluence-175.png" alt="Truss heel visual reference" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">AJS Rafters edge condition</div>
+      <div class="kb-figure-row__rule">Если roof framed with AJS Rafters ведёт себя как exposed overhang, считай rafters manually.</div>
+      <div class="kb-figure-row__note">Не заменяй это простым `Rake`, когда detail требует отдельные rafters.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/reference/important-change-03.png" target="_blank" rel="noopener"><img src="../../../assets/images/reference/important-change-03.png" alt="AJS rafters manual roof edge rule" loading="lazy"></a>
+  </figure>
+</details>
 
 | Bucket | Что это | Где считать |
 | --- | --- | --- |

@@ -20,14 +20,10 @@ checkpoint-ы перед output: сначала прочитай правило 
 ??? info "Источник картинок"
     - Railing - перила: [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/67043361/Railing+-)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../assets/images/confluence/confluence-151.png" title="image-20250610-135631.png">
-    <img src="../../../assets/images/confluence/confluence-151.png" alt="Railing - визуальная проверка: Проверь railing run, post condition, returns и connection points.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Railing - визуальная проверка</div>
-      <div class="kb-rule-card__rule">Проверь railing run, post condition, returns и connection points.</div>
-      <div class="kb-rule-card__note">Не смешивай railing LF с deck/balcony trim, если scope просит отдельно.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures">
+  <summary>Показать 1 иллюстраций</summary>
+  <div class="kb-figure-grid">
+    <a class="kb-figure" href="../../../assets/images/confluence/confluence-151.png" target="_blank" rel="noopener"><img src="../../../assets/images/confluence/confluence-151.png" alt="Railing - визуальная проверка: Проверь railing run, post condition, returns и connection points." loading="lazy"></a>
+  </div>
+</details>
 <!-- confluence-gallery:end -->

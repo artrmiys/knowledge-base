@@ -21,14 +21,15 @@ checkpoint-ы перед output: сначала прочитай правило 
 ??? info "Источник картинок"
     - Hip (балка примыкания крыши наружу): [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/66093087/Hip)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-142.png" title="image-20250608-030055.png">
-    <img src="../../../../assets/images/confluence/confluence-142.png" alt="Hip - визуальная проверка: Проверь outside roof intersection, length и beam/rafter material.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Hip - визуальная проверка</div>
-      <div class="kb-rule-card__rule">Проверь outside roof intersection, length и beam/rafter material.</div>
-      <div class="kb-rule-card__note">Hip не смешивай с Valley: это наружный угол roof planes.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures kb-figures--rows" open>
+  <summary>Скрыть 1 правил с иллюстрациями</summary>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Hip - визуальная проверка</div>
+      <div class="kb-figure-row__rule">Проверь outside roof intersection, length и beam/rafter material.</div>
+      <div class="kb-figure-row__note">Hip не смешивай с Valley: это наружный угол roof planes.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-142.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-142.png" alt="Hip - визуальная проверка: Проверь outside roof intersection, length и beam/rafter material." loading="lazy"></a>
+  </figure>
+</details>
 <!-- confluence-gallery:end -->

@@ -47,14 +47,10 @@ checkpoint-ы перед output: сначала прочитай правило 
 ??? info "Источник картинок"
     - Demising (меж-секционные стены - двойные): [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65306639/Demising+-+-)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-126.png" title="image-20251030-161646.png">
-    <img src="../../../../assets/images/confluence/confluence-126.png" alt="Demising Wall - визуальная проверка: Проверь double wall, fire/acoustic layers, height и side requirements.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Demising Wall - визуальная проверка</div>
-      <div class="kb-rule-card__rule">Проверь double wall, fire/acoustic layers, height и side requirements.</div>
-      <div class="kb-rule-card__note">Demising не смешивай с Corridor или Unit wall, даже если stud size похож.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures">
+  <summary>Показать 1 иллюстраций</summary>
+  <div class="kb-figure-grid">
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-126.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-126.png" alt="Demising Wall - визуальная проверка: Проверь double wall, fire/acoustic layers, height и side requirements." loading="lazy"></a>
+  </div>
+</details>
 <!-- confluence-gallery:end -->

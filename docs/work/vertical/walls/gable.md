@@ -82,78 +82,18 @@ checkpoint-ы перед output: сначала прочитай правило 
 ??? info "Источник картинок"
     - Gable (треугольные фронтоны): [9 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/63799300/Gable)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-083.png" title="image-20250603-181446.png">
-    <img src="../../../../assets/images/confluence/confluence-083.png" alt="Gable Wall - визуальная проверка 01: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 01</div>
-      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
-      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-084.png" title="image-20250603-181146.png">
-    <img src="../../../../assets/images/confluence/confluence-084.png" alt="Gable Wall - визуальная проверка 02: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 02</div>
-      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
-      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-085.png" title="image-20250603-180924.png">
-    <img src="../../../../assets/images/confluence/confluence-085.png" alt="Gable Wall - визуальная проверка 03: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 03</div>
-      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
-      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-086.png" title="image-20250603-180752.png">
-    <img src="../../../../assets/images/confluence/confluence-086.png" alt="Gable Wall - визуальная проверка 04: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 04</div>
-      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
-      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-087.png" title="image-20250603-180136.png">
-    <img src="../../../../assets/images/confluence/confluence-087.png" alt="Gable Wall - визуальная проверка 05: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 05</div>
-      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
-      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-088.png" title="image-20250603-174813.png">
-    <img src="../../../../assets/images/confluence/confluence-088.png" alt="Gable Wall - визуальная проверка 06: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 06</div>
-      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
-      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-089.png" title="image-20250603-172238.png">
-    <img src="../../../../assets/images/confluence/confluence-089.png" alt="Gable Wall - визуальная проверка 07: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 07</div>
-      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
-      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-090.png" title="image-20250603-172109.png">
-    <img src="../../../../assets/images/confluence/confluence-090.png" alt="Gable Wall - визуальная проверка 08: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 08</div>
-      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
-      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-091.png" title="image-20250603-172051.png">
-    <img src="../../../../assets/images/confluence/confluence-091.png" alt="Gable Wall - визуальная проверка 09: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Gable Wall - визуальная проверка 09</div>
-      <div class="kb-rule-card__rule">Проверь triangular wall area, height breakpoints, studs/blocking и sheathing.</div>
-      <div class="kb-rule-card__note">Gable легко задвоить между wall framing и sheathing; держи scope отдельно.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures">
+  <summary>Показать 9 иллюстраций</summary>
+  <div class="kb-figure-grid">
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-083.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-083.png" alt="Gable Wall - визуальная проверка 01: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-084.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-084.png" alt="Gable Wall - визуальная проверка 02: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-085.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-085.png" alt="Gable Wall - визуальная проверка 03: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-086.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-086.png" alt="Gable Wall - визуальная проверка 04: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-087.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-087.png" alt="Gable Wall - визуальная проверка 05: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-088.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-088.png" alt="Gable Wall - визуальная проверка 06: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-089.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-089.png" alt="Gable Wall - визуальная проверка 07: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-090.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-090.png" alt="Gable Wall - визуальная проверка 08: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-091.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-091.png" alt="Gable Wall - визуальная проверка 09: Проверь triangular wall area, height breakpoints, studs/blocking и sheathing." loading="lazy"></a>
+  </div>
+</details>
 <!-- confluence-gallery:end -->

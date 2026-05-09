@@ -189,110 +189,22 @@ checkpoint-ы перед output: сначала прочитай правило 
 ??? info "Источник картинок"
     - COM Commercial Job: [13 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/2359297/COM+Commercial+Job)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-053.png" title="image-20250722-030816.png">
-    <img src="../../assets/images/confluence/confluence-053.png" alt="COM - визуальная проверка 01: Сверь COM scope, level split, loose material и финальный QA checklist.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">COM - визуальная проверка 01</div>
-      <div class="kb-rule-card__rule">Сверь COM scope, level split, loose material и финальный QA checklist.</div>
-      <div class="kb-rule-card__note">Если condition влияет на output, он должен быть отдельной строкой или явной note.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-054.png" title="image-20250717-232520.png">
-    <img src="../../assets/images/confluence/confluence-054.png" alt="COM - визуальная проверка 02: Сверь COM scope, level split, loose material и финальный QA checklist.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">COM - визуальная проверка 02</div>
-      <div class="kb-rule-card__rule">Сверь COM scope, level split, loose material и финальный QA checklist.</div>
-      <div class="kb-rule-card__note">Если condition влияет на output, он должен быть отдельной строкой или явной note.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-055.png" title="image-20250619-192434.png">
-    <img src="../../assets/images/confluence/confluence-055.png" alt="COM - визуальная проверка 03: Сверь COM scope, level split, loose material и финальный QA checklist.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">COM - визуальная проверка 03</div>
-      <div class="kb-rule-card__rule">Сверь COM scope, level split, loose material и финальный QA checklist.</div>
-      <div class="kb-rule-card__note">Если condition влияет на output, он должен быть отдельной строкой или явной note.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-056.png" title="image-20250619-192242.png">
-    <img src="../../assets/images/confluence/confluence-056.png" alt="COM - визуальная проверка 04: Сверь COM scope, level split, loose material и финальный QA checklist.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">COM - визуальная проверка 04</div>
-      <div class="kb-rule-card__rule">Сверь COM scope, level split, loose material и финальный QA checklist.</div>
-      <div class="kb-rule-card__note">Если condition влияет на output, он должен быть отдельной строкой или явной note.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-057.png" title="image-20250619-192221.png">
-    <img src="../../assets/images/confluence/confluence-057.png" alt="COM - визуальная проверка 05: Сверь COM scope, level split, loose material и финальный QA checklist.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">COM - визуальная проверка 05</div>
-      <div class="kb-rule-card__rule">Сверь COM scope, level split, loose material и финальный QA checklist.</div>
-      <div class="kb-rule-card__note">Если condition влияет на output, он должен быть отдельной строкой или явной note.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-058.png" title="image-20250619-192136.png">
-    <img src="../../assets/images/confluence/confluence-058.png" alt="COM - визуальная проверка 06: Сверь COM scope, level split, loose material и финальный QA checklist.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">COM - визуальная проверка 06</div>
-      <div class="kb-rule-card__rule">Сверь COM scope, level split, loose material и финальный QA checklist.</div>
-      <div class="kb-rule-card__note">Если condition влияет на output, он должен быть отдельной строкой или явной note.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-059.png" title="image-20250619-191959.png">
-    <img src="../../assets/images/confluence/confluence-059.png" alt="COM - визуальная проверка 07: Сверь COM scope, level split, loose material и финальный QA checklist.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">COM - визуальная проверка 07</div>
-      <div class="kb-rule-card__rule">Сверь COM scope, level split, loose material и финальный QA checklist.</div>
-      <div class="kb-rule-card__note">Если condition влияет на output, он должен быть отдельной строкой или явной note.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-060.png" title="image-20250619-191937.png">
-    <img src="../../assets/images/confluence/confluence-060.png" alt="COM - визуальная проверка 08: Сверь COM scope, level split, loose material и финальный QA checklist.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">COM - визуальная проверка 08</div>
-      <div class="kb-rule-card__rule">Сверь COM scope, level split, loose material и финальный QA checklist.</div>
-      <div class="kb-rule-card__note">Если condition влияет на output, он должен быть отдельной строкой или явной note.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-061.png" title="image-20250210-115947.png">
-    <img src="../../assets/images/confluence/confluence-061.png" alt="COM - визуальная проверка 09: Сверь COM scope, level split, loose material и финальный QA checklist.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">COM - визуальная проверка 09</div>
-      <div class="kb-rule-card__rule">Сверь COM scope, level split, loose material и финальный QA checklist.</div>
-      <div class="kb-rule-card__note">Если condition влияет на output, он должен быть отдельной строкой или явной note.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-062.png" title="image-20250210-115939.png">
-    <img src="../../assets/images/confluence/confluence-062.png" alt="COM - визуальная проверка 10: Сверь COM scope, level split, loose material и финальный QA checklist.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">COM - визуальная проверка 10</div>
-      <div class="kb-rule-card__rule">Сверь COM scope, level split, loose material и финальный QA checklist.</div>
-      <div class="kb-rule-card__note">Если condition влияет на output, он должен быть отдельной строкой или явной note.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-063.png" title="image-20250210-115920.png">
-    <img src="../../assets/images/confluence/confluence-063.png" alt="COM - визуальная проверка 11: Сверь COM scope, level split, loose material и финальный QA checklist.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">COM - визуальная проверка 11</div>
-      <div class="kb-rule-card__rule">Сверь COM scope, level split, loose material и финальный QA checklist.</div>
-      <div class="kb-rule-card__note">Если condition влияет на output, он должен быть отдельной строкой или явной note.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-064.png" title="image-20250210-115909.png">
-    <img src="../../assets/images/confluence/confluence-064.png" alt="COM - визуальная проверка 12: Сверь COM scope, level split, loose material и финальный QA checklist.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">COM - визуальная проверка 12</div>
-      <div class="kb-rule-card__rule">Сверь COM scope, level split, loose material и финальный QA checklist.</div>
-      <div class="kb-rule-card__note">Если condition влияет на output, он должен быть отдельной строкой или явной note.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-065.png" title="image-20250210-115855.png">
-    <img src="../../assets/images/confluence/confluence-065.png" alt="COM - визуальная проверка 13: Сверь COM scope, level split, loose material и финальный QA checklist.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">COM - визуальная проверка 13</div>
-      <div class="kb-rule-card__rule">Сверь COM scope, level split, loose material и финальный QA checklist.</div>
-      <div class="kb-rule-card__note">Если condition влияет на output, он должен быть отдельной строкой или явной note.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures">
+  <summary>Показать 13 иллюстраций</summary>
+  <div class="kb-figure-grid">
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-053.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-053.png" alt="COM - визуальная проверка 01: Сверь COM scope, level split, loose material и финальный QA checklist." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-054.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-054.png" alt="COM - визуальная проверка 02: Сверь COM scope, level split, loose material и финальный QA checklist." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-055.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-055.png" alt="COM - визуальная проверка 03: Сверь COM scope, level split, loose material и финальный QA checklist." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-056.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-056.png" alt="COM - визуальная проверка 04: Сверь COM scope, level split, loose material и финальный QA checklist." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-057.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-057.png" alt="COM - визуальная проверка 05: Сверь COM scope, level split, loose material и финальный QA checklist." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-058.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-058.png" alt="COM - визуальная проверка 06: Сверь COM scope, level split, loose material и финальный QA checklist." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-059.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-059.png" alt="COM - визуальная проверка 07: Сверь COM scope, level split, loose material и финальный QA checklist." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-060.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-060.png" alt="COM - визуальная проверка 08: Сверь COM scope, level split, loose material и финальный QA checklist." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-061.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-061.png" alt="COM - визуальная проверка 09: Сверь COM scope, level split, loose material и финальный QA checklist." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-062.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-062.png" alt="COM - визуальная проверка 10: Сверь COM scope, level split, loose material и финальный QA checklist." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-063.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-063.png" alt="COM - визуальная проверка 11: Сверь COM scope, level split, loose material и финальный QA checklist." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-064.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-064.png" alt="COM - визуальная проверка 12: Сверь COM scope, level split, loose material и финальный QA checklist." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-065.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-065.png" alt="COM - визуальная проверка 13: Сверь COM scope, level split, loose material и финальный QA checklist." loading="lazy"></a>
+  </div>
+</details>
 <!-- confluence-gallery:end -->

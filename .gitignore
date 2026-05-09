@@ -25,3 +25,6 @@ docs/assets/images/ourplanecore/ourplanecore-takeoff-manager.png
 twist-*.md
 twist-*.json
 probe-twist-*.json
+
+# Local Claude harness state
+.claude/

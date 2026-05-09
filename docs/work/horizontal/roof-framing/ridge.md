@@ -37,14 +37,15 @@ checkpoint-ы перед output: сначала прочитай правило 
 ??? info "Источник картинок"
     - Ridge (конек): [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/66093057/Ridge)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-137.png" title="image-20250608-022309.png">
-    <img src="../../../../assets/images/confluence/confluence-137.png" alt="Ridge - визуальная проверка: Проверь top roof line, support points, size и rounded length.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Ridge - визуальная проверка</div>
-      <div class="kb-rule-card__rule">Проверь top roof line, support points, size и rounded length.</div>
-      <div class="kb-rule-card__note">Ridge length бери по правилу страницы, а не по случайной line на плане.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures kb-figures--rows" open>
+  <summary>Скрыть 1 правил с иллюстрациями</summary>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Ridge - визуальная проверка</div>
+      <div class="kb-figure-row__rule">Проверь top roof line, support points, size и rounded length.</div>
+      <div class="kb-figure-row__note">Ridge length бери по правилу страницы, а не по случайной line на плане.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-137.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-137.png" alt="Ridge - визуальная проверка: Проверь top roof line, support points, size и rounded length." loading="lazy"></a>
+  </figure>
+</details>
 <!-- confluence-gallery:end -->

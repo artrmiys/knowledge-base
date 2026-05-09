@@ -74,150 +74,151 @@ fire-retardant-treated framing material.
 
 ## Визуальные правила
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-26.png">
-    <img src="../../../assets/images/trims/int-trims-26.png" alt="Interior door measured by open door symbol">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Считать по open door symbol</div>
-      <div class="kb-rule-card__rule">Считай настоящий swing/opening.</div>
-      <div class="kb-rule-card__note">Не считай только по nearby wall note.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-27.png">
-    <img src="../../../assets/images/trims/int-trims-27.png" alt="Door size notation 2680">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Size notation: 2680</div>
-      <div class="kb-rule-card__rule"><code>2680</code> = 2'-6" x 8'-0".</div>
-      <div class="kb-rule-card__note">Перед Excel conversion держи size notation одинаковой.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-28.png">
-    <img src="../../../assets/images/trims/int-trims-28.png" alt="Double door notation">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Double doors</div>
-      <div class="kb-rule-card__rule">Пиши <code>(2)2680</code>.</div>
-      <div class="kb-rule-card__note">Оставляй pair marker; не своди к одной regular door.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-29.png">
-    <img src="../../../assets/images/trims/int-trims-29.png" alt="Pocket door notation">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Pocket door</div>
-      <div class="kb-rule-card__rule">Пиши <code>2680 Pocket</code>.</div>
-      <div class="kb-rule-card__note">Сохраняй door type в mark.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-30.png">
-    <img src="../../../assets/images/trims/int-trims-30.png" alt="Slider door notation">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Slider door</div>
-      <div class="kb-rule-card__rule">Пиши <code>(2)3080 Slider</code> или matching size/type.</div>
-      <div class="kb-rule-card__note">Оставляй и quantity, и type.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-31.png">
-    <img src="../../../assets/images/trims/int-trims-31.png" alt="Shower glass doors не считать как interior doors">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Shower glass doors</div>
-      <div class="kb-rule-card__rule">Не вводи как interior doors.</div>
-      <div class="kb-rule-card__note">Это shower/glass scope, а не interior door casing.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-32.png">
-    <img src="../../../assets/images/trims/int-trims-32.png" alt="French doors in large guest rooms">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">French doors</div>
-      <div class="kb-rule-card__rule">Оставляй <code>French</code> / glass-door note видимой.</div>
-      <div class="kb-rule-card__note">Не упрощай до plain interior door, если plan называет type.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-33.png">
-    <img src="../../../assets/images/trims/int-trims-33.png" alt="Bi-Fold door notation">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Bi-Fold door</div>
-      <div class="kb-rule-card__rule">Оставляй <code>Bi-Fold</code> в mark.</div>
-      <div class="kb-rule-card__note">Door type может влиять на review и casing notes.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-34.png">
-    <img src="../../../assets/images/trims/int-trims-34.png" alt="Cased opening example">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Cased opening</div>
-      <div class="kb-rule-card__rule"><code>C.O.</code> — opening without a door.</div>
-      <div class="kb-rule-card__note">Вводи на стороне cased-opening, не как door.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-35.png">
-    <img src="../../../assets/images/trims/int-trims-35.png" alt="Doors and cased openings entered by level">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Ввод по level</div>
-      <div class="kb-rule-card__rule">Разделяй doors и C.O. по floor/level.</div>
-      <div class="kb-rule-card__note">Так formulas и review output остаются согласованными.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-36.png">
-    <img src="../../../assets/images/trims/int-trims-36.png" alt="Copy helper columns for Excel entry">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Копировать helper columns</div>
-      <div class="kb-rule-card__rule">Копируй mark + quantity в helper table.</div>
-      <div class="kb-rule-card__note">Helper table управляет casing formulas.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-37.png">
-    <img src="../../../assets/images/trims/int-trims-37.png" alt="Doors and cased openings Excel table">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Excel door/opening table</div>
-      <div class="kb-rule-card__rule">Используй table для casing formulas.</div>
-      <div class="kb-rule-card__note">Не оставляй door marks только в plan notes.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-38.png">
-    <img src="../../../assets/images/trims/int-trims-38.png" alt="Rewrite openings and doors into left table">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Переписать в left table</div>
-      <div class="kb-rule-card__rule">Перед output чисто перенеси door/opening marks.</div>
-      <div class="kb-rule-card__note">Так half-cleaned helper data не попадёт в final output.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-39.png">
-    <img src="../../../assets/images/trims/int-trims-39.png" alt="Door size inches conversion">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Feet to inches conversion</div>
-      <div class="kb-rule-card__rule"><code>2'-0" x 6'-8"</code> становится <code>24 x 80</code>.</div>
-      <div class="kb-rule-card__note">Используй inches в formula table, если этого требует workbook.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-40.png">
-    <img src="../../../assets/images/trims/int-trims-40.png" alt="Formulas для many doors">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Много repeated doors</div>
-      <div class="kb-rule-card__rule">Используй formulas, чтобы не потерять repeated quantities.</div>
-      <div class="kb-rule-card__note">Manual repeated typing — частое место, где counts начинают расходиться.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-41.png">
-    <img src="../../../assets/images/trims/int-trims-41.png" alt="Проверка selected cell sum">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Sum check</div>
-      <div class="kb-rule-card__rule">Сравни selected-cell sum с takeoff count.</div>
-      <div class="kb-rule-card__note">Так ловятся missing doors до output.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-42.png">
-    <img src="../../../assets/images/trims/int-trims-42.png" alt="Doors and openings Excel output">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Excel output</div>
-      <div class="kb-rule-card__rule">Final output должен совпадать с entered table.</div>
-      <div class="kb-rule-card__note">Перед отправкой проверь size, quantity и note.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-43.png">
-    <img src="../../../assets/images/trims/int-trims-43.png" alt="Заполнять из door schedule, если он есть">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Есть door schedule</div>
-      <div class="kb-rule-card__rule">Сначала заполняй из schedule.</div>
-      <div class="kb-rule-card__note">Plan view вторичен, если доступна schedule data.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures kb-figures--rows" open>
+  <summary>Скрыть 18 правил с иллюстрациями</summary>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Считать по open door symbol</div>
+      <div class="kb-figure-row__rule">Считай настоящий swing/opening.</div>
+      <div class="kb-figure-row__note">Не считай только по nearby wall note.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-26.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-26.png" alt="Interior door measured by open door symbol" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Size notation: 2680</div>
+      <div class="kb-figure-row__rule"><code>2680</code> = 2'-6" x 8'-0".</div>
+      <div class="kb-figure-row__note">Перед Excel conversion держи size notation одинаковой.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-27.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-27.png" alt="Door size notation 2680" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Double doors</div>
+      <div class="kb-figure-row__rule">Пиши <code>(2)2680</code>.</div>
+      <div class="kb-figure-row__note">Оставляй pair marker; не своди к одной regular door.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-28.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-28.png" alt="Double door notation" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Pocket door</div>
+      <div class="kb-figure-row__rule">Пиши <code>2680 Pocket</code>.</div>
+      <div class="kb-figure-row__note">Сохраняй door type в mark.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-29.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-29.png" alt="Pocket door notation" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Slider door</div>
+      <div class="kb-figure-row__rule">Пиши <code>(2)3080 Slider</code> или matching size/type.</div>
+      <div class="kb-figure-row__note">Оставляй и quantity, и type.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-30.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-30.png" alt="Slider door notation" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Shower glass doors</div>
+      <div class="kb-figure-row__rule">Не вводи как interior doors.</div>
+      <div class="kb-figure-row__note">Это shower/glass scope, а не interior door casing.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-31.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-31.png" alt="Shower glass doors не считать как interior doors" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">French doors</div>
+      <div class="kb-figure-row__rule">Оставляй <code>French</code> / glass-door note видимой.</div>
+      <div class="kb-figure-row__note">Не упрощай до plain interior door, если plan называет type.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-32.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-32.png" alt="French doors in large guest rooms" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Bi-Fold door</div>
+      <div class="kb-figure-row__rule">Оставляй <code>Bi-Fold</code> в mark.</div>
+      <div class="kb-figure-row__note">Door type может влиять на review и casing notes.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-33.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-33.png" alt="Bi-Fold door notation" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Cased opening</div>
+      <div class="kb-figure-row__rule"><code>C.O.</code> — opening without a door.</div>
+      <div class="kb-figure-row__note">Вводи на стороне cased-opening, не как door.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-34.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-34.png" alt="Cased opening example" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Ввод по level</div>
+      <div class="kb-figure-row__rule">Разделяй doors и C.O. по floor/level.</div>
+      <div class="kb-figure-row__note">Так formulas и review output остаются согласованными.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-35.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-35.png" alt="Doors and cased openings entered by level" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Копировать helper columns</div>
+      <div class="kb-figure-row__rule">Копируй mark + quantity в helper table.</div>
+      <div class="kb-figure-row__note">Helper table управляет casing formulas.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-36.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-36.png" alt="Copy helper columns for Excel entry" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Excel door/opening table</div>
+      <div class="kb-figure-row__rule">Используй table для casing formulas.</div>
+      <div class="kb-figure-row__note">Не оставляй door marks только в plan notes.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-37.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-37.png" alt="Doors and cased openings Excel table" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Переписать в left table</div>
+      <div class="kb-figure-row__rule">Перед output чисто перенеси door/opening marks.</div>
+      <div class="kb-figure-row__note">Так half-cleaned helper data не попадёт в final output.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-38.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-38.png" alt="Rewrite openings and doors into left table" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Feet to inches conversion</div>
+      <div class="kb-figure-row__rule"><code>2'-0" x 6'-8"</code> становится <code>24 x 80</code>.</div>
+      <div class="kb-figure-row__note">Используй inches в formula table, если этого требует workbook.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-39.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-39.png" alt="Door size inches conversion" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Много repeated doors</div>
+      <div class="kb-figure-row__rule">Используй formulas, чтобы не потерять repeated quantities.</div>
+      <div class="kb-figure-row__note">Manual repeated typing — частое место, где counts начинают расходиться.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-40.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-40.png" alt="Formulas для many doors" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Sum check</div>
+      <div class="kb-figure-row__rule">Сравни selected-cell sum с takeoff count.</div>
+      <div class="kb-figure-row__note">Так ловятся missing doors до output.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-41.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-41.png" alt="Проверка selected cell sum" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Excel output</div>
+      <div class="kb-figure-row__rule">Final output должен совпадать с entered table.</div>
+      <div class="kb-figure-row__note">Перед отправкой проверь size, quantity и note.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-42.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-42.png" alt="Doors and openings Excel output" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Есть door schedule</div>
+      <div class="kb-figure-row__rule">Сначала заполняй из schedule.</div>
+      <div class="kb-figure-row__note">Plan view вторичен, если доступна schedule data.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-43.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-43.png" alt="Заполнять из door schedule, если он есть" loading="lazy"></a>
+  </figure>
+</details>
 

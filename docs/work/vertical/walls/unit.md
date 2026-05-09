@@ -65,14 +65,10 @@ checkpoint-ы перед output: сначала прочитай правило 
 ??? info "Источник картинок"
     - Unit (внутрикомнатные стены): [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65077308/Unit)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-095.png" title="image-20250623-135522.png">
-    <img src="../../../../assets/images/confluence/confluence-095.png" alt="Unit Wall - визуальная проверка: Проверь interior/unit wall type, height, thickness и scope boundary.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Unit Wall - визуальная проверка</div>
-      <div class="kb-rule-card__rule">Проверь interior/unit wall type, height, thickness и scope boundary.</div>
-      <div class="kb-rule-card__note">Unit walls держи отдельно от corridor/demising/exterior walls.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures">
+  <summary>Показать 1 иллюстраций</summary>
+  <div class="kb-figure-grid">
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-095.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-095.png" alt="Unit Wall - визуальная проверка: Проверь interior/unit wall type, height, thickness и scope boundary." loading="lazy"></a>
+  </div>
+</details>
 <!-- confluence-gallery:end -->

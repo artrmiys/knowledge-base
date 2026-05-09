@@ -52,14 +52,10 @@ checkpoint-ы перед output: сначала прочитай правило 
 ??? info "Источник картинок"
     - Post (колоны): [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65831004/Post)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-134.png" title="image-20250608-021518.png">
-    <img src="../../../../assets/images/confluence/confluence-134.png" alt="Post / Column - визуальная проверка: Проверь post size, height, material и connection to beam/foundation.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Post / Column - визуальная проверка</div>
-      <div class="kb-rule-card__rule">Проверь post size, height, material и connection to beam/foundation.</div>
-      <div class="kb-rule-card__note">Post может быть wood, steel или by others; не угадывай без schedule/detail.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures">
+  <summary>Показать 1 иллюстраций</summary>
+  <div class="kb-figure-grid">
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-134.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-134.png" alt="Post / Column - визуальная проверка: Проверь post size, height, material и connection to beam/foundation." loading="lazy"></a>
+  </div>
+</details>
 <!-- confluence-gallery:end -->

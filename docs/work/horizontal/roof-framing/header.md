@@ -42,22 +42,23 @@ checkpoint-ы перед output: сначала прочитай правило 
 ??? info "Источник картинок"
     - Header (горизонтальная балка в крыше): [2 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/66093067/Header)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-138.png" title="image-20250608-030154.png">
-    <img src="../../../../assets/images/confluence/confluence-138.png" alt="Roof Header - визуальная проверка 01: Проверь opening/support condition, header size и connected rafters/hangers.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Roof Header - визуальная проверка 01</div>
-      <div class="kb-rule-card__rule">Проверь opening/support condition, header size и connected rafters/hangers.</div>
-      <div class="kb-rule-card__note">Roof Header часто влияет на hangers и adjacent doubled rafters.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-139.png" title="image-20250608-025101.png">
-    <img src="../../../../assets/images/confluence/confluence-139.png" alt="Roof Header - визуальная проверка 02: Проверь opening/support condition, header size и connected rafters/hangers.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Roof Header - визуальная проверка 02</div>
-      <div class="kb-rule-card__rule">Проверь opening/support condition, header size и connected rafters/hangers.</div>
-      <div class="kb-rule-card__note">Roof Header часто влияет на hangers и adjacent doubled rafters.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures kb-figures--rows" open>
+  <summary>Скрыть 2 правил с иллюстрациями</summary>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Roof Header - визуальная проверка 01</div>
+      <div class="kb-figure-row__rule">Проверь opening/support condition, header size и connected rafters/hangers.</div>
+      <div class="kb-figure-row__note">Roof Header часто влияет на hangers и adjacent doubled rafters.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-138.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-138.png" alt="Roof Header - визуальная проверка 01: Проверь opening/support condition, header size и connected rafters/hangers." loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Roof Header - визуальная проверка 02</div>
+      <div class="kb-figure-row__rule">Проверь opening/support condition, header size и connected rafters/hangers.</div>
+      <div class="kb-figure-row__note">Roof Header часто влияет на hangers и adjacent doubled rafters.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-139.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-139.png" alt="Roof Header - визуальная проверка 02: Проверь opening/support condition, header size и connected rafters/hangers." loading="lazy"></a>
+  </figure>
+</details>
 <!-- confluence-gallery:end -->

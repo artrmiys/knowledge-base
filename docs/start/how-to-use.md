@@ -44,70 +44,17 @@ checkpoint-ы перед output: сначала прочитай правило 
     - PlanSwift: [2 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/4292609/PlanSwift)
     - PlanSwift - large GIF attachments: [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/4292609/PlanSwift)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-066.gif" title="ываывп.gif">
-    <img src="../../assets/images/confluence/confluence-066.gif" alt="Workflow screenshot - визуальная проверка 01: Проверь порядок действий: source, takeoff, Excel/output, QA.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Workflow screenshot - визуальная проверка 01</div>
-      <div class="kb-rule-card__rule">Проверь порядок действий: source, takeoff, Excel/output, QA.</div>
-      <div class="kb-rule-card__note">Screenshot не заменяет правило; он показывает, где проверить действие в workflow.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-067.gif" title="asdasd.gif">
-    <img src="../../assets/images/confluence/confluence-067.gif" alt="Workflow screenshot - визуальная проверка 02: Проверь порядок действий: source, takeoff, Excel/output, QA.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Workflow screenshot - визуальная проверка 02</div>
-      <div class="kb-rule-card__rule">Проверь порядок действий: source, takeoff, Excel/output, QA.</div>
-      <div class="kb-rule-card__note">Screenshot не заменяет правило; он показывает, где проверить действие в workflow.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-068.jpg" title="excel 12f.gif">
-    <img src="../../assets/images/confluence/confluence-068.jpg" alt="Workflow screenshot - визуальная проверка 03: Проверь порядок действий: source, takeoff, Excel/output, QA.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Workflow screenshot - визуальная проверка 03</div>
-      <div class="kb-rule-card__rule">Проверь порядок действий: source, takeoff, Excel/output, QA.</div>
-      <div class="kb-rule-card__note">Screenshot не заменяет правило; он показывает, где проверить действие в workflow.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-069.jpg" title="excel 12.gif">
-    <img src="../../assets/images/confluence/confluence-069.jpg" alt="Workflow screenshot - визуальная проверка 04: Проверь порядок действий: source, takeoff, Excel/output, QA.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Workflow screenshot - визуальная проверка 04</div>
-      <div class="kb-rule-card__rule">Проверь порядок действий: source, takeoff, Excel/output, QA.</div>
-      <div class="kb-rule-card__note">Screenshot не заменяет правило; он показывает, где проверить действие в workflow.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-070.jpg" title="excel 1.gif">
-    <img src="../../assets/images/confluence/confluence-070.jpg" alt="Workflow screenshot - визуальная проверка 05: Проверь порядок действий: source, takeoff, Excel/output, QA.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Workflow screenshot - визуальная проверка 05</div>
-      <div class="kb-rule-card__rule">Проверь порядок действий: source, takeoff, Excel/output, QA.</div>
-      <div class="kb-rule-card__note">Screenshot не заменяет правило; он показывает, где проверить действие в workflow.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-076.jpg" title="scale.gif">
-    <img src="../../assets/images/confluence/confluence-076.jpg" alt="Workflow screenshot - визуальная проверка 06: Проверь порядок действий: source, takeoff, Excel/output, QA.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Workflow screenshot - визуальная проверка 06</div>
-      <div class="kb-rule-card__rule">Проверь порядок действий: source, takeoff, Excel/output, QA.</div>
-      <div class="kb-rule-card__note">Screenshot не заменяет правило; он показывает, где проверить действие в workflow.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-077.jpg" title="beam.gif">
-    <img src="../../assets/images/confluence/confluence-077.jpg" alt="Workflow screenshot - визуальная проверка 07: Проверь порядок действий: source, takeoff, Excel/output, QA.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Workflow screenshot - визуальная проверка 07</div>
-      <div class="kb-rule-card__rule">Проверь порядок действий: source, takeoff, Excel/output, QA.</div>
-      <div class="kb-rule-card__note">Screenshot не заменяет правило; он показывает, где проверить действие в workflow.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-078.jpg" title="1234.gif">
-    <img src="../../assets/images/confluence/confluence-078.jpg" alt="Workflow screenshot - визуальная проверка 08: Проверь порядок действий: source, takeoff, Excel/output, QA.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Workflow screenshot - визуальная проверка 08</div>
-      <div class="kb-rule-card__rule">Проверь порядок действий: source, takeoff, Excel/output, QA.</div>
-      <div class="kb-rule-card__note">Screenshot не заменяет правило; он показывает, где проверить действие в workflow.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures">
+  <summary>Показать 8 иллюстраций</summary>
+  <div class="kb-figure-grid">
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-066.gif" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-066.gif" alt="Workflow screenshot - визуальная проверка 01: Проверь порядок действий: source, takeoff, Excel/output, QA." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-067.gif" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-067.gif" alt="Workflow screenshot - визуальная проверка 02: Проверь порядок действий: source, takeoff, Excel/output, QA." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-068.jpg" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-068.jpg" alt="Workflow screenshot - визуальная проверка 03: Проверь порядок действий: source, takeoff, Excel/output, QA." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-069.jpg" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-069.jpg" alt="Workflow screenshot - визуальная проверка 04: Проверь порядок действий: source, takeoff, Excel/output, QA." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-070.jpg" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-070.jpg" alt="Workflow screenshot - визуальная проверка 05: Проверь порядок действий: source, takeoff, Excel/output, QA." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-076.jpg" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-076.jpg" alt="Workflow screenshot - визуальная проверка 06: Проверь порядок действий: source, takeoff, Excel/output, QA." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-077.jpg" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-077.jpg" alt="Workflow screenshot - визуальная проверка 07: Проверь порядок действий: source, takeoff, Excel/output, QA." loading="lazy"></a>
+    <a class="kb-figure" href="../../assets/images/confluence/confluence-078.jpg" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-078.jpg" alt="Workflow screenshot - визуальная проверка 08: Проверь порядок действий: source, takeoff, Excel/output, QA." loading="lazy"></a>
+  </div>
+</details>
 <!-- confluence-gallery:end -->

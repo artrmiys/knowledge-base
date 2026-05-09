@@ -100,134 +100,25 @@ checkpoint-ы перед output: сначала прочитай правило 
 ??? info "Источник картинок"
     - Exterior (наружные стены): [16 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65273857/Exterior)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-109.png" title="image-20260408-222831.png">
-    <img src="../../../../assets/images/confluence/confluence-109.png" alt="Exterior Wall - визуальная проверка 01: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Exterior Wall - визуальная проверка 01</div>
-      <div class="kb-rule-card__rule">Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.</div>
-      <div class="kb-rule-card__note">Картинка должна подтверждать конкретный layer/scope, а не просто лежать архивом.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-110.png" title="image-20260408-220422.png">
-    <img src="../../../../assets/images/confluence/confluence-110.png" alt="Exterior Wall - визуальная проверка 02: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Exterior Wall - визуальная проверка 02</div>
-      <div class="kb-rule-card__rule">Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.</div>
-      <div class="kb-rule-card__note">Картинка должна подтверждать конкретный layer/scope, а не просто лежать архивом.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-111.png" title="image-20260408-215636.png">
-    <img src="../../../../assets/images/confluence/confluence-111.png" alt="Exterior Wall - визуальная проверка 03: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Exterior Wall - визуальная проверка 03</div>
-      <div class="kb-rule-card__rule">Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.</div>
-      <div class="kb-rule-card__note">Картинка должна подтверждать конкретный layer/scope, а не просто лежать архивом.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-112.png" title="image-20260408-215533.png">
-    <img src="../../../../assets/images/confluence/confluence-112.png" alt="Exterior Wall - визуальная проверка 04: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Exterior Wall - визуальная проверка 04</div>
-      <div class="kb-rule-card__rule">Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.</div>
-      <div class="kb-rule-card__note">Картинка должна подтверждать конкретный layer/scope, а не просто лежать архивом.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-113.png" title="image-20260408-215334.png">
-    <img src="../../../../assets/images/confluence/confluence-113.png" alt="Exterior Wall - визуальная проверка 05: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Exterior Wall - визуальная проверка 05</div>
-      <div class="kb-rule-card__rule">Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.</div>
-      <div class="kb-rule-card__note">Картинка должна подтверждать конкретный layer/scope, а не просто лежать архивом.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-114.png" title="image-20260408-212441.png">
-    <img src="../../../../assets/images/confluence/confluence-114.png" alt="Exterior Wall - визуальная проверка 06: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Exterior Wall - визуальная проверка 06</div>
-      <div class="kb-rule-card__rule">Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.</div>
-      <div class="kb-rule-card__note">Картинка должна подтверждать конкретный layer/scope, а не просто лежать архивом.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-115.png" title="image-20260408-212418.png">
-    <img src="../../../../assets/images/confluence/confluence-115.png" alt="Exterior Wall - визуальная проверка 07: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Exterior Wall - визуальная проверка 07</div>
-      <div class="kb-rule-card__rule">Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.</div>
-      <div class="kb-rule-card__note">Картинка должна подтверждать конкретный layer/scope, а не просто лежать архивом.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-116.png" title="image-20251120-163603.png">
-    <img src="../../../../assets/images/confluence/confluence-116.png" alt="Exterior Wall - визуальная проверка 08: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Exterior Wall - визуальная проверка 08</div>
-      <div class="kb-rule-card__rule">Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.</div>
-      <div class="kb-rule-card__note">Картинка должна подтверждать конкретный layer/scope, а не просто лежать архивом.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-117.png" title="image-20251120-163803.png">
-    <img src="../../../../assets/images/confluence/confluence-117.png" alt="Exterior Wall - визуальная проверка 09: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Exterior Wall - визуальная проверка 09</div>
-      <div class="kb-rule-card__rule">Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.</div>
-      <div class="kb-rule-card__note">Картинка должна подтверждать конкретный layer/scope, а не просто лежать архивом.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-118.png" title="654dd981-d86a-4882-94a5-679a31b64b84.png">
-    <img src="../../../../assets/images/confluence/confluence-118.png" alt="Exterior Wall - визуальная проверка 10: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Exterior Wall - визуальная проверка 10</div>
-      <div class="kb-rule-card__rule">Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.</div>
-      <div class="kb-rule-card__note">Картинка должна подтверждать конкретный layer/scope, а не просто лежать архивом.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-119.png" title="image-20260408-211626.png">
-    <img src="../../../../assets/images/confluence/confluence-119.png" alt="Exterior Wall - визуальная проверка 11: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Exterior Wall - визуальная проверка 11</div>
-      <div class="kb-rule-card__rule">Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.</div>
-      <div class="kb-rule-card__note">Картинка должна подтверждать конкретный layer/scope, а не просто лежать архивом.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-120.png" title="image-20251120-162245.png">
-    <img src="../../../../assets/images/confluence/confluence-120.png" alt="Exterior Wall - визуальная проверка 12: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Exterior Wall - визуальная проверка 12</div>
-      <div class="kb-rule-card__rule">Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.</div>
-      <div class="kb-rule-card__note">Картинка должна подтверждать конкретный layer/scope, а не просто лежать архивом.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-121.png" title="image-20251030-161255.png">
-    <img src="../../../../assets/images/confluence/confluence-121.png" alt="Exterior Wall - визуальная проверка 13: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Exterior Wall - визуальная проверка 13</div>
-      <div class="kb-rule-card__rule">Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.</div>
-      <div class="kb-rule-card__note">Картинка должна подтверждать конкретный layer/scope, а не просто лежать архивом.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-122.png" title="image-20251030-161158.png">
-    <img src="../../../../assets/images/confluence/confluence-122.png" alt="Exterior Wall - визуальная проверка 14: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Exterior Wall - визуальная проверка 14</div>
-      <div class="kb-rule-card__rule">Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.</div>
-      <div class="kb-rule-card__note">Картинка должна подтверждать конкретный layer/scope, а не просто лежать архивом.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-123.png" title="image-20251030-161154.png">
-    <img src="../../../../assets/images/confluence/confluence-123.png" alt="Exterior Wall - визуальная проверка 15: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Exterior Wall - визуальная проверка 15</div>
-      <div class="kb-rule-card__rule">Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.</div>
-      <div class="kb-rule-card__note">Картинка должна подтверждать конкретный layer/scope, а не просто лежать архивом.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-124.png" title="image-20251030-161128.png">
-    <img src="../../../../assets/images/confluence/confluence-124.png" alt="Exterior Wall - визуальная проверка 16: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Exterior Wall - визуальная проверка 16</div>
-      <div class="kb-rule-card__rule">Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories.</div>
-      <div class="kb-rule-card__note">Картинка должна подтверждать конкретный layer/scope, а не просто лежать архивом.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures">
+  <summary>Показать 16 иллюстраций</summary>
+  <div class="kb-figure-grid">
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-109.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-109.png" alt="Exterior Wall - визуальная проверка 01: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-110.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-110.png" alt="Exterior Wall - визуальная проверка 02: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-111.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-111.png" alt="Exterior Wall - визуальная проверка 03: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-112.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-112.png" alt="Exterior Wall - визуальная проверка 04: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-113.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-113.png" alt="Exterior Wall - визуальная проверка 05: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-114.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-114.png" alt="Exterior Wall - визуальная проверка 06: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-115.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-115.png" alt="Exterior Wall - визуальная проверка 07: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-116.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-116.png" alt="Exterior Wall - визуальная проверка 08: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-117.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-117.png" alt="Exterior Wall - визуальная проверка 09: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-118.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-118.png" alt="Exterior Wall - визуальная проверка 10: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-119.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-119.png" alt="Exterior Wall - визуальная проверка 11: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-120.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-120.png" alt="Exterior Wall - визуальная проверка 12: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-121.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-121.png" alt="Exterior Wall - визуальная проверка 13: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-122.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-122.png" alt="Exterior Wall - визуальная проверка 14: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-123.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-123.png" alt="Exterior Wall - визуальная проверка 15: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-124.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-124.png" alt="Exterior Wall - визуальная проверка 16: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
+  </div>
+</details>
 <!-- confluence-gallery:end -->

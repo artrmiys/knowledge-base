@@ -32,14 +32,10 @@ checkpoint-ы перед output: сначала прочитай правило 
 ??? info "Источник картинок"
     - Truss Heel (обшивка ферм крыши, вертикальной части): [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/89948190/Truss+Heel)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-175.png" title="image-20251030-150249.png">
-    <img src="../../../../assets/images/confluence/confluence-175.png" alt="Truss Heel - визуальная проверка: Проверь vertical heel area, height и sheathing material.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Truss Heel - визуальная проверка</div>
-      <div class="kb-rule-card__rule">Проверь vertical heel area, height и sheathing material.</div>
-      <div class="kb-rule-card__note">Truss Heel sheathing не прячь в roof sheathing или wall sheathing без note.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures">
+  <summary>Показать 1 иллюстраций</summary>
+  <div class="kb-figure-grid">
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-175.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-175.png" alt="Truss Heel - визуальная проверка: Проверь vertical heel area, height и sheathing material." loading="lazy"></a>
+  </div>
+</details>
 <!-- confluence-gallery:end -->

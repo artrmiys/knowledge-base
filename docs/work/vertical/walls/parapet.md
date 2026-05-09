@@ -37,22 +37,11 @@ checkpoint-ы перед output: сначала прочитай правило 
 ??? info "Источник картинок"
     - Parapet (парапет, стены крыши): [2 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65306653/Parapet)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-127.png" title="image-20251030-151131.png">
-    <img src="../../../../assets/images/confluence/confluence-127.png" alt="Parapet Wall - визуальная проверка 01: Проверь parapet height, material, FRT rule и roof edge condition.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Parapet Wall - визуальная проверка 01</div>
-      <div class="kb-rule-card__rule">Проверь parapet height, material, FRT rule и roof edge condition.</div>
-      <div class="kb-rule-card__note">Если exterior wall FRT, parapet/blocking тоже часто должны быть FRT.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-128.png" title="image-20251030-150702.png">
-    <img src="../../../../assets/images/confluence/confluence-128.png" alt="Parapet Wall - визуальная проверка 02: Проверь parapet height, material, FRT rule и roof edge condition.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Parapet Wall - визуальная проверка 02</div>
-      <div class="kb-rule-card__rule">Проверь parapet height, material, FRT rule и roof edge condition.</div>
-      <div class="kb-rule-card__note">Если exterior wall FRT, parapet/blocking тоже часто должны быть FRT.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures">
+  <summary>Показать 2 иллюстраций</summary>
+  <div class="kb-figure-grid">
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-127.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-127.png" alt="Parapet Wall - визуальная проверка 01: Проверь parapet height, material, FRT rule и roof edge condition." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-128.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-128.png" alt="Parapet Wall - визуальная проверка 02: Проверь parapet height, material, FRT rule и roof edge condition." loading="lazy"></a>
+  </div>
+</details>
 <!-- confluence-gallery:end -->

@@ -48,46 +48,14 @@ checkpoint-ы перед output: сначала прочитай правило 
 ??? info "Источник картинок"
     - Shaft (противопожарные стены): [5 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65306667/Shaft)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-129.png" title="image-20251030-153706.png">
-    <img src="../../../../assets/images/confluence/confluence-129.png" alt="Shaft Wall - визуальная проверка 01: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Shaft Wall - визуальная проверка 01</div>
-      <div class="kb-rule-card__rule">Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.</div>
-      <div class="kb-rule-card__note">Shaft walls не смешивай с обычными demising/unit walls.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-130.png" title="image-20251030-153647.png">
-    <img src="../../../../assets/images/confluence/confluence-130.png" alt="Shaft Wall - визуальная проверка 02: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Shaft Wall - визуальная проверка 02</div>
-      <div class="kb-rule-card__rule">Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.</div>
-      <div class="kb-rule-card__note">Shaft walls не смешивай с обычными demising/unit walls.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-131.png" title="image-20251030-153459.png">
-    <img src="../../../../assets/images/confluence/confluence-131.png" alt="Shaft Wall - визуальная проверка 03: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Shaft Wall - визуальная проверка 03</div>
-      <div class="kb-rule-card__rule">Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.</div>
-      <div class="kb-rule-card__note">Shaft walls не смешивай с обычными demising/unit walls.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-132.png" title="image-20251030-153049.png">
-    <img src="../../../../assets/images/confluence/confluence-132.png" alt="Shaft Wall - визуальная проверка 04: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Shaft Wall - визуальная проверка 04</div>
-      <div class="kb-rule-card__rule">Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.</div>
-      <div class="kb-rule-card__note">Shaft walls не смешивай с обычными demising/unit walls.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-133.png" title="image-20251030-152801.png">
-    <img src="../../../../assets/images/confluence/confluence-133.png" alt="Shaft Wall - визуальная проверка 05: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Shaft Wall - визуальная проверка 05</div>
-      <div class="kb-rule-card__rule">Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements.</div>
-      <div class="kb-rule-card__note">Shaft walls не смешивай с обычными demising/unit walls.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures">
+  <summary>Показать 5 иллюстраций</summary>
+  <div class="kb-figure-grid">
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-129.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-129.png" alt="Shaft Wall - визуальная проверка 01: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-130.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-130.png" alt="Shaft Wall - визуальная проверка 02: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-131.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-131.png" alt="Shaft Wall - визуальная проверка 03: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-132.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-132.png" alt="Shaft Wall - визуальная проверка 04: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-133.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-133.png" alt="Shaft Wall - визуальная проверка 05: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements." loading="lazy"></a>
+  </div>
+</details>
 <!-- confluence-gallery:end -->

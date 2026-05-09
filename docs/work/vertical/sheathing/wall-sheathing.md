@@ -76,22 +76,11 @@ checkpoint-ы перед output: сначала прочитай правило 
 ??? info "Источник картинок"
     - Sheathing: [2 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65044604/Sheathing)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-093.jpg" title="image-20251030-155040.png">
-    <img src="../../../../assets/images/confluence/confluence-093.jpg" alt="Wall Sheathing - визуальная проверка 01: Проверь material/thickness, side, Zip/Densglass/FRT и shear schedule.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Wall Sheathing - визуальная проверка 01</div>
-      <div class="kb-rule-card__rule">Проверь material/thickness, side, Zip/Densglass/FRT и shear schedule.</div>
-      <div class="kb-rule-card__note">Sheathing держи отдельной строкой, если product, side или location важны для review.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-094.jpg" title="image-20251030-155003.png">
-    <img src="../../../../assets/images/confluence/confluence-094.jpg" alt="Wall Sheathing - визуальная проверка 02: Проверь material/thickness, side, Zip/Densglass/FRT и shear schedule.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Wall Sheathing - визуальная проверка 02</div>
-      <div class="kb-rule-card__rule">Проверь material/thickness, side, Zip/Densglass/FRT и shear schedule.</div>
-      <div class="kb-rule-card__note">Sheathing держи отдельной строкой, если product, side или location важны для review.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures">
+  <summary>Показать 2 иллюстраций</summary>
+  <div class="kb-figure-grid">
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-093.jpg" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-093.jpg" alt="Wall Sheathing - визуальная проверка 01: Проверь material/thickness, side, Zip/Densglass/FRT и shear schedule." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-094.jpg" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-094.jpg" alt="Wall Sheathing - визуальная проверка 02: Проверь material/thickness, side, Zip/Densglass/FRT и shear schedule." loading="lazy"></a>
+  </div>
+</details>
 <!-- confluence-gallery:end -->

@@ -38,14 +38,10 @@ checkpoint-ы перед output: сначала прочитай правило 
 ??? info "Источник картинок"
     - Corridor (коридорные стены): [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65306625/Corridor)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-125.png" title="image-20251030-161559.png">
-    <img src="../../../../assets/images/confluence/confluence-125.png" alt="Corridor Wall - визуальная проверка: Проверь corridor side, double-wall condition, height и fire/sound requirements.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Corridor Wall - визуальная проверка</div>
-      <div class="kb-rule-card__rule">Проверь corridor side, double-wall condition, height и fire/sound requirements.</div>
-      <div class="kb-rule-card__note">Corridor walls часто отличаются от unit walls по layers и output naming.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures">
+  <summary>Показать 1 иллюстраций</summary>
+  <div class="kb-figure-grid">
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-125.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-125.png" alt="Corridor Wall - визуальная проверка: Проверь corridor side, double-wall condition, height и fire/sound requirements." loading="lazy"></a>
+  </div>
+</details>
 <!-- confluence-gallery:end -->

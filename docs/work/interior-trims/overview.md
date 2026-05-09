@@ -37,56 +37,57 @@ schedules, door/window schedules или finish plans.
 На Trello board `int trims` есть 43 исходные картинки. Карточки ниже связывают
 картинку с правилом; полный набор смотри на отдельных topic pages.
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-01.png">
-    <img src="../../../assets/images/trims/int-trims-01.png" alt="Create interior trim PDF files">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">1. Подготовить trim PDFs</div>
-      <div class="kb-rule-card__rule">Сначала сделай листы, которые можно проверить.</div>
-      <div class="kb-rule-card__note">Не начинай formulas по памяти; сначала отдели interior-trim scope.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-02.png">
-    <img src="../../../assets/images/trims/int-trims-02.png" alt="Baseboard and crown perimeter example">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">2. Мерить perimeter items</div>
-      <div class="kb-rule-card__rule">Baseboard и Crowns — это LF / perimeter work.</div>
-      <div class="kb-rule-card__note">Веди trace непрерывно; breaks должны быть намеренными и видимыми.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-07.png">
-    <img src="../../../assets/images/trims/int-trims-07.png" alt="Baseboard is not counted behind kitchen cabinets">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Baseboard</div>
-      <div class="kb-rule-card__rule">За kitchen cabinets Baseboard не считается.</div>
-      <div class="kb-rule-card__note">Открой страницу Base для картинок 07-16 и Excel-output checks.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-17.png">
-    <img src="../../../assets/images/trims/int-trims-17.png" alt="Crown is not counted in closets">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Crown</div>
-      <div class="kb-rule-card__rule">В closets нет Crowns; в garage тоже нет Crowns.</div>
-      <div class="kb-rule-card__note">Открой страницу Crown для картинок 17-25 и всех exclusions.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-26.png">
-    <img src="../../../assets/images/trims/int-trims-26.png" alt="Interior doors are measured by open door swing">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Door / Window Trim</div>
-      <div class="kb-rule-card__rule">Interior doors считай по open door symbol.</div>
-      <div class="kb-rule-card__note">Открой Door page для картинок 26-43: sizes, C.O., Pocket, Slider и F.R. S.C.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../assets/images/trims/int-trims-43.png">
-    <img src="../../../assets/images/trims/int-trims-43.png" alt="Door schedule source for interior doors">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Сначала door schedule</div>
-      <div class="kb-rule-card__rule">Если есть door schedule, заполняй из schedule.</div>
-      <div class="kb-rule-card__note">Plan view вторичен, когда schedule даёт size/material/fire notes.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures kb-figures--rows" open>
+  <summary>Скрыть 6 правил с иллюстрациями</summary>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">1. Подготовить trim PDFs</div>
+      <div class="kb-figure-row__rule">Сначала сделай листы, которые можно проверить.</div>
+      <div class="kb-figure-row__note">Не начинай formulas по памяти; сначала отдели interior-trim scope.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-01.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-01.png" alt="Create interior trim PDF files" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">2. Мерить perimeter items</div>
+      <div class="kb-figure-row__rule">Baseboard и Crowns — это LF / perimeter work.</div>
+      <div class="kb-figure-row__note">Веди trace непрерывно; breaks должны быть намеренными и видимыми.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-02.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-02.png" alt="Baseboard and crown perimeter example" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Baseboard</div>
+      <div class="kb-figure-row__rule">За kitchen cabinets Baseboard не считается.</div>
+      <div class="kb-figure-row__note">Открой страницу Base для картинок 07-16 и Excel-output checks.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-07.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-07.png" alt="Baseboard is not counted behind kitchen cabinets" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Crown</div>
+      <div class="kb-figure-row__rule">В closets нет Crowns; в garage тоже нет Crowns.</div>
+      <div class="kb-figure-row__note">Открой страницу Crown для картинок 17-25 и всех exclusions.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-17.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-17.png" alt="Crown is not counted in closets" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Door / Window Trim</div>
+      <div class="kb-figure-row__rule">Interior doors считай по open door symbol.</div>
+      <div class="kb-figure-row__note">Открой Door page для картинок 26-43: sizes, C.O., Pocket, Slider и F.R. S.C.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-26.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-26.png" alt="Interior doors are measured by open door swing" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Сначала door schedule</div>
+      <div class="kb-figure-row__rule">Если есть door schedule, заполняй из schedule.</div>
+      <div class="kb-figure-row__note">Plan view вторичен, когда schedule даёт size/material/fire notes.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-43.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-43.png" alt="Door schedule source for interior doors" loading="lazy"></a>
+  </figure>
+</details>
 
 ## Карта картинок
 

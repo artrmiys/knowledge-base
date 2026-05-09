@@ -64,38 +64,13 @@ checkpoint-ы перед output: сначала прочитай правило 
 ??? info "Источник картинок"
     - Beam - Балки: [4 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/3735554/Beam+-)
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-071.png" title="image-20250211-181056.png">
-    <img src="../../../../assets/images/confluence/confluence-071.png" alt="Beam - визуальная проверка 01: Проверь size, ply count, length, bearing и hanger condition.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Beam - визуальная проверка 01</div>
-      <div class="kb-rule-card__rule">Проверь size, ply count, length, bearing и hanger condition.</div>
-      <div class="kb-rule-card__note">Если картинка показывает special condition, перенеси его в output row или note.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-072.png" title="image-20250211-181023.png">
-    <img src="../../../../assets/images/confluence/confluence-072.png" alt="Beam - визуальная проверка 02: Проверь size, ply count, length, bearing и hanger condition.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Beam - визуальная проверка 02</div>
-      <div class="kb-rule-card__rule">Проверь size, ply count, length, bearing и hanger condition.</div>
-      <div class="kb-rule-card__note">Если картинка показывает special condition, перенеси его в output row или note.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-073.png" title="image-20250211-180929.png">
-    <img src="../../../../assets/images/confluence/confluence-073.png" alt="Beam - визуальная проверка 03: Проверь size, ply count, length, bearing и hanger condition.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Beam - визуальная проверка 03</div>
-      <div class="kb-rule-card__rule">Проверь size, ply count, length, bearing и hanger condition.</div>
-      <div class="kb-rule-card__note">Если картинка показывает special condition, перенеси его в output row или note.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../../../assets/images/confluence/confluence-074.png" title="image-20250211-180817.png">
-    <img src="../../../../assets/images/confluence/confluence-074.png" alt="Beam - визуальная проверка 04: Проверь size, ply count, length, bearing и hanger condition.">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Beam - визуальная проверка 04</div>
-      <div class="kb-rule-card__rule">Проверь size, ply count, length, bearing и hanger condition.</div>
-      <div class="kb-rule-card__note">Если картинка показывает special condition, перенеси его в output row или note.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures">
+  <summary>Показать 4 иллюстраций</summary>
+  <div class="kb-figure-grid">
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-071.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-071.png" alt="Beam - визуальная проверка 01: Проверь size, ply count, length, bearing и hanger condition." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-072.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-072.png" alt="Beam - визуальная проверка 02: Проверь size, ply count, length, bearing и hanger condition." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-073.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-073.png" alt="Beam - визуальная проверка 03: Проверь size, ply count, length, bearing и hanger condition." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-074.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-074.png" alt="Beam - визуальная проверка 04: Проверь size, ply count, length, bearing и hanger condition." loading="lazy"></a>
+  </div>
+</details>
 <!-- confluence-gallery:end -->

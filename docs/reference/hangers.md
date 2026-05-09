@@ -100,48 +100,49 @@ Hanger выбирается не "по названию на глаз", а по 
 
 ## Визуальные типы
 
-<div class="kb-rule-gallery">
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-080.png">
-    <img src="../../assets/images/confluence/confluence-080.png" alt="Face mount hanger on side of support">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Face Mount</div>
-      <div class="kb-rule-card__rule">Hanger крепится к боковой стороне support.</div>
-      <div class="kb-rule-card__note">Проверяй section, carried member depth и есть ли skew.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-081.png">
-    <img src="../../assets/images/confluence/confluence-081.png" alt="Top flange hanger sitting over support">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Top Flange</div>
-      <div class="kb-rule-card__rule">Flange садится сверху на beam/wall/support.</div>
-      <div class="kb-rule-card__note">Для I-joist обычно смотри <code>ITS/MIT</code>; для beam top mount - <code>WP/GLT/LBV</code>.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-082.png">
-    <img src="../../assets/images/confluence/confluence-082.png" alt="Concealed flange hanger">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">Concealed Flange</div>
-      <div class="kb-rule-card__rule">Flange скрыт; чаще <code>HUC/HUCQ</code> family.</div>
-      <div class="kb-rule-card__note">Сверяй fastener note/detail. Не заменяй на обычный <code>HU</code> без причины.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-030.png">
-    <img src="../../assets/images/confluence/confluence-030.png" alt="CBH hanger for glulam condition">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">CBH for Glulam</div>
-      <div class="kb-rule-card__rule"><code>CBH2.37X9.75C-KT</code> - special glulam condition.</div>
-      <div class="kb-rule-card__note">Используй только когда detail/schedule показывает glulam/Cedar-style special connection.</div>
-    </div>
-  </a>
-  <a class="kb-rule-card" href="../../assets/images/confluence/confluence-031.png">
-    <img src="../../assets/images/confluence/confluence-031.png" alt="CJTZ installation for Cedar beam and post">
-    <div class="kb-rule-card__body">
-      <div class="kb-rule-card__title">CJTZ for Cedar</div>
-      <div class="kb-rule-card__rule"><code>CJTZ</code> - special item для Cedar beams/posts.</div>
-      <div class="kb-rule-card__note">Не смешивай с обычными beam hangers; это отдельная строка в output.</div>
-    </div>
-  </a>
-</div>
+<details class="kb-figures kb-figures--rows" open>
+  <summary>Скрыть 5 правил с иллюстрациями</summary>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Face Mount</div>
+      <div class="kb-figure-row__rule">Hanger крепится к боковой стороне support.</div>
+      <div class="kb-figure-row__note">Проверяй section, carried member depth и есть ли skew.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../assets/images/confluence/confluence-080.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-080.png" alt="Face mount hanger on side of support" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Top Flange</div>
+      <div class="kb-figure-row__rule">Flange садится сверху на beam/wall/support.</div>
+      <div class="kb-figure-row__note">Для I-joist обычно смотри <code>ITS/MIT</code>; для beam top mount - <code>WP/GLT/LBV</code>.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../assets/images/confluence/confluence-081.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-081.png" alt="Top flange hanger sitting over support" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">Concealed Flange</div>
+      <div class="kb-figure-row__rule">Flange скрыт; чаще <code>HUC/HUCQ</code> family.</div>
+      <div class="kb-figure-row__note">Сверяй fastener note/detail. Не заменяй на обычный <code>HU</code> без причины.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../assets/images/confluence/confluence-082.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-082.png" alt="Concealed flange hanger" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">CBH for Glulam</div>
+      <div class="kb-figure-row__rule"><code>CBH2.37X9.75C-KT</code> - special glulam condition.</div>
+      <div class="kb-figure-row__note">Используй только когда detail/schedule показывает glulam/Cedar-style special connection.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../assets/images/confluence/confluence-030.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-030.png" alt="CBH hanger for glulam condition" loading="lazy"></a>
+  </figure>
+  <figure class="kb-figure-row">
+    <figcaption class="kb-figure-row__text">
+      <div class="kb-figure-row__title">CJTZ for Cedar</div>
+      <div class="kb-figure-row__rule"><code>CJTZ</code> - special item для Cedar beams/posts.</div>
+      <div class="kb-figure-row__note">Не смешивай с обычными beam hangers; это отдельная строка в output.</div>
+    </figcaption>
+    <a class="kb-figure-row__image" href="../../assets/images/confluence/confluence-031.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-031.png" alt="CJTZ installation for Cedar beam and post" loading="lazy"></a>
+  </figure>
+</details>
 
 ## Подбор по condition
 

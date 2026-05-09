@@ -145,10 +145,6 @@ nav:
       - Hangers: reference/hangers.md
       - Excel macro hotkeys: reference/excel-hotkeys.md
       - Формулы и факторы: reference/formulas.md
-      - Tilda source map: reference/tilda-site-map.md
-      - Confluence source map: reference/confluence-source-map.md
-      - Trello source map: reference/trello-source-map.md
-      - Общая source map: reference/source-map.md
 
 plugins:
   - search:
@@ -196,3 +192,7 @@ not_in_nav: |
   /work/interior-trims/trello-import-pending.md
   /start/important-changes.md
   /reference/confluence-image-archive.md
+  /reference/tilda-site-map.md
+  /reference/confluence-source-map.md
+  /reference/trello-source-map.md
+  /reference/source-map.md
