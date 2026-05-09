@@ -46,6 +46,7 @@ rules, source drawings, project specifications, or AHJ/code requirements.
 | [American Wood Council FRTW FAQ](https://awc.org/faq/can-surface-coated-wood-products-be-approved-for-use-in-applications-where-fire-retardant-treated-wood-is-permitted/) | Difference between `F.R.` door notation and `FRTW` lumber/material scope. |
 | [Helonic finish schedule guide](https://helonic.com/knowledge-base/finish-schedule-guide) | Finish schedule column sanity-check: Base / Ceiling / Remarks. |
 | [Metrie measuring guide](https://www.metrie.com/how-do-i-measure) | General trim measuring sanity-check: wall-by-wall / linear run. |
+| [Microsoft Support - Keyboard shortcuts in Excel](https://support.microsoft.com/en-gb/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f) | Excel hotkeys page and Windows/Web shortcut caveats. |
 
 ## Redacted / Not Published
 

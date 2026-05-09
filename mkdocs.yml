@@ -143,6 +143,7 @@ nav:
   - Справочник:
       - Советы и важные вещи: reference/boss-feedback-rules.md
       - Hangers: reference/hangers.md
+      - Excel hotkeys: reference/excel-hotkeys.md
       - Формулы и факторы: reference/formulas.md
       - Tilda source map: reference/tilda-site-map.md
       - Confluence source map: reference/confluence-source-map.md
