@@ -396,8 +396,6 @@
       
         
       
-        
-      
     
     
     
@@ -458,34 +456,6 @@
     
   
     Как пользоваться
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../start/ourplanecore/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Программа
   
 
     
@@ -3628,10 +3598,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -3695,6 +3661,62 @@
     
   
     Советы и важные вещи
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../takeoff-naming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как называть takeoffs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplanecore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OurPlaneCore — программа
   
 
     
@@ -3803,21 +3825,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#macro-hotkeys" class="md-nav__link">
+  <a href="#workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Macro hotkeys
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        По задачам
+        По этапам workflow
       
     </span>
   </a>
@@ -3839,7 +3850,7 @@
   <a href="#excel-shortcuts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Обычные Excel shortcuts
+        Стандартные Excel shortcuts
       
     </span>
   </a>
@@ -3894,118 +3905,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tilda-site-map/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tilda source map
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../confluence-source-map/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Confluence source map
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trello-source-map/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Trello source map
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../source-map/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Общая source map
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -4040,21 +3939,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#macro-hotkeys" class="md-nav__link">
+  <a href="#workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Macro hotkeys
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        По задачам
+        По этапам workflow
       
     </span>
   </a>
@@ -4076,7 +3964,7 @@
   <a href="#excel-shortcuts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Обычные Excel shortcuts
+        Стандартные Excel shortcuts
       
     </span>
   </a>
@@ -4112,162 +4000,176 @@
 
 
 <h1 id="excel-macro-hotkeys">Excel macro hotkeys<a class="headerlink" href="#excel-macro-hotkeys" title="Прямая ссылка на раздел">&para;</a></h1>
-<p>Это не стандартные shortcuts Excel. Это наши hotkeys для VBA/macros в рабочем
-Excel workbook/template после PlanSwift output и ручного cleanup.</p>
-<figure>
-<p><img alt="Excel macro hotkeys map" src="../../assets/images/reference/excel-hotkeys-map.svg" />
-  </p>
-<figcaption>Excel macro hotkeys - что запускать после PlanSwift и перед check/output.</figcaption>
-</figure>
+<p>Это не стандартные Excel shortcuts. Это <strong>VBA-macros</strong>, подключённые к рабочему
+workbook'у — для очистки, форматирования и записи после PlanSwift output.</p>
 <div class="admonition warning">
-<p class="admonition-title">Важно</p>
-<p>Эти hotkeys работают только там, где подключены нужные macros. Если shortcut
-ничего не делает, проверь active workbook, включены ли macros, и не занят ли
-shortcut самим Excel/Windows.</p>
+<p class="admonition-title">Макросы должны быть включены</p>
+<p>Если shortcut ничего не делает — проверь:
+1. Активный workbook содержит нужные macros.
+2. Macros включены (<code>File → Options → Trust Center → Macro Settings</code>).
+3. Shortcut не перехвачен Excel/Windows.</p>
 </div>
-<h2 id="macro-hotkeys">Macro hotkeys<a class="headerlink" href="#macro-hotkeys" title="Прямая ссылка на раздел">&para;</a></h2>
+<h2 class="kb-section-title kb-st--cyan" id="workflow">По этапам workflow<a class="headerlink" href="#workflow" title="Прямая ссылка на раздел">&para;</a></h2>
+<div class="grid cards kb-hotkey-cards">
+<ul>
+<li>
+<p><span class="twemoji lg middle kb-mk--cyan"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.36 2.72 1.42 1.42-5.72 5.71c1.07 1.54 1.22 3.39.32 4.59L9.06 8.12c1.2-.9 3.05-.75 4.59.32zM5.93 17.57c-2.01-2.01-3.24-4.41-3.58-6.65l4.88-2.09 7.44 7.44-2.09 4.88c-2.24-.34-4.64-1.57-6.65-3.58"/></svg></span> <strong>Cleanup</strong></p>
+<hr />
 <table>
 <thead>
 <tr>
 <th>Hotkey</th>
-<th>Macro / действие</th>
-<th>Что делает</th>
+<th>Действие</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><kbd>Ctrl</kbd>+<kbd>Q</kbd></td>
-<td>Delete selected cells</td>
-<td>Удалить выделенные ячейки со сдвигом вверх.</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-q">Q</kbd></span></td>
+<td>Удалить ячейки (сдвиг вверх)</td>
 </tr>
 <tr>
-<td><kbd>Ctrl</kbd>+<kbd>W</kbd></td>
-<td>Add selected cells</td>
-<td>Добавить выделенные ячейки со сдвигом вверх.</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-w">W</kbd></span></td>
+<td>Вставить ячейки (сдвиг вверх)</td>
 </tr>
 <tr>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd></td>
-<td>Format Beams</td>
-<td>Форматирование Beams после PlanSwift.</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-e">E</kbd></span></td>
+<td>Удалить строки, где column <code>C</code> = <code>0</code></td>
 </tr>
 <tr>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd></td>
-<td>Format Joists</td>
-<td>Форматирование Joists после PlanSwift.</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-d">D</kbd></span></td>
+<td>Удалить grey cells</td>
 </tr>
 <tr>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd></td>
-<td>Format Details</td>
-<td>Форматирование Details после PlanSwift.</td>
-</tr>
-<tr>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd></td>
-<td>Sum same values</td>
-<td>Суммирование одинаковых значений.</td>
-</tr>
-<tr>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>W</kbd></td>
-<td>Write wall values</td>
-<td>Запись значений стен в форму.</td>
-</tr>
-<tr>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Q</kbd></td>
-<td>Write area values</td>
-<td>Запись значений площади в форму.</td>
-</tr>
-<tr>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> / <kbd>К</kbd></td>
-<td>Insert detail rows left</td>
-<td>Вставка в левую часть строк с деталями.</td>
-</tr>
-<tr>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd></td>
-<td>Add bolts block</td>
-<td>Добавление блока с bolts со сдвигом вниз.</td>
-</tr>
-<tr>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd></td>
-<td>Check Spelling</td>
-<td>Проверка орфографии.</td>
-</tr>
-<tr>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd></td>
-<td>Date</td>
-<td>Выставить дату.</td>
-</tr>
-<tr>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd></td>
-<td>Validation cleanup</td>
-<td>Убрать выпадающие списки.</td>
-</tr>
-<tr>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd></td>
-<td>Delete grey cells</td>
-<td>Удалить grey cells.</td>
-</tr>
-<tr>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd></td>
-<td>Write to check</td>
-<td>Записать в check.</td>
-</tr>
-<tr>
-<td><kbd>Ctrl</kbd>+<kbd>M</kbd></td>
-<td>Multiply all</td>
-<td>Умножить всё, что есть в ячейке.</td>
-</tr>
-<tr>
-<td><kbd>Ctrl</kbd>+<kbd>E</kbd></td>
-<td>Delete 0 rows</td>
-<td>Удалить строки, где в column <code>C</code> значение <code>0</code>.</td>
-</tr>
-<tr>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd></td>
-<td>Insert note</td>
-<td>Чтобы вставить заметку, напиши <code>Note: text</code> и нажми shortcut. Работает только если в тексте есть слово <code>Note</code>.</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-v">V</kbd></span></td>
+<td>Убрать validation dropdowns</td>
 </tr>
 </tbody>
 </table>
-<h2 id="_1">По задачам<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
+</li>
+<li>
+<p><span class="twemoji lg middle kb-mk--magenta"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 4h4v4H3zm6 1v2h12V5zm-6 5h4v4H3zm6 1v2h12v-2zm-6 5h4v4H3zm6 1v2h12v-2z"/></svg></span> <strong>PlanSwift formatting</strong></p>
+<hr />
 <table>
 <thead>
 <tr>
-<th>Задача</th>
-<th>Hotkeys</th>
+<th>Hotkey</th>
+<th>Действие</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Cleanup cells / rows</td>
-<td><kbd>Ctrl</kbd>+<kbd>Q</kbd>, <kbd>Ctrl</kbd>+<kbd>W</kbd>, <kbd>Ctrl</kbd>+<kbd>E</kbd>, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd></td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-b">B</kbd></span></td>
+<td>Format <strong>Beams</strong></td>
 </tr>
 <tr>
-<td>PlanSwift formatting</td>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd>, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd></td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-j">J</kbd></span></td>
+<td>Format <strong>Joists</strong></td>
 </tr>
 <tr>
-<td>Forms / output write</td>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>W</kbd>, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Q</kbd>, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd></td>
-</tr>
-<tr>
-<td>Helpers</td>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>, <kbd>Ctrl</kbd>+<kbd>M</kbd>, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd></td>
-</tr>
-<tr>
-<td>Workbook finish</td>
-<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd>, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd>, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd></td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-r">R</kbd></span></td>
+<td>Format <strong>Details</strong></td>
 </tr>
 </tbody>
 </table>
-<h2 id="planswift">Быстрый порядок после PlanSwift<a class="headerlink" href="#planswift" title="Прямая ссылка на раздел">&para;</a></h2>
+</li>
+<li>
+<p><span class="twemoji lg middle kb-mk--amber"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 19h6v2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12l4 4v2.12l-2 2V7.83L15.17 5H4zm10-9V6H5v4zm6.42 2.3a.53.53 0 0 0-.38-.17c-.14 0-.28.06-.39.17l-1 1 2.05 2.05 1-1c.22-.21.22-.56 0-.77zM12 19.94V22h2.06l6.06-6.07-2.05-2.05zM14 15c0-1.66-1.34-3-3-3s-3 1.34-3 3 1.34 3 3 3h.13L14 15.13z"/></svg></span> <strong>Forms / output write</strong></p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Hotkey</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-w">W</kbd></span></td>
+<td>Записать значения <strong>walls</strong> в форму</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-q">Q</kbd></span></td>
+<td>Записать значения <strong>area</strong> в форму</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-n">N</kbd></span></td>
+<td>Write to <strong>check</strong></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><span class="twemoji lg middle kb-mk--green"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.71 20.29-1.42 1.42a1 1 0 0 1-1.41 0L7 9.85A3.8 3.8 0 0 1 6 10a4 4 0 0 1-3.78-5.3l2.54 2.54.53-.53 1.42-1.42.53-.53L4.7 2.22A4 4 0 0 1 10 6a3.8 3.8 0 0 1-.15 1l11.86 11.88a1 1 0 0 1 0 1.41M2.29 18.88a1 1 0 0 0 0 1.41l1.42 1.42a1 1 0 0 0 1.41 0l5.47-5.46-2.83-2.83M20 2l-4 2v2l-2.17 2.17 2 2L18 8h2l2-4Z"/></svg></span> <strong>Helpers</strong></p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Hotkey</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f">F</kbd></span></td>
+<td>Суммировать одинаковые значения</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-m">M</kbd></span></td>
+<td>Умножить всё в ячейке</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-i">I</kbd></span></td>
+<td>Вставить note (текст должен начинаться со слова <code>Note</code>)</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-k">K</kbd></span></td>
+<td>Вставить detail-строки слева</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-l">L</kbd></span></td>
+<td>Добавить блок <strong>bolts</strong> (сдвиг вниз)</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><span class="twemoji lg middle kb-mk--blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.4-2.8.3-3.7-3.6-.8-1.9-3.2L12 3 8.6 1.5 6.7 4.7l-3.6.8.3 3.7L1 12l2.4 2.8-.3 3.7 3.6.8 1.9 3.2L12 21l3.4 1.5 1.9-3.2 3.6-.8-.3-3.7zm-4.3 4.9-2.7.6-1.4 2.4-2.6-1.1-2.6 1.1L8 17.5l-2.7-.6.2-2.8L3.7 12l1.8-2.1-.2-2.8L8 6.5l1.4-2.4L12 5.2l2.6-1.1L16 6.5l2.7.6-.2 2.8 1.8 2.1-1.8 2.1zm-2.1-9.3L18 9l-8 8-4-4 1.4-1.4 2.6 2.6z"/></svg></span> <strong>Workbook finish</strong></p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Hotkey</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-o">O</kbd></span></td>
+<td>Поставить дату</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-t">T</kbd></span></td>
+<td>Check Spelling</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-v">V</kbd></span></td>
+<td>Validation cleanup</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<h2 class="kb-section-title kb-st--magenta" id="planswift">Быстрый порядок после PlanSwift<a class="headerlink" href="#planswift" title="Прямая ссылка на раздел">&para;</a></h2>
 <ol>
 <li>Выбери правильный output sheet и range.</li>
-<li>Запусти formatting macro: Beams / Joists / Details.</li>
-<li>Удали мусор: grey cells, zero rows, лишние validation dropdowns.</li>
-<li>Запиши стены или площади в форму, если это часть workbook workflow.</li>
-<li>Поставь дату, check spelling, затем write to check.</li>
+<li>Запусти formatting: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-b">B</kbd></span> Beams → <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-j">J</kbd></span> Joists → <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-r">R</kbd></span> Details.</li>
+<li>Чисти мусор: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-d">D</kbd></span> grey cells, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-e">E</kbd></span> zero rows, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-v">V</kbd></span> validation dropdowns.</li>
+<li>Запиши в форму: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-w">W</kbd></span> walls / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-q">Q</kbd></span> area, если это часть workbook workflow.</li>
+<li>Финал: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-o">O</kbd></span> дата → <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-t">T</kbd></span> spell check → <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-n">N</kbd></span> write to check.</li>
 </ol>
-<h2 id="excel-shortcuts">Обычные Excel shortcuts<a class="headerlink" href="#excel-shortcuts" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Для обычных встроенных shortcuts Excel смотри официальный список Microsoft:
+<h2 class="kb-section-title kb-st--amber" id="excel-shortcuts">Стандартные Excel shortcuts<a class="headerlink" href="#excel-shortcuts" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Для встроенных Excel shortcuts — официальный список Microsoft:
 <a href="https://support.microsoft.com/en-gb/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f">Keyboard shortcuts in Excel</a>.</p>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

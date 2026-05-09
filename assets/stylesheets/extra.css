@@ -1,19 +1,55 @@
 /* ==========================================================================
-   Estimating Knowledge Base — clean readable layout on top of Material defaults.
-   Никаких тяжелых overlay-фонов: контент должен читаться в первую очередь.
+   Estimating Knowledge Base — clean, low-noise layout.
+   Приглушённый teal-green вместо насыщенного зелёного.
    ========================================================================== */
 
-/* --- Брендовые цвета (зелёный, как было) ----------------------------------- */
+/* --- Палитра: muted teal-green -------------------------------------------- */
 :root {
-  --md-primary-fg-color:        #2e7d32;
-  --md-primary-fg-color--light: #60ad5e;
-  --md-primary-fg-color--dark:  #005005;
-  --md-accent-fg-color:         #aed581;
+  --md-primary-fg-color:        #3a6b5a;
+  --md-primary-fg-color--light: #5b8a78;
+  --md-primary-fg-color--dark:  #284c3f;
+  --md-accent-fg-color:         #4d8d75;
+
+  --kb-surface:                 #f6f8f7;
+  --kb-border:                  rgba(58, 107, 90, 0.18);
+  --kb-accent-bar:              #3a6b5a;
+
+  /* OurPlaneCore palette — bright markers для категорий и акцентов */
+  --kb-mk-cyan:    #4FD1C5;
+  --kb-mk-magenta: #E94B7B;
+  --kb-mk-amber:   #F5B845;
+  --kb-mk-green:   #5DE065;
+  --kb-mk-orange:  #F09040;
+  --kb-mk-blue:    #5078DB;
+  --kb-mk-violet:  #B388E8;
 }
 
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color:        #43a047;
-  --md-accent-fg-color:         #c5e1a5;
+  --md-primary-fg-color:        #6f9b87;
+  --md-primary-fg-color--light: #8db6a3;
+  --md-primary-fg-color--dark:  #4d7a68;
+  --md-accent-fg-color:         #a6d4c2;
+
+  --kb-surface:                 rgba(255, 255, 255, 0.04);
+  --kb-border:                  rgba(255, 255, 255, 0.10);
+  --kb-accent-bar:              #8db6a3;
+}
+
+/* --- Шапка ----------------------------------------------------------------- */
+.md-header,
+.md-tabs {
+  background: var(--md-primary-fg-color);
+}
+
+.md-header {
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+[data-md-color-scheme="slate"] .md-header,
+[data-md-color-scheme="slate"] .md-tabs {
+  background: #1f2a26;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* --- Типографика ----------------------------------------------------------- */
@@ -39,7 +75,7 @@
   font-weight: 600;
 }
 
-/* --- Таблицы — основное представление контента в этой wiki ----------------- */
+/* --- Таблицы --------------------------------------------------------------- */
 .md-typeset table:not([class]) {
   font-size: 0.74rem;
   border: 1px solid var(--md-default-fg-color--lightest);
@@ -65,31 +101,91 @@
   background-color: var(--md-primary-fg-color);
 }
 
-/* --- Inline-код и блоки кода ---------------------------------------------- */
+/* --- Inline-код ------------------------------------------------------------ */
 .md-typeset code {
   font-size: 0.85em;
   padding: 0.1em 0.35em;
   border-radius: 3px;
 }
 
-/* --- Навигация: компактнее, чтобы дерево takeoff влезало без скролла ---- */
+/* --- Левый сайдбар: явная иерархия с отступами ---------------------------- */
 .md-nav__link {
-  margin-top: 0.35em;
-  margin-bottom: 0.35em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
 }
 
-.md-nav__item--section > .md-nav__link {
+.md-nav__item--section > .md-nav__link,
+.md-nav__item--nested > .md-nav__link {
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+}
+
+/* Каждый уровень вложенности — сдвиг + тонкая вертикальная линия */
+.md-nav .md-nav .md-nav__list {
+  padding-left: 0.55rem;
+  border-left: 1px solid var(--md-default-fg-color--lightest);
+  margin-left: 0.35rem;
+}
+
+.md-nav .md-nav .md-nav .md-nav__list {
+  padding-left: 0.7rem;
+}
+
+.md-nav__link--active,
+.md-nav__link--active code {
+  color: var(--md-primary-fg-color) !important;
   font-weight: 600;
 }
 
-/* --- Шапка страницы: чуть выраженнее лого --------------------------------- */
+/* Активная ссылка — акцентная полоса слева (как в OurPlaneCore selection) */
+.md-sidebar--primary .md-nav__item .md-nav__link--active:not(.md-nav__link--index) {
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.md-sidebar--primary .md-nav__item .md-nav__link--active:not(.md-nav__link--index)::before {
+  content: "";
+  position: absolute;
+  left: -0.55rem;
+  top: 0.15em;
+  bottom: 0.15em;
+  width: 3px;
+  border-radius: 1.5px;
+  background: var(--md-primary-fg-color);
+}
+
+.md-nav__link:hover {
+  color: var(--md-primary-fg-color);
+}
+
+/* Tabs (горизонтальная навигация) — активная вкладка с тонкой подсветкой */
+.md-tabs__link--active {
+  font-weight: 600;
+  opacity: 1 !important;
+}
+
+.md-tabs__item {
+  position: relative;
+}
+
+.md-tabs__item--active::after {
+  content: "";
+  position: absolute;
+  left: 0.6rem;
+  right: 0.6rem;
+  bottom: 0.2rem;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 1px;
+}
+
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
   height: 1.6rem;
   width: auto;
 }
 
-/* --- Static GitHub source link: no live repo facts/API calls --------------- */
+/* --- GitHub source link --------------------------------------------------- */
 .kb-source {
   display: flex;
   align-items: center;
@@ -121,112 +217,145 @@
   white-space: nowrap;
 }
 
-/* --- Главная: hero -------------------------------------------------------- */
+/* --- Главная: лёгкий hero без gradient ------------------------------------ */
 .kb-hero {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 36px 28px;
-  margin: 0 0 2rem;
-  border-radius: 14px;
-  background:
-    radial-gradient(circle at 85% 20%, rgba(67, 160, 71, 0.18), transparent 55%),
-    radial-gradient(circle at 15% 85%, rgba(46, 125, 50, 0.18), transparent 50%),
-    linear-gradient(135deg, var(--md-primary-fg-color--dark), var(--md-primary-fg-color));
-  color: #fff;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  padding: 20px 0 14px;
+  margin: 0 0 1.4rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  background: transparent;
+  color: var(--md-default-fg-color);
 }
 
 .kb-hero__eyebrow {
-  font-size: 0.72rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.66rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  opacity: 0.75;
+  letter-spacing: 0.12em;
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
   margin: 0;
+}
+
+.kb-hero__eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: var(--kb-accent-bar);
+  display: inline-block;
 }
 
 .md-typeset .kb-hero__title {
-  font-size: 1.7rem;
+  font-size: 1.55rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   margin: 0;
-  line-height: 1.15;
-  color: #fff;
+  line-height: 1.2;
+  color: var(--md-default-fg-color);
 }
 
 .kb-hero__lede {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.55;
   margin: 0;
-  max-width: 60ch;
-  opacity: 0.92;
+  max-width: 64ch;
+  color: var(--md-default-fg-color--light);
 }
 
 .kb-hero__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 8px;
+  gap: 8px;
+  margin-top: 6px;
 }
 
 .kb-hero__btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 9px 16px;
+  padding: 7px 14px;
   border-radius: 6px;
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 600;
   text-decoration: none !important;
-  transition: transform 0.15s ease, background 0.15s ease;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  border: 1px solid var(--kb-border);
 }
 
 .kb-hero__btn--primary {
-  background: #fff;
-  color: var(--md-primary-fg-color--dark) !important;
+  background: var(--md-primary-fg-color);
+  color: #fff !important;
+  border-color: var(--md-primary-fg-color);
+}
+
+.kb-hero__btn--primary:hover {
+  background: var(--md-primary-fg-color--dark);
+  border-color: var(--md-primary-fg-color--dark);
 }
 
 .kb-hero__btn--ghost {
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff !important;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.kb-hero__btn:hover {
-  transform: translateY(-1px);
+  background: transparent;
+  color: var(--md-default-fg-color) !important;
 }
 
 .kb-hero__btn--ghost:hover {
-  background: rgba(255, 255, 255, 0.22);
+  background: var(--kb-surface);
+  border-color: var(--md-primary-fg-color);
+  color: var(--md-primary-fg-color) !important;
 }
 
-[data-md-color-scheme="slate"] .kb-hero {
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
-}
-
-/* --- Главная: секционный заголовок ---------------------------------------- */
+/* --- Секционный заголовок: цветной маркер + line ------------------------- */
 .kb-section-title {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 12px;
-  margin: 2.2rem 0 1rem !important;
+  margin: 2rem 0 0.9rem !important;
   padding-top: 0 !important;
   border-top: none !important;
-  font-size: 1rem !important;
+  font-size: 0.95rem !important;
   font-weight: 600;
+  color: var(--md-default-fg-color);
+}
+
+.kb-section-title::before {
+  content: "";
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--kb-st-color, var(--md-primary-fg-color));
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0); /* placeholder for halo if needed */
 }
 
 .kb-section-title::after {
   content: "";
   flex: 1;
   height: 1px;
-  background: var(--md-default-fg-color--lightest);
+  background: linear-gradient(
+    to right,
+    var(--kb-st-color, var(--md-default-fg-color--lightest)) 0%,
+    var(--md-default-fg-color--lightest) 35%
+  );
+  opacity: 0.7;
 }
 
-/* --- Material grid cards: усилим вид -------------------------------------- */
+/* Per-section color modifiers */
+.kb-st--cyan    { --kb-st-color: var(--kb-mk-cyan); }
+.kb-st--magenta { --kb-st-color: var(--kb-mk-magenta); }
+.kb-st--amber   { --kb-st-color: var(--kb-mk-amber); }
+.kb-st--green   { --kb-st-color: var(--kb-mk-green); }
+.kb-st--orange  { --kb-st-color: var(--kb-mk-orange); }
+.kb-st--blue    { --kb-st-color: var(--kb-mk-blue); }
+.kb-st--violet  { --kb-st-color: var(--kb-mk-violet); }
+
+/* --- Material grid cards -------------------------------------------------- */
 .md-typeset .grid.cards > ul > li,
 .md-typeset .grid > .card {
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid var(--md-default-fg-color--lightest);
   transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
@@ -234,8 +363,8 @@
 .md-typeset .grid.cards > ul > li:hover,
 .md-typeset .grid > .card:hover {
   border-color: var(--md-primary-fg-color);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
 .md-typeset .grid.cards > ul > li > hr {
@@ -248,8 +377,24 @@
   fill: var(--md-primary-fg-color);
 }
 
-/* --- Картинки и схемы (везде) --------------------------------------------- */
-/* Базовое: любая картинка в контенте — отзывчивая, аккуратная.              */
+/* Per-card OurPlaneCore-style tints для иконок Material grid cards.
+   Применяй классы .kb-mk--cyan / --magenta / ... к иконке: ":icon:{ .lg .middle .kb-mk--cyan }". */
+.md-typeset .kb-mk--cyan,
+.md-typeset .kb-mk--cyan svg    { fill: var(--kb-mk-cyan) !important; color: var(--kb-mk-cyan) !important; }
+.md-typeset .kb-mk--magenta,
+.md-typeset .kb-mk--magenta svg { fill: var(--kb-mk-magenta) !important; color: var(--kb-mk-magenta) !important; }
+.md-typeset .kb-mk--amber,
+.md-typeset .kb-mk--amber svg   { fill: var(--kb-mk-amber) !important; color: var(--kb-mk-amber) !important; }
+.md-typeset .kb-mk--green,
+.md-typeset .kb-mk--green svg   { fill: var(--kb-mk-green) !important; color: var(--kb-mk-green) !important; }
+.md-typeset .kb-mk--orange,
+.md-typeset .kb-mk--orange svg  { fill: var(--kb-mk-orange) !important; color: var(--kb-mk-orange) !important; }
+.md-typeset .kb-mk--blue,
+.md-typeset .kb-mk--blue svg    { fill: var(--kb-mk-blue) !important; color: var(--kb-mk-blue) !important; }
+.md-typeset .kb-mk--violet,
+.md-typeset .kb-mk--violet svg  { fill: var(--kb-mk-violet) !important; color: var(--kb-mk-violet) !important; }
+
+/* --- Картинки ------------------------------------------------------------- */
 .md-typeset img:not(.kb-hero img):not(.md-logo img) {
   max-width: 100%;
   height: auto;
@@ -258,7 +403,6 @@
   display: block;
 }
 
-/* <figure markdown> + <figcaption> — Material поддерживает из коробки */
 .md-typeset figure {
   margin: 1.2rem auto;
   text-align: center;
@@ -281,12 +425,12 @@
   font-style: italic;
 }
 
-/* --- Галерея схем/картинок (используется на главной и любых страницах) --- */
+/* --- Старая kb-gallery (плейсхолдеры главной) ---------------------------- */
 .kb-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 14px;
-  margin: 1.2rem 0 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 1rem 0 1.6rem;
 }
 
 .kb-gallery__item {
@@ -295,7 +439,7 @@
   gap: 8px;
   padding: 10px;
   border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 10px;
+  border-radius: 8px;
   background: var(--md-default-bg-color);
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
   text-decoration: none !important;
@@ -303,18 +447,18 @@
 }
 
 .kb-gallery__item:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   border-color: var(--md-primary-fg-color);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
 .kb-gallery__item--placeholder {
   border-style: dashed;
   align-items: center;
   justify-content: center;
-  min-height: 140px;
+  min-height: 120px;
   text-align: center;
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   color: var(--md-default-fg-color--light);
 }
 
@@ -328,83 +472,201 @@
 }
 
 .kb-gallery__caption {
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   color: var(--md-default-fg-color--light);
   line-height: 1.4;
 }
 
-/* --- Rule cards: tie each image directly to the estimating rule ------------ */
-.kb-rule-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
-  margin: 1.2rem 0 2rem;
-}
-
-.kb-rule-card {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 8px;
-  background: var(--md-default-bg-color);
-  color: inherit !important;
-  text-decoration: none !important;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
-}
-
-.kb-rule-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--md-primary-fg-color);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-}
-
-.kb-rule-card img {
-  width: 100%;
-  height: auto;
-  max-height: 360px;
-  object-fit: contain;
-  border-bottom: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 0;
-  background: #fff;
-}
-
-.kb-rule-card__body {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 10px 12px 12px;
-}
-
-.kb-rule-card__title {
-  font-size: 0.8rem;
-  font-weight: 700;
-  line-height: 1.35;
-}
-
-.kb-rule-card__rule {
-  color: var(--md-primary-fg-color);
-  font-size: 0.72rem;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-.kb-rule-card__note {
-  color: var(--md-default-fg-color--light);
-  font-size: 0.72rem;
-  line-height: 1.45;
-}
-
-/* --- Inline-ряд иконок-плейсхолдеров (для plain text) -------------------- */
 .kb-gallery__item--placeholder .twemoji,
 .kb-gallery__item--placeholder svg {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   fill: var(--md-default-fg-color--lighter);
   margin-bottom: 4px;
 }
 
-/* --- Двухколоночный layout «текст слева — схема справа» ------------------ */
+/* --- <details>-обёртка для confluence-галерей ---------------------------- */
+.kb-figures {
+  margin: 1.2rem 0 1.6rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  background: var(--kb-surface);
+}
+
+.kb-figures > summary {
+  cursor: pointer;
+  padding: 0.7em 1em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+.kb-figures > summary::-webkit-details-marker { display: none; }
+
+.kb-figures > summary::before {
+  content: "▸";
+  display: inline-block;
+  color: var(--md-primary-fg-color);
+  transition: transform 0.15s ease;
+  font-size: 0.85rem;
+}
+
+.kb-figures[open] > summary::before { transform: rotate(90deg); }
+.kb-figures > summary:hover { color: var(--md-primary-fg-color); }
+.kb-figures[open] > summary { border-bottom: 1px solid var(--md-default-fg-color--lightest); }
+
+/* --- Templated grid --------------------------------------------------- */
+.kb-figure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+  padding: 12px;
+}
+
+.kb-figure {
+  display: block;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+  text-decoration: none !important;
+}
+
+.kb-figure:hover {
+  transform: translateY(-1px);
+  border-color: var(--md-primary-fg-color);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.kb-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0 !important;
+}
+
+/* --- Rule rows: «описание + картинка» стек ------------------------------ */
+.kb-figure-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 1.2rem;
+  align-items: start;
+  padding: 1rem 1.1rem;
+  margin: 0;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.kb-figure-row:last-child { border-bottom: none; }
+
+@media (max-width: 720px) {
+  .kb-figure-row { grid-template-columns: 1fr; gap: 0.7rem; }
+}
+
+.kb-figure-row__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  text-align: left;
+  font-style: normal;
+  margin: 0;
+}
+
+.kb-figure-row__title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+  line-height: 1.35;
+}
+
+.kb-figure-row__rule {
+  font-size: 0.78rem;
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.kb-figure-row__note {
+  font-size: 0.74rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.5;
+}
+
+.kb-figure-row__image {
+  display: block;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  text-decoration: none !important;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.kb-figure-row__image:hover {
+  border-color: var(--md-primary-fg-color);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.kb-figure-row__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0 !important;
+  background: #fff;
+}
+
+/* --- Hotkey cards (Excel macro hotkeys) ----------------------------------- */
+.md-typeset .kb-hotkey-cards.grid.cards > ul > li {
+  padding: 14px 16px 6px;
+}
+
+.md-typeset .kb-hotkey-cards.grid.cards table:not([class]) {
+  font-size: 0.72rem;
+  border: none;
+  margin: 0.4em 0 0.6em;
+}
+
+.md-typeset .kb-hotkey-cards.grid.cards table:not([class]) th {
+  display: none;
+}
+
+.md-typeset .kb-hotkey-cards.grid.cards table:not([class]) td {
+  padding: 0.25em 0.5em;
+  border: none;
+  vertical-align: middle;
+}
+
+.md-typeset .kb-hotkey-cards.grid.cards table:not([class]) td:first-child {
+  white-space: nowrap;
+  width: 1%;
+  padding-right: 0.7em;
+}
+
+.md-typeset .kb-hotkey-cards.grid.cards kbd {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 0.05em 0.4em;
+  font-size: 0.74rem;
+  font-family: 'JetBrains Mono', Consolas, monospace;
+  color: var(--md-default-fg-color);
+  box-shadow: none;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .kb-hotkey-cards.grid.cards kbd {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* --- Двухколоночный layout «текст + схема» ------------------------------ */
 .kb-split {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -417,27 +679,19 @@
   .kb-split { grid-template-columns: 1fr; }
 }
 
-/* --- Схема, которая занимает всю ширину контента ------------------------- */
 .kb-schema-full img {
   width: 100%;
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* --- Footer: убрать лишний воздух ----------------------------------------- */
-.md-footer-meta {
-  font-size: 0.7rem;
-}
+/* --- Footer --------------------------------------------------------------- */
+.md-footer-meta { font-size: 0.7rem; }
 
-/* --- Печатная версия (вдруг распечатают чек-лист) ------------------------- */
 @media print {
   .md-sidebar,
   .md-header,
   .md-footer,
-  .md-tabs {
-    display: none !important;
-  }
-  .md-content {
-    margin: 0 !important;
-  }
+  .md-tabs { display: none !important; }
+  .md-content { margin: 0 !important; }
 }
