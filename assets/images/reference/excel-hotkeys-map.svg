@@ -1,98 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
-  <title id="title">Excel hotkeys keyboard map</title>
-  <desc id="desc">Keyboard zones for Excel estimating work: navigation, edit, formulas, formatting, filters, and paste values.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="640" viewBox="0 0 1040 640" role="img" aria-labelledby="title desc">
+  <title id="title">Excel macro hotkeys map</title>
+  <desc id="desc">Grouped macro hotkeys for PlanSwift formatting, cleanup, forms and output checks.</desc>
   <defs>
     <style>
-      .bg { fill: #f7faf7; }
+      .bg { fill: #f6faf6; }
       .panel { fill: #ffffff; stroke: #bfd4bf; stroke-width: 2; }
-      .key { fill: #eef5ee; stroke: #8aae8a; stroke-width: 1.5; rx: 8; }
-      .key-strong { fill: #dff3df; stroke: #498a49; stroke-width: 2; rx: 8; }
-      .label { fill: #1f3321; font-family: Inter, Arial, sans-serif; font-size: 20px; font-weight: 700; }
-      .small { fill: #334a35; font-family: Inter, Arial, sans-serif; font-size: 15px; }
-      .tiny { fill: #3f5541; font-family: Inter, Arial, sans-serif; font-size: 13px; }
-      .chip { fill: #e8f7d6; stroke: #87aa54; stroke-width: 1.5; rx: 14; }
-      .line { stroke: #6a936a; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .group { fill: #f8fcf8; stroke: #8caf8c; stroke-width: 1.6; }
+      .head { fill: #dff3df; stroke: #498a49; stroke-width: 1.5; }
+      .title { fill: #1f3321; font-family: Inter, Arial, sans-serif; font-size: 24px; font-weight: 700; }
+      .subtitle { fill: #334a35; font-family: Inter, Arial, sans-serif; font-size: 15px; }
+      .label { fill: #1f3321; font-family: Inter, Arial, sans-serif; font-size: 16px; font-weight: 700; }
+      .text { fill: #344936; font-family: Inter, Arial, sans-serif; font-size: 14px; }
+      .key { fill: #e8f7d6; stroke: #87aa54; stroke-width: 1.3; rx: 9; }
+      .key2 { fill: #eef5ee; stroke: #8aae8a; stroke-width: 1.3; rx: 9; }
+      .kbd { fill: #243925; font-family: JetBrains Mono, Consolas, monospace; font-size: 13px; font-weight: 700; }
     </style>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L8,3 z" fill="#6a936a"/>
-    </marker>
   </defs>
 
-  <rect class="bg" width="960" height="520"/>
-  <rect class="panel" x="32" y="30" width="896" height="460" rx="18"/>
+  <rect class="bg" width="1040" height="640"/>
+  <rect class="panel" x="32" y="28" width="976" height="584" rx="18"/>
+  <text class="title" x="64" y="72">Excel macro hotkeys</text>
+  <text class="subtitle" x="64" y="100">Custom VBA shortcuts for PlanSwift output, cleanup, forms, and final check.</text>
 
-  <text class="label" x="64" y="74">Excel hotkeys map</text>
-  <text class="small" x="64" y="102">Use these zones during takeoff output: move fast, keep formulas visible, paste clean values.</text>
-
-  <g transform="translate(64 142)">
-    <rect class="key-strong" x="0" y="0" width="70" height="48"/>
-    <text class="small" x="22" y="30">Esc</text>
-    <rect class="key-strong" x="88" y="0" width="70" height="48"/>
-    <text class="small" x="113" y="30">F2</text>
-    <rect class="key" x="176" y="0" width="70" height="48"/>
-    <text class="small" x="200" y="30">F4</text>
-    <rect class="key" x="264" y="0" width="70" height="48"/>
-    <text class="small" x="288" y="30">F9</text>
-    <rect class="key" x="352" y="0" width="70" height="48"/>
-    <text class="small" x="374" y="30">F11</text>
-
-    <rect class="key" x="0" y="70" width="70" height="48"/>
-    <text class="small" x="24" y="100">Ctrl</text>
-    <rect class="key" x="88" y="70" width="70" height="48"/>
-    <text class="small" x="114" y="100">C</text>
-    <rect class="key" x="176" y="70" width="70" height="48"/>
-    <text class="small" x="203" y="100">V</text>
-    <rect class="key" x="264" y="70" width="70" height="48"/>
-    <text class="small" x="290" y="100">Z</text>
-    <rect class="key" x="352" y="70" width="70" height="48"/>
-    <text class="small" x="379" y="100">Y</text>
-
-    <rect class="key" x="0" y="140" width="70" height="48"/>
-    <text class="small" x="24" y="170">Alt</text>
-    <rect class="key" x="88" y="140" width="70" height="48"/>
-    <text class="small" x="112" y="170">H</text>
-    <rect class="key" x="176" y="140" width="70" height="48"/>
-    <text class="small" x="202" y="170">V</text>
-    <rect class="key" x="264" y="140" width="70" height="48"/>
-    <text class="small" x="290" y="170">I</text>
-    <rect class="key" x="352" y="140" width="70" height="48"/>
-    <text class="small" x="378" y="170">D</text>
-
-    <rect class="key-strong" x="470" y="0" width="82" height="48"/>
-    <text class="small" x="486" y="30">Home</text>
-    <rect class="key-strong" x="568" y="0" width="82" height="48"/>
-    <text class="small" x="594" y="30">End</text>
-    <rect class="key" x="666" y="0" width="82" height="48"/>
-    <text class="small" x="681" y="30">PgUp</text>
-    <rect class="key" x="764" y="0" width="82" height="48"/>
-    <text class="small" x="778" y="30">PgDn</text>
-
-    <rect class="key" x="568" y="92" width="82" height="48"/>
-    <text class="small" x="598" y="122">Up</text>
-    <rect class="key" x="470" y="150" width="82" height="48"/>
-    <text class="small" x="490" y="180">Left</text>
-    <rect class="key" x="568" y="150" width="82" height="48"/>
-    <text class="small" x="590" y="180">Down</text>
-    <rect class="key" x="666" y="150" width="82" height="48"/>
-    <text class="small" x="686" y="180">Right</text>
+  <g transform="translate(64 132)">
+    <rect class="group" x="0" y="0" width="440" height="178" rx="14"/>
+    <rect class="head" x="0" y="0" width="440" height="42" rx="14"/>
+    <text class="label" x="18" y="27">PlanSwift formatting</text>
+    <rect class="key" x="18" y="62" width="112" height="30"/><text class="kbd" x="34" y="82">Ctrl+Shift+B</text>
+    <text class="text" x="148" y="82">Format Beams</text>
+    <rect class="key" x="18" y="102" width="112" height="30"/><text class="kbd" x="34" y="122">Ctrl+Shift+J</text>
+    <text class="text" x="148" y="122">Format Joists</text>
+    <rect class="key" x="18" y="142" width="112" height="30"/><text class="kbd" x="34" y="162">Ctrl+Shift+R</text>
+    <text class="text" x="148" y="162">Format Details</text>
   </g>
 
-  <g transform="translate(72 380)">
-    <rect class="chip" x="0" y="0" width="155" height="34"/>
-    <text class="tiny" x="18" y="22">F2: edit cell</text>
-    <rect class="chip" x="170" y="0" width="168" height="34"/>
-    <text class="tiny" x="188" y="22">Ctrl+Arrow: jump</text>
-    <rect class="chip" x="356" y="0" width="170" height="34"/>
-    <text class="tiny" x="374" y="22">Ctrl+Shift+L: filter</text>
-    <rect class="chip" x="544" y="0" width="152" height="34"/>
-    <text class="tiny" x="562" y="22">Ctrl+1: format</text>
-    <rect class="chip" x="712" y="0" width="122" height="34"/>
-    <text class="tiny" x="730" y="22">Alt+=: sum</text>
+  <g transform="translate(536 132)">
+    <rect class="group" x="0" y="0" width="440" height="178" rx="14"/>
+    <rect class="head" x="0" y="0" width="440" height="42" rx="14"/>
+    <text class="label" x="18" y="27">Cleanup cells / rows</text>
+    <rect class="key2" x="18" y="62" width="74" height="30"/><text class="kbd" x="34" y="82">Ctrl+Q</text>
+    <text class="text" x="110" y="82">Delete selected cells, shift up</text>
+    <rect class="key2" x="18" y="102" width="74" height="30"/><text class="kbd" x="34" y="122">Ctrl+W</text>
+    <text class="text" x="110" y="122">Add selected cells, shift up</text>
+    <rect class="key2" x="18" y="142" width="74" height="30"/><text class="kbd" x="34" y="162">Ctrl+E</text>
+    <text class="text" x="110" y="162">Delete zero rows in column C</text>
   </g>
 
-  <path class="line" d="M160 332 C150 304, 150 260, 150 210"/>
-  <path class="line" d="M342 332 C340 294, 340 250, 340 210"/>
-  <path class="line" d="M624 332 C640 290, 672 254, 710 230"/>
+  <g transform="translate(64 338)">
+    <rect class="group" x="0" y="0" width="440" height="198" rx="14"/>
+    <rect class="head" x="0" y="0" width="440" height="42" rx="14"/>
+    <text class="label" x="18" y="27">Forms / output write</text>
+    <rect class="key" x="18" y="62" width="112" height="30"/><text class="kbd" x="34" y="82">Ctrl+Shift+W</text>
+    <text class="text" x="148" y="82">Write wall values to form</text>
+    <rect class="key" x="18" y="102" width="112" height="30"/><text class="kbd" x="34" y="122">Ctrl+Shift+Q</text>
+    <text class="text" x="148" y="122">Write area values to form</text>
+    <rect class="key" x="18" y="142" width="112" height="30"/><text class="kbd" x="34" y="162">Ctrl+Shift+N</text>
+    <text class="text" x="148" y="162">Write to check</text>
+  </g>
 
-  <text class="tiny" x="72" y="456">Tip: keep the mouse for checking drawings, but use keyboard for Excel entry and cleanup.</text>
+  <g transform="translate(536 338)">
+    <rect class="group" x="0" y="0" width="440" height="198" rx="14"/>
+    <rect class="head" x="0" y="0" width="440" height="42" rx="14"/>
+    <text class="label" x="18" y="27">Helpers and final check</text>
+    <rect class="key2" x="18" y="62" width="112" height="30"/><text class="kbd" x="34" y="82">Ctrl+Shift+F</text>
+    <text class="text" x="148" y="82">Sum same values</text>
+    <rect class="key2" x="18" y="102" width="112" height="30"/><text class="kbd" x="34" y="122">Ctrl+Shift+I</text>
+    <text class="text" x="148" y="122">Insert Note: text</text>
+    <rect class="key2" x="18" y="142" width="112" height="30"/><text class="kbd" x="34" y="162">Ctrl+Shift+O</text>
+    <text class="text" x="148" y="162">Set date</text>
+  </g>
+
+  <g transform="translate(64 558)">
+    <rect class="key" x="0" y="0" width="92" height="30"/><text class="kbd" x="16" y="20">Ctrl+M</text>
+    <text class="text" x="104" y="20">Multiply all in cell</text>
+    <rect class="key" x="276" y="0" width="112" height="30"/><text class="kbd" x="292" y="20">Ctrl+Shift+V</text>
+    <text class="text" x="400" y="20">Remove validations</text>
+    <rect class="key" x="620" y="0" width="112" height="30"/><text class="kbd" x="636" y="20">Ctrl+Shift+L</text>
+    <text class="text" x="744" y="20">Add bolts block</text>
+  </g>
 </svg>
