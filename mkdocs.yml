@@ -49,7 +49,6 @@ nav:
 
   - Старт:
       - Как пользоваться: start/how-to-use.md
-      - Программа: start/ourplanecore.md
       - Workflow: start/workflow.md
       - Структура takeoff: start/takeoff-structure.md
       - QA checklist: start/quality-checklist.md
@@ -142,6 +141,8 @@ nav:
 
   - Справочник:
       - Советы и важные вещи: reference/boss-feedback-rules.md
+      - Как называть takeoffs: reference/takeoff-naming.md
+      - OurPlaneCore — программа: reference/ourplanecore.md
       - Hangers: reference/hangers.md
       - Excel macro hotkeys: reference/excel-hotkeys.md
       - Формулы и факторы: reference/formulas.md
