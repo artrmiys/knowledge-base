@@ -7,6 +7,75 @@
     Названия кнопок даны **как в интерфейсе** (англ.), пояснение — рус.
     Тултипы кнопок в программе совпадают с описанием здесь.
 
+## Скриншоты { .kb-section-title .kb-st--cyan }
+
+Снято на реальном job (имена не скрыты — рабочий вид интерфейса).
+
+<details class="kb-figures" open>
+  <summary>Скрыть скриншоты</summary>
+
+<figure markdown>
+  ![Main View](../assets/images/ourplanecore/opc-guide-main-view.png)
+  <figcaption><code>1 Main View</code> — ribbon, Pages-дерево, PDF-вьюпорт, Takeoffs-дерево, tool strip, ползунки.</figcaption>
+</figure>
+
+<figure markdown>
+  ![Ribbon Main](../assets/images/ourplanecore/opc-guide-ribbon-main.png)
+  <figcaption>Ribbon <code>Main</code>: Open/Import, PlanSwift, Export, Name, Scale, Name+Scale, AI Fill, Crop Hints.</figcaption>
+</figure>
+
+<figure markdown>
+  ![Ribbon Page](../assets/images/ourplanecore/opc-guide-ribbon-page.png)
+  <figcaption>Ribbon <code>Page</code>: Add Pages, Batch Rename, Rotate/Flip/Invert, Crop New Page, Set/Offset Origin, Close.</figcaption>
+</figure>
+
+<figure markdown>
+  ![Ribbon PDF Output](../assets/images/ourplanecore/opc-guide-ribbon-pdf-output.png)
+  <figcaption>Ribbon <code>PDF Output</code>: Lines &amp; Area, Labels, Overlays (Legend/Header), Include Meas/Markups.</figcaption>
+</figure>
+
+<figure markdown>
+  ![Ribbon Viewport](../assets/images/ourplanecore/opc-guide-ribbon-viewport.png)
+  <figcaption>Ribbon <code>Viewport</code>: ползунки Line/Point/Edge/Fill, Labels, Legend/Header, Units &amp; View, Dark.</figcaption>
+</figure>
+
+<figure markdown>
+  ![Sheet Manager](../assets/images/ourplanecore/opc-guide-sheet-manager.png)
+  <figcaption><code>2 Sheet Manager</code>: таблица листов — №, Proposed Name, Scale, Confidence, Why, Warnings.</figcaption>
+</figure>
+
+<figure markdown>
+  ![Takeoff Manager](../assets/images/ourplanecore/opc-guide-takeoff-manager.png)
+  <figcaption><code>3 Takeoff Manager</code>: Item / Type / Sections / Total / Unit / Notes / Folder + экспорт.</figcaption>
+</figure>
+
+<figure markdown>
+  ![Report Builder](../assets/images/ourplanecore/opc-guide-report-builder.png)
+  <figcaption><code>4 Report Builder</code>: сборка report-блоков из <code>TemplateCom.xlsm</code>.</figcaption>
+</figure>
+
+<figure markdown>
+  ![Materials](../assets/images/ourplanecore/opc-guide-materials.png)
+  <figcaption><code>5 Materials</code>: Extract / Report Sheet / JSON / Rows-Summary CSV.</figcaption>
+</figure>
+
+<figure markdown>
+  ![AI Manager](../assets/images/ourplanecore/opc-guide-ai-manager.png)
+  <figcaption><code>6 AI Manager</code>: наблюдения, Run AI / Run New / Retry, маркер-сеты.</figcaption>
+</figure>
+
+<figure markdown>
+  ![3D](../assets/images/ourplanecore/opc-guide-3d.png)
+  <figcaption><code>7 3D</code>: Auto/Wall/Roof build + 3D viewer (Fit/Iso/Top/Front/Reset).</figcaption>
+</figure>
+
+<figure markdown>
+  ![Settings](../assets/images/ourplanecore/opc-guide-settings.png)
+  <figcaption><code>8 Settings</code>: редактируемые правила (Page Folders, Sort A/S, Auto Rename/Scale, Defaults…).</figcaption>
+</figure>
+
+</details>
+
 ## От и до — рабочий процесс { .kb-section-title .kb-st--green }
 
 1. **Создать / открыть job.** Таб `1 Main View` → `Open / Import`
