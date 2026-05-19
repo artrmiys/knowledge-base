@@ -128,6 +128,7 @@ nav:
           - Balcony: work/sqfts/balcony.md
           - Cantilevered: work/sqfts/cantilevered.md
       - Deck / Porch / Balcony:
+          - Frame (deck/porch/balcony): work/deck/deck-porch-balcony-frame.md
           - Railing: work/deck/railing.md
           - Balcony Trims: work/deck/balcony-trims.md
           - Anchor Bolts: work/deck/anchor-bolts.md

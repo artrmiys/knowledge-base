@@ -1,5 +1,9 @@
 # Anchor Bolts
 
+!!! info "Связано"
+    Ledger/post attachment для deck/porch/balcony — в контексте каркаса:
+    [Deck / Porch / Balcony Frame](deck-porch-balcony-frame.md).
+
 ## Что считать
 
 - Anchor bolts, holdown anchors, deck/balcony attachment bolts и washers там,

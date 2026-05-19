@@ -4,6 +4,7 @@
     Balcony / deck / porch отделка целиком разобрана в разделе
     [Exterior Trims → Porch / Deck / Balcony](../exterior-trims/porch-deck-balcony.md),
     включая balcony composition (pavers / membrane) и правило «by others».
+    Структурный каркас — [Deck / Porch / Balcony Frame](deck-porch-balcony-frame.md).
 
 ## Что считать
 

@@ -292,6 +292,113 @@ Sheet Manager нужен, чтобы **не применять auto-renaming/sca
 - **No hidden magic** — если программа не уверена, она говорит почему.
 - **Manual fallback** — ручной takeoff всегда работает, AI его не ломает.
 
+## Архитектура { .kb-section-title .kb-st--blue }
+
+Для понимания, почему программа ведёт себя именно так (не для разработки).
+
+- **Стек:** WPF desktop, `.NET 9` (`net9.0-windows`), `x64`. Namespace
+  `OurPlaneCore`. Близкий функциональный клон PlanSwift.
+- **Three-panel shell** (`MainWindow` + множество `MainWindow.*.cs`
+  partials — pages, takeoffs, estimating, export, AI, 3D):
+    - слева **Pages tree** — импортированные PDF sheets по папкам;
+    - центр **PDF viewport** — SkiaSharp-overlay поверх отрендеренного PDF;
+    - справа **Takeoffs tree** — items (контейнеры measurements) в папках;
+    - снизу **AI Inbox** (сворачиваемый) — pending-наблюдения и draft-действия.
+- **PDF-рендер в два слоя:**
+    1. статичная картинка страницы — Python-воркер (PyMuPDF,
+       `pdf_layers_helper.py`, живёт как процесс) с layer-aware рендером и
+       извлечением sheet-метаданных;
+    2. overlay measurements — `PdfViewport` (SkiaSharp): pan/zoom, tools,
+       rubber-band, vertex editing;
+    3. fallback — Docnet/PDFium, если Python недоступен.
+- **Геометрия:** `Line` = сумма отрезков в PDF-точках × scale; `Area` =
+  shoelace по полигону; `Count` = число маркеров. Каждый `Measurement`
+  хранит свой `PageFolder` + scale → один item может идти по нескольким
+  sheet с разным масштабом.
+- **Autosave** — debounce 500 мс после любого изменения measurement.
+- **Настройки приложения:** `%APPDATA%\OurPlaneCore\settings.json`;
+  логи — `%APPDATA%\OurPlaneCore\logs\app-<yyyyMMdd>.log`.
+
+| Слой данных | Модель | Хранит |
+| --- | --- | --- |
+| Job/pages | `OurPlaneCoreJob` (+ `JobStore`) | дерево job/page/folder, persistence |
+| Measurement | `Measurement` | `SKPoint[]` в PDF-координатах + per-measure scale |
+| Takeoff item | `TakeoffItem` | контейнер measurements с фиксированным типом |
+| Units | `UnitMode` / `Units` | Metric/Imperial формат |
+| AI | `SmartContextStore` / `SmartLearningStore` | observations, requests/responses, обучение rename/scale |
+| OpenAI | `OpenAiRequestRunner` | HTTP к `/v1/responses`, ключ из `OPENAI_API_KEY` |
+
+## «8 Settings» — редактируемые правила { .kb-section-title .kb-st--orange }
+
+Верхний таб **8 Settings** — канонический дом для всех редактируемых
+шаблонов и правил. Поведение-определяющие константы не зашиты в код, а
+вынесены сюда. Категории:
+
+| Категория | Что настраивает |
+| --- | --- |
+| `Page Folders` | шаблон папок для sheets |
+| `Auto Tree` | авто-дерево takeoff'ов |
+| `From Pages` | генерация из pages |
+| `Sort A/S` | `A`→Arch, `S`→Struct, trailing `-`→Others |
+| `Sort D/Sec/WT` | Details / Sections / Wall-Type раскладка |
+| `Auto Rename / Scale` | правила авто-имени и масштаба |
+| `Defaults` | дефолты по умолчанию |
+
+Каждая категория: live-редактор (точное зеркало результата), `Reset to
+default`, `Save global default`, `Save as this job`, `Apply`. Разрешение
+правила: **job override → global → default** (`SettingsPresetStore`:
+global в `SmartContextStore/presets/`, per-job в `<job>/AI_Context/settings/`).
+
+## Полная карта возможностей { .kb-section-title .kb-st--violet }
+
+| Область | Что есть |
+| --- | --- |
+| Pages | импорт PDF, папки, drag/drop, organization, метаданные, page tabs, detached sheet window, page setup, bookmarks |
+| Layers | layer visibility, **Layer Trace**, PDF geometry highlight/trace |
+| Takeoffs | items/folders, multi-select, copy/cut/paste, undo, bulk properties, sections order, auto-routing, joist calculator |
+| Tools | Count / Line / Area / J Area / Scale / Ruler, Snap / PDF Snap / Ortho, vertex & transform editing, note editing, cut regions |
+| Estimating | Estimating window, Takeoff Manager, current-sheet filter, notes export |
+| Export | CSV / TXT / Excel, `Current Excel` (в открытый workbook), PlanSwift import/export |
+| Material | Material Extraction + Material Report page |
+| AI | AI Inbox, marker sets / training, crop bookmarks, OpenAI settings, learned rules, action review |
+| 3D Massing | footprint/walls/roof из markers, roof guides/eaves/ridges/rakes, openings review, 3D viewer |
+| Командное | Command Palette (++ctrl+shift+p++), workspace tabs, shortcuts map |
+
+## Disk-модель (расширенно) { .kb-section-title .kb-st--cyan }
+
+```text
+<job>/
+  Pages/        PDF sheet folders (00. imported/, --------others/, …)
+  Takeoffs/     item folders, measurements.json в каждом
+  sources/      исходные PDF
+  AI_Context/   observations.jsonl, requests/, responses/, crops/,
+                markers/, learning/, settings/
+  Data.xml      per-folder item metadata
+```
+
+- **Local-first** — ничего в облаке; job полностью на диске.
+- AI работает **файлами**: запрос → `AI_Context/requests/`, ответ →
+  `responses/`, нарисованная geometry → `actions/`, всегда с crop-evidence.
+- Per-job настройки правил — в `AI_Context/settings/`.
+
+## Сборка и обновление { .kb-section-title .kb-st--amber }
+
+```powershell
+dotnet restore .\ourplanecore.sln
+dotnet build   .\ourplanecore.sln
+dotnet run --project .\ourplanecore.csproj
+```
+
+- Без параллельных билдов (lock в `obj\Debug\net9.0-windows`).
+- Release single-file (~166 МБ, сжатый) → кладётся в
+  `C:\Users\User\Desktop\updates\OurPlaneCore\ourplanecore.exe`, Desktop-ярлык
+  указывает туда (working dir — та же папка). Это тот же ярлык, что в
+  `wiki.url`-стиле — программа берётся из update-папки, не из Debug.
+- «Запустилось ли» проверяют **не** по окну (crash тоже показывает окно
+  `OurPlaneCore`), а по `%APPDATA%\OurPlaneCore\logs\app-<date>.log` от
+  последней `Application startup.`: процесс жив + нет `ERROR` после маркера
+  + есть `Loaded takeoffs` / `Viewport`.
+
 ## See also
 
 - [Как называть takeoffs](takeoff-naming.md) — правила naming + auto-routing

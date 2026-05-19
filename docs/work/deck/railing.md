@@ -1,5 +1,11 @@
 # Railing
 
+!!! info "Frame vs finish"
+    Structural railing posts / blocking / bolts — в
+    [Deck / Porch / Balcony Frame](deck-porch-balcony-frame.md).
+    Railing-системы (composite/Azek/cable/metal) и cap rail — в
+    [Exterior Trims → Rails & Decking](../exterior-trims/rails-decking.md).
+
 ## Что считать
 
 - Railing LF, posts, blocking, attachments и special trims, когда in scope.
