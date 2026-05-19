@@ -7,43 +7,13 @@
     Названия кнопок даны **как в интерфейсе** (англ.), пояснение — рус.
     Тултипы кнопок в программе совпадают с описанием здесь.
 
-## Скриншоты { .kb-section-title .kb-st--cyan }
+Скриншоты — фрагментами **прямо у соответствующих разделов** ниже (снято
+на реальном job, рабочий вид). Полный вид главного окна:
 
-Снято на реальном job (имена не скрыты — рабочий вид интерфейса). Клик —
-открыть в полном размере.
-
-<details class="kb-figures" open>
-  <summary>Скрыть скриншоты</summary>
-  <div class="kb-figure-grid">
-    <a class="kb-figure" href="../../assets/images/ourplanecore/opc-guide-main-view.png" target="_blank" rel="noopener"><img src="../../assets/images/ourplanecore/opc-guide-main-view.png" alt="1 Main View — ribbon, Pages tree, PDF viewport, Takeoffs tree, tool strip, sliders" loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/ourplanecore/opc-guide-ribbon-main.png" target="_blank" rel="noopener"><img src="../../assets/images/ourplanecore/opc-guide-ribbon-main.png" alt="Ribbon Main: Open/Import, PlanSwift, Export, Name, Scale, Name+Scale, AI Fill, Crop Hints" loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/ourplanecore/opc-guide-ribbon-page.png" target="_blank" rel="noopener"><img src="../../assets/images/ourplanecore/opc-guide-ribbon-page.png" alt="Ribbon Page: Add Pages, Batch Rename, Rotate/Flip/Invert, Crop New Page, Set/Offset Origin, Close" loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/ourplanecore/opc-guide-ribbon-pdf-output.png" target="_blank" rel="noopener"><img src="../../assets/images/ourplanecore/opc-guide-ribbon-pdf-output.png" alt="Ribbon PDF Output: Lines & Area, Labels, Overlays (Legend/Header), Include Meas/Markups" loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/ourplanecore/opc-guide-ribbon-viewport.png" target="_blank" rel="noopener"><img src="../../assets/images/ourplanecore/opc-guide-ribbon-viewport.png" alt="Ribbon Viewport: Line/Point/Edge/Fill sliders, Labels, Legend/Header, Units & View, Dark" loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/ourplanecore/opc-guide-sheet-manager.png" target="_blank" rel="noopener"><img src="../../assets/images/ourplanecore/opc-guide-sheet-manager.png" alt="2 Sheet Manager: sheet table — number, Proposed Name, Scale, Confidence, Why, Warnings" loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/ourplanecore/opc-guide-takeoff-manager.png" target="_blank" rel="noopener"><img src="../../assets/images/ourplanecore/opc-guide-takeoff-manager.png" alt="3 Takeoff Manager: Item / Type / Sections / Total / Unit / Notes / Folder + export" loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/ourplanecore/opc-guide-report-builder.png" target="_blank" rel="noopener"><img src="../../assets/images/ourplanecore/opc-guide-report-builder.png" alt="4 Report Builder: report blocks from TemplateCom.xlsm" loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/ourplanecore/opc-guide-materials.png" target="_blank" rel="noopener"><img src="../../assets/images/ourplanecore/opc-guide-materials.png" alt="5 Materials: Extract / Report Sheet / JSON / Rows-Summary CSV" loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/ourplanecore/opc-guide-ai-manager.png" target="_blank" rel="noopener"><img src="../../assets/images/ourplanecore/opc-guide-ai-manager.png" alt="6 AI Manager: observations, Run AI / Run New / Retry, marker sets" loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/ourplanecore/opc-guide-3d.png" target="_blank" rel="noopener"><img src="../../assets/images/ourplanecore/opc-guide-3d.png" alt="7 3D: Auto/Wall/Roof build + 3D viewer (Fit/Iso/Top/Front/Reset)" loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/ourplanecore/opc-guide-settings.png" target="_blank" rel="noopener"><img src="../../assets/images/ourplanecore/opc-guide-settings.png" alt="8 Settings: editable rules (Page Folders, Sort A/S, Auto Rename/Scale, Defaults)" loading="lazy"></a>
-  </div>
-</details>
-
-| Скриншот | Что на нём |
-| --- | --- |
-| Main View | `1 Main View` — ribbon, Pages-дерево, PDF-вьюпорт, Takeoffs-дерево, tool strip, ползунки |
-| Ribbon Main | Open/Import, PlanSwift, Export, Name, Scale, Name+Scale, AI Fill, Crop Hints |
-| Ribbon Page | Add Pages, Batch Rename, Rotate/Flip/Invert, Crop New Page, Set/Offset Origin, Close |
-| Ribbon PDF Output | Lines & Area, Labels, Overlays (Legend/Header), Include Meas/Markups |
-| Ribbon Viewport | ползунки Line/Point/Edge/Fill, Labels, Legend/Header, Units & View, Dark |
-| Sheet Manager | таблица листов: №, Proposed Name, Scale, Confidence, Why, Warnings |
-| Takeoff Manager | Item / Type / Sections / Total / Unit / Notes / Folder + экспорт |
-| Report Builder | сборка report-блоков из `TemplateCom.xlsm` |
-| Materials | Extract / Report Sheet / JSON / Rows-Summary CSV |
-| AI Manager | наблюдения, Run AI / Run New / Retry, маркер-сеты |
-| 3D | Auto/Wall/Roof build + 3D viewer (Fit/Iso/Top/Front/Reset) |
-| Settings | редактируемые правила (Page Folders, Sort A/S, Auto Rename/Scale, Defaults…) |
+<figure markdown>
+  ![1 Main View — общий вид](../assets/images/ourplanecore/opc-guide-main-view.png)
+  <figcaption><code>1 Main View</code>: ribbon сверху, Pages-дерево слева, PDF-вьюпорт по центру, Takeoffs-дерево справа, tool strip снизу.</figcaption>
+</figure>
 
 ## От и до — рабочий процесс { .kb-section-title .kb-st--green }
 
@@ -101,6 +71,11 @@
 | `AI Fill` | Очередь GPT-fallback для отсутствующих метаданных |
 | `Crop Hints` | Нарисовать переиспользуемые кроп-боксы для номера листа и масштаба |
 
+<figure markdown>
+  ![Ribbon Main](../assets/images/ourplanecore/opc-frag-ribbon-main.png)
+  <figcaption>Ribbon <code>Main</code> + строка workspace-табов под ним.</figcaption>
+</figure>
+
 ### Таб `Page`
 
 | Кнопка | Действие |
@@ -117,6 +92,27 @@
 | `Set Origin` | Отметить центр видимой страницы как origin |
 | `Offset Origin` | Сдвинуть сохранённый origin |
 | `Close Page` | Закрыть вкладку активной страницы |
+
+<figure markdown>
+  ![Ribbon Page](../assets/images/ourplanecore/opc-frag-ribbon-page.png)
+  <figcaption>Ribbon <code>Page</code>: Add Pages, Batch Rename, Rotate, Flip, Invert, Crop, Origin, Close.</figcaption>
+</figure>
+
+### Таб `PDF Output`
+
+Настройки **экспортного рендера** PDF (как measurements/markups лягут в файл).
+
+| Контрол | Действие |
+| --- | --- |
+| `Lines & Area` ползунки | Толщина/заливка линий и площадей в экспорте |
+| `Labels` | Какие value-лейблы включать |
+| Overlays `Legend` / `Header` | Включать легенду / заголовок масштаба |
+| `Include` `Meas` / `Markups` | Включать замеры / аннотации в PDF |
+
+<figure markdown>
+  ![Ribbon PDF Output](../assets/images/ourplanecore/opc-frag-ribbon-pdf-output.png)
+  <figcaption>Ribbon <code>PDF Output</code>: Lines &amp; Area, Labels, Overlays, Include Meas/Markups.</figcaption>
+</figure>
 
 ### Таб `Viewport`
 
@@ -135,6 +131,13 @@
 | `Dark` toggle | Тёмная тема |
 
 ## Панель инструментов (tool strip) { .kb-section-title .kb-st--green }
+
+Нижняя строка под вьюпортом — основные инструменты и слайдеры выделения.
+
+<figure markdown>
+  ![Tool strip](../assets/images/ourplanecore/opc-frag-toolstrip.png)
+  <figcaption>Tool strip: Pan/Select/Scale/Ruler · Annotation · Count/Line/Area/J Area/Cut · Record · Snap/PDF Snap/Ortho/Box · Fit/+/− · Flip · Rot/Scale ползунки · Scale/Set/Presets.</figcaption>
+</figure>
 
 | Кнопка | Tag / клавиша | Действие |
 | --- | --- | --- |
@@ -185,6 +188,11 @@
     У большинства ползунков есть текст-поле: впиши значение и `Enter` —
     точная установка без перетаскивания.
 
+<figure markdown>
+  ![Viewport sliders](../assets/images/ourplanecore/opc-frag-ribbon-viewport.png)
+  <figcaption>Ползунки в ribbon <code>Viewport</code>: Line / Point / Edge / Fill + поля ввода, Labels, Legend/Header.</figcaption>
+</figure>
+
 ## Левая панель — Pages { .kb-section-title .kb-st--magenta }
 
 | Контрол | Действие |
@@ -203,6 +211,11 @@
 | Под-таб `PDF Layers` | `Load`, `On`, `Off`, `Clear Hi`, `Layer Trace` toggle, `Cycle`, `Apply` |
 | `Layer Trace` (viewport) toggle / `Cycle` | Трассировка PDF-слоёв прямо во вьюпорте |
 
+<figure markdown>
+  ![Pages panel](../assets/images/ourplanecore/opc-frag-pages.png)
+  <figcaption>Левая панель <code>Pages</code>: Tabs/Detach/Tile M2, под-табы Pages/PDF Layers/Bookmarks, дерево листов, Page Setup.</figcaption>
+</figure>
+
 ## Правая панель — Takeoffs { .kb-section-title .kb-st--green }
 
 | Контрол | Действие |
@@ -219,6 +232,11 @@
 | `Export ▾` | Меню экспорта |
 | `Auto Tree` | Стандартное дерево takeoff |
 | `From Pages` | Создать папки/items из структуры страниц |
+
+<figure markdown>
+  ![Takeoffs panel](../assets/images/ourplanecore/opc-frag-takeoffs.png)
+  <figcaption>Правая панель <code>Takeoffs</code>: активный item + Record, под-табы Takeoffs/Estimating/3D, дерево, New Folder/Item, Export.</figcaption>
+</figure>
 
 ## AI Inbox (низ) { .kb-section-title .kb-st--blue }
 
@@ -250,6 +268,11 @@
 | `Repair Links` | Переподключить measurements |
 | `Auto Folders` | Стандартные папки под выбранной |
 
+<figure markdown>
+  ![Sheet Manager](../assets/images/ourplanecore/opc-guide-sheet-manager.png)
+  <figcaption><code>2 Sheet Manager</code>: №, Proposed Name, Scale, Confidence, Why, Warnings + Apply Checked.</figcaption>
+</figure>
+
 ## Таб `3 Takeoff Manager` — кнопки { .kb-section-title .kb-st--magenta }
 
 | Кнопка | Действие |
@@ -264,6 +287,11 @@
 | `Export CSV` / `TXT` / `Excel` | Экспорт quantities |
 | `Current Excel` | Записать выбранную папку/item в активную ячейку **открытого** workbook |
 
+<figure markdown>
+  ![Takeoff Manager](../assets/images/ourplanecore/opc-guide-takeoff-manager.png)
+  <figcaption><code>3 Takeoff Manager</code>: Item / Type / Sections / Total / Unit / Notes / Folder + экспорт.</figcaption>
+</figure>
+
 ## Таб `4 Report Builder` { .kb-section-title .kb-st--green }
 
 | Кнопка | Действие |
@@ -271,6 +299,11 @@
 | `Reload` | Перезагрузить `TemplateCom.xlsm` в таблицу |
 | `Refresh` | Обновить вид |
 | `Apply Walls` | Применить A3 wall-block правило к выбранным строкам `J:K` |
+
+<figure markdown>
+  ![Report Builder](../assets/images/ourplanecore/opc-guide-report-builder.png)
+  <figcaption><code>4 Report Builder</code>: сборка report-блоков из <code>TemplateCom.xlsm</code> (в разработке).</figcaption>
+</figure>
 
 ## Таб `5 Materials` { .kb-section-title .kb-st--cyan }
 
@@ -282,6 +315,11 @@
 | `JSON` | Полный JSON извлечения |
 | `Rows CSV` / `Summary CSV` | Строки evidence / сгруппированная сводка в CSV |
 | `Folder` | Открыть папку вывода извлечения |
+
+<figure markdown>
+  ![Materials](../assets/images/ourplanecore/opc-guide-materials.png)
+  <figcaption><code>5 Materials</code>: Extract / Report Sheet / JSON / Rows-Summary CSV.</figcaption>
+</figure>
 
 ## Таб `6 AI Manager` { .kb-section-title .kb-st--magenta }
 
@@ -297,6 +335,11 @@
 | `Create Set` / `Marker Sets` | Создать/управлять маркер-сетами |
 | `Export Markers` | Экспорт проверенных маркеров |
 
+<figure markdown>
+  ![AI Manager](../assets/images/ourplanecore/opc-guide-ai-manager.png)
+  <figcaption><code>6 AI Manager</code>: наблюдения, Run AI / Run New / Retry Failed, маркер-сеты.</figcaption>
+</figure>
+
 ## Таб `7 3D` { .kb-section-title .kb-st--green }
 
 | Кнопка | Действие |
@@ -310,6 +353,11 @@
 | `Clear Roof` | Сброс roof base/ролей/сетки |
 | `Fit` / `Iso` / `Top` / `Front` / `Reset` | Виды 3D-сцены |
 
+<figure markdown>
+  ![3D](../assets/images/ourplanecore/opc-guide-3d.png)
+  <figcaption><code>7 3D</code>: Auto / Wall / Roof Base / Auto Roof / Generate Roof + 3D viewer.</figcaption>
+</figure>
+
 ## Таб `8 Settings` — редактируемые правила { .kb-section-title .kb-st--orange }
 
 Категории: `Page Folders`, `Auto Tree`, `From Pages`, `Sort A/S`,
@@ -317,6 +365,11 @@
 `Reset to default`, `Save global default`, `Save as this job`, `Apply`.
 Разрешение правила: **job override → global → default**. Подробно —
 [OurPlaneCore → раздел «8 Settings»](ourplanecore.md).
+
+<figure markdown>
+  ![Settings](../assets/images/ourplanecore/opc-guide-settings.png)
+  <figcaption><code>8 Settings</code>: live-редактор правила, Reset / Save global / Save as job / Apply.</figcaption>
+</figure>
 
 ## Горячие клавиши { .kb-section-title .kb-st--blue }
 
