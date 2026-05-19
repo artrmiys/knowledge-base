@@ -138,12 +138,26 @@ nav:
           - Crown: work/interior-trims/crown.md
           - Door and Window Trim: work/interior-trims/door-window-trim.md
           - Room Schedule: work/interior-trims/room-schedule.md
+      - Exterior Trims:
+          - Обзор: work/exterior-trims/overview.md
+          - Exclusions и J-Channel: work/exterior-trims/exclusions.md
+          - Casing, Corner & Band: work/exterior-trims/casing-corner-band.md
+          - Furring & Window Jambs: work/exterior-trims/furring-and-jambs.md
+          - Soffit & Fascia: work/exterior-trims/soffit-fascia.md
+          - Porch / Deck / Balcony: work/exterior-trims/porch-deck-balcony.md
+          - Rails & Decking: work/exterior-trims/rails-decking.md
+          - Balcony build-up: work/exterior-trims/balcony-buildup.md
+          - Outdoor Shower & Pergola: work/exterior-trims/shower-pergola.md
+          - Trim macros: work/exterior-trims/macros.md
 
   - Справочник:
       - Советы и важные вещи: reference/boss-feedback-rules.md
       - Как называть takeoffs: reference/takeoff-naming.md
       - OurPlaneCore — программа: reference/ourplanecore.md
       - Hangers: reference/hangers.md
+      - Material catalog: reference/material-catalog.md
+      - Standard notes: reference/standard-notes.md
+      - Takeoff item labels: reference/takeoff-items.md
       - Excel macro hotkeys: reference/excel-hotkeys.md
       - Формулы и факторы: reference/formulas.md
 
@@ -186,14 +200,3 @@ markdown_extensions:
 
 extra:
   generator: false
-
-# Файлы вне навигации (доступны по прямой ссылке, но скрыты из меню)
-not_in_nav: |
-  /work/vertical/sheathing/duplicate-of-gable.md
-  /work/interior-trims/trello-import-pending.md
-  /start/important-changes.md
-  /reference/confluence-image-archive.md
-  /reference/tilda-site-map.md
-  /reference/confluence-source-map.md
-  /reference/trello-source-map.md
-  /reference/source-map.md

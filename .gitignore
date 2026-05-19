@@ -9,6 +9,7 @@ __pycache__/
 imports/
 .playwright-mcp/
 1.txt
+_scratch_workbooks/
 
 # local visual/browser checks
 *-check.png

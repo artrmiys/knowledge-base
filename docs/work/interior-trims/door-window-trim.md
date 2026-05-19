@@ -29,6 +29,8 @@
 | `(2)2680` | Две doors, каждая 2'-6" x 8'-0" | Double door pair |
 | `2680 Pocket` | Pocket door, 2'-6" x 8'-0" | Оставляй `Pocket` в mark |
 | `(2)3080 Slider` | Две 3'-0" x 8'-0" sliding leaves | Оставляй и quantity, и `Slider` |
+| `(2)2680 Bi-Fold` | Bi-fold door pair, 2'-6" x 8'-0" | Обычно closet; оставляй `Bi-Fold` в mark, не своди к slider |
+| `9068 Bi-Fold` | Wide bi-fold opening, 9'-0" x 8'-0" | Closet/wardrobe; quantity leaves считаются как один opening |
 | `2680 Metal F.R. S.C.` | Metal, fire-rated, self-closing door | Garage/mechanical/fire-rated condition |
 | `4080 C.O.` | 4'-0" x 8'-0" cased opening | Вводить как cased opening, не как door |
 
@@ -53,6 +55,8 @@ fire-retardant-treated framing material.
 | Double doors пишутся как `(2)2680`. | Оставляй pair marker видимым. | [Trello](https://trello.com/c/eQgpc2fU) |
 | Pocket doors пишутся как `2680 Pocket`. | Сохраняй `Pocket` note. | [Trello](https://trello.com/c/YhlqMraY) |
 | Slider doors пишутся как `(2)3080 Slider`. | Сохраняй и quantity, и type. | [Trello](https://trello.com/c/sgMGFbJN) |
+| Bi-Fold doors пишутся как `(2)2680 Bi-Fold` (closet bi-fold). | Сохраняй `Bi-Fold` в mark; не путай с `Slider` и не своди к single door. | Estimating rule |
+| Closet bi-fold пишется как один opening, даже если показано 2/4 leaves. | Считай opening, а не каждую створку отдельно, если schedule не требует иначе. | Estimating rule |
 | Garage/mechanical metal doors могут быть `F.R S.C.`. | Отмечай fire-rated и self-close conditions. | [Trello](https://trello.com/c/aFiv0hIM) |
 | Glass shower doors не вводятся как interior doors. | Исключай shower glass doors из interior door count. | [Trello](https://trello.com/c/43ZyybeD) |
 | Large guest rooms могут иметь `French doors`. | Оставляй glass/French door note видимой. | [Trello](https://trello.com/c/cb8EWYy1) |
