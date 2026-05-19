@@ -177,6 +177,6 @@ fascia, frieze, columns, porch / deck / balcony trim.
 - [Balcony build-up](balcony-buildup.md)
 - [Outdoor Shower & Pergola](shower-pergola.md)
 - [Trim macros](macros.md)
-- [Interior Trims](../interior-trims/overview.md)
+- [Interior Trims](../interior-trims/overview.md) · [Siding](../siding/overview.md)
 - [Material catalog](../../reference/material-catalog.md) · [Standard notes](../../reference/standard-notes.md) · [Takeoff item labels](../../reference/takeoff-items.md)
 - [Excel macro hotkeys](../../reference/excel-hotkeys.md)

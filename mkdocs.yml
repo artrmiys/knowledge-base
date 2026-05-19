@@ -149,6 +149,12 @@ nav:
           - Balcony build-up: work/exterior-trims/balcony-buildup.md
           - Outdoor Shower & Pergola: work/exterior-trims/shower-pergola.md
           - Trim macros: work/exterior-trims/macros.md
+      - Siding:
+          - Обзор: work/siding/overview.md
+          - Типы siding: work/siding/types.md
+          - Underlayment: work/siding/underlayment.md
+          - EIFS / Stucco / Veneer: work/siding/eifs-stucco-veneer.md
+          - Измерение: work/siding/measure.md
 
   - Справочник:
       - Советы и важные вещи: reference/boss-feedback-rules.md

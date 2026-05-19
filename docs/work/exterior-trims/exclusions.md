@@ -1,5 +1,10 @@
 # Exclusions и J-Channel
 
+!!! info "Полное описание EIFS / Stucco / Veneer — в разделе Siding"
+    Здесь — правило исключения для **trim-scope**. Что такое EIFS / Stucco /
+    Stone / Brick veneer, как распознать на чертеже и где идёт casing bead —
+    в [Siding → EIFS / Stucco / Veneer](../siding/eifs-stucco-veneer.md).
+
 ## Что НЕ считаем в Exterior Trims { .kb-section-title .kb-st--amber }
 
 !!! danger "By others — не входит в наш scope"
