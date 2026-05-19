@@ -70,7 +70,7 @@ then merge rules into topic pages.
   URLs.
 - Keep source dumps outside `docs/` until reviewed.
 - Prefer one imported Markdown file per Trello list / Confluence section.
-- Add exact source status to `docs/reference/source-map.md`.
+- Keep exact source status in a temporary import note until useful rules are
+  moved into public topic pages.
 - Run `.\.venv\Scripts\python.exe -m mkdocs build --strict` after moving
   reviewed pages into `docs/`.
-

@@ -96,14 +96,8 @@ project-root/
 
 Файлы существуют на диске, но не показываются в меню:
 
-```yaml
-not_in_nav: |
-  /work/vertical/sheathing/duplicate-of-gable.md
-  /work/interior-trims/trello-import-pending.md
-  /start/important-changes.md
-```
-
-Используй это для pending-импортов и техдолга, чтобы они не позорили публичный сайт.
+Скрытые pending-импорты и source-map страницы удалены из рабочей версии. Не
+добавляй такие страницы обратно без явной задачи на импорт/аудит источников.
 
 ---
 
@@ -274,10 +268,9 @@ Material's native `grid cards` (`<div class="grid cards" markdown>...`) тоже
 ### Что недопустимо
 
 - Прямое цитирование email, UID, цен, salary history, личных Dropbox-ссылок,
-  Twist/ChatGPT private links, SSH/IP/credentials. Полный список — в `IMPORT_SOURCES.md` и `docs/reference/source-map.md`.
+  Twist/ChatGPT private links, SSH/IP/credentials. Полный список — в `IMPORT_SOURCES.md`.
 - Эмодзи в навигации.
-- Дубли страниц по одной теме (см. историю с `gable` walls / sheathing /
-  `duplicate-of-gable`).
+- Дубли страниц по одной теме.
 
 ---
 
@@ -294,8 +287,8 @@ Material's native `grid cards` (`<div class="grid cards" markdown>...`) тоже
 
 **Trello/Confluence без авторизации не отдадут содержимое** — попытки скрейпа
 HTML вернут только JS-shell или 401. Не делай вид, что что-то импортировал —
-если данных нет, фиксируй это в `docs/reference/source-map.md` и добавь
-страницу в `not_in_nav` пока она пустая.
+если данных нет, фиксируй это в рабочей заметке импорта, а не в публичных
+страницах сайта.
 
 ### Запуск конвертера Trello
 
@@ -333,7 +326,6 @@ broken links и опечатки в путях.
 - [ ] Локальный preview — `http://127.0.0.1:8000/` — проверить визуально.
 - [ ] В диффе нет `.venv`, `site/`, логов serve.
 - [ ] Нет приватных данных (email/UID/credentials).
-- [ ] `docs/reference/source-map.md` обновлён, если добавлен новый источник.
 - [ ] `mkdocs.yml`'s `nav:` — новая страница добавлена в меню или в `not_in_nav`.
 
 ---
@@ -364,9 +356,8 @@ broken links и опечатки в путях.
 2. **Material's marketing warning.** При каждом билде печатается длинный блок
    про MkDocs 2.0 — это маркетинг от squidfunk, к проекту отношения не имеет.
    Игнорируй.
-3. **Большой `animation.gif` (18 МБ)** уже в git history. Не добавляй больше
-   тяжёлых медиа без LFS или сжатия. Однажды нужно будет почистить историю
-   или перейти на Git LFS.
+3. **Большой `animation.gif` (18 МБ)** удалён из рабочей версии, но всё ещё
+   может быть в git history. Не добавляй тяжёлые медиа без LFS или сжатия.
 4. **Поиск на русском работает за счёт `plugins.search.lang: [en, ru]`.**
    Если нужно сербский/немецкий — добавлять туда же.
 5. **Иконки `:material-*:` требуют `pymdownx.emoji` с Material extension.**
@@ -393,6 +384,6 @@ broken links и опечатки в путях.
 
 ## 15. Текущая сессия / handoff
 
-Перед продолжением live-import из Confluence/Trello прочитай
-[`CURRENT_SESSION.md`](CURRENT_SESSION.md). Там зафиксированы открытые источники,
-raw-import папки, что уже скачано, и что осталось добрать.
+Активного live-import handoff в репозитории нет. Если импорт возобновляется,
+создай новую короткую рабочую заметку с источником, статусом и тем, что было
+перенесено в `docs/`.

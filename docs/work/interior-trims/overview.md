@@ -107,7 +107,7 @@ Internet references — только проверка terminology. Что име
 | --- | --- | --- |
 | Finish schedule | Columns Base / Ceiling / Remarks могут управлять trim scope; не полагайся только на room name. | [Helonic finish schedule guide](https://helonic.com/knowledge-base/finish-schedule-guide) |
 | Linear measurement | Base/crown trim обычно проверяется wall-by-wall / room run, а не по room area. | [Metrie measuring guide](https://www.metrie.com/how-do-i-measure) |
-| Estimating exceptions | Kitchen cabinets, closets, garage, slope ceilings, no-finish rooms и `TBD` notes остаются project-specific estimating rules. | [Trello Source Map](../../reference/trello-source-map.md) |
+| Estimating exceptions | Kitchen cabinets, closets, garage, slope ceilings, no-finish rooms и `TBD` notes остаются project-specific estimating rules. | Topic rules |
 
 ## Статус источников
 

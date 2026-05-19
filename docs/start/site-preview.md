@@ -131,4 +131,3 @@ topic page.
 - [Как пользоваться](how-to-use.md)
 - [Картинки и схемы](images-and-schemas.md)
 - [Советы и важные вещи](../reference/boss-feedback-rules.md)
-- [Общая source map](../reference/source-map.md)
