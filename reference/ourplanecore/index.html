@@ -3193,6 +3193,8 @@
       
         
       
+        
+      
     
     
     
@@ -3237,6 +3239,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/deck/deck-porch-balcony-frame/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frame (deck/porch/balcony)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -4530,6 +4560,61 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Архитектура
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        «8 Settings» — редактируемые правила
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Полная карта возможностей
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disk-модель (расширенно)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сборка и обновление
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#see-also" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4921,6 +5006,61 @@
     <span class="md-ellipsis">
       
         Принципы разработки
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Архитектура
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        «8 Settings» — редактируемые правила
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Полная карта возможностей
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disk-модель (расширенно)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сборка и обновление
       
     </span>
   </a>
@@ -5528,6 +5668,205 @@ item записана геометрия.</p>
 <li><strong>PlanSwift-like</strong> — workflow привычен estimator-у.</li>
 <li><strong>No hidden magic</strong> — если программа не уверена, она говорит почему.</li>
 <li><strong>Manual fallback</strong> — ручной takeoff всегда работает, AI его не ломает.</li>
+</ul>
+<h2 class="kb-section-title kb-st--blue" id="_5">Архитектура<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Для понимания, почему программа ведёт себя именно так (не для разработки).</p>
+<ul>
+<li><strong>Стек:</strong> WPF desktop, <code>.NET 9</code> (<code>net9.0-windows</code>), <code>x64</code>. Namespace
+  <code>OurPlaneCore</code>. Близкий функциональный клон PlanSwift.</li>
+<li><strong>Three-panel shell</strong> (<code>MainWindow</code> + множество <code>MainWindow.*.cs</code>
+  partials — pages, takeoffs, estimating, export, AI, 3D):<ul>
+<li>слева <strong>Pages tree</strong> — импортированные PDF sheets по папкам;</li>
+<li>центр <strong>PDF viewport</strong> — SkiaSharp-overlay поверх отрендеренного PDF;</li>
+<li>справа <strong>Takeoffs tree</strong> — items (контейнеры measurements) в папках;</li>
+<li>снизу <strong>AI Inbox</strong> (сворачиваемый) — pending-наблюдения и draft-действия.</li>
+</ul>
+</li>
+<li><strong>PDF-рендер в два слоя:</strong><ol>
+<li>статичная картинка страницы — Python-воркер (PyMuPDF,
+   <code>pdf_layers_helper.py</code>, живёт как процесс) с layer-aware рендером и
+   извлечением sheet-метаданных;</li>
+<li>overlay measurements — <code>PdfViewport</code> (SkiaSharp): pan/zoom, tools,
+   rubber-band, vertex editing;</li>
+<li>fallback — Docnet/PDFium, если Python недоступен.</li>
+</ol>
+</li>
+<li><strong>Геометрия:</strong> <code>Line</code> = сумма отрезков в PDF-точках × scale; <code>Area</code> =
+  shoelace по полигону; <code>Count</code> = число маркеров. Каждый <code>Measurement</code>
+  хранит свой <code>PageFolder</code> + scale → один item может идти по нескольким
+  sheet с разным масштабом.</li>
+<li><strong>Autosave</strong> — debounce 500 мс после любого изменения measurement.</li>
+<li><strong>Настройки приложения:</strong> <code>%APPDATA%\OurPlaneCore\settings.json</code>;
+  логи — <code>%APPDATA%\OurPlaneCore\logs\app-&lt;yyyyMMdd&gt;.log</code>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Слой данных</th>
+<th>Модель</th>
+<th>Хранит</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Job/pages</td>
+<td><code>OurPlaneCoreJob</code> (+ <code>JobStore</code>)</td>
+<td>дерево job/page/folder, persistence</td>
+</tr>
+<tr>
+<td>Measurement</td>
+<td><code>Measurement</code></td>
+<td><code>SKPoint[]</code> в PDF-координатах + per-measure scale</td>
+</tr>
+<tr>
+<td>Takeoff item</td>
+<td><code>TakeoffItem</code></td>
+<td>контейнер measurements с фиксированным типом</td>
+</tr>
+<tr>
+<td>Units</td>
+<td><code>UnitMode</code> / <code>Units</code></td>
+<td>Metric/Imperial формат</td>
+</tr>
+<tr>
+<td>AI</td>
+<td><code>SmartContextStore</code> / <code>SmartLearningStore</code></td>
+<td>observations, requests/responses, обучение rename/scale</td>
+</tr>
+<tr>
+<td>OpenAI</td>
+<td><code>OpenAiRequestRunner</code></td>
+<td>HTTP к <code>/v1/responses</code>, ключ из <code>OPENAI_API_KEY</code></td>
+</tr>
+</tbody>
+</table>
+<h2 class="kb-section-title kb-st--orange" id="8-settings">«8 Settings» — редактируемые правила<a class="headerlink" href="#8-settings" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Верхний таб <strong>8 Settings</strong> — канонический дом для всех редактируемых
+шаблонов и правил. Поведение-определяющие константы не зашиты в код, а
+вынесены сюда. Категории:</p>
+<table>
+<thead>
+<tr>
+<th>Категория</th>
+<th>Что настраивает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Page Folders</code></td>
+<td>шаблон папок для sheets</td>
+</tr>
+<tr>
+<td><code>Auto Tree</code></td>
+<td>авто-дерево takeoff'ов</td>
+</tr>
+<tr>
+<td><code>From Pages</code></td>
+<td>генерация из pages</td>
+</tr>
+<tr>
+<td><code>Sort A/S</code></td>
+<td><code>A</code>→Arch, <code>S</code>→Struct, trailing <code>-</code>→Others</td>
+</tr>
+<tr>
+<td><code>Sort D/Sec/WT</code></td>
+<td>Details / Sections / Wall-Type раскладка</td>
+</tr>
+<tr>
+<td><code>Auto Rename / Scale</code></td>
+<td>правила авто-имени и масштаба</td>
+</tr>
+<tr>
+<td><code>Defaults</code></td>
+<td>дефолты по умолчанию</td>
+</tr>
+</tbody>
+</table>
+<p>Каждая категория: live-редактор (точное зеркало результата), <code>Reset to
+default</code>, <code>Save global default</code>, <code>Save as this job</code>, <code>Apply</code>. Разрешение
+правила: <strong>job override → global → default</strong> (<code>SettingsPresetStore</code>:
+global в <code>SmartContextStore/presets/</code>, per-job в <code>&lt;job&gt;/AI_Context/settings/</code>).</p>
+<h2 class="kb-section-title kb-st--violet" id="_6">Полная карта возможностей<a class="headerlink" href="#_6" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Область</th>
+<th>Что есть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pages</td>
+<td>импорт PDF, папки, drag/drop, organization, метаданные, page tabs, detached sheet window, page setup, bookmarks</td>
+</tr>
+<tr>
+<td>Layers</td>
+<td>layer visibility, <strong>Layer Trace</strong>, PDF geometry highlight/trace</td>
+</tr>
+<tr>
+<td>Takeoffs</td>
+<td>items/folders, multi-select, copy/cut/paste, undo, bulk properties, sections order, auto-routing, joist calculator</td>
+</tr>
+<tr>
+<td>Tools</td>
+<td>Count / Line / Area / J Area / Scale / Ruler, Snap / PDF Snap / Ortho, vertex &amp; transform editing, note editing, cut regions</td>
+</tr>
+<tr>
+<td>Estimating</td>
+<td>Estimating window, Takeoff Manager, current-sheet filter, notes export</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>CSV / TXT / Excel, <code>Current Excel</code> (в открытый workbook), PlanSwift import/export</td>
+</tr>
+<tr>
+<td>Material</td>
+<td>Material Extraction + Material Report page</td>
+</tr>
+<tr>
+<td>AI</td>
+<td>AI Inbox, marker sets / training, crop bookmarks, OpenAI settings, learned rules, action review</td>
+</tr>
+<tr>
+<td>3D Massing</td>
+<td>footprint/walls/roof из markers, roof guides/eaves/ridges/rakes, openings review, 3D viewer</td>
+</tr>
+<tr>
+<td>Командное</td>
+<td>Command Palette (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-p">P</kbd></span>), workspace tabs, shortcuts map</td>
+</tr>
+</tbody>
+</table>
+<h2 class="kb-section-title kb-st--cyan" id="disk-">Disk-модель (расширенно)<a class="headerlink" href="#disk-" title="Прямая ссылка на раздел">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;job&gt;/
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  Pages/        PDF sheet folders (00. imported/, --------others/, …)
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  Takeoffs/     item folders, measurements.json в каждом
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  sources/      исходные PDF
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  AI_Context/   observations.jsonl, requests/, responses/, crops/,
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>                markers/, learning/, settings/
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  Data.xml      per-folder item metadata
+</span></code></pre></div>
+<ul>
+<li><strong>Local-first</strong> — ничего в облаке; job полностью на диске.</li>
+<li>AI работает <strong>файлами</strong>: запрос → <code>AI_Context/requests/</code>, ответ →
+  <code>responses/</code>, нарисованная geometry → <code>actions/</code>, всегда с crop-evidence.</li>
+<li>Per-job настройки правил — в <code>AI_Context/settings/</code>.</li>
+</ul>
+<h2 class="kb-section-title kb-st--amber" id="_7">Сборка и обновление<a class="headerlink" href="#_7" title="Прямая ссылка на раздел">&para;</a></h2>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">dotnet</span> <span class="n">restore</span> <span class="p">.\</span><span class="n">ourplanecore</span><span class="p">.</span><span class="n">sln</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">dotnet</span> <span class="n">build</span>   <span class="p">.\</span><span class="n">ourplanecore</span><span class="p">.</span><span class="n">sln</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">dotnet</span> <span class="n">run</span> <span class="p">-</span><span class="n">-project</span> <span class="p">.\</span><span class="n">ourplanecore</span><span class="p">.</span><span class="n">csproj</span>
+</span></code></pre></div>
+<ul>
+<li>Без параллельных билдов (lock в <code>obj\Debug\net9.0-windows</code>).</li>
+<li>Release single-file (~166 МБ, сжатый) → кладётся в
+  <code>C:\Users\User\Desktop\updates\OurPlaneCore\ourplanecore.exe</code>, Desktop-ярлык
+  указывает туда (working dir — та же папка). Это тот же ярлык, что в
+  <code>wiki.url</code>-стиле — программа берётся из update-папки, не из Debug.</li>
+<li>«Запустилось ли» проверяют <strong>не</strong> по окну (crash тоже показывает окно
+  <code>OurPlaneCore</code>), а по <code>%APPDATA%\OurPlaneCore\logs\app-&lt;date&gt;.log</code> от
+  последней <code>Application startup.</code>: процесс жив + нет <code>ERROR</code> после маркера</li>
+<li>есть <code>Loaded takeoffs</code> / <code>Viewport</code>.</li>
 </ul>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

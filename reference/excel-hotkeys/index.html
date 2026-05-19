@@ -3193,6 +3193,8 @@
       
         
       
+        
+      
     
     
     
@@ -3237,6 +3239,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/deck/deck-porch-balcony-frame/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frame (deck/porch/balcony)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -4515,6 +4545,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#calc-pipeline-a-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calc pipeline (A-series)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Новые insert-хелперы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-navigation-ctrl-alt-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section navigation (Ctrl / Alt + F)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#excel-shortcuts" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4622,6 +4685,39 @@
     <span class="md-ellipsis">
       
         Быстрый порядок после PlanSwift
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calc-pipeline-a-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calc pipeline (A-series)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Новые insert-хелперы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-navigation-ctrl-alt-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section navigation (Ctrl / Alt + F)
       
     </span>
   </a>
@@ -4836,12 +4932,226 @@ workbook'у — для очистки, форматирования и запи�
 <li>Запиши в форму: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-w">W</kbd></span> walls / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-q">Q</kbd></span> area, если это часть workbook workflow.</li>
 <li>Финал: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-o">O</kbd></span> дата → <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-t">T</kbd></span> spell check → <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-n">N</kbd></span> write to check.</li>
 </ol>
+<h2 class="kb-section-title kb-st--cyan" id="calc-pipeline-a-series">Calc pipeline (A-series)<a class="headerlink" href="#calc-pipeline-a-series" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Расчётные макросы — запускаются по выделенному range, по порядку. Не имеют
+Ctrl-хоткеев: запускай кнопкой или <code>Alt+F8</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Макрос</th>
+<th>Что делает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>A1_UnitTable</code></td>
+<td>строит unit-таблицу из выделения</td>
+</tr>
+<tr>
+<td><code>A2_SQFT_calc</code></td>
+<td>SQFT + gable / truss heel</td>
+</tr>
+<tr>
+<td><code>A3_Walls_Calc_AllGroup</code> / <code>_OneGroup</code></td>
+<td>walls: все группы / одна группа</td>
+</tr>
+<tr>
+<td><code>A4_Parapet</code> (+ <code>X_ClearParapetTable</code>)</td>
+<td>parapet walls</td>
+</tr>
+<tr>
+<td><code>A5_Openings</code></td>
+<td>openings calc</td>
+</tr>
+<tr>
+<td><code>A6_Eve_Rakes</code></td>
+<td>eve / rakes</td>
+</tr>
+<tr>
+<td><code>A7_wall_sheathing</code></td>
+<td>по тексту в <code>J</code>: Zip → удалить Ply/OSB/CDX+Tyvek (пишет в <code>O5</code>); Ply/OSB/CDX → удалить Zip+Zip Tape (пишет в <code>O3</code>)</td>
+</tr>
+<tr>
+<td><code>A8_SplitWallSuffixes_ByJ</code></td>
+<td>делит выделенные строки <code>J:L</code> на base-список (имена walls для A3) и список suffix/detail notes</td>
+</tr>
+<tr>
+<td><code>wall_panel</code></td>
+<td>wall panel расчёт</td>
+</tr>
+<tr>
+<td><code>Fame_only</code></td>
+<td>удаляет finish/trim-блоки, оставляет <strong>только frame</strong> (A:H, сдвиг вверх)</td>
+</tr>
+<tr>
+<td><code>Y_Run_First6</code></td>
+<td>один запуск всей цепочки <code>A1…A6</code> (toggle-константы внутри; <code>A1</code> идёт последним для безопасности — он перестраивает выделенный range)</td>
+</tr>
+<tr>
+<td><code>C_HeadersSort</code></td>
+<td>сортировка/раскладка headers (как <code>C_BeamsSort</code>/<code>C_JoistsSort</code>; J-mode + legend-строки <code>H5 - (2) 2x10</code>)</td>
+</tr>
+<tr>
+<td><code>C_RimBoardBlockingHangers</code></td>
+<td>rim board + blocking + hangers одним блоком</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Порядок</p>
+<p><code>A1</code> чистит/перестраивает выделение, поэтому <code>A2…A6</code> читают исходное
+выделение <strong>до</strong> <code>A1</code>. <code>Y_Run_First6</code> это уже учитывает. Вручную —
+запускай <code>A2…A6</code>, затем <code>A1</code>.</p>
+</div>
+<h2 class="kb-section-title kb-st--green" id="insert-">Новые insert-хелперы<a class="headerlink" href="#insert-" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Макрос</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>B_FrameOC_InsertOneRow</code></td>
+<td>вставляет одну frame-OC строку под выделенной</td>
+</tr>
+<tr>
+<td><code>B_Plate2_InsertOneRow</code></td>
+<td>вставляет одну Plate2-строку под выделенной</td>
+</tr>
+<tr>
+<td><code>Y_add_2400V48</code></td>
+<td>по 2-колоночному лук-апу проставляет <code>2400 V48</code> note-значения</td>
+</tr>
+<tr>
+<td><code>B_Balcony_Insert_Template_FromText</code></td>
+<td>полный balcony-каркас по <code>b 12x30</code></td>
+</tr>
+</tbody>
+</table>
+<p>Полное описание trim/frame insert-блоков —
+<a href="../../work/exterior-trims/macros/">Trim macros</a> и
+<a href="../../work/deck/deck-porch-balcony-frame/">Deck / Porch / Balcony Frame</a>.</p>
+<h2 class="kb-section-title kb-st--blue" id="section-navigation-ctrl-alt-f">Section navigation (Ctrl / Alt + F)<a class="headerlink" href="#section-navigation-ctrl-alt-f" title="Прямая ссылка на раздел">&para;</a></h2>
+<p><code>BindNavHotkeys</code> (Workbook_Open) вешает прыжки по section-заголовкам. Это
+быстрый способ скакать по большому output-листу.</p>
+<div class="grid cards kb-hotkey-cards">
+<ul>
+<li>
+<p><span class="twemoji lg middle kb-mk--cyan"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m7 14 5-5h-3V8h-4v4H7z"/></svg></span> <strong>Ctrl + F — Walls</strong></p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Hotkey</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f1">F1</kbd></span> … <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f5">F5</kbd></span></td>
+<td>1st … 5th Floor Walls</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f6">F6</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f7">F7</kbd></span></td>
+<td>Gable Walls #1 / #2</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f8">F8</kbd></span></td>
+<td>Parapet Walls</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f9">F9</kbd></span></td>
+<td>Wall Materials</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f11">F11</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f12">F12</kbd></span></td>
+<td>Foundation / Basement Floor Walls</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><span class="twemoji lg middle kb-mk--magenta"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 17-5-5h3V8h4v4h3zM5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m0 2v14h14V5z"/></svg></span> <strong>Alt + F — Framing / roof</strong></p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Hotkey</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-f1">F1</kbd></span> … <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-f4">F4</kbd></span></td>
+<td>1st … 4th Floor Framing List</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-f5">F5</kbd></span></td>
+<td>Loft Framing List</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-f6">F6</kbd></span> / <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-f7">F7</kbd></span></td>
+<td>Roof Frame list / Roof System Misc</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-f10">F10</kbd></span></td>
+<td>Roof Products</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-f11">F11</kbd></span> / <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-f12">F12</kbd></span></td>
+<td>Soffits and Fascias / Exterior Trims</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><span class="twemoji lg middle kb-mk--green"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m7 14 5-5h-3V8h-4v4H7z"/></svg></span> <strong>Alt + Shift + F</strong></p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Hotkey</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f1">F1</kbd></span></td>
+<td>Interior Doors&amp;Trims</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f2">F2</kbd></span></td>
+<td>Drywall &amp; Insulation</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f8">F8</kbd></span></td>
+<td>Balcony (по заливке #99CC00/#FABF8F)</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f9">F9</kbd></span></td>
+<td>Porch (по заливке #99CC00/#FABF8F)</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Не работает — проверь</p>
+<p>Nav-хоткеи вешает <code>Workbook_Open</code>. Если не прыгает: workbook с макросами
+открыт, macros enabled, и заголовок section написан точно (<code>1st Floor
+Walls</code>, <code>Exterior Trims</code> и т.д.). <code>Z_Dont_use_Run_ByPriority</code> —
+устаревший, не использовать.</p>
+</div>
 <h2 class="kb-section-title kb-st--amber" id="excel-shortcuts">Стандартные Excel shortcuts<a class="headerlink" href="#excel-shortcuts" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Для встроенных Excel shortcuts — официальный список Microsoft:
 <a href="https://support.microsoft.com/en-gb/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f">Keyboard shortcuts in Excel</a>.</p>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li><a href="../../work/exterior-trims/macros/">Trim macros</a> — <code>C_TrimsCalc</code>, jamb / pavers / balcony insert</li>
+<li><a href="../../work/deck/deck-porch-balcony-frame/">Deck / Porch / Balcony Frame</a> — frame insert / sort макросы</li>
 <li><a href="../formulas/">Formulas and factors</a></li>
 <li><a href="../../start/quality-checklist/">Quality checklist</a></li>
 <li><a href="../../start/workflow/">Workflow</a></li>

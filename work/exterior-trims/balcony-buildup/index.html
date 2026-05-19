@@ -3218,6 +3218,8 @@
       
         
       
+        
+      
     
     
     
@@ -3265,6 +3267,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deck/deck-porch-balcony-frame/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frame (deck/porch/balcony)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -3948,7 +3978,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Полная сборка снизу вверх
+        Карта сборки снизу вверх
       
     </span>
   </a>
@@ -3956,21 +3986,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#beam-plate1-plate2" class="md-nav__link">
+  <a href="#finish-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Beam: plate1 + plate2
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sleepers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sleepers: часто два слоя
+        Finish-слои
       
     </span>
   </a>
@@ -3989,10 +4008,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#finish" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Чек перед выводом
+        Чек перед выводом (finish)
       
     </span>
   </a>
@@ -4666,7 +4685,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Полная сборка снизу вверх
+        Карта сборки снизу вверх
       
     </span>
   </a>
@@ -4674,21 +4693,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#beam-plate1-plate2" class="md-nav__link">
+  <a href="#finish-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Beam: plate1 + plate2
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sleepers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sleepers: часто два слоя
+        Finish-слои
       
     </span>
   </a>
@@ -4707,10 +4715,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#finish" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Чек перед выводом
+        Чек перед выводом (finish)
       
     </span>
   </a>
@@ -4746,152 +4754,138 @@
 
 
 <h1 id="balcony-build-up">Balcony build-up<a class="headerlink" href="#balcony-build-up" title="Прямая ссылка на раздел">&para;</a></h1>
-<p>Balcony — это не одна строка trim, а <strong>полная сборка</strong>: от structural framing
-снизу до finish сверху. Этот порядок зашит в balcony-template макрос
-(<code>B_Balcony_Insert_Template_FromText</code>) — он вставляет весь блок целиком.</p>
+<p>Balcony — это полная сборка от structural framing снизу до finish сверху.
+Эта страница — <strong>карта сборки + finish/trim слои</strong>. <strong>Структурный каркас</strong>
+вынесен в отдельную страницу.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Где структурный каркас</p>
+<p>Posts / Post Bases / Caps / Beam / Ledger / Box / Joists / Hangers /
+Blocking / Rim / Sleepers / structural Subfloor / Stringers — детально в
+<a href="../../deck/deck-porch-balcony-frame/">Deck / Porch / Balcony Frame</a>.
+Здесь — finish: decking finish, soffit, fascia/edge trim, flashing,
+composition.</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Template-макрос</p>
-<p>Вставляется командой <code>b 12x30</code> (ширина × длина) или <code>b 1.3x1.9 u2</code>
-(×2 units). Defaults: beam <code>2x10 P.T.</code>, posts <code>6x6 P.T.</code>, OC <code>16"</code>.
-Подробно — <a href="../macros/">Trim macros</a>. Ниже — что именно он раскладывает.</p>
+<p>Весь блок целиком вставляет <code>B_Balcony_Insert_Template_FromText</code> —
+командой <code>b 12x30</code> или <code>b 1.3x1.9 u2</code>. Defaults: beam <code>2x10 P.T.</code>,
+posts <code>6x6 P.T.</code>, OC <code>16"</code>. Подробно — <a href="../macros/">Trim macros</a>.</p>
 </div>
-<h2 class="kb-section-title kb-st--green" id="_1">Полная сборка снизу вверх<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
+<h2 class="kb-section-title kb-st--green" id="_1">Карта сборки снизу вверх<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
 <tr>
 <th>#</th>
 <th>Label</th>
-<th>Типовой материал</th>
+<th>Материал</th>
 <th>Unit</th>
+<th>Scope</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td><code>Posts</code></td>
-<td><code>6x6 P.T.</code> (default)</td>
-<td><code>pcs</code> + высота</td>
+<td><code>Posts</code> + <code>Post Bases</code> + <code>Post Caps</code></td>
+<td><code>6x6 P.T.</code> + <code>ABU66</code>/<code>BCS2</code></td>
+<td><code>pcs</code></td>
+<td>→ <a href="../../deck/deck-porch-balcony-frame/">Frame</a></td>
 </tr>
 <tr>
 <td>2</td>
-<td><code>Post Bases</code></td>
-<td><code>ABU66 Zmax</code></td>
-<td><code>pcs</code></td>
+<td><code>Beam (…)</code> (multi-ply)</td>
+<td><code>2x10 P.T.</code></td>
+<td><code>LFT</code></td>
+<td>→ Frame</td>
 </tr>
 <tr>
 <td>3</td>
-<td><code>Post Caps</code></td>
-<td><code>BCS2-3/6 Zmax</code></td>
-<td><code>pcs</code></td>
+<td><code>Ledger</code> / <code>Box</code></td>
+<td><code>2x10 P.T.</code></td>
+<td><code>LFT</code></td>
+<td>→ Frame</td>
 </tr>
 <tr>
 <td>4</td>
-<td><code>Post Wrap</code></td>
-<td><code>1x</code> / <code>5/4x</code></td>
-<td><code>LFT</code></td>
+<td><code>Joists</code> + <code>Hangers</code> + <code>Blocking</code> + <code>Rim</code></td>
+<td><code>2x10/2x12 P.T.</code> @16"</td>
+<td><code>LFT</code>/<code>pcs</code></td>
+<td>→ Frame</td>
 </tr>
 <tr>
 <td>5</td>
-<td><code>Beam (…)</code></td>
-<td><code>2x10 P.T.</code> (plate1 ×3 + plate2 ×2 ply)</td>
+<td><code>Sleepers</code> (часто 2 слоя)</td>
+<td><code>2x4 P.T.</code></td>
 <td><code>LFT</code></td>
+<td>→ Frame</td>
 </tr>
 <tr>
 <td>6</td>
-<td><code>Ledger</code></td>
-<td><code>2x10 P.T.</code> к стене</td>
-<td><code>LFT</code></td>
+<td><code>Subfloor</code> (structural) / <code>Stringers</code></td>
+<td><code>3/4" CDX</code> / <code>2x12</code></td>
+<td><code>4x8</code>/<code>pcs</code></td>
+<td>→ Frame</td>
 </tr>
 <tr>
 <td>7</td>
-<td><code>Box</code></td>
-<td><code>2x10 P.T.</code> периметр</td>
+<td><code>Post Wrap</code></td>
+<td><code>1x</code> / <code>5/4x</code></td>
 <td><code>LFT</code></td>
+<td><strong>finish</strong></td>
 </tr>
 <tr>
 <td>8</td>
-<td><code>Joists</code></td>
-<td><code>2x10 P.T.</code> / <code>2x12 P.T.</code> @ 16" o.c.</td>
-<td><code>LFT</code> / <code>pcs</code></td>
-</tr>
-<tr>
-<td>9</td>
-<td><code>Hangers</code></td>
-<td><code>LUC26</code>, <code>LUS28</code></td>
-<td><code>pcs</code></td>
-</tr>
-<tr>
-<td>10</td>
-<td><code>Subfloor</code></td>
-<td><code>3/4" CDX Ply</code> <code>4x8</code></td>
-<td><code>4x8</code> / <code>SQ FT</code></td>
-</tr>
-<tr>
-<td>11</td>
-<td><code>Sleepers</code></td>
-<td><code>2x4 P.T.</code> (часто <strong>two layers</strong>)</td>
-<td><code>LFT</code></td>
-</tr>
-<tr>
-<td>12</td>
 <td><code>EPDM</code></td>
 <td><code>EPDM</code> membrane</td>
 <td><code>SQ FT</code></td>
+<td><strong>finish</strong></td>
 </tr>
 <tr>
-<td>13</td>
-<td><code>Decking</code></td>
-<td><code>5/4x6</code> (Composite / Azek / Wd)</td>
+<td>9</td>
+<td><code>Decking</code> (finish)</td>
+<td><code>5/4x6</code> Composite/Azek/Wd</td>
 <td><code>SQ FT</code></td>
+<td><strong>finish</strong></td>
 </tr>
 <tr>
-<td>14</td>
-<td><code>Treads</code> / <code>Stringers (4)</code></td>
-<td>по детали</td>
-<td><code>LFT</code> / <code>pcs</code></td>
-</tr>
-<tr>
-<td>15</td>
+<td>10</td>
 <td><code>Soffits at Balcony</code></td>
 <td><code>Beadboard</code></td>
 <td><code>SQ FT</code></td>
+<td><strong>finish</strong></td>
 </tr>
 <tr>
-<td>16</td>
+<td>11</td>
 <td><code>Balcony Trims</code></td>
 <td>fascia / edge trim <code>1x</code> / <code>5/4x</code></td>
 <td><code>LFT</code></td>
+<td><strong>finish</strong></td>
 </tr>
 <tr>
-<td>17</td>
+<td>12</td>
 <td><code>Flashings at Wall</code></td>
 <td><code>Copper</code> / drip edge</td>
 <td><code>LFT</code></td>
+<td><strong>finish</strong></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition warning">
-<p class="admonition-title">Не прячь framing в trim</p>
-<p>Beam / Ledger / Box / Joists / Hangers / Subfloor / Sleepers — это
-<strong>structural</strong>, отдельные строки. Они не должны раствориться в
-<code>Balcony Trims</code>. Trim — это только soffit, fascia, edge trim, flashing.</p>
+<p class="admonition-title">Frame и finish — раздельно</p>
+<p>Строки 1–6 (structural) считаются по
+<a href="../../deck/deck-porch-balcony-frame/">Frame</a>, не растворяются в
+<code>Balcony Trims</code>. Здесь — только finish (строки 7–12).</p>
 </div>
-<h2 class="kb-section-title kb-st--cyan" id="beam-plate1-plate2">Beam: plate1 + plate2<a class="headerlink" href="#beam-plate1-plate2" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Balcony beam в шаблоне — это <strong>multi-ply</strong>: <code>plate1</code> (default 3 ply) +
-<code>plate2</code> (default 2 ply), материал <code>2x10 P.T.</code> (или <code>2x12 P.T.</code>).</p>
+<h2 class="kb-section-title kb-st--cyan" id="finish-">Finish-слои<a class="headerlink" href="#finish-" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li>Пиши ply явно: <code>(3)2x10 P.T.</code> + <code>(2)2x10 P.T.</code>.</li>
-<li><code>Note: Assumed Balcony Joists are 2x10 P.T. per structural; per S664 2x8
-  P.T.; verify</code> — типичное противоречие, оставляй note.</li>
+<li><strong><code>Post Wrap</code></strong> — обшивка structural post (<code>1x</code>/<code>5/4x</code>), <code>LFT</code>.</li>
+<li><strong><code>EPDM</code></strong> — гидроизоляция под decking, <code>SQ FT</code>.</li>
+<li><strong><code>Decking</code></strong> (finish) — <code>5/4x6</code> Composite/Azek/Wd, <code>SQ FT</code>; полный разбор —
+  <a href="../rails-decking/">Rails &amp; Decking</a>.</li>
+<li><strong><code>Soffits at Balcony</code></strong> — <code>Beadboard</code>, <code>SQ FT</code> (низ балкона).</li>
+<li><strong><code>Balcony Trims</code></strong> — fascia / edge trim по периметру, <code>LFT</code>.</li>
+<li><strong><code>Flashings at Wall</code></strong> — <code>Copper</code> / drip edge примыкание к стене, <code>LFT</code>.</li>
 </ul>
-<h2 class="kb-section-title kb-st--magenta" id="sleepers">Sleepers: часто два слоя<a class="headerlink" href="#sleepers" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Под decking на balcony идут <strong>sleepers</strong> (<code>2x4 P.T.</code>), нередко <strong>в два
-слоя</strong> (cross-sleepers для уклона/дренажа). Считай оба слоя, держи note.</p>
-<ul>
-<li><code>Note: balcony framing requires 2-ply framing and two layers of sleepers</code>
-  — держи видимым (см. <a href="../../deck/balcony-trims/">Balcony Trims</a>).</li>
-</ul>
-<h2 class="kb-section-title kb-st--green" id="composition-paver-">Composition (paver-вариант)<a class="headerlink" href="#composition-paver-" title="Прямая ссылка на раздел">&para;</a></h2>
+<h2 class="kb-section-title kb-st--magenta" id="composition-paver-">Composition (paver-вариант)<a class="headerlink" href="#composition-paver-" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Если balcony не deck-on-sleepers, а <strong>paver on membrane</strong> — слои сверху вниз:</p>
 <table>
 <thead>
@@ -4937,27 +4931,23 @@
 <div class="admonition danger">
 <p class="admonition-title">Pavers / membrane часто by others</p>
 <p><code>Note: Pavers Deck System are by others</code>. Тогда из composition считаем
-только наш framing/trim, paver-систему — нет. Это то же правило
-исключений: <a href="../exclusions/">Exclusions</a>.</p>
+только наш framing/trim, paver-систему — нет. То же правило исключений:
+<a href="../exclusions/">Exclusions</a>.</p>
 </div>
-<h2 class="kb-section-title kb-st--cyan" id="_2">Чек перед выводом<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
+<h2 class="kb-section-title kb-st--green" id="finish">Чек перед выводом (finish)<a class="headerlink" href="#finish" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Полная сборка: posts/bases/caps → beam → ledger/box → joists/hangers →
-      subfloor → sleepers → EPDM → decking → soffit/trim/flashing?</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Beam multi-ply (plate1+plate2) посчитан с явным <code>(n)</code>?</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Sleepers — оба слоя, если two layers?</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Joists P.T. size взят из structural (2x10/2x12/2x8 — противоречия в note)?</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Hangers (<code>LUC26</code>/<code>LUS28</code>) посчитаны по joists?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Структурный каркас посчитан по <a href="../../deck/deck-porch-balcony-frame/">Frame</a>?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Post wrap / EPDM / decking finish / soffit / trim / flashing — все слои?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Decking finish в <code>SQ FT</code>; trim/flashing в <code>LFT</code>?</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Composition: pavers/membrane — by others проверено?</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Trim (soffit/fascia/edge/flashing) отделён от structural?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Finish отделён от structural (не дублирует Frame)?</li>
 </ul>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li><a href="../porch-deck-balcony/">Porch / Deck / Balcony</a></li>
-<li><a href="../rails-decking/">Rails &amp; Decking</a></li>
+<li><a href="../../deck/deck-porch-balcony-frame/">Deck / Porch / Balcony Frame</a> — структурный каркас</li>
+<li><a href="../porch-deck-balcony/">Porch / Deck / Balcony</a> · <a href="../rails-decking/">Rails &amp; Decking</a></li>
 <li><a href="../macros/">Trim macros</a></li>
-<li><a href="../../deck/balcony-trims/">Balcony Trims</a> · <a href="../../../reference/hangers/">Hangers</a></li>
-<li><a href="../../../reference/standard-notes/">Standard notes</a></li>
+<li><a href="../../deck/balcony-trims/">Balcony Trims</a> · <a href="../../../reference/hangers/">Hangers</a> · <a href="../../../reference/standard-notes/">Standard notes</a></li>
 </ul>
 
 
