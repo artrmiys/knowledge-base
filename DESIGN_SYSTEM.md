@@ -4,9 +4,9 @@
 
 | Продукт | Стек | Тема | Статус |
 | --- | --- | --- | --- |
-| Knowledge Base | MkDocs Material | светлая + тёмная | ✅ переведён на токены |
-| Pay-дашборд | React + Vite | тёмная (нужна светлая) | ⏳ план |
-| takeoff-app | WPF (desktop) | светлая + тёмная | ⏳ план |
+| Knowledge Base | MkDocs Material | светлая + тёмная | ✅ токены + Pay-chrome + лого |
+| Pay-дашборд | React + Vite | светлая + тёмная | ✅ токены + ребренд + лого |
+| takeoff-app | WPF (desktop) | светлая + тёмная | ✅ иконка L4D |
 
 > Внутреннее имя системы — **OurCore**. На видимых частях UI бренд «E-Wood» не
 > используется (в коде/комментариях — допустимо).
@@ -73,20 +73,44 @@
 
 ---
 
+## Лого — семейство «L4D»
+
+Один **glass-каркас**, у каждого продукта свой глиф. Каркас = стопка из 3 матовых
+стёкол (glassmorphism) над градиентом синий→тил `#0b2a4a → #0e7490` + blueprint-сетка
+в верхнем листе + лаймовый `#c6ff3d` глиф с лёгким glow.
+
+| Продукт | Глиф | Мастер-файл |
+| --- | --- | --- |
+| takeoff-app | трасса-замер с узлом-таргетом | `ourcore-logos-v2/l4d.svg` |
+| Knowledge Base | угол плана (L стен) + пунктирный гайд + линия-замер с узлами | `ourcore-logos-v2/logo-kb-final.svg` |
+| Pay | растущие столбцы + трендовая линия с узлами | `ourcore-logos-v2/logo-pay-final.svg` |
+
+- Мастера и preview-`*.html` лежат в `C:\Users\User\Desktop\ourcore-logos-v2\`.
+- KB использует свой как `docs/assets/images/logo.svg` (шапка + favicon).
+- Pay — как `web/public/logo.svg` (логин/сайдбар/favicon).
+- Иконки ярлыков Windows: `C:\Users\User\Desktop\updates\{wiki.ico = KB, pay.ico = Pay}`.
+  `wiki.url` (десктоп + updates) и `pay.url` (десктоп) ссылаются на них; `OurPlaneCore.lnk` держит L4D.
+
+---
+
 ## Применение по продуктам
 
-### Knowledge Base (сделано)
+### Knowledge Base ✅
 - `tokens.css` подключён первым в `extra_css`, `extra.css` маппит `--md-*` на `--ds-*`.
 - Шрифты: `font: false` в `mkdocs.yml` + `--md-text-font/-code-font` в CSS.
+- **Pay-style chrome:** шапка светлая в light / тёмный titlebar (`#171a22→#0f1117`) в dark
+  (не зелёная плашка); фон `.md-main` = радиальное green/blue свечение; glass-карточки
+  + мягкие тени; кнопки = soft-green тон + обводка (не неон).
+- Деплой: `mkdocs gh-deploy` → gh-pages, + push в main.
 
-### Pay-дашборд (план)
-- Скопировать `tokens.css` в `web/src/`, импортировать перед `styles.css`.
-- Заменить локальные `--bg/--panel/--line/--text/--muted/--accent` на `--ds-*`.
-- Добавить **светлую тему** + переключатель (класс `.theme-dark` на корне).
+### Pay-дашборд ✅
+- `tokens.css` вендорится в `web/src/`, импортируется перед `styles.css`.
+- Локальные `--bg/--panel/--line/--text/--muted/--accent` маппятся на `--ds-*`.
+- Светлая + тёмная тема + переключатель (класс `.theme-dark` на корне).
 - Шрифт `Manrope` → системный стек `--ds-font-text`.
-- Скрыть видимый бренд «E-Wood».
+- Видимый бренд скрыт (= «My Account», без E-Wood/OurCore).
+- Прод: `deploy@185.81.165.121`, `~/e-wood-pay`, `docker compose up -d --build web`.
 
-### takeoff-app (план)
-- Вынести цвета в `ResourceDictionary` со значениями из токенов.
-- Selection/активное = green; ссылки/info = blue; маркеры — `--ds-mk-*`.
-- Тема уже светлая + тёмная — синхронизировать палитру.
+### takeoff-app ✅ (минимально)
+- Заменена только иконка `.ico` → L4D. Палитра/UI оставлены родными по решению пользователя.
+- При синхронизации палитры: selection/активное = green; ссылки/info = blue; маркеры — `--ds-mk-*`.
