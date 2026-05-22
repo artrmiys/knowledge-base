@@ -38,30 +38,47 @@
   --kb-accent-bar:              var(--ds-green);
 }
 
-/* --- Шапка: тёмная (как titlebar Pay), без зелёной плашки ------------------ */
+/* --- Шапка: светлая в light, тёмная (titlebar Pay) в dark ------------------ */
 .md-header,
 .md-tabs {
-  background: linear-gradient(180deg, #171a22 0%, #0f1117 100%);
-  color: #e9ecf2;
+  background: #ffffff;
+  color: var(--md-default-fg-color);
 }
 
 .md-header {
-  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.18);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--ds-line);
 }
 
 .md-tabs {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--ds-line);
 }
 
-/* текст/иконки шапки — светлые в обеих темах */
 .md-header__title,
 .md-header .md-icon,
 .md-tabs__link,
 .md-search__input {
+  color: var(--md-default-fg-color);
+}
+.md-search__input::placeholder { color: var(--ds-text-3); }
+
+[data-md-color-scheme="slate"] .md-header,
+[data-md-color-scheme="slate"] .md-tabs {
+  background: linear-gradient(180deg, #171a22 0%, #0f1117 100%);
+}
+[data-md-color-scheme="slate"] .md-header {
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+[data-md-color-scheme="slate"] .md-tabs {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+[data-md-color-scheme="slate"] .md-header__title,
+[data-md-color-scheme="slate"] .md-header .md-icon,
+[data-md-color-scheme="slate"] .md-tabs__link,
+[data-md-color-scheme="slate"] .md-search__input {
   color: #e9ecf2;
 }
-.md-search__input::placeholder { color: rgba(233, 236, 242, 0.6); }
 
 /* --- Фон страницы: радиальное свечение, как в Pay ------------------------- */
 .md-main {
@@ -204,7 +221,7 @@
   right: 0.6rem;
   bottom: 0.2rem;
   height: 2px;
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--md-primary-fg-color);
   border-radius: 1px;
 }
 
