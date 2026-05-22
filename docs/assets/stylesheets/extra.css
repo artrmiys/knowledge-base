@@ -3,18 +3,21 @@
    Приглушённый teal-green вместо насыщенного зелёного.
    ========================================================================== */
 
-/* --- Палитра: muted teal-green -------------------------------------------- */
+/* --- Палитра: OurCore green + blue (токены — в tokens.css) ----------------- */
 :root {
-  --md-primary-fg-color:        #3a6b5a;
-  --md-primary-fg-color--light: #5b8a78;
-  --md-primary-fg-color--dark:  #284c3f;
-  --md-accent-fg-color:         #4d8d75;
+  --md-text-font: "Segoe UI";
+  --md-code-font: "Consolas";
 
-  --kb-surface:                 #f6f8f7;
-  --kb-border:                  rgba(58, 107, 90, 0.18);
-  --kb-accent-bar:              #3a6b5a;
+  --md-primary-fg-color:        var(--ds-green-dark);   /* шапка/бренд        */
+  --md-primary-fg-color--light: var(--ds-green);
+  --md-primary-fg-color--dark:  var(--ds-green-darker);
+  --md-accent-fg-color:         var(--ds-blue-dark);    /* ссылки/hover = blue */
 
-  /* OurPlaneCore palette — bright markers для категорий и акцентов */
+  --kb-surface:                 var(--ds-surface);
+  --kb-border:                  var(--ds-line);
+  --kb-accent-bar:              var(--ds-green-dark);
+
+  /* Декоративные маркеры секций (внутренние для KB) */
   --kb-mk-cyan:    #4FD1C5;
   --kb-mk-magenta: #E94B7B;
   --kb-mk-amber:   #F5B845;
@@ -25,14 +28,14 @@
 }
 
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color:        #6f9b87;
-  --md-primary-fg-color--light: #8db6a3;
-  --md-primary-fg-color--dark:  #4d7a68;
-  --md-accent-fg-color:         #a6d4c2;
+  --md-primary-fg-color:        var(--ds-green);
+  --md-primary-fg-color--light: #56e070;
+  --md-primary-fg-color--dark:  var(--ds-green-dark);
+  --md-accent-fg-color:         var(--ds-blue-light);
 
-  --kb-surface:                 rgba(255, 255, 255, 0.04);
-  --kb-border:                  rgba(255, 255, 255, 0.10);
-  --kb-accent-bar:              #8db6a3;
+  --kb-surface:                 var(--ds-surface);
+  --kb-border:                  var(--ds-line);
+  --kb-accent-bar:              var(--ds-green);
 }
 
 /* --- Шапка ----------------------------------------------------------------- */
@@ -79,7 +82,7 @@
 .md-typeset table:not([class]) {
   font-size: 0.74rem;
   border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 6px;
+  border-radius: var(--ds-radius);
   overflow: hidden;
 }
 
@@ -105,7 +108,7 @@
 .md-typeset code {
   font-size: 0.85em;
   padding: 0.1em 0.35em;
-  border-radius: 3px;
+  border-radius: var(--ds-radius-sm);
 }
 
 /* --- Левый сайдбар: явная иерархия с отступами ---------------------------- */
@@ -278,7 +281,7 @@
   align-items: center;
   gap: 6px;
   padding: 7px 14px;
-  border-radius: 6px;
+  border-radius: var(--ds-radius);
   font-size: 0.74rem;
   font-weight: 600;
   text-decoration: none !important;
@@ -355,7 +358,7 @@
 /* --- Material grid cards -------------------------------------------------- */
 .md-typeset .grid.cards > ul > li,
 .md-typeset .grid > .card {
-  border-radius: 8px;
+  border-radius: var(--ds-radius);
   border: 1px solid var(--md-default-fg-color--lightest);
   transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
@@ -364,7 +367,7 @@
 .md-typeset .grid > .card:hover {
   border-color: var(--md-primary-fg-color);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--ds-shadow-md);
 }
 
 .md-typeset .grid.cards > ul > li > hr {
@@ -398,7 +401,7 @@
 .md-typeset img:not(.kb-hero img):not(.md-logo img) {
   max-width: 100%;
   height: auto;
-  border-radius: 6px;
+  border-radius: var(--ds-radius);
   background: #fff;
   display: block;
 }
@@ -410,7 +413,7 @@
 
 .md-typeset figure img {
   margin: 0 auto;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--ds-shadow-sm);
   border: 1px solid var(--md-default-fg-color--lightest);
 }
 
@@ -439,7 +442,7 @@
   gap: 8px;
   padding: 10px;
   border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 8px;
+  border-radius: var(--ds-radius);
   background: var(--md-default-bg-color);
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
   text-decoration: none !important;
@@ -449,7 +452,7 @@
 .kb-gallery__item:hover {
   transform: translateY(-1px);
   border-color: var(--md-primary-fg-color);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--ds-shadow-md);
 }
 
 .kb-gallery__item--placeholder {
@@ -465,7 +468,7 @@
 .kb-gallery__item img {
   width: 100%;
   height: auto;
-  border-radius: 6px;
+  border-radius: var(--ds-radius);
   object-fit: cover;
   aspect-ratio: 16 / 10;
   background: #fff;
@@ -489,7 +492,7 @@
 .kb-figures {
   margin: 1.2rem 0 1.6rem;
   border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 8px;
+  border-radius: var(--ds-radius);
   background: var(--kb-surface);
 }
 
@@ -531,7 +534,7 @@
 .kb-figure {
   display: block;
   border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 6px;
+  border-radius: var(--ds-radius);
   overflow: hidden;
   background: #fff;
   transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
@@ -541,7 +544,7 @@
 .kb-figure:hover {
   transform: translateY(-1px);
   border-color: var(--md-primary-fg-color);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--ds-shadow-sm);
 }
 
 .kb-figure img {
@@ -602,7 +605,7 @@
 .kb-figure-row__image {
   display: block;
   border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 6px;
+  border-radius: var(--ds-radius);
   overflow: hidden;
   background: #fff;
   text-decoration: none !important;
@@ -611,7 +614,7 @@
 
 .kb-figure-row__image:hover {
   border-color: var(--md-primary-fg-color);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--ds-shadow-sm);
 }
 
 .kb-figure-row__image img {
@@ -653,7 +656,7 @@
   background: var(--md-default-bg-color);
   border: 1px solid var(--md-default-fg-color--lighter);
   border-bottom-width: 2px;
-  border-radius: 4px;
+  border-radius: var(--ds-radius-sm);
   padding: 0.05em 0.4em;
   font-size: 0.74rem;
   font-family: 'JetBrains Mono', Consolas, monospace;
@@ -681,8 +684,8 @@
 
 .kb-schema-full img {
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border-radius: var(--ds-radius);
+  box-shadow: var(--ds-shadow-md);
 }
 
 /* --- Footer --------------------------------------------------------------- */

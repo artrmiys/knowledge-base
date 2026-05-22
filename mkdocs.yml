@@ -38,10 +38,9 @@ theme:
       toggle:
         icon: material/weather-night
         name: Включить светлый режим
-  font:
-    text: Inter
-    code: JetBrains Mono
+  font: false
 extra_css:
+  - assets/stylesheets/tokens.css
   - assets/stylesheets/extra.css
 
 nav:

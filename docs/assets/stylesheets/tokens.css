@@ -1,0 +1,88 @@
+/* ==========================================================================
+   OurCore Design System — shared tokens (v1)  ·  prefix: ds-*
+   --------------------------------------------------------------------------
+   Единый источник правды для трёх продуктов (Knowledge Base, Pay-дашборд,
+   takeoff-app). Полная спецификация и роли — в /DESIGN_SYSTEM.md (корень репо).
+
+   Принципы:
+     • green = действие / бренд / активное / success
+     • blue  = ссылки / info / выделение (selection)
+     • шрифт = Segoe UI (системный) + Consolas для чисел
+     • форма = единый радиус 12px и единый набор теней
+     • светлая И тёмная тема — обе первоклассные
+
+   Тёмная тема включается одним из селекторов (портируется между продуктами):
+       [data-md-color-scheme="slate"]   ← MkDocs Material (KB)
+       .theme-dark                       ← React-дашборд
+       [data-theme="dark"]               ← универсальный
+   ========================================================================== */
+
+:root {
+  /* --- Бренд ------------------------------------------------------------- */
+  --ds-green:        #2ad24b;   /* акцент действия (яркий, для тёмного фона) */
+  --ds-green-dark:   #1f9e38;   /* читаемый зелёный на белом (текст/шапка)   */
+  --ds-green-darker: #18802d;
+  --ds-green-soft:   rgba(42, 210, 75, 0.10);
+
+  --ds-blue:         #2563eb;   /* ссылки / info / выделение                 */
+  --ds-blue-dark:    #1d4ed8;
+  --ds-blue-light:   #5ba8e8;   /* blue для тёмной темы                      */
+  --ds-blue-soft:    rgba(37, 99, 235, 0.10);
+
+  /* --- Статусы ----------------------------------------------------------- */
+  --ds-success: #1e7e34;
+  --ds-warning: #c68a00;
+  --ds-danger:  #c62828;
+  --ds-info:    var(--ds-blue);
+
+  /* --- Маркеры takeoff (канвас takeoff-app) ------------------------------ */
+  --ds-mk-line:  #1a5ba8;
+  --ds-mk-area:  #6a4fb6;
+  --ds-mk-joist: #1b7a60;
+  --ds-mk-count: #b83276;
+
+  /* --- Форма (жёстко унифицировано) -------------------------------------- */
+  --ds-radius:      12px;       /* контейнеры: карточки, панели, кнопки, таблицы */
+  --ds-radius-sm:   4px;        /* микро-элементы: inline-код, kbd, чипы        */
+  --ds-radius-pill: 999px;
+
+  --ds-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.10);
+  --ds-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --ds-shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.18);
+
+  /* --- Типографика ------------------------------------------------------- */
+  --ds-font-text: "Segoe UI", system-ui, -apple-system, "Roboto", Arial, sans-serif;
+  --ds-font-mono: "Consolas", "JetBrains Mono", ui-monospace, monospace;
+
+  /* --- Нейтральная рампа: СВЕТЛАЯ тема ----------------------------------- */
+  --ds-bg:        #ffffff;   /* основной фон страницы            */
+  --ds-surface:   #f6f8f7;   /* приподнятая поверхность/панель   */
+  --ds-surface-2: #eceff3;   /* вторичная поверхность            */
+  --ds-line:      rgba(20, 30, 26, 0.12);  /* границы            */
+  --ds-text:      #1f2328;   /* основной текст                   */
+  --ds-text-2:    #555b62;   /* приглушённый текст               */
+  --ds-text-3:    #8a9099;   /* третичный текст                  */
+
+  --ds-accent:        var(--ds-green-dark);  /* действие (читаемо на белом) */
+  --ds-accent-soft:   var(--ds-green-soft);
+  --ds-link:          var(--ds-blue-dark);   /* ссылки/info на светлом      */
+  --ds-link-soft:     var(--ds-blue-soft);
+}
+
+/* --- Нейтральная рампа: ТЁМНАЯ тема -------------------------------------- */
+[data-md-color-scheme="slate"],
+.theme-dark,
+[data-theme="dark"] {
+  --ds-bg:        #0b0c0f;
+  --ds-surface:   #11131a;
+  --ds-surface-2: #0f1117;
+  --ds-line:      rgba(255, 255, 255, 0.08);
+  --ds-text:      #e9ecf2;
+  --ds-text-2:    #a6adbb;
+  --ds-text-3:    #6b7280;
+
+  --ds-accent:        var(--ds-green);       /* яркий зелёный на тёмном */
+  --ds-accent-soft:   var(--ds-green-soft);
+  --ds-link:          var(--ds-blue-light);  /* светлый blue на тёмном  */
+  --ds-link-soft:     var(--ds-blue-soft);
+}

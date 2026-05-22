@@ -54,7 +54,7 @@ unknown SQFT names — by natural name
 !!! warning "Floors не объединяй"
     `1st`, `2nd`, `3rd`... остаются отдельными items даже если geometry похожа.
     Не суммируй totals по нескольким этажам, только потому что имена похожи —
-    это правило клиента (E-Wood / WM).
+    это правило конкретных клиентов (напр. WM).
 
 ## Wall items { .kb-section-title .kb-st--magenta }
 
