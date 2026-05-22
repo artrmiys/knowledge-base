@@ -316,14 +316,15 @@
 }
 
 .kb-hero__btn--primary {
-  background: var(--md-primary-fg-color);
-  color: #fff !important;
-  border-color: var(--md-primary-fg-color);
+  background: var(--ds-green-soft);
+  color: var(--md-default-fg-color) !important;
+  border-color: rgba(42, 210, 75, 0.35);
 }
 
 .kb-hero__btn--primary:hover {
-  background: var(--md-primary-fg-color--dark);
-  border-color: var(--md-primary-fg-color--dark);
+  background: rgba(42, 210, 75, 0.16);
+  border-color: rgba(42, 210, 75, 0.55);
+  color: var(--md-default-fg-color) !important;
 }
 
 .kb-hero__btn--ghost {
@@ -332,9 +333,9 @@
 }
 
 .kb-hero__btn--ghost:hover {
-  background: var(--kb-surface);
-  border-color: var(--md-primary-fg-color);
-  color: var(--md-primary-fg-color) !important;
+  background: var(--ds-green-soft);
+  border-color: rgba(42, 210, 75, 0.40);
+  color: var(--md-default-fg-color) !important;
 }
 
 /* --- Секционный заголовок: цветной маркер + line ------------------------- */
@@ -393,7 +394,7 @@
 
 .md-typeset .grid.cards > ul > li:hover,
 .md-typeset .grid > .card:hover {
-  border-color: var(--md-primary-fg-color);
+  border-color: rgba(42, 210, 75, 0.40);
   transform: translateY(-1px);
   box-shadow: var(--ds-shadow-md);
 }
