@@ -1,0 +1,6601 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Рабочая wiki для estimating: takeoff workflow, COM/EWP rules, QA checklists">
+      
+      
+        <meta name="author" content="Estimating Team">
+      
+      
+      
+        <link rel="prev" href="../ourplanecore/">
+      
+      
+        <link rel="next" href="../hangers/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>OurPlaneCore — полный гайд - Estimating Knowledge Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/tokens.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="lime">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ourplanecore" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Estimating Knowledge Base" class="md-header__button md-logo" aria-label="Estimating Knowledge Base" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Estimating Knowledge Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OurPlaneCore — полный гайд
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="lime"  aria-label="Включить тёмный режим"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Включить тёмный режим" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="lime"  aria-label="Включить светлый режим"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Включить светлый режим" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Поделиться" aria-label="Поделиться" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Главная
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start/how-to-use/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Старт
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../work-types/residential/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Работа
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../boss-feedback-rules/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Справочник
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Estimating Knowledge Base" class="md-nav__button md-logo" aria-label="Estimating Knowledge Base" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    Estimating Knowledge Base
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Старт
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Старт
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/how-to-use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как пользоваться
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/takeoff-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Структура takeoff
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/quality-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/client-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Правила клиентов
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/images-and-schemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Картинки и схемы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/site-preview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preview страницы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/maintenance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Поддержка
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Работа
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Работа
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Типы работ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Типы работ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work-types/residential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Residential
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work-types/reconstruction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reconstruction / Реконструкция
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work-types/com/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    COM Commercial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work-types/ewp-capital/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EWP / Capital
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Вертикальные работы
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Вертикальные работы
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Walls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Walls
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/sill-plates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sill Plates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/unit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unit / Interior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/exterior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exterior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/corridor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Corridor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/demising/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demising
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/gable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gable
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/parapet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parapet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/shaft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shaft
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/furring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Furring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/corners/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Corners
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Openings
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Openings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/openings/windows-doors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows and Doors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/openings/headers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Headers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Горизонтальные работы
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Горизонтальные работы
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Floor Framing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Floor Framing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/post/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/beam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beam
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/joist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Joist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/stair/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stair
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/subfloor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Subfloor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1_6" id="__nav_3_3_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Details / мелкие элементы
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Details / мелкие элементы
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/details/rim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rim Board
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/details/ribbon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ribbon Board
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/details/blocking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/details/blockingoc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocking OC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/details/bracingdrywall/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bracing for Drywall
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/details/bolts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bolts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/details/screws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Screws
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/details/steelbeams/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Steel Beam Web Fillers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roof Framing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Roof Framing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/ridge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ridge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/header/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Header
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/hip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hip
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/valley/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Valley
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/dormer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dormer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/overframes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overframes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/dbl-trpl-rafters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dbl / Trpl Rafters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/canopy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Canopy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sheathing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sheathing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/sheathing/wall-sheathing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wall Sheathing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/sheathing/exterior-materials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exterior Wall Materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/sheathing/floor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Floor Sheathing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/roof-sheathing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roof Sheathing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/sheathing/gable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gable Sheathing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/sheathing/box-sheathing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Box Sheathing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/sheathing/truss-heel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Truss Heel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/sheathing/shear-wall/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shear Wall
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roof Misc / прочее
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Roof Misc / прочее
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sheathing-and-misc/eve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eve
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sheathing-and-misc/rake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sheathing-and-misc/returns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Returns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sheathing-and-misc/rooftype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roof Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sheathing-and-misc/ridgevalleyhip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ridge / Valley / Hip
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sheathing-and-misc/flashing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flashing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQFTs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SQFTs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sqfts/basement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sqfts/1st2nd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1st-5th Floors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sqfts/loft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loft
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sqfts/roof/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roof
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sqfts/deck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deck
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sqfts/porch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Porch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sqfts/balcony/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balcony
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sqfts/cantilevered/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cantilevered
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deck / Porch / Balcony
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Deck / Porch / Balcony
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/deck/deck-porch-balcony-frame/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frame (deck/porch/balcony)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/deck/railing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Railing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/deck/balcony-trims/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balcony Trims
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/deck/anchor-bolts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anchor Bolts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interior Trims
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Interior Trims
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/interior-trims/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обзор
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/interior-trims/base/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/interior-trims/casing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/interior-trims/crown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crown
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/interior-trims/door-window-trim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Door and Window Trim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/interior-trims/room-schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Room Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exterior Trims
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Exterior Trims
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обзор
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/exclusions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exclusions и J-Channel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/casing-corner-band/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casing, Corner & Band
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/furring-and-jambs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Furring & Window Jambs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/soffit-fascia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soffit & Fascia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/porch-deck-balcony/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Porch / Deck / Balcony
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/rails-decking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rails & Decking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/balcony-buildup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balcony build-up
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/shower-pergola/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outdoor Shower & Pergola
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/macros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trim macros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Siding
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Siding
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/siding/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обзор
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/siding/types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Типы siding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/siding/underlayment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Underlayment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/siding/eifs-stucco-veneer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EIFS / Stucco / Veneer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/siding/measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Измерение
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Справочник
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Справочник
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../boss-feedback-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Советы и важные вещи
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../takeoff-naming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как называть takeoffs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplanecore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OurPlaneCore — программа
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OurPlaneCore — полный гайд
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OurPlaneCore — полный гайд
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        От и до — рабочий процесс
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workspace-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Верхние workspace-табы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Лента над вьюпортом
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Лента над вьюпортом">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб Main
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб Page
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб PDF Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewport" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб Viewport
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-strip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Панель инструментов (tool strip)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polzunki" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ползунки (sliders)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Левая панель — Pages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeoffs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Правая панель — Takeoffs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-inbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Inbox (низ)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sheet-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб 2 Sheet Manager — кнопки
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-takeoff-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб 3 Takeoff Manager — кнопки
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-report-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб 4 Report Builder
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб 5 Materials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-ai-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб 6 AI Manager
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tab-7-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб 7 3D
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб 8 Settings — редактируемые правила
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-massing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3D Massing — AI-черновик здания
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Редактирование: выделение, vertex-grips, line cut
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-misc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прочее новое
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Горячие клавиши
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hangers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hangers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../material-catalog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Material catalog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standard-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standard notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../takeoff-items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Takeoff item labels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../excel-hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Excel macro hotkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formulas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Формулы и факторы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        От и до — рабочий процесс
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workspace-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Верхние workspace-табы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Лента над вьюпортом
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Лента над вьюпортом">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб Main
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб Page
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб PDF Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewport" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб Viewport
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-strip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Панель инструментов (tool strip)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polzunki" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ползунки (sliders)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Левая панель — Pages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeoffs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Правая панель — Takeoffs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-inbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Inbox (низ)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sheet-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб 2 Sheet Manager — кнопки
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-takeoff-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб 3 Takeoff Manager — кнопки
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-report-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб 4 Report Builder
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб 5 Materials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-ai-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб 6 AI Manager
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tab-7-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб 7 3D
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таб 8 Settings — редактируемые правила
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-massing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3D Massing — AI-черновик здания
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Редактирование: выделение, vertex-grips, line cut
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-misc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Прочее новое
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Горячие клавиши
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ourplanecore">OurPlaneCore — полный гайд<a class="headerlink" href="#ourplanecore" title="Прямая ссылка на раздел">&para;</a></h1>
+<p>Здесь — <strong>каждая кнопка, ползунок и таб</strong> + рабочий процесс от и до. Краткий
+обзор программы — на странице <a href="../ourplanecore/">OurPlaneCore</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Как читать</p>
+<p>Названия кнопок даны <strong>как в интерфейсе</strong> (англ.), пояснение — рус.
+Тултипы кнопок в программе совпадают с описанием здесь.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Новое в программе (обновления мая 2026)</p>
+<ul>
+<li><strong>3D Roof по-новому</strong> — таб <code>7 3D</code>: per-edge pitch вместо «Auto/Clear Roof».
+  Помечаешь кромки roof base (<code>Select Edge</code>), задаёшь каждой свой pitch,
+  <code>Generate Roof</code> строит ridge/hip/valley (включая вогнутые valleys),
+  Revit-style envelope для U/S/L-крыш. См. <a href="#tab-7-3d">Таб 7 3D</a>.</li>
+<li><strong>3D Massing — AI-черновик здания</strong> — отдельная панель: <code>Build 3D Draft</code>,
+  <code>3D From Takeoffs</code>, <code>AI 3D Sort</code>, <code>Review Roof</code>/<code>Review Openings</code>,
+  <code>Accept 3D</code>. См. <a href="#3d-massing">3D Massing</a>.</li>
+<li><strong>Новая модель выделения и vertex-grips</strong> — <code>Ctrl</code> мультивыбор, <code>Alt</code>
+  режим вершин, прямое перетаскивание ручек, <code>line cut</code>. См.
+  <a href="#editing">Редактирование</a>.</li>
+<li><strong>Page takeoff layers</strong> — порядок (z-order) привязанных takeoff-слоёв на
+  листе. <strong>Job source selector</strong> + переделанный <code>Open Job</code> диалог.
+  См. <a href="#new-misc">Прочее новое</a>.</li>
+</ul>
+</div>
+<p>Скриншоты — фрагментами <strong>прямо у соответствующих разделов</strong> ниже (снято
+на реальном job, рабочий вид). Полный вид главного окна:</p>
+<figure>
+<p><img alt="1 Main View — общий вид" src="../../assets/images/ourplanecore/opc-guide-main-view.png" />
+  </p>
+<figcaption><code>1 Main View</code>: ribbon сверху, Pages-дерево слева, PDF-вьюпорт по центру, Takeoffs-дерево справа, tool strip снизу.</figcaption>
+</figure>
+<h2 class="kb-section-title kb-st--green" id="_1">От и до — рабочий процесс<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
+<ol>
+<li><strong>Создать / открыть job.</strong> Таб <code>1 Main View</code> → <code>Open / Import</code>
+   (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span>) — открыть/создать job или импортировать PDF. Recent —
+   <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-o">O</kbd></span>.</li>
+<li><strong>Импорт PDF.</strong> <code>Open / Import</code> → добавить PDF (или таб <code>2 Sheet
+   Manager</code> → <code>Import PDF(s)</code>).</li>
+<li><strong>Метаданные листов.</strong> Таб <code>2 Sheet Manager</code>: <code>Analyze</code> → <code>Auto Name</code> /
+   <code>Auto Scale</code> / <code>Name+Scale</code> → проверить <code>Confidence</code> / <code>Why</code> /
+   <code>Warnings</code> → <code>Apply Checked</code> (применяется <strong>только</strong> отмеченное).
+   Нет данных в PDF → <code>AI Fill</code> (+ <code>Crop Hints</code> для зон номера/масштаба).</li>
+<li><strong>Разложить листы.</strong> <code>Sort A/S</code> → <code>D/Sec/WT</code> → <code>Auto Folders</code>.
+   При сбитых связях measurements → <code>Repair Links</code>.</li>
+<li><strong>Открыть лист.</strong> Таб <code>1 Main View</code>, дерево <code>Pages</code> слева — выбрать
+   sheet. Проверить scale (<code>Scale</code> tool) и слои (<code>PDF Layers</code>).</li>
+<li><strong>Создать / выбрать takeoff item.</strong> Справа дерево <code>Takeoffs</code> →
+   <code>New Item</code> (или <span class="keys"><kbd class="key-t">T</kbd></span>). Имя по правилам — <a href="../takeoff-naming/">Как называть
+   takeoffs</a>.</li>
+<li><strong>Рисовать.</strong> Выбрать tool (<code>Count</code>/<code>Line</code>/<code>Area</code>/<code>J Area</code>), включить
+   запись <code>Record</code> (<span class="keys"><kbd class="key-space">Space</kbd></span>), обвести. <code>Scale</code> обязателен для Line/Area.</li>
+<li><strong>Проверить.</strong> Таб <code>3 Takeoff Manager</code> или <code>Open Estimating</code> — totals,
+   sections, notes; <code>Current-sheet filter</code> — только активный лист.</li>
+<li><strong>Экспорт.</strong> Таб <code>3</code> → <code>Export CSV</code> / <code>TXT</code> / <code>Excel</code>, либо
+   <code>Current Excel</code> — пишет в <strong>уже открытый</strong> workbook от активной ячейки
+   (auto-save <strong>нет</strong>, проверка на пользователе).</li>
+<li><strong>AI (опц.).</strong> <code>AI Inbox</code> снизу: <code>+ Add</code> маркер/кроп → <code>Run AI</code> →
+    review draft → accept. Quantity появляется <strong>только</strong> после accept.</li>
+</ol>
+<h2 class="kb-section-title kb-st--cyan" id="workspace-">Верхние workspace-табы<a class="headerlink" href="#workspace-" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Таб</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1 Main View</code></td>
+<td>Основное: PDF-вьюпорт, Pages слева, Takeoffs справа, AI Inbox снизу</td>
+</tr>
+<tr>
+<td><code>2 Sheet Manager</code></td>
+<td>Импорт/метаданные/раскладка листов, review-gated rename+scale</td>
+</tr>
+<tr>
+<td><code>3 Takeoff Manager</code></td>
+<td>Таблица quantities, sections, notes, экспорт</td>
+</tr>
+<tr>
+<td><code>4 Report Builder</code></td>
+<td>Сборка report-блоков из <code>TemplateCom.xlsm</code> (в разработке)</td>
+</tr>
+<tr>
+<td><code>5 Materials</code></td>
+<td>Извлечение material evidence + Materials Report sheet</td>
+</tr>
+<tr>
+<td><code>6 AI Manager</code></td>
+<td>AI-наблюдения, маркер-сеты, обучение, запуск/ретрай</td>
+</tr>
+<tr>
+<td><code>7 3D</code></td>
+<td>3D massing: walls/roof build + 3D viewer</td>
+</tr>
+<tr>
+<td><code>8 Settings</code></td>
+<td>Редактируемые правила (см. ниже)</td>
+</tr>
+</tbody>
+</table>
+<h2 class="kb-section-title kb-st--magenta" id="_2">Лента над вьюпортом<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
+<h3 id="main">Таб <code>Main</code><a class="headerlink" href="#main" title="Прямая ссылка на раздел">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Кнопка</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Open / Import</code></td>
+<td>Открыть job, сменить job-папку, создать job или импортировать PDF</td>
+</tr>
+<tr>
+<td><code>PlanSwift</code></td>
+<td>Отдельный конвертер PlanSwift-job</td>
+</tr>
+<tr>
+<td><code>Export</code></td>
+<td>Экспорт выбранных/всех листов в PDF</td>
+</tr>
+<tr>
+<td><code>Name</code></td>
+<td>Превью и применение PDF-имён листов</td>
+</tr>
+<tr>
+<td><code>Scale</code></td>
+<td>Превью и применение PDF-масштаба листов</td>
+</tr>
+<tr>
+<td><code>Name+Scale</code></td>
+<td>Имена и масштаб вместе</td>
+</tr>
+<tr>
+<td><code>AI Fill</code></td>
+<td>Очередь GPT-fallback для отсутствующих метаданных</td>
+</tr>
+<tr>
+<td><code>Crop Hints</code></td>
+<td>Нарисовать переиспользуемые кроп-боксы для номера листа и масштаба</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<p><img alt="Ribbon Main" src="../../assets/images/ourplanecore/opc-frag-ribbon-main.png" />
+  </p>
+<figcaption>Ribbon <code>Main</code> + строка workspace-табов под ним.</figcaption>
+</figure>
+<h3 id="page">Таб <code>Page</code><a class="headerlink" href="#page" title="Прямая ссылка на раздел">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Кнопка</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Add Pages</code></td>
+<td>Импорт PDF-страниц в текущий job</td>
+</tr>
+<tr>
+<td><code>Batch Rename</code></td>
+<td>Переименовать выбранные страницы по порядку</td>
+</tr>
+<tr>
+<td><code>Left</code> / <code>Right</code> / <code>180</code></td>
+<td>Повернуть активную страницу влево/вправо/на 180°</td>
+</tr>
+<tr>
+<td><code>Level</code></td>
+<td>Сброс вида страницы к fit + очистка временного ввода</td>
+</tr>
+<tr>
+<td><code>Batch Rotate</code></td>
+<td>Повернуть выбранные страницы</td>
+</tr>
+<tr>
+<td><code>Vertical</code> / <code>Horizontal</code></td>
+<td>Отразить активную страницу верт./гор.</td>
+</tr>
+<tr>
+<td><code>Invert</code></td>
+<td>Инвертировать цвета страницы</td>
+</tr>
+<tr>
+<td><code>Crop New Page</code></td>
+<td>Создать новую страницу из видимой области вьюпорта</td>
+</tr>
+<tr>
+<td><code>Copy</code></td>
+<td>Скопировать PNG активной страницы в буфер</td>
+</tr>
+<tr>
+<td><code>Set Origin</code></td>
+<td>Отметить центр видимой страницы как origin</td>
+</tr>
+<tr>
+<td><code>Offset Origin</code></td>
+<td>Сдвинуть сохранённый origin</td>
+</tr>
+<tr>
+<td><code>Close Page</code></td>
+<td>Закрыть вкладку активной страницы</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<p><img alt="Ribbon Page" src="../../assets/images/ourplanecore/opc-frag-ribbon-page.png" />
+  </p>
+<figcaption>Ribbon <code>Page</code>: Add Pages, Batch Rename, Rotate, Flip, Invert, Crop, Origin, Close.</figcaption>
+</figure>
+<h3 id="pdf-output">Таб <code>PDF Output</code><a class="headerlink" href="#pdf-output" title="Прямая ссылка на раздел">&para;</a></h3>
+<p>Настройки <strong>экспортного рендера</strong> PDF (как measurements/markups лягут в файл).</p>
+<table>
+<thead>
+<tr>
+<th>Контрол</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Lines &amp; Area</code> ползунки</td>
+<td>Толщина/заливка линий и площадей в экспорте</td>
+</tr>
+<tr>
+<td><code>Labels</code></td>
+<td>Какие value-лейблы включать</td>
+</tr>
+<tr>
+<td>Overlays <code>Legend</code> / <code>Header</code></td>
+<td>Включать легенду / заголовок масштаба</td>
+</tr>
+<tr>
+<td><code>Include</code> <code>Meas</code> / <code>Markups</code></td>
+<td>Включать замеры / аннотации в PDF</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<p><img alt="Ribbon PDF Output" src="../../assets/images/ourplanecore/opc-frag-ribbon-pdf-output.png" />
+  </p>
+<figcaption>Ribbon <code>PDF Output</code>: Lines &amp; Area, Labels, Overlays, Include Meas/Markups.</figcaption>
+</figure>
+<h3 id="viewport">Таб <code>Viewport</code><a class="headerlink" href="#viewport" title="Прямая ссылка на раздел">&para;</a></h3>
+<p>Чекбоксы display + ползунки (см. <a href="#polzunki">раздел ползунков</a>):</p>
+<table>
+<thead>
+<tr>
+<th>Контрол</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>All</code> / <code>Line</code> / <code>Area</code> / <code>Joist</code> / <code>Count</code></td>
+<td>Master + по типам: показывать value-лейблы measurements</td>
+</tr>
+<tr>
+<td><code>w/ page</code> (labels)</td>
+<td>Лейблы масштабируются вместе со страницей</td>
+</tr>
+<tr>
+<td>Legend: <code>Show</code> / <code>Size</code> / <code>Pos</code> / <code>w/page</code></td>
+<td>Показ легенды листа, размер, позиция, масштаб с страницей</td>
+</tr>
+<tr>
+<td>Scale header: <code>Size</code> / <code>w/page</code></td>
+<td>Размер заголовка масштаба, масштаб с страницей</td>
+</tr>
+<tr>
+<td><code>Fast pan/zoom</code></td>
+<td>Упрощённая навигация (быстрее на тяжёлых PDF)</td>
+</tr>
+<tr>
+<td><code>ft / sf</code></td>
+<td>Imperial-единицы (фут/кв.фут)</td>
+</tr>
+<tr>
+<td><code>Viewport background</code> combo</td>
+<td>Фон вьюпорта: White / Gray / Dark</td>
+</tr>
+<tr>
+<td><code>Page background</code> combo</td>
+<td>Фон страницы: White…Black (7 вариантов)</td>
+</tr>
+<tr>
+<td><code>Dark</code> toggle</td>
+<td>Тёмная тема</td>
+</tr>
+</tbody>
+</table>
+<h2 class="kb-section-title kb-st--green" id="tool-strip">Панель инструментов (tool strip)<a class="headerlink" href="#tool-strip" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Нижняя строка под вьюпортом — основные инструменты и слайдеры выделения.</p>
+<figure>
+<p><img alt="Tool strip" src="../../assets/images/ourplanecore/opc-frag-toolstrip.png" />
+  </p>
+<figcaption>Tool strip: Pan/Select/Scale/Ruler · Annotation · Count/Line/Area/J Area/Cut · Record · Snap/PDF Snap/Ortho/Box · Fit/+/− · Flip · Rot/Scale ползунки · Scale/Set/Presets.</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Кнопка</th>
+<th>Tag / клавиша</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Pan</code></td>
+<td><code>pan</code> / <span class="keys"><kbd class="key-v">V</kbd></span></td>
+<td>Панорамирование</td>
+</tr>
+<tr>
+<td><code>Select</code></td>
+<td><code>select</code> / <span class="keys"><kbd class="key-e">E</kbd></span></td>
+<td>Выбор/редактирование measurements</td>
+</tr>
+<tr>
+<td><code>Scale</code></td>
+<td><code>scale</code> / <span class="keys"><kbd class="key-s">S</kbd></span></td>
+<td>Задать/проверить масштаб листа</td>
+</tr>
+<tr>
+<td><code>Ruler</code></td>
+<td><code>ruler</code> / <span class="keys"><kbd class="key-r">R</kbd></span></td>
+<td>Временный замер без takeoff item</td>
+</tr>
+<tr>
+<td><code>Ruler sheet visibility</code> toggle</td>
+<td>—</td>
+<td>Показывать ruler-замеры на листе</td>
+</tr>
+<tr>
+<td><code>Annotation ▾</code></td>
+<td>—</td>
+<td>Меню типа аннотации</td>
+</tr>
+<tr>
+<td><code>Draw</code></td>
+<td><code>drawline</code> / <span class="keys"><kbd class="key-d">D</kbd></span></td>
+<td>Линия-аннотация</td>
+</tr>
+<tr>
+<td><code>Arrow</code></td>
+<td><code>drawarrow</code></td>
+<td>Стрелка</td>
+</tr>
+<tr>
+<td><code>Box</code></td>
+<td><code>drawrect</code> / <span class="keys"><kbd class="key-b">B</kbd></span></td>
+<td>Прямоугольник-аннотация</td>
+</tr>
+<tr>
+<td><code>Cloud</code></td>
+<td><code>drawcloud</code></td>
+<td>Облако (ревизия)</td>
+</tr>
+<tr>
+<td><code>Area</code> (annot)</td>
+<td><code>drawarea</code></td>
+<td>Область-аннотация</td>
+</tr>
+<tr>
+<td><code>Note</code></td>
+<td><code>note</code></td>
+<td>Текстовая заметка</td>
+</tr>
+<tr>
+<td><code>Count</code></td>
+<td><code>point</code> / <span class="keys"><kbd class="key-p">P</kbd></span></td>
+<td>Счётный маркер (<code>ea</code>)</td>
+</tr>
+<tr>
+<td><code>Count symbol ▾</code></td>
+<td>—</td>
+<td>Символ счётного маркера по умолчанию</td>
+</tr>
+<tr>
+<td><code>Line</code></td>
+<td><code>line</code> / <span class="keys"><kbd class="key-l">L</kbd></span></td>
+<td>Линейный замер (<code>lf</code>)</td>
+</tr>
+<tr>
+<td><code>Area</code></td>
+<td><code>area</code> / <span class="keys"><kbd class="key-a">A</kbd></span></td>
+<td>Площадь (<code>sf</code>)</td>
+</tr>
+<tr>
+<td><code>J Area</code></td>
+<td><code>joistarea</code> / <span class="keys"><kbd class="key-j">J</kbd></span></td>
+<td>Joist-раскладка (count + длина, direction/spacing/pitch)</td>
+</tr>
+<tr>
+<td><code>Cut</code></td>
+<td><code>areacut</code> / <span class="keys"><kbd class="key-x">X</kbd></span></td>
+<td>Вырез из площади</td>
+</tr>
+<tr>
+<td><code>Snap</code> toggle</td>
+<td><span class="keys"><kbd class="key-f3">F3</kbd></span></td>
+<td>Привязка к нарисованной геометрии</td>
+</tr>
+<tr>
+<td><code>PDF Snap</code> toggle</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f3">F3</kbd></span></td>
+<td>Привязка к vector-геометрии PDF</td>
+</tr>
+<tr>
+<td><code>Ortho</code> toggle</td>
+<td><span class="keys"><kbd class="key-f8">F8</kbd></span></td>
+<td>Ограничение 90/45°</td>
+</tr>
+<tr>
+<td><code>Box</code> toggle</td>
+<td><span class="keys"><kbd class="key-f9">F9</kbd></span></td>
+<td>Box-режим</td>
+</tr>
+<tr>
+<td><code>Fit</code></td>
+<td><span class="keys"><kbd class="key-f">F</kbd></span></td>
+<td>Вписать страницу</td>
+</tr>
+<tr>
+<td><code>+</code> / <code>-</code></td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-plus">+</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-minus">-</kbd></span></td>
+<td>Зум +/−</td>
+</tr>
+<tr>
+<td><code>Flip H</code> / <code>Flip V</code></td>
+<td>—</td>
+<td>Отразить выделение гор./верт.</td>
+</tr>
+<tr>
+<td><code>0</code> (reset rotate)</td>
+<td>—</td>
+<td>Сбросить угол поворота выделения</td>
+</tr>
+<tr>
+<td><code>1x</code> (reset scale)</td>
+<td>—</td>
+<td>Сбросить масштаб выделения</td>
+</tr>
+<tr>
+<td><code>Set</code> (scale)</td>
+<td>—</td>
+<td>Задать масштаб листа</td>
+</tr>
+<tr>
+<td><code>▾ Presets</code></td>
+<td>—</td>
+<td>Пресеты масштаба</td>
+</tr>
+<tr>
+<td><code>AI Settings</code></td>
+<td>—</td>
+<td>Модель и статус ключа OpenAI</td>
+</tr>
+</tbody>
+</table>
+<h2 class="kb-section-title kb-st--cyan" id="polzunki">Ползунки (sliders)<a class="headerlink" href="#polzunki" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Ползунок</th>
+<th>Диапазон</th>
+<th>Что делает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Line thickness</code> (<code>SldLineThickness</code>)</td>
+<td><code>0.25 – 4.0</code></td>
+<td>Толщина линий-замеров</td>
+</tr>
+<tr>
+<td><code>Point size</code> (<code>SldPointSize</code>)</td>
+<td><code>0.25 – 4.0</code></td>
+<td>Размер счётных маркеров</td>
+</tr>
+<tr>
+<td><code>Area edge</code> (<code>SldAreaEdge</code>)</td>
+<td><code>0.25 – 4.0</code></td>
+<td>Толщина границы площади</td>
+</tr>
+<tr>
+<td><code>Area fill</code> (<code>SldAreaFill</code>)</td>
+<td><code>0 – 100 %</code></td>
+<td>Прозрачность заливки площади</td>
+</tr>
+<tr>
+<td><code>Label scale</code> (<code>SldLabelScale</code>)</td>
+<td><code>0.5 – 3.0</code></td>
+<td>Размер value-лейблов</td>
+</tr>
+<tr>
+<td><code>Rotate selection</code> (<code>SliderRotateSelection</code>)</td>
+<td><code>−180 … +180°</code></td>
+<td>Поворот выделенных measurements; <code>0</code> — сброс</td>
+</tr>
+<tr>
+<td><code>Scale selection</code> (<code>SliderScaleSelection</code>)</td>
+<td><code>от 0.25×</code></td>
+<td>Масштаб выделенных measurements; <code>1x</code> — сброс</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Рядом с ползунком — поле ввода</p>
+<p>У большинства ползунков есть текст-поле: впиши значение и <code>Enter</code> —
+точная установка без перетаскивания.</p>
+</div>
+<figure>
+<p><img alt="Viewport sliders" src="../../assets/images/ourplanecore/opc-frag-ribbon-viewport.png" />
+  </p>
+<figcaption>Ползунки в ribbon <code>Viewport</code>: Line / Point / Edge / Fill + поля ввода, Labels, Legend/Header.</figcaption>
+</figure>
+<h2 class="kb-section-title kb-st--magenta" id="pages">Левая панель — Pages<a class="headerlink" href="#pages" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Контрол</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collapse / Expand tree</td>
+<td>Свернуть/развернуть дерево страниц</td>
+</tr>
+<tr>
+<td><code>Open Tabs</code></td>
+<td>Открыть выбранные листы вкладками вьюпорта</td>
+</tr>
+<tr>
+<td><code>Detach</code></td>
+<td>Открыть выбранные листы в отдельных окнах</td>
+</tr>
+<tr>
+<td><code>Tile M2</code> (+ vertical toggle)</td>
+<td>Разложить отделённые окна на мониторе 2</td>
+</tr>
+<tr>
+<td><code>Sort A/S</code></td>
+<td><code>A</code>→Arch, <code>S</code>→Struct, trailing <code>-</code>→Others</td>
+</tr>
+<tr>
+<td><code>D/Sec/WT</code></td>
+<td>Details/Sections/Wall-Type внутри выбранной папки</td>
+</tr>
+<tr>
+<td><code>Repair Links</code></td>
+<td>Переподключить сохранённые measurements к папкам страниц</td>
+</tr>
+<tr>
+<td><code>Page Setup</code></td>
+<td>Параметры страницы (плавающее окно)</td>
+</tr>
+<tr>
+<td><code>Folder template</code> combo</td>
+<td><code>Auto</code> / <code>COM</code> / <code>EWP</code> шаблон папок</td>
+</tr>
+<tr>
+<td><code>New Page Folder</code> / <code>Auto Folders</code></td>
+<td>Создать папку / стандартные папки</td>
+</tr>
+<tr>
+<td>Под-таб <code>Pages</code></td>
+<td>Дерево листов/папок</td>
+</tr>
+<tr>
+<td>Под-таб <code>PDF Layers</code></td>
+<td><code>Load</code>, <code>On</code>, <code>Off</code>, <code>Clear Hi</code>, <code>Layer Trace</code> toggle, <code>Cycle</code>, <code>Apply</code></td>
+</tr>
+<tr>
+<td><code>Layer Trace</code> (viewport) toggle / <code>Cycle</code></td>
+<td>Трассировка PDF-слоёв прямо во вьюпорте</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<p><img alt="Pages panel" src="../../assets/images/ourplanecore/opc-frag-pages.png" />
+  </p>
+<figcaption>Левая панель <code>Pages</code>: Tabs/Detach/Tile M2, под-табы Pages/PDF Layers/Bookmarks, дерево листов, Page Setup.</figcaption>
+</figure>
+<h2 class="kb-section-title kb-st--green" id="takeoffs">Правая панель — Takeoffs<a class="headerlink" href="#takeoffs" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Контрол</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collapse / Expand tree</td>
+<td>Свернуть/развернуть дерево takeoff</td>
+</tr>
+<tr>
+<td><code>Record</code></td>
+<td>Вкл/выкл запись в активный item (<span class="keys"><kbd class="key-space">Space</kbd></span>)</td>
+</tr>
+<tr>
+<td><code>More</code></td>
+<td>Доп. действия активного item</td>
+</tr>
+<tr>
+<td><code>Properties</code></td>
+<td>Свойства активного item</td>
+</tr>
+<tr>
+<td><code>Find</code></td>
+<td>Найти item</td>
+</tr>
+<tr>
+<td><code>Sheet Next</code></td>
+<td>Следующий лист активного item</td>
+</tr>
+<tr>
+<td><code>Next</code> / <code>Previous</code></td>
+<td>Следующий/предыдущий item</td>
+</tr>
+<tr>
+<td><code>New Folder</code> / <code>New Item</code></td>
+<td>Создать папку / item</td>
+</tr>
+<tr>
+<td><code>Roof Base</code></td>
+<td>Создать roof-base слой</td>
+</tr>
+<tr>
+<td><code>Export ▾</code></td>
+<td>Меню экспорта</td>
+</tr>
+<tr>
+<td><code>Auto Tree</code></td>
+<td>Стандартное дерево takeoff</td>
+</tr>
+<tr>
+<td><code>From Pages</code></td>
+<td>Создать папки/items из структуры страниц</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<p><img alt="Takeoffs panel" src="../../assets/images/ourplanecore/opc-frag-takeoffs.png" />
+  </p>
+<figcaption>Правая панель <code>Takeoffs</code>: активный item + Record, под-табы Takeoffs/Estimating/3D, дерево, New Folder/Item, Export.</figcaption>
+</figure>
+<h2 class="kb-section-title kb-st--blue" id="ai-inbox">AI Inbox (низ)<a class="headerlink" href="#ai-inbox" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Контрол</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Toggle Inbox</code></td>
+<td>Свернуть/раскрыть инбокс</td>
+</tr>
+<tr>
+<td><code>+ Add</code></td>
+<td>Добавить ручное наблюдение/маркер-note</td>
+</tr>
+<tr>
+<td><code>Run AI</code></td>
+<td>Запустить AI по выбранному</td>
+</tr>
+<tr>
+<td><code>More</code></td>
+<td>Доп. действия</td>
+</tr>
+<tr>
+<td><code>Marker type</code> / <code>Marker sample</code> combo</td>
+<td>Фильтры маркеров</td>
+</tr>
+</tbody>
+</table>
+<h2 class="kb-section-title kb-st--cyan" id="2-sheet-manager">Таб <code>2 Sheet Manager</code> — кнопки<a class="headerlink" href="#2-sheet-manager" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Кнопка</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Import PDF(s)</code></td>
+<td>Добавить один/много PDF в job</td>
+</tr>
+<tr>
+<td><code>Export PDF</code></td>
+<td>Экспорт выбранных/всех листов в PDF</td>
+</tr>
+<tr>
+<td><code>Refresh</code></td>
+<td>Перечитать таблицу листов из папок</td>
+</tr>
+<tr>
+<td><code>Analyze</code></td>
+<td>Прочитать текст/слои PDF и показать превью метаданных</td>
+</tr>
+<tr>
+<td><code>Auto Name</code> / <code>Auto Scale</code> / <code>Name+Scale</code></td>
+<td>Превью авто-имён / масштаба / вместе</td>
+</tr>
+<tr>
+<td><code>AI Fill</code></td>
+<td>GPT-fallback для отсутствующих метаданных</td>
+</tr>
+<tr>
+<td><code>Crop Hints</code></td>
+<td>Кроп-боксы для номера листа и масштаба</td>
+</tr>
+<tr>
+<td><code>Apply Checked</code></td>
+<td>Применить отмеченные строки rename/scale</td>
+</tr>
+<tr>
+<td><code>Open Sheet</code></td>
+<td>Открыть выбранный лист в Main View</td>
+</tr>
+<tr>
+<td><code>Open Tabs</code></td>
+<td>Выбранные листы вкладками</td>
+</tr>
+<tr>
+<td><code>Detach</code> / <code>Tile M2</code></td>
+<td>Отдельные окна / тайлинг на мониторе 2</td>
+</tr>
+<tr>
+<td><code>Open JSON</code></td>
+<td>Открыть JSON метаданных PDF</td>
+</tr>
+<tr>
+<td><code>Sort A/S</code> / <code>D/Sec/WT</code></td>
+<td>Раскладка листов</td>
+</tr>
+<tr>
+<td><code>Repair Links</code></td>
+<td>Переподключить measurements</td>
+</tr>
+<tr>
+<td><code>Auto Folders</code></td>
+<td>Стандартные папки под выбранной</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<p><img alt="Sheet Manager" src="../../assets/images/ourplanecore/opc-guide-sheet-manager.png" />
+  </p>
+<figcaption><code>2 Sheet Manager</code>: №, Proposed Name, Scale, Confidence, Why, Warnings + Apply Checked.</figcaption>
+</figure>
+<h2 class="kb-section-title kb-st--magenta" id="3-takeoff-manager">Таб <code>3 Takeoff Manager</code> — кнопки<a class="headerlink" href="#3-takeoff-manager" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Кнопка</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Save</code></td>
+<td>Сохранить job (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>)</td>
+</tr>
+<tr>
+<td><code>Refresh</code></td>
+<td>Перечитать таблицу</td>
+</tr>
+<tr>
+<td><code>Set Active</code></td>
+<td>Сделать выбранный item активной целью рисования</td>
+</tr>
+<tr>
+<td><code>Properties</code></td>
+<td>Свойства item</td>
+</tr>
+<tr>
+<td><code>Open Estimating</code></td>
+<td>Полное окно estimating-таблицы</td>
+</tr>
+<tr>
+<td><code>New Folder</code> / <code>New Item</code></td>
+<td>Создать папку / item</td>
+</tr>
+<tr>
+<td><code>Auto Tree</code> / <code>From Pages</code></td>
+<td>Стандартное дерево / из структуры страниц</td>
+</tr>
+<tr>
+<td><code>Export CSV</code> / <code>TXT</code> / <code>Excel</code></td>
+<td>Экспорт quantities</td>
+</tr>
+<tr>
+<td><code>Current Excel</code></td>
+<td>Записать выбранную папку/item в активную ячейку <strong>открытого</strong> workbook</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<p><img alt="Takeoff Manager" src="../../assets/images/ourplanecore/opc-guide-takeoff-manager.png" />
+  </p>
+<figcaption><code>3 Takeoff Manager</code>: Item / Type / Sections / Total / Unit / Notes / Folder + экспорт.</figcaption>
+</figure>
+<h2 class="kb-section-title kb-st--green" id="4-report-builder">Таб <code>4 Report Builder</code><a class="headerlink" href="#4-report-builder" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Кнопка</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Reload</code></td>
+<td>Перезагрузить <code>TemplateCom.xlsm</code> в таблицу</td>
+</tr>
+<tr>
+<td><code>Refresh</code></td>
+<td>Обновить вид</td>
+</tr>
+<tr>
+<td><code>Apply Walls</code></td>
+<td>Применить A3 wall-block правило к выбранным строкам <code>J:K</code></td>
+</tr>
+</tbody>
+</table>
+<figure>
+<p><img alt="Report Builder" src="../../assets/images/ourplanecore/opc-guide-report-builder.png" />
+  </p>
+<figcaption><code>4 Report Builder</code>: сборка report-блоков из <code>TemplateCom.xlsm</code> (в разработке).</figcaption>
+</figure>
+<h2 class="kb-section-title kb-st--cyan" id="5-materials">Таб <code>5 Materials</code><a class="headerlink" href="#5-materials" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Кнопка</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Extract</code></td>
+<td>Извлечь material evidence из source-PDF job</td>
+</tr>
+<tr>
+<td><code>Report Sheet</code></td>
+<td>Создать копируемый Materials Report sheet из страниц</td>
+</tr>
+<tr>
+<td><code>Refresh</code></td>
+<td>Перечитать вывод извлечения</td>
+</tr>
+<tr>
+<td><code>JSON</code></td>
+<td>Полный JSON извлечения</td>
+</tr>
+<tr>
+<td><code>Rows CSV</code> / <code>Summary CSV</code></td>
+<td>Строки evidence / сгруппированная сводка в CSV</td>
+</tr>
+<tr>
+<td><code>Folder</code></td>
+<td>Открыть папку вывода извлечения</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<p><img alt="Materials" src="../../assets/images/ourplanecore/opc-guide-materials.png" />
+  </p>
+<figcaption><code>5 Materials</code>: Extract / Report Sheet / JSON / Rows-Summary CSV.</figcaption>
+</figure>
+<h2 class="kb-section-title kb-st--magenta" id="6-ai-manager">Таб <code>6 AI Manager</code><a class="headerlink" href="#6-ai-manager" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Кнопка</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AI Settings</code></td>
+<td>Модель и статус ключа</td>
+</tr>
+<tr>
+<td><code>+ Add</code></td>
+<td>Ручное наблюдение/маркер</td>
+</tr>
+<tr>
+<td><code>Refresh</code></td>
+<td>Перечитать таблицу</td>
+</tr>
+<tr>
+<td><code>Open Details</code></td>
+<td>Детали выбранного</td>
+</tr>
+<tr>
+<td><code>Go to Page</code></td>
+<td>Перейти к source-странице</td>
+</tr>
+<tr>
+<td><code>Run AI</code></td>
+<td>Запустить AI по выбранному eligible</td>
+</tr>
+<tr>
+<td><code>Run New</code> / <code>Retry Failed</code></td>
+<td>Все новые / повтор неуспешных bookmark-запросов</td>
+</tr>
+<tr>
+<td><code>Create Set</code> / <code>Marker Sets</code></td>
+<td>Создать/управлять маркер-сетами</td>
+</tr>
+<tr>
+<td><code>Export Markers</code></td>
+<td>Экспорт проверенных маркеров</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<p><img alt="AI Manager" src="../../assets/images/ourplanecore/opc-guide-ai-manager.png" />
+  </p>
+<figcaption><code>6 AI Manager</code>: наблюдения, Run AI / Run New / Retry Failed, маркер-сеты.</figcaption>
+</figure>
+<h2 class="kb-section-title kb-st--green" id="tab-7-3d">Таб <code>7 3D</code><a class="headerlink" href="#tab-7-3d" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Группа <code>Build</code> сверху + группа <code>Viewer</code>. Кнопки и тултипы — как в программе.</p>
+<table>
+<thead>
+<tr>
+<th>Кнопка</th>
+<th>Группа</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Auto</code></td>
+<td>Build</td>
+<td>Авто-постройка walls + sqft slabs + RF/roof areas (если есть)</td>
+</tr>
+<tr>
+<td><code>Wall</code></td>
+<td>Build</td>
+<td>Стены-призмы из выбранных <strong>line</strong>-takeoff</td>
+</tr>
+<tr>
+<td><code>Roof Base</code></td>
+<td>Build</td>
+<td>Roof footprint из выбранных <strong>area</strong>-takeoff</td>
+</tr>
+<tr>
+<td><code>Select Edge</code></td>
+<td>Build</td>
+<td>Выбрать кромки roof base на листе; задать <strong>per-edge pitch</strong> в боковой панели</td>
+</tr>
+<tr>
+<td><code>Generate Roof</code></td>
+<td>Build</td>
+<td>Построить ridge/hip/valley из сохранённых per-edge pitch</td>
+</tr>
+<tr>
+<td><code>Fit</code> / <code>Iso</code> / <code>Top</code> / <code>Front</code> / <code>Reset</code></td>
+<td>Viewer</td>
+<td>Виды чистой 3D-сцены</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Per-edge roof workflow (Revit-style U/S/L крыши)</p>
+<p>Старые <code>Auto Roof</code> / <code>Roof Edges</code> / <code>Clear Roof</code> заменены одним потоком:</p>
+<ol>
+<li><code>Roof Base</code> — footprint из area-takeoff (RF/roof).</li>
+<li><code>Select Edge</code> — кликаешь кромки footprint; для каждой в боковой панели
+   помечаешь <strong>defines slope</strong> и задаёшь свой <strong>pitch</strong>. Кромка без slope —
+   это gable/rake (вертикальный фронтон).</li>
+<li><code>Generate Roof</code> — солвер строит точный <em>lower-envelope</em>: ridge, hips и
+   <strong>valleys</strong> (в т.ч. вогнутые, через изломы footprint), клиппит плоскости
+   по mitered slope-доменам. Крыша читается как реальное здание и движется
+   как объект; результат можно <strong>затолкнуть обратно в takeoff-дерево</strong> как
+   roof-takeoff.</li>
+</ol>
+</div>
+<figure>
+<p><img alt="3D" src="../../assets/images/ourplanecore/opc-guide-3d.png" />
+  </p>
+<figcaption><code>7 3D</code>: Build (Auto / Wall / Roof Base / Select Edge / Generate Roof) + Viewer (Fit / Iso / Top / Front / Reset).</figcaption>
+</figure>
+<h2 class="kb-section-title kb-st--orange" id="8-settings">Таб <code>8 Settings</code> — редактируемые правила<a class="headerlink" href="#8-settings" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Категории: <code>Page Folders</code>, <code>Auto Tree</code>, <code>From Pages</code>, <code>Sort A/S</code>,
+<code>Sort D/Sec/WT</code>, <code>Auto Rename / Scale</code>, <code>Defaults</code>. У каждой: live-редактор,
+<code>Reset to default</code>, <code>Save global default</code>, <code>Save as this job</code>, <code>Apply</code>.
+Разрешение правила: <strong>job override → global → default</strong>. Подробно —
+<a href="../ourplanecore/">OurPlaneCore → раздел «8 Settings»</a>.</p>
+<figure>
+<p><img alt="Settings" src="../../assets/images/ourplanecore/opc-guide-settings.png" />
+  </p>
+<figcaption><code>8 Settings</code>: live-редактор правила, Reset / Save global / Save as job / Apply.</figcaption>
+</figure>
+<h2 class="kb-section-title kb-st--cyan" id="3d-massing">3D Massing — AI-черновик здания<a class="headerlink" href="#3d-massing" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Отдельная панель (под-таб <code>3D</code> справа): собирает <strong>черновую 3D-модель здания</strong>
+из AI-маркеров или из takeoff'ов и даёт review-gated workflow до принятия.
+Кнопки и тултипы — как в программе.</p>
+<table>
+<thead>
+<tr>
+<th>Кнопка</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Build 3D Draft</code></td>
+<td>Собрать <code>AI_Context/3d_massing/model.json</code> из текущих AI-маркеров</td>
+</tr>
+<tr>
+<td><code>3D From Takeoffs</code></td>
+<td>Черновик из Line/Area замеров уровня Walls/Areas/Sqft</td>
+</tr>
+<tr>
+<td><code>AI 3D Sort</code></td>
+<td>Отправить метаданные takeoff в OpenAI для структурной сортировки role/level, затем детерминированно построить черновик</td>
+</tr>
+<tr>
+<td><code>3D Window</code></td>
+<td>Отдельное orbit-окно 3D с сохранёнными точками маркеров</td>
+</tr>
+<tr>
+<td><code>Auto Roof</code></td>
+<td>Поставить в очередь reviewable AI-кандидаты roof-маркеров с активного листа</td>
+</tr>
+<tr>
+<td><code>Review Roof</code></td>
+<td>Проверить и сохранить тип крыши, pitch, заметки и guide-точки до принятия геометрии</td>
+</tr>
+<tr>
+<td><code>Review Openings</code></td>
+<td>Проверить спроецированные маркеры дверей/окон/проёмов до принятия черновика</td>
+</tr>
+<tr>
+<td><code>Accept 3D</code></td>
+<td>Пометить текущий черновик как reviewed project context</td>
+</tr>
+<tr>
+<td><code>Open JSON</code></td>
+<td>Открыть <code>model.json</code></td>
+</tr>
+<tr>
+<td><code>Fit</code> / <code>Iso</code> / <code>Top</code> / <code>Front</code></td>
+<td>Виды 2D-превью footprint + 3D-shell</td>
+</tr>
+</tbody>
+</table>
+<p>Внизу — список <strong>Source markers</strong> (Role / Type / Page / Point / Draft / Status)
+с кнопками <code>Jump</code> (открыть лист маркера), <code>Marker JSON</code>, <code>Crop</code> и панелью
+деталей-evidence под каждым маркером.</p>
+<div class="admonition note">
+<p class="admonition-title">Порядок</p>
+<p><code>Build</code> / <code>From Takeoffs</code> / <code>AI 3D Sort</code> → (опц.) <code>Auto Roof</code> → <code>Review
+Roof</code> → <code>Review Openings</code> → <code>Accept 3D</code>. Кнопки review/accept активны
+только когда есть что ревьюить.</p>
+</div>
+<h2 class="kb-section-title kb-st--magenta" id="editing">Редактирование: выделение, vertex-grips, line cut<a class="headerlink" href="#editing" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Новая модель выделения и прямого редактирования geometry прямо во вьюпорте
+(инструмент <code>Select</code>, <span class="keys"><kbd class="key-e">E</kbd></span>).</p>
+<table>
+<thead>
+<tr>
+<th>Жест</th>
+<th>Что делает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Клик по объекту</td>
+<td>Выбрать один measurement</td>
+</tr>
+<tr>
+<td>Box (рамка)</td>
+<td>Выбрать пересечённые/охваченные measurements</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + клик по новому объекту</td>
+<td>Добавить в мульти-выбор (2, 3, … N)</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + клик по уже выбранному</td>
+<td>Выбрать <strong>все его вершины</strong></td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-shift">Shift</kbd></span> + клик/box</td>
+<td>Убрать попавшие объекты из выбора</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-alt">Alt</kbd></span> + клик/box</td>
+<td>Режим <strong>вершин (handles)</strong>: набрать/снять ручки (toggle)</td>
+</tr>
+<tr>
+<td>Drag ручки</td>
+<td>Двигать вершину(ы); <span class="keys"><kbd class="key-shift">Shift</kbd></span> — ортогонально</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-delete">Del</kbd></span></td>
+<td>Удалить выбранные объекты или ручки</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Direct vertex grips</strong> — у выбранного measurement видны ручки; тянешь любую
+  напрямую, без отдельного режима. Несколько выбранных ручек двигаются вместе.</li>
+<li><strong>Count vertex editing</strong> — у count-маркеров точки тоже редактируются грипами.</li>
+<li><strong>Line cut</strong> — разрез линии: линию можно разрезать на месте (как area <code>Cut</code>,
+  но для line-замеров).</li>
+<li><strong>Cut regions (area)</strong> — вырез из площади теперь можно <strong>вставлять и за
+  границей</strong> Area, paste якорится по <strong>верхнему-левому углу</strong> региона.</li>
+</ul>
+<h2 class="kb-section-title kb-st--orange" id="new-misc">Прочее новое<a class="headerlink" href="#new-misc" title="Прямая ссылка на раздел">&para;</a></h2>
+<ul>
+<li><strong>Page takeoff layers</strong> — порядок (z-order) привязанных takeoff-слоёв на
+  листе: выбранные слои двигаются вперёд/назад относительно страницы (через
+  legend/контекст листа). Полезно, когда заливки area перекрывают линии.</li>
+<li><strong>Job source selector</strong> — видимый переключатель источника job'а (например
+  read-only PlanSwift-источник виден явно).</li>
+<li><strong>Open Job — новый диалог</strong> — переделан как ribbon-styled XAML; даты
+  показываются в инвариантном английском формате (никаких «мая 13» на
+  не-английской локали). Recent — <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-o">O</kbd></span>.</li>
+<li><strong>Per-Monitor DPI v2</strong> — корректный рендер вьюпорта/overlay на разных
+  мониторах и масштабах.</li>
+</ul>
+<h2 class="kb-section-title kb-st--blue" id="_3">Горячие клавиши<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Global / tools</label><label for="__tabbed_1_2">Viewport</label><label for="__tabbed_1_3">Trees / 3D guides</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Клавиша</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-o">O</kbd></span></td>
+<td>Open Job / Recent</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span></td>
+<td>Save</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-p">P</kbd></span></td>
+<td>Command Palette</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span></td>
+<td>Старт/стоп записи в активный item</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-t">T</kbd></span></td>
+<td>Новый takeoff item</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-b">B</kbd></span> <span class="keys"><kbd class="key-k">K</kbd></span></td>
+<td>Add Bookmark (последовательность)</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-v">V</kbd></span> / <span class="keys"><kbd class="key-e">E</kbd></span> / <span class="keys"><kbd class="key-s">S</kbd></span> / <span class="keys"><kbd class="key-r">R</kbd></span></td>
+<td>Pan / Select / Scale / Ruler</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-d">D</kbd></span> / <span class="keys"><kbd class="key-b">B</kbd></span></td>
+<td>Draw Line / Box annotation</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-p">P</kbd></span> / <span class="keys"><kbd class="key-l">L</kbd></span> / <span class="keys"><kbd class="key-a">A</kbd></span> / <span class="keys"><kbd class="key-j">J</kbd></span> / <span class="keys"><kbd class="key-x">X</kbd></span></td>
+<td>Count / Line / Area / J Area / Cut</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Клавиша</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-escape">Esc</kbd></span></td>
+<td>Отмена draw/edit/Layer Trace/3D guide</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-enter">Enter</kbd></span> / <span class="keys"><kbd class="key-tab">Tab</kbd></span></td>
+<td>Layer Trace: дальше / цикл режима</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-t">T</kbd></span></td>
+<td>Toggle Layer Trace</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-c">C</kbd></span></td>
+<td>Завершить Line/Area/Cut</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-backspace">Backspace</kbd></span></td>
+<td>Отменить последнюю точку</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-delete">Del</kbd></span></td>
+<td>Удалить выбранное</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-f">F</kbd></span></td>
+<td>Fit page</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-f3">F3</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f3">F3</kbd></span></td>
+<td>Snap / PDF Snap</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-f8">F8</kbd></span> / <span class="keys"><kbd class="key-f9">F9</kbd></span></td>
+<td>Ortho / Box mode</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-plus">+</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-minus">-</kbd></span></td>
+<td>Зум +/−</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span></td>
+<td>Undo</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span></td>
+<td>Выбрать всё / копировать / вставить</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Клавиша</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-x">X</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-d">D</kbd></span></td>
+<td>Copy / Cut / Paste / Duplicate (имя сохраняется)</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-up">Up</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-down">Down</kbd></span></td>
+<td>Двигать узел вверх/вниз</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span></td>
+<td>(Takeoffs) выбрать measurements секции на canvas</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-f2">F2</kbd></span> / <span class="keys"><kbd class="key-delete">Del</kbd></span></td>
+<td>Rename / Delete</td>
+</tr>
+<tr>
+<td>3D Roof: <span class="keys"><kbd class="key-r">R</kbd></span> <span class="keys"><kbd class="key-h">H</kbd></span> <span class="keys"><kbd class="key-v">V</kbd></span> <span class="keys"><kbd class="key-e">E</kbd></span> <span class="keys"><kbd class="key-k">K</kbd></span> <span class="keys"><kbd class="key-p">P</kbd></span></td>
+<td>Ridge / Hip / Valley / Eave / Rake / Pitch guide</td>
+</tr>
+<tr>
+<td>3D Roof: <span class="keys"><kbd class="key-escape">Esc</kbd></span> / <span class="keys"><kbd class="key-backspace">Backspace</kbd></span></td>
+<td>Отмена guide / убрать точку</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Прямая ссылка на раздел">&para;</a></h2>
+<ul>
+<li><a href="../ourplanecore/">OurPlaneCore</a> — обзор, архитектура, mental model</li>
+<li><a href="../takeoff-naming/">Как называть takeoffs</a></li>
+<li><a href="../../start/workflow/">Workflow</a> · <a href="../../start/takeoff-structure/">Структура takeoff</a></li>
+<li><a href="../excel-hotkeys/">Excel macro hotkeys</a> — после экспорта в Excel</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
+        
+          
+          <a href="../ourplanecore/" class="md-footer__link md-footer__link--prev" aria-label="Назад: OurPlaneCore — программа">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              <div class="md-ellipsis">
+                OurPlaneCore — программа
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../hangers/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Hangers">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              <div class="md-ellipsis">
+                Hangers
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
