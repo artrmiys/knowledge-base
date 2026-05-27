@@ -24,6 +24,9 @@
 - Для one-hour exterior walls давай exterior wall SQFT, когда это requested.
 - Проверяй wall size по floor: 2x4, 2x6 или 2x8.
 - Bottom plates могут требовать separate line, если lower plate = P.T.
+- **Metal stud / CMU стены:** даже если каркас by others, обшивка (exterior
+  gypsum), insulation (вкл. `Insulation at CMU`), flashing, `Bracing 2x4` и
+  window jambs остаются нашими. Полный блок — [Exterior Wall Materials](../sheathing/exterior-materials.md).
 
 ## Wall Sizing & Height
 
@@ -88,6 +91,9 @@ Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65175555/Walls`
 - Corner studs and corners by floor.
 - Exterior blocking changing to FRT because the exterior wall material is FRT.
 - Parapet framing that follows the exterior wall material rule.
+- Exterior gypsum sheathing на metal стенах (material нужен, даже если studs чужие).
+- `Insulation at CMU` — отдельная строка от обычной wall insulation.
+- Window jambs (доска) в проёмах metal стен; flashing at Mtl/CMU walls.
 
 
 <!-- confluence-gallery:start -->

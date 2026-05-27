@@ -58,6 +58,13 @@ nailing-плоскость / зазор для вентиляции.
 - Не путай **structural window jamb** (наш framing/trim) с **interior jamb
   trim / casing** — это разные scope и разные страницы.
 
+!!! warning "Доска-jamb в metal стенах"
+    В **metal stud** стенах проёмы окон/дверей иногда добирают **деревянной
+    доской** (`2x` jamb) — это наш material, даже если каркас by others. Смотри
+    section внимательно. Если jambs не используются — фиксируй note, напр.
+    `Assumed window jambs 2x4 are not used page A8.53; verify`. См.
+    [Exterior Wall Materials](../vertical/sheathing/exterior-materials.md).
+
 ### Макрос вставки блока openings
 
 В trims workbook есть helper-макрос, который вставляет готовый блок

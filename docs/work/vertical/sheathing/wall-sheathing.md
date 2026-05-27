@@ -41,7 +41,8 @@ Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/90144770/Wall+She
 ## Проверить
 
 - FRT sheathing notes на exterior walls.
-- Densglass на metal walls или specific elevations.
+- Densglass / Type X gypsum на metal walls или specific elevations.
+- `Insulation at CMU` — continuous insulation на CMU стенах отдельной строкой.
 - Shear wall schedule: one-side vs both-sides requirements.
 - Full-height vs box-only sheathing на optional walls.
 - Floor-height sheathing вокруг panelized COM jobs, где loose material всё ещё
@@ -62,9 +63,20 @@ Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/90144770/Wall+She
 | `1/2" Ply` (или просто **APA RATED**) | Plywood APA-rated, 1/2" |
 | `7/16" Zip` | Huber Zip System, 7/16" |
 | `Zip Tape` | Лента Zip — отдельной строкой к Zip-обшивке |
+| `5/8" Type X` | Exterior grade gypsum sheathing (= `19/32"`) |
+| `5/8" Densglass` | Densglass gypsum sheathing (часто over Zip) |
 
 - Если на плане только `APA RATED` без указания материала — это **Plywood**, не OSB.
 - `Zip Tape` идёт **только** в паре с Zip-обшивкой; не забывай добавить отдельную строку.
+- **Gypsum sheathing** (`Type X` / `Densglass`) бывает в **(2) layers** и отдельным
+  слоем **over FRT** — каждый слой считается своей строкой. Material для metal/CMU
+  стен нужен, даже если каркас чужой.
+
+!!! note "Полный блок наружных материалов"
+    Exterior gypsum, continuous insulation, **Insulation at CMU**, flashing,
+    bracing и window jambs собраны на странице
+    [Exterior Wall Materials](exterior-materials.md). Открывай её, когда
+    считаешь наружную оболочку целиком.
 
 <!-- confluence-gallery:start -->
 ## Визуальная проверка

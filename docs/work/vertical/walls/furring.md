@@ -25,3 +25,20 @@ Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65306681/Furring`
 
 - Furring к бетонным стенам **типично возле elevator-шахт** и других бетонных core-конструкций.
 - Смотри детали — указано ли в спецификации **P.T.** (Pressure Treated) для досок, прилегающих к бетону. Если P.T. в детали есть, считай его отдельно от обычного SPF furring.
+
+## Z metal furring и furring под siding
+
+Два разных продукта, оба "furring":
+
+| Тип | Где | Size | Назначение |
+| --- | --- | --- | --- |
+| **Z metal furring** | на CMU, под insulation | `Z furring` (metal) | держит rigid / continuous insulation на блоке |
+| **Furring под siding** | за siding на каркасе | `1x4` или `2x4` **P.T.** | rainscreen / nailing-плоскость / зазор |
+
+- **Z metal furring** идёт в паре с `Insulation at CMU` (continuous insulation на
+  CMU). Если client не хочет видеть metal — verify scope.
+- **Furring под siding** бывает лёгкая рейка `1x4` или толще `2x4` **P.T.** (низ /
+  влажные зоны). P.T. и не-P.T. — разные строки.
+
+См. [Exterior Wall Materials](../sheathing/exterior-materials.md) и
+[Furring & Window Jambs](../../exterior-trims/furring-and-jambs.md).
