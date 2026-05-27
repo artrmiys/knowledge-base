@@ -9,6 +9,11 @@ Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/90144770/Wall+She
     - Каждый product / thickness / side — отдельной строкой, не прячь в wall SQFT.
     - Полный блок наружных материалов → [Exterior Wall Materials](exterior-materials.md).
 
+<figure markdown>
+  ![WD stud wall layer stack with takeoff notes](../../../assets/images/sheathing/wd-wall-layers.svg)
+  <figcaption>Стена по слоям: каждый sheathing-слой (gypsum, FRT ply, WRB) — отдельная строка, не общий wall SQFT.</figcaption>
+</figure>
+
 ## Что считать
 
 - Exterior sheathing по Arch / energy / Zip notes.

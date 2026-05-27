@@ -18,6 +18,11 @@ sections / wall type schedule, а не на elevation.
 fire-rating и wall type schedule. Бывает в **один или два слоя**, и отдельно —
 слой **поверх FRT** структурной обшивки.
 
+<figure markdown>
+  ![WD stud wall layer stack with takeoff notes](../../../assets/images/sheathing/wd-wall-layers.svg)
+  <figcaption>Каркасная стена по слоям: veneer → WRB → Type X gypsum → FRT ply → batt + studs → interior gypsum. Каждый слой — отдельная строка.</figcaption>
+</figure>
+
 <div class="kb-split" markdown>
 
 - `5/8" Type X` (= `19/32"`) — стандартная exterior gypsum sheathing.
@@ -58,6 +63,11 @@ fire-rating и wall type schedule. Бывает в **один или два сл
 Continuous insulation (`Cont. Insulation`, `R6 Zip`, rigid) идёт по energy /
 envelope sheets. Два разных места — **на каркасных стенах** и **на CMU** —
 считаются **отдельными строками**, потому что площади и детали разные.
+
+<figure markdown>
+  ![CMU wall layer stack with continuous insulation and Z furring](../../../assets/images/sheathing/cmu-wall-layers.svg)
+  <figcaption>CMU стена: veneer → continuous insulation (= Insulation at CMU) → Z metal furring → air barrier → CMU block. Каркас чужой, но insulation/furring/flashing — наши.</figcaption>
+</figure>
 
 <div class="kb-split" markdown>
 
