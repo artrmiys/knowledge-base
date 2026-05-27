@@ -2,10 +2,12 @@
 
 Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/90144770/Wall+Sheathing`
 
-<figure markdown>
-  ![Wall sheathing source priority flow](../../../assets/images/sheathing/wall-sheathing-priority.svg)
-  <figcaption>Wall Sheathing priority: Arch/Energy может управлять exterior, Structural управляет shear.</figcaption>
-</figure>
+!!! abstract "Коротко"
+    - **Exterior** обшивку ведут **Arch / Energy / Zip** notes.
+    - **Shear / interior** обшивку ведёт **Structural** (по shear wall schedule).
+    - Zip перекрывает structural notes на exterior, но оставляй note о конфликте.
+    - Каждый product / thickness / side — отдельной строкой, не прячь в wall SQFT.
+    - Полный блок наружных материалов → [Exterior Wall Materials](exterior-materials.md).
 
 ## Что считать
 
