@@ -20,18 +20,33 @@ Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65339393/Windows+
 - Interior door jambs can use casing divided by 2 where that is the local method.
 - Room schedule tile base исключай, если нужен только wood base.
 
-## Flashing Table
+## Flashing из Openings
 
 Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65044582/Openings`
 
-| Opening item | Output |
-| --- | --- |
-| Window Flashing | Sill Flashing |
+Когда openings заполнены — flashing **считается автоматом** через макрос
+`F_Openings`. Руками длины не набиваем; задача — правильно проставить тип
+(окно / дверь) и размеры, а LFT макрос соберёт сам.
+
+| Opening | Что выдаёт макрос | Правило |
+| --- | --- | --- |
+| Window | `Window Flashing` (3 стороны: head + 2 jambs) + `Sill Flashing` (низ) | Окну считается **и то, и то** |
+| Door (`d`) | `Window Flashing` (3 стороны) | У двери **нет** `Sill Flashing` — снизу threshold |
+| Garage door (`gd`) | `Window Flashing` (3 стороны) | Аналогично двери, sill нет |
+
+- **Sides + head** считаются как `Window Flashing` LFT = `(2*H + W) * qty`.
+- **Bottom** считается как `Sill Flashing` LFT = `W * qty` — **только для окон**.
+- Полная логика «что такое flashing, что такое sill, и как разделять по типу
+  стены (wood / Mtl / CMU/concrete)» — на странице
+  [Flashing](../../sheathing-and-misc/flashing.md).
+- На CMU / concrete стенах часто нужен ещё `Window Jamb 1x4` или `2x4 P.T.` —
+  отдельной строкой, см. там же.
 
 ## PlanSwift Marking & Macro
 
 - Подсчёт всех openings — макрос **`F_Openings`** (даёт Window Flashing + Sill Flashing).
-- У всех **дверей** обязательно ставь пометку **`d`**.
+- У всех **дверей** обязательно ставь пометку **`d`** — макрос по этой пометке
+  **не считает** sill flashing.
 - У **гаражных** дверей — пометка **`gd`**.
 - Если **окно и дверь объединены одним хэдером** (например, sliding patio в blocks с фиксом сбоку) — считай их **вместе** одним openings, ставь **`d`**.
 - Все openings **вырезаются из sheathing** — не забывай subtract при подсчёте Wall Sheathing SQFT.
