@@ -112,20 +112,15 @@ envelope sheets. Два разных места — **на каркасных с
 
 ## Flashing вокруг проёмов { .kb-section-title .kb-st--green }
 
-Flashing разделяют **по типу стены**, потому что у metal / CMU / каркасных стен
-разные detail и разные quantities:
+Flashing вокруг окон и дверей **разделяется по типу стены** (wood / Mtl /
+CMU / concrete) и идёт **отдельными строками**, потому что у каждого типа
+свой detail и свой подрядчик. Полная логика, формулы LFT и правило про двери
+(у дверей **нет** Sill Flashing) — на отдельной странице:
 
-| Строка в takeoff | Материал | Unit |
-| --- | --- | --- |
-| `Window Flashing` | `Flashing Tape` | `LFT` |
-| `Sill Flashing` | `Sill Flashing` | `LFT` |
-| `Window Flashing at Mtl Walls` | `Flashing Tape` | `LFT` |
-| `Sill Flashing at Mtl Walls` | `Sill Flashing` | `LFT` |
-| `Window Flashing at CMU Walls` | `Flashing Tape` | `LFT` |
+**[Window Flashing & Sill](../openings/window-flashing.md)**.
 
-- `Flashing Tape` — по периметру окна (head + jambs, иногда + sill).
-- `Sill Flashing` — отдельно по нижней грани проёма.
-- Не объединяй Mtl / CMU / wood walls в одну строку — это разные scope-зоны.
+Здесь, в Exterior Wall Materials, эти строки появляются как наш material
+по `Mtl Walls` / `CMU Walls` — см. примеры в блоке такейофа ниже.
 
 ## Window jambs — доска в проёмах { .kb-section-title .kb-st--cyan }
 
@@ -203,4 +198,5 @@ Window Flashing at CMU Walls Flashing Tape           190   LFT
 - [Exterior Walls](../walls/exterior.md)
 - [Furring (walls)](../walls/furring.md)
 - [Furring & Window Jambs](../../exterior-trims/furring-and-jambs.md)
-- [Flashing](../../sheathing-and-misc/flashing.md)
+- [Window Flashing & Sill](../openings/window-flashing.md) — flashing вокруг проёмов.
+- [Flashing (roof / wall / deck)](../../sheathing-and-misc/flashing.md)

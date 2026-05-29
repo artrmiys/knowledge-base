@@ -126,7 +126,7 @@ vented/vinyl soffit и отдельные roof-edge details.
 
 ## Источники правил
 
-- Trello: `Vinel Soffits только в SQFT`.
+- Trello: `Vinyl Soffits только в SQFT`.
 - Trello: `Если Soffit Eve Vinyl то нужно вписать в SQFT`.
 - Trello: `Для крыши из AJS Rafters считать вместо Rake вручную Rafters`.
 - Related pages: [Rake](rake.md), [Returns](returns.md),

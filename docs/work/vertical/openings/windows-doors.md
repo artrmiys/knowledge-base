@@ -4,43 +4,35 @@ Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65339393/Windows+
 
 ## Что считать
 
-- Window and door openings by type/size.
-- Jamb blocking for all windows and interior doors.
-- Fire-rated unit entry doors from corridors.
+- **Окна и двери** — по типам и размерам из window / door schedule.
+- **Блокировку проёмов** (`jamb blocking`) — у всех окон и у межкомнатных
+  дверей.
+- **Пожароустойчивые двери** в квартиры из коридоров (`fire-rated unit
+  entry`) — отдельным типом, с указанием рейтинга.
 
-## Door Labels
+## Подписи дверей
 
-- Используй material и fire rating, где это важно: `2670 FCW`, `3070 HM C-lbl`.
-- Unit entries can be labeled `3070 Entry`.
-- Hardware numbers usually are not needed in the takeoff list.
+- В подписи указываем **материал** и **fire rating**, если это важно. Примеры:
+    - `2670 FCW` — двустворчатая 2'6"×7'0".
+    - `3070 HM C-lbl` — металлическая 3'0"×7'0", класс «C».
+- Дверь в квартиру можно подписать просто `3070 Entry`.
+- **Номера фурнитуры** (hardware numbers) в takeoff обычно **не нужны**.
 
 ## Проверить
 
-- Exterior jambs can use flashing-style formulas.
-- Interior door jambs can use casing divided by 2 where that is the local method.
-- Room schedule tile base исключай, если нужен только wood base.
+- У наружных проёмов **jamb** (доска по периметру проёма) можно считать той же
+  формулой, что и flashing — по 3 сторонам. Подробнее на странице
+  [Window Flashing](window-flashing.md).
+- У межкомнатных дверей **jamb** часто считается как `casing / 2`, если так
+  заведено в проекте.
+- Из Room Schedule убирай `tile base`, если в скоупе только wood base.
 
-## Flashing из Openings
+## Гидроизоляция вокруг проёмов
 
-Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65044582/Openings`
-
-Когда openings заполнены — flashing **считается автоматом** через макрос
-`F_Openings`. Руками длины не набиваем; задача — правильно проставить тип
-(окно / дверь) и размеры, а LFT макрос соберёт сам.
-
-| Opening | Что выдаёт макрос | Правило |
-| --- | --- | --- |
-| Window | `Window Flashing` (3 стороны: head + 2 jambs) + `Sill Flashing` (низ) | Окну считается **и то, и то** |
-| Door (`d`) | `Window Flashing` (3 стороны) | У двери **нет** `Sill Flashing` — снизу threshold |
-| Garage door (`gd`) | `Window Flashing` (3 стороны) | Аналогично двери, sill нет |
-
-- **Sides + head** считаются как `Window Flashing` LFT = `(2*H + W) * qty`.
-- **Bottom** считается как `Sill Flashing` LFT = `W * qty` — **только для окон**.
-- Полная логика «что такое flashing, что такое sill, и как разделять по типу
-  стены (wood / Mtl / CMU/concrete)» — на странице
-  [Flashing](../../sheathing-and-misc/flashing.md).
-- На CMU / concrete стенах часто нужен ещё `Window Jamb 1x4` или `2x4 P.T.` —
-  отдельной строкой, см. там же.
+Flashing вокруг окон и дверей — отдельная страница:
+**[Window Flashing & Sill](window-flashing.md)**. Там: правило «3 стороны
+у окон + sill, у дверей только 3 стороны», разделение по типу стены (wood /
+Mtl / CMU / concrete), и wood jamb `1x4` / `2x4 P.T.` на бетоне.
 
 ## PlanSwift Marking & Macro
 

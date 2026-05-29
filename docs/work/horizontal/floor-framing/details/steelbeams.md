@@ -13,5 +13,6 @@
 
 ## Проверить
 
-- Hangers могут bear on top of steel или wood nailer; это меняет hanger type.
+- Hangers могут опираться **сверху** на сталь или на wood nailer — это меняет
+  тип hanger (top-mount vs face-mount), проверь по детали.
 - Assumptions держи видимыми.

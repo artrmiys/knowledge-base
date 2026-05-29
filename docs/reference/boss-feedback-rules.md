@@ -98,15 +98,11 @@
 
 ## Client Metal Rule
 
-| Считать metal | Исключить / by others |
-| --- | --- |
-| WM | EBS |
-| Timberline | Probuild |
-| Littleton | Triangle |
-|  | Interstate |
-|  | Bliffert |
+Канонично — на странице [Правила клиентов → Metal Studs](../start/client-rules.md#metal-studs).
+Здесь не дублируем, чтобы списки клиентов не разошлись между двумя страницами.
 
-Когда metal исключён, всё равно отмечай locations как `by others`.
+Главное правило: даже когда metal исключается, всё равно отмечай locations
+как `by others`.
 
 ## Formatting и output
 
@@ -134,7 +130,7 @@ checkpoint-ы перед output: сначала прочитай правило 
 карточку и проверь похожий condition на плане/schedule.
 
 ??? info "Источник картинок"
-    - ---: [19 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/11796656/---)
+    - Разное (QA feedback): [19 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/11796656/---)
     - Need to sort: [4 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/229638146/Need+to+sort)
 
 <details class="kb-figures">

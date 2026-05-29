@@ -153,7 +153,8 @@ output всё равно должен идти по framing plan, joist schedule
 ## Проверить
 
 - Добавляй note, если нестандартные lengths сделаны намеренно.
-- Если joists are top chord bearing, ribbon board может не применяться.
+- Если joists / trusses — **top chord bearing**, ribbon board часто не нужен
+  (вместо него — blocking, см. [Ribbon Board](details/ribbon.md)).
 - Проверь, что rim всё ещё посчитан при roof TJI conditions.
 - Не разбивай rim на 16' pieces, если output format прямо не просит pieces.
 - Не меняй местами joist count и joist length в Excel/output.

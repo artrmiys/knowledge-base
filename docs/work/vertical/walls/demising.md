@@ -11,8 +11,9 @@
 - Some demising walls are double; не усредняй их в regular walls.
 - Shear wall sheathing at demising walls может быть one side only или half the
   wall length; следуй schedule.
-- Regular demising hanger conditions обычно используют ITS, не DHU/DGU, когда
-  gypsum stops below floor level.
+- На обычных demising hanger conditions используют `ITS`, а не `DHU` / `DGU` —
+  когда gypsum заканчивается ниже уровня floor framing (т.е. это не настоящая
+  fire wall, см. [Corridor → DHU/DGU](corridor.md#правила)).
 
 ## Проверить
 

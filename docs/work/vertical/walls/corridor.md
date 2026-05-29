@@ -15,8 +15,9 @@
 
 ## Проверить
 
-- Не используй DHU/DGU hangers только потому, что wall = demising/corridor. DHU/DGU используй
-  only where joists hang over true fire wall conditions per details.
+- Не используй `DHU` / `DGU` hangers только потому, что стена — demising/corridor.
+  `DHU` / `DGU` нужны **только там, где joists заходят над настоящей fire wall**
+  по детали (stairs / elevator / shaft).
 
 ## Что считается corridor wall
 
