@@ -79,6 +79,26 @@ Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65175555/Walls`
 | `2x4 x` / `2x6 x` | Generic wall run by stud size |
 | `2x4 half` / `2x6 half` | Half-height wall by stud size |
 
+## Полнота строки (corpus) { .kb-section-title .kb-st--cyan }
+
+На full-frame проектах 1st-floor-стена — это полный каркас, не только bracing+sheathing.
+Типовой набор по корпусу (137 файлов, `%` = частота):
+
+| Строка | % | Заметка |
+| --- | ---: | --- |
+| Studs Ext / Int / Dem | 60 / 53 / 49% | размер авто по высоте стены (nested-IF) |
+| Bracing Ext / Dem / Corr | 86 / 65 / 48% | `2x4` |
+| Vapor Barrier | 77% | Tyvek / `=O4` |
+| Wall / Box Sheathing | 68 / 63% | OSB (×56) чаще Zip (×18) |
+| Blocking | 62% | `2x4`–`2x10` |
+| **Holdowns** | 58% | `DTT2Z` / `HTT5KT` / `HDU…` / `TBD HD` — частый пропуск |
+| Plates btm (P.T.) + dbl top | 42–53% | btm `2x6/2x4 P.T.` |
+| Ext. Headers | 51% | `2x10`/`2x8`/`2x12` по пролёту |
+
+→ **Holdowns** в ~58% — если есть shear walls, не забудь (выбор по SW-schedule,
+[Hardware catalog](../../../reference/hardware-catalog.md)). Studs auto-sized по высоте —
+коэффициенты spacing в [Формулах](../../../reference/formulas.md).
+
 ## Частые пропуски
 
 - Rigid insulation.

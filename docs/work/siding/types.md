@@ -73,6 +73,20 @@
     `Siding` (field) и `Siding Gable front` (accent shingle/panel) — разные
     строки: разный материал, разный waste, разная площадь.
 
+## Ориентация и companion-строки (corpus) { .kb-section-title .kb-st--magenta }
+
+По корпусу siding чаще **горизонтальный** (`Siding Horizontal` — lap/clapboard),
+реже **вертикальный** (`Siding Vertical` — board&batten / `1x6 Vert. Cedar`). Держи
+ориентацию в Label, если шаблон их разделяет.
+
+Частые **companion-строки** рядом с полем siding:
+
+- **Post Wrap** — `1x10` / `1x12` (обёртка колонн порчей/крыльца).
+- **Fascia** — `1x12` / `1x8` (по краю).
+- Panel-варианты поля: `Fiber Cement Panel`, `Timber Faced Panel`.
+
+Trim (casing/corner/J-channel) — отдельно в [Exterior Trims](../exterior-trims/casing-corner-band.md).
+
 ## Чек { .kb-section-title .kb-st--cyan }
 
 - [ ] Материал + профиль + exposure в Label?

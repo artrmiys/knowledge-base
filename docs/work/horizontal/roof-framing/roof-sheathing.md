@@ -17,6 +17,25 @@
 - Some details call for every other rafter to be doubled; do not average this
   into a generic rafter run.
 
+## Companion-каркас (corpus) { .kb-section-title .kb-st--cyan }
+
+Секция roof sheathing почти всегда тянет за собой **overhang/eave-каркас** —
+по корпусу (flat 68 файлов / pitched 32):
+
+| Строка | % | Типично |
+| --- | ---: | --- |
+| Sub Fascia | 91% | `2x6` / `2x8` |
+| Blocking at Eves | 81% | `2x6` |
+| Truss Bracing | 78% | `2x4` (длина `16'`) |
+| Clips (H-clip) | 62% | сшивка листов |
+| Simpson Ties at Eves | 62% | `H2.5` |
+| Frame for Soffits / Rakes | 56% / 25% | `2x4` |
+| Insulation (flat) | 87% | tapered / rigid |
+
+**Flat-roof overhang с опорами** (canopy-style): Posts `8x8 Timber` / `6x6 Western
+Cedar` / `4x4 P.T.`; Beams `5¼x7¼ LVL`; Post Caps `CBH…` (timber connectors);
+Ledger `2x8 FRT` / `2x10`. Детали overhang-обшивки — [Eve / Eave](../../sheathing-and-misc/eve.md).
+
 
 <!-- confluence-gallery:start -->
 ## Визуальная проверка

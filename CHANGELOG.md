@@ -13,7 +13,16 @@
 - `reference/quantity-benchmarks.md` + nav. Типовые количества/длины (median[q1–q3])
   для sanity-check + сверка факторов с индустрией + метод Tukey.
 
-### Распределение corpus-фактов по профильным страницам
+### Распределение corpus-фактов по профильным страницам (полный проход)
+- `floor-framing/stair.md` — спеки stringers `2x12`/LVL, treads/risers `12'`, `1x8` riser.
+- `floor-framing/subfloor.md` — дефолт `3/4" T&G` (88%) + Panel Adhesive `29OZ` companion.
+- `sqfts/basement.md` — состав цокольной стены: btm-plate всегда P.T., studs by-height, corridor.
+- `roof-framing/roof-sheathing.md` — companion overhang-каркас (sub fascia/blocking/clips/H2.5)
+  + flat-roof опоры (timber posts/LVL beams/CBH caps).
+- `vertical/sheathing/truss-heel.md` — Vapor Barrier companion (81%) + blocking-for-drywall.
+- `vertical/sheathing/wall-sheathing.md` — OSB чаще Zip (~3:1) как sanity-default.
+- `siding/types.md` — ориентация Horizontal/Vertical + companion Post Wrap/Fascia.
+- `vertical/walls/exterior.md` — полнота 1st-floor стены (studs/bracing/holdowns 58%/headers).
 - `deck/railing.md` — metal vs wood railing (corpus): mtl post/cap/balusters vs `4x4 P.T.`.
 - `vertical/walls/parapet.md` — типовой состав (corpus): 3 плоскости обшивки
   (inside 94% + wall 89% + top 82%) + drip edge 100% + studs/plates.

@@ -73,6 +73,9 @@ Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/90144770/Wall+She
 | `5/8" Type X` | Exterior grade gypsum sheathing (= `19/32"`) |
 | `5/8" Densglass` | Densglass gypsum sheathing (часто over Zip) |
 
+- По корпусу **box / wall sheathing чаще `OSB`** (≈3:1 к Zip на field-стенах) —
+  Zip идёт там, где это явно Zip-система (energy/Arch note). Exterior всё равно ведут
+  Arch / Zip notes, это лишь sanity-default.
 - Если на плане только `APA RATED` без указания материала — это **Plywood**, не OSB.
 - `Zip Tape` идёт **только** в паре с Zip-обшивкой; не забывай добавить отдельную строку.
 - **Gypsum sheathing** (`Type X` / `Densglass`) бывает в **(2) layers** и отдельным
