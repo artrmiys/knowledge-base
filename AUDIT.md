@@ -182,3 +182,79 @@
 - `5/4x4 P.T.` blocking vs `2x` jamb — это две разные строки, не выбор.
 
 Скажи по каждому оставшемуся пункту, как должно быть — допишу пачкой.
+
+---
+
+## ✍️ Заполнить и продолжить
+
+Готовые слоты — пиши ответ прямо после `→`. Когда вернёмся, я по этому
+списку пройду пачкой и закрою всё одним коммитом.
+
+### Противоречия
+
+- **Q1 (FRT auto).** Когда наружная стена = FRT — какие из этих автоматически
+  тоже FRT, а какие зависят от деталь/назначения?
+    - Parapet framing →
+    - Parapet sheathing →
+    - Exterior blocking →
+    - Demising shear-wall sheathing →
+    - Draft stop sheathing →
+    - *Файлы под правку: `vertical/walls/parapet.md`, `vertical/sheathing/shear-wall.md`, `reference/boss-feedback-rules.md` (FRT-таблица).*
+
+- **Q2 (Zip приоритет).** Если Arch / energy ставит Zip, а Structural — обычный
+  ply / OSB:
+    - Какой note берём в takeoff? →
+    - И что пишем в note строки (`assumed`, `per Arch over Structural`,
+      что-то ещё)? →
+    - *Файлы под правку: `reference/material-catalog.md`, `reference/ourplanecore.md`, `reference/boss-feedback-rules.md`.*
+
+- **Q3 (`TJI 9 1/2` series).** Если не `360` / `560`, то какие series идут на
+  `9 1/2"` глубине?
+    - Список разрешённых series для `TJI 9 1/2` →
+    - Откуда берём (Weyerhaeuser sheet / specific job?) →
+    - *Файл под правку: `horizontal/floor-framing/joist.md:162`.*
+
+### Недосказано / дефолты
+
+- **Q4 (SQFT overhangs).** В SQFT этажа:
+    - Eaves / soffit overhangs → включаем / не включаем?
+    - Cantilevers → включаем / не включаем?
+    - *Файлы под правку: все 8 в `work/sqfts/*.md` (одно общее правило +
+      cross-link), плюс пункт в `reference/formulas.md`.*
+
+- **Q5 (Soffit ширина-порог).** Где граница `LFT` vs `SQ FT`?
+    - Порог (`12"` / `16"` / `24"` / другое) →
+    - *Файл под правку: `exterior-trims/soffit-fascia.md:15-16`.*
+
+- **Q6 (Furring unit).** Когда `LFT`, когда `SQ FT`?
+    - Правило →
+    - *Файл под правку: `exterior-trims/furring-and-jambs.md`.*
+
+- **Q7 (Sleepers default ply).** Какая дефолтная толщина в слоях?
+    - Sleepers default → 1 слой / 2 слоя
+    - Зависит от чего →
+    - *Файлы под правку: `deck/deck-porch-balcony-frame.md:77`,
+      `deck/anchor-bolts.md`, `exterior-trims/balcony-buildup.md`.*
+
+### Черновики
+
+- **Q8 (`reconstruction.md`).** Что с ним делаем?
+    - [ ] Снять пометку «черновик» и зафиксировать как стабильную
+    - [ ] Дополнить (укажи источник / реальный проект) →
+    - [ ] Оставить как есть до первого reconstruction-проекта
+
+- **Q9 (`blockingoc.md` — `G` и `D`).** Что это за переменные?
+    - `G` →
+    - `D` →
+    - Или просто линковать на `reference/formulas.md`? →
+    - *Файл под правку: `horizontal/floor-framing/details/blockingoc.md`.*
+
+---
+
+## История правок
+
+- **2026-05-29.** Flashing rework + первая волна аудита: дубли (Client Metal,
+  Sill Sealer block), битый Confluence-якорь `---:`, опечатка `Vinel`,
+  4 нечитаемых RU/EN фразы.
+- **2026-05-30.** Round 2: rim factor (EWP vs прочее), ITS depth-граница,
+  jamb vs blocking dis-ambiguation.
