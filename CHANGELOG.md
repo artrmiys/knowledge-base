@@ -6,6 +6,12 @@
 
 ## 2026-05-30
 
+### Work — Ceiling / Soffit Framing (новая страница)
+- `work/horizontal/ceiling-soffit-framing.md` + nav. Внутренний каркас потолков/софитов:
+  Interior Soffit Framing (dropped soffit `2x4`), Kitchen Ceiling (per unit), Ceiling Mech
+  (`2x6` Plate + Frame `24"oc` + Screws, MC/1-storey), Interior Materials/Gable Walls.
+  Чётко отделено от finish-trim, roof eave soffit и truss soffit plywood. Источник — RCP.
+
 ### Reference — corpus-данные (новые страницы)
 - `reference/hardware-catalog.md` + nav. Словарь крепежа Simpson по корпусу 180+
   takeoff'ов с частотами: hangers / ties-clips / straps / post bases-caps /
