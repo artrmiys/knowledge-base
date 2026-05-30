@@ -13,6 +13,13 @@
 - Lengths under 8' stay exact.
 - In EWP jobs, ordinary 2x beams are usually excluded.
 
+## Что чаще всего встречается (corpus) { .kb-section-title .kb-st--cyan }
+
+По корпусу самые частые сечения балок: **`1¾x11⅞ LVL`**, **`2x10`**, **`1¾x14 LVL`**,
+`2x8`. Типовая длина — медиана `12'` (диапазон `8'–16'`, snap к stock 8/10/12/14/16).
+Количество балок на секцию — обычно `2–4`. Это ориентир «нормально ли», не дефолт:
+конкретные размеры/ply всегда из structural ([Quantity benchmarks](../../../reference/quantity-benchmarks.md)).
+
 ## Standard Built-Up Sizes
 
 | Callout | Actual built-up size |

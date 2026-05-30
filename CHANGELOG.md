@@ -6,6 +6,23 @@
 
 ## 2026-05-30
 
+### Reference — corpus-данные (новые страницы)
+- `reference/hardware-catalog.md` + nav. Словарь крепежа Simpson по корпусу 180+
+  takeoff'ов с частотами: hangers / ties-clips / straps / post bases-caps /
+  holdowns (HDU-серия) / screws. Дополняет прескриптивный `hangers.md`.
+- `reference/quantity-benchmarks.md` + nav. Типовые количества/длины (median[q1–q3])
+  для sanity-check + сверка факторов с индустрией + метод Tukey.
+
+### Распределение corpus-фактов по профильным страницам
+- `deck/railing.md` — metal vs wood railing (corpus): mtl post/cap/balusters vs `4x4 P.T.`.
+- `vertical/walls/parapet.md` — типовой состав (corpus): 3 плоскости обшивки
+  (inside 94% + wall 89% + top 82%) + drip edge 100% + studs/plates.
+- `vertical/walls/sill-plates.md` — corpus-спеки: Sill Sealer `6"` (100%),
+  Termite Shield `Copper` (100%), Washer `3x3 Square`; anchor ~71%.
+- `vertical/walls/gable.md` — Draft Stop (`1/2" Ply`/`5/8" Type X`, ~36%, частый пропуск).
+- `horizontal/floor-framing/beam.md` — частые сечения (`1¾x11⅞ LVL`/`2x10`/`1¾x14 LVL`),
+  длина med `12'`, кол-во `2–4`.
+
 ### Reference — ИИ-ассистент и стратегия (новая страница)
 - `reference/ai-assist-system.md` + nav. Карта системы предсказание→проверка DFL:
   полная петля (scope → SUGGEST состав → измерение → per-project с PDF → блоки →
