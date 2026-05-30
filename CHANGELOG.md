@@ -4,6 +4,33 @@
 `.\tools\deploy.ps1` или `mkdocs gh-deploy --force --clean --remote-branch gh-pages`.
 Прод: https://artrmiys.github.io/knowledge-base/
 
+## 2026-05-30
+
+### Reference — ИИ-ассистент и стратегия (новая страница)
+- `reference/ai-assist-system.md` + nav. Карта системы предсказание→проверка DFL:
+  полная петля (scope → SUGGEST состав → измерение → per-project с PDF → блоки →
+  VALIDATE → ingest растит корпус); три операции (**SUGGEST** scope→состав,
+  **VALIDATE** 3 уровня: секции/строки/количества, **PDF→spec** crop→AI);
+  stable-дефолты vs per-project; roadmap (готово: suggest/validate/pdf→spec/CSI;
+  дальше: авто-парсинг legend, validate по спеке, NL→Excel, масштаб 500+).
+
+### Reference — Отраслевые стандарты (новая страница)
+- `reference/industry-standards.md` + nav. Позиционирование workflow в индустрии:
+  **assemblies** (RSMeans-стиль, per LFT/SQFT — наш DFL = библиотека assemblies),
+  **CSI MasterFormat** (Div 06 Wood / 07 Thermal&Moisture / 08 Openings / 09 Finishes —
+  Артём уже пишет CSI-коды в E-колонке: `07.04 WD-01`, `05.01`, `07.01 EIFS`),
+  best-practices чеклист (waste, group-by-size, risk-flag), AI-takeoff контекст.
+  Связь с output-wiki `wiki/E-Wood/` (takeoff-to-dfl, research-positioning, csi-mapping).
+  Источник — ресёрч май 2026 + reconciliation формул.
+
+### Дополнения существующих страниц
+- `reference/formulas.md` — blocking factor по типу (flat 2 / diagonal 2.5 /
+  vertical 1.5–2) + блок «контрольные диапазоны количеств» (sanity-check от VALIDATE).
+- `start/quality-checklist.md` — секция «Авто-проверка (ИИ-дубль)»: VALIDATE как
+  второй глаз к ручному чеклисту (секции/строки/количества).
+- `reference/ourplanecore-guide.md` — обновления программы май 2026 (3D per-edge roof,
+  3D Massing AI-черновик, vertex-grips, page takeoff layers).
+
 ## 2026-05-19
 
 ### Interior Trims

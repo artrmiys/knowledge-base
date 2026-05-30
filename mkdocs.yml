@@ -169,6 +169,8 @@ nav:
       - Takeoff item labels: reference/takeoff-items.md
       - Excel macro hotkeys: reference/excel-hotkeys.md
       - Формулы и факторы: reference/formulas.md
+      - Отраслевые стандарты: reference/industry-standards.md
+      - ИИ-ассистент и стратегия: reference/ai-assist-system.md
 
 plugins:
   - search:
