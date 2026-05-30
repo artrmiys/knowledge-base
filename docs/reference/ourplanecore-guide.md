@@ -7,6 +7,21 @@
     Названия кнопок даны **как в интерфейсе** (англ.), пояснение — рус.
     Тултипы кнопок в программе совпадают с описанием здесь.
 
+!!! abstract "Новое в программе (обновления мая 2026)"
+    - **3D Roof по-новому** — таб `7 3D`: per-edge pitch вместо «Auto/Clear Roof».
+      Помечаешь кромки roof base (`Select Edge`), задаёшь каждой свой pitch,
+      `Generate Roof` строит ridge/hip/valley (включая вогнутые valleys),
+      Revit-style envelope для U/S/L-крыш. См. [Таб 7 3D](#tab-7-3d).
+    - **3D Massing — AI-черновик здания** — отдельная панель: `Build 3D Draft`,
+      `3D From Takeoffs`, `AI 3D Sort`, `Review Roof`/`Review Openings`,
+      `Accept 3D`. См. [3D Massing](#3d-massing).
+    - **Новая модель выделения и vertex-grips** — `Ctrl` мультивыбор, `Alt`
+      режим вершин, прямое перетаскивание ручек, `line cut`. См.
+      [Редактирование](#editing).
+    - **Page takeoff layers** — порядок (z-order) привязанных takeoff-слоёв на
+      листе. **Job source selector** + переделанный `Open Job` диалог.
+      См. [Прочее новое](#new-misc).
+
 Скриншоты — фрагментами **прямо у соответствующих разделов** ниже (снято
 на реальном job, рабочий вид). Полный вид главного окна:
 
@@ -340,22 +355,35 @@
   <figcaption><code>6 AI Manager</code>: наблюдения, Run AI / Run New / Retry Failed, маркер-сеты.</figcaption>
 </figure>
 
-## Таб `7 3D` { .kb-section-title .kb-st--green }
+## Таб `7 3D` { #tab-7-3d .kb-section-title .kb-st--green }
 
-| Кнопка | Действие |
-| --- | --- |
-| `Auto` | Авто-постройка walls + sqft slabs + RF/roof |
-| `Wall` | Стены-призмы из выбранных line-takeoff |
-| `Roof Base` | Отдельный roof-base из выбранных area-takeoff |
-| `Auto Roof` | Roof base из RF/roof, авто-eaves, превью |
-| `Roof Edges` | Вкл/выкл выбор кромок roof base |
-| `Generate Roof` | Сетка крыши из Eave-кромок и pitch |
-| `Clear Roof` | Сброс roof base/ролей/сетки |
-| `Fit` / `Iso` / `Top` / `Front` / `Reset` | Виды 3D-сцены |
+Группа `Build` сверху + группа `Viewer`. Кнопки и тултипы — как в программе.
+
+| Кнопка | Группа | Действие |
+| --- | --- | --- |
+| `Auto` | Build | Авто-постройка walls + sqft slabs + RF/roof areas (если есть) |
+| `Wall` | Build | Стены-призмы из выбранных **line**-takeoff |
+| `Roof Base` | Build | Roof footprint из выбранных **area**-takeoff |
+| `Select Edge` | Build | Выбрать кромки roof base на листе; задать **per-edge pitch** в боковой панели |
+| `Generate Roof` | Build | Построить ridge/hip/valley из сохранённых per-edge pitch |
+| `Fit` / `Iso` / `Top` / `Front` / `Reset` | Viewer | Виды чистой 3D-сцены |
+
+!!! info "Per-edge roof workflow (Revit-style U/S/L крыши)"
+    Старые `Auto Roof` / `Roof Edges` / `Clear Roof` заменены одним потоком:
+
+    1. `Roof Base` — footprint из area-takeoff (RF/roof).
+    2. `Select Edge` — кликаешь кромки footprint; для каждой в боковой панели
+       помечаешь **defines slope** и задаёшь свой **pitch**. Кромка без slope —
+       это gable/rake (вертикальный фронтон).
+    3. `Generate Roof` — солвер строит точный *lower-envelope*: ridge, hips и
+       **valleys** (в т.ч. вогнутые, через изломы footprint), клиппит плоскости
+       по mitered slope-доменам. Крыша читается как реальное здание и движется
+       как объект; результат можно **затолкнуть обратно в takeoff-дерево** как
+       roof-takeoff.
 
 <figure markdown>
   ![3D](../assets/images/ourplanecore/opc-guide-3d.png)
-  <figcaption><code>7 3D</code>: Auto / Wall / Roof Base / Auto Roof / Generate Roof + 3D viewer.</figcaption>
+  <figcaption><code>7 3D</code>: Build (Auto / Wall / Roof Base / Select Edge / Generate Roof) + Viewer (Fit / Iso / Top / Front / Reset).</figcaption>
 </figure>
 
 ## Таб `8 Settings` — редактируемые правила { .kb-section-title .kb-st--orange }
@@ -370,6 +398,71 @@
   ![Settings](../assets/images/ourplanecore/opc-guide-settings.png)
   <figcaption><code>8 Settings</code>: live-редактор правила, Reset / Save global / Save as job / Apply.</figcaption>
 </figure>
+
+## 3D Massing — AI-черновик здания { #3d-massing .kb-section-title .kb-st--cyan }
+
+Отдельная панель (под-таб `3D` справа): собирает **черновую 3D-модель здания**
+из AI-маркеров или из takeoff'ов и даёт review-gated workflow до принятия.
+Кнопки и тултипы — как в программе.
+
+| Кнопка | Действие |
+| --- | --- |
+| `Build 3D Draft` | Собрать `AI_Context/3d_massing/model.json` из текущих AI-маркеров |
+| `3D From Takeoffs` | Черновик из Line/Area замеров уровня Walls/Areas/Sqft |
+| `AI 3D Sort` | Отправить метаданные takeoff в OpenAI для структурной сортировки role/level, затем детерминированно построить черновик |
+| `3D Window` | Отдельное orbit-окно 3D с сохранёнными точками маркеров |
+| `Auto Roof` | Поставить в очередь reviewable AI-кандидаты roof-маркеров с активного листа |
+| `Review Roof` | Проверить и сохранить тип крыши, pitch, заметки и guide-точки до принятия геометрии |
+| `Review Openings` | Проверить спроецированные маркеры дверей/окон/проёмов до принятия черновика |
+| `Accept 3D` | Пометить текущий черновик как reviewed project context |
+| `Open JSON` | Открыть `model.json` |
+| `Fit` / `Iso` / `Top` / `Front` | Виды 2D-превью footprint + 3D-shell |
+
+Внизу — список **Source markers** (Role / Type / Page / Point / Draft / Status)
+с кнопками `Jump` (открыть лист маркера), `Marker JSON`, `Crop` и панелью
+деталей-evidence под каждым маркером.
+
+!!! note "Порядок"
+    `Build` / `From Takeoffs` / `AI 3D Sort` → (опц.) `Auto Roof` → `Review
+    Roof` → `Review Openings` → `Accept 3D`. Кнопки review/accept активны
+    только когда есть что ревьюить.
+
+## Редактирование: выделение, vertex-grips, line cut { #editing .kb-section-title .kb-st--magenta }
+
+Новая модель выделения и прямого редактирования geometry прямо во вьюпорте
+(инструмент `Select`, ++e++).
+
+| Жест | Что делает |
+| --- | --- |
+| Клик по объекту | Выбрать один measurement |
+| Box (рамка) | Выбрать пересечённые/охваченные measurements |
+| ++ctrl++ + клик по новому объекту | Добавить в мульти-выбор (2, 3, … N) |
+| ++ctrl++ + клик по уже выбранному | Выбрать **все его вершины** |
+| ++shift++ + клик/box | Убрать попавшие объекты из выбора |
+| ++alt++ + клик/box | Режим **вершин (handles)**: набрать/снять ручки (toggle) |
+| Drag ручки | Двигать вершину(ы); ++shift++ — ортогонально |
+| ++delete++ | Удалить выбранные объекты или ручки |
+
+- **Direct vertex grips** — у выбранного measurement видны ручки; тянешь любую
+  напрямую, без отдельного режима. Несколько выбранных ручек двигаются вместе.
+- **Count vertex editing** — у count-маркеров точки тоже редактируются грипами.
+- **Line cut** — разрез линии: линию можно разрезать на месте (как area `Cut`,
+  но для line-замеров).
+- **Cut regions (area)** — вырез из площади теперь можно **вставлять и за
+  границей** Area, paste якорится по **верхнему-левому углу** региона.
+
+## Прочее новое { #new-misc .kb-section-title .kb-st--orange }
+
+- **Page takeoff layers** — порядок (z-order) привязанных takeoff-слоёв на
+  листе: выбранные слои двигаются вперёд/назад относительно страницы (через
+  legend/контекст листа). Полезно, когда заливки area перекрывают линии.
+- **Job source selector** — видимый переключатель источника job'а (например
+  read-only PlanSwift-источник виден явно).
+- **Open Job — новый диалог** — переделан как ribbon-styled XAML; даты
+  показываются в инвариантном английском формате (никаких «мая 13» на
+  не-английской локали). Recent — ++ctrl+shift+o++.
+- **Per-Monitor DPI v2** — корректный рендер вьюпорта/overlay на разных
+  мониторах и масштабах.
 
 ## Горячие клавиши { .kb-section-title .kb-st--blue }
 
