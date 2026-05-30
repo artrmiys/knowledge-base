@@ -1127,6 +1127,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#corpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Полнота строки (corpus)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       Частые пропуски
@@ -4270,6 +4279,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#corpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Полнота строки (corpus)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       Частые пропуски
@@ -4440,6 +4458,63 @@
 </tr>
 </tbody>
 </table>
+<h2 class="kb-section-title kb-st--cyan" id="corpus">Полнота строки (corpus)<a class="headerlink" href="#corpus" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>На full-frame проектах 1st-floor-стена — это полный каркас, не только bracing+sheathing.
+Типовой набор по корпусу (137 файлов, <code>%</code> = частота):</p>
+<table>
+<thead>
+<tr>
+<th>Строка</th>
+<th style="text-align: right;">%</th>
+<th>Заметка</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Studs Ext / Int / Dem</td>
+<td style="text-align: right;">60 / 53 / 49%</td>
+<td>размер авто по высоте стены (nested-IF)</td>
+</tr>
+<tr>
+<td>Bracing Ext / Dem / Corr</td>
+<td style="text-align: right;">86 / 65 / 48%</td>
+<td><code>2x4</code></td>
+</tr>
+<tr>
+<td>Vapor Barrier</td>
+<td style="text-align: right;">77%</td>
+<td>Tyvek / <code>=O4</code></td>
+</tr>
+<tr>
+<td>Wall / Box Sheathing</td>
+<td style="text-align: right;">68 / 63%</td>
+<td>OSB (×56) чаще Zip (×18)</td>
+</tr>
+<tr>
+<td>Blocking</td>
+<td style="text-align: right;">62%</td>
+<td><code>2x4</code>–<code>2x10</code></td>
+</tr>
+<tr>
+<td><strong>Holdowns</strong></td>
+<td style="text-align: right;">58%</td>
+<td><code>DTT2Z</code> / <code>HTT5KT</code> / <code>HDU…</code> / <code>TBD HD</code> — частый пропуск</td>
+</tr>
+<tr>
+<td>Plates btm (P.T.) + dbl top</td>
+<td style="text-align: right;">42–53%</td>
+<td>btm <code>2x6/2x4 P.T.</code></td>
+</tr>
+<tr>
+<td>Ext. Headers</td>
+<td style="text-align: right;">51%</td>
+<td><code>2x10</code>/<code>2x8</code>/<code>2x12</code> по пролёту</td>
+</tr>
+</tbody>
+</table>
+<p>→ <strong>Holdowns</strong> в ~58% — если есть shear walls, не забудь (выбор по SW-schedule,
+<a href="../../../../reference/hardware-catalog/">Hardware catalog</a>). Studs auto-sized по высоте —
+коэффициенты spacing в <a href="../../../../reference/formulas/">Формулах</a>.</p>
 <h2 id="_4">Частые пропуски<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Rigid insulation.</li>
