@@ -5,7 +5,8 @@
 - Не пиши `1-3/4 LVL Rim`, если LVL явно не called out и не нужен по detail.
 - Default output может быть `11-7/8" Rim`.
 - Если LSL specified, пиши `11-7/8" LSL Rim`.
-- Rim factor = 1.05 в LFT.
+- **Rim factor:** `1.05` — **только для EWP-jobs**. На остальных типах работ
+  (residential / COM / reconstruction) — `1.1`, как у обычного blocking.
 - Roof TJI тоже требует rim.
 
 ## Typical products

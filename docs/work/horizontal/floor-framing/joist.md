@@ -134,8 +134,11 @@ output всё равно должен идти по framing plan, joist schedule
 - Не начинай spacing заново от внутреннего beam.
 - Убирай joist только когда он реально попадает прямо на beam, примерно
   плюс-минус 2".
-- Для 18"/20"/22"/24" joists используй HIT hangers, не ITS.
-- ITS — только для light floor applications до 16".
+- Для joists с **сечением** `18"` / `20"` / `22"` / `24"` (глубина балки) — `HIT`
+  hangers, не `ITS`.
+- `ITS` — только для light floor applications, **до `16"` глубины** включительно
+  (примеры: `9-1/2"`, `11-7/8"`, `14"`, `16"`). Сечение читается из шильдика
+  joist'a (`11-7/8 TJI 230`, `16 LVL`), не из spacing `16" o.c.`.
 - В row name оставляй joist depth/product: `11-7/8 TJI 230` проверять проще,
   чем общий `TJI joist`.
 - Top chord bearing conditions проверяй отдельно: они могут менять ribbon/rim и

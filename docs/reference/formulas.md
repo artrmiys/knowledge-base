@@ -15,9 +15,13 @@
 
 | Item | Unit | Фактор |
 | --- | --- | --- |
-| Rim Board | LFT | 1.05 |
+| Rim Board (EWP-jobs) | LFT | `1.05` |
+| Rim Board (residential / COM / прочее) | LFT | `1.1` |
 | Blocking | LFT | без factor, если continuous |
 | Ribbons / ledgers / bracing | pieces | используй 16' ceiling, когда требуется |
+
+- `1.05` — это EWP-specific factor. На обычных jobs rim считается тем же
+  `1.1`, что и blocking.
 
 ## COM Waste
 

@@ -65,13 +65,11 @@
    - Правило одинаково для всех sheathing когда стена FRT, или зависит от
      роли элемента (cladding / shear / draft stop)?
 
-2. **Rim factor `1.05` vs Blocking factor `1.1`.**
-   - `docs/work/horizontal/floor-framing/details/rim.md:8`: rim factor `1.05`.
-   - `docs/reference/formulas.md:18`: rim factor `1.05` ✓ совпадает.
-   - `docs/work/horizontal/floor-framing/details/blocking.md` и
-     `details/blockingoc.md` — blocking factor `1.1`.
-   - Это разные factors для разных компонентов, или ошибка? Если разные —
-     явно прописать на странице rim, почему он 1.05, а не 1.1.
+2. ~~**Rim factor `1.05` vs Blocking factor `1.1`.**~~ ✅ **Решено (2026-05-30).**
+   - **`1.05` — только для EWP-jobs.** На residential / COM / reconstruction —
+     `1.1`, как у обычного blocking.
+   - Уточнено в `details/rim.md:8`, `reference/formulas.md:14-21`,
+     `reference/boss-feedback-rules.md:12`.
 
 3. **Zip sheathing — чей note приоритетнее.**
    - `docs/reference/material-catalog.md:57-58`: «Assumed per Structural;
@@ -81,12 +79,11 @@
      перекрывает structural sheathing notes».
    - Какой источник в приоритете при конфликте?
 
-4. **`ITS` hanger — депт-граница.**
-   - `docs/work/horizontal/floor-framing/joist.md:138`: «`ITS` — только для
-     light floor applications до 16"».
-   - Пример в `joist.md:201` использует `ITS2.37/11.88` для 16" o.c. Это
-     корректно (16" o.c. ≠ 16" depth) или конфликт? Уточнить определение
-     «light floor».
+4. ~~**`ITS` hanger — депт-граница.**~~ ✅ **Решено (2026-05-30).**
+   - **`16"` — это про сечение (depth) joist'a**, не про spacing. `ITS`
+     применяется до `16"` глубины включительно (примеры: `9-1/2"`, `11-7/8"`,
+     `14"`, `16"`). Пример с `ITS2.37/11.88` корректен — `11.88"` < `16"`.
+   - Уточнено в `joist.md:137-141`.
 
 5. **`TJI 9 1/2` — какие series.**
    - `docs/work/horizontal/floor-framing/joist.md:162`: «`TJI 9 1/2` does not
@@ -115,11 +112,11 @@
    `docs/work/exterior-trims/balcony-buildup.md` упоминают `2x4 P.T.`
    без указания слоёв. Какой дефолт — 1 или 2?
 
-10. **`5/4x4 P.T.` blocking-jamb vs `2x4/2x8/2x10` structural jamb.**
-    `docs/work/exterior-trims/macros.md:94` ставит `5/4x4 P.T.` jamb-блок,
-    `docs/work/exterior-trims/furring-and-jambs.md:47-49` — `2x4/2x8/2x10`.
-    Это разные элементы (blocking vs structural jamb) — стоит явно сказать,
-    что это два разных скоупа.
+10. ~~**`5/4x4 P.T.` blocking-jamb vs `2x4/2x8/2x10` structural jamb.**~~
+    ✅ **Решено (2026-05-30).** Это **две разные строки**, не выбор:
+    `Window jamb` (структурный, `2x4`/`2x8`/`2x10`) добирает глубину проёма;
+    `Blocking around all openings` (`5/4x4 P.T.`) — nailer под отделку.
+    Уточнено в `furring-and-jambs.md`.
 
 ### Незаконченный контент
 
@@ -163,11 +160,25 @@
 
 ## TL;DR — что осталось решить
 
-- 5 фактических противоречий (FRT, factors, Zip-приоритет, ITS depth,
-  TJI 9 1/2 series) — нужно слово от тебя.
-- 5 недосказанных правил (SQFT overhangs, soffit width threshold, furring
-  unit, sleepers default ply, jamb 5/4x4 vs 2x) — нужны дефолты.
-- 2 незаконченных страницы (`reconstruction.md` черновик,
-  `blockingoc.md` переменные без определения) — нужен контент.
+**Осталось 3 противоречия** (нужно слово от owner):
+- FRT auto-rule (parapets vs shear-wall sheathing).
+- Zip sheathing — какой note приоритетнее (Structural vs Arch/energy).
+- `TJI 9 1/2` — какие series применяются (если не 360 / 560).
 
-Скажи по каждому пункту, как должно быть — допишу пачкой.
+**Осталось 4 недосказанных правила** (нужны дефолты):
+- SQFT и overhangs — eaves включаются или нет?
+- Soffit «узкий vs широкий» — какая ширина-порог?
+- Furring `LFT` vs `SQ FT` — критерий выбора?
+- Sleepers — дефолтная толщина в слоях?
+
+**2 незаконченных страницы** (нужен контент):
+- `work-types/reconstruction.md` — пометить как стабильное, либо дописать.
+- `floor-framing/details/blockingoc.md` — определить `G` и `D` либо
+  линковать на `reference/formulas.md`.
+
+### Решено в этом проходе (2026-05-30)
+- Rim factor: `1.05` для EWP, `1.1` для остального.
+- `ITS` hanger depth: «до 16"» — это про сечение (depth), не spacing.
+- `5/4x4 P.T.` blocking vs `2x` jamb — это две разные строки, не выбор.
+
+Скажи по каждому оставшемуся пункту, как должно быть — допишу пачкой.

@@ -57,6 +57,12 @@ nailing-плоскость / зазор для вентиляции.
   4 sides если есть и sill). Quantity = периметр × количество окон этого типа.
 - Не путай **structural window jamb** (наш framing/trim) с **interior jamb
   trim / casing** — это разные scope и разные страницы.
+- **`Window jamb` (`2x4` / `2x8` / `2x10`)** и **`Blocking around all openings`
+  (`5/4x4 P.T.`)** — это **две разные строки**, не выбор. Jamb добирает
+  глубину проёма по детали; blocking — nailer по периметру под casing /
+  flashing. Бывают вместе: одна строка по structural (если деталь требует
+  jamb), вторая — `5/4x4 P.T.` под отделку (вставляется макросом
+  `B_JambsAllBlock`).
 
 !!! warning "Доска-jamb в metal стенах"
     В **metal stud** стенах проёмы окон/дверей иногда добирают **деревянной
