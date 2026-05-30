@@ -10,7 +10,7 @@
     - **Roof eave soffit** (под свесом крыши) — [Eve / Eave](../sheathing-and-misc/eve.md).
     - **Soffit plywood под roof trusses** — [Roof Sheathing](roof-framing/roof-sheathing.md).
 
-## Что встречается (corpus) { .kb-section-title .kb-st--green }
+## Что встречается { .kb-section-title .kb-st--green }
 
 | Секция | Что это | Типично |
 | --- | --- | --- |

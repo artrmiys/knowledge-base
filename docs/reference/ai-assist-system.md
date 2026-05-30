@@ -53,7 +53,7 @@ takeoff по словам/scope, помогать заполнять per-project
        из 180 проектов) → проверить (опечатка/единицы/scope-аномалия).
 
     Это автоматический дубль к [QA checklist](../start/quality-checklist.md) —
-    ловит «забыл Anchor Bolts в Foundation» (есть у 98% peers) до отправки.
+    ловит «забыл Anchor Bolts в Foundation» (есть почти у всех похожих) до отправки.
 
 === "PDF→spec (читать с чертежа)"
 

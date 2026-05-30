@@ -12,10 +12,9 @@
 Floor assembly underlayment can be huge. Always check assemblies, not only plan
 views.
 
-## Дефолт (corpus) { .kb-section-title .kb-st--green }
+## Дефолт { .kb-section-title .kb-st--green }
 
-- Subfloor по умолчанию **`3/4" T&G`** (tongue-&-groove) — встречается в ~88%
-  файлов корпуса, где есть subfloor. Меняется только по assembly/spec.
+- Subfloor по умолчанию **`3/4" T&G`** (tongue-&-groove). Меняется только по assembly/spec.
 - Часто идёт в паре с **Panel Adhesive** (`29OZ`) — не забывай строку клея.
 - Над FRT-периметром / over slab — отдельные underlayment-строки (см. ниже).
 

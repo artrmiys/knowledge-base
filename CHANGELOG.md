@@ -6,6 +6,14 @@
 
 ## 2026-05-30
 
+### Чистка — убраны corpus-частоты (`%`/freq) из обучалки
+- Со всех work/reference-страниц убраны частотные проценты и `freq`-колонки
+  (`94%`, `81%`, `58%`, «по корпусу N файлов» и т.п.) — для рабочей wiki это шум.
+  Оставлено только полезное: что за позиции, типовые спеки и размеры.
+  Затронуто: hardware-catalog, parapet, sill-plates, gable, beam, stair, subfloor,
+  basement, roof-sheathing, truss-heel, wall-sheathing, siding/types, exterior,
+  railing, ceiling-soffit-framing, quality-checklist.
+
 ### Work — Ceiling / Soffit Framing (новая страница)
 - `work/horizontal/ceiling-soffit-framing.md` + nav. Внутренний каркас потолков/софитов:
   Interior Soffit Framing (dropped soffit `2x4`), Kitchen Ceiling (per unit), Ceiling Mech

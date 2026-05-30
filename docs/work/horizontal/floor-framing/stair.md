@@ -15,9 +15,9 @@
 - DHU/DGU can apply at stair firewall hanger conditions; mark separately.
 - Stair/elevator/shaft hangers не смешивай с regular demising hangers.
 
-## Типовые спеки (corpus) { .kb-section-title .kb-st--cyan }
+## Типовые спеки { .kb-section-title .kb-st--cyan }
 
-По корпусу stair-блок почти всегда тройка `Stringers → Treads → Risers`:
+Stair-блок почти всегда тройка `Stringers → Treads → Risers`:
 
 | Строка | Типовой материал | Длина |
 | --- | --- | --- |

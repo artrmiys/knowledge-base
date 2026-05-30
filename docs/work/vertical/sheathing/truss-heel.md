@@ -17,15 +17,15 @@
 - Стандартная высота `truss heel` ≈ **1'-7"** (берётся от верха стены до верха верхнего пояса фермы по краю).
 - Используй это как sanity-check, если на чертеже высота heel не подписана; конкретное число — всегда из truss-package, если он есть.
 
-## Companion-строки (corpus) { .kb-section-title .kb-st--green }
+## Companion-строки { .kb-section-title .kb-st--green }
 
-По корпусу (58 файлов) heel-секция почти всегда несёт за собой:
+Heel-секция почти всегда несёт за собой:
 
-- **Vapor Barrier** — 81% (`Tyvek` / `=O4`) за обшивкой heel.
-- Subfloor 33% (`=O8`), Panel Adhesive 28% (`29OZ`), Tape 22% (`Zip Tape`).
-- Blocking for Drywall 22% — на COM/flat condition.
+- **Vapor Barrier** (`Tyvek`) за обшивкой heel — типовая пара.
+- Иногда Subfloor, Panel Adhesive (`29OZ`), Tape (`Zip Tape`).
+- Blocking for Drywall — на COM / flat condition.
 
-→ Если поставил Truss Heel sheathing, проверь Vapor Barrier рядом — это типовая пара.
+→ Если поставил Truss Heel sheathing, проверь Vapor Barrier рядом.
 
 ## Где не пропустить heel sheathing
 

@@ -15,9 +15,9 @@
 - Deck/porch/balcony railing может быть by others; проверь scope.
 - Attachment details can drive blocking, bolts, and rim material.
 
-## Metal vs wood (что встречается в корпусе) { .kb-section-title .kb-st--cyan }
+## Metal vs wood { .kb-section-title .kb-st--cyan }
 
-По корпусу railing идёт **двумя системами** — определи по detail/elevation:
+Railing идёт **двумя системами** — определи по detail / elevation:
 
 - **Metal** — `2½x2½x⅛ mtl post` / `2x2 mtl post`, `1½ mtl cap rail`, alum
   balusters. Часто на balcony/upper deck. Posts крепятся к каркасу (см. blocking/bolts).

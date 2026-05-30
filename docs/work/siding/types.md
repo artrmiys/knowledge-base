@@ -73,10 +73,10 @@
     `Siding` (field) и `Siding Gable front` (accent shingle/panel) — разные
     строки: разный материал, разный waste, разная площадь.
 
-## Ориентация и companion-строки (corpus) { .kb-section-title .kb-st--magenta }
+## Ориентация и companion-строки { .kb-section-title .kb-st--magenta }
 
-По корпусу siding чаще **горизонтальный** (`Siding Horizontal` — lap/clapboard),
-реже **вертикальный** (`Siding Vertical` — board&batten / `1x6 Vert. Cedar`). Держи
+Siding чаще **горизонтальный** (`Siding Horizontal` — lap/clapboard), реже
+**вертикальный** (`Siding Vertical` — board&batten / `1x6 Vert. Cedar`). Держи
 ориентацию в Label, если шаблон их разделяет.
 
 Частые **companion-строки** рядом с полем siding:

@@ -11,18 +11,17 @@
 
 При посадке стены на бетон (foundation / slab) обязательно проверь и добавь в takeoff три позиции — на плане их не показывают:
 
-- **Sill Sealer** — поролоновая прокладка между бетоном и Sill Plate. По корпусу
-  ширина почти всегда **`6"`** (реже `8"` / `4"`), идёт `100%` где есть foundation.
-- **Termite Shield** — металлическая защита от термитов, по корпусу всегда **`Copper`**.
+- **Sill Sealer** — поролоновая прокладка между бетоном и Sill Plate. Ширина почти
+  всегда **`6"`** (реже `8"` / `4"`).
+- **Termite Shield** — металлическая защита от термитов, обычно **`Copper`**.
 - **Washers** — шайбы под анкерные болты, типично **`3x3 Square`**.
 
 Подробнее по болтам — [Anchor Bolts](../../deck/anchor-bolts.md).
 
-!!! note "Corpus sanity-check"
-    Sill Sealer и Termite Shield встречаются в **100%** foundation-секций корпуса —
-    если их нет в takeoff на бетонной посадке, это почти наверняка пропуск.
-    Anchor Bolts ~71%, Washer ~64% (зависит от типа фундамента). Диапазоны
-    количеств — [Quantity benchmarks](../../../reference/quantity-benchmarks.md).
+!!! note "Не забыть"
+    Sill Sealer и Termite Shield на бетонной посадке нужны почти всегда — если их
+    нет в takeoff, это почти наверняка пропуск. Типовые размеры/количества —
+    [Quantity benchmarks](../../../reference/quantity-benchmarks.md).
 
 ## Что считать
 

@@ -18,21 +18,20 @@
 - Detail callouts вроде `(2) 2x8 FRT blocking at parapets`.
 - Cap plate treatment, часто 2x6 PT.
 
-## Типовой состав (corpus-validated) { .kb-section-title .kb-st--green }
+## Типовой состав { .kb-section-title .kb-st--green }
 
-Парапет как framed-стена — полноценный набор строк (по 65 файлам корпуса, `%` = в
-скольки парапет-секциях встречается):
+Парапет как framed-стена — полноценный набор строк:
 
-| Строка | % | Типично |
-| --- | ---: | --- |
-| Flashing | 100% | `Drip Edge` по верху |
-| Inside Sheathing | 94% | OSB / `5/8" Gypsum` (внутренняя сторона) |
-| Wall Sheathing | 89% | OSB / Zip (наружная сторона) |
-| **Top Sheathing** | 82% | по верхней грани парапета (часто забывают) |
-| Studs | 66% | размер по высоте (nested-IF) |
-| Vapor Barrier | 66% | Tyvek / `=O4` |
-| Plates btm + top | 58% | P.T. снизу |
-| Subfloor / Hangers | 40% / — | `LUS210` / `A35` / `LSSR1.81Z` где есть |
+| Строка | Типично |
+| --- | --- |
+| Flashing | `Drip Edge` по верху |
+| Inside Sheathing | OSB / `5/8" Gypsum` (внутренняя сторона) |
+| Wall Sheathing | OSB / Zip (наружная сторона) |
+| **Top Sheathing** | по верхней грани парапета (часто забывают) |
+| Studs | размер по высоте (nested-IF) |
+| Vapor Barrier | Tyvek |
+| Plates btm + top | P.T. снизу |
+| Subfloor / Hangers | `LUS210` / `A35` / `LSSR1.81Z` где есть |
 
 → Ключевое: парапет обшивается **с двух сторон** (inside + wall) **плюс top** + flashing —
 это три плоскости обшивки, не одна.
