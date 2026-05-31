@@ -2,7 +2,7 @@
   <title id="t">Stair stringer, treads and risers</title>
   <defs>
     <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2f7fd6}</style>
   </defs>
   <rect width="760" height="320" fill="#fff"/>
   <text class="t" x="32" y="40">Stair — stringers → treads → risers</text>
@@ -23,10 +23,10 @@
     <rect x="236" y="152" width="8" height="30"/>
     <rect x="296" y="112" width="8" height="30"/>
   </g>
-  <line x1="150" y1="250" x2="520" y2="240" stroke="#2e7d32" stroke-width="1.4"/>
+  <line x1="150" y1="250" x2="520" y2="240" stroke="#2f7fd6" stroke-width="1.4"/>
   <text class="l" x="528" y="243">Stringer (2x12 / LVL)</text>
-  <line x1="270" y1="147" x2="520" y2="150" stroke="#2e7d32" stroke-width="1.4"/>
+  <line x1="270" y1="147" x2="520" y2="150" stroke="#2f7fd6" stroke-width="1.4"/>
   <text class="l" x="528" y="153">Tread (2x12, 12')</text>
-  <line x1="300" y1="125" x2="520" y2="110" stroke="#2e7d32" stroke-width="1.4"/>
+  <line x1="300" y1="125" x2="520" y2="110" stroke="#2f7fd6" stroke-width="1.4"/>
   <text class="l" x="528" y="113">Riser (1x8, 12')</text>
 </svg>

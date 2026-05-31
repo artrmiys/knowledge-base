@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
   <title id="t">Room finish schedule columns</title>
-  <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.h{font:700 13px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.c{font:400 13px "Segoe UI",Arial,sans-serif;fill:#374237}.ok{fill:#2e7d32}.no{fill:#c0392b}</style>
+  <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.h{font:700 13px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.c{font:400 13px "Segoe UI",Arial,sans-serif;fill:#374237}.ok{fill:#2f7fd6}.no{fill:#c0392b}</style>
   <rect width="760" height="300" fill="#fff"/>
   <text class="t" x="32" y="40">Room schedule — что считать в trim</text>
   <text class="s" x="32" y="62">Wood base только при `Wd`; tile base исключай. Common areas — отдельно.</text>

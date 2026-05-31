@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
   <title id="t">Eave return boxed corner</title>
-  <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+  <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2f7fd6}</style>
   <rect width="760" height="300" fill="#fff"/>
   <text class="t" x="32" y="40">Return — «коробка», где eave заворачивается к rake</text>
   <text class="s" x="32" y="62">Отдельный bucket: свой framing/trim. Чаще на architectural details.</text>
@@ -9,13 +9,13 @@
   <!-- rake (sloped) coming down -->
   <line x1="180" y1="90" x2="320" y2="170" stroke="#c0392b" stroke-width="5"/>
   <!-- eave (horizontal) -->
-  <line x1="320" y1="170" x2="500" y2="170" stroke="#2e7d32" stroke-width="5"/>
+  <line x1="320" y1="170" x2="500" y2="170" stroke="#2f7fd6" stroke-width="5"/>
   <!-- return box -->
   <rect x="300" y="158" width="40" height="34" fill="#fff3c4" stroke="#c78b00" stroke-width="3"/>
-  <line x1="320" y1="175" x2="560" y2="150" stroke="#2e7d32" stroke-width="1.4"/>
+  <line x1="320" y1="175" x2="560" y2="150" stroke="#2f7fd6" stroke-width="1.4"/>
   <text class="l" x="568" y="153">Return (boxed corner)</text>
-  <line x1="240" y1="130" x2="560" y2="120" stroke="#2e7d32" stroke-width="1.4"/>
+  <line x1="240" y1="130" x2="560" y2="120" stroke="#2f7fd6" stroke-width="1.4"/>
   <text class="l" x="568" y="123">Rake</text>
-  <line x1="420" y1="170" x2="560" y2="195" stroke="#2e7d32" stroke-width="1.4"/>
+  <line x1="420" y1="170" x2="560" y2="195" stroke="#2f7fd6" stroke-width="1.4"/>
   <text class="l" x="568" y="198">Eave</text>
 </svg>

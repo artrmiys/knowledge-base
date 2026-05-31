@@ -3,7 +3,7 @@
   <desc id="desc">Section through a roof eave: rafter tail, roof sheathing, truss heel, subfascia, fascia and soffit, each with its takeoff unit (LFT or SQFT).</desc>
   <defs>
     <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/>
+      <path d="M0,0 L0,6 L8,3 z" fill="#2f7fd6"/>
     </marker>
     <pattern id="wood3" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="14" height="14" fill="#f2d6a8"/>
@@ -18,8 +18,8 @@
       .ttl{font:700 30px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
       .sub{font:400 20px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}
       .lab{font:600 22px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
-      .unit{font:700 18px "Segoe UI",Arial,sans-serif;fill:#2e7d32}
-      .lead{stroke:#2e7d32;stroke-width:2;fill:none;marker-end:url(#arrow)}
+      .unit{font:700 18px "Segoe UI",Arial,sans-serif;fill:#2f7fd6}
+      .lead{stroke:#2f7fd6;stroke-width:2;fill:none;marker-end:url(#arrow)}
       .ln{stroke:#3a3a3a;stroke-width:2;fill:none}
     </style>
   </defs>
