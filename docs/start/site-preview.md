@@ -88,7 +88,7 @@ topic page.
       <div class="kb-figure-row__rule">Сохраняй точную series: <code>TJI 230</code>, <code>RED</code>, <code>LPI</code>, <code>BCI</code>.</div>
       <div class="kb-figure-row__note">В output должно быть видно, какой product family был указан в schedule.</div>
     </figcaption>
-    <a class="kb-figure-row__image" href="../assets/images/confluence/confluence-007.png" target="_blank" rel="noopener"><img src="../assets/images/confluence/confluence-007.png" alt="TJI joist series reference" loading="lazy"></a>
+    <a class="kb-figure-row__image" href="../../assets/images/confluence/confluence-007.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-007.png" alt="TJI joist series reference" loading="lazy"></a>
   </figure>
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
@@ -96,7 +96,7 @@ topic page.
       <div class="kb-figure-row__rule">Spacing считается center-to-center, не от края lumber.</div>
       <div class="kb-figure-row__note">Перед formula проверь, что plan реально показывает 12 / 16 / 19.2 / 24 o.c.</div>
     </figcaption>
-    <a class="kb-figure-row__image" href="../assets/images/confluence/confluence-075.png" target="_blank" rel="noopener"><img src="../assets/images/confluence/confluence-075.png" alt="Joist spacing diagram" loading="lazy"></a>
+    <a class="kb-figure-row__image" href="../../assets/images/confluence/confluence-075.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-075.png" alt="Joist spacing diagram" loading="lazy"></a>
   </figure>
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
@@ -104,7 +104,7 @@ topic page.
       <div class="kb-figure-row__rule">Base и Crown считаются по room perimeter, но исключения надо проверять отдельно.</div>
       <div class="kb-figure-row__note">Kitchen cabinets, closets, garage и room schedule могут менять count.</div>
     </figcaption>
-    <a class="kb-figure-row__image" href="../assets/images/trims/int-trims-02.png" target="_blank" rel="noopener"><img src="../assets/images/trims/int-trims-02.png" alt="Baseboard and crown perimeter example" loading="lazy"></a>
+    <a class="kb-figure-row__image" href="../../assets/images/trims/int-trims-02.png" target="_blank" rel="noopener"><img src="../../assets/images/trims/int-trims-02.png" alt="Baseboard and crown perimeter example" loading="lazy"></a>
   </figure>
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
@@ -112,7 +112,7 @@ topic page.
       <div class="kb-figure-row__rule">Правки от boss должны попадать в точную topic page и в reference, если это общий rule.</div>
       <div class="kb-figure-row__note">Так правило потом находится через search и не теряется в source map.</div>
     </figcaption>
-    <a class="kb-figure-row__image" href="../assets/images/reference/important-change-04.png" target="_blank" rel="noopener"><img src="../assets/images/reference/important-change-04.png" alt="Important change reference" loading="lazy"></a>
+    <a class="kb-figure-row__image" href="../../assets/images/reference/important-change-04.png" target="_blank" rel="noopener"><img src="../../assets/images/reference/important-change-04.png" alt="Important change reference" loading="lazy"></a>
   </figure>
 </details>
 
