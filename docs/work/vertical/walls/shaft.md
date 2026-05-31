@@ -26,6 +26,16 @@ Shaft wall почти всегда fire-rated и собирается из CH-st
 | Tracks | 2-1/2" J-channel |
 | Liner | 1" liner panel |
 
+<figure markdown>
+  ![C-T stud, J-track and J-L corner profiles with dimensions](../../../assets/images/confluence/confluence-129.png)
+  <figcaption>Профили shaft wall: <strong>C-T (CH) stud</strong> (`2-1/2"/4"/6"`, полка `1-5/8"`), <strong>J-track</strong> и <strong>J-L corner</strong>. Размер studs/tracks бери из wall type.</figcaption>
+</figure>
+
+<figure markdown>
+  ![1 inch gypsum shaftliner panel](../../../assets/images/confluence/confluence-131.png)
+  <figcaption><strong>1" shaftliner</strong> — гипсовая панель-вкладыш в J-track между CH-studs. Отдельная строка.</figcaption>
+</figure>
+
 !!! note "Формулы shaft wall"
     CH-channels, J-channels и liner-панели считаются по формулам в
     [Формулы → Shaft Walls](../../../reference/formulas.md#shaft-walls).
@@ -47,23 +57,17 @@ Shaft wall почти всегда fire-rated и собирается из CH-st
 - [Формулы → Shaft Walls](../../../reference/formulas.md#shaft-walls) · [Demising Walls](demising.md) · [Hangers](../../../reference/hangers.md)
 
 <!-- confluence-gallery:start -->
-## Визуальная проверка
-
-Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
-checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
-карточку и проверь похожий condition на плане/schedule.
+## Ещё примеры (shaft / fire wall)
 
 ??? info "Источник картинок"
     - Shaft (противопожарные стены): [5 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65306667/Shaft)
 
 <details class="kb-figures">
-  <summary>Показать 5 иллюстраций</summary>
+  <summary>Показать ещё 3 иллюстрации</summary>
   <div class="kb-figure-grid">
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-129.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-129.png" alt="Shaft Wall - визуальная проверка 01: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-130.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-130.png" alt="Shaft Wall - визуальная проверка 02: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-131.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-131.png" alt="Shaft Wall - визуальная проверка 03: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-132.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-132.png" alt="Shaft Wall - визуальная проверка 04: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-133.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-133.png" alt="Shaft Wall - визуальная проверка 05: Проверь fire/shaft wall type, layers, height и sheathing/gypsum requirements." loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-130.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-130.png" alt="Shaft / fire wall узел 02" loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-132.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-132.png" alt="Shaft / fire wall узел 04" loading="lazy"></a>
+    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-133.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-133.png" alt="Shaft / fire wall узел 05" loading="lazy"></a>
   </div>
 </details>
 <!-- confluence-gallery:end -->
