@@ -34,6 +34,25 @@
 - Высота стены — от нижней доски **Btm Plate** до верхних досок **Top Plates** (включая обе доски). Брать с **elevation** или **section**, не с плана.
 - В PlanSwift запись: `ext <толщина> <высота>`, например **`ext 2x6 9.0`**.
 
+### Stud spacing factors (стойки)
+
+Stud-rule: считаем **1 стойку/фут + waste**, а **не** геометрические `0.75`
+(учитывает corners, T-intersections, jack/king/cripple и обрезь).
+
+| Spacing | Фактор (pcs / LFT) | Откуда |
+| --- | ---: | --- |
+| 12" o.c. | **1.4667** | `1:1` масштаб 16→12 + 10% waste |
+| 16" o.c. | **1.1** | `1:1` + 10% waste |
+| 24" o.c. | **0.625** | `0.5` + 25% waste |
+
+`pcs = wall LFT × фактор`. На COM jobs часто считают по точной высоте (nested-IF
+авто-подбор 2x4/2x6).
+
+!!! warning "Joists — другая таблица"
+    Это **stud**-факторы. **Joists/rafters** считаются по геометрии
+    `12 / spacing` → `1.0 / 0.75 / 0.5` (без stud-waste). Полная сводка обеих
+    таблиц — [Формулы → Spacing factors](../../../reference/formulas.md#stud-spacing-factors).
+
 ## Под Bottom Plate (на бетоне)
 
 При посадке экстерьерной стены на бетон/фундамент в takeoff попадают три
