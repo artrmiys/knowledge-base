@@ -4,6 +4,58 @@
 `.\tools\deploy.ps1` или `mkdocs gh-deploy --force --clean --remote-branch gh-pages`.
 Прод: https://artrmiys.github.io/knowledge-base/
 
+## 2026-05-31
+
+### Дизайн — применён OurCore Design Code v0.2 (источник: `my design core system.zip`)
+- **Закон цвета:** зелёный полностью убран. **blue `#2f7fd6`(light)/`#4ea1ff`(dark)
+  = «выбрано»** (active tab, ссылка, selected, primary CTA, info-leader);
+  **sage `#6fa37c`/`#8fb89a` = бренд** — узко: 1.5-px полоска под active tab,
+  left-border активного пункта nav/TOC, маркеры списков, tip-callout, логотип.
+  Статусы ok/warn/err. Никакого неона/gradient-mesh.
+- `tokens.css` переписан под v0.2: ink-поверхности light+dark, токены `--ds-*` +
+  маппинг Material `--md-*` для обеих схем. Шрифты **Inter + JetBrains Mono**
+  (`@import`), цифры моно/tabular. Радиусы 6/8/12/16.
+- `extra.css` перешит: нейтральная шапка (white/ink, тонкая граница),
+  active=blue+sage, admonitions→callouts (note/info blue · tip sage · warning warn
+  · danger err), rounded-таблицы с uppercase-шапкой, карточки/hero/секции.
+  Декоративные `kb-st--*`/`kb-mk--*` сведены к blue/sage/warn.
+- Лого/favicon = KB-глиф `assets/images/brand/icon-kb-128.png`; палитра `blue`.
+- 51 SVG-схема перекрашены: accent `#2e7d32` → blue `#2f7fd6`.
+- Проверено рендером (headless Chrome) в светлой и тёмной теме. Зафиксировано в
+  CLAUDE.md §6 — green/lime не возвращать.
+
+### Контент — спейсинг, факторы, перелинковка
+- **Joist vs Stud spacing разведены.** `formulas.md`: две таблицы — Stud
+  (`12/16/24 = 1.4667/1.1/0.625`, boss-rule «1 стойка/фут + waste») и **Joist**
+  (геометрия `12/spacing` → `1.0/0.75/0.625/0.5`). `joist.md` исправлен (был
+  stud-фактор). Stud-таблица добавлена в `Exterior Walls`. Rim `1.05` — EWP-only
+  (подтверждено везде). `industry-standards`, `boss-feedback`, `quantity-benchmarks`
+  согласованы.
+- **See-also перелинковка** по work/work-types/reference; определения терминов на
+  тонких страницах; чистка мёртвых `Source: redacted` строк.
+- `site-preview` — починены пути картинок (raw-HTML `../assets`→`../../assets`).
+- `bracingdrywall` — bracing-length явно как свойство стены (+ ссылки на walls/COM).
+
+### Схемы и картинки
+- **49 новых SVG-схем** в едином чертёжном стиле на всех страницах, где не было
+  изображений (rim/blocking/ribbon/bolts/screws/steel-beam/bracing, stair/subfloor,
+  header, gable/shear/box sheathing, corners/furring, rake/returns/ridge-valley-hip/
+  rooftype/flashing, 8× sqfts, casing/room-schedule, siding eifs/measure,
+  exterior-trims ×5, deck-frame, ceiling-soffit, 3× work-types, stud-spacing-extra,
+  sill-plate-assembly). Новые папки `framing/`, `openings/`, `sqfts/`, `siding/`,
+  `work-types/`, `brand/`.
+- **6 «гпт-шных» SVG перерисованы** в архитектурном стиле (wall sections, eave map,
+  hanger flow) — настоящие штриховки/leader-линии.
+- **Реальные reference-картинки интегрированы в текст** (вместо дампов-галерей):
+  sill-plates (узел + termite shield), parapet (truss-bearing detail), unit
+  (A2x4/A2x6 PlanSwift), corridor/demising (takeoff-строки), shaft (CH-stud/J-track
+  + shaftliner), com (field/extra/dbl studs), ewp-capital (материалы).
+
+### Reference — OurPlaneCore: две страницы → одна
+- `ourplanecore.md` и `ourplanecore-guide.md` объединены в одну (актуальное
+  состояние май 2026: per-edge 3D roof, 3D Massing, vertex-edit). `-guide` удалён,
+  nav и ссылки (`ai-assist-system`, `ceiling-soffit-framing`) поправлены.
+
 ## 2026-05-30
 
 ### Чистка — убраны corpus-частоты (`%`/freq) из обучалки
