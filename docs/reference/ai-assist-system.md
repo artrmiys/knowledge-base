@@ -59,7 +59,7 @@ takeoff по словам/scope, помогать заполнять per-project
 
     Находит, на каких листах лежат BEAM/HEADER/SHEAR WALL/HOLDOWN schedules и
     spec-ноты (roof/wall sheathing) → кропит регион в high-DPI → ИИ читает коды.
-    Тот же механизм, что `crop→AI` в [OurPlaneCore](ourplanecore-guide.md);
+    Тот же механизм, что `crop→AI` в [OurPlaneCore](ourplanecore.md);
     закрывает шаг ④ «читать per-project».
 
 ## Stable-дефолты vs per-project { .kb-section-title .kb-st--magenta }
@@ -98,7 +98,7 @@ takeoff по словам/scope, помогать заполнять per-project
 ## См. также
 
 - [Отраслевые стандарты](industry-standards.md) — assemblies / CSI / best-practices.
-- [OurPlaneCore — полный гайд](ourplanecore-guide.md) — измерение + crop→AI.
+- [OurPlaneCore](ourplanecore.md) — программа: измерение + crop→AI.
 - [Формулы и факторы](formulas.md) — что пересчитывают блоки.
 - [QA checklist](../start/quality-checklist.md) — ручная проверка, которую дублирует VALIDATE.
 - [Workflow](../start/workflow.md) — общий рабочий процесс.

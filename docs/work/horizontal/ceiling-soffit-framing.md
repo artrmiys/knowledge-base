@@ -39,7 +39,7 @@
 | `Screws N" o.c. (2)` | structural screws | крепёж, 2 на узел (`16" o.c.`) | pcs |
 
 - Frame несёт detail-callout (напр. `A454`) — тот же ceiling-detail, что и во
-  «Frame Ceiling» в truss-heel зоне. Сверяй callout в [PDF](../../reference/ourplanecore-guide.md).
+  «Frame Ceiling» в truss-heel зоне. Сверяй callout в [PDF](../../reference/ourplanecore.md).
 - Площадь/периметр потолка — manual measured с A-планов (не из общего sqft).
 
 ## Где искать { .kb-section-title .kb-st--magenta }
