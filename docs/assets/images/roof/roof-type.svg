@@ -2,7 +2,7 @@
   <title id="t">Flat roof layer stack</title>
   <defs>
     <pattern id="rig" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#d8ecff"/><line x1="0" y1="0" x2="0" y2="12" stroke="#2c7fb8" stroke-width="1.1"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2f7fd6}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
   <text class="t" x="32" y="40">Flat roof — слои по той же площади</text>
@@ -11,8 +11,8 @@
   <rect x="120" y="116" width="360" height="20" fill="#cfd6dc" stroke="#3a3a3a" stroke-width="1.2"/>
   <rect x="120" y="136" width="360" height="44" fill="url(#rig)" stroke="#2c7fb8" stroke-width="1.4"/>
   <rect x="120" y="180" width="360" height="24" fill="#eef2f6" stroke="#3a3a3a" stroke-width="1.4"/>
-  <line x1="300" y1="108" x2="560" y2="100" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="103">Membrane (EPDM/TPO)</text>
-  <line x1="300" y1="126" x2="560" y2="135" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="138">Cover board (1/4" Densdeck)</text>
-  <line x1="300" y1="158" x2="560" y2="170" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="173">Rigid / XPS insulation</text>
-  <line x1="300" y1="192" x2="560" y2="205" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="208">Roof deck / trusses</text>
+  <line x1="300" y1="108" x2="560" y2="100" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="568" y="103">Membrane (EPDM/TPO)</text>
+  <line x1="300" y1="126" x2="560" y2="135" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="568" y="138">Cover board (1/4" Densdeck)</text>
+  <line x1="300" y1="158" x2="560" y2="170" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="568" y="173">Rigid / XPS insulation</text>
+  <line x1="300" y1="192" x2="560" y2="205" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="568" y="208">Roof deck / trusses</text>
 </svg>

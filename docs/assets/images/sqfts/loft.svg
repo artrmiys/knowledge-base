@@ -2,7 +2,7 @@
   <title id="t">Loft mezzanine level with guard</title>
   <defs>
     <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2f7fd6}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
   <text class="t" x="32" y="40">Loft — антресольный уровень внутри объёма</text>
@@ -16,6 +16,6 @@
   <!-- guard rail -->
   <line x1="305" y1="170" x2="305" y2="120" stroke="#6c4b2a" stroke-width="4"/>
   <line x1="260" y1="120" x2="330" y2="120" stroke="#6c4b2a" stroke-width="4"/>
-  <line x1="285" y1="170" x2="540" y2="150" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="153">Loft floor (SQFT)</text>
-  <line x1="305" y1="135" x2="540" y2="120" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="123">Guard / railing по краю</text>
+  <line x1="285" y1="170" x2="540" y2="150" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="548" y="153">Loft floor (SQFT)</text>
+  <line x1="305" y1="135" x2="540" y2="120" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="548" y="123">Guard / railing по краю</text>
 </svg>

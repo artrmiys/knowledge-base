@@ -15,8 +15,8 @@
   <line x1="220" y1="195" x2="420" y2="195" stroke="#c0392b" stroke-width="5"/>
   <!-- ell + valley -->
   <polygon points="420,110 600,110 600,210 420,210" fill="#e6ebf0" stroke="#3a3a3a" stroke-width="1.4"/>
-  <line x1="420" y1="180" x2="490" y2="120" stroke="#2e7d32" stroke-width="4"/>
+  <line x1="420" y1="180" x2="490" y2="120" stroke="#2f7fd6" stroke-width="4"/>
   <text class="l" x="300" y="186" fill="#c0392b">Ridge</text>
   <text class="l" x="150" y="150" fill="#c78b00">Hip</text>
-  <text class="l" x="505" y="135" fill="#2e7d32">Valley</text>
+  <text class="l" x="505" y="135" fill="#2f7fd6">Valley</text>
 </svg>

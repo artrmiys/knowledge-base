@@ -7,8 +7,8 @@ theme:
   name: material
   custom_dir: overrides
   language: ru
-  logo: assets/images/logo.svg
-  favicon: assets/images/logo.svg
+  logo: assets/images/brand/icon-kb-128.png
+  favicon: assets/images/brand/icon-kb-128.png
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -26,15 +26,15 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: green
-      accent: lime
+      primary: blue
+      accent: blue
       toggle:
         icon: material/weather-sunny
         name: Включить тёмный режим
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: green
-      accent: lime
+      primary: blue
+      accent: blue
       toggle:
         icon: material/weather-night
         name: Включить светлый режим

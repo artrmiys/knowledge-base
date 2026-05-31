@@ -31,7 +31,7 @@
   <line x1="300" y1="410" x2="430" y2="318" stroke="#c0392b" stroke-width="6"/>
   <line x1="430" y1="318" x2="560" y2="410" stroke="#c0392b" stroke-width="6"/>
   <!-- EAVE edge (side bottom of roof) -->
-  <line x1="560" y1="410" x2="940" y2="260" stroke="#2e7d32" stroke-width="6"/>
+  <line x1="560" y1="410" x2="940" y2="260" stroke="#2f7fd6" stroke-width="6"/>
   <!-- RETURN box at the corner -->
   <rect x="544" y="398" width="34" height="26" fill="#fff3c4" stroke="#c78b00" stroke-width="3"/>
 
@@ -42,7 +42,7 @@
   <text class="note" x="94" y="300">наклонная кромка на gable — своя LFT-строка</text>
 
   <line class="lead" x1="760" y1="320" x2="900" y2="360"/>
-  <rect x="980" y="350" width="24" height="12" fill="#2e7d32"/>
+  <rect x="980" y="350" width="24" height="12" fill="#2f7fd6"/>
   <text class="lab" x="1014" y="364">Eave</text>
   <text class="note" x="900" y="392">горизонтальный низ свеса — LFT + soffit SQFT</text>
 
