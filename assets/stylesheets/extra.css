@@ -47,13 +47,13 @@
 /* --- Фон страницы: очень тонкий sage→white сверху (как в KB-макете) ------ */
 .md-main {
   background:
-    linear-gradient(180deg, rgba(111,163,124,0.05) 0%, transparent 320px),
+    linear-gradient(180deg, rgba(31,158,56,0.06) 0%, transparent 320px),
     var(--ds-bg);
 }
 [data-md-color-scheme="slate"] .md-main {
   background:
-    radial-gradient(900px 480px at 12% -4%, rgba(78,161,255,0.06), transparent 60%),
-    radial-gradient(820px 460px at 90% 2%, rgba(143,184,154,0.05), transparent 58%),
+    radial-gradient(1000px 520px at 16% -6%, rgba(42,210,75,0.10), transparent 60%),
+    radial-gradient(820px 460px at 90% 2%, rgba(42,210,75,0.06), transparent 58%),
     var(--ds-bg);
 }
 

@@ -3,7 +3,7 @@
   <desc id="desc">Architectural section of an exterior stud wall: WRB, sheathing, studs with batt insulation, blocking, P.T. bottom plate and interior gypsum, with takeoff checkpoints.</desc>
   <defs>
     <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L8,3 z" fill="#2f7fd6"/>
+      <path d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/>
     </marker>
     <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse">
       <rect width="20" height="16" fill="#fdf6e3"/>
@@ -27,7 +27,7 @@
       .lab{font:600 15px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
       .note{font:400 13px "Segoe UI",Arial,sans-serif;fill:#566}
       .side{font:700 13px "Segoe UI",Arial,sans-serif;fill:#8a98a5;letter-spacing:1px}
-      .lead{stroke:#2f7fd6;stroke-width:1.4;fill:none;marker-end:url(#arrow)}
+      .lead{stroke:#2e7d32;stroke-width:1.4;fill:none;marker-end:url(#arrow)}
     </style>
   </defs>
 
@@ -38,7 +38,7 @@
   <!-- wall section, exterior (left) -> interior (right) -->
   <g>
     <!-- WRB -->
-    <rect x="150" y="120" width="12" height="300" fill="#d9f2d8" stroke="#2f7fd6" stroke-width="1.4"/>
+    <rect x="150" y="120" width="12" height="300" fill="#d9f2d8" stroke="#2e7d32" stroke-width="1.4"/>
     <!-- sheathing -->
     <rect x="162" y="120" width="26" height="300" fill="url(#osb)" stroke="#3a3a3a" stroke-width="1.4"/>
     <!-- stud cavity with batt -->

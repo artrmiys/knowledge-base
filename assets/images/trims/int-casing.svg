@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
   <title id="t">Door casing: head, sides, apron</title>
-  <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2f7fd6}</style>
+  <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   <rect width="760" height="300" fill="#fff"/>
   <text class="t" x="32" y="40">Casing — наличник вокруг проёма</text>
   <text class="s" x="32" y="62">Door / window casing (LFT). Interior door jamb часто = casing / 2.</text>
@@ -11,7 +11,7 @@
   <rect x="184" y="100" width="16" height="180" fill="#caa27b" stroke="#6c4b2a" stroke-width="1.5"/>
   <rect x="360" y="100" width="16" height="180" fill="#caa27b" stroke="#6c4b2a" stroke-width="1.5"/>
   <text class="s" x="245" y="200">door / window</text>
-  <line x1="280" y1="92" x2="540" y2="105" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="548" y="108">Head casing (5/4x6)</text>
-  <line x1="192" y1="180" x2="540" y2="170" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="548" y="173">Side casing (5/4x4)</text>
+  <line x1="280" y1="92" x2="540" y2="105" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="108">Head casing (5/4x6)</text>
+  <line x1="192" y1="180" x2="540" y2="170" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="173">Side casing (5/4x4)</text>
   <text class="s" x="548" y="205">Группируй by location/type; common areas — отдельно.</text>
 </svg>

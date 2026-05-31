@@ -18,13 +18,13 @@
 
 :root {
   /* --- Акценты ----------------------------------------------------------- */
-  --ds-info:        #2f7fd6;   /* blue = выбрано / ссылка (на светлом) */
-  --ds-info-soft:   rgba(47,127,214,0.10);
-  --ds-info-line:   rgba(47,127,214,0.28);
+  --ds-info:        #1f9e38;   /* GREEN = бренд/active/ссылка (на светлом) */
+  --ds-info-soft:   rgba(31,158,56,0.10);
+  --ds-info-line:   rgba(31,158,56,0.32);
 
-  --ds-sage:        #6fa37c;   /* brand-сигнал OurCore (на светлом) */
-  --ds-sage-soft:   rgba(111,163,124,0.14);
-  --ds-sage-line:   rgba(111,163,124,0.35);
+  --ds-sage:        #2e7d32;   /* тёмно-зелёный brand-маркер (узко) */
+  --ds-sage-soft:   rgba(46,125,50,0.12);
+  --ds-sage-line:   rgba(46,125,50,0.35);
 
   /* обратная совместимость со старыми именами (всё → новый закон) */
   --ds-blue:        var(--ds-info);
@@ -86,8 +86,8 @@
   --md-code-font: "JetBrains Mono";
 
   --md-primary-fg-color:        var(--ds-info);
-  --md-primary-fg-color--light: #5a9ee0;
-  --md-primary-fg-color--dark:  #2569b5;
+  --md-primary-fg-color--light: #45c25f;
+  --md-primary-fg-color--dark:  #18802d;
   --md-accent-fg-color:         var(--ds-info);
 
   --md-typeset-a-color:         var(--ds-info);
@@ -104,13 +104,13 @@
 [data-md-color-scheme="slate"],
 .theme-dark,
 [data-theme="dark"] {
-  --ds-info:        #4ea1ff;
-  --ds-info-soft:   rgba(78,161,255,0.14);
-  --ds-info-line:   rgba(78,161,255,0.30);
+  --ds-info:        #2ad24b;   /* GREEN bright на тёмном */
+  --ds-info-soft:   rgba(42,210,75,0.16);
+  --ds-info-line:   rgba(42,210,75,0.34);
 
-  --ds-sage:        #8fb89a;
-  --ds-sage-soft:   rgba(143,184,154,0.12);
-  --ds-sage-line:   rgba(143,184,154,0.30);
+  --ds-sage:        #56e070;
+  --ds-sage-soft:   rgba(42,210,75,0.12);
+  --ds-sage-line:   rgba(42,210,75,0.32);
 
   --ds-blue-light:  #4ea1ff;
   --ds-green-darker:#7aa886;
@@ -131,8 +131,8 @@
   --ds-code-bg:   #121b27;
 
   --md-primary-fg-color:        var(--ds-info);
-  --md-primary-fg-color--light: #74b4ff;
-  --md-primary-fg-color--dark:  #3b86e0;
+  --md-primary-fg-color--light: #56e070;
+  --md-primary-fg-color--dark:  #1f9e38;
   --md-accent-fg-color:         var(--ds-info);
 
   --md-typeset-a-color:         var(--ds-info);

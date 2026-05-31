@@ -2,7 +2,7 @@
   <title id="t">EIFS stucco and veneer are by others</title>
   <defs>
     <pattern id="stone" width="22" height="16" patternUnits="userSpaceOnUse"><rect width="22" height="16" fill="#d9c7b0"/><line x1="0" y1="8" x2="22" y2="8" stroke="#9c8a6c" stroke-width="1.2"/><line x1="11" y1="0" x2="11" y2="8" stroke="#9c8a6c" stroke-width="1.2"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.no{font:700 15px "Segoe UI",Arial,sans-serif;fill:#c0392b}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2f7fd6}</style>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.no{font:700 15px "Segoe UI",Arial,sans-serif;fill:#c0392b}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
   <text class="t" x="32" y="40">EIFS / Stucco / Veneer — by others</text>
@@ -16,7 +16,7 @@
   <text class="s" x="320" y="240">Stone / Brick veneer</text>
   <text class="no" x="340" y="165">by others</text>
   <!-- our scope -->
-  <rect x="520" y="100" width="180" height="120" fill="#eaf6ea" stroke="#2f7fd6" stroke-width="1.6"/>
+  <rect x="520" y="100" width="180" height="120" fill="#eaf6ea" stroke="#2e7d32" stroke-width="1.6"/>
   <text class="l" x="540" y="130">Наше всё равно:</text>
   <text class="s" x="540" y="155">• WRB / sheathing</text>
   <text class="s" x="540" y="178">• furring</text>

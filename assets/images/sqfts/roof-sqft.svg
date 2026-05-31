@@ -2,7 +2,7 @@
   <title id="t">Roof sheathing area</title>
   <defs>
     <pattern id="o" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#eef2f6"/><circle cx="2.5" cy="2.5" r="1" fill="#9bb0c2"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2f7fd6}</style>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
   <text class="t" x="32" y="40">Roof SQFT — площадь крыши по скату</text>
@@ -12,6 +12,6 @@
   <line x1="330" y1="110" x2="330" y2="230" stroke="#9bb0c2" stroke-width="1.2" stroke-dasharray="5 4"/>
   <!-- sheathing seams -->
   <g stroke="#9bb0c2" stroke-width="1"><line x1="180" y1="195" x2="285" y2="135"/><line x1="240" y1="230" x2="345" y2="170"/><line x1="375" y1="170" x2="480" y2="230"/></g>
-  <line x1="260" y1="170" x2="600" y2="150" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="608" y="153">Roof sheathing (SQFT)</text>
+  <line x1="260" y1="170" x2="600" y2="150" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="608" y="153">Roof sheathing (SQFT)</text>
   <text class="s" x="120" y="270">Flat roof: + Densdeck / rigid / membrane по той же площади (частый пропуск).</text>
 </svg>

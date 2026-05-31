@@ -3,7 +3,7 @@
   <defs>
     <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
     <pattern id="c" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#e7e9ec"/><circle cx="2" cy="2" r="0.9" fill="#9aa0a8"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2f7fd6}</style>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
   <text class="t" x="32" y="40">Basement — стена на бетоне</text>
@@ -16,7 +16,7 @@
   <rect x="200" y="250" width="160" height="18" fill="#caa27b" stroke="#6c4b2a" stroke-width="1.6"/>
   <!-- slab -->
   <rect x="150" y="268" width="260" height="20" fill="url(#c)" stroke="#3a3a3a" stroke-width="1.4"/>
-  <line x1="280" y1="255" x2="540" y2="245" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="548" y="248">Btm plate — всегда P.T.</text>
-  <line x1="278" y1="150" x2="540" y2="140" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="548" y="143">Studs (по высоте)</text>
-  <line x1="172" y1="180" x2="540" y2="195" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="548" y="198">Concrete / foundation</text>
+  <line x1="280" y1="255" x2="540" y2="245" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="248">Btm plate — всегда P.T.</text>
+  <line x1="278" y1="150" x2="540" y2="140" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="143">Studs (по высоте)</text>
+  <line x1="172" y1="180" x2="540" y2="195" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="198">Concrete / foundation</text>
 </svg>

@@ -3,7 +3,7 @@
   <desc id="d">Section of a wood stud brick-veneer wall: brick veneer, WRB, Type X gypsum sheathing, FRT structural sheathing, batt insulation in studs, interior gypsum — each a separate takeoff line.</desc>
   <defs>
     <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L8,3 z" fill="#2f7fd6"/>
+      <path d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/>
     </marker>
     <pattern id="brick" width="18" height="22" patternUnits="userSpaceOnUse">
       <rect width="18" height="22" fill="#e0a079"/>
@@ -34,7 +34,7 @@
       .lab{font:600 15px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
       .note{font:400 13px "Segoe UI",Arial,sans-serif;fill:#566}
       .side{font:700 13px "Segoe UI",Arial,sans-serif;fill:#8a98a5;letter-spacing:1px}
-      .lead{stroke:#2f7fd6;stroke-width:1.4;fill:none;marker-end:url(#arrow)}
+      .lead{stroke:#2e7d32;stroke-width:1.4;fill:none;marker-end:url(#arrow)}
     </style>
   </defs>
 
@@ -44,7 +44,7 @@
 
   <g>
     <rect x="120" y="120" width="34" height="300" fill="url(#brick)" stroke="#3a3a3a" stroke-width="1.4"/>
-    <rect x="154" y="120" width="10" height="300" fill="#d9f2d8" stroke="#2f7fd6" stroke-width="1.3"/>
+    <rect x="154" y="120" width="10" height="300" fill="#d9f2d8" stroke="#2e7d32" stroke-width="1.3"/>
     <rect x="164" y="120" width="20" height="300" fill="url(#gyphatch)" stroke="#8aa0b0" stroke-width="1.4"/>
     <rect x="184" y="120" width="22" height="300" fill="url(#osb2)" stroke="#3a3a3a" stroke-width="1.4"/>
     <rect x="206" y="120" width="150" height="300" fill="url(#batt2)" stroke="#3a3a3a" stroke-width="1.4"/>
