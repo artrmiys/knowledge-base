@@ -36,10 +36,6 @@
 → Ключевое: парапет обшивается **с двух сторон** (inside + wall) **плюс top** + flashing —
 это три плоскости обшивки, не одна.
 
-## See also
-
-- [Exterior Walls](exterior.md) · [Truss Heel](../sheathing/truss-heel.md) · [Flashing](../../sheathing-and-misc/flashing.md) · [Box Sheathing](../sheathing/box-sheathing.md)
-
 ## Parapet vs. Truss System
 
 Главная развилка — входит ли парапет в truss-систему крыши:
@@ -49,21 +45,16 @@
     - **Перпендикулярное опирание** — парапет выполняй отдельным каркасом (stud wall).
     - **Параллельное опирание** — стену последнего этажа **продли вверх** до высоты парапета (продолжение exterior wall).
 
-<!-- confluence-gallery:start -->
-## Визуальная проверка
+<figure markdown>
+  ![Roof truss bearing at exterior parapet — structural detail](../../../assets/images/confluence/confluence-127.png)
+  <figcaption>Parapet integral with truss: continuous <code>2x</code> по верху + (2) 16d, <strong>2x8 blocking между фермами</strong>, double top plate, Simpson <code>H2.5A</code> clip. Sheathing считаем отдельно — она <em>не</em> в truss-пакете.</figcaption>
+</figure>
 
-Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
-checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
-карточку и проверь похожий condition на плане/schedule.
+<figure markdown>
+  ![Parapet condition reference](../../../assets/images/confluence/confluence-128.png)
+  <figcaption>Ещё один parapet condition — сверь height, FRT и roof-edge перед output.</figcaption>
+</figure>
 
-??? info "Источник картинок"
-    - Parapet (парапет, стены крыши): [2 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65306653/Parapet)
+## See also
 
-<details class="kb-figures">
-  <summary>Показать 2 иллюстраций</summary>
-  <div class="kb-figure-grid">
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-127.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-127.png" alt="Parapet Wall - визуальная проверка 01: Проверь parapet height, material, FRT rule и roof edge condition." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-128.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-128.png" alt="Parapet Wall - визуальная проверка 02: Проверь parapet height, material, FRT rule и roof edge condition." loading="lazy"></a>
-  </div>
-</details>
-<!-- confluence-gallery:end -->
+- [Exterior Walls](exterior.md) · [Truss Heel](../sheathing/truss-heel.md) · [Flashing](../../sheathing-and-misc/flashing.md) · [Box Sheathing](../sheathing/box-sheathing.md)

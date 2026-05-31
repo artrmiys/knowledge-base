@@ -49,6 +49,11 @@ Unit A
   – A 2x6: 3.1 ft
 ```
 
+<figure markdown>
+  ![Unit walls marked A 2x4 / A 2x6 in PlanSwift](../../../assets/images/confluence/confluence-095.png)
+  <figcaption>Так это выглядит в PlanSwift: только interior-стены юнита, <span style="color:#c0392b">A 2x4 (красный)</span> и <span style="color:#2e7d32">A 2x6 (зелёный)</span>. Внешние стены не входят. Снизу — длины (58.7 / 3.1 ft) как в выгрузке выше.</figcaption>
+</figure>
+
 ### Учёт повторов юнитов
 
 На общем плане этажа отметь, **сколько раз встречается каждый unit** (A, B, C…). Это нужно для последующего подсчёта в Excel через макрос **`C_UnitTable`** — он умножает длину стен юнита на количество повторов.
@@ -58,21 +63,3 @@ Unit A
 ## See also
 
 - [Corridor Walls](corridor.md) · [Demising Walls](demising.md) · [Windows & Doors](../openings/windows-doors.md) · [Формулы → Stud factors](../../../reference/formulas.md#stud-spacing-factors)
-
-<!-- confluence-gallery:start -->
-## Визуальная проверка
-
-Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
-checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
-карточку и проверь похожий condition на плане/schedule.
-
-??? info "Источник картинок"
-    - Unit (внутрикомнатные стены): [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65077308/Unit)
-
-<details class="kb-figures">
-  <summary>Показать 1 иллюстраций</summary>
-  <div class="kb-figure-grid">
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-095.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-095.png" alt="Unit Wall - визуальная проверка: Проверь interior/unit wall type, height, thickness и scope boundary." loading="lazy"></a>
-  </div>
-</details>
-<!-- confluence-gallery:end -->

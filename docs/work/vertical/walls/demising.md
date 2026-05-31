@@ -38,24 +38,11 @@
 
 Если обе стены идентичны — короткая запись `dem (2) 2x6 10.5`. Если стены разные — пиши **толщины подряд, потом высоты подряд**.
 
+<figure markdown>
+  ![Demising plate rows in the takeoff sheet](../../../assets/images/confluence/confluence-126.png)
+  <figcaption>Demising-строки в takeoff: <code>Plates Demising (1) btm / (2) top</code> по каждой из двух стен (2x6 P.T. / 2x6 / 2x4) — двойная стена заводится отдельными строками.</figcaption>
+</figure>
+
 ## See also
 
 - [Corridor Walls](corridor.md) · [Shear Wall](../sheathing/shear-wall.md) · [Bracing for Drywall](../../horizontal/floor-framing/details/bracingdrywall.md)
-
-<!-- confluence-gallery:start -->
-## Визуальная проверка
-
-Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
-checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
-карточку и проверь похожий condition на плане/schedule.
-
-??? info "Источник картинок"
-    - Demising (меж-секционные стены - двойные): [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65306639/Demising+-+-)
-
-<details class="kb-figures">
-  <summary>Показать 1 иллюстраций</summary>
-  <div class="kb-figure-grid">
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-126.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-126.png" alt="Demising Wall - визуальная проверка: Проверь double wall, fire/acoustic layers, height и side requirements." loading="lazy"></a>
-  </div>
-</details>
-<!-- confluence-gallery:end -->

@@ -29,24 +29,11 @@ Corridor walls — это **не только стены вдоль коридо
 
 Запись в PlanSwift — `cor 2x6 x` / `corr 2x6 x` (см. [Exterior → PlanSwift Wall Names](exterior.md#planswift-wall-names)). Двойной коридор — `cor (2) 2x6 x`.
 
+<figure markdown>
+  ![Corridor plate and bracing rows in the takeoff sheet](../../../assets/images/confluence/confluence-125.png)
+  <figcaption>Corridor-строки в takeoff-таблице: <code>Plates Corr (1) btm / (2) dbl top</code> (2x6 P.T. / 2x6), <code>Bracing Corridor</code> 2x4. Так заполняется коридорная стена.</figcaption>
+</figure>
+
 ## See also
 
 - [Demising Walls](demising.md) · [Unit Walls](unit.md) · [Sill Plates](sill-plates.md) · [Hangers](../../../reference/hangers.md)
-
-<!-- confluence-gallery:start -->
-## Визуальная проверка
-
-Эти картинки уже привязаны к правилам страницы. Используй их как быстрые
-checkpoint-ы перед output: сначала прочитай правило выше, потом открой нужную
-карточку и проверь похожий condition на плане/schedule.
-
-??? info "Источник картинок"
-    - Corridor (коридорные стены): [1 карт. Confluence](https://redacted.atlassian.net/wiki/spaces/work/pages/65306625/Corridor)
-
-<details class="kb-figures">
-  <summary>Показать 1 иллюстраций</summary>
-  <div class="kb-figure-grid">
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-125.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-125.png" alt="Corridor Wall - визуальная проверка: Проверь corridor side, double-wall condition, height и fire/sound requirements." loading="lazy"></a>
-  </div>
-</details>
-<!-- confluence-gallery:end -->
