@@ -121,9 +121,19 @@ project-root/
 
 ### Темы и режимы
 
-- **Light + Dark** с авто-переключением и тоггл-кнопкой в шапке.
-- Зелёная палитра (primary `green`, accent `lime`).
-- Шрифты `Inter` (текст) + `JetBrains Mono` (код).
+- **Light + Dark** с авто-переключением и тоггл-кнопкой в шапке. Обе темы —
+  первоклассные (dark-first по духу дизайн-кода).
+- **OurCore Design Code v0.2** (НЕ зелёная палитра — она удалена). Закон цвета:
+  **blue `#2f7fd6`/`#4ea1ff` = «выбрано»** (активная вкладка, ссылка, selected,
+  primary CTA), **sage `#6fa37c`/`#8fb89a` = бренд** (узко: 1.5-px полоска под
+  активной вкладкой, left-border активного пункта, маркеры списков, tip-callout,
+  логотип). Никаких новых цветов / неона / gradient-mesh. Декоративные
+  `kb-st--*` / `kb-mk--*` сведены к blue/sage/warn. Источник правды —
+  `docs/assets/stylesheets/tokens.css` (токены `--ds-*` + маппинг Material
+  `--md-*`), компоненты — `extra.css`. **Не возвращай green/lime.**
+- Шрифты `Inter` (текст) + `JetBrains Mono` (код/числа), грузятся `@import` в
+  `tokens.css`. Цифры — моно, tabular.
+- Логотип/favicon — KB-глиф `assets/images/brand/icon-kb-128.png`.
 - Иконка GitHub в шапке + edit-кнопка на каждой странице (`edit_uri`).
 
 ### Навигация
