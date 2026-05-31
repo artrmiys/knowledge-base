@@ -1,96 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
-  <title id="title">Roof edge takeoff map for eave rake returns and truss heel</title>
-  <desc id="desc">Plan view roof edge map showing eave, rake, returns, and truss heel as separate estimating buckets with takeoff units.</desc>
+  <title id="title">Eave vs rake vs return — roof edge map</title>
+  <desc id="desc">Oblique view of a gable roof showing the eave (horizontal bottom edge), the rake (sloped gable edge) and the return (boxed corner) as separate takeoff buckets.</desc>
   <defs>
-    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7.4" refY="4.5" orient="auto">
-      <path d="M0 0 L9 4.5 L0 9 Z" fill="#1f2933"/>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1f2a1f"/>
     </marker>
-    <pattern id="roofhatch" width="22" height="22" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
-      <line x1="0" y1="0" x2="0" y2="22" stroke="#d2dde3" stroke-width="1.5"/>
-    </pattern>
     <style>
-      .sheet { fill: #fff; }
-      .roof { fill: url(#roofhatch); stroke: #111827; stroke-width: 3.2; stroke-linejoin: round; }
-      .wall { fill: #f5f7f8; stroke: #111827; stroke-width: 2.6; }
-      .ridge { stroke: #4b5563; stroke-width: 2.4; stroke-dasharray: 12 9; }
-      .eave { stroke: #1b5e20; stroke-width: 11; stroke-linecap: round; }
-      .rake { stroke: #b45309; stroke-width: 9; stroke-linecap: round; }
-      .return { fill: #e8f1f8; stroke: #0f5e8c; stroke-width: 3; }
-      .heel { fill: #fff8df; stroke: #8a5a00; stroke-width: 3; }
-      .dim { stroke: #1f2933; stroke-width: 2.2; marker-start: url(#arrow); marker-end: url(#arrow); fill: none; }
-      .lead { stroke: #1f2933; stroke-width: 2.2; marker-end: url(#arrow); fill: none; }
-      .title { font: 700 28px Arial, Helvetica, sans-serif; fill: #111827; }
-      .label { font: 700 18px Arial, Helvetica, sans-serif; fill: #111827; }
-      .note { font: 16px Arial, Helvetica, sans-serif; fill: #374151; }
-      .tiny { font: 14px Arial, Helvetica, sans-serif; fill: #4b5563; }
-      .box { fill: #fff; stroke: #cfd8dc; stroke-width: 2; }
+      .ttl{font:700 30px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
+      .sub{font:400 20px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}
+      .lab{font:700 24px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
+      .note{font:400 18px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}
+      .lead{stroke:#1f2a1f;stroke-width:2;fill:none;marker-end:url(#arrow)}
     </style>
   </defs>
 
-  <rect class="sheet" x="0" y="0" width="1280" height="760"/>
-  <rect x="34" y="34" width="1212" height="692" rx="8" fill="#fff" stroke="#cfd8dc" stroke-width="2"/>
-  <text class="title" x="72" y="82">Roof edge buckets - keep eave, rake, returns, and heel separate</text>
-  <text class="note" x="72" y="112">Use this plan-view map when the roof edge notes are confusing or when the output template expects separate rows.</text>
+  <rect width="1280" height="760" fill="#ffffff"/>
+  <text class="ttl" x="56" y="74">Eave / Rake / Return — три разных bucket</text>
+  <text class="sub" x="56" y="108">Eave = горизонтальный низ свеса · Rake = наклонная кромка фронтона · Return = угловая коробка.</text>
 
-  <!-- building footprint -->
-  <rect class="wall" x="322" y="292" width="556" height="250"/>
-  <line x1="322" y1="330" x2="878" y2="330" stroke="#c6d1d8" stroke-width="2"/>
-  <line x1="322" y1="505" x2="878" y2="505" stroke="#c6d1d8" stroke-width="2"/>
-  <text class="tiny" x="520" y="424">exterior walls / footprint</text>
+  <!-- side wall (parallelogram) -->
+  <polygon points="540,620 540,400 900,250 900,470" fill="#f3f6f9" stroke="#3a3a3a" stroke-width="2"/>
+  <!-- front gable wall -->
+  <polygon points="320,620 540,620 540,400 430,330 320,400" fill="#eef2f6" stroke="#3a3a3a" stroke-width="2"/>
+  <!-- front gable roof (the two rake faces, shown as gable triangle face overhang) -->
+  <polygon points="300,410 430,318 560,410 540,400 430,330 320,400" fill="#dfe7ee" stroke="#3a3a3a" stroke-width="2"/>
+  <!-- side roof plane -->
+  <polygon points="430,318 770,190 940,260 560,410" fill="#cdd9e3" stroke="#3a3a3a" stroke-width="2"/>
 
-  <!-- roof planes -->
-  <polygon class="roof" points="232,292 600,126 968,292 878,292 600,175 322,292"/>
-  <polygon class="roof" points="232,542 600,690 968,542 878,542 600,642 322,542"/>
-  <polygon class="roof" points="232,292 322,292 322,542 232,542"/>
-  <polygon class="roof" points="878,292 968,292 968,542 878,542"/>
-  <line class="ridge" x1="600" y1="175" x2="600" y2="642"/>
+  <!-- RAKE edge (front sloped) -->
+  <line x1="300" y1="410" x2="430" y2="318" stroke="#c0392b" stroke-width="6"/>
+  <line x1="430" y1="318" x2="560" y2="410" stroke="#c0392b" stroke-width="6"/>
+  <!-- EAVE edge (side bottom of roof) -->
+  <line x1="560" y1="410" x2="940" y2="260" stroke="#2e7d32" stroke-width="6"/>
+  <!-- RETURN box at the corner -->
+  <rect x="544" y="398" width="34" height="26" fill="#fff3c4" stroke="#c78b00" stroke-width="3"/>
 
-  <!-- highlighted edge buckets -->
-  <line class="eave" x1="232" y1="292" x2="968" y2="292"/>
-  <line class="eave" x1="232" y1="542" x2="968" y2="542"/>
-  <line class="rake" x1="232" y1="292" x2="600" y2="126"/>
-  <line class="rake" x1="600" y1="126" x2="968" y2="292"/>
-  <line class="rake" x1="232" y1="542" x2="600" y2="690"/>
-  <line class="rake" x1="600" y1="690" x2="968" y2="542"/>
+  <!-- legend swatches + leaders -->
+  <line class="lead" x1="365" y1="362" x2="250" y2="300"/>
+  <rect x="60" y="262" width="24" height="12" fill="#c0392b"/>
+  <text class="lab" x="94" y="276">Rake</text>
+  <text class="note" x="94" y="300">наклонная кромка на gable — своя LFT-строка</text>
 
-  <!-- returns at four lower corners -->
-  <rect class="return" x="238" y="300" width="74" height="52" rx="3"/>
-  <rect class="return" x="888" y="300" width="74" height="52" rx="3"/>
-  <rect class="return" x="238" y="482" width="74" height="52" rx="3"/>
-  <rect class="return" x="888" y="482" width="74" height="52" rx="3"/>
+  <line class="lead" x1="760" y1="320" x2="900" y2="360"/>
+  <rect x="980" y="350" width="24" height="12" fill="#2e7d32"/>
+  <text class="lab" x="1014" y="364">Eave</text>
+  <text class="note" x="900" y="392">горизонтальный низ свеса — LFT + soffit SQFT</text>
 
-  <!-- truss heel strips along eave walls -->
-  <rect class="heel" x="327" y="336" width="546" height="22" rx="3"/>
-  <rect class="heel" x="327" y="476" width="546" height="22" rx="3"/>
-
-  <!-- labels on drawing -->
-  <text class="label" x="505" y="279">EAVE - LFT along lower roof edge</text>
-  <text class="label" x="494" y="573">EAVE - separate run</text>
-  <text class="label" x="143" y="222">RAKE</text>
-  <path class="lead" d="M200 228 L312 257"/>
-  <text class="label" x="994" y="222">RAKE</text>
-  <path class="lead" d="M990 230 L875 257"/>
-  <text class="label" x="126" y="422">RETURN</text>
-  <path class="lead" d="M208 417 L250 352"/>
-  <text class="label" x="958" y="422">RETURN</text>
-  <path class="lead" d="M950 417 L916 352"/>
-  <text class="label" x="890" y="472">TRUSS HEEL</text>
-  <path class="lead" d="M890 466 L870 488"/>
-
-  <!-- dimension along eave -->
-  <line class="dim" x1="249" y1="245" x2="951" y2="245"/>
-  <text class="label" x="492" y="226">measure eave length</text>
-
-  <!-- legend and rules -->
-  <rect class="box" x="78" y="610" width="1124" height="82" rx="8"/>
-  <line class="eave" x1="112" y1="637" x2="174" y2="637"/>
-  <text class="note" x="194" y="643">Eave: fascia/subfascia/framing = LFT; soffit material = eave LFT x overhang depth.</text>
-  <line class="rake" x1="112" y1="672" x2="174" y2="672"/>
-  <text class="note" x="194" y="678">Rake: sloped gable edge; do not bury AJS rafter edge conditions in a generic rake line.</text>
-
-  <rect class="box" x="940" y="78" width="252" height="125" rx="8"/>
-  <text class="label" x="960" y="112">Quick decision</text>
-  <text class="tiny" x="960" y="143">1. Is it horizontal roof edge?</text>
-  <text class="tiny" x="960" y="167">2. Is material soffit or trim?</text>
-  <text class="tiny" x="960" y="191">3. Is heel/return separate?</text>
+  <line class="lead" x1="561" y1="411" x2="470" y2="500"/>
+  <rect x="300" y="520" width="24" height="14" fill="#fff3c4" stroke="#c78b00" stroke-width="2"/>
+  <text class="lab" x="334" y="534">Return</text>
+  <text class="note" x="334" y="558">коробка, где eave заворачивается к rake — отдельная строка</text>
 </svg>

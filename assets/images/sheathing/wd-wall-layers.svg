@@ -1,62 +1,80 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="t d">
-  <title id="t">WD stud exterior wall — layer stack</title>
-  <desc id="d">Brick veneer, WRB, Type X gypsum sheathing, FRT structural sheathing, batt insulation in studs, interior gypsum — with takeoff notes.</desc>
+  <title id="t">WD stud brick wall — layer stack</title>
+  <desc id="d">Section of a wood stud brick-veneer wall: brick veneer, WRB, Type X gypsum sheathing, FRT structural sheathing, batt insulation in studs, interior gypsum — each a separate takeoff line.</desc>
   <defs>
-    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="#2e7d32"/>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/>
     </marker>
+    <pattern id="brick" width="18" height="22" patternUnits="userSpaceOnUse">
+      <rect width="18" height="22" fill="#e0a079"/>
+      <line x1="0" y1="11" x2="18" y2="11" stroke="#a85b32" stroke-width="1.4"/>
+      <line x1="9" y1="0" x2="9" y2="11" stroke="#a85b32" stroke-width="1.4"/>
+      <line x1="0" y1="11" x2="0" y2="22" stroke="#a85b32" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="batt2" width="20" height="16" patternUnits="userSpaceOnUse">
+      <rect width="20" height="16" fill="#fdf6e3"/>
+      <path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/>
+    </pattern>
+    <pattern id="osb2" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="6" fill="#eef2f6"/>
+      <circle cx="1.5" cy="1.5" r="0.7" fill="#9bb0c2"/>
+      <circle cx="4.5" cy="4" r="0.7" fill="#9bb0c2"/>
+    </pattern>
+    <pattern id="wood2" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="10" height="10" fill="#f2d6a8"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/>
+    </pattern>
+    <pattern id="gyphatch" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#eef3f7"/>
+      <circle cx="4" cy="4" r="0.8" fill="#9aa9b6"/>
+    </pattern>
     <style>
-      .bg{fill:#f8faf8}.panel{fill:#fff;stroke:#d7e5d4;stroke-width:2}
-      .veneer{fill:#e3a07a;stroke:#a85b32;stroke-width:2}.wrb{fill:#d9f2d8;stroke:#2e7d32;stroke-width:2}
-      .gyp{fill:#eef3f7;stroke:#8aa0b0;stroke-width:2}.sheath{fill:#d8ecff;stroke:#2c7fb8;stroke-width:2}
-      .frame{fill:#f1c27d;stroke:#9a6b32;stroke-width:2}.insul{fill:#fff3c4;stroke:#c78b00;stroke-width:2}
-      .pt{fill:#c7a27b;stroke:#6c4b2a;stroke-width:2}
-      .label{font:600 19px Arial,sans-serif;fill:#1f2a1f}.small{font:14px Arial,sans-serif;fill:#374237}
-      .rule{font:600 15px Arial,sans-serif;fill:#2e7d32}.line{stroke:#2e7d32;stroke-width:2;marker-end:url(#ar)}
-      .side{font:600 14px Arial,sans-serif;fill:#5a6a5a}
+      .ttl{font:700 21px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
+      .sub{font:400 14px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}
+      .lab{font:600 15px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
+      .note{font:400 13px "Segoe UI",Arial,sans-serif;fill:#566}
+      .side{font:700 13px "Segoe UI",Arial,sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.4;fill:none;marker-end:url(#arrow)}
     </style>
   </defs>
-  <rect class="bg" width="920" height="520" rx="16"/>
-  <rect class="panel" x="36" y="34" width="848" height="452" rx="14"/>
-  <text class="label" x="64" y="76">WD stud wall — считай каждый слой отдельной строкой</text>
-  <text class="small" x="64" y="100">Пример: brick veneer / Type X gypsum / FRT ply / batt — wall type schedule + section.</text>
 
-  <rect class="veneer" x="120" y="130" width="36" height="270"/>
-  <rect class="wrb"    x="156" y="130" width="14" height="270"/>
-  <rect class="gyp"    x="170" y="130" width="24" height="270"/>
-  <rect class="sheath" x="194" y="130" width="22" height="270"/>
-  <rect class="insul"  x="216" y="130" width="150" height="270"/>
-  <rect class="frame"  x="216" y="130" width="16" height="270"/>
-  <rect class="frame"  x="283" y="130" width="16" height="270"/>
-  <rect class="frame"  x="350" y="130" width="16" height="270"/>
-  <rect class="frame"  x="216" y="130" width="150" height="16"/>
-  <rect class="pt"     x="216" y="384" width="150" height="16"/>
-  <rect class="gyp"    x="366" y="130" width="20" height="270"/>
+  <rect width="920" height="520" fill="#ffffff"/>
+  <text class="ttl" x="40" y="56">WD stud / brick — каждый слой отдельной строкой</text>
+  <text class="sub" x="40" y="80">Wall type schedule + section. Type X gypsum, FRT ply и veneer — это разные lines.</text>
 
-  <text class="side" x="118" y="420">Exterior</text>
-  <text class="side" x="332" y="420">Interior</text>
+  <g>
+    <rect x="120" y="120" width="34" height="300" fill="url(#brick)" stroke="#3a3a3a" stroke-width="1.4"/>
+    <rect x="154" y="120" width="10" height="300" fill="#d9f2d8" stroke="#2e7d32" stroke-width="1.3"/>
+    <rect x="164" y="120" width="20" height="300" fill="url(#gyphatch)" stroke="#8aa0b0" stroke-width="1.4"/>
+    <rect x="184" y="120" width="22" height="300" fill="url(#osb2)" stroke="#3a3a3a" stroke-width="1.4"/>
+    <rect x="206" y="120" width="150" height="300" fill="url(#batt2)" stroke="#3a3a3a" stroke-width="1.4"/>
+    <rect x="206" y="120" width="16" height="300" fill="url(#wood2)" stroke="#3a3a3a" stroke-width="1.2"/>
+    <rect x="340" y="120" width="16" height="300" fill="url(#wood2)" stroke="#3a3a3a" stroke-width="1.2"/>
+    <rect x="206" y="120" width="150" height="13" fill="url(#wood2)" stroke="#3a3a3a" stroke-width="1.2"/>
+    <rect x="206" y="407" width="150" height="13" fill="#caa27b" stroke="#6c4b2a" stroke-width="1.4"/>
+    <rect x="356" y="120" width="16" height="300" fill="url(#gyphatch)" stroke="#8aa0b0" stroke-width="1.4"/>
+  </g>
 
-  <line class="line" x1="470" y1="150" x2="138" y2="150"/>
-  <text class="rule" x="486" y="150">Masonry veneer</text>
-  <text class="small" x="486" y="170">Часто by others — verify scope.</text>
+  <text class="side" x="120" y="440">EXTERIOR</text>
+  <text class="side" x="318" y="440">INTERIOR</text>
 
-  <line class="line" x1="470" y1="200" x2="172" y2="180"/>
-  <text class="rule" x="486" y="200">WRB / air barrier</text>
-  <text class="small" x="486" y="220">Отдельная строка, SQ FT.</text>
+  <line class="lead" x1="137" y1="150" x2="560" y2="140"/>
+  <text class="lab" x="572" y="137">Brick / masonry veneer</text>
+  <text class="note" x="572" y="156">часто by others — verify scope</text>
 
-  <line class="line" x1="470" y1="250" x2="182" y2="225"/>
-  <text class="rule" x="486" y="250">Type X gypsum sheathing</text>
-  <text class="small" x="486" y="270">5/8&quot;; бывает (2) layers + over FRT.</text>
+  <line class="lead" x1="174" y1="195" x2="560" y2="200"/>
+  <text class="lab" x="572" y="197">Type X gypsum sheathing</text>
+  <text class="note" x="572" y="216">5/8&quot;; бывает (2) layers + over FRT</text>
 
-  <line class="line" x1="470" y1="300" x2="205" y2="270"/>
-  <text class="rule" x="486" y="300">FRT structural sheathing</text>
-  <text class="small" x="486" y="320">1/2&quot; Ply FRT — своя строка (4x8).</text>
+  <line class="lead" x1="195" y1="250" x2="560" y2="262"/>
+  <text class="lab" x="572" y="259">FRT structural sheathing</text>
+  <text class="note" x="572" y="278">1/2&quot; Ply FRT — своя строка (4x8)</text>
 
-  <line class="line" x1="470" y1="350" x2="300" y2="300"/>
-  <text class="rule" x="486" y="350">Batt insulation + studs</text>
-  <text class="small" x="486" y="370">Insulation отдельно от gypsum.</text>
+  <line class="lead" x1="290" y1="300" x2="560" y2="324"/>
+  <text class="lab" x="572" y="321">Batt insulation + studs</text>
+  <text class="note" x="572" y="340">insulation отдельно от gypsum</text>
 
-  <line class="line" x1="470" y1="400" x2="282" y2="392"/>
-  <text class="rule" x="486" y="400">P.T. bottom plate</text>
-  <text class="small" x="486" y="420">Если low plate = P.T. — своя строка.</text>
+  <line class="lead" x1="280" y1="413" x2="560" y2="386"/>
+  <text class="lab" x="572" y="383">P.T. bottom plate</text>
+  <text class="note" x="572" y="402">если low plate = P.T. — своя строка</text>
 </svg>
