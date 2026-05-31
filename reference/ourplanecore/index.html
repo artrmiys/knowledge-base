@@ -5584,6 +5584,24 @@ sheet names, real takeoff names — скрыты. Названия кнопок 
   См. <a href="#new-misc">Прочее новое</a>.</li>
 </ul>
 </div>
+<div class="admonition abstract">
+<p class="admonition-title">Свежий цикл — UI/UX (что нового по исходнику)</p>
+<ul>
+<li><strong>F1 cheat-sheet overlay</strong> — оверлей со всеми горячими клавишами по <code>F1</code>;
+  на пустом старте (нет job) — <strong>Start-карточка</strong> с подсказками F1.</li>
+<li><strong>Takeoff Templates dock</strong> — PlanSwift-style панель шаблонов takeoff'ов на
+  правой <code>Takeoffs</code>-полосе (зеркалит <code>Bookmarks</code>); <code>Auto Tree</code>/<code>From Pages</code> рядом.</li>
+<li><strong>Transform popup</strong> — <code>Flip</code> / <code>Rotate</code> / <code>Scale</code> свёрнуты в один popup на
+  нижней полосе; нижняя полоса теперь <strong>в два ряда</strong>, добавлены <code>Tile M2</code> и
+  <code>Current Excel</code> (перенесён на таб <code>Estimating</code>).</li>
+<li><strong>Чище ribbon/табы (по дизайн-коду)</strong> — компактная top tab+ribbon полоса,
+  segmented main-pills, borderless ribbon-кнопки, иконки на табе <code>Page</code>
+  (parity с <code>Main</code>), вторичные табы в OurCore-стиле (blue text + sage
+  underline), Open/Import-меню перестроено, accent через тему.</li>
+<li><strong>Старт/перф</strong> — выбранная стартовая страница открывается напрямую; кэш
+  первичных layer-рендеров (быстрее открытие тяжёлых PDF).</li>
+</ul>
+</div>
 <figure>
 <p><img alt="1 Main View — общий вид" src="../../assets/images/ourplanecore/opc-guide-main-view.png" />
   </p>
@@ -5954,9 +5972,9 @@ Current-sheet filter, export commands.</p>
 <td>Вписать / зум</td>
 </tr>
 <tr>
-<td><code>Flip H</code> / <code>Flip V</code> / <code>0</code> / <code>1x</code></td>
+<td><code>Transform ▾</code> (popup)</td>
 <td>—</td>
-<td>Отразить / сбросить поворот / сбросить масштаб выделения</td>
+<td><code>Flip H/V</code> / <code>Rotate</code> / <code>Scale</code> / сброс <code>0</code>/<code>1x</code> собраны в один popup</td>
 </tr>
 <tr>
 <td><code>Set</code> (scale) / <code>▾ Presets</code></td>
@@ -6102,6 +6120,10 @@ Current-sheet filter, export commands.</p>
 <tr>
 <td><code>Auto Tree</code> / <code>From Pages</code></td>
 <td>Стандартное дерево / из структуры страниц</td>
+</tr>
+<tr>
+<td><code>Templates</code> (dock)</td>
+<td>PlanSwift-style панель шаблонов takeoff'ов (зеркалит <code>Bookmarks</code>)</td>
 </tr>
 </tbody>
 </table>
@@ -6784,6 +6806,10 @@ per-job в <code>&lt;job&gt;/AI_Context/settings/</code>).</p>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-p">P</kbd></span></td>
 <td>Command Palette</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-f1">F1</kbd></span></td>
+<td>Cheat-sheet overlay всех горячих клавиш</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-space">Space</kbd></span></td>
