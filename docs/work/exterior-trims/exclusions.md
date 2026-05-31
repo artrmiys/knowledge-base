@@ -5,6 +5,11 @@
     Stone / Brick veneer, как распознать на чертеже и где идёт casing bead —
     в [Siding → EIFS / Stucco / Veneer](../siding/eifs-stucco-veneer.md).
 
+<figure markdown>
+  ![Cladding exclusions and J-channel](../../assets/images/trims/exclusions.svg)
+  <figcaption>EIFS / Stucco / Stone veneer — by others. WRB, sheathing, furring, J-channel — проверяем.</figcaption>
+</figure>
+
 ## Что НЕ считаем в Exterior Trims { .kb-section-title .kb-st--amber }
 
 !!! danger "By others — не входит в наш scope"

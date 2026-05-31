@@ -1,5 +1,9 @@
 # Overframes
 
+**Overframe** — каркас крыши, надстроенный поверх нижней (piggy-back / framed-over
+roof). Много материала прячется в деталях, а не на плане: sleepers, sheathing
+overlap.
+
 ## Что считать
 
 - Overframing members, sleepers, sheathing, and attachment details.

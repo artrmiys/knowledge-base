@@ -1,7 +1,5 @@
 # Wall Sheathing
 
-Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/90144770/Wall+Sheathing`
-
 !!! abstract "Коротко"
     - **Exterior** обшивку ведут **Arch / Energy / Zip** notes.
     - **Shear / interior** обшивку ведёт **Structural** (по shear wall schedule).
@@ -86,6 +84,10 @@ Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/90144770/Wall+She
     bracing и window jambs собраны на странице
     [Exterior Wall Materials](exterior-materials.md). Открывай её, когда
     считаешь наружную оболочку целиком.
+
+## See also
+
+- [Exterior Wall Materials](exterior-materials.md) · [Shear Wall](shear-wall.md) · [Box Sheathing](box-sheathing.md) · [Gable Sheathing](gable.md) · [Exterior Walls](../walls/exterior.md)
 
 <!-- confluence-gallery:start -->
 ## Визуальная проверка

@@ -1,6 +1,13 @@
 # Furring
 
-Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65306681/Furring`
+**Furring** — рейки/профили, создающие зазор и плоскость крепления: под siding
+(`1x4`/`2x4` P.T.) или Z-metal на CMU под continuous insulation. Считается
+только когда в scope.
+
+<figure markdown>
+  ![Furring on CMU and under siding](../../../assets/images/framing/furring.svg)
+  <figcaption>Z-metal furring на CMU под insulation · 1x4/2x4 P.T. furring под siding.</figcaption>
+</figure>
 
 ## Что считать
 

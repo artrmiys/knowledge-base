@@ -5,6 +5,11 @@ Reconstruction jobs — это проекты, где часть здания у
 дом как new construction и не потерять места, где new framing должен
 подключиться к existing.
 
+<figure markdown>
+  ![Existing, demo and new legend](../assets/images/work-types/reconstruction.svg)
+  <figcaption>Existing — не считать · Demo — если в scope · New + connections — считаем.</figcaption>
+</figure>
+
 !!! note "Черновик"
     Эта страница пока написана как рабочая шпаргалка без отдельного source.
     Когда появятся реальные project notes / feedback, перенеси сюда точные

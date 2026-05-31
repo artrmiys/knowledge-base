@@ -1,15 +1,43 @@
 # Формулы и факторы
 
-## Joist / Stud spacing factors
+!!! warning "Stud ≠ Joist — это разные факторы"
+    У **studs** и **joists** один и тот же `o.c.`, но **разные множители**.
+    Studs считаем по boss-rule (`1 стойка/фут + waste`), joists — по реальной
+    геометрии center-to-center (`12 / spacing`). Не путай таблицы местами.
 
-| Spacing | Фактор |
+## Stud spacing factors
+
+Канонический источник по стойкам. Boss-rule: на `16" o.c.` считаем **1:1**
+(одна стойка на фут) **+ 10% waste**, а не геометрические `0.75`. Это сделано
+намеренно — учитывает corners, T-intersections, jack/king/cripple вокруг
+проёмов и обрезь.
+
+| Spacing | Фактор (pcs / LFT) | Откуда |
+| --- | ---: | --- |
+| 12" o.c. | **1.4667** | `1:1` масштаб 16→12 (×1.333) + 10% waste |
+| 16" o.c. | **1.1** | `1:1` + 10% waste |
+| 24" o.c. | **0.625** | `0.5` + 25% waste |
+
+- Формула: `pcs = wall LFT × фактор`.
+- На больших COM jobs studs часто считают по **точной высоте** (nested-IF
+  авто-подбор 2x4/2x6), см. [Exterior Walls](../work/vertical/walls/exterior.md).
+- Сверка с индустрией — [Quantity benchmarks](quantity-benchmarks.md).
+
+## Joist spacing factors
+
+Joists (и rafters, и floor trusses) считаем по **истинной геометрии**
+center-to-center, без stud-waste. Фактор = `12 / spacing`.
+
+| Spacing | Фактор (pcs / LFT ширины) |
 | --- | ---: |
-| 12" o.c. | 1.4667 |
-| 16" o.c. | 1.1 |
-| 24" o.c. | 0.625 |
+| 12" o.c. | **1.0** |
+| 16" o.c. | **0.75** |
+| 19.2" o.c. | **0.625** |
+| 24" o.c. | **0.5** |
 
-Для studs at 16" o.c. boss feedback говорит использовать 1:1 плюс 10% waste,
-а не 0.75. Для 24" o.c. используй 0.5 плюс 25% waste.
+- Формула: `pcs = run ширина LFT × 12 / spacing`, **+1** торцевой joist на каждый run.
+- Hangers по joists: `=ЧЁТН(LFT × 12 / spacing)` — округление вверх до чётного.
+- Подробно — [Joist](../work/horizontal/floor-framing/joist.md).
 
 ## Rim и Blocking
 

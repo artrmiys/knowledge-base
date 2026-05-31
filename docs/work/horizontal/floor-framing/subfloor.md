@@ -1,5 +1,10 @@
 # Subfloor Sheathing
 
+<figure markdown>
+  ![Subfloor T and G on joists](../../../assets/images/framing/subfloor.svg)
+  <figcaption>Subfloor по умолчанию 3/4" T&G + panel adhesive; FRT-периметр и over-slab — отдельно.</figcaption>
+</figure>
+
 ## Что считать
 
 - Subfloor sheathing by assembly.
@@ -25,3 +30,7 @@ views.
 - Deck and balcony underlayment assemblies.
 - Blocking below FRT perimeter sheathing where details show it.
 - Panel Adhesive (`29OZ`) под subfloor — частая забытая строка.
+
+## See also
+
+- [Joist](joist.md) · [Floor SQFT](../../sqfts/1st2nd.md) · [Floor-height Sheathing](../../vertical/sheathing/floor.md)

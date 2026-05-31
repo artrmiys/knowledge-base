@@ -1,5 +1,8 @@
 # Dormer
 
+**Dormer** — надстройка с собственной крышей, выходящая из ската (со своим окном).
+Объединяет правила wall + roof + opening + trim — поэтому не прячь в один item.
+
 ## Что считать
 
 - Dormer walls, roof framing, sheathing, trims и openings как separate scope,
@@ -11,6 +14,10 @@
 - Проверь exterior sheathing/WRB и FRT rules.
 - Не прячь dormer materials внутри generic roof lines, если pricing требует их
   separate.
+
+## See also
+
+- [Roof Header](header.md) · [Overframes](overframes.md) · [Exterior Walls](../../vertical/walls/exterior.md)
 
 
 <!-- confluence-gallery:start -->

@@ -63,8 +63,6 @@
 
 ## PlanSwift Wall Names
 
-Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65175555/Walls`
-
 | Wall output name | Для чего |
 | --- | --- |
 | `ext x` | Exterior wall run |

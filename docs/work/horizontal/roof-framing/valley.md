@@ -1,5 +1,9 @@
 # Valley
 
+**Valley** — наклонная **внутренняя** ендова, где два ската сходятся вогнутым
+углом. Valley rafter обычно длиннее и крупнее common rafter. Не путать с hip
+(наружный угол).
+
 ## Что считать
 
 - Valley rafters/beams, valley framing, and connectors where shown.
@@ -8,6 +12,11 @@
 
 - Valley framing can be part of overframe or truss package by others.
 - Если stick-framed, проверь sheathing, blocking и roof finish interfaces.
+- Engineered valley beams — точный product и length.
+
+## See also
+
+- [Hip](hip.md) · [Ridge](ridge.md) · [Ridge / Valley / Hip](../../sheathing-and-misc/ridgevalleyhip.md) · [Hangers](../../../reference/hangers.md)
 
 
 <!-- confluence-gallery:start -->

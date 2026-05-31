@@ -3,6 +3,11 @@
 Siding считается по **площади** (`SQ FT` / `SF`) по elevations, стена за
 стеной. Trim, accessories и flashing — отдельно (`LFT`/`pcs`), не в siding.
 
+<figure markdown>
+  ![Siding take-off by elevation area](../../assets/images/siding/measure.svg)
+  <figcaption>SQ FT по elevation, минус openings; gable/accent — отдельные строки.</figcaption>
+</figure>
+
 ## Метод { .kb-section-title .kb-st--green }
 
 1. Иди **по elevations**, стена за стеной (front / rear / left / right).

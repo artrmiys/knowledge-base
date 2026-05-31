@@ -1,5 +1,8 @@
 # Canopy
 
+**Canopy** — небольшой навес/козырёк (над входом, у фасада). Отдельный scope:
+свой framing, soffit и attachment — не теряй его внутри main roof.
+
 ## Что считать
 
 - Canopy framing, soffit sheathing, exterior-grade gypsum/Denseglas, posts,
@@ -10,6 +13,10 @@
 - Canopies и porch soffits могут требовать 5/8" exterior-grade gypsum soffit sheathing.
 - RCP and architectural sheets often show canopy soffit framing.
 - Metal stud joists могут требоваться at gazebo/canopy conditions.
+
+## See also
+
+- [Porch SQFT](../../sqfts/porch.md) · [Eve / Eave](../../sheathing-and-misc/eve.md) · [Soffit & Fascia](../../exterior-trims/soffit-fascia.md)
 
 
 <!-- confluence-gallery:start -->

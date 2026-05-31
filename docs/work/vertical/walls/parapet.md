@@ -36,6 +36,10 @@
 → Ключевое: парапет обшивается **с двух сторон** (inside + wall) **плюс top** + flashing —
 это три плоскости обшивки, не одна.
 
+## See also
+
+- [Exterior Walls](exterior.md) · [Truss Heel](../sheathing/truss-heel.md) · [Flashing](../../sheathing-and-misc/flashing.md) · [Box Sheathing](../sheathing/box-sheathing.md)
+
 ## Parapet vs. Truss System
 
 Главная развилка — входит ли парапет в truss-систему крыши:

@@ -8,6 +8,11 @@ parapet / cap flashing, kick-out, step flashing, deck-to-wall flashing и т.п.
     CMU/concrete и опциональный wood jamb `1x4` / `2x4` P.T. на бетоне) —
     относятся к Openings, не к крыше. См. **[Window Flashing](../vertical/openings/window-flashing.md)**.
 
+<figure markdown>
+  ![Roof to wall step and kick-out flashing](../../assets/images/roof/flashing.svg)
+  <figcaption>Roof-to-wall: step flashing + kick-out у низа примыкания (частый пропуск).</figcaption>
+</figure>
+
 ## Что считать
 
 - Roof flashing: rake / eve / parapet / cap, step flashing у дымоходов и

@@ -4,6 +4,11 @@ EIFS, Stucco, Stone veneer и Brick veneer — это тоже наружная 
 стен, но это **отдельные trade**. Для нашего scope (wood / EWP / vinyl /
 fiber-cement + trim) они почти всегда **by others**.
 
+<figure markdown>
+  ![EIFS, stucco and veneer are by others](../../assets/images/siding/eifs-stucco-veneer.svg)
+  <figcaption>Finish-системы by others; WRB, sheathing, furring, trim/J-channel — наши.</figcaption>
+</figure>
+
 !!! danger "Главное правило"
     **EIFS — не считаем. Stucco — не считаем. Stone Veneer — не считаем.
     Brick Veneer — не считаем.** Это finish/masonry by others. Считаем

@@ -4,6 +4,11 @@
 материал: decking, railing-системы, post hardware, ballusters, cap rail,
 fascia/skirt/risers/stringer, lattice.
 
+<figure markdown>
+  ![Railing components and decking](../../assets/images/trims/rails-decking.svg)
+  <figcaption>Posts · cap rail · balusters · decking — каждый своя строка.</figcaption>
+</figure>
+
 !!! tip "Railing считается одним из двух способов"
     - **Системой / секциями** — заводская система: `6' Rail section`,
       `8' Stair Rail section`, `36" Rail System composite` (`unit` / `pcs`).

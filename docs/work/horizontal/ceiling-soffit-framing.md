@@ -4,6 +4,11 @@
 и не roof soffit. Сюда попадают dropped soffits, потолочные короба, потолок мех-комнаты
 и потолок кухни. Источник — **RCP** (reflected ceiling plan) + mech/detail-листы.
 
+<figure markdown>
+  ![Dropped ceiling soffit framing](../../assets/images/framing/ceiling-soffit.svg)
+  <figcaption>Dropped soffit — 2x frame по периметру короба; источник RCP, не structural план.</figcaption>
+</figure>
+
 !!! abstract "Где что (не путать)"
     - **Эта страница** — *каркас* потолков/софитов внутри (2x framing, plates, screws).
     - **Finish-отделка** потолка (crown, beadboard, gypsum) — [Interior Trims](../interior-trims/overview.md).

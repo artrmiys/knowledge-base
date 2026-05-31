@@ -4,6 +4,11 @@
 отделки: суммирование, умножение на count, и вставка готовых блоков
 (jambs / pavers / balcony). Это **не** стандартные Excel-шорткаты.
 
+<figure markdown>
+  ![Trim macro block times count](../../assets/images/trims/macros.svg)
+  <figcaption>`C_TrimsCalc`: trim-block одного окна × count повторов = total LFT.</figcaption>
+</figure>
+
 !!! warning "Макросы должны быть включены"
     Если макрос «ничего не делает»:
 

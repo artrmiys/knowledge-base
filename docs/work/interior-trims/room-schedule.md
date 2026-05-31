@@ -1,5 +1,10 @@
 # Room Schedule
 
+<figure markdown>
+  ![Room finish schedule columns](../../assets/images/trims/room-schedule.svg)
+  <figcaption>Wood base только при `Wd`; tile base исключай. Garage — без base/crown.</figcaption>
+</figure>
+
 ## Что читать
 
 - Room finish schedule.
@@ -20,3 +25,7 @@
 - Corridors/lobbies имеют другой base или casing type?
 - Crown нужен везде, только common areas или только specific rooms?
 - Door/window trims указаны или omitted?
+
+## See also
+
+- [Base](base.md) · [Casing](casing.md) · [Crown](crown.md) · [Interior Trims overview](overview.md)

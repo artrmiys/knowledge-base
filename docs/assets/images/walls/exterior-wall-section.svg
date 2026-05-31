@@ -1,57 +1,83 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="title desc">
-  <title id="title">Exterior wall section takeoff diagram</title>
-  <desc id="desc">Layered exterior wall section with takeoff checkpoints for WRB, sheathing, studs, blocking, insulation, and plates.</desc>
+  <title id="title">Exterior wall section — takeoff layers</title>
+  <desc id="desc">Architectural section of an exterior stud wall: WRB, sheathing, studs with batt insulation, blocking, P.T. bottom plate and interior gypsum, with takeoff checkpoints.</desc>
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="#2e7d32"/>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/>
     </marker>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse">
+      <rect width="20" height="16" fill="#fdf6e3"/>
+      <path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/>
+    </pattern>
+    <pattern id="osb" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="6" fill="#eef2f6"/>
+      <circle cx="1.5" cy="1.5" r="0.7" fill="#9bb0c2"/>
+      <circle cx="4.5" cy="4" r="0.7" fill="#9bb0c2"/>
+    </pattern>
+    <pattern id="wood" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="10" height="10" fill="#f2d6a8"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/>
+    </pattern>
     <style>
-      .bg{fill:#f8faf8}.panel{fill:#fff;stroke:#d7e5d4;stroke-width:2}.frame{fill:#f1c27d;stroke:#9a6b32;stroke-width:2}
-      .sheath{fill:#d8ecff;stroke:#2c7fb8;stroke-width:2}.wrb{fill:#d9f2d8;stroke:#2e7d32;stroke-width:2}
-      .insul{fill:#fff3c4;stroke:#c78b00;stroke-width:2}.pt{fill:#c7a27b;stroke:#6c4b2a;stroke-width:2}
-      .label{font:600 18px Arial, sans-serif;fill:#1f2a1f}.small{font:14px Arial, sans-serif;fill:#374237}
-      .rule{font:600 15px Arial, sans-serif;fill:#2e7d32}.line{stroke:#2e7d32;stroke-width:2;marker-end:url(#arrow)}
+      .bg{fill:#ffffff}
+      .frameln{fill:none;stroke:#3a3a3a;stroke-width:1.6}
+      .thin{stroke:#3a3a3a;stroke-width:1.1;fill:none}
+      .ttl{font:700 21px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
+      .sub{font:400 14px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}
+      .lab{font:600 15px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
+      .note{font:400 13px "Segoe UI",Arial,sans-serif;fill:#566}
+      .side{font:700 13px "Segoe UI",Arial,sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.4;fill:none;marker-end:url(#arrow)}
     </style>
   </defs>
-  <rect class="bg" width="920" height="520" rx="16"/>
-  <rect class="panel" x="36" y="34" width="848" height="452" rx="14"/>
-  <text class="label" x="70" y="78">Exterior Wall: count by layer, not as one lump</text>
-  <text class="small" x="70" y="105">Use Arch / Energy / Wall Type notes first; verify Structural exceptions.</text>
 
-  <rect class="wrb" x="136" y="145" width="26" height="260"/>
-  <rect class="sheath" x="162" y="145" width="42" height="260"/>
-  <rect class="insul" x="204" y="145" width="42" height="260"/>
-  <rect class="frame" x="246" y="145" width="150" height="260"/>
-  <rect class="panel" x="396" y="145" width="42" height="260"/>
+  <rect class="bg" width="920" height="520"/>
+  <text class="ttl" x="40" y="56">Exterior wall — считай по слоям, не одной строкой</text>
+  <text class="sub" x="40" y="80">Источник: Arch / Energy / Wall-type notes; Structural-исключения проверь отдельно.</text>
 
-  <rect class="frame" x="256" y="158" width="18" height="234"/>
-  <rect class="frame" x="316" y="158" width="18" height="234"/>
-  <rect class="frame" x="376" y="158" width="18" height="234"/>
-  <rect class="frame" x="246" y="145" width="150" height="18"/>
-  <rect class="pt" x="246" y="387" width="150" height="18"/>
-  <rect class="frame" x="246" y="265" width="150" height="14"/>
-  <rect class="frame" x="246" y="315" width="150" height="14"/>
+  <!-- wall section, exterior (left) -> interior (right) -->
+  <g>
+    <!-- WRB -->
+    <rect x="150" y="120" width="12" height="300" fill="#d9f2d8" stroke="#2e7d32" stroke-width="1.4"/>
+    <!-- sheathing -->
+    <rect x="162" y="120" width="26" height="300" fill="url(#osb)" stroke="#3a3a3a" stroke-width="1.4"/>
+    <!-- stud cavity with batt -->
+    <rect x="188" y="120" width="150" height="300" fill="url(#batt)" stroke="#3a3a3a" stroke-width="1.4"/>
+    <!-- studs -->
+    <rect x="188" y="120" width="16" height="300" fill="url(#wood)" stroke="#3a3a3a" stroke-width="1.2"/>
+    <rect x="322" y="120" width="16" height="300" fill="url(#wood)" stroke="#3a3a3a" stroke-width="1.2"/>
+    <!-- top plates (double) -->
+    <rect x="188" y="120" width="150" height="13" fill="url(#wood)" stroke="#3a3a3a" stroke-width="1.2"/>
+    <rect x="188" y="133" width="150" height="13" fill="url(#wood)" stroke="#3a3a3a" stroke-width="1.2"/>
+    <!-- blocking row -->
+    <rect x="204" y="262" width="118" height="14" fill="url(#wood)" stroke="#3a3a3a" stroke-width="1.2"/>
+    <!-- P.T. bottom plate -->
+    <rect x="188" y="407" width="150" height="13" fill="#caa27b" stroke="#6c4b2a" stroke-width="1.4"/>
+    <!-- interior gypsum -->
+    <rect x="338" y="120" width="16" height="300" fill="#f1f4f7" stroke="#8aa0b0" stroke-width="1.4"/>
+  </g>
 
-  <text class="small" x="114" y="430">Exterior</text>
-  <text class="small" x="392" y="430">Interior</text>
+  <text class="side" x="150" y="440">EXTERIOR</text>
+  <text class="side" x="300" y="440">INTERIOR</text>
 
-  <line class="line" x1="600" y1="155" x2="166" y2="170"/>
-  <text class="rule" x="620" y="160">WRB / Tyvek / Zip tape</text>
-  <text class="small" x="620" y="182">Count as separate line when scope asks.</text>
+  <!-- callouts -->
+  <line class="lead" x1="156" y1="150" x2="560" y2="138"/>
+  <text class="lab" x="572" y="135">WRB / Tyvek / Zip tape</text>
+  <text class="note" x="572" y="154">отдельная строка, когда scope просит</text>
 
-  <line class="line" x1="600" y1="215" x2="184" y2="210"/>
-  <text class="rule" x="620" y="220">Sheathing thickness</text>
-  <text class="small" x="620" y="242">19/32&quot; = 5/8&quot;; Zip can override.</text>
+  <line class="lead" x1="175" y1="200" x2="560" y2="200"/>
+  <text class="lab" x="572" y="197">Sheathing thickness</text>
+  <text class="note" x="572" y="216">19/32&quot; = 5/8&quot;; Zip может override</text>
 
-  <line class="line" x1="600" y1="277" x2="322" y2="275"/>
-  <text class="rule" x="620" y="282">Studs and blocking</text>
-  <text class="small" x="620" y="304">Check 2x4 / 2x6 / 2x8 and wall height.</text>
+  <line class="lead" x1="300" y1="245" x2="560" y2="262"/>
+  <text class="lab" x="572" y="259">Studs + blocking</text>
+  <text class="note" x="572" y="278">2x4 / 2x6 / 2x8 по высоте стены</text>
 
-  <line class="line" x1="600" y1="337" x2="322" y2="322"/>
-  <text class="rule" x="620" y="342">Tall-wall blocking</text>
-  <text class="small" x="620" y="364">10 ft+ walls often need two rows.</text>
+  <line class="lead" x1="260" y1="269" x2="560" y2="324"/>
+  <text class="lab" x="572" y="321">Tall-wall blocking</text>
+  <text class="note" x="572" y="340">10&#39;+ стены — часто два ряда</text>
 
-  <line class="line" x1="600" y1="397" x2="320" y2="396"/>
-  <text class="rule" x="620" y="402">Plate material</text>
-  <text class="small" x="620" y="424">Separate P.T. bottom plate if called out.</text>
+  <line class="lead" x1="250" y1="413" x2="560" y2="386"/>
+  <text class="lab" x="572" y="383">P.T. bottom plate</text>
+  <text class="note" x="572" y="402">отдельной строкой, если low plate = P.T.</text>
 </svg>

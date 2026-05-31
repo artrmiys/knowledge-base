@@ -26,6 +26,10 @@
 | Ridge | `2x12` | `1` | `10` |
 | Ridge `(2)` | `1 3/4 x 11 7/8 LVL` | `2` | `12` |
 
+## See also
+
+- [Dbl / Trpl Rafters](dbl-trpl-rafters.md) · [Roof Header](header.md) · [Hip](hip.md) · [Valley](valley.md) · [Post](../floor-framing/post.md)
+
 
 <!-- confluence-gallery:start -->
 ## Визуальная проверка

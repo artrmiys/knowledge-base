@@ -1,6 +1,7 @@
 # Windows and Doors
 
-Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65339393/Windows+Doors`
+**Openings** — окна и двери по window/door schedule. Тянут за собой jamb
+blocking, headers, flashing и **вырез из sheathing**.
 
 ## Что считать
 
@@ -42,6 +43,10 @@ Mtl / CMU / concrete), и wood jamb `1x4` / `2x4 P.T.` на бетоне.
 - У **гаражных** дверей — пометка **`gd`**.
 - Если **окно и дверь объединены одним хэдером** (например, sliding patio в blocks с фиксом сбоку) — считай их **вместе** одним openings, ставь **`d`**.
 - Все openings **вырезаются из sheathing** — не забывай subtract при подсчёте Wall Sheathing SQFT.
+
+## See also
+
+- [Headers](headers.md) · [Window Flashing & Sill](window-flashing.md) · [Macros](../../exterior-trims/macros.md) · [Furring & Window Jambs](../../exterior-trims/furring-and-jambs.md)
 
 <!-- confluence-gallery:start -->
 ## Визуальная проверка

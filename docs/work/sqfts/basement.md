@@ -1,5 +1,10 @@
 # Basement SQFT
 
+<figure markdown>
+  ![Basement wall on concrete slab](../../assets/images/sqfts/basement.svg)
+  <figcaption>Цокольная стена на бетоне: btm plate всегда P.T.; box sheathing + vapor barrier.</figcaption>
+</figure>
+
 ## Что считать
 
 - Basement floor/wall areas that drive sheathing, sleepers, insulation, or

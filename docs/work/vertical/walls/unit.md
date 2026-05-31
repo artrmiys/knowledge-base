@@ -55,6 +55,10 @@ Unit A
 
 Используй чёткие имена групп (например, `Unit A — A 2x4`) — так удобнее экспортировать и анализировать.
 
+## See also
+
+- [Corridor Walls](corridor.md) · [Demising Walls](demising.md) · [Windows & Doors](../openings/windows-doors.md) · [Формулы → Stud factors](../../../reference/formulas.md#stud-spacing-factors)
+
 <!-- confluence-gallery:start -->
 ## Визуальная проверка
 

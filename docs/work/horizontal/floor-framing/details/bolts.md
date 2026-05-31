@@ -1,5 +1,13 @@
 # Bolts
 
+**Bolts** — анкерные, holdown и detail-specific болты с шайбами. Считаются по
+деталям; nails покупают коробками и не считаются.
+
+<figure markdown>
+  ![Anchor bolt through sill plate](../../../../assets/images/framing/anchor-bolt.svg)
+  <figcaption>Anchor bolt с washer/nut крепит sill plate к бетону; шаг — по SW-schedule.</figcaption>
+</figure>
+
 ## Что считать
 
 - Bolts, anchor bolts, holdown bolts и detail-specific bolts.
@@ -15,3 +23,8 @@
 
 - Не используй один label для screw detail и bolt detail.
 - ATS rod systems могут быть by others; перед count проверь scope.
+
+## See also
+
+- [Anchor Bolts](../../../deck/anchor-bolts.md) · [Screws](screws.md) · [Hardware catalog](../../../../reference/hardware-catalog.md)
+

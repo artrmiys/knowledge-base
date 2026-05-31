@@ -3,6 +3,11 @@
 Две вещи, которые **легко пропустить**, потому что они спрятаны в wall
 sections и window details, а не на elevation.
 
+<figure markdown>
+  ![Window jamb extension and furring](../../assets/images/trims/furring-jambs.svg)
+  <figcaption>Window jamb (доска) по глубине стены + furring 1x4/2x4 P.T. под siding.</figcaption>
+</figure>
+
 !!! danger "Смотреть внимательно в разрезах"
     Furring под siding и window jamb extensions часто **не показаны на
     elevation** — только в wall section / window detail. Перед выводом

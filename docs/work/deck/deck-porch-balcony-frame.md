@@ -4,6 +4,11 @@
 posts + hardware, joists, hangers, blocking, rim, sleepers, structural
 subfloor, stair stringers.
 
+<figure markdown>
+  ![Deck framing plan](../../assets/images/framing/deck-frame-plan.svg)
+  <figcaption>Каркас (план): ledger к зданию · joists + hangers · beam на posts.</figcaption>
+</figure>
+
 !!! abstract "Frame vs Trim — где что"
     - **Frame (эта страница)** — несущее: posts, beams, ledger, box, joists,
       hangers, blocking, rim, sleepers, structural subfloor.

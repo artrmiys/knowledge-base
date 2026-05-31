@@ -1,5 +1,8 @@
 # Hip
 
+**Hip** — наклонное **наружное** ребро, где два ската сходятся выпуклым углом.
+Hip rafter длиннее и крупнее common rafter. Не путать с valley (внутренний угол).
+
 ## Что считать
 
 - Hip rafters/beams и related connectors, когда scope включает roof framing.
@@ -9,6 +12,10 @@
 - Confirm whether hips are stick-framed or truss by others.
 - Engineered hip beams need exact product and length.
 - Hip material держи отдельно от roof trim, если output pricing differs.
+
+## See also
+
+- [Valley](valley.md) · [Ridge](ridge.md) · [Ridge / Valley / Hip](../../sheathing-and-misc/ridgevalleyhip.md) · [Hangers](../../../reference/hangers.md)
 
 
 <!-- confluence-gallery:start -->

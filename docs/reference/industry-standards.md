@@ -51,7 +51,7 @@ notes (`07.04 WD-01`, `05.01` guardrail, `07.01-07.03` EIFS).
 | Group by size (studs/joists) | ✅ nested-IF по высоте стены |
 | Templates/checklists для consistency | ✅ scope-профили + [QA checklist](../start/quality-checklist.md) |
 | Flag risk / проверка раньше | ✅ validate ловит пропуски (section+row level) |
-| Spacing factors 12/16/24 = 1.4667/1.1/0.625 | ✅ [Формулы](formulas.md) |
+| Stud spacing factors 12/16/24 = 1.4667/1.1/0.625 (joists — отдельно по `12/spacing`) | ✅ [Формулы](formulas.md) |
 
 ## AI-takeoff контекст { .kb-section-title .kb-st--amber }
 

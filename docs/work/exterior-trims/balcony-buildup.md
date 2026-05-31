@@ -4,6 +4,11 @@ Balcony — это полная сборка от structural framing снизу 
 Эта страница — **карта сборки + finish/trim слои**. **Структурный каркас**
 вынесен в отдельную страницу.
 
+<figure markdown>
+  ![Balcony build-up assembly stack](../../assets/images/trims/balcony-buildup.svg)
+  <figcaption>Сборка снизу вверх: structure → sleepers → EPDM → decking. Decking часто by others.</figcaption>
+</figure>
+
 !!! abstract "Где структурный каркас"
     Posts / Post Bases / Caps / Beam / Ledger / Box / Joists / Hangers /
     Blocking / Rim / Sleepers / structural Subfloor / Stringers — детально в

@@ -61,6 +61,10 @@
 
 См. [Hangers](../../../reference/hangers.md) для подбора крепления под ширину/высоту built-up.
 
+## See also
+
+- [Post](post.md) · [Steel Beam Web Fillers](details/steelbeams.md) · [Joist](joist.md) · [Quantity benchmarks](../../../reference/quantity-benchmarks.md)
+
 <!-- confluence-gallery:start -->
 ## Визуальная проверка
 

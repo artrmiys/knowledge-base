@@ -3,6 +3,11 @@
 Residential jobs идут по стандартному takeoff flow, если plans не добавляют
 commercial-style assemblies, shaft walls или panelized scope.
 
+<figure markdown>
+  ![Residential scope overview](../assets/images/work-types/residential.svg)
+  <figcaption>Walls + openings · floor/roof framing · sheathing · SQFT · roof/deck/porch.</figcaption>
+</figure>
+
 ## Типовой scope
 
 - Walls и openings.
@@ -22,3 +27,7 @@ commercial-style assemblies, shaft walls или panelized scope.
 
 Assumptions держи видимыми. Если detail неясен, добавь note, а не прячь
 решение в quantity.
+
+## See also
+
+- [COM Commercial](com.md) · [Reconstruction](reconstruction.md) · [Структура takeoff](../start/takeoff-structure.md) · [Workflow](../start/workflow.md)

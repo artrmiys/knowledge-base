@@ -1,5 +1,10 @@
 # Stair
 
+<figure markdown>
+  ![Stair stringers, treads and risers](../../../assets/images/framing/stair.svg)
+  <figcaption>Stair-блок: stringers → treads → risers. Hangers под stair — в этой же секции.</figcaption>
+</figure>
+
 ## Что считать
 
 - Stair stringers, stair platform framing, treads, risers, hangers, and ledgers.
@@ -28,3 +33,7 @@ Stair-блок почти всегда тройка `Stringers → Treads → Ri
 - `2x12` stringers — дефолт; LVL только когда structural требует.
 - Treads/Risers режутся из `12'` stock — это и есть sanity-check длины.
 - Hangers под stair — внутри этой же секции (см. [Hardware catalog](../../../reference/hardware-catalog.md)).
+
+## See also
+
+- [Post](post.md) · [Beam](beam.md) · [Hangers](../../../reference/hangers.md)

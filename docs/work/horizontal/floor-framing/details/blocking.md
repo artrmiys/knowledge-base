@@ -1,5 +1,14 @@
 # Blocking
 
+**Blocking** — короткие доски между членами каркаса (joists/studs/trusses) для
+жёсткости, опоры кромок и крепления. Считается в LFT (continuous) либо по
+шагу — см. [Blocking o.c.](blockingoc.md)
+
+<figure markdown>
+  ![Blocking between joists](../../../../assets/images/framing/blocking.svg)
+  <figcaption>Blocking — короткие доски между joists; continuous считается в LFT без factor.</figcaption>
+</figure>
+
 ## Что считать
 
 - Wall blocking, joist blocking, drywall blocking, roof/floor blocking и
@@ -24,3 +33,9 @@
 - Parapet FRT blocking.
 - Если `EWP are by others`, но blocking for steel beams called out, оставь
   `LVL` / `LSL` blocking note видимой и scaled.
+
+## See also
+
+- [Blocking o.c.](blockingoc.md) · [Bracing for Drywall](bracingdrywall.md) · [Ribbon Board](ribbon.md)
+- [Формулы → Blocking](../../../../reference/formulas.md#blocking-formulas)
+

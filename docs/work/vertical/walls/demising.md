@@ -38,6 +38,10 @@
 
 Если обе стены идентичны — короткая запись `dem (2) 2x6 10.5`. Если стены разные — пиши **толщины подряд, потом высоты подряд**.
 
+## See also
+
+- [Corridor Walls](corridor.md) · [Shear Wall](../sheathing/shear-wall.md) · [Bracing for Drywall](../../horizontal/floor-framing/details/bracingdrywall.md)
+
 <!-- confluence-gallery:start -->
 ## Визуальная проверка
 

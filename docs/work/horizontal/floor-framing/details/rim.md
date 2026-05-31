@@ -1,5 +1,10 @@
 # Rim Board
 
+<figure markdown>
+  ![Rim board at joist ends](../../../../assets/images/framing/rim-board.svg)
+  <figcaption>Rim board закрывает торцы joists по краю перекрытия; считается в LFT.</figcaption>
+</figure>
+
 ## Правила
 
 - Не пиши `1-3/4 LVL Rim`, если LVL явно не called out и не нужен по detail.

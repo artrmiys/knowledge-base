@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280" role="img" aria-labelledby="t">
+  <title id="t">Cladding exclusions and J-channel</title>
+  <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.no{font:700 14px "Segoe UI",Arial,sans-serif;fill:#c0392b}.ok{font:700 14px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+  <rect width="760" height="280" fill="#fff"/>
+  <text class="t" x="32" y="40">Exclusions — что НЕ считаем</text>
+  <text class="s" x="32" y="62">EIFS · Stucco · Stone/Brick veneer = by others. J-channel часто идёт с EIFS.</text>
+  <!-- not counted box -->
+  <rect x="60" y="90" width="320" height="150" fill="#fdecea" stroke="#c0392b" stroke-width="1.8"/>
+  <text class="no" x="80" y="120">НЕ считаем (by others):</text>
+  <text class="s" x="80" y="150">• EIFS</text>
+  <text class="s" x="80" y="174">• Stucco</text>
+  <text class="s" x="80" y="198">• Stone / Brick veneer</text>
+  <!-- counted box -->
+  <rect x="410" y="90" width="290" height="150" fill="#eaf6ea" stroke="#2e7d32" stroke-width="1.8"/>
+  <text class="ok" x="430" y="120">Проверяем всё равно:</text>
+  <text class="s" x="430" y="150">• WRB / sheathing / furring</text>
+  <text class="s" x="430" y="174">• trim вокруг</text>
+  <text class="s" x="430" y="198">• J-channel / casing bead</text>
+</svg>

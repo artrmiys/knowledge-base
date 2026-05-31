@@ -41,6 +41,10 @@
 | Posts Base | `ABU66` | `5` | pcs |
 | Posts Caps | `CCQ66` | `3` | pcs |
 
+## See also
+
+- [Beam](beam.md) · [Ridge](../roof-framing/ridge.md) · [Roof Header](../roof-framing/header.md) · [Hardware catalog](../../../reference/hardware-catalog.md)
+
 
 <!-- confluence-gallery:start -->
 ## Визуальная проверка

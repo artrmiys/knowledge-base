@@ -1,6 +1,13 @@
 # Shear Wall
 
-Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/90210306/Shear+Wall+Sheathing`
+**Shear wall** — стена, воспринимающая боковые (ветер/сейсмика) нагрузки через
+структурную обшивку + holdowns/anchors. Обшивка считается строго по structural
+shear wall schedule (тип, толщина, гвоздёвка), не по Arch.
+
+<figure markdown>
+  ![Shear wall sheathing, nailing and holdown](../../../assets/images/sheathing/shear-wall.svg)
+  <figcaption>Обшивка + edge nailing по schedule; holdowns и A35 — частый пропуск.</figcaption>
+</figure>
 
 ## Что считать
 
@@ -19,3 +26,7 @@ Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/90210306/Shear+Wa
 - A35 clips at shear wall connection to another shear wall below.
 - Holdowns per S-details.
 - Interior vs exterior sheathing thickness.
+
+## See also
+
+- [Wall Sheathing](wall-sheathing.md) · [Hardware catalog](../../../reference/hardware-catalog.md) (holdowns/A35) · [Demising Walls](../walls/demising.md)

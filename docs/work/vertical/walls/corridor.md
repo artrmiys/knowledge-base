@@ -29,6 +29,10 @@ Corridor walls — это **не только стены вдоль коридо
 
 Запись в PlanSwift — `cor 2x6 x` / `corr 2x6 x` (см. [Exterior → PlanSwift Wall Names](exterior.md#planswift-wall-names)). Двойной коридор — `cor (2) 2x6 x`.
 
+## See also
+
+- [Demising Walls](demising.md) · [Unit Walls](unit.md) · [Sill Plates](sill-plates.md) · [Hangers](../../../reference/hangers.md)
+
 <!-- confluence-gallery:start -->
 ## Визуальная проверка
 

@@ -1,5 +1,9 @@
 # Truss Heel
 
+**Truss heel** — вертикальная полоса обшивки в торце фермы (между Top Plate
+стены и низом верхнего пояса/overhang). Отдельная строка, не box sheathing и
+не soffit. Типовая высота ≈ `1'-7"`.
+
 ## Что считать
 
 - Vertical sheathing at the heel of roof trusses.
@@ -31,6 +35,10 @@ Heel-секция почти всегда несёт за собой:
 
 - На **gable**-сторонах heel-обшивка обычно уже **учтена** в Gable Sheathing (треугольник + полоска heel под ним идут одной плоскостью).
 - На **Eave**-сторонах (длинная сторона свеса) heel-обшивка **часто забывается** — это отдельная вертикальная полоска по периметру здания между Top Plate стены и нижом overhang. Проверяй её отдельной строкой.
+
+## See also
+
+- [Box Sheathing](box-sheathing.md) · [Gable Sheathing](gable.md) · [Eve / Eave](../../sheathing-and-misc/eve.md) · [Parapet](../walls/parapet.md)
 
 <!-- confluence-gallery:start -->
 ## Визуальная проверка

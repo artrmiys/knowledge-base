@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
+  <title id="t">Existing demo and new legend</title>
+  <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 14px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}</style>
+  <rect width="760" height="300" fill="#fff"/>
+  <text class="t" x="32" y="40">Reconstruction — раздели existing / demo / new</text>
+  <text class="s" x="32" y="62">Считаем new + connections к existing. Existing-to-remain не считаем.</text>
+  <!-- existing (gray solid) -->
+  <line x1="80" y1="110" x2="220" y2="110" stroke="#9aa0a8" stroke-width="6"/>
+  <text class="l" x="240" y="115">Existing — не считать</text>
+  <!-- demo (dashed red) -->
+  <line x1="80" y1="160" x2="220" y2="160" stroke="#c0392b" stroke-width="5" stroke-dasharray="12 8"/>
+  <text class="l" x="240" y="165">Demo — только если в scope</text>
+  <!-- new (solid green/dark) -->
+  <line x1="80" y1="210" x2="220" y2="210" stroke="#2e7d32" stroke-width="6"/>
+  <text class="l" x="240" y="215">New — считаем как обычно</text>
+  <!-- connection marker -->
+  <circle cx="150" cy="255" r="9" fill="#fff3c4" stroke="#c78b00" stroke-width="3"/>
+  <text class="l" x="240" y="261">New-to-existing connection — важнее всего</text>
+</svg>

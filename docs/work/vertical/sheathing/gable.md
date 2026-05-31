@@ -1,6 +1,13 @@
 # Gable Sheathing
 
-Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/89948176/Gable`
+**Gable** — треугольный участок стены под двускатной крышей. Здесь считается
+обшивка этого треугольника (OSB/plywood) в SQFT — отдельно от truss heel и box
+sheathing.
+
+<figure markdown>
+  ![Gable triangle sheathing](../../../assets/images/sheathing/gable-sheathing.svg)
+  <figcaption>SQFT треугольника фронтона — от верха верхней доски стены. Не truss heel / box.</figcaption>
+</figure>
 
 ## Что считать
 
@@ -16,3 +23,7 @@ Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/89948176/Gable`
 - FRT follows exterior wall rules.
 - For truss gables, verify whether sheathing is loose material while studs/plates
   are included in trusses.
+
+## See also
+
+- [Gable Wall](../walls/gable.md) · [Truss Heel](truss-heel.md) · [Box Sheathing](box-sheathing.md) · [Wall Sheathing](wall-sheathing.md)

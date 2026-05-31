@@ -45,11 +45,13 @@
 
 ## Studs
 
-| Spacing | Фактор | Waste |
-| --- | ---: | ---: |
-| 16" o.c. | 1:1 | 10% |
-| 24" o.c. | 0.5 | 25% |
+Boss-rule: на `16" o.c.` считай **1:1 + 10% waste** (одна стойка на фут), а
+**не** геометрические `0.75`. На `24" o.c.` — `0.5 + 25% waste`. Это покрывает
+corners, T-пересечения, jack/king/cripple и обрезь.
 
+- **Числа — в одной таблице:** [Формулы → Stud spacing factors](formulas.md#stud-spacing-factors)
+  (`12/16/24 = 1.4667/1.1/0.625`). Не дублируй её здесь, чтобы значения не
+  разошлись. Joists считаются **по другой** таблице (`12/spacing`).
 - На больших COM jobs используй exact heights: `9'0-3/8"`, `9'1-1/8"` и т.д.
 - Пример math: `11'1" wall - 22" truss - 3/4" subfloor = 9'2" stud`.
 - Corridor 2x4 staggered означает two rows at 16" o.c.; plates должны быть 2x6.

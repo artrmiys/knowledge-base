@@ -1,9 +1,12 @@
 # EWP / Capital
 
-Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/2162791/EWP+Capital+Job`
-
 EWP jobs включают только engineered wood products, если project scope не говорит
 иначе.
+
+<figure markdown>
+  ![EWP materials: I-joist, LVL beam, hanger](../assets/images/work-types/ewp-capital.svg)
+  <figcaption>Считаем engineered: I-joists, LVL/PSL/GL, hangers, rim. 2x, trusses, nails — нет.</figcaption>
+</figure>
 
 ## Что считать
 
@@ -57,3 +60,7 @@ EWP jobs включают только engineered wood products, если projec
 
 - **Включает**: перекрытия, возможно колонны, косоуры лестниц (`stringers`).
 - **Не считаем**: 2x материалы, соединители для лестниц, Trusses (их ставят другие).
+
+## See also
+
+- [Joist → EWP materials](../work/horizontal/floor-framing/joist.md#ewp-joist-materials) · [Beam](../work/horizontal/floor-framing/beam.md) · [Rim Board](../work/horizontal/floor-framing/details/rim.md) · [Hangers](../reference/hangers.md)

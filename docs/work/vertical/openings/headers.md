@@ -1,6 +1,13 @@
 # Headers
 
-Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65339407/Headers`
+**Header** — балка над проёмом (окно/дверь), передающая нагрузку на jack/king
+studs. `(2)`/`(3)` = число плёнок (двух-/трёхслойный). Размер часто меняется
+по этажу — бери из structural schedule.
+
+<figure markdown>
+  ![Header over opening with king and jack studs](../../../assets/images/openings/header.svg)
+  <figcaption>Header опирается на jack studs; king по краям. `(2)`/`(3)` — число плёнок.</figcaption>
+</figure>
 
 ## Что считать
 
@@ -19,3 +26,7 @@ Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65339407/Headers`
 - Higher floors могут иметь larger exterior headers, чем lower floors.
 - Structural schedules override architectural wall assumptions.
 - `(3)` означает three-ply header; не вводи only one board для triple header.
+
+## See also
+
+- [Windows & Doors](windows-doors.md) · [Roof Framing → Header](../../horizontal/roof-framing/header.md) · [Exterior Walls](../walls/exterior.md)

@@ -1,7 +1,5 @@
 # Структура takeoff
 
-Source: `https://redacted.atlassian.net/wiki/spaces/work/pages/65961989/Deck+Porch+Balcony+-`
-
 Эта структура повторяет рабочий порядок COM takeoff.
 
 ## Vertical Constructions

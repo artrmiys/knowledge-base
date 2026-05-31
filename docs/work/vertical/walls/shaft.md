@@ -26,6 +26,10 @@ Shaft wall почти всегда fire-rated и собирается из CH-st
 | Tracks | 2-1/2" J-channel |
 | Liner | 1" liner panel |
 
+!!! note "Формулы shaft wall"
+    CH-channels, J-channels и liner-панели считаются по формулам в
+    [Формулы → Shaft Walls](../../../reference/formulas.md#shaft-walls).
+
 ## Проверить
 
 - Chute Shaft wall A201/A806, wall type 7A — recurring miss.
@@ -37,6 +41,10 @@ Shaft wall почти всегда fire-rated и собирается из CH-st
   channel, считай resilient channel condition отдельно вместо full shaft-wall quantity.
 - `7/8"` resilient channel может быть ceiling/strapping item и применяться на
   всех levels, минус dropped metal-frame areas; проверь RCP/ceiling notes.
+
+## See also
+
+- [Формулы → Shaft Walls](../../../reference/formulas.md#shaft-walls) · [Demising Walls](demising.md) · [Hangers](../../../reference/hangers.md)
 
 <!-- confluence-gallery:start -->
 ## Визуальная проверка
