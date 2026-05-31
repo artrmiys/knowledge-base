@@ -2,7 +2,7 @@
   <title id="t">Gable triangle sheathing</title>
   <defs>
     <pattern id="o" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#eef2f6"/><circle cx="2" cy="2" r="1" fill="#9bb0c2"/><circle cx="6.5" cy="6" r="1" fill="#9bb0c2"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2f7fd6}</style>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
   <text class="t" x="32" y="40">Gable sheathing — обшивка треугольника фронтона</text>
@@ -16,8 +16,8 @@
     <line x1="240" y1="250" x2="240" y2="180"/><line x1="300" y1="250" x2="300" y2="145"/>
     <line x1="360" y1="250" x2="360" y2="110"/><line x1="420" y1="250" x2="420" y2="145"/><line x1="480" y1="250" x2="480" y2="180"/>
   </g>
-  <line x1="360" y1="180" x2="600" y2="148" stroke="#2f7fd6" stroke-width="1.4"/>
+  <line x1="360" y1="180" x2="600" y2="148" stroke="#2e7d32" stroke-width="1.4"/>
   <text class="l" x="606" y="151">Gable sheathing (SQFT)</text>
-  <line x1="300" y1="250" x2="630" y2="245" stroke="#2f7fd6" stroke-width="1.4"/>
+  <line x1="300" y1="250" x2="630" y2="245" stroke="#2e7d32" stroke-width="1.4"/>
   <text class="l" x="638" y="248">Верх стены (BTM)</text>
 </svg>

@@ -2,7 +2,7 @@
   <title id="t">Header over opening with king and jack studs</title>
   <defs>
     <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2f7fd6}.m{stroke:#3a3a3a;stroke-width:1.4;fill:url(#w)}</style>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}.m{stroke:#3a3a3a;stroke-width:1.4;fill:url(#w)}</style>
   </defs>
   <rect width="760" height="320" fill="#fff"/>
   <text class="t" x="32" y="40">Header — балка над проёмом</text>
@@ -21,10 +21,10 @@
   <!-- opening -->
   <rect x="156" y="150" width="288" height="126" fill="#f4f7fa" stroke="#9bb0c2" stroke-width="1.2" stroke-dasharray="5 4"/>
   <text class="s" x="250" y="220">opening</text>
-  <line x1="300" y1="128" x2="560" y2="120" stroke="#2f7fd6" stroke-width="1.4"/>
+  <line x1="300" y1="128" x2="560" y2="120" stroke="#2e7d32" stroke-width="1.4"/>
   <text class="l" x="568" y="123">Header (2)/(3) ply</text>
-  <line x1="148" y1="210" x2="560" y2="200" stroke="#2f7fd6" stroke-width="1.4"/>
+  <line x1="148" y1="210" x2="560" y2="200" stroke="#2e7d32" stroke-width="1.4"/>
   <text class="l" x="568" y="203">Jack stud (несёт header)</text>
-  <line x1="130" y1="240" x2="560" y2="250" stroke="#2f7fd6" stroke-width="1.4"/>
+  <line x1="130" y1="240" x2="560" y2="250" stroke="#2e7d32" stroke-width="1.4"/>
   <text class="l" x="568" y="253">King stud</text>
 </svg>

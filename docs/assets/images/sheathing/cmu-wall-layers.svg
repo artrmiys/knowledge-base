@@ -3,7 +3,7 @@
   <desc id="d">Section of a CMU wall: masonry veneer, continuous insulation, Z metal furring, air barrier, concrete masonry units. Frame may be by others but insulation, furring and flashing are counted.</desc>
   <defs>
     <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L8,3 z" fill="#2f7fd6"/>
+      <path d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/>
     </marker>
     <pattern id="stone" width="22" height="18" patternUnits="userSpaceOnUse">
       <rect width="22" height="18" fill="#d9c7b0"/>
@@ -26,7 +26,7 @@
       .lab{font:600 15px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
       .note{font:400 13px "Segoe UI",Arial,sans-serif;fill:#566}
       .side{font:700 13px "Segoe UI",Arial,sans-serif;fill:#8a98a5;letter-spacing:1px}
-      .lead{stroke:#2f7fd6;stroke-width:1.4;fill:none;marker-end:url(#arrow)}
+      .lead{stroke:#2e7d32;stroke-width:1.4;fill:none;marker-end:url(#arrow)}
     </style>
   </defs>
 
@@ -38,7 +38,7 @@
     <rect x="120" y="120" width="34" height="300" fill="url(#stone)" stroke="#3a3a3a" stroke-width="1.4"/>
     <rect x="154" y="120" width="34" height="300" fill="url(#rigid)" stroke="#2c7fb8" stroke-width="1.4"/>
     <path d="M188,150 h10 v6 h-8 M188,250 h10 v6 h-8 M188,350 h10 v6 h-8" fill="none" stroke="#8a5a2a" stroke-width="2.2"/>
-    <rect x="198" y="120" width="8" height="300" fill="#d9f2d8" stroke="#2f7fd6" stroke-width="1.2"/>
+    <rect x="198" y="120" width="8" height="300" fill="#d9f2d8" stroke="#2e7d32" stroke-width="1.2"/>
     <rect x="206" y="120" width="150" height="300" fill="url(#cmu)" stroke="#3a3a3a" stroke-width="1.6"/>
   </g>
 

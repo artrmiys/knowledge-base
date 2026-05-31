@@ -2,7 +2,7 @@
   <title id="t">Railing components and decking</title>
   <defs>
     <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2f7fd6}</style>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
   <text class="t" x="32" y="40">Rails &amp; decking — компоненты перил</text>
@@ -17,8 +17,8 @@
   <!-- bottom rail + decking -->
   <rect x="130" y="200" width="276" height="10" fill="#caa27b" stroke="#6c4b2a" stroke-width="1.3"/>
   <rect x="120" y="230" width="320" height="16" fill="url(#w)" stroke="#3a3a3a" stroke-width="1.4"/>
-  <line x1="270" y1="106" x2="540" y2="100" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="548" y="103">Cap rail</text>
-  <line x1="270" y1="150" x2="540" y2="145" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="548" y="148">Balusters</text>
-  <line x1="148" y1="180" x2="540" y2="190" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="548" y="193">Posts at rails</text>
-  <line x1="300" y1="238" x2="540" y2="235" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="548" y="238">Decking</text>
+  <line x1="270" y1="106" x2="540" y2="100" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="103">Cap rail</text>
+  <line x1="270" y1="150" x2="540" y2="145" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="148">Balusters</text>
+  <line x1="148" y1="180" x2="540" y2="190" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="193">Posts at rails</text>
+  <line x1="300" y1="238" x2="540" y2="235" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="238">Decking</text>
 </svg>

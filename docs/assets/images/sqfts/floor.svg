@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280" role="img" aria-labelledby="t">
   <title id="t">Floor area to subfloor sheets</title>
-  <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2f7fd6}.big{font:700 18px "Segoe UI",Arial,sans-serif;fill:#2f7fd6}</style>
+  <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}.big{font:700 18px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   <rect width="760" height="280" fill="#fff"/>
   <text class="t" x="32" y="40">Floor SQFT — площадь по уровням</text>
   <text class="s" x="32" y="62">Тянет subfloor, underlayment, sound mat, gypcrete. Этажи держим отдельно.</text>

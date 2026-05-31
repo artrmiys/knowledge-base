@@ -2,7 +2,7 @@
   <title id="t">Deck section: ledger, joists, decking, railing</title>
   <defs>
     <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2f7fd6}</style>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
   <text class="t" x="32" y="40">Deck — открытая площадка (framing + decking + railing)</text>
@@ -18,7 +18,7 @@
   <!-- railing -->
   <line x1="440" y1="146" x2="440" y2="96" stroke="#6c4b2a" stroke-width="4"/>
   <line x1="400" y1="100" x2="460" y2="100" stroke="#6c4b2a" stroke-width="4"/>
-  <line x1="158" y1="190" x2="560" y2="155" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="568" y="158">Ledger (bolts/screws)</text>
-  <line x1="300" y1="207" x2="560" y2="200" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="568" y="203">Joists + decking (SQFT)</text>
-  <line x1="440" y1="120" x2="560" y2="115" stroke="#2f7fd6" stroke-width="1.4"/><text class="l" x="568" y="118">Railing / guard</text>
+  <line x1="158" y1="190" x2="560" y2="155" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="158">Ledger (bolts/screws)</text>
+  <line x1="300" y1="207" x2="560" y2="200" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="203">Joists + decking (SQFT)</text>
+  <line x1="440" y1="120" x2="560" y2="115" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="118">Railing / guard</text>
 </svg>

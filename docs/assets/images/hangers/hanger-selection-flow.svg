@@ -13,9 +13,9 @@
       .code{font:700 17px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
       .cs{font:400 12.5px "Segoe UI",Arial,sans-serif;fill:#566}
       .flow{stroke:#7c8a96;stroke-width:1.6;fill:none;marker-end:url(#arrow)}
-      .start{fill:#d9f2d8;stroke:#2f7fd6;stroke-width:2}
+      .start{fill:#d9f2d8;stroke:#2e7d32;stroke-width:2}
       .qbox{fill:#ffffff;stroke:#9bb0c2;stroke-width:1.6}
-      .ok{fill:#eaf6ea;stroke:#2f7fd6;stroke-width:2}
+      .ok{fill:#eaf6ea;stroke:#2e7d32;stroke-width:2}
       .warn{fill:#fff6dd;stroke:#c78b00;stroke-width:2}
     </style>
   </defs>

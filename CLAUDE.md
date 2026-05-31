@@ -123,14 +123,17 @@ project-root/
 
 - **Light + Dark** с авто-переключением и тоггл-кнопкой в шапке. Обе темы —
   первоклассные (dark-first по духу дизайн-кода).
-- **OurCore Design Code v0.2** (НЕ зелёная палитра — она удалена). Закон цвета:
-  **blue `#2f7fd6`/`#4ea1ff` = «выбрано»** (активная вкладка, ссылка, selected,
-  primary CTA), **sage `#6fa37c`/`#8fb89a` = бренд** (узко: 1.5-px полоска под
-  активной вкладкой, left-border активного пункта, маркеры списков, tip-callout,
-  логотип). Никаких новых цветов / неона / gradient-mesh. Декоративные
-  `kb-st--*` / `kb-mk--*` сведены к blue/sage/warn. Источник правды —
-  `docs/assets/stylesheets/tokens.css` (токены `--ds-*` + маппинг Material
-  `--md-*`), компоненты — `extra.css`. **Не возвращай green/lime.**
+- **OurCore-скин на структуре Design Code v0.2, но акцент — ЗЕЛЁНЫЙ** (по явному
+  выбору пользователя: «зелёный было круто»). Закон цвета: **green
+  `#1f9e38`(light)/`#2ad24b`(dark) = бренд/active/ссылка/selected/primary**;
+  тёмно-зелёный (`#2e7d32`/`#56e070`) = узкий brand-маркер (1.5-px полоска под
+  активной вкладкой, left-border активного пункта nav/TOC, маркеры списков,
+  tip-callout). Статусы ok/warn/err. От v0.2 сохранены: плотность, ink-поверхности
+  light+dark, callout-admonitions, скругления 6/8/12/16, нейтральная шапка.
+  Декоративные `kb-st--*`/`kb-mk--*` → green/warn. Источник правды —
+  `tokens.css` (`--ds-*` + Material `--md-*`), компоненты — `extra.css`. SVG-схемы
+  используют accent `#2e7d32`. **Зелёный — основной; синий как primary не
+  возвращать без явной просьбы.**
 - Шрифты `Inter` (текст) + `JetBrains Mono` (код/числа), грузятся `@import` в
   `tokens.css`. Цифры — моно, tabular.
 - Логотип/favicon — KB-глиф `assets/images/brand/icon-kb-128.png`.

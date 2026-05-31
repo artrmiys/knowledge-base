@@ -3,7 +3,7 @@
   <defs>
     <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
     <pattern id="c" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#e7e9ec"/><circle cx="2" cy="2" r="0.9" fill="#9aa0a8"/><circle cx="6" cy="6" r="0.9" fill="#9aa0a8"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2f7fd6}</style>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
   <text class="t" x="32" y="40">Anchor bolt — крепит sill plate к бетону</text>
@@ -17,11 +17,11 @@
   <!-- washer + nut -->
   <rect x="318" y="138" width="24" height="8" fill="#7c8a96" stroke="#3a3a3a" stroke-width="1.2"/>
   <rect x="322" y="128" width="16" height="10" fill="#7c8a96" stroke="#3a3a3a" stroke-width="1.2"/>
-  <line x1="335" y1="135" x2="560" y2="120" stroke="#2f7fd6" stroke-width="1.4"/>
+  <line x1="335" y1="135" x2="560" y2="120" stroke="#2e7d32" stroke-width="1.4"/>
   <text class="l" x="568" y="123">Washer + nut</text>
-  <line x1="340" y1="165" x2="560" y2="165" stroke="#2f7fd6" stroke-width="1.4"/>
+  <line x1="340" y1="165" x2="560" y2="165" stroke="#2e7d32" stroke-width="1.4"/>
   <text class="l" x="568" y="168">P.T. sill plate</text>
-  <line x1="330" y1="235" x2="560" y2="225" stroke="#2f7fd6" stroke-width="1.4"/>
+  <line x1="330" y1="235" x2="560" y2="225" stroke="#2e7d32" stroke-width="1.4"/>
   <text class="l" x="568" y="228">Anchor bolt (emb 3½")</text>
   <text class="l" x="568" y="262">Concrete</text>
 </svg>

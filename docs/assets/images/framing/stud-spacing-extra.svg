@@ -2,13 +2,13 @@
   <title id="t">Stud spacing, extra studs and double studs</title>
   <desc id="d">Wall elevation: field studs at 16 inch on center, extra studs at corner and around an opening (king, jack, cripple), and double studs at bearing or demising.</desc>
   <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L7,3 z" fill="#2f7fd6"/></marker>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L7,3 z" fill="#2e7d32"/></marker>
     <pattern id="w" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="9" stroke="#c89b5a" stroke-width="0.9"/></pattern>
     <style>
       .ttl{font:700 21px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.sub{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}
       .lab{font:600 13px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.note{font:400 12px "Segoe UI",Arial,sans-serif;fill:#566}
-      .grn{font:700 12px "Segoe UI",Arial,sans-serif;fill:#2f7fd6}
-      .dim{stroke:#2f7fd6;stroke-width:1;fill:none}
+      .grn{font:700 12px "Segoe UI",Arial,sans-serif;fill:#2e7d32}
+      .dim{stroke:#2e7d32;stroke-width:1;fill:none}
       .st{fill:url(#w);stroke:#3a3a3a;stroke-width:1.2}
     </style>
   </defs>
