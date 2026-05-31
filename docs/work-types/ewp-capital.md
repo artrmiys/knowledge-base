@@ -1,12 +1,27 @@
 # EWP / Capital
 
-EWP jobs включают только engineered wood products, если project scope не говорит
-иначе.
+**EWP (Engineered Wood Products)** — это заводские инженерные материалы каркаса:
+I-joists, LVL/PSL/LSL/GL балки и rim. На **EWP / Capital** jobs мы считаем
+**только их** — обычный размерный лес (`2x`), фермы и крепёж-мелочёвку не трогаем,
+если scope прямо этого не требует.
 
 <figure markdown>
   ![EWP materials: I-joist, LVL beam, hanger](../assets/images/work-types/ewp-capital.svg)
   <figcaption>Считаем engineered: I-joists, LVL/PSL/GL, hangers, rim. 2x, trusses, nails — нет.</figcaption>
 </figure>
+
+## Что это за материалы
+
+| Материал | Что это | Где |
+| --- | --- | --- |
+| **I-joist** | OSB-стенка + LVL/OSB-полки; лёгкая балка перекрытия | полы, плоские крыши |
+| **LVL** | клееный шпон (Versa-Lam); прочный, стабильный | балки, headers, rim |
+| **PSL** | parallel strand lumber; высокая несущая | балки, колонны |
+| **LSL** | laminated strand; часто rim и короткие балки | rim, headers |
+| **GL / Glulam** | клееные ламели; часто exposed/architectural | большие пролёты |
+
+Детали по продуктам — [Joist → EWP materials](../work/horizontal/floor-framing/joist.md#ewp-joist-materials)
+и [Beam → EWP Materials](../work/horizontal/floor-framing/beam.md#ewp-materials).
 
 ## Что считать
 

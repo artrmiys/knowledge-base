@@ -44,6 +44,27 @@ drawings/specs не показывают дополнительный loose mate
 - Shafts, stairs, elevators.
 - Metal studs по client rule.
 
+## Studs: spacing, extra studs, dbl extra
+
+Каркас стены — это не только **field studs** с шагом. Считаем три группы:
+
+<figure markdown>
+  ![Stud spacing, extra studs and double studs](../assets/images/framing/stud-spacing-extra.svg)
+  <figcaption>Field studs 16" o.c. · extra (corner + king/jack/cripple) · dbl на bearing/demising.</figcaption>
+</figure>
+
+| Группа | Где | Как считать |
+| --- | --- | --- |
+| **Field studs** | по полю стены | по фактору spacing (`16"→1.1`, см. [Exterior Walls → Stud spacing factors](../work/vertical/walls/exterior.md#stud-spacing-factors)) |
+| **Extra studs** | углы (2–3 stud corner), T-пересечения, у проёмов (**king / jack / cripple**) | отдельно; на stick — своя строка `Corners` и jamb-стойки |
+| **Dbl / extra studs** | bearing walls нижних этажей, demising | **double studs** по structural notes — выписывать отдельной строкой |
+
+- Boss-rule `1 стойка/фут + waste` (фактор `1.1` на `16"`) уже частично закрывает
+  extra studs у проёмов — но **corners** и **double studs** на bearing/demising
+  считаются дополнительно, по плану/structural.
+- На panelized jobs field studs и corners — внутри panel; считаем только то, что
+  loose (см. ниже).
+
 ## Wall Order и состав
 
 - Сначала каркас в порядке: `Ext` → `Corridor` → `Demising`. Юнитовые `int walls` идут после.

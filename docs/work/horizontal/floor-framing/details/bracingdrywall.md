@@ -1,7 +1,13 @@
 # Bracing for Drywall
 
 **Drywall bracing / ledger** — `2x4` раскосы и леджеры, дающие опору гипсу там,
-где стена идёт параллельно framing. Длина куска берётся по высоте стены.
+где стена идёт параллельно framing. Это **элемент стен** (не перекрытия): и
+наличие, и **длина куска зависят от высоты стены**.
+
+!!! info "Bracing length — это свойство стены"
+    Длина bracing подбирается строго **по высоте стены** (таблица ниже). Тот же
+    приём используется на [Exterior Walls](../../../vertical/walls/exterior.md) и в
+    [COM → Bracing](../../../../work-types/com.md). `Bracing` обычно `2x4`.
 
 <figure markdown>
   ![2x4 drywall bracing and ledger](../../../../assets/images/framing/drywall-bracing.svg)
