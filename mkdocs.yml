@@ -42,6 +42,8 @@ theme:
 extra_css:
   - assets/stylesheets/tokens.css
   - assets/stylesheets/extra.css
+extra_javascript:
+  - assets/js/zoom.js
 
 nav:
   - Главная: index.md
