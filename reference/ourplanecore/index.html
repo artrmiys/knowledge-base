@@ -4621,6 +4621,56 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bookmarks-templates-docks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bookmarks · Templates · docks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bookmarks · Templates · docks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#page-bookmarks-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Page Bookmarks (док под Pages)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#takeoff-templates-takeoffs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Takeoff Templates (док под Takeoffs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Новые UI-удобства
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tools-scale-snap" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5309,6 +5359,56 @@
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bookmarks-templates-docks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bookmarks · Templates · docks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bookmarks · Templates · docks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#page-bookmarks-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Page Bookmarks (док под Pages)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#takeoff-templates-takeoffs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Takeoff Templates (док под Takeoffs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Новые UI-удобства
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -6132,6 +6232,83 @@ Current-sheet filter, export commands.</p>
   </p>
 <figcaption>Правая панель <code>Takeoffs</code>: активный item + Record, под-табы Takeoffs/Estimating/3D, дерево, New Folder/Item, Export.</figcaption>
 </figure>
+<h2 class="kb-section-title kb-st--green" id="bookmarks-templates-docks">Bookmarks · Templates · docks<a class="headerlink" href="#bookmarks-templates-docks" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Две докуемые панели ускоряют работу: <strong>Bookmarks</strong> (куда смотреть) и
+<strong>Takeoff Templates</strong> (что считать). Это <strong>не</strong> crop-bookmarks для AI — те живут
+в AI Manager.</p>
+<h3 id="page-bookmarks-pages">Page Bookmarks (док под Pages)<a class="headerlink" href="#page-bookmarks-pages" title="Прямая ссылка на раздел">&para;</a></h3>
+<p>Сохранённый <strong>вид листа</strong> — страница + текущий zoom/позиция. Нужен, чтобы за один
+клик возвращаться к нужному месту чертежа (узел, schedule, деталь).</p>
+<table>
+<thead>
+<tr>
+<th>Кнопка</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Add</code> (<span class="keys"><kbd class="key-b">B</kbd></span> затем <span class="keys"><kbd class="key-k">K</kbd></span>)</td>
+<td>Сохранить текущую страницу + zoom как закладку</td>
+</tr>
+<tr>
+<td><code>Open</code> (или двойной клик)</td>
+<td>Открыть сохранённый вид</td>
+</tr>
+<tr>
+<td><code>Rename</code> / <code>Delete</code></td>
+<td>Переименовать / удалить</td>
+</tr>
+</tbody>
+</table>
+<p>Список — колонки <code>Name</code> / <code>Page</code> / <code>View</code>. Включается тумблером
+<strong>«Show Bookmarks below Pages»</strong> (отдельная панель под деревом Pages).</p>
+<h3 id="takeoff-templates-takeoffs">Takeoff Templates (док под Takeoffs)<a class="headerlink" href="#takeoff-templates-takeoffs" title="Прямая ссылка на раздел">&para;</a></h3>
+<p>Переиспользуемое <strong>дерево takeoff-папок/итемов</strong> (PlanSwift-style). Собрал типовую
+структуру (например, COM-набор секций) один раз — и разворачиваешь её на каждом
+новом job, не пересобирая вручную.</p>
+<table>
+<thead>
+<tr>
+<th>Кнопка</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Save Current</code></td>
+<td>Сохранить текущее дерево Takeoffs как шаблон</td>
+</tr>
+<tr>
+<td><code>Apply</code> (или двойной клик)</td>
+<td>Создать выбранный шаблон под текущей Takeoffs-папкой</td>
+</tr>
+<tr>
+<td><code>Rename</code> / <code>Delete</code></td>
+<td>Переименовать / удалить</td>
+</tr>
+</tbody>
+</table>
+<p>Док зеркалит Bookmarks, живёт под табами Takeoffs (можно отстегнуть в нижний ряд).
+Пусто → подсказка «Build a Takeoffs tree, then Save Current».</p>
+<div class="admonition tip">
+<p class="admonition-title">Bookmark vs Template vs Crop-bookmark — не путать</p>
+<ul>
+<li><strong>Bookmark</strong> = <em>куда смотреть</em> (лист + zoom).</li>
+<li><strong>Template</strong> = <em>что считать</em> (заготовка дерева takeoff).</li>
+<li><strong>Crop bookmark</strong> = фрагмент чертежа в очередь AI (<code>Run New</code> / <code>Retry Failed</code>),
+  см. <a href="#таб-6-ai-manager">Таб 6 AI Manager</a>.</li>
+</ul>
+</div>
+<h3 id="ui-">Новые UI-удобства<a class="headerlink" href="#ui-" title="Прямая ссылка на раздел">&para;</a></h3>
+<ul>
+<li><strong><code>F1</code> — cheat-sheet overlay:</strong> всплывает оверлей со всеми горячими клавишами
+  (tools / viewport / trees / 3D). Не нужно помнить — нажал <code>F1</code>, посмотрел.</li>
+<li><strong>Start-карточка (пустой старт):</strong> когда job ещё не открыт, в центре —
+  карточка «с чего начать» (<code>Open / Import</code>) с подсказками <code>F1</code>, а не пустой экран.</li>
+<li><strong>Transform popup:</strong> <code>Flip H/V</code>, <code>Rotate</code>, <code>Scale</code> и сбросы <code>0</code>/<code>1x</code> собраны в
+  один popup на нижней полосе — tool-strip стал чище и компактнее (два ряда).</li>
+</ul>
 <h2 class="kb-section-title kb-st--blue" id="tools-scale-snap">Tools, scale и snap<a class="headerlink" href="#tools-scale-snap" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7035,6 +7212,8 @@ per-job в <code>&lt;job&gt;/AI_Context/settings/</code>).</p>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/js/zoom.js"></script>
       
     
   </body>

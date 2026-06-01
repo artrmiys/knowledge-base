@@ -397,9 +397,37 @@
 @media (max-width: 720px) { .kb-split { grid-template-columns: 1fr; } }
 .kb-schema-full img { width: 100%; border-radius: var(--ds-radius); box-shadow: var(--ds-shadow-md); }
 
-/* --- Footer --------------------------------------------------------------- */
-.md-footer { background: var(--ds-surface); }
-.md-footer-meta { background: var(--ds-bg); font-size: 0.7rem; border-top: 1px solid var(--ds-line); }
+/* --- Image lightbox / зум картинок --------------------------------------- */
+.md-typeset figure img,
+.md-typeset p > img,
+.kb-figure img,
+.kb-figure-row__image img,
+.kb-gallery__item:not(.kb-gallery__item--placeholder) img,
+.kb-schema-full img { cursor: zoom-in; }
+
+.kb-lightbox {
+  position: fixed; inset: 0; z-index: 2000;
+  display: none; align-items: center; justify-content: center;
+  padding: 3vmin; cursor: zoom-out;
+  background: rgba(6, 10, 16, 0.88);
+}
+.kb-lightbox.is-open { display: flex; }
+.kb-lightbox img {
+  max-width: 96vw; max-height: 90vh;
+  border-radius: var(--ds-radius); background: #fff;
+  box-shadow: var(--ds-shadow-lg);
+}
+.kb-lightbox__cap {
+  position: absolute; left: 0; right: 0; bottom: 14px;
+  text-align: center; color: #cdd6e0; font-size: 0.78rem; padding: 0 16px;
+}
+.kb-lightbox__close {
+  position: absolute; top: 14px; right: 18px;
+  width: 36px; height: 36px; border-radius: var(--ds-radius-sm);
+  background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.18);
+  color: #fff; font-size: 1.4rem; line-height: 1; cursor: pointer;
+}
+.kb-lightbox__close:hover { background: rgba(255,255,255,0.20); }
 
 @media print {
   .md-sidebar, .md-header, .md-footer, .md-tabs { display: none !important; }
