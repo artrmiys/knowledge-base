@@ -17,21 +17,13 @@
 - Existing/podium conditions нельзя считать standard panels без
   checking details.
 
-## Basement как каркасная стена { .kb-section-title .kb-st--green }
+!!! note "Каркас цокольной стены — отдельно"
+    Если basement walls in scope, их состав (studs, P.T. btm plates, box
+    sheathing, vapor barrier) считается как полноценная стена — см.
+    [Basement Walls](../vertical/walls/basement.md). Здесь — только площадь этажа.
 
-Если basement walls in scope — это полноценная stick-стена. Типовой состав:
+## See also
 
-| Строка | Заметка |
-| --- | --- |
-| **Plates Interior btm** | **всегда `P.T.`** (садится на бетон) |
-| **Studs Interior** | размер авто по высоте (nested-IF) |
-| Blocking | `2x` |
-| Plates dbl top | |
-| Plates / Studs Corridor | `2x6 P.T.` / `LSL P.T.` btm |
-| Vapor Barrier | Tyvek |
-| Box Sheathing | OSB |
-| Window / Sill Flashing | проёмы в bsmt-стене |
-
-→ Ключевое: **btm-plate цокольной стены всегда P.T.** (контакт с бетоном) — как и
-у [Sill Plates](../vertical/walls/sill-plates.md). Стальной каркас (Steel/Mtl Walls)
-встречается — тогда framing by others, но обшивка/изоляция наши.
+- [Basement Walls](../vertical/walls/basement.md) — каркас цокольной стены
+- [Box Sheathing](../vertical/sheathing/box-sheathing.md) · [Subfloor](../horizontal/floor-framing/subfloor.md)
+- [Формулы → per SQFT](../../reference/formulas.md)

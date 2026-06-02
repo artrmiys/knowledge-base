@@ -13,7 +13,7 @@
   wall length; следуй schedule.
 - На обычных demising hanger conditions используют `ITS`, а не `DHU` / `DGU` —
   когда gypsum заканчивается ниже уровня floor framing (т.е. это не настоящая
-  fire wall, см. [Corridor → DHU/DGU](corridor.md#правила)).
+  fire wall, см. [Corridor → DHU/DGU](corridor.md#rules)).
 
 ## Проверить
 

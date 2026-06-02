@@ -67,6 +67,7 @@ nav:
       - Вертикальные работы:
           - Walls:
               - Sill Plates: work/vertical/walls/sill-plates.md
+              - Basement: work/vertical/walls/basement.md
               - Unit / Interior: work/vertical/walls/unit.md
               - Exterior: work/vertical/walls/exterior.md
               - Corridor: work/vertical/walls/corridor.md

@@ -6,7 +6,7 @@
   sheathing.
 - Corridor ledgers or drywall ledger where floor framing runs parallel.
 
-## Правила
+## Правила { #rules }
 
 - Corridor studs can be staggered: 2x4 staggered usually means two rows at
   16" o.c. with 2x6 plates.
