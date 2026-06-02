@@ -4,6 +4,20 @@
 `.\tools\deploy.ps1` или `mkdocs gh-deploy --force --clean --remote-branch gh-pages`.
 Прод: https://artrmiys.github.io/knowledge-base/
 
+## 2026-06-02
+
+### Контент — новая страница Metal Tracks / CFMF
+- Добавлена обучающая страница `work/vertical/walls/metal-tracks.md` (Работа →
+  Вертикальные работы → Walls, рядом с Exterior). Покрывает: что такое CFMF
+  (plates→tracks, studs→mtl studs), три типа треков, **deflection track** (зачем и
+  когда обязателен), **GA (gauge)** — толщина стали, деревянные / double jambs у
+  проёмов, **пакет обшивки = как у деревянной стены** (sheathing / vapor / insulation
+  / gypsum / bracing / blocking), концепт takeoff (tracks по LFT, studs по spacing),
+  **by others** (проверять scope), и где искать детали — **WT-листы**.
+- Две реальные детали в `assets/images/walls/`: `metal-deflection-head.png`
+  (DEFLECTION HEAD + стальная балка) и `metal-wt-section.png` (слои стены на floor
+  line). Источник: 112 Queensberry, A402 Section Details.
+
 ## 2026-05-31
 
 ### Дизайн — применён OurCore Design Code v0.2 (источник: `my design core system.zip`)
