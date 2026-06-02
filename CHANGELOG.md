@@ -18,6 +18,38 @@
   (DEFLECTION HEAD + стальная балка) и `metal-wt-section.png` (слои стены на floor
   line). Источник: 112 Queensberry, A402 Section Details.
 
+### Бренд — починен логотип (чёрные артефакты)
+- `assets/images/brand/icon-kb-128.png`: PNG имел непрозрачный почти-чёрный фон
+  вокруг плитки → на светлой шапке читался как чёрный квадрат, плюс был смещён.
+  Пересобрал из оригинала: альфа по яркости + **un-matting** (деление цвета на
+  альфу против чёрного) — кромка стала чистый navy без тёмного ореола (0 fringe-
+  пикселей), обрезан по содержимому и отцентрован (130×130 → 116×116).
+
+### Контент — Workflow развёрнут
+- `start/workflow.md`: переписан из списка в методичку. Новый раздел «сканируй
+  лист целиком» (слева→направо, сверху→вниз, один scope за проход) со схемой
+  `framing/scan-order.svg`. Раздел **Beams — длина и округление** (support to
+  support; ≥8' → до 2', <8' как есть) со схемой `framing/beam-marking-direction.svg`.
+  Раздел Joists, callout'ы про scale и двойной waste, ссылки на все предметные
+  страницы и QA.
+
+### Контент — Basement wall вынесен из SQFT
+- Описание каркаса цокольной стены перенесено из `work/sqfts/basement.md` в новую
+  страницу `work/vertical/walls/basement.md` (Walls, после Sill Plates; добавлена
+  в nav). В SQFT остался только расчёт площади + кросс-ссылка.
+
+### Контент — naming (takeoff-structure)
+- `start/takeoff-structure.md`: добавлен `prpt` / `p` = parapet; починена опечатка
+  `blocking ×2` (`bи` → `bb`); Details-коды развёрнуты по макросу `struct_rimblock`
+  (правила ×2 / o.c. / группа); добавлена таблица **Connectors/fasteners**
+  (hangers / screws / ties + `blt` = Anchor Bolts + Washers + Nuts, 3 строки,
+  default 24" o.c.) со ссылками на Bolts / Screws / Hangers.
+
+### Фиксы — битые кириллические якоря
+- ASCII-id для русских заголовков: `corridor.md#rules`, `sill-plates.md#with-sill-plate`,
+  `ourplanecore.md#tab-6-ai-manager`, `ourplanecore.md#hotkeys`. Ссылки обновлены
+  в demising/exterior/basement/site-preview/ourplanecore.
+
 ## 2026-05-31
 
 ### Дизайн — применён OurCore Design Code v0.2 (источник: `my design core system.zip`)
