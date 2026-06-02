@@ -144,6 +144,7 @@
 | `int` | interior |
 | `dem` | demising |
 | `cor` | corridor |
+| `prpt` / `p` | parapet — парапет |
 | `str` | stair |
 
 ## SQFT-сокращения в PlanSwift
@@ -153,21 +154,39 @@
 
 ## Details — короткие коды
 
-| Код | Что |
-| --- | --- |
-| `r` | rim board |
-| `rr` | rim board × 2 |
-| `l` | ledger |
-| `ll` | ledger × 2 |
-| `b` | blocking |
-| `bи` | blocking × 2 |
-| `b48` | blocking 48" o.c. |
-| `bb48` | blocking 48" o.c. × 2 |
-| `rb` | ribbon board |
-| `bd` | blocking for drywall |
-| `bft` | bracing for trusses |
-| `h16` | hangers 16" o.c. |
-| `hh16` | hangers 16" o.c. × 2 |
+Эти флаги ставятся в Flag-колонке и разворачиваются макросом
+`C_RimBoardBlockingHangers` (модуль `struct_rimblock`). Три правила записи:
+
+- **Удвоенная буква = ×2** — `rr`, `bb`, `ll`, `hh16`, `ss`, `tt`.
+- **Число = шаг o.c.** — `b48`, `h16`, `s24`, `blt24`.
+- **` 1` (пробел + цифра) = номер группы** → отдельная строка/группа (`b 1`,
+  `r 1`, `bb48 1`).
+
+| Код | Что | По умолчанию |
+| --- | --- | --- |
+| `r` / `rr` | Rim board (`rr` = ×2) | |
+| `rb` | Ribbon board | |
+| `l` / `ll` | Ledger (`ll` = ×2) | |
+| `b` / `bb` | Blocking (`bb` = ×2) | |
+| `b48` / `bb48` | Blocking по шагу o.c. (`bb48` = ×2) | 48" o.c. |
+| `bd` | Blocking for Drywall | |
+| `bft` | Bracing for Trusses | |
+
+### Connectors / fasteners (гвозди, болты и т.д.)
+
+Крепёж разворачивается тем же макросом — отдельными строками по группам:
+
+| Код | Что | По умолчанию |
+| --- | --- | --- |
+| `h16` / `hh16` | Hangers (`hh` = ×2) | 16" o.c. |
+| `s` / `ss` / `s16` | Screws (`ss` = ×2) | 16" o.c. |
+| `t` / `tt` / `t16` | Ties (`tt` = ×2) | 16" o.c. |
+| `blt` / `blt24` | **Anchor Bolts + Washers + Nuts** (блок из 3 строк) | 24" o.c., `1/2" Ø x 5 1/2"` |
+
+→ `blt` всегда вставляет три строки: **Anchor Bolts**, **Washers**, **Nuts**
+(макрос `B_BoltsAdd` / `ins_bolts`). Подробнее — [Bolts](../work/horizontal/floor-framing/details/bolts.md),
+[Screws](../work/horizontal/floor-framing/details/screws.md),
+[Anchor Bolts](../work/deck/anchor-bolts.md), [Hangers](../reference/hangers.md).
 
 ## Material Override Legend
 
