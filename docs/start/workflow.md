@@ -90,18 +90,13 @@
 
 ## 3. Правила разметки
 
-### Beams — top-down / left-right
-
-Балки размечай **в одном направлении** (top-down и left-right) и держи его весь
-run. Это главное правило: если менять направление по ходу, длины и точки
-опирания начинают «съезжать».
+### Beams — длина и округление
 
 <figure markdown>
-  ![Mark beams top-down, left-right](../assets/images/framing/beam-marking-direction.svg)
-  <figcaption>Balки — сверху вниз, слева направо, одним направлением. Длина — от опоры до опоры; ≥ 8' округлять до 2'.</figcaption>
+  ![Beam length to support, rounding rule](../assets/images/framing/beam-marking-direction.svg)
+  <figcaption>Длина балки — от опоры до опоры (support to support); ≥ 8' округлять до 2', &lt; 8' — как есть.</figcaption>
 </figure>
 
-- **Направление одно** — top-down / left-right, не переключаться внутри run.
 - **Длина** зависит от **точки опирания** (support to support), а не от линии на
   плане.
 - Beams **8' и длиннее** — округлять до ближайших **2'** (8.4' → 10', 11.2' → 12').
