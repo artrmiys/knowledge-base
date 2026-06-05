@@ -19,7 +19,7 @@ takeoff по словам/scope, помогать заполнять per-project
         ▼
 ②  SUGGEST состав DFL  —  CORE-секции под scope (из модели 180 файлов)
         ▼
-③  ИЗМЕРЕНИЕ на PDF (PlanSwift / OurPlaneCore) → SQFT/walls
+③  ИЗМЕРЕНИЕ на PDF (PlanSwift / OurPlanCore) → SQFT/walls
         ▼
 ④  PER-PROJECT данные  —  где на чертеже schedules → читать B/H/wall/F-P-W коды
         │  locked-дефолты пред-заполнены (Zip Tape, 29OZ)
@@ -59,7 +59,7 @@ takeoff по словам/scope, помогать заполнять per-project
 
     Находит, на каких листах лежат BEAM/HEADER/SHEAR WALL/HOLDOWN schedules и
     spec-ноты (roof/wall sheathing) → кропит регион в high-DPI → ИИ читает коды.
-    Тот же механизм, что `crop→AI` в [OurPlaneCore](ourplanecore.md);
+    Тот же механизм, что `crop→AI` в [OurPlanCore](ourplanecore.md);
     закрывает шаг ④ «читать per-project».
 
 ## Stable-дефолты vs per-project { .kb-section-title .kb-st--magenta }
@@ -98,7 +98,7 @@ takeoff по словам/scope, помогать заполнять per-project
 ## См. также
 
 - [Отраслевые стандарты](industry-standards.md) — assemblies / CSI / best-practices.
-- [OurPlaneCore](ourplanecore.md) — программа: измерение + crop→AI.
+- [OurPlanCore](ourplanecore.md) — программа: измерение + crop→AI.
 - [Формулы и факторы](formulas.md) — что пересчитывают блоки.
 - [QA checklist](../start/quality-checklist.md) — ручная проверка, которую дублирует VALIDATE.
 - [Workflow](../start/workflow.md) — общий рабочий процесс.

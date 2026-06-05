@@ -75,7 +75,7 @@ topic page.
 
 !!! tip "Где полная таблица"
     Полные hotkeys и command map держать в
-    [OurPlaneCore](../reference/ourplanecore.md#hotkeys), а на topic pages
+    [OurPlanCore](../reference/ourplanecore.md#hotkeys), а на topic pages
     показывать только те shortcut-ы, которые реально помогают в этом workflow.
 
 ## Визуальная проверка

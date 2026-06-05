@@ -1,6 +1,6 @@
 # Как называть takeoffs
 
-Правила именования takeoff-items в OurPlaneCore. Эти имена напрямую влияют на:
+Правила именования takeoff-items в OurPlanCore. Эти имена напрямую влияют на:
 
 - **Auto-routing** — куда упадёт новый item: `sqfts`, `walls`, `framing` и т.д.
 - **Sort order** — в каком порядке item появится внутри папки и в Excel export.
@@ -127,7 +127,7 @@ unknown wall names — by natural name
 
 ## See also
 
-- [OurPlaneCore — программа](ourplanecore.md)
+- [OurPlanCore — программа](ourplanecore.md)
 - [Workflow](../start/workflow.md)
 - [Структура takeoff](../start/takeoff-structure.md)
 - [Советы и важные вещи](boss-feedback-rules.md)

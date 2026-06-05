@@ -4,6 +4,28 @@
 `.\tools\deploy.ps1` или `mkdocs gh-deploy --force --clean --remote-branch gh-pages`.
 Прод: https://artrmiys.github.io/knowledge-base/
 
+## 2026-06-05 (2) — пересборка страницы программы
+
+### Переименование OurPlaneCore → OurPlanCore (бренд)
+- Видимое имя приложения в KB переименовано на **OurPlanCore** (заголовок, nav,
+  все упоминания в тексте и ссылках). Реальные системные имена **оставлены**:
+  пути `Documents\OurPlaneCore Jobs`, `%APPDATA%\OurPlaneCore\`, релизный путь,
+  namespace `OurPlaneCore`, репо `ourplanecore` — это имена на диске/в коде.
+- Имя файла `reference/ourplanecore.md` не меняли (ссылки целы).
+
+### Пересборка `reference/ourplanecore.md` — user-facing гайд
+- Больше демонстрации инструментов: по-инструментная секция (Count/Line/Area/
+  J Area/Scale/Ruler) с «что/как/когда» через content-tabs.
+- Новый раздел **«Создание job, папок и что появляется автоматически»**: 4
+  способа создать job, добавление листов/page-папок/takeoff-папок, и что именно
+  авто-создаётся на диске (Data.xml/Pages/Takeoffs/sources/AI_Context) при
+  создании job и папок. Со ссылкой на job-creation-storage.
+- Новый раздел **«Привязки (Snap)»**: Snap/PDF Snap (vector+raster черные
+  линии)/Ortho/Box + трассировка контура (Tab), и как привязки помогают точно
+  рисовать линии и замыкать площади.
+- Блоки «что нового» свёрнуты в один collapsible `??? abstract` (история по
+  датам); крупные таблицы кнопок — под `??? note` спойлерами.
+
 ## 2026-06-05
 
 ### Контент — OurPlaneCore: что нового за неделю (01–05.06)

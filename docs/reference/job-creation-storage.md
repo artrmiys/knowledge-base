@@ -1,6 +1,6 @@
 # Создание Job и где что лежит
 
-Простыми словами: **как в OurPlaneCore создаётся job, куда программа кладёт
+Простыми словами: **как в OurPlanCore создаётся job, куда программа кладёт
 листы (sheets) и takeoff'ы, и почему они не теряются.** Эта страница — для
 человека, которому надо понять «где мои файлы», а не для разработчика.
 
@@ -263,6 +263,6 @@ Takeoff'ы **не лежат внутри листа.** Они живут отд
 
 ## See also
 
-- [OurPlaneCore — программа](ourplanecore.md) — полный гайд по интерфейсу
+- [OurPlanCore — программа](ourplanecore.md) — полный гайд по интерфейсу
 - [Как называть takeoffs](takeoff-naming.md) — naming + auto-routing
 - [Workflow](../start/workflow.md) · [Структура takeoff](../start/takeoff-structure.md)
