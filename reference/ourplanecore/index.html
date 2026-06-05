@@ -4935,7 +4935,7 @@ raster cache and strict black-line snap index»</strong>:</p>
 <p>Шесть основных инструментов на нижней панели. Логика одна: выбрал tool → выбрал
 активный takeoff item → включил <code>Record</code> (<span class="keys"><kbd class="key-space">Space</kbd></span>) → рисуешь во вьюпорте.
 Результат сразу падает в quantity активного item.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Count — счёт (ea)</label><label for="__tabbed_1_2">Line — линия (lf)</label><label for="__tabbed_1_3">Area — площадь (sf)</label><label for="__tabbed_1_4">J Area — joist (count + lf)</label><label for="__tabbed_1_5">Scale — масштаб</label><label for="__tabbed_1_6">Ruler — линейка</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:9"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><input id="__tabbed_1_9" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Count — счёт (ea)</label><label for="__tabbed_1_2">Line — линия (lf)</label><label for="__tabbed_1_3">Area — площадь (sf)</label><label for="__tabbed_1_4">J Area — joist (count + lf)</label><label for="__tabbed_1_5">Beam — балка (ea + lf)</label><label for="__tabbed_1_6">Openings — проёмы (ea)</label><label for="__tabbed_1_7">Cut — вырез / стирание (X)</label><label for="__tabbed_1_8">Scale — масштаб</label><label for="__tabbed_1_9">Ruler — линейка</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Что:</strong> счётные маркеры — окна, двери, посты, балки, hardware.
@@ -4963,6 +4963,27 @@ raster cache and strict black-line snap index»</strong>:</p>
 длина</strong>, с направлением, шагом (spacing), pitch и округлением.
 <strong>Как:</strong> <span class="keys"><kbd class="key-j">J</kbd></span> → задать область и направление раскладки → программа
 расставляет joist по spacing. Лейблы видны по умолчанию.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Что:</strong> замер балки «в одно действие» — меряешь длину балки, программа
+<strong>сама создаёт Count-item</strong> с именем по длине и ставит первую count-метку.
+Удобно для beam/header/GLB: и длина посчитана, и item заведён.
+<strong>Как:</strong> <span class="keys"><kbd class="key-b">B</kbd></span> → провести по балке → подтвердить имя item → метка ставится
+автоматически. Дальше можно доставлять метки как обычным <code>Count</code>.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Что:</strong> проёмы (окна/двери/beam openings) — обводишь проём <strong>рамкой</strong>,
+программа меряет его размер <code>Ш×В</code> в футах, создаёт Count-item с именем-
+размером (напр. <code>3.0x5.0</code>) и ставит метку <strong>в центре</strong> проёма.
+<strong>Как:</strong> <span class="keys"><kbd class="key-o">O</kbd></span> → растянуть бокс по проёму → подтвердить → метка в центре.
+Имя по умолчанию = размер, его можно поправить.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Что:</strong> двойного назначения — <strong>вырезает дырки в Area</strong> (проёмы из
+площади, чтобы <code>sf</code> считалась без них) <strong>или стирает куски Line</strong>.
+<strong>Как:</strong> <span class="keys"><kbd class="key-x">X</kbd></span> → обвести вырез внутри площади (или участок линии).
+<span class="keys"><kbd class="key-f9">F9</kbd></span> переключает <strong>box-режим</strong> (прямоугольный вырез). Вырез можно
+вставлять и за границей Area; paste якорится по верхнему-левому углу.</p>
 </div>
 <div class="tabbed-block">
 <p><strong>Что:</strong> задать/проверить масштаб листа. <strong>Обязателен до <code>Line</code>/<code>Area</code>.</strong>
@@ -5015,8 +5036,8 @@ raster cache and strict black-line snap index»</strong>:</p>
 </tr>
 <tr>
 <td><code>Annotation ▾</code> (<code>Draw</code>/<code>Arrow</code>/<code>Box</code>/<code>Cloud</code>/<code>Area</code>/<code>Note</code>)</td>
-<td><code>drawline</code> <span class="keys"><kbd class="key-d">D</kbd></span> / <code>drawrect</code> <span class="keys"><kbd class="key-b">B</kbd></span> …</td>
-<td>Аннотации поверх листа</td>
+<td><code>drawline</code> <span class="keys"><kbd class="key-d">D</kbd></span> …</td>
+<td>Аннотации поверх листа (Box/Cloud/… из popup-меню)</td>
 </tr>
 <tr>
 <td><code>Count</code></td>
@@ -5039,9 +5060,19 @@ raster cache and strict black-line snap index»</strong>:</p>
 <td>Joist-раскладка (count + длина)</td>
 </tr>
 <tr>
+<td><code>Beam</code></td>
+<td><code>beam</code> / <span class="keys"><kbd class="key-b">B</kbd></span></td>
+<td>Замер балки → авто Count-item + первая метка</td>
+</tr>
+<tr>
+<td><code>Open</code></td>
+<td><code>openings</code> / <span class="keys"><kbd class="key-o">O</kbd></span></td>
+<td>Проём рамкой → Count-item с размером <code>Ш×В</code>, метка в центре</td>
+</tr>
+<tr>
 <td><code>Cut</code></td>
-<td><code>areacut</code> / <span class="keys"><kbd class="key-x">X</kbd></span></td>
-<td>Вырез из площади</td>
+<td><code>areacut</code> / <span class="keys"><kbd class="key-x">X</kbd></span> (<span class="keys"><kbd class="key-f9">F9</kbd></span> box)</td>
+<td>Вырез дырки в Area <strong>или</strong> стирание куска Line</td>
 </tr>
 <tr>
 <td><code>Snap</code> / <code>PDF Snap</code> / <code>Ortho</code> / <code>Box</code></td>
@@ -5949,12 +5980,16 @@ item записана геометрия.</p>
 <td>Pan / Select / Scale / Ruler</td>
 </tr>
 <tr>
-<td><span class="keys"><kbd class="key-d">D</kbd></span> / <span class="keys"><kbd class="key-b">B</kbd></span></td>
-<td>Draw Line / Box annotation</td>
+<td><span class="keys"><kbd class="key-d">D</kbd></span></td>
+<td>Draw Line annotation (Box/Cloud/… — из Annotation popup)</td>
 </tr>
 <tr>
-<td><span class="keys"><kbd class="key-p">P</kbd></span> / <span class="keys"><kbd class="key-l">L</kbd></span> / <span class="keys"><kbd class="key-a">A</kbd></span> / <span class="keys"><kbd class="key-j">J</kbd></span> / <span class="keys"><kbd class="key-x">X</kbd></span></td>
-<td>Count / Line / Area / J Area / Cut</td>
+<td><span class="keys"><kbd class="key-p">P</kbd></span> / <span class="keys"><kbd class="key-l">L</kbd></span> / <span class="keys"><kbd class="key-a">A</kbd></span> / <span class="keys"><kbd class="key-j">J</kbd></span></td>
+<td>Count / Line / Area / J Area</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-b">B</kbd></span> / <span class="keys"><kbd class="key-o">O</kbd></span> / <span class="keys"><kbd class="key-x">X</kbd></span></td>
+<td>Beam / Openings / Cut (<span class="keys"><kbd class="key-f9">F9</kbd></span> — box-режим Cut)</td>
 </tr>
 </tbody>
 </table>
