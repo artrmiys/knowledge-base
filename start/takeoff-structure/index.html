@@ -658,6 +658,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Details — короткие коды">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connectors-fasteners" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connectors / fasteners (гвозди, болты и т.д.)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3921,6 +3936,8 @@
       
         
       
+        
+      
     
     
     
@@ -4016,6 +4033,29 @@
   
   <span class="md-ellipsis">
     OurPlaneCore — программа
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/job-creation-storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Создание Job и хранение
     
   </span>
   
@@ -4419,6 +4459,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Details — короткие коды">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connectors-fasteners" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connectors / fasteners (гвозди, болты и т.д.)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -4647,6 +4702,10 @@
 <td>corridor</td>
 </tr>
 <tr>
+<td><code>prpt</code> / <code>p</code></td>
+<td>parapet — парапет</td>
+</tr>
+<tr>
 <td><code>str</code></td>
 <td>stair</td>
 </tr>
@@ -4656,68 +4715,97 @@
 <p><code>deck</code>, <code>blcny</code>, <code>porch</code>, <code>cant</code>, <code>base</code>, <code>1st</code>, <code>2nd</code>, <code>3rd</code>, <code>4th</code>, <code>flat</code>,
 <code>rf x</code>, <code>rf mtl x</code>, <code>overframe x</code>, <code>gable truss</code>, <code>gable stick</code>.</p>
 <h2 id="details">Details — короткие коды<a class="headerlink" href="#details" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Эти флаги ставятся в Flag-колонке и разворачиваются макросом
+<code>C_RimBoardBlockingHangers</code> (модуль <code>struct_rimblock</code>). Три правила записи:</p>
+<ul>
+<li><strong>Удвоенная буква = ×2</strong> — <code>rr</code>, <code>bb</code>, <code>ll</code>, <code>hh16</code>, <code>ss</code>, <code>tt</code>.</li>
+<li><strong>Число = шаг o.c.</strong> — <code>b48</code>, <code>h16</code>, <code>s24</code>, <code>blt24</code>.</li>
+<li><strong><code>1</code> (пробел + цифра) = номер группы</strong> → отдельная строка/группа (<code>b 1</code>,
+  <code>r 1</code>, <code>bb48 1</code>).</li>
+</ul>
 <table>
 <thead>
 <tr>
 <th>Код</th>
 <th>Что</th>
+<th>По умолчанию</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>r</code></td>
-<td>rim board</td>
-</tr>
-<tr>
-<td><code>rr</code></td>
-<td>rim board × 2</td>
-</tr>
-<tr>
-<td><code>l</code></td>
-<td>ledger</td>
-</tr>
-<tr>
-<td><code>ll</code></td>
-<td>ledger × 2</td>
-</tr>
-<tr>
-<td><code>b</code></td>
-<td>blocking</td>
-</tr>
-<tr>
-<td><code>bи</code></td>
-<td>blocking × 2</td>
-</tr>
-<tr>
-<td><code>b48</code></td>
-<td>blocking 48" o.c.</td>
-</tr>
-<tr>
-<td><code>bb48</code></td>
-<td>blocking 48" o.c. × 2</td>
+<td><code>r</code> / <code>rr</code></td>
+<td>Rim board (<code>rr</code> = ×2)</td>
+<td></td>
 </tr>
 <tr>
 <td><code>rb</code></td>
-<td>ribbon board</td>
+<td>Ribbon board</td>
+<td></td>
+</tr>
+<tr>
+<td><code>l</code> / <code>ll</code></td>
+<td>Ledger (<code>ll</code> = ×2)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>b</code> / <code>bb</code></td>
+<td>Blocking (<code>bb</code> = ×2)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>b48</code> / <code>bb48</code></td>
+<td>Blocking по шагу o.c. (<code>bb48</code> = ×2)</td>
+<td>48" o.c.</td>
 </tr>
 <tr>
 <td><code>bd</code></td>
-<td>blocking for drywall</td>
+<td>Blocking for Drywall</td>
+<td></td>
 </tr>
 <tr>
 <td><code>bft</code></td>
-<td>bracing for trusses</td>
-</tr>
-<tr>
-<td><code>h16</code></td>
-<td>hangers 16" o.c.</td>
-</tr>
-<tr>
-<td><code>hh16</code></td>
-<td>hangers 16" o.c. × 2</td>
+<td>Bracing for Trusses</td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<h3 id="connectors-fasteners">Connectors / fasteners (гвозди, болты и т.д.)<a class="headerlink" href="#connectors-fasteners" title="Прямая ссылка на раздел">&para;</a></h3>
+<p>Крепёж разворачивается тем же макросом — отдельными строками по группам:</p>
+<table>
+<thead>
+<tr>
+<th>Код</th>
+<th>Что</th>
+<th>По умолчанию</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>h16</code> / <code>hh16</code></td>
+<td>Hangers (<code>hh</code> = ×2)</td>
+<td>16" o.c.</td>
+</tr>
+<tr>
+<td><code>s</code> / <code>ss</code> / <code>s16</code></td>
+<td>Screws (<code>ss</code> = ×2)</td>
+<td>16" o.c.</td>
+</tr>
+<tr>
+<td><code>t</code> / <code>tt</code> / <code>t16</code></td>
+<td>Ties (<code>tt</code> = ×2)</td>
+<td>16" o.c.</td>
+</tr>
+<tr>
+<td><code>blt</code> / <code>blt24</code></td>
+<td><strong>Anchor Bolts + Washers + Nuts</strong> (блок из 3 строк)</td>
+<td>24" o.c., <code>1/2" Ø x 5 1/2"</code></td>
+</tr>
+</tbody>
+</table>
+<p>→ <code>blt</code> всегда вставляет три строки: <strong>Anchor Bolts</strong>, <strong>Washers</strong>, <strong>Nuts</strong>
+(макрос <code>B_BoltsAdd</code> / <code>ins_bolts</code>). Подробнее — <a href="../../work/horizontal/floor-framing/details/bolts/">Bolts</a>,
+<a href="../../work/horizontal/floor-framing/details/screws/">Screws</a>,
+<a href="../../work/deck/anchor-bolts/">Anchor Bolts</a>, <a href="../../reference/hangers/">Hangers</a>.</p>
 <h2 id="material-override-legend">Material Override Legend<a class="headerlink" href="#material-override-legend" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>В конце выделения добавляется override для конкретного материала. Формат:</p>
 <table>
