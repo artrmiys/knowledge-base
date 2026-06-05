@@ -4,6 +4,20 @@
 `.\tools\deploy.ps1` или `mkdocs gh-deploy --force --clean --remote-branch gh-pages`.
 Прод: https://artrmiys.github.io/knowledge-base/
 
+## 2026-06-05
+
+### Контент — OurPlaneCore: что нового за неделю (01–05.06)
+- Дополнена `reference/ourplanecore.md` датированным блоком «Свежая неделя —
+  производительность и снап (01–05.06.2026)» поверх майского UI-цикла:
+  релиз **v2** + фиксы навигации takeoff-дерева (drag не открывает чужой лист,
+  draggable page tabs), **Viewport v4** (coalescing, RAM-кэши, clipped
+  detail-тайлы для чёткого зума 250–350 %, prefetch, индексированная синхра
+  деревьев), **raster-листы** (cache v5, scanned/PlanSwift image-PDF), **PDF
+  exterior contour snap** (Area+PDF Snap→Tab, помечен work-in-progress),
+  joist summary labels, Blank job/sheet.
+- Точечно: строка про draggable page tabs в «Прочее новое» и про contour-снап
+  в таблице snap. Источники — release-доки репозитория ourplanecore.
+
 ## 2026-06-02
 
 ### Контент — новая страница Metal Tracks / CFMF
