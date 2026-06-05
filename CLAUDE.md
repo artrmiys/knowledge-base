@@ -50,16 +50,25 @@ py -m venv .venv
 project-root/
 ├── CLAUDE.md                  ← этот файл
 ├── README.md                  ← короткое описание для людей
+├── CHANGELOG.md               ← журнал изменений сайта (коммиты `docs(changelog)`)
+├── AUDIT.md                   ← рабочий аудит контента/структуры
+├── DESIGN_SYSTEM.md           ← заметки по дизайн-системе (токены, OurCore-скин)
+├── AGENTS.md, .github/AGENTS.md ← СТАРЫЕ упрощённые копии этого файла (см. §13.6)
 ├── IMPORT_SOURCES.md          ← playbook по импорту из Trello/Confluence/Tilda
 ├── mkdocs.yml                 ← КОНФИГ САЙТА (тема, плагины, навигация)
 ├── .github/workflows/deploy.yml
+├── overrides/                 ← custom_dir темы Material
+│   └── partials/source.html   ← переопределённый partial (repo-ссылка в шапке)
 ├── tools/
 │   └── trello_json_to_markdown.py   ← конвертер Trello JSON → MD
 ├── docs/                      ← КОНТЕНТ САЙТА
 │   ├── index.md               ← главная (hero + grid cards + galery)
 │   ├── assets/
 │   │   ├── images/            ← все картинки и схемы (см. раздел 7)
-│   │   └── stylesheets/extra.css
+│   │   ├── js/zoom.js         ← клик-зум картинок (подключён в extra_javascript)
+│   │   └── stylesheets/
+│   │       ├── tokens.css     ← ИСТОЧНИК ПРАВДЫ для токенов (--ds-*, --md-*, шрифты)
+│   │       └── extra.css      ← компоненты (.kb-hero, .kb-gallery, .kb-split, ...)
 │   ├── start/                 ← Workflow, QA, takeoff tool, Client Rules, ...
 │   ├── work/                  ← Walls, Framing, Sheathing, SQFTs, Trims
 │   ├── work-types/            ← COM, EWP/Capital, Residential
@@ -68,7 +77,8 @@ project-root/
 └── .venv/                     ← venv (в .gitignore)
 ```
 
-**Никогда не коммить:** `site/`, `.venv/`, `mkdocs-serve*.log`, личные `.env`.
+**Никогда не коммить:** `site/`, `.venv/`, `mkdocs-serve*.log`, `_scratch_workbooks/`,
+`imports/`, личные `.env`, `twist-*`/`probe-twist-*` снапшоты. Полный список — в `.gitignore`.
 
 ---
 
@@ -376,6 +386,19 @@ broken links и опечатки в путях.
 5. **Иконки `:material-*:` требуют `pymdownx.emoji` с Material extension.**
    Уже подключено. Если случайно удалить из `mkdocs.yml`, иконки превратятся
    в текст.
+6. **Три копии этого мануала.** `CLAUDE.md` — источник правды (самый полный и
+   свежий). `AGENTS.md` и `.github/AGENTS.md` — старые упрощённые копии
+   (например, у них устаревшее описание палитры: `accent: lime` вместо green).
+   При правке операционных правил обновляй `CLAUDE.md`; копии синхронизируй
+   только по запросу, не считай их авторитетными.
+7. **`font: false` в теме.** Material НЕ грузит Google Fonts. Шрифты `Inter` +
+   `JetBrains Mono` приходят через `@import` в `tokens.css`. Не включай
+   `theme.font` обратно — будет дубль загрузки.
+8. **Клик-зум картинок** — кастомный `docs/assets/js/zoom.js`, подключён через
+   `extra_javascript`. Не плагин. Если зум сломался — смотри туда, не в mkdocs.yml.
+9. **`overrides/partials/source.html`** переопределяет partial Material
+   (`custom_dir: overrides`). После апгрейда `mkdocs-material` сверяй его с
+   апстримом — изменённый upstream-partial может разойтись.
 
 ---
 
