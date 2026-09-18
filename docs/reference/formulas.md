@@ -68,40 +68,23 @@ Shaft walls записывай отдельным блоком, даже есл�
     В формулах ниже использованы единицы измерения: `LFT`, `Horizontal LFT`,
     `Perimeter LFT`, `Stock LF`. В Excel подставляй реальные source/stock cells.
 
+`Stock LF` обычно = `12`; panels идут в лист как `2x12 Panels`.
+
 ### 2-1/2" CH + J-channel assembly
 
-```text
-Linear Panels / 1" Shaft Panels
-=CEILING((LFT * 1.1 / 24), 2)
-Stock LF = 12, listed as 2x12 Panels
-
-CH Channels Vertical / 2-1/2" CH-channels
-=CEILING((LFT * 0.5 * 1.1 / Stock LF), 2)
-Stock LF = 12
-
-J Channels Horizontal / 2-1/2" J-channels
-=CEILING((Horizontal LFT * 1.1 / Stock LF), 2)
-Stock LF = 12
+```excel
+1" Shaft Panels       = CEILING(LFT * 1.1 / 24, 2)
+CH-channels vertical  = CEILING(LFT * 0.5 * 1.1 / Stock LF, 2)
+J-channels horizontal = CEILING(Horizontal LFT * 1.1 / Stock LF, 2)
 ```
 
 ### 2" H + C-channel assembly
 
-```text
-Linear Panels / 1" Shaft Panels
-=CEILING((LFT * 2 * 1.1 / 24), 2)
-Stock LF = 12, listed as 2x12 Panels
-
-Channels Vertical / 2" H-channels
-=CEILING((LFT * 0.5 * 1.1 / Stock LF), 2)
-Stock LF = 12
-
-Channels Horizontal / 2" H-channels
-=CEILING((Horizontal LFT * 2 * 1.1 / Stock LF), 2)
-Stock LF = 12
-
-Channels Perimeter / 2" C-channels
-=CEILING((Perimeter LFT * 1.1 / Stock LF), 2)
-Stock LF = 12
+```excel
+1" Shaft Panels, 2 слоя = CEILING(LFT * 2 * 1.1 / 24, 2)
+H-channels vertical     = CEILING(LFT * 0.5 * 1.1 / Stock LF, 2)
+H-channels horizontal   = CEILING(Horizontal LFT * 2 * 1.1 / Stock LF, 2)
+C-channels perimeter    = CEILING(Perimeter LFT * 1.1 / Stock LF, 2)
 ```
 
 ## Dropped Ceiling Metal Joists
