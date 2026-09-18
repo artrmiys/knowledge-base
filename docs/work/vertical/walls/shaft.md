@@ -27,13 +27,18 @@ Shaft wall почти всегда fire-rated. На takeoff/DFL обычно в�
 
 ### Type 1: 2-1/2" CH + J-channel
 
-Обычно для CH-stud shaft wall assembly с 1" shaftliner:
+Обычно для CH-stud shaft wall assembly с одним слоем 1" shaftliner:
 
 | Item | Typical |
 | --- | --- |
 | Studs | 2-1/2" CH studs |
 | Horizontal tracks/channels | 2-1/2" J-channel |
 | Liner | 1" liner panel |
+
+<figure markdown>
+  ![C-T stud, J-track and J-L corner profiles with dimensions](../../../assets/images/confluence/confluence-129.png)
+  <figcaption>Профили Type 1: <strong>C-T (CH) stud</strong> (`2-1/2"/4"/6"`, полка `1-5/8"`), <strong>J-track</strong> и <strong>J-L corner</strong>. Размер studs/tracks бери из wall type.</figcaption>
+</figure>
 
 DFL rows:
 
@@ -45,14 +50,32 @@ DFL rows:
 
 ### Type 2: 2" H + C-channel
 
-Обычно для H-channel shaft wall assembly, где detail требует H-channels и perimeter C-channel:
+Обычно для H-channel assembly (area separation / party fire wall), где detail требует
+H-channels и perimeter C-channel. Панели здесь идут **в два слоя** 1" liner —
+поэтому в формуле panels стоит множитель `* 2`:
 
 | Item | Typical |
 | --- | --- |
-| Vertical channels | 2" H-channels |
+| Vertical channels | 2" H-channels (H-studs) |
 | Horizontal channels | 2" H-channels |
-| Perimeter channels | 2" C-channels |
-| Liner | 1" shaft panel |
+| Perimeter channels | 2" C-channels (C-runner) |
+| Liner | 1" shaft panel, 2 слоя |
+
+<div class="kb-gallery">
+  <a class="kb-gallery__item" href="../../../../assets/images/walls/shaft-h-stud.png">
+    <img src="../../../../assets/images/walls/shaft-h-stud.png" alt="2 inch H-stud profile with dimensions" loading="lazy">
+    <div class="kb-gallery__caption">2" H-stud (2" × 1-1/2") — вертикальный: 1" панели входят в пазы с двух сторон</div>
+  </a>
+  <a class="kb-gallery__item" href="../../../../assets/images/walls/shaft-c-runner.png">
+    <img src="../../../../assets/images/walls/shaft-c-runner.png" alt="2 inch C-runner profile with dimensions" loading="lazy">
+    <div class="kb-gallery__caption">2" C-runner / C-channel (2-1/8" × 1") — perimeter: top, bottom, end cap</div>
+  </a>
+</div>
+
+<figure markdown>
+  ![2 inch H-stud and C-runner shaft wall assembly with 1 inch shaftliner panels](../../../assets/images/walls/shaft-h-c-assembly.jpg)
+  <figcaption>Сборка Type 2: панели <strong>1" × 24" shaftliner</strong> вставляются между <strong>2" H-studs</strong>, по периметру (top, bottom, end cap) — <strong>2" C-runner</strong>. Источник: PABCO Gypsum, H-Stud ASW.</figcaption>
+</figure>
 
 DFL rows:
 
@@ -67,13 +90,8 @@ DFL rows:
 overall shaft-wall LFT, horizontal run LFT, or perimeter LFT.
 
 <figure markdown>
-  ![C-T stud, J-track and J-L corner profiles with dimensions](../../../assets/images/confluence/confluence-129.png)
-  <figcaption>Профили shaft wall: <strong>C-T (CH) stud</strong> (`2-1/2"/4"/6"`, полка `1-5/8"`), <strong>J-track</strong> и <strong>J-L corner</strong>. Размер studs/tracks бери из wall type.</figcaption>
-</figure>
-
-<figure markdown>
   ![1 inch gypsum shaftliner panel](../../../assets/images/confluence/confluence-131.png)
-  <figcaption><strong>1" shaftliner</strong> — гипсовая панель-вкладыш в J-track между CH-studs. Отдельная строка.</figcaption>
+  <figcaption><strong>1" shaftliner</strong> — одна и та же гипсовая панель-вкладыш для обоих типов: в Type 1 — один слой между CH-studs, в Type 2 — два слоя между H-studs. Отдельная строка.</figcaption>
 </figure>
 
 !!! note "Формулы shaft wall"
