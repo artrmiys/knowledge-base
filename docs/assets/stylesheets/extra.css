@@ -1,7 +1,7 @@
 /* ==========================================================================
-   Estimating Knowledge Base вЂ” OurCore Design Code v0.2 skin.
-   Р—Р°РєРѕРЅ: blue (#2f7fd6/#4ea1ff) = В«РІС‹Р±СЂР°РЅРѕ/СЃСЃС‹Р»РєР°В», sage = Р±СЂРµРЅРґ (СѓР·РєРѕ),
-   РїР»РѕС‚РЅРѕ, Р±РµР· РЅРµРѕРЅР°. РўРѕРєРµРЅС‹ вЂ” РІ tokens.css.
+   Estimating Knowledge Base — OurCore Design Code v0.2 skin.
+   Закон: blue (#2f7fd6/#4ea1ff) = «выбрано/ссылка», sage = бренд (узко),
+   плотно, без неона. Токены — в tokens.css.
    ========================================================================== */
 
 :root {
@@ -9,7 +9,7 @@
   --kb-border:     var(--ds-line);
   --kb-accent-bar: var(--ds-sage);
 
-  /* Р”РµРєРѕСЂР°С‚РёРІРЅС‹Рµ РјР°СЂРєРµСЂС‹ СЃРµРєС†РёР№/РєР°СЂС‚РѕС‡РµРє вЂ” СЃС‚СЂРѕРіРѕ РІ Р·Р°РєРѕРЅРµ (blue/sage/warn) */
+  /* Декоративные маркеры секций/карточек — строго в законе (blue/sage/warn) */
   --kb-mk-cyan:    var(--ds-info);
   --kb-mk-blue:    var(--ds-info);
   --kb-mk-violet:  var(--ds-info);
@@ -19,7 +19,7 @@
   --kb-mk-orange:  var(--ds-warn);
 }
 
-/* --- РЁР°РїРєР° / С‚Р°Р±С‹: РЅРµР№С‚СЂР°Р»СЊРЅС‹Рµ, РїР»РѕСЃРєРёРµ, СЃ С‚РѕРЅРєРѕР№ РіСЂР°РЅРёС†РµР№ --------------- */
+/* --- Шапка / табы: нейтральные, плоские, с тонкой границей --------------- */
 .md-header,
 .md-tabs {
   background: var(--ds-bg);
@@ -44,7 +44,7 @@
 .md-search__form:hover { background: var(--ds-surface-2); }
 [data-md-toggle="search"]:checked ~ .md-header .md-search__form { background: var(--ds-bg); }
 
-/* --- Р¤РѕРЅ СЃС‚СЂР°РЅРёС†С‹: РѕС‡РµРЅСЊ С‚РѕРЅРєРёР№ sageв†’white СЃРІРµСЂС…Сѓ (РєР°Рє РІ KB-РјР°РєРµС‚Рµ) ------ */
+/* --- Фон страницы: очень тонкий sage→white сверху (как в KB-макете) ------ */
 .md-main {
   background:
     linear-gradient(180deg, rgba(31,158,56,0.06) 0%, transparent 320px),
@@ -57,7 +57,7 @@
     var(--ds-bg);
 }
 
-/* --- РўРёРїРѕРіСЂР°С„РёРєР° ----------------------------------------------------------- */
+/* --- Типографика ----------------------------------------------------------- */
 .md-typeset {
   font-size: 0.78rem;
   line-height: 1.7;
@@ -76,17 +76,17 @@
 }
 .md-typeset h3 { margin-top: 1.4em; font-weight: 600; letter-spacing: -0.01em; }
 
-/* С‡РёСЃР»Р°/РєРѕРѕСЂРґРёРЅР°С‚С‹ вЂ” JetBrains Mono */
+/* числа/координаты — JetBrains Mono */
 .md-typeset code, .md-typeset kbd, .md-typeset pre { font-feature-settings: "tnum"; }
 
-/* СЃРїРёСЃРєРё вЂ” РјР°СЂРєРµСЂ sage (Р±СЂРµРЅРґ-СЃРёРіРЅР°Р») */
+/* списки — маркер sage (бренд-сигнал) */
 .md-typeset ul li::marker { color: var(--ds-sage); }
 
-/* --- РЎСЃС‹Р»РєРё --------------------------------------------------------------- */
+/* --- Ссылки --------------------------------------------------------------- */
 .md-typeset a { color: var(--ds-info); }
 .md-typeset a:hover { color: var(--ds-info); text-decoration: underline; text-underline-offset: 2px; }
 
-/* --- РўР°Р±Р»РёС†С‹: rounded wrap, Р°РєРєСѓСЂР°С‚РЅР°СЏ С€Р°РїРєР° ------------------------------ */
+/* --- Таблицы: rounded wrap, аккуратная шапка ------------------------------ */
 .md-typeset table:not([class]) {
   font-size: 0.74rem;
   border: 1px solid var(--ds-line);
@@ -105,7 +105,7 @@
 .md-typeset table:not([class]) td { border-top: 1px solid var(--ds-line-soft); }
 .md-typeset table:not([class]) tr:hover td { background: var(--ds-surface); }
 
-/* --- РЎРїРёСЃРєРё Р·Р°РґР°С‡ / inline-РєРѕРґ -------------------------------------------- */
+/* --- Списки задач / inline-код -------------------------------------------- */
 .md-typeset .task-list-item [type="checkbox"]:checked + .task-list-indicator::before {
   background-color: var(--ds-info);
 }
@@ -116,7 +116,7 @@
   background: var(--ds-code-bg);
 }
 
-/* --- Admonitions = OurCore callouts: С†РІРµС‚РЅР°СЏ 6-px РїРѕР»РѕСЃР° СЃР»РµРІР° ------------- */
+/* --- Admonitions = OurCore callouts: цветная 6-px полоса слева ------------- */
 .md-typeset .admonition,
 .md-typeset details.admonition,
 .md-typeset details {
@@ -136,7 +136,7 @@
 .md-typeset .admonition-title::before,
 .md-typeset summary::before { background-color: currentColor; }
 
-/* note / info в†’ blue */
+/* note / info → blue */
 .md-typeset .admonition.note, .md-typeset details.note,
 .md-typeset .admonition.info, .md-typeset details.info,
 .md-typeset .admonition.abstract, .md-typeset details.abstract {
@@ -147,25 +147,25 @@
 .md-typeset .note > summary, .md-typeset .info > summary, .md-typeset .abstract > summary {
   color: var(--ds-info);
 }
-/* tip / success в†’ sage (Р±СЂРµРЅРґ) */
+/* tip / success → sage (бренд) */
 .md-typeset .admonition.tip, .md-typeset details.tip,
 .md-typeset .admonition.success, .md-typeset details.success {
   border-left-color: var(--ds-sage);
 }
 .md-typeset .tip > .admonition-title, .md-typeset .success > .admonition-title,
 .md-typeset .tip > summary, .md-typeset .success > summary { color: var(--ds-sage); }
-/* warning в†’ warn */
+/* warning → warn */
 .md-typeset .admonition.warning, .md-typeset details.warning {
   border-left-color: var(--ds-warn);
 }
 .md-typeset .warning > .admonition-title, .md-typeset .warning > summary { color: var(--ds-warn); }
-/* danger в†’ err */
+/* danger → err */
 .md-typeset .admonition.danger, .md-typeset details.danger {
   border-left-color: var(--ds-err);
 }
 .md-typeset .danger > .admonition-title, .md-typeset .danger > summary { color: var(--ds-err); }
 
-/* --- Р›РµРІС‹Р№ СЃР°Р№РґР±Р°СЂ: Р°РєС‚РёРІРЅРѕРµ = blue + sage left-border ------------------- */
+/* --- Левый сайдбар: активное = blue + sage left-border ------------------- */
 .md-nav__link { margin-top: 0.3em; margin-bottom: 0.3em; }
 .md-nav__item--section > .md-nav__link,
 .md-nav__item--nested > .md-nav__link {
@@ -193,11 +193,11 @@
   position: absolute;
   left: -0.55rem; top: 0.1em; bottom: 0.1em;
   width: 2px; border-radius: 1px;
-  background: var(--ds-sage);     /* sage left-border = Р±СЂРµРЅРґ */
+  background: var(--ds-sage);     /* sage left-border = бренд */
 }
 .md-nav__link:hover { color: var(--ds-info); }
 
-/* --- Tabs: Р°РєС‚РёРІРЅР°СЏ РІРєР»Р°РґРєР° blue + sage 1.5-px РїРѕР»РѕСЃРєР° -------------------- */
+/* --- Tabs: активная вкладка blue + sage 1.5-px полоска -------------------- */
 .md-tabs__link { opacity: 0.75; font-weight: 500; }
 .md-tabs__link--active { color: var(--ds-info) !important; font-weight: 600; opacity: 1 !important; }
 .md-tabs__item { position: relative; }
@@ -209,7 +209,7 @@
   background: var(--ds-sage);
 }
 
-/* --- РџСЂР°РІС‹Р№ TOC: Р°РєС‚РёРІРЅРѕРµ = blue + sage left-border ---------------------- */
+/* --- Правый TOC: активное = blue + sage left-border ---------------------- */
 .md-nav--secondary .md-nav__link--active {
   color: var(--ds-info) !important;
   border-left: 2px solid var(--ds-sage);
@@ -225,7 +225,7 @@
 .kb-source__icon svg { display: block; fill: currentColor; height: 100%; width: 100%; }
 .kb-source__repository { margin-left: 0.6rem; max-width: 11rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-/* --- Р“Р»Р°РІРЅР°СЏ: hero -------------------------------------------------------- */
+/* --- Главная: hero -------------------------------------------------------- */
 .kb-hero {
   display: flex; flex-direction: column; gap: 10px;
   padding: 24px 0 16px; margin: 0 0 1.4rem;
@@ -259,7 +259,7 @@
 .kb-hero__btn--ghost { background: var(--ds-surface); color: var(--ds-text) !important; }
 .kb-hero__btn--ghost:hover { background: var(--ds-surface-2); border-color: var(--ds-info-line); color: var(--ds-text) !important; }
 
-/* --- РЎРµРєС†РёРѕРЅРЅС‹Р№ Р·Р°РіРѕР»РѕРІРѕРє: С†РІРµС‚РЅРѕР№ РјР°СЂРєРµСЂ + line ------------------------- */
+/* --- Секционный заголовок: цветной маркер + line ------------------------- */
 .kb-section-title {
   display: flex; align-items: center; gap: 12px;
   margin: 2rem 0 0.9rem !important;
@@ -303,7 +303,7 @@
 .md-typeset .grid.cards .twemoji,
 .md-typeset .grid.cards svg { fill: var(--ds-info); }
 
-/* per-card icon tints (РІ Р·Р°РєРѕРЅРµ: blue/sage/warn) */
+/* per-card icon tints (в законе: blue/sage/warn) */
 .md-typeset .kb-mk--cyan,    .md-typeset .kb-mk--cyan svg    { fill: var(--kb-mk-cyan) !important;    color: var(--kb-mk-cyan) !important; }
 .md-typeset .kb-mk--magenta, .md-typeset .kb-mk--magenta svg { fill: var(--kb-mk-magenta) !important; color: var(--kb-mk-magenta) !important; }
 .md-typeset .kb-mk--amber,   .md-typeset .kb-mk--amber svg   { fill: var(--kb-mk-amber) !important;   color: var(--kb-mk-amber) !important; }
@@ -312,7 +312,7 @@
 .md-typeset .kb-mk--blue,    .md-typeset .kb-mk--blue svg    { fill: var(--kb-mk-blue) !important;    color: var(--kb-mk-blue) !important; }
 .md-typeset .kb-mk--violet,  .md-typeset .kb-mk--violet svg  { fill: var(--kb-mk-violet) !important;  color: var(--kb-mk-violet) !important; }
 
-/* --- РљР°СЂС‚РёРЅРєРё ------------------------------------------------------------- */
+/* --- Картинки ------------------------------------------------------------- */
 .md-typeset img:not(.kb-hero img):not(.md-logo img) {
   max-width: 100%; height: auto; border-radius: var(--ds-radius);
   background: #fff; display: block;
@@ -328,7 +328,7 @@
   margin-left: auto; margin-right: auto;
 }
 
-/* --- kb-gallery (РјРёРЅРёР°С‚СЋСЂС‹) ---------------------------------------------- */
+/* --- kb-gallery (миниатюры) ---------------------------------------------- */
 .kb-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 1rem 0 1.6rem; }
 .kb-gallery__item {
   display: flex; flex-direction: column; gap: 8px; padding: 10px;
@@ -342,7 +342,7 @@
 .kb-gallery__caption { font-size: 0.72rem; color: var(--ds-text-2); line-height: 1.4; }
 .kb-gallery__item--placeholder .twemoji, .kb-gallery__item--placeholder svg { width: 24px; height: 24px; fill: var(--ds-text-4); margin-bottom: 4px; }
 
-/* --- <details>-РѕР±С‘СЂС‚РєР° РґР»СЏ confluence-РіР°Р»РµСЂРµР№ ---------------------------- */
+/* --- <details>-обёртка для confluence-галерей ---------------------------- */
 .kb-figures {
   margin: 1.2rem 0 1.6rem; border: 1px solid var(--ds-line);
   border-radius: var(--ds-radius); background: var(--ds-surface);
@@ -352,7 +352,7 @@
   color: var(--ds-text); list-style: none; display: flex; align-items: center; gap: 8px; user-select: none;
 }
 .kb-figures > summary::-webkit-details-marker { display: none; }
-.kb-figures > summary::before { content: "в–ё"; display: inline-block; color: var(--ds-info); transition: transform .15s; font-size: 0.85rem; }
+.kb-figures > summary::before { content: "▸"; display: inline-block; color: var(--ds-info); transition: transform .15s; font-size: 0.85rem; }
 .kb-figures[open] > summary::before { transform: rotate(90deg); }
 .kb-figures > summary:hover { color: var(--ds-info); }
 .kb-figures[open] > summary { border-bottom: 1px solid var(--ds-line-soft); }
@@ -362,7 +362,7 @@
 .kb-figure:hover { transform: translateY(-1px); border-color: var(--ds-info-line); box-shadow: var(--ds-shadow-sm); }
 .kb-figure img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 0 !important; }
 
-/* --- Rule rows: В«РѕРїРёСЃР°РЅРёРµ + РєР°СЂС‚РёРЅРєР°В» ------------------------------------ */
+/* --- Rule rows: «описание + картинка» ------------------------------------ */
 .kb-figure-row {
   display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: 1.2rem; align-items: start; padding: 1rem 1.1rem; margin: 0;
@@ -392,12 +392,12 @@
   color: var(--ds-text); box-shadow: none;
 }
 
-/* --- Р”РІСѓС…РєРѕР»РѕРЅРѕС‡РЅС‹Р№ layout + full schema --------------------------------- */
+/* --- Двухколоночный layout + full schema --------------------------------- */
 .kb-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem; align-items: start; margin: 1rem 0; }
 @media (max-width: 720px) { .kb-split { grid-template-columns: 1fr; } }
 .kb-schema-full img { width: 100%; border-radius: var(--ds-radius); box-shadow: var(--ds-shadow-md); }
 
-/* --- Image lightbox / Р·СѓРј РєР°СЂС‚РёРЅРѕРє --------------------------------------- */
+/* --- Image lightbox / зум картинок --------------------------------------- */
 .md-typeset figure img,
 .md-typeset p > img,
 .kb-figure img,
@@ -445,7 +445,8 @@
 }
 
 /* Code in tables: keep formulas on one line - the table scrolls instead. */
-.md-typeset table code {
-  white-space: nowrap;
+.md-typeset table code,
+.md-typeset table:not([class]) td code {
+  white-space: nowrap !important;
   font-size: .9em;
 }
