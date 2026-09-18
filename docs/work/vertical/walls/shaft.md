@@ -42,11 +42,11 @@ Shaft wall почти всегда fire-rated. На takeoff/DFL обычно в�
 
 DFL rows:
 
-| Row | Material | Takeoff unit/source | Formula pattern | Stock |
-| --- | --- | --- | --- | --- |
-| Linear Panels | 1" Shaft Panels | LFT | `ОКРВВЕРХ(LFT * 1.1 / 24; 2)` | 12, listed as 2x12 Panels |
-| CH Channels Vertical | 2-1/2" CH-channels | LFT | `ОКРВВЕРХ(LFT * 0.5 * 1.1 / Stock LF; 2)` | 12 |
-| J Channels Horizontal | 2-1/2" J-channels | Horizontal LFT | `ОКРВВЕРХ(Horizontal LFT * 1.1 / Stock LF; 2)` | 12 |
+| Row | Material | Formula | Stock |
+| --- | --- | --- | --- |
+| Linear Panels | 1" Shaft Panels | `ОКРВВЕРХ(LFT * 1.1 / 24; 2)` | 12 (2x12 Panels) |
+| CH Channels Vertical | 2-1/2" CH-channels | `ОКРВВЕРХ(LFT * 0.5 * 1.1 / Stock LF; 2)` | 12 |
+| J Channels Horizontal | 2-1/2" J-channels | `ОКРВВЕРХ(Horizontal LFT * 1.1 / Stock LF; 2)` | 12 |
 
 ### Type 2: 2" H + C-channel
 
@@ -79,12 +79,12 @@ H-channels и perimeter C-channel. Панели здесь идут **в два 
 
 DFL rows:
 
-| Row | Material | Takeoff unit/source | Formula pattern | Stock |
-| --- | --- | --- | --- | --- |
-| Linear Panels | 1" Shaft Panels | LFT | `ОКРВВЕРХ(LFT * 2 * 1.1 / 24; 2)` | 12, listed as 2x12 Panels |
-| Channels Vertical | 2" H-channels | LFT | `ОКРВВЕРХ(LFT * 0.5 * 1.1 / Stock LF; 2)` | 12 |
-| Channels Horizontal | 2" H-channels | Horizontal LFT | `ОКРВВЕРХ(Horizontal LFT * 2 * 1.1 / Stock LF; 2)` | 12 |
-| Channels Perimeter | 2" C-channels | Perimeter LFT | `ОКРВВЕРХ(Perimeter LFT * 1.1 / Stock LF; 2)` | 12 |
+| Row | Material | Formula | Stock |
+| --- | --- | --- | --- |
+| Linear Panels | 1" Shaft Panels | `ОКРВВЕРХ(LFT * 2 * 1.1 / 24; 2)` | 12 (2x12 Panels) |
+| Channels Vertical | 2" H-channels | `ОКРВВЕРХ(LFT * 0.5 * 1.1 / Stock LF; 2)` | 12 |
+| Channels Horizontal | 2" H-channels | `ОКРВВЕРХ(Horizontal LFT * 2 * 1.1 / Stock LF; 2)` | 12 |
+| Channels Perimeter | 2" C-channels | `ОКРВВЕРХ(Perimeter LFT * 1.1 / Stock LF; 2)` | 12 |
 
 `Stock LF` is the stock length cell, usually `12`. Use the measured LFT source that matches the row:
 overall shaft-wall LFT, horizontal run LFT, or perimeter LFT.
