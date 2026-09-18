@@ -64,27 +64,27 @@ Shaft walls записывай отдельным блоком, даже есл�
 Материал бери из wall type / detail: бывают `2-1/2"` CH + J-channel и `2"` H + C-channel assemblies.
 
 !!! note "Excel"
-    В русской локали Excel `CEILING(...)` отображается как `ОКРВВЕРХ(...)`.
-    В формулах ниже использованы единицы измерения: `LFT`, `Horizontal LFT`,
-    `Perimeter LFT`, `Stock LF`. В Excel подставляй реальные source/stock cells.
+    Формулы записаны как в русской локали Excel: `ОКРВВЕРХ(...; ...)`, аргументы через `;`
+    (в английской локали это `CEILING(..., ...)`). Вместо единиц измерения (`LFT`,
+    `Horizontal LFT`, `Perimeter LFT`, `Stock LF`) подставляй реальные source/stock cells.
 
 `Stock LF` обычно = `12`; panels идут в лист как `2x12 Panels`.
 
 ### 2-1/2" CH + J-channel assembly
 
 ```excel
-1" Shaft Panels       = CEILING(LFT * 1.1 / 24, 2)
-CH-channels vertical  = CEILING(LFT * 0.5 * 1.1 / Stock LF, 2)
-J-channels horizontal = CEILING(Horizontal LFT * 1.1 / Stock LF, 2)
+1" Shaft Panels       = ОКРВВЕРХ(LFT * 1.1 / 24; 2)
+CH-channels vertical  = ОКРВВЕРХ(LFT * 0.5 * 1.1 / Stock LF; 2)
+J-channels horizontal = ОКРВВЕРХ(Horizontal LFT * 1.1 / Stock LF; 2)
 ```
 
 ### 2" H + C-channel assembly
 
 ```excel
-1" Shaft Panels, 2 слоя = CEILING(LFT * 2 * 1.1 / 24, 2)
-H-channels vertical     = CEILING(LFT * 0.5 * 1.1 / Stock LF, 2)
-H-channels horizontal   = CEILING(Horizontal LFT * 2 * 1.1 / Stock LF, 2)
-C-channels perimeter    = CEILING(Perimeter LFT * 1.1 / Stock LF, 2)
+1" Shaft Panels, 2 слоя = ОКРВВЕРХ(LFT * 2 * 1.1 / 24; 2)
+H-channels vertical     = ОКРВВЕРХ(LFT * 0.5 * 1.1 / Stock LF; 2)
+H-channels horizontal   = ОКРВВЕРХ(Horizontal LFT * 2 * 1.1 / Stock LF; 2)
+C-channels perimeter    = ОКРВВЕРХ(Perimeter LFT * 1.1 / Stock LF; 2)
 ```
 
 ## Dropped Ceiling Metal Joists
@@ -96,8 +96,8 @@ C-channels perimeter    = CEILING(Perimeter LFT * 1.1 / Stock LF, 2)
 ## Blocking formulas
 
 ```excel
-Flat 48" o.c.     = CEILING(LFT * 12 / 48 * 2 * 1.1 / Stock LF, 1)
-Diagonal 48" o.c. = CEILING(LFT * 12 / 48 * 2.5 * 1.1 / Stock LF, 1)
+Flat 48" o.c.     = ОКРВВЕРХ(LFT * 12 / 48 * 2 * 1.1 / Stock LF; 1)
+Diagonal 48" o.c. = ОКРВВЕРХ(LFT * 12 / 48 * 2.5 * 1.1 / Stock LF; 1)
 ```
 
 ### Blocking factor по типу
