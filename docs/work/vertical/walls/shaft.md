@@ -7,7 +7,8 @@
 - **trash chute** — мусоропроводы;
 - **mechanical/communications shafts** — pipes, cables, ducts.
 
-Shaft wall почти всегда fire-rated и собирается из CH-stud + shaft liner.
+Shaft wall почти всегда fire-rated. На takeoff/DFL обычно встречаются два рабочих типа:
+`2-1/2" CH + J-channel` или `2" H + C-channel`. Размер и тип всегда бери из wall type/detail.
 
 ## Что считать
 
@@ -19,15 +20,50 @@ Shaft wall почти всегда fire-rated и собирается из CH-st
 - Shaft walls не пропускай как "панели by others" автоматически: если wall type/detail дает shaft assembly,
   отрази его отдельными строками в takeoff/DFL.
 
-## Default assumption
+## Two common shaft-wall types
 
-Когда иначе не specified, notes часто используют:
+Если detail/wall type прямо не уточняет другое, сначала проверь эти два типовых варианта.
+Не смешивай их в один блок: у них разные channels и разные формулы для panels/horizontal rows.
+
+### Type 1: 2-1/2" CH + J-channel
+
+Обычно для CH-stud shaft wall assembly с 1" shaftliner:
 
 | Item | Typical |
 | --- | --- |
 | Studs | 2-1/2" CH studs |
-| Tracks | 2-1/2" J-channel |
+| Horizontal tracks/channels | 2-1/2" J-channel |
 | Liner | 1" liner panel |
+
+DFL rows:
+
+| Row | Material | Formula pattern | Stock |
+| --- | --- | --- | --- |
+| Linear Panels | 1" Shaft Panels | `CEILING((G * 1.1 / 24), 2)` | 12, listed as 2x12 Panels |
+| CH Channels Vertical | 2-1/2" CH-channels | `CEILING((G * 0.5 * 1.1 / D), 2)` | 12 |
+| J Channels Horizontal | 2-1/2" J-channels | `CEILING((G * 1.1 / D), 2)` | 12 |
+
+### Type 2: 2" H + C-channel
+
+Обычно для H-channel shaft wall assembly, где detail требует H-channels и perimeter C-channel:
+
+| Item | Typical |
+| --- | --- |
+| Vertical channels | 2" H-channels |
+| Horizontal channels | 2" H-channels |
+| Perimeter channels | 2" C-channels |
+| Liner | 1" shaft panel |
+
+DFL rows:
+
+| Row | Material | Formula pattern | Stock |
+| --- | --- | --- | --- |
+| Linear Panels | 1" Shaft Panels | `CEILING((G * 2 * 1.1 / 24), 2)` | 12, listed as 2x12 Panels |
+| Channels Vertical | 2" H-channels | `CEILING((G * 0.5 * 1.1 / D), 2)` | 12 |
+| Channels Horizontal | 2" H-channels | `CEILING((G * 2 * 1.1 / D), 2)` | 12 |
+| Channels Perimeter | 2" C-channels | `CEILING((G * 1.1 / D), 2)` | 12 |
+
+`G` is the measured shaft-wall source quantity. `D` is the stock length cell, usually `12`.
 
 <figure markdown>
   ![C-T stud, J-track and J-L corner profiles with dimensions](../../../assets/images/confluence/confluence-129.png)
@@ -42,27 +78,6 @@ Shaft wall почти всегда fire-rated и собирается из CH-st
 !!! note "Формулы shaft wall"
     CH-channels, J-channels и liner-панели считаются по формулам в
     [Формулы → Shaft Walls](../../../reference/formulas.md#shaft-walls).
-
-## Typical DFL rows
-
-### 2-1/2" CH + J-channel
-
-| Row | Material | Formula pattern | Stock |
-| --- | --- | --- | --- |
-| Linear Panels | 1" Shaft Panels | `CEILING((G * 1.1 / 24), 2)` | 12, listed as 2x12 Panels |
-| CH Channels Vertical | 2-1/2" CH-channels | `CEILING((G * 0.5 * 1.1 / D), 2)` | 12 |
-| J Channels Horizontal | 2-1/2" J-channels | `CEILING((G * 1.1 / D), 2)` | 12 |
-
-### 2" H + C-channel
-
-| Row | Material | Formula pattern | Stock |
-| --- | --- | --- | --- |
-| Linear Panels | 1" Shaft Panels | `CEILING((G * 2 * 1.1 / 24), 2)` | 12, listed as 2x12 Panels |
-| Channels Vertical | 2" H-channels | `CEILING((G * 0.5 * 1.1 / D), 2)` | 12 |
-| Channels Horizontal | 2" H-channels | `CEILING((G * 2 * 1.1 / D), 2)` | 12 |
-| Channels Perimeter | 2" C-channels | `CEILING((G * 1.1 / D), 2)` | 12 |
-
-`G` is the measured shaft-wall source quantity. `D` is the stock length cell, usually `12`.
 
 ## Проверить
 
