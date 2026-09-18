@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280" role="img" aria-labelledby="t">
+  <title id="t">Floor area to subfloor sheets</title>
+  <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}.big{font:700 18px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+  <rect width="760" height="280" fill="#fff"/>
+  <text class="t" x="32" y="40">Floor SQFT — площадь по уровням</text>
+  <text class="s" x="32" y="62">Тянет subfloor, underlayment, sound mat, gypcrete. Этажи держим отдельно.</text>
+  <rect x="120" y="100" width="300" height="140" fill="#eef3f7" stroke="#3a3a3a" stroke-width="1.6"/>
+  <g stroke="#9bb0c2" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="120" y1="135" x2="420" y2="135"/><line x1="120" y1="170" x2="420" y2="170"/><line x1="120" y1="205" x2="420" y2="205"/>
+    <line x1="195" y1="100" x2="195" y2="240"/><line x1="270" y1="100" x2="270" y2="240"/><line x1="345" y1="100" x2="345" y2="240"/>
+  </g>
+  <text class="s" x="210" y="175">Floor area (SQFT)</text>
+  <text class="big" x="470" y="150">sheets = SQFT / 32</text>
+  <text class="s" x="470" y="178">или area × 1.1 по материалу</text>
+  <text class="l" x="470" y="206">3/4" T&amp;G subfloor + adhesive</text>
+</svg>

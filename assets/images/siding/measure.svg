@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
+  <title id="t">Siding take-off by elevation area</title>
+  <defs>
+    <pattern id="lap" width="40" height="12" patternUnits="userSpaceOnUse"><rect width="40" height="12" fill="#eef3ee"/><line x1="0" y1="11" x2="40" y2="11" stroke="#9bb0a0" stroke-width="1.2"/></pattern>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}.no{font:700 13px "Segoe UI",Arial,sans-serif;fill:#c0392b}</style>
+  </defs>
+  <rect width="760" height="300" fill="#fff"/>
+  <text class="t" x="32" y="40">Siding — SQFT по elevation, минус проёмы</text>
+  <text class="s" x="32" y="62">Поле стены в SQ FT (не LFT). Gable/accent — отдельные строки. Deductions за openings.</text>
+  <!-- elevation -->
+  <polygon points="120,250 120,140 320,90 520,140 520,250" fill="url(#lap)" stroke="#3a3a3a" stroke-width="1.6"/>
+  <!-- window deduction -->
+  <rect x="200" y="170" width="60" height="60" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+  <rect x="360" y="170" width="60" height="60" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+  <text class="l" x="300" y="215">Siding (SQ FT)</text>
+  <line x1="320" y1="120" x2="600" y2="110" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="608" y="113">Gable accent</text>
+  <line x1="230" y1="200" x2="600" y2="180" stroke="#c0392b" stroke-width="1.4"/><text class="no" x="608" y="183">Openings вычитать</text>
+  <text class="s" x="120" y="280">Waste 1.1; материал + exposure всегда в Label.</text>
+</svg>

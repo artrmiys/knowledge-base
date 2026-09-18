@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
+  <title id="t">Rake — sloped gable edge</title>
+  <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+  <rect width="760" height="300" fill="#fff"/>
+  <text class="t" x="32" y="40">Rake — наклонная кромка на gable-стороне</text>
+  <text class="s" x="32" y="62">Отдельная LFT-строка; отличается от eave (низ) и return (угол).</text>
+  <!-- gable wall -->
+  <polygon points="180,260 480,260 480,170 330,90 180,170" fill="#f3f6f9" stroke="#9bb0c2" stroke-width="1.4"/>
+  <!-- rake edges (sloped) -->
+  <line x1="170" y1="176" x2="330" y2="82" stroke="#c0392b" stroke-width="6"/>
+  <line x1="330" y1="82" x2="490" y2="176" stroke="#c0392b" stroke-width="6"/>
+  <!-- eave bottom (for contrast) -->
+  <line x1="180" y1="260" x2="480" y2="260" stroke="#2e7d32" stroke-width="4"/>
+  <line x1="260" y1="120" x2="560" y2="110" stroke="#2e7d32" stroke-width="1.4"/>
+  <text class="l" x="568" y="113">Rake (наклонная кромка)</text>
+  <line x1="330" y1="260" x2="560" y2="250" stroke="#2e7d32" stroke-width="1.4"/>
+  <text class="l" x="568" y="253">Eave / верх стены</text>
+</svg>

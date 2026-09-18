@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
+  <title id="t">Window jamb extension and furring in opening</title>
+  <defs>
+    <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+  </defs>
+  <rect width="760" height="300" fill="#fff"/>
+  <text class="t" x="32" y="40">Window jamb + furring (под siding)</text>
+  <text class="s" x="32" y="62">Jamb `2x4`/`2x8`/`2x10` по глубине стены. Furring `1x4`/`2x4` P.T. под siding.</text>
+  <!-- wall (plan thru opening) -->
+  <rect x="120" y="110" width="360" height="50" fill="#e7e9ec" stroke="#3a3a3a" stroke-width="1.4"/>
+  <rect x="120" y="210" width="360" height="50" fill="#e7e9ec" stroke="#3a3a3a" stroke-width="1.4"/>
+  <!-- jamb boards lining opening -->
+  <rect x="120" y="160" width="360" height="14" fill="url(#w)" stroke="#6c4b2a" stroke-width="1.4"/>
+  <rect x="120" y="196" width="360" height="14" fill="url(#w)" stroke="#6c4b2a" stroke-width="1.4"/>
+  <text class="s" x="250" y="190">opening</text>
+  <!-- furring on exterior face -->
+  <rect x="108" y="110" width="12" height="150" fill="#caa27b" stroke="#6c4b2a" stroke-width="1.4"/>
+  <line x1="300" y1="167" x2="540" y2="150" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="153">Window jamb (доска)</text>
+  <line x1="114" y1="185" x2="540" y2="200" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="203">Furring под siding (P.T.)</text>
+</svg>
