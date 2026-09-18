@@ -60,10 +60,47 @@ center-to-center, без stud-waste. Фактор = `12 / spacing`.
 
 ## Shaft Walls
 
+Shaft walls записывай отдельным блоком, даже если основной wall scope идет как panels/by others.
+Материал бери из wall type / detail: бывают `2-1/2"` CH + J-channel и `2"` H + C-channel assemblies.
+
+!!! note "Excel"
+    В русской локали Excel `CEILING(...)` отображается как `ОКРВВЕРХ(...)`.
+    В формулах ниже `G` — measured quantity/source cell, `D` — stock length.
+
+### 2-1/2" CH + J-channel assembly
+
 ```text
-CH channels vertical  = LFT * 0.5 * 1.1 / 12
-J-channels horizontal = LFT * 2 / 10 * 1.1 / 10
-Shaft panels          = LFT * 0.5 * 1.1, listed as 2x12
+Linear Panels / 1" Shaft Panels
+=CEILING((G * 1.1 / 24), 2)
+D = 12, listed as 2x12 Panels
+
+CH Channels Vertical / 2-1/2" CH-channels
+=CEILING((G * 0.5 * 1.1 / D), 2)
+D = 12
+
+J Channels Horizontal / 2-1/2" J-channels
+=CEILING((G * 1.1 / D), 2)
+D = 12
+```
+
+### 2" H + C-channel assembly
+
+```text
+Linear Panels / 1" Shaft Panels
+=CEILING((G * 2 * 1.1 / 24), 2)
+D = 12, listed as 2x12 Panels
+
+Channels Vertical / 2" H-channels
+=CEILING((G * 0.5 * 1.1 / D), 2)
+D = 12
+
+Channels Horizontal / 2" H-channels
+=CEILING((G * 2 * 1.1 / D), 2)
+D = 12
+
+Channels Perimeter / 2" C-channels
+=CEILING((G * 1.1 / D), 2)
+D = 12
 ```
 
 ## Dropped Ceiling Metal Joists

@@ -15,6 +15,9 @@ Shaft wall почти всегда fire-rated и собирается из CH-st
 - J-channels.
 - 1" liner panels.
 - Fire-wall hanger conditions, когда joists hang over shaft walls.
+- Для `2"` H/C assemblies: H-channels vertical/horizontal и C-channels perimeter.
+- Shaft walls не пропускай как "панели by others" автоматически: если wall type/detail дает shaft assembly,
+  отрази его отдельными строками в takeoff/DFL.
 
 ## Default assumption
 
@@ -39,6 +42,27 @@ Shaft wall почти всегда fire-rated и собирается из CH-st
 !!! note "Формулы shaft wall"
     CH-channels, J-channels и liner-панели считаются по формулам в
     [Формулы → Shaft Walls](../../../reference/formulas.md#shaft-walls).
+
+## Typical DFL rows
+
+### 2-1/2" CH + J-channel
+
+| Row | Material | Formula pattern | Stock |
+| --- | --- | --- | --- |
+| Linear Panels | 1" Shaft Panels | `CEILING((G * 1.1 / 24), 2)` | 12, listed as 2x12 Panels |
+| CH Channels Vertical | 2-1/2" CH-channels | `CEILING((G * 0.5 * 1.1 / D), 2)` | 12 |
+| J Channels Horizontal | 2-1/2" J-channels | `CEILING((G * 1.1 / D), 2)` | 12 |
+
+### 2" H + C-channel
+
+| Row | Material | Formula pattern | Stock |
+| --- | --- | --- | --- |
+| Linear Panels | 1" Shaft Panels | `CEILING((G * 2 * 1.1 / 24), 2)` | 12, listed as 2x12 Panels |
+| Channels Vertical | 2" H-channels | `CEILING((G * 0.5 * 1.1 / D), 2)` | 12 |
+| Channels Horizontal | 2" H-channels | `CEILING((G * 2 * 1.1 / D), 2)` | 12 |
+| Channels Perimeter | 2" C-channels | `CEILING((G * 1.1 / D), 2)` | 12 |
+
+`G` is the measured shaft-wall source quantity. `D` is the stock length cell, usually `12`.
 
 ## Проверить
 
