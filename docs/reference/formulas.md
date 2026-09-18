@@ -65,42 +65,43 @@ Shaft walls записывай отдельным блоком, даже есл�
 
 !!! note "Excel"
     В русской локали Excel `CEILING(...)` отображается как `ОКРВВЕРХ(...)`.
-    В формулах ниже `G` — measured quantity/source cell, `D` — stock length.
+    В формулах ниже использованы единицы измерения: `LFT`, `Horizontal LFT`,
+    `Perimeter LFT`, `Stock LF`. В Excel подставляй реальные source/stock cells.
 
 ### 2-1/2" CH + J-channel assembly
 
 ```text
 Linear Panels / 1" Shaft Panels
-=CEILING((G * 1.1 / 24), 2)
-D = 12, listed as 2x12 Panels
+=CEILING((LFT * 1.1 / 24), 2)
+Stock LF = 12, listed as 2x12 Panels
 
 CH Channels Vertical / 2-1/2" CH-channels
-=CEILING((G * 0.5 * 1.1 / D), 2)
-D = 12
+=CEILING((LFT * 0.5 * 1.1 / Stock LF), 2)
+Stock LF = 12
 
 J Channels Horizontal / 2-1/2" J-channels
-=CEILING((G * 1.1 / D), 2)
-D = 12
+=CEILING((Horizontal LFT * 1.1 / Stock LF), 2)
+Stock LF = 12
 ```
 
 ### 2" H + C-channel assembly
 
 ```text
 Linear Panels / 1" Shaft Panels
-=CEILING((G * 2 * 1.1 / 24), 2)
-D = 12, listed as 2x12 Panels
+=CEILING((LFT * 2 * 1.1 / 24), 2)
+Stock LF = 12, listed as 2x12 Panels
 
 Channels Vertical / 2" H-channels
-=CEILING((G * 0.5 * 1.1 / D), 2)
-D = 12
+=CEILING((LFT * 0.5 * 1.1 / Stock LF), 2)
+Stock LF = 12
 
 Channels Horizontal / 2" H-channels
-=CEILING((G * 2 * 1.1 / D), 2)
-D = 12
+=CEILING((Horizontal LFT * 2 * 1.1 / Stock LF), 2)
+Stock LF = 12
 
 Channels Perimeter / 2" C-channels
-=CEILING((G * 1.1 / D), 2)
-D = 12
+=CEILING((Perimeter LFT * 1.1 / Stock LF), 2)
+Stock LF = 12
 ```
 
 ## Dropped Ceiling Metal Joists
@@ -112,8 +113,8 @@ D = 12
 ## Blocking formulas
 
 ```excel
-Flat 48" o.c.     = CEILING(G * 12 / 48 * 2 * 1.1 / D, 1)
-Diagonal 48" o.c. = CEILING(G * 12 / 48 * 2.5 * 1.1 / D, 1)
+Flat 48" o.c.     = CEILING(LFT * 12 / 48 * 2 * 1.1 / Stock LF, 1)
+Diagonal 48" o.c. = CEILING(LFT * 12 / 48 * 2.5 * 1.1 / Stock LF, 1)
 ```
 
 ### Blocking factor по типу

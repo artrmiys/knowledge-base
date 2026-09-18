@@ -37,11 +37,11 @@ Shaft wall почти всегда fire-rated. На takeoff/DFL обычно в�
 
 DFL rows:
 
-| Row | Material | Formula pattern | Stock |
-| --- | --- | --- | --- |
-| Linear Panels | 1" Shaft Panels | `CEILING((G * 1.1 / 24), 2)` | 12, listed as 2x12 Panels |
-| CH Channels Vertical | 2-1/2" CH-channels | `CEILING((G * 0.5 * 1.1 / D), 2)` | 12 |
-| J Channels Horizontal | 2-1/2" J-channels | `CEILING((G * 1.1 / D), 2)` | 12 |
+| Row | Material | Takeoff unit/source | Formula pattern | Stock |
+| --- | --- | --- | --- | --- |
+| Linear Panels | 1" Shaft Panels | LFT | `CEILING((LFT * 1.1 / 24), 2)` | 12, listed as 2x12 Panels |
+| CH Channels Vertical | 2-1/2" CH-channels | LFT | `CEILING((LFT * 0.5 * 1.1 / Stock LF), 2)` | 12 |
+| J Channels Horizontal | 2-1/2" J-channels | Horizontal LFT | `CEILING((Horizontal LFT * 1.1 / Stock LF), 2)` | 12 |
 
 ### Type 2: 2" H + C-channel
 
@@ -56,14 +56,15 @@ DFL rows:
 
 DFL rows:
 
-| Row | Material | Formula pattern | Stock |
-| --- | --- | --- | --- |
-| Linear Panels | 1" Shaft Panels | `CEILING((G * 2 * 1.1 / 24), 2)` | 12, listed as 2x12 Panels |
-| Channels Vertical | 2" H-channels | `CEILING((G * 0.5 * 1.1 / D), 2)` | 12 |
-| Channels Horizontal | 2" H-channels | `CEILING((G * 2 * 1.1 / D), 2)` | 12 |
-| Channels Perimeter | 2" C-channels | `CEILING((G * 1.1 / D), 2)` | 12 |
+| Row | Material | Takeoff unit/source | Formula pattern | Stock |
+| --- | --- | --- | --- | --- |
+| Linear Panels | 1" Shaft Panels | LFT | `CEILING((LFT * 2 * 1.1 / 24), 2)` | 12, listed as 2x12 Panels |
+| Channels Vertical | 2" H-channels | LFT | `CEILING((LFT * 0.5 * 1.1 / Stock LF), 2)` | 12 |
+| Channels Horizontal | 2" H-channels | Horizontal LFT | `CEILING((Horizontal LFT * 2 * 1.1 / Stock LF), 2)` | 12 |
+| Channels Perimeter | 2" C-channels | Perimeter LFT | `CEILING((Perimeter LFT * 1.1 / Stock LF), 2)` | 12 |
 
-`G` is the measured shaft-wall source quantity. `D` is the stock length cell, usually `12`.
+`Stock LF` is the stock length cell, usually `12`. Use the measured LFT source that matches the row:
+overall shaft-wall LFT, horizontal run LFT, or perimeter LFT.
 
 <figure markdown>
   ![C-T stud, J-track and J-L corner profiles with dimensions](../../../assets/images/confluence/confluence-129.png)
