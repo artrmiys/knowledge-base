@@ -86,7 +86,7 @@ drawings и строительными plans становится вопросо
 во время монтажа и ограничивает самовольные изменения panels. Для сметы это
 означает: проверять bracing и connection details, а не придумывать раскрой
 или замену несущих элементов.
-[SBCA: Handling, Installing & Temporary Bracing](https://api.sbcacomponents.com/sites/default/files/handling-installing-temporary-bracing-wall-panels_7.pdf).
+[SBCA: Handling, Installing & Temporary Bracing — страница руководства](https://pubs.sbcacomponents.com/products/guide-for-handling-installing-temporary-bracing-of-wall-panels-100-sheets).
 
 ## Notes для выдачи
 
