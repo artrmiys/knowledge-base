@@ -4,6 +4,17 @@
 Workflow `.github/workflows/deploy.yml` настроен на push в `main` и ручной запуск;
 фактический результат публикации проверяется отдельно. Инструкция: [README](README.md).
 
+## 2026-10-09 — H-clips и границы wall panels
+
+- Добавлены два правила из списка владельца: T&G plywood без H-clips;
+  стены рядом с CMU могут быть panels, исключения перечислены явно.
+- Обновлены Roof Sheathing, Furring, Exterior Walls и QA checklist.
+- Убрано безусловное исключение всех exterior build-ups из panels.
+- Добавлены отдельные страницы H-clips и Wall Panels: схема Simpson 2026,
+  примеры подсчёта, состав поставки, concrete podium и reconstruction.
+- Общие технические сведения отделены от правил scope E-Wood; добавлены
+  ссылки на Simpson, APA и SBCA. Уточнены COM и reconstruction cross-references.
+
 ## 2026-09-06 — пересборка KB и актуальный OurPlanCore
 
 - OurPlanCore вынесен в отдельную вкладку: начало работы, инструменты, хранение,

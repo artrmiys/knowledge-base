@@ -59,6 +59,9 @@ corners, T-пересечения, jack/king/cripple и обрезь.
 
 ## Sheathing
 
+- **H-clips не нужны для T&G plywood.** H-clips учитываются только для
+  square-edge plywood; сначала проверь тип кромки в спецификации.
+  [Пояснение, схема и подсчёт](../work/horizontal/roof-framing/h-clips.md).
 - `19/32"` equals `5/8"`, not `1/2"`.
 - Exterior sheathing идёт по Arch / energy / Zip notes, если Structural не даёт
   более сильное non-Zip requirement.
@@ -67,6 +70,25 @@ corners, T-пересечения, jack/king/cripple и обрезь.
   оставляй note.
 - Optional walls могут требовать full-height sheathing, а loose/box sheathing
   остаётся box only.
+
+## Wall panels
+
+Полный разбор, таблица scope и наши исключения под бетоном / при reconstruction:
+[Wall Panels](../work/vertical/walls/wall-panels.md).
+
+В panelized scope стены рядом с CMU могут быть изготовлены как panels.
+Соседство с CMU и название `furring wall` сами по себе не делают стену stick
+framing и не являются основанием добавлять optional framing.
+
+К non-panel walls относятся стены под concrete slab, внутри existing frames,
+короткие стены и стены с irregular slope. Exterior build-up walls могут быть
+исключением — проверь конкретную конструкцию и scope. Не исключай все exterior
+build-ups из panels автоматически.
+
+Furring strips под siding/insulation проверяются по своему scope и details:
+это отдельные элементы, см. [Furring](../work/vertical/walls/furring.md).
+
+Правила H-clips и wall panels уточнены по рабочему фидбэку 2026-10-09.
 
 ## Частые пропуски
 

@@ -74,6 +74,10 @@ drawings/specs не показывают дополнительный loose mate
 
 ## Panelized Walls — что считаем и не считаем
 
+Полный актуальный контракт: [Wall Panels](../work/vertical/walls/wall-panels.md).
+**Стены под concrete slab/podium и новые стены внутри existing frame при
+reconstruction остаются stick framing**, даже при общем `COM w/panel`.
+
 Panelized COM значит: основные wall panels делает другой подрядчик. Мы не
 пересчитываем panel как обычную stick-framed wall. Наш takeoff — только
 материал, который остаётся **outside panel package** или прямо показан как
@@ -102,13 +106,13 @@ loose/additional detail.
 | --- | --- | --- |
 | `Exterior Walls` для bracing | Только exterior wall runs, которые нужны для bracing length | Не добавляй studs/plates как обычную wall line. |
 | `Corridor Walls` и `Demising Walls` для bracing | Только несущие corridor/demising walls | Demising может быть double wall; показывай отдельной строкой. |
-| `Tyvek` / WRB | Обычно на exterior walls | Если specs дают только Tyvek для panels, не добавляй plywood/studs. |
+| `Tyvek` / WRB | Когда не включён в panel package и входит в наш scope | Если specs дают только Tyvek для panels, не добавляй plywood/studs. |
 | Floor-height plywood | Когда это отдельная loose zone, не часть panel | Держи отдельной строкой от wall panel. |
 | `Box Sheathing` | Когда box sheathing показан вне panel | Смотри детали и elevations. |
 | `Truss Heel` sheathing | Когда heel/sheathing shown as loose material | Часто остаётся in scope даже при panelized walls. |
 | `Parapet Walls` / parapet sheathing | Когда parapet не входит в panel package | Проверяй FRT и blocking/bolts по details. |
 | `Gable` plywood at trusses | Когда gables относятся к truss/roof condition | Не путай с обычной wall panel sheathing. |
-| `Shear Walls` plywood | Когда shear wall plywood shown отдельно | Вносить с одной стороны, если detail не показывает иначе. |
+| `Shear Walls` plywood | Когда не включён в package и показан отдельно | Число сторон, слоёв и тип брать из shear schedule/detail. |
 | `Holdowns`, `Strapping`, `Straps` | Когда показаны в structural details | Не прятать в wall count; это отдельные items. |
 | `Hurricane Ties` | Когда есть в details | Проверять отдельно, особенно около trusses/roof. |
 | `LVL Beams` | Когда beam shown in structural | Считать и учитывать даже в panelized job. |
@@ -117,9 +121,9 @@ loose/additional detail.
 
 - Если opening находится в wall panel и drawings не говорят обратного, header
   внутри этой panel **не считается отдельной строкой**.
-- Если detail/schedule явно показывает `flush header`, special header, metal
-  header, extra jamb blocking или пишет `not included in panels`, тогда это
-  становится loose scope и считается отдельно.
+- `Flush/special/metal header` и extra jamb blocking проверять по panel package.
+  Отдельно считать то, что отмечено `not included in panels` / loose или
+  явно возвращено в наш scope; одно название header не доказывает исключение.
 - Для проверки смотри [Headers](../work/vertical/openings/headers.md) и
   opening schedule. Не бери header только из архитектурного размера двери/окна,
   если panel package уже включает openings.
@@ -140,12 +144,12 @@ loose/additional detail.
 ### Как быстро решить: считать или нет
 
 1. Сначала найди note/scope: `panelized`, `wall panels`, `panels by others`.
-2. Если item physically inside wall panel — не считай отдельно.
+2. Если item подтверждённо included in wall panel package — не считай отдельно.
 3. Если item is outside panel package или shown as loose detail — считай.
 4. Если сомневаешься, добавь visible note в output: `Assumed included in wall
    panels unless noted otherwise`.
-5. Под подиумом или внутри existing building панели обычно **не применяются** —
-   там проверяй stick-framed scope отдельно.
+5. По нашему правилу стены под concrete slab/podium и новые стены внутри
+   existing frame считаем stick; сохраняем полный применимый блок DFL.
 
 ## Bracing — высота стены → длина
 

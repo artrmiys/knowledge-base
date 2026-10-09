@@ -46,6 +46,10 @@ Reconstruction jobs — это проекты, где часть здания у
 
 ## Главные правила
 
+- **Новые/заменяемые стены внутри existing frame считаем как stick framing**,
+  даже если общий scope содержит wall panels. См. [Wall Panels](../work/vertical/walls/wall-panels.md#reconstruction-existing).
+- Если detail требует новый subfloor по всей existing площади, считаем весь
+  этот новый слой; сохранение старого пола не отменяет указанное покрытие.
 - Сначала прочитай legend: line weights, dashed lines, hatch и keynote symbols.
 - Не используй план существующего этажа как полный takeoff plan. Он часто нужен
   только для context.

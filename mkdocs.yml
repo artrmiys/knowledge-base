@@ -72,6 +72,7 @@ nav:
           - EWP / Capital: work-types/ewp-capital.md
       - Вертикальные работы:
           - Walls:
+              - Wall Panels: work/vertical/walls/wall-panels.md
               - Sill Plates: work/vertical/walls/sill-plates.md
               - Basement: work/vertical/walls/basement.md
               - Unit / Interior: work/vertical/walls/unit.md
@@ -119,6 +120,7 @@ nav:
           - Exterior Wall Materials: work/vertical/sheathing/exterior-materials.md
           - Floor Sheathing: work/vertical/sheathing/floor.md
           - Roof Sheathing: work/horizontal/roof-framing/roof-sheathing.md
+          - H-clips: work/horizontal/roof-framing/h-clips.md
           - Gable Sheathing: work/vertical/sheathing/gable.md
           - Box Sheathing: work/vertical/sheathing/box-sheathing.md
           - Truss Heel: work/vertical/sheathing/truss-heel.md

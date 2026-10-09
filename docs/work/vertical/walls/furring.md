@@ -16,6 +16,9 @@
 
 ## Правила
 
+- Wood-framed furring wall рядом с CMU может быть panelized. Не добавляй её
+  как optional stick framing только из-за соседства с CMU. Границы исключений:
+  [Wall panels](../../../reference/boss-feedback-rules.md#wall-panels).
 - Не добавляй 2x4 furring at exterior CMU walls, когда detail требует только
   1-1/2" insulation.
 - Metal resilient channels under floor frames обычно by others, если client не

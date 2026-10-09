@@ -8,6 +8,9 @@
 
 ## Проверить
 
+- [H-clips: картинка, условия применения и подсчёт](h-clips.md).
+- Тип кромки plywood: **T&G — без H-clips; H-clips только для square edge**.
+  См. [Советы и важные вещи](../../../reference/boss-feedback-rules.md#sheathing).
 - Flat roof trusses often need Densedeck over the same area as rigid insulation.
 - Extra rigid XPS layer is a recurring miss.
 - Piggy truss sleepers can be hidden in roof details.
@@ -26,7 +29,7 @@
 | Sub Fascia | `2x6` / `2x8` |
 | Blocking at Eves | `2x6` |
 | Truss Bracing | `2x4` (длина `16'`) |
-| Clips (H-clip) | сшивка листов |
+| Clips (H-clip) | только square-edge plywood; для T&G не нужны |
 | Simpson Ties at Eves | `H2.5` |
 | Frame for Soffits / Rakes | `2x4` |
 | Insulation (flat) | tapered / rigid |

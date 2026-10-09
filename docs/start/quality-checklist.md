@@ -10,6 +10,9 @@
 - Identical floors отмечены, но materials всё равно перечислены per floor.
 - Нет двойного 1.1 waste из formulas, которые ссылаются на другие formulas.
 - Notes добавлены там, где есть assumptions.
+- T&G plywood без H-clips; тип кромки проверен по спецификации.
+- Стены рядом с CMU не вынесены в optional stick framing без основания;
+  [исключения из panels](../reference/boss-feedback-rules.md#wall-panels) проверены по scope.
 
 ## Критические проверки COM
 

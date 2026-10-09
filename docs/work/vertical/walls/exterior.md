@@ -20,7 +20,8 @@
 - Exterior sheathing идёт по Arch / energy / Zip notes, если Structural не даёт
   более сильное non-Zip requirement.
 - Если exterior wall material = FRT, exterior blocking и parapets тоже FRT.
-- Exterior buildouts — stick framed, не panels.
+- Exterior build-up walls могут быть stick framed; проверь конструкцию и scope.
+  Полный список исключений: [Wall panels](../../../reference/boss-feedback-rules.md#wall-panels).
 - Для one-hour exterior walls давай exterior wall SQFT, когда это requested.
 - Проверяй wall size по floor: 2x4, 2x6 или 2x8.
 - Bottom plates могут требовать separate line, если lower plate = P.T.
