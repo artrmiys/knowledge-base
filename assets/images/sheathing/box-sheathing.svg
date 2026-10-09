@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
+  <title id="t">Box sheathing band at floor line</title>
+  <defs>
+    <pattern id="o" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#dbe9d9"/><circle cx="2" cy="2" r="1" fill="#7fae7a"/><circle cx="6.5" cy="6" r="1" fill="#7fae7a"/></pattern>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+  </defs>
+  <rect width="760" height="300" fill="#fff"/>
+  <text class="t" x="32" y="40">Box sheathing — полоса только по «коробке»</text>
+  <text class="s" x="32" y="62">Band на высоте перекрытия / parapet, не full-height. Не truss heel.</text>
+  <!-- wall elevation -->
+  <rect x="120" y="90" width="420" height="180" fill="#f7f9fb" stroke="#9bb0c2" stroke-width="1.4"/>
+  <!-- floor line band (box sheathing) -->
+  <rect x="120" y="170" width="420" height="40" fill="url(#o)" stroke="#2e7d32" stroke-width="1.8"/>
+  <!-- floor line marker -->
+  <line x1="120" y1="190" x2="540" y2="190" stroke="#2e7d32" stroke-width="1" stroke-dasharray="6 4"/>
+  <line x1="330" y1="190" x2="600" y2="180" stroke="#2e7d32" stroke-width="1.4"/>
+  <text class="l" x="608" y="183">Box sheathing (band)</text>
+  <line x1="300" y1="120" x2="600" y2="120" stroke="#2e7d32" stroke-width="1.4"/>
+  <text class="l" x="608" y="123">Wall (full-height)</text>
+</svg>

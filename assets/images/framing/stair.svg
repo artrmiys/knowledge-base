@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" role="img" aria-labelledby="t">
+  <title id="t">Stair stringer, treads and risers</title>
+  <defs>
+    <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+  </defs>
+  <rect width="760" height="320" fill="#fff"/>
+  <text class="t" x="32" y="40">Stair — stringers → treads → risers</text>
+  <text class="s" x="32" y="62">2x12 stringers (LVL по structural); 2x12 Treads + 1x8 Riser, режут из 12' stock.</text>
+  <!-- stringer (zigzag) -->
+  <polyline points="120,270 120,230 180,230 180,190 240,190 240,150 300,150 300,110 360,110" fill="none" stroke="#6c4b2a" stroke-width="3"/>
+  <polygon points="120,290 120,270 360,130 360,110 420,110 420,290" fill="url(#w)" stroke="#6c4b2a" stroke-width="2" opacity="0.55"/>
+  <!-- treads (horizontal) -->
+  <g fill="#caa27b" stroke="#6c4b2a" stroke-width="1.5">
+    <rect x="120" y="222" width="64" height="10"/>
+    <rect x="180" y="182" width="64" height="10"/>
+    <rect x="240" y="142" width="64" height="10"/>
+    <rect x="300" y="102" width="64" height="10"/>
+  </g>
+  <!-- risers (vertical faces) -->
+  <g fill="#eef3f7" stroke="#8aa0b0" stroke-width="1.4">
+    <rect x="176" y="192" width="8" height="30"/>
+    <rect x="236" y="152" width="8" height="30"/>
+    <rect x="296" y="112" width="8" height="30"/>
+  </g>
+  <line x1="150" y1="250" x2="520" y2="240" stroke="#2e7d32" stroke-width="1.4"/>
+  <text class="l" x="528" y="243">Stringer (2x12 / LVL)</text>
+  <line x1="270" y1="147" x2="520" y2="150" stroke="#2e7d32" stroke-width="1.4"/>
+  <text class="l" x="528" y="153">Tread (2x12, 12')</text>
+  <line x1="300" y1="125" x2="520" y2="110" stroke="#2e7d32" stroke-width="1.4"/>
+  <text class="l" x="528" y="113">Riser (1x8, 12')</text>
+</svg>

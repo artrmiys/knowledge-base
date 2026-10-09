@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="350" viewBox="0 0 900 350" role="img" aria-labelledby="title desc">
+  <title id="title">Как связаны проект, лист, takeoff и замер</title>
+  <desc id="desc">В проекте лист задаёт чертёж и масштаб, takeoff задаёт именованный контейнер. Замер связывает лист и takeoff. Результат сохраняется в проект и экспортируется в PDF или Excel.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#2e7d32"/></marker></defs>
+  <rect width="900" height="350" rx="12" fill="#f5f7f5"/>
+  <g font-family="Segoe UI,Arial,sans-serif" fill="#183323">
+    <text x="30" y="37" font-size="22" font-weight="600">Один проект — связанные данные</text>
+    <g fill="#fff" stroke="#a8bcab" stroke-width="1.5">
+      <rect x="30" y="64" width="310" height="91" rx="8"/>
+      <rect x="560" y="64" width="310" height="91" rx="8"/>
+      <rect x="282" y="206" width="336" height="99" rx="8" stroke="#2e7d32" stroke-width="2"/>
+    </g>
+    <text x="50" y="94" font-size="21" font-weight="600">Page / Sheet</text>
+    <text x="50" y="121" font-size="17">Чертёж, масштаб и видимость</text>
+    <text x="580" y="94" font-size="21" font-weight="600">Takeoff item</text>
+    <text x="580" y="121" font-size="17">Что считаем: имя и тип замера</text>
+    <g fill="none" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow)">
+      <path d="M186 155V181H355V202"/>
+      <path d="M714 155V181H545V202"/>
+    </g>
+    <text x="310" y="239" font-size="21" font-weight="600">Measurement</text>
+    <text x="310" y="267" font-size="17">Геометрия + лист + масштаб</text>
+    <text x="30" y="331" font-size="16">Save сохраняет проект. PDF и Excel — отдельные результаты выдачи.</text>
+  </g>
+</svg>

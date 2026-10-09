@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
+  <title id="t">Shear wall with sheathing, nailing and holdown</title>
+  <defs>
+    <pattern id="o" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#eef2f6"/><circle cx="2" cy="2" r="1" fill="#9bb0c2"/><circle cx="6.5" cy="6" r="1" fill="#9bb0c2"/></pattern>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+  </defs>
+  <rect width="760" height="300" fill="#fff"/>
+  <text class="t" x="32" y="40">Shear wall — обшивка по structural schedule</text>
+  <text class="s" x="32" y="62">Тип/толщина/гвоздёвка по shear wall schedule. Holdowns + A35 — частый пропуск.</text>
+  <!-- sheathing panel -->
+  <rect x="150" y="100" width="300" height="160" fill="url(#o)" stroke="#3a3a3a" stroke-width="1.8"/>
+  <!-- nailing edge dots -->
+  <g fill="#3a3a3a">
+    <circle cx="158" cy="112" r="2.2"/><circle cx="158" cy="140" r="2.2"/><circle cx="158" cy="168" r="2.2"/><circle cx="158" cy="196" r="2.2"/><circle cx="158" cy="224" r="2.2"/><circle cx="158" cy="250" r="2.2"/>
+    <circle cx="442" cy="112" r="2.2"/><circle cx="442" cy="140" r="2.2"/><circle cx="442" cy="168" r="2.2"/><circle cx="442" cy="196" r="2.2"/><circle cx="442" cy="224" r="2.2"/><circle cx="442" cy="250" r="2.2"/>
+  </g>
+  <!-- holdown at base -->
+  <rect x="156" y="232" width="22" height="28" fill="#7c8a96" stroke="#3a3a3a" stroke-width="1.4"/>
+  <line x1="167" y1="262" x2="167" y2="285" stroke="#3a3a3a" stroke-width="4"/>
+  <line x1="300" y1="180" x2="560" y2="170" stroke="#2e7d32" stroke-width="1.4"/>
+  <text class="l" x="568" y="173">Shear sheathing</text>
+  <line x1="160" y1="130" x2="560" y2="120" stroke="#2e7d32" stroke-width="1.4"/>
+  <text class="l" x="568" y="123">Edge nailing</text>
+  <line x1="167" y1="250" x2="560" y2="255" stroke="#2e7d32" stroke-width="1.4"/>
+  <text class="l" x="568" y="258">Holdown (HDU / DTT)</text>
+</svg>

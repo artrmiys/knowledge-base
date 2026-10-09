@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
+  <title id="t">Porch section: post, beam, soffit, decking</title>
+  <defs>
+    <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+  </defs>
+  <rect width="760" height="300" fill="#fff"/>
+  <text class="t" x="32" y="40">Porch — крытая площадка (framing + soffit + decking)</text>
+  <text class="s" x="32" y="62">Soffit часто 5/8" exterior gypsum / Densglass. Крыша — по Roof SQFT.</text>
+  <!-- roof slope -->
+  <polygon points="150,110 470,110 470,128 150,150" fill="#dfe7ee" stroke="#3a3a3a" stroke-width="1.5"/>
+  <!-- soffit under roof -->
+  <rect x="200" y="150" width="270" height="12" fill="#eef3f7" stroke="#8aa0b0" stroke-width="1.4"/>
+  <!-- beam -->
+  <rect x="200" y="128" width="270" height="16" fill="#caa27b" stroke="#6c4b2a" stroke-width="1.5"/>
+  <!-- post -->
+  <rect x="220" y="162" width="20" height="90" fill="url(#w)" stroke="#3a3a3a" stroke-width="1.4"/>
+  <!-- decking -->
+  <rect x="180" y="252" width="300" height="14" fill="url(#w)" stroke="#3a3a3a" stroke-width="1.4"/>
+  <line x1="350" y1="156" x2="560" y2="145" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="148">Soffit (exterior gypsum)</text>
+  <line x1="230" y1="200" x2="560" y2="195" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="198">Post + beam</text>
+  <line x1="300" y1="259" x2="560" y2="245" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="248">Decking (SQFT)</text>
+</svg>

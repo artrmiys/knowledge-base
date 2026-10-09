@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="title desc">
+  <title id="title">Exterior wall section — takeoff layers</title>
+  <desc id="desc">Architectural section of an exterior stud wall: WRB, sheathing, studs with batt insulation, blocking, P.T. bottom plate and interior gypsum, with takeoff checkpoints.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/>
+    </marker>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse">
+      <rect width="20" height="16" fill="#fdf6e3"/>
+      <path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/>
+    </pattern>
+    <pattern id="osb" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="6" fill="#eef2f6"/>
+      <circle cx="1.5" cy="1.5" r="0.7" fill="#9bb0c2"/>
+      <circle cx="4.5" cy="4" r="0.7" fill="#9bb0c2"/>
+    </pattern>
+    <pattern id="wood" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="10" height="10" fill="#f2d6a8"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/>
+    </pattern>
+    <style>
+      .bg{fill:#ffffff}
+      .frameln{fill:none;stroke:#3a3a3a;stroke-width:1.6}
+      .thin{stroke:#3a3a3a;stroke-width:1.1;fill:none}
+      .ttl{font:700 21px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
+      .sub{font:400 14px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}
+      .lab{font:600 15px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
+      .note{font:400 13px "Segoe UI",Arial,sans-serif;fill:#566}
+      .side{font:700 13px "Segoe UI",Arial,sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.4;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect class="bg" width="920" height="520"/>
+  <text class="ttl" x="40" y="56">Exterior wall — считай по слоям, не одной строкой</text>
+  <text class="sub" x="40" y="80">Источник: Arch / Energy / Wall-type notes; Structural-исключения проверь отдельно.</text>
+
+  <!-- wall section, exterior (left) -> interior (right) -->
+  <g>
+    <!-- WRB -->
+    <rect x="150" y="120" width="12" height="300" fill="#d9f2d8" stroke="#2e7d32" stroke-width="1.4"/>
+    <!-- sheathing -->
+    <rect x="162" y="120" width="26" height="300" fill="url(#osb)" stroke="#3a3a3a" stroke-width="1.4"/>
+    <!-- stud cavity with batt -->
+    <rect x="188" y="120" width="150" height="300" fill="url(#batt)" stroke="#3a3a3a" stroke-width="1.4"/>
+    <!-- studs -->
+    <rect x="188" y="120" width="16" height="300" fill="url(#wood)" stroke="#3a3a3a" stroke-width="1.2"/>
+    <rect x="322" y="120" width="16" height="300" fill="url(#wood)" stroke="#3a3a3a" stroke-width="1.2"/>
+    <!-- top plates (double) -->
+    <rect x="188" y="120" width="150" height="13" fill="url(#wood)" stroke="#3a3a3a" stroke-width="1.2"/>
+    <rect x="188" y="133" width="150" height="13" fill="url(#wood)" stroke="#3a3a3a" stroke-width="1.2"/>
+    <!-- blocking row -->
+    <rect x="204" y="262" width="118" height="14" fill="url(#wood)" stroke="#3a3a3a" stroke-width="1.2"/>
+    <!-- P.T. bottom plate -->
+    <rect x="188" y="407" width="150" height="13" fill="#caa27b" stroke="#6c4b2a" stroke-width="1.4"/>
+    <!-- interior gypsum -->
+    <rect x="338" y="120" width="16" height="300" fill="#f1f4f7" stroke="#8aa0b0" stroke-width="1.4"/>
+  </g>
+
+  <text class="side" x="150" y="440">EXTERIOR</text>
+  <text class="side" x="300" y="440">INTERIOR</text>
+
+  <!-- callouts -->
+  <line class="lead" x1="156" y1="150" x2="560" y2="138"/>
+  <text class="lab" x="572" y="135">WRB / Tyvek / Zip tape</text>
+  <text class="note" x="572" y="154">отдельная строка, когда scope просит</text>
+
+  <line class="lead" x1="175" y1="200" x2="560" y2="200"/>
+  <text class="lab" x="572" y="197">Sheathing thickness</text>
+  <text class="note" x="572" y="216">19/32&quot; = 5/8&quot;; Zip может override</text>
+
+  <line class="lead" x1="300" y1="245" x2="560" y2="262"/>
+  <text class="lab" x="572" y="259">Studs + blocking</text>
+  <text class="note" x="572" y="278">2x4 / 2x6 / 2x8 по высоте стены</text>
+
+  <line class="lead" x1="260" y1="269" x2="560" y2="324"/>
+  <text class="lab" x="572" y="321">Tall-wall blocking</text>
+  <text class="note" x="572" y="340">10&#39;+ стены — часто два ряда</text>
+
+  <line class="lead" x1="250" y1="413" x2="560" y2="386"/>
+  <text class="lab" x="572" y="383">P.T. bottom plate</text>
+  <text class="note" x="572" y="402">отдельной строкой, если low plate = P.T.</text>
+</svg>

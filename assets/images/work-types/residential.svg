@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
+  <title id="t">Residential scope overview</title>
+  <defs>
+    <pattern id="o" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#eef2f6"/><circle cx="2" cy="2" r="1" fill="#9bb0c2"/></pattern>
+    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+  </defs>
+  <rect width="760" height="300" fill="#fff"/>
+  <text class="t" x="32" y="40">Residential — стандартный takeoff flow</text>
+  <text class="s" x="32" y="62">Walls + openings · floor/roof framing · sheathing · SQFT · roof/deck/porch.</text>
+  <!-- house section -->
+  <polygon points="150,250 150,150 320,90 490,150 490,250" fill="#f7f9fb" stroke="#3a3a3a" stroke-width="1.6"/>
+  <!-- roof -->
+  <polygon points="140,156 320,82 500,156 490,150 320,90 150,150" fill="url(#o)" stroke="#3a3a3a" stroke-width="1.4"/>
+  <!-- floor line -->
+  <line x1="150" y1="200" x2="490" y2="200" stroke="#c89b5a" stroke-width="4"/>
+  <line x1="320" y1="120" x2="600" y2="110" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="608" y="113">Roof framing</text>
+  <line x1="200" y1="175" x2="600" y2="165" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="608" y="168">Walls + openings</text>
+  <line x1="320" y1="200" x2="600" y2="215" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="608" y="218">Floor + subfloor</text>
+  <text class="s" x="150" y="280">Проверь shaft walls в duplex/townhouse и energy/Zip notes.</text>
+</svg>
