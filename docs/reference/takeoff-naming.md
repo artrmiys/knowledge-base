@@ -179,6 +179,46 @@ half
 
 
 
+## Точка листа: W / F / S / U { #sheet-dots .kb-section-title .kb-st--cyan }
+
+С 2.2.23, строка U — с **2.2.33**. Под заголовком Scale на листе стоит сетка
+точек: строки **W** (walls), **F** (framing), **S** (shear walls) по этажам
+B, 1–5, L, R и строка **U** (units) с одной точкой на все этажи. Точка решает,
+в какую папку корпуса попадёт **новый** takeoff, нарисованный на этом листе.
+
+| Точка | Куда идут новые takeoff |
+| --- | --- |
+| W, этаж | Line, Count → `walls/<этаж> floor walls`; Area, J Area → `sqfts` |
+| F, этаж | Count → `framing/<этаж> floor framing`; Line → `…/details`; Area, J Area → `…/joists`; Beam → `…/beams` |
+| S, этаж | `shear walls/<этаж>/shear`; Count → `…/holdowns` |
+| U | всё, любым инструментом → `units` |
+
+Точка ставится сама при переименовании листа (Name, F2, Batch Rename,
+Page Setup) и на приёме проекта:
+
+- `a101 1st` → W 1, `s102 2nd` → F 2;
+- имя кончается на `u` или `U` → U: `a3011 u`, `S0-4A U`, `a3101 common terrace u`,
+  копия `… U (2)` тоже. `a301 u el` не получает U: `u` не последний.
+
+Точка, поставленная руками, не заменяется. Щелчок по выбранной точке снимает её.
+Для уже открытого проекта: `Settings → Sheet Takeoff Routing →
+Route sheets without a dot now`. Там же в таблице `Rows` правятся папка U и
+теги конца имени.
+
+!!! note "Лист U сильнее правил по имени takeoff"
+    На W/F/S листах Openings и имена с `eve`, `rake`, `gable`, `prpt`,
+    `trussheel` уходят в свои папки (`openings`, `eves rakes`, …). На листе U
+    они тоже ложатся в `units`. `Record` продолжает текущий takeoff, как и раньше.
+
+## Порядок легенды вручную { #legend-order .kb-section-title .kb-st--cyan }
+
+`Pages → лист → Organize`: **Sort Sheet Legend Auto**, **A-Z** и с 2.2.33
+**by Key (before space)**. By Key сортирует по части имени до первого пробела,
+числа по значению, потом по остатку: `A1 2x4, A1 2x6, A2 2x4, A10 2x4, B1 2x4,
+B1A 2x4`. То же есть для нескольких выбранных листов, для папки
+(`… in Folder`) и в меню takeoff в легенде листа. `Reset Sheet Legend Order`
+возвращает автоматический порядок.
+
 ## Настройки и границы правил
 
 `8 Settings` содержит редакторы шаблонов дерева и правил страниц. Описанные

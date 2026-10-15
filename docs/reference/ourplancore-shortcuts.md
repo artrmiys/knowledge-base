@@ -57,7 +57,9 @@ read-only проект остаётся ограничением и при на�
     | ++ctrl+o++ / ++ctrl+shift+o++ | Общий выбор проекта / выбор с недавними проектами |
     | ++ctrl+s++ | Save |
     | ++ctrl+shift+s++ | Save As с сохранением формата проекта |
-    | ++ctrl+m++ / ++ctrl+shift+m++ | Merge / Split сегментов |
+    | ++ctrl+m++ / ++ctrl+shift+m++ | Merge / Split сегментов; Split создаёт новый takeoff со своим цветом (2.2.33) |
+    | ++ctrl+shift+b++ | Break: выбранные Lines → отдельные сегменты (2.2.33) |
+    | ++ctrl+shift+v++ | Break H/V: сегменты → takeoff `- Horizontal` и `- Vertical` (2.2.33) |
     | ++ctrl+shift+p++ | Command Palette |
     | ++space++ | Старт/стоп `Record` |
     | ++t++ | Новый takeoff item |
