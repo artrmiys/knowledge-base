@@ -1,8 +1,8 @@
-# CLAUDE.md — Operating Manual for Estimating Knowledge Base
+# AGENTS.md — Operating Manual for Estimating Knowledge Base
 
-Этот файл — инструкция для любого агента (Claude Code или другого), который
-будет дорабатывать или поддерживать этот проект. Прочитай его в начале каждой
-сессии до того, как трогать `docs/`, `mkdocs.yml` или CSS.
+Этот файл — инструкция для любого агента (Claude Code, Codex или другого),
+который будет дорабатывать или поддерживать этот проект. Он уже в контексте на
+старте: Codex читает его сам, Claude получает через импорт в `CLAUDE.md`.
 
 ---
 
@@ -13,8 +13,8 @@ walls/framing/sheathing). Это **шпаргалка для конструкт�
 таблицы, и много схем/картинок.
 
 - **Стек:** [MkDocs](https://www.mkdocs.org/) + [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
-- **Деплой:** GitHub Pages (workflow в [.github/workflows/deploy.yml](.github/workflows/deploy.yml)) при каждом push в `main`.
-- **Прод-URL:** GitHub Pages project URL
+- **Деплой:** workflow в [.github/workflows/deploy.yml](.github/workflows/deploy.yml) настроен на push в `main` и ручной запуск; успешную публикацию проверять отдельно.
+- **Прод-URL:** https://artrmiys.github.io/knowledge-base/
 - **Репо:** repository URL
 - **Источник контента:** Obsidian-vault `C:\Users\User\Documents\0.Obsidian` + Tilda + Trello + локальные правки.
 
@@ -48,18 +48,29 @@ py -m venv .venv
 
 ```
 project-root/
-├── CLAUDE.md                  ← этот файл
+├── AGENTS.md                  ← этот файл, канон правил для Claude и Codex
+├── CLAUDE.md                  ← одна строка-импорт `@AGENTS.md`, не дополнять
+├── AGENT_NOTES.md             ← история решений и handoff (на старте не грузится, см. §12)
 ├── README.md                  ← короткое описание для людей
+├── CHANGELOG.md               ← журнал изменений сайта (коммиты `docs(changelog)`)
+├── AUDIT.md                   ← рабочий аудит контента/структуры
+├── DESIGN_SYSTEM.md           ← заметки по дизайн-системе (токены, OurCore-скин)
+├── .github/AGENTS.md          ← СТАРАЯ упрощённая копия этого файла (см. §13.6)
 ├── IMPORT_SOURCES.md          ← playbook по импорту из Trello/Confluence/Tilda
 ├── mkdocs.yml                 ← КОНФИГ САЙТА (тема, плагины, навигация)
 ├── .github/workflows/deploy.yml
+├── overrides/                 ← custom_dir темы Material
+│   └── partials/source.html   ← переопределённый partial (repo-ссылка в шапке)
 ├── tools/
 │   └── trello_json_to_markdown.py   ← конвертер Trello JSON → MD
 ├── docs/                      ← КОНТЕНТ САЙТА
-│   ├── index.md               ← главная (hero + grid cards + galery)
+│   ├── index.md               ← главная (hero + маршруты по задачам)
 │   ├── assets/
 │   │   ├── images/            ← все картинки и схемы (см. раздел 7)
-│   │   └── stylesheets/extra.css
+│   │   ├── js/zoom.js         ← клик-зум картинок (подключён в extra_javascript)
+│   │   └── stylesheets/
+│   │       ├── tokens.css     ← ИСТОЧНИК ПРАВДЫ для токенов (--ds-*, --md-*, шрифты)
+│   │       └── extra.css      ← компоненты (.kb-hero, .kb-gallery, .kb-split, ...)
 │   ├── start/                 ← Workflow, QA, takeoff tool, Client Rules, ...
 │   ├── work/                  ← Walls, Framing, Sheathing, SQFTs, Trims
 │   ├── work-types/            ← COM, EWP/Capital, Residential
@@ -68,7 +79,8 @@ project-root/
 └── .venv/                     ← venv (в .gitignore)
 ```
 
-**Никогда не коммить:** `site/`, `.venv/`, `mkdocs-serve*.log`, личные `.env`.
+**Никогда не коммить:** `site/`, `.venv/`, `mkdocs-serve*.log`, `_scratch_workbooks/`,
+`imports/`, личные `.env`, `twist-*`/`probe-twist-*` снапшоты. Полный список — в `.gitignore`.
 
 ---
 
@@ -80,8 +92,18 @@ project-root/
 
 1. **Главная** — `index.md`
 2. **Старт** — процесс, чек-листы, как пользоваться
-3. **Работа** — основное: типы работ, walls, framing, sheathing, SQFTs, trims
-4. **Справочник** — советы, hangers, formulas, sources
+3. **OurPlanCore** — семь маршрутов: старт, инструменты, проекты, имена, клавиши, проблемы, изменения
+4. **Работа** — основное: типы работ, walls, framing, sheathing, SQFTs, trims
+5. **Справочник** — советы, hangers, formulas, sources; подраздел «Редактору KB»
+
+Каноны программы и правила проверки версии перечислены в
+[maintenance](docs/start/maintenance.md). Текущий аудит и постраничная глубина
+проверки — [AUDIT.md](AUDIT.md) и [DOCUMENT_REGISTER.md](DOCUMENT_REGISTER.md).
+Описание OurPlanCore сверено с 2.2.7 Preview на 06.09.2026. При следующем релизе
+сверяй фактическое поведение и обновляй затронутые сценарии; дату нельзя менять
+без проверки. Сохраняй старые URL `reference/ourplanecore/` и
+`reference/job-creation-storage/`. Таблица клавиш имеет один канон:
+`reference/ourplancore-shortcuts.md`.
 
 ### Правила нейминга в `nav`
 
@@ -121,39 +143,38 @@ project-root/
 
 ### Темы и режимы
 
-- **Light + Dark** с авто-переключением и тоггл-кнопкой в шапке.
-- Зелёная палитра (primary `green`, accent `lime`).
-- Шрифты `Inter` (текст) + `JetBrains Mono` (код).
+- **Light + Dark** с авто-переключением и тоггл-кнопкой в шапке. Обе темы —
+  первоклассные (dark-first по духу дизайн-кода).
+- **OurCore-скин на структуре Design Code v0.2, но акцент — ЗЕЛЁНЫЙ** (по явному
+  выбору пользователя: «зелёный было круто»). Закон цвета: **green
+  `#1f9e38`(light)/`#2ad24b`(dark) = бренд/active/ссылка/selected/primary**;
+  тёмно-зелёный (`#2e7d32`/`#56e070`) = узкий brand-маркер (1.5-px полоска под
+  активной вкладкой, left-border активного пункта nav/TOC, маркеры списков,
+  tip-callout). Статусы ok/warn/err. От v0.2 сохранены: плотность, ink-поверхности
+  light+dark, callout-admonitions, скругления 6/8/12/16, нейтральная шапка.
+  Декоративные `kb-st--*`/`kb-mk--*` → green/warn. Источник правды —
+  `tokens.css` (`--ds-*` + Material `--md-*`), компоненты — `extra.css`. SVG-схемы
+  используют accent `#2e7d32`. **Зелёный — основной; синий как primary не
+  возвращать без явной просьбы.**
+- Шрифты `Inter` (текст) + `JetBrains Mono` (код/числа), грузятся `@import` в
+  `tokens.css`. Цифры — моно, tabular.
+- Логотип/favicon — KB-глиф `assets/images/brand/icon-kb-128.png`.
 - Иконка GitHub в шапке + edit-кнопка на каждой странице (`edit_uri`).
 
-### Навигация
+### Навигация, поиск, Markdown extensions
 
-- `navigation.tabs` + `navigation.tabs.sticky` — табы сверху.
-- `navigation.sections` — заголовки разделов в сайдбаре.
-- `navigation.indexes` — поддерживается section-index page.
-- `navigation.top` — кнопка «вверх».
-- `navigation.footer` — стрелки prev/next в подвале.
+Канон списка — `theme.features`, `plugins.search` и `markdown_extensions` в
+`mkdocs.yml`; здесь только то, чем пользоваться.
 
-### Поиск
-
-- `search.suggest` + `search.highlight` + `search.share`.
-- Языки индекса: `en` + `ru`.
-
-### Markdown extensions
-
-| Расширение | Использование |
-| --- | --- |
-| `admonition` | `!!! note "Заголовок"` блоки |
-| `pymdownx.details` | `??? tip` сворачиваемые блоки |
-| `pymdownx.superfences` | вложенные code/admonition |
-| `pymdownx.tabbed` | `=== "Tab 1"` табы |
-| `pymdownx.tasklist` | `- [x]` чеклисты |
-| `pymdownx.highlight` + `inlinehilite` | подсветка кода |
-| `pymdownx.keys` | `++ctrl+s++` → клавиши |
-| `pymdownx.caret/mark/tilde` | `^^ins^^`, `==mark==`, `~~strike~~` |
-| `pymdownx.emoji` (material) | `:material-wall:`, `:octicons-arrow-right-24:`, `:fontawesome-brands-github:` |
-| `attr_list` + `md_in_html` | классы и HTML-блоки внутри markdown |
-| `tables`, `def_list`, `footnotes`, `abbr` | базовые штуки |
+- Навигация: табы сверху (sticky), заголовки разделов и section-index в
+  сайдбаре, кнопка «вверх», стрелки prev/next в подвале.
+- Поиск: подсказки, подсветка, share; языки индекса `en` + `ru`.
+- В страницах работает: `!!! note "Заголовок"`, сворачиваемый `??? tip`,
+  табы `=== "Tab 1"`, чеклисты `- [x]`, клавиши `++ctrl+s++`, `^^ins^^`,
+  `==mark==`, `~~strike~~`, иконки `:material-wall:` /
+  `:octicons-arrow-right-24:` / `:fontawesome-brands-github:`, вложенные
+  code/admonition, подсветка кода, классы и HTML-блоки (`attr_list` +
+  `md_in_html`), таблицы, `def_list`, сноски, `abbr`.
 
 ---
 
@@ -179,50 +200,12 @@ docs/assets/images/
 - **Размер:** ужимай до &lt;500 KB. Большие диаграммы можно SVG.
 - **Не коммить:** скриншоты с email/UID/паролями/ценами.
 
-### Шаблоны (полный гайд — [docs/start/images-and-schemas.md](docs/start/images-and-schemas.md))
+### Шаблоны
 
-**Одна картинка с подписью:**
-
-```markdown
-<figure markdown>
-  ![Wall section](../assets/images/walls/exterior-2x6.png)
-  <figcaption>Exterior 2×6 wall — typical section</figcaption>
-</figure>
-```
-
-**Две колонки «текст + схема»:**
-
-```html
-<div class="kb-split" markdown>
-
-Текст / правила слева.
-
-<figure markdown>
-  ![alt](../assets/images/...)
-  <figcaption>Подпись.</figcaption>
-</figure>
-
-</div>
-```
-
-**Галерея:**
-
-```html
-<div class="kb-gallery">
-  <a class="kb-gallery__item" href="../assets/images/walls/exterior.png">
-    <img src="../assets/images/walls/exterior.png" alt="Exterior">
-    <div class="kb-gallery__caption">Exterior wall</div>
-  </a>
-</div>
-```
-
-**Большая схема на всю ширину:**
-
-```html
-<div class="kb-schema-full">
-  ![alt](../assets/images/...)
-</div>
-```
+Готовая разметка — в [docs/start/images-and-schemas.md](docs/start/images-and-schemas.md),
+копируй оттуда, не сочиняй заново: одна картинка с подписью (`<figure markdown>`
++ `<figcaption>`), две колонки «текст + схема» (`.kb-split`), галерея
+(`.kb-gallery`), большая схема на всю ширину (`.kb-schema-full`).
 
 ### Доступные CSS-классы (в [docs/assets/stylesheets/extra.css](docs/assets/stylesheets/extra.css))
 
@@ -271,6 +254,11 @@ Material's native `grid cards` (`<div class="grid cards" markdown>...`) тоже
   Twist/ChatGPT private links, SSH/IP/credentials. Полный список — в `IMPORT_SOURCES.md`.
 - Эмодзи в навигации.
 - Дубли страниц по одной теме.
+- Значки, которые выдают текст модели (просьба владельца 17.10.2026): длинное
+  и среднее тире `—` `–`, стрелки `→` `←` `⇒` `↔`, точка-разделитель `·`,
+  ёлочки `« »`. Вместо тире и стрелки ставь обычный дефис `-` или слово
+  («идёт в», «потом»), кавычки прямые. Касается страниц, nav, подписей и
+  текста внутри SVG. Проверка: `python tools/check_symbols.py`.
 
 ---
 
@@ -330,23 +318,13 @@ broken links и опечатки в путях.
 
 ---
 
-## 12. История важных решений
+## 12. История важных решений и handoff
 
-- **Дизайн откатывался дважды.** Прежний агент сделал тяжёлый синий overlay
-  с blur'ом, контент был нечитаем. Текущий стиль — чистый Material с
-  light/dark и аккуратным hero на главной. Не возвращай overlay-фон body
-  без явной просьбы.
-- **«Boss Feedback Rules» переименован в «Советы и важные вещи».** Файл
-  оставлен как `reference/boss-feedback-rules.md` для стабильности URL.
-  Всегда используй новое русское имя в навигации и текстах.
-- **Sheathing раньше был размазан по 4 папкам.** Сейчас собран в одну
-  секцию `Работа → Sheathing` в `mkdocs.yml`, но физические файлы остались
-  в исторических папках (`work/vertical/sheathing/`, `work/horizontal/...`).
-  При перемещении файлов будь осторожен — обновляй ссылки.
-- **`Duplicate of Gable`** оставлен на диске, но скрыт через `not_in_nav` —
-  это артефакт старого takeoff-дерева, выбрасывать пока не стали.
-- **Главная — карточная**, с галереей-заглушками под будущие схемы. Картинки
-  ожидаются на каждой предметной странице.
+Вынесены в [AGENT_NOTES.md](AGENT_NOTES.md). Открой его **перед** правкой
+дизайна, переименованием страниц, перемещением файлов и перед возобновлением
+импорта: там записано, что уже откатывали и почему (overlay-фон, имя «Советы и
+важные вещи», раскладка Sheathing по папкам, скрытый `Duplicate of Gable`,
+карточная главная).
 
 ---
 
@@ -363,6 +341,18 @@ broken links и опечатки в путях.
 5. **Иконки `:material-*:` требуют `pymdownx.emoji` с Material extension.**
    Уже подключено. Если случайно удалить из `mkdocs.yml`, иконки превратятся
    в текст.
+6. **Канон мануала — этот `AGENTS.md`.** `CLAUDE.md` содержит только импорт
+   `@AGENTS.md`. `.github/AGENTS.md` — старая упрощённая копия (в ней
+   устаревшая палитра `accent: lime` вместо green): не считай её авторитетной,
+   синхронизируй только по запросу.
+7. **`font: false` в теме.** Material НЕ грузит Google Fonts. Шрифты `Inter` +
+   `JetBrains Mono` приходят через `@import` в `tokens.css`. Не включай
+   `theme.font` обратно — будет дубль загрузки.
+8. **Клик-зум картинок** — кастомный `docs/assets/js/zoom.js`, подключён через
+   `extra_javascript`. Не плагин. Если зум сломался — смотри туда, не в mkdocs.yml.
+9. **`overrides/partials/source.html`** переопределяет partial Material
+   (`custom_dir: overrides`). После апгрейда `mkdocs-material` сверяй его с
+   апстримом — изменённый upstream-partial может разойтись.
 
 ---
 
@@ -379,11 +369,3 @@ broken links и опечатки в путях.
 
 Мелкие правки контента, добавление страниц, фиксы опечаток — можно делать
 без подтверждения, но **обязательно** с финальным `mkdocs build --strict`.
-
----
-
-## 15. Текущая сессия / handoff
-
-Активного live-import handoff в репозитории нет. Если импорт возобновляется,
-создай новую короткую рабочую заметку с источником, статусом и тем, что было
-перенесено в `docs/`.
