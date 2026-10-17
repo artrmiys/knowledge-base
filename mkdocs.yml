@@ -57,13 +57,29 @@ nav:
       - Правила клиентов и типов заказов: start/client-rules.md
 
   - OurPlanCore:
-      - Начало работы: reference/ourplancore-start.md
-      - Интерфейс и инструменты: reference/ourplanecore.md
-      - Проекты и сохранение: reference/job-creation-storage.md
-      - Имена takeoffs: reference/takeoff-naming.md
-      - Горячие клавиши: reference/ourplancore-shortcuts.md
-      - Решение проблем: reference/ourplancore-troubleshooting.md
-      - Что нового: reference/ourplancore-changelog.md
+      - OurPlanCore 3.0: reference/ourplanecore.md
+      - Каждый день:
+          - Начало работы: reference/ourplancore-start.md
+          - Проекты и сохранение: reference/job-creation-storage.md
+          - Листы (Pages): reference/ourplancore-pages.md
+          - Инструменты замера: reference/ourplancore-tools.md
+          - Дерево Takeoffs: reference/ourplancore-takeoffs.md
+          - Имена и автомаршрут: reference/takeoff-naming.md
+          - Экспорт в Excel: reference/ourplancore-excel.md
+          - PDF и сдача: reference/ourplancore-pdf.md
+      - Продвинутое:
+          - Маршрутизация и правила: reference/ourplancore-routing.md
+          - Merge, Split, Break: reference/ourplancore-edit-takeoffs.md
+          - Кропы, маска, наложения, легенда: reference/ourplancore-sheets-advanced.md
+          - Settings и модули: reference/ourplancore-settings.md
+          - ИИ и терминалы: reference/ourplancore-ai.md
+          - Workspace, Job Tracker, CLI: reference/ourplancore-workspace.md
+          - 3D и менеджеры: reference/ourplancore-3d.md
+      - Идеи и планы: reference/ourplancore-ideas.md
+      - Справка:
+          - Горячие клавиши: reference/ourplancore-shortcuts.md
+          - Решение проблем: reference/ourplancore-troubleshooting.md
+          - Что нового: reference/ourplancore-changelog.md
 
   - Работа:
       - Типы работ:
