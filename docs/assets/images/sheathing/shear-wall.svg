@@ -5,8 +5,8 @@
     <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Shear wall — обшивка по structural schedule</text>
-  <text class="s" x="32" y="62">Тип/толщина/гвоздёвка по shear wall schedule. Holdowns + A35 — частый пропуск.</text>
+  <text class="t" x="32" y="40">Shear wall - обшивка по structural schedule</text>
+  <text class="s" x="32" y="62">Тип/толщина/гвоздёвка по shear wall schedule. Holdowns + A35 - частый пропуск.</text>
   <!-- sheathing panel -->
   <rect x="150" y="100" width="300" height="160" fill="url(#o)" stroke="#3a3a3a" stroke-width="1.8"/>
   <!-- nailing edge dots -->

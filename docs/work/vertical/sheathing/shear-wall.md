@@ -1,12 +1,12 @@
 # Shear Wall
 
-**Shear wall** — стена, воспринимающая боковые (ветер/сейсмика) нагрузки через
+**Shear wall** - стена, воспринимающая боковые (ветер/сейсмика) нагрузки через
 структурную обшивку + holdowns/anchors. Обшивка считается строго по structural
 shear wall schedule (тип, толщина, гвоздёвка), не по Arch.
 
 <figure markdown>
   ![Shear wall sheathing, nailing and holdown](../../../assets/images/sheathing/shear-wall.svg)
-  <figcaption>Обшивка + edge nailing по schedule; holdowns и A35 — частый пропуск.</figcaption>
+  <figcaption>Обшивка + edge nailing по schedule; holdowns и A35 - частый пропуск.</figcaption>
 </figure>
 
 ## Что считать
@@ -29,4 +29,4 @@ shear wall schedule (тип, толщина, гвоздёвка), не по Arch
 
 ## See also
 
-- [Wall Sheathing](wall-sheathing.md) · [Hardware catalog](../../../reference/hardware-catalog.md) (holdowns/A35) · [Demising Walls](../walls/demising.md)
+- [Wall Sheathing](wall-sheathing.md) , [Hardware catalog](../../../reference/hardware-catalog.md) (holdowns/A35) , [Demising Walls](../walls/demising.md)

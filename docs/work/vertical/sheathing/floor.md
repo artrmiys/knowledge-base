@@ -1,6 +1,6 @@
 # Floor-height Sheathing
 
-**Floor-height sheathing** — полоса наружной обшивки на высоте перекрытия (band
+**Floor-height sheathing** - полоса наружной обшивки на высоте перекрытия (band
 между этажами), плюс floor underlayment по сборке. Считается по площади/полосе.
 
 ## Что считать

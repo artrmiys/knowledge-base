@@ -1,11 +1,11 @@
 # Shaft Walls
 
-**Shaft wall** — это стена шахты, ограждение **вертикальных шахт** в здании. На чертежах под `shaft wall` обычно понимают:
+**Shaft wall** - это стена шахты, ограждение **вертикальных шахт** в здании. На чертежах под `shaft wall` обычно понимают:
 
-- **elevator shaft** — шахты лифтов;
-- **vent shaft** — вентиляционные каналы;
-- **trash chute** — мусоропроводы;
-- **mechanical/communications shafts** — pipes, cables, ducts.
+- **elevator shaft** - шахты лифтов;
+- **vent shaft** - вентиляционные каналы;
+- **trash chute** - мусоропроводы;
+- **mechanical/communications shafts** - pipes, cables, ducts.
 
 Shaft wall почти всегда fire-rated. На takeoff/DFL обычно встречаются два рабочих типа:
 `2-1/2" CH + J-channel` или `2" H + C-channel`. Размер и тип всегда бери из wall type/detail.
@@ -51,7 +51,7 @@ DFL rows:
 ### Type 2: 2" H + C-channel
 
 Обычно для H-channel assembly (area separation / party fire wall), где detail требует
-H-channels и perimeter C-channel. Панели здесь идут **в два слоя** 1" liner —
+H-channels и perimeter C-channel. Панели здесь идут **в два слоя** 1" liner -
 поэтому в формуле panels стоит множитель `* 2`:
 
 | Item | Typical |
@@ -64,17 +64,17 @@ H-channels и perimeter C-channel. Панели здесь идут **в два 
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../../../assets/images/walls/shaft-h-stud.png">
     <img src="../../../../assets/images/walls/shaft-h-stud.png" alt="2 inch H-stud profile with dimensions" loading="lazy">
-    <div class="kb-gallery__caption">2" H-stud (2" × 1-1/2") — вертикальный: 1" панели входят в пазы с двух сторон</div>
+    <div class="kb-gallery__caption">2" H-stud (2" × 1-1/2") - вертикальный: 1" панели входят в пазы с двух сторон</div>
   </a>
   <a class="kb-gallery__item" href="../../../../assets/images/walls/shaft-c-runner.png">
     <img src="../../../../assets/images/walls/shaft-c-runner.png" alt="2 inch C-runner profile with dimensions" loading="lazy">
-    <div class="kb-gallery__caption">2" C-runner / C-channel (2-1/8" × 1") — perimeter: top, bottom, end cap</div>
+    <div class="kb-gallery__caption">2" C-runner / C-channel (2-1/8" × 1") - perimeter: top, bottom, end cap</div>
   </a>
 </div>
 
 <figure markdown>
   ![2 inch H-stud and C-runner shaft wall assembly with 1 inch shaftliner panels](../../../assets/images/walls/shaft-h-c-assembly.jpg)
-  <figcaption>Сборка Type 2: панели <strong>1" × 24" shaftliner</strong> вставляются между <strong>2" H-studs</strong>, по периметру (top, bottom, end cap) — <strong>2" C-runner</strong>. Источник: PABCO Gypsum, H-Stud ASW.</figcaption>
+  <figcaption>Сборка Type 2: панели <strong>1" × 24" shaftliner</strong> вставляются между <strong>2" H-studs</strong>, по периметру (top, bottom, end cap) - <strong>2" C-runner</strong>. Источник: PABCO Gypsum, H-Stud ASW.</figcaption>
 </figure>
 
 DFL rows:
@@ -91,16 +91,16 @@ overall shaft-wall LFT, horizontal run LFT, or perimeter LFT.
 
 <figure markdown>
   ![1 inch gypsum shaftliner panel](../../../assets/images/confluence/confluence-131.png)
-  <figcaption><strong>1" shaftliner</strong> — одна и та же гипсовая панель-вкладыш для обоих типов: в Type 1 — один слой между CH-studs, в Type 2 — два слоя между H-studs. Отдельная строка.</figcaption>
+  <figcaption><strong>1" shaftliner</strong> - одна и та же гипсовая панель-вкладыш для обоих типов: в Type 1 - один слой между CH-studs, в Type 2 - два слоя между H-studs. Отдельная строка.</figcaption>
 </figure>
 
 !!! note "Формулы shaft wall"
     CH-channels, J-channels и liner-панели считаются по формулам в
-    [Формулы → Shaft Walls](../../../reference/formulas.md#shaft-walls).
+    [Формулы - Shaft Walls](../../../reference/formulas.md#shaft-walls).
 
 ## Проверить
 
-- Chute Shaft wall A201/A806, wall type 7A — recurring miss.
+- Chute Shaft wall A201/A806, wall type 7A - recurring miss.
 - DHU/DGU hanger conditions относятся сюда, когда joists hang over the firewall.
 - Shaft hangers помечай отдельно by floor для review.
 - Typical shaft details сами по себе недостаточны; найди реальный shaft location
@@ -112,7 +112,7 @@ overall shaft-wall LFT, horizontal run LFT, or perimeter LFT.
 
 ## See also
 
-- [Формулы → Shaft Walls](../../../reference/formulas.md#shaft-walls) · [Demising Walls](demising.md) · [Hangers](../../../reference/hangers.md)
+- [Формулы - Shaft Walls](../../../reference/formulas.md#shaft-walls) , [Demising Walls](demising.md) , [Hangers](../../../reference/hangers.md)
 
 <!-- confluence-gallery:start -->
 ## Ещё примеры (shaft / fire wall)

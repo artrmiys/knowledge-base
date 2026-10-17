@@ -20,7 +20,7 @@
     <text x="287" y="119" font-size="16">Save</text>
     <text x="579" y="119" font-size="14">Copy</text>
     <rect x="30" y="220" width="840" height="83" rx="8" fill="#fff4dc" stroke="#d6ae5c"/>
-    <text x="50" y="252" font-size="18" font-weight="600">Если Save не завершился — сохрани local recovery</text>
+    <text x="50" y="252" font-size="18" font-weight="600">Если Save не завершился - сохрани local recovery</text>
     <text x="50" y="281" font-size="16">В ней могут быть изменения, которых ещё нет в файле .ourplan.</text>
   </g>
 </svg>

@@ -1,11 +1,11 @@
 # Corners
 
-**Corner** — сборка стоек на стыке двух стен (L-corner, 2- или 3-stud corner,
-California corner). На stick-каркасе считается отдельно; в panels — уже включён.
+**Corner** - сборка стоек на стыке двух стен (L-corner, 2- или 3-stud corner,
+California corner). На stick-каркасе считается отдельно; в panels - уже включён.
 
 <figure markdown>
   ![Corner stud assembly plan view](../../../assets/images/framing/corners.svg)
-  <figcaption>Сборка стоек на стыке стен (план). Stick — отдельная строка по этажам.</figcaption>
+  <figcaption>Сборка стоек на стыке стен (план). Stick - отдельная строка по этажам.</figcaption>
 </figure>
 
 ## Что считать
@@ -15,9 +15,9 @@ California corner). На stick-каркасе считается отдельн�
 
 ## Критические правила
 
-- **Wall stick** — внешние углы **необходимо подсчитать** отдельной позицией.
-- **Wall panels** — углы **НЕ считаем** (они уже входят в panel).
-- Считай углы по этажам — corners by floor должны выдаваться отдельной строкой.
+- **Wall stick** - внешние углы **необходимо подсчитать** отдельной позицией.
+- **Wall panels** - углы **НЕ считаем** (они уже входят в panel).
+- Считай углы по этажам - corners by floor должны выдаваться отдельной строкой.
 
 ## Проверить
 
@@ -28,4 +28,4 @@ California corner). На stick-каркасе считается отдельн�
 
 ## See also
 
-- [Exterior Walls](exterior.md) · [Sill Plates](sill-plates.md) · [Hardware catalog](../../../reference/hardware-catalog.md)
+- [Exterior Walls](exterior.md) , [Sill Plates](sill-plates.md) , [Hardware catalog](../../../reference/hardware-catalog.md)

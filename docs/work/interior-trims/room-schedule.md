@@ -2,7 +2,7 @@
 
 <figure markdown>
   ![Room finish schedule columns](../../assets/images/trims/room-schedule.svg)
-  <figcaption>Wood base только при `Wd`; tile base исключай. Garage — без base/crown.</figcaption>
+  <figcaption>Wood base только при `Wd`; tile base исключай. Garage - без base/crown.</figcaption>
 </figure>
 
 ## Что читать
@@ -28,4 +28,4 @@
 
 ## See also
 
-- [Base](base.md) · [Casing](casing.md) · [Crown](crown.md) · [Interior Trims overview](overview.md)
+- [Base](base.md) , [Casing](casing.md) , [Crown](crown.md) , [Interior Trims overview](overview.md)

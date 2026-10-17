@@ -1,12 +1,12 @@
 # Gable Sheathing
 
-**Gable** — треугольный участок стены под двускатной крышей. Здесь считается
-обшивка этого треугольника (OSB/plywood) в SQFT — отдельно от truss heel и box
+**Gable** - треугольный участок стены под двускатной крышей. Здесь считается
+обшивка этого треугольника (OSB/plywood) в SQFT - отдельно от truss heel и box
 sheathing.
 
 <figure markdown>
   ![Gable triangle sheathing](../../../assets/images/sheathing/gable-sheathing.svg)
-  <figcaption>SQFT треугольника фронтона — от верха верхней доски стены. Не truss heel / box.</figcaption>
+  <figcaption>SQFT треугольника фронтона - от верха верхней доски стены. Не truss heel / box.</figcaption>
 </figure>
 
 ## Что считать
@@ -26,4 +26,4 @@ sheathing.
 
 ## See also
 
-- [Gable Wall](../walls/gable.md) · [Truss Heel](truss-heel.md) · [Box Sheathing](box-sheathing.md) · [Wall Sheathing](wall-sheathing.md)
+- [Gable Wall](../walls/gable.md) , [Truss Heel](truss-heel.md) , [Box Sheathing](box-sheathing.md) , [Wall Sheathing](wall-sheathing.md)

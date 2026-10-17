@@ -1,6 +1,6 @@
 # Eve / Eave
 
-`Eve` / `Eave` — нижний горизонтальный край крыши вдоль стены. В takeoff это не
+`Eve` / `Eave` - нижний горизонтальный край крыши вдоль стены. В takeoff это не
 один item: там могут быть framing, soffit material, fascia/subfascia, trims,
 vented/vinyl soffit и отдельные roof-edge details.
 

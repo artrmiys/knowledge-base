@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
-  <title id="title">Eave vs rake vs return — roof edge map</title>
+  <title id="title">Eave vs rake vs return - roof edge map</title>
   <desc id="desc">Oblique view of a gable roof showing the eave (horizontal bottom edge), the rake (sloped gable edge) and the return (boxed corner) as separate takeoff buckets.</desc>
   <defs>
     <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
@@ -15,8 +15,8 @@
   </defs>
 
   <rect width="1280" height="760" fill="#ffffff"/>
-  <text class="ttl" x="56" y="74">Eave / Rake / Return — три разных bucket</text>
-  <text class="sub" x="56" y="108">Eave = горизонтальный низ свеса · Rake = наклонная кромка фронтона · Return = угловая коробка.</text>
+  <text class="ttl" x="56" y="74">Eave / Rake / Return - три разных bucket</text>
+  <text class="sub" x="56" y="108">Eave = горизонтальный низ свеса , Rake = наклонная кромка фронтона , Return = угловая коробка.</text>
 
   <!-- side wall (parallelogram) -->
   <polygon points="540,620 540,400 900,250 900,470" fill="#f3f6f9" stroke="#3a3a3a" stroke-width="2"/>
@@ -39,15 +39,15 @@
   <line class="lead" x1="365" y1="362" x2="250" y2="300"/>
   <rect x="60" y="262" width="24" height="12" fill="#c0392b"/>
   <text class="lab" x="94" y="276">Rake</text>
-  <text class="note" x="94" y="300">наклонная кромка на gable — своя LFT-строка</text>
+  <text class="note" x="94" y="300">наклонная кромка на gable - своя LFT-строка</text>
 
   <line class="lead" x1="760" y1="320" x2="900" y2="360"/>
   <rect x="980" y="350" width="24" height="12" fill="#2e7d32"/>
   <text class="lab" x="1014" y="364">Eave</text>
-  <text class="note" x="900" y="392">горизонтальный низ свеса — LFT + soffit SQFT</text>
+  <text class="note" x="900" y="392">горизонтальный низ свеса - LFT + soffit SQFT</text>
 
   <line class="lead" x1="561" y1="411" x2="470" y2="500"/>
   <rect x="300" y="520" width="24" height="14" fill="#fff3c4" stroke="#c78b00" stroke-width="2"/>
   <text class="lab" x="334" y="534">Return</text>
-  <text class="note" x="334" y="558">коробка, где eave заворачивается к rake — отдельная строка</text>
+  <text class="note" x="334" y="558">коробка, где eave заворачивается к rake - отдельная строка</text>
 </svg>

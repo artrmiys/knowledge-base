@@ -1,22 +1,22 @@
 # Sill Plates
 
-**Sill Plate** — нижняя горизонтальная доска, которая укладывается на бетонный фундамент или цоколь, и к которой крепится каркас стены. По сути это переходный элемент между бетоном и деревянной конструкцией.
+**Sill Plate** - нижняя горизонтальная доска, которая укладывается на бетонный фундамент или цоколь, и к которой крепится каркас стены. По сути это переходный элемент между бетоном и деревянной конструкцией.
 
 <figure markdown>
   ![Sill plate assembly cross-section](../../../assets/images/framing/sill-plate-assembly.svg)
-  <figcaption>Стек на бетоне: foundation → sill sealer → termite shield → P.T. sill plate (+ anchor/washer) → btm plate → stud.</figcaption>
+  <figcaption>Стек на бетоне: foundation - sill sealer - termite shield - P.T. sill plate (+ anchor/washer) - btm plate - stud.</figcaption>
 </figure>
 
-- Sill Plate бывает **одинарной, двойной и даже тройной** — смотри детали.
-- Типичный материал — **`2x6 P.T.`**, но возможен любой размер (по детали).
+- Sill Plate бывает **одинарной, двойной и даже тройной** - смотри детали.
+- Типичный материал - **`2x6 P.T.`**, но возможен любой размер (по детали).
 - **Sill Plate ≠ Btm Plate.** Sill Plate лежит **под перекрытием** (на бетоне), а **Btm Plate стены находится на перекрытии** (выше Sill Plate). Обе доски являются частью стены и проходят отдельными строками.
-- Над Sill Plate может идти **Dbl Btm Plate (2) — `2x6 P.T.`** (двойная нижняя доска стены).
+- Над Sill Plate может идти **Dbl Btm Plate (2) - `2x6 P.T.`** (двойная нижняя доска стены).
 
 <div class="kb-split" markdown>
 
-На реальном узле порядок снизу вверх читается так: **Foundation Wall → Sill Plate
-(на бетоне) → Anchor Bolt сквозь plate → Bottom Plate стены → стойка**. Sill
-Plate — самая нижняя деревянная доска, она же контактирует с бетоном, поэтому
+На реальном узле порядок снизу вверх читается так: **Foundation Wall - Sill Plate
+(на бетоне) - Anchor Bolt сквозь plate - Bottom Plate стены - стойка**. Sill
+Plate - самая нижняя деревянная доска, она же контактирует с бетоном, поэтому
 **P.T.**
 
 <figure markdown>
@@ -28,15 +28,15 @@ Plate — самая нижняя деревянная доска, она же �
 
 ## Что считать вместе с Sill Plate { #with-sill-plate }
 
-При посадке стены на бетон (foundation / slab) обязательно проверь и добавь в takeoff три позиции — **на плане их не показывают**:
+При посадке стены на бетон (foundation / slab) обязательно проверь и добавь в takeoff три позиции - **на плане их не показывают**:
 
 <div class="kb-split" markdown>
 
-- **Sill Sealer** — поролоновая прокладка между бетоном и Sill Plate. Ширина почти
+- **Sill Sealer** - поролоновая прокладка между бетоном и Sill Plate. Ширина почти
   всегда **`6"`** (реже `8"` / `4"`).
-- **Termite Shield** — металлическая защита от термитов, обычно **`Copper`**.
-  Укладывается с **нахлёстом ~1 ft** на стыках, вдоль края — bead of caulk.
-- **Washers** — шайбы под анкерные болты, типично **`3x3 Square`**.
+- **Termite Shield** - металлическая защита от термитов, обычно **`Copper`**.
+  Укладывается с **нахлёстом ~1 ft** на стыках, вдоль края - bead of caulk.
+- **Washers** - шайбы под анкерные болты, типично **`3x3 Square`**.
 
 <figure markdown>
   ![Termite shield overlap, caulk and anchor bolt](../../../assets/images/confluence/confluence-156.png)
@@ -45,7 +45,7 @@ Plate — самая нижняя деревянная доска, она же �
 
 </div>
 
-Termite Shield по факту — это сплошной металлический лист поверх стены/sill,
+Termite Shield по факту - это сплошной металлический лист поверх стены/sill,
 из-под которого выходят анкеры:
 
 <figure markdown>
@@ -53,11 +53,11 @@ Termite Shield по факту — это сплошной металличес�
   <figcaption>Termite shield в натуре: металл по верху фундамента, анкер сквозь него.</figcaption>
 </figure>
 
-Подробнее по болтам — [Anchor Bolts](../../deck/anchor-bolts.md).
+Подробнее по болтам - [Anchor Bolts](../../deck/anchor-bolts.md).
 
 !!! note "Не забыть"
-    Sill Sealer и Termite Shield на бетонной посадке нужны почти всегда — если их
-    нет в takeoff, это почти наверняка пропуск. Типовые размеры/количества —
+    Sill Sealer и Termite Shield на бетонной посадке нужны почти всегда - если их
+    нет в takeoff, это почти наверняка пропуск. Типовые размеры/количества -
     [Quantity benchmarks](../../../reference/quantity-benchmarks.md).
 
 ## Что считать
@@ -83,12 +83,12 @@ Termite Shield по факту — это сплошной металличес�
 
 ## See also
 
-- [Anchor Bolts](../../deck/anchor-bolts.md) · [Exterior Walls](exterior.md) · [Basement SQFT](../../sqfts/basement.md) · [Corners](corners.md)
+- [Anchor Bolts](../../deck/anchor-bolts.md) , [Exterior Walls](exterior.md) , [Basement SQFT](../../sqfts/basement.md) , [Corners](corners.md)
 
 <!-- confluence-gallery:start -->
 ## Ещё примеры (Sill Plates)
 
-Дополнительные реальные узлы Sill Plate / anchor / termite — открой нужную
+Дополнительные реальные узлы Sill Plate / anchor / termite - открой нужную
 карточку и сверь похожий condition на плане/детали.
 
 ??? info "Источник картинок"

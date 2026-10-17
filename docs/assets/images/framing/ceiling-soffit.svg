@@ -5,8 +5,8 @@
     <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Ceiling / soffit framing — каркас (RCP)</text>
-  <text class="s" x="32" y="62">Dropped soffit: 2x frame по периметру короба. Источник — RCP, не structural план.</text>
+  <text class="t" x="32" y="40">Ceiling / soffit framing - каркас (RCP)</text>
+  <text class="s" x="32" y="62">Dropped soffit: 2x frame по периметру короба. Источник - RCP, не structural план.</text>
   <!-- structure above -->
   <rect x="100" y="90" width="440" height="16" fill="#7c8a96"/>
   <text class="s" x="100" y="84">структура выше</text>

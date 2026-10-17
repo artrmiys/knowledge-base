@@ -8,7 +8,7 @@ hide:
 <p class="kb-hero__eyebrow">Estimating wiki</p>
 <h1 class="kb-hero__title">База знаний по takeoff и estimating</h1>
 <p class="kb-hero__lede">
-Workflow, чек-листы, правила COM/EWP, советы из реальных правок и таблицы по Walls, Framing, Sheathing, Hangers — в одном месте.
+Workflow, чек-листы, правила COM/EWP, советы из реальных правок и таблицы по Walls, Framing, Sheathing, Hangers - в одном месте.
 </p>
 <div class="kb-hero__actions" markdown>
 [Начать работу :octicons-arrow-right-24:](start/how-to-use.md){ .kb-hero__btn .kb-hero__btn--primary }
@@ -26,7 +26,7 @@ Workflow, чек-листы, правила COM/EWP, советы из реал�
 
     ---
 
-    Полный путь: подготовить PDF → разметить takeoff → экспорт в Excel → проверка перед отправкой.
+    Полный путь: подготовить PDF - разметить takeoff - экспорт в Excel - проверка перед отправкой.
 
     [:octicons-arrow-right-24: Открыть](start/workflow.md)
 
@@ -50,7 +50,7 @@ Workflow, чек-листы, правила COM/EWP, советы из реал�
 
     ---
 
-    Кто включает метал, кого считать «by others», особенности WM / Timberline / EBS / Probuild.
+    Кто включает метал, кого считать "by others", особенности WM / Timberline / EBS / Probuild.
 
     [:octicons-arrow-right-24: Открыть](start/client-rules.md)
 
@@ -142,7 +142,7 @@ Workflow, чек-листы, правила COM/EWP, советы из реал�
 
     ---
 
-    ITS / HU / HIT / WP / MIT / GLTV — таблицы выбора по joist и beam.
+    ITS / HU / HIT / WP / MIT / GLTV - таблицы выбора по joist и beam.
 
     [:octicons-arrow-right-24: Hangers](reference/hangers.md)
 
@@ -150,7 +150,7 @@ Workflow, чек-листы, правила COM/EWP, советы из реал�
 
     ---
 
-    Waste-факторы, формулы spacing, повторные коэффициенты — что не множить дважды.
+    Waste-факторы, формулы spacing, повторные коэффициенты - что не множить дважды.
 
     [:octicons-arrow-right-24: Формулы](reference/formulas.md)
 
@@ -164,7 +164,7 @@ Workflow, чек-листы, правила COM/EWP, советы из реал�
 
 </div>
 
-## OurPlanCore — работа в программе { .kb-section-title .kb-st--green }
+## OurPlanCore - работа в программе { .kb-section-title .kb-st--green }
 
 Инструкции сверены с **2.2.7 Preview, 6 сентября 2026**. Выбери действие:
 
@@ -221,8 +221,8 @@ Workflow, чек-листы, правила COM/EWP, советы из реал�
 </div>
 
 !!! tip "Как добавлять картинки и схемы"
-    Полный гайд с шаблонами — [Картинки и схемы](start/images-and-schemas.md):
-    `<figure>` с подписью, две колонки «текст + схема», галереи, schema на всю
+    Полный гайд с шаблонами - [Картинки и схемы](start/images-and-schemas.md):
+    `<figure>` с подписью, две колонки "текст + схема", галереи, schema на всю
     ширину, картинка внутри admonition.
 
 ---

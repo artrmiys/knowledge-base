@@ -5,7 +5,7 @@ watertable, head crowns, flashing, shutters, louvers, brackets.
 
 ## Ext. Casing { .kb-section-title .kb-st--green }
 
-Casing — это обкладка вокруг окон и дверей снаружи. Считается **LFT**.
+Casing - это обкладка вокруг окон и дверей снаружи. Считается **LFT**.
 Часто разбивается по позициям, потому что профиль разный:
 
 | Позиция | Типовой size | Unit | Заметка |
@@ -19,21 +19,21 @@ Casing — это обкладка вокруг окон и дверей сна�
 | `Casing garage doors (sides)` | `5/4x4` / `5/4x8` | `LFT` | garage openings шире |
 | `Head casing garage dr` | `5/4x12` / `5/4 Panel` | `LFT` / `SQ FT` | большой head |
 | `Ext. Casing 4-sides` | `3-1/2" Vinyl casing` | `LFT` | при vinyl siding |
-| `Ext. Casing` | `Vinyl J-channel` | `LFT` | vinyl siding → casing = J-channel |
+| `Ext. Casing` | `Vinyl J-channel` | `LFT` | vinyl siding - casing = J-channel |
 | `Ext. Casing` | `1x4 azek trim` | `LFT` | при Azek/PVC спецификации |
 
 !!! tip "`4-sides` и `3-sides`"
     `4-sides` = casing по всему периметру opening. `3-sides` = без apron/sill
-    снизу (низ закрыт sill или siding). Держи это в Label — это меняет LFT.
+    снизу (низ закрыт sill или siding). Держи это в Label - это меняет LFT.
 
 !!! warning "Vinyl siding"
     При vinyl siding casing часто = `Vinyl J-channel` или `3-1/2" Vinyl
-    casing`. Не добавляй сверху ещё `5/4` wood casing. Подробно —
+    casing`. Не добавляй сверху ещё `5/4` wood casing. Подробно -
     [Exclusions и J-Channel](exclusions.md).
 
 ## Head crowns / caps / flashing { .kb-section-title .kb-st--cyan }
 
-Над head casing часто идёт «слойка»: crown → cap → flashing.
+Над head casing часто идёт "слойка": crown - cap - flashing.
 
 | Label | Типовой size | Unit |
 | --- | --- | --- |
@@ -44,9 +44,9 @@ Casing — это обкладка вокруг окон и дверей сна�
 | `Drip cap` | `1" Drip cap` | `LFT` |
 | `Window Sills` | `1" Sill` / `2" Sill` / `1-1/2" Sill` | `LFT` |
 
-- Crown без cap и без flashing — редкость; если показан crown, проверь, нет ли
+- Crown без cap и без flashing - редкость; если показан crown, проверь, нет ли
   ещё `1x4` cap и `drip edge` сверху.
-- `verify size` / `scaled` оставляй в note — crown profile часто не указан.
+- `verify size` / `scaled` оставляй в note - crown profile часто не указан.
 
 ## Corner boards { .kb-section-title .kb-st--magenta }
 
@@ -56,14 +56,14 @@ Corner board закрывает наружный (иногда внутренн�
 siding. Считается **LFT** по высоте угла (× кол-во углов).
 
 - Wood/PVC: `5/4x6`, `5/4x8` (на bays часто `5/4x8`).
-- Vinyl: `4" Vinyl corner` — отдельный product, не путать с `5/4`.
-- Может варьироваться `5/4x4`…`5/4x6` — если не указано, бери крупнее и пиши
+- Vinyl: `4" Vinyl corner` - отдельный product, не путать с `5/4`.
+- Может варьироваться `5/4x4`…`5/4x6` - если не указано, бери крупнее и пиши
   `verify for 5/4x4`.
 - На углах bays считается отдельной строкой (`CornerBoards at Bays`).
 
 <figure markdown>
   ![Corner board over siding](../../assets/images/trims/ext-cornerboard-vinyl.png)
-  <figcaption>Corner board заводит cut edge siding — считается LFT по высоте.</figcaption>
+  <figcaption>Corner board заводит cut edge siding - считается LFT по высоте.</figcaption>
 </figure>
 
 </div>
@@ -72,7 +72,7 @@ siding. Считается **LFT** по высоте угла (× кол-во у
   <summary>Скрыть corner board детали</summary>
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Corner board — общий вид</div>
+      <div class="kb-figure-row__title">Corner board - общий вид</div>
       <div class="kb-figure-row__rule">Outside corner, wood/PVC <code>5/4x6</code>.</div>
       <div class="kb-figure-row__note">LFT = высота угла × количество углов этого типа.</div>
     </figcaption>
@@ -82,7 +82,7 @@ siding. Считается **LFT** по высоте угла (× кол-во у
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">Build-up под corner</div>
       <div class="kb-figure-row__rule">Под corner board нужен solid nailing base.</div>
-      <div class="kb-figure-row__note">Если показан build-up — это может быть отдельный blocking item.</div>
+      <div class="kb-figure-row__note">Если показан build-up - это может быть отдельный blocking item.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../assets/images/trims/ext-cornerboard-nailing.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/ext-cornerboard-nailing.png" alt="Corner build-up" loading="lazy"></a>
   </figure>
@@ -97,14 +97,14 @@ siding. Считается **LFT** по высоте угла (× кол-во у
 | `Band Trims` / `Band trim front 2nd floor` | `5/4x10` / `5/4x6` | `LFT` | межэтажный пояс |
 | `Watertable Trim` | `5/4x10` / `5/4x12` | `LFT` | по низу стены |
 | `Flashing at band` / `Flashing` | `drip edge` | `LFT` | поверх горизонтали |
-| `Frieze` (в trim-блоке) | `5/4x6` | `LFT` | под soffit — см. Soffit & Fascia |
+| `Frieze` (в trim-блоке) | `5/4x6` | `LFT` | под soffit - см. Soffit & Fascia |
 
-- Любой горизонтальный wood/PVC пояс почти всегда требует `drip edge` сверху —
+- Любой горизонтальный wood/PVC пояс почти всегда требует `drip edge` сверху -
   проверь, не пропущен ли он.
 
 ## Shutters / Louvers / Brackets { .kb-section-title .kb-st--cyan }
 
-Counted items — `pairs` / `pcs` / `units`, не LFT:
+Counted items - `pairs` / `pcs` / `units`, не LFT:
 
 | Label | Пример | Unit |
 | --- | --- | --- |
@@ -114,8 +114,8 @@ Counted items — `pairs` / `pcs` / `units`, не LFT:
 | `Brackets` | `5-1/2"x7"x?` | `pcs` |
 
 - Shutters считаются **парами** на окно (две створки = 1 pair).
-- Размер shutter держи в Label (`20"x60"`) — он задаёт product.
-- `?` в размере (`5-1/2"x7"x?`) — оставляй, это явный verify-flag.
+- Размер shutter держи в Label (`20"x60"`) - он задаёт product.
+- `?` в размере (`5-1/2"x7"x?`) - оставляй, это явный verify-flag.
 
 ## Чек перед выводом { .kb-section-title .kb-st--magenta }
 

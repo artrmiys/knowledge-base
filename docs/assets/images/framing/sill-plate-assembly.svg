@@ -12,8 +12,8 @@
     </style>
   </defs>
   <rect width="760" height="360" fill="#fff"/>
-  <text class="ttl" x="32" y="42">Sill plate — переход бетон → каркас</text>
-  <text class="sub" x="32" y="64">На бетоне почти всегда нужны Sill Sealer + Termite Shield + Washers — на плане их нет.</text>
+  <text class="ttl" x="32" y="42">Sill plate - переход бетон - каркас</text>
+  <text class="sub" x="32" y="64">На бетоне почти всегда нужны Sill Sealer + Termite Shield + Washers - на плане их нет.</text>
 
   <!-- foundation -->
   <rect x="150" y="250" width="230" height="80" fill="url(#c)" stroke="#3a3a3a" stroke-width="1.6"/>
@@ -35,7 +35,7 @@
   <!-- leaders right -->
   <line class="lead" x1="262" y1="120" x2="470" y2="110"/><text class="lab" x="478" y="108">Stud</text>
   <line class="lead" x1="320" y1="194" x2="470" y2="150"/><text class="lab" x="478" y="148">Btm Plate (стена)</text><text class="note" x="478" y="165">лежит на перекрытии, выше sill</text>
-  <line class="lead" x1="320" y1="216" x2="470" y2="196"/><text class="lab" x="478" y="194">Sill Plate — 2x6 P.T.</text><text class="note" x="478" y="211">на бетоне; может быть (2)/(3)</text>
+  <line class="lead" x1="320" y1="216" x2="470" y2="196"/><text class="lab" x="478" y="194">Sill Plate - 2x6 P.T.</text><text class="note" x="478" y="211">на бетоне; может быть (2)/(3)</text>
   <line class="lead" x1="215" y1="195" x2="470" y2="240"/><text class="lab" x="478" y="238">Anchor bolt + Washer 3x3</text>
   <line class="lead" x1="300" y1="244" x2="470" y2="278"/><text class="lab" x="478" y="276">Sill Sealer (foam, 6")</text>
   <line class="lead" x1="250" y1="233" x2="470" y2="312"/><text class="lab" x="478" y="310">Termite Shield (copper, overlap)</text>

@@ -5,11 +5,11 @@
 
 ## Где обновлять описание программы
 
-- Вход и сценарии — [OurPlanCore: начало работы](../reference/ourplancore-start.md).
-- Возможности — [интерфейс и инструменты](../reference/ourplanecore.md).
-- Хранение — [проекты и сохранение](../reference/job-creation-storage.md).
-- Клавиши — [отдельный справочник](../reference/ourplancore-shortcuts.md).
-- Изменения версий — [что нового](../reference/ourplancore-changelog.md).
+- Вход и сценарии - [OurPlanCore: начало работы](../reference/ourplancore-start.md).
+- Возможности - [интерфейс и инструменты](../reference/ourplanecore.md).
+- Хранение - [проекты и сохранение](../reference/job-creation-storage.md).
+- Клавиши - [отдельный справочник](../reference/ourplancore-shortcuts.md).
+- Изменения версий - [что нового](../reference/ourplancore-changelog.md).
 
 Одна функция должна иметь одно подробное описание. На других страницах оставляй
 короткий маршрут к нему. Не копируй таблицу клавиш в несколько мест.

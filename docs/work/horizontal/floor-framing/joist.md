@@ -26,7 +26,7 @@ schedule указан конкретный product family для `Joist`.
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">LP SolidStart</div>
-      <div class="kb-figure-row__rule">LP / LPI profiles — отдельный product family.</div>
+      <div class="kb-figure-row__rule">LP / LPI profiles - отдельный product family.</div>
       <div class="kb-figure-row__note">Используй, если schedule показывает LP, LPI, LPI 20Plus, 32Plus, 36, 42Plus, 52Plus или 56.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-006.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-006.png" alt="LP SolidStart I-joist product specifications" loading="lazy"></a>
@@ -50,7 +50,7 @@ schedule указан конкретный product family для `Joist`.
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">BCI / Boise profiles</div>
-      <div class="kb-figure-row__rule">BCI — не TJI; сохраняй Boise / BCI naming.</div>
+      <div class="kb-figure-row__rule">BCI - не TJI; сохраняй Boise / BCI naming.</div>
       <div class="kb-figure-row__note">На картинке также есть Boise LVL / glulam profiles для проверки.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-004.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-004.png" alt="BCI and engineered wood product profiles" loading="lazy"></a>
@@ -117,14 +117,14 @@ output всё равно должен идти по framing plan, joist schedule
 - I-joists: TJI, LPI, RED, BCI, RFPI, Nordic.
 - Joist hangers.
 - Rim и blocking, которые относятся к joist runs.
-- Web stiffeners, squash blocks или special blocking — только если они прямо
+- Web stiffeners, squash blocks или special blocking - только если они прямо
   указаны в details/general notes.
 
 ## Spacing
 
-Spacing считается **center-to-center (O.C.)** — от центра одного joist до
+Spacing считается **center-to-center (O.C.)** - от центра одного joist до
 центра следующего. Фактор по joists = `12 / spacing` (истинная геометрия,
-**без** stud-waste — joist'ы не путать со стойками).
+**без** stud-waste - joist'ы не путать со стойками).
 
 | Spacing | Фактор (pcs / LFT ширины) |
 | --- | ---: |
@@ -135,7 +135,7 @@ Spacing считается **center-to-center (O.C.)** — от центра о�
 
 - `pcs = run ширина LFT × 12 / spacing`, **+1** торцевой joist на каждый run.
 - `12 / 16 / 19.2 / 24` o.c. бери только если это показано на plan/notes.
-- Stud-факторы (`16"→1.1`) сюда **не** подставлять — это другая таблица в
+- Stud-факторы (`16"-1.1`) сюда **не** подставлять - это другая таблица в
   [Формулах](../../../reference/formulas.md).
 
 ## Правила
@@ -144,9 +144,9 @@ Spacing считается **center-to-center (O.C.)** — от центра о�
 - Не начинай spacing заново от внутреннего beam.
 - Убирай joist только когда он реально попадает прямо на beam, примерно
   плюс-минус 2".
-- Для joists с **сечением** `18"` / `20"` / `22"` / `24"` (глубина балки) — `HIT`
+- Для joists с **сечением** `18"` / `20"` / `22"` / `24"` (глубина балки) - `HIT`
   hangers, не `ITS`.
-- `ITS` — только для light floor applications, **до `16"` глубины** включительно
+- `ITS` - только для light floor applications, **до `16"` глубины** включительно
   (примеры: `9-1/2"`, `11-7/8"`, `14"`, `16"`). Сечение читается из шильдика
   joist'a (`11-7/8 TJI 230`, `16 LVL`), не из spacing `16" o.c.`.
 - В row name оставляй joist depth/product: `11-7/8 TJI 230` проверять проще,
@@ -166,8 +166,8 @@ Spacing считается **center-to-center (O.C.)** — от центра о�
 ## Проверить
 
 - Добавляй note, если нестандартные lengths сделаны намеренно.
-- Если joists / trusses — **top chord bearing**, ribbon board часто не нужен
-  (вместо него — blocking, см. [Ribbon Board](details/ribbon.md)).
+- Если joists / trusses - **top chord bearing**, ribbon board часто не нужен
+  (вместо него - blocking, см. [Ribbon Board](details/ribbon.md)).
 - Проверь, что rim всё ещё посчитан при roof TJI conditions.
 - Не разбивай rim на 16' pieces, если output format прямо не просит pieces.
 - Не меняй местами joist count и joist length в Excel/output.
@@ -192,7 +192,7 @@ joists не превращаем в EWP material line, если scope/schedule �
 
 ### Частые I-Joist series
 
-`TJI` · `RED` · `LP` / `LPI` · `RFPI` · `BCI` (+ `s`) · `Nordic Joist`
+`TJI` , `RED` , `LP` / `LPI` , `RFPI` , `BCI` (+ `s`) , `Nordic Joist`
 (`NI-20` / `NI-40x` / `NI-60` / `NI-80` / `NI-90`).
 
 ## Пример вывода

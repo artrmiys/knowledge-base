@@ -1,11 +1,11 @@
 # Balcony SQFT
 
-**Balcony** — приподнятая наружная площадка, консольно вынесенная или на
-каркасе, привязанная к зданию. В SQFT — площадь настила + buildup.
+**Balcony** - приподнятая наружная площадка, консольно вынесенная или на
+каркасе, привязанная к зданию. В SQFT - площадь настила + buildup.
 
 <figure markdown>
   ![Balcony build-up layers](../../assets/images/sqfts/balcony.svg)
-  <figcaption>Buildup: structure → sleepers → membrane → decking/pavers (часто by others).</figcaption>
+  <figcaption>Buildup: structure - sleepers - membrane - decking/pavers (часто by others).</figcaption>
 </figure>
 
 ## Что считать
@@ -17,14 +17,14 @@
 
 ## Проверить
 
-- Details могут показывать **decking без sheathing** — не добавляй sheathing,
+- Details могут показывать **decking без sheathing** - не добавляй sheathing,
   если его нет.
 - Balcony trims держи **отдельно** от general exterior trims (другой pricing).
 - Attachment к зданию может тянуть LVL rim, bolts или Simpson screws.
-- Cantilevered balcony — смотри [Cantilevered SQFT](cantilevered.md) (rim/edge,
+- Cantilevered balcony - смотри [Cantilevered SQFT](cantilevered.md) (rim/edge,
   blocking, holdowns).
 
 ## See also
 
-- [Balcony build-up](../exterior-trims/balcony-buildup.md) · [Balcony trims](../deck/balcony-trims.md)
+- [Balcony build-up](../exterior-trims/balcony-buildup.md) , [Balcony trims](../deck/balcony-trims.md)
 - [Deck / Porch / Balcony framing](../deck/deck-porch-balcony-frame.md)

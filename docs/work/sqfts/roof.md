@@ -1,11 +1,11 @@
 # Roof SQFT
 
-**Roof SQFT** — площадь крыши (по скату/проекции). Тянет sheathing, а для
-плоских крыш — слои изоляции и cover board.
+**Roof SQFT** - площадь крыши (по скату/проекции). Тянет sheathing, а для
+плоских крыш - слои изоляции и cover board.
 
 <figure markdown>
   ![Roof sheathing area](../../assets/images/sqfts/roof-sqft.svg)
-  <figcaption>Площадь по скату → sheathing; flat roof — Densdeck/rigid той же площади.</figcaption>
+  <figcaption>Площадь по скату - sheathing; flat roof - Densdeck/rigid той же площади.</figcaption>
 </figure>
 
 ## Что считать
@@ -24,6 +24,6 @@
 
 ## See also
 
-- [Roof Sheathing](../horizontal/roof-framing/roof-sheathing.md) · [Roof Types](../sheathing-and-misc/rooftype.md)
+- [Roof Sheathing](../horizontal/roof-framing/roof-sheathing.md) , [Roof Types](../sheathing-and-misc/rooftype.md)
 - [Truss Heel](../vertical/sheathing/truss-heel.md)
 

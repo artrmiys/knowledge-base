@@ -1,11 +1,11 @@
 # Bolts
 
-**Bolts** — анкерные, holdown и detail-specific болты с шайбами. Считаются по
+**Bolts** - анкерные, holdown и detail-specific болты с шайбами. Считаются по
 деталям; nails покупают коробками и не считаются.
 
 <figure markdown>
   ![Anchor bolt through sill plate](../../../../assets/images/framing/anchor-bolt.svg)
-  <figcaption>Anchor bolt с washer/nut крепит sill plate к бетону; шаг — по SW-schedule.</figcaption>
+  <figcaption>Anchor bolt с washer/nut крепит sill plate к бетону; шаг - по SW-schedule.</figcaption>
 </figure>
 
 ## Что считать
@@ -26,5 +26,5 @@
 
 ## See also
 
-- [Anchor Bolts](../../../deck/anchor-bolts.md) · [Screws](screws.md) · [Hardware catalog](../../../../reference/hardware-catalog.md)
+- [Anchor Bolts](../../../deck/anchor-bolts.md) , [Screws](screws.md) , [Hardware catalog](../../../../reference/hardware-catalog.md)
 

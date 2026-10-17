@@ -1,49 +1,49 @@
 # Exterior Wall Materials
 
-Блок наружных материалов стены — то, что лежит **поверх и внутри каркаса**:
+Блок наружных материалов стены - то, что лежит **поверх и внутри каркаса**:
 обшивка (gypsum / ply / Zip), continuous insulation, flashing, bracing, window
 jambs и furring. Эти позиции легко потерять, потому что они спрятаны в wall
 sections / wall type schedule, а не на elevation.
 
-!!! danger "Считаем материал, даже если каркас — чужой"
+!!! danger "Считаем материал, даже если каркас - чужой"
     Metal stud walls и CMU walls сам каркас часто **by others**. Но обшивка
     (sheathing/gypsum), **insulation**, **flashing** вокруг проёмов, **bracing
     2x4** и **window jambs** обычно остаются нашими. Не выкидывай весь блок
-    стены только потому, что studs/CMU не считаем — пройди по wall section и
+    стены только потому, что studs/CMU не считаем - пройди по wall section и
     собери material lines.
 
 ## Exterior gypsum sheathing { .kb-section-title .kb-st--green }
 
 Наружная **gypsum sheathing** (`Type X`, `Exterior Grade`, `Densglass`) идёт по
-fire-rating и wall type schedule. Бывает в **один или два слоя**, и отдельно —
+fire-rating и wall type schedule. Бывает в **один или два слоя**, и отдельно -
 слой **поверх FRT** структурной обшивки.
 
 <figure markdown>
   ![WD stud wall layer stack with takeoff notes](../../../assets/images/sheathing/wd-wall-layers.svg)
-  <figcaption>Каркасная стена по слоям: veneer → WRB → Type X gypsum → FRT ply → batt + studs → interior gypsum. Каждый слой — отдельная строка.</figcaption>
+  <figcaption>Каркасная стена по слоям: veneer - WRB - Type X gypsum - FRT ply - batt + studs - interior gypsum. Каждый слой - отдельная строка.</figcaption>
 </figure>
 
 <div class="kb-split" markdown>
 
-- `5/8" Type X` (= `19/32"`) — стандартная exterior gypsum sheathing.
-- **(2) layers** — когда wall type / UL-assembly требует два слоя (см. схему).
-- **over FRT** — gypsum поверх структурной `1/2" Ply FRT` обшивки; это
+- `5/8" Type X` (= `19/32"`) - стандартная exterior gypsum sheathing.
+- **(2) layers** - когда wall type / UL-assembly требует два слоя (см. схему).
+- **over FRT** - gypsum поверх структурной `1/2" Ply FRT` обшивки; это
   **отдельная строка**, не сливай с базовой.
 - `Densglass` разноси по level/elevation, если schedule так делит.
 - Считается в `SQ FT` площади стены (gypsum) и в `4x8` листах (structural ply).
 
 <figure markdown>
-  ![WD stud wall — 2 layers 5/8" exterior grade gypsum sheathing](../../../assets/images/sheathing/ext-gypsum-wd-stud-2layer.png)
-  <figcaption>WD stud (FRT) wall, UL U301 — (2) layers 5/8" exterior grade gypsum sheathing на наружной грани.</figcaption>
+  ![WD stud wall - 2 layers 5/8" exterior grade gypsum sheathing](../../../assets/images/sheathing/ext-gypsum-wd-stud-2layer.png)
+  <figcaption>WD stud (FRT) wall, UL U301 - (2) layers 5/8" exterior grade gypsum sheathing на наружной грани.</figcaption>
 </figure>
 
 </div>
 
-Иногда на стене **несколько слоёв обшивки сразу** — структурный ply + gypsum:
+Иногда на стене **несколько слоёв обшивки сразу** - структурный ply + gypsum:
 
 <figure markdown>
-  ![WD stud brick wall — Type X gypsum over FRT exterior sheathing + batt insulation](../../../assets/images/sheathing/wd-stud-brick-gypsum-frt.png)
-  <figcaption>WD stud 2HR / brick: <strong>5/8" Type X gypsum</strong> + <strong>1/2" FRT exterior sheathing</strong> + batt insulation + 5/8" gypsum board внутри. Все слои — отдельные lines.</figcaption>
+  ![WD stud brick wall - Type X gypsum over FRT exterior sheathing + batt insulation](../../../assets/images/sheathing/wd-stud-brick-gypsum-frt.png)
+  <figcaption>WD stud 2HR / brick: <strong>5/8" Type X gypsum</strong> + <strong>1/2" FRT exterior sheathing</strong> + batt insulation + 5/8" gypsum board внутри. Все слои - отдельные lines.</figcaption>
 </figure>
 
 | Строка в takeoff | Материал | Unit |
@@ -56,30 +56,30 @@ fire-rating и wall type schedule. Бывает в **один или два сл
 
 !!! tip "Densglass over Zip"
     Часто в заметках: `5/8" Densglass Gypsum over Zip Sheathing`. Это **два
-    продукта** — Zip (structural) + Densglass (gypsum) — обе строки в takeoff.
+    продукта** - Zip (structural) + Densglass (gypsum) - обе строки в takeoff.
 
 ## Insulation (continuous) { .kb-section-title .kb-st--cyan }
 
 Continuous insulation (`Cont. Insulation`, `R6 Zip`, rigid) идёт по energy /
-envelope sheets. Два разных места — **на каркасных стенах** и **на CMU** —
+envelope sheets. Два разных места - **на каркасных стенах** и **на CMU** -
 считаются **отдельными строками**, потому что площади и детали разные.
 
 <figure markdown>
   ![CMU wall layer stack with continuous insulation and Z furring](../../../assets/images/sheathing/cmu-wall-layers.svg)
-  <figcaption>CMU стена: veneer → continuous insulation (= Insulation at CMU) → Z metal furring → air barrier → CMU block. Каркас чужой, но insulation/furring/flashing — наши.</figcaption>
+  <figcaption>CMU стена: veneer - continuous insulation (= Insulation at CMU) - Z metal furring - air barrier - CMU block. Каркас чужой, но insulation/furring/flashing - наши.</figcaption>
 </figure>
 
 <div class="kb-split" markdown>
 
-- `Insulation` — continuous insulation на наружной грани каркасных стен.
-- `Insulation at CMU` — continuous insulation на CMU (бетонный блок) стенах. Это
+- `Insulation` - continuous insulation на наружной грани каркасных стен.
+- `Insulation at CMU` - continuous insulation на CMU (бетонный блок) стенах. Это
   **отдельная позиция**, её площадь обычно больше (вся CMU-оболочка).
 - Считается в `SQ FT`.
 - Под insulation на CMU часто крепят **Z metal furring** (см. ниже Furring).
 
 <figure markdown>
   ![CMU wall with continuous insulation and cast stone veneer](../../../assets/images/sheathing/cmu-continuous-insulation.png)
-  <figcaption>Wall type EXT — CMU (CI): concrete masonry units + <strong>continuous insulation</strong> + air barrier + masonry veneer. Insulation at CMU — наша строка.</figcaption>
+  <figcaption>Wall type EXT - CMU (CI): concrete masonry units + <strong>continuous insulation</strong> + air barrier + masonry veneer. Insulation at CMU - наша строка.</figcaption>
 </figure>
 
 </div>
@@ -91,17 +91,17 @@ envelope sheets. Два разных места — **на каркасных с
 | `Insulation at 6" Ext. Walls` | batt / rigid по детали | `SQ FT` |
 | `Rigid Insulation` | rigid board | `SQ FT` |
 
-## Metal stud walls — что остаётся нашим { .kb-section-title .kb-st--magenta }
+## Metal stud walls - что остаётся нашим { .kb-section-title .kb-st--magenta }
 
 Даже если **metal studs by others**, по wall section обычно наши:
 
-- **Exterior gypsum sheathing** — material для metal стен нужен, считаем
+- **Exterior gypsum sheathing** - material для metal стен нужен, считаем
   (`5/8" Type X`, слои по wall type).
-- **Bracing 2x4** — temporary/permanent bracing остаётся: `Bracing Ext Walls`,
-  `Bracing Corridor`, `Bracing Demising` — все `2x4`.
-- **Flashing** вокруг openings — `Window Flashing at Mtl Walls`, `Sill Flashing
+- **Bracing 2x4** - temporary/permanent bracing остаётся: `Bracing Ext Walls`,
+  `Bracing Corridor`, `Bracing Demising` - все `2x4`.
+- **Flashing** вокруг openings - `Window Flashing at Mtl Walls`, `Sill Flashing
   at Mtl Walls`.
-- **Window jambs** — иногда в metal стенах проёмы добирают **доской** (`2x` jamb),
+- **Window jambs** - иногда в metal стенах проёмы добирают **доской** (`2x` jamb),
   смотри внимательно (см. ниже).
 
 | Строка в takeoff | Материал | Unit |
@@ -115,24 +115,24 @@ envelope sheets. Два разных места — **на каркасных с
 Flashing вокруг окон и дверей **разделяется по типу стены** (wood / Mtl /
 CMU / concrete) и идёт **отдельными строками**, потому что у каждого типа
 свой detail и свой подрядчик. Полная логика, формулы LFT и правило про двери
-(у дверей **нет** Sill Flashing) — на отдельной странице:
+(у дверей **нет** Sill Flashing) - на отдельной странице:
 
 **[Window Flashing & Sill](../openings/window-flashing.md)**.
 
 Здесь, в Exterior Wall Materials, эти строки появляются как наш material
-по `Mtl Walls` / `CMU Walls` — см. примеры в блоке такейофа ниже.
+по `Mtl Walls` / `CMU Walls` - см. примеры в блоке такейофа ниже.
 
-## Window jambs — доска в проёмах { .kb-section-title .kb-st--cyan }
+## Window jambs - доска в проёмах { .kb-section-title .kb-st--cyan }
 
 В **metal стенах** проёмы окон/дверей иногда добирают **деревянной доской**
-(`2x4` / `2x8` jamb) — это наш material, легко пропустить.
+(`2x4` / `2x8` jamb) - это наш material, легко пропустить.
 
 - Глубина стены задаёт size: `2x4` тонкая, `2x8`/`2x10` толстая (CMU + insulation
   + furring). Бери из section.
 - Если на плане jambs **не используются**, фиксируй note: `Assumed window jambs
-  2x4 are not used page A8.53; verify` — это видно на drawing, не угадывай.
+  2x4 are not used page A8.53; verify` - это видно на drawing, не угадывай.
 
-Полная логика jambs — [Furring & Window Jambs](../../exterior-trims/furring-and-jambs.md).
+Полная логика jambs - [Furring & Window Jambs](../../exterior-trims/furring-and-jambs.md).
 
 ## Furring { .kb-section-title .kb-st--magenta }
 
@@ -143,14 +143,14 @@ CMU / concrete) и идёт **отдельными строками**, пото�
 | **Z metal furring** | на CMU / под insulation | `Z furring` (metal) | держит continuous / rigid insulation на CMU |
 | **Furring под siding** | за siding на каркасе | `1x4` или `2x4` **P.T.** | rainscreen / ровная nailing-плоскость / зазор |
 
-- **Z metal furring** идёт вместе с `Insulation at CMU` — металлический Z-профиль
-  крепит rigid insulation к блоку. Если client не хочет metal — verify scope.
+- **Z metal furring** идёт вместе с `Insulation at CMU` - металлический Z-профиль
+  крепит rigid insulation к блоку. Если client не хочет metal - verify scope.
 - **Furring под siding** бывает `1x4` (лёгкая рейка) или `2x4` **P.T.**
-  (толще, по structural / у влажных зон). P.T. и не-P.T. — разные строки.
-- Если в заметке `Furring strips under the siding system are not utilized` —
+  (толще, по structural / у влажных зон). P.T. и не-P.T. - разные строки.
+- Если в заметке `Furring strips under the siding system are not utilized` -
   значит на этом проекте siding furring чужой/нет, но проверь по section.
 
-Подробно про furring и P.T. — [Furring (walls)](../walls/furring.md) и
+Подробно про furring и P.T. - [Furring (walls)](../walls/furring.md) и
 [Furring & Window Jambs](../../exterior-trims/furring-and-jambs.md).
 
 ## Пример из реального takeoff (EBS) { .kb-section-title .kb-st--green }
@@ -184,12 +184,12 @@ Window Flashing at CMU Walls Flashing Tape           190   LFT
 - [ ] Прошёл по wall section, а не только elevation?
 - [ ] Exterior gypsum (`Type X`) посчитан, даже если studs/CMU чужие?
 - [ ] Слои gypsum разделены: 1 слой / (2) layers / over FRT?
-- [ ] `Insulation` (на каркасе) и `Insulation at CMU` — две отдельные строки?
+- [ ] `Insulation` (на каркасе) и `Insulation at CMU` - две отдельные строки?
 - [ ] `Bracing` Ext / Corridor / Demising `2x4` есть для metal стен?
 - [ ] Flashing разделён по Mtl / CMU / wood walls?
 - [ ] Проверил window jambs в metal стенах (доска в проёме)?
 - [ ] Z metal furring под insulation на CMU?
-- [ ] Furring под siding `1x4` / `2x4` P.T. — нужный size и P.T.?
+- [ ] Furring под siding `1x4` / `2x4` P.T. - нужный size и P.T.?
 
 ## See also
 
@@ -198,5 +198,5 @@ Window Flashing at CMU Walls Flashing Tape           190   LFT
 - [Exterior Walls](../walls/exterior.md)
 - [Furring (walls)](../walls/furring.md)
 - [Furring & Window Jambs](../../exterior-trims/furring-and-jambs.md)
-- [Window Flashing & Sill](../openings/window-flashing.md) — flashing вокруг проёмов.
+- [Window Flashing & Sill](../openings/window-flashing.md) - flashing вокруг проёмов.
 - [Flashing (roof / wall / deck)](../../sheathing-and-misc/flashing.md)

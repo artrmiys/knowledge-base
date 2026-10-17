@@ -40,7 +40,7 @@
 - `Note: 5/8" Densglass Gypsum over Zip Sheathing wall type A1-A2`
 
 !!! warning "Arch vs Structural"
-    Sheathing на Arch и Structural часто противоречат. Не выбирай молча —
+    Sheathing на Arch и Structural часто противоречат. Не выбирай молча -
     `Assumed per Structural; verify` (или per Arch, по правилу проекта).
 
 ## By others { .kb-section-title .kb-st--amber }
@@ -53,9 +53,9 @@
 - `Note: Anchor Bolts are Hilti by others`
 - `Note: 1-2 Stairs are Metal, by others`
 - `Note: custom stained wood millwork by others`
-- `Note: Stone Veneer by others` · `Note: Pavers Deck System are by others`
+- `Note: Stone Veneer by others` , `Note: Pavers Deck System are by others`
 
-См. также правило исключений: [Exterior Trims → Exclusions](../work/exterior-trims/exclusions.md).
+См. также правило исключений: [Exterior Trims - Exclusions](../work/exterior-trims/exclusions.md).
 
 ## Framing assumed / budget only { .kb-section-title .kb-st--green }
 
@@ -96,4 +96,4 @@
 
 - [Material catalog](material-catalog.md)
 - [Takeoff item labels](takeoff-items.md)
-- [Boss feedback rules](boss-feedback-rules.md) · [Quality checklist](../start/quality-checklist.md)
+- [Boss feedback rules](boss-feedback-rules.md) , [Quality checklist](../start/quality-checklist.md)

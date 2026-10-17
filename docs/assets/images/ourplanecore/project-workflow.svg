@@ -4,7 +4,7 @@
   <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#2e7d32"/></marker></defs>
   <rect width="900" height="350" rx="12" fill="#f5f7f5"/>
   <g font-family="Segoe UI,Arial,sans-serif" fill="#183323">
-    <text x="30" y="37" font-size="22" font-weight="600">Один проект — связанные данные</text>
+    <text x="30" y="37" font-size="22" font-weight="600">Один проект - связанные данные</text>
     <g fill="#fff" stroke="#a8bcab" stroke-width="1.5">
       <rect x="30" y="64" width="310" height="91" rx="8"/>
       <rect x="560" y="64" width="310" height="91" rx="8"/>
@@ -20,6 +20,6 @@
     </g>
     <text x="310" y="239" font-size="21" font-weight="600">Measurement</text>
     <text x="310" y="267" font-size="17">Геометрия + лист + масштаб</text>
-    <text x="30" y="331" font-size="16">Save сохраняет проект. PDF и Excel — отдельные результаты выдачи.</text>
+    <text x="30" y="331" font-size="16">Save сохраняет проект. PDF и Excel - отдельные результаты выдачи.</text>
   </g>
 </svg>

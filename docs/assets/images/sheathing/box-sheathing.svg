@@ -5,7 +5,7 @@
     <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Box sheathing — полоса только по «коробке»</text>
+  <text class="t" x="32" y="40">Box sheathing - полоса только по "коробке"</text>
   <text class="s" x="32" y="62">Band на высоте перекрытия / parapet, не full-height. Не truss heel.</text>
   <!-- wall elevation -->
   <rect x="120" y="90" width="420" height="180" fill="#f7f9fb" stroke="#9bb0c2" stroke-width="1.4"/>

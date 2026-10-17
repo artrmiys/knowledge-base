@@ -91,22 +91,22 @@
 - Старый Tilda source имел много menu items как labels без active links. Сейчас
   подтверждённые active work pages: Walls и Gables.
 
-## Vertical Constructions — что входит
+## Vertical Constructions - что входит
 
 Вертикалка ≈ **50% здания**, важно ничего не пропустить:
 
 - Несущие и ненесущие стены: `Ext`, `Unit`, `Corr`, `Demising` walls.
-- Фронтоны — `Gables`.
+- Фронтоны - `Gables`.
 - Наружная и внутренняя обшивка: `Plywood`, `OSB`, siding, gypsum.
-- Обшивка торцов перекрытия — `Floor Height`.
-- Обшивка торцов перекрытия — `Eve Heel` / `Truss Heel`.
-- Ветроизоляция — `Tyvek`.
-- Утеплитель — `Insulation`.
+- Обшивка торцов перекрытия - `Floor Height`.
+- Обшивка торцов перекрытия - `Eve Heel` / `Truss Heel`.
+- Ветроизоляция - `Tyvek`.
+- Утеплитель - `Insulation`.
 
 ## Структура файла в PlanSwift
 
-В PlanSwift сначала идут общие layers (без счёта), потом — группы по этажам и
-типам. Общая идея — каждая ячейка `xxx` — это место для своей цифры.
+В PlanSwift сначала идут общие layers (без счёта), потом - группы по этажам и
+типам. Общая идея - каждая ячейка `xxx` - это место для своей цифры.
 
 ### Background layers (не считаются)
 
@@ -129,13 +129,13 @@
 
 | Сокращение | Что |
 | --- | --- |
-| `f` | foundation — фундамент |
+| `f` | foundation - фундамент |
 | `1st` | first floor |
 | `2nd` | second floor |
 | `3rd` | third floor |
-| `5th–8th` | fifth to eighth floors |
-| `el` | elevation — фасад |
-| `sec` | section — разрез |
+| `5th-8th` | fifth to eighth floors |
+| `el` | elevation - фасад |
+| `sec` | section - разрез |
 | `sec d` | section details |
 | `rcp` | reflected ceiling plan |
 | `wt` | wall type |
@@ -144,7 +144,7 @@
 | `int` | interior |
 | `dem` | demising |
 | `cor` | corridor |
-| `prpt` / `p` | parapet — парапет |
+| `prpt` / `p` | parapet - парапет |
 | `str` | stair |
 
 ## SQFT-сокращения в PlanSwift
@@ -152,14 +152,14 @@
 `deck`, `blcny`, `porch`, `cant`, `base`, `1st`, `2nd`, `3rd`, `4th`, `flat`,
 `rf x`, `rf mtl x`, `overframe x`, `gable truss`, `gable stick`.
 
-## Details — короткие коды
+## Details - короткие коды
 
 Эти флаги ставятся в Flag-колонке и разворачиваются макросом
 `C_RimBoardBlockingHangers` (модуль `struct_rimblock`). Три правила записи:
 
-- **Удвоенная буква = ×2** — `rr`, `bb`, `ll`, `hh16`, `ss`, `tt`.
-- **Число = шаг o.c.** — `b48`, `h16`, `s24`, `blt24`.
-- **` 1` (пробел + цифра) = номер группы** → отдельная строка/группа (`b 1`,
+- **Удвоенная буква = ×2** - `rr`, `bb`, `ll`, `hh16`, `ss`, `tt`.
+- **Число = шаг o.c.** - `b48`, `h16`, `s24`, `blt24`.
+- **` 1` (пробел + цифра) = номер группы** - отдельная строка/группа (`b 1`,
   `r 1`, `bb48 1`).
 
 | Код | Что | По умолчанию |
@@ -174,7 +174,7 @@
 
 ### Connectors / fasteners (гвозди, болты и т.д.)
 
-Крепёж разворачивается тем же макросом — отдельными строками по группам:
+Крепёж разворачивается тем же макросом - отдельными строками по группам:
 
 | Код | Что | По умолчанию |
 | --- | --- | --- |
@@ -183,8 +183,8 @@
 | `t` / `tt` / `t16` | Ties (`tt` = ×2) | 16" o.c. |
 | `blt` / `blt24` | **Anchor Bolts + Washers + Nuts** (блок из 3 строк) | 24" o.c., `1/2" Ø x 5 1/2"` |
 
-→ `blt` всегда вставляет три строки: **Anchor Bolts**, **Washers**, **Nuts**
-(макрос `B_BoltsAdd` / `ins_bolts`). Подробнее — [Bolts](../work/horizontal/floor-framing/details/bolts.md),
+- `blt` всегда вставляет три строки: **Anchor Bolts**, **Washers**, **Nuts**
+(макрос `B_BoltsAdd` / `ins_bolts`). Подробнее - [Bolts](../work/horizontal/floor-framing/details/bolts.md),
 [Screws](../work/horizontal/floor-framing/details/screws.md),
 [Anchor Bolts](../work/deck/anchor-bolts.md), [Hangers](../reference/hangers.md).
 

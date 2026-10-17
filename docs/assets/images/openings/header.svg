@@ -5,7 +5,7 @@
     <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}.m{stroke:#3a3a3a;stroke-width:1.4;fill:url(#w)}</style>
   </defs>
   <rect width="760" height="320" fill="#fff"/>
-  <text class="t" x="32" y="40">Header — балка над проёмом</text>
+  <text class="t" x="32" y="40">Header - балка над проёмом</text>
   <text class="s" x="32" y="62">(2)/(3) = число плёнок. Опирается на jack studs; king по краям. Size из schedule.</text>
   <!-- top plate -->
   <rect x="120" y="90" width="360" height="16" class="m"/>

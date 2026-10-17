@@ -1,6 +1,6 @@
 # Interior Trims
 
-Interior Trims — это отдельный scope, не exterior trims, не drywall и не
+Interior Trims - это отдельный scope, не exterior trims, не drywall и не
 framing. Используй этот раздел, когда в scope есть finish trim items из room
 schedules, door/window schedules или finish plans.
 
@@ -30,7 +30,7 @@ schedules, door/window schedules или finish plans.
 - Сначала сделай interior-trim PDFs/sheets, потом меряй `Baseboard` и `Crowns`
   continuous room perimeter.
 - Casing для interior doors заполняется после interior-door list; casing для
-  exterior doors/windows — после exterior openings.
+  exterior doors/windows - после exterior openings.
 
 ## Визуальный workflow
 
@@ -50,7 +50,7 @@ schedules, door/window schedules или finish plans.
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">2. Мерить perimeter items</div>
-      <div class="kb-figure-row__rule">Baseboard и Crowns — это LF / perimeter work.</div>
+      <div class="kb-figure-row__rule">Baseboard и Crowns - это LF / perimeter work.</div>
       <div class="kb-figure-row__note">Веди trace непрерывно; breaks должны быть намеренными и видимыми.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-02.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-02.png" alt="Baseboard and crown perimeter example" loading="lazy"></a>
@@ -100,7 +100,7 @@ schedules, door/window schedules или finish plans.
 
 ## Внешняя проверка
 
-Internet references — только проверка terminology. Что именно считать, всё ещё
+Internet references - только проверка terminology. Что именно считать, всё ещё
 задают Estimating/Trello rules.
 
 | Проверка | Что подтверждает | Источник |

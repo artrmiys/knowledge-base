@@ -2,7 +2,7 @@
   <title id="t">Eave return boxed corner</title>
   <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Return — «коробка», где eave заворачивается к rake</text>
+  <text class="t" x="32" y="40">Return - "коробка", где eave заворачивается к rake</text>
   <text class="s" x="32" y="62">Отдельный bucket: свой framing/trim. Чаще на architectural details.</text>
   <!-- wall corner -->
   <rect x="160" y="150" width="320" height="110" fill="#f3f6f9" stroke="#9bb0c2" stroke-width="1.4"/>

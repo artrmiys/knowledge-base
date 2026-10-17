@@ -1,11 +1,11 @@
 # 1st-5th Floor SQFT
 
-**Floor SQFT** — площадь перекрытия по уровням. Тянет subfloor, underlayment,
+**Floor SQFT** - площадь перекрытия по уровням. Тянет subfloor, underlayment,
 sound mat, gypcrete и прочие площадные материалы пола.
 
 <figure markdown>
   ![Floor area to subfloor sheets](../../assets/images/sqfts/floor.svg)
-  <figcaption>Площадь этажа → sheets = SQFT / 32 (или area × 1.1). Этажи держим отдельно.</figcaption>
+  <figcaption>Площадь этажа - sheets = SQFT / 32 (или area × 1.1). Этажи держим отдельно.</figcaption>
 </figure>
 
 ## Что считать
@@ -23,6 +23,6 @@ sound mat, gypcrete и прочие площадные материалы пол
 
 ## See also
 
-- [Subfloor](../horizontal/floor-framing/subfloor.md) · [Joist](../horizontal/floor-framing/joist.md)
-- [Формулы → per SQFT](../../reference/formulas.md)
+- [Subfloor](../horizontal/floor-framing/subfloor.md) , [Joist](../horizontal/floor-framing/joist.md)
+- [Формулы - per SQFT](../../reference/formulas.md)
 

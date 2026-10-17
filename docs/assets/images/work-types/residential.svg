@@ -5,8 +5,8 @@
     <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Residential — стандартный takeoff flow</text>
-  <text class="s" x="32" y="62">Walls + openings · floor/roof framing · sheathing · SQFT · roof/deck/porch.</text>
+  <text class="t" x="32" y="40">Residential - стандартный takeoff flow</text>
+  <text class="s" x="32" y="62">Walls + openings , floor/roof framing , sheathing , SQFT , roof/deck/porch.</text>
   <!-- house section -->
   <polygon points="150,250 150,150 320,90 490,150 490,250" fill="#f7f9fb" stroke="#3a3a3a" stroke-width="1.6"/>
   <!-- roof -->

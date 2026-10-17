@@ -13,7 +13,7 @@
   </defs>
   <rect width="760" height="300" fill="#fff"/>
   <text class="t" x="32" y="38">Сканируй лист целиком</text>
-  <text class="s" x="32" y="60">Слева → направо, сверху → вниз. Не «прыгай» по чертежу — иначе пропустишь зону.</text>
+  <text class="s" x="32" y="60">Слева - направо, сверху - вниз. Не "прыгай" по чертежу - иначе пропустишь зону.</text>
 
   <!-- sheet -->
   <rect x="60" y="90" width="430" height="180" fill="#f4f7f4" stroke="#3a3a3a" stroke-width="1.6"/>
@@ -36,6 +36,6 @@
   <text class="s" x="540" y="142">строка за строкой</text>
   <text class="l" x="540" y="178">потом ниже</text>
   <text class="s" x="540" y="200">тем же шагом</text>
-  <text class="l" x="540" y="236">так — каждый scope</text>
+  <text class="l" x="540" y="236">так - каждый scope</text>
   <text class="s" x="540" y="258">walls, beams, joists…</text>
 </svg>

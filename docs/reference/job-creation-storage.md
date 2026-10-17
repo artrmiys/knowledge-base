@@ -1,11 +1,11 @@
 # Создание Job и где что лежит
 
-Проверено по OurPlanCore **2.2.7 Preview, 6 сентября 2026**. Здесь — создание,
+Проверено по OurPlanCore **2.2.7 Preview, 6 сентября 2026**. Здесь - создание,
 открытие, сохранение и восстановление проекта. Новые команды доступны в новой
 версии; старый установленный выпуск автоматически не заменяется.
 
 !!! abstract "Что копировать для передачи и резервного хранения"
-    **Новый проект — один файл `.ourplan`.** Сначала нажми `Save` и дождись
+    **Новый проект - один файл `.ourplan`.** Сначала нажми `Save` и дождись
     успеха, затем копируй этот файл. Старые проекты в папках сохраняют прежний
     формат: для них нужна вся папка. Локальная рабочая копия приложения и
     резервная копия на другом диске выполняют разные задачи.
@@ -26,9 +26,9 @@
 `Ctrl+O` и `Ctrl+Shift+O` открывают общий выбор проекта при стандартных
 назначениях. Менять их можно в [Keyboard Shortcuts](ourplanecore.md#hotkeys).
 
-!!! note "PlanSwift — отдельный формат исходника"
+!!! note "PlanSwift - отдельный формат исходника"
     Кнопка `PlanSwift` импортирует исходный проект PlanSwift в отдельный проект.
-    `Open / Import → Import into the current job → PlanSwift project...`
+    `Open / Import - Import into the current job - PlanSwift project...`
     добавляет его в уже открытый. Уже преобразованный проект OurPlanCore
     открывай через `Open project...`.
 
@@ -38,10 +38,10 @@
 
 | Маршрут | Что импортируется | Внутренняя организация |
 | --- | --- | --- |
-| `Import into the current job → PDF file(s)...` / `Add Pages` | Один или несколько PDF с подтверждением имён листов | Листы под `Pages/00. imported` |
-| `Import into the current job → Folder of PDFs...` | PDF из папки и подпапок без отдельного вопроса об имени каждого листа | Листы под `Pages/00. imported` |
-| `Import into the current job → PlanSwift project...` | Листы и takeoffs исходного PlanSwift | Группы `01. planswift` в Pages и Takeoffs |
-| `PDF Takeoffs → Import into current job` | Редактируемые линии, площади, counts и выбранные аннотации | Группы `from pdf` и отчёт импорта |
+| `Import into the current job - PDF file(s)...` / `Add Pages` | Один или несколько PDF с подтверждением имён листов | Листы под `Pages/00. imported` |
+| `Import into the current job - Folder of PDFs...` | PDF из папки и подпапок без отдельного вопроса об имени каждого листа | Листы под `Pages/00. imported` |
+| `Import into the current job - PlanSwift project...` | Листы и takeoffs исходного PlanSwift | Группы `01. planswift` в Pages и Takeoffs |
+| `PDF Takeoffs - Import into current job` | Редактируемые линии, площади, counts и выбранные аннотации | Группы `from pdf` и отчёт импорта |
 | `Blank Sheet` | Пустой лист | В выбранной области Pages |
 
 В PlanSwift-импорте листы без замеров по умолчанию могут пропускаться; для полного
@@ -50,7 +50,7 @@ PDF Takeoffs сначала показывает результат сканир
 и целевой проект перед подтверждением. Обычная картинка или линия в PDF не
 обязательно содержит структуру редактируемого takeoff.
 
-## Галочка «растр» при импорте PDF { #raster .kb-section-title .kb-st--violet }
+## Галочка "растр" при импорте PDF { #raster .kb-section-title .kb-st--violet }
 
 В `Import PDF Options` есть
 `Build readable raster cache and strict black-line snap index`.
@@ -110,7 +110,7 @@ Retry / Save As / сохранения recovery.
 
 ### Настройки и профили
 
-Обычный профиль хранит настройки в `%APPDATA%\OurPlanCore`, локальные данные —
+Обычный профиль хранит настройки в `%APPDATA%\OurPlanCore`, локальные данные -
 в `%LOCALAPPDATA%\OurPlanCore`. Изолированный Preview может использовать свой
 каталог с отдельными `roaming` и `local`; список недавних проектов и горячие
 клавиши поэтому могут отличаться между выпусками.
@@ -171,8 +171,8 @@ Retry / Save As / сохранения recovery.
 
 ## Где лежат takeoff'ы { #takeoffs .kb-section-title .kb-st--violet }
 
-Takeoff — отдельный контейнер замеров под `Takeoffs`, а не часть папки листа.
-`Data.xml` хранит свойства контейнера; `measurements.json` — точки/контуры,
+Takeoff - отдельный контейнер замеров под `Takeoffs`, а не часть папки листа.
+`Data.xml` хранит свойства контейнера; `measurements.json` - точки/контуры,
 масштаб и другие параметры каждого замера. Поле `page_folder` связывает замер
 с листом. Один takeoff может содержать замеры с нескольких листов.
 
@@ -183,7 +183,7 @@ Takeoff — отдельный контейнер замеров под `Takeoff
 ## Восстановление и резервные копии { #backup .kb-section-title .kb-st--green }
 
 - Для бекапа `.ourplan` сначала заверши `Save`, затем скопируй файл под отдельным
-  именем или на другой диск. Проверка бекапа — открыть копию и проверить листы,
+  именем или на другой диск. Проверка бекапа - открыть копию и проверить листы,
   замеры и сохранение.
 - Для старого проекта сохраняй всю папку. Копия во время активной записи может
   содержать файлы разных моментов; сначала заверши сохранение.
@@ -195,12 +195,12 @@ Takeoff — отдельный контейнер замеров под `Takeoff
 - Встроенный recovery не компенсирует потерю диска с единственным проектом.
   Для этого нужна отдельная сохранённая копия.
 
-## Если листы или takeoff'ы «пропали» { #lost .kb-section-title .kb-st--orange }
+## Если листы или takeoff'ы "пропали" { #lost .kb-section-title .kb-st--orange }
 
 | Симптом | Проверка и действие |
 | --- | --- |
 | Замеры отсутствуют на экране | Проверь активный лист, видимость takeoff и выбранный проект. При переносе старой папки проверь `Repair Links`; не создавай замеры повторно до выяснения причины. |
-| Защищённый JSON метаданных в открытом проекте | `Open / Import → Project Data Recovery...`: выбери запись из списка и `Retry reading` после устранения блокировки либо `Restore from copy...` для известной исправной копии. |
+| Защищённый JSON метаданных в открытом проекте | `Open / Import - Project Data Recovery...`: выбери запись из списка и `Retry reading` после устранения блокировки либо `Restore from copy...` для известной исправной копии. |
 | Сам `.ourplan` не читается | Следуй предложению открыть сохранённую local recovery, если она найдена. Project Data Recovery не ремонтирует архив или исходный PDF. |
 | Recovery всё ещё сообщает ошибку | Файл остаётся защищённым. Сохрани исходник и сообщение для диагностики; не подменяй его пустым JSON. |
 | `.ourplan` не обновился | Рабочая копия может содержать новые изменения. Используй предложенные Retry / Save As и не очищай recovery. |
@@ -215,7 +215,7 @@ Takeoff — отдельный контейнер замеров под `Takeoff
 
 ## Project Storage { #storage .kb-section-title .kb-st--blue }
 
-`8 Settings → Project Storage` показывает размер и состав открытого проекта.
+`8 Settings - Project Storage` показывает размер и состав открытого проекта.
 Начни с `Analyze project`, затем `Preview safe compact`. Доступное действие
 `Compact snap.json...` относится к подготовленному плану обработки snap-данных;
 это не кнопка удаления всех recovery или кешей на компьютере.
@@ -230,7 +230,7 @@ Takeoff — отдельный контейнер замеров под `Takeoff
 
 ## See also
 
-- [OurPlanCore — программа](ourplanecore.md) — интерфейс и рабочие операции
-- [Горячие клавиши](ourplanecore.md#hotkeys) — назначение и смена сочетаний
-- [Как называть takeoffs](takeoff-naming.md) — naming и auto-routing
-- [Workflow](../start/workflow.md) · [Структура takeoff](../start/takeoff-structure.md)
+- [OurPlanCore - программа](ourplanecore.md) - интерфейс и рабочие операции
+- [Горячие клавиши](ourplanecore.md#hotkeys) - назначение и смена сочетаний
+- [Как называть takeoffs](takeoff-naming.md) - naming и auto-routing
+- [Workflow](../start/workflow.md) , [Структура takeoff](../start/takeoff-structure.md)

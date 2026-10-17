@@ -1,6 +1,6 @@
 # COM Commercial
 
-Commercial jobs — это большие проекты: multifamily, office, hotel, mixed-use
+Commercial jobs - это большие проекты: multifamily, office, hotel, mixed-use
 buildings.
 
 ## Порядок COM
@@ -31,7 +31,7 @@ drawings/specs не показывают дополнительный loose mate
 - COM обычно использует 1.1 waste в formulas.
 - Не применяй 1.1 дважды, когда formula ссылается на другую formula, где waste
   уже учтён.
-- Blocking в COM notes может идти с factor 1 — зависит от scope.
+- Blocking в COM notes может идти с factor 1 - зависит от scope.
 
 ## Что не пропустить
 
@@ -46,40 +46,40 @@ drawings/specs не показывают дополнительный loose mate
 
 ## Studs: spacing, extra studs, dbl extra
 
-Каркас стены — это не только **field studs** с шагом. Считаем три группы:
+Каркас стены - это не только **field studs** с шагом. Считаем три группы:
 
 <figure markdown>
   ![Stud spacing, extra studs and double studs](../assets/images/framing/stud-spacing-extra.svg)
-  <figcaption>Field studs 16" o.c. · extra (corner + king/jack/cripple) · dbl на bearing/demising.</figcaption>
+  <figcaption>Field studs 16" o.c. , extra (corner + king/jack/cripple) , dbl на bearing/demising.</figcaption>
 </figure>
 
 | Группа | Где | Как считать |
 | --- | --- | --- |
-| **Field studs** | по полю стены | по фактору spacing (`16"→1.1`, см. [Exterior Walls → Stud spacing factors](../work/vertical/walls/exterior.md#stud-spacing-factors)) |
-| **Extra studs** | углы (2–3 stud corner), T-пересечения, у проёмов (**king / jack / cripple**) | отдельно; на stick — своя строка `Corners` и jamb-стойки |
-| **Dbl / extra studs** | bearing walls нижних этажей, demising | **double studs** по structural notes — выписывать отдельной строкой |
+| **Field studs** | по полю стены | по фактору spacing (`16"-1.1`, см. [Exterior Walls - Stud spacing factors](../work/vertical/walls/exterior.md#stud-spacing-factors)) |
+| **Extra studs** | углы (2-3 stud corner), T-пересечения, у проёмов (**king / jack / cripple**) | отдельно; на stick - своя строка `Corners` и jamb-стойки |
+| **Dbl / extra studs** | bearing walls нижних этажей, demising | **double studs** по structural notes - выписывать отдельной строкой |
 
 - Boss-rule `1 стойка/фут + waste` (фактор `1.1` на `16"`) уже частично закрывает
-  extra studs у проёмов — но **corners** и **double studs** на bearing/demising
+  extra studs у проёмов - но **corners** и **double studs** на bearing/demising
   считаются дополнительно, по плану/structural.
-- На panelized jobs field studs и corners — внутри panel; считаем только то, что
+- На panelized jobs field studs и corners - внутри panel; считаем только то, что
   loose (см. ниже).
 
 ## Wall Order и состав
 
-- Сначала каркас в порядке: `Ext` → `Corridor` → `Demising`. Юнитовые `int walls` идут после.
-- `Demising` стены могут быть двойные — выписывать отдельной строкой.
-- На масштабе **1/4"** SQFT берется от общей площади — внимательно.
-- `Siding` и `Ext trims` бывают редко — но появляются в commercial.
+- Сначала каркас в порядке: `Ext` - `Corridor` - `Demising`. Юнитовые `int walls` идут после.
+- `Demising` стены могут быть двойные - выписывать отдельной строкой.
+- На масштабе **1/4"** SQFT берется от общей площади - внимательно.
+- `Siding` и `Ext trims` бывают редко - но появляются в commercial.
 
-## Panelized Walls — что считаем и не считаем
+## Panelized Walls - что считаем и не считаем
 
 Полный актуальный контракт: [Wall Panels](../work/vertical/walls/wall-panels.md).
 **Стены под concrete slab/podium и новые стены внутри existing frame при
 reconstruction остаются stick framing**, даже при общем `COM w/panel`.
 
 Panelized COM значит: основные wall panels делает другой подрядчик. Мы не
-пересчитываем panel как обычную stick-framed wall. Наш takeoff — только
+пересчитываем panel как обычную stick-framed wall. Наш takeoff - только
 материал, который остаётся **outside panel package** или прямо показан как
 loose/additional detail.
 
@@ -144,23 +144,23 @@ loose/additional detail.
 ### Как быстро решить: считать или нет
 
 1. Сначала найди note/scope: `panelized`, `wall panels`, `panels by others`.
-2. Если item подтверждённо included in wall panel package — не считай отдельно.
-3. Если item is outside panel package или shown as loose detail — считай.
+2. Если item подтверждённо included in wall panel package - не считай отдельно.
+3. Если item is outside panel package или shown as loose detail - считай.
 4. Если сомневаешься, добавь visible note в output: `Assumed included in wall
    panels unless noted otherwise`.
 5. По нашему правилу стены под concrete slab/podium и новые стены внутри
    existing frame считаем stick; сохраняем полный применимый блок DFL.
 
-## Bracing — высота стены → длина
+## Bracing - высота стены - длина
 
 | Высота стены | Bracing length |
 | --- | --- |
 | `16'` | `20'` |
 | `12'` и выше | `18'` |
-| `10'–12'` | `16'` |
+| `10'-12'` | `16'` |
 | Всё остальное | `14'` |
 
-`Bracing for Trusses` — каждые `10'`, `2x6` в LFT.
+`Bracing for Trusses` - каждые `10'`, `2x6` в LFT.
 
 ## Blocking-формулы (panelized walls)
 
@@ -172,37 +172,37 @@ loose/additional detail.
 
 ## Corridor
 
-- Смотреть внимательнее — обычно коридор `6'–7'` перекрывается `2x10`, крепится на `ledger`.
-- Trusses на полу и на крыше отличаются по высоте — не путать.
-- Направление Joists (перпендикулярно или параллельно стенам) определять по `Structural Detail` — это самое главное.
-- Accessories for Trusses (всё по периметру) — сначала по Structural plans (опирание параллельно/перпендикулярно и внутри на стенах).
+- Смотреть внимательнее - обычно коридор `6'-7'` перекрывается `2x10`, крепится на `ledger`.
+- Trusses на полу и на крыше отличаются по высоте - не путать.
+- Направление Joists (перпендикулярно или параллельно стенам) определять по `Structural Detail` - это самое главное.
+- Accessories for Trusses (всё по периметру) - сначала по Structural plans (опирание параллельно/перпендикулярно и внутри на стенах).
 
 ## Specs Check (приходит на каждый COM)
 
-- **FRT (Fire Treated)** — может быть только на Wall Sheathing, либо на всю экстерьерную стену (sheathing + studs + plates + headers). Если второе — то и blocking/parapets обычно тоже FRT.
+- **FRT (Fire Treated)** - может быть только на Wall Sheathing, либо на всю экстерьерную стену (sheathing + studs + plates + headers). Если второе - то и blocking/parapets обычно тоже FRT.
 - Watch OSB Ext sheathing с названиями `Flame Block` или `Densglass Sheathing`. `Densglass` часто на metal walls.
-- **Glulam grades**: Architectural `24F-V3` и т.п. Слова вроде `camber` — отметить.
+- **Glulam grades**: Architectural `24F-V3` и т.п. Слова вроде `camber` - отметить.
 - **Stud / Plates specs**: `SP plates`; `SPF` studs vs `DF`, `DF#2`, `HF`, `MSR`, `LSL`.
-- **Bearing walls** — spacing и количество. На нижних этажах часто **double studs**, demising studs — выписывать отдельной строкой.
-- Multi-layer sheathing, subfloor, underlayment, sound membrane — проверить.
-- Edge sheathing может быть `FRT 4'` или `2'` по периметру (Floor & Roof — see notes; над demising тоже).
-- `Gypcrete` floors — чаще всего **double bottom plates**.
-- `Rigid Insulation` — проверить.
-- **Interior sheathing** и **Holdowns**: если location не указан — assume каждая сторона SW.
+- **Bearing walls** - spacing и количество. На нижних этажах часто **double studs**, demising studs - выписывать отдельной строкой.
+- Multi-layer sheathing, subfloor, underlayment, sound membrane - проверить.
+- Edge sheathing может быть `FRT 4'` или `2'` по периметру (Floor & Roof - see notes; над demising тоже).
+- `Gypcrete` floors - чаще всего **double bottom plates**.
+- `Rigid Insulation` - проверить.
+- **Interior sheathing** и **Holdowns**: если location не указан - assume каждая сторона SW.
 - **Parapet** sheathing внутри = снаружи минус insulation board.
 - **Tall Trusses w Piggy trusses** требуют `2x6 bearing plates` `4' o.c.`
-- **Flat curb blocking** на flat roofs — `(2) 2x6 PT`, если ничего не указано и нет детали.
-- **Exact stud height** — считать вручную: `9'`, `9'1-1/8"`, `9'1-1/4"` и т.п.
+- **Flat curb blocking** на flat roofs - `(2) 2x6 PT`, если ничего не указано и нет детали.
+- **Exact stud height** - считать вручную: `9'`, `9'1-1/8"`, `9'1-1/4"` и т.п.
 - Всегда следовать **S-details**, когда они есть.
-- **Exterior Sheathing** по Arch plans (если Structural не даёт более точную инфу). **Interior sheathing** — по Structural.
-- **Blocking around windows** — особенно когда используется Insulation или Zip R sheathing.
-- `1x3 PT strapping` под siding типа Hardi paneling — если указано.
-- **Любые Exterior buildouts** — стик-фрейм, не панели.
+- **Exterior Sheathing** по Arch plans (если Structural не даёт более точную инфу). **Interior sheathing** - по Structural.
+- **Blocking around windows** - особенно когда используется Insulation или Zip R sheathing.
+- `1x3 PT strapping` под siding типа Hardi paneling - если указано.
+- **Любые Exterior buildouts** - стик-фрейм, не панели.
 - Все новые формулы **проверять сразу**, не потом.
-- **Shaft walls** — не пропускать.
-- **Dropped Soffits** — проверять RCP pages. Может быть `2x4 soffit frame` в bath или в коридоре.
-- **Soffit plywood** под Roof trusses — возможно.
-- Под **Podium** или внутри существующего здания — **не панели**.
+- **Shaft walls** - не пропускать.
+- **Dropped Soffits** - проверять RCP pages. Может быть `2x4 soffit frame` в bath или в коридоре.
+- **Soffit plywood** под Roof trusses - возможно.
+- Под **Podium** или внутри существующего здания - **не панели**.
 
 <!-- confluence-gallery:start -->
 ## Визуальная проверка

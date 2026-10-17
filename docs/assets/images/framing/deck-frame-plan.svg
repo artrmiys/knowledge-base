@@ -2,8 +2,8 @@
   <title id="t">Deck framing plan: ledger, beam, posts, joists</title>
   <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}</style>
   <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Deck / Porch / Balcony — каркас (план)</text>
-  <text class="s" x="32" y="62">Ledger к зданию · beam на posts · joists между. Hangers/bolts по детали.</text>
+  <text class="t" x="32" y="40">Deck / Porch / Balcony - каркас (план)</text>
+  <text class="s" x="32" y="62">Ledger к зданию , beam на posts , joists между. Hangers/bolts по детали.</text>
   <!-- building wall -->
   <rect x="100" y="90" width="420" height="14" fill="#7c8a96"/>
   <text class="s" x="100" y="84">building</text>

@@ -4,12 +4,12 @@
     - **Exterior** обшивку ведут **Arch / Energy / Zip** notes.
     - **Shear / interior** обшивку ведёт **Structural** (по shear wall schedule).
     - Zip перекрывает structural notes на exterior, но оставляй note о конфликте.
-    - Каждый product / thickness / side — отдельной строкой, не прячь в wall SQFT.
-    - Полный блок наружных материалов → [Exterior Wall Materials](exterior-materials.md).
+    - Каждый product / thickness / side - отдельной строкой, не прячь в wall SQFT.
+    - Полный блок наружных материалов - [Exterior Wall Materials](exterior-materials.md).
 
 <figure markdown>
   ![WD stud wall layer stack with takeoff notes](../../../assets/images/sheathing/wd-wall-layers.svg)
-  <figcaption>Стена по слоям: каждый sheathing-слой (gypsum, FRT ply, WRB) — отдельная строка, не общий wall SQFT.</figcaption>
+  <figcaption>Стена по слоям: каждый sheathing-слой (gypsum, FRT ply, WRB) - отдельная строка, не общий wall SQFT.</figcaption>
 </figure>
 
 ## Что считать
@@ -47,12 +47,12 @@
 
 - FRT sheathing notes на exterior walls.
 - Densglass / Type X gypsum на metal walls или specific elevations.
-- `Insulation at CMU` — continuous insulation на CMU стенах отдельной строкой.
+- `Insulation at CMU` - continuous insulation на CMU стенах отдельной строкой.
 - Shear wall schedule: one-side vs both-sides requirements.
 - Full-height vs box-only sheathing на optional walls.
 - Floor-height sheathing вокруг panelized COM jobs, где loose material всё ещё
   in scope.
-- Draft stop sheathing at party/demising walls — это не shear wall sheathing.
+- Draft stop sheathing at party/demising walls - это не shear wall sheathing.
   Draft stop и shear wall quantities держи отдельно.
 - Draft stop может быть на walls и between floors; считай каждый supplied scope
   в своей section, а не объединяй в одну wall line.
@@ -67,16 +67,16 @@
 | `1/2" OSB` | OSB, 1/2" |
 | `1/2" Ply` (или просто **APA RATED**) | Plywood APA-rated, 1/2" |
 | `7/16" Zip` | Huber Zip System, 7/16" |
-| `Zip Tape` | Лента Zip — отдельной строкой к Zip-обшивке |
+| `Zip Tape` | Лента Zip - отдельной строкой к Zip-обшивке |
 | `5/8" Type X` | Exterior grade gypsum sheathing (= `19/32"`) |
 | `5/8" Densglass` | Densglass gypsum sheathing (часто over Zip) |
 
-- **Box / wall sheathing чаще `OSB`** — Zip идёт там, где это явно Zip-система
+- **Box / wall sheathing чаще `OSB`** - Zip идёт там, где это явно Zip-система
   (energy / Arch note). Exterior всё равно ведут Arch / Zip notes, это лишь default.
-- Если на плане только `APA RATED` без указания материала — это **Plywood**, не OSB.
+- Если на плане только `APA RATED` без указания материала - это **Plywood**, не OSB.
 - `Zip Tape` идёт **только** в паре с Zip-обшивкой; не забывай добавить отдельную строку.
 - **Gypsum sheathing** (`Type X` / `Densglass`) бывает в **(2) layers** и отдельным
-  слоем **over FRT** — каждый слой считается своей строкой. Material для metal/CMU
+  слоем **over FRT** - каждый слой считается своей строкой. Material для metal/CMU
   стен нужен, даже если каркас чужой.
 
 !!! note "Полный блок наружных материалов"
@@ -87,7 +87,7 @@
 
 ## See also
 
-- [Exterior Wall Materials](exterior-materials.md) · [Shear Wall](shear-wall.md) · [Box Sheathing](box-sheathing.md) · [Gable Sheathing](gable.md) · [Exterior Walls](../walls/exterior.md)
+- [Exterior Wall Materials](exterior-materials.md) , [Shear Wall](shear-wall.md) , [Box Sheathing](box-sheathing.md) , [Gable Sheathing](gable.md) , [Exterior Walls](../walls/exterior.md)
 
 <!-- confluence-gallery:start -->
 ## Визуальная проверка

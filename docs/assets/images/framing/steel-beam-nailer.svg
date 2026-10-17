@@ -5,8 +5,8 @@
     <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Steel beam — wood nailer / web filler</text>
-  <text class="s" x="32" y="62">Top nailer → top-mount hanger; filler в стенке. Washers по детали.</text>
+  <text class="t" x="32" y="40">Steel beam - wood nailer / web filler</text>
+  <text class="s" x="32" y="62">Top nailer - top-mount hanger; filler в стенке. Washers по детали.</text>
   <!-- steel I-beam (section) -->
   <g fill="#c2cad1" stroke="#3a3a3a" stroke-width="1.6">
     <rect x="220" y="120" width="120" height="16"/>

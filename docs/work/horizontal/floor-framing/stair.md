@@ -2,7 +2,7 @@
 
 <figure markdown>
   ![Stair stringers, treads and risers](../../../assets/images/framing/stair.svg)
-  <figcaption>Stair-блок: stringers → treads → risers. Hangers под stair — в этой же секции.</figcaption>
+  <figcaption>Stair-блок: stringers - treads - risers. Hangers под stair - в этой же секции.</figcaption>
 </figure>
 
 ## Что считать
@@ -22,18 +22,18 @@
 
 ## Типовые спеки { .kb-section-title .kb-st--cyan }
 
-Stair-блок почти всегда тройка `Stringers → Treads → Risers`:
+Stair-блок почти всегда тройка `Stringers - Treads - Risers`:
 
 | Строка | Типовой материал | Длина |
 | --- | --- | --- |
-| `Stringers (4)` | `2x12`, на больших пролётах `1¾x14 LVL` | med `10'` [10–14] |
+| `Stringers (4)` | `2x12`, на больших пролётах `1¾x14 LVL` | med `10'` [10-14] |
 | `Treads` | `2x12 Treads`, либо `1" wood` / `5/4x11` / plywood | **`12'`** (стабильно) |
 | `Risers` | `1x8` | **`12'`** (стабильно) |
 
-- `2x12` stringers — дефолт; LVL только когда structural требует.
-- Treads/Risers режутся из `12'` stock — это и есть sanity-check длины.
-- Hangers под stair — внутри этой же секции (см. [Hardware catalog](../../../reference/hardware-catalog.md)).
+- `2x12` stringers - дефолт; LVL только когда structural требует.
+- Treads/Risers режутся из `12'` stock - это и есть sanity-check длины.
+- Hangers под stair - внутри этой же секции (см. [Hardware catalog](../../../reference/hardware-catalog.md)).
 
 ## See also
 
-- [Post](post.md) · [Beam](beam.md) · [Hangers](../../../reference/hangers.md)
+- [Post](post.md) , [Beam](beam.md) , [Hangers](../../../reference/hangers.md)

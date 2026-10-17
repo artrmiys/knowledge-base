@@ -24,7 +24,7 @@
 - Room schedule: включать только wood base; tile base исключать.
 - Door list: hardware numbers не нужны, но material и fire rating нужны.
 - Примеры labels: `2670 FCW`, `3070 HM C-lbl`.
-- Deflection tracks — только на full-height walls, которые доходят до ceiling above.
+- Deflection tracks - только на full-height walls, которые доходят до ceiling above.
 - Dropped soffits используют regular top tracks.
 
 ## Capital / EWP

@@ -11,15 +11,15 @@
 - Some demising walls are double; не усредняй их в regular walls.
 - Shear wall sheathing at demising walls может быть one side only или half the
   wall length; следуй schedule.
-- На обычных demising hanger conditions используют `ITS`, а не `DHU` / `DGU` —
+- На обычных demising hanger conditions используют `ITS`, а не `DHU` / `DGU` -
   когда gypsum заканчивается ниже уровня floor framing (т.е. это не настоящая
-  fire wall, см. [Corridor → DHU/DGU](corridor.md#rules)).
+  fire wall, см. [Corridor - DHU/DGU](corridor.md#rules)).
 
 ## Проверить
 
 - Drywall ledger: 2x4 at both sides of demising walls, где parallel with framing.
 - Double studs на lower bearing levels, если structural notes требуют их.
-- Draft stop sheathing at party/demising walls — отдельно от shear wall
+- Draft stop sheathing at party/demising walls - отдельно от shear wall
   sheathing. Если structural details требуют draft stop, считай его на wall и
   на floor-framing levels отдельными measurements.
 - Не assume draft stop material = P.T.; используй regular material, если
@@ -36,13 +36,13 @@
 | `dem 2x4 2x4 10.5 9` | Двойной demising 2x4/2x4 разной высоты |
 | `dem 2x6 2x6 11 12` | Двойной demising 2x6/2x6 разной высоты |
 
-Если обе стены идентичны — короткая запись `dem (2) 2x6 10.5`. Если стены разные — пиши **толщины подряд, потом высоты подряд**.
+Если обе стены идентичны - короткая запись `dem (2) 2x6 10.5`. Если стены разные - пиши **толщины подряд, потом высоты подряд**.
 
 <figure markdown>
   ![Demising plate rows in the takeoff sheet](../../../assets/images/confluence/confluence-126.png)
-  <figcaption>Demising-строки в takeoff: <code>Plates Demising (1) btm / (2) top</code> по каждой из двух стен (2x6 P.T. / 2x6 / 2x4) — двойная стена заводится отдельными строками.</figcaption>
+  <figcaption>Demising-строки в takeoff: <code>Plates Demising (1) btm / (2) top</code> по каждой из двух стен (2x6 P.T. / 2x6 / 2x4) - двойная стена заводится отдельными строками.</figcaption>
 </figure>
 
 ## See also
 
-- [Corridor Walls](corridor.md) · [Shear Wall](../sheathing/shear-wall.md) · [Bracing for Drywall](../../horizontal/floor-framing/details/bracingdrywall.md)
+- [Corridor Walls](corridor.md) , [Shear Wall](../sheathing/shear-wall.md) , [Bracing for Drywall](../../horizontal/floor-framing/details/bracingdrywall.md)

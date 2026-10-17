@@ -1,28 +1,28 @@
 # Windows and Doors
 
-**Openings** — окна и двери по window/door schedule. Тянут за собой jamb
+**Openings** - окна и двери по window/door schedule. Тянут за собой jamb
 blocking, headers, flashing и **вырез из sheathing**.
 
 ## Что считать
 
-- **Окна и двери** — по типам и размерам из window / door schedule.
-- **Блокировку проёмов** (`jamb blocking`) — у всех окон и у межкомнатных
+- **Окна и двери** - по типам и размерам из window / door schedule.
+- **Блокировку проёмов** (`jamb blocking`) - у всех окон и у межкомнатных
   дверей.
 - **Пожароустойчивые двери** в квартиры из коридоров (`fire-rated unit
-  entry`) — отдельным типом, с указанием рейтинга.
+  entry`) - отдельным типом, с указанием рейтинга.
 
 ## Подписи дверей
 
 - В подписи указываем **материал** и **fire rating**, если это важно. Примеры:
-    - `2670 FCW` — двустворчатая 2'6"×7'0".
-    - `3070 HM C-lbl` — металлическая 3'0"×7'0", класс «C».
+    - `2670 FCW` - двустворчатая 2'6"×7'0".
+    - `3070 HM C-lbl` - металлическая 3'0"×7'0", класс "C".
 - Дверь в квартиру можно подписать просто `3070 Entry`.
 - **Номера фурнитуры** (hardware numbers) в takeoff обычно **не нужны**.
 
 ## Проверить
 
 - У наружных проёмов **jamb** (доска по периметру проёма) можно считать той же
-  формулой, что и flashing — по 3 сторонам. Подробнее на странице
+  формулой, что и flashing - по 3 сторонам. Подробнее на странице
   [Window Flashing](window-flashing.md).
 - У межкомнатных дверей **jamb** часто считается как `casing / 2`, если так
   заведено в проекте.
@@ -30,23 +30,23 @@ blocking, headers, flashing и **вырез из sheathing**.
 
 ## Гидроизоляция вокруг проёмов
 
-Flashing вокруг окон и дверей — отдельная страница:
-**[Window Flashing & Sill](window-flashing.md)**. Там: правило «3 стороны
-у окон + sill, у дверей только 3 стороны», разделение по типу стены (wood /
+Flashing вокруг окон и дверей - отдельная страница:
+**[Window Flashing & Sill](window-flashing.md)**. Там: правило "3 стороны
+у окон + sill, у дверей только 3 стороны", разделение по типу стены (wood /
 Mtl / CMU / concrete), и wood jamb `1x4` / `2x4 P.T.` на бетоне.
 
 ## PlanSwift Marking & Macro
 
-- Подсчёт всех openings — макрос **`F_Openings`** (даёт Window Flashing + Sill Flashing).
-- У всех **дверей** обязательно ставь пометку **`d`** — макрос по этой пометке
+- Подсчёт всех openings - макрос **`F_Openings`** (даёт Window Flashing + Sill Flashing).
+- У всех **дверей** обязательно ставь пометку **`d`** - макрос по этой пометке
   **не считает** sill flashing.
-- У **гаражных** дверей — пометка **`gd`**.
-- Если **окно и дверь объединены одним хэдером** (например, sliding patio в blocks с фиксом сбоку) — считай их **вместе** одним openings, ставь **`d`**.
-- Все openings **вырезаются из sheathing** — не забывай subtract при подсчёте Wall Sheathing SQFT.
+- У **гаражных** дверей - пометка **`gd`**.
+- Если **окно и дверь объединены одним хэдером** (например, sliding patio в blocks с фиксом сбоку) - считай их **вместе** одним openings, ставь **`d`**.
+- Все openings **вырезаются из sheathing** - не забывай subtract при подсчёте Wall Sheathing SQFT.
 
 ## See also
 
-- [Headers](headers.md) · [Window Flashing & Sill](window-flashing.md) · [Macros](../../exterior-trims/macros.md) · [Furring & Window Jambs](../../exterior-trims/furring-and-jambs.md)
+- [Headers](headers.md) , [Window Flashing & Sill](window-flashing.md) , [Macros](../../exterior-trims/macros.md) , [Furring & Window Jambs](../../exterior-trims/furring-and-jambs.md)
 
 <!-- confluence-gallery:start -->
 ## Визуальная проверка

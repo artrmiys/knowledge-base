@@ -17,15 +17,15 @@
 
 Внутренние примеры единиц расчёта:
 
-- На **1 LFT** — выбранные линейные элементы.
-- На **1 SQFT** — выбранные площади sheathing, subfloor или insulation.
-- На **each** — отдельные posts, holdowns и другие штучные позиции.
+- На **1 LFT** - выбранные линейные элементы.
+- На **1 SQFT** - выбранные площади sheathing, subfloor или insulation.
+- На **each** - отдельные posts, holdowns и другие штучные позиции.
 
 Состав набора и формулы зависят от проекта и шаблона. Не прибавляй waste повторно,
 если он уже включён. Принятые внутренние множители собраны в
 [Формулах и факторах](formulas.md).
 
-Прежнее описание «37 блоков из 180 проектов» относится к историческому внутреннему
+Прежнее описание "37 блоков из 180 проектов" относится к историческому внутреннему
 исследованию. Оно не является текущим публичным каталогом assemblies и в этом
 проходе не пересчитывалось.
 
@@ -35,7 +35,7 @@
 Название системы классификации само по себе не определяет, какие материалы
 входят в ваш scope или кому принадлежат работы.
 
-Ниже — тематический указатель для чтения спецификации, а не готовое назначение
+Ниже - тематический указатель для чтения спецификации, а не готовое назначение
 кодов строкам Excel:
 
 | Раздел | Тема для проверки |
@@ -72,7 +72,7 @@ DFL были названы CSI-кодами. Соответствие этих 
 
 Текущий пользовательский процесс OurPlanCore описан в
 [руководстве](ourplanecore.md) и [быстром старте](ourplancore-start.md).
-Направления помощи ИИ и их ограничения — на странице
+Направления помощи ИИ и их ограничения - на странице
 [ИИ в takeoff](ai-assist-system.md).
 
 Сравнение возможностей коммерческих AI-takeoff продуктов здесь не поддерживается.
@@ -81,8 +81,8 @@ DFL были названы CSI-кодами. Соответствие этих 
 
 ## Где продолжить
 
-- RSMeans: [Unit & Assembly Estimates](https://www.rsmeans.com/resources/creating-unit-assembly-estimates-rsmeans-online) — материал об unit и assembly estimates.
-- Autodesk: [Lumber Takeoff](https://www.autodesk.com/blogs/construction/framing-lumber-takeoff/) — материал о процессе lumber takeoff.
-- [Workflow](../start/workflow.md) — порядок работы в этой KB.
-- [Материалы](material-catalog.md) и [Hangers](hangers.md) — предметные справочники.
-- [Стандартные notes](standard-notes.md) — как показывать предположения и вопросы.
+- RSMeans: [Unit & Assembly Estimates](https://www.rsmeans.com/resources/creating-unit-assembly-estimates-rsmeans-online) - материал об unit и assembly estimates.
+- Autodesk: [Lumber Takeoff](https://www.autodesk.com/blogs/construction/framing-lumber-takeoff/) - материал о процессе lumber takeoff.
+- [Workflow](../start/workflow.md) - порядок работы в этой KB.
+- [Материалы](material-catalog.md) и [Hangers](hangers.md) - предметные справочники.
+- [Стандартные notes](standard-notes.md) - как показывать предположения и вопросы.

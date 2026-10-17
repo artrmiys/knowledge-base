@@ -1,6 +1,6 @@
 # Truss Heel
 
-**Truss heel** — вертикальная полоса обшивки в торце фермы (между Top Plate
+**Truss heel** - вертикальная полоса обшивки в торце фермы (между Top Plate
 стены и низом верхнего пояса/overhang). Отдельная строка, не box sheathing и
 не soffit. Типовая высота ≈ `1'-7"`.
 
@@ -19,26 +19,26 @@
 ## Typical Heel Height
 
 - Стандартная высота `truss heel` ≈ **1'-7"** (берётся от верха стены до верха верхнего пояса фермы по краю).
-- Используй это как sanity-check, если на чертеже высота heel не подписана; конкретное число — всегда из truss-package, если он есть.
+- Используй это как sanity-check, если на чертеже высота heel не подписана; конкретное число - всегда из truss-package, если он есть.
 
 ## Companion-строки { .kb-section-title .kb-st--green }
 
 Heel-секция почти всегда несёт за собой:
 
-- **Vapor Barrier** (`Tyvek`) за обшивкой heel — типовая пара.
+- **Vapor Barrier** (`Tyvek`) за обшивкой heel - типовая пара.
 - Иногда Subfloor, Panel Adhesive (`29OZ`), Tape (`Zip Tape`).
-- Blocking for Drywall — на COM / flat condition.
+- Blocking for Drywall - на COM / flat condition.
 
-→ Если поставил Truss Heel sheathing, проверь Vapor Barrier рядом.
+- Если поставил Truss Heel sheathing, проверь Vapor Barrier рядом.
 
 ## Где не пропустить heel sheathing
 
 - На **gable**-сторонах heel-обшивка обычно уже **учтена** в Gable Sheathing (треугольник + полоска heel под ним идут одной плоскостью).
-- На **Eave**-сторонах (длинная сторона свеса) heel-обшивка **часто забывается** — это отдельная вертикальная полоска по периметру здания между Top Plate стены и нижом overhang. Проверяй её отдельной строкой.
+- На **Eave**-сторонах (длинная сторона свеса) heel-обшивка **часто забывается** - это отдельная вертикальная полоска по периметру здания между Top Plate стены и нижом overhang. Проверяй её отдельной строкой.
 
 ## See also
 
-- [Box Sheathing](box-sheathing.md) · [Gable Sheathing](gable.md) · [Eve / Eave](../../sheathing-and-misc/eve.md) · [Parapet](../walls/parapet.md)
+- [Box Sheathing](box-sheathing.md) , [Gable Sheathing](gable.md) , [Eve / Eave](../../sheathing-and-misc/eve.md) , [Parapet](../walls/parapet.md)
 
 <!-- confluence-gallery:start -->
 ## Визуальная проверка

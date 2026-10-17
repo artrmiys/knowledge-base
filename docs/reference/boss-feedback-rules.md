@@ -1,7 +1,7 @@
 # Советы и важные вещи
 
 Ключевая страница wiki: правила, собранные из реальных правок и фидбэка по
-проектам. Многих из этих вещей нет в общих гайдах по estimating — это локальная
+проектам. Многих из этих вещей нет в общих гайдах по estimating - это локальная
 память команды.
 
 ## Rim Board
@@ -46,10 +46,10 @@
 ## Studs
 
 Boss-rule: на `16" o.c.` считай **1:1 + 10% waste** (одна стойка на фут), а
-**не** геометрические `0.75`. На `24" o.c.` — `0.5 + 25% waste`. Это покрывает
+**не** геометрические `0.75`. На `24" o.c.` - `0.5 + 25% waste`. Это покрывает
 corners, T-пересечения, jack/king/cripple и обрезь.
 
-- **Числа — в одной таблице:** [Формулы → Stud spacing factors](formulas.md#stud-spacing-factors)
+- **Числа - в одной таблице:** [Формулы - Stud spacing factors](formulas.md#stud-spacing-factors)
   (`12/16/24 = 1.4667/1.1/0.625`). Не дублируй её здесь, чтобы значения не
   разошлись. Joists считаются **по другой** таблице (`12/spacing`).
 - На больших COM jobs используй exact heights: `9'0-3/8"`, `9'1-1/8"` и т.д.
@@ -82,7 +82,7 @@ framing и не являются основанием добавлять optiona
 
 К non-panel walls относятся стены под concrete slab, внутри existing frames,
 короткие стены и стены с irregular slope. Exterior build-up walls могут быть
-исключением — проверь конкретную конструкцию и scope. Не исключай все exterior
+исключением - проверь конкретную конструкцию и scope. Не исключай все exterior
 build-ups из panels автоматически.
 
 Furring strips под siding/insulation проверяются по своему scope и details:
@@ -122,7 +122,7 @@ Furring strips под siding/insulation проверяются по своему
 
 ## Client Metal Rule
 
-Канонично — на странице [Правила клиентов → Metal Studs](../start/client-rules.md#metal-studs).
+Канонично - на странице [Правила клиентов - Metal Studs](../start/client-rules.md#metal-studs).
 Здесь не дублируем, чтобы списки клиентов не разошлись между двумя страницами.
 
 Главное правило: даже когда metal исключается, всё равно отмечай locations

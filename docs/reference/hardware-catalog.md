@@ -1,15 +1,15 @@
 # Hardware catalog (Simpson)
 
-Словарь крепежа Simpson Strong-Tie — «какой spec под какое соединение». Это словарь
-(что встречается и зачем), а выбор за 30 секунд — в [Hangers](hangers.md).
+Словарь крепежа Simpson Strong-Tie - "какой spec под какое соединение". Это словарь
+(что встречается и зачем), а выбор за 30 секунд - в [Hangers](hangers.md).
 
 !!! tip "Как читать"
     `Zmax`/`Z`-суффикс = горячая оцинковка (наружка / PT-древесина). `E`-суффикс у
     holdown = embedded (заливной анкер, не post-installed). Цифра в модели обычно =
-    сечение/нагрузка (`ABU66` → 6x6 post; `HDU8` > `HDU4` по нагрузке).
+    сечение/нагрузка (`ABU66` - 6x6 post; `HDU8` > `HDU4` по нагрузке).
 
 !!! warning "Это словарь, не дефолты"
-    Все spec'и — **per-project по деталям/schedule**. Список показывает, что бывает,
+    Все spec'и - **per-project по деталям/schedule**. Список показывает, что бывает,
     но конкретная модель берётся из structural notes проекта.
 
 ## Joist / beam hangers { .kb-section-title .kb-st--green }
@@ -22,16 +22,16 @@
 | `LUC26` | concealed-flange 2x6 |
 | `HUC210-2/-3`, `HUC410-2`, `HUC214-3` | heavy face-mount (2/3-ply, `Zmax`) |
 | `HU9` / `HU410` / `HU412` / `HU48` | heavy U-hanger |
-| `HHUS5.50/10·/12·/14`, `HHUS48`, `HHUS210-3` | heavy hi-cap (LVL / большие балки) |
+| `HHUS5.50/10,/12,/14`, `HHUS48`, `HHUS210-3` | heavy hi-cap (LVL / большие балки) |
 | `HUCQ210-3`, `HUCQ610`, `HUCQ412 Zmax` | concealed heavy (лестница / platform / balcony beams) |
-| `LRU210Z` / `LRU212Z` / `LRU24Z` / `LRU28Z` | **rafter/slope hangers** (skewed/sloped — porch/roof) |
+| `LRU210Z` / `LRU212Z` / `LRU24Z` / `LRU28Z` | **rafter/slope hangers** (skewed/sloped - porch/roof) |
 | `MIT`, `ML26Z`, `ML24Z`, `ML28` | misc / lite beam hanger |
 
-## Ties / clips (uplift, truss/rafter→plate) { .kb-section-title .kb-st--cyan }
+## Ties / clips (uplift, truss/rafter-plate) { .kb-section-title .kb-st--cyan }
 
 | Spec | Назначение |
 | --- | --- |
-| `H2.5` / `H2.5A` | hurricane tie — самый частый (truss/rafter-to-plate) |
+| `H2.5` / `H2.5A` | hurricane tie - самый частый (truss/rafter-to-plate) |
 | `H1` / `H3` / `H8` / `H10` | tie по нагрузке |
 | `A35` | framing angle (универсальный) |
 | `A34` | framing angle (меньше) |
@@ -63,14 +63,14 @@
 | Spec | Назначение |
 | --- | --- |
 | `DTT2Z` | deck/light tension (1-storey, лёгкая) |
-| `HDU2/4/5/8/11/14/19` | **HDU-серия — рабочая лошадка** (цифра = модель по нагрузке) |
+| `HDU2/4/5/8/11/14/19` | **HDU-серия - рабочая лошадка** (цифра = модель по нагрузке) |
 | `HDUE3/5/7/9/13` | **HDU Embedded** (заливной анкер, не post-installed) |
 | `HTT5KT` / `HTT5K` | tension holdown (KT = kit) |
 | `TBD HD` | placeholder когда shear walls не определены |
 
 !!! note "Holdown на практике"
     Почти всегда из **HDU / HDUE-серии**, выбор по нагрузке из shear-wall schedule
-    (`HDU2 < 4 < 5 < 8 < 11 < 14 < 19`). `HTT5K` реже; `DTT2Z` — лёгкие / deck.
+    (`HDU2 < 4 < 5 < 8 < 11 < 14 < 19`). `HTT5K` реже; `DTT2Z` - лёгкие / deck.
 
 ## Structural screws { .kb-section-title .kb-st--orange }
 
@@ -82,14 +82,14 @@
 
 ## Шпаргалка по умолчанию
 
-- **Hanger** — по балке/нагрузке/mount: 2x10 → `LUS210`; 3-ply → `-3`; heavy/LVL →
-  `HUC`/`HHUS`; наружка/PT → `Zmax`. Логика выбора — [Hangers](hangers.md).
+- **Hanger** - по балке/нагрузке/mount: 2x10 - `LUS210`; 3-ply - `-3`; heavy/LVL -
+  `HUC`/`HHUS`; наружка/PT - `Zmax`. Логика выбора - [Hangers](hangers.md).
 - **Tie** по умолчанию `H2.5` (uplift); framing angle `A35`.
-- **Post 6x6:** база `ABU66 Zmax` + кап `BCS2-3/6` или `CCQ66`; консоль → `ECCQ66`.
-- **Holdown** по shear-wall schedule; нет данных → `TBD HD`.
+- **Post 6x6:** база `ABU66 Zmax` + кап `BCS2-3/6` или `CCQ66`; консоль - `ECCQ66`.
+- **Holdown** по shear-wall schedule; нет данных - `TBD HD`.
 
 ## См. также
 
-- [Hangers](hangers.md) — выбор hanger по condition (mount / depth / skew).
-- [Material catalog](material-catalog.md) — древесина и материалы.
-- [Quantity benchmarks](quantity-benchmarks.md) — типовые размеры/количества.
+- [Hangers](hangers.md) - выбор hanger по condition (mount / depth / skew).
+- [Material catalog](material-catalog.md) - древесина и материалы.
+- [Quantity benchmarks](quantity-benchmarks.md) - типовые размеры/количества.

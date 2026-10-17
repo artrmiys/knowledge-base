@@ -1,12 +1,12 @@
 # Headers
 
-**Header** — балка над проёмом (окно/дверь), передающая нагрузку на jack/king
+**Header** - балка над проёмом (окно/дверь), передающая нагрузку на jack/king
 studs. `(2)`/`(3)` = число плёнок (двух-/трёхслойный). Размер часто меняется
-по этажу — бери из structural schedule.
+по этажу - бери из structural schedule.
 
 <figure markdown>
   ![Header over opening with king and jack studs](../../../assets/images/openings/header.svg)
-  <figcaption>Header опирается на jack studs; king по краям. `(2)`/`(3)` — число плёнок.</figcaption>
+  <figcaption>Header опирается на jack studs; king по краям. `(2)`/`(3)` - число плёнок.</figcaption>
 </figure>
 
 ## Что считать
@@ -29,4 +29,4 @@ studs. `(2)`/`(3)` = число плёнок (двух-/трёхслойный).
 
 ## See also
 
-- [Windows & Doors](windows-doors.md) · [Roof Framing → Header](../../horizontal/roof-framing/header.md) · [Exterior Walls](../walls/exterior.md)
+- [Windows & Doors](windows-doors.md) , [Roof Framing - Header](../../horizontal/roof-framing/header.md) , [Exterior Walls](../walls/exterior.md)

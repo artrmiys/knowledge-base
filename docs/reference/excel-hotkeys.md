@@ -1,12 +1,12 @@
 # Excel macro hotkeys
 
 Это не стандартные Excel shortcuts. Это **VBA-macros**, подключённые к рабочему
-workbook'у — для очистки, форматирования и записи после PlanSwift output.
+workbook'у - для очистки, форматирования и записи после PlanSwift output.
 
 !!! warning "Макросы должны быть включены"
-    Если shortcut ничего не делает — проверь:
+    Если shortcut ничего не делает - проверь:
     1. Активный workbook содержит нужные macros.
-    2. Macros включены (`File → Options → Trust Center → Macro Settings`).
+    2. Macros включены (`File - Options - Trust Center - Macro Settings`).
     3. Shortcut не перехвачен Excel/Windows.
 
 ## По этапам workflow { .kb-section-title .kb-st--cyan }
@@ -72,14 +72,14 @@ workbook'у — для очистки, форматирования и запи�
 ## Быстрый порядок после PlanSwift { .kb-section-title .kb-st--magenta }
 
 1. Выбери правильный output sheet и range.
-2. Запусти formatting: ++ctrl+shift+b++ Beams → ++ctrl+shift+j++ Joists → ++ctrl+shift+r++ Details.
+2. Запусти formatting: ++ctrl+shift+b++ Beams - ++ctrl+shift+j++ Joists - ++ctrl+shift+r++ Details.
 3. Чисти мусор: ++ctrl+shift+d++ grey cells, ++ctrl+e++ zero rows, ++ctrl+shift+v++ validation dropdowns.
 4. Запиши в форму: ++ctrl+shift+w++ walls / ++ctrl+shift+q++ area, если это часть workbook workflow.
-5. Финал: ++ctrl+shift+o++ дата → ++ctrl+shift+t++ spell check → ++ctrl+shift+n++ write to check.
+5. Финал: ++ctrl+shift+o++ дата - ++ctrl+shift+t++ spell check - ++ctrl+shift+n++ write to check.
 
 ## Calc pipeline (A-series) { .kb-section-title .kb-st--cyan }
 
-Расчётные макросы — запускаются по выделенному range, по порядку. Не имеют
+Расчётные макросы - запускаются по выделенному range, по порядку. Не имеют
 Ctrl-хоткеев: запускай кнопкой или `Alt+F8`.
 
 | Макрос | Что делает |
@@ -90,17 +90,17 @@ Ctrl-хоткеев: запускай кнопкой или `Alt+F8`.
 | `A4_Parapet` (+ `X_ClearParapetTable`) | parapet walls |
 | `A5_Openings` | openings calc |
 | `A6_Eve_Rakes` | eve / rakes |
-| `A7_wall_sheathing` | по тексту в `J`: Zip → удалить Ply/OSB/CDX+Tyvek (пишет в `O5`); Ply/OSB/CDX → удалить Zip+Zip Tape (пишет в `O3`) |
+| `A7_wall_sheathing` | по тексту в `J`: Zip - удалить Ply/OSB/CDX+Tyvek (пишет в `O5`); Ply/OSB/CDX - удалить Zip+Zip Tape (пишет в `O3`) |
 | `A8_SplitWallSuffixes_ByJ` | делит выделенные строки `J:L` на base-список (имена walls для A3) и список suffix/detail notes |
 | `wall_panel` | wall panel расчёт |
 | `Fame_only` | удаляет finish/trim-блоки, оставляет **только frame** (A:H, сдвиг вверх) |
-| `Y_Run_First6` | один запуск всей цепочки `A1…A6` (toggle-константы внутри; `A1` идёт последним для безопасности — он перестраивает выделенный range) |
+| `Y_Run_First6` | один запуск всей цепочки `A1…A6` (toggle-константы внутри; `A1` идёт последним для безопасности - он перестраивает выделенный range) |
 | `C_HeadersSort` | сортировка/раскладка headers (как `C_BeamsSort`/`C_JoistsSort`; J-mode + legend-строки `H5 - (2) 2x10`) |
 | `C_RimBoardBlockingHangers` | rim board + blocking + hangers одним блоком |
 
 !!! tip "Порядок"
     `A1` чистит/перестраивает выделение, поэтому `A2…A6` читают исходное
-    выделение **до** `A1`. `Y_Run_First6` это уже учитывает. Вручную —
+    выделение **до** `A1`. `Y_Run_First6` это уже учитывает. Вручную -
     запускай `A2…A6`, затем `A1`.
 
 ## Новые insert-хелперы { .kb-section-title .kb-st--green }
@@ -112,7 +112,7 @@ Ctrl-хоткеев: запускай кнопкой или `Alt+F8`.
 | `Y_add_2400V48` | по 2-колоночному лук-апу проставляет `2400 V48` note-значения |
 | `B_Balcony_Insert_Template_FromText` | полный balcony-каркас по `b 12x30` |
 
-Полное описание trim/frame insert-блоков —
+Полное описание trim/frame insert-блоков -
 [Trim macros](../work/exterior-trims/macros.md) и
 [Deck / Porch / Balcony Frame](../work/deck/deck-porch-balcony-frame.md).
 
@@ -123,7 +123,7 @@ Ctrl-хоткеев: запускай кнопкой или `Alt+F8`.
 
 <div class="grid cards kb-hotkey-cards" markdown>
 
--   :material-arrow-down-bold-box:{ .lg .middle .kb-mk--cyan } **Ctrl + F — Walls**
+-   :material-arrow-down-bold-box:{ .lg .middle .kb-mk--cyan } **Ctrl + F - Walls**
 
     ---
 
@@ -135,7 +135,7 @@ Ctrl-хоткеев: запускай кнопкой или `Alt+F8`.
     | ++ctrl+f9++ | Wall Materials |
     | ++ctrl+f11++ / ++ctrl+f12++ | Foundation / Basement Floor Walls |
 
--   :material-arrow-down-bold-box-outline:{ .lg .middle .kb-mk--magenta } **Alt + F — Framing / roof**
+-   :material-arrow-down-bold-box-outline:{ .lg .middle .kb-mk--magenta } **Alt + F - Framing / roof**
 
     ---
 
@@ -160,21 +160,21 @@ Ctrl-хоткеев: запускай кнопкой или `Alt+F8`.
 
 </div>
 
-!!! warning "Не работает — проверь"
+!!! warning "Не работает - проверь"
     Nav-хоткеи вешает `Workbook_Open`. Если не прыгает: workbook с макросами
     открыт, macros enabled, и заголовок section написан точно (`1st Floor
-    Walls`, `Exterior Trims` и т.д.). `Z_Dont_use_Run_ByPriority` —
+    Walls`, `Exterior Trims` и т.д.). `Z_Dont_use_Run_ByPriority` -
     устаревший, не использовать.
 
 ## Стандартные Excel shortcuts { .kb-section-title .kb-st--amber }
 
-Для встроенных Excel shortcuts — официальный список Microsoft:
+Для встроенных Excel shortcuts - официальный список Microsoft:
 [Keyboard shortcuts in Excel](https://support.microsoft.com/en-gb/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f).
 
 ## See also
 
-- [Trim macros](../work/exterior-trims/macros.md) — `C_TrimsCalc`, jamb / pavers / balcony insert
-- [Deck / Porch / Balcony Frame](../work/deck/deck-porch-balcony-frame.md) — frame insert / sort макросы
+- [Trim macros](../work/exterior-trims/macros.md) - `C_TrimsCalc`, jamb / pavers / balcony insert
+- [Deck / Porch / Balcony Frame](../work/deck/deck-porch-balcony-frame.md) - frame insert / sort макросы
 - [Formulas and factors](formulas.md)
 - [Quality checklist](../start/quality-checklist.md)
 - [Workflow](../start/workflow.md)

@@ -1,12 +1,12 @@
 # Box Sheathing
 
-**Box sheathing** — узкая полоса обшивки только по «коробке» перехода
+**Box sheathing** - узкая полоса обшивки только по "коробке" перехода
 (floor/roof band, parapet, loose wall), а не full-height. Не путать с truss
 heel и full-height sheathing.
 
 <figure markdown>
   ![Box sheathing band at floor line](../../../assets/images/sheathing/box-sheathing.svg)
-  <figcaption>Box sheathing — узкая полоса по «коробке» перехода, а не вся стена.</figcaption>
+  <figcaption>Box sheathing - узкая полоса по "коробке" перехода, а не вся стена.</figcaption>
 </figure>
 
 ## Что считать
@@ -25,12 +25,12 @@ heel и full-height sheathing.
 - At attic conditions добавляй floor height к box sheathing только для first
   height, когда local rule требует это.
 - Attic subfloor может быть из `extra plate + box = subfloor`; не пропусти
-  subfloor line, когда box/plate detail — это clue.
+  subfloor line, когда box/plate detail - это clue.
 
 ## Проверить
 
-- Сопоставляй labels с details; copied detail labels — recurring error.
+- Сопоставляй labels с details; copied detail labels - recurring error.
 
 ## See also
 
-- [Wall Sheathing](wall-sheathing.md) · [Truss Heel](truss-heel.md) · [Floor Sheathing](floor.md)
+- [Wall Sheathing](wall-sheathing.md) , [Truss Heel](truss-heel.md) , [Floor Sheathing](floor.md)

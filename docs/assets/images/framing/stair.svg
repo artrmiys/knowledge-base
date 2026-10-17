@@ -5,7 +5,7 @@
     <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="320" fill="#fff"/>
-  <text class="t" x="32" y="40">Stair — stringers → treads → risers</text>
+  <text class="t" x="32" y="40">Stair - stringers - treads - risers</text>
   <text class="s" x="32" y="62">2x12 stringers (LVL по structural); 2x12 Treads + 1x8 Riser, режут из 12' stock.</text>
   <!-- stringer (zigzag) -->
   <polyline points="120,270 120,230 180,230 180,190 240,190 240,150 300,150 300,110 360,110" fill="none" stroke="#6c4b2a" stroke-width="3"/>

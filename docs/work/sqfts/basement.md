@@ -17,13 +17,13 @@
 - Existing/podium conditions нельзя считать standard panels без
   checking details.
 
-!!! note "Каркас цокольной стены — отдельно"
+!!! note "Каркас цокольной стены - отдельно"
     Если basement walls in scope, их состав (studs, P.T. btm plates, box
-    sheathing, vapor barrier) считается как полноценная стена — см.
-    [Basement Walls](../vertical/walls/basement.md). Здесь — только площадь этажа.
+    sheathing, vapor barrier) считается как полноценная стена - см.
+    [Basement Walls](../vertical/walls/basement.md). Здесь - только площадь этажа.
 
 ## See also
 
-- [Basement Walls](../vertical/walls/basement.md) — каркас цокольной стены
-- [Box Sheathing](../vertical/sheathing/box-sheathing.md) · [Subfloor](../horizontal/floor-framing/subfloor.md)
-- [Формулы → per SQFT](../../reference/formulas.md)
+- [Basement Walls](../vertical/walls/basement.md) - каркас цокольной стены
+- [Box Sheathing](../vertical/sheathing/box-sheathing.md) , [Subfloor](../horizontal/floor-framing/subfloor.md)
+- [Формулы - per SQFT](../../reference/formulas.md)

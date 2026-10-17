@@ -1,12 +1,12 @@
 # Blocking o.c.
 
-**Blocking o.c.** — раскладка блокинга с фиксированным шагом (обычно `48" o.c.`).
+**Blocking o.c.** - раскладка блокинга с фиксированным шагом (обычно `48" o.c.`).
 Считается через площадь/пролёт, не как continuous. Множитель зависит от типа
-(flat `2`, diagonal `2.5`) — полная таблица в [Формулах](../../../../reference/formulas.md#blocking-factor).
+(flat `2`, diagonal `2.5`) - полная таблица в [Формулах](../../../../reference/formulas.md#blocking-factor).
 
 <figure markdown>
   ![Blocking at 48 inch on center](../../../../assets/images/framing/blocking-oc.svg)
-  <figcaption>Blocking o.c. — раскладка с фиксированным шагом; считается через пролёт.</figcaption>
+  <figcaption>Blocking o.c. - раскладка с фиксированным шагом; считается через пролёт.</figcaption>
 </figure>
 
 ## Formulas
@@ -26,5 +26,5 @@ Diagonal 48" o.c. = G * 12 / 48 * 2.5 * 1.1 / D, ceiling to 1
 
 ## See also
 
-- [Blocking](blocking.md) · [Ribbon Board](ribbon.md) · [Формулы](../../../../reference/formulas.md)
+- [Blocking](blocking.md) , [Ribbon Board](ribbon.md) , [Формулы](../../../../reference/formulas.md)
 

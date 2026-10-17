@@ -1,12 +1,12 @@
 # Rake
 
-**Rake** — наклонный край крыши на gable-стороне (по скату фронтона). Отличается
+**Rake** - наклонный край крыши на gable-стороне (по скату фронтона). Отличается
 от **eave** (горизонтальный нижний край) и **return** (угловая коробка).
 Меряется отдельной LFT-строкой по наклонной кромке.
 
 <figure markdown>
   ![Rake sloped gable edge](../../assets/images/roof/rake.svg)
-  <figcaption>Rake — наклонная кромка на gable; eave (зелёный) — горизонтальный низ.</figcaption>
+  <figcaption>Rake - наклонная кромка на gable; eave (зелёный) - горизонтальный низ.</figcaption>
 </figure>
 
 ## Что считать
@@ -21,8 +21,8 @@
   template ожидает separate roof-edge lines.
 - Confirm FRT/exterior treatment для exposed wood.
 - Для крыш из `AJS Rafters` (exposed overhang) считай rafters вручную, а не
-  простой `Rake` — см. [Eve / Eave](eve.md).
+  простой `Rake` - см. [Eve / Eave](eve.md).
 
 ## See also
 
-- [Eve / Eave](eve.md) · [Returns](returns.md) · [Roof Sheathing](../horizontal/roof-framing/roof-sheathing.md)
+- [Eve / Eave](eve.md) , [Returns](returns.md) , [Roof Sheathing](../horizontal/roof-framing/roof-sheathing.md)

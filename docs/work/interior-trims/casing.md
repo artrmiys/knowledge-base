@@ -2,7 +2,7 @@
 
 <figure markdown>
   ![Door casing head, sides, apron](../../assets/images/trims/int-casing.svg)
-  <figcaption>Casing — наличник вокруг проёма (LFT). Interior door jamb часто = casing / 2.</figcaption>
+  <figcaption>Casing - наличник вокруг проёма (LFT). Interior door jamb часто = casing / 2.</figcaption>
 </figure>
 
 ## Что считать
@@ -33,4 +33,4 @@ Casing держи grouped by location/type, если common areas отличаю
 
 ## See also
 
-- [Door & Window Trim](door-window-trim.md) · [Base](base.md) · [Room Schedule](room-schedule.md) · [Interior Trims overview](overview.md)
+- [Door & Window Trim](door-window-trim.md) , [Base](base.md) , [Room Schedule](room-schedule.md) , [Interior Trims overview](overview.md)

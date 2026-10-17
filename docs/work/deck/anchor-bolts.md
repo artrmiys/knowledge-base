@@ -1,7 +1,7 @@
 # Anchor Bolts
 
 !!! info "Связано"
-    Ledger/post attachment для deck/porch/balcony — в контексте каркаса:
+    Ledger/post attachment для deck/porch/balcony - в контексте каркаса:
     [Deck / Porch / Balcony Frame](deck-porch-balcony-frame.md).
 
 ## Что считать
@@ -11,15 +11,15 @@
 
 ## Критические правила
 
-- **Стандартный bolt** (когда не указан другой) — `5/8" Dia Titen HD x 5 1/2"`, заглубление **3 1/2" Emb**.
-- **Shear walls at foundation** часто имеют **другой шаг** anchor bolts — обязательно проверять **SW Schedule** (Shear Wall Schedule), не брать стандартный шаг автоматом.
+- **Стандартный bolt** (когда не указан другой) - `5/8" Dia Titen HD x 5 1/2"`, заглубление **3 1/2" Emb**.
+- **Shear walls at foundation** часто имеют **другой шаг** anchor bolts - обязательно проверять **SW Schedule** (Shear Wall Schedule), не брать стандартный шаг автоматом.
 
 ## Проверить
 
 - ATS rod systems часто by others; не считай, если scope не говорит считать.
 - Используй detail-specific bolt sizes.
 - Bolts держи отдельно от screws.
-- Washers — не copy/paste item: обновляй spacing/count по current detail, а не
+- Washers - не copy/paste item: обновляй spacing/count по current detail, а не
   оставляй previous spacing unchanged.
 
 

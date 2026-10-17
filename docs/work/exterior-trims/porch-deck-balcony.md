@@ -1,24 +1,24 @@
 # Porch / Deck / Balcony
 
-Porch, deck и balcony — часть **exterior scope**. Это хаб: ниже — porch trim,
+Porch, deck и balcony - часть **exterior scope**. Это хаб: ниже - porch trim,
 дальше ссылки на полные страницы по rails/decking, balcony build-up и
 shower/pergola.
 
 !!! note "Включать всегда"
-    Эти элементы легко забыть — они не на «main wall» elevation. Каждый
+    Эти элементы легко забыть - они не на "main wall" elevation. Каждый
     porch / deck / balcony проходи отдельно по своим sections.
 
 <div class="grid cards" markdown>
 
--   :material-fence:{ .lg .middle } **Rails & Decking** — railing-системы,
+-   :material-fence:{ .lg .middle } **Rails & Decking** - railing-системы,
     decking, post hardware, ballusters, lattice, skirt.
     [:octicons-arrow-right-24: открыть](rails-decking.md)
 
--   :material-layers-triple:{ .lg .middle } **Balcony build-up** — полная
+-   :material-layers-triple:{ .lg .middle } **Balcony build-up** - полная
     сборка от posts до soffit/trim + composition by others.
     [:octicons-arrow-right-24: открыть](balcony-buildup.md)
 
--   :material-shower:{ .lg .middle } **Shower & Pergola** — privacy/shower
+-   :material-shower:{ .lg .middle } **Shower & Pergola** - privacy/shower
     screen, pergola, trellis, canopy.
     [:octicons-arrow-right-24: открыть](shower-pergola.md)
 
@@ -35,18 +35,18 @@ shower/pergola.
 | `Soffits at Porch` | `Beadboard` / `Beadboard Vinyl` | `SQ FT` | потолок крыльца |
 | `Frieze inside` | `5/4x12` | `LFT` | |
 | `Crowns outside` / `Crowns inside` | `3-1/2" crown` | `LFT` | часто `scaled` |
-| `Columns` | `10"–12" Dia Fbg`, `SQ Fluted`, `Poly-Classic` | `pcs` + высота | см. [Soffit & Fascia](soffit-fascia.md) |
+| `Columns` | `10"-12" Dia Fbg`, `SQ Fluted`, `Poly-Classic` | `pcs` + высота | см. [Soffit & Fascia](soffit-fascia.md) |
 | `Column wrap` | `1x8` | `LFT` | обшивка стойки |
-| `Posts at Rails` | `4x4 PT` | `pcs` + `4'` | + sleeve + cap → [Rails & Decking](rails-decking.md) |
+| `Posts at Rails` | `4x4 PT` | `pcs` + `4'` | + sleeve + cap - [Rails & Decking](rails-decking.md) |
 | `Porch deck Fascia` | `1x10` | `LFT` | |
 
 - Porch soffit обычно `Beadboard` в `SQ FT` (площадь потолка крыльца).
-- Нет деталей → `Note: No Details provided; all trims are assumed per
-  elevations` — все строки с `assumed`.
+- Нет деталей - `Note: No Details provided; all trims are assumed per
+  elevations` - все строки с `assumed`.
 
 ## Flare / shingled bump { .kb-section-title .kb-st--cyan }
 
-Flare (расширение стены книзу с shingle) — отдельный набор trim + blocking:
+Flare (расширение стены книзу с shingle) - отдельный набор trim + blocking:
 
 <figure markdown>
   ![Flare detail section](../../assets/images/trims/ext-flare-detail.png)
@@ -66,13 +66,13 @@ Flare (расширение стены книзу с shingle) — отдельн
 - [ ] Каждый porch / deck / balcony пройден отдельно по своим sections?
 - [ ] Porch: fascia (outside/inside) + soffit at hdr + porch soffit (SQ FT)?
 - [ ] Columns с типом/taper/`w/c&b` и высотой; column wrap отдельно?
-- [ ] Deck/rail — посчитан по [Rails & Decking](rails-decking.md)?
-- [ ] Balcony — собран по [Balcony build-up](balcony-buildup.md)?
+- [ ] Deck/rail - посчитан по [Rails & Decking](rails-decking.md)?
+- [ ] Balcony - собран по [Balcony build-up](balcony-buildup.md)?
 - [ ] Flare: blocking + trim + crown + sheathing + vapor barrier?
 
 ## See also
 
-- [Rails & Decking](rails-decking.md) · [Balcony build-up](balcony-buildup.md) · [Shower & Pergola](shower-pergola.md)
-- [Soffit & Fascia](soffit-fascia.md) · [Overview](overview.md)
-- [Balcony Trims](../deck/balcony-trims.md) · [Railing](../deck/railing.md)
-- [Porch SQFT](../sqfts/porch.md) · [Deck SQFT](../sqfts/deck.md) · [Balcony SQFT](../sqfts/balcony.md)
+- [Rails & Decking](rails-decking.md) , [Balcony build-up](balcony-buildup.md) , [Shower & Pergola](shower-pergola.md)
+- [Soffit & Fascia](soffit-fascia.md) , [Overview](overview.md)
+- [Balcony Trims](../deck/balcony-trims.md) , [Railing](../deck/railing.md)
+- [Porch SQFT](../sqfts/porch.md) , [Deck SQFT](../sqfts/deck.md) , [Balcony SQFT](../sqfts/balcony.md)

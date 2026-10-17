@@ -9,7 +9,7 @@
 ## Проверить
 
 - [H-clips: картинка, условия применения и подсчёт](h-clips.md).
-- Тип кромки plywood: **T&G — без H-clips; H-clips только для square edge**.
+- Тип кромки plywood: **T&G - без H-clips; H-clips только для square edge**.
   См. [Советы и важные вещи](../../../reference/boss-feedback-rules.md#sheathing).
 - Flat roof trusses often need Densedeck over the same area as rigid insulation.
 - Extra rigid XPS layer is a recurring miss.
@@ -36,7 +36,7 @@
 
 **Flat-roof overhang с опорами** (canopy-style): Posts `8x8 Timber` / `6x6 Western
 Cedar` / `4x4 P.T.`; Beams `5¼x7¼ LVL`; Post Caps `CBH…` (timber connectors);
-Ledger `2x8 FRT` / `2x10`. Детали overhang-обшивки — [Eve / Eave](../../sheathing-and-misc/eve.md).
+Ledger `2x8 FRT` / `2x10`. Детали overhang-обшивки - [Eve / Eave](../../sheathing-and-misc/eve.md).
 
 
 <!-- confluence-gallery:start -->

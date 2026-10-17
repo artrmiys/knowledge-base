@@ -5,7 +5,7 @@
     <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Flashing — roof-to-wall, step и kick-out</text>
+  <text class="t" x="32" y="40">Flashing - roof-to-wall, step и kick-out</text>
   <text class="s" x="32" y="62">Отдельно от window flashing. Kick-out у низа примыкания часто забывают.</text>
   <!-- wall -->
   <rect x="120" y="80" width="60" height="200" fill="url(#o)" stroke="#3a3a3a" stroke-width="1.5"/>

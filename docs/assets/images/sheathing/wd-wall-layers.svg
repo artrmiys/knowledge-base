@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="t d">
-  <title id="t">WD stud brick wall — layer stack</title>
-  <desc id="d">Section of a wood stud brick-veneer wall: brick veneer, WRB, Type X gypsum sheathing, FRT structural sheathing, batt insulation in studs, interior gypsum — each a separate takeoff line.</desc>
+  <title id="t">WD stud brick wall - layer stack</title>
+  <desc id="d">Section of a wood stud brick-veneer wall: brick veneer, WRB, Type X gypsum sheathing, FRT structural sheathing, batt insulation in studs, interior gypsum - each a separate takeoff line.</desc>
   <defs>
     <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
       <path d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/>
@@ -39,8 +39,8 @@
   </defs>
 
   <rect width="920" height="520" fill="#ffffff"/>
-  <text class="ttl" x="40" y="56">WD stud / brick — каждый слой отдельной строкой</text>
-  <text class="sub" x="40" y="80">Wall type schedule + section. Type X gypsum, FRT ply и veneer — это разные lines.</text>
+  <text class="ttl" x="40" y="56">WD stud / brick - каждый слой отдельной строкой</text>
+  <text class="sub" x="40" y="80">Wall type schedule + section. Type X gypsum, FRT ply и veneer - это разные lines.</text>
 
   <g>
     <rect x="120" y="120" width="34" height="300" fill="url(#brick)" stroke="#3a3a3a" stroke-width="1.4"/>
@@ -60,7 +60,7 @@
 
   <line class="lead" x1="137" y1="150" x2="560" y2="140"/>
   <text class="lab" x="572" y="137">Brick / masonry veneer</text>
-  <text class="note" x="572" y="156">часто by others — verify scope</text>
+  <text class="note" x="572" y="156">часто by others - verify scope</text>
 
   <line class="lead" x1="174" y1="195" x2="560" y2="200"/>
   <text class="lab" x="572" y="197">Type X gypsum sheathing</text>
@@ -68,7 +68,7 @@
 
   <line class="lead" x1="195" y1="250" x2="560" y2="262"/>
   <text class="lab" x="572" y="259">FRT structural sheathing</text>
-  <text class="note" x="572" y="278">1/2&quot; Ply FRT — своя строка (4x8)</text>
+  <text class="note" x="572" y="278">1/2&quot; Ply FRT - своя строка (4x8)</text>
 
   <line class="lead" x1="290" y1="300" x2="560" y2="324"/>
   <text class="lab" x="572" y="321">Batt insulation + studs</text>
@@ -76,5 +76,5 @@
 
   <line class="lead" x1="280" y1="413" x2="560" y2="386"/>
   <text class="lab" x="572" y="383">P.T. bottom plate</text>
-  <text class="note" x="572" y="402">если low plate = P.T. — своя строка</text>
+  <text class="note" x="572" y="402">если low plate = P.T. - своя строка</text>
 </svg>

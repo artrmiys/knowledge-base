@@ -12,7 +12,7 @@ returns и columns. Обычно это отдельный sheet/блок `Soffi
     ---
 
     Горизонтальная подшивка свеса. `1x` доска, vinyl vented, beadboard или
-    soffit panel. Узкий — `LFT`, широкий/панель — `SQ FT`.
+    soffit panel. Узкий - `LFT`, широкий/панель - `SQ FT`.
 
 -   :material-border-bottom-variant:{ .lg .middle } **Fascia**
 
@@ -36,14 +36,14 @@ returns и columns. Обычно это отдельный sheet/блок `Soffi
 
 </div>
 
-## Eves и Rakes — раздельно { .kb-section-title .kb-st--cyan }
+## Eves и Rakes - раздельно { .kb-section-title .kb-st--cyan }
 
 `Eves` (горизонтальный свес) и `Rakes` (наклонный, по фронтону) считаются
-**отдельными строками** — у них разные размеры и часто разные материалы.
+**отдельными строками** - у них разные размеры и часто разные материалы.
 
 | Label | Типовой size | Unit | Заметка |
 | --- | --- | --- | --- |
-| `Soffits at Eves` | `1x12`, `12" Vinyl vented`, `T&G beadboard` | `LFT` / `SQ FT` | широкий → SQ FT |
+| `Soffits at Eves` | `1x12`, `12" Vinyl vented`, `T&G beadboard` | `LFT` / `SQ FT` | широкий - SQ FT |
 | `Fascia at Eves` | `1x8`, `2x8`, `5/4x10` | `LFT` | |
 | `Frieze` | `5/4x6` / `5/4x8` | `LFT` | по стене под soffit |
 | `Trim at Fascia` / `Trim over fascia` | `1x3` / `1x4` / `1x5` | `LFT` | доп. полоса |
@@ -56,42 +56,42 @@ returns и columns. Обычно это отдельный sheet/блок `Soffi
 | `Soffits at Dormer / Chimney / Bay` | по детали | `LFT` | мелкие отдельные runs |
 
 !!! tip "Soffit: LFT или SQ FT"
-    - **`LFT`** — когда soffit это `1x` доска постоянной ширины (считаешь длину).
-    - **`SQ FT`** — когда soffit это panel / beadboard / wide T&G (считаешь
+    - **`LFT`** - когда soffit это `1x` доска постоянной ширины (считаешь длину).
+    - **`SQ FT`** - когда soffit это panel / beadboard / wide T&G (считаешь
       площадь = длина × ширина свеса).
 
     Vinyl vented soffit обычно дают как `LFT` с указанием ширины (`12" Vinyl`).
 
 !!! warning "Vinyl / Alum wrap"
     `Note: Soffits assumed Vinyl; Fascias assumed PVC or 1x Alum wrapped -
-    verify`. Материал часто не специфицирован — оставляй note и `verify`.
+    verify`. Материал часто не специфицирован - оставляй note и `verify`.
     Не подставляй wood, если возможен vinyl/alum.
 
 ## Returns (eave return) { .kb-section-title .kb-st--magenta }
 
-Return — это завершение свеса на фронтоне. Есть два принципиально разных
+Return - это завершение свеса на фронтоне. Есть два принципиально разных
 варианта, и их **нельзя считать одинаково**:
 
 <div class="kb-split" markdown>
 
-- **Proper / cornice return** — полноценный возврат с soffit, fascia, crown.
+- **Proper / cornice return** - полноценный возврат с soffit, fascia, crown.
   Считается как отдельный мини-набор trim (soffit + fascia + crown по returns).
   Часто отдельные строки `... Returns`.
-- **Pork-chop return** — упрощённый треугольный «обрубок». Простой в постройке,
+- **Pork-chop return** - упрощённый треугольный "обрубок". Простой в постройке,
   trim минимальный, но он всё равно есть (fascia + маленький soffit).
-- Если на elevation видно returns — проверь sections: это `pork-chop` или
+- Если на elevation видно returns - проверь sections: это `pork-chop` или
   полноценный cornice? Это меняет LFT и SQ FT.
 
 <figure markdown>
   ![Pork-chop eave return](../../assets/images/trims/ext-pork-chop.png)
-  <figcaption>"Pork-chop" return — простой, но trim (fascia + soffit) считаем.</figcaption>
+  <figcaption>"Pork-chop" return - простой, но trim (fascia + soffit) считаем.</figcaption>
 </figure>
 
 </div>
 
 <figure markdown>
   ![Cornice eave return](../../assets/images/trims/ext-eave-return.png)
-  <figcaption>Proper cornice return: soffit + fascia + crown — отдельный набор строк.</figcaption>
+  <figcaption>Proper cornice return: soffit + fascia + crown - отдельный набор строк.</figcaption>
 </figure>
 
 ## Columns / Posts { .kb-section-title .kb-st--green }
@@ -110,11 +110,11 @@ Return — это завершение свеса на фронтоне. Ест�
 | `Post cap` / `Post caps` | `Cap for 4x4`, `pyramid` | `pcs` |
 | `Post bases` | `Post base for 4x4` | `pcs` |
 
-- **`w/c&b`** = with cap & base — это часть product, оставляй в Label.
-- **Tapered vs Non-taper** — разный product line, держи в Label.
-- **Round / Square / Fluted / Plain / Craftsman** — тоже product-defining.
-- Высота (`8'`, `10'`, `7'7"`) — отдельной колонкой, не внутри Label.
-- `Column wrap` (обшивка) ≠ `Column` (сама колонна) — это разные строки.
+- **`w/c&b`** = with cap & base - это часть product, оставляй в Label.
+- **Tapered vs Non-taper** - разный product line, держи в Label.
+- **Round / Square / Fluted / Plain / Craftsman** - тоже product-defining.
+- Высота (`8'`, `10'`, `7'7"`) - отдельной колонкой, не внутри Label.
+- `Column wrap` (обшивка) ≠ `Column` (сама колонна) - это разные строки.
 - `Posts at Rails` обычно идёт тройкой: post + sleeve + cap (часто и base).
 
 <details class="kb-figures kb-figures--rows" open>
@@ -123,7 +123,7 @@ Return — это завершение свеса на фронтоне. Ест�
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">Типы columns</div>
       <div class="kb-figure-row__rule">Round Plain / Fluted / No-Taper, Square Fluted / Recessed / Plain, Craftsman.</div>
-      <div class="kb-figure-row__note">Тип задаёт product — держи в Label.</div>
+      <div class="kb-figure-row__note">Тип задаёт product - держи в Label.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../assets/images/trims/ext-column-types.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/ext-column-types.png" alt="Column types" loading="lazy"></a>
   </figure>
@@ -144,7 +144,7 @@ Return — это завершение свеса на фронтоне. Ест�
 - [ ] Frieze + trim at fascia + rake moulding не пропущены?
 - [ ] Returns: определён тип (pork-chop vs cornice), trim по returns добавлен?
 - [ ] Columns: тип/taper/`w/c&b` в Label, высота отдельной колонкой?
-- [ ] Post + sleeve + cap (+ base) — полный набор?
+- [ ] Post + sleeve + cap (+ base) - полный набор?
 - [ ] Материал (vinyl / PVC / alum / wood) с note `verify`, если не указан?
 
 ## See also
@@ -152,4 +152,4 @@ Return — это завершение свеса на фронтоне. Ест�
 - [Overview](overview.md)
 - [Casing, Corner & Band](casing-corner-band.md)
 - [Porch / Deck / Balcony](porch-deck-balcony.md)
-- [Eve](../sheathing-and-misc/eve.md) · [Rake](../sheathing-and-misc/rake.md) · [Returns](../sheathing-and-misc/returns.md)
+- [Eve](../sheathing-and-misc/eve.md) , [Rake](../sheathing-and-misc/rake.md) , [Returns](../sheathing-and-misc/returns.md)

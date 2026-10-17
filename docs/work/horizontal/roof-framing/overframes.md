@@ -1,6 +1,6 @@
 # Overframes
 
-**Overframe** — каркас крыши, надстроенный поверх нижней (piggy-back / framed-over
+**Overframe** - каркас крыши, надстроенный поверх нижней (piggy-back / framed-over
 roof). Много материала прячется в деталях, а не на плане: sleepers, sheathing
 overlap.
 
@@ -10,7 +10,7 @@ overlap.
 
 ## Правила
 
-- Piggy trusses — split upper trusses; считай 2x6 sleepers between parts, когда
+- Piggy trusses - split upper trusses; считай 2x6 sleepers between parts, когда
   shown.
 - Overframes can hide a lot of material in details, not plan view.
 

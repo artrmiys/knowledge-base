@@ -5,8 +5,8 @@
     <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="320" fill="#fff"/>
-  <text class="t" x="32" y="40">Balcony build-up — полная сборка снизу вверх</text>
-  <text class="s" x="32" y="62">posts → beam → ledger/box → joists/hangers → subfloor → sleepers → EPDM → decking.</text>
+  <text class="t" x="32" y="40">Balcony build-up - полная сборка снизу вверх</text>
+  <text class="s" x="32" y="62">posts - beam - ledger/box - joists/hangers - subfloor - sleepers - EPDM - decking.</text>
   <!-- stacked layers -->
   <g stroke="#3a3a3a" stroke-width="1.3">
     <rect x="150" y="240" width="340" height="22" fill="url(#w)"/>
@@ -20,5 +20,5 @@
   <line x1="320" y1="173" x2="560" y2="178" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="181">EPDM membrane</text>
   <line x1="320" y1="190" x2="560" y2="206" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="209">Sleepers (часто 2 слоя)</text>
   <line x1="320" y1="230" x2="560" y2="240" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="243">Subfloor + joists/hangers</text>
-  <text class="s" x="150" y="290">Структурный каркас (posts/beam/ledger) — отдельно от trim.</text>
+  <text class="s" x="150" y="290">Структурный каркас (posts/beam/ledger) - отдельно от trim.</text>
 </svg>

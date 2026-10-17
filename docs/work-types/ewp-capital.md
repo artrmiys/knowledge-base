@@ -1,13 +1,13 @@
 # EWP / Capital
 
-**EWP (Engineered Wood Products)** — это заводские инженерные материалы каркаса:
+**EWP (Engineered Wood Products)** - это заводские инженерные материалы каркаса:
 I-joists, LVL/PSL/LSL/GL балки и rim. На **EWP / Capital** jobs мы считаем
-**только их** — обычный размерный лес (`2x`), фермы и крепёж-мелочёвку не трогаем,
+**только их** - обычный размерный лес (`2x`), фермы и крепёж-мелочёвку не трогаем,
 если scope прямо этого не требует.
 
 <figure markdown>
   ![EWP materials: I-joist, LVL beam, hanger](../assets/images/work-types/ewp-capital.svg)
-  <figcaption>Считаем engineered: I-joists, LVL/PSL/GL, hangers, rim. 2x, trusses, nails — нет.</figcaption>
+  <figcaption>Считаем engineered: I-joists, LVL/PSL/GL, hangers, rim. 2x, trusses, nails - нет.</figcaption>
 </figure>
 
 ## Что это за материалы
@@ -20,8 +20,8 @@ I-joists, LVL/PSL/LSL/GL балки и rim. На **EWP / Capital** jobs мы с�
 | **LSL** | laminated strand; часто rim и короткие балки | rim, headers |
 | **GL / Glulam** | клееные ламели; часто exposed/architectural | большие пролёты |
 
-Детали по продуктам — [Joist → EWP materials](../work/horizontal/floor-framing/joist.md#ewp-joist-materials)
-и [Beam → EWP Materials](../work/horizontal/floor-framing/beam.md#ewp-materials).
+Детали по продуктам - [Joist - EWP materials](../work/horizontal/floor-framing/joist.md#ewp-joist-materials)
+и [Beam - EWP Materials](../work/horizontal/floor-framing/beam.md#ewp-materials).
 
 ## Что считать
 
@@ -40,7 +40,7 @@ I-joists, LVL/PSL/LSL/GL балки и rim. На **EWP / Capital** jobs мы с�
 ## Главные правила
 
 - TJI 110 series не превращается в 230; пиши как показано.
-- Большинство hangers на таких jobs — top mount.
+- Большинство hangers на таких jobs - top mount.
 - Rim factor: 1.05.
 - Blocking: без factor, если continuous.
 - Joists over 16" используют HIT hangers, не ITS.
@@ -53,17 +53,17 @@ I-joists, LVL/PSL/LSL/GL балки и rim. На **EWP / Capital** jobs мы с�
 
 Типичные размеры 24" Rim в порядке предпочтения:
 
-- Если указан очень тонкий Rim — `1-1/8" × 24 OSB`.
-- Далее по толщине — `1-1/2" × 24 LSL`.
-- Затем — `1-3/4" × 24 LVL`.
+- Если указан очень тонкий Rim - `1-1/8" × 24 OSB`.
+- Далее по толщине - `1-1/2" × 24 LSL`.
+- Затем - `1-3/4" × 24 LVL`.
 
 Стандартные толщины Rim, на которые обращать внимание: `1-1/4"`, `1-1/2"`, `1-3/4"`.
 
-## Hangers — детали выбора
+## Hangers - детали выбора
 
-- Чаще всего на EWP-jobs используются **верхнемонтируемые (top mount)** крепления — на стенах, балках или стальных post.
-- В архитектурных чертежах указаны стены с **двойным гипсокартоном (double gypsum / firewall)** — в этих местах могут быть специальные крепления `DGU` или `DGT`. Их выписывать отдельной строкой.
-- TIES (`CS`, `MST` и подобные) на EWP не учитываем — только Hangers.
+- Чаще всего на EWP-jobs используются **верхнемонтируемые (top mount)** крепления - на стенах, балках или стальных post.
+- В архитектурных чертежах указаны стены с **двойным гипсокартоном (double gypsum / firewall)** - в этих местах могут быть специальные крепления `DGU` или `DGT`. Их выписывать отдельной строкой.
+- TIES (`CS`, `MST` и подобные) на EWP не учитываем - только Hangers.
 
 ## Identical floors
 
@@ -78,4 +78,4 @@ I-joists, LVL/PSL/LSL/GL балки и rim. На **EWP / Capital** jobs мы с�
 
 ## See also
 
-- [Joist → EWP materials](../work/horizontal/floor-framing/joist.md#ewp-joist-materials) · [Beam](../work/horizontal/floor-framing/beam.md) · [Rim Board](../work/horizontal/floor-framing/details/rim.md) · [Hangers](../reference/hangers.md)
+- [Joist - EWP materials](../work/horizontal/floor-framing/joist.md#ewp-joist-materials) , [Beam](../work/horizontal/floor-framing/beam.md) , [Rim Board](../work/horizontal/floor-framing/details/rim.md) , [Hangers](../reference/hangers.md)

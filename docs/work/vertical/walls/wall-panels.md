@@ -1,6 +1,6 @@
-# Wall Panels — scope и исключения
+# Wall Panels - scope и исключения
 
-Wall panel — изготовленный заранее участок деревянной стены. В нём могут быть
+Wall panel - изготовленный заранее участок деревянной стены. В нём могут быть
 studs, plates, framing проёмов, sheathing и WRB. Конкретный состав определяет
 поставка: слово `panels` не гарантирует, что включены все слои и connections.
 По SBCA панели применяются для exterior и interior walls; placement diagram
@@ -29,7 +29,7 @@ studs, plates, framing проёмов, sheathing и WRB. Конкретный с
 | Furring strips под insulation/siding | Отдельные рейки/профили по detail и scope; не смешиваем с полноценной furring wall. |
 | Shaft / elevator | Всегда фиксируем стену в takeoff; определяем материал и package. Нельзя забыть shaft из-за общего `panels by others`. |
 
-**«Под бетоном» и «на бетоне» различаются.** Наше исключение относится к
+**"Под бетоном" и "на бетоне" различаются.** Наше исключение относится к
 деревянным стенам ниже concrete slab/podium. Стена, которая просто стоит
 нижней plate на бетонном основании, может быть panelized. SBCA описывает
 PT bottom plate для такого опирания; это не основание считать всю стену stick.
@@ -44,7 +44,7 @@ panel scope по проекту. Одно имя этажа не доказыв�
 
 Сверь четыре источника: project scope/письмо клиента, structural/architectural
 details, wall schedule и предложение/чертежи изготовителя panels. Для каждой
-позиции фиксируй одно из трёх: `included in panels`, `loose — count`,
+позиции фиксируй одно из трёх: `included in panels`, `loose - count`,
 `verify scope`. Так остаётся видимым, кто поставляет материал.
 
 | Элемент | Проверка перед отдельным подсчётом |
@@ -60,11 +60,11 @@ details, wall schedule и предложение/чертежи изготови
 | Temporary / permanent bracing | Разделяем назначения и следуем проекту/installation plan; учитываем материал в пределах заказанного scope. |
 
 SBCA подтверждает, что sheathing/WRB могут наноситься на заводе, а соединяющая
-верхняя plate может монтироваться на объекте. Поэтому таблица выше —
+верхняя plate может монтироваться на объекте. Поэтому таблица выше -
 проверка поставки, не универсальный перечень включённого материала.
 [SBCA: элементы и сборка panels](https://www.sbcacomponents.com/wall-panels).
 
-## Reconstruction: existing не равно «ничего не считать»
+## Reconstruction: existing не равно "ничего не считать"
 
 - Существующую неизменяемую конструкцию не пересчитываем как новую.
 - Считаем новые стены, замену, reinforcement, connections и заданные покрытия.
@@ -86,7 +86,7 @@ drawings и строительными plans становится вопросо
 во время монтажа и ограничивает самовольные изменения panels. Для сметы это
 означает: проверять bracing и connection details, а не придумывать раскрой
 или замену несущих элементов.
-[SBCA: Handling, Installing & Temporary Bracing — страница руководства](https://pubs.sbcacomponents.com/products/guide-for-handling-installing-temporary-bracing-of-wall-panels-100-sheets).
+[SBCA: Handling, Installing & Temporary Bracing - страница руководства](https://pubs.sbcacomponents.com/products/guide-for-handling-installing-temporary-bracing-of-wall-panels-100-sheets).
 
 ## Notes для выдачи
 

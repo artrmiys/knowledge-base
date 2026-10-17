@@ -1,6 +1,6 @@
 # Exterior Trims
 
-Exterior Trims — это **wood / PVC / composite** finish trim снаружи здания: ext
+Exterior Trims - это **wood / PVC / composite** finish trim снаружи здания: ext
 casing вокруг openings, corner boards, band/watertable, head crowns, soffit и
 fascia, frieze, columns, porch / deck / balcony trim.
 
@@ -8,9 +8,9 @@ fascia, frieze, columns, porch / deck / balcony trim.
 **не** structural framing. Считаем только trim material.
 
 !!! danger "Главное правило: что НЕ считаем"
-    **EIFS — не считаем. Stucco — не считаем. Stone Veneer / Brick Veneer — не
+    **EIFS - не считаем. Stucco - не считаем. Stone Veneer / Brick Veneer - не
     считаем.** Это finish-системы by others. Полный список и работа с
-    `J-Channel` — на странице [Exclusions и J-Channel](exclusions.md).
+    `J-Channel` - на странице [Exclusions и J-Channel](exclusions.md).
 
 ## Что входит в scope { .kb-section-title .kb-st--green }
 
@@ -66,8 +66,8 @@ fascia, frieze, columns, porch / deck / balcony trim.
 
     ---
 
-    Полная сборка: posts → beam → ledger/box → joists/hangers → subfloor →
-    sleepers → EPDM → decking → soffit/trim. Composition by others.
+    Полная сборка: posts - beam - ledger/box - joists/hangers - subfloor -
+    sleepers - EPDM - decking - soffit/trim. Composition by others.
 
     [:octicons-arrow-right-24: Balcony build-up](balcony-buildup.md)
 
@@ -83,7 +83,7 @@ fascia, frieze, columns, porch / deck / balcony trim.
 
     ---
 
-    `C_TrimsCalc` (block × count), jamb / pavers / balcony insert helpers —
+    `C_TrimsCalc` (block × count), jamb / pavers / balcony insert helpers -
     как устроены и как ими пользоваться.
 
     [:octicons-arrow-right-24: Trim macros](macros.md)
@@ -92,7 +92,7 @@ fascia, frieze, columns, porch / deck / balcony trim.
 
     ---
 
-    EIFS / Stucco / Stone / Brick veneer — by others. Где появляется
+    EIFS / Stucco / Stone / Brick veneer - by others. Где появляется
     `J-Channel` и почему он часто идёт с EIFS.
 
     [:octicons-arrow-right-24: Exclusions & J-Channel](exclusions.md)
@@ -101,7 +101,7 @@ fascia, frieze, columns, porch / deck / balcony trim.
 
 ## Как устроена строка takeoff { .kb-section-title .kb-st--cyan }
 
-Каждый trim item в Excel — это 3 колонки: **Label**, **Value**, **Unit**.
+Каждый trim item в Excel - это 3 колонки: **Label**, **Value**, **Unit**.
 
 | Label | Value | Unit | Комментарий |
 | --- | --- | --- | --- |
@@ -115,28 +115,28 @@ fascia, frieze, columns, porch / deck / balcony trim.
 | `Columns` | `12" Dia Fbg Non-taper` | `pcs` / `8'` | по штукам, высота отдельно |
 | `Shutters - paneled` | `20"x60"` | `pairs` | пары |
 
-- `LFT` / `LF` — linear feet (casing, corner, band, fascia, frieze, rail).
-- `SQ FT` / `SF` — square feet (soffit panel, beadboard, paneling, lattice).
-- `pcs` / `pairs` / `units` — counted items (brackets, louvers, shutters).
+- `LFT` / `LF` - linear feet (casing, corner, band, fascia, frieze, rail).
+- `SQ FT` / `SF` - square feet (soffit panel, beadboard, paneling, lattice).
+- `pcs` / `pairs` / `units` - counted items (brackets, louvers, shutters).
 - Высота columns / posts пиши отдельной колонкой (`8'`, `10'`), не внутри Label.
 
 !!! tip "Размеры всегда видимы"
-    `5/4x4`, `1x8`, `3-1/2" crown`, `4" Vinyl corner` — это product size.
+    `5/4x4`, `1x8`, `3-1/2" crown`, `4" Vinyl corner` - это product size.
     Никогда не сворачивай к generic `trim`. Reviewer должен видеть профиль.
 
 ## Когда размер / материал не указан { .kb-section-title .kb-st--magenta }
 
 Очень часто на чертеже trim profile не специфицирован. Тогда:
 
-- Пиши material как `TBD` (`Casing TBD`, `Crown TBD`, `Base TBD`) — видимая
+- Пиши material как `TBD` (`Casing TBD`, `Crown TBD`, `Base TBD`) - видимая
   неопределённость лучше, чем выдуманный product.
-- Если значение scaled с elevation — добавляй note `scaled` / `assumed`.
+- Если значение scaled с elevation - добавляй note `scaled` / `assumed`.
 - Note про siding-материал держи рядом: `Note: Siding is Hardi; verify if
   Trims are Hardi or PVC`. Vinyl siding часто = vinyl trim / J-channel.
-- `Note: All trims to be verified. Scaled per elevations` — типовая шапка
+- `Note: All trims to be verified. Scaled per elevations` - типовая шапка
   блока, когда деталей нет.
 
-## Типовые trims — визуально { .kb-section-title .kb-st--green }
+## Типовые trims - визуально { .kb-section-title .kb-st--green }
 
 <details class="kb-figures kb-figures--rows" open>
   <summary>Скрыть типовые trims</summary>
@@ -144,7 +144,7 @@ fascia, frieze, columns, porch / deck / balcony trim.
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">Corner board</div>
       <div class="kb-figure-row__rule">Outside corner: <code>5/4x6</code> / <code>5/4x8</code> wood/PVC, или <code>4" Vinyl corner</code>.</div>
-      <div class="kb-figure-row__note">Считается LFT по высоте угла. Vinyl corner — отдельный product.</div>
+      <div class="kb-figure-row__note">Считается LFT по высоте угла. Vinyl corner - отдельный product.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../assets/images/trims/ext-cornerboard.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/ext-cornerboard.png" alt="Exterior corner board" loading="lazy"></a>
   </figure>
@@ -160,7 +160,7 @@ fascia, frieze, columns, porch / deck / balcony trim.
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">Eave return</div>
       <div class="kb-figure-row__rule">Returns бывают proper (cornice) и "pork-chop".</div>
-      <div class="kb-figure-row__note">Подробно — на странице Soffit &amp; Fascia.</div>
+      <div class="kb-figure-row__note">Подробно - на странице Soffit &amp; Fascia.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../assets/images/trims/ext-eave-return.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/ext-eave-return.png" alt="Eave return" loading="lazy"></a>
   </figure>
@@ -177,6 +177,6 @@ fascia, frieze, columns, porch / deck / balcony trim.
 - [Balcony build-up](balcony-buildup.md)
 - [Outdoor Shower & Pergola](shower-pergola.md)
 - [Trim macros](macros.md)
-- [Interior Trims](../interior-trims/overview.md) · [Siding](../siding/overview.md)
-- [Material catalog](../../reference/material-catalog.md) · [Standard notes](../../reference/standard-notes.md) · [Takeoff item labels](../../reference/takeoff-items.md)
+- [Interior Trims](../interior-trims/overview.md) , [Siding](../siding/overview.md)
+- [Material catalog](../../reference/material-catalog.md) , [Standard notes](../../reference/standard-notes.md) , [Takeoff item labels](../../reference/takeoff-items.md)
 - [Excel macro hotkeys](../../reference/excel-hotkeys.md)

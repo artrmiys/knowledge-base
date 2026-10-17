@@ -1,13 +1,13 @@
 # Reconstruction / Реконструкция
 
-Reconstruction jobs — это проекты, где часть здания уже существует, часть
+Reconstruction jobs - это проекты, где часть здания уже существует, часть
 демонтируется, а часть добавляется заново. Главная сложность: не считать весь
 дом как new construction и не потерять места, где new framing должен
 подключиться к existing.
 
 <figure markdown>
   ![Existing, demo and new legend](../assets/images/work-types/reconstruction.svg)
-  <figcaption>Existing — не считать · Demo — если в scope · New + connections — считаем.</figcaption>
+  <figcaption>Existing - не считать , Demo - если в scope , New + connections - считаем.</figcaption>
 </figure>
 
 !!! note "Черновик"

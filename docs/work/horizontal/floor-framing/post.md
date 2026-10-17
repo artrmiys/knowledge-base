@@ -4,12 +4,12 @@
 
 - Wood posts, steel posts, bearing posts и built-up post groups, когда in scope.
 - Post caps/bases только когда specifically called out.
-- Posts в крыше — опора для [Ridge](../roof-framing/ridge.md) и [Header](../roof-framing/header.md).
+- Posts в крыше - опора для [Ridge](../roof-framing/ridge.md) и [Header](../roof-framing/header.md).
 
 ## Критические правила
 
 - Posts могут быть **цельные** (`5 1/4 x 5 1/4 PSL`, `6x6`, `4x4`) или **сборные** из нескольких досок (`(2) 2x6`, `(4) 2x4`).
-- **Длина Posts очень важна** — может идти от фундамента сквозь несколько этажей. Проверяй elevation/section.
+- **Длина Posts очень важна** - может идти от фундамента сквозь несколько этажей. Проверяй elevation/section.
 - Post в крыше опирается **либо на балку, либо на несущую стену**.
 - Указывать кол-во и длину **в футах с округлением до 2'**.
 
@@ -26,7 +26,7 @@
 
 ## Connectors
 
-Снизу — **Post Base** к фундаменту/балке. Сверху — **Post Cap** к балке. Примеры: `ABU66`, `PC46`, `CCQ66`.
+Снизу - **Post Base** к фундаменту/балке. Сверху - **Post Cap** к балке. Примеры: `ABU66`, `PC46`, `CCQ66`.
 
 ## Таблицы вывода
 
@@ -43,7 +43,7 @@
 
 ## See also
 
-- [Beam](beam.md) · [Ridge](../roof-framing/ridge.md) · [Roof Header](../roof-framing/header.md) · [Hardware catalog](../../../reference/hardware-catalog.md)
+- [Beam](beam.md) , [Ridge](../roof-framing/ridge.md) , [Roof Header](../roof-framing/header.md) , [Hardware catalog](../../../reference/hardware-catalog.md)
 
 
 <!-- confluence-gallery:start -->

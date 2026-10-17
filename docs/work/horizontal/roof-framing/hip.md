@@ -1,6 +1,6 @@
 # Hip
 
-**Hip** — наклонное **наружное** ребро, где два ската сходятся выпуклым углом.
+**Hip** - наклонное **наружное** ребро, где два ската сходятся выпуклым углом.
 Hip rafter длиннее и крупнее common rafter. Не путать с valley (внутренний угол).
 
 ## Что считать
@@ -15,7 +15,7 @@ Hip rafter длиннее и крупнее common rafter. Не путать с 
 
 ## See also
 
-- [Valley](valley.md) · [Ridge](ridge.md) · [Ridge / Valley / Hip](../../sheathing-and-misc/ridgevalleyhip.md) · [Hangers](../../../reference/hangers.md)
+- [Valley](valley.md) , [Ridge](ridge.md) , [Ridge / Valley / Hip](../../sheathing-and-misc/ridgevalleyhip.md) , [Hangers](../../../reference/hangers.md)
 
 
 <!-- confluence-gallery:start -->

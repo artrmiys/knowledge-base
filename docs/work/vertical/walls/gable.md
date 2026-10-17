@@ -2,24 +2,24 @@
 
 Gables делятся на **два типа**, и от этого зависит весь takeoff:
 
-- **gable stick** — продолжение каркасной стены вверх. Считаем plates, studs, blocking, bracing, sheathing.
-- **gable trusses** — собран из ферм. Считаем **только sheathing** (фермы — by others).
+- **gable stick** - продолжение каркасной стены вверх. Считаем plates, studs, blocking, bracing, sheathing.
+- **gable trusses** - собран из ферм. Считаем **только sheathing** (фермы - by others).
 
 ### Как определить тип
 
 1. На плане крыши найди заметки про **Rafters**.
-2. Если написано **Trusses** — крыша из ферм → **gable trusses**.
-3. Если написано `2x8`, `2x10`, `2x12`, `TJI 360` или `stick` — крыша stick → **gable stick**.
+2. Если написано **Trusses** - крыша из ферм - **gable trusses**.
+3. Если написано `2x8`, `2x10`, `2x12`, `TJI 360` или `stick` - крыша stick - **gable stick**.
 
 ## Workflow в PlanSwift
 
 Для каждого треугольника gable замерь:
 
-- **SQFT** — площадь треугольника gable. Брать **от верхней грани TOP верхней доски стены** (не от низа стены).
-- **BTM** — длина нижней грани (по верху стены).
-- **TOP** — длина двух верхних наклонных граней.
+- **SQFT** - площадь треугольника gable. Брать **от верхней грани TOP верхней доски стены** (не от низа стены).
+- **BTM** - длина нижней грани (по верху стены).
+- **TOP** - длина двух верхних наклонных граней.
 
-Все gables на здании заводи **одной площадью SQFT, одним BTM и одним TOP**, даже если треугольников несколько. Где заканчивается стена и начинается gable — смотри на разрезах/фасадах (sections / elevations).
+Все gables на здании заводи **одной площадью SQFT, одним BTM и одним TOP**, даже если треугольников несколько. Где заканчивается стена и начинается gable - смотри на разрезах/фасадах (sections / elevations).
 
 ## Что считать
 
@@ -41,7 +41,7 @@ Gables делятся на **два типа**, и от этого зависи�
   include them.
 - Dormers записывай вместе с wall scope.
 - Gable stud height добавляй на left/output side.
-- **Draft Stop** — отдельная строка (`1/2" Ply` / `5/8" Type X`), частый пропуск;
+- **Draft Stop** - отдельная строка (`1/2" Ply` / `5/8" Type X`), частый пропуск;
   проверь по details / fire-rating notes.
 
 ## Таблица вывода
@@ -72,7 +72,7 @@ Gables делятся на **два типа**, и от этого зависи�
 
 ## See also
 
-- [Gable Sheathing](../sheathing/gable.md) · [Truss Heel](../sheathing/truss-heel.md) · [Exterior Walls](exterior.md) · [Ridge](../../horizontal/roof-framing/ridge.md)
+- [Gable Sheathing](../sheathing/gable.md) , [Truss Heel](../sheathing/truss-heel.md) , [Exterior Walls](exterior.md) , [Ridge](../../horizontal/roof-framing/ridge.md)
 
 <!-- confluence-gallery:start -->
 ## Визуальная проверка

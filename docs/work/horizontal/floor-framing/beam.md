@@ -16,7 +16,7 @@
 ## Что чаще всего встречается { .kb-section-title .kb-st--cyan }
 
 Самые частые сечения балок: **`1¾x11⅞ LVL`**, **`2x10`**, **`1¾x14 LVL`**, `2x8`.
-Типовая длина — около `12'` (snap к stock 8/10/12/14/16). Это ориентир «нормально ли»,
+Типовая длина - около `12'` (snap к stock 8/10/12/14/16). Это ориентир "нормально ли",
 не дефолт: конкретные размеры/ply всегда из structural
 ([Quantity benchmarks](../../../reference/quantity-benchmarks.md)).
 
@@ -37,11 +37,11 @@
 
 ## EWP Materials
 
-Для **EWP** (Engineered Wood Products) обычные деревянные балки **2x10 / 4x12 / 6x14** не учитываем — только инженерные:
+Для **EWP** (Engineered Wood Products) обычные деревянные балки **2x10 / 4x12 / 6x14** не учитываем - только инженерные:
 
-- **LVL** (Laminated Veneer Lumber, Versa Lam) — клееный брус, прочный, устойчив к деформациям.
-- **PSL** (Parallel Strand Lumber) — параллельные волокна, высокая несущая способность.
-- **GL** (Glued Laminated Timber, Glu Lam) — многослойный клееный брус из ламелей.
+- **LVL** (Laminated Veneer Lumber, Versa Lam) - клееный брус, прочный, устойчив к деформациям.
+- **PSL** (Parallel Strand Lumber) - параллельные волокна, высокая несущая способность.
+- **GL** (Glued Laminated Timber, Glu Lam) - многослойный клееный брус из ламелей.
 
 ## Вывод Example
 
@@ -57,13 +57,13 @@
 | Hangers | `GLTV3.514` | 5 | pcs |
 | Hangers | `for 7 x 11 7/8` | 10 | pcs |
 
-Длины snap-ятся при scaling — например `scaled 12' 0 1/8"` округляем до `12`.
+Длины snap-ятся при scaling - например `scaled 12' 0 1/8"` округляем до `12`.
 
 См. [Hangers](../../../reference/hangers.md) для подбора крепления под ширину/высоту built-up.
 
 ## See also
 
-- [Post](post.md) · [Steel Beam Web Fillers](details/steelbeams.md) · [Joist](joist.md) · [Quantity benchmarks](../../../reference/quantity-benchmarks.md)
+- [Post](post.md) , [Steel Beam Web Fillers](details/steelbeams.md) , [Joist](joist.md) , [Quantity benchmarks](../../../reference/quantity-benchmarks.md)
 
 <!-- confluence-gallery:start -->
 ## Визуальная проверка

@@ -27,12 +27,12 @@
 - Bottom plates могут требовать separate line, если lower plate = P.T.
 - **Metal stud / CMU стены:** даже если каркас by others, обшивка (exterior
   gypsum), insulation (вкл. `Insulation at CMU`), flashing, `Bracing 2x4` и
-  window jambs остаются нашими. Полный блок — [Exterior Wall Materials](../sheathing/exterior-materials.md).
+  window jambs остаются нашими. Полный блок - [Exterior Wall Materials](../sheathing/exterior-materials.md).
 
 ## Wall Sizing & Height
 
 - На плане толщина стен: **5 1/2"** для 2x6, **3 1/2"** для 2x4.
-- Высота стены — от нижней доски **Btm Plate** до верхних досок **Top Plates** (включая обе доски). Брать с **elevation** или **section**, не с плана.
+- Высота стены - от нижней доски **Btm Plate** до верхних досок **Top Plates** (включая обе доски). Брать с **elevation** или **section**, не с плана.
 - В PlanSwift запись: `ext <толщина> <высота>`, например **`ext 2x6 9.0`**.
 
 ### Stud spacing factors (стойки)
@@ -42,24 +42,24 @@ Stud-rule: считаем **1 стойку/фут + waste**, а **не** гео�
 
 | Spacing | Фактор (pcs / LFT) | Откуда |
 | --- | ---: | --- |
-| 12" o.c. | **1.4667** | `1:1` масштаб 16→12 + 10% waste |
+| 12" o.c. | **1.4667** | `1:1` масштаб 16-12 + 10% waste |
 | 16" o.c. | **1.1** | `1:1` + 10% waste |
 | 24" o.c. | **0.625** | `0.5` + 25% waste |
 
 `pcs = wall LFT × фактор`. На COM jobs часто считают по точной высоте (nested-IF
 авто-подбор 2x4/2x6).
 
-!!! warning "Joists — другая таблица"
+!!! warning "Joists - другая таблица"
     Это **stud**-факторы. **Joists/rafters** считаются по геометрии
-    `12 / spacing` → `1.0 / 0.75 / 0.5` (без stud-waste). Полная сводка обеих
-    таблиц — [Формулы → Spacing factors](../../../reference/formulas.md#stud-spacing-factors).
+    `12 / spacing` - `1.0 / 0.75 / 0.5` (без stud-waste). Полная сводка обеих
+    таблиц - [Формулы - Spacing factors](../../../reference/formulas.md#stud-spacing-factors).
 
 ## Под Bottom Plate (на бетоне)
 
 При посадке экстерьерной стены на бетон/фундамент в takeoff попадают три
-скрытые позиции (Sill Sealer / Termite Shield / Washers) — их легко забыть,
-потому что на плане они не показаны. Полный разбор и иллюстрации —
-[Sill Plates → Что считать вместе с Sill Plate](sill-plates.md#with-sill-plate)
+скрытые позиции (Sill Sealer / Termite Shield / Washers) - их легко забыть,
+потому что на плане они не показаны. Полный разбор и иллюстрации -
+[Sill Plates - Что считать вместе с Sill Plate](sill-plates.md#with-sill-plate)
 и [Anchor Bolts](../../deck/anchor-bolts.md).
 
 ## Где смотреть
@@ -99,7 +99,7 @@ Stud-rule: считаем **1 стойку/фут + waste**, а **не** гео�
 
 ## Полнота строки { .kb-section-title .kb-st--cyan }
 
-На full-frame проектах 1st-floor-стена — это полный каркас, не только bracing+sheathing.
+На full-frame проектах 1st-floor-стена - это полный каркас, не только bracing+sheathing.
 Типовой набор:
 
 | Строка | Заметка |
@@ -108,13 +108,13 @@ Stud-rule: считаем **1 стойку/фут + waste**, а **не** гео�
 | Bracing Ext / Dem / Corr | `2x4` |
 | Vapor Barrier | Tyvek |
 | Wall / Box Sheathing | OSB чаще Zip |
-| Blocking | `2x4`–`2x10` |
-| **Holdowns** | `DTT2Z` / `HTT5KT` / `HDU…` / `TBD HD` — частый пропуск |
+| Blocking | `2x4`-`2x10` |
+| **Holdowns** | `DTT2Z` / `HTT5KT` / `HDU…` / `TBD HD` - частый пропуск |
 | Plates btm (P.T.) + dbl top | btm `2x6/2x4 P.T.` |
 | Ext. Headers | `2x10`/`2x8`/`2x12` по пролёту |
 
-→ **Holdowns** — если есть shear walls, не забудь (выбор по SW-schedule,
-[Hardware catalog](../../../reference/hardware-catalog.md)). Studs auto-sized по высоте —
+- **Holdowns** - если есть shear walls, не забудь (выбор по SW-schedule,
+[Hardware catalog](../../../reference/hardware-catalog.md)). Studs auto-sized по высоте -
 коэффициенты spacing в [Формулах](../../../reference/formulas.md).
 
 ## Частые пропуски
@@ -128,7 +128,7 @@ Stud-rule: считаем **1 стойку/фут + waste**, а **не** гео�
 - Exterior blocking changing to FRT because the exterior wall material is FRT.
 - Parapet framing that follows the exterior wall material rule.
 - Exterior gypsum sheathing на metal стенах (material нужен, даже если studs чужие).
-- `Insulation at CMU` — отдельная строка от обычной wall insulation.
+- `Insulation at CMU` - отдельная строка от обычной wall insulation.
 - Window jambs (доска) в проёмах metal стен; flashing at Mtl/CMU walls.
 
 

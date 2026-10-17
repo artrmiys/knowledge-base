@@ -5,7 +5,7 @@
     <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}.st{stroke:#3a3a3a;stroke-width:1.5;fill:url(#w)}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Ribbon board — врезана в стойки, несёт joists</text>
+  <text class="t" x="32" y="40">Ribbon board - врезана в стойки, несёт joists</text>
   <text class="s" x="32" y="62">Не путать с rim (по торцам) и blocking (между joists).</text>
   <!-- studs vertical -->
   <rect x="160" y="90" width="22" height="180" class="st"/>

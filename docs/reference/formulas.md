@@ -1,27 +1,27 @@
 # Формулы и факторы
 
-!!! warning "Stud ≠ Joist — это разные факторы"
+!!! warning "Stud ≠ Joist - это разные факторы"
     У **studs** и **joists** один и тот же `o.c.`, но **разные множители**.
-    Studs считаем по boss-rule (`1 стойка/фут + waste`), joists — по реальной
+    Studs считаем по boss-rule (`1 стойка/фут + waste`), joists - по реальной
     геометрии center-to-center (`12 / spacing`). Не путай таблицы местами.
 
 ## Stud spacing factors
 
 Канонический источник по стойкам. Boss-rule: на `16" o.c.` считаем **1:1**
 (одна стойка на фут) **+ 10% waste**, а не геометрические `0.75`. Это сделано
-намеренно — учитывает corners, T-intersections, jack/king/cripple вокруг
+намеренно - учитывает corners, T-intersections, jack/king/cripple вокруг
 проёмов и обрезь.
 
 | Spacing | Фактор (pcs / LFT) | Откуда |
 | --- | ---: | --- |
-| 12" o.c. | **1.4667** | `1:1` масштаб 16→12 (×1.333) + 10% waste |
+| 12" o.c. | **1.4667** | `1:1` масштаб 16-12 (×1.333) + 10% waste |
 | 16" o.c. | **1.1** | `1:1` + 10% waste |
 | 24" o.c. | **0.625** | `0.5` + 25% waste |
 
 - Формула: `pcs = wall LFT × фактор`.
 - На больших COM jobs studs часто считают по **точной высоте** (nested-IF
   авто-подбор 2x4/2x6), см. [Exterior Walls](../work/vertical/walls/exterior.md).
-- Сравнение с примерами сопоставимого scope и его ограничения —
+- Сравнение с примерами сопоставимого scope и его ограничения -
   [Quantity benchmarks](quantity-benchmarks.md). Это проверка разумности результата,
   а не универсальная отраслевая норма, заменяющая чертежи и правила проекта.
 
@@ -38,8 +38,8 @@ center-to-center, без stud-waste. Фактор = `12 / spacing`.
 | 24" o.c. | **0.5** |
 
 - Формула: `pcs = run ширина LFT × 12 / spacing`, **+1** торцевой joist на каждый run.
-- Hangers по joists: `=ЧЁТН(LFT × 12 / spacing)` — округление вверх до чётного.
-- Подробно — [Joist](../work/horizontal/floor-framing/joist.md).
+- Hangers по joists: `=ЧЁТН(LFT × 12 / spacing)` - округление вверх до чётного.
+- Подробно - [Joist](../work/horizontal/floor-framing/joist.md).
 
 ## Rim и Blocking
 
@@ -50,7 +50,7 @@ center-to-center, без stud-waste. Фактор = `12 / spacing`.
 | Blocking | LFT | без factor, если continuous |
 | Ribbons / ledgers / bracing | pieces | используй 16' ceiling, когда требуется |
 
-- `1.05` — это EWP-specific factor. На обычных jobs rim считается тем же
+- `1.05` - это EWP-specific factor. На обычных jobs rim считается тем же
   `1.1`, что и blocking.
 
 ## COM Waste
@@ -108,16 +108,16 @@ Diagonal 48" o.c. = ОКРВВЕРХ(LFT * 12 / 48 * 2.5 * 1.1 / Stock LF; 1)
 | --- | ---: |
 | Flat | `2` |
 | Diagonal | `2.5` |
-| Vertical | `1.5–2` |
+| Vertical | `1.5-2` |
 
-Diagonal дороже flat (длиннее рез + угол); vertical — между ними, ближе к flat
+Diagonal дороже flat (длиннее рез + угол); vertical - между ними, ближе к flat
 при плотной раскладке. Continuous blocking считается без factor (см. выше).
 
 ## Контрольные диапазоны количеств (sanity-check)
 
 Если для задачи отдельно настроен внешний процесс проверки и доступен проверенный
 корпус сопоставимых проектов, **итоговые количества** DFL можно сравнить по
-`(секция, строка)`, единицам и scope. Median / IQR и Tukey fences — способы
+`(секция, строка)`, единицам и scope. Median / IQR и Tukey fences - способы
 статистического сравнения, а не обязательные нормы расхода. Выход за диапазон
 требует проверки причины: опечатка, единицы или особенность scope; сам по себе
 он не доказывает ошибку.
@@ -127,7 +127,7 @@ Diagonal дороже flat (длиннее рез + угол); vertical — ме
 Не считай такую сверку встроенной автопроверкой OurPlanCore. Выполненную проверку
 подтверждает конкретный отчёт с источниками и замечаниями. Ручной
 [QA checklist](../start/quality-checklist.md) остаётся обязательным; границы
-внешнего процесса — в [ИИ-ассистент](ai-assist-system.md).
+внешнего процесса - в [ИИ-ассистент](ai-assist-system.md).
 
 ## Kitchen and Bath Blocking
 

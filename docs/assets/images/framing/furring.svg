@@ -5,8 +5,8 @@
     <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Furring — рейка/профиль с зазором</text>
-  <text class="s" x="32" y="62">Z-metal на CMU под insulation · 1x4/2x4 P.T. под siding (rainscreen).</text>
+  <text class="t" x="32" y="40">Furring - рейка/профиль с зазором</text>
+  <text class="s" x="32" y="62">Z-metal на CMU под insulation , 1x4/2x4 P.T. под siding (rainscreen).</text>
   <!-- CMU -->
   <rect x="120" y="100" width="120" height="160" fill="url(#cmu)" stroke="#3a3a3a" stroke-width="1.6"/>
   <!-- Z furring marks -->

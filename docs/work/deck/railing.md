@@ -1,10 +1,10 @@
 # Railing
 
 !!! info "Frame vs finish"
-    Structural railing posts / blocking / bolts — в
+    Structural railing posts / blocking / bolts - в
     [Deck / Porch / Balcony Frame](deck-porch-balcony-frame.md).
-    Railing-системы (composite/Azek/cable/metal) и cap rail — в
-    [Exterior Trims → Rails & Decking](../exterior-trims/rails-decking.md).
+    Railing-системы (composite/Azek/cable/metal) и cap rail - в
+    [Exterior Trims - Rails & Decking](../exterior-trims/rails-decking.md).
 
 ## Что считать
 
@@ -17,15 +17,15 @@
 
 ## Metal vs wood { .kb-section-title .kb-st--cyan }
 
-Railing идёт **двумя системами** — определи по detail / elevation:
+Railing идёт **двумя системами** - определи по detail / elevation:
 
-- **Metal** — `2½x2½x⅛ mtl post` / `2x2 mtl post`, `1½ mtl cap rail`, alum
+- **Metal** - `2½x2½x⅛ mtl post` / `2x2 mtl post`, `1½ mtl cap rail`, alum
   balusters. Часто на balcony/upper deck. Posts крепятся к каркасу (см. blocking/bolts).
-- **Wood** — `4x4 P.T.` posts, `2x4` / `2x2 P.T.` rails и balustrades, wood cap rail.
+- **Wood** - `4x4 P.T.` posts, `2x4` / `2x2 P.T.` rails и balustrades, wood cap rail.
 
-Строки railing: `Posts at Rails` → `Cap Rail` → `Rails / Balustrades` (+ blocking,
+Строки railing: `Posts at Rails` - `Cap Rail` - `Rails / Balustrades` (+ blocking,
 post bases/sleeves). Cap rail и balusters не забывай отдельными строками. Finish-перила
-(composite/Azek/cable) — в [Rails & Decking](../exterior-trims/rails-decking.md).
+(composite/Azek/cable) - в [Rails & Decking](../exterior-trims/rails-decking.md).
 
 
 <!-- confluence-gallery:start -->

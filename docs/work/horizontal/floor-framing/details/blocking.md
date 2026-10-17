@@ -1,12 +1,12 @@
 # Blocking
 
-**Blocking** — короткие доски между членами каркаса (joists/studs/trusses) для
+**Blocking** - короткие доски между членами каркаса (joists/studs/trusses) для
 жёсткости, опоры кромок и крепления. Считается в LFT (continuous) либо по
-шагу — см. [Blocking o.c.](blockingoc.md)
+шагу - см. [Blocking o.c.](blockingoc.md)
 
 <figure markdown>
   ![Blocking between joists](../../../../assets/images/framing/blocking.svg)
-  <figcaption>Blocking — короткие доски между joists; continuous считается в LFT без factor.</figcaption>
+  <figcaption>Blocking - короткие доски между joists; continuous считается в LFT без factor.</figcaption>
 </figure>
 
 ## Что считать
@@ -36,6 +36,6 @@
 
 ## See also
 
-- [Blocking o.c.](blockingoc.md) · [Bracing for Drywall](bracingdrywall.md) · [Ribbon Board](ribbon.md)
-- [Формулы → Blocking](../../../../reference/formulas.md#blocking-formulas)
+- [Blocking o.c.](blockingoc.md) , [Bracing for Drywall](bracingdrywall.md) , [Ribbon Board](ribbon.md)
+- [Формулы - Blocking](../../../../reference/formulas.md#blocking-formulas)
 

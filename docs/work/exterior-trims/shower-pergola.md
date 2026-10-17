@@ -2,7 +2,7 @@
 
 Открытые садовые конструкции, которые тоже входят в exterior scope:
 privacy / outdoor shower screen, pergola, trellis, canopy. Часто `assumed`
-по elevation — деталей мало.
+по elevation - деталей мало.
 
 ## Outdoor / privacy shower screen { .kb-section-title .kb-st--green }
 
@@ -17,8 +17,8 @@ privacy / outdoor shower screen, pergola, trellis, canopy. Часто `assumed`
 | `Slats` | `1x6 IPE` + `1x4 IPE` alternating, `1x6 Vert. Cedar BDS.` | `SQFT` экрана |
 | `Cap` | `5/4 IPE Cap` | `LFT` |
 
-- Slats считаются по **площади экрана** (`SQFT`), gap (`1/4"`) — в note.
-- `Garage Shower Outside` — отдельный участок (свой размер posts/slats).
+- Slats считаются по **площади экрана** (`SQFT`), gap (`1/4"`) - в note.
+- `Garage Shower Outside` - отдельный участок (свой размер posts/slats).
 - Когда детали нет: `Posts 4x4 P.T. assumed`, `Jamb 2x4 P.T. assumed`.
 
 <figure markdown>
@@ -38,9 +38,9 @@ privacy / outdoor shower screen, pergola, trellis, canopy. Часто `assumed`
 | `Brackets` | по детали | `pcs` |
 | `Posts` | `4x4`/`6x6` (P.T. или cedar) | `pcs` + высота |
 
-- Pergola — это набор: главные балки (`1E Shape` / `4x10`), trellis-рейки
+- Pergola - это набор: главные балки (`1E Shape` / `4x10`), trellis-рейки
   (`3x3`), ledger к стене, brackets, posts.
-- Материал почти всегда cedar или P.T. — держи в Label, не своди к generic.
+- Материал почти всегда cedar или P.T. - держи в Label, не своди к generic.
 
 ## Canopy { .kb-section-title .kb-st--magenta }
 
@@ -61,7 +61,7 @@ privacy / outdoor shower screen, pergola, trellis, canopy. Часто `assumed`
 - [ ] Pergola: главные балки + trellis + ledger + brackets + posts?
 - [ ] Материал (IPE / cedar / P.T.) в Label, не generic?
 - [ ] Canopy: header wrap + fascia + soffit beadboard?
-- [ ] Где нет деталей — `assumed` в note?
+- [ ] Где нет деталей - `assumed` в note?
 
 ## See also
 

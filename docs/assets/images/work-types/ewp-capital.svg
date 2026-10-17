@@ -5,8 +5,8 @@
     <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}.no{font:700 13px "Segoe UI",Arial,sans-serif;fill:#c0392b}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">EWP / Capital — только engineered</text>
-  <text class="s" x="32" y="62">I-joists, LVL/PSL/GL beams, hangers, rim. Обычный 2x, trusses, nails — нет.</text>
+  <text class="t" x="32" y="40">EWP / Capital - только engineered</text>
+  <text class="s" x="32" y="62">I-joists, LVL/PSL/GL beams, hangers, rim. Обычный 2x, trusses, nails - нет.</text>
   <!-- I-joist (I section) -->
   <g stroke="#3a3a3a" stroke-width="1.5" fill="url(#w)"><rect x="110" y="110" width="80" height="14"/><rect x="140" y="124" width="20" height="80"/><rect x="110" y="204" width="80" height="14"/></g>
   <text class="l" x="110" y="240">I-joist</text>

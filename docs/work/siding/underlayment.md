@@ -1,4 +1,4 @@
-# Underlayment — что за siding
+# Underlayment - что за siding
 
 За siding есть слои, которые легко пропустить: WRB / housewrap, sheathing,
 furring / rainscreen, Cedar Breather, starter / J-channel / corners,
@@ -6,10 +6,10 @@ flashing. Смотри **wall sections**, не только elevation.
 
 ## Слои стены снаружи внутрь { .kb-section-title .kb-st--green }
 
-1. **Siding** (поле, `SQ FT`) — см. [Типы siding](types.md).
-2. **Rainscreen / furring** — `1x4` / `2x4`, P.T. или нет (опционально).
-3. **WRB / housewrap** — Tyvek, или Zip (WRB integral).
-4. **Sheathing** — CDX / Zip / OSB (свой scope).
+1. **Siding** (поле, `SQ FT`) - см. [Типы siding](types.md).
+2. **Rainscreen / furring** - `1x4` / `2x4`, P.T. или нет (опционально).
+3. **WRB / housewrap** - Tyvek, или Zip (WRB integral).
+4. **Sheathing** - CDX / Zip / OSB (свой scope).
 5. Stud wall.
 
 ## WRB / Housewrap { .kb-section-title .kb-st--cyan }
@@ -20,18 +20,18 @@ flashing. Смотри **wall sections**, не только elevation.
 | `Vapor Barrier` | `Tyvek` | `SQ FT` |
 | Zip system | `7/16` / `1/2` Zip + `Zip Tape` | sheet / rolls |
 
-- При **Zip** отдельный housewrap не нужен (WRB встроен) — не дублируй.
+- При **Zip** отдельный housewrap не нужен (WRB встроен) - не дублируй.
 - Tyvek считается по площади стены (часто = siding SQ FT + factor).
 
 ## Furring / Rainscreen { .kb-section-title .kb-st--magenta }
 
 Рейка между WRB и siding: вентзазор / ровное основание. **Часто пропускают.**
 
-- `1x4` или `2x4`, **P.T. или не P.T.** — берётся из section.
+- `1x4` или `2x4`, **P.T. или не P.T.** - берётся из section.
 - Считается `LFT` (по spacing, 16" o.c.) или `SQ FT` стены, если сплошной.
-- P.T. внизу / у foundation / влажно; выше — обычно не P.T.
+- P.T. внизу / у foundation / влажно; выше - обычно не P.T.
 
-Полное правило и макрос — [Furring & Window Jambs](../exterior-trims/furring-and-jambs.md).
+Полное правило и макрос - [Furring & Window Jambs](../exterior-trims/furring-and-jambs.md).
 
 ## Cedar Breather { .kb-section-title .kb-st--green }
 
@@ -40,11 +40,11 @@ flashing. Смотри **wall sections**, не только elevation.
 
 - Появляется в Standarts как `Cedar Breather`.
 - Считается `SQ FT` площади shingle-стены.
-- Если siding = cedar shingle на solid sheathing — проверь, есть ли он в деталях.
+- Если siding = cedar shingle на solid sheathing - проверь, есть ли он в деталях.
 
 ## Vinyl accessories / starter / J-channel / corners { .kb-section-title .kb-st--cyan }
 
-Для vinyl (и иногда fiber-cement) siding нужны accessories — это **не поле**,
+Для vinyl (и иногда fiber-cement) siding нужны accessories - это **не поле**,
 а отдельные `LFT`-строки (часто учитываются как trim):
 
 | Accessory | Где | Unit |
@@ -54,13 +54,13 @@ flashing. Смотри **wall sections**, не только elevation.
 | `Corner posts` (outside/inside) | углы | `LFT` |
 | `Undersill / finish trim` | под окном, у верха стены | `LFT` |
 
-- При vinyl siding `Ext. Casing` нередко **и есть** `Vinyl J-channel` — не
+- При vinyl siding `Ext. Casing` нередко **и есть** `Vinyl J-channel` - не
   дублируй с `5/4` wood casing. См.
-  [Exterior Trims → Exclusions и J-Channel](../exterior-trims/exclusions.md).
+  [Exterior Trims - Exclusions и J-Channel](../exterior-trims/exclusions.md).
 
 <figure markdown>
   ![Housewrap / sheathing behind siding](../../assets/images/trims/ext-cornerboard-nailing.png)
-  <figcaption>Housewrap → sheathing → stud за siding; corner нужен solid nailing base.</figcaption>
+  <figcaption>Housewrap - sheathing - stud за siding; corner нужен solid nailing base.</figcaption>
 </figure>
 
 ## Flashing за / в siding { .kb-section-title .kb-st--magenta }
@@ -78,16 +78,16 @@ flashing. Смотри **wall sections**, не только elevation.
 
 ## Чек { .kb-section-title .kb-st--green }
 
-- [ ] WRB определён (Tyvek vs Zip-integral) — без дублей?
-- [ ] Открыл sections — есть ли furring/rainscreen (size, P.T.)?
-- [ ] Cedar shingle на solid → Cedar Breather учтён?
+- [ ] WRB определён (Tyvek vs Zip-integral) - без дублей?
+- [ ] Открыл sections - есть ли furring/rainscreen (size, P.T.)?
+- [ ] Cedar shingle на solid - Cedar Breather учтён?
 - [ ] Vinyl: starter / J-channel / corners / undersill посчитаны (LFT)?
 - [ ] При vinyl: casing = J-channel, без двойного счёта?
-- [ ] Z / head / kickout / step flashing — видимыми строками?
+- [ ] Z / head / kickout / step flashing - видимыми строками?
 
 ## See also
 
-- [Overview](overview.md) · [Типы siding](types.md) · [Измерение](measure.md)
+- [Overview](overview.md) , [Типы siding](types.md) , [Измерение](measure.md)
 - [Furring & Window Jambs](../exterior-trims/furring-and-jambs.md)
-- [Exterior Trims → Exclusions и J-Channel](../exterior-trims/exclusions.md)
+- [Exterior Trims - Exclusions и J-Channel](../exterior-trims/exclusions.md)
 - [Material catalog](../../reference/material-catalog.md)

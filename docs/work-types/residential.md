@@ -5,7 +5,7 @@ commercial-style assemblies, shaft walls или panelized scope.
 
 <figure markdown>
   ![Residential scope overview](../assets/images/work-types/residential.svg)
-  <figcaption>Walls + openings · floor/roof framing · sheathing · SQFT · roof/deck/porch.</figcaption>
+  <figcaption>Walls + openings , floor/roof framing , sheathing , SQFT , roof/deck/porch.</figcaption>
 </figure>
 
 ## Типовой scope
@@ -30,4 +30,4 @@ Assumptions держи видимыми. Если detail неясен, доба�
 
 ## See also
 
-- [COM Commercial](com.md) · [Reconstruction](reconstruction.md) · [Структура takeoff](../start/takeoff-structure.md) · [Workflow](../start/workflow.md)
+- [COM Commercial](com.md) , [Reconstruction](reconstruction.md) , [Структура takeoff](../start/takeoff-structure.md) , [Workflow](../start/workflow.md)

@@ -1,12 +1,12 @@
 # Steel Beam Web Fillers
 
-**Web fillers / nailers** — деревянные вставки в полку/стенку стального бимa,
+**Web fillers / nailers** - деревянные вставки в полку/стенку стального бимa,
 дающие поверхность для крепления и hangers. Top nailer часто задаёт top-mount
 hanger.
 
 <figure markdown>
   ![Steel beam with wood nailer and web filler](../../../../assets/images/framing/steel-beam-nailer.svg)
-  <figcaption>Wood nailer/web filler в стальном биме; top nailer → top-mount hanger.</figcaption>
+  <figcaption>Wood nailer/web filler в стальном биме; top nailer - top-mount hanger.</figcaption>
 </figure>
 
 ## Что считать
@@ -22,11 +22,11 @@ hanger.
 
 ## Проверить
 
-- Hangers могут опираться **сверху** на сталь или на wood nailer — это меняет
+- Hangers могут опираться **сверху** на сталь или на wood nailer - это меняет
   тип hanger (top-mount vs face-mount), проверь по детали.
 - Assumptions держи видимыми.
 
 ## See also
 
-- [Beam](../beam.md) · [Hangers](../../../../reference/hangers.md) · [Bolts](bolts.md)
+- [Beam](../beam.md) , [Hangers](../../../../reference/hangers.md) , [Bolts](bolts.md)
 

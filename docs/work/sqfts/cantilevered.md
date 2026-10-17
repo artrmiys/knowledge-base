@@ -1,6 +1,6 @@
 # Cantilevered SQFT
 
-**Cantilever** — часть перекрытия/крыши/деки, вынесенная за опору без нижней
+**Cantilever** - часть перекрытия/крыши/деки, вынесенная за опору без нижней
 поддержки. Меняет rim/edge, blocking и нередко holdowns.
 
 <figure markdown>
@@ -23,6 +23,6 @@
 
 ## See also
 
-- [Rim Board](../horizontal/floor-framing/details/rim.md) · [Blocking](../horizontal/floor-framing/details/blocking.md)
+- [Rim Board](../horizontal/floor-framing/details/rim.md) , [Blocking](../horizontal/floor-framing/details/blocking.md)
 - [Joist](../horizontal/floor-framing/joist.md)
 

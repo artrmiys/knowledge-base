@@ -60,8 +60,8 @@ fire-retardant-treated framing material.
 | Garage/mechanical metal doors могут быть `F.R S.C.`. | Отмечай fire-rated и self-close conditions. | [Trello](https://trello.com/c/aFiv0hIM) |
 | Glass shower doors не вводятся как interior doors. | Исключай shower glass doors из interior door count. | [Trello](https://trello.com/c/43ZyybeD) |
 | Large guest rooms могут иметь `French doors`. | Оставляй glass/French door note видимой. | [Trello](https://trello.com/c/cb8EWYy1) |
-| `Cased Openings` — openings without doors. | Cased openings пиши отдельно от doors. | [Trello](https://trello.com/c/GIxtgKCI) |
-| `4080 C.O.` — cased-opening notation. | Convert и вводи на стороне cased-opening, не doors. | [Trello](https://trello.com/c/XYT9cr0q) |
+| `Cased Openings` - openings without doors. | Cased openings пиши отдельно от doors. | [Trello](https://trello.com/c/GIxtgKCI) |
+| `4080 C.O.` - cased-opening notation. | Convert и вводи на стороне cased-opening, не doors. | [Trello](https://trello.com/c/XYT9cr0q) |
 | Interior doors и cased openings вводятся для каждого level в Excel. | Floors разделить до trim formulas. | [Trello](https://trello.com/c/Zy0M8kcH) |
 | Если есть door schedule, заполняй из schedule. | Schedule data лучше, чем ручной plan-only entry. | [Trello](https://trello.com/c/C0LHSgXl) |
 
@@ -147,7 +147,7 @@ fire-retardant-treated framing material.
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">Cased opening</div>
-      <div class="kb-figure-row__rule"><code>C.O.</code> — opening without a door.</div>
+      <div class="kb-figure-row__rule"><code>C.O.</code> - opening without a door.</div>
       <div class="kb-figure-row__note">Вводи на стороне cased-opening, не как door.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-34.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-34.png" alt="Cased opening example" loading="lazy"></a>
@@ -196,7 +196,7 @@ fire-retardant-treated framing material.
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">Много repeated doors</div>
       <div class="kb-figure-row__rule">Используй formulas, чтобы не потерять repeated quantities.</div>
-      <div class="kb-figure-row__note">Manual repeated typing — частое место, где counts начинают расходиться.</div>
+      <div class="kb-figure-row__note">Manual repeated typing - частое место, где counts начинают расходиться.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-40.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-40.png" alt="Formulas для many doors" loading="lazy"></a>
   </figure>

@@ -7,9 +7,9 @@
 
 ## Критические правила
 
-- **Ridge** — самый верхний элемент крыши.
+- **Ridge** - самый верхний элемент крыши.
 - Может быть **одинарной**, двойной или тройной балкой разного материала и сечения: `1 3/4 x 11 7/8 LVL`, `2x12`, `(2) 2x10`.
-- Опирание Ridge — на стены **Gable** или на [Posts](../floor-framing/post.md).
+- Опирание Ridge - на стены **Gable** или на [Posts](../floor-framing/post.md).
 - **Длина Ridge** определяется **от внешней грани экстерьерной стены** (не от грани wall framing внутри).
 - Указывать кол-во и длину **в футах с округлением до 2'**.
 
@@ -28,7 +28,7 @@
 
 ## See also
 
-- [Dbl / Trpl Rafters](dbl-trpl-rafters.md) · [Roof Header](header.md) · [Hip](hip.md) · [Valley](valley.md) · [Post](../floor-framing/post.md)
+- [Dbl / Trpl Rafters](dbl-trpl-rafters.md) , [Roof Header](header.md) , [Hip](hip.md) , [Valley](valley.md) , [Post](../floor-framing/post.md)
 
 
 <!-- confluence-gallery:start -->

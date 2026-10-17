@@ -1,7 +1,7 @@
 # Canopy
 
-**Canopy** — небольшой навес/козырёк (над входом, у фасада). Отдельный scope:
-свой framing, soffit и attachment — не теряй его внутри main roof.
+**Canopy** - небольшой навес/козырёк (над входом, у фасада). Отдельный scope:
+свой framing, soffit и attachment - не теряй его внутри main roof.
 
 ## Что считать
 
@@ -16,7 +16,7 @@
 
 ## See also
 
-- [Porch SQFT](../../sqfts/porch.md) · [Eve / Eave](../../sheathing-and-misc/eve.md) · [Soffit & Fascia](../../exterior-trims/soffit-fascia.md)
+- [Porch SQFT](../../sqfts/porch.md) , [Eve / Eave](../../sheathing-and-misc/eve.md) , [Soffit & Fascia](../../exterior-trims/soffit-fascia.md)
 
 
 <!-- confluence-gallery:start -->
