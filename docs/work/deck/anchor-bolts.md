@@ -7,7 +7,7 @@
 
 <figure markdown>
   ![Anchor bolt through sill plate](../../assets/images/framing/anchor-bolt.svg)
-  <figcaption markdown="span">Anchor bolt с washer и nut крепит P.T. plate к бетону. Размер, заглубление и шаг только из anchorage schedule и SW schedule, дефолта нет.</figcaption>
+  <figcaption markdown="span">Anchor bolt с washer и nut крепит P.T. plate к бетону. Размер, заглубление и шаг берутся из anchorage schedule и SW schedule; если там пусто, ставится дефолт шаблона (ниже).</figcaption>
 </figure>
 
 ## Что это
@@ -27,9 +27,9 @@ Bolts`, `Washers`, `Nuts`. Общие правила по болтам и screws
 | Детали ledger балкона и porch (S3xx) | Through bolts или screws, шаг, washers |
 | General notes S | Hilti или другой продукт by others, минимальное заглубление |
 
-Дефолтного анкера нет: размер, заглубление и шаг только из anchorage
-schedule. Schedule не найден: пиши `assumed` в E и ноту
-`Note: Anchor Bolts <size> assumed; verify`.
+Размер, заглубление и шаг берутся из anchorage schedule. Schedule не
+найден: ставь [дефолт шаблона](#default) (`1/2" Ø emb.`, 36" o.c.), в E
+`assumed` и ноту `Note: Anchor Bolts 1/2" Ø @ 36" o.c. assumed; verify`.
 
 ## Как мерить в OurPlanCore
 
@@ -37,6 +37,19 @@ schedule. Schedule не найден: пиши `assumed` в E и ноту
 (`walls/<этаж>`, точка F для фундамента). Проёмы в этой линии (ворота,
 двери) вычитаются один раз. Ledger: длина ledger из блока балкона или
 porch. Шаг и тип анкера в имени не нужны, они живут в DFL.
+
+## Дефолт, если на чертежах нет anchorage schedule { #default }
+
+Строка шаблона DFL (блок Foundation walls):
+
+| Строка DFL | B (spec) | H (шаг) | Формула C |
+| --- | --- | --- | --- |
+| `Anchor Bolts 36" o.c.` | `1/2" Ø emb.` | `36` | `=CEILING((G*12/36)*1.1, 2)` |
+| `Washer 36" o.c.` | по детали, обычно `3x3 Square` | `36` | та же формула, одна шайба на болт |
+
+G - длина стен на бетоне. Shear walls получают свои строки со своим шагом из
+SW schedule, дефолт на них не распространяется. Если на листах есть
+anchorage schedule или notes с размером, они важнее дефолта.
 
 ## Как назвать в дереве и строка DFL
 

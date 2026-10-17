@@ -450,3 +450,15 @@
   white-space: nowrap !important;
   font-size: .9em;
 }
+
+/* Demo clips of OurPlanCore (docs/assets/images/ourplancore/demo/*.mp4):
+   same frame as screenshots, never wider than the text column. */
+.md-typeset figure video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background: #000;
+}

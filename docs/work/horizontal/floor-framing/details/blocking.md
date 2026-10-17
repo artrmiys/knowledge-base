@@ -41,12 +41,12 @@ Line (L) по ряду blocking на листе framing с точкой F; дл�
 | --- | --- | --- | --- | --- | --- |
 | `details/blocking` | `Blocking` | сечение joists (`2x10`), `11 7/8 TJI` | `=ОКРВВЕРХ(G*1.1/D;1)` | `16` | деталь |
 | `details/bd` | `Blocking for Drywall` | `2x4` | `=ОКРВВЕРХ(G*1.1/D;1)` | `16` | детали |
-| `details/bft` | `Bracing for Trusses` | по truss detail; в шаблоне по умолчанию `2x6` | ряды по площади под фермами, в шаблоне 1 ряд на каждые 10' | `16` | truss detail или `assumed` |
+| `details/bft` | `Bracing for Trusses` | по умолчанию `2x6`; другое только если так в truss detail | по умолчанию 1 ряд на каждые 10' по площади под фермами | `16` | truss detail или `assumed` |
 | `details/blocking eves` | `Blocking at Eves` | `2x6` | `=ОКРВВЕРХ(G*1.1/D;1)` | `16` | |
 | `details/2x6 kitchen` | `Blocking` | `2x6` | 4 доски по 14' на кухню, 1 на ванную | `14` | |
 
 - Фактор один на все строки: blocking, ribbon, ledger, drywall blocking = LFT x 1.1 один раз в формуле; rim 1.05 только на EWP, иначе 1.1. Канон цифр: [Формулы](../../../../reference/formulas.md#rim-ribbon-blocking-ledger).
-- Bracing for trusses: сечение, шаг и материал по truss detail текущего дома; `2x6` каждые 10' - значение шаблона по умолчанию, а не правило. Если деталь даёт `2x4` или другой шаг, пиши по детали.
+- Bracing for trusses: по умолчанию `2x6` каждые 10' на всю площадь под крышей, включая гараж. Если truss detail текущего дома даёт другое сечение или шаг, пиши по детали и ставь ссылку на лист.
 - Стены 10' и выше - два ряда blocking.
 - Наружный blocking FRT, когда наружная стена FRT. Parapet blocking FRT или P.T. по детали.
 - Kickers и braces считаются только когда они есть на детали: firewall `(2) 2x6 @ 48`, gable kickers @ 5'.

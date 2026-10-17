@@ -55,7 +55,7 @@ sub fascia, blocking at eves, truss bracing, ties.
 | --- | --- | --- |
 | `Sub Fascia` | `2x6` / `2x8` | `LFT` по eave и rake |
 | `Blocking at Eves` | `2x6` | `LFT` |
-| `Bracing for Trusses` | по truss detail (встречается `2x4`, `2x6`); на всю площадь под крышей, включая гараж | `LFT` |
+| `Bracing for Trusses` | по умолчанию `2x6` каждые 10', иначе по truss detail; на всю площадь под крышей, включая гараж | `LFT` |
 | `Simpson Ties at Eves` | `H2.5A` без Zmax (под обшивкой), шаг = шаг ферм, по всем линиям опирания | `pcs` |
 | `Frame for Soffits` / `Frame for Rakes` | `2x4 24" o.c.` | `LFT` |
 

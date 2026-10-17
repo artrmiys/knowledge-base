@@ -146,7 +146,7 @@
     - `Note: No details provided; all trims assumed per elevations.`
     - `Note: Interior doors height assumed 6'8"; verify.`
 
-    **Anchor bolts**: размер, заглубление и шаг живут в строке (`B`, `H`, `E`), источник - sill and sole plate anchorage schedule. Нота нужна только для допущения: `Note: Anchor bolt spacing is not indicated; assumed 48" o.c.; verify.`
+    **Anchor bolts**: размер, заглубление и шаг живут в строке (`B`, `H`, `E`), источник - sill and sole plate anchorage schedule. Нота нужна только для допущения: `Note: Anchor bolt spacing is not indicated; assumed 36" o.c.; verify.` (36" o.c. и `1/2" Ø` - дефолт шаблона, см. [Anchor Bolts](../work/deck/anchor-bolts.md#default))
 
 ## Частые ошибки
 

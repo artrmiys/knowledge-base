@@ -77,7 +77,7 @@ T blocking at gables   = EVEN(G / D)
 | Screws по фермам | `=CEILING(...,3)` | `pcs` |
 | Washers | `=C<строка анкеров>` или `=SUM(...)` одной строкой на группу | `pcs` |
 | H-clips | по толщине настила и шагу опор: `PSCL at 16"` = 6 на лист, не "4 на лист"; при T&G и настиле толще порога спецификации не нужны | `pcs` |
-| Truss bracing | `=CEILING(G/4/D,1)` на всю площадь под крышей, включая гараж | `pcs` |
+| Truss bracing | по умолчанию `2x6`, ряд каждые 10'; `=CEILING(G/4/D,1)` на всю площадь под крышей, включая гараж | `pcs` |
 | Panel adhesive | `=C<subfloor>/3` | `tubes` |
 | Resilient channels | `=CEILING(area*12/spacing*1.1,10)`, только где показаны в типе стены | `LFT` |
 | Holdowns | `=G` к бетону, `=G*2` через деревянное перекрытие | `pcs` |
