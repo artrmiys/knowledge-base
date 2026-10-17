@@ -37,7 +37,7 @@
 
 1. `Main > Open / Import > Sample job (demo to explore)` или плитка `Open sample job`.
 2. Программа создаёт проект `OurPlanCore Guide Sample` в папке работ. Внутри: папка листов `00. Guide` с карточками-подсказками и лист `A101 Sample Plan`.
-3. В дереве Takeoffs уже есть позиции `sqfts/1st/Floor Area`, `walls/1st/Exterior Walls`, `framing/Ridge Beam`, `framing/Floor Joists 2x10 @16`, `openings/Doors`, `openings/Windows`, `rf/Roof Area` и готовая 3D-модель.
+3. В дереве Takeoffs уже есть позиции `sqfts/1st/Floor Area`, `walls/1st/Exterior Walls`, `framing/Ridge Beam`, `framing/Floor Joists 2x10 @16`, `openings/Doors`, `openings/Windows`, `rf/Roof Area`. 3D-вид строится из этих позиций кнопкой `Auto` на вкладке 3D.
 4. На этом проекте безопасно пробовать инструменты, Record, копирование, экспорт PDF и полосу XL. Клиентских данных в нём нет.
 
 ## F1 и палитра команд

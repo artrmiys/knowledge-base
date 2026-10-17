@@ -4,7 +4,7 @@
 
 <figure markdown>
   ![Полоса XL](../assets/images/ourplancore/v3/excel-strip.png)
-  <figcaption markdown="span">Сверху `ALL` и `LG`, ниже кнопки стен и площадей, внизу framing. Подсказка каждой кнопки говорит, что она делает.</figcaption>
+  <figcaption markdown="span">Верх полосы: `ALL` и `LG`, ниже кнопки стен и площадей, дальше начинается framing (`FR`). На низком окне нижние кнопки framing уходят за край, разверните окно. Подсказка каждой кнопки говорит, что она делает.</figcaption>
 </figure>
 
 ## Что нужно до нажатия
