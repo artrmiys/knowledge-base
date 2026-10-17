@@ -1,0 +1,111 @@
+# Exceptions for tools/opc_coverage.py. One per line, a reason after "#" is mandatory.
+#   surface:title    title compared without case / trailing dots; * = any surface
+#   id:command.id    every surface that carries this palette id
+#   source:<prefix>  path prefix inside the program sources
+#   group:<text>     group label contains the text (without case)
+#
+# --- debug, developer and service entries (not for the estimator's KB)
+source:Dialogs/CommandPaletteDialog.cs           # the palette itself is described as Ctrl+Shift+P, the window has no own function
+source:Dialogs/KeyboardShortcutRecoveryDialog.cs # recovery of a corrupt shortcut profile: service window, appears only on file damage
+source:Dialogs/ProjectDataRecoveryDialog.cs      # service window for damaged project JSON
+*:project data recovery...                       # same service window from the Open / Import menu
+*:open source_pdf.json                           # developer file view
+*:open json                                      # developer file view (Sheet Manager / 3D massing)
+*:open request json                              # developer file view (AI Inbox)
+*:open layer json                                # developer file view (AI Inbox)
+*:open response json                             # developer file view (AI Inbox)
+*:open action draft json                         # developer file view (AI Inbox)
+*:open marker json                               # developer file view (AI Inbox)
+*:open bookmark json                             # developer file view (AI Inbox)
+*:marker json                                    # developer file view (3D massing panel)
+*:request json                                   # developer file view (Observation Details)
+*:open in explorer                               # opens the job folder in Windows Explorer: self-explanatory
+*:open page folder in explorer                   # same
+*:open takeoffs in explorer                      # same
+*:rows csv                                       # developer CSV of the Materials extraction
+*:summary csv                                    # developer CSV of the Materials extraction
+*:folder                                         # opens the Materials output folder
+*:capture final learning snapshot                # developer tool for the sheet-metadata learning model
+*:review project learned rules...                # developer tool for the sheet-metadata learning model
+*:review global learned rules...                 # developer tool for the sheet-metadata learning model
+*:save layer info for ai                         # AI research helper, not part of the daily flow
+*:queue ai request for this layer                # AI research helper, not part of the daily flow
+*:configure the command strip (gear)             # synthetic label; the gear is described with the strips on the workspace page
+#
+# --- one function shown as several controls
+group:панель Pages, вкладка Overlay              # six colour swatches and layer buttons of the Overlay panel are one function "Overlay" described on the sheets page; only "Red"/"Blue"... rows differ
+*:choose custom color                            # part of the same Overlay colour palette
+*:symbol: cross, square, star, triangle, diamond, ring, circle  # the list of Count symbols is described once as "Count display"
+#
+# --- dialog window titles that only repeat the command that opens them
+dialog:create line grid                          # opened by "Create Line Grid..." which is checked separately
+dialog:count points at line ends                 # opened by the "Ends" tool / "Count Points At Line Ends"
+dialog:create count points along line(s)        # opened by "Points Along Line(s)"
+dialog:rename legend group                       # inner rename prompt of Legend Groups
+dialog:rename marker set                         # inner rename prompt of Marker Sets
+dialog:paste measurements                        # paste mode prompt of Ctrl+V, described with Paste Measurements
+dialog:merge into takeoff                        # prompt of Merge (Ctrl+M)
+dialog:split selected takeoffs                   # prompt of Split (Ctrl+Shift+M)
+dialog:create marker set                         # prompt of Create Marker Set
+dialog:import pdf options                        # prompt of Import PDF(s)
+dialog:planswift import complete                 # result message of Import PlanSwift Job
+dialog:sheet overlay transform                   # prompt of "Use + Edit Transform"
+dialog:takeoff item properties                   # the Properties window, described as "Properties..."
+dialog:add template preset                       # inner prompt of the Templates panel
+dialog:edit template preset                      # inner prompt of the Templates panel
+dialog:create takeoff from template              # inner prompt of the Templates panel
+dialog:workspace conflicts                       # inner window of Workspace sync
+dialog:page setup                                # the Name / Scale window (F5)
+dialog:estimating                                # the Estimating table window, described as "Open Estimating"
+dialog:keyboard shortcuts                        # the Settings > Keyboard Shortcuts editor
+dialog:overlay color                             # colour picker of the Overlay panel
+dialog:choose sheet overlay candidate            # the window behind "Overlay" / "Choose / Replace...", described as the Overlay flow
+#
+# --- F1 rows that are standard Windows behaviour or a modifier explained with its tool
+f1:accept / open the selected result             # Enter in dialogs: standard Windows behaviour
+f1:close the active dialog                       # Esc in dialogs: standard Windows behaviour
+f1:navigate palette / picker results             # Up / Down in lists: standard Windows behaviour
+f1:add to / toggle selection                     # Ctrl modifier, part of the Select tool description
+f1:remove from selection                         # Ctrl+Shift modifier, part of the Select tool description
+f1:select vertices / handles                     # Alt modifier, part of the Select tool description
+f1:select a range                                # Shift+click in trees: standard Windows behaviour
+f1:toggle one row                                # Ctrl+click in trees: standard Windows behaviour
+f1:add a range                                   # Ctrl+Shift+click in trees: standard Windows behaviour
+f1:range / toggle selection                      # Shift / Ctrl+click in trees: standard Windows behaviour
+f1:temporarily force ortho                       # Shift while drawing, part of the Ortho description
+f1:use fine movement / scale / rotation          # Shift modifier of the overlay keys, described with them
+f1:move the overlay                              # Ctrl+Alt+drag, mouse variant of the overlay keys
+f1:close help or cancel the active action        # Esc
+f1:cancel trace step / leave layer trace         # Esc inside Layer Trace
+f1:cancel guide / leave roof mode                # Esc inside Roof guide
+#
+# --- "defaults" rows that are standard list / tree behaviour
+defaults:pages tree: clear the selection         # Esc
+defaults:cancel the active action                # Esc
+defaults:open the selected bookmark              # Enter in a list
+defaults:open the selected ai entry              # Enter in a list
+defaults:delete the selected bookmark            # Delete in a list
+
+# --- unreachable or hidden in 3.0.1 (checked against the code 2026-10-17)
+source:MainWindow.DisplaySettings.MeasurementSizing.cs:500  # Custom... of the line width presets: BtnStrokeSizePresets_Click is bound to no button
+source:MainWindow.DisplaySettings.MeasurementSizing.cs:522  # Custom... of the point size presets: BtnPointSizePresets_Click is bound to no button
+ribbon:Style                                     # Visibility=Collapsed ("kept for future use"); its tools are described as MARKUP TOOLS and STYLE
+toolstrip:Default Count display for newly created Count takeoffs  # Visibility=Collapsed, never shown; the default comes from New Takeoff Item
+panel:3D From Takeoffs                           # 3D Massing panel is never built (BuildMassingDraftPanel not called, legacy massing off)
+panel:AI 3D Sort                                 # 3D Massing panel is never built
+panel:3D Window                                  # 3D Massing panel is never built
+panel:Review Openings                            # 3D Massing panel is never built
+panel:Jump                                       # marker list button of the 3D Massing panel, never built
+panel:Auto Roof                                  # 3D Massing panel is never built
+dialog:Review Roof Draft                         # opened only from legacy massing, switched off in code
+dialog:Review Opening Projections                # legacy AI 3D Massing window, entry switched off in code
+
+# --- same function described under another name
+workspace:Sheet Manager Raster Format Box        # x:Name of the Format list; described as raster format Auto / WebP / PNG
+workspace:Return Templates to the tab list       # the other position of the Templates dock toggle, described in extras-other#templates
+context-menu:Add Line                            # same AddTemplateItem as the Line button of the Templates editor
+context-menu:Add Area                            # same AddTemplateItem as the Area button of the Templates editor
+workspace:Hide the calculator panel              # the close cross of the Calculator panel, described in extras-other#calculator
+panel:Open Report                                # opens the PlanSwift import report file, the import is described in extras-other#import
+workspace:▶ Run                                  # same button as Run of the console panel; the triangle sign is not written in text
+palette:Open Jobs Folder                         # same handler as Manage job folders... (job-creation-storage)

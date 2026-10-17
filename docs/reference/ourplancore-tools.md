@@ -26,8 +26,8 @@
 | `Beam` | `B` | длина балки между опорами, одна точка на балку | позиция Count с длиной в имени |
 | `Open` | `O` | бокс по проёму, точка в центре | позиция Count `ШxВ` |
 | `Scale` | `S` | масштаб листа по известному размеру | - |
-| `Ruler` | `R` | рулетка-размер на листе без количества; точка на кнопке прячет рулетки листа | разметка |
-| `Pitch` | - | уклон крыши `rise:12` по двум точкам | разметка |
+| `Ruler` | `R` | рулетка-размер на листе без количества; точка на кнопке (`Ruler Sheet Visibility`) прячет рулетки листа | разметка |
+| `Pitch` | - | уклон крыши `rise:12` по двум точкам; в палитре команда `Pitch Tool` | разметка |
 | `Select` | `E` | выбор и правка замеров; `Ctrl+C` / `Ctrl+V` | - |
 | `Pan` | `V` | двигать лист | - |
 | `Cut`, `P Line`, `Similar`, `Repeat`, `Merge`, `Split`, `Break`, `Ends`, `Combine`, `Transform` | `X`, `Ctrl+M`, `Ctrl+Shift+M`, `Ctrl+Shift+B` | правка готовых замеров и позиций, поиск похожих символов, серии отрезков | [Правка и привязки](ourplancore-editing.md) |
@@ -91,11 +91,12 @@
 Зачем: посты, holdowns, крепёж, всё, что считается в штуках.
 
 1. Нажмите `P` (кнопка `Count`), впишите имя по марке или модели: `C4 20`, `HDU11 SB1x30 S2.2`, `MPB88Z S2.1`, `int H228 4`.
-2. Выберите значок точки в поле `Count display` (circle, cross, square, star, triangle, diamond, ring) и нажмите **OK**.
+2. Выберите значок точки в поле `Count display` (circle, cross, square, star, triangle, diamond, ring) и нажмите **OK**. Выбранный значок программа запоминает и предлагает для следующего нового Count.
 3. Щёлкайте по центру каждого символа; у holdown - на конце shear wall.
 4. Промахнулись: нажмите `E`, перетащите точку или `Delete`.
+5. Чтобы позже добавить точки в готовую позицию, нажмите ПКМ по ней в Takeoffs и выберите `Add Count` (у Line и Area этот пункт называется `New Section`) или выделите её и нажмите `Space`.
 
-Результат: при точке W позиция в `walls/<этаж> floor walls`, при F в корне `framing/<этаж> framing` (посты и headers потом переносятся в `posts` и `headers/ext|int`), при S в `shear walls/<этаж>/holdowns`; `Total` в штуках.
+Результат: при точке W позиция в `walls/<этаж> floor walls`, при F в корне `framing/<этаж> framing` (посты и headers потом переносятся в `posts` и `headers/ext|int`), при S в `shear walls/<этаж>/holdowns`; `Total` в штуках. В панели Templates тот же пункт `Add Count` заводит не позицию, а пресет Count в дереве заготовок ([Templates](ourplancore-extras-other.md#templates)).
 
 Правила: [Post](../work/horizontal/floor-framing/post.md), [Holdowns](../work/vertical/sheathing/holdowns.md), [Headers](../work/vertical/openings/headers.md).
 
@@ -119,6 +120,19 @@
 6. При необходимости включите в `Props` галку `Detailed area label` (заказные и чистые длины в таблице на листе) и `Move joist note` (таблицу можно перетащить инструментом Select, `Ctrl+Z` отменяет перенос; положение сохраняется и печатается в PDF).
 
 Результат: при точке F позиция в `framing/<этаж> framing/joists`; `Total` показывает штуки и LFT. Смена направления, шага или материала - новая зона. Обычная Area с именем `2x8 16"` в Excel joists не даст.
+
+### Меню ПКМ у J Area { #jarea-menu }
+
+Пункты есть в меню зоны на листе (часть из них и в отдельном окне листа), в меню секции под позицией и в подменю `Joist` у позиции в Takeoffs. Нужен модуль Advanced Takeoff Tools (включён).
+
+| Пункт | Что делает | Когда нужно |
+| --- | --- | --- |
+| `Use Area As Joists...` | у обычной Area открывает `Takeoff Item Properties`: галка `Joist layout` превращает позицию в J Area (`Joist type`, `O.C. spacing (in)`, уклон, округление длин). У J Area тот же пункт называется `Joist Properties...` | зону нарисовали обычной `Area`, а считать надо joists |
+| `Set / Reset Joist Direction` | заново задаёт направление одной зоны: проведите двухточечную линию вдоль joists | направление легло поперёк |
+| `Set Direction for All Areas` | одна линия направления на выбранной зоне ставит то же направление всем зонам позиции на всех листах; статус `Joist direction ... applied to N areas` | все зоны позиции идут в одну сторону |
+| `Refresh Regular Joists in All Area Segments` | переносит общие свойства позиции (тип, шаг, `Default far-edge joist`) на все зоны и пересчитывает обычные joists; зоны без своего направления программа по очереди просит провести линию. Свои крайние joists, заданные на листе, сохраняются | после смены шага или типа в `Props` |
+| `Start Extra Joists Mode (D)` | то же, что `D`: клики внутри зоны ставят Extra Joists, `D` или `Esc` выходят; доступно, когда направление зоны задано | дополнительные joists под стенами |
+| `Delete Nearest Extra Joist` | удаляет дополнительный joist под курсором (ПКМ точно по его линии); промах даёт статус `Right-click directly on an Extra Joist to delete it.`, `Ctrl+Z` возвращает | лишний Extra Joist |
 
 Правила: [Joist](../work/horizontal/floor-framing/joist.md).
 
@@ -161,12 +175,17 @@
 
 Правила: [Windows and Doors](../work/vertical/openings/windows-doors.md).
 
-## Остальные инструменты
+## Остальные инструменты и кнопки { #other }
 
 | Инструмент | Когда и как |
 | --- | --- |
-| `Pitch` | уклон крыши по разрезу: две точки по скату, результат `rise:12` для имени `rf 6` |
+| `Pitch` | уклон крыши по разрезу: две точки по скату, результат `rise:12` для имени `rf 6`. Кнопка `Pitch` стоит в строке 1 рядом с `Ruler`; в палитре `Ctrl+Shift+P` та же команда называется `Pitch Tool`, клавиши у неё нет |
 | `Ruler` (`R`) | проверка масштаба и размеров; количества не даёт |
+| `Ruler Sheet Visibility` | маленькая точка на кнопке `Ruler`: прячет рулетки, уже стоящие на этом листе (новые рулетки остаются видны); повторное нажатие снова показывает все. Удобно, когда рулетки ставили только для проверки масштаба и они мешают смотреть лист |
+| `Ruler screen thickness` | ползунок `Ruler` на ленте **Viewport**, группа RULER / EXTRA: толщина линий рулетки и `Pitch` на экране, 0.5-6 px (по умолчанию 1); рядом поле для точного числа |
+| `Scale:` и `Set` | поле масштаба в строке 2 полосы: впишите `1/8" = 1'0"` или `1:96` и нажмите `Set` (или `Enter`). Масштаб пишется в текущий лист, его замеры пересчитываются; `Presets` даёт типовые значения ([масштаб](ourplancore-pages.md#scale)) |
+| `Reset Rotate Selection` | кнопка с круговой стрелкой справа от ползунка `Rot`: возвращает ползунок в ноль, выделение остаётся повёрнутым; следующий поворот считается от нового положения ([Transform](ourplancore-edit-takeoffs.md#transform)) |
+| `Expand all Pages nodes`, `Expand all Takeoffs nodes` | значки над деревьями Pages и Takeoffs раскрывают все папки, соседний значок сворачивает. Те же команды на полосах значков у краёв листа: `Expand Pages Tree` слева, `Expand Takeoffs Tree` справа |
 | `Record` (`Space`) | продолжить выбранную позицию; ещё раз `Space` останавливает ([Record](ourplancore-takeoffs.md#record)) |
 | `Cut`, `P Line`, `Similar`, `Repeat`, `Combine`, привязки `Snap` / `PDF` / `Ortho` / `Box` | вырезы, точки вдоль линии, похожие символы, серии отрезков, площади внахлёст, привязки к чертежу: [Правка и привязки](ourplancore-editing.md) |
 

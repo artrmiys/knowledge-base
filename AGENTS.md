@@ -105,6 +105,11 @@ project-root/
 без проверки. Сохраняй старые URL `reference/ourplanecore/` и
 `reference/job-creation-storage/`. Таблица клавиш имеет один канон:
 `reference/ourplancore-shortcuts.md`.
+Каждая функция программы должна быть описана: после каждого релиза запускай
+`python tools/opc_inventory.py --page` (инвентарь из кода и страница
+`reference/ourplancore-all-functions.md`) и `python tools/opc_coverage.py`
+(код выхода 0 = всё описано). Не найденное дописывай на страницу по теме;
+служебное и дубли - в `tools/opc_coverage_ignore.txt` с причиной.
 
 ### Правила нейминга в `nav`
 

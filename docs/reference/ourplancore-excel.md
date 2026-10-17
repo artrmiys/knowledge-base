@@ -1,6 +1,6 @@
 # Экспорт в Excel
 
-Здесь: полоса XL справа от листа, что каждая кнопка берёт из дерева и куда пишет в книге `TemplateCom.xlsm`, легенда LG, точка "комментарии", кнопки `Value` и `Excel`, порядок работы и ошибки. Нужно после замеров, перед работой в DFL.
+Здесь: полоса XL справа от листа, что каждая кнопка берёт из дерева и куда пишет в книге `TemplateCom.xlsm`, легенда LG, точка "комментарии", кнопки `Value` и `Excel`, настройка кнопок в `Settings > Excel Actions`, порядок работы и ошибки. Нужно после замеров, перед работой в DFL.
 
 <!-- DEMO: d-excel-xl -->
 
@@ -41,7 +41,7 @@
 | Кнопка | Берёт из дерева | Пишет в книге |
 | --- | --- | --- |
 | `ALL` | весь выделенный корпус | все шаги по порядку выше |
-| `LG` | - | открывает легенду проекта для `PS`, `BM`, `HD`; строка `wall sheathing = 7/16" Zip no insulation` нужна `SH` |
+| `LG` | - | открывает легенду проекта для `PS`, `BM`, `HD`; строка `wall sheathing = 7/16" Zip no insulation` нужна `SH`. Крестик в шапке панели (`Hide the Excel legend panel`) или повторное `LG` закрывают её без сохранения: сначала **Save for job**, иначе правка пропадёт; **Clear** очищает и сохраняет пустую легенду |
 | `SF` | `sqfts` (`sqft`) | `J:L`, макрос `A2_SQFT_calc`: площади этажей, Front Page, кровля по уклонам |
 | `WL` | `walls` | `J:L` с заголовками этажей, строгий порядок, макрос `A3_Walls_Calc_AllGroup`: матрица стен `O:AB` и строки Floor Walls; потом удаление нулевых строк в `A:H` блока стен (шаблонные строки Flashing, Headers, Wall Sheathing, Insulation, Box Sheathing, Tape, Shear Walls, Holdowns остаются) |
 | `GB` | `gables` | `J:L`, `A2_SQFT_calc` |
@@ -93,10 +93,21 @@ Posts, beams и joists **заменяют** свои строки в списк�
 | Кнопка | Что делает |
 | --- | --- |
 | `Excel` (внизу слева) | пишет выделенную папку или позицию строками (имя, число, единица) от активной ячейки открытой книги; без макросов |
-| точка на кнопке `Excel` | закрашена - в экспорт идут комментарии позиций и замеров (notes); по умолчанию выключена |
+| точка на кнопке `Excel` (`Include takeoff comments in Excel export`) | закрашена - в экспорт идут комментарии позиций и замеров (notes); по умолчанию выключена. Действует на `Excel` и `Export > Export Excel`; `Value` и полоса XL комментарии не пишут, CSV и TXT пишут всегда |
 | `Value` | пишет только числа той же выборки в одну колонку от активной ячейки |
 | `Export > Export CSV / TXT / Excel` | выгрузка дерева в файл |
 | `Export > Export to Current Excel` | то же, что кнопка `Excel` |
+
+### Как добавить комментарий к замеру и вывести его в Excel { #notes }
+
+Зачем: пометка для DFL рядом с числом (`verify on site`, `per S2.1`), которая едет в книгу вместе с позицией.
+
+1. Щёлкните ПКМ по строке замера (секции) под позицией в Takeoffs и выберите **Set Notes...**; для нескольких выделенных строк пункт называется `Set Notes for N Rows...`.
+2. Впишите текст, каждая строка - отдельный комментарий, нажмите OK. Комментарий для всей позиции пишется в поле `Notes:` окна **Properties...** позиции.
+3. Щёлкните точку на кнопке `Excel` внизу слева, чтобы она стала закрашенной: статус `Excel comments are on: include takeoff and measurement comments.`
+4. Щёлкните ячейку назначения в Excel и нажмите `Excel`.
+
+Результат: под строкой позиции идут строки комментариев (сначала позиции, потом замеров, одинаковые не повторяются) и пустая строка после них.
 
 ## Шаблон TemplateCom { #template }
 
@@ -109,6 +120,34 @@ Posts, beams и joists **заменяют** свои строки в списк�
 
 !!! warning "Уточняется"
     Как чисто убрать прежний блок `J:L` перед повтором `WL` или `SF` (руками или макросом), проверяется на следующей сдаче.
+
+## Как поменять, что делает кнопка XL: Settings > Excel Actions { #settings }
+
+<figure markdown>
+  ![Settings, раздел Excel Actions](../assets/images/ourplancore/v3/settings-excel-actions.png)
+  <figcaption markdown="span">Список `Action` (кнопка полосы XL), её поля, порядок `ALL sequence` и блоки этажей, framing и walls extras.</figcaption>
+</figure>
+
+Зачем: другая книга, другие папки дерева или другой состав `ALL` без правки программы. По умолчанию стоят правила `TemplateCom.xlsm`, описанные выше.
+
+1. Откройте **Settings > Excel Actions** и выберите кнопку в списке **Action**.
+2. Поправьте поля (таблица ниже) и порядок шагов в **ALL sequence** (id через запятую).
+3. Нажмите **Apply / Run selected** (или **Apply / Run ALL**), чтобы проверить на открытой книге.
+4. Нажмите **Save as this job** (только этот проект) или **Save global default** (все проекты).
+
+Результат: кнопки полосы XL работают по новым правилам. **Use global for this job** снимает правила проекта, **Reset built-in** загружает встроенные правила как черновик (сохраняются кнопками шага 4).
+
+Раздел состоит из четырёх блоков: `Excel macro actions`, `Floor folder matching`, `Framing folders - Excel blocks`, `Walls extras: sheathing, shear walls, shaft, units, balconies`.
+
+??? note "Поля всех четырёх блоков"
+    | Блок | Что в нём |
+    | --- | --- |
+    | `Excel macro actions` | для выбранной кнопки: `Workbook`, `Worksheet`, `Takeoffs folder aliases` (какие папки дерева она читает), `VBA macro`, колонки `Scan start column`, `Scan end column`, `Write start column`, `First scan row`, `Blank rows between blocks`, `Output units`, `Per-floor VBA first`, `Row order`, макрос чистки `After VBA` с диапазоном `After range` (например `B_DeleteZeroRowsOnlyIn_AtoH`), `Always keep rows` (строки, которые чистка не трогает), `Cleanup stops at`, галка `Insert numeric floor group rows (0-5) before the takeoff rows` |
+    | `Floor folder matching` | слова папок этажей для `Floor 0` ... `Floor 5`: по умолчанию `0, basement, bsmt`, `1, 1st, first`, `2, 2nd, second` и так до `5, 5th, fifth` |
+    | `Framing folders - Excel blocks` (в программе между словами стрелка) | `Include framing export in ALL`, `Framing root aliases`, `Pair joists up to (ft)` (по умолчанию 7, 0 выключает сдвоенный сток), `Add Extra joists of the same size and length to the regular joist row`, `Add a framing list the workbook lacks (6th floor, balcony) from the nearest floor list`, таблицы правил этажей и категорий, галка запуска макроса деталей |
+    | `Walls extras: sheathing, shear walls, shaft, units, balconies` | галки `Units in ALL`, `Sheathing in ALL`, `Shear walls in ALL`, `Shaft block in ALL`, `Balconies in ALL`; поля `Sheathing VBA`, `Units table at` (ячейка таблицы units, по умолчанию `AM3`), `Shear root folders`, `Holdown folders`, `Balcony area names`, `Porch area names` |
+
+Обзор всех разделов Settings: [Settings](ourplancore-settings.md).
 
 ## Частые ошибки { #errors }
 

@@ -38,15 +38,16 @@
 | `Codex` / `Claude` | профиль: у каждого свой терминал, оба живут одновременно, переключение не рвёт сессии |
 | `Run` | запустить или продолжить ассистента (`Run / resume using the selected E-Wood shortcut`); при Workspace стартует `claude --continue` или `codex resume --last`, то есть продолжает последнюю сессию, иначе новую |
 | `Attach` | подхватить уже открытое окно Git Bash или mintty: меню со списком окон и `Refresh`; после подключения нажать `Paste context` |
-| `Quick` / `Balanced` / `Deep` / `Provider default` | усилие рассуждения для следующего запуска: low, medium, high или как у провайдера; у подключённой сессии список неактивен, она живёт своими настройками |
+| `Quick` / `Balanced` / `Deep` / `Provider default` | список `Reasoning effort for the next launch`: усилие рассуждения для следующего запуска, low, medium, high или как у провайдера; у подключённой сессии список неактивен, она живёт своими настройками |
 | `ctx <проект> <лист>` | что сейчас в контексте ([ниже](#context)) |
 | `Context` | открыть живой файл контекста в редакторе по умолчанию |
 | `Paste context` | вставить сообщение подключения в терминал без `Enter`: прочитать и отправить самому, когда ассистент свободен |
 | `AI Inbox` | развернуть AI Inbox внизу Main View |
 | `AI Crop +` | нарисовать кроп на листе и отдать его PNG в контекст ([ниже](#crop)) |
-| стрелка `Detach` | открепить терминал в отдельное окно; беседа продолжается (`Detached - conversation continues in its own window`) |
+| стрелка `Detach` (`Detach terminal to its own window`) | открепить терминал в отдельное окно; беседа продолжается (`Detached - conversation continues in its own window`); активна только при подключённой сессии |
 | шестерёнка | `Settings > Terminals` |
-| крестик | скрыть панель; обе беседы продолжают работать |
+| три точки (`Terminal actions`) | только на узкой панели (уже 390 px): вместо стрелки и шестерёнки меню `Detach to window` и `Settings > Terminals`; подписи кнопок укорачиваются (`Inbox`, `Crop +`), строка счётчиков прячется |
+| крестик (`Hide panel`) | скрыть панель; обе беседы продолжают работать |
 
 Строка статуса под кнопками ведёт по шагам: `Choose Run or Attach`, `Starting Claude...`, `Connected - context sent at startup`, `Connected - startup context disabled`, `Context pasted - submit it in your assistant when ready`, `AI crop saved - available in context and AI Inbox`. Ошибка пишется туда же и в строку статуса окна с префиксом `Terminal:`.
 
@@ -83,7 +84,7 @@
 
 Результат: статус `AI crop saved - available in context and AI Inbox`, запись выбрана в Inbox, строка `ctx` показывает `Crop` на единицу больше.
 
-Так же в контекст попадает выбранная закладка (`B`, `K`, вкладка Bookmarks) и выбранная запись AI Inbox: достаточно выделить её перед вопросом.
+Так же в контекст попадает выбранная закладка (`B`, `K`, вкладка Bookmarks) и выбранная запись AI Inbox: достаточно выделить её перед вопросом. Пункт `Use in Codex / Claude terminal` в меню записи AI Inbox делает это одним щелчком: открывает панель `>_` и сразу обновляет контекст с этой записью. В уже идущую беседу её нужно передать кнопкой `Paste context`, новая сессия получит её при `Run`.
 
 ## Правки проекта через Agent Bridge { #bridge }
 

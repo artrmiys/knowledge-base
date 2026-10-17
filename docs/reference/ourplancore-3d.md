@@ -16,6 +16,7 @@
 
 1. Откройте **Settings > Modules**, поставьте галку **3D**, нажмите **Save global default** (или **Apply** до перезапуска).
 2. В строке режимов появилась вкладка **3D**; под Takeoffs появился под-таб `3D`.
+3. Чтобы перейти к ним без мыши, откройте палитру команд (++ctrl+shift+p++): `Show 3D Viewer` открывает вкладку 3D в строке режимов, `Show 3D Tab` выбирает под-таб `3D` рядом с Takeoffs.
 
 <figure markdown>
   ![Вкладка 3D](../assets/images/ourplancore/v3/view-3d.png)
