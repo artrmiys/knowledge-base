@@ -1,65 +1,93 @@
-# Unit / Interior Walls
-
-## Что считать
-
-- Interior apartment walls по type и height.
-- Studs, plates, blocking и openings, если не panelized / by others.
-- Jamb blocking для interior doors.
-
-## Правила
-
-- Typical unit walls - 2x4, но structural schedules могут override.
-- Exact stud heights важны на больших COM jobs.
-- Не включай gypsum для normal wall faces, если scope прямо не просит.
-- Interior walls разделяй by floor, когда plans отдельно показывают basement,
-  first floor, second floor, attic/loft, chimney, dormer или garage conditions.
-
-## Проверить
-
-- Kitchen blocking: 2x6, 4 pieces of 14' per kitchen.
-- Bath blocking: 2x6, 1 piece of 14' per bathroom.
-- Tile base в room schedules исключается, когда нужен только wood base.
-- Studs PreCut должен быть видим на left/output side, если этого требует Tilda
-  checklist.
-- Сначала смотри на спецификацию стен - **из металла или из дерева** делаются интерьерные стены.
-- Если в notes написано **`walls are panels`** - НЕ считаем (панели поставляются отдельно).
-- Если unit interior walls - metal studs, проверь spacing. Не переноси
-  `24" o.c.`, если notes/spec требуют `16" o.c.`.
-- Metal-stud door jambs inside units должны совпадать с metal-stud wall size
-  (`2x4` или `2x6`), а не generic jamb.
-
-## Разметка по юнитам в PlanSwift (A 2x4 / A 2x6)
-
-Когда здание состоит из юнитов (units), каждый юнит размечается **отдельно**.
-
-1. В PlanSwift создаётся отдельная **папка `units`**.
-2. Внутри каждого юнита добавляются типы стен по толщине доски:
-    - **`A 2x4`** - интерьерная стена 2x4 (буква-префикс = код юнита, например `A`, `Q`, `SK`).
-    - **`A 2x6`** - интерьерная стена 2x6.
-3. На плане линия чертится вдоль стены по её толщине:
-    - **~3½"** на плане - `A 2x4`.
-    - **~5½"** на плане - `A 2x6`.
-4. Каждая стена должна относиться **только к одному юниту**. Внешние стены НЕ включаются - только interior.
-
-### Пример выгрузки в Takeoff
-
-```
-Unit A
-  - A 2x4: 58.7 ft
-  - A 2x6: 3.1 ft
-```
+# Unit Walls (стены типовых квартир)
 
 <figure markdown>
-  ![Unit walls marked A 2x4 / A 2x6 in PlanSwift](../../../assets/images/confluence/confluence-095.png)
-  <figcaption>Так это выглядит в PlanSwift: только interior-стены юнита, <span style="color:#c0392b">A 2x4 (красный)</span> и <span style="color:#2e7d32">A 2x6 (зелёный)</span>. Внешние стены не входят. Снизу - длины (58.7 / 3.1 ft) как в выгрузке выше.</figcaption>
+  ![Лист юнита с точкой U и линиями A 2x4 и A 2x6](../../../assets/images/ourplancore/v3/sheet-unit.png)
+  <figcaption markdown="span">Лист типа юнита с точкой U: все новые takeoff с него ложатся в `units`. Линии только по внутренним перегородкам квартиры, по одной позиции на сечение.</figcaption>
 </figure>
 
-### Учёт повторов юнитов
+## Что это
 
-На общем плане этажа отметь, **сколько раз встречается каждый unit** (A, B, C…). Это нужно для последующего подсчёта в Excel через макрос **`C_UnitTable`** - он умножает длину стен юнита на количество повторов.
+Unit walls - внутренние перегородки **одной типовой квартиры**. Квартиры
+повторяются, поэтому стены одного типа меряются один раз на увеличенном
+плане юнита, а число повторов берётся отдельно. Наружные, коридорные и
+demising стены в юнит не входят: они считаются на плане этажа
+([Exterior](exterior.md), [Corridor](corridor.md), [Demising](demising.md)).
 
-Используй чёткие имена групп (например, `Unit A - A 2x4`) - так удобнее экспортировать и анализировать.
+## Где искать на чертежах
 
-## See also
+| Лист | Что взять |
+| --- | --- |
+| Планы юнитов `a3011 u` (масштаб обычно 1/4") | Перегородки типа A, B1, B1A; сечение по толщине на плане: 3 1/2" = 2x4, 5 1/2" = 2x6 |
+| Unit matrix, keyplan, планы этажей `a101 1st` | Сколько раз и на каких этажах встречается каждый тип, зеркальные варианты |
+| Wall type schedule (`wt`) | Из чего перегородки: дерево или metal studs, шаг, rated стены |
+| Interior elevations `in el`, RCP | Blocking под кухню и ванную, dropped soffit |
+| Door schedule | Межкомнатные двери и их jambs по сечению соседней стены |
 
-- [Corridor Walls](corridor.md) , [Demising Walls](demising.md) , [Windows & Doors](../openings/windows-doors.md) , [Формулы - Stud factors](../../../reference/formulas.md#stud-spacing-factors)
+## Как мерить в OurPlanCore
+
+Инструмент **Line**, единица LFT, на листе юнита.
+
+1. Имя листа кончается на `u` (`a3011 u`): лист получает точку **U**, и любой
+   новый takeoff с него ложится прямо в `units`. Подпапку этажа или типа
+   задаёшь переносом (move).
+2. Одна позиция на тип и сечение: `A 2x4`, `A 2x6`, `B1A 2x4`. Зеркальный
+   повтор - тот же тип; реально другой вариант (шахта, доступность, другой
+   потолок) - свой тип.
+3. Линия по оси каждой внутренней перегородки юнита. Стена без марки на
+   листе типов - по соседним.
+4. Граница с общими стенами фиксируется один раз: перегородка не должна попасть
+   и в `units`, и в `walls/<этаж> floor walls`.
+5. Повторы - отдельный счёт, не число линий: Count точками на плане этажа,
+   имя = марка юнита (`B1`, `B1A`), одна точка на квартиру.
+6. Легенду листа сортируй `Organize > Sort Sheet Legend by Key (before space)`:
+   `A1 2x4, A1 2x6, A2 2x4, B1 2x4, B1A 2x4`.
+
+Если перегородки юнитов - metal studs или `walls are panels by others`, стены
+всё равно размечаются, а в DFL ставится `0` и нота по scope
+([Metal Tracks](metal-tracks.md), [Wall Panels](wall-panels.md)).
+
+## Как назвать в дереве и строка DFL
+
+| Имя в дереве | Строка DFL | Unit | Формула / фактор |
+| --- | --- | --- | --- |
+| `units/A 2x4` | `Studs Interior 2x4` | pcs | `LFT x повторы x 1.1` (16") |
+| `units/A 2x6` | `Studs Interior 2x6` | pcs | то же, 24" = 0.625 |
+| то же | `Plates Interior (1) btm`, `(2) dbl top` | LFT | `LFT x повторы x 1.1`; btm P.T. только на бетоне |
+| то же | `Blocking`, `Bracing` | LFT | по типу стены |
+| `B1` (Count на плане этажа) | множитель повторов | ea | число квартир типа на этаже |
+
+Кнопка `UN` полосы XL ставит таблицу юнитов в книгу (AM3) с итогами по
+этажам; макрос `C_UnitTable` умножает длины юнита на число повторов.
+Отдельно по юниту идут blocking кухни (`2x6`, 4 по 14') и ванной (`2x6`,
+1 по 14'), jamb blocking межкомнатных дверей и dropped soffit с RCP. Внутренний
+гипсокартон, внутренний утеплитель и sound batt во frame-scope не считаем.
+
+## Частые ошибки
+
+- Повторы умножены дважды: и скопирована геометрия, и поставлен коэффициент.
+- Demising или corridor стена попала внутрь юнита и посчитана ещё раз на этаже.
+- Типы A1 и A10 из прошлого дома перенесены на новый проект без матрицы.
+- Шаг `24" o.c.` скопирован, хотя spec требует `16" o.c.`.
+- Jamb межкомнатной двери взят generic, а не по сечению соседней стены.
+- Тег `u` не последний в имени листа (`a301 u el`): точки U нет, линии ушли в `walls`.
+
+Разбор с примерами: [все ошибки по стенам](../../../start/common-mistakes.md#walls).
+
+## Пример
+
+```text
+units/
+  A 2x4      Line, 58.7 LFT
+  A 2x6      Line, 3.1 LFT
+  B1 2x4     Line, 71.2 LFT
+  B1A 2x4    Line, 74.0 LFT
+walls/1st floor walls/
+  B1         Count, 6 ea      (повторы типа B1 на 1-м этаже)
+```
+
+## См. также
+
+- [Corridor Walls](corridor.md), [Demising Walls](demising.md)
+- [Windows and Doors](../openings/windows-doors.md): межкомнатные двери и jambs
+- [Точка листа U](../../../reference/takeoff-naming.md#sheet-dots), [порядок легенды](../../../reference/takeoff-naming.md#legend-order)
+- [Формулы: stud factors](../../../reference/formulas.md#stud-spacing-factors)

@@ -29,6 +29,8 @@ REPLACE = {
     "»": '"',   # guillemet right
 }
 PATTERN = re.compile("|".join(map(re.escape, REPLACE)))
+# arrow icons (:octicons-arrow-right-24: and the like) look the same as arrows
+ARROW_ICON = re.compile(r":[a-z]+-(?:[a-z]+-)*arrow-[a-z0-9-]+: ?")
 
 
 def files():
@@ -39,6 +41,7 @@ def files():
 
 def fix_text(text):
     # " — " and " → " become " - ", a dash glued to words becomes "-"
+    text = ARROW_ICON.sub("", text)
     return PATTERN.sub(lambda m: REPLACE[m.group(0)], text)
 
 
@@ -51,11 +54,11 @@ def main():
         if not path.exists():
             continue
         text = path.read_text(encoding="utf-8")
-        if fix and PATTERN.search(text):
+        if fix and (PATTERN.search(text) or ARROW_ICON.search(text)):
             path.write_text(fix_text(text), encoding="utf-8", newline="")
             text = path.read_text(encoding="utf-8")
         for no, line in enumerate(text.splitlines(), 1):
-            hits = PATTERN.findall(line)
+            hits = PATTERN.findall(line) + [h.strip() for h in ARROW_ICON.findall(line)]
             if hits:
                 found += len(hits)
                 rel = path.relative_to(ROOT).as_posix()

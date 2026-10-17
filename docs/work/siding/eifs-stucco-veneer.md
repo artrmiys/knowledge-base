@@ -1,118 +1,96 @@
-# EIFS / Stucco / Veneer
-
-EIFS, Stucco, Stone veneer и Brick veneer - это тоже наружная облицовка
-стен, но это **отдельные trade**. Для нашего scope (wood / EWP / vinyl /
-fiber-cement + trim) они почти всегда **by others**.
+# EIFS / Stucco / Veneer (облицовка by others)
 
 <figure markdown>
   ![EIFS, stucco and veneer are by others](../../assets/images/siding/eifs-stucco-veneer.svg)
-  <figcaption>Finish-системы by others; WRB, sheathing, furring, trim/J-channel - наши.</figcaption>
+  <figcaption markdown="span">Finish-системы by others. WRB, sheathing, furring и wood/PVC trim вокруг них наши. J-channel наш только при vinyl siding.</figcaption>
 </figure>
 
-!!! danger "Главное правило"
-    **EIFS - не считаем. Stucco - не считаем. Stone Veneer - не считаем.
-    Brick Veneer - не считаем.** Это finish/masonry by others. Считаем
-    только то, что в нашем scope (WRB, sheathing, furring, wood/PVC trim).
+<!-- TODO-PHOTO: EIFS installation with EPS boards and base coat mesh, EN: "EIFS installation insulation board mesh base coat" -->
+<!-- TODO-PHOTO: three-coat stucco over metal lath, EN: "stucco scratch coat metal lath wall" -->
+<!-- TODO-PHOTO: adhered stone veneer on house wall, EN: "manufactured stone veneer installation house" -->
 
-## Что это и как распознать { .kb-section-title .kb-st--amber }
+## Что это
+
+EIFS, stucco, stone veneer и brick veneer тоже наружная облицовка стен, но
+это отдельные trades. В нашем scope (wood, EWP, vinyl, fiber cement и trim)
+сам finish не считаем. Считаем то, что под ним и вокруг: WRB, sheathing,
+furring, wood/PVC trim, soffit, fascia.
+
+## Как распознать на чертежах
 
 === "EIFS"
 
-    **EIFS** = Exterior Insulation and Finish System ("синтетическая
-    штукатурка"). Слои: adhesive - insulation board (EPS) - base coat +
-    fiberglass mesh - finish coat.
-
-    **Распознать:** notes `EIFS`, `Synthetic Stucco`, `Dryvit`, `Sto`,
-    `Senergy`, `1" / 2" EIFS`; на разрезе - insulation board + тонкие слои с
-    mesh; на elevation - гладкие поля с reveals/expansion joints.
-
-    **Кто:** EIFS sub. **By others.**
+    Exterior Insulation and Finish System, "синтетическая штукатурка":
+    adhesive, insulation board (EPS), base coat с fiberglass mesh, finish
+    coat. Notes `EIFS`, `Synthetic Stucco`, `Dryvit`, `Sto`, `Senergy`,
+    `1" / 2" EIFS`; на разрезе insulation board и тонкие слои с mesh; на
+    фасаде гладкие поля с reveals и expansion joints. By others (EIFS sub).
 
 === "Stucco"
 
-    **Stucco** = традиционная цементная штукатурка (обычно 3-coat: scratch -
-    brown - finish) по metal lath / WRB.
-
-    **Распознать:** notes `Stucco`, `3-coat stucco`, `Cement plaster`,
-    `Portland`; на разрезе - lath + 3 слоя; weep screed по низу.
-
-    **Кто:** plaster trade. **By others.**
+    Цементная штукатурка, обычно 3-coat (scratch, brown, finish) по metal
+    lath и WRB. Notes `Stucco`, `3-coat stucco`, `Cement plaster`,
+    `Portland`; на разрезе lath и три слоя, weep screed по низу. By others
+    (plaster trade).
 
 === "Stone veneer"
 
-    **Stone veneer** = облицовочный камень (manufactured/cultured или
-    natural), adhered (на mortar/scratch coat) или anchored.
-
-    **Распознать:** notes `Stone Veneer`, `Cultured Stone`, `Manufactured
-    Stone`, `Stone Veneer by others`; hatch камня на elevation; на разрезе -
-    WRB + lath + scratch coat + stone.
-
-    **Кто:** mason / veneer sub. **By others.**
+    Облицовочный камень, manufactured или natural, adhered на scratch coat
+    или anchored. Notes `Stone Veneer`, `Cultured Stone`, `Manufactured
+    Stone`; hatch камня на фасаде; на разрезе WRB, lath, scratch coat,
+    stone. By others (mason).
 
 === "Brick veneer"
 
-    **Brick veneer** = кирпичная облицовочная стенка с воздушным зазором,
-    brick ties к каркасу, weep holes, lintels/shelf angles.
+    Кирпичная облицовка с воздушным зазором, brick ties к каркасу, weep
+    holes, lintels и shelf angles. Notes `Brick Veneer`, `Brick`, brick
+    hatch; на разрезе air gap, ties, weeps. By others (mason).
 
-    **Распознать:** notes `Brick Veneer`, `Brick`, brick hatch; на разрезе -
-    air gap + ties + weeps; shelf angle / lintel над openings.
+## Что считаем рядом
 
-    **Кто:** mason. **By others.**
-
-## Почему by others и что всё-таки считаем { .kb-section-title .kb-st--green }
-
-EIFS / stucco / stone / brick устанавливают **другие trade**. Мы не считаем
-сам finish, но рядом **остаётся наш scope**:
-
-| Элемент рядом с EIFS/stucco/veneer | Считаем? |
+| Элемент | Считаем? |
 | --- | --- |
-| WRB / housewrap (если наш) | :material-check-bold: проверить |
-| Sheathing (CDX / Zip / OSB) | :material-check-bold: свой scope |
-| Furring / framing под облицовку | :material-check-bold: проверить |
-| Wood / PVC trim, corner, band, soffit, fascia | :material-check-bold: ДА |
-| Sam EIFS / stucco / stone / brick finish | :material-close-thick: НЕТ |
-| Lath, base coat, brick ties, shelf angle | :material-close-thick: НЕТ (by others) |
+| WRB под облицовкой (по спецификации) | да, проверить scope |
+| Sheathing (CDX, OSB, Zip) | да, свой scope |
+| Furring и каркас под облицовку | да, если показан |
+| Wood / PVC trim, corner, band, soffit, fascia | да |
+| Сам EIFS, stucco, stone, brick | нет |
+| Lath, base coat, brick ties, shelf angle, casing bead | нет, by others |
 
-- `Note: Stone Veneer by others` / `Note: Stucco by others` / `Note: EIFS by
-  others` - ставь видимую note (см. [Standard notes](../../reference/standard-notes.md)).
-- Если **весь** фасад EIFS/stucco/stone - siding `0 SQ FT` + note; trim может
-  быть почти нулевым. Не "добивай" количество.
+- Нота обязательна: `Note: Stone Veneer by others`, `Note: Stucco by
+  others`, `Note: EIFS by others`.
+- Весь фасад EIFS, stucco или stone: siding `0 SQ FT` плюс нота, trim
+  почти нулевой. Не добивай количество.
+- Accessory EIFS и stucco (casing bead, stop bead, track, expansion joint)
+  идут с системой by others. J-channel при vinyl siding наш; канон:
+  [Exclusions и J-Channel](../exterior-trims/exclusions.md).
 
-## J-Channel / casing bead / stop { .kb-section-title .kb-st--cyan }
+## Как мерить в OurPlanCore
 
-EIFS и stucco - сплошные системы, их нужно **terminating** на чистую кромку.
-Поэтому по периметру ставят accessory-профили:
+Отдельный takeoff на облицовку by others не нужен. Площадь стен под ней
+нужна для WRB и sheathing: она берётся из `walls` и высоты стен, а не из
+фасада. Trim вокруг облицовки считается как обычно в `trims`.
 
-| Условие | Профиль |
-| --- | --- |
-| Вокруг **окон / дверей** | `J-Channel` / `casing bead` / back-wrap |
-| По **низу** EIFS/stucco | track / `weep screed` / stop bead |
-| Примыкание к **dissimilar material** (siding, soffit, stone) | `J-Channel` / expansion joint |
-| Поля EIFS | `expansion joint` / `reveal` (декоративный паз) |
-| **Vinyl siding** рядом | `J-Channel` у corner/openings/soffit/rake |
+## Частые ошибки
 
-!!! tip "J-Channel в строке takeoff"
-    - С **EIFS/stucco** accessory обычно идёт с finish-системой - **by
-      others**. Считаем только если явно в нашем scope.
-    - С **vinyl siding** `J-Channel` - наш accessory: `LFT` по периметру
-      openings + terminations; `Ext. Casing` может **и есть** `Vinyl
-      J-channel` - не дублируй с wood casing.
+- Stone или brick veneer посчитаны как siding или как наша кладка.
+- WRB и sheathing под EIFS пропущены, потому что "стена by others".
+- Casing bead EIFS записан как наш J-channel.
+- Нота by others не поставлена.
+- Все ошибки по обшивке и WRB: [Обшивка](../../start/common-mistakes.md#sheathing).
 
-    Полная карта где бывает J-Channel -
-    [Exterior Trims - Exclusions и J-Channel](../exterior-trims/exclusions.md).
+## Пример
 
-## Чек перед выводом { .kb-section-title .kb-st--magenta }
+```text
+Note: Stone Veneer and EIFS are by others; WRB and sheathing counted
+Siding          Per plans: EIFS by others     0      SQ FT
+WRB             fluid-applied per spec        6 420  SQ FT   A3.0
+Wall Sheathing  7/16" Zip                     215    4x8     8/S3.0
+CornerBoards    5/4x6 PVC                     112    LFT     A201
+```
 
-- [ ] Прочитал notes: EIFS / Synthetic Stucco / Dryvit / Sto / Stucco / Stone / Brick?
-- [ ] EIFS / Stucco / Stone / Brick veneer исключены (by others) + note?
-- [ ] WRB / sheathing / furring рядом - проверены по нашему scope?
-- [ ] Wood / PVC trim вокруг облицовки всё равно посчитан?
-- [ ] J-Channel: by others (с EIFS) vs наш (с vinyl) - не перепутал?
-- [ ] Весь фасад EIFS/stone - siding `0` + note, без "добивки"?
+## См. также
 
-## See also
-
-- [Overview](overview.md) , [Underlayment](underlayment.md) , [Измерение](measure.md)
-- [Exterior Trims - Exclusions и J-Channel](../exterior-trims/exclusions.md)
-- [Casing, Corner & Band](../exterior-trims/casing-corner-band.md)
-- [Standard notes](../../reference/standard-notes.md)
+- [Siding](overview.md), [Underlayment](underlayment.md), [Измерение](measure.md)
+- [Exclusions и J-Channel](../exterior-trims/exclusions.md), [Casing, Corner & Band](../exterior-trims/casing-corner-band.md)
+- [Wall Sheathing](../vertical/sheathing/wall-sheathing.md), [Standard notes](../../reference/standard-notes.md)

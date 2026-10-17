@@ -1,103 +1,87 @@
-# Типы siding
+# Типы siding (lap, shingle, panel, board and batten)
 
-Материал и профиль всегда держи в Label. Exposure (`6" exp`,
-`5-1/2" to weather`) - часть продукта, не убирай.
+Материал, профиль и exposure (`6" exp`, `5-1/2" to weather`) это часть
+продукта: всегда в строке DFL. Как мерить площадь: [Измерение](measure.md).
 
-## Lap / Clapboard { .kb-section-title .kb-st--green }
+## Lap / Clapboard
 
-Горизонтальная "в нахлёст" обшивка. Считается `SQ FT`.
+<figure markdown>
+  ![Wooden clapboard lap siding](../../assets/images/photos/siding/lap-siding.jpg)
+  <figcaption markdown="span">Lap siding: доски в нахлёст, видимая ширина ряда это exposure. Считаем SQ FT поля, exposure пишем в строке. Фото: Daniel Case, CC BY-SA 3.0, [источник](https://commons.wikimedia.org/wiki/File:Stained_wooden_clapboard_siding.jpg)</figcaption>
+</figure>
 
-| Пример Label | Заметка |
+| Пример строки | Заметка |
 | --- | --- |
 | `Hardi plank 6" exp` | fiber cement, exposure 6" |
 | `4" Ext Clapboard` | exposure 4" |
-| `Vinyl clapboard` | vinyl lap (Dutch lap / double 4" / 4½") |
-| `Red Cedar clapboard` | cedar, verify grade |
-| `Clapboard` (generic) | `verify material` в note |
+| `Vinyl clapboard` | Dutch lap, double 4", 4-1/2" |
+| `Red Cedar clapboard` | cedar, `verify grade` |
+| `Clapboard` | материал не указан: `verify material` в ноте |
 
-- **Exposure** (видимая ширина ряда) задаёт расход - держи в Label.
-- Vinyl lap идёт со starter strip, J-channel, corner posts (см.
-  [Underlayment](underlayment.md)).
+Vinyl lap идёт со starter strip, J-channel и corner posts, это accessories
+из [Underlayment](underlayment.md).
 
-## Shingle / Shake { .kb-section-title .kb-st--cyan }
-
-<div class="kb-split" markdown>
-
-Дранка / шейк. Выше waste, чем у lap. Часто на gable как accent.
-
-| Пример Label | Заметка |
-| --- | --- |
-| `Cedar shingles "Perfection" 5-1/2" to weather` | cedar, exposure 5½" |
-| `Vinyl Shingles` | vinyl shake panel |
-| `Vinyl Shingles` (gable) | gable accent - отдельная строка |
-| `1x6 Vert. Cedar BDS.` | вертикальная cedar доска |
-
-- Cedar shingle на сплошном основании требует **Cedar Breather** (вент-сетка).
-- Gable shingle accent почти всегда отдельная строка от field siding.
+## Shingle / Shake
 
 <figure markdown>
-  ![Cedar shingle to weather](../../assets/images/trims/ext-flare-detail.png)
-  <figcaption>Cedar shingles "Perfection" 5-1/2" to weather (flare-узел).</figcaption>
+  ![Cedar shake siding wall](../../assets/images/photos/siding/shingle-siding.jpg)
+  <figcaption markdown="span">Cedar shake по полю стены. Waste выше, чем у lap; на сплошном основании под дранкой нужен Cedar Breather. Фото: EgorovaSvetlana, CC BY-SA 4.0, [источник](https://commons.wikimedia.org/wiki/File:Cedar_Wood_Shake_Siding_Steele_Hill_Resort_Sanbornton_Lakes_Region_New_England.jpg)</figcaption>
 </figure>
 
-</div>
-
-## Panel / Board / Shiplap { .kb-section-title .kb-st--magenta }
-
-Листовая или досочная обшивка.
-
-| Пример Label | Заметка |
+| Пример строки | Заметка |
 | --- | --- |
-| `Hardipanel siding` | fiber-cement panel; Z-flashing на стыках |
-| `Boral TruExt 1x10 Shiplap` | composite shiplap, продукт в Label |
-| `1/2" Panel` | паневая обшивка bays / gable |
-| `Wainscotting` (gable paneling) | панель-акцент |
-| Board & Batten | доска + нащельник (batten) - оба считай |
+| `Cedar shingles "Perfection" 5-1/2" to weather` | exposure 5-1/2" |
+| `Vinyl Shingles` | vinyl shake panel |
+| `Vinyl Shingles` (gable) | accent во фронтоне, отдельная строка |
 
-- Panel siding обычно `SQ FT`; battens - `LFT`, если считаются отдельно.
-- Stack у панелей: Z-flashing горизонтальных стыков (см. flashing в
-  [Underlayment](underlayment.md)).
+Gable shingle accent почти всегда отдельная строка от поля. Flare
+(расширение под shingle) со своим blocking и trim:
+[Porch / Deck / Balcony](../exterior-trims/porch-deck-balcony.md).
 
-## По материалу { .kb-section-title .kb-st--green }
+## Panel / Board and batten / Shiplap
 
-| Материал | Особенность для takeoff |
+<!-- TODO-PHOTO: fiber cement panel siding with battens on a multifamily building, EN: "fiber cement panel siding battens apartment" -->
+
+| Пример строки | Заметка |
 | --- | --- |
-| **Vinyl** | starter, J-channel, corners, undersill - это accessories/trim; `Vinyl J-channel` может быть casing |
-| **Fiber cement (Hardi)** | plank / panel / shingle; note `verify if Trims Hardi or PVC` |
-| **Cedar** | clapboard / shingle / vertical; grade verify; Cedar Breather под shingle |
-| **Composite / engineered** | Boral TruExt, LP SmartSide - продукт в Label |
-| **Wood clapboard** | grade / primed; `primed vertical grade cedar` (см. notes) |
-| **Aluminum / steel** | редко; обычно by others - проверь scope |
+| `Hardipanel siding` | fiber cement panel; Z-flashing на горизонтальных стыках |
+| `Boral TruExt 1x10 Shiplap` | composite shiplap, продукт в строке |
+| `1/2" Panel` | панель на bays и gable |
+| `Board & Batten` | доска плюс нащельник; battens `LFT`, если считаются отдельно |
+| `1x6 Vert. Cedar BDS.` | вертикальная cedar доска |
+| `Wainscotting` | панель-акцент |
 
-!!! tip "Gable / accent / bay - всегда отдельно"
-    `Siding` (field) и `Siding Gable front` (accent shingle/panel) - разные
-    строки: разный материал, разный waste, разная площадь.
+Board and batten по полю, shingle во фронтоне и stone внизу на одном
+фасаде: три строки, см. фото на [обзоре](overview.md).
 
-## Ориентация и companion-строки { .kb-section-title .kb-st--magenta }
+## По материалу
 
-Siding чаще **горизонтальный** (`Siding Horizontal` - lap/clapboard), реже
-**вертикальный** (`Siding Vertical` - board&batten / `1x6 Vert. Cedar`). Держи
-ориентацию в Label, если шаблон их разделяет.
+| Материал | Что это меняет в takeoff |
+| --- | --- |
+| Vinyl | starter, J-channel, corners, undersill это accessories; `Vinyl J-channel` может быть casing |
+| Fiber cement (Hardi) | plank, panel или shingle; нота `verify if Trims are Hardi or PVC` |
+| Cedar | clapboard, shingle, vertical; `verify grade`; Cedar Breather под shingle |
+| Composite (Boral TruExt, LP SmartSide) | продукт в строке |
+| Wood clapboard | grade и primed в ноте (`primed vertical grain cedar`) |
+| Aluminum, steel | редко; обычно by others, проверить scope |
 
-Частые **companion-строки** рядом с полем siding:
+## Ориентация и соседние строки
 
-- **Post Wrap** - `1x10` / `1x12` (обёртка колонн порчей/крыльца).
-- **Fascia** - `1x12` / `1x8` (по краю).
-- Panel-варианты поля: `Fiber Cement Panel`, `Timber Faced Panel`.
+`Siding Horizontal` (lap) и `Siding Vertical` (board and batten, `1x6 Vert.
+Cedar`) держи раздельно, если шаблон их делит. Рядом с полем siding часто
+стоят `Post Wrap` (`1x10` / `1x12`) и `Fascia` (`1x8` / `1x12`), это trim:
+[Exterior Trims](../exterior-trims/casing-corner-band.md).
 
-Trim (casing/corner/J-channel) - отдельно в [Exterior Trims](../exterior-trims/casing-corner-band.md).
+## Частые ошибки
 
-## Чек { .kb-section-title .kb-st--cyan }
+- Exposure и материал выброшены из строки.
+- Поле и accent во фронтоне в одной строке.
+- Vinyl accessories не учтены как trim.
+- Cedar shingle без Cedar Breather на сплошном основании.
+- Panel без Z-flashing на стыках.
+- Все ошибки по обшивке: [Обшивка](../../start/common-mistakes.md#sheathing).
 
-- [ ] Материал + профиль + exposure в Label?
-- [ ] Field siding отделён от gable / accent / bay?
-- [ ] Vinyl: accessories (starter/J/corner) учтены как trim/accessory?
-- [ ] Cedar shingle: Cedar Breather на solid основании?
-- [ ] Panel: Z-flashing на стыках не пропущен?
-- [ ] Материал не указан - `verify` / `TBD` в note?
+## См. также
 
-## See also
-
-- [Overview](overview.md) , [Underlayment](underlayment.md) , [Измерение](measure.md)
-- [EIFS / Stucco / Veneer](eifs-stucco-veneer.md)
-- [Exterior Trims - Casing, Corner & Band](../exterior-trims/casing-corner-band.md)
+- [Siding](overview.md), [Underlayment](underlayment.md), [Измерение](measure.md), [EIFS / Stucco / Veneer](eifs-stucco-veneer.md)
+- [Casing, Corner & Band](../exterior-trims/casing-corner-band.md), [Material catalog](../../reference/material-catalog.md)

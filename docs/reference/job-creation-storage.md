@@ -90,7 +90,7 @@ Raster First само по себе не создаёт недостающие �
 
 <figure markdown>
   ![Рабочая копия, успешное Save в .ourplan и отдельная резервная копия](../assets/images/ourplanecore/save-recovery.svg)
-  <figcaption>Перед передачей нужна успешная запись переносимого файла.</figcaption>
+  <figcaption markdown="span">Перед передачей нужна успешная запись переносимого файла.</figcaption>
 </figure>
 
 У `.ourplan` есть два этапа сохранения:

@@ -1,116 +1,106 @@
-# Interior Trims
+# Interior Trims (внутренняя отделка)
 
-Interior Trims - это отдельный scope, не exterior trims, не drywall и не
-framing. Используй этот раздел, когда в scope есть finish trim items из room
-schedules, door/window schedules или finish plans.
+Interior Trims это отдельный scope: baseboard, casing дверей и окон, crown.
+Не exterior trims, не drywall и не каркас. Раздел нужен, когда в задании
+есть finish trim по room schedule, door schedule или finish plans. Во
+frame-scope внутренняя отделка не считается.
 
-## Что считать
+<figure markdown>
+  ![Baseboard and crown perimeter example](../../assets/images/trims/int-trims-02.png)
+  <figcaption markdown="span">Baseboard и crown это LFT по периметру комнат. Разрывы (шкафы кухни, garage, лестница) должны быть намеренными и видимыми в формуле.</figcaption>
+</figure>
 
-- Base / wood base.
-- Door casing и jamb trim.
-- Window casing, stool, apron и related trim, если они показаны.
-- Crown, когда trim scope активен.
-- Common-area trims отдельно от unit trims.
+## Что входит и в каком порядке
 
-## Не смешивать
+<div class="grid cards" markdown>
 
-- Exterior casing, mullion, sill, head, corner board, watertable, siding trim.
-- Gypsum board для стен.
-- Framing blocking, если trim не требует backing и scope не просит это считать.
+-   :material-table:{ .lg .middle } **Room Schedule**
+
+    ---
+
+    Как читать room finish schedule: колонка Base, материал `Wd` или tile,
+    комнаты без отделки.
+
+    [Room Schedule](room-schedule.md)
+
+-   :material-border-bottom:{ .lg .middle } **Base**
+
+    ---
+
+    Baseboard по периметру комнат: где есть, где нет (кухонные шкафы,
+    garage, tile base).
+
+    [Base](base.md)
+
+-   :material-border-top:{ .lg .middle } **Crown**
+
+    ---
+
+    Crown по периметру: без closets, sloped ceilings, garage.
+
+    [Crown](crown.md)
+
+-   :material-door:{ .lg .middle } **Door and Window Trim**
+
+    ---
+
+    Список дверей и cased openings по этажам, обозначения `2680`, `C.O.`,
+    `F.R. S.C.`, ввод в Excel.
+
+    [Door and Window Trim](door-window-trim.md)
+
+-   :material-rectangle-outline:{ .lg .middle } **Casing**
+
+    ---
+
+    Наличники дверей и окон изнутри: формула от списка проёмов, jamb.
+
+    [Casing](casing.md)
+
+</div>
+
+## Порядок работы
+
+1. Подготовь листы: планы этажей, room finish schedule, door schedule,
+   interior elevations. В OurPlanCore это листы `fin` и `in el` в папке
+   `units`, планы с точкой W.
+2. Прочитай room schedule: какой base (`Wd`, tile, rubber, `TBD`), где
+   crown, какие комнаты без отделки.
+3. Обведи периметры Line: `Baseboard` и `Crowns` непрерывно от входной
+   двери, с намеренными разрывами. Unit base отдельно от corridors и lobby.
+4. Составь список дверей и cased openings по этажам, потом casing
+   формулой от списка.
+5. Trim не указан: пиши `not specified`, а не угадывай продукт.
 
 ## Основные правила
 
-- Если trims не указаны, пиши `not specified`.
-- Garage: нет `Baseboard` и нет `Crowns`.
-- В room schedules может быть tile base; исключай tile base, когда takeoff нужен
-  только для wood base.
-- Common areas вроде corridors и lobbies держи отдельно: trim type может
-  отличаться.
-- `Crowns` включаются, когда interior trim scope активен.
-- Сначала сделай interior-trim PDFs/sheets, потом меряй `Baseboard` и `Crowns`
-  continuous room perimeter.
-- Casing для interior doors заполняется после interior-door list; casing для
-  exterior doors/windows - после exterior openings.
+- Garage, mechanical, crawl space, unfinished storage: нет `Baseboard` и
+  нет `Crowns`.
+- Tile base исключай, когда takeoff нужен по wood base.
+- Common areas (corridors, lobbies) отдельно от units: другой trim.
+- `Crowns` считаются, когда trim-scope активен и crown показан.
+- Casing дверей заполняется после списка interior doors; casing наружных
+  дверей и окон после exterior openings.
 
-## Визуальный workflow
+## Как назвать в дереве и строка DFL
 
-На Trello board `int trims` есть 43 исходные картинки. Карточки ниже связывают
-картинку с правилом; полный набор смотри на отдельных topic pages.
+| Имя в дереве | Строка DFL | Unit | Правило |
+| --- | --- | --- | --- |
+| `trims/baseboard 1st` | `Baseboard` | LFT | периметр комнат с отделкой, формула с видимыми слагаемыми |
+| `trims/crown 1st` | `Crowns` | LFT | только комнаты с crown по schedule |
+| `openings`-список | `Int. Doors`, `Cased Openings` | pcs | по этажам, с обозначением размера |
+| | `Casing for Int. Doors` | LFT | формула от списка дверей |
 
-<details class="kb-figures kb-figures--rows" open>
-  <summary>Скрыть 6 правил с иллюстрациями</summary>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">1. Подготовить trim PDFs</div>
-      <div class="kb-figure-row__rule">Сначала сделай листы, которые можно проверить.</div>
-      <div class="kb-figure-row__note">Не начинай formulas по памяти; сначала отдели interior-trim scope.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-01.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-01.png" alt="Create interior trim PDF files" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">2. Мерить perimeter items</div>
-      <div class="kb-figure-row__rule">Baseboard и Crowns - это LF / perimeter work.</div>
-      <div class="kb-figure-row__note">Веди trace непрерывно; breaks должны быть намеренными и видимыми.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-02.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-02.png" alt="Baseboard and crown perimeter example" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Baseboard</div>
-      <div class="kb-figure-row__rule">За kitchen cabinets Baseboard не считается.</div>
-      <div class="kb-figure-row__note">Открой страницу Base для картинок 07-16 и Excel-output checks.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-07.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-07.png" alt="Baseboard is not counted behind kitchen cabinets" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Crown</div>
-      <div class="kb-figure-row__rule">В closets нет Crowns; в garage тоже нет Crowns.</div>
-      <div class="kb-figure-row__note">Открой страницу Crown для картинок 17-25 и всех exclusions.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-17.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-17.png" alt="Crown is not counted in closets" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Door / Window Trim</div>
-      <div class="kb-figure-row__rule">Interior doors считай по open door symbol.</div>
-      <div class="kb-figure-row__note">Открой Door page для картинок 26-43: sizes, C.O., Pocket, Slider и F.R. S.C.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-26.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-26.png" alt="Interior doors are measured by open door swing" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Сначала door schedule</div>
-      <div class="kb-figure-row__rule">Если есть door schedule, заполняй из schedule.</div>
-      <div class="kb-figure-row__note">Plan view вторичен, когда schedule даёт size/material/fire notes.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-43.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-43.png" alt="Door schedule source for interior doors" loading="lazy"></a>
-  </figure>
-</details>
+## Частые ошибки
 
-## Карта картинок
+- Base проведён через кухонные шкафы и garage.
+- Crown посчитан в closets и комнатах со sloped ceiling.
+- Tile base посчитан как wood base.
+- Двери посчитаны по стене, а не по символу открытой двери.
+- Все ошибки по Excel: [Excel DFL и ноты](../../start/common-mistakes.md#excel).
 
-| Картинки | Тема | Куда открыть |
-| --- | --- | --- |
-| `01` - `06` | Workflow: PDFs, perimeter, casing automation | Эта страница |
-| `07` - `16` | Baseboard rules и Excel checks | [Base](base.md) |
-| `17` - `25` | Crown rules и Excel checks | [Crown](crown.md) |
-| `26` - `43` | Interior doors, `F.R. S.C.`, C.O., Excel entry | [Door and Window Trim](door-window-trim.md) |
+## См. также
 
-## Внешняя проверка
-
-Internet references - только проверка terminology. Что именно считать, всё ещё
-задают Estimating/Trello rules.
-
-| Проверка | Что подтверждает | Источник |
-| --- | --- | --- |
-| Finish schedule | Columns Base / Ceiling / Remarks могут управлять trim scope; не полагайся только на room name. | [Helonic finish schedule guide](https://helonic.com/knowledge-base/finish-schedule-guide) |
-| Linear measurement | Base/crown trim обычно проверяется wall-by-wall / room run, а не по room area. | [Metrie measuring guide](https://www.metrie.com/how-do-i-measure) |
-| Estimating exceptions | Kitchen cabinets, closets, garage, slope ceilings, no-finish rooms и `TBD` notes остаются project-specific estimating rules. | Topic rules |
-
-## Статус источников
-
-Импортированный source board:
-`https://trello.com/b/TyUKA0Zw/int-trims`.
-
+- [Room Schedule](room-schedule.md), [Base](base.md), [Crown](crown.md), [Door and Window Trim](door-window-trim.md), [Casing](casing.md)
+- [Exterior Trims](../exterior-trims/overview.md), [Windows and Doors](../vertical/openings/windows-doors.md)
+- [Standard notes](../../reference/standard-notes.md), [Takeoff item labels](../../reference/takeoff-items.md)

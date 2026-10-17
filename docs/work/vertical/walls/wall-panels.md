@@ -1,116 +1,108 @@
-# Wall Panels - scope и исключения
-
-Wall panel - изготовленный заранее участок деревянной стены. В нём могут быть
-studs, plates, framing проёмов, sheathing и WRB. Конкретный состав определяет
-поставка: слово `panels` не гарантирует, что включены все слои и connections.
-По SBCA панели применяются для exterior и interior walls; placement diagram
-задаёт положение каждой панели.
-[SBCA: Wall Panels](https://www.sbcacomponents.com/wall-panels).
+# Wall Panels (панельные стены: что считаем)
 
 <figure markdown>
   ![Состав деревянной wall panel: plates, studs и framing проёма](../../../assets/images/walls/wall-panel-sbca.png){ width="760" style="background:#fff;padding:12px;border-radius:8px" }
-  <figcaption>Состав wall panel. Иллюстрация SBCA; наличие элемента на схеме не подтверждает его включение в конкретную поставку.</figcaption>
+  <figcaption markdown="span">Состав wall panel: plates, studs, каркас проёма, иногда sheathing и WRB. Иллюстрация SBCA. Что именно входит в поставку, решает проект, а не картинка.</figcaption>
 </figure>
 
-## Наши правила E-Wood
+## Что это
 
-Это правила состава сметы команды, подтверждённые владельцем 2026-10-09.
-Они не являются утверждением, что такую стену технически невозможно сделать
-на заводе.
+Wall panel - заводской участок стены (studs, plates, каркас проёмов, часто
+одна сторона sheathing и WRB). На panel-job мы не дублируем заводской
+каркас, а считаем loose scope и stick-исключения. Слово `panels` в scope не
+означает "стены не считать": стены всё равно меряются полностью, чтобы
+обшивка, headers, holdowns и исключения считались от реальных длин.
 
-| Участок | Что делаем в расчёте |
+## Где искать на чертежах
+
+| Источник | Что взять |
 | --- | --- |
-| Обычная стена, включённая в wall panel package by others | Не дублируем её заводской каркас. Считаем согласованный loose scope. |
-| **Стена под concrete slab / podium** | **Считаем как stick framing**, даже если проект в целом `COM w/panel`. В DFL сохраняем studs, plates, headers и применимую sheathing. |
-| **Новая/заменяемая стена внутри existing frame при reconstruction** | **Считаем stick framing** по объёму новой работы. Общая пометка panels не исключает этот участок. |
-| Короткая стена или irregular sloped wall | Отдельное non-panel исключение; считаем соответствующий stick scope. |
-| Exterior build-up wall | Возможное non-panel исключение. Проверяем конструкцию и scope, не исключаем все build-ups автоматически. |
-| Wood-framed wall рядом с CMU | Может быть panelized. Соседство с CMU не является основанием для optional stick framing. |
-| Furring strips под insulation/siding | Отдельные рейки/профили по detail и scope; не смешиваем с полноценной furring wall. |
-| Shaft / elevator | Всегда фиксируем стену в takeoff; определяем материал и package. Нельзя забыть shaft из-за общего `panels by others`. |
+| Scope-тег проекта (`Frame. Wall panels`), письмо клиента | Panel-job или нет; что клиент хочет видеть loose |
+| Разрезы и планы | Какие стены ниже плиты или podium, какие внутри existing frame |
+| Wall type schedule, SW schedule | Какая сторона sheathing в панели, какая loose |
+| Panel drawings, если есть | Номера панелей, RO, bearing points |
+| Details | Headers flush, build-up, короткие и наклонные стены |
 
-**"Под бетоном" и "на бетоне" различаются.** Наше исключение относится к
-деревянным стенам ниже concrete slab/podium. Стена, которая просто стоит
-нижней plate на бетонном основании, может быть panelized. SBCA описывает
-PT bottom plate для такого опирания; это не основание считать всю стену stick.
-[SBCA: Bottom Plate](https://www.sbcacomponents.com/wall-panels).
+## Как мерить в OurPlanCore
 
-Для mixed здания определяем границу по разрезам. Base/Basement/1st Floor
-участки **фактически ниже плиты** оставляем stick; этажи выше относятся к
-panel scope по проекту. Одно имя этажа не доказывает положение относительно
-бетона. Нельзя одним действием убрать stick blocks со всех этажей.
+Стены меряются как обычно: [Exterior](exterior.md), [Corridor](corridor.md),
+[Demising](demising.md), [BW](bearing-walls.md). Отличия panel-job:
 
-## Как установить состав panel package
+1. Headers внутри панелей не рисуются: только flush и loose по scope
+   ([Headers](../openings/headers.md)).
+2. Sheathing одной стороны уже в панели; отдельно только требуемая вторая
+   сторона и loose зоны ([Shear Wall](../sheathing/shear-wall.md)).
+3. Stick-участки отмечай отдельными позициями или нотой: под плитой, в
+   existing frame, короткие и наклонные.
 
-Сверь четыре источника: project scope/письмо клиента, structural/architectural
-details, wall schedule и предложение/чертежи изготовителя panels. Для каждой
-позиции фиксируй одно из трёх: `included in panels`, `loose - count`,
-`verify scope`. Так остаётся видимым, кто поставляет материал.
+## Правила E-Wood (подтверждены владельцем 2026-10-09)
 
-| Элемент | Проверка перед отдельным подсчётом |
+| Участок | Что делаем |
 | --- | --- |
-| Studs, plates, in-panel blocking, corners | Включены в package? Тогда повторный material count не нужен. В stick exceptions считаем полностью. |
-| Headers, king/jack/cripple studs | Проверяем openings и panel drawings. Название `special/flush header` само по себе не доказывает loose scope. |
-| Sheathing / shear plywood | Проверяем, какой слой и какая сторона включены; отдельные loose зоны считаем по details. Не назначаем всем shear walls одну сторону. |
-| WRB/Tyvek, insulation, exterior gypsum | Могут входить в поставку или оставаться field scope. Не дублируем и не исключаем без проверки. |
-| Sill plates, gasket, anchors, holdowns, straps | Сверяем отдельные connections и supply responsibility; заводской каркас не закрывает эту проверку. |
-| Double top plate / splice material | Часть может устанавливаться в поле. Проверяем supplied loose material и соединения панелей. |
-| Floor-height/box sheathing, truss heel, parapet, gable, roof edge | Проверяем каждый узел отдельно: это не автоматически часть wall panel. |
-| Beams, posts, hangers, ledgers | Проверяем свой structural schedule и scope; не теряем их из-за `panels by others`. |
-| Temporary / permanent bracing | Разделяем назначения и следуем проекту/installation plan; учитываем материал в пределах заказанного scope. |
+| Обычная стена в panel package | Заводской каркас не дублируем; считаем loose scope |
+| Стена под concrete slab / podium | Считаем stick: studs, plates, headers, sheathing |
+| Новая стена внутри existing frame (reconstruction) | Считаем stick по объёму новой работы |
+| Короткая стена, irregular sloped wall | Stick-исключение |
+| Exterior build-up wall | Возможное исключение; проверяем конструкцию, не исключаем все build-ups автоматически |
+| Wood wall рядом с CMU | Может быть panelized; соседство с CMU не повод для optional stick |
+| Furring под insulation/siding | Отдельные рейки по detail и scope |
+| Shaft, elevator | Всегда фиксируем; материал и package определяем, не теряем из-за `panels by others` |
 
-SBCA подтверждает, что sheathing/WRB могут наноситься на заводе, а соединяющая
-верхняя plate может монтироваться на объекте. Поэтому таблица выше -
-проверка поставки, не универсальный перечень включённого материала.
-[SBCA: элементы и сборка panels](https://www.sbcacomponents.com/wall-panels).
+"Под бетоном" и "на бетоне" различаются: стена, которая стоит P.T. plate
+на бетонном основании, может быть panelized; исключение - стены **ниже**
+плиты или podium. Границу на mixed-здании определяй по разрезам, не по
+имени этажа. Полный список в
+[Советах](../../../reference/boss-feedback-rules.md#wall-panels).
 
-## Reconstruction: existing не равно "ничего не считать"
+## Как назвать в дереве и строка DFL
 
-- Существующую неизменяемую конструкцию не пересчитываем как новую.
-- Считаем новые стены, замену, reinforcement, connections и заданные покрытия.
-- Если detail требует **new subfloor over all existing flooring**, включаем
-  всю указанную площадь нового слоя, даже при сохранённом старом настиле.
-- Пристройка/новый корпус и ремонт внутри existing frame могут иметь разный
-  scope. Не распространяем panel исключение или stick правило на весь job
-  только из-за слова `reconstruction` в названии.
-- Показываем отдельно `existing to remain`, `new`, `replace`, `patch` и
-  соединения new-to-existing. Подробно: [Reconstruction](../../../work-types/reconstruction.md).
+| Элемент | Проверка перед отдельной строкой |
+| --- | --- |
+| Studs, plates, corners, in-panel blocking | В package - не считаем; в stick-исключениях считаем полностью |
+| Headers, king/jack/cripple | Только flush и loose; слово `special header` само по себе не доказывает loose |
+| Sheathing, shear plywood | Какая сторона и слой в панели; loose зоны по details |
+| WRB, insulation, exterior gypsum | Могут быть в поставке или field scope; не дублируем и не исключаем без проверки |
+| Sill plates, gasket, anchors, holdowns, straps | Свои connections, заводской каркас их не закрывает |
+| Double top plate, splice | Часть монтируется в поле: проверяем loose material |
+| Box sheathing, truss heel, parapet, gable, roof edge | Каждый узел отдельно; это не часть панели автоматически |
+| Beams, posts, hangers, ledgers | Свой structural schedule и scope |
 
-## Проверка чертежей и монтажа
+### Reconstruction: existing не значит "не считать" { #reconstruction-existing }
 
-Для takeoff полезно сверить номера panels, размеры rough openings, высоты,
-толщины, bearing points и сопряжения с полом/крышей. Разница между panel
-drawings и строительными plans становится вопросом для уточнения.
+Существующую конструкцию не пересчитываем, а новые стены, замену,
+reinforcement, connections и заданные покрытия считаем. Если деталь требует
+new subfloor over all existing flooring, включаем всю площадь нового слоя.
+Пристройка и ремонт внутри existing frame могут иметь разный scope; слово
+`reconstruction` само по себе не включает и не выключает панельное правило.
+Подробно: [Reconstruction](../../../work-types/reconstruction.md).
 
-Руководство SBCA отдельно требует устойчивости/временного раскрепления стен
-во время монтажа и ограничивает самовольные изменения panels. Для сметы это
-означает: проверять bracing и connection details, а не придумывать раскрой
-или замену несущих элементов.
-[SBCA: Handling, Installing & Temporary Bracing - страница руководства](https://pubs.sbcacomponents.com/products/guide-for-handling-installing-temporary-bracing-of-wall-panels-100-sheets).
+В DFL на этажах с панелями stick-блок остаётся под локальной нотой
+`Note: Optional stick frame, if walls are not panels; verify`. Шаблонная
+нота `Walls are panels by others` удаляется, если панелей в scope нет.
+Optional без причины ревьюер снимает: у каждого optional-блока нота, почему.
 
-## Notes для выдачи
+## Частые ошибки
 
-- `Walls below concrete podium counted as stick framing; wall panels above by others.`
-- `New walls within existing frame counted as stick framing.`
-- `Wall panel package by others; loose materials listed separately per scope.`
-- Если участок действительно полностью предполагается: укажи **почему**,
-  какой материал принят и что проверить. Не называй shown framing `Optional`
-  только из-за отсутствующего spacing.
+- Шахты и стены ниже podium выброшены вместе с панелями.
+- Все build-ups автоматически stick; или furring у CMU добавлен как optional.
+- Sheathing второй стороны посчитан, хотя одна сторона в панели и второй по schedule нет.
+- Headers внутри панелей посчитаны ещё раз.
+- `Optional` без объяснения, почему; shown framing назван optional из-за отсутствующего spacing.
+- Новый subfloor поверх existing пола пропущен, хотя деталь его требует.
 
-## Чек-лист
+Разбор с примерами: [все ошибки по стенам](../../../start/common-mistakes.md#walls).
 
-- [ ] Panel и stick участки разделены по этажам и разрезам.
-- [ ] Стены под плитой и новые стены внутри existing frame посчитаны.
-- [ ] CMU adjacency не превращён в автоматическое non-panel исключение.
-- [ ] Shaft walls записаны; материал и supply scope определены.
-- [ ] Included material не продублирован; loose material не пропущен.
-- [ ] Headers, shear layers, holdowns и connections проверены по своим details.
-- [ ] Notes объясняют реальные assumptions и границы scope.
+## Пример
 
-## See also
+```text
+Note: Walls are panels by others; walls below podium counted as stick framing.
+Note: Optional stick frame, if walls are not panels; verify.      (под заголовком этажа)
+Note: New walls within existing frame counted as stick framing.
+```
 
-- [COM Commercial](../../../work-types/com.md)
-- [Furring](furring.md)
-- [Exterior Walls](exterior.md)
-- [Reconstruction](../../../work-types/reconstruction.md)
-- [Советы и важные вещи](../../../reference/boss-feedback-rules.md#wall-panels)
+## См. также
+
+- [COM Commercial](../../../work-types/com.md), [Reconstruction](../../../work-types/reconstruction.md)
+- [Exterior Walls](exterior.md), [Furring](furring.md), [Shaft Walls](shaft.md)
+- [Советы и важные вещи: Wall panels](../../../reference/boss-feedback-rules.md#wall-panels)
+- [SBCA: Wall Panels](https://www.sbcacomponents.com/wall-panels)

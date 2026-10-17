@@ -1,85 +1,92 @@
-# Beam
+# Beam (балка)
 
-## Что считать
+<figure markdown>
+  ![Инструмент Beam: длина балки в имени](../../../assets/images/ourplancore/v3/measure-beam.png)
+  <figcaption markdown="span">Инструмент Beam: две точки по балке от опоры до опоры, программа округляет длину и создаёт Count-позицию `FB1 8` с первой меткой. Вторая балка той же марки и длины идёт в ту же позицию второй точкой.</figcaption>
+</figure>
 
-- LVL, PSL, GL, and other beams by size, ply count, and length.
-- Hangers connected to beams.
+<!-- TODO-PHOTO: multi-ply LVL beam bearing on wood posts in a floor frame, EN query "LVL beam built-up on posts floor framing" -->
 
-## Правила
+## Что это
 
-- Mark beams top-down / left-right.
-- Length depends on the bearing/attachment point.
-- Lengths 8' and longer round to 2' increments.
-- Lengths under 8' stay exact.
-- In EWP jobs, ordinary 2x beams are usually excluded.
+Beam - балка перекрытия или крыши, на которую опираются joists, rafters или посты: `(2) 2x10`, `(3) 1 3/4 x 11 7/8 LVL`, `5 1/4 x 11 7/8 PSL`, `5 1/2 x 14 GL`. Стальная балка by others, но деревянный nailer на ней наш: [Steel Beam Web Fillers](details/steelbeams.md). Перемычка над проёмом - [Headers](../../vertical/openings/headers.md); балка между усиленными rafters в крыше - [Roof Header](../roof-framing/header.md). Flush (в уровне joists, на hangers) и Dropped (ниже joists) пишутся в Label.
 
-## Что чаще всего встречается { .kb-section-title .kb-st--cyan }
+## Где искать на чертежах
 
-Самые частые сечения балок: **`1¾x11⅞ LVL`**, **`2x10`**, **`1¾x14 LVL`**, `2x8`.
-Типовая длина - около `12'` (snap к stock 8/10/12/14/16). Это ориентир "нормально ли",
-не дефолт: конкретные размеры/ply всегда из structural
-([Quantity benchmarks](../../../reference/quantity-benchmarks.md)).
-
-## Standard Built-Up Sizes
-
-| Callout | Actual built-up size |
+| Лист | Что взять |
 | --- | --- |
-| (2) 1 3/4 x 9 1/2 LVL | 3 1/2 x 9 1/2 |
-| (3) 1 3/4 x 9 1/2 LVL | 5 1/4 x 9 1/2 |
-| (4) 1 3/4 x 9 1/2 LVL | 7 x 9 1/2 |
+| S framing plan этажа | марки (`FB1`, `B2`, `H5`), положение, пролёт, опоры с обеих сторон |
+| Beam schedule (S5xx, S6xx) | сечение, plies, материал по марке. Нет schedule - собери легенду сам по подписям на плане |
+| Sections, details | flush или dropped, опирание, hangers, PSL и squash blocks под концами |
+| General notes | EWP by others, nailer на стальных балках, сорт древесины |
 
-## Проверить
+## Как мерить в OurPlanCore
 
-- Steel top nailers or steel beam web fillers can drive separate material lines.
-- Hanger selection depends on face/top/concealed/skewed condition.
-- For `Tri-Force` and beams with steel plates, write nearest foot sizes; do not
-  leave noisy inch fractions in the size.
+Инструмент Beam (B), лист framing с точкой F. Тяни линию по оси балки от грани опоры до грани опоры; длина в имени появляется сама.
 
-## EWP Materials
+- Округление делает программа: до 8' включительно вверх до целого фута, длиннее - вверх до чётного (9.2' даёт 10, 12.1' даёт 14). Не прибавляй футы сам.
+- Один built-up beam = одна точка с `(n)` в имени. Не ставь n точек и `(n)` одновременно.
+- Рисуй все балки, которые не часть панелей стены. Каждую марку на каждом этаже, где она показана.
+- Марка с буквой H (`H5`) может быть балкой по роли; не уноси в `headers` только по букве.
+- Ledger, rim, blocking, nailer - отдельные Line в `details`, не точки балки.
+- Repeat Beam (кнопка рядом с Beam) чертит несколько отдельных балок подряд без повторного выбора инструмента.
 
-Для **EWP** (Engineered Wood Products) обычные деревянные балки **2x10 / 4x12 / 6x14** не учитываем - только инженерные:
+## Как назвать в дереве и строка DFL
 
-- **LVL** (Laminated Veneer Lumber, Versa Lam) - клееный брус, прочный, устойчив к деформациям.
-- **PSL** (Parallel Strand Lumber) - параллельные волокна, высокая несущая способность.
-- **GL** (Glued Laminated Timber, Glu Lam) - многослойный клееный брус из ламелей.
+Путь: `framing/<этаж> framing/beams/<марка или сечение> <длина>`. Размер по марке берётся из легенды LG (`B2 - (3) 2x10`) при экспорте.
 
-## Вывод Example
+| Имя в дереве | A (Label) | B (материал) | C | D | E |
+| --- | --- | --- | --- | --- | --- |
+| `beams/FB1 8` | `Beam (2) Flush` | `2x10` | точки | `8` | `FB1 per S601` |
+| `beams/(3) 1 3/4 x 11 7/8 LVL 14` | `Beam (3)` | `1 3/4 x 11 7/8 LVL` | точки | `14` | |
+| `beams/B2 14` + LG `B2 - (3) 2x10` | `Beam (3) Dropped` | `2x10` | точки | `14` | `B2` |
+| `beams/int 4x10 4` | `Beam` | `4x10` | точки | `4` | |
+| `beams/H5 8` | `Beam (2)` | по schedule | точки | `8` | `H5` |
 
-Запись балок и hangers в Excel/PlanSwift (поля: **Description**, **Size**, **Quantities**, **Units**):
+Hangers к балкам: по ширине built-up и условию (face, top, concealed, skew), на каждый конец, который висит на другой балке или стене. Подбор - [Hangers](../../../reference/hangers.md), запись в B - [формат крепежа в DFL](../../../reference/hangers.md#dfl-format). Снаружи и на P.T. - `Zmax` отдельным словом.
 
-| Description | Size | Qty | Units |
-| --- | --- | ---: | --- |
-| Beam `(3)` | `1 3/4 x 9 1/2 LVL` | 3 | 12 |
-| Beam `(1)` | `5 1/2 x 11 7/8 GL` | 1 | 20 |
-| Beam `(2)` | `1 3/4 x 11 7/8 LVL` | 2 | 10 |
-| Hangers | `HU412` | 10 | pcs |
-| Hangers | `HGUS7.25/12` | 20 | pcs |
-| Hangers | `GLTV3.514` | 5 | pcs |
-| Hangers | `for 7 x 11 7/8` | 10 | pcs |
+Экспорт: кнопка BM полосы XL заменяет только строки балок в листе этажа, шаблонные строки остаются. Макрос `C_BeamsSort` сортирует по марке и длине.
 
-Длины snap-ятся при scaling - например `scaled 12' 0 1/8"` округляем до `12`.
+??? note "Built-up LVL: фактическая ширина"
+    | Запись | Фактический размер |
+    | --- | --- |
+    | `(2) 1 3/4 x 9 1/2 LVL` | `3 1/2 x 9 1/2` |
+    | `(3) 1 3/4 x 9 1/2 LVL` | `5 1/4 x 9 1/2` |
+    | `(4) 1 3/4 x 9 1/2 LVL` | `7 x 9 1/2` |
 
-См. [Hangers](../../../reference/hangers.md) для подбора крепления под ширину/высоту built-up.
+    Ширина пакета задаёт hanger (`HU412` под `3 1/2 x 11 7/8`, `HGUS7.25/12` под `7 x 11 7/8`). На EWP-заказах (считаем только LVL, PSL, GL, I-joists) обычные 2x балки не входят: [EWP / Capital](../../../work-types/ewp-capital.md).
 
-## See also
+## Частые ошибки
 
-- [Post](post.md) , [Steel Beam Web Fillers](details/steelbeams.md) , [Joist](joist.md) , [Quantity benchmarks](../../../reference/quantity-benchmarks.md)
+- Марка пропущена на одном из этажей: та же `FB7` есть и на S102, и на S103.
+- К длине инструмента прибавлены футы "на опирание" - округление уже сделано.
+- Пакет из трёх LVL записан тремя точками и ещё `(3)` в имени: тройной счёт.
+- PSL или squash blocks под концами балок по schedule не посчитаны (2 стало 4).
+- Hangers не на оба конца или по закупочным доскам после раскроя; модель не по детали (`U210-2`, не `LUS210-2`).
+- Балка внутри панели стены нарисована на panel-job.
+- У балок Tri-Force и со стальными пластинами в B оставлены дроби дюймов: пиши ближайший фут.
+- [Все ошибки по перекрытиям](../../../start/common-mistakes.md#floor)
 
-<!-- confluence-gallery:start -->
-## Визуальная проверка
+## Пример
 
-Архивные иллюстрации помогают прочитать правило. Для своего takeoff сверь его с чертежами и scope текущего проекта.
+```text
+framing/
+  2nd floor framing/
+    beams/
+      FB1 8                        6 точек
+      FB1 10                       2 точки
+      (3) 1 3/4 x 11 7/8 LVL 14    3 точки
+```
 
-??? info "Источник картинок"
-    - Beam - Балки: 4 карт. Confluence (архивный источник; ссылка не публикуется)
+| A | B | C | D | E |
+| --- | --- | --- | --- | --- |
+| `Beam (2) Flush` | `2x10` | 6 | 8 | `FB1 per S601` |
+| `Beam (2) Flush` | `2x10` | 2 | 10 | `FB1` |
+| `Beam (3)` | `1 3/4 x 11 7/8 LVL` | 3 | 14 | `S102` |
+| `Hangers` | `HU412` | 6 | pcs | `9/S501` |
 
-<details class="kb-figures">
-  <summary>Показать 4 иллюстраций</summary>
-  <div class="kb-figure-grid">
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-071.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-071.png" alt="Beam - визуальная проверка 01: Проверь size, ply count, length, bearing и hanger condition." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-072.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-072.png" alt="Beam - визуальная проверка 02: Проверь size, ply count, length, bearing и hanger condition." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-073.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-073.png" alt="Beam - визуальная проверка 03: Проверь size, ply count, length, bearing и hanger condition." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-074.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-074.png" alt="Beam - визуальная проверка 04: Проверь size, ply count, length, bearing и hanger condition." loading="lazy"></a>
-  </div>
-</details>
-<!-- confluence-gallery:end -->
+## См. также
+
+- [Post](post.md), [Joist](joist.md), [Steel Beam Web Fillers](details/steelbeams.md)
+- [Hangers](../../../reference/hangers.md), [Quantity benchmarks](../../../reference/quantity-benchmarks.md)
+- [Takeoff item labels](../../../reference/takeoff-items.md)

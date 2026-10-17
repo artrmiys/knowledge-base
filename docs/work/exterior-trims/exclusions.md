@@ -1,90 +1,65 @@
-# Exclusions и J-Channel
-
-!!! info "Полное описание EIFS / Stucco / Veneer - в разделе Siding"
-    Здесь - правило исключения для **trim-scope**. Что такое EIFS / Stucco /
-    Stone / Brick veneer, как распознать на чертеже и где идёт casing bead -
-    в [Siding - EIFS / Stucco / Veneer](../siding/eifs-stucco-veneer.md).
+# Exclusions и J-Channel (что не считаем в trims и где идёт J-channel)
 
 <figure markdown>
   ![Cladding exclusions and J-channel](../../assets/images/trims/exclusions.svg)
-  <figcaption>EIFS / Stucco / Stone veneer - by others. WRB, sheathing, furring, J-channel - проверяем.</figcaption>
+  <figcaption markdown="span">EIFS, stucco, stone и brick veneer by others. WRB, sheathing, furring и wood/PVC trim вокруг них наши; J-channel наш только при vinyl siding.</figcaption>
 </figure>
 
-## Что НЕ считаем в Exterior Trims { .kb-section-title .kb-st--amber }
+## Что это
 
-!!! danger "By others - не входит в наш scope"
-    | Система | Считаем? | Почему |
-    | --- | --- | --- |
-    | **EIFS** (synthetic stucco) | :material-close-thick: НЕТ | Finish system by others (EIFS sub). |
-    | **Stucco** (cement / 3-coat) | :material-close-thick: НЕТ | Plaster trade, by others. |
-    | **Stone Veneer** | :material-close-thick: НЕТ | Masonry / veneer sub, by others. |
-    | **Brick Veneer** | :material-close-thick: НЕТ | Masonry, by others. |
-    | **Siding** (Hardi / vinyl / cedar) | :material-close-thick: НЕТ* | Siding scope отдельно, не trim. |
+Правило исключений для trim-scope и канон по `J-Channel`. Что такое EIFS,
+stucco, stone и brick veneer, как их узнать на чертеже и какие accessory
+идут с ними, разобрано на канонической странице
+[Siding - EIFS / Stucco / Veneer](../siding/eifs-stucco-veneer.md).
 
-    \* Siding считается в своём scope, не в Exterior Trims. Но trim **вокруг**
-    siding (casing, corner, band) - наш.
+## Что не считаем в Exterior Trims
 
-- Видишь на elevation `Note: Stone Veneer by others` - пропускаем veneer,
-  считаем только wood/PVC trim вокруг него.
-- `EIFS`, `Synthetic Stucco`, `Dryvit`, `Sto` - это всё EIFS-семейство, не наше.
-- Если весь фасад EIFS / stucco / stone - exterior **trim** может быть почти
-  нулевым (только то, что явно wood/PVC). Не "добивай" количество.
-- Не путай: **soffit / fascia / frieze / corner / band** - это наш trim, даже
-  если стена под ними EIFS или stone.
+| Система | Считаем? | Почему |
+| --- | --- | --- |
+| EIFS (synthetic stucco, Dryvit, Sto) | нет | finish system by others |
+| Stucco (cement, 3-coat) | нет | plaster trade, by others |
+| Stone veneer, brick veneer | нет | masonry by others |
+| Siding (Hardi, vinyl, cedar) | не здесь | свой scope [Siding](../siding/overview.md) |
 
-!!! note "Что всё-таки считаем рядом с EIFS / stucco / stone"
-    - Wood / PVC / composite casing, corner board, band, watertable.
-    - Soffit, fascia, frieze, rake moulding.
-    - Columns, porch / deck / balcony trim.
-    - **J-Channel** - если он наш по scope (см. ниже).
+Что остаётся нашим рядом с ними: wood/PVC casing, corner board, band,
+watertable, soffit, fascia, frieze, columns, porch и balcony trim, WRB и
+sheathing под облицовкой, furring. Если весь фасад EIFS или stone, trim
+может быть почти нулевым: не добивай количество, ставь ноту
+`Note: Stone Veneer by others`.
 
-## J-Channel { .kb-section-title .kb-st--cyan }
+## J-Channel
 
-`J-Channel` - это профиль в форме буквы **J**, в который заводится обрезанный
-край siding или EIFS / stucco stop. Он закрывает торец материала и даёт чистую
-линию примыкания.
+`J-Channel` это профиль буквой J, в который заводится обрезанный край
+siding. Он закрывает торец и даёт чистую линию примыкания.
 
-### С EIFS почти всегда есть J-Channel
+| Условие | Где идёт J-channel | Чей |
+| --- | --- | --- |
+| Vinyl siding | вокруг окон и дверей, под soffit и frieze, у corner posts, inside corners, по rake | **наш**, LFT |
+| Siding примыкает к другому материалу | стык со stone, brick, EIFS, decking, потолком porch | наш, если siding наш |
+| EIFS / stucco | casing bead, stop bead, track по низу, у dissimilar material | обычно by others с системой |
 
-EIFS - это сплошная штукатурная система, и её нужно **terminating** (останавливать)
-на чистую кромку. По периметру EIFS-поля ставят:
+При vinyl siding `Ext. Casing` часто и есть `Vinyl J-channel`: строка
+`Ext. Casing | Vinyl J-channel | LFT`. Тогда не дублируй `5/4` wood casing.
+Количество: периметр всех openings плюс terminations. Слово `J-channel`
+остаётся в строке, не сводить к generic `casing`.
 
-- `J-Channel` / casing bead / stop bead вокруг **окон и дверей**;
-- track / stop по **низу** EIFS (где он переходит в foundation / другой материал);
-- stop там, где EIFS примыкает к **soffit, fascia, corner, dissimilar material**.
+## Как мерить в OurPlanCore
 
-Поэтому если на elevation указан EIFS - ищи note про `J-Channel` / `casing
-bead` / `stop`. Считаем его, только если он явно в нашем scope (не EIFS-sub).
+J-channel при vinyl siding: Line по периметру openings на фасаде или
+формулой от списка проёмов (периметр x количество), плюс Line по rake и по
+стыкам. Отдельный takeoff на EIFS, stucco и veneer не нужен: они by
+others; площадь siding `0` и нота.
 
-### Где J-Channel бывает ещё (не только EIFS)
+## Частые ошибки
 
-| Условие | Где именно идёт J-Channel |
-| --- | --- |
-| **Vinyl siding** | Вокруг окон/дверей, под soffit/frieze, у corner posts, на inside corners, у gable/rake. При vinyl siding ext. casing **сам бывает** `Vinyl J-channel`. |
-| **Siding - другой материал** | Где siding примыкает к stone/brick/EIFS, к decking, к porch ceiling. |
-| **Gable / rake** | По наклонной кромке, где siding обрезается под крышу. |
-| **Окна / двери** | Head, jambs, sometimes sill - заводит cut edge siding. |
-| **Soffit / frieze** | Где верх siding встречается с soffit или frieze board. |
+- Stone или brick veneer посчитаны как siding.
+- При vinyl siding посчитаны и `J-channel`, и `5/4` casing на одни проёмы.
+- J-channel с EIFS записан как наш.
+- Trim вокруг veneer пропущен, потому что "стена by others".
+- Все ошибки по обшивке и WRB: [Обшивка](../../start/common-mistakes.md#sheathing).
 
-!!! tip "J-Channel в строке takeoff"
-    Видишь в exterior trims `Ext. Casing | Vinyl J-channel | 0 | LFT` - это
-    значит, что для vinyl siding роль casing играет именно J-channel. Тогда:
+## См. также
 
-    - не дублируй ещё и `5/4x4` casing, если siding vinyl и note про J-channel;
-    - количество - LFT по периметру всех openings (4 sides) + terminations;
-    - оставляй слово `J-channel` в Label, не своди к generic `casing`.
-
-## Чек перед выводом { .kb-section-title .kb-st--magenta }
-
-- [ ] Прочитал note про siding-материал (Hardi / vinyl / cedar / EIFS / stucco)?
-- [ ] EIFS / Stucco / Stone / Brick veneer исключены (by others)?
-- [ ] При vinyl siding проверил, не `J-channel` ли это casing?
-- [ ] J-Channel посчитан там, где siding обрезается (openings, rake, terminations)?
-- [ ] Wood / PVC trim вокруг veneer всё равно посчитан?
-
-## See also
-
-- [Overview](overview.md)
-- [Casing, Corner & Band](casing-corner-band.md)
-- [Soffit & Fascia](soffit-fascia.md)
-- [Furring & Window Jambs](furring-and-jambs.md)
+- [EIFS / Stucco / Veneer](../siding/eifs-stucco-veneer.md) (канон), [Siding](../siding/overview.md), [Underlayment](../siding/underlayment.md)
+- [Overview](overview.md), [Casing, Corner & Band](casing-corner-band.md), [Soffit & Fascia](soffit-fascia.md), [Furring & Window Jambs](furring-and-jambs.md)
+- [Standard notes](../../reference/standard-notes.md)

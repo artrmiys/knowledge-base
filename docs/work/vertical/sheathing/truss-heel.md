@@ -1,57 +1,74 @@
-# Truss Heel
+# Truss Heel (полоса обшивки у пятки фермы)
 
-**Truss heel** - вертикальная полоса обшивки в торце фермы (между Top Plate
-стены и низом верхнего пояса/overhang). Отдельная строка, не box sheathing и
-не soffit. Типовая высота ≈ `1'-7"`.
+<figure markdown>
+  ![Деталь soffit с высотой пятки фермы 1'-7"](../../../assets/images/confluence/confluence-175.png)
+  <figcaption markdown="span">Деталь карниза: высота пятки фермы 1'-7" между верхом стены и низом настила, вертикальная полоса 1/2" OSB на пятке, ниже Zip стены, снаружи 2x8 sub-fascia и 1x8 fascia. Высоту берём с такой детали или из truss package. Архивный фрагмент.</figcaption>
+</figure>
 
-## Что считать
+<!-- TODO-PHOTO: raised heel (energy heel) roof truss on wall top plate, eave side, with vertical sheathing strip at the heel -->
 
-- Vertical sheathing at the heel of roof trusses.
-- Related blocking or exterior wall treatment where shown.
+## Что это
 
-## Правила
+Truss heel - вертикальная полоса обшивки в торце ферм вдоль карнизных
+(eave) сторон здания: между верхней доской стены и низом кровельного
+настила. Её высота задаётся пяткой фермы (heel height), типично от 0.66 до
+3 футов. На gable-сторонах эта полоса уже входит в треугольник фронтона
+([Gable Sheathing](gable.md)); на eave-сторонах её легко забыть. Это не
+[Box Sheathing](box-sheathing.md) и не soffit.
 
-- Truss Heel держи отдельно от Box Sheathing.
-- In panelized COM jobs, truss heel sheathing can still be loose material.
-- Проверь, убирает ли top chord bearing truss condition ribbon board и требует ли
-  blocking between trusses.
+## Где искать на чертежах
 
-## Typical Heel Height
+| Лист | Что взять |
+| --- | --- |
+| Truss profile / truss package | Heel height, границы пятки, bearing condition |
+| Roof section, soffit detail (`sec`, `d`) | Высота полосы, материал (часто тот же, что у стены), offset настила |
+| Roof plan (`rf`) и план стен (`1st`) | Вдоль каких стен опираются фермы: там и полоса |
+| Scope / notes | Фермы by others не отменяют loose-обшивку пятки; проверь scope |
 
-- Стандартная высота `truss heel` ≈ **1'-7"** (берётся от верха стены до верха верхнего пояса фермы по краю).
-- Используй это как sanity-check, если на чертеже высота heel не подписана; конкретное число - всегда из truss-package, если он есть.
+## Как мерить в OurPlanCore
 
-## Companion-строки { .kb-section-title .kb-st--green }
+1. Инструмент Line вдоль стен, на которые опираются фермы (eave-стороны),
+   на листе плана верхнего этажа или кровли. Единица LFT.
+2. Имя несёт высоту пятки в десятичных футах: `trussheel 0.66`,
+   `trussheel 1.25`. Разные высоты = разные позиции. Папка `trussheel`
+   прямо под корпусом; имя с `trussheel` уходит туда само.
+3. Не путай числа: у `eve 24` число в дюймах (вынос), у `prpt 3.4 3 2` это
+   высоты парапета, у `trussheel 1.25` высота полосы в футах.
+4. Площадь = длина x высота; её считает экспорт (полоса XL, кнопка TH).
+   Граница с gable и wall sheathing должна быть явной, без двойного слоя.
 
-Heel-секция почти всегда несёт за собой:
+## Как назвать в дереве и строка DFL
 
-- **Vapor Barrier** (`Tyvek`) за обшивкой heel - типовая пара.
-- Иногда Subfloor, Panel Adhesive (`29OZ`), Tape (`Zip Tape`).
-- Blocking for Drywall - на COM / flat condition.
+| Имя в дереве | Строка DFL | Материал | Unit | Формула |
+| --- | --- | --- | --- | --- |
+| `trussheel/trussheel 1.25` | `Truss Heel Sheathing` (в блоке Gable Walls или кровли шаблона) | как у стены, например `7/16" Zip` | `4x8` | `=ОКРВВЕРХ(LFT*1.25/32*1.1;1)` |
+| та же площадь | `Vapor Barrier` (WRB) | по спецификации | `SQ FT` | `=ОКРВВЕРХ(SQFT*1.1;10)` |
+| та же длина | `Blocking at Eves` | `2x6` | `LFT` | по детали, см. [Roof Sheathing](../../horizontal/roof-framing/roof-sheathing.md) |
 
-- Если поставил Truss Heel sheathing, проверь Vapor Barrier рядом.
+!!! warning "Уточняется"
+    Точный Label строки пятки в текущем TemplateCom (блок и имя) проверить по
+    сданной книге; здесь дано описательное имя.
 
-## Где не пропустить heel sheathing
+## Частые ошибки
 
-- На **gable**-сторонах heel-обшивка обычно уже **учтена** в Gable Sheathing (треугольник + полоска heel под ним идут одной плоскостью).
-- На **Eave**-сторонах (длинная сторона свеса) heel-обшивка **часто забывается** - это отдельная вертикальная полоска по периметру здания между Top Plate стены и нижом overhang. Проверяй её отдельной строкой.
+- Полоса на eave-сторонах не посчитана вовсе (gable-стороны есть, eave нет).
+- Та же полоса посчитана и в gable, и в trussheel.
+- Высота взята из другого дома или прочитана как вынос в дюймах.
+- Написано "Vapor Barrier / Tyvek", хотя барьер в спецификации другой.
+- При top chord bearing забыто blocking между фермами вместо ribbon.
 
-## See also
+Все ошибки: [common-mistakes](../../../start/common-mistakes.md#sheathing).
 
-- [Box Sheathing](box-sheathing.md) , [Gable Sheathing](gable.md) , [Eve / Eave](../../sheathing-and-misc/eve.md) , [Parapet](../walls/parapet.md)
+## Пример
 
-<!-- confluence-gallery:start -->
-## Визуальная проверка
+```text
+Takeoffs/Main/trussheel/
+  trussheel 1.25     Line  236 LFT   (eave-стороны main)
+Takeoffs/Grge/trussheel/
+  trussheel 0.66     Line   84 LFT
+```
 
-Архивные иллюстрации помогают прочитать правило. Для своего takeoff сверь его с чертежами и scope текущего проекта.
+## См. также
 
-??? info "Источник картинок"
-    - Truss Heel (обшивка ферм крыши, вертикальной части): 1 карт. Confluence (архивный источник; ссылка не публикуется)
-
-<details class="kb-figures">
-  <summary>Показать 1 иллюстраций</summary>
-  <div class="kb-figure-grid">
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-175.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-175.png" alt="Truss Heel - визуальная проверка: Проверь vertical heel area, height и sheathing material." loading="lazy"></a>
-  </div>
-</details>
-<!-- confluence-gallery:end -->
+- [Gable Sheathing](gable.md), [Box Sheathing](box-sheathing.md), [Eve / Eave](../../sheathing-and-misc/eve.md)
+- [Roof Sheathing](../../horizontal/roof-framing/roof-sheathing.md), [Parapet](../walls/parapet.md)

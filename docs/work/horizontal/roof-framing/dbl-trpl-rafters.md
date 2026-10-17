@@ -1,62 +1,67 @@
-# Dbl Trpl Rafters
+# Dbl / Trpl Rafters (усиленные стропила)
 
-## Что считать
+<figure markdown>
+  ![Двойные rafters выделены зелёным](../../../assets/images/confluence/confluence-140.png)
+  <figcaption markdown="span">Архивный 3D-вид: зелёным выделены сдвоенные rafters по бокам проёма и под нагрузкой. Они идут параллельно обычным rafters от конька до стены и считаются как балка с plies.</figcaption>
+</figure>
 
-- Double/triple rafters и built-up roof members.
+## Что это
 
-## Критические правила
+Dbl и Trpl Rafters - сдвоенные или строенные rafters: по бокам проёма крыши (держат [Roof Header](header.md)), под стеной dormer, под нагрузкой от оборудования. Сечение любое: `2x12`, `(2) 2x10`, `(3) 1 3/4 x 11 7/8 LVL`. Опираются на [Ridge](ridge.md), стену или перекрытие. Обычные rafters с шагом - J Area на странице [Joist](../floor-framing/joist.md).
 
-- **Dbl/Trpl Rafters** работают **параллельно Rafters**, как внутренняя усиленная балка крыши.
-- Сечения и материалы - любые: `1 3/4 x 11 7/8 LVL`, `2x12`, `(2) 2x10` и т.д.
-- Опирание - на **Ridge**, **перекрытие** или **стену**.
-- **Длина** как у обычных Rafters - **всегда сверять по разрезам и фасадам**, не брать с плана.
-- Указывать кол-во и длину **в футах с округлением до 2'**.
-- Hangers нужны только если Dbl/Trpl Rafters **опираются на несущий [Ridge](ridge.md)**, либо это явно указано на плане. См. [Hangers](../../../reference/hangers.md).
+## Где искать на чертежах
 
-## Проверить
+| Лист | Что взять |
+| --- | --- |
+| Roof framing plan (S) | где rafters doubled или tripled, марка, сечение |
+| Sections, elevations | наклонная длина от конька до опоры; с плана длину не брать |
+| Details | опирание на ridge beam (hangers) или на ridge board (без hangers), ties к стене |
+| Notes | "every other rafter doubled" - считать по плану, не усреднять |
 
-- Product может быть dimensional lumber, LVL, PSL или GL.
-- Built-up member length и ply count должны быть видимы в output.
-- Используй hangers/connectors, которые соответствуют реальной built-up width.
+## Как мерить в OurPlanCore
 
-## Таблицы вывода
+Инструмент Beam (B) вдоль rafter на листе roof framing с точкой F. Один пакет = одна точка с `(n)` в имени. Плановая длина умножается на коэффициент уклона (6:12 даёт 1.118, 8:12 даёт 1.202; таблица на странице [Hip](hip.md)) или берётся с разреза. Программа округляет заказную длину (до 8' до фута, длиннее до чётного).
 
-| Name | Size | Qty | Length / pcs |
-| --- | --- | --- | --- |
-| Dbl Rafters | `2x12` | `2` | `18` |
-| Trpl Rafters | `1 3/4 x 11 7/8 LVL` | `3` | `28` |
+Hangers нужны только когда rafters опираются на несущий ridge beam или деталь прямо их показывает: `LSSR`, `LRU` по ширине пакета. К ridge board hangers не ставятся.
 
-| Connector | Size | Qty | Unit |
-| --- | --- | --- | --- |
-| Hangers | `LSSR2.56Z` | `2` | pcs |
-| Hangers | `LRU212Z` | `1` | pcs |
+<figure markdown>
+  ![Инструмент Beam](../../../assets/images/ourplancore/v3/measure-beam.png)
+  <figcaption markdown="span">Инструмент Beam: две точки по элементу, длина округляется программой и попадает в имя позиции.</figcaption>
+</figure>
 
+## Как назвать в дереве и строка DFL
 
-<!-- confluence-gallery:start -->
-## Визуальная проверка
+Путь: `framing/roof framing/beams/dbl rafters <сечение> <длина>`.
 
-Архивные иллюстрации помогают прочитать правило. Для своего takeoff сверь его с чертежами и scope текущего проекта.
+| Имя в дереве | A (Label) | B | C | D | E |
+| --- | --- | --- | --- | --- | --- |
+| `beams/dbl rafters 2x12 18` | `Dbl Rafters` | `2x12` | точки x 2 | `18` | `S201` |
+| `beams/trpl rafters (3) 1 3/4 x 11 7/8 LVL 28` | `Trpl Rafters` | `1 3/4 x 11 7/8 LVL` | точки x 3 | `28` | `R2 per S601` |
+| `details/LSSR` | `Hangers` | `LSSR2.56Z`, `LRU212Z` | по узлам | `pcs` | деталь |
 
-??? info "Источник картинок"
-    - Dbl Trpl Rafters (двойные тройные стропила): 2 карт. Confluence (архивный источник; ссылка не публикуется)
+## Частые ошибки
 
-<details class="kb-figures kb-figures--rows" open>
-  <summary>Скрыть 2 правил с иллюстрациями</summary>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Double/Triple Rafters - визуальная проверка 01</div>
-      <div class="kb-figure-row__rule">Проверь где rafters doubled/tripled, длину и support/hanger condition.</div>
-      <div class="kb-figure-row__note">Не считай как обычные rafters, если detail/schedule показывает built-up condition.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-140.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-140.png" alt="Double/Triple Rafters - визуальная проверка 01: Проверь где rafters doubled/tripled, длину и support/hanger condition." loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Double/Triple Rafters - визуальная проверка 02</div>
-      <div class="kb-figure-row__rule">Проверь где rafters doubled/tripled, длину и support/hanger condition.</div>
-      <div class="kb-figure-row__note">Не считай как обычные rafters, если detail/schedule показывает built-up condition.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-141.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-141.png" alt="Double/Triple Rafters - визуальная проверка 02: Проверь где rafters doubled/tripled, длину и support/hanger condition." loading="lazy"></a>
-  </figure>
-</details>
-<!-- confluence-gallery:end -->
+- Длина взята с плана без уклона.
+- Пакет записан как одна доска: `(3)` потерян, или наоборот три точки и `(3)` вместе.
+- Hangers поставлены к ridge board, где их нет, или пропущены у ridge beam.
+- Hanger не по ширине пакета: `LSSR2.56` под один 2x вместо `LSSR410` под два.
+- Усиленные rafters по детали "every other rafter doubled" усреднены в обычные rafters.
+- [Все ошибки по крыше](../../../start/common-mistakes.md#roof)
+
+## Пример
+
+| A | B | C | D | E |
+| --- | --- | --- | --- | --- |
+| `Dbl Rafters` | `2x12` | 4 | 18 | `S201, skylight` |
+| `Trpl Rafters` | `1 3/4 x 11 7/8 LVL` | 3 | 28 | `R2` |
+| `Hangers` | `LSSR2.56Z` | 2 | pcs | `rafters to ridge beam 7/S501` |
+
+<figure markdown>
+  ![Второй вид dbl rafters](../../../assets/images/confluence/confluence-141.png)
+  <figcaption markdown="span">Сдвоенные rafters ближе: пакет из двух досок по краю проёма, обычные rafters между ними обрезаны на header.</figcaption>
+</figure>
+
+## См. также
+
+- [Ridge](ridge.md), [Roof Header](header.md), [Hip](hip.md), [Valley](valley.md)
+- [Joist](../floor-framing/joist.md) - обычные rafters через J Area, [Hangers](../../../reference/hangers.md)

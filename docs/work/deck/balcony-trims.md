@@ -1,37 +1,53 @@
-# Balcony Trims
+# Balcony Trims (отделка балкона в блоке)
 
-!!! info "Часть Exterior Trims"
-    Balcony / deck / porch отделка целиком разобрана в разделе
-    [Exterior Trims - Porch / Deck / Balcony](../exterior-trims/porch-deck-balcony.md),
-    включая balcony composition (pavers / membrane) и правило "by others".
-    Структурный каркас - [Deck / Porch / Balcony Frame](deck-porch-balcony-frame.md).
+<figure markdown>
+  ![Balcony trim, archive](../../assets/images/confluence/confluence-152.png)
+  <figcaption markdown="span">Fascia и edge trim по открытым сторонам балкона, soffit снизу, flashing у стены. Считаем только когда отделка в scope.</figcaption>
+</figure>
 
-## Что считать
+## Что это
 
-- Balcony trims, edge trims, flashing, soffit/underside trims и related finish
-  material.
+Finish-строки балконного блока: fascia и edge trim по периметру, soffit
+снизу, post wrap, flashing у стены. Полная карта слоёв от каркаса до
+отделки на канонической странице
+[Balcony build-up](../exterior-trims/balcony-buildup.md); каркас на
+[Deck / Porch / Balcony Frame](deck-porch-balcony-frame.md).
 
-## Проверить
+## Где искать на чертежах
 
-- Balcony trims не должны исчезать внутри general exterior trim.
-- Проверь, показывают ли details decking without sheathing.
-- Trim, flashing и structural material держи отдельно.
-- Balcony framing может требовать 2-ply framing и two layers of sleepers; держи
-  framing/sleeper notes видимыми, не прячь их в trim.
+| Лист | Что взять |
+| --- | --- |
+| Разрез балкона A4xx, детали A5xx | Fascia, soffit (beadboard), flashing, post wrap: материал и размер |
+| Elevations | Видимые trims, цвет и профиль, что закрыто перилами |
+| Scope задания | Frame only: отделку не вставлять вообще |
 
+## Как мерить в OurPlanCore
 
-<!-- confluence-gallery:start -->
-## Визуальная проверка
+Длины и площади берутся из размеров блока W x D и множителя G, как у
+перил. Soffit снизу балкона это Area по реальному контуру только когда
+контур не прямоугольник; обычно хватает W x D.
 
-Архивные иллюстрации помогают прочитать правило. Для своего takeoff сверь его с чертежами и scope текущего проекта.
+## Как назвать в дереве и строка DFL
 
-??? info "Источник картинок"
-    - Balcony Trims - отделка для балконов: 1 карт. Confluence (архивный источник; ссылка не публикуется)
+| Строка DFL | Материал | Unit | Правило |
+| --- | --- | --- | --- |
+| `Balcony Trims` / `Fascia` | `1x10`, `5/4x8` | LFT | открытые стороны: `=(W+2*D)*G` |
+| `Soffits at Balcony` | `Beadboard` | SQ FT | `=W*D*G` |
+| `Post Wrap` | `1x8` | LFT | по высоте поста x 4 стороны |
+| `Flashings at Wall` | `Copper` / drip edge | LFT | по стене, `=W*G` |
 
-<details class="kb-figures">
-  <summary>Показать 1 иллюстраций</summary>
-  <div class="kb-figure-grid">
-    <a class="kb-figure" href="../../../assets/images/confluence/confluence-152.png" target="_blank" rel="noopener"><img src="../../../assets/images/confluence/confluence-152.png" alt="Balcony Trim - визуальная проверка: Сверь fascia/trim runs, exposed edges и finish material." loading="lazy"></a>
-  </div>
-</details>
-<!-- confluence-gallery:end -->
+Размер не указан: `TBD` в материале и нота `Note: All trims to be verified.
+Scaled per elevations`.
+
+## Частые ошибки
+
+- Balcony trims растворены в общем `Exterior Trims` без своей строки.
+- Строки каркаса (sleepers, joists) записаны в блок trims.
+- Отделка вставлена при scope Frame only.
+- Все ошибки раздела: [Deck, porch, балконы](../../start/common-mistakes.md#deck).
+
+## См. также
+
+- [Balcony build-up](../exterior-trims/balcony-buildup.md) (канон слоёв)
+- [Porch / Deck / Balcony](../exterior-trims/porch-deck-balcony.md), [Rails & Decking](../exterior-trims/rails-decking.md)
+- [Deck / Porch / Balcony Frame](deck-porch-balcony-frame.md), [Railing](railing.md)

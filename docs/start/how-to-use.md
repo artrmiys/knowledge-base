@@ -1,78 +1,79 @@
-# Как пользоваться
+# Как пользоваться базой
 
-Эта wiki должна быть быстрой рабочей памятью: открыл страницу, проверил правило,
-применил в takeoff tool или Excel.
+База знаний - рабочая память эстиматора: открыл страницу, проверил правило,
+применил в OurPlanCore или в Excel DFL. Здесь коротко, как она устроена и как
+читать страницы.
+
+<figure markdown>
+  ![Окно OurPlanCore 3.0: Pages слева, лист в центре, Takeoffs справа](../assets/images/ourplancore/v3/window.png)
+  <figcaption markdown="span">Всё, что описано в базе, делается в этом окне: слева листы (Pages), в центре чертёж, справа дерево замеров (Takeoffs). Названия панелей в тексте базы совпадают с подписями на экране.</figcaption>
+</figure>
+
+## Разделы сайта
+
+| Вкладка | Что там | Когда открывать |
+| --- | --- | --- |
+| **Старт** | Процесс работы, дерево takeoff и имена листов, проверка перед сдачей, правила клиентов, частые ошибки | В первый день и перед каждой сдачей |
+| **OurPlanCore** | Программа: начало работы, интерфейс и инструменты, имена takeoffs и точки листа, клавиши, проблемы, что нового | Когда непонятно, какой кнопкой или клавишей это делается |
+| **Работа** | Предметные страницы по каждому элементу каркаса в порядке, в котором их мерят: типы работ, стены, проёмы, перекрытия, крыша, обшивка, площади, deck, отделка | Во время замера: открыл элемент, проверил, как считать и как назвать |
+| **Справочник** | Советы и важные вещи, hangers, крепёж, формулы и факторы, стандартные ноты, имена строк DFL | При заполнении Excel и при сомнении в правиле |
+
+Меню "Работа" повторяет порядок замера: идёшь сверху вниз по списку, и ничего не
+пропускаешь. Это не классификатор, а чек-лист.
+
+## Поиск
+
+Ctrl+K открывает поиск. Ищи по английскому термину с чертежа: `rim`, `truss heel`,
+`holdown`, `prpt`, `draft stop`. Русские слова тоже находятся, но термины
+чертежей в базе всегда английские, поэтому по ним результат точнее.
+
+## Как читать предметную страницу
+
+Страницы раздела "Работа" построены по одному шаблону. Если нужен только один
+ответ, иди сразу в нужный раздел:
+
+| Раздел страницы | Какой вопрос закрывает |
+| --- | --- |
+| Картинка сверху | Как это выглядит на чертеже или в конструкции |
+| Что это | Чем элемент отличается от соседнего (Sill Plate не Btm Plate) |
+| Где искать на чертежах | На каком листе брать размер, марку, спецификацию |
+| Как мерить в OurPlanCore | Инструмент (Line, Area, Count, J Area, Beam, Openings), единица, что обводить, на листе с какой точкой W/F/S/U |
+| Как назвать в дереве и строка DFL | Имя позиции в Takeoffs, строка в Excel, unit, формула или фактор |
+| Частые ошибки | Что уже находили на проверках и ссылка на [общий список](common-mistakes.md) |
+| Пример | Кусок дерева или DFL, 3-6 строк |
+| См. также | Соседние страницы |
+
+Термины чертежей в тексте английские (Joist, Rim Board, FRT), объяснения русские.
+Имена позиций и строк DFL копируй как написано: их читают макросы Excel.
 
 ## Приоритет источников
 
-1. Реальные drawings/specs текущего проекта.
+1. Чертежи и спецификации текущего проекта.
 2. Structural details и schedules.
-3. Arch plans, assemblies, RCP, wall types, energy notes.
-4. Client-specific rules из этой wiki.
-5. [Советы и важные вещи](../reference/boss-feedback-rules.md).
+3. Arch plans, wall types, assemblies, RCP, energy notes.
+4. Правила клиента и типа заказа из этой базы: [Правила клиентов](client-rules.md).
+5. [Советы и важные вещи](../reference/boss-feedback-rules.md) и предметные страницы.
 
-Если правило из wiki конфликтует с drawings/specs, не подменяй проект. Запиши
-вопрос или note в output.
+Если правило базы противоречит чертежу, чертёж главнее. Расхождение не прячь:
+пиши ноту в DFL с обоими источниками и принятым значением
+([как оформить](../reference/standard-notes.md)).
 
-## Как читать страницы
+## Если правила нет
 
-- `Старт` - процесс, структура, checklist.
-- `OurPlanCore` - начало работы, интерфейс, проекты, горячие клавиши и решение
-  проблем. Начни с [короткого маршрута](../reference/ourplancore-start.md).
-- `Типы работ` - логика COM, EWP/Capital, Residential.
-- `Работа` - предметные страницы по разделам takeoff.
-- `Справочник` - правила, таблицы и формулы.
+1. Проверь, что его нет: поиск по английскому термину и по синониму
+   (eave и eve, holdown и HDU, WRB и Tyvek).
+2. Посмотри [Советы и важные вещи](../reference/boss-feedback-rules.md) и
+   [Частые ошибки](common-mistakes.md): многие решения записаны там как
+   "ошибка и как правильно".
+3. Нет и там: прими решение по чертежу, запиши его нотой `assumed; verify` с
+   номером листа и отметь вопрос для владельца. Решение, подтверждённое
+   владельцем, потом попадает на предметную страницу.
 
-Описание функции программы проверяй по версии в начале её инструкции.
-Старый скриншот показывает расположение элементов в момент съёмки; текущие
-названия и действия описаны в тексте. Планы развития не являются готовыми
-функциями. Для сравнения выпусков есть
-[история изменений OurPlanCore](../reference/ourplancore-changelog.md).
+Как вносить правки в саму базу, описано на странице для редактора:
+[Обновление базы](maintenance.md).
 
-## Найти раздел по задаче
+## См. также
 
-| Задача | Маршрут |
-| --- | --- |
-| Выбрать процесс по типу работы | [COM](../work-types/com.md), [EWP / Capital](../work-types/ewp-capital.md), [Residential](../work-types/residential.md), [Reconstruction](../work-types/reconstruction.md) |
-| Разобраться с металлическими стенами | [Metal Tracks / CFMF](../work/vertical/walls/metal-tracks.md) |
-| Найти потолочный или soffit framing | [Ceiling / Soffit Framing](../work/horizontal/ceiling-soffit-framing.md) |
-| Найти dormer в roof framing | [Dormer](../work/horizontal/roof-framing/dormer.md) |
-| Найти loft в площадях | [Loft](../work/sqfts/loft.md) |
-| Проверить весь путь от PDF до выдачи | [Workflow](workflow.md), затем [QA checklist](quality-checklist.md) |
-
-## Обновить правило
-
-- Добавляй подтверждённое правило в одну предметную страницу. В
-  [Советы и важные вещи](../reference/boss-feedback-rules.md) оставляй краткую
-  ссылку на него, если это feedback.
-- Не храни приватные ссылки, emails, UIDs, salary history и credentials.
-- Если правило относится к конкретному клиенту, обнови
-  [Правила клиентов](client-rules.md).
-- Если правило повторяется в разных местах, держи короткую версию на topic page
-  и полную версию в reference page.
-
-
-<!-- confluence-gallery:start -->
-## Визуальная проверка
-
-Архивные иллюстрации помогают прочитать правило. Для своего takeoff сверь его с чертежами и scope текущего проекта.
-
-??? info "Источник картинок"
-    - Excel: 5 карт. Confluence (архивный источник; ссылка не публикуется)
-    - PlanSwift: 2 карт. Confluence (архивный источник; ссылка не публикуется)
-    - PlanSwift - large GIF attachments: 1 карт. Confluence (архивный источник; ссылка не публикуется)
-
-<details class="kb-figures">
-  <summary>Показать 8 иллюстраций</summary>
-  <div class="kb-figure-grid">
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-066.gif" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-066.gif" alt="Workflow screenshot - визуальная проверка 01: Проверь порядок действий: source, takeoff, Excel/output, QA." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-067.gif" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-067.gif" alt="Workflow screenshot - визуальная проверка 02: Проверь порядок действий: source, takeoff, Excel/output, QA." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-068.jpg" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-068.jpg" alt="Workflow screenshot - визуальная проверка 03: Проверь порядок действий: source, takeoff, Excel/output, QA." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-069.jpg" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-069.jpg" alt="Workflow screenshot - визуальная проверка 04: Проверь порядок действий: source, takeoff, Excel/output, QA." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-070.jpg" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-070.jpg" alt="Workflow screenshot - визуальная проверка 05: Проверь порядок действий: source, takeoff, Excel/output, QA." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-076.jpg" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-076.jpg" alt="Workflow screenshot - визуальная проверка 06: Проверь порядок действий: source, takeoff, Excel/output, QA." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-077.jpg" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-077.jpg" alt="Workflow screenshot - визуальная проверка 07: Проверь порядок действий: source, takeoff, Excel/output, QA." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-078.jpg" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-078.jpg" alt="Workflow screenshot - визуальная проверка 08: Проверь порядок действий: source, takeoff, Excel/output, QA." loading="lazy"></a>
-  </div>
-</details>
-<!-- confluence-gallery:end -->
+- [Процесс работы](workflow.md)
+- [Дерево takeoff и имена листов](takeoff-structure.md)
+- [OurPlanCore 3.0: начало работы](../reference/ourplancore-start.md)

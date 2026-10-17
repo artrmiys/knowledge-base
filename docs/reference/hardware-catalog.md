@@ -1,95 +1,91 @@
 # Hardware catalog (Simpson)
 
-Словарь крепежа Simpson Strong-Tie - "какой spec под какое соединение". Это словарь
-(что встречается и зачем), а выбор за 30 секунд - в [Hangers](hangers.md).
+Здесь: словарь крепежа Simpson Strong-Tie, который встречается в DFL: что это и для какого узла. Выбор hanger по условию - [Hangers](hangers.md), запись модели в колонку B - [там же](hangers.md#dfl-format).
 
-!!! tip "Как читать"
-    `Zmax`/`Z`-суффикс = горячая оцинковка (наружка / PT-древесина). `E`-суффикс у
-    holdown = embedded (заливной анкер, не post-installed). Цифра в модели обычно =
-    сечение/нагрузка (`ABU66` - 6x6 post; `HDU8` > `HDU4` по нагрузке).
+!!! warning "Словарь, не дефолты"
+    Модель всегда берётся из деталей и schedule своего проекта. Список показывает, что бывает, и помогает прочитать марку на чертеже.
 
-!!! warning "Это словарь, не дефолты"
-    Все spec'и - **per-project по деталям/schedule**. Список показывает, что бывает,
-    но конкретная модель берётся из structural notes проекта.
+## Как читать марку
 
-## Joist / beam hangers { .kb-section-title .kb-st--green }
+| Часть | Значение | Пример |
+| --- | --- | --- |
+| `Zmax`, `Z` | горячая оцинковка: снаружи и на P.T.-древесине | `LUS210 Zmax` (в B пишется отдельным словом) |
+| `-2`, `-3` | число plies несомой балки | `HUC210-3` |
+| `E` у holdown | embedded: заливной анкер, не post-installed | `HDUE7` |
+| число в модели | сечение или нагрузка | `ABU66` под 6x6, `HDU8` сильнее `HDU4` |
+| `SK30 R` после модели | skew 30 градусов, правая рука (только в записи B) | `HHUS410 Zmax SK30 R` |
 
-| Spec | Назначение |
+## Hangers (joist, beam)
+
+| Модель | Для чего |
 | --- | --- |
-| `LUS210` (+`-2/-3`, `Zmax`) | стандартный face-mount для 2x10 (`-2/-3` = 2/3-ply) |
-| `LUS26` / `LUS28` | для 2x6 / 2x8 (`-3` = 3-ply, `Zmax` наружка) |
-| `LUS212` / `LUS24` | для 2x12 / 2x4 |
-| `LUC26` | concealed-flange 2x6 |
-| `HUC210-2/-3`, `HUC410-2`, `HUC214-3` | heavy face-mount (2/3-ply, `Zmax`) |
-| `HU9` / `HU410` / `HU412` / `HU48` | heavy U-hanger |
-| `HHUS5.50/10,/12,/14`, `HHUS48`, `HHUS210-3` | heavy hi-cap (LVL / большие балки) |
-| `HUCQ210-3`, `HUCQ610`, `HUCQ412 Zmax` | concealed heavy (лестница / platform / balcony beams) |
-| `LRU210Z` / `LRU212Z` / `LRU24Z` / `LRU28Z` | **rafter/slope hangers** (skewed/sloped - porch/roof) |
-| `MIT`, `ML26Z`, `ML24Z`, `ML28` | misc / lite beam hanger |
+| `LUS26`, `LUS28`, `LUS210`, `LUS212` (+`-2`, `-3`) | face mount под пилёный 2x; самый частый |
+| `LUC26`, `LUC210` | concealed flange под 2x: крайние joists, где полка не должна торчать |
+| `HU9`, `HU11`, `HU14`, `HU410`, `HU412`, `HU414`, `HU612` | heavy U под LVL и построенные балки |
+| `HHUS410`, `HHUS5.50/10`, `HHUS5.50/12`, `HGUS7.25/12` | heavy hi-cap под LVL, PSL, большие балки |
+| `HUC210-2`, `HUC412`, `HUCQ412 Zmax`, `HUCQ610` | concealed heavy: лестницы, платформы, балки балконов |
+| `ITS`, `IUS`, `MIT`, `MIU` | I-joists top flange и face mount; размер по ширине полки и глубине ([таблицы](hangers.md#tables)) |
+| `SUL`, `SUR`, `HSUR`, `LSSR`, `LBV ... XL45 / XR45` | skewed и sloped; `SUL` левая, `SUR` правая рука |
+| `DHU`, `DGU` | через двойной гипс firewall: лестницы, лифты, шахты; не вместо `ITS` на обычной demising |
+| `WP`, `GLT`, `GLTV`, `LBV` | top flange под балки |
+| `CJTZ`, `CBH` | кедр и glulam: отдельные строки, только по детали |
 
-## Ties / clips (uplift, truss/rafter-plate) { .kb-section-title .kb-st--cyan }
+## Ties и clips
 
-| Spec | Назначение |
+| Модель | Для чего |
 | --- | --- |
-| `H2.5` / `H2.5A` | hurricane tie - самый частый (truss/rafter-to-plate) |
-| `H1` / `H3` / `H8` / `H10` | tie по нагрузке |
-| `A35` | framing angle (универсальный) |
-| `A34` | framing angle (меньше) |
-| `HGA10` / `HGA10KT` | hurricane gusset angle (+KT kit) |
-| `A35 or LTP4` | framing angle ИЛИ lateral tie plate (взаимозаменяемы) |
+| `H2.5`, `H2.5A` | ферма или rafter к plate; самый частый; к фермам без `Zmax` (под обшивкой) |
+| `H1`, `H3`, `H8`, `H10` | ties по нагрузке; `H3` с обеих сторон фермы, если так показано |
+| `A35`, `A34`, `LTP4` | framing angle и lateral tie plate; на shear walls по schedule |
+| `HGA10`, `HGA10KT` | hurricane gusset angle, `KT` = комплект |
+| `SDWC6` | truss screw вместо tie, если деталь даёт `in lieu of H2.5A` (либо screws, либо ties) |
 
-## Straps (continuity / tension) { .kb-section-title .kb-st--magenta }
+## Straps
 
-| Spec | Назначение |
+`MSTC40`, `MSTC52`, `MSTC66` (длина в имени), `MSTA49`, `MST72`, `LSTA24`, `CS16` / `CS14` / `CS20` (coiled strap, режется по длине). Страпы не смешивать с holdowns и анкерами: своя строка, своя марка SW в E.
+
+## Post bases и caps
+
+| Модель | Для чего |
 | --- | --- |
-| `MSTC66` / `MSTC40` / `MSTC52` / `MSTC48` | medium strap coiled (длина в имени) |
-| `MSTA49` | medium strap 49" (continuity across floors) |
-| `MST72` / `MSTD4` | medium strap прямой |
-| `LSTA24` | light strap 24" |
-| `CS16` / `CS14` / `CS20` | coiled strap (режется по футажу) |
+| `ABU44`, `ABU66`, `ABU68`, `ABU88` (+`Zmax`), `ABA66Z` | база поста по его сечению |
+| `BC46 Zmax`, `BCS2-3/6 Zmax`, `BCS2-2/4` | cap по plies балки: 2-ply `BC46`, 3-ply `BCS2-3/6`; per schedule |
+| `CCQ44`, `CCQ46`, `CCQ66`, `CCQ68`, `ECCQ66` | column cap; `ECCQ` на краю и консоли |
+| `PC6Z`, `PB66 Zmax`, `CBSQ66 Zmax` | лёгкие cap и standoff base |
+| `ML210Z`, `HL33Z` | уголки балка к посту на балконах |
 
-## Post bases / caps { .kb-section-title .kb-st--amber }
+Cap и base на каждую стойку, модель по детали; база и cap меняются вместе с сечением поста.
 
-| Spec | Назначение |
+## Holdowns и анкеры
+
+| Модель | Для чего |
 | --- | --- |
-| `ABU66 Zmax` / `ABU44` / `ABU88` / `ABU68` | **ABU post base** (размер = сечение поста: 44/66/68/88) |
-| `BCS2-3/6 Zmax` / `BCS2-2/4` | post cap/base (2-3 ply / 6x) |
-| `CCQ66` / `CCQ46` / `CCQ44` / `CCQ68` | **CCQ column cap** (по сечению) |
-| `ECCQ66` / `ECCQ46` Zmax | **end column cap** (cantilever / край) |
-| `PC6Z` / `PCZ` / `PB66 Zmax` / `CBSQ66 Zmax` | post cap / post base (lite / standoff) |
+| `HDU2`, `HDU4`, `HDU5`, `HDU8`, `HDU11`, `HDU14`, `HDU19` | рабочая серия; число растёт с нагрузкой по SW schedule |
+| `HDUE3`, `HDUE5`, `HDUE7`, `HDUE9`, `HDUE13` | embedded в бетон |
+| `HTT5KT`, `HTT5K` | tension holdown, `KT` с анкером |
+| `DTT2Z` | лёгкий, одноэтажные дома, deck |
+| `Titen HD 1/2" x 4"`, wedge anchor, `BP1/2-3`, `3x3 Square` | анкеры sill plate и plate washers по anchorage schedule; wedge anchor на Titen HD не менять без основания |
+| `TBD HD` | заглушка, когда shear walls и holdowns не определены, с нотой |
 
-## Holdowns (shear wall) { .kb-section-title .kb-st--blue }
+Счёт holdowns: к бетону один, через деревянное перекрытие два ([Блоки](dfl-blocks.md#holdowns)).
 
-| Spec | Назначение |
-| --- | --- |
-| `DTT2Z` | deck/light tension (1-storey, лёгкая) |
-| `HDU2/4/5/8/11/14/19` | **HDU-серия - рабочая лошадка** (цифра = модель по нагрузке) |
-| `HDUE3/5/7/9/13` | **HDU Embedded** (заливной анкер, не post-installed) |
-| `HTT5KT` / `HTT5K` | tension holdown (KT = kit) |
-| `TBD HD` | placeholder когда shear walls не определены |
+<figure markdown>
+  ![Анкерные болты в стене из блоков](../assets/images/photos/hardware/anchor-bolts-in-cmu-wall.jpg)
+  <figcaption markdown="span">Анкерные болты, замоноличенные в кладку под sill plate: строки `Anchor Bolts` по шагу, `Washers`, `Nuts`. Фото: Bill Bradley, CC BY 2.5, [источник](https://commons.wikimedia.org/wiki/File:HD-bolts.jpg)</figcaption>
+</figure>
 
-!!! note "Holdown на практике"
-    Почти всегда из **HDU / HDUE-серии**, выбор по нагрузке из shear-wall schedule
-    (`HDU2 < 4 < 5 < 8 < 11 < 14 < 19`). `HTT5K` реже; `DTT2Z` - лёгкие / deck.
+## Structural screws
 
-## Structural screws { .kb-section-title .kb-st--orange }
+`SDS25312`, `SDS25600` (длина в имени), `SDWS22400DB`, `SDWS22500DB`, `SDWS22600DB` (ledger, deck, stairs; по 3 на точку), `SDWC6` (trusses). У screws шайбы и гайки не нужны; гвозди не считаются.
 
-| Spec | Назначение |
-| --- | --- |
-| `SDS25600` / `SDS25312` / `SDS25300` | структурные SDS-винты (по длине) |
-| `SDWS22500DB` / `SDWS22600DB` | structural wood screw 5" / 6" (stair / deck) |
-| `SDWC6` | truss screw |
+## Что помнить
 
-## Шпаргалка по умолчанию
+- Снаружи и на P.T. - `Zmax`; ties к фермам под обшивкой без `Zmax`.
+- Hangers на оба конца каждого joist, по сборкам, а не по закупочным доскам; только целые штуки.
+- Модель по детали: `U210-2`, если деталь даёт его, а не `LUS210-2`.
 
-- **Hanger** - по балке/нагрузке/mount: 2x10 - `LUS210`; 3-ply - `-3`; heavy/LVL -
-  `HUC`/`HHUS`; наружка/PT - `Zmax`. Логика выбора - [Hangers](hangers.md).
-- **Tie** по умолчанию `H2.5` (uplift); framing angle `A35`.
-- **Post 6x6:** база `ABU66 Zmax` + кап `BCS2-3/6` или `CCQ66`; консоль - `ECCQ66`.
-- **Holdown** по shear-wall schedule; нет данных - `TBD HD`.
+<!-- TODO-PHOTO: joist hanger LUS on ledger, hurricane tie H2.5A at truss, post base ABU66 on concrete; EN query "joist hanger ledger deck", "hurricane tie truss plate", "post base bracket deck concrete" -->
 
 ## См. также
 
-- [Hangers](hangers.md) - выбор hanger по condition (mount / depth / skew).
-- [Material catalog](material-catalog.md) - древесина и материалы.
-- [Quantity benchmarks](quantity-benchmarks.md) - типовые размеры/количества.
+- [Hangers](hangers.md), [Блоки балконов, porch и holdowns](dfl-blocks.md), [Anchor Bolts](../work/deck/anchor-bolts.md), [Shear Wall](../work/vertical/sheathing/shear-wall.md)

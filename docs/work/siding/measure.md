@@ -1,83 +1,86 @@
-# Измерение siding
-
-Siding считается по **площади** (`SQ FT` / `SF`) по elevations, стена за
-стеной. Trim, accessories и flashing - отдельно (`LFT`/`pcs`), не в siding.
+# Измерение siding (Area по фасадам)
 
 <figure markdown>
   ![Siding take-off by elevation area](../../assets/images/siding/measure.svg)
-  <figcaption>SQ FT по elevation, минус openings; gable/accent - отдельные строки.</figcaption>
+  <figcaption markdown="span">SQ FT по фасаду: поле стены Area, gable и accent отдельными площадями, крупные проёмы вычтены один раз.</figcaption>
 </figure>
 
-## Метод { .kb-section-title .kb-st--green }
+<!-- TODO-SCREEN: measure-area-siding.png (Area по фасаду в OurPlanCore с вычетом проёма, итем siding/6" vertical) -->
 
-1. Иди **по elevations**, стена за стеной (front / rear / left / right).
-2. Площадь = ширина × высота стены, минус то, что вычитается по правилу
-   проекта/клиента.
-3. **Gables, dormers, bays, return walls** - отдельные площади (часто
-   отдельные строки, особенно если материал другой).
-4. Сумму веди формулой в Excel (видимые слагаемые), не "голым" числом.
+## Что это
 
-| Label | Value | Unit |
-| --- | --- | --- |
-| `Siding` | `=L+R+Front+Rear …` | `SQ FT` |
-| `Siding Gable front` | `=…` | `SQ FT` |
-| `Siding` (offset / correction) | `-140` | `SQ FT` |
+Siding считается площадью `SQ FT` по фасадам, стена за стеной. Trim,
+accessories и flashing считаются отдельно в `LFT` и `pcs`, в площадь
+siding они не входят.
 
-## Deductions { .kb-section-title .kb-st--cyan }
+## Где искать на чертежах
 
-- Крупные openings (garage, большие окна/двери, проёмы) вычитаются - или
-  считается gross + waste, **по правилу клиента**. Не смешивай два подхода
-  на одном объекте.
-- Маленькие окна часто **не** вычитают (уходит в waste) - но следуй client
-  rule / Boss feedback.
-- Deduction показывай **видимой** строкой/слагаемым (в воркбуке встречаются
-  отрицательные строки, напр. `-140 SQ FT` - это нормально и наглядно).
+| Лист | Что взять |
+| --- | --- |
+| Elevations (`el`) | Площадь каждого фасада, материал по зонам, gables, bays, dormers |
+| Wall sections | Высота стены до soffit, flare, furring |
+| Планы и схема проёмов | Крупные проёмы для вычета (ворота, витражи) |
+| Notes | `by others`, `TBD`, продукт |
 
-!!! tip "Gross vs net"
-    Если правило проекта неизвестно - спрашивай, не угадывай. Зафиксируй note
-    `Siding gross, openings not deducted` или `net of large openings`.
-    См. [Правила клиентов](../../start/client-rules.md).
+## Как мерить в OurPlanCore
 
-## Waste { .kb-section-title .kb-st--magenta }
+1. Открой лист фасада. У фасадов нет точки листа, поэтому итем создаётся
+   в корне `siding` вручную или по правилу имени.
+2. Area по полю стены каждого фасада: по итему на материал и цвет
+   (`6" vertical`, `panel grey`, `shingle gable`). Один материал на
+   нескольких фасадах можно собирать несколькими полигонами в одном итеме.
+3. Gables, dormers, bays, return walls отдельными полигонами или итемами,
+   особенно при другом материале.
+4. Крупные проёмы вырезай отверстием в Area; окна меньше 4' не вычитаем,
+   они уходят в waste. Один и тот же проём не вычитать дважды (siding и
+   WRB берут вычет каждый от своей площади).
+5. Масштаб фасада проверь по известному размеру (высота этажа, ширина
+   ворот): фасады часто в другом масштабе, чем планы.
+6. Перенеси площадь в DFL формулой с видимыми слагаемыми и обновляй после
+   правок замера.
 
-- Lap / clapboard - умеренный waste (зависит от exposure).
-- **Shingle / shake - waste выше**, чем у lap.
-- Diagonal / pattern / small gables - больше обрезков.
-- Waste-фактор применяй по [Формулам и факторам](../../reference/formulas.md);
-  держи его видимым множителем (макрос ×-ячейки - см.
-  [Trim macros](../exterior-trims/macros.md)).
+## Как назвать в дереве и строка DFL
 
-## By others / TBD дисциплина { .kb-section-title .kb-st--green }
+| Имя в дереве | Строка DFL | Unit | Формула |
+| --- | --- | --- | --- |
+| `siding/6" vertical` | `Siding Vertical 1x6 Cedar` | SQ FT | `=Front+Rear+Left+Right` |
+| `siding/panel grey` | `Siding Fiber Cement Panel grey` | SQ FT | отдельно по цвету |
+| `siding/shingle gable` | `Siding Gable front Vinyl Shingles` | SQ FT | accent отдельно |
+| | `Siding` (correction) | SQ FT | `-140` видимой строкой, если нужен вычет |
+| | `Siding Per customer TBD` | SQ FT | `0` плюс нота |
 
-- Siding by others - строка `Siding | <material> | 0 | SQ FT` + note
-  (`by others` / `by customer`).
-- Материал не указан - `Per customer TBD` / `verify material` в note, не
-  подставляй продукт.
-- EIFS / stucco / stone / brick - не считаем (см.
-  [EIFS / Stucco / Veneer](eifs-stucco-veneer.md)), но trim/furring/WRB
-  проверяем.
+Waste: lap умеренный, shingle и shake выше, диагональ и мелкие gables
+больше обрезков. Фактор держи видимым множителем по
+[Формулам и факторам](../../reference/formulas.md).
 
-## Что НЕ входит в siding SQ FT { .kb-section-title .kb-st--cyan }
+## By others и TBD
 
-Считается **отдельно**, не в площади siding:
+- Siding by others: строка с `0` и нота `by others` или `by customer`.
+- Материал не указан: `Per customer TBD` или `verify material`, продукт
+  не подставлять.
+- EIFS, stucco, stone, brick: не считаем, но WRB, sheathing, furring и
+  trim рядом проверяем: [EIFS / Stucco / Veneer](eifs-stucco-veneer.md).
 
-- Casing / corner / band / watertable - `LFT` ([Casing, Corner & Band](../exterior-trims/casing-corner-band.md)).
-- Soffit / fascia / frieze - ([Soffit & Fascia](../exterior-trims/soffit-fascia.md)).
-- Starter / J-channel / corners / undersill - accessories `LFT`
-  ([Underlayment](underlayment.md)).
-- WRB, furring, Cedar Breather, flashing - свои строки.
+## Частые ошибки
 
-## Чек перед выводом { .kb-section-title .kb-st--magenta }
+- Площадь по плану (периметр x высота) без вычета фронтонов и разной
+  высоты стен по фасадам.
+- Проём вычтен дважды или не вычтен вовсе (ворота гаража).
+- Масштаб фасада не проверен.
+- Площадь измерена, но в Excel не перенесена или не обновлена.
+- Все ошибки по площадям и обшивке: [Площади SQFT](../../start/common-mistakes.md#sqft), [Обшивка](../../start/common-mistakes.md#sheathing).
 
-- [ ] Площадь по elevations, стена за стеной, формулой?
-- [ ] Gables / dormers / bays / returns - отдельными площадями?
-- [ ] Deductions по одному правилу (gross **или** net), видимо?
-- [ ] Waste-фактор применён (выше для shingle), виден множителем?
-- [ ] By others / TBD - `0` + note, без угадывания продукта?
-- [ ] Trim / accessories / flashing вынесены из siding SQ FT?
+## Пример
 
-## See also
+```text
+Takeoffs/Main/siding/6" vertical     Area   4 polygons   3 180 SF
+Takeoffs/Main/siding/shingle gable   Area   2 polygons     420 SF
 
-- [Overview](overview.md) , [Типы siding](types.md) , [Underlayment](underlayment.md) , [EIFS / Stucco / Veneer](eifs-stucco-veneer.md)
-- [Формулы и факторы](../../reference/formulas.md) , [Правила клиентов](../../start/client-rules.md)
-- [Trim macros](../exterior-trims/macros.md)
+Siding Vertical      1x6 Cedar              3 180  SQ FT   =1120+940+560+560   A201 A202
+Siding Gable front   Cedar Shingles 5-1/2"    420  SQ FT   =210+210            A201
+```
+
+## См. также
+
+- [Siding](overview.md), [Типы siding](types.md), [Underlayment](underlayment.md), [EIFS / Stucco / Veneer](eifs-stucco-veneer.md)
+- [Формулы и факторы](../../reference/formulas.md), [Правила клиентов](../../start/client-rules.md), [Trim macros](../exterior-trims/macros.md)

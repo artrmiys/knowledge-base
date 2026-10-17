@@ -1,27 +1,67 @@
-# Loft SQFT
-
-**Loft** - антресольный/мезонинный уровень внутри объёма этажа. В SQFT - площадь
-пола лофта; framing может быть floor- или roof-типа.
+# Loft SQFT (площадь антресоли)
 
 <figure markdown>
-  ![Loft mezzanine with guard](../../assets/images/sqfts/loft.svg)
-  <figcaption>Loft floor (SQFT) + guard по открытому краю. Уточни тип framing.</figcaption>
+  ![Loft с ограждением по открытому краю](../../assets/images/sqfts/loft.svg)
+  <figcaption markdown="span">Loft: пол антресоли внутри объёма этажа плюс guard по открытому краю. Площадь - отдельная Area, не часть этажа ниже.</figcaption>
 </figure>
 
-## Что считать
+## Что это
 
-- Loft floor area - subfloor, joists/framing, blocking.
-- Guards/railings по периметру открытой части.
-- Stairs/openings к лофту и roof-interface materials, когда показаны.
+Loft - антресоль или mezzanine внутри объёма этажа, часто над частью
+плана. Её площадь считается отдельно от этажа под ней: она тянет свой
+subfloor, свои joists и ограждение по открытому краю. На Front Page уровень
+называется `Loft`, не следующим номером этажа. Общие правила замера -
+[Floor SQFT, раздел правил](1st2nd.md#rules).
 
-## Проверить
+## Где искать на чертежах
 
-- Loft часто прячется на architectural sheets, а framing - на structural.
-- Уточни: loft framing - это **floor framing, roof framing или by others**.
-  От этого зависит joist depth/product и hangers.
-- Открытый периметр почти всегда требует guard/railing - частый пропуск.
+| Лист | Что взять |
+| --- | --- |
+| Loft / mezzanine plan (A) | Контур пола, открытый край, лестница |
+| Sections (`sec`) | Высота, тип каркаса: floor framing, roof framing или by others |
+| Framing plan (S) | Joists loft, балки, опоры; глубина и hangers |
+| Door / guard notes | Guard по открытому краю |
 
-## See also
+## Как мерить в OurPlanCore
 
-- [Joist](../horizontal/floor-framing/joist.md) , [Subfloor](../horizontal/floor-framing/subfloor.md)
-- [Stair](../horizontal/floor-framing/stair.md)
+1. Area по контуру пола loft на листе плана loft (точка W). Имя `loft`.
+2. Открытый край (над комнатой ниже) не входит в площадь loft, но нужен
+   как длина guard: Line в `trims` или `framing` по принятому дереву.
+3. Уточни тип каркаса: floor joists, roof-type или by others; от этого зависит,
+   куда идут joists ([Joist](../horizontal/floor-framing/joist.md)).
+
+!!! warning "Уточняется"
+    Токен `loft` в автомаршруте имён не подтверждён: проверь, что позиция
+    легла в `sqfts`, иначе перенеси через move или добавь правило в
+    Settings > Takeoff Name Routing.
+
+## Как назвать в дереве и строка DFL
+
+| Имя в дереве | Строка DFL | Материал | Unit | Формула |
+| --- | --- | --- | --- | --- |
+| `sqfts/loft` | Front Page, `Loft` | | `SQ FT` | как измерено |
+| `sqfts/loft` | `Subfloor` в `Loft Framing List` | `3/4" T&G` | `4x8` | `=ОКРВВЕРХ(SQFT/32*1.1;1)` |
+| Line по открытому краю | `Railing` / guard | по детали | `LFT` | |
+
+## Частые ошибки
+
+- Loft не найден: он на архитектурных листах, каркас на structural.
+- Guard по открытому периметру забыт.
+- Loft записан как `5th` вместо `Loft` на Front Page.
+
+Все ошибки по площадям: [common-mistakes](../../start/common-mistakes.md#sqft).
+
+## Пример
+
+```text
+Takeoffs/Main/sqfts/
+  loft      Area   340 SF
+Loft Framing List
+Joists 16" o.c.    2x10     ...   LFT   S203
+Subfloor           3/4" T&G  12   4x8
+```
+
+## См. также
+
+- [Floor SQFT](1st2nd.md), [Joist](../horizontal/floor-framing/joist.md), [Stair](../horizontal/floor-framing/stair.md)
+- [Railing](../deck/railing.md)

@@ -1,164 +1,122 @@
-# Exterior Walls
+# Exterior Walls (наружные стены)
 
 <figure markdown>
-  ![Exterior wall section takeoff checkpoints](../../../assets/images/walls/exterior-wall-section.svg)
-  <figcaption>Exterior wall takeoff: перед подсчётом раздели wall на layers.</figcaption>
+  ![Разрез наружной стены с точками проверки](../../../assets/images/walls/exterior-wall-section.svg)
+  <figcaption markdown="span">Наружная стена в разрезе: plates, studs, sheathing, WRB, insulation. Перед счётом раздели стену на слои и реши, какие из них в scope.</figcaption>
 </figure>
 
-## Что считать
+## Что это
 
-- Studs, plates, blocking, sheathing, bracing, Tyvek/WRB, insulation и exterior
-  buildouts, когда они in scope.
-- Для panelized COM jobs считай только loose/exterior scope: Tyvek, bracing,
-  floor-height sheathing, box sheathing, truss heel и parapet items.
-- Residential/Tilda checklist buckets: basement exterior walls, first floor
-  exterior walls, second floor exterior walls, attic/loft exterior walls, chimney
-  walls, knee walls, dormer walls, garage walls и balloon walls.
+Exterior wall - стена по контуру здания с обшивкой снаружи. От внутренних
+стен отличается слоями (sheathing, WRB, insulation), FRT-требованием и тем,
+что все проёмы фасада вырезаются именно из неё. Стена на бетоне тянет за
+собой [Sill Plates](sill-plates.md), а наверху - [Gable](gable.md),
+[Parapet](parapet.md) и [Truss Heel](../sheathing/truss-heel.md).
 
-## Критические правила
+## Где искать на чертежах
 
-- Exterior sheathing идёт по Arch / energy / Zip notes, если Structural не даёт
-  более сильное non-Zip requirement.
-- Если exterior wall material = FRT, exterior blocking и parapets тоже FRT.
-- Exterior build-up walls могут быть stick framed; проверь конструкцию и scope.
-  Полный список исключений: [Wall panels](../../../reference/boss-feedback-rules.md#wall-panels).
-- Для one-hour exterior walls давай exterior wall SQFT, когда это requested.
-- Проверяй wall size по floor: 2x4, 2x6 или 2x8.
-- Bottom plates могут требовать separate line, если lower plate = P.T.
-- **Metal stud / CMU стены:** даже если каркас by others, обшивка (exterior
-  gypsum), insulation (вкл. `Insulation at CMU`), flashing, `Bracing 2x4` и
-  window jambs остаются нашими. Полный блок - [Exterior Wall Materials](../sheathing/exterior-materials.md).
-
-## Wall Sizing & Height
-
-- На плане толщина стен: **5 1/2"** для 2x6, **3 1/2"** для 2x4.
-- Высота стены - от нижней доски **Btm Plate** до верхних досок **Top Plates** (включая обе доски). Брать с **elevation** или **section**, не с плана.
-- В PlanSwift запись: `ext <толщина> <высота>`, например **`ext 2x6 9.0`**.
-
-### Stud spacing factors (стойки)
-
-Stud-rule: считаем **1 стойку/фут + waste**, а **не** геометрические `0.75`
-(учитывает corners, T-intersections, jack/king/cripple и обрезь).
-
-| Spacing | Фактор (pcs / LFT) | Откуда |
-| --- | ---: | --- |
-| 12" o.c. | **1.4667** | `1:1` масштаб 16-12 + 10% waste |
-| 16" o.c. | **1.1** | `1:1` + 10% waste |
-| 24" o.c. | **0.625** | `0.5` + 25% waste |
-
-`pcs = wall LFT × фактор`. На COM jobs часто считают по точной высоте (nested-IF
-авто-подбор 2x4/2x6).
-
-!!! warning "Joists - другая таблица"
-    Это **stud**-факторы. **Joists/rafters** считаются по геометрии
-    `12 / spacing` - `1.0 / 0.75 / 0.5` (без stud-waste). Полная сводка обеих
-    таблиц - [Формулы - Spacing factors](../../../reference/formulas.md#stud-spacing-factors).
-
-## Под Bottom Plate (на бетоне)
-
-При посадке экстерьерной стены на бетон/фундамент в takeoff попадают три
-скрытые позиции (Sill Sealer / Termite Shield / Washers) - их легко забыть,
-потому что на плане они не показаны. Полный разбор и иллюстрации -
-[Sill Plates - Что считать вместе с Sill Plate](sill-plates.md#with-sill-plate)
-и [Anchor Bolts](../../deck/anchor-bolts.md).
-
-## Где смотреть
-
-| Где на чертежах | Что взять |
+| Лист | Что взять |
 | --- | --- |
-| Wall type schedule | Stud size, spacing, fire rating, sheathing notes |
-| Exterior elevations | Special sheathing/Densglass zones, material changes, gables |
-| Energy / envelope sheets | Zip, WRB, rigid insulation, continuous insulation |
-| Structural plans/details | Bracing, shear wall notes, holdowns, tall-wall blocking |
-| RCP / soffit details | Dropped exterior soffit frames и buildouts |
+| Планы этажей `a101 1st` | Контур и длина стен, марки типов стен |
+| Wall type schedule (`wt`) | Сечение stud, шаг, слои, fire rating, FRT |
+| Разрезы `a3.01 sec` | Высота стойки, состав перекрытия, где кончается стена и начинается gable |
+| Фасады `el`, energy sheets | Зоны Densglass и Zip, continuous insulation, смена материала |
+| Структура `s101`, SW schedule | Shear walls, holdowns, blocking высоких стен |
+| Code summary (`n`) | Тип конструкции: при Type III всё в плоскости наружной стены FRT |
 
-## Вывод takeoff
+## Как мерить в OurPlanCore
 
-- Exterior wall framing, sheathing, WRB, insulation и buildouts держи отдельными
-  rows, если scope/pricing нужно проверить.
-- Assumptions пиши прямо в output: `2x6 ext wall assumed from wall type` лучше,
-  чем молча смешать sizes.
-- Если floor repeats, всё равно list that floor separately и добавь `same as`
-  note вместо combining floors.
+Инструмент **Line**, единица LFT. Точка листа **W** на плане этажа кладёт
+новую линию в `walls/<этаж> floor walls`.
 
-## PlanSwift Wall Names
+1. Веди линию по оси стены по реальным участкам. Выноски и размерные линии не обводятся.
+2. Новая позиция при смене высоты, сечения, конструкции или стороны обшивки.
+   Один участок с несколькими выносками остаётся одной линией.
+3. Тип стены определяй по участкам, не группой: кусок demising между двумя
+   наружными не становится `ext`.
+4. Двойная стена - два каркаса только если на плане два каркаса.
+5. BW и shear walls в `walls` не рисуются: у них свои ветки
+   [BW](bearing-walls.md) и [Shear Wall](../sheathing/shear-wall.md).
+6. Каждой позиции свой Color.
 
-| Wall output name | Для чего |
-| --- | --- |
-| `ext x` | Exterior wall run |
-| `cor 2x6 x` / `corr 2x6 x` | Corridor wall, 2x6 |
-| `cor 2x4 x` / `corr 2x4 x` | Corridor wall, 2x4 |
-| `dem 2x6 x` | Demising wall, 2x6 |
-| `dem 2x4 x` | Demising wall, 2x4 |
-| `cor (2) 2x6 x` / `corr (2) 2x6 x` | Double corridor wall, 2x6 |
-| `cor (2) 2x4 x` / `corr (2) 2x4 x` | Double corridor wall, 2x4 |
-| `dem (2) 2x6 x` | Double demising wall, 2x6 |
-| `dem (2) 2x4 x` | Double demising wall, 2x4 |
-| `2x4 x` / `2x6 x` | Generic wall run by stud size |
-| `2x4 half` / `2x6 half` | Half-height wall by stud size |
+<figure markdown>
+  ![Line по наружным стенам с именем ext 2x6 9.09](../../../assets/images/ourplancore/v3/measure-line-walls.png)
+  <figcaption markdown="span">Line по стенам 1-го этажа. Имя несёт категорию, сечение и высоту: `ext 2x6 9.09`.</figcaption>
+</figure>
 
-## Полнота строки { .kb-section-title .kb-st--cyan }
+### Высота стойки { #stud-height }
 
-На full-frame проектах 1st-floor-стена - это полный каркас, не только bracing+sheathing.
-Типовой набор:
+Высота в имени - высота стены с plates в десятичных футах. Это **не**
+floor-to-floor и не отметка потолка. Читай разрез каждого дома: из
+floor-to-floor вычти subfloor и глубину перекрытия, потом проверь, льётся ли
+gypcrete поверх каркаса или внутрь. Пример: 9'-6" floor-to-floor минус TJI
+11 7/8" минус 3/4" subfloor = 8.45'. В DFL высота живёт в колонке E строки
+студов (до 1/8"), в имени стены - десятичные футы.
 
-| Строка | Заметка |
-| --- | --- |
-| Studs Ext / Int / Dem | размер авто по высоте стены (nested-IF) |
-| Bracing Ext / Dem / Corr | `2x4` |
-| Vapor Barrier | Tyvek |
-| Wall / Box Sheathing | OSB чаще Zip |
-| Blocking | `2x4`-`2x10` |
-| **Holdowns** | `DTT2Z` / `HTT5KT` / `HDU…` / `TBD HD` - частый пропуск |
-| Plates btm (P.T.) + dbl top | btm `2x6/2x4 P.T.` |
-| Ext. Headers | `2x10`/`2x8`/`2x12` по пролёту |
+<figure markdown>
+  ![Разрез: высота 9'-0", TJI 11 7/8", subfloor 3/4"](../../../assets/images/confluence/confluence-110.png)
+  <figcaption markdown="span">Разрез кухни: высота стойки 9'-0" стоит между subfloor и низом перекрытия выше. Красные линии - границы стены, а не отметки этажей.</figcaption>
+</figure>
 
-- **Holdowns** - если есть shear walls, не забудь (выбор по SW-schedule,
-[Hardware catalog](../../../reference/hardware-catalog.md)). Studs auto-sized по высоте -
-коэффициенты spacing в [Формулах](../../../reference/formulas.md).
+## Как назвать в дереве и строка DFL
 
-## Частые пропуски
+Канон имени: `<категория> <сечение> <высота>`. Старые примеры с `x`
+(`ext 2x6 x`) означают то же самое: `x` стоит на месте высоты.
 
-- Rigid insulation.
-- R6 Zip wall system.
-- 5/8" Densglass on levels or elevations called out by wall type schedule.
-- Dropped soffit frames from RCP pages.
-- Garage doors quantity on first-floor/garage wall takeoff.
-- Corner studs and corners by floor.
-- Exterior blocking changing to FRT because the exterior wall material is FRT.
-- Parapet framing that follows the exterior wall material rule.
-- Exterior gypsum sheathing на metal стенах (material нужен, даже если studs чужие).
-- `Insulation at CMU` - отдельная строка от обычной wall insulation.
-- Window jambs (доска) в проёмах metal стен; flashing at Mtl/CMU walls.
+| Имя в дереве | Что это | Строка DFL | Unit |
+| --- | --- | --- | --- |
+| `ext 2x6 9.09` | Наружная 2x6 высотой 9.09' | `Studs Ext`, `Plates Ext (1) btm` P.T., `Plates Ext (2) dbl top` | pcs, LFT |
+| `corr 2x6 11.7` | Коридорная, см. [Corridor](corridor.md) | `Studs Corr`, `Plates Corr` | pcs, LFT |
+| `dem 2x6 9.09` | Межквартирная, см. [Demising](demising.md) | `Studs Demising`, `Plates Demising` | pcs, LFT |
+| `dem (2) 2x6 9.09` | Двойная demising, два одинаковых каркаса | две группы строк | pcs, LFT |
+| `furr 2x4 9.09` | Furring wall, см. [Furring](furring.md) | `Plates Furring`, `Furring` | LFT |
+| `2x4 9.09` | Обычная перегородка без префикса | `Studs Interior`, `Plates Interior` | pcs, LFT |
+| `2x6 half` | Половинная стена | по высоте из имени | pcs, LFT |
 
+Со стеной в DFL идут `Bracing Ext Walls 2x4`, `Blocking`, `Wall Sheathing`,
+`Vapor Barrier` (подпись шаблона; материал - WRB из спецификации, не Tyvek по
+умолчанию), `Insulation`, `Holdowns` и
+`Ext. Headers`. Факторы стоек (16" = 1.1, 24" = 0.625) - один канон в
+[Формулах](../../../reference/formulas.md#stud-spacing-factors). Кнопка `WL`
+полосы XL переносит стены в блок этажа; суффикс после высоты (`ext 2x6 10.09
+5/S400`) отделяется сам.
 
-<!-- confluence-gallery:start -->
-## Визуальная проверка
+Правила слоёв - на отдельных страницах: [Wall Sheathing](../sheathing/wall-sheathing.md),
+[Exterior Wall Materials](../sheathing/exterior-materials.md). FRT: если
+наружная стена FRT, то FRT и blocking, и парапет, и headers в её плоскости.
+Build-out фасада считай отдельно на вертикаль и горизонталь, FRT по узлу.
+Metal stud и CMU стены: каркас by others, но exterior gypsum, insulation,
+flashing и window jambs остаются нашими ([Metal Tracks](metal-tracks.md)).
 
-Архивные иллюстрации помогают прочитать правило. Для своего takeoff сверь его с чертежами и scope текущего проекта.
+## Частые ошибки
 
-??? info "Источник картинок"
-    - Exterior (наружные стены): 16 карт. Confluence (архивный источник; ссылка не публикуется)
+- Высота стойки взята как floor-to-floor или отметка потолка.
+- Тип стены задан группой: corridor и demising перепутаны, кусок demising попал в exterior.
+- P.T. plate на деревянном перекрытии: P.T. только на бетоне и кладке.
+- Двойная нижняя plate везде, хотя деталь показывает её только на части этажей.
+- В строке барьера записан Tyvek при fluid-applied WRB: продукт из спецификации.
+- Проёмы вычтены из обшивки дважды или не вычтены вовсе.
+- Пропущены rigid insulation, Densglass по зонам фасада, dropped soffit с RCP.
 
-<details class="kb-figures">
-  <summary>Показать 16 иллюстраций</summary>
-  <div class="kb-figure-grid">
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-109.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-109.png" alt="Exterior Wall - визуальная проверка 01: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-110.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-110.png" alt="Exterior Wall - визуальная проверка 02: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-111.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-111.png" alt="Exterior Wall - визуальная проверка 03: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-112.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-112.png" alt="Exterior Wall - визуальная проверка 04: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-113.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-113.png" alt="Exterior Wall - визуальная проверка 05: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-114.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-114.png" alt="Exterior Wall - визуальная проверка 06: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-115.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-115.png" alt="Exterior Wall - визуальная проверка 07: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-116.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-116.png" alt="Exterior Wall - визуальная проверка 08: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-117.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-117.png" alt="Exterior Wall - визуальная проверка 09: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-118.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-118.png" alt="Exterior Wall - визуальная проверка 10: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-119.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-119.png" alt="Exterior Wall - визуальная проверка 11: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-120.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-120.png" alt="Exterior Wall - визуальная проверка 12: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-121.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-121.png" alt="Exterior Wall - визуальная проверка 13: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-122.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-122.png" alt="Exterior Wall - визуальная проверка 14: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-123.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-123.png" alt="Exterior Wall - визуальная проверка 15: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-124.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-124.png" alt="Exterior Wall - визуальная проверка 16: Проверь wall type, height, sheathing/WRB, FRT и bottom-plate accessories." loading="lazy"></a>
-  </div>
-</details>
-<!-- confluence-gallery:end -->
+Разбор с примерами: [все ошибки по стенам](../../../start/common-mistakes.md#walls).
+
+## Пример
+
+```text
+walls/
+  1st floor walls/
+    ext 2x6 9.09      Line, 412.3 LFT
+    corr 2x6 9.09     Line, 161.0 LFT
+    dem (2) 2x4 9.09  Line, 96.5 LFT
+    2x4 9.09          Line, 540.8 LFT
+  2nd floor walls/
+    ext 2x6 8.45      Line, 410.9 LFT
+```
+
+## См. также
+
+- [Bearing Walls](bearing-walls.md), [Sill Plates](sill-plates.md), [Corners](corners.md)
+- [Wall Panels](wall-panels.md): что в панели, что loose
+- [Имена takeoffs и точки листа](../../../reference/takeoff-naming.md)
+- [Windows and Doors](../openings/windows-doors.md), [Headers](../openings/headers.md)
+- [Советы и важные вещи](../../../reference/boss-feedback-rules.md#studs)

@@ -1,131 +1,110 @@
-# Shaft Walls
-
-**Shaft wall** - это стена шахты, ограждение **вертикальных шахт** в здании. На чертежах под `shaft wall` обычно понимают:
-
-- **elevator shaft** - шахты лифтов;
-- **vent shaft** - вентиляционные каналы;
-- **trash chute** - мусоропроводы;
-- **mechanical/communications shafts** - pipes, cables, ducts.
-
-Shaft wall почти всегда fire-rated. На takeoff/DFL обычно встречаются два рабочих типа:
-`2-1/2" CH + J-channel` или `2" H + C-channel`. Размер и тип всегда бери из wall type/detail.
-
-## Что считать
-
-- CH studs.
-- J-channels.
-- 1" liner panels.
-- Fire-wall hanger conditions, когда joists hang over shaft walls.
-- Для `2"` H/C assemblies: H-channels vertical/horizontal и C-channels perimeter.
-- Shaft walls не пропускай как "панели by others" автоматически: если wall type/detail дает shaft assembly,
-  отрази его отдельными строками в takeoff/DFL.
-
-## Two common shaft-wall types
-
-Если detail/wall type прямо не уточняет другое, сначала проверь эти два типовых варианта.
-Не смешивай их в один блок: у них разные channels и разные формулы для panels/horizontal rows.
-
-### Type 1: 2-1/2" CH + J-channel
-
-Обычно для CH-stud shaft wall assembly с одним слоем 1" shaftliner:
-
-| Item | Typical |
-| --- | --- |
-| Studs | 2-1/2" CH studs |
-| Horizontal tracks/channels | 2-1/2" J-channel |
-| Liner | 1" liner panel |
+# Shaft Walls (стены шахт)
 
 <figure markdown>
-  ![C-T stud, J-track and J-L corner profiles with dimensions](../../../assets/images/confluence/confluence-129.png)
-  <figcaption>Профили Type 1: <strong>C-T (CH) stud</strong> (`2-1/2"/4"/6"`, полка `1-5/8"`), <strong>J-track</strong> и <strong>J-L corner</strong>. Размер studs/tracks бери из wall type.</figcaption>
+  ![2" H-stud и C-runner с панелями shaftliner](../../../assets/images/walls/shaft-h-c-assembly.jpg)
+  <figcaption markdown="span">Сборка Type 2: панели 1" x 24" shaftliner между 2" H-studs, по периметру 2" C-runner. Источник: PABCO Gypsum, H-Stud ASW.</figcaption>
 </figure>
 
-DFL rows:
+## Что это
 
-| Row | Material | Formula | Stock |
-| --- | --- | --- | --- |
-| Linear Panels | 1" Shaft Panels | `ОКРВВЕРХ(LFT * 1.1 / 24; 2)` | 12 (2x12 Panels) |
-| CH Channels Vertical | 2-1/2" CH-channels | `ОКРВВЕРХ(LFT * 0.5 * 1.1 / Stock LF; 2)` | 12 |
-| J Channels Horizontal | 2-1/2" J-channels | `ОКРВВЕРХ(Horizontal LFT * 1.1 / Stock LF; 2)` | 12 |
+Shaft wall - ограждение вертикальной шахты: лифт, вентканал, trash chute,
+mechanical. Почти всегда fire-rated и почти всегда из металлических
+профилей с гипсовым liner, поэтому это не обычная перегородка и не
+[Metal Tracks](metal-tracks.md). Два рабочих типа: `2-1/2" CH + J-channel`
+(один слой liner) и `2" H + C-channel` (два слоя). Лифт из CMU деревянного
+или liner-каркаса не даёт.
 
-### Type 2: 2" H + C-channel
+## Где искать на чертежах
 
-Обычно для H-channel assembly (area separation / party fire wall), где detail требует
-H-channels и perimeter C-channel. Панели здесь идут **в два слоя** 1" liner -
-поэтому в формуле panels стоит множитель `* 2`:
-
-| Item | Typical |
+| Лист | Что взять |
 | --- | --- |
-| Vertical channels | 2" H-channels (H-studs) |
-| Horizontal channels | 2" H-channels |
-| Perimeter channels | 2" C-channels (C-runner) |
-| Liner | 1" shaft panel, 2 слоя |
+| Планы этажей `a101` | Где реально стоят шахты: лифт, chute, vent, mech |
+| Wall type schedule (`wt`), тип `7A` и подобные | CH или H, размер профиля, слои liner, gypsum снаружи |
+| Детали шахты `a806` | Перимeтральные channels, стык с перекрытием, переход в дерево |
+| Разрезы | Высота шахты по этажам; где шахта кончается выше потолка |
+| S-планы | Hangers над шахтой (`DHU`), когда joists заходят над fire wall |
+
+## Как мерить в OurPlanCore
+
+Инструмент **Line**, единица LFT, по периметру шахты на плане каждого этажа.
+Своя позиция на тип сборки и высоту; ветка - `walls/<этаж> floor walls`,
+имя по типу стены и высоте (например `shaft 7A 10.5`).
+
+!!! warning "Уточняется"
+    Единого канона имени для shaft в дереве нет; кнопка `SHF` полосы XL
+    собирает блок Shaft walls над первым framing-листом.
+
+1. Типовая деталь сама по себе не количество: найди каждую шахту на плане.
+2. Материал фиксируй всегда: CMU-лифт, metal shaftliner, дерево. Шахту не
+   выбрасывай по общей ноте `walls are panels by others`.
+3. Переход дерево-шахта выше потолка не множь на полную высоту этажа.
+4. Если wall type даёт shaft assembly, а план только resilient channel,
+   считай resilient channel отдельно, не полную шахту.
+
+## Как назвать в дереве и строка DFL
+
+Type 1, `2-1/2" CH + J-channel`, один слой liner:
+
+| Строка DFL | Материал | Unit | Формула |
+| --- | --- | --- | --- |
+| `Linear Panels` | `1" Shaft Panels` | 2x12 panels | `LFT x 1.1 / 24`, до 2 |
+| `CH Channels Vertical` | `2-1/2" CH-channels` | 12' | `LFT x 0.5 x 1.1 / 12`, до 2 |
+| `J Channels Horizontal` | `2-1/2" J-channels` | 12' | `горизонталь LFT x 1.1 / 12`, до 2 |
+
+Type 2, `2" H + C-channel`, два слоя liner (в панелях множитель `x 2`):
+
+| Строка DFL | Материал | Unit | Формула |
+| --- | --- | --- | --- |
+| `Linear Panels` | `1" Shaft Panels` | 2x12 panels | `LFT x 2 x 1.1 / 24`, до 2 |
+| `Channels Vertical` | `2" H-channels` | 12' | `LFT x 0.5 x 1.1 / 12`, до 2 |
+| `Channels Horizontal` | `2" H-channels` | 12' | `горизонталь LFT x 2 x 1.1 / 12`, до 2 |
+| `Channels Perimeter` | `2" C-channels` | 12' | `периметр LFT x 1.1 / 12`, до 2 |
+
+Полный разбор формул - [Формулы: Shaft Walls](../../../reference/formulas.md#shaft-walls).
+Состав без детали пиши с `assumed; verify`. Resilient channels:
+`CEILING(area x 12 / spacing x 1.1, 10)` только где показаны в типе стены;
+metal RC под перекрытием обычно by others.
 
 <div class="kb-gallery">
+  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-129.png">
+    <img src="../../../../assets/images/confluence/confluence-129.png" alt="Профили C-T stud, J-track и J-L corner" loading="lazy">
+    <div class="kb-gallery__caption">Type 1: C-T (CH) stud 2-1/2", 4", 6", J-track и J-L corner. Размер из wall type.</div>
+  </a>
   <a class="kb-gallery__item" href="../../../../assets/images/walls/shaft-h-stud.png">
-    <img src="../../../../assets/images/walls/shaft-h-stud.png" alt="2 inch H-stud profile with dimensions" loading="lazy">
-    <div class="kb-gallery__caption">2" H-stud (2" × 1-1/2") - вертикальный: 1" панели входят в пазы с двух сторон</div>
+    <img src="../../../../assets/images/walls/shaft-h-stud.png" alt="2 inch H-stud" loading="lazy">
+    <div class="kb-gallery__caption">Type 2: 2" H-stud, панели входят в пазы с двух сторон.</div>
   </a>
   <a class="kb-gallery__item" href="../../../../assets/images/walls/shaft-c-runner.png">
-    <img src="../../../../assets/images/walls/shaft-c-runner.png" alt="2 inch C-runner profile with dimensions" loading="lazy">
-    <div class="kb-gallery__caption">2" C-runner / C-channel (2-1/8" × 1") - perimeter: top, bottom, end cap</div>
+    <img src="../../../../assets/images/walls/shaft-c-runner.png" alt="2 inch C-runner" loading="lazy">
+    <div class="kb-gallery__caption">Type 2: 2" C-runner по периметру: top, bottom, end cap.</div>
+  </a>
+  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-131.png">
+    <img src="../../../../assets/images/confluence/confluence-131.png" alt="1 inch gypsum shaftliner" loading="lazy">
+    <div class="kb-gallery__caption">1" shaftliner: один слой в Type 1, два слоя в Type 2. Отдельная строка.</div>
   </a>
 </div>
 
-<figure markdown>
-  ![2 inch H-stud and C-runner shaft wall assembly with 1 inch shaftliner panels](../../../assets/images/walls/shaft-h-c-assembly.jpg)
-  <figcaption>Сборка Type 2: панели <strong>1" × 24" shaftliner</strong> вставляются между <strong>2" H-studs</strong>, по периметру (top, bottom, end cap) - <strong>2" C-runner</strong>. Источник: PABCO Gypsum, H-Stud ASW.</figcaption>
-</figure>
+## Частые ошибки
 
-DFL rows:
+- Лифт из CMU записан как shaftliner, или chute wall type 7A пропущен вовсе.
+- Шахты выброшены как "panels by others".
+- Два типа смешаны в один блок: у них разные channels и разные формулы.
+- Переход дерево-шахта умножен на полную высоту этажа.
+- Hangers над шахтой взяты `ITS` вместо `DHU` по детали.
+- Resilient channel посчитан как полная шахта.
 
-| Row | Material | Formula | Stock |
-| --- | --- | --- | --- |
-| Linear Panels | 1" Shaft Panels | `ОКРВВЕРХ(LFT * 2 * 1.1 / 24; 2)` | 12 (2x12 Panels) |
-| Channels Vertical | 2" H-channels | `ОКРВВЕРХ(LFT * 0.5 * 1.1 / Stock LF; 2)` | 12 |
-| Channels Horizontal | 2" H-channels | `ОКРВВЕРХ(Horizontal LFT * 2 * 1.1 / Stock LF; 2)` | 12 |
-| Channels Perimeter | 2" C-channels | `ОКРВВЕРХ(Perimeter LFT * 1.1 / Stock LF; 2)` | 12 |
+Разбор с примерами: [все ошибки по стенам](../../../start/common-mistakes.md#walls).
 
-`Stock LF` is the stock length cell, usually `12`. Use the measured LFT source that matches the row:
-overall shaft-wall LFT, horizontal run LFT, or perimeter LFT.
+## Пример
 
-<figure markdown>
-  ![1 inch gypsum shaftliner panel](../../../assets/images/confluence/confluence-131.png)
-  <figcaption><strong>1" shaftliner</strong> - одна и та же гипсовая панель-вкладыш для обоих типов: в Type 1 - один слой между CH-studs, в Type 2 - два слоя между H-studs. Отдельная строка.</figcaption>
-</figure>
+```text
+walls/2nd floor walls/
+  shaft 7A 10.5        Line, 64.0 LFT     Notes: A806 det 3, 2-1/2" CH + 1" liner
+  shaft elev 10.5      Line, 48.0 LFT     Notes: CMU per S201, framing by others
+```
 
-!!! note "Формулы shaft wall"
-    CH-channels, J-channels и liner-панели считаются по формулам в
-    [Формулы - Shaft Walls](../../../reference/formulas.md#shaft-walls).
+## См. также
 
-## Проверить
-
-- Chute Shaft wall A201/A806, wall type 7A - recurring miss.
-- DHU/DGU hanger conditions относятся сюда, когда joists hang over the firewall.
-- Shaft hangers помечай отдельно by floor для review.
-- Typical shaft details сами по себе недостаточны; найди реальный shaft location
-  на plans. Начни с trash/vent/mechanical shafts, потом проверь referenced detail.
-- Если wall type показывает shaft assembly, но plan calls out только resilient
-  channel, считай resilient channel condition отдельно вместо full shaft-wall quantity.
-- `7/8"` resilient channel может быть ceiling/strapping item и применяться на
-  всех levels, минус dropped metal-frame areas; проверь RCP/ceiling notes.
-
-## See also
-
-- [Формулы - Shaft Walls](../../../reference/formulas.md#shaft-walls) , [Demising Walls](demising.md) , [Hangers](../../../reference/hangers.md)
-
-<!-- confluence-gallery:start -->
-## Ещё примеры (shaft / fire wall)
-
-??? info "Источник картинок"
-    - Shaft (противопожарные стены): 5 карт. Confluence (архивный источник; ссылка не публикуется)
-
-<details class="kb-figures">
-  <summary>Показать ещё 3 иллюстрации</summary>
-  <div class="kb-figure-grid">
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-130.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-130.png" alt="Shaft / fire wall узел 02" loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-132.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-132.png" alt="Shaft / fire wall узел 04" loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-133.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-133.png" alt="Shaft / fire wall узел 05" loading="lazy"></a>
-  </div>
-</details>
-<!-- confluence-gallery:end -->
+- [Формулы: Shaft Walls](../../../reference/formulas.md#shaft-walls), [Demising Walls](demising.md)
+- [Metal Tracks](metal-tracks.md), [Hangers](../../../reference/hangers.md)
+- [Wall Panels](wall-panels.md): шахта не исключается общей нотой

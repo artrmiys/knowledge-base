@@ -50,10 +50,11 @@ nav:
 
   - Старт:
       - Как пользоваться: start/how-to-use.md
-      - Workflow: start/workflow.md
-      - Структура takeoff: start/takeoff-structure.md
-      - QA checklist: start/quality-checklist.md
-      - Правила клиентов: start/client-rules.md
+      - Процесс работы: start/workflow.md
+      - Дерево takeoff и имена листов: start/takeoff-structure.md
+      - Проверка перед сдачей: start/quality-checklist.md
+      - Частые ошибки: start/common-mistakes.md
+      - Правила клиентов и типов заказов: start/client-rules.md
 
   - OurPlanCore:
       - Начало работы: reference/ourplancore-start.md
@@ -77,6 +78,7 @@ nav:
               - Basement: work/vertical/walls/basement.md
               - Unit / Interior: work/vertical/walls/unit.md
               - Exterior: work/vertical/walls/exterior.md
+              - Bearing Walls (BW): work/vertical/walls/bearing-walls.md
               - Metal Tracks / CFMF: work/vertical/walls/metal-tracks.md
               - Corridor: work/vertical/walls/corridor.md
               - Demising: work/vertical/walls/demising.md
@@ -125,6 +127,7 @@ nav:
           - Box Sheathing: work/vertical/sheathing/box-sheathing.md
           - Truss Heel: work/vertical/sheathing/truss-heel.md
           - Shear Wall: work/vertical/sheathing/shear-wall.md
+          - Holdowns: work/vertical/sheathing/holdowns.md
       - Roof Misc / прочее:
           - Eve: work/sheathing-and-misc/eve.md
           - Rake: work/sheathing-and-misc/rake.md
@@ -171,18 +174,22 @@ nav:
           - EIFS / Stucco / Veneer: work/siding/eifs-stucco-veneer.md
           - Измерение: work/siding/measure.md
 
+  - Excel и DFL:
+      - "DFL: как устроена книга": reference/dfl-overview.md
+      - Подписи строк и формат: reference/takeoff-items.md
+      - Ноты в DFL: reference/standard-notes.md
+      - Блоки балконов, porch и holdowns: reference/dfl-blocks.md
+      - Макросы и клавиши Excel: reference/excel-hotkeys.md
+      - Формулы и факторы: reference/formulas.md
+
   - Справочник:
       - Советы и важные вещи: reference/boss-feedback-rules.md
       - Hangers: reference/hangers.md
-      - Hardware catalog (corpus): reference/hardware-catalog.md
-      - Quantity benchmarks: reference/quantity-benchmarks.md
+      - Hardware catalog: reference/hardware-catalog.md
       - Material catalog: reference/material-catalog.md
-      - Standard notes: reference/standard-notes.md
-      - Takeoff item labels: reference/takeoff-items.md
-      - Excel macro hotkeys: reference/excel-hotkeys.md
-      - Формулы и факторы: reference/formulas.md
       - Термины и спецификации: reference/industry-standards.md
-      - ИИ-ассистент и стратегия: reference/ai-assist-system.md
+      - Ориентиры количеств: reference/quantity-benchmarks.md
+      - ИИ-помощь эстиматору: reference/ai-assist-system.md
       - Редактору KB:
           - Обновление базы: start/maintenance.md
           - Картинки и схемы: start/images-and-schemas.md

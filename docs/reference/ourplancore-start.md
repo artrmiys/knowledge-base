@@ -75,7 +75,7 @@ Beam, Openings и J Area имеют собственные параметры и
 
 <figure markdown>
   ![Лист задаёт чертёж и масштаб, takeoff задаёт контейнер, замер связывает их](../assets/images/ourplanecore/project-workflow.svg)
-  <figcaption>Схема данных OurPlanCore; это пояснение связей, а не снимок интерфейса.</figcaption>
+  <figcaption markdown="span">Схема данных OurPlanCore; это пояснение связей, а не снимок интерфейса.</figcaption>
 </figure>
 
 | Сущность | Роль |

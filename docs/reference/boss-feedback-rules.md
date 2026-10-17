@@ -1,186 +1,143 @@
 # Советы и важные вещи
 
-Ключевая страница wiki: правила, собранные из реальных правок и фидбэка по
-проектам. Многих из этих вещей нет в общих гайдах по estimating - это локальная
-память команды.
+Здесь: правила, собранные из правок и замечаний по сданным работам, по темам. Многих из них нет в общих гайдах по estimating: это локальная память. Как выглядит ошибка и как её ловить - на странице [Частые ошибки](../start/common-mistakes.md); здесь только правило.
 
-## Rim Board
+<a id="walls"></a>
+
+## Стены и стойки { #studs }
+
+- Высота стойки = floor-to-floor минус subfloor, минус глубина перекрытия, минус plates. Floor-to-floor и отметка потолка высотой стойки не являются; проверять по разрезу каждого дома. Пример: `11'1" wall - 22" truss - 3/4" subfloor = 9'2" stud`. На COM точная высота до 1/8" в E строки студов.
+- Тип стены (ext, corr, dem, party) определяется по участкам wall schedule, не группой: кусок demising внутри наружной линии остаётся demising.
+- Нижняя plate P.T. только на бетоне и кладке. Двойная нижняя plate только там, где показывает деталь.
+- Факторы studs: [Stud spacing factors](formulas.md#stud-spacing-factors), `12 / 16 / 24 = 1.4667 / 1.1 / 0.625`. Joists считаются по другой таблице (`12 / spacing`). Здесь числа не дублируются.
+- Corridor 2x4 staggered = два ряда на 16" o.c., plates 2x6. Bearing walls нижних этажей могут требовать double studs: считать как Extra по stud schedule этажа.
+- Металлические стены: даже когда metal by others, строка или нота `Metal studs are by others` остаётся. Список клиентов - [Правила клиентов, Metal Studs](../start/client-rules.md#metal-studs).
+- Шахты всегда в книге, материал по чертежу (лифт из CMU - не деревянный shaftliner).
+- Внутренний гипсокартон, внутренний утеплитель и sound batt во frame-scope не считаем; утеплитель только наружный после обшивки, даже на CMU. Наружный гипс (паркинг, mech) считается.
+
+<figure markdown>
+  ![Staggered stud wall](../assets/images/confluence/confluence-062.png)
+  <figcaption markdown="span">Staggered stud wall: два ряда стоек 2x4 на общих plates 2x6. В книге два ряда studs на 16" o.c. и plates 2x6.</figcaption>
+</figure>
+
+## FRT { #frt }
+
+FRT задаёт тип конструкции из Code Compliance Summary, а не условная нота.
+
+| Тип конструкции | Что FRT |
+| --- | --- |
+| Type III | всё в плоскости наружной стены: studs, plates, headers, blocking, sheathing; деревянные стены ниже podium. LVL, PSL, LSL в этой плоскости запрещены, `LVL FRT` не пишется |
+| Type V-A, V-B | общего FRT нет; только где деталь прямо требует |
+| Любой | parapets и exterior blocking как наружная стена; subfloor: полосы 2' или 4' по периметру своего этажа; demising shear wall sheathing обычная, если schedule не говорит FRT; стены лестниц и шахт часто FRT по детали |
+
+`FRT` и `FRTW` на чертеже - одно требование. Нота `all wood materials at exterior to be FRT` = весь loose plywood снаружи FRT с `verify`.
+
+## Обшивка и WRB { #sheathing }
+
+- `19/32" = 5/8"`, не `1/2"`. Относится к plywood и OSB.
+- Структурный лист главнее по толщине; Zip по арх превалирует над структурной нотой, но с нотой. `7/16" Zip` на S и `Zip R-3` на A - один продукт, не расхождение.
+- Название обшивки проектное: `LP FlameBlock 2-sided` не равно `7/16 OSB FRT`; `5/8 EXT. SHEATHING` не превращать в Ply без основания; `CDX` только если так в спецификации.
+- Наружный барьер называется WRB или Air Barrier, не Vapor Barrier; продукт по спецификации (fluid-applied - не Tyvek).
+- Таблицы спецификации читать до конца: WS-1 (стены) и WRS-1 (кровля) - разные таблицы.
+- Слои по стрелкам детали: двойная стрелка на один штрих = два слоя, каждый своей строкой.
+- Panel-job: одна сторона обшивки в панели; считать только требуемую вторую. Наружная сторона SW уже в ext walls, нужна только внутренняя; двусторонний SW подписывать "с двух сторон", G = сумма двух лиц без ещё одного x2. `P` у марки = perforated, не две стороны.
+- Проёмы вычитать из обшивки, WRB, утеплителя, Z-girt и линии фундамента по своему этажу и один раз. Окна меньше 4' не вычитаются.
+- H-clips не нужны при T&G и при настиле толще порога спецификации; иначе по шагу опор, не "4 на лист". [H-clips](../work/horizontal/roof-framing/h-clips.md).
+- Измеренная площадь должна дойти до Excel и обновиться после правок в программе.
+
+## Wall panels { #wall-panels }
+
+Полный разбор, таблица scope и исключения под бетоном и при reconstruction: [Wall Panels](../work/vertical/walls/wall-panels.md).
+
+- В panelized scope стены рядом с CMU могут быть панелями. Соседство с CMU и имя `furring wall` сами по себе не делают стену stick и не основание для optional framing.
+- Не панели: стены под concrete slab, внутри existing frames, короткие и с irregular slope. Exterior build-up walls могут быть исключением - проверить конструкцию и scope, не исключать все build-ups автоматически.
+- Furring под siding и insulation - отдельные элементы по своему scope: [Furring](../work/vertical/walls/furring.md).
+- Headers внутри панелей не рисуются; отдельно только flush; при экспорте headers встают в блок стен этажа ниже.
+
+<a id="rim"></a><a id="blocking"></a>
+
+## Rim, ribbon, blocking { #rim-board }
 
 | Ошибка | Как правильно |
 | --- | --- |
-| `1-3/4 LVL Rim`, когда LVL не указан | `11-7/8" Rim` или product с пометкой assumed |
-| Rim разбит на 16' pieces | Держать rim в LFT (factor `1.05` для EWP, `1.1` для остального) |
+| `1-3/4 LVL Rim`, когда LVL не указан | `11-7/8" Rim`; LSL назван - `11-7/8" LSL Rim` |
+| Rim разбит на куски по 16' | rim в LFT с фактором `1.05` (EWP) или `1.1` |
+| Ribbon board при top chord bearing trusses | blocking между фермами, часто `(2) 2x6` |
 
-- Если LSL указан, пиши `11-7/8" LSL Rim`.
-- `1-3/4 LVL Rim` используется только когда к нему что-то крепится for strength,
-  например deck или corridor frame.
-- Rim нужен и at roof TJI, не только на floors.
+- `1-3/4 LVL Rim` только когда к rim крепится deck или corridor frame. С I-joists только engineered rim. Rim нужен и у roof TJI.
+- Стены 10' и выше - два ряда blocking. Blocking, drywall blocking, ribbon, ledger - LFT с 10% waste один раз ([Rim, ribbon, blocking](formulas.md#blocking-formulas)).
+- Ledger и его крепёж отдельными строками по детали (3 SDWS на торец фермы на 16"), вход по своему этажу.
+- Piggyback trusses: sleepers `2x6` между верхними частями ферм.
 
-## Blocking
+<figure markdown>
+  ![Ribbon board at floor trusses](../assets/images/confluence/confluence-061.png)
+  <figcaption markdown="span">Ribbon по стандарту производителя ферм на top chord: при top chord bearing вместо ribbon считается blocking между фермами.</figcaption>
+</figure>
 
-- Walls 10' и выше требуют two rows of blocking.
-- Blocking остаётся в LFT, если output прямо не требует pieces.
-- Для framing elements вроде drywall blocking, rim и upper walls используй 10%
-  waste.
-- Для top chord bearing trusses не добавляй 2x4 ribbon board; используй
-  blocking between trusses, часто `(2) 2x6`.
+<a id="hangers"></a>
 
-## FRT
+## Hangers, ties, holdowns { #dhu-dgu-vs-its }
 
-| Элемент | Правило |
-| --- | --- |
-| Exterior blocking | FRT, если exterior wall material = FRT |
-| Parapets | FRT, если exterior walls = FRT |
-| Subfloor perimeter | Проверить 2' или 4' FRT perimeter notes |
-| Demising shear wall sheathing | Regular sheathing, если schedule не говорит FRT |
-| Stair / CMU two-hour walls | Часто FRT; проверять details |
+- `DHU / DGU` только там, где joists висят над firewall у лестниц, лифтов, шахт; обычная demising с гипсом под перекрытием - `ITS`. DHU заметно дороже, помечать стояки отдельно для проверки.
+- Hangers на оба конца каждого joist, по сборкам; снаружи `Zmax`; ties к фермам под обшивкой без `Zmax`. Формат записи - [Hangers, как записывать](hangers.md#dfl-format).
+- Roof-to-wall ties по всем линиям опирания, шаг = шаг ферм, `H3` с обеих сторон фермы и base ties у каждой стойки, если деталь так даёт.
+- Holdowns: к бетону один, через деревянное перекрытие два; над балкой transfer holdown не нужен (указание клиента); явно показанный инженером крепёж не удалять. Блок в конце секции стен этажа: [Блоки](dfl-blocks.md#holdowns).
+- `A35 / LTP4` на shear walls по SW schedule и деталям: если schedule их называет, считать по шагу.
+- Анкеры shear walls разносить по шагу, в E марка SW, в B тип и размер из anchorage schedule; wedge anchor на Titen HD не менять без основания; plate washers по таблице, не универсальные 3x3.
 
-## DHU / DGU vs ITS
+<figure markdown>
+  ![Holdown detail at foundation](../assets/images/confluence/confluence-028.png)
+  <figcaption markdown="span">Деталь holdown у фундамента: threaded rod anchor, holdown на chord studs, plate washer на анкере SW. К бетону одна строка `Holdowns (1) btm`.</figcaption>
+</figure>
 
-- DHU/DGU только там, где joists hang over firewall conditions at stairs,
-  elevators или shafts.
-- Regular demising conditions, где gypsum stops under the floor, обычно используют ITS.
-- DHU может стоить в разы больше ITS, поэтому перед listing проверяй details.
-- Stair / Elevator / Shaft hangers помечай отдельно, чтобы review был ясным.
+## Кровля { #roof }
 
-## Studs
+- Уклон с листа, применяется один раз; у каждого корпуса свой. Overframe не добавлять автоматом.
+- Eaves все участки; canopy не входит в eve и rake. Frame for Eave по разрезу: алюминиевый карниз не считается.
+- Truss bracing на всю площадь под крышей, включая гараж.
+- Kickers только там, где они есть на детали; firewall и gable kickers по шагу детали.
+- Soffit: деревянный каркас считаем, алюминиевый soffit нет; 5/8" exterior gypsum на canopies и porch; обе площади soffit идут в обшивку и WRB.
+- Draft stop чердака отдельно от fireblock, по зонам roof plan, строка в `Gable Walls`; не копировать из суммы shear.
+- Парапеты по узлам с заходом вокруг rim, раскрой реальный, coping отдельной строкой или в Drip Edge.
 
-Boss-rule: на `16" o.c.` считай **1:1 + 10% waste** (одна стойка на фут), а
-**не** геометрические `0.75`. На `24" o.c.` - `0.5 + 25% waste`. Это покрывает
-corners, T-пересечения, jack/king/cripple и обрезь.
+## Балки, посты, лестницы { #framing }
 
-- **Числа - в одной таблице:** [Формулы - Stud spacing factors](formulas.md#stud-spacing-factors)
-  (`12/16/24 = 1.4667/1.1/0.625`). Не дублируй её здесь, чтобы значения не
-  разошлись. Joists считаются **по другой** таблице (`12/spacing`).
-- На больших COM jobs используй exact heights: `9'0-3/8"`, `9'1-1/8"` и т.д.
-- Пример math: `11'1" wall - 22" truss - 3/4" subfloor = 9'2" stud`.
-- Corridor 2x4 staggered означает two rows at 16" o.c.; plates должны быть 2x6.
-- Bearing walls on lower floors могут требовать double studs по structural notes.
+- Каждая марка балки на каждом этаже, где показана; PSL под концами балок по schedule.
+- Имя балки в программе несёт длину с округлением инструмента Beam: до 8' вверх до целого фута, длиннее до чётного.
+- Cap и base на каждую стойку по детали; непрерывный пост один раз на верхнем этаже, который он держит.
+- Nailer на стальной балке: сверху 3x DF, снизу отдельно 2x; болты по балкам своего этажа.
+- Болты, шайбы, гайки раздельными формулами; одна шайба на болт, две при дереве с обеих сторон; гвозди не считать; у screws шайбы и гайки не нужны.
+- Лестницы умножать на число лестниц; два марша - stringers 2x12, не LVL из шаблона; `2x12 Tread` и `1x8 Riser`.
+- Мелкие конструкции не забывать: roof hatch curb, mechanical platforms, sign backing, trash enclosure, ограждения с крепежом; blocking кухни и ванной.
 
-## Sheathing
+## Балконы и porch { #deck }
 
-- **H-clips не нужны для T&G plywood.** H-clips учитываются только для
-  square-edge plywood; сначала проверь тип кромки в спецификации.
-  [Пояснение, схема и подсчёт](../work/horizontal/roof-framing/h-clips.md).
-- `19/32"` equals `5/8"`, not `1/2"`.
-- Exterior sheathing идёт по Arch / energy / Zip notes, если Structural не даёт
-  более сильное non-Zip requirement.
-- Interior sheathing идёт по Structural.
-- Zip sheathing на exterior walls перекрывает structural sheathing notes, но
-  оставляй note.
-- Optional walls могут требовать full-height sheathing, а loose/box sheathing
-  остаётся box only.
+- Posts на улице всегда P.T.; под крышей обычные. Railing composite как система, wood painted поэлементно; два поста на балкон.
+- Porch считается отдельно от балконов; porch SQFT на Front Page заполнять даже при porch над балконом.
+- Ceiling joists porch + ledger + hangers обязательны; каркас не показан - нота. Полный состав: [Блоки балконов, porch и holdowns](dfl-blocks.md).
 
-## Wall panels
+## Двери { #doors }
 
-Полный разбор, таблица scope и наши исключения под бетоном / при reconstruction:
-[Wall Panels](../work/vertical/walls/wall-panels.md).
+- Unit entry doors из коридора обычно fire rated: `3070 Entry`, `2670 FCW`, `3070 HM C-lbl`; формат строки `3070 1 unit MARK FIRE LABEL`.
+- Двери шире 4' как двойные: `5070` = `(2)2670`. Hardware numbers в takeoff не идут.
+- Casing в LFT по трём сторонам двери; jambs межкомнатных дверей считать точками по юнитам, группа по сечению соседней стены (точка у `2x6` = jamb 2x6).
 
-В panelized scope стены рядом с CMU могут быть изготовлены как panels.
-Соседство с CMU и название `furring wall` сами по себе не делают стену stick
-framing и не являются основанием добавлять optional framing.
+## Interior trims { #trims }
 
-К non-panel walls относятся стены под concrete slab, внутри existing frames,
-короткие стены и стены с irregular slope. Exterior build-up walls могут быть
-исключением - проверь конкретную конструкцию и scope. Не исключай все exterior
-build-ups из panels автоматически.
+- Room schedule: только wood base (`Wd`); tile base исключать.
+- Corridors, lobbies и другие common areas отдельно: trim type может отличаться от units.
+- Crowns включаются, когда interior trim scope активен. Trims не указаны - `not specified`, не придумывать.
 
-Furring strips под siding/insulation проверяются по своему scope и details:
-это отдельные элементы, см. [Furring](../work/vertical/walls/furring.md).
+## Formatting и output { #formatting }
 
-Правила H-clips и wall panels уточнены по рабочему фидбэку 2026-10-09.
+- Этажи отдельно, даже одинаковые; заголовок секции `4th Floor Framing List is the same as 3rd Floor` вместо ноты.
+- Единицы: `LFT`, не `FT`; caps, bases, коннекторы в `pcs`. Подпись совпадает с расчётом; E = правильный лист или деталь; дюймы со знаком `"`.
+- Другой сорт отдельной строкой; copied detail labels поправлены; `Schedule`, не `Shedule`; этажи `1st`, `2nd`, `Loft`.
+- Материал из отдельной спецификации - нота `per customer note`. Unused rows удалять, кроме формул, которые питают расчёт стен.
+- Не менять местами count и length для joists; для duplex и повторяющихся корпусов множители проверять дважды.
+- Полная проверка перед сдачей: особенно позиции, которых очень много, и "ничего ли не задвоено".
 
-## Частые пропуски
+## См. также
 
-- `1/2" plywood underlayment` per floor assembly.
-- Piggy truss sleepers: often 2x6 between upper truss parts.
-- `1/4" Densedeck` or glass mat cover board at flat roofs.
-- Additional rigid XPS layer.
-- Drywall ledger: 2x4 at demising walls both sides and exterior walls one side
-  where parallel with framing.
-- Chute shaft wall A201/A806, wall type 7A.
-- A35 clips at shearwall connections.
-- Jamb blocking for all windows and interior doors.
-- Kitchen and bath blocking.
-- Holdowns per S-details.
-
-## Doors
-
-- Unit entry doors from corridors обычно fire rated.
-- Используй labels вроде `3070 Entry`, `2670 FCW` или `3070 HM C-lbl`.
-- Door hardware numbers обычно не идут в takeoff list.
-- Interior door jamb trim может использовать casing divided by 2, если это
-  local estimating method.
-
-## Interior Trims
-
-- Room schedule: включай только wood base / `Wd`; tile base исключай.
-- Corridors, lobbies и другие common areas перечисляй отдельно, потому что trim
-  type может отличаться от units.
-- Crowns включаются, когда interior trim scope активен.
-- Если trims не указаны, пиши `not specified`, а не придумывай trim type.
-
-## Client Metal Rule
-
-Канонично - на странице [Правила клиентов - Metal Studs](../start/client-rules.md#metal-studs).
-Здесь не дублируем, чтобы списки клиентов не разошлись между двумя страницами.
-
-Главное правило: даже когда metal исключается, всё равно отмечай locations
-как `by others`.
-
-## Formatting и output
-
-- Не объединяй floors, даже если они одинаковые; copy data отдельно.
-- Добавляй note, когда floor frame identical to another floor.
-- Stair treads: указывай `2x12 Tread` и добавляй `1x8 Riser`.
-- Nails не считай; bolts и Simpson screws указывай, где они required.
-- Не оставляй copied detail labels без правки.
-- Пиши `Schedule`, не `Shedule`.
-- Floor labels: `1st`, `2nd`, `3rd`, `4th` и т.д.
-- Если material приходит из отдельного specification PDF, добавляй note вроде
-  `per customer note`.
-- Убирай unused rows/items из output, кроме formulas, которые всё ещё drive wall
-  calculations.
-- Не меняй местами count и length columns для joists и похожих repeated members.
-- Для duplex / repeated-building jobs проверяй multipliers дважды, чтобы не
-  пропустить half a building.
-
-
-<!-- confluence-gallery:start -->
-## Визуальная проверка
-
-Архивные иллюстрации помогают прочитать правило. Для своего takeoff сверь его с чертежами и scope текущего проекта.
-
-??? info "Источник картинок"
-    - Разное (QA feedback): 19 карт. Confluence (архивный источник; ссылка не публикуется)
-    - Need to sort: 4 карт. Confluence (архивный источник; ссылка не публикуется)
-
-<details class="kb-figures">
-  <summary>Показать 23 иллюстраций</summary>
-  <div class="kb-figure-grid">
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-011.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-011.png" alt="QA feedback - визуальная проверка 01: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-012.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-012.png" alt="QA feedback - визуальная проверка 02: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-013.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-013.png" alt="QA feedback - визуальная проверка 03: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-014.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-014.png" alt="QA feedback - визуальная проверка 04: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-015.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-015.png" alt="QA feedback - визуальная проверка 05: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-016.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-016.png" alt="QA feedback - визуальная проверка 06: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-017.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-017.png" alt="QA feedback - визуальная проверка 07: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-018.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-018.png" alt="QA feedback - визуальная проверка 08: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-019.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-019.png" alt="QA feedback - визуальная проверка 09: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-020.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-020.png" alt="QA feedback - визуальная проверка 10: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-021.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-021.png" alt="QA feedback - визуальная проверка 11: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-022.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-022.png" alt="QA feedback - визуальная проверка 12: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-023.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-023.png" alt="QA feedback - визуальная проверка 13: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-024.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-024.png" alt="QA feedback - визуальная проверка 14: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-025.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-025.png" alt="QA feedback - визуальная проверка 15: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-026.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-026.png" alt="QA feedback - визуальная проверка 16: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-027.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-027.png" alt="QA feedback - визуальная проверка 17: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-028.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-028.png" alt="QA feedback - визуальная проверка 18: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-029.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-029.png" alt="QA feedback - визуальная проверка 19: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-049.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-049.png" alt="QA feedback - визуальная проверка 20: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-050.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-050.png" alt="QA feedback - визуальная проверка 21: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-051.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-051.png" alt="QA feedback - визуальная проверка 22: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-    <a class="kb-figure" href="../../assets/images/confluence/confluence-052.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-052.png" alt="QA feedback - визуальная проверка 23: Преврати замечание в конкретный check перед отправкой." loading="lazy"></a>
-  </div>
-</details>
-<!-- confluence-gallery:end -->
+- [Частые ошибки](../start/common-mistakes.md), [QA checklist](../start/quality-checklist.md), [Правила клиентов](../start/client-rules.md)
+- [Формулы и факторы](formulas.md), [Ноты в DFL](standard-notes.md), [Hangers](hangers.md)

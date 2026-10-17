@@ -1,59 +1,78 @@
-# Overframes
+# Overframes (надстроенная крыша)
 
-**Overframe** - каркас крыши, надстроенный поверх нижней (piggy-back / framed-over
-roof). Много материала прячется в деталях, а не на плане: sleepers, sheathing
-overlap.
+<figure markdown>
+  ![Overframe зоны выделены красным](../../../assets/images/confluence/confluence-144.png)
+  <figcaption markdown="span">Архивный 3D-вид: красным выделены overframe - участки крыши, собранные поверх нижней крыши. Снизу под ними идёт настил основной крыши, сверху - свои rafters на sleepers.</figcaption>
+</figure>
 
-## Что считать
+<figure markdown>
+  ![Разрез overframe со sleepers](../../../assets/images/roof/overframe-section.svg)
+  <figcaption markdown="span">Разрез: нижняя крыша с настилом, на ней плашмя 2x6 sleepers (valley plates), на них rafters overframe и его настил. Sleepers, rafters и верхний настил - наши строки; нижний настил под overframe по детали.</figcaption>
+</figure>
 
-- Overframing members, sleepers, sheathing, and attachment details.
+## Что это
 
-## Правила
+Overframe (california framing, framed-over roof) - каркас крыши, построенный поверх уже обшитой нижней крыши: rafters опираются на 2x6 sleepers (valley plates), положенные плашмя на нижний настил. Так же собирают piggyback trusses: верхняя часть высокой фермы стоит на sleepers по нижней. Много материала прячется в деталях, а не на плане.
 
-- Piggy trusses - split upper trusses; считай 2x6 sleepers between parts, когда
-  shown.
-- Overframes can hide a lot of material in details, not plan view.
+## Где искать на чертежах
 
-## Проверить
+| Лист | Что взять |
+| --- | --- |
+| Roof plan (A) | контур overframe, уклон, где он ложится на нижнюю крышу |
+| Roof framing plan (S) | stick overframe или piggyback trusses, сечение rafters, шаг |
+| Details, sections | sleepers (`2x6 flat`, `2x6 bearing plates 4' o.c.`), ridge overframe, настил под overframe |
+| Truss notes | piggyback: sleepers 2x6 и их шаг, cover board |
 
-- Roof too tall / split truss conditions.
-- Sleeper spacing and length.
-- Cover board and roof layers above overframed areas.
+## Как мерить в OurPlanCore
 
+| Часть | Инструмент | Ветка и имя |
+| --- | --- | --- |
+| Площадь overframe | Area (A) | `sqfts/overframe <уклон>` (`overframe 4`), свой уклон |
+| Rafters overframe | J Area (J) | `framing/roof framing/joists/overframe 2x8 24"` |
+| Sleepers | Line (L) по линиям опирания rafters на нижнюю крышу | `framing/roof framing/details/sleepers` |
+| Ridge overframe | Beam (B) | `framing/roof framing/beams/ridge ...` |
 
-<!-- confluence-gallery:start -->
-## Визуальная проверка
+Площадь `overframe 4` считается отдельно от `rf 6` и уходит в roof sheathing со своим slope factor (один раз). Overframe не добавляется автоматически: его площадь и материалы только с чертежей этого дома.
 
-Архивные иллюстрации помогают прочитать правило. Для своего takeoff сверь его с чертежами и scope текущего проекта.
+<figure markdown>
+  ![Area по контуру](../../../assets/images/ourplancore/v3/measure-area-floor.png)
+  <figcaption markdown="span">Area по контуру зоны: площадь уходит в sqfts и дальше в расчёт листов.</figcaption>
+</figure>
 
-??? info "Источник картинок"
-    - Overframes (скрытая части крыши): 3 карт. Confluence (архивный источник; ссылка не публикуется)
+## Как назвать в дереве и строка DFL
 
-<details class="kb-figures kb-figures--rows" open>
-  <summary>Скрыть 3 правил с иллюстрациями</summary>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Overframe - визуальная проверка 01</div>
-      <div class="kb-figure-row__rule">Проверь hidden/framed-over roof areas, sleeper condition и sheathing overlap.</div>
-      <div class="kb-figure-row__note">Overframes легко пропустить, потому что они часто выглядят как второстепенная roof geometry.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-144.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-144.png" alt="Overframe - визуальная проверка 01: Проверь hidden/framed-over roof areas, sleeper condition и sheathing overlap." loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Overframe - визуальная проверка 02</div>
-      <div class="kb-figure-row__rule">Проверь hidden/framed-over roof areas, sleeper condition и sheathing overlap.</div>
-      <div class="kb-figure-row__note">Overframes легко пропустить, потому что они часто выглядят как второстепенная roof geometry.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-145.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-145.png" alt="Overframe - визуальная проверка 02: Проверь hidden/framed-over roof areas, sleeper condition и sheathing overlap." loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Overframe - визуальная проверка 03</div>
-      <div class="kb-figure-row__rule">Проверь hidden/framed-over roof areas, sleeper condition и sheathing overlap.</div>
-      <div class="kb-figure-row__note">Overframes легко пропустить, потому что они часто выглядят как второстепенная roof geometry.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-146.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-146.png" alt="Overframe - визуальная проверка 03: Проверь hidden/framed-over roof areas, sleeper condition и sheathing overlap." loading="lazy"></a>
-  </figure>
-</details>
-<!-- confluence-gallery:end -->
+| Имя в дереве | A (Label) | B | C | D | E |
+| --- | --- | --- | --- | --- | --- |
+| `sqfts/overframe 4` | `Roof Sheathing (overframes)` | по спецификации кровли | SQ FT x slope / 32 x 1.1 | `4x8` | лист |
+| `details/sleepers` | `Sleepers` | `2x6` | `=ОКРВВЕРХ(G/D;1)` | `16` | деталь |
+| `joists/overframe 2x8 24"` | `Rafters 24" o.c.` | `2x8` | по J Area | длины | |
+| piggyback | `Sleepers` или `Bearing Plates` | `2x6` по детали | по truss detail: шаг (часто 4' o.c.) по площади верхних ферм | `16` | truss detail |
+
+Piggyback - один узел, две записи одного и того же: в [Советах](../../../reference/boss-feedback-rules.md#roof) он записан как sleepers `2x6`, в [COM](../../../work-types/com.md) как `2x6 bearing plates 4' o.c.`. Считай по truss detail текущего дома одной строкой, не двумя.
+
+## Частые ошибки
+
+- Overframe добавлен "по привычке" или не добавлен, хотя на roof plan есть пристройка поверх ската.
+- Уклон overframe взят от основной крыши.
+- Sleepers забыты (около 400 досок 2x6 по 16' на большой многоэтажке).
+- Настил нижней крыши под overframe вычтен или посчитан дважды без детали.
+- Cover board и слои над overframe пропущены.
+- [Все ошибки по крыше](../../../start/common-mistakes.md#roof)
+
+## Пример
+
+| A | B | C | D | E |
+| --- | --- | --- | --- | --- |
+| `Roof Sheathing (overframes)` | `19/32" OSB` | 14 | 4x8 | `overframe 4, 410 SF` |
+| `Sleepers` | `2x6` | 12 | 16 | `4/S301` |
+| `Rafters 24" o.c.` | `2x8` | 22 | 12 | `S201` |
+
+<figure markdown>
+  ![Overframe вид 02](../../../assets/images/confluence/confluence-145.png)
+  <figcaption markdown="span">Второй участок overframe ближе: rafters пристройки лежат на скате нижней крыши, под ними виден её настил.</figcaption>
+</figure>
+
+## См. также
+
+- [Valley](valley.md), [Ridge](ridge.md), [Dormer](dormer.md), [Roof SQFT](../../sqfts/roof.md)
+- [Roof Sheathing](roof-sheathing.md), [COM](../../../work-types/com.md)

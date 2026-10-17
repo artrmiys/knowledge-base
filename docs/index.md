@@ -5,226 +5,204 @@ hide:
 ---
 
 <div class="kb-hero" markdown>
-<p class="kb-hero__eyebrow">Estimating wiki</p>
-<h1 class="kb-hero__title">База знаний по takeoff и estimating</h1>
+<p class="kb-hero__eyebrow">База знаний эстиматора E-Wood</p>
+<h1 class="kb-hero__title">Как мерить каркас в OurPlanCore 3.0 и заполнять DFL</h1>
 <p class="kb-hero__lede">
-Workflow, чек-листы, правила COM/EWP, советы из реальных правок и таблицы по Walls, Framing, Sheathing, Hangers - в одном месте.
+Процесс работы, дерево takeoff, правила по каждому элементу каркаса, Excel DFL и ноты,
+правила клиентов и частые ошибки. Поиск Ctrl+K ищет по английскому термину: "rim", "truss heel", "holdown".
 </p>
 <div class="kb-hero__actions" markdown>
-[Начать работу :octicons-arrow-right-24:](start/how-to-use.md){ .kb-hero__btn .kb-hero__btn--primary }
-[OurPlanCore](reference/ourplancore-start.md){ .kb-hero__btn .kb-hero__btn--ghost }
-[Советы и важные вещи](reference/boss-feedback-rules.md){ .kb-hero__btn .kb-hero__btn--ghost }
-[QA checklist](start/quality-checklist.md){ .kb-hero__btn .kb-hero__btn--ghost }
+[Я новичок](start/how-to-use.md){ .kb-hero__btn .kb-hero__btn--primary }
+[Мне надо померить ...](#measure){ .kb-hero__btn .kb-hero__btn--ghost }
+[OurPlanCore 3.0](reference/ourplanecore.md){ .kb-hero__btn .kb-hero__btn--ghost }
+[Частые ошибки](start/common-mistakes.md){ .kb-hero__btn .kb-hero__btn--ghost }
 </div>
 </div>
 
-## С чего начать { .kb-section-title .kb-st--cyan }
+## Четыре входа { .kb-section-title .kb-st--cyan }
 
 <div class="grid cards" markdown>
 
--   :material-map-legend:{ .lg .middle .kb-mk--cyan } **Workflow**
+-   :material-school:{ .lg .middle .kb-mk--cyan } **Я новичок**
 
     ---
 
-    Полный путь: подготовить PDF - разметить takeoff - экспорт в Excel - проверка перед отправкой.
+    Порядок чтения в первый день:
 
-    [:octicons-arrow-right-24: Открыть](start/workflow.md)
+    1. [Как пользоваться базой](start/how-to-use.md)
+    2. [Процесс работы по шагам](start/workflow.md)
+    3. [Дерево takeoff и имена листов](start/takeoff-structure.md)
+    4. [OurPlanCore 3.0: начало работы](reference/ourplancore-start.md)
+    5. [Типы работ](work-types/com.md) и [правила клиентов](start/client-rules.md)
+    6. [Проверка перед сдачей](start/quality-checklist.md)
 
--   :material-file-tree:{ .lg .middle .kb-mk--blue } **Структура takeoff**
-
-    ---
-
-    Как раскладывать листы, секции, scale и почему важна единая структура для COM/EWP.
-
-    [:octicons-arrow-right-24: Открыть](start/takeoff-structure.md)
-
--   :material-clipboard-check-outline:{ .lg .middle .kb-mk--green } **QA checklist**
+-   :material-ruler:{ .lg .middle .kb-mk--green } **Мне надо померить ...**
 
     ---
 
-    Проверка перед сдачей: формулы, waste, FRT, hangers, метал, нестыковки чертежей.
+    Группы по меню "Работа": стены, проёмы, обшивка, перекрытия, крыша, площади,
+    deck и porch, отделка. В каждой группе самые частые страницы одним кликом.
 
-    [:octicons-arrow-right-24: Открыть](start/quality-checklist.md)
+    [К группам](#measure)
 
--   :material-account-tie:{ .lg .middle .kb-mk--magenta } **Правила клиентов**
+-   :material-monitor:{ .lg .middle .kb-mk--blue } **Программа OurPlanCore 3.0**
 
     ---
 
-    Кто включает метал, кого считать "by others", особенности WM / Timberline / EBS / Probuild.
+    - [Интерфейс и инструменты](reference/ourplanecore.md)
+    - [Начало работы: первый проект](reference/ourplancore-start.md)
+    - [Горячие клавиши](reference/ourplancore-shortcuts.md)
+    - [Имена takeoffs и точки листа](reference/takeoff-naming.md)
+    - [Если что-то не работает](reference/ourplancore-troubleshooting.md)
 
-    [:octicons-arrow-right-24: Открыть](start/client-rules.md)
+-   :material-account-tie:{ .lg .middle .kb-mk--magenta } **Правила клиентов и советы**
+
+    ---
+
+    - [Правила клиентов и типов заказов](start/client-rules.md)
+    - [Советы и важные вещи](reference/boss-feedback-rules.md)
+    - [Частые ошибки и как их не делать](start/common-mistakes.md)
+    - [Hangers](reference/hangers.md), [Формулы и факторы](reference/formulas.md)
+    - [Стандартные notes](reference/standard-notes.md)
 
 </div>
 
-## Работа { .kb-section-title .kb-st--magenta }
+## Мне надо померить ... { #measure .kb-section-title .kb-st--magenta }
 
 <div class="grid cards" markdown>
 
--   :material-wall:{ .lg .middle .kb-mk--cyan } **Walls**
+-   :material-wall:{ .lg .middle .kb-mk--cyan } **Стены**
 
     ---
 
-    Sill / Unit / Exterior / Corridor / Demising / Gable / Parapet / Shaft / Furring / Corners.
+    [Exterior](work/vertical/walls/exterior.md),
+    [Corridor](work/vertical/walls/corridor.md),
+    [Demising](work/vertical/walls/demising.md),
+    [Unit / Interior](work/vertical/walls/unit.md),
+    [Sill Plates](work/vertical/walls/sill-plates.md),
+    [Wall Panels](work/vertical/walls/wall-panels.md),
+    [Shaft](work/vertical/walls/shaft.md),
+    [Parapet](work/vertical/walls/parapet.md),
+    [Metal Tracks](work/vertical/walls/metal-tracks.md)
 
-    [:octicons-arrow-right-24: Walls](work/vertical/walls/sill-plates.md)
-
--   :material-window-open-variant:{ .lg .middle .kb-mk--orange } **Openings**
-
-    ---
-
-    Окна, двери, headers и сопутствующее.
-
-    [:octicons-arrow-right-24: Openings](work/vertical/openings/windows-doors.md)
-
--   :material-floor-plan:{ .lg .middle .kb-mk--magenta } **Floor Framing**
+-   :material-window-open-variant:{ .lg .middle .kb-mk--orange } **Проёмы**
 
     ---
 
-    Post, Beam, Joist, Stair, Subfloor, Rim, Blocking, Bolts, Steel beam fillers.
+    [Windows and Doors](work/vertical/openings/windows-doors.md),
+    [Headers](work/vertical/openings/headers.md),
+    [Window Flashing](work/vertical/openings/window-flashing.md)
 
-    [:octicons-arrow-right-24: Floor Framing](work/horizontal/floor-framing/post.md)
-
--   :material-home-roof:{ .lg .middle .kb-mk--amber } **Roof Framing**
-
-    ---
-
-    Ridge, Hip, Valley, Dormer, Overframes, Canopy, Dbl/Trpl Rafters.
-
-    [:octicons-arrow-right-24: Roof Framing](work/horizontal/roof-framing/ridge.md)
-
--   :material-grid:{ .lg .middle .kb-mk--green } **Sheathing**
+-   :material-grid:{ .lg .middle .kb-mk--green } **Обшивка**
 
     ---
 
-    Wall / Floor / Roof / Gable / Box / Truss Heel / Shear Wall.
+    [Wall Sheathing](work/vertical/sheathing/wall-sheathing.md),
+    [Exterior Wall Materials](work/vertical/sheathing/exterior-materials.md),
+    [Shear Wall](work/vertical/sheathing/shear-wall.md),
+    [Roof Sheathing](work/horizontal/roof-framing/roof-sheathing.md),
+    [H-clips](work/horizontal/roof-framing/h-clips.md),
+    [Truss Heel](work/vertical/sheathing/truss-heel.md),
+    [Gable](work/vertical/walls/gable.md)
 
-    [:octicons-arrow-right-24: Sheathing](work/vertical/sheathing/wall-sheathing.md)
-
--   :material-square-outline:{ .lg .middle .kb-mk--blue } **SQFTs**
-
-    ---
-
-    Basement, 1st-5th, Loft, Roof, Deck, Porch, Balcony, Cantilevered.
-
-    [:octicons-arrow-right-24: SQFTs](work/sqfts/basement.md)
-
--   :material-deck:{ .lg .middle .kb-mk--violet } **Deck / Porch / Balcony**
+-   :material-floor-plan:{ .lg .middle .kb-mk--magenta } **Перекрытия**
 
     ---
 
-    Railing, Balcony Trims, Anchor Bolts.
+    [Joist](work/horizontal/floor-framing/joist.md),
+    [Beam](work/horizontal/floor-framing/beam.md),
+    [Post](work/horizontal/floor-framing/post.md),
+    [Stair](work/horizontal/floor-framing/stair.md),
+    [Rim Board](work/horizontal/floor-framing/details/rim.md),
+    [Blocking](work/horizontal/floor-framing/details/blocking.md),
+    [Subfloor](work/horizontal/floor-framing/subfloor.md)
 
-    [:octicons-arrow-right-24: Открыть](work/deck/railing.md)
-
--   :material-format-paint:{ .lg .middle .kb-mk--orange } **Interior Trims**
+-   :material-home-roof:{ .lg .middle .kb-mk--amber } **Крыша**
 
     ---
 
-    Base, Casing, Crown, Door/Window, Room Schedule.
+    [Ridge / Hip / Valley](work/horizontal/roof-framing/ridge.md),
+    [Overframes](work/horizontal/roof-framing/overframes.md),
+    [Dormer](work/horizontal/roof-framing/dormer.md),
+    [Canopy](work/horizontal/roof-framing/canopy.md),
+    [Eave](work/sheathing-and-misc/eve.md),
+    [Rake](work/sheathing-and-misc/rake.md),
+    [Flashing](work/sheathing-and-misc/flashing.md)
 
-    [:octicons-arrow-right-24: Interior Trims](work/interior-trims/overview.md)
+-   :material-square-outline:{ .lg .middle .kb-mk--blue } **Площади SQFT**
+
+    ---
+
+    [1st-5th Floors](work/sqfts/1st2nd.md),
+    [Basement](work/sqfts/basement.md),
+    [Roof](work/sqfts/roof.md),
+    [Balcony](work/sqfts/balcony.md),
+    [Porch](work/sqfts/porch.md),
+    [Cantilevered](work/sqfts/cantilevered.md)
+
+-   :material-balcony:{ .lg .middle .kb-mk--violet } **Deck / Porch / Balcony**
+
+    ---
+
+    [Frame](work/deck/deck-porch-balcony-frame.md),
+    [Railing](work/deck/railing.md),
+    [Anchor Bolts](work/deck/anchor-bolts.md),
+    [Rails and Decking](work/exterior-trims/rails-decking.md),
+    [Balcony build-up](work/exterior-trims/balcony-buildup.md)
+
+-   :material-home-city:{ .lg .middle .kb-mk--orange } **Отделка снаружи**
+
+    ---
+
+    [Exterior Trims](work/exterior-trims/overview.md),
+    [Soffit and Fascia](work/exterior-trims/soffit-fascia.md),
+    [Casing, Corner and Band](work/exterior-trims/casing-corner-band.md),
+    [Siding](work/siding/overview.md),
+    [Измерение siding](work/siding/measure.md)
+
+-   :material-format-paint:{ .lg .middle .kb-mk--cyan } **Отделка внутри**
+
+    ---
+
+    [Interior Trims](work/interior-trims/overview.md),
+    [Base](work/interior-trims/base.md),
+    [Crown](work/interior-trims/crown.md),
+    [Door and Window Trim](work/interior-trims/door-window-trim.md)
+
+-   :material-office-building:{ .lg .middle .kb-mk--green } **Типы работ**
+
+    ---
+
+    [Residential](work-types/residential.md),
+    [COM Commercial](work-types/com.md),
+    [EWP / Capital](work-types/ewp-capital.md),
+    [Reconstruction](work-types/reconstruction.md)
 
 </div>
 
-## Справочник { .kb-section-title .kb-st--amber }
+## Excel DFL { .kb-section-title .kb-st--amber }
 
 <div class="grid cards" markdown>
 
--   :material-lightbulb-on:{ .lg .middle .kb-mk--magenta } **Советы и важные вещи**
+-   :material-table:{ .lg .middle .kb-mk--amber } **Строки, ноты, формулы**
 
     ---
 
-    Реальные правила из правок: rim, blocking, FRT, DHU/ITS, studs, sheathing, doors, trims, output.
+    [Имена строк DFL](reference/takeoff-items.md),
+    [Стандартные notes](reference/standard-notes.md),
+    [Формулы и факторы](reference/formulas.md),
+    [Excel macro hotkeys](reference/excel-hotkeys.md),
+    [Material catalog](reference/material-catalog.md)
 
-    [:octicons-arrow-right-24: Открыть](reference/boss-feedback-rules.md)
-
--   :material-link-variant:{ .lg .middle .kb-mk--amber } **Hangers**
-
-    ---
-
-    ITS / HU / HIT / WP / MIT / GLTV - таблицы выбора по joist и beam.
-
-    [:octicons-arrow-right-24: Hangers](reference/hangers.md)
-
--   :material-calculator-variant:{ .lg .middle .kb-mk--cyan } **Формулы и факторы**
+-   :material-link-variant:{ .lg .middle .kb-mk--blue } **Крепёж**
 
     ---
 
-    Waste-факторы, формулы spacing, повторные коэффициенты - что не множить дважды.
-
-    [:octicons-arrow-right-24: Формулы](reference/formulas.md)
-
--   :material-keyboard-outline:{ .lg .middle .kb-mk--violet } **Excel macro hotkeys**
-
-    ---
-
-    VBA-shortcuts для cleanup, formatting и output записи после PlanSwift.
-
-    [:octicons-arrow-right-24: Hotkeys](reference/excel-hotkeys.md)
+    [Hangers](reference/hangers.md),
+    [Hardware catalog](reference/hardware-catalog.md)
 
 </div>
-
-## OurPlanCore - работа в программе { .kb-section-title .kb-st--green }
-
-Инструкции сверены с **2.2.7 Preview, 6 сентября 2026**. Выбери действие:
-
-<div class="grid cards" markdown>
-
--   :material-play-circle-outline:{ .lg .middle } **Первый проект**
-
-    ---
-
-    Открыть PDF, проверить масштаб, создать takeoff, сохранить и выдать результат.
-
-    [Начало работы](reference/ourplancore-start.md)
-
--   :material-ruler-square:{ .lg .middle } **Замеры и инструменты**
-
-    ---
-
-    Count, Line, Area, Joists, Beams, Openings, привязки, зеркала и отдельные окна.
-
-    [Полный справочник](reference/ourplanecore.md)
-
--   :material-keyboard-outline:{ .lg .middle } **Свои горячие клавиши**
-
-    ---
-
-    Назначить действие, найти конфликт, сохранить набор для себя или проекта.
-
-    [Настроить клавиши](reference/ourplancore-shortcuts.md)
-
--   :material-content-save-outline:{ .lg .middle } **Сохранение и копии**
-
-    ---
-
-    Файл .ourplan, старые папочные проекты, Save As, recovery и бекап.
-
-    [Проекты и хранение](reference/job-creation-storage.md)
-
--   :material-lifebuoy:{ .lg .middle } **Если что-то не работает**
-
-    ---
-
-    Найти скрытую команду, вернуть замер, разобраться с PDF, Excel и сохранением.
-
-    [Решение проблем](reference/ourplancore-troubleshooting.md)
-
--   :material-update:{ .lg .middle } **Что изменилось**
-
-    ---
-
-    Новые функции, исправления и проверенные ограничения текущего Preview.
-
-    [История изменений](reference/ourplancore-changelog.md)
-
-</div>
-
-!!! tip "Как добавлять картинки и схемы"
-    Полный гайд с шаблонами - [Картинки и схемы](start/images-and-schemas.md):
-    `<figure>` с подписью, две колонки "текст + схема", галереи, schema на всю
-    ширину, картинка внутри admonition.
 
 ---
 
-:material-magnify: Поиск (Ctrl/Cmd + K) индексируется на русском и английском.
+:material-magnify: Поиск (Ctrl+K) работает по русским и английским словам.

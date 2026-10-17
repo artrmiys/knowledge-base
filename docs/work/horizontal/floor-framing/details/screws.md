@@ -1,29 +1,57 @@
-# Screws
-
-**Screws** - structural/Simpson винты (SDS, SDW, SDWS и пр.) по деталям
-соединений. Считаются только когда явно called out; nails - нет.
+# Screws (структурные саморезы)
 
 <figure markdown>
   ![Structural screws in a built-up member](../../../../assets/images/framing/screws.svg)
-  <figcaption>Structural/Simpson screws по деталям соединений; не путать с bolts.</figcaption>
+  <figcaption markdown="span">Structural screws (SDS, SDWS, SDWC) по деталям соединений: ledger к фермам, пакеты LVL, замена ties. Считаются в pcs по шагу или по числу на узел.</figcaption>
 </figure>
 
-## Что считать
+<!-- TODO-PHOTO: Simpson SDWS structural screws in a ledger, EN query "Simpson SDWS structural screw ledger" -->
 
-- Simpson screws и structural screws, которые called out by details.
+## Что это
 
-## Правила
+Screws - структурные саморезы из деталей: `SDS 1/4 x 4 1/2`, `SDWS 22" ledger screw`, `SDWC` (в замену H2.5A). Считаются только когда деталь их называет; гвозди не считаем. Шайбы и гайки у screws не нужны. Болты - [Bolts](bolts.md).
 
-- Screws считаются, когда details specifically call them out.
-- Не смешивай screw и bolt detail labels.
-- Nails обычно excluded.
+## Где искать на чертежах
 
-## Проверить
+| Лист | Что взять |
+| --- | --- |
+| Ledger details | тип screw, шаг или число на торец фермы (например, 3 на торец @ 16") |
+| Built-up beam, multi-ply LVL details | SDS на пакет, шаг и ряды |
+| Roof-to-wall details | `6" SDWC in lieu of H2.5A`: либо clips, либо screws, не оба |
+| Stair detail | screws нижней опорной доски stringers |
 
-- Detail 1 и detail 3 могут выглядеть похоже, но использовать different fasteners.
-- Screw notes держи рядом с related connection item.
+## Как мерить в OurPlanCore
 
-## See also
+Длина из Line детали (`details/2x10 ledger + screws`, `details/12/S401`), количество узлов из Count. Отдельную позицию для screws создавать не нужно, если они идут вместе с деталью ledger.
 
-- [Bolts](bolts.md) , [Hardware catalog](../../../../reference/hardware-catalog.md)
+## Как назвать в дереве и строка DFL
 
+Строка screws стоит рядом со своим соединением. Формула в pcs: `G` - LFT ledger, `H` - шаг, множитель - число screws на узел, значимость округления = число на узел (3 на торец фермы дают `;3`); результат меньше 50 округлять до чётного.
+
+| A (Label) | B | C | D | E |
+| --- | --- | --- | --- | --- |
+| `Screws 16" o.c. (3)` | `SDWS 0.22 x 6"` | `=ОКРВВЕРХ(G*12/H*3*1.1;3)` | `pcs` | `ledger per 4/S401` |
+| `Screws (2)` | `SDS 1/4 x 4 1/2` | узлов x 2 | `pcs` | деталь балка-пост |
+| `Screws` | `SDWS 1/4 x 4 1/4` | `=4*4*G` на лестницу | `pcs` | stair detail |
+| `Screws 24" o.c.` | `SDWC 6"` | по шагу ферм | `pcs` | `in lieu of H2.5A` |
+
+## Частые ошибки
+
+- Screws ledger не по детали: 1 на торец вместо 3 (84 стало 132).
+- Screws взяты с другого этажа, не со своего ledger.
+- Детали 1 и 3 похожи на картинке, но крепёж разный.
+- Clips H2.5A и SDWC посчитаны оба, когда деталь даёт "in lieu of".
+- Гвозди посчитаны штуками.
+- [Все ошибки по перекрытиям](../../../../start/common-mistakes.md#floor)
+
+## Пример
+
+| A | B | C | D | E | G | H |
+| --- | --- | --- | --- | --- | --- | --- |
+| `Ledger` | `2x10` | `=ОКРВВЕРХ(G*1.1/D;1)` | 16 | `4/S401` | 44 | |
+| `Screws 16" o.c. (3)` | `SDWS 0.22 x 6"` | `=ОКРВВЕРХ(G*12/H*3*1.1;3)` | pcs | `4/S401` | 44 | 16 |
+
+## См. также
+
+- [Bolts](bolts.md), [Steel Beam Web Fillers](steelbeams.md), [Hardware catalog](../../../../reference/hardware-catalog.md)
+- [Hangers](../../../../reference/hangers.md)

@@ -1,180 +1,131 @@
-# Excel macro hotkeys
+# Макросы и клавиши Excel
 
-Это не стандартные Excel shortcuts. Это **VBA-macros**, подключённые к рабочему
-workbook'у - для очистки, форматирования и записи после PlanSwift output.
+Здесь: какие VBA-макросы встроены в книгу `TemplateCom.xlsm`, что делает каждый, когда его жать и в каком порядке. Это не стандартные клавиши Excel: макросы работают только в книге с включёнными макросами.
 
-!!! warning "Макросы должны быть включены"
-    Если shortcut ничего не делает - проверь:
-    1. Активный workbook содержит нужные macros.
-    2. Macros включены (`File - Options - Trust Center - Macro Settings`).
-    3. Shortcut не перехвачен Excel/Windows.
+<figure markdown>
+  ![Полоса XL в OurPlanCore](../assets/images/ourplancore/v3/excel-strip.png)
+  <figcaption markdown="span">Полоса XL в OurPlanCore пишет замеры в книгу и сама запускает расчётные макросы. Остальные макросы запускаются в Excel клавишей или через Alt+F8.</figcaption>
+</figure>
 
-## По этапам workflow { .kb-section-title .kb-st--cyan }
+!!! warning "Макрос ничего не делает"
+    1. Открыта книга из шаблона `TemplateCom.xlsm` (копия в папке обновлений программы), а не чужой файл.
+    2. Макросы разрешены: `File > Options > Trust Center > Macro Settings`.
+    3. Курсор стоит там, где нужно: макросы вставки работают от выделенной строки, расчётные - от выделенного диапазона.
+    4. Клавиша не сработала - `Alt+F8`, выбрать макрос по имени.
 
-<div class="grid cards kb-hotkey-cards" markdown>
+## Клавиши
 
--   :material-broom:{ .lg .middle .kb-mk--cyan } **Cleanup**
+Клавиши сверены с исходниками макросов. У макросов без клавиши запуск через `Alt+F8` или кнопку.
 
-    ---
+| Клавиша | Макрос | Что делает |
+| --- | --- | --- |
+| ++ctrl+shift+b++ | `C_BeamsSort` | балки из пар "марка и длина" в строки `Beam` |
+| ++ctrl+shift+j++ | `C_JoistsSort` | joists из пар "число и длина" в строки `Joists` |
+| ++ctrl+shift+h++ | `C_HeadersSort` | перемычки по корзинам ширины `up to 48" / 60" / 72" / over 72"` |
+| ++ctrl+shift+p++ | `C_PostsSort` | стойки по марке с легендой |
+| ++ctrl+shift+f++ | `C_SumTheSameValues` | сложить одинаковые строки (ключ: подпись + единица) |
+| ++ctrl+m++ | `Y_MultiplySelectedCells` | домножить выделенные ячейки на адрес (например, на G заголовка) |
+| ++ctrl+shift+i++ | `Y_Improve_Note` | переписать текст ноты по образцам листа `Standarts` (результат проверить глазами) |
+| ++ctrl+shift+t++ | `Y_CheckEnglish` | проверка английского в выделении |
+| ++ctrl+shift+o++ | `Y_InsertDate` | поставить дату |
+| ++ctrl+shift+v++ | `Y_noValidation` | снять выпадающие списки (data validation) |
+| ++ctrl+w++ / ++ctrl+q++ | `Y_InsertCellsUp` / `X_DeleteCellsUp` | вставить / удалить ячейки A:H со сдвигом. Только так, не целой строкой листа |
+| ++ctrl+e++ | `B_DeleteZeroRowsOnlyIn_AtoH` | удалить строки с нулём в количестве (только A:H) |
+| ++ctrl+shift+d++ | `X_DeleteRowsByColor` | удалить серые строки-заглушки шаблона |
+| ++ctrl+t++ | `B_FrameOC_InsertOneRow` | вставить строку `Frame N" o.c.` под выделенной |
+| ++ctrl+r++ | `B_Plate2_InsertOneRow` | вставить строку `Plate (2)` под выделенной |
+| `Alt+F8` | `B_BoltsAdd`, `C_TrimsCalc` и остальные | без клавиши |
 
-    | Hotkey | Действие |
-    | --- | --- |
-    | ++ctrl+q++ | Удалить ячейки (сдвиг вверх) |
-    | ++ctrl+w++ | Вставить ячейки (сдвиг вверх) |
-    | ++ctrl+e++ | Удалить строки, где column `C` = `0` |
-    | ++ctrl+shift+d++ | Удалить grey cells |
-    | ++ctrl+shift+v++ | Убрать validation dropdowns |
+??? note "Прыжки по секциям (Ctrl+F1 ... Alt+Shift+F9)"
+    В части книг при открытии навешиваются клавиши перехода к заголовку секции: ++ctrl+f1++ ... ++ctrl+f5++ `1st ... 5th Floor Walls`, ++ctrl+f6++ / ++ctrl+f7++ `Gable Walls #1 / #2`, ++ctrl+f8++ `Parapet Walls`, ++ctrl+f9++ `Wall Materials`, ++ctrl+f11++ / ++ctrl+f12++ `Foundation / Basement Floor Walls`; ++alt+f1++ ... ++alt+f4++ `1st ... 4th Floor Framing List`, ++alt+f5++ `Loft Framing List`, ++alt+f6++ / ++alt+f7++ `Roof Frame list / Roof System Misc`, ++alt+f10++ `Roof Products`, ++alt+f11++ / ++alt+f12++ `Soffits and Fascias / Exterior Trims`; ++alt+shift+f1++ `Interior Doors&Trims`, ++alt+shift+f2++ `Drywall & Insulation`, ++alt+shift+f8++ / ++alt+shift+f9++ балкон / porch по заливке. Переход ищет заголовок по точному тексту.
 
--   :material-format-list-bulleted-square:{ .lg .middle .kb-mk--magenta } **PlanSwift formatting**
+    !!! warning "Уточняется"
+        В текущих исходниках макросов модуля навигации нет; если клавиши в книге не прыгают, это не ошибка.
 
-    ---
+## Макросы по этапам
 
-    | Hotkey | Действие |
-    | --- | --- |
-    | ++ctrl+shift+b++ | Format **Beams** |
-    | ++ctrl+shift+j++ | Format **Joists** |
-    | ++ctrl+shift+r++ | Format **Details** |
+### 1. Расчёт после экспорта (серия A, запускает полоса XL)
 
--   :material-content-save-edit-outline:{ .lg .middle .kb-mk--amber } **Forms / output write**
+Работают по выделенному диапазону в правой зоне `J:N`. Полоса XL в OurPlanCore запускает их сама; руками они нужны только при повторном расчёте одной группы.
 
-    ---
+| Макрос | Что делает | Когда |
+| --- | --- | --- |
+| `A1_UnitTable` | таблица units по этажам | есть `units` в дереве |
+| `A2_SQFT_calc` | площади этажей, фронтонов, truss heel; уклоны кровли по порядку появления в выделении | после `SF`, `GB`, `TH` |
+| `A3_Walls_Calc_AllGroup` / `_OneGroup` | стены из J:N в матрицу `O:AB` и строки Floor Walls; `(2)` в имени множит длину, `corr` = `cor` | после `WL` |
+| `A4_Parapet` | парапеты: три числа из хвоста имени (`prpt 6.4 5.3 0.5`) | после `PP` |
+| `A5_Openings` | проёмы по ширине в корзины headers, flashing | после `OP` |
+| `A6_Eve_Rakes` | `eve 12 main`, `rake 12 main`, `returns 24`, `canopy 36 porch` в строки карнизов | после `E/R` |
+| `A7_walls_sheathing` | по тексту в J (`Zip`, `OSB`, `no insulation`, `1" Insulation`) оставляет нужные строки обшивки и пишет спек-ячейку `O3` или `O5` | после `SH` |
+| `A8_SplitWallSuffixes_ByJ` | делит имена стен на базовое имя для A3 и суффикс с деталью (`ext 10.09 5/S400`) | стены с деталью в имени |
+| `Y_Run_First6` | A2 ... A6 подряд, A1 последним (A1 перестраивает выделение) | ручной полный прогон |
 
-    | Hotkey | Действие |
-    | --- | --- |
-    | ++ctrl+shift+w++ | Записать значения **walls** в форму |
-    | ++ctrl+shift+q++ | Записать значения **area** в форму |
-    | ++ctrl+shift+n++ | Write to **check** |
-
--   :material-tools:{ .lg .middle .kb-mk--green } **Helpers**
-
-    ---
-
-    | Hotkey | Действие |
-    | --- | --- |
-    | ++ctrl+shift+f++ | Суммировать одинаковые значения |
-    | ++ctrl+m++ | Умножить всё в ячейке |
-    | ++ctrl+shift+i++ | Вставить note (текст должен начинаться со слова `Note`) |
-    | ++ctrl+shift+k++ | Вставить detail-строки слева |
-    | ++ctrl+shift+l++ | Добавить блок **bolts** (сдвиг вниз) |
-
--   :material-check-decagram-outline:{ .lg .middle .kb-mk--blue } **Workbook finish**
-
-    ---
-
-    | Hotkey | Действие |
-    | --- | --- |
-    | ++ctrl+shift+o++ | Поставить дату |
-    | ++ctrl+shift+t++ | Check Spelling |
-    | ++ctrl+shift+v++ | Validation cleanup |
-
-</div>
-
-## Быстрый порядок после PlanSwift { .kb-section-title .kb-st--magenta }
-
-1. Выбери правильный output sheet и range.
-2. Запусти formatting: ++ctrl+shift+b++ Beams - ++ctrl+shift+j++ Joists - ++ctrl+shift+r++ Details.
-3. Чисти мусор: ++ctrl+shift+d++ grey cells, ++ctrl+e++ zero rows, ++ctrl+shift+v++ validation dropdowns.
-4. Запиши в форму: ++ctrl+shift+w++ walls / ++ctrl+shift+q++ area, если это часть workbook workflow.
-5. Финал: ++ctrl+shift+o++ дата - ++ctrl+shift+t++ spell check - ++ctrl+shift+n++ write to check.
-
-## Calc pipeline (A-series) { .kb-section-title .kb-st--cyan }
-
-Расчётные макросы - запускаются по выделенному range, по порядку. Не имеют
-Ctrl-хоткеев: запускай кнопкой или `Alt+F8`.
+### 2. Scope (серия A9)
 
 | Макрос | Что делает |
 | --- | --- |
-| `A1_UnitTable` | строит unit-таблицу из выделения |
-| `A2_SQFT_calc` | SQFT + gable / truss heel |
-| `A3_Walls_Calc_AllGroup` / `_OneGroup` | walls: все группы / одна группа |
-| `A4_Parapet` (+ `X_ClearParapetTable`) | parapet walls |
-| `A5_Openings` | openings calc |
-| `A6_Eve_Rakes` | eve / rakes |
-| `A7_wall_sheathing` | по тексту в `J`: Zip - удалить Ply/OSB/CDX+Tyvek (пишет в `O5`); Ply/OSB/CDX - удалить Zip+Zip Tape (пишет в `O3`) |
-| `A8_SplitWallSuffixes_ByJ` | делит выделенные строки `J:L` на base-список (имена walls для A3) и список suffix/detail notes |
-| `wall_panel` | wall panel расчёт |
-| `Fame_only` | удаляет finish/trim-блоки, оставляет **только frame** (A:H, сдвиг вверх) |
-| `Y_Run_First6` | один запуск всей цепочки `A1…A6` (toggle-константы внутри; `A1` идёт последним для безопасности - он перестраивает выделенный range) |
-| `C_HeadersSort` | сортировка/раскладка headers (как `C_BeamsSort`/`C_JoistsSort`; J-mode + legend-строки `H5 - (2) 2x10`) |
-| `C_RimBoardBlockingHangers` | rim board + blocking + hangers одним блоком |
+| `A9_Fame_only` | убирает блоки отделки и продуктов, оставляет только каркас (удаление только A:H со сдвигом) |
+| `A9_1_wall_panel` | в секциях `Floor Walls` оставляет строки панельного дома, обшивку переносит в строку WRB и Tape; стик-строки этажей возвращаются ниже под нотой `Note: Optional stick frame, if walls are not panels; verify.` |
 
-!!! tip "Порядок"
-    `A1` чистит/перестраивает выделение, поэтому `A2…A6` читают исходное
-    выделение **до** `A1`. `Y_Run_First6` это уже учитывает. Вручную -
-    запускай `A2…A6`, затем `A1`.
+Оба запускаются при создании книги по scope проекта. На готовой книге повторно не гонять без причины: они удаляют строки.
 
-## Новые insert-хелперы { .kb-section-title .kb-st--green }
+### 3. Структурные после ввода (серия C)
 
-| Макрос | Действие |
+| Макрос | Вход | Выход |
+| --- | --- | --- |
+| `C_BeamsSort` | пары `H5 7` + число; легенда в конце выделения `H5 - (2) 1 3/4 x 11 7/8 LVL`; хвост `(24V48)` уходит в E | строки `Beam` с размером по коду; в J-режиме сам вставляет место в A:H |
+| `C_HeadersSort` | `(2) 2x10 4`, `ext H5 7`; легенда `H5 - (2) 2x10` | `Ext. Headers up to 48" / 60" / 72" / over 72"`, int отдельно |
+| `C_JoistsSort` | пары число / длина с маркой и шагом (`11 7/8 TJI 110 24"`) | одинаковые длины складываются; длина больше 8' и нечётная получает +1 |
+| `C_PostsSort` | `C5 2`, `C5 12`; легенда `C5 - 3 1/2 x 5 1/4 PSL 1.8E` | строки `Posts` с кодом и сортом в E; длина по умолчанию 10' |
+| `C_RimBoardBlockingHangers` | флаги в M: `r` rim, `rb` ribbon, `b` / `b48` blocking, `h16` hangers, `s` screws, `t` ties, `blt24` anchor bolts, `l` ledger, `bd` drywall blocking, `bft` bracing for trusses; двойная буква = x2; легенда материала в конце (`l - 2x10`, `t24 - A35`) | строки rim, ribbon, blocking, hangers, ledger по группам; блок bolts + washers + nuts |
+| `C_SumTheSameValues`, `C_SumNearWindowValues` | три колонки подпись / число / единица | свёрнутые суммы; у окон - сумма значений рядом с проёмами для A5 |
+| `C_TrimsCalc` | блок отделки одного элемента + строка `EA` | отделка умноженная на количество ([Trim macros](../work/exterior-trims/macros.md)) |
+
+### 4. Вставка строк и блоков (серия B)
+
+Встать на строку, с которой нужен блок: вставка идёт от неё вниз, только в A:H.
+
+| Макрос | Что вставляет |
 | --- | --- |
-| `B_FrameOC_InsertOneRow` | вставляет одну frame-OC строку под выделенной |
-| `B_Plate2_InsertOneRow` | вставляет одну Plate2-строку под выделенной |
-| `Y_add_2400V48` | по 2-колоночному лук-апу проставляет `2400 V48` note-значения |
-| `B_Balcony_Insert_Template_FromText` | полный balcony-каркас по `b 12x30` |
+| `B_BoltsAdd` | 4 строки: `Blocking`, `Anchor Bolts`, `Washers`, `Nuts` (счёт парами, подписи из H) |
+| `B_Plate2_InsertOneRow`, `B_FrameOC_InsertOneRow` | строка `Plate (2) ... P.T.` или `Frame N" o.c.` с формулой |
+| `B_JambsAllBlock` | блок `Blocking around all openings` по проёмам |
+| `B_ShaftWallsBlocks` | блоки shaft walls (liner panels + channels) |
+| `B_PaversBlock` | `Pavers` с нотой `by others` и строками рейлинга |
+| `B_MetalStuds_ByJ` (`_16oc`, `_24oc`) | тройка `Tracks (1) btm`, `Deflection Tracks (1) top`, `Mtl Studs` из таблицы справа (размер, длина, единица, высота) |
+| `B_Balcony_Insert_Template_FromText` | балконный блок по команде `b 12x30`. В текущих книгах блок `#1` уже есть в шаблоне: заполнять его, а не вставлять второй ([Блоки](dfl-blocks.md)) |
+| `Y_add_2400V48` | проставить значения `2400 V48` по двухколоночному списку |
 
-Полное описание trim/frame insert-блоков -
-[Trim macros](../work/exterior-trims/macros.md) и
-[Deck / Porch / Balcony Frame](../work/deck/deck-porch-balcony-frame.md).
+### 5. Чистка и финал (серии X, Y)
 
-## Section navigation (Ctrl / Alt + F) { .kb-section-title .kb-st--blue }
+| Макрос | Когда |
+| --- | --- |
+| `X_DeleteRowsByColor` (++ctrl+shift+d++), `B_DeleteZeroRowsOnlyIn_AtoH` (++ctrl+e++) | после всех вставок: заглушки и нули долой |
+| `X_ClearColor`, `X_ClearWall_SQFTCells`, `X_ClearParapetTable` | серая заливка в белую; очистить площади стен или таблицу парапетов перед новым расчётом |
+| `Y_noValidation` (++ctrl+shift+v++), `Y_CheckEnglish` (++ctrl+shift+t++), `Y_InsertDate` (++ctrl+shift+o++) | перед processed `.xlsx` |
+| `Y_Improve_Note` (++ctrl+shift+i++) | черновик ноты; потом проверить по [правилам нот](standard-notes.md) |
+| `Z_Dont_use_Run_ByPriority` | не использовать |
 
-`BindNavHotkeys` (Workbook_Open) вешает прыжки по section-заголовкам. Это
-быстрый способ скакать по большому output-листу.
+## Порядок работы с книгой
 
-<div class="grid cards kb-hotkey-cards" markdown>
+1. В OurPlanCore: легенда `LG` заполнена (коды балок, стоек, перемычек, флаги деталей, обшивка), затем `ALL` или нужные кнопки полосы XL.
+2. В Excel: проверить, что всё из дерева дошло (предупреждение экспорта перечисляет пропущенные позиции), поправить J:N.
+3. Структурные сорты, если что-то выгружалось руками: ++ctrl+shift+b++, ++ctrl+shift+j++, ++ctrl+shift+h++, ++ctrl+shift+p++, затем `C_RimBoardBlockingHangers`.
+4. Блоки балконов, porch, holdowns, bolts, jambs ([Блоки](dfl-blocks.md)).
+5. Чистка: ++ctrl+shift+d++ серые, ++ctrl+e++ нули, ++ctrl+shift+v++ validation.
+6. Финал: ++ctrl+shift+o++ дата, ++ctrl+shift+t++ английский, ноты по правилам, Front Page заполнен, затем processed `.xlsx`.
 
--   :material-arrow-down-bold-box:{ .lg .middle .kb-mk--cyan } **Ctrl + F - Walls**
+## Частые ошибки
 
-    ---
+- Вставка целой строки листа вместо ++ctrl+w++: правые зоны поехали.
+- `A9_*` запущен повторно на заполненной книге: удалил нужные строки.
+- `C_BeamsSort` без легенды: в B стоит код `H5` вместо размера.
+- Балконный блок вставлен макросом поверх шаблонного `#1`: два блока.
+- Количество вписано числом после макроса: при повторном экспорте не обновится.
 
-    | Hotkey | Section |
-    | --- | --- |
-    | ++ctrl+f1++ … ++ctrl+f5++ | 1st … 5th Floor Walls |
-    | ++ctrl+f6++ / ++ctrl+f7++ | Gable Walls #1 / #2 |
-    | ++ctrl+f8++ | Parapet Walls |
-    | ++ctrl+f9++ | Wall Materials |
-    | ++ctrl+f11++ / ++ctrl+f12++ | Foundation / Basement Floor Walls |
+Все ошибки по книге: [Частые ошибки, Excel DFL и ноты](../start/common-mistakes.md#excel).
 
--   :material-arrow-down-bold-box-outline:{ .lg .middle .kb-mk--magenta } **Alt + F - Framing / roof**
+## См. также
 
-    ---
-
-    | Hotkey | Section |
-    | --- | --- |
-    | ++alt+f1++ … ++alt+f4++ | 1st … 4th Floor Framing List |
-    | ++alt+f5++ | Loft Framing List |
-    | ++alt+f6++ / ++alt+f7++ | Roof Frame list / Roof System Misc |
-    | ++alt+f10++ | Roof Products |
-    | ++alt+f11++ / ++alt+f12++ | Soffits and Fascias / Exterior Trims |
-
--   :material-arrow-down-bold-box:{ .lg .middle .kb-mk--green } **Alt + Shift + F**
-
-    ---
-
-    | Hotkey | Section |
-    | --- | --- |
-    | ++alt+shift+f1++ | Interior Doors&Trims |
-    | ++alt+shift+f2++ | Drywall & Insulation |
-    | ++alt+shift+f8++ | Balcony (по заливке #99CC00/#FABF8F) |
-    | ++alt+shift+f9++ | Porch (по заливке #99CC00/#FABF8F) |
-
-</div>
-
-!!! warning "Не работает - проверь"
-    Nav-хоткеи вешает `Workbook_Open`. Если не прыгает: workbook с макросами
-    открыт, macros enabled, и заголовок section написан точно (`1st Floor
-    Walls`, `Exterior Trims` и т.д.). `Z_Dont_use_Run_ByPriority` -
-    устаревший, не использовать.
-
-## Стандартные Excel shortcuts { .kb-section-title .kb-st--amber }
-
-Для встроенных Excel shortcuts - официальный список Microsoft:
-[Keyboard shortcuts in Excel](https://support.microsoft.com/en-gb/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f).
-
-## See also
-
-- [Trim macros](../work/exterior-trims/macros.md) - `C_TrimsCalc`, jamb / pavers / balcony insert
-- [Deck / Porch / Balcony Frame](../work/deck/deck-porch-balcony-frame.md) - frame insert / sort макросы
-- [Formulas and factors](formulas.md)
-- [Quality checklist](../start/quality-checklist.md)
-- [Workflow](../start/workflow.md)
+- [DFL: как устроена книга](dfl-overview.md), [Блоки балконов, porch и holdowns](dfl-blocks.md), [Формулы и факторы](formulas.md)
+- [Trim macros](../work/exterior-trims/macros.md), [OurPlanCore: Estimating и экспорт](ourplanecore.md)

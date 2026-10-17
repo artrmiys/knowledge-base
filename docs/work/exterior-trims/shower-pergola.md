@@ -1,71 +1,66 @@
-# Outdoor Shower & Pergola
-
-Открытые садовые конструкции, которые тоже входят в exterior scope:
-privacy / outdoor shower screen, pergola, trellis, canopy. Часто `assumed`
-по elevation - деталей мало.
-
-## Outdoor / privacy shower screen { .kb-section-title .kb-st--green }
-
-<div class="kb-split" markdown>
-
-Экран наружного душа (часто IPE или cedar). Состав:
-
-| Label | Типовой материал | Unit |
-| --- | --- | --- |
-| `Posts` | `4x4 P.T.`, `4x4 IPE`, `4x4` | `pcs` + высота (`14'`, `10'`, `7'`) |
-| `Jamb` | `5/4 IPE Jambs`, `2x4 P.T.` | `pcs` / `LFT` |
-| `Slats` | `1x6 IPE` + `1x4 IPE` alternating, `1x6 Vert. Cedar BDS.` | `SQFT` экрана |
-| `Cap` | `5/4 IPE Cap` | `LFT` |
-
-- Slats считаются по **площади экрана** (`SQFT`), gap (`1/4"`) - в note.
-- `Garage Shower Outside` - отдельный участок (свой размер posts/slats).
-- Когда детали нет: `Posts 4x4 P.T. assumed`, `Jamb 2x4 P.T. assumed`.
+# Outdoor Shower & Pergola (экран душа, pergola, canopy)
 
 <figure markdown>
   ![Shower screen IPE slats](../../assets/images/trims/ext-shower-screen.png)
-  <figcaption>Alternating 1x6 & 1x4 IPE slats, gap 1/4", на 4x4 IPE posts, 5/4 IPE cap.</figcaption>
+  <figcaption markdown="span">Экран наружного душа: 1x6 и 1x4 IPE slats с зазором 1/4", 4x4 IPE posts, 5/4 IPE cap. Slats считаем площадью экрана, posts штуками с высотой.</figcaption>
 </figure>
 
-</div>
+## Что это
 
-## Pergola / Trellis { .kb-section-title .kb-st--cyan }
+Открытые садовые конструкции из exterior-scope: privacy и shower screen,
+pergola и trellis, canopy над входом. Деталей обычно мало, много строк
+идёт с `assumed` по elevation.
 
-| Label | Типовой материал | Unit |
-| --- | --- | --- |
-| `1E Shape` | `4x10 Cedar 1E Shape` | `pcs` + длина (`14'`) |
-| `Trellis` | `3x3` | `pcs` + длина (`8'`) |
-| `Ledger` | `2x4` | `pcs` + длина |
-| `Brackets` | по детали | `pcs` |
-| `Posts` | `4x4`/`6x6` (P.T. или cedar) | `pcs` + высота |
+## Где искать на чертежах
 
-- Pergola - это набор: главные балки (`1E Shape` / `4x10`), trellis-рейки
-  (`3x3`), ledger к стене, brackets, posts.
-- Материал почти всегда cedar или P.T. - держи в Label, не своди к generic.
+| Лист | Что взять |
+| --- | --- |
+| Elevations и site plan | Где стоит экран, pergola, canopy; высоты |
+| Details A5xx | Сечения slats, posts, cap, 1E shape балок, trellis, brackets |
+| Roof plan и canopy section | Header wrap, fascia, soffit canopy; каркас canopy отдельно |
 
-## Canopy { .kb-section-title .kb-st--magenta }
+## Как мерить в OurPlanCore
 
-| Label | Типовой размер | Unit |
-| --- | --- | --- |
-| `Soffits at Canopy Eves` | `Azek Beadboard`, `Beadboard` | `SQ FT` |
-| `Fascia at Canopies` / `Canopies rake` | `1x6`, `1x8` | `LFT` |
-| `Canopy Hdr wraps` | `1x8`, `1x4` | `LFT` |
-| `Frame for Soffits` | по детали (24" o.c.) | `LFT` |
+Экран: Area по площади экрана (slats) и Count постов. Pergola: Count балок
+и trellis-реек с длиной в строке, Line для ledger. Canopy: Line по fascia и
+Area по soffit, в своём итеме, не в `eves rakes`. Каркас canopy считается
+на [Canopy](../horizontal/roof-framing/canopy.md).
 
-- Canopy = mini-roof над входом: header wrap + fascia + soffit (beadboard).
-  Считается как маленький porch (см. [Soffit & Fascia](soffit-fascia.md)).
+## Как назвать в дереве и строка DFL
 
-## Чек перед выводом { .kb-section-title .kb-st--green }
+| Элемент | Строка DFL | Материал | Unit |
+| --- | --- | --- | --- |
+| Shower screen | `Posts` | `4x4 P.T.`, `4x4 IPE` | pcs + высота (`7'`, `10'`, `14'`) |
+| | `Jamb` | `5/4 IPE Jambs`, `2x4 P.T.` | pcs / LFT |
+| | `Slats` | `1x6 IPE` + `1x4 IPE` alternating, `1x6 Vert. Cedar BDS.` | SQ FT экрана, gap в ноте |
+| | `Cap` | `5/4 IPE Cap` | LFT |
+| Pergola / trellis | `1E Shape` | `4x10 Cedar 1E Shape` | pcs + длина |
+| | `Trellis` | `3x3` | pcs + длина |
+| | `Ledger`, `Brackets`, `Posts` | `2x4`, по детали, `4x4` / `6x6` | pcs, LFT |
+| Canopy | `Soffits at Canopy Eves` | `Azek Beadboard` | SQ FT |
+| | `Fascia at Canopies`, `Canopy Hdr wraps` | `1x6` / `1x8`, `1x4` | LFT |
+| | `Frame for Soffits` | по детали, 24" o.c. | LFT |
 
-- [ ] Shower: posts (pcs+высота) + jamb + slats (SQFT) + cap (LFT)?
-- [ ] Garage/outside shower разделены, gap в note?
-- [ ] Pergola: главные балки + trellis + ledger + brackets + posts?
-- [ ] Материал (IPE / cedar / P.T.) в Label, не generic?
-- [ ] Canopy: header wrap + fascia + soffit beadboard?
-- [ ] Где нет деталей - `assumed` в note?
+- Материал (IPE, cedar, P.T.) держи в строке, не своди к generic.
+- `Garage Shower Outside` отдельный участок со своими posts и slats.
+- Нет детали: `Posts 4x4 P.T. assumed`, `Jamb 2x4 P.T. assumed`.
 
-## See also
+## Частые ошибки
 
-- [Porch / Deck / Balcony](porch-deck-balcony.md)
-- [Rails & Decking](rails-decking.md)
-- [Soffit & Fascia](soffit-fascia.md)
-- [Furring & Window Jambs](furring-and-jambs.md)
+- Canopy посчитан в eve и rake повторно.
+- Slats посчитаны LFT вместо площади экрана.
+- Pergola одной строкой без главных балок, trellis, ledger, brackets, posts.
+- Все ошибки раздела: [Deck, porch, балконы](../../start/common-mistakes.md#deck).
+
+## Пример
+
+```text
+Posts   4x4 IPE                       6   pcs    10'    assumed  A502
+Slats   1x6 + 1x4 IPE alternating     180 SQ FT  gap 1/4"        A502
+Cap     5/4 IPE Cap                   24  LFT                    A502
+```
+
+## См. также
+
+- [Porch / Deck / Balcony](porch-deck-balcony.md), [Rails & Decking](rails-decking.md), [Soffit & Fascia](soffit-fascia.md)
+- [Canopy](../horizontal/roof-framing/canopy.md), [Furring & Window Jambs](furring-and-jambs.md)

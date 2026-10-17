@@ -1,33 +1,79 @@
-# Residential
+# Residential (жилой дом)
 
-Residential jobs идут по стандартному takeoff flow, если plans не добавляют
-commercial-style assemblies, shaft walls или panelized scope.
+Отдельный дом, дуплекс или таунхаус: один-два корпуса, гараж, porch, часто
+деревянные стены по всей высоте и обычный стик-каркас.
 
 <figure markdown>
   ![Residential scope overview](../assets/images/work-types/residential.svg)
-  <figcaption>Walls + openings , floor/roof framing , sheathing , SQFT , roof/deck/porch.</figcaption>
+  <figcaption markdown="span">Walls + openings, floor/roof framing, sheathing, SQFT, roof/deck/porch. Порядок тот же, что в меню "Работа".</figcaption>
 </figure>
 
-## Типовой scope
+<!-- TODO-PHOTO: stick-framed house under construction, walls and roof trusses visible; EN query "wood frame house under construction stick framing" -->
 
-- Walls и openings.
-- Floor и roof framing.
-- Sheathing, SQFT, roof/deck/porch materials.
-- Details, hangers, bolts, screws, когда они called out.
+## Что это
 
-## Всё равно проверить
+Жилой заказ по полному каркасу. В отличие от COM здесь обычно нет коридоров,
+demising-стен, шахт и панелей; зато почти всегда есть гараж, porch, балкон или
+deck со своими контурами и уклонами кровли. Scope чаще всего `Frame` или
+`Frame. EWP by others`.
 
-- Structural vs Arch wall sizes.
-- Exact stud heights, если schedules отличаются.
-- Shaft walls в duplex или townhouse plans.
-- Exterior sheathing vs energy/Zip notes.
-- Roof overframes, canopies, dormers и truss heel conditions.
+## Чем отличается от COM
 
-## Вывод
+| | Residential | COM |
+| --- | --- | --- |
+| Стены | ext и перегородки без префикса, bearing walls как `BW` | ext, corridor, demising, unit, shaft |
+| Панели | Редко | Часто (`COM w/panel`) |
+| Перекрытия | Joists и балки по framing plan, EWP по спецификации | То же плюс fire hangers, firewall |
+| Кровля | Фермы или rafters, overframes, dormers | Flat roof, parapets, piggyback trusses |
+| Корпуса | Дом, гараж, иногда ADU | Несколько корпусов, книги по корпусам |
 
-Assumptions держи видимыми. Если detail неясен, добавь note, а не прячь
-решение в quantity.
+## Что считать и что нет
 
-## See also
+**Считать:** стены по wall schedule, проёмы, обшивка и WRB, площади по
+этажам, joists, beams, posts, headers, details, лестницы, кровля по уклонам,
+eaves и rakes, truss heel, gables, deck / porch / balcony, крепёж, если показан.
 
-- [COM Commercial](com.md) , [Reconstruction](reconstruction.md) , [Структура takeoff](../start/takeoff-structure.md) , [Workflow](../start/workflow.md)
+**Не считать:** фермы (by others, нота в шапке), гвозди, внутренний гипс и
+внутренний утеплитель, отделку без scope. При `EWP by others` ещё I-joists,
+LVL и engineered rim - [EWP by others](ewp-capital.md#ewp-by-others).
+
+## На что смотреть
+
+- Structural и Arch дают разные размеры стен: structural главнее, расхождение нотой.
+- Exact stud heights по разрезу, если schedule отличаются по этажам.
+- Shaft walls в дуплексе или таунхаусе (между юнитами): demising с gypsum,
+  draft stop на чердаке.
+- Наружная обшивка против energy и Zip notes.
+- Overframes, canopy, dormers, truss heel: свои площади и строки.
+- Гараж, porch, porte cochere: свои контуры и уклоны, не наследуют основной дом.
+- EWP по спецификации (TJI серия как показана), не по привычке.
+
+## Частые ошибки
+
+- Уклон кровли гаража взят с основного дома.
+- Posts на улице (porch, deck) не P.T.; posts под крышей записаны P.T.
+- Hangers снаружи без Zmax.
+- Балкон и porch посчитаны одним блоком.
+- Все ошибки по разделам - [Частые ошибки](../start/common-mistakes.md#roof),
+  [deck и porch](../start/common-mistakes.md#deck).
+
+## Пример
+
+```text
+Takeoffs/
+  Main/
+    walls/1st floor walls/ext 2x6 9.09
+    walls/1st floor walls/2x4 9.09
+    sqfts/1st, sqfts/rf 6, sqfts/porch
+    framing/1st floor framing/beams/FB1 8
+    eves rakes/eves/eve 24 main
+  Grge/
+    walls/1st floor walls/ext 2x6 10.0
+    sqfts/rf 4, sqfts/flat grge
+```
+
+## См. также
+
+- [COM Commercial](com.md), [Reconstruction](reconstruction.md), [EWP / Capital](ewp-capital.md)
+- [Правила клиентов и типов заказов](../start/client-rules.md)
+- [Дерево takeoff](../start/takeoff-structure.md), [Процесс работы](../start/workflow.md)

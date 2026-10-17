@@ -1,126 +1,94 @@
-# Crown
+# Crown (потолочный карниз)
 
-## Правило
+<figure markdown>
+  ![Crown molding at tray ceiling](../../assets/images/photos/trims/crown-molding.jpg)
+  <figcaption markdown="span">Crown molding по периметру потолка. Считается LFT по тем же комнатам, что и base, но со своими исключениями. Фото: The Finishing Company Richmond Va, CC BY 2.0, [источник](https://www.flickr.com/photos/23141008@N06/5084390501)</figcaption>
+</figure>
 
-`Crowns` включаются, когда активен interior trim scope.
+## Что это
 
-## Что считать
+`Crowns`: молдинг по стыку стены и потолка. Считается LFT по периметру
+комнат, той же логикой, что [Base](base.md), но crown нельзя выводить из
+base: у него свой список комнат. Включается, когда interior trim scope
+активен и crown показан в schedule или notes.
 
-- Crown molding по room/area, где он показан или требуется trim scope.
-- Common areas отделять от units, если finish schedule отличается.
+## Где искать на чертежах
 
-## Проверить
+| Лист | Что взять |
+| --- | --- |
+| Room finish schedule, remarks | В каких комнатах crown, материал, `TBD` |
+| RCP и ceiling notes | Sloped ceiling, tray ceiling, высота |
+| Interior elevations | Профиль crown, где он показан |
 
-- Crown может быть в finish notes, а не на plan view.
-- Garage: нет `Crowns`.
-- Не путай crown с exterior cornice, fascia, frieze или rake trim.
-- Если trim scope есть, но crown неясен, добавь видимую note.
-- Типовые no-crown spaces: garage, mechanical/equipment rooms, crawl space и
-  другие rooms without finish.
+## Как мерить в OurPlanCore
 
-## Правила из Trello
+Line по периметру комнат с crown на плане с точкой W, по итему на этаж
+(`crown 1st`, `crown 2nd`). Second floor отдельно: там crown часто только
+в hall, foyer и больших спальнях.
 
-| Правило | Что проверить | Источник |
-| --- | --- | --- |
-| В closets нет `Crowns`. | Исключай `Closet` / `CLO.` spaces, если scope не говорит обратное. | [Trello](https://trello.com/c/Iz1T4E1L) |
-| В rooms with sloped ceilings нет `Crowns`. | Следи за `slope ceiling` / sloped roof conditions. | [Trello](https://trello.com/c/a2x8EuZA) |
-| В garage нет `Crowns`. | Не веди crown perimeter через garage walls. | Estimating rule |
-| В rooms without finish нет `Crowns`. | Исключай unfinished areas. | [Trello](https://trello.com/c/L54HVTxD) |
-| `Crowns` в bathrooms считаются, если trim scope требует это. | Не исключай bathrooms автоматически. | [Trello](https://trello.com/c/nV0U6Z32) |
-| На second level считай crowns только в `Hall`, foyer и large guest rooms, где это требуется. | Держи second-floor crown logic отдельно от first-floor living areas. | [Trello](https://trello.com/c/EImvQgbn) |
-| В Excel вписывай все measured values в formula. | Formula должна быть проверяемой. | [Trello](https://trello.com/c/x4SZ0PZN) |
-| Проверяй material вроде `TBD Crowns`. | Оставляй видимую note, если material не указан. | [Trello](https://trello.com/c/KvJvp48a) |
+## Правила
 
-## Метод takeoff
+| Правило | Что проверить |
+| --- | --- |
+| В closets crown нет | Исключать `Closet` / `CLO.`, если scope не говорит обратное |
+| Sloped ceiling: crown нет | Следить за `slope ceiling` на RCP |
+| Garage, mechanical, crawl space, unfinished: crown нет | Периметр через них не вести |
+| Bathrooms могут иметь crown | Не исключать автоматически, смотреть scope |
+| Second level | Только hall, foyer и большие комнаты, где показано |
+| Материал `TBD Crowns` | Оставить ноту, не выбирать продукт |
 
-- `Crowns` меряются той же room perimeter logic, что и Baseboard.
-- Garage perimeter не считается для `Crowns`.
-- Каждый measured segment вписывай в Excel formula, не только final total.
-- Если crown material = `TBD`, оставляй material note видимой.
+Не путай crown с exterior cornice, fascia, frieze и rake trim.
 
-## Внешняя проверка
+## Как назвать в дереве и строка DFL
 
-- Crown тоже linear room-run item, но его нельзя выводить только из base.
-- Перед perimeter count проверь finish schedule, ceiling notes, RCP/finish plans
-  и remarks.
-- Estimating exclusions остаются рабочим правилом: closets, sloped-ceiling rooms и
-  no-finish rooms не считаются, если scope явно не говорит обратное.
+| Имя в дереве | Строка DFL | Unit | Формула |
+| --- | --- | --- | --- |
+| `trims/crown 1st` | `Crowns` | LFT | `=58+44+71+...` все участки видны |
+| `trims/crown 2nd` | `Crowns 2nd floor` | LFT | отдельной строкой |
+| | `Crowns TBD` | LFT | нота, если материал не задан |
 
-## Визуальные правила
+## Частые ошибки
 
-<details class="kb-figures kb-figures--rows" open>
-  <summary>Скрыть 9 правил с иллюстрациями</summary>
+- Crown посчитан в closets и комнатах со sloped ceiling.
+- Crown выведен из base без своего списка комнат.
+- Second floor посчитан целиком.
+- Все ошибки по Excel: [Excel DFL и ноты](../../start/common-mistakes.md#excel).
+
+## Пример
+
+```text
+Takeoffs/Main/trims/crown 1st   Line   286 LFT (living, dining, foyer, hall)
+
+Crowns   3-1/2" crown (per schedule)   286  LFT   =92+68+44+82   A701
+Crowns   TBD                           0    LFT   Note: Crown material not specified; verify
+```
+
+<details class="kb-figures kb-figures--rows">
+  <summary>Показать 3 архивные карточки с иллюстрациями</summary>
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">В closets нет Crowns</div>
-      <div class="kb-figure-row__rule">Исключай <code>Closet</code> / <code>CLO.</code>, если scope прямо не включает их.</div>
-      <div class="kb-figure-row__note">По умолчанию не веди crown perimeter через closet walls.</div>
+      <div class="kb-figure-row__rule">Не веди периметр crown через closet walls.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-17.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-17.png" alt="No crowns in closets" loading="lazy"></a>
   </figure>
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Нет crowns при slope ceiling</div>
-      <div class="kb-figure-row__rule">Перед perimeter count проверь ceiling/roof condition.</div>
-      <div class="kb-figure-row__note">Sloped ceiling condition ломает обычное crown rule.</div>
+      <div class="kb-figure-row__title">Sloped ceiling</div>
+      <div class="kb-figure-row__rule">Перед подсчётом проверь RCP: наклонный потолок ломает обычное правило.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-18.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-18.png" alt="No crowns in slope ceiling rooms" loading="lazy"></a>
   </figure>
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Slope ceiling example</div>
-      <div class="kb-figure-row__rule">Не считай Crown только потому, что у room есть finish.</div>
-      <div class="kb-figure-row__note">Если plan неясен, смотри RCP/ceiling notes.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-19.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-19.png" alt="Sloped ceiling crown example" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">No finish / garage / service rooms</div>
-      <div class="kb-figure-row__rule">В garage и unfinished/service spaces нет Crowns.</div>
-      <div class="kb-figure-row__note">Исключай garage, mechanical/equipment rooms, crawl space, unfinished storage.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-20.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-20.png" alt="No crowns in unfinished rooms" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Bathrooms могут иметь Crowns</div>
-      <div class="kb-figure-row__rule">Не исключай bathrooms автоматически.</div>
-      <div class="kb-figure-row__note">Иди по finish/trim scope и material notes.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-21.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-21.png" alt="Crowns in bathrooms" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Second-level Crown rule</div>
-      <div class="kb-figure-row__rule">Считай только Hall, foyer и large guest rooms, если это правило применимо.</div>
-      <div class="kb-figure-row__note">Держи second-floor logic отдельно от first-floor living areas.</div>
+      <div class="kb-figure-row__title">Second level</div>
+      <div class="kb-figure-row__rule">Только hall, foyer и большие комнаты, где это требуется.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-22.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-22.png" alt="Second level crown locations" loading="lazy"></a>
   </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Crown Excel formula</div>
-      <div class="kb-figure-row__rule">Каждый measured segment вписывай в formula.</div>
-      <div class="kb-figure-row__note">Не прячь perimeter total без видимых run values.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-23.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-23.png" alt="Crown Excel formula values" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">TBD Crowns</div>
-      <div class="kb-figure-row__rule">Оставляй uncertainty по material видимой.</div>
-      <div class="kb-figure-row__note">Не угадывай crown material, когда schedule говорит TBD.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-24.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-24.png" alt="TBD Crown material check" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Crown Excel output</div>
-      <div class="kb-figure-row__rule">Final output должен совпадать с formula и material note.</div>
-      <div class="kb-figure-row__note">Перед отправкой takeoff проверь line description.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/int-trims-25.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/int-trims-25.png" alt="Crown Excel output" loading="lazy"></a>
-  </figure>
 </details>
 
+## См. также
+
+- [Interior Trims](overview.md), [Base](base.md), [Room Schedule](room-schedule.md), [Casing](casing.md)
+- [Standard notes](../../reference/standard-notes.md)

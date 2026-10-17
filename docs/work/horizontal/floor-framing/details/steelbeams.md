@@ -1,32 +1,68 @@
-# Steel Beam Web Fillers
-
-**Web fillers / nailers** - деревянные вставки в полку/стенку стального бимa,
-дающие поверхность для крепления и hangers. Top nailer часто задаёт top-mount
-hanger.
+# Steel Beam Web Fillers (nailer и fillers на стальной балке)
 
 <figure markdown>
   ![Steel beam with wood nailer and web filler](../../../../assets/images/framing/steel-beam-nailer.svg)
-  <figcaption>Wood nailer/web filler в стальном биме; top nailer - top-mount hanger.</figcaption>
+  <figcaption markdown="span">Стальная балка by others, но деревянный nailer на верхней полке, filler в стенке и болты к ним - наши строки. Top nailer задаёт top-mount hanger для joists.</figcaption>
 </figure>
 
-## Что считать
+<!-- TODO-PHOTO: wood nailer plate bolted to top flange of steel W-beam with joists on hangers, EN query "steel beam wood nailer top flange joists" -->
 
-- Wood fillers, nailers, bolts/screws/washers и attachment material at steel
-  beams там, где shown.
+## Что это
 
-## Правила
+Nailer (nailer plate) - доска на верхней полке стальной балки, в которую бьют hangers joists; web filler - доска в стенке балки между полками для face-mount hangers или крепления. Сама сталь (W12x26, HSS) by others. Считаем дерево, болты, шайбы, гайки и hangers.
 
-- Steel top nailers могут задавать top-mount hanger conditions.
-- Filler steel anchors могут требовать washers, но не over-specify washer size,
-  если он не called out.
+## Где искать на чертежах
 
-## Проверить
+| Лист | Что взять |
+| --- | --- |
+| S framing plan | длины стальных балок своего этажа |
+| General framing notes | типовая нота: `double 2x plate bolted to top flange, 3/8" bolts staggered @ 24" o.c.` |
+| Steel beam details (S4xx, S5xx) | nailer сверху и снизу, ripped to flange width, filler, тип hanger |
+| Hanger schedule | top-mount на nailer или face-mount на filler |
 
-- Hangers могут опираться **сверху** на сталь или на wood nailer - это меняет
-  тип hanger (top-mount vs face-mount), проверь по детали.
-- Assumptions держи видимыми.
+## Как мерить в OurPlanCore
 
-## See also
+Line (L) по оси стальной балки на листе framing с точкой F: `framing/<этаж> framing/details/nailer` или `details/W12 nailer`. Длина линии = длина балки. Сталь как Beam не рисуем.
 
-- [Beam](../beam.md) , [Hangers](../../../../reference/hangers.md) , [Bolts](bolts.md)
+<figure markdown>
+  ![Line по узлу на плане](../../../../assets/images/ourplancore/v3/measure-line-detail.png)
+  <figcaption markdown="span">Line по линии применения детали: длина линии уходит в G строки DFL, имя детали даёт флаг M при экспорте.</figcaption>
+</figure>
 
+## Как назвать в дереве и строка DFL
+
+Блок из четырёх строк рядом с балками своего этажа. Nailer по умолчанию двойной (нота `double 2x plate`); одинарный только если деталь прямо показывает один слой. Нижний nailer под полкой и filler - отдельные строки по детали.
+
+| A (Label) | B | C | D | E |
+| --- | --- | --- | --- | --- |
+| `Nailer Plates for Steel Beam (2)` | `2x8` (по ширине полки, `3x DF ripped`) | `=ОКРВВЕРХ(G*2/D;1)` | `16` | `14/S400` |
+| `Anchor Bolts 24" o.c. (2)` | `3/8" Ø` | `=ОКРВВЕРХ(G*12/H*2*1.1;2)` | `pcs` | `note II.B` |
+| `Washers 24" o.c. (2)` | `3/8" Washers` | та же формула | `pcs` | |
+| `Nuts 24" o.c. (2)` | `Nuts for 3/8" Ø` | та же формула | `pcs` | |
+| `Web Filler` | `2x6` | `=ОКРВВЕРХ(G*2/D;1)` | `16` | деталь |
+| `Hangers` | top-mount на nailer, face-mount на filler | по joists | `pcs` | деталь |
+
+Шайба под болт nailer - обычная washer, `3x3` только если деталь требует.
+
+## Частые ошибки
+
+- Nailer посчитан одинарным без болтов, хотя нота даёт double 2x с болтами 3/8" @ 24".
+- Болты взяты по балкам другого этажа.
+- Hanger выбран face-mount, а деталь даёт опору сверху на nailer (top-mount), или наоборот.
+- Filler steel anchors с шайбой 3x3 без указания.
+- `EWP by others`, а LVL/LSL blocking у стальной балки по детали не записан.
+- [Все ошибки по перекрытиям](../../../../start/common-mistakes.md#floor)
+
+## Пример
+
+| A | B | C | D | E | G | H |
+| --- | --- | --- | --- | --- | --- | --- |
+| `Nailer Plates for Steel Beam (2)` | `2x8` | `=ОКРВВЕРХ(G*2/D;1)` | 16 | `4/S5.6` | 86 | |
+| `Anchor Bolts 24" o.c. (2)` | `3/8" Ø` | `=ОКРВВЕРХ(G*12/H*2*1.1;2)` | pcs | `note II.B` | 86 | 24 |
+| `Washers 24" o.c. (2)` | `3/8" Washers` | `=ОКРВВЕРХ(G*12/H*2*1.1;2)` | pcs | | 86 | 24 |
+| `Nuts 24" o.c. (2)` | `Nuts for 3/8" Ø` | `=ОКРВВЕРХ(G*12/H*2*1.1;2)` | pcs | | 86 | 24 |
+
+## См. также
+
+- [Beam](../beam.md), [Bolts](bolts.md), [Hangers](../../../../reference/hangers.md)
+- [Metal tracks](../../../vertical/walls/metal-tracks.md) - стены под стальными балками

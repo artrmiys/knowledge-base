@@ -1,107 +1,108 @@
-# Wall Sheathing
-
-!!! abstract "Коротко"
-    - **Exterior** обшивку ведут **Arch / Energy / Zip** notes.
-    - **Shear / interior** обшивку ведёт **Structural** (по shear wall schedule).
-    - Zip перекрывает structural notes на exterior, но оставляй note о конфликте.
-    - Каждый product / thickness / side - отдельной строкой, не прячь в wall SQFT.
-    - Полный блок наружных материалов - [Exterior Wall Materials](exterior-materials.md).
+# Wall Sheathing (обшивка стен)
 
 <figure markdown>
-  ![WD stud wall layer stack with takeoff notes](../../../assets/images/sheathing/wd-wall-layers.svg)
-  <figcaption>Стена по слоям: каждый sheathing-слой (gypsum, FRT ply, WRB) - отдельная строка, не общий wall SQFT.</figcaption>
+  ![Монтаж OSB-обшивки на каркасную стену](../../../assets/images/confluence/confluence-094.jpg)
+  <figcaption markdown="span">Структурная обшивка наружной стены: лист OSB по стойкам. Площадь = длина стены x высота стены, минус проёмы шире 4'. Архивное фото.</figcaption>
 </figure>
 
-## Что считать
+## Что это
 
-- Exterior sheathing по Arch / energy / Zip notes.
-- Interior shear wall sheathing по Structural.
-- Loose/box/full-height sheathing отдельно, когда project scope различает их.
-- Densglass, FRT, Zip, plywood/OSB и gypsum-based sheathing отдельными lines,
-  когда drawings показывают разные products.
+Wall Sheathing - структурный лист на наружной грани каркасной стены: OSB,
+plywood или Zip. Это не то же самое, что Exterior Gypsum (`Type X`,
+`Densglass`) и не внутренний гипсокартон: наружный гипс идёт отдельной
+строкой ([Exterior Wall Materials](exterior-materials.md)), внутренний гипс,
+внутренний утеплитель и sound batt во frame-scope не считаем. Узкие полосы
+(box, truss heel, gable, parapet) имеют свои страницы и свои строки.
 
-## Правила
+## Где искать на чертежах
 
-- `19/32"` = `5/8"`, не `1/2"`.
-- Zip на exterior walls перекрывает structural sheathing notes, но оставляй note.
-- Non-Zip exception: если Arch говорит 1/2", а Structural говорит 5/8", бери
-  5/8" для strength.
-- Optional walls могут требовать full-height sheathing; loose sheathing может
-  быть box only.
-- Interior shear wall sheathing идёт по shear wall schedule, включая one-side vs
-  both-sides requirements.
-- Не прячь sheathing в generic wall SQFT, когда reviewer нужны product,
-  thickness, side или location.
+| Лист | Что взять |
+| --- | --- |
+| Wall type schedule (`wt`) и wall sections (`sec`) | Продукт, толщина, число слоёв по стрелкам слоёв; сторона стены |
+| Structural general notes, таблица WS-1 (например S3.1) | Структурная толщина и nailing; таблица стен и таблица кровли (WRS-1) разные |
+| Shear wall schedule | Обшивка shear walls: сторона, толщина, слои; см. [Shear Wall](shear-wall.md) |
+| Energy / envelope sheets | Zip, Zip R, WRB, continuous insulation |
+| Elevations (`el`) | Зоны Densglass, смена материала, фронтоны |
 
 ## Приоритет источников
 
-| Situation | Default takeoff decision |
+| Ситуация | Решение |
 | --- | --- |
-| Exterior wall has Zip note | Используй Zip; Structural conflict оставь как note |
-| Exterior wall has no Zip, Arch 1/2" vs Structural 5/8" | Используй 5/8" |
-| Shear wall schedule says both sides | Считай both sides, не wall area один раз |
-| Wall type/elevation calls Densglass | Разделяй Densglass by level/elevation |
-| FRT exterior wall material | Проверь, меняются ли sheathing/blocking/parapet |
+| Арх даёт Zip, структура даёт OSB/ply | Берём Zip, в DFL главная Note с обоими источниками |
+| Без Zip: Arch `1/2"`, Structural `5/8"` | Берём `5/8"` (сильнее), Note с обоими листами |
+| `19/32"` | Это `5/8"` для plywood/OSB, не `1/2"` |
+| `7/16" Zip` на S-листе и `Zip R-3` в wall type | Один продукт, Note фактом, без "differ" |
+| Нет толщины нигде | `assumed 1/2" Ply; verify` в главной Note |
 
-## Проверить
+Название продукта берём из этого комплекта: `LP FlameBlock 2-sided` не равно
+`7/16" OSB FRT`, `5/8" EXT. SHEATHING` не превращаем в Ply без основания,
+`CDX` пишем только если так в сете. Наружный барьер называем WRB / Weather
+Barrier по спецификации (fluid-applied не Tyvek), не "Vapor Barrier".
 
-- FRT sheathing notes на exterior walls.
-- Densglass / Type X gypsum на metal walls или specific elevations.
-- `Insulation at CMU` - continuous insulation на CMU стенах отдельной строкой.
-- Shear wall schedule: one-side vs both-sides requirements.
-- Full-height vs box-only sheathing на optional walls.
-- Floor-height sheathing вокруг panelized COM jobs, где loose material всё ещё
-  in scope.
-- Draft stop sheathing at party/demising walls - это не shear wall sheathing.
-  Draft stop и shear wall quantities держи отдельно.
-- Draft stop может быть на walls и between floors; считай каждый supplied scope
-  в своей section, а не объединяй в одну wall line.
+## Как мерить в OurPlanCore
 
-## Sheathing Material Variants
+Отдельной ветки `sheathing` в дереве нет. Площадь стен собирается из линий
+стен: имя стены несёт высоту (`ext 2x6 9.09`), экспорт в Excel умножает длину
+на высоту.
 
-Стандартные продукты, которые встречаются на чертежах:
+1. Стены обведены Line в `walls/<этаж> floor walls/` на листе с точкой W
+   (`a101 1st`). Смена высоты, сечения или стороны обшивки = новая позиция.
+2. До подсчёта составь таблицу поверхностей: корпус, этаж, сторона, продукт,
+   толщина, слои, gross или net, вычеты. Слои считай по стрелкам детали.
+3. Вычеты: проёмы вычитаются по своему этажу и один раз (из обшивки, WRB,
+   утеплителя, Z-girt). Окна уже 4' не вычитаем. Ворота гаража вычитаем.
+4. Полосы вне стен берутся из своих веток: `gables`, `trussheel`, `parapets`,
+   box из высоты перекрытия. Каждая полоса считается один раз.
+5. Сколько сторон: на panel-job одна сторона уже в панели, отдельно только
+   требуемая вторая. Наружная сторона shear wall уже в ext walls, добавляем
+   только внутреннюю. `P` у марки = perforated, не две стороны.
 
-| Запись на чертеже | Что брать |
-| --- | --- |
-| `1/2" CDX Ply` | Plywood CDX, 1/2" |
-| `1/2" OSB` | OSB, 1/2" |
-| `1/2" Ply` (или просто **APA RATED**) | Plywood APA-rated, 1/2" |
-| `7/16" Zip` | Huber Zip System, 7/16" |
-| `Zip Tape` | Лента Zip - отдельной строкой к Zip-обшивке |
-| `5/8" Type X` | Exterior grade gypsum sheathing (= `19/32"`) |
-| `5/8" Densglass` | Densglass gypsum sheathing (часто over Zip) |
+## Как назвать в дереве и строка DFL
 
-- **Box / wall sheathing чаще `OSB`** - Zip идёт там, где это явно Zip-система
-  (energy / Arch note). Exterior всё равно ведут Arch / Zip notes, это лишь default.
-- Если на плане только `APA RATED` без указания материала - это **Plywood**, не OSB.
-- `Zip Tape` идёт **только** в паре с Zip-обшивкой; не забывай добавить отдельную строку.
-- **Gypsum sheathing** (`Type X` / `Densglass`) бывает в **(2) layers** и отдельным
-  слоем **over FRT** - каждый слой считается своей строкой. Material для metal/CMU
-  стен нужен, даже если каркас чужой.
+| Имя в дереве | Строка DFL | Материал | Unit | Формула |
+| --- | --- | --- | --- | --- |
+| `walls/1st floor walls/ext 2x6 9.09` | `Wall Sheathing` | `7/16" Zip` или `1/2" OSB` | `4x8` | `=ОКРВВЕРХ(SQFT/32*1.1;1)` |
+| тот же замер | `Tape` | `Zip Tape` (только с Zip) | `LFT` | `=ОКРВВЕРХ(SQFT*0.4*1.1;10)` |
+| тот же замер | `Vapor Barrier` (в шаблоне) | WRB по спецификации | `SQ FT` | `=ОКРВВЕРХ(SQFT*1.1;10)` |
+| тот же замер | `Insulation` | наружный `1" Insulation` или Zip R | `SQ FT` | как WRB |
+| `walls/1st floor walls/ext ...` | `Wall Sheathing` второй строкой | `5/8" Type X` (наружный гипс) | `SQ FT` | [Exterior Wall Materials](exterior-materials.md) |
 
-!!! note "Полный блок наружных материалов"
-    Exterior gypsum, continuous insulation, **Insulation at CMU**, flashing,
-    bracing и window jambs собраны на странице
-    [Exterior Wall Materials](exterior-materials.md). Открывай её, когда
-    считаешь наружную оболочку целиком.
+Спека живёт в ячейках шаблона: O3 обшивка, O4 WRB, O5 Zip, O6 Zip Tape,
+в P голая ссылка на лист (`S3.0`, `8/S3.0`, без слова "per"). Заполняется при
+создании job. Строки Box Sheathing и Holdowns стоят в конце секции стен этажа.
 
-## See also
+## Частые ошибки
 
-- [Exterior Wall Materials](exterior-materials.md) , [Shear Wall](shear-wall.md) , [Box Sheathing](box-sheathing.md) , [Gable Sheathing](gable.md) , [Exterior Walls](../walls/exterior.md)
+- Проёмы не вычтены (ворота гаража) или вычтены дважды (двери на двух этажах).
+- Толщина и продукт унаследованы от прошлого дома, а не прочитаны в этом сете.
+- `Vapor Barrier` и `Tyvek` при fluid-applied барьере в спецификации.
+- Конфликт арх и структуры решён молча, без Note с двумя листами.
+- Посчитан внутренний гипс, внутренний утеплитель или sound batt.
+- Площадь измерена в программе, но в Excel осталось старое число.
+- Один и тот же слой учтён и в стене, и в gable или parapet.
 
-<!-- confluence-gallery:start -->
-## Визуальная проверка
+Все ошибки по обшивке: [common-mistakes](../../../start/common-mistakes.md#sheathing).
 
-Архивные иллюстрации помогают прочитать правило. Для своего takeoff сверь его с чертежами и scope текущего проекта.
+## Пример
 
-??? info "Источник картинок"
-    - Sheathing: 2 карт. Confluence (архивный источник; ссылка не публикуется)
+```text
+1st Floor Walls
+Wall Sheathing      7/16" Zip        214   4x8     8/S3.0
+Tape                Zip Tape        2740   LFT
+Insulation          Zip R-3         6850   SQ FT   A2-00
+Note: Wall Sheathing 7/16" Zip R3 per 8/S3.0 A2-00.
+Box Sheathing       7/16" Zip         21   4x8
+Tape                Zip Tape         270   LFT
+```
 
-<details class="kb-figures">
-  <summary>Показать 2 иллюстраций</summary>
-  <div class="kb-figure-grid">
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-093.jpg" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-093.jpg" alt="Wall Sheathing - визуальная проверка 01: Проверь material/thickness, side, Zip/Densglass/FRT и shear schedule." loading="lazy"></a>
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-094.jpg" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-094.jpg" alt="Wall Sheathing - визуальная проверка 02: Проверь material/thickness, side, Zip/Densglass/FRT и shear schedule." loading="lazy"></a>
-  </div>
-</details>
-<!-- confluence-gallery:end -->
+<figure markdown>
+  ![Дом в обшивке Zip System](../../../assets/images/confluence/confluence-093.jpg)
+  <figcaption markdown="span">Zip System: лист и WRB в одном продукте, строка Tape обязательна. Треугольник фронтона в ветке gables, стена ниже в walls. Архивное фото.</figcaption>
+</figure>
+
+## См. также
+
+- [Exterior Wall Materials](exterior-materials.md) - наружный гипс, insulation, flashing, bracing
+- [Shear Wall](shear-wall.md), [Box Sheathing](box-sheathing.md), [Truss Heel](truss-heel.md), [Gable Sheathing](gable.md)
+- [Exterior Walls](../walls/exterior.md), [Parapet](../walls/parapet.md)
+- [Советы и важные вещи, Sheathing](../../../reference/boss-feedback-rules.md#sheathing)

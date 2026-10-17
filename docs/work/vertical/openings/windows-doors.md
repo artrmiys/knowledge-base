@@ -1,65 +1,101 @@
-# Windows and Doors
+# Windows and Doors (проёмы)
 
-**Openings** - окна и двери по window/door schedule. Тянут за собой jamb
-blocking, headers, flashing и **вырез из sheathing**.
+<figure markdown>
+  ![Инструмент Openings: рамка на окне и точка с именем 3.0x5.0](../../../assets/images/ourplancore/v3/measure-openings.png)
+  <figcaption markdown="span">Инструмент Openings на фасаде: рамка по проёму, программа сама пишет имя-размер `3.0x5.0` и ставит точку в центре. Одна точка - один физический проём.</figcaption>
+</figure>
 
-## Что считать
+## Что это
 
-- **Окна и двери** - по типам и размерам из window / door schedule.
-- **Блокировку проёмов** (`jamb blocking`) - у всех окон и у межкомнатных
-  дверей.
-- **Пожароустойчивые двери** в квартиры из коридоров (`fire-rated unit
-  entry`) - отдельным типом, с указанием рейтинга.
+Openings - все дыры в наружной стене: окна, наружные и patio двери,
+гаражные ворота, storefront, наружные решётки (louvers). Они дают header,
+jamb-стойки, flashing и вычет из обшивки. Межкомнатные двери - отдельный
+scope (двери, jambs, casing), а не openings. Перемычки считаются на своей
+странице [Headers](headers.md).
 
-## Подписи дверей
+## Где искать на чертежах
 
-- В подписи указываем **материал** и **fire rating**, если это важно. Примеры:
-    - `2670 FCW` - двустворчатая 2'6"×7'0".
-    - `3070 HM C-lbl` - металлическая 3'0"×7'0", класс "C".
-- Дверь в квартиру можно подписать просто `3070 Entry`.
-- **Номера фурнитуры** (hardware numbers) в takeoff обычно **не нужны**.
+| Лист | Что взять |
+| --- | --- |
+| Фасады `a201 el` | Марки окон и дверей (ромбы), этаж по отметкам своего вида |
+| Window schedule, window types (`win sch`) | Размер изделия; в general notes - это R.O. или размер блока |
+| Door schedule (`dr sch`) | Размер, материал, fire label: `3070 HM C-lbl` |
+| Планы этажей | Теги дверей, storefront, ворота; окна без марок на фасаде |
+| Листы другого корпуса | Ширина типа, которой нет на своём листе (записать в Notes) |
 
-## Проверить
+## Как мерить в OurPlanCore
 
-- У наружных проёмов **jamb** (доска по периметру проёма) можно считать той же
-  формулой, что и flashing - по 3 сторонам. Подробнее на странице
-  [Window Flashing](window-flashing.md).
-- У межкомнатных дверей **jamb** часто считается как `casing / 2`, если так
-  заведено в проекте.
-- Из Room Schedule убирай `tile base`, если в скоупе только wood base.
+Инструмент **Openings** (клавиша O), результат - Count/point с размером.
 
-## Гидроизоляция вокруг проёмов
+1. Растяни рамку по проёму на фасаде `... el`: программа меряет `ШxВ` в
+   футах и создаёт позицию с именем-размером. Если марки стоят на планах,
+   рисуй на планах.
+2. Папки этажей прямо под `openings`: `0` (ниже 1-го), `1`, `2`, `roof`.
+   Без подпапок windows и doors. Этаж точки - между отметками этажей
+   своего вида; окна лестницы на полэтажа ниже уходят в нижний.
+3. Имя `W.WxH.H` в десятичных футах, одна цифра после точки: `5.8x5.9`.
+   Двери ` d` (`3.3x6.5 d`), ворота ` gd` (`9.0x6.8 gd`), решётки ` lv`.
+   Разные марки одного размера - одна позиция. Марку, лист и R.O. пиши в
+   Notes: `Note: A601 type W1, RO 3'-0" x 5'-0"`.
+4. Размер - из schedule, не с длины линии на фасаде. Высота окна = высота
+   изделия, не отметка верха (`7'-2"` на рисунке часто отметка head).
+5. Одна точка на проём, точка внутри проёма. Свой цвет на размер, один на
+   всех этажах.
+6. Не считать дважды: окно на matchline берётся в том виде, где целое; бледный
+   задний план без марок не считается; створка составного окна - не окно.
+7. Storefront, multi-slide, ворота, HM-двери без типа - отдельно по своему
+   источнику размеров. Полный storefront один раз, его дверь не вторая дыра.
 
-Flashing вокруг окон и дверей - отдельная страница:
-**[Window Flashing & Sill](window-flashing.md)**. Там: правило "3 стороны
-у окон + sill, у дверей только 3 стороны", разделение по типу стены (wood /
-Mtl / CMU / concrete), и wood jamb `1x4` / `2x4 P.T.` на бетоне.
+Имя с размером нужно кнопке `OP` полосы XL: она читает `ШxВ` из имени и
+переносит проёмы в книгу, где макрос `F_Openings` считает flashing.
 
-## PlanSwift Marking & Macro
+## Как назвать в дереве и строка DFL
 
-- Подсчёт всех openings - макрос **`F_Openings`** (даёт Window Flashing + Sill Flashing).
-- У всех **дверей** обязательно ставь пометку **`d`** - макрос по этой пометке
-  **не считает** sill flashing.
-- У **гаражных** дверей - пометка **`gd`**.
-- Если **окно и дверь объединены одним хэдером** (например, sliding patio в blocks с фиксом сбоку) - считай их **вместе** одним openings, ставь **`d`**.
-- Все openings **вырезаются из sheathing** - не забывай subtract при подсчёте Wall Sheathing SQFT.
+| Имя в дереве | Строка DFL | Unit | Формула / фактор |
+| --- | --- | --- | --- |
+| `openings/1/3.0x5.0` | `Window Flashing` + `Sill Flashing` | LFT | `(2H + W) x qty`, `W x qty` |
+| `openings/1/3.3x6.5 d` | `Ext. Doors` `3070 1 unit MARK FIRE LABEL`; flashing 3 стороны | ea, LFT | без sill flashing |
+| `openings/1/9.0x6.8 gd` | `Garage headers (3)`, flashing 3 стороны | ea, LFT | без sill |
+| `openings/1/2.0x2.0 lv` | решётка, вычет из обшивки | ea | |
+| межкомнатные двери | `Int. Doors` `2670 ...`, jambs по сечению соседней стены | ea | дверь шире 4' = двойная `(2)2670` |
 
-## See also
+- Casing у двери по 3 сторонам в LFT; jambs межкомнатных дверей считаются
+  точками по юнитам и группируются по сечению стены (точка у `2x6` = jamb 2x6).
+- Номера фурнитуры в DFL не нужны; материал и fire rating - нужны.
+- Из обшивки, WRB, insulation и линии фундамента проёмы вычитаются **один раз**
+  и по своему этажу. Окна меньше 4' из обшивки не вычитаются:
+  [Wall Sheathing](../sheathing/wall-sheathing.md).
 
-- [Headers](headers.md) , [Window Flashing & Sill](window-flashing.md) , [Macros](../../exterior-trims/macros.md) , [Furring & Window Jambs](../../exterior-trims/furring-and-jambs.md)
+## Частые ошибки
 
-<!-- confluence-gallery:start -->
-## Визуальная проверка
+- Высота окна взята как отметка верха, а не высота изделия.
+- Проём посчитан дважды: на плане и фасаде, с двух видов, дверь storefront отдельно.
+- Пометка ` d` не поставлена: у двери появился Sill Flashing.
+- Проёмы не вычтены из обшивки и WRB (ворота гаража) или вычтены дважды.
+- Дверь шире 4' записана одной створкой.
+- Размер взят с фасада "на глаз", а не из schedule; R.O. перепутан с размером блока.
 
-Архивные иллюстрации помогают прочитать правило. Для своего takeoff сверь его с чертежами и scope текущего проекта.
+Разбор с примерами: [все ошибки по проёмам](../../../start/common-mistakes.md#openings).
 
-??? info "Источник картинок"
-    - Openings: 1 карт. Confluence (архивный источник; ссылка не публикуется)
+## Пример
 
-<details class="kb-figures">
-  <summary>Показать 1 иллюстраций</summary>
-  <div class="kb-figure-grid">
-    <a class="kb-figure" href="../../../../assets/images/confluence/confluence-092.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-092.png" alt="Window/Door Opening - визуальная проверка: Проверь schedule, rough opening, header need и exterior-only scope." loading="lazy"></a>
-  </div>
-</details>
-<!-- confluence-gallery:end -->
+```text
+openings/
+  0/
+    2.9x4.0          Count, 4 ea
+    3.2x6.9 d        Count, 1 ea     Notes: A601 type D2, RO 3'-4" x 7'-0"
+  1/
+    4.3x7.8          Count, 12 ea    Notes: A601 type W1
+    5.1x7.1 d        Count, 6 ea
+  roof/
+    2.0x2.0 lv       Count, 2 ea
+Grge/openings/
+  9.0x6.8 gd         Count, 2 ea
+```
+
+## См. также
+
+- [Headers](headers.md), [Window Flashing](window-flashing.md)
+- [Furring & Window Jambs](../../exterior-trims/furring-and-jambs.md), [Interior door trim](../../interior-trims/door-window-trim.md)
+- [Советы: Doors](../../../reference/boss-feedback-rules.md#doors)
+- [Имена takeoffs](../../../reference/takeoff-naming.md)

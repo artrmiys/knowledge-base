@@ -1,135 +1,95 @@
-# Eve / Eave
-
-`Eve` / `Eave` - нижний горизонтальный край крыши вдоль стены. В takeoff это не
-один item: там могут быть framing, soffit material, fascia/subfascia, trims,
-vented/vinyl soffit и отдельные roof-edge details.
+# Eve / Eave (карниз)
 
 <figure markdown>
-  ![Eave takeoff parts](../../assets/images/roof/eave-parts-takeoff.svg)
-  <figcaption>Eave состоит из разных buckets: LFT для edge/framing, SQFT для soffit material.</figcaption>
+  ![Угол крыши: карниз eave и наклонный rake в обшивке OSB](../../assets/images/photos/roof/rm-eave-rake-corner-osb.jpg)
+  <figcaption markdown="span">Угол кровли в стадии каркаса: слева наклонная кромка rake по фронтону, справа горизонтальный eave с blocking между хвостами ферм. Eave и rake - разные линии и разные позиции. Фото: ssukotash, CC BY 2.0, <a href="https://www.flickr.com/photos/20775821@N03/6071724150">источник</a>.</figcaption>
 </figure>
 
-## Что считать
+## Что это
 
-- `Eve` framing / rafter-tail framing / soffit frame, когда shown.
-- `Soffit` material: vinyl, beadboard, plywood, exterior gypsum, Denseglas /
-  Densglass, vented soffit panels.
-- `Subfascia` и `Fascia` / trim, если это часть scope.
-- `Frieze` / wall trim под eave, если drawings/specs показывают отдельную line.
-- Blocking, backing, strapping и vents только когда они called out.
-- `Soffit plywood` under roof trusses, если detail/RCP/section показывает его.
-- Canopy/porch eave material, если это не отдельная page/line в output.
+Eave (в дереве `eve`) - нижний горизонтальный край крыши вдоль стены, свес с
+soffit снизу и fascia по торцу. Rake - наклонная кромка на фронтоне
+([Rake](rake.md)), return - коробка в углу, где eave заворачивает к rake
+([Returns](returns.md)). Вертикальная полоса у пятки фермы над стеной - это
+[Truss Heel](../vertical/sheathing/truss-heel.md), не часть карниза. Из одной
+линии eave экспорт получает soffit (SQ FT), fascia и sub fascia (LFT) и каркас
+свеса.
 
-## Что не смешивать
+## Где искать на чертежах
 
-<details class="kb-figures kb-figures--rows" open>
-  <summary>Скрыть 3 правил с иллюстрациями</summary>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Eave / Rake / Return / Truss Heel</div>
-      <div class="kb-figure-row__rule">Держи buckets отдельно, если output template не просит объединить.</div>
-      <div class="kb-figure-row__note">Eave = горизонтальный нижний edge; Rake = sloped gable edge; Return = boxed corner; Truss Heel = вертикальная полоска.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/roof/eave-vs-rake-return-map.svg" target="_blank" rel="noopener"><img src="../../../assets/images/roof/eave-vs-rake-return-map.svg" alt="Eave versus rake and returns map" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Truss Heel near Eave</div>
-      <div class="kb-figure-row__rule">На eave side heel sheathing часто забывается.</div>
-      <div class="kb-figure-row__note">Это вертикальная полоска между Top Plate и низом overhang; не прячь её в soffit SQFT.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/confluence/confluence-175.png" target="_blank" rel="noopener"><img src="../../../assets/images/confluence/confluence-175.png" alt="Truss heel visual reference" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">AJS Rafters edge condition</div>
-      <div class="kb-figure-row__rule">Если roof framed with AJS Rafters ведёт себя как exposed overhang, считай rafters manually.</div>
-      <div class="kb-figure-row__note">Не заменяй это простым `Rake`, когда detail требует отдельные rafters.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/reference/important-change-03.png" target="_blank" rel="noopener"><img src="../../../assets/images/reference/important-change-03.png" alt="AJS rafters manual roof edge rule" loading="lazy"></a>
-  </figure>
-</details>
-
-| Bucket | Что это | Где считать |
-| --- | --- | --- |
-| `Eave` | Горизонтальный нижний edge roof overhang | LFT по длине eave |
-| `Rake` | Наклонный edge на gable side | Отдельная Rake line |
-| `Returns` | Boxed corner, где eave/rake возвращается | Отдельная Returns line |
-| `Truss Heel` | Вертикальная strip у края truss | [Truss Heel](../vertical/sheathing/truss-heel.md), не soffit |
-| `Canopy / Porch soffit` | Soffit under canopy/porch | Считать в canopy/porch scope, если output так разделён |
-
-## Правила takeoff
-
-- `Eave` line обычно меряется **LFT** по наружному периметру roof edge.
-- `Soffit` material обычно считается **SQFT**: `eave length × overhang width`.
-- `Fascia`, `subfascia`, frieze trim и edge trims обычно считаются **LFT**.
-- `Vinyl Soffits` / `Soffit Eve Vinyl` вводи в **SQFT**, не как framing line.
-- Если `30%+` soffit = beadboard, считай весь soffit SQFT как beadboard и
-  добавь note, что это local rule.
-- Eve soffit frames can be `2x6`, not `2x4`, if drawings show it.
-- Canopies и porch soffits могут требовать `5/8" exterior-grade gypsum`,
-  Denseglas/Densglass или похожий exterior soffit material.
-- Для roofs framed with `AJS Rafters`: если edge behaves like exposed floor
-  overhang, считай rafters manually instead of simple `Rake`.
-- Если `FRT`/exterior treatment applies to exposed roof edge, проверь fascia,
-  subfascia, blocking и trim material.
-
-## Где искать
-
-| Лист / источник | Что взять |
+| Лист | Что взять |
 | --- | --- |
-| Roof plan | Eave runs, overhang zones, main roof vs porch/canopy |
-| Exterior elevations | Fascia/subfascia, frieze, trim profiles, material changes |
-| Architectural sections | Overhang depth, soffit thickness, boxed eave construction |
-| RCP | Dropped soffits, canopy/porch soffits, hidden soffit frames |
-| Structural roof framing | Rafter tails, truss condition, AJS rafters, blocking |
-| Truss package/details | Heel height, eave side vertical sheathing, bearing condition |
-| Exterior finish schedule/specs | Vinyl, beadboard, vented soffit, Denseglas/Densglass |
+| Roof plan (`a105 rf`) | Линии eave по периметру, вынос свеса, main против porch и canopy |
+| Sections, soffit detail (`sec`, `d`) | Ширина свеса, sub fascia `2x6`/`2x8`, frame for soffit `2x4`/`2x6`, материал soffit |
+| Elevations (`el`) | Fascia, frieze, смена материала по фасадам |
+| RCP | Soffit под canopy и porch (своя ветка, не eave) |
+| Finish schedule / specs | Vinyl vented, beadboard, fiber cement, exterior gypsum |
 
-## Как мерить
+## Как мерить в OurPlanCore
 
-| Item | Unit | Метод |
-| --- | --- | --- |
-| Eave framing | LFT | По eave run, split by size/material. |
-| Soffit material | SQFT | `eave LFT × overhang width`; split by material. |
-| Vinyl soffit | SQFT | Вносить как SQFT, даже если на plan подписано `Soffit Eve Vinyl`. |
-| Beadboard soffit | SQFT | Если 30%+ beadboard, local rule: full soffit SQFT as beadboard. |
-| Fascia / subfascia | LFT | По exposed roof edge; отделяй eave от rake. |
-| Soffit frame | LFT / PCS | По detail: 2x4/2x6, spacing или continuous run. |
-| Vented soffit | SQFT / LFT | Следуй spec/template; note if counted by SQFT. |
+1. Инструмент Line по наружной кромке eave на плане кровли. Единица LFT.
+   Все участки: каждая сторона дома, каждый выступ.
+2. Имя: `eve <вынос в дюймах> <зона>`: `eve 24 main`, `eve 12 porch`,
+   `eve 18 upperporch no frame`. Вынос берём из section или detail, не по
+   толщине линии на плане. Папка `eves rakes/eves` создаётся по имени сама; не
+   исправляй `eves` на `eaves`.
+3. Разные выносы и зоны = разные позиции. Участки без каркаса свеса помечай в
+   имени (`no frame`).
+4. Canopy и porch в eave не входят: у них свои позиции и свой блок. Главная
+   ошибка - посчитать их дважды.
+5. Soffit SQ FT = длина x ширина только при постоянной ширине. Сложный soffit
+   porte-cochere или porch обводится Area отдельно, без второго счёта
+   длиной.
 
-## Проверить
+## Как назвать в дереве и строка DFL
 
-- RCP and architectural sections can show soffits missing from structural plans.
-- `Vinyl Soffits` / `Soffit Eve Vinyl` belong in SQFT, not as a framing line.
-- Не включай `Rake` в `Eve`, если template ожидает separate roof edge lines.
-- Не включай `Returns` в обычный eave run, если return trim/framing differs.
-- Не считай `Truss Heel` как soffit; это separate vertical sheathing strip.
-- Для porch/canopy проверь, не должен ли soffit идти в
-  [Canopy](../horizontal/roof-framing/canopy.md) или [Porch SQFT](../sqfts/porch.md).
-- Если eave material меняется по elevation, разбивай line by material.
-- Если soffit depth меняется, считай SQFT отдельными участками.
-- Если note говорит `vented`, `solid`, `beadboard`, `vinyl`, `fiber cement`,
-  `gypsum`, не заменяй generic `soffit`.
-- Если drawings молчат по size, не подставляй `2x4` frame автоматически:
-  сначала проверь section/detail.
+| Имя в дереве | Строка DFL | Материал | Unit | Формула |
+| --- | --- | --- | --- | --- |
+| `eves rakes/eves/eve 24 main` | `Soffits at Eves` | `12" Vinyl vented` / beadboard / `5/8" Ext Gyp` | `SQ FT` или `LFT` | `LFT x 24/12` |
+| та же линия | `Fascia at Eves` | `1x8` / alum wrapped | `LFT` | `LFT x 1.1` |
+| та же линия | `Sub Fascia` | `2x8` | `LFT` | в блоке кровли |
+| та же линия | `Frame for Soffits 24" o.c.` | `2x4` или `2x6` по детали | `LFT` | по детали |
+| та же линия | `Blocking at Eves`, `Simpson Ties at Eves` | `2x6`, `H2.5A` | `LFT`, `pcs` | [Roof Sheathing](../horizontal/roof-framing/roof-sheathing.md) |
+| `eves rakes/eves/eve 12 porch` | те же строки в блоке porch | по детали porch | | отдельно от main |
 
-## Пример output
+Экспорт в Excel: полоса XL, кнопка E/R; число выноса в имени читается
+макросом как ширина в дюймах. Vinyl soffit вводится как материал в SQ FT, не
+как строка каркаса. Если 30% и больше soffit = beadboard, весь soffit считаем
+beadboard и пишем Note, что это local rule.
 
-| Description | Size / material | Qty | Unit | Note |
-| --- | --- | ---: | --- | --- |
-| Eave subfascia | `2x6` | 148 | LFT | Main roof eave only |
-| Soffit Eve Vinyl | Vinyl | 296 | SQFT | `148 LFT × 2'-0"` |
-| Soffit frame | `2x6` | 148 | LFT | Per A-section |
-| Beadboard soffit | Beadboard | 296 | SQFT | Full soffit by 30%+ local rule |
-| Truss Heel sheathing | OSB / plywood | 148 | LFT/SQFT | Separate from soffit |
+## Частые ошибки
 
-## Источники правил
+- Canopy и porch посчитаны ещё раз внутри eave или rake.
+- Не все участки eave обведены (271 LFT вместо 310).
+- Rake и returns слиты в eave, хотя строки разные.
+- Truss heel спрятан в soffit SQ FT.
+- `Soffit Eve Vinyl` введён как каркас, а не как SQ FT материала.
+- Frame for soffit `2x4` подставлен автоматически, хотя деталь даёт `2x6`.
+- Для кровли из `AJS Rafters` с открытым свесом посчитан простой rake вместо rafters вручную.
 
-- Trello: `Vinyl Soffits только в SQFT`.
-- Trello: `Если Soffit Eve Vinyl то нужно вписать в SQFT`.
-- Trello: `Для крыши из AJS Rafters считать вместо Rake вручную Rafters`.
-- Related pages: [Rake](rake.md), [Returns](returns.md),
-  [Truss Heel](../vertical/sheathing/truss-heel.md),
-  [Roof Sheathing](../horizontal/roof-framing/roof-sheathing.md),
-  [Canopy](../horizontal/roof-framing/canopy.md).
+Все ошибки по кровле: [common-mistakes](../../start/common-mistakes.md#roof).
+
+## Пример
+
+```text
+Takeoffs/Main/eves rakes/eves/
+  eve 24 main          Line  310 LFT
+  eve 12 porch         Line   38 LFT
+Takeoffs/Main/eves rakes/rakes/
+  rake 12 main         Line   96 LFT
+  returns 12           Line    8 LFT
+
+Soffits at Eves      12" Vinyl vented    620   SQ FT   310 x 2'
+Fascia at Eves       1x8 alum wrapped    341   LFT
+```
+
+<figure markdown>
+  ![Части карниза в takeoff](../../assets/images/roof/eave-parts-takeoff.svg)
+  <figcaption markdown="span">Одна линия eave даёт несколько строк: soffit по площади, fascia и sub fascia по длине, каркас свеса по детали.</figcaption>
+</figure>
+
+## См. также
+
+- [Rake](rake.md), [Returns](returns.md), [Truss Heel](../vertical/sheathing/truss-heel.md)
+- [Soffit and Fascia](../exterior-trims/soffit-fascia.md) - материалы и LFT против SQ FT
+- [Roof Sheathing](../horizontal/roof-framing/roof-sheathing.md), [Canopy](../horizontal/roof-framing/canopy.md), [Porch SQFT](../sqfts/porch.md)

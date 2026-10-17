@@ -26,13 +26,13 @@ docs/
 ```markdown
 <figure markdown>
   ![Wall section, exterior 2×6](../assets/images/walls/exterior-2x6-section.png)
-  <figcaption>Exterior 2×6 wall - typical section</figcaption>
+  <figcaption markdown="span">Exterior 2×6 wall - typical section</figcaption>
 </figure>
 ```
 
 <figure markdown>
   ![Заглушка](../assets/images/logo.svg){ width="120" }
-  <figcaption>Так выглядит figure + figcaption.</figcaption>
+  <figcaption markdown="span">Так выглядит figure + figcaption.</figcaption>
 </figure>
 
 ## Две колонки: текст слева - схема справа
@@ -44,7 +44,7 @@ docs/
 
 <figure markdown>
   ![alt](../assets/images/your-schema.png)
-  <figcaption>Подпись.</figcaption>
+  <figcaption markdown="span">Подпись.</figcaption>
 </figure>
 
 </div>
@@ -82,7 +82,7 @@ docs/
 !!! note "Смотри схему"
     <figure markdown>
       ![alt](../assets/images/some-detail.png)
-      <figcaption>Деталь - где смотреть.</figcaption>
+      <figcaption markdown="span">Деталь - где смотреть.</figcaption>
     </figure>
 ```
 

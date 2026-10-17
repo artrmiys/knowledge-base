@@ -31,7 +31,7 @@
 
 <figure markdown>
   ![Main View - общий вид](../assets/images/ourplanecore/opc-main-view.png)
-  <figcaption>Историческая иллюстрация; актуальные команды - в тексте. Верхние ленты, слева <code>Pages</code>, по центру PDF-вьюпорт, справа <code>Takeoffs</code>, снизу - tool strip. Строка режимов - всего две "пилюли": <code>Main View</code> и <code>Settings</code>.</figcaption>
+  <figcaption markdown="span">Историческая иллюстрация; актуальные команды - в тексте. Верхние ленты, слева <code>Pages</code>, по центру PDF-вьюпорт, справа <code>Takeoffs</code>, снизу - tool strip. Строка режимов - всего две "пилюли": <code>Main View</code> и <code>Settings</code>.</figcaption>
 </figure>
 
 - **Сверху - шесть лент команд:** `Main` , `Page` , `Annotation` , `PDF Output` ,
@@ -230,7 +230,7 @@
 
 <figure markdown>
   ![Tool strip](../assets/images/ourplanecore/opc-toolstrip.png)
-  <figcaption>Историческая иллюстрация; актуальные команды - в тексте. Tool strip, ряд 1: <code>Pan/Select/Scale/Ruler</code> , <code>Count/Similar/P Line/Line/Area/J Area/Beam/Open/Cut</code> , <code>Merge/Split/Combine</code> , <code>Snap/PDF/Ortho/Box</code>, справа - <code>Excel</code>. Ряд 2 - <code>Transform</code> (Flip H/Flip V/Rot/Scale), настройка масштаба (<code>Set</code>/<code>Presets</code>) и <code>Fit/+/−</code>. Кнопка Openings подписана <code>Open</code>. <code>Record</code> тут нет - он на правом Active-Takeoff баре (++space++).</figcaption>
+  <figcaption markdown="span">Историческая иллюстрация; актуальные команды - в тексте. Tool strip, ряд 1: <code>Pan/Select/Scale/Ruler</code> , <code>Count/Similar/P Line/Line/Area/J Area/Beam/Open/Cut</code> , <code>Merge/Split/Combine</code> , <code>Snap/PDF/Ortho/Box</code>, справа - <code>Excel</code>. Ряд 2 - <code>Transform</code> (Flip H/Flip V/Rot/Scale), настройка масштаба (<code>Set</code>/<code>Presets</code>) и <code>Fit/+/−</code>. Кнопка Openings подписана <code>Open</code>. <code>Record</code> тут нет - он на правом Active-Takeoff баре (++space++).</figcaption>
 </figure>
 
 **Шпаргалка по всем инструментам:**
@@ -581,7 +581,7 @@ objects vertically` можно назначить в [редакторе кла�
 
     <figure markdown>
       ![Ribbon Main](../assets/images/ourplanecore/opc-ribbon-main.png)
-      <figcaption>Историческая иллюстрация; актуальные команды - в тексте. Лента <code>Main</code> (дефолт): Open/Import, PlanSwift, PDF Takeoffs, Export.</figcaption>
+      <figcaption markdown="span">Историческая иллюстрация; актуальные команды - в тексте. Лента <code>Main</code> (дефолт): Open/Import, PlanSwift, PDF Takeoffs, Export.</figcaption>
     </figure>
 
 ??? note "Лента `Page` - работа со страницей"
@@ -604,7 +604,7 @@ objects vertically` можно назначить в [редакторе кла�
 
     <figure markdown>
       ![Ribbon Page](../assets/images/ourplanecore/opc-ribbon-page.png)
-      <figcaption>Историческая иллюстрация; актуальные команды - в тексте. Лента <code>Page</code>: Add, Rotate, Flip, Image, Page.</figcaption>
+      <figcaption markdown="span">Историческая иллюстрация; актуальные команды - в тексте. Лента <code>Page</code>: Add, Rotate, Flip, Image, Page.</figcaption>
     </figure>
 
 ??? note "Лента `Viewport` - толщины и заливки на экране"
@@ -619,7 +619,7 @@ objects vertically` можно назначить в [редакторе кла�
 
     <figure markdown>
       ![Ribbon Viewport](../assets/images/ourplanecore/opc-ribbon-viewport.png)
-      <figcaption>Историческая иллюстрация; актуальные команды - в тексте. Лента <code>Viewport</code>: Lines &amp; Area, Ruler, PDF Snap Bridge.</figcaption>
+      <figcaption markdown="span">Историческая иллюстрация; актуальные команды - в тексте. Лента <code>Viewport</code>: Lines &amp; Area, Ruler, PDF Snap Bridge.</figcaption>
     </figure>
 
 ??? note "Лента `PDF Output` - экспорт и живое превью"
@@ -702,7 +702,7 @@ objects vertically` можно назначить в [редакторе кла�
 
     <figure markdown>
       ![Pages panel](../assets/images/ourplanecore/opc-pages-layers.png)
-      <figcaption>Историческая иллюстрация; актуальные команды - в тексте. Панель <code>Pages</code> с открытым под-табом <code>PDF Layers</code>: Load / All On / All Off / Clear Hi / Layer Trace / Apply.</figcaption>
+      <figcaption markdown="span">Историческая иллюстрация; актуальные команды - в тексте. Панель <code>Pages</code> с открытым под-табом <code>PDF Layers</code>: Load / All On / All Off / Clear Hi / Layer Trace / Apply.</figcaption>
     </figure>
 
 ??? note "Правая панель `Takeoffs`"
@@ -716,7 +716,7 @@ objects vertically` можно назначить в [редакторе кла�
 
     <figure markdown>
       ![Takeoffs panel](../assets/images/ourplanecore/opc-takeoffs-panel.png)
-      <figcaption>Историческая иллюстрация; актуальные команды - в тексте. Панель <code>Takeoffs</code>: активный item + Record, под-табы, дерево, итоговая сумма снизу.</figcaption>
+      <figcaption markdown="span">Историческая иллюстрация; актуальные команды - в тексте. Панель <code>Takeoffs</code>: активный item + Record, под-табы, дерево, итоговая сумма снизу.</figcaption>
     </figure>
 
 ### Деревья, имена и отмена
@@ -771,7 +771,7 @@ sections, с units, notes и ценами. `Current-sheet filter` показыв
 
 <figure markdown>
   ![Settings - Modules](../assets/images/ourplanecore/opc-modules.png)
-  <figcaption>Историческая иллюстрация; актуальные команды - в тексте. <code>Settings - Modules</code>: категории Productivity / Documents / Takeoff / Output / Assistance; галочки + Load preset / Reset / Apply / Save global / Save for this job / Clear job override.</figcaption>
+  <figcaption markdown="span">Историческая иллюстрация; актуальные команды - в тексте. <code>Settings - Modules</code>: категории Productivity / Documents / Takeoff / Output / Assistance; галочки + Load preset / Reset / Apply / Save global / Save for this job / Clear job override.</figcaption>
 </figure>
 
 | Категория | Модуль | По умолчанию |
@@ -853,7 +853,7 @@ job override обновляют также его. Некоторые Defaults �
 
     <figure markdown>
       ![Sheet Manager](../assets/images/ourplanecore/opc-sheet-manager.png)
-      <figcaption>Историческая иллюстрация; актуальные команды - в тексте. <code>Sheet Manager</code>: сетка листов, Auto Name / Auto Scale / Name+Scale, Apply Checked.</figcaption>
+      <figcaption markdown="span">Историческая иллюстрация; актуальные команды - в тексте. <code>Sheet Manager</code>: сетка листов, Auto Name / Auto Scale / Name+Scale, Apply Checked.</figcaption>
     </figure>
 
 ??? note ":material-format-list-checks: Takeoff Manager - таблица takeoff'ов"
@@ -863,7 +863,7 @@ job override обновляют также его. Некоторые Defaults �
 
     <figure markdown>
       ![Takeoff Manager](../assets/images/ourplanecore/opc-takeoff-manager.png)
-      <figcaption>Историческая иллюстрация; актуальные команды - в тексте. <code>Takeoff Manager</code>: таблица items/sections, quantities, экспорт.</figcaption>
+      <figcaption markdown="span">Историческая иллюстрация; актуальные команды - в тексте. <code>Takeoff Manager</code>: таблица items/sections, quantities, экспорт.</figcaption>
     </figure>
 
 ??? note ":material-cube-outline: 3D - per-edge roof и rafters"
@@ -890,7 +890,7 @@ job override обновляют также его. Некоторые Defaults �
 
     <figure markdown>
       ![3D](../assets/images/ourplanecore/opc-3d.png)
-      <figcaption>Историческая иллюстрация; актуальные команды - в тексте. <code>3D</code>: Build (Auto / Wall / Roof Base / Select Edge / Generate Roof) + Rafters (Pick Faces / Whole Roof / Spacing / Size) + Viewer (Fit/Iso/Top/Front/Reset).</figcaption>
+      <figcaption markdown="span">Историческая иллюстрация; актуальные команды - в тексте. <code>3D</code>: Build (Auto / Wall / Roof Base / Select Edge / Generate Roof) + Rafters (Pick Faces / Whole Roof / Spacing / Size) + Viewer (Fit/Iso/Top/Front/Reset).</figcaption>
     </figure>
 
     !!! warning "Старый "3D Massing" отключён"
@@ -920,7 +920,7 @@ job override обновляют также его. Некоторые Defaults �
 
     <figure markdown>
       ![AI Manager](../assets/images/ourplanecore/opc-ai-manager.png)
-      <figcaption>Историческая иллюстрация; актуальные команды - в тексте. <code>AI Manager</code>: Setup / Review / Batch / Markers - Run AI, Run New, Retry Failed, маркер-сеты.</figcaption>
+      <figcaption markdown="span">Историческая иллюстрация; актуальные команды - в тексте. <code>AI Manager</code>: Setup / Review / Batch / Markers - Run AI, Run New, Retry Failed, маркер-сеты.</figcaption>
     </figure>
 
     !!! warning "AI safety"
@@ -938,7 +938,7 @@ job override обновляют также его. Некоторые Defaults �
 
     <figure markdown>
       ![Report Builder](../assets/images/ourplanecore/opc-report-builder.png)
-      <figcaption>Историческая иллюстрация; актуальные команды - в тексте. <code>Report Builder</code>: Reload TemplateCom.xlsm, Refresh, Apply Walls.</figcaption>
+      <figcaption markdown="span">Историческая иллюстрация; актуальные команды - в тексте. <code>Report Builder</code>: Reload TemplateCom.xlsm, Refresh, Apply Walls.</figcaption>
     </figure>
 
 ??? note ":material-package-variant-closed: Materials - извлечение материалов"
@@ -955,7 +955,7 @@ job override обновляют также его. Некоторые Defaults �
 
     <figure markdown>
       ![Materials](../assets/images/ourplanecore/opc-materials.png)
-      <figcaption>Историческая иллюстрация; актуальные команды - в тексте. <code>Materials</code>: Extract, Report Sheet, экспорт JSON / CSV.</figcaption>
+      <figcaption markdown="span">Историческая иллюстрация; актуальные команды - в тексте. <code>Materials</code>: Extract, Report Sheet, экспорт JSON / CSV.</figcaption>
     </figure>
 
 ## Mental model { .kb-section-title .kb-st--green }

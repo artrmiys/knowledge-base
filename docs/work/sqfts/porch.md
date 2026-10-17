@@ -1,36 +1,73 @@
-# Porch SQFT
-
-**Porch** - крытая входная площадка, прикреплённая к зданию. В SQFT-такеоффе
-это площадь пола (и/или потолка/soffit) порча, которая тянет за собой framing,
-decking и наружную отделку.
+# Porch SQFT (площадь крытого крыльца)
 
 <figure markdown>
-  ![Porch section](../../assets/images/sqfts/porch.svg)
-  <figcaption>Porch: post + beam + soffit + decking. Крыша - по Roof SQFT.</figcaption>
+  ![Разрез porch: post, beam, soffit, decking](../../assets/images/sqfts/porch.svg)
+  <figcaption markdown="span">Porch: пол на своём каркасе и потолок (soffit) под крышей. Площадь пола - Area `porch`; крыша над porch - своя Area в roof.</figcaption>
 </figure>
 
-## Что считать
+## Что это
 
-- Floor framing порча: joists/beams, posts, ledger к зданию.
-- Decking по площади (см. формулу ниже).
-- Soffit / ceiling sheathing - часто **5/8" exterior-grade gypsum** или Densglass.
-- Posts, beams, railings, exterior trims.
-- Roof над порчем (если есть) - отдельно по [Roof SQFT](roof.md).
+Porch - крытая площадка у входа на своём каркасе. Его площадь даёт пол
+(decking или subfloor) и потолок (`5/8" Gyp` exterior, две поверхности в
+одной строке с x2). Крыша над porch - отдельная площадь по
+[Roof SQFT](roof.md), карниз porch - отдельная позиция `eve 12 porch`.
+Porch считается независимо от балконов, даже если похож. Общие правила
+замера - [Floor SQFT, раздел правил](1st2nd.md#rules).
 
-## Формула площади
+## Где искать на чертежах
 
-`Decking / soffit pcs = area SQFT / 32` (лист 4×8) либо `area × 1.1` по
-материалу. Waste - `1.1` (см. [Формулы](../../reference/formulas.md)).
+| Лист | Что взять |
+| --- | --- |
+| Floor plan (`a101 1st`) | Контур porch, posts |
+| Framing plan, details (S) | Ceiling joists, ledger, hangers, балки, posts; каркас не показан - Note |
+| RCP (`rcp`) | Материал потолка: `5/8" Ext Gyp`, DensGlass, beadboard |
+| Elevations, sections | Крыша porch, уклон, колонны |
 
-## Проверить
+## Как мерить в OurPlanCore
 
-- На многих COM jobs porch/deck scope **не входит** - проверь, а не предполагай.
-- Exterior soffit sheathing может быть `5/8"` exterior gypsum или Densglass -
-  не путать с обычным interior gypsum.
-- Attachment к зданию (ledger) может требовать LVL rim, bolts или Simpson screws.
+1. Area по контуру пола porch на плане (точка W). Имя `porch`. Несколько
+   одинаковых porch - полигоны в одной позиции; разные типы - разные.
+2. Типовые porch в многоквартирном доме размечаются блоками: одна позиция
+   Count на тип, точка на каждый экземпляр (см.
+   [Deck / Porch / Balcony Frame](../deck/deck-porch-balcony-frame.md)).
+3. Крышу porch обводи в `sqfts` отдельно (`rf 4` porch или `rf mtl 4`).
 
-## See also
+## Как назвать в дереве и строка DFL
 
-- [Deck / Porch / Balcony framing](../deck/deck-porch-balcony-frame.md)
-- [Porch / Deck / Balcony trims](../exterior-trims/porch-deck-balcony.md)
-- [Anchor Bolts](../deck/anchor-bolts.md) , [Soffit & Fascia](../exterior-trims/soffit-fascia.md)
+| Имя в дереве | Строка DFL (блок Porch) | Материал | Unit | Формула |
+| --- | --- | --- | --- | --- |
+| `sqfts/porch` | Front Page, `Porches` | | `SQ FT` | как измерено |
+| `sqfts/porch` | `Decking` или `Subfloor` | по детали | `SQ FT` / `4x8` | `SQFT x 1.1` или `/32` |
+| `sqfts/porch` | `Ceiling` | `5/8" Gyp` exterior | `SQ FT` | `SQFT x 2 x 1.1` |
+| та же площадь | `Ceiling Joists 16" o.c.` + `Ledger` + `Hangers` | по детали | `LFT`, `pcs` | отдельно от rafters |
+| posts | `Posts` | P.T. на улице; под крышей без P.T. | `pcs` | |
+
+Каркас не показан: `Note: Porch framing is not specified; all framing
+assumed; verify` сразу под заголовком блока.
+
+## Частые ошибки
+
+- Porch SQFT на Front Page пустой (итог дома не сошёлся).
+- Porch зеркален с балконов вместо отдельного счёта.
+- Потолок porch посчитан как обычный interior gypsum, а не exterior.
+- Крыша porch попала в main `rf 6` с чужим уклоном.
+- Карниз porch посчитан ещё раз внутри `eve 24 main`.
+
+Все ошибки по площадям: [common-mistakes](../../start/common-mistakes.md#sqft).
+
+## Пример
+
+```text
+Takeoffs/Main/sqfts/
+  porch       Area   96 SF
+  rf 4        Area  118 SF   (крыша porch)
+Covered Front Porch Framing List
+Note: Porch framing is not specified; all framing assumed; verify.
+Ceiling Joists 16" o.c.   2x8          ...   LFT
+Ceiling                   5/8" Gyp     212   SQ FT   x2
+```
+
+## См. также
+
+- [Deck / Porch / Balcony Frame](../deck/deck-porch-balcony-frame.md), [Porch / Deck / Balcony trims](../exterior-trims/porch-deck-balcony.md)
+- [Eve / Eave](../sheathing-and-misc/eve.md), [Soffit and Fascia](../exterior-trims/soffit-fascia.md), [Roof SQFT](roof.md)

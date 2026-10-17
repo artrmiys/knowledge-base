@@ -1,18 +1,17 @@
-# Siding
+# Siding (наружная обшивка стен)
 
-Siding - это **наружная обшивка стен**: clapboard / lap, shingle / shake,
-panel / board, vinyl, Hardi (fiber cement), cedar, composite. Это **отдельный
-scope**, не Exterior Trims.
+Siding это поле наружной стены: lap и clapboard, shingle и shake, panel,
+board and batten, vinyl, Hardi (fiber cement), cedar, composite. Считается
+площадью `SQ FT` по фасадам. Отдельный scope: trim вокруг siding это
+[Exterior Trims](../exterior-trims/overview.md), а EIFS, stucco, stone и
+brick veneer это облицовка by others.
 
-!!! abstract "Siding vs Exterior Trims"
-    - **Siding** - поле стены (площадь, `SQ FT`). Эта секция.
-    - **Trim вокруг siding** - casing, corner, band, soffit/fascia - это
-      [Exterior Trims](../exterior-trims/overview.md).
-    - **EIFS / Stucco / Stone / Brick veneer** - это **тоже cladding**, но
-      обычно **by others**. Полностью разобрано здесь:
-      [EIFS / Stucco / Veneer](eifs-stucco-veneer.md).
+<figure markdown>
+  ![Board and batten siding with shingle gable and stone veneer base](../../assets/images/photos/siding/board-batten-shingle-stone.jpg)
+  <figcaption markdown="span">Один фасад, три строки: board and batten по полю, shingle accent во фронтоне, stone veneer внизу (by others). Columns и перила porch это отдельные позиции. Фото: Robert Neustadter, CC BY-SA 4.0, [источник](https://commons.wikimedia.org/wiki/File:House_showing_board-and-batten_siding_and_shingle-style_ornamentation.jpg)</figcaption>
+</figure>
 
-## Что входит в scope { .kb-section-title .kb-st--green }
+## Что входит и в каком порядке
 
 <div class="grid cards" markdown>
 
@@ -20,97 +19,87 @@ scope**, не Exterior Trims.
 
     ---
 
-    Clapboard / lap, shingle / shake, panel / board-&-batten / shiplap,
-    vinyl, Hardi, cedar, Boral / composite, gable accent.
+    Lap, shingle, panel, board and batten, vinyl, Hardi, cedar, composite;
+    exposure и материал в строке.
 
-    [:octicons-arrow-right-24: Типы siding](types.md)
+    [Типы siding](types.md)
 
--   :material-layers-outline:{ .lg .middle } **Underlayment / за siding**
+-   :material-layers-outline:{ .lg .middle } **Underlayment**
 
     ---
 
-    WRB / housewrap (Tyvek), Zip, furring / rainscreen, Cedar Breather,
-    starter / J-channel / corners, flashing.
+    WRB по спецификации, Zip, furring и rainscreen, Cedar Breather,
+    starter, J-channel, flashing.
 
-    [:octicons-arrow-right-24: Underlayment](underlayment.md)
+    [Underlayment](underlayment.md)
 
 -   :material-cancel:{ .lg .middle .kb-mk--amber } **EIFS / Stucco / Veneer**
 
     ---
 
-    EIFS, Stucco, Stone & Brick veneer - что это, как распознать, почему
-    **by others**, и где идёт `J-Channel` / casing bead.
+    Что это, как распознать, почему by others, что рядом остаётся нашим.
 
-    [:octicons-arrow-right-24: EIFS / Stucco / Veneer](eifs-stucco-veneer.md)
+    [EIFS / Stucco / Veneer](eifs-stucco-veneer.md)
 
--   :material-ruler-square:{ .lg .middle } **Измерение / takeoff**
+-   :material-ruler-square:{ .lg .middle } **Измерение**
 
     ---
 
-    `SQ FT` по elevation, gables, dormers, bays, deductions, waste,
-    by-others дисциплина.
+    Area по фасадам в OurPlanCore, gables и accents отдельно, вычеты,
+    waste, by others.
 
-    [:octicons-arrow-right-24: Измерение](measure.md)
+    [Измерение](measure.md)
 
 </div>
 
-## Считаем / не считаем { .kb-section-title .kb-st--amber }
+## Считаем или нет
 
 | Cladding | Считаем? | Почему |
 | --- | --- | --- |
-| Clapboard / lap / shingle / panel / board | :material-check-bold: ДА | wood / vinyl / fiber-cement / composite - наш scope |
-| Cedar / Hardi / Boral / vinyl | :material-check-bold: ДА | поле стены, `SQ FT` |
-| **EIFS** / **Stucco** | :material-close-thick: НЕТ* | finish system by others |
-| **Stone / Brick veneer** | :material-close-thick: НЕТ* | masonry / veneer by others |
-| Siding `by others` / `TBD` | :material-minus-thick: 0 + note | заказчик/другой trade |
+| Lap, shingle, panel, board and batten (wood, vinyl, Hardi, composite) | да | поле стены, `SQ FT` |
+| EIFS, stucco | нет, кроме WRB, sheathing, furring и trim рядом | finish system by others |
+| Stone, brick veneer | нет, кроме WRB, sheathing, furring и trim рядом | masonry by others |
+| Siding `by others` / `TBD` | `0` плюс нота | заказчик или другой trade |
 
-\* Но WRB, sheathing, furring и trim вокруг - всё равно проверяем.
-Подробно: [EIFS / Stucco / Veneer](eifs-stucco-veneer.md).
+## Порядок работы
 
-## Строка takeoff { .kb-section-title .kb-st--cyan }
+1. Прочитай ноты на фасадах: материал siding, exposure, где accent, где
+   stone или EIFS. Сразу напиши ноту в DFL (`Note: Siding is Hardi; verify
+   if Trims are Hardi or PVC`).
+2. Открой wall sections: WRB по спецификации, furring, Cedar Breather.
+3. Обведи площади по фасадам, стена за стеной; gables, dormers, bays и
+   accent отдельными итемами.
+4. Вычеты по правилу: крупные проёмы один раз, окна меньше 4' не вычитаем.
 
-| Label | Value | Unit | Заметка |
-| --- | --- | --- | --- |
-| `Siding` | `Hardi plank 6" exp` | `SQ FT` | exposure в Label |
-| `Siding` | `Vinyl clapboard` | `SQ FT` | |
-| `Siding Gable front` | `Vinyl Shingles` | `SQ FT` | gable accent отдельно |
-| `Siding` | `Per customer TBD` | `SQ FT` | `0` + note |
-| `Siding 2 Boral TruExt` | `1x10 Shiplap` | `SQ FT` | продукт в Label |
+## Как мерить в OurPlanCore
 
-- Материал и exposure (`6" exp`, `5-1/2" to weather`) всегда в Label.
-- Gable / accent / bay siding - **отдельные строки** от field siding.
-- `SQ FT` (или `SF`) - единица siding. Не `LFT`.
+Корень `siding` в дереве корпуса, Area по итему на материал и цвет:
+`6" vertical`, `panel grey`, `shingle gable`. Листы фасадов (`el`) без
+точки, поэтому проверяй, что итем попал в `siding`. Подробно:
+[Измерение](measure.md).
 
-!!! tip "Note-дисциплина"
-    Сразу пиши siding-note: `Note: Siding is Hardi; verify if Trims are
-    Hardi or PVC`, `Note: Stone Veneer by others`, `Note: Per customer TBD`.
-    Это управляет и trim-scope (см. [Standard notes](../../reference/standard-notes.md)).
+## Строка в DFL
 
-## Визуально { .kb-section-title .kb-st--green }
+| A Description | B Size | C Qty | D Unit | E |
+| --- | --- | --- | --- | --- |
+| `Siding` | `Hardi plank 6" exp` | `=L+R+Front+Rear` | SQ FT | `A201` |
+| `Siding Gable front` | `Vinyl Shingles` | `=...` | SQ FT | `A201` |
+| `Siding 2` | `Boral TruExt 1x10 Shiplap` | `=...` | SQ FT | `A202` |
+| `Siding` | `Per customer TBD` | `0` | SQ FT | нота |
 
-<details class="kb-figures kb-figures--rows" open>
-  <summary>Скрыть siding-примеры</summary>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Lap / clapboard + corner</div>
-      <div class="kb-figure-row__rule">Vinyl/Hardi/cedar lap заводится в corner / J-channel.</div>
-      <div class="kb-figure-row__note">Siding = поле (SQ FT); corner - это trim.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/ext-cornerboard-vinyl.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/ext-cornerboard-vinyl.png" alt="Lap siding into corner" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Cedar shingle</div>
-      <div class="kb-figure-row__rule"><code>"Perfection" 5-1/2" to weather</code> - exposure в Label.</div>
-      <div class="kb-figure-row__note">Shingle waste выше, чем у lap; Cedar Breather на solid основании.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/ext-flare-detail.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/ext-flare-detail.png" alt="Cedar shingle siding detail" loading="lazy"></a>
-  </figure>
-</details>
+Материал и exposure всегда в строке; gable и accent отдельно; единица
+`SQ FT`, не `LFT`.
 
-## See also
+## Частые ошибки
 
-- [Типы siding](types.md) , [Underlayment](underlayment.md) , [EIFS / Stucco / Veneer](eifs-stucco-veneer.md) , [Измерение](measure.md)
-- [Exterior Trims - Overview](../exterior-trims/overview.md) , [Exclusions и J-Channel](../exterior-trims/exclusions.md)
-- [Furring & Window Jambs](../exterior-trims/furring-and-jambs.md)
-- [Material catalog](../../reference/material-catalog.md) , [Standard notes](../../reference/standard-notes.md)
+- WRB назван `Vapor Barrier`, или Tyvek при fluid-applied по спецификации.
+- Stone или EIFS посчитаны как siding.
+- Accent во фронтоне слит с полем другого материала.
+- Измеренная площадь не перенесена в Excel или не обновлена после правок.
+- Все ошибки по обшивке и WRB: [Обшивка](../../start/common-mistakes.md#sheathing).
+
+## См. также
+
+- [Типы siding](types.md), [Underlayment](underlayment.md), [EIFS / Stucco / Veneer](eifs-stucco-veneer.md), [Измерение](measure.md)
+- [Exterior Trims](../exterior-trims/overview.md), [Exclusions и J-Channel](../exterior-trims/exclusions.md), [Furring & Window Jambs](../exterior-trims/furring-and-jambs.md)
+- [Wall Sheathing](../vertical/sheathing/wall-sheathing.md), [Material catalog](../../reference/material-catalog.md), [Standard notes](../../reference/standard-notes.md)

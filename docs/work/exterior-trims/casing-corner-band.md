@@ -1,135 +1,85 @@
-# Casing, Corner & Band
+# Casing, Corner & Band (наружные наличники, угловые доски, пояса)
 
-Trim вокруг openings и по полю стены: ext. casing, corner boards, band /
-watertable, head crowns, flashing, shutters, louvers, brackets.
-
-## Ext. Casing { .kb-section-title .kb-st--green }
-
-Casing - это обкладка вокруг окон и дверей снаружи. Считается **LFT**.
-Часто разбивается по позициям, потому что профиль разный:
-
-| Позиция | Типовой size | Unit | Заметка |
-| --- | --- | --- | --- |
-| `Ext. Casing sides` | `5/4x4` | `LFT` | вертикальные стороны openings |
-| `Ext. Casing (apron & sides)` | `5/4x3` | `LFT` | sides + apron под окном |
-| `Ext. Casing heads` | `5/4x4` / `5/4x6` | `LFT` | верх openings, часто шире |
-| `Ext. Casing heads (at crowns)` | `5/4x6` | `LFT` | где сверху crown |
-| `Ext. Casing - mulls` / `Mull trims` | `5/4x6` | `LFT` | между спаренными окнами |
-| `Casing at basement windows` | `5/4x3` / `5/4x4` | `LFT` | часто `assumed` |
-| `Casing garage doors (sides)` | `5/4x4` / `5/4x8` | `LFT` | garage openings шире |
-| `Head casing garage dr` | `5/4x12` / `5/4 Panel` | `LFT` / `SQ FT` | большой head |
-| `Ext. Casing 4-sides` | `3-1/2" Vinyl casing` | `LFT` | при vinyl siding |
-| `Ext. Casing` | `Vinyl J-channel` | `LFT` | vinyl siding - casing = J-channel |
-| `Ext. Casing` | `1x4 azek trim` | `LFT` | при Azek/PVC спецификации |
-
-!!! tip "`4-sides` и `3-sides`"
-    `4-sides` = casing по всему периметру opening. `3-sides` = без apron/sill
-    снизу (низ закрыт sill или siding). Держи это в Label - это меняет LFT.
-
-!!! warning "Vinyl siding"
-    При vinyl siding casing часто = `Vinyl J-channel` или `3-1/2" Vinyl
-    casing`. Не добавляй сверху ещё `5/4` wood casing. Подробно -
-    [Exclusions и J-Channel](exclusions.md).
-
-## Head crowns / caps / flashing { .kb-section-title .kb-st--cyan }
-
-Над head casing часто идёт "слойка": crown - cap - flashing.
-
-| Label | Типовой size | Unit |
-| --- | --- | --- |
-| `Head crowns` / `Crowns` | `3-1/2" crown` / `4" crown` / `5" crown` | `LFT` |
-| `Crown cap` / `Crown caps` | `1x4` | `LFT` |
-| `Crown Base` | `5/4x6` | `LFT` |
-| `Head flashing` / `Flashing at head trims` | `Drip edge` | `LFT` |
-| `Drip cap` | `1" Drip cap` | `LFT` |
-| `Window Sills` | `1" Sill` / `2" Sill` / `1-1/2" Sill` | `LFT` |
-
-- Crown без cap и без flashing - редкость; если показан crown, проверь, нет ли
-  ещё `1x4` cap и `drip edge` сверху.
-- `verify size` / `scaled` оставляй в note - crown profile часто не указан.
-
-## Corner boards { .kb-section-title .kb-st--magenta }
-
-<div class="kb-split" markdown>
-
-Corner board закрывает наружный (иногда внутренний) угол, куда упирается
-siding. Считается **LFT** по высоте угла (× кол-во углов).
-
-- Wood/PVC: `5/4x6`, `5/4x8` (на bays часто `5/4x8`).
-- Vinyl: `4" Vinyl corner` - отдельный product, не путать с `5/4`.
-- Может варьироваться `5/4x4`…`5/4x6` - если не указано, бери крупнее и пиши
-  `verify for 5/4x4`.
-- На углах bays считается отдельной строкой (`CornerBoards at Bays`).
+<!-- TODO-PHOTO: exterior window with 5/4 PVC casing, head crown and drip cap on lap siding, EN: "exterior window trim casing drip cap lap siding" -->
 
 <figure markdown>
   ![Corner board over siding](../../assets/images/trims/ext-cornerboard-vinyl.png)
-  <figcaption>Corner board заводит cut edge siding - считается LFT по высоте.</figcaption>
+  <figcaption markdown="span">Corner board закрывает обрезанный край siding на углу. Считается LFT по высоте угла, умноженной на число углов этого типа.</figcaption>
 </figure>
 
-</div>
+## Что это
 
-<details class="kb-figures kb-figures--rows" open>
-  <summary>Скрыть corner board детали</summary>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Corner board - общий вид</div>
-      <div class="kb-figure-row__rule">Outside corner, wood/PVC <code>5/4x6</code>.</div>
-      <div class="kb-figure-row__note">LFT = высота угла × количество углов этого типа.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/ext-cornerboard.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/ext-cornerboard.png" alt="Corner board general" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Build-up под corner</div>
-      <div class="kb-figure-row__rule">Под corner board нужен solid nailing base.</div>
-      <div class="kb-figure-row__note">Если показан build-up - это может быть отдельный blocking item.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/ext-cornerboard-nailing.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/ext-cornerboard-nailing.png" alt="Corner build-up" loading="lazy"></a>
-  </figure>
-</details>
+Trim вокруг проёмов и по полю фасада: ext. casing (sides, heads, apron,
+mulls), corner boards, band и watertable, head crowns с cap и flashing,
+window sills, shutters, louvers, brackets. Всё это wood, PVC или composite
+погонаж; siding и облицовка в него не входят.
 
-## Band / Watertable { .kb-section-title .kb-st--green }
+## Где искать на чертежах
 
-Горизонтальные пояса по фасаду (между этажами, по низу стены):
+| Лист | Что взять |
+| --- | --- |
+| Elevations | Где есть casing, corner, band; сколько углов; shutters и louvers по окнам |
+| Window и door details (A5xx, A6xx) | Профиль casing (`5/4x4`), head crown, cap, drip cap, sill, 3-sides или 4-sides |
+| Wall sections | Band и watertable, flashing над ними, build-up под corner |
+| Spec и notes | Материал (PVC, Azek, Hardi trim, vinyl), `All trims to be verified` |
 
-| Label | Типовой size | Unit | Заметка |
-| --- | --- | --- | --- |
-| `Band Trims` / `Band trim front 2nd floor` | `5/4x10` / `5/4x6` | `LFT` | межэтажный пояс |
-| `Watertable Trim` | `5/4x10` / `5/4x12` | `LFT` | по низу стены |
-| `Flashing at band` / `Flashing` | `drip edge` | `LFT` | поверх горизонтали |
-| `Frieze` (в trim-блоке) | `5/4x6` | `LFT` | под soffit - см. Soffit & Fascia |
+## Как мерить в OurPlanCore
 
-- Любой горизонтальный wood/PVC пояс почти всегда требует `drip edge` сверху -
-  проверь, не пропущен ли он.
+Casing, corner и band это Line в корне `trims`, по итему на профиль:
+`2" casing`, `8" horizontal trim`, `corner 5/4x6`. Фасады без точки листа,
+поэтому проверяй, что итем попал в `trims`. Casing удобнее считать
+формулой от списка проёмов (периметр одного окна x количество), Line
+только там, где профиль идёт по сложному контуру. Shutters, louvers и
+brackets это Count точками, свой цвет и символ у каждой позиции.
 
-## Shutters / Louvers / Brackets { .kb-section-title .kb-st--cyan }
+## Как назвать в дереве и строка DFL
 
-Counted items - `pairs` / `pcs` / `units`, не LFT:
+| Имя в дереве | Строка DFL | Size | Unit | Правило |
+| --- | --- | --- | --- | --- |
+| `trims/casing sides` | `Ext. Casing sides` | `5/4x4` | LFT | вертикальные стороны openings |
+| `trims/casing heads` | `Ext. Casing heads` | `5/4x4` / `5/4x6` | LFT | верх, часто шире; `(at crowns)` отдельной строкой |
+| | `Ext. Casing (apron & sides)` | `5/4x3` | LFT | sides плюс apron под окном |
+| | `Mull trims` | `5/4x6` | LFT | между спаренными окнами |
+| | `Casing garage doors (sides)`, `Head casing garage dr` | `5/4x8`, `5/4x12` | LFT | ворота отдельно |
+| | `Ext. Casing` | `Vinyl J-channel` / `3-1/2" Vinyl casing` | LFT | при vinyl siding, не дублировать с `5/4` |
+| | `Head crowns`, `Crown cap`, `Head flashing` | `3-1/2" crown`, `1x4`, `Drip edge` | LFT | слойка над head: crown, cap, flashing |
+| | `Window Sills` | `1" Sill` / `2" Sill` | LFT | когда показан sill |
+| `trims/corner 5/4x6` | `CornerBoards` | `5/4x6` / `5/4x8` | LFT | высота угла x число углов; bays отдельной строкой |
+| `trims/band 5/4x10` | `Band Trims`, `Watertable Trim` | `5/4x10` / `5/4x12` | LFT | плюс `Flashing at band` drip edge сверху |
+| `trims/shutters` | `Shutters - paneled` | `20"x60"` | pairs | пара на окно, размер в строке |
+| | `Louver vent`, `Brackets` | `24" Dia`, `5-1/2"x7"x?` | pcs | `?` в размере остаётся как verify |
 
-| Label | Пример | Unit |
-| --- | --- | --- |
-| `Shutters - paneled` / `Shutters louvered` | `20"x60"`, `14"x57"` | `pairs` |
-| `Shutters Composite 2-panel` | `18"x52"` | `pairs` |
-| `Louver vent` / `gables Louvers` | `24" Dia`, `12"x18"` | `units` / `pcs` |
-| `Brackets` | `5-1/2"x7"x?` | `pcs` |
+- `4-sides` casing идёт по всему периметру, `3-sides` без низа (sill или
+  siding). Пиши это в строке, это меняет LFT.
+- Vinyl corner (`4" Vinyl corner`) это другой продукт, не `5/4`.
+- Размер не указан: `TBD` в size, `scaled` или `assumed` в E, нота
+  `Note: All trims to be verified. Scaled per elevations`.
 
-- Shutters считаются **парами** на окно (две створки = 1 pair).
-- Размер shutter держи в Label (`20"x60"`) - он задаёт product.
-- `?` в размере (`5-1/2"x7"x?`) - оставляй, это явный verify-flag.
+## Частые ошибки
 
-## Чек перед выводом { .kb-section-title .kb-st--magenta }
+- Casing одной строкой без разделения sides, heads, mulls, garage.
+- При vinyl siding посчитаны и J-channel, и wood casing.
+- Над head crown без cap и drip edge, хотя деталь их показывает.
+- Band и watertable без flashing сверху.
+- Shutters в pcs вместо pairs; размер shutter потерян.
+- Trim вокруг stone или EIFS пропущен (см. [Exclusions](exclusions.md)).
+- Все ошибки по Excel и строкам: [Excel DFL и ноты](../../start/common-mistakes.md#excel).
 
-- [ ] Casing разбит по sides / heads / mulls / garage, где профили разные?
-- [ ] При vinyl siding casing = J-channel / vinyl casing (не двойной счёт)?
-- [ ] Над head: crown + cap + flashing проверены?
-- [ ] Corner boards: правильный size, bays отдельно, vinyl corner не смешан с 5/4?
-- [ ] Band / watertable: есть drip edge сверху?
-- [ ] Shutters в pairs, louvers/brackets в pcs/units?
-- [ ] EIFS / stucco / stone veneer исключены?
+## Пример
 
-## See also
+```text
+Takeoffs/Main/trims/2" casing          Line   412 LFT
+Takeoffs/Main/trims/corner 5/4x6       Line   8 x 28' = 224 LFT
 
-- [Exclusions и J-Channel](exclusions.md)
-- [Furring & Window Jambs](furring-and-jambs.md)
-- [Soffit & Fascia](soffit-fascia.md)
-- [Trim macros](macros.md)
+Ext. Casing sides    5/4x4   380  LFT   =2*5.5*34 windows     A601
+Ext. Casing heads    5/4x6   112  LFT   =3.3*34               A601
+Head flashing        Drip edge 112 LFT  =C<heads>
+CornerBoards         5/4x6   224  LFT   8 corners x 28'       A201
+Shutters - paneled   20"x60" 12   pairs                       A201
+```
+
+## См. также
+
+- [Overview](overview.md), [Exclusions и J-Channel](exclusions.md), [Furring & Window Jambs](furring-and-jambs.md), [Soffit & Fascia](soffit-fascia.md)
+- [Windows and Doors](../vertical/openings/windows-doors.md), [Window flashing](../vertical/openings/window-flashing.md)
+- [Trim macros](macros.md), [Standard notes](../../reference/standard-notes.md)

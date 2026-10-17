@@ -1,155 +1,90 @@
-# Soffit & Fascia
+# Soffit & Fascia (подшивка свесов, торцевые доски, columns)
 
-Подшивка свесов и торцевая доска по eves и rakes, плюс frieze, rake moulding,
-returns и columns. Обычно это отдельный sheet/блок `Soffits and Fascias`.
-
-## Базовые элементы { .kb-section-title .kb-st--green }
-
-<div class="grid cards" markdown>
-
--   :material-arrow-expand-horizontal:{ .lg .middle } **Soffit**
-
-    ---
-
-    Горизонтальная подшивка свеса. `1x` доска, vinyl vented, beadboard или
-    soffit panel. Узкий - `LFT`, широкий/панель - `SQ FT`.
-
--   :material-border-bottom-variant:{ .lg .middle } **Fascia**
-
-    ---
-
-    Торцевая доска по краю свеса. `1x6` / `1x8` / `1x10` / `2x8`.
-    Считается `LFT`.
-
--   :material-format-align-bottom:{ .lg .middle } **Frieze**
-
-    ---
-
-    Доска по стене под soffit. `5/4x6` / `5/4x8` / `5/4x10`. `LFT`.
-
--   :material-vector-triangle:{ .lg .middle } **Rake moulding**
-
-    ---
-
-    Молдинг по наклонной кромке (rake) + crown at frieze. `3" crown`,
-    `2" moulding`. `LFT`.
-
-</div>
-
-## Eves и Rakes - раздельно { .kb-section-title .kb-st--cyan }
-
-`Eves` (горизонтальный свес) и `Rakes` (наклонный, по фронтону) считаются
-**отдельными строками** - у них разные размеры и часто разные материалы.
-
-| Label | Типовой size | Unit | Заметка |
-| --- | --- | --- | --- |
-| `Soffits at Eves` | `1x12`, `12" Vinyl vented`, `T&G beadboard` | `LFT` / `SQ FT` | широкий - SQ FT |
-| `Fascia at Eves` | `1x8`, `2x8`, `5/4x10` | `LFT` | |
-| `Frieze` | `5/4x6` / `5/4x8` | `LFT` | по стене под soffit |
-| `Trim at Fascia` / `Trim over fascia` | `1x3` / `1x4` / `1x5` | `LFT` | доп. полоса |
-| `Soffits at Rakes` | `1x8`, `9" Vinyl`, `beadboard` | `LFT` / `SQ FT` | |
-| `Fascia at Rakes` | `1x6` / `1x8` | `LFT` | |
-| `Rake Moulding` | `3" crown` | `LFT` | по наклонной кромке |
-| `Crown` / `Crown at Frieze` | `5-1/2" crown`, `3" crown` | `LFT` | |
-| `Soffits at Porch Eves/Rakes` | по детали | `LFT` / `SQ FT` | porch отдельно |
-| `Soffits at Floor Overhangs` / `cantilever` | `1x12`, `Vinyl` | `LFT` / `SQ FT` | underside cantilever |
-| `Soffits at Dormer / Chimney / Bay` | по детали | `LFT` | мелкие отдельные runs |
-
-!!! tip "Soffit: LFT или SQ FT"
-    - **`LFT`** - когда soffit это `1x` доска постоянной ширины (считаешь длину).
-    - **`SQ FT`** - когда soffit это panel / beadboard / wide T&G (считаешь
-      площадь = длина × ширина свеса).
-
-    Vinyl vented soffit обычно дают как `LFT` с указанием ширины (`12" Vinyl`).
-
-!!! warning "Vinyl / Alum wrap"
-    `Note: Soffits assumed Vinyl; Fascias assumed PVC or 1x Alum wrapped -
-    verify`. Материал часто не специфицирован - оставляй note и `verify`.
-    Не подставляй wood, если возможен vinyl/alum.
-
-## Returns (eave return) { .kb-section-title .kb-st--magenta }
-
-Return - это завершение свеса на фронтоне. Есть два принципиально разных
-варианта, и их **нельзя считать одинаково**:
-
-<div class="kb-split" markdown>
-
-- **Proper / cornice return** - полноценный возврат с soffit, fascia, crown.
-  Считается как отдельный мини-набор trim (soffit + fascia + crown по returns).
-  Часто отдельные строки `... Returns`.
-- **Pork-chop return** - упрощённый треугольный "обрубок". Простой в постройке,
-  trim минимальный, но он всё равно есть (fascia + маленький soffit).
-- Если на elevation видно returns - проверь sections: это `pork-chop` или
-  полноценный cornice? Это меняет LFT и SQ FT.
-
-<figure markdown>
-  ![Pork-chop eave return](../../assets/images/trims/ext-pork-chop.png)
-  <figcaption>"Pork-chop" return - простой, но trim (fascia + soffit) считаем.</figcaption>
-</figure>
-
-</div>
+<!-- TODO-PHOTO: house eave with vented soffit panel, fascia board and frieze under it, EN: "roof eave soffit fascia frieze house" -->
 
 <figure markdown>
   ![Cornice eave return](../../assets/images/trims/ext-eave-return.png)
-  <figcaption>Proper cornice return: soffit + fascia + crown - отдельный набор строк.</figcaption>
+  <figcaption markdown="span">Угол фронтона: eave с soffit и fascia уходит вдоль стены, rake по скату, в углу return. Proper cornice return это отдельный набор строк.</figcaption>
 </figure>
 
-## Columns / Posts { .kb-section-title .kb-st--green }
+## Что это
 
-Колонны и стойки на porch / entry. Считаются **`pcs`** + высота отдельной
-колонкой; product зависит от типа.
+Soffit (подшивка свеса), fascia (торцевая доска), frieze (доска по стене
+под soffit), rake moulding, returns и columns porch. Обычно отдельный блок
+`Soffits and Fascias`. Длины eves и rakes приходят из
+[Eve](../sheathing-and-misc/eve.md) и [Rake](../sheathing-and-misc/rake.md);
+обшивка soffit (5/8" exterior gypsum, plywood) это
+[Sheathing](../vertical/sheathing/wall-sheathing.md), не trim.
 
-| Label | Пример | Unit |
-| --- | --- | --- |
-| `Columns Poly-Classic Fbg` | `10" Dia non-taper w/c&b` | `pcs` + `8'` |
-| `Columns` | `12" Dia Fbg Non-taper`, `12" SQ Taper w/c&b` | `pcs` + высота |
-| `Columns HB&G` | `12" SQ Taper w/c&b` | `pcs` + `8'` |
-| `Column wrap` | `1x8` (обшивка существующей стойки) | `LFT` |
-| `Posts at Rails` | `4x4 PT` | `pcs` + `4'` |
-| `Post Sleeve` / `Post Sleeves` | `Sleeve for 4x4` | `pcs` |
-| `Post cap` / `Post caps` | `Cap for 4x4`, `pyramid` | `pcs` |
-| `Post bases` | `Post base for 4x4` | `pcs` |
+## Где искать на чертежах
 
-- **`w/c&b`** = with cap & base - это часть product, оставляй в Label.
-- **Tapered vs Non-taper** - разный product line, держи в Label.
-- **Round / Square / Fluted / Plain / Craftsman** - тоже product-defining.
-- Высота (`8'`, `10'`, `7'7"`) - отдельной колонкой, не внутри Label.
-- `Column wrap` (обшивка) ≠ `Column` (сама колонна) - это разные строки.
-- `Posts at Rails` обычно идёт тройкой: post + sleeve + cap (часто и base).
+| Лист | Что взять |
+| --- | --- |
+| Eave и rake details (A5xx) | Ширина свеса, материал soffit (vinyl vented, beadboard, 1x), fascia, frieze, rake moulding |
+| Elevations | Где eaves, где rakes, returns (cornice или pork-chop), columns и их тип |
+| RCP и porch sections | Потолок porch и canopy: материал, площадь, 5/8" exterior gypsum под отделкой |
+| Spec | `Soffits assumed Vinyl; Fascias assumed PVC or 1x Alum wrapped; verify` |
 
-<details class="kb-figures kb-figures--rows" open>
-  <summary>Скрыть column reference</summary>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Типы columns</div>
-      <div class="kb-figure-row__rule">Round Plain / Fluted / No-Taper, Square Fluted / Recessed / Plain, Craftsman.</div>
-      <div class="kb-figure-row__note">Тип задаёт product - держи в Label.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/ext-column-types.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/ext-column-types.png" alt="Column types" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Tapered vs Non-tapered</div>
-      <div class="kb-figure-row__rule">Tapered сужается кверху; base не добавляет высоту shaft.</div>
-      <div class="kb-figure-row__note">Высота считается по shaft, отдельной колонкой.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../assets/images/trims/ext-column-taper.png" target="_blank" rel="noopener"><img src="../../../assets/images/trims/ext-column-taper.png" alt="Tapered vs non-tapered column" loading="lazy"></a>
-  </figure>
-</details>
+## Как мерить в OurPlanCore
 
-## Чек перед выводом { .kb-section-title .kb-st--cyan }
+Длины свесов это Line в `eves rakes/eves` и `eves rakes/rakes` с выносом в
+дюймах в имени (`eve 24 main`, `rake 12 main`, `returns 12`): одна линия
+питает и trim, и обшивку свеса. Soffit как площадь (beadboard, panel) это
+Area по реальному нижнему контуру в `trims` или в принятой ветке проекта
+(`rcp 1.6`), контур не равен roof deck. Не корми одну площадь дважды:
+или `длина x ширина`, или Area. Canopy не входит в eve и rake, у него свои
+строки. Columns это Count точками.
 
-- [ ] Eves и Rakes посчитаны отдельными строками?
-- [ ] Soffit: правильно выбран LFT vs SQ FT (доска vs panel)?
-- [ ] Frieze + trim at fascia + rake moulding не пропущены?
-- [ ] Returns: определён тип (pork-chop vs cornice), trim по returns добавлен?
-- [ ] Columns: тип/taper/`w/c&b` в Label, высота отдельной колонкой?
-- [ ] Post + sleeve + cap (+ base) - полный набор?
-- [ ] Материал (vinyl / PVC / alum / wood) с note `verify`, если не указан?
+## Как назвать в дереве и строка DFL
 
-## See also
+| Имя в дереве | Строка DFL | Size | Unit | Правило |
+| --- | --- | --- | --- | --- |
+| `eves rakes/eves/eve 24 main` | `Soffits at Eves` | `12" Vinyl vented`, `1x12`, `T&G beadboard` | LFT или SQ FT | доска постоянной ширины LFT; panel и beadboard SQ FT = длина x вынос |
+| | `Fascia at Eves` | `1x8`, `2x8`, `5/4x10` | LFT | |
+| | `Frieze` | `5/4x6` / `5/4x8` | LFT | по стене под soffit |
+| | `Trim over fascia` | `1x3` / `1x4` | LFT | доп. полоса |
+| `eves rakes/rakes/rake 12 main` | `Soffits at Rakes`, `Fascia at Rakes` | `1x8`, `9" Vinyl` | LFT / SQ FT | отдельно от eves: другой размер и материал |
+| | `Rake Moulding`, `Crown at Frieze` | `3" crown` | LFT | |
+| `eves rakes/eves/returns 12` | `Soffit / Fascia / Crown at Returns` | по детали | LFT | cornice return как мини-набор; pork-chop только fascia и малый soffit |
+| `trims/soffit porch` | `Soffits at Porch`, `at Canopy`, `at Floor Overhangs` | `Beadboard`, `Azek Beadboard` | SQ FT | свои строки, не в main eves |
+| `trims/columns` | `Columns` | `12" Dia Fbg Non-taper w/c&b` | pcs + высота | `w/c&b`, taper, round/square в строке; высота отдельно |
+| | `Column wrap` | `1x8` | LFT | обшивка стойки, не column |
+| | `Posts at Rails`, `Post Sleeve`, `Post cap` | `4x4 P.T.`, `Sleeve for 4x4` | pcs | набор, см. [Rails & Decking](rails-decking.md) |
 
-- [Overview](overview.md)
-- [Casing, Corner & Band](casing-corner-band.md)
-- [Porch / Deck / Balcony](porch-deck-balcony.md)
-- [Eve](../sheathing-and-misc/eve.md) , [Rake](../sheathing-and-misc/rake.md) , [Returns](../sheathing-and-misc/returns.md)
+Материал не указан: `Note: Soffits assumed Vinyl; Fascias assumed PVC or
+1x Alum wrapped; verify`. Не подставляй wood, если возможен vinyl или alum.
+
+<figure markdown>
+  ![Pork-chop eave return](../../assets/images/trims/ext-pork-chop.png)
+  <figcaption markdown="span">Pork-chop return: простой треугольный обрубок. Trim минимальный, но fascia и маленький soffit считаем.</figcaption>
+</figure>
+
+## Частые ошибки
+
+- Canopy и porch посчитаны повторно в eve и rake.
+- Soffit panel посчитан и как LFT x ширина, и как Area.
+- Eves и rakes одной строкой при разных размерах.
+- Returns не определены (cornice или pork-chop), trim по returns пропущен.
+- Columns без типа, taper и высоты; column wrap перепутан с column.
+- 5/8" exterior gypsum soffit записан в trim вместо обшивки и WRB.
+- Все ошибки по крыше: [Крыша](../../start/common-mistakes.md#roof).
+
+## Пример
+
+```text
+Takeoffs/Main/eves rakes/eves/eve 24 main     Line   310 LFT
+Takeoffs/Main/eves rakes/rakes/rake 12 main   Line   96 LFT
+
+Soffits at Eves     12" Vinyl vented   620  SQ FT  =310*2
+Fascia at Eves      1x8                310  LFT
+Frieze              5/4x6              310  LFT
+Soffits at Rakes    9" Vinyl           96   LFT
+Fascia at Rakes     1x6                96   LFT
+Columns             12" Dia Fbg Non-taper w/c&b   4  pcs   8'
+```
+
+## См. также
+
+- [Overview](overview.md), [Casing, Corner & Band](casing-corner-band.md), [Porch / Deck / Balcony](porch-deck-balcony.md)
+- [Eve](../sheathing-and-misc/eve.md), [Rake](../sheathing-and-misc/rake.md), [Returns](../sheathing-and-misc/returns.md), [Canopy](../horizontal/roof-framing/canopy.md)
+- [Porch SQFT](../sqfts/porch.md), [Standard notes](../../reference/standard-notes.md)

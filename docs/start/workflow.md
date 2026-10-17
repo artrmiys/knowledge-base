@@ -1,144 +1,174 @@
-# Workflow
+# Процесс работы
 
-Полный порядок работы над takeoff - от импорта PDF до отправки. Это общий
-маршрут; детали по каждому scope лежат на предметных страницах раздела
-[Работа](../work-types/com.md), а формулы и waste - в
-[Справочнике](../reference/formulas.md).
-
-!!! tip "Золотое правило"
-    Не "прыгай" по чертежу. Бери **один scope** (например, exterior walls) и
-    **сканируй весь лист слева направо, сверху вниз**, прежде чем переходить к
-    следующему. Так не теряются углы, тупиковые зоны и мелкие элементы.
-
----
-
-## 0. Главный принцип - сканируй лист целиком
-
-Чертёж читается как страница книги: **слева - направо, сверху - вниз**, строка
-за строкой. Один проход = одна горизонтальная полоса по всей ширине листа; затем
-спускаешься ниже тем же шагом. И так - для **каждого** scope отдельно.
+Путь проекта от папки клиента до сдачи. Это общий маршрут; как мерить каждый
+элемент, написано на предметных страницах раздела "Работа", как заполнять
+Excel - в [Справочнике](../reference/takeoff-items.md).
 
 <figure markdown>
-  ![Scan the sheet left-to-right, top-to-bottom](../assets/images/framing/scan-order.svg)
-  <figcaption>Сканируй лист как текст: 1) полоса по всей ширине - 2) ниже - 3) ещё ниже. Один scope за проход.</figcaption>
+  ![Схема процесса: от Dropbox до .Finished](../assets/images/process/work-process.svg)
+  <figcaption markdown="span">Восемь шагов. Серые шаги делает автоматика при приёме, зелёные - эстиматор, синий - сдача. Ревизия добавляет Changes.txt.</figcaption>
 </figure>
 
-- **Один scope за раз.** Сначала размечаешь все exterior walls по всему листу,
-  потом возвращаешься наверх и идёшь по corridor, затем demising и т.д.
-- **Не пропускай зоны.** Мелкие куски стен у лестниц, шахт, входов - их легко
-  "перепрыгнуть", если двигаться хаотично.
-- **Помечай сомнительное note сразу.** Лучше лишняя заметка, чем забытая деталь
-  на этапе Excel output.
+!!! tip "Золотое правило замера"
+    Не прыгай по чертежу. Бери один scope (например, exterior walls) и сканируй
+    весь лист слева направо, сверху вниз, прежде чем перейти к следующему.
+    Так не теряются углы, тупиковые зоны и мелкие куски стен у лестниц и шахт.
 
----
+<figure markdown>
+  ![Сканируй лист слева направо, сверху вниз](../assets/images/framing/scan-order.svg)
+  <figcaption markdown="span">Один проход = одна полоса по всей ширине листа, потом ниже. Один scope за проход.</figcaption>
+</figure>
 
-## 1. Подготовить PDF
+## 1. Проект пришёл
 
-1. **Импортировать PDF** в takeoff-инструмент.
-2. **Переименовать листы** и разложить по структуре (см.
-   [Takeoff structure](takeoff-structure.md)).
-3. **Установить scale** и обязательно **проверить** его по известному размеру на
-   чертеже (door 3'-0", grid spacing). Неверный scale ломает все количества.
-4. **Просмотреть Arch + Structural + specs** до массовой разметки - чтобы знать
-   wall types, fire rating, sheathing notes, holdowns.
-5. **Отметить сомнительные места** notes, чтобы не забыть при Excel output.
+1. Проект лежит в папке клиента (Dropbox) под именем клиента: `<номер очереди>. <Проект>_<Клиент>_<теги>`.
+   Это имя понадобится при сдаче: папка в `.Finished` называется так же.
+2. Проект получает внутренний сквозной номер и папку `<N>. <имя>` с чертежами,
+   Excel и проектом OurPlanCore. Номер не выдумывается: он следующий по
+   журналу работ.
+3. Scope читается из пометок в папке клиента: `Frame`, `Frame. Wall panels`,
+   `Frame. EWP by others`, `Revision`, `NO metal`, `EXT`. Что меняет каждая
+   пометка - [Правила клиентов](client-rules.md).
+4. Ревизия: в папке есть `Revision`, `rev`, `review` или письмо с изменениями.
+   База для Excel - копия прошлой сдачи, новый и старый комплект листов лежат раздельно.
 
-!!! warning "Scale - в первую очередь"
-    Если scale не выставлен/не проверен, не начинай разметку. Ошибка в scale
-    умножается на весь job.
+## 2. Анализ PDF
 
----
+1. Обложка и sheet index: сколько корпусов, какие серии листов (A, S, G), какие
+   листы мерные (планы этажей, roof plan, framing plans).
+2. Обшивка и утеплитель стен - с листа wall types; кровля - со structural
+   roof framing и разреза; subfloor - с разреза. Противоречие арх и S решается
+   сразу: structural главнее, расхождение записывается нотой `... per <лист>; verify`.
+3. Масштабы: планы обычно 1/8", unit-планы 1/4", разрезы 3/8", детали NTS.
+   Подпись листа не доказательство, масштаб проверяется по размеру на листе.
+4. Растровый комплект (скан): автоимена и автомасштаб не сработают, листы
+   называются руками по тайтл-блоку.
 
-## 2. Порядок разметки takeoff
+## 3. Проект в OurPlanCore
 
-Базовый порядок для COM (сверху вниз по конструкции). Каждый шаг - сканируй лист
-целиком, прежде чем перейти к следующему.
+<figure markdown>
+  ![Панель Pages с папками листов](../assets/images/ourplancore/v3/pages-panel.png)
+  <figcaption markdown="span">Листы разложены по папкам `00. imported/Arch`, `Struct`, `sections`, `details ...`; ненужное в `--------others`. Имя листа `a101 1st`.</figcaption>
+</figure>
 
-1. **Vertical Constructions** - стены:
-   [Exterior](../work/vertical/walls/exterior.md) ,
-   [Corridor](../work/vertical/walls/corridor.md) ,
-   [Demising](../work/vertical/walls/demising.md) ,
-   [Unit / Interior](../work/vertical/walls/unit.md) ,
-   [Basement](../work/vertical/walls/basement.md).
-2. **Openings** - [Windows & Doors](../work/vertical/openings/windows-doors.md),
-   [Headers](../work/vertical/openings/headers.md).
-3. **Sheathing** - [Wall Sheathing](../work/vertical/sheathing/wall-sheathing.md),
-   [Box Sheathing](../work/vertical/sheathing/box-sheathing.md),
+1. **Листы.** Имя `<номер листа> <тег>` строчными: `a101 1st`, `s201 2nd`, `s101 f`,
+   `a105 rf`, `a3.01 sec`. Тег в конце, `f` только у фундамента. Полная таблица
+   тегов и папок - [Дерево takeoff и имена листов](takeoff-structure.md).
+2. **Масштаб.** Scale по известному размеру, проверка Ruler по второму размеру.
+   Лист с несколькими масштабами калибруется по зоне.
+3. **Точки W/F/S/U.** Под заголовком Scale у листа стоит точка: W (walls) у
+   архитектурных планов, F (framing) у structural, S (shear) у копий под shear,
+   U у планов юнитов. Точка решает, в какую папку корпуса ляжет новый замер.
+   Ставится сама по имени листа; для старого проекта
+   `Settings > Sheet Takeoff Routing > Route sheets without a dot now`.
+   Механика - [Имена takeoffs и точки листа](../reference/takeoff-naming.md#sheet-dots).
+4. **Дерево Takeoffs.** `More > Auto Tree` создаёт корни COM-шаблона (`walls`,
+   `sqfts`, `framing`, `openings`, `shear walls`, `units`...). Несколько корпусов:
+   папка на каждый (`Main`, `Grge`), активный корпус отмечен зелёной точкой.
+5. **Excel по корпусам.** На каждый корпус своя книга из TemplateCom. Сразу
+   заполняются главные ноты шапки (сначала шаблонные, потом проектные) и
+   спек-ячейки обшивки стен, пола и кровли со ссылкой на лист. Как оформлять -
+   [Стандартные notes](../reference/standard-notes.md).
+
+## 4. Замеры по порядку меню "Работа"
+
+<figure markdown>
+  ![Дерево Takeoffs после Auto Tree](../assets/images/ourplancore/v3/takeoffs-panel.png)
+  <figcaption markdown="span">Корни COM-шаблона. Каждая позиция ложится в `<корпус>/<тип>/<этаж>/<позиция>`; имя несёт числа для Excel.</figcaption>
+</figure>
+
+Идёшь по меню "Работа" сверху вниз, один scope на проход листа:
+
+| Шаг | Что | Инструмент | Куда ложится |
+| --- | --- | --- | --- |
+| 1 | Стены: ext, corridor, demising, unit, basement, BW | Line | `walls/<этаж> floor walls`, `BW/<этаж>`, `units` |
+| 2 | Проёмы | Openings | `openings/<этаж>` |
+| 3 | Обшивка, gables, truss heel, parapets, box | Area, Line | `gables`, `trussheel`, `parapets` (стены считаются от walls x height) |
+| 4 | Площади этажей и кровли | Area | `sqfts` (`1st`, `blcny`, `rf 6`) |
+| 5 | Перекрытия: posts, beams, headers, joists, details, stairs | Count, Beam, J Area, Line | `framing/<этаж> framing/...` |
+| 6 | Shear walls и holdowns | Line, Count | `shear walls/<этаж>/shear`, `.../holdowns` |
+| 7 | Карнизы, кровля, eve/rake | Line | `eves rakes/eves`, `eves rakes/rakes` |
+| 8 | Deck, porch, балконы | Count по типу блока | `Balcony blocks`, `Porch blocks` |
+| 9 | Siding, trims (если в scope) | Area, Line, Count | `siding`, `trims` |
+
+Правила: у каждой новой позиции свой цвет и свой значок точек; `Record`
+продолжает существующую позицию, повторное нажатие инструмента создаёт новую;
+joists только J Area, балки только Beam, проёмы только Openings. Форматы имён -
+[Дерево takeoff](takeoff-structure.md).
+
+## 5. Excel DFL и ноты
+
+<figure markdown>
+  ![Полоса XL экспорта в Excel](../assets/images/ourplancore/v3/excel-strip.png)
+  <figcaption markdown="span">Кнопки полосы XL переносят ветки дерева в открытую книгу TemplateCom по секциям; `ALL` делает всё по порядку.</figcaption>
+</figure>
+
+1. Книга корпуса открыта, лист DFL активен. Полоса XL в OurPlanCore переносит
+   замеры по секциям (стены, обшивка, площади, проёмы, framing...). Подробно -
+   [Интерфейс и инструменты](../reference/ourplanecore.md).
+2. Высота стены живёт в E строки студов (до 1/8"), единицы в D: `LFT` для досок,
+   `pcs` для крепежа, SF для листов. Имена строк - [Имена строк DFL](../reference/takeoff-items.md).
+3. Формулы только от собственных входов блока; новую формулу проверяй на первой
+   строке сразу. Не множить на 1.1 второй раз - [Формулы](../reference/formulas.md).
+4. Ноты: главные в шапке (жёлтый фон, красный жирный), локальные сразу под
+   заголовком своего блока. Живая фраза, до 80 знаков, `per <лист>`, без `=`.
+   Образцы - [Стандартные notes](../reference/standard-notes.md).
+5. Балконы, porch, holdowns - блоками по образцу сданных работ:
+   [Deck / Porch / Balcony](../work/deck/deck-porch-balcony-frame.md),
    [Shear Wall](../work/vertical/sheathing/shear-wall.md).
-4. **SQFT** - площади по уровням:
-   [1st-5th Floors](../work/sqfts/1st2nd.md),
-   [Basement](../work/sqfts/basement.md),
-   [Roof](../work/sqfts/roof.md) и др.
-5. **Floor Framing** -
-   [Post](../work/horizontal/floor-framing/post.md) -
-   [Beam](../work/horizontal/floor-framing/beam.md) -
-   [Joist](../work/horizontal/floor-framing/joist.md) -
-   [Details](../work/horizontal/floor-framing/details/rim.md).
-6. **Roof Framing** -
-   [Ridge / Hip / Valley](../work/horizontal/roof-framing/ridge.md),
-   [Rafters](../work/horizontal/roof-framing/dbl-trpl-rafters.md),
-   [Roof Sheathing](../work/horizontal/roof-framing/roof-sheathing.md).
-7. **Sheathing & Misc** -
-   [Eave / Rake / Returns](../work/sheathing-and-misc/eve.md),
-   [Flashing](../work/sheathing-and-misc/flashing.md).
-8. **Deck / Porch / Balcony** -
-   [Frame](../work/deck/deck-porch-balcony-frame.md).
-9. **Ties / Connectors** - [Hangers](../reference/hangers.md),
-   [Hardware catalog](../reference/hardware-catalog.md).
 
----
+## 6. Проверка
 
-## 3. Правила разметки
+Полная проверка перед сдачей, особенно позиций, которых много: ничего не
+задвоено, каждая измеренная площадь дошла до Excel, ноты не противоречат
+строкам. Чек-лист по разделам - [Проверка перед сдачей](quality-checklist.md),
+список известных ошибок - [Частые ошибки](common-mistakes.md).
+В OurPlanCore: Estimating, `Total`, легенда листа (`Organize > Sort Sheet Legend by Key`).
 
-### Beams - длина и округление
+## 7. Экспорт
 
 <figure markdown>
-  ![Beam length to support, rounding rule](../assets/images/framing/beam-marking-direction.svg)
-  <figcaption>Длина балки - от опоры до опоры (support to support); ≥ 8' округлять до 2', &lt; 8' - как есть.</figcaption>
+  ![Диалог экспорта PDF](../assets/images/ourplancore/v3/export-pdf.png)
+  <figcaption markdown="span">PDF Output: Preview, потом Export. В файл идут только листы, на которых есть видимые замеры.</figcaption>
 </figure>
 
-- **Длина** зависит от **точки опирания** (support to support), а не от линии на
-  плане.
-- Beams **8' и длиннее** - округлять до ближайших **2'** (8.4' - 10', 11.2' - 12').
-- Beams **меньше 8'** - оставлять без округления.
-- Подробно про продукт и опоры - [Beam](../work/horizontal/floor-framing/beam.md),
-  опоры - [Post](../work/horizontal/floor-framing/post.md).
+1. **PDF.** Сохранить проект (Ctrl+S). Лишнее спрятать (H), узлы собрать
+   через Crop to Sheet. `PDF Output > Preview`, затем Export. В PDF только
+   листы с замерами; на каждый корпус свой PDF (скрыть ветки других корпусов).
+   Ревизия "только новое": по веткам нового комплекта.
+2. **Processed xlsx.** Из рабочей `.xlsm` делается `.xlsx` с формулами,
+   переведёнными в значения, и без ссылок между книгами. Excel при этом закрыт.
+   Проверить, что ноты и строки на месте и что xlsx не старше рабочей xlsm.
+3. **Changes.txt** - только для ревизии, review или переделки. По-английски,
+   одна строка - одно изменение, прошедшее время, источник `per <лист>` или
+   `per <деталь>/<лист>`. Незакрытое только в `Open items` (секция обязательна,
+   даже с одной строкой). Без русского текста, ячеек и внутренней кухни. Мелочь
+   группируется одной строкой. Имя файла ровно `Changes.txt`.
 
-### Joists
+??? example "Образец Changes.txt"
+    ```text
+    <имя Excel без расширения>
 
-- Внутри одного run продолжай **одним spacing** - top-down или left-right,
-  не меняя направление.
-- **Не начинай spacing заново** от внутренней балки - run считается сквозным.
-- Удаляй joist, только если он попадает **прямо на beam** (примерно в пределах
-  **2"**).
-- Spacing-факторы (studs vs joists - разные таблицы!) -
-  [Формулы - Spacing factors](../reference/formulas.md).
-- Детали: [Joist](../work/horizontal/floor-framing/joist.md),
-  [Rim](../work/horizontal/floor-framing/details/rim.md),
-  [Blocking](../work/horizontal/floor-framing/details/blocking.md).
+    Changes
+    - Stair and trash shaft walls above the podium were changed from CMU to wood framing. The corresponding framing quantities were added.
+    - Ceiling blocking was added per A7.01.
+    Open items
 
----
+    - Revised structural drawings were not provided.
+    ```
 
-## 4. Export в Excel
+## 8. Сдача
 
-- **Экспортировать** takeoff quantities.
-- **Перенести в template** и разнести категории: Beams, Joists, Details, Walls,
-  Sheathing, SQFT.
-- **Проверять новые формулы сразу**, на первой строке, а не после полного job.
-- **Не применять `1.1` повторно**, если формула уже ссылается на данные с waste
-  (двойной waste - частая ошибка, см. [Формулы](../reference/formulas.md)).
+1. В папку клиента `.Finished\<имя как при приёме>` уходят: PDF по корпусам,
+   processed xlsx, для ревизии `Changes.txt`. Исходные чертёжные PDF и служебные
+   файлы в сдачу не идут.
+2. Папка должна называться ровно как папка Dropbox при приёме.
+3. Статус работы отмечается в трекере; если срок уезжал, об этом сказано заранее,
+   а не в день сдачи.
 
----
+## См. также
 
-## 5. Перед отправкой
-
-- Пройти полный [QA checklist](quality-checklist.md).
-- Для больших COM jobs - делать **PDF sketch / markups**, если есть риск забыть
-  детали (см. [Картинки и схемы](images-and-schemas.md)).
-- Сверить спорные места с [Советами и важными вещами](../reference/boss-feedback-rules.md)
-  и [Client Rules](client-rules.md).
-
-## See also
-
-- [How to use](how-to-use.md) , [Takeoff structure](takeoff-structure.md)
-- [Quality checklist](quality-checklist.md) , [Формулы](../reference/formulas.md)
+- [Как пользоваться базой](how-to-use.md)
+- [Дерево takeoff и имена листов](takeoff-structure.md)
+- [Проверка перед сдачей](quality-checklist.md)
+- [OurPlanCore 3.0: начало работы](../reference/ourplancore-start.md)

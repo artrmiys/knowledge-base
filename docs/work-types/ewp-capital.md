@@ -1,81 +1,89 @@
 # EWP / Capital
 
-**EWP (Engineered Wood Products)** - это заводские инженерные материалы каркаса:
-I-joists, LVL/PSL/LSL/GL балки и rim. На **EWP / Capital** jobs мы считаем
-**только их** - обычный размерный лес (`2x`), фермы и крепёж-мелочёвку не трогаем,
-если scope прямо этого не требует.
+**EWP (Engineered Wood Products)** - заводские инженерные материалы каркаса:
+I-joists, LVL / PSL / LSL / GL балки и engineered rim. Есть два противоположных
+заказа: "только EWP" (Capital-тип) и "всё, кроме EWP" (`Frame. EWP by others`).
 
 <figure markdown>
   ![EWP materials: I-joist, LVL beam, hanger](../assets/images/work-types/ewp-capital.svg)
-  <figcaption>Считаем engineered: I-joists, LVL/PSL/GL, hangers, rim. 2x, trusses, nails - нет.</figcaption>
+  <figcaption markdown="span">EWP only: считаем I-joists, LVL/PSL/GL, engineered rim и hangers к ним. 2x, фермы, гвозди - нет.</figcaption>
 </figure>
+
+<!-- TODO-PHOTO: floor framing with I-joists, LVL beam and rim board, no people; EN query "I-joist floor framing LVL beam engineered wood" -->
 
 ## Что это за материалы
 
 | Материал | Что это | Где |
 | --- | --- | --- |
-| **I-joist** | OSB-стенка + LVL/OSB-полки; лёгкая балка перекрытия | полы, плоские крыши |
-| **LVL** | клееный шпон (Versa-Lam); прочный, стабильный | балки, headers, rim |
-| **PSL** | parallel strand lumber; высокая несущая | балки, колонны |
-| **LSL** | laminated strand; часто rim и короткие балки | rim, headers |
-| **GL / Glulam** | клееные ламели; часто exposed/architectural | большие пролёты |
+| I-joist | OSB-стенка и LVL/OSB-полки; лёгкая балка перекрытия (TJI, LPI, BCI, RFPI, Nordic) | Полы, плоские крыши |
+| LVL | Клееный шпон; прочный, стабильный | Балки, headers, rim под нагрузкой |
+| PSL | Parallel strand lumber; высокая несущая | Балки, колонны |
+| LSL | Laminated strand; часто rim и короткие балки | Rim, headers |
+| GL / Glulam | Клееные ламели; часто exposed | Большие пролёты |
 
-Детали по продуктам - [Joist - EWP materials](../work/horizontal/floor-framing/joist.md#ewp-joist-materials)
-и [Beam - EWP Materials](../work/horizontal/floor-framing/beam.md#ewp-materials).
+Детали по продуктам - [Joist](../work/horizontal/floor-framing/joist.md)
+и [Beam](../work/horizontal/floor-framing/beam.md).
 
-## Что считать
+## EWP only (Capital-тип)
 
-- I-joists: TJI, LPI, RED, BCI, RFPI, Nordic.
-- Beams: LVL, PSL, GL.
-- Associated hangers.
-- Rim board и blocking в LFT.
+**Считать:** I-joists, балки LVL / PSL / GL, engineered rim и blocking в LFT,
+hangers к ним; возможно колонны и stringers лестниц.
 
-## По умолчанию не считать
+**Не считать:** обычный 2x, фермы, ties (CS, MST и подобные), гвозди,
+соединители лестниц, если scope прямо не просит.
 
-- Обычный 2x lumber.
-- Trusses.
-- Ties вроде CS, MST и т.д., если их прямо не попросили.
-- Nails.
+Правила:
 
-## Главные правила
+- TJI серия как показана: 110 не превращается в 230.
+- Большинство hangers top mount; joists глубже 16" берут HIT, не ITS.
+  Над стенами с двойным гипсом (firewall) у лестниц и шахт - DHU / DGU
+  отдельной строкой - [Hangers](../reference/hangers.md).
+- Rim: если LVL нигде не указан, не предполагать `1-3/4 LVL Rim`; по умолчанию
+  `Rim` или продукт с пометкой assumed. Толщины rim 1-1/8" OSB, 1-1/2" LSL,
+  1-3/4" LVL - [Rim Board](../work/horizontal/floor-framing/details/rim.md).
+- Rim factor 1.05; blocking continuous в LFT, фактор по [Формулам](../reference/formulas.md).
+- Одинаковый этаж: нота `4th floor frame is identical to 3rd floor`, но
+  материалы перечислить.
 
-- TJI 110 series не превращается в 230; пиши как показано.
-- Большинство hangers на таких jobs - top mount.
-- Rim factor: 1.05.
-- Blocking: без factor, если continuous.
-- Joists over 16" используют HIT hangers, не ITS.
-- Если floor identical, добавь note, но всё равно перечисли materials.
+## Обратный случай: Frame. EWP by others {#ewp-by-others}
 
-## Rim Sizing
+Пометка `Frame. EWP by others` в папке проекта: клиент поставляет EWP сам,
+мы считаем весь остальной каркас.
 
-Если LVL нигде явно не указан, не предполагаем `1-3/4 LVL Rim`. Используй `Rim`
-или помечай product как assumed.
+**Считать:** стены, проёмы, обшивка, площади, все posts (в том числе под
+EWP-балками), headers из 2x, кровля, eaves, truss heel, крепёж.
 
-Типичные размеры 24" Rim в порядке предпочтения:
+**Не считать:** I-joists, LVL / PSL / LSL балки и headers, engineered rim.
+Строки с EWP убрать, не оставлять нулевыми.
 
-- Если указан очень тонкий Rim - `1-1/8" × 24 OSB`.
-- Далее по толщине - `1-1/2" × 24 LSL`.
-- Затем - `1-3/4" × 24 LVL`.
+Правила:
 
-Стандартные толщины Rim, на которые обращать внимание: `1-1/4"`, `1-1/2"`, `1-3/4"`.
+- Нота в шапке `All EWP products are by others`. Шаблонная нота
+  `Walls are panels by others` удаляется, если panel scope нет.
+- Hangers к EWP не считаем; остальной крепёж как обычно: снаружи и на P.T.
+  Zmax, ties к фермам под обшивкой без Zmax.
+- Furring и rainscreen, если они под вопросом, как optional с нотой-причиной.
+- Posts под EWP-балками всё равно наши: по schedule, с cap и base.
 
-## Hangers - детали выбора
+## Частые ошибки
 
-- Чаще всего на EWP-jobs используются **верхнемонтируемые (top mount)** крепления - на стенах, балках или стальных post.
-- В архитектурных чертежах указаны стены с **двойным гипсокартоном (double gypsum / firewall)** - в этих местах могут быть специальные крепления `DGU` или `DGT`. Их выписывать отдельной строкой.
-- TIES (`CS`, `MST` и подобные) на EWP не учитываем - только Hangers.
+- EWP посчитан при `EWP by others` или не посчитан при EWP only.
+- Rim записан как LVL без указания.
+- Hangers по закупочным доскам, а не по сборкам.
+- Все ошибки по перекрытиям - [Частые ошибки](../start/common-mistakes.md#floor).
 
-## Identical floors
+## Пример
 
-Если один этаж идентичен другому, добавляй пометку сверху, но **всё равно перечисляй все материалы**, чтобы не дублировать инфу:
+```text
+Takeoffs/
+  framing/2nd floor framing/joists/11 7/8 TJI 210 16"
+  framing/2nd floor framing/beams/(2) 1 3/4 x 11 7/8 LVL 14
+  framing/2nd floor framing/details/rim
+  framing/2nd floor framing/posts/C4 9.0
+```
 
-> `4th floor frame is identical to 3rd floor`
+## См. также
 
-## Scope recap
-
-- **Включает**: перекрытия, возможно колонны, косоуры лестниц (`stringers`).
-- **Не считаем**: 2x материалы, соединители для лестниц, Trusses (их ставят другие).
-
-## See also
-
-- [Joist - EWP materials](../work/horizontal/floor-framing/joist.md#ewp-joist-materials) , [Beam](../work/horizontal/floor-framing/beam.md) , [Rim Board](../work/horizontal/floor-framing/details/rim.md) , [Hangers](../reference/hangers.md)
+- [Joist](../work/horizontal/floor-framing/joist.md), [Beam](../work/horizontal/floor-framing/beam.md), [Rim Board](../work/horizontal/floor-framing/details/rim.md), [Hangers](../reference/hangers.md)
+- [Правила клиентов и типов заказов](../start/client-rules.md)
+- [COM Commercial](com.md), [Residential](residential.md)

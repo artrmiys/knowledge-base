@@ -1,217 +1,149 @@
-# Joist
+# Joist (балки перекрытия)
 
-## Картинки Joist типов
+<figure markdown>
+  ![J Area: зона joists с направлением и шагом](../../../assets/images/ourplancore/v3/measure-joist-area.png)
+  <figcaption markdown="span">Инструмент J Area: контур зоны, стрелка направления, шаг. Программа сама даёт количество и длины joists по зоне. Обычная Area с именем `2x8 16"` этого не делает.</figcaption>
+</figure>
 
-Это реальные картинки из Confluence. Используй их, когда на плане или в
-schedule указан конкретный product family для `Joist`.
+## Что это
 
-<details class="kb-figures kb-figures--rows" open>
-  <summary>Скрыть 11 правил с иллюстрациями</summary>
+Joists - балки перекрытия или плоской крыши с шагом: пилёные `2x10`, I-joists (`11 7/8 TJI 230`, `LPI`, `BCI`, `RFPI`, `NI`), LVL. Floor trusses и roof trusses - by others, их не считаем, но считаем rim, blocking, hangers и ties вокруг них. Rafters скатной крыши мерятся тем же инструментом, см. [Dbl / Trpl Rafters](../roof-framing/dbl-trpl-rafters.md).
+
+## Где искать на чертежах
+
+| Лист | Что взять |
+| --- | --- |
+| S framing plan этажа | направление, шаг, сечение, границы зон, extra и double joists, отверстия |
+| Joist schedule, general notes | серия и глубина I-joist, rim, web stiffeners, squash blocks, blocking rows |
+| Beam schedule, details | опирание: на балке сверху, на hangers, top chord bearing |
+| Firewall и stair details | DHU/DGU вместо ITS над лестницами, лифтами, шахтами |
+
+## Как мерить в OurPlanCore
+
+Инструмент J Area (J), лист framing с точкой F. Обведи зону, задай направление (с Shift строго по осям), шаг, end joists; extra joists добавляются к выделенной зоне клавишей D.
+
+1. Разбивай зону при смене направления, шага, материала или линии опоры. Одна стрелка на весь этаж не описывает перекрытие.
+2. В каждой зоне проверь: направление, начальную и конечную границу, include end joists, отверстия, extra и double joists.
+3. Проверь на одной простой зоне количество и длины, потом остальные.
+4. Rafters by others и trusses by others в joists не рисуй.
+
+## Как назвать в дереве и строка DFL
+
+Путь: `framing/<этаж> framing/joists/<сечение серия шаг назначение>`: `2x8 16"`, `11 7/8 TJI 230 16"`, `flat roof 11 7/8 TJI 16"`, `porch 16 TJI 560 24"`, `cant`.
+
+Экспорт: кнопка JS полосы XL пишет joists парами "количество / длина" в лист этажа. Раскладка по правилу макроса `C_JoistsSort`:
+
+- длина больше 8' и нечётная получает +1 (11' становится 12');
+- одинаковые длины складываются в одну строку;
+- короткие (до 7') идут на двойную доску: `90 x 6'` становится `45 x 12'`, в E пишется `90 pcs 6'`;
+- extra joists той же длины прибавляются к основной строке.
+
+| A (Label) | B (материал) | C | D | E |
+| --- | --- | --- | --- | --- |
+| `Joists 16" o.c.` | `11 7/8 TJI 230` | 36 | `20` | `S102` |
+| `Joists 16" o.c.` | `11 7/8 TJI 230` | 45 | `12` | `90 pcs 6'` |
+| `Dbl Joists` | `11 7/8 TJI 230` | 4 | `20` | `under wall per S102` |
+| `Hangers` | `ITS2.37/11.88` | `=ЧЁТН(G*12/16)` | `pcs` | |
+| `Rim Board` | `11-7/8" LSL Rim` | LFT x 1.05 | `LFT` | |
+
+Hangers: на оба конца каждого joist, который висит; считать по сборкам, не по закупочным доскам после раскроя. Модель по детали (`U210-2`, не `LUS210-2`). `ITS` только top-flange до 16" глубины и без skew; глубже - `HIT`. Снаружи и на P.T. - `Zmax` отдельным словом; ties `H2.5A` к фермам под обшивкой без Zmax. Подбор: [Hangers](../../../reference/hangers.md), запись в B: [формат крепежа в DFL](../../../reference/hangers.md#dfl-format).
+
+<figure markdown>
+  ![Face-mount joist hanger на балке](../../../assets/images/photos/framing/joist-hanger-on-joist.jpg)
+  <figcaption markdown="span">Face-mount hanger держит торец joist на балке: один такой узел на каждый конец, который висит. Фото: ArmchairBuilder.com, CC BY 2.0, <a href="https://commons.wikimedia.org/wiki/File:Joist_Hanger.jpg">источник</a>.</figcaption>
+</figure>
+
+Фактор по шагу, если считаешь вручную: `pcs = ширина зоны LFT x 12 / шаг` плюс торцевой joist; 16" даёт 0.75, 19.2" даёт 0.625, 24" даёт 0.5. Это геометрия, не stud-фактор 1.1: [Формулы](../../../reference/formulas.md#joist-spacing-factors).
+
+## Частые ошибки
+
+- Обычная Area названа `2x8 16"`: количества нет, в Excel уходит площадь.
+- Шаг продолжен от внутренней балки заново или joist убран, хотя он не попадает на балку (допуск около 2").
+- Hangers не на оба конца; `ITS` на joists 18" и глубже; DHU там, где гипс кончается под перекрытием (нужен ITS).
+- Rim разбит на 16' и назван `1-3/4 LVL` без указания: [Rim Board](details/rim.md).
+- Rim у roof TJI забыт.
+- Серия потеряна: `TJI` вместо `11 7/8 TJI 230`; RED переписан в TJI; `TJI 9 1/2` не бывает серии 360/560.
+- Top chord bearing не замечен: там blocking вместо ribbon, см. [Ribbon Board](details/ribbon.md).
+- Длинные 2x ceiling joists со стыком на опоре посчитаны одной доской.
+- [Все ошибки по перекрытиям](../../../start/common-mistakes.md#floor)
+
+## Пример
+
+```text
+framing/
+  2nd floor framing/
+    joists/
+      11 7/8 TJI 230 16"      J Area, 3 зоны
+      2x10 16"                J Area, porch
+      cant                    J Area, консоль
+```
+
+| A | B | C | D | E |
+| --- | --- | --- | --- | --- |
+| `Joists 16" o.c.` | `11 7/8 TJI 230` | 3 | 12 | `S102` |
+| `Joists 16" o.c.` | `11 7/8 TJI 230` | 36 | 20 | |
+| `Hangers` | `ITS2.37/11.88` | 42 | pcs | `9/S501` |
+
+## Профили I-joist (справка по производителям)
+
+Серию и глубину пиши как в schedule. Картинки архивные, для проверки названия семейства.
+
+<details class="kb-figures kb-figures--rows">
+  <summary>Показать профили TJI, RED, LP, RFPI, BCI, Nordic</summary>
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">TJI series</div>
-      <div class="kb-figure-row__rule">Сохраняй точную серию: 110 / 210 / 230 / 360 / 560.</div>
-      <div class="kb-figure-row__note">В строке пиши <code>11-7/8 TJI 230</code>, а не просто общий <code>TJI</code>.</div>
+      <div class="kb-figure-row__title">TJI</div>
+      <div class="kb-figure-row__rule">Серии 110, 210, 230, 360, 560. В строке <code>11 7/8 TJI 230</code>, не общий <code>TJI</code>.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-007.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-007.png" alt="TJI joist series" loading="lazy"></a>
   </figure>
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">RED / Red-I series</div>
-      <div class="kb-figure-row__rule">Не переписывай RED в TJI.</div>
-      <div class="kb-figure-row__note">Оставляй Red-I mark, depth и series так, как они указаны в schedule.</div>
+      <div class="kb-figure-row__title">RED / Red-I</div>
+      <div class="kb-figure-row__rule">Не переписывать в TJI; марка, глубина и серия как в schedule.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-009.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-009.png" alt="Red-I joist series" loading="lazy"></a>
   </figure>
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">LP SolidStart</div>
-      <div class="kb-figure-row__rule">LP / LPI profiles - отдельный product family.</div>
-      <div class="kb-figure-row__note">Используй, если schedule показывает LP, LPI, LPI 20Plus, 32Plus, 36, 42Plus, 52Plus или 56.</div>
+      <div class="kb-figure-row__title">LP / LPI SolidStart</div>
+      <div class="kb-figure-row__rule">LPI 20Plus, 32Plus, 36, 42Plus, 52Plus, 56. Flange влияет на hanger (<code>ITS2.56</code> против <code>ITS2.37</code>).</div>
     </figcaption>
-    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-006.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-006.png" alt="LP SolidStart I-joist product specifications" loading="lazy"></a>
+    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-006.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-006.png" alt="LP SolidStart I-joist" loading="lazy"></a>
   </figure>
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">LPI profile details</div>
-      <div class="kb-figure-row__rule">Перед выбором hanger family проверь flange/web profile.</div>
-      <div class="kb-figure-row__note">Depth и flange width могут изменить hanger и название в output.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-005.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-005.png" alt="LPI joist profile details" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">RFPI dimensions</div>
-      <div class="kb-figure-row__rule">У RFPI есть LVL-flange и solid-sawn-flange варианты.</div>
-      <div class="kb-figure-row__note">Оставляй RFPI series и depth видимыми; не превращай в общий I-joist.</div>
+      <div class="kb-figure-row__title">RFPI</div>
+      <div class="kb-figure-row__rule">LVL-flange и solid-sawn-flange варианты; серию и глубину держать видимыми.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-008.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-008.png" alt="RFPI joist dimensions" loading="lazy"></a>
   </figure>
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">BCI / Boise profiles</div>
-      <div class="kb-figure-row__rule">BCI - не TJI; сохраняй Boise / BCI naming.</div>
-      <div class="kb-figure-row__note">На картинке также есть Boise LVL / glulam profiles для проверки.</div>
+      <div class="kb-figure-row__title">BCI / Boise</div>
+      <div class="kb-figure-row__rule">BCI не равно TJI; суффикс <code>+ s</code> в марке сохранять.</div>
     </figcaption>
-    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-004.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-004.png" alt="BCI and engineered wood product profiles" loading="lazy"></a>
+    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-004.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-004.png" alt="BCI and engineered wood profiles" loading="lazy"></a>
   </figure>
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">BCI + s chart</div>
-      <div class="kb-figure-row__rule">Если mark содержит <code>+ s</code>, оставляй его.</div>
-      <div class="kb-figure-row__note">Не теряй suffix при cleanup или Excel output.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-003.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-003.png" alt="BCI joist chart" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Nordic Joist NI series</div>
-      <div class="kb-figure-row__rule">Оставляй NI series видимой: NI-20 / NI-40x / NI-60 / NI-80 / NI-90.</div>
-      <div class="kb-figure-row__note">Nordic schedule names влияют и на строку joist, и на проверку hangers.</div>
+      <div class="kb-figure-row__title">Nordic NI</div>
+      <div class="kb-figure-row__rule">NI-20, NI-40x, NI-60, NI-80, NI-90; у Nordic свои hanger notes.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-002.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-002.png" alt="Nordic Joist NI series" loading="lazy"></a>
   </figure>
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">Nordic hanger reference</div>
-      <div class="kb-figure-row__rule">Используй, когда Nordic joists требуют hanger cross-check.</div>
-      <div class="kb-figure-row__note">Hanger type зависит от depth, mount condition, skew и header/support.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-001.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-001.png" alt="Nordic Joist hanger reference" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">TJI design properties table</div>
-      <div class="kb-figure-row__rule">Только reference; takeoff всё равно идёт по plan/schedule labels.</div>
-      <div class="kb-figure-row__note">Полезно, когда нужно понять, почему важны series/depth.</div>
-    </figcaption>
-    <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-010.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-010.png" alt="TJI design properties table" loading="lazy"></a>
-  </figure>
-  <figure class="kb-figure-row">
-    <figcaption class="kb-figure-row__text">
-      <div class="kb-figure-row__title">O.C. spacing diagram</div>
-      <div class="kb-figure-row__rule">Spacing считается center-to-center.</div>
-      <div class="kb-figure-row__note">12 / 16 / 19.2 / 24 o.c. используй только если это показано на plan или notes.</div>
+      <div class="kb-figure-row__title">Шаг o.c.</div>
+      <div class="kb-figure-row__rule">Шаг считается от центра до центра; 12 / 16 / 19.2 / 24 только с плана или нот.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-075.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-075.png" alt="Joist spacing diagram" loading="lazy"></a>
   </figure>
 </details>
 
-## Официальные product references
+Официальные справочники для проверки названий: [TJI](https://www.weyerhaeuser.com/woodproducts/document-library/document_library_detail/tj-4000/), [LP SolidStart](https://www.pwtewp.com/wp-content/uploads/2022/09/SolidStart-IJ-Residential-Technical-Guide-US.pdf), [BCI](https://www.bc.com/ewp/bci-joists/), [RFPI](https://www.roseburg.com/Product/rfpi-joist/), [Nordic](https://www.nordic.ca/en/products/nordic-i-joist), [APA I-joist](https://www.apawood.org/i-joist).
 
-Эти ссылки нужны только для проверки product family / series names. Takeoff
-output всё равно должен идти по framing plan, joist schedule и structural notes
-конкретного проекта.
+## См. также
 
-| Product family | Official reference | Как использовать в takeoff |
-| --- | --- | --- |
-| TJI | [Weyerhaeuser TJI 110/210/230/360/560 Specifier's Guide](https://www.weyerhaeuser.com/woodproducts/document-library/document_library_detail/tj-4000/) | Проверить точную TJI series и depth. |
-| LP / LPI / SolidStart | [Pacific Woodtech SolidStart I-Joist Technical Guide](https://www.pwtewp.com/wp-content/uploads/2022/09/SolidStart-IJ-Residential-Technical-Guide-US.pdf) | Оставить LPI / Plus / SolidStart naming, если он показан. |
-| BCI | [Boise Cascade BCI Joists](https://www.bc.com/ewp/bci-joists/) | Сохранить BCI / Boise naming; не превращать в TJI. |
-| RFPI | [Roseburg RFPI Joist](https://www.roseburg.com/Product/rfpi-joist/) | Оставить RFPI series и flange/profile note видимыми. |
-| Nordic NI | [Nordic I-Joists](https://www.nordic.ca/en/products/nordic-i-joist) | Оставить NI series видимой и сверить Nordic hanger notes. |
-| General I-joist reports | [APA I-Joist product reports](https://www.apawood.org/i-joist) | Использовать только как reference, если важен manufacturer/product report. |
-
-## Что считать
-
-- I-joists: TJI, LPI, RED, BCI, RFPI, Nordic.
-- Joist hangers.
-- Rim и blocking, которые относятся к joist runs.
-- Web stiffeners, squash blocks или special blocking - только если они прямо
-  указаны в details/general notes.
-
-## Spacing
-
-Spacing считается **center-to-center (O.C.)** - от центра одного joist до
-центра следующего. Фактор по joists = `12 / spacing` (истинная геометрия,
-**без** stud-waste - joist'ы не путать со стойками).
-
-| Spacing | Фактор (pcs / LFT ширины) |
-| --- | ---: |
-| 12" o.c. | **1.0** |
-| 16" o.c. | **0.75** |
-| 19.2" o.c. | **0.625** |
-| 24" o.c. | **0.5** |
-
-- `pcs = run ширина LFT × 12 / spacing`, **+1** торцевой joist на каждый run.
-- `12 / 16 / 19.2 / 24` o.c. бери только если это показано на plan/notes.
-- Stud-факторы (`16"-1.1`) сюда **не** подставлять - это другая таблица в
-  [Формулах](../../../reference/formulas.md).
-
-## Правила
-
-- Продолжай spacing внутри run сверху вниз / слева направо.
-- Не начинай spacing заново от внутреннего beam.
-- Убирай joist только когда он реально попадает прямо на beam, примерно
-  плюс-минус 2".
-- Для joists с **сечением** `18"` / `20"` / `22"` / `24"` (глубина балки) - `HIT`
-  hangers, не `ITS`.
-- `ITS` - только для light floor applications, **до `16"` глубины** включительно
-  (примеры: `9-1/2"`, `11-7/8"`, `14"`, `16"`). Сечение читается из шильдика
-  joist'a (`11-7/8 TJI 230`, `16 LVL`), не из spacing `16" o.c.`.
-- В row name оставляй joist depth/product: `11-7/8 TJI 230` проверять проще,
-  чем общий `TJI joist`.
-- Top chord bearing conditions проверяй отдельно: они могут менять ribbon/rim и
-  blocking requirements.
-
-## Где смотреть
-
-| Где на чертежах | Что проверить |
-| --- | --- |
-| Framing plan | Direction, spacing, depth, product family, repeated areas |
-| Beam schedule | Support condition и hanger family |
-| General notes | Web stiffeners, blocking rows, rim material, squash blocks |
-| Details | Top chord bearing, skewed hangers, firewall conditions |
-
-## Проверить
-
-- Добавляй note, если нестандартные lengths сделаны намеренно.
-- Если joists / trusses - **top chord bearing**, ribbon board часто не нужен
-  (вместо него - blocking, см. [Ribbon Board](details/ribbon.md)).
-- Проверь, что rim всё ещё посчитан при roof TJI conditions.
-- Не разбивай rim на 16' pieces, если output format прямо не просит pieces.
-- Не меняй местами joist count и joist length в Excel/output.
-- Если house примерно 28' wide и beam dropped, проверь joist span labels:
-  joists могут быть длиннее 14'.
-- `TJI 9 1/2` does not use 360 / 560 series.
-- Long 2x ceiling joists могут быть split и подразумевать supporting vertical
-  joists; перед one continuous member проверь notes/details.
-
-## EWP Joist Materials
-
-Для **EWP** считаем только engineered joists. Обычные деревянные `2x`
-joists не превращаем в EWP material line, если scope/schedule прямо этого не
-требует.
-
-- **I-Joists**: самый частый EWP joist. OSB web + LVL/OSB flanges.
-- **LVL Joists**: laminated veneer lumber; обычно для больших пролетов.
-- **PSL / LSL Joists**: engineered strand/parallel lumber; считать только
-  когда так показано в schedule/details.
-- **GL / Glulam Joists**: laminated timber; чаще architectural / exposed
-  условия, не путать с обычным I-joist.
-
-### Частые I-Joist series
-
-`TJI` , `RED` , `LP` / `LPI` , `RFPI` , `BCI` (+ `s`) , `Nordic Joist`
-(`NI-20` / `NI-40x` / `NI-60` / `NI-80` / `NI-90`).
-
-## Пример вывода
-
-| Description | Size | Qty | Units |
-| --- | --- | ---: | --- |
-| Joists `16" o.c.` | `11 7/8 TJI 230` | 3 | 12 |
-| Joists `16" o.c.` | `11 7/8 TJI 230` | 36 | 20 |
-| Joists `16" o.c.` | `11 7/8 TJI 230` | 2 | 10 |
-| Hangers | `ITS2.37/11.88` | `=ЧЁТН(lft * 12/16)` | pcs |
-
-Формула для hangers по joists 16" O.C.: `=ЧЁТН(lft * 12 / spacing)` -
-округление вверх до четного.
-
-## Trello QA formulas
-
-| Item | Формула / note |
-| --- | --- |
-| I-joist cross bridging / `TB27` | `length * 2 * 12 / 16` pcs |
-| Attic `EWP by others` | Добавить note: `LVLs by others` |
-| `EWP by others` with steel-beam blocking | Blocking может быть `LVL` / `LSL`; scale и note обязательны |
-| `EWP by others` with one `LVL` in floor | Добавить видимую note, а не прятать условие |
+- [Beam](beam.md), [Rim Board](details/rim.md), [Blocking](details/blocking.md), [Subfloor](subfloor.md)
+- [Hangers](../../../reference/hangers.md), [Формулы](../../../reference/formulas.md), [EWP / Capital](../../../work-types/ewp-capital.md)

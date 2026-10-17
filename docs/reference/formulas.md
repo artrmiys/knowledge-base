@@ -1,34 +1,27 @@
 # Формулы и факторы
 
-!!! warning "Stud ≠ Joist - это разные факторы"
-    У **studs** и **joists** один и тот же `o.c.`, но **разные множители**.
-    Studs считаем по boss-rule (`1 стойка/фут + waste`), joists - по реальной
-    геометрии center-to-center (`12 / spacing`). Не путай таблицы местами.
+Здесь: множители и формулы колонки C, которые стоят в книге, и чем studs отличаются от joists. Формулы даны в английской локали (`CEILING`, `EVEN`); в русской Excel показывает их как `ОКРВВЕРХ`, `ЧЁТН` с `;` между аргументами, смысл тот же.
 
-## Stud spacing factors
+!!! warning "Stud и Joist считаются по разным таблицам"
+    У studs и joists один и тот же `o.c.`, но разные множители: studs по правилу владельца (стойка на фут плюс waste), joists по геометрии (`12 / spacing`). Не путать таблицы.
 
-Канонический источник по стойкам. Boss-rule: на `16" o.c.` считаем **1:1**
-(одна стойка на фут) **+ 10% waste**, а не геометрические `0.75`. Это сделано
-намеренно - учитывает corners, T-intersections, jack/king/cripple вокруг
-проёмов и обрезь.
+## Stud spacing factors { #stud-spacing-factors }
+
+Канон по стойкам. На `16" o.c.` считается одна стойка на фут стены плюс 10 процентов waste, а не геометрические `0.75`: так покрываются углы, T-пересечения, jack, king, cripple у проёмов и обрезь.
 
 | Spacing | Фактор (pcs / LFT) | Откуда |
 | --- | ---: | --- |
-| 12" o.c. | **1.4667** | `1:1` масштаб 16-12 (×1.333) + 10% waste |
-| 16" o.c. | **1.1** | `1:1` + 10% waste |
-| 24" o.c. | **0.625** | `0.5` + 25% waste |
+| 12" o.c. | **1.4667** | 1:1 с масштабом 16 к 12 (x1.333) плюс 10% waste |
+| 16" o.c. | **1.1** | 1:1 плюс 10% waste |
+| 24" o.c. | **0.625** | 0.5 плюс 25% waste |
 
-- Формула: `pcs = wall LFT × фактор`.
-- На больших COM jobs studs часто считают по **точной высоте** (nested-IF
-  авто-подбор 2x4/2x6), см. [Exterior Walls](../work/vertical/walls/exterior.md).
-- Сравнение с примерами сопоставимого scope и его ограничения -
-  [Quantity benchmarks](quantity-benchmarks.md). Это проверка разумности результата,
-  а не универсальная отраслевая норма, заменяющая чертежи и правила проекта.
+- `pcs = wall LFT x фактор`; высота стойки в E строки, до 1/8" (floor-to-floor минус subfloor, минус перекрытие, минус plates).
+- Bearing walls как Extra: основная линия с обычным фактором, лишние plies отдельной строкой `double extra`, базу вычесть из обычных studs. Факторы Extra: `16" o.c.` 0.75, `24" o.c.` 0.5 (без waste базовой строки).
+- Double стена = два каркаса только если на плане два каркаса; staggered corridor 2x4 = два ряда на 16" o.c., plates 2x6.
 
 ## Joist spacing factors
 
-Joists (и rafters, и floor trusses) считаем по **истинной геометрии**
-center-to-center, без stud-waste. Фактор = `12 / spacing`.
+Joists, rafters и floor trusses - по истинной геометрии center-to-center, без stud-waste.
 
 | Spacing | Фактор (pcs / LFT ширины) |
 | --- | ---: |
@@ -37,101 +30,107 @@ center-to-center, без stud-waste. Фактор = `12 / spacing`.
 | 19.2" o.c. | **0.625** |
 | 24" o.c. | **0.5** |
 
-- Формула: `pcs = run ширина LFT × 12 / spacing`, **+1** торцевой joist на каждый run.
-- Hangers по joists: `=ЧЁТН(LFT × 12 / spacing)` - округление вверх до чётного.
-- Подробно - [Joist](../work/horizontal/floor-framing/joist.md).
+- `pcs = ширина пролёта LFT x 12 / spacing + 1` (торцевой joist на каждый run).
+- Из OurPlanCore joists приходят парами "число / длина" из J Area: одинаковые длины складываются, длина больше 8' и нечётная получает +1 (правило `C_JoistsSort`); короткие до 7' идут на двойную доску (`90 x 6'` = `45 x 12'`, в E `90 pcs 6'`). Extra той же длины прибавляется к основной строке.
+- Hangers по joists: на оба конца каждого joist, по сборкам; штучный крепёж меньше 50 - до чётного.
 
-## Rim и Blocking
+## Rim, ribbon, blocking, ledger
 
 | Item | Unit | Фактор |
 | --- | --- | --- |
-| Rim Board (EWP-jobs) | LFT | `1.05` |
-| Rim Board (residential / COM / прочее) | LFT | `1.1` |
-| Blocking | LFT | без factor, если continuous |
-| Ribbons / ledgers / bracing | pieces | используй 16' ceiling, когда требуется |
+| Rim Board, EWP-jobs | LFT | `1.05` |
+| Rim Board, остальные (residential, COM) | LFT | `1.1` |
+| Blocking, Ribbon, Ledger, Blocking for Drywall, bracing по стенам | LFT | `1.1` один раз в формуле |
 
-- `1.05` - это EWP-specific factor. На обычных jobs rim считается тем же
-  `1.1`, что и blocking.
+- Rim и blocking остаются в LFT и не делятся на куски по 16', если output прямо не требует pcs.
+- Top chord bearing trusses: вместо ribbon board blocking между фермами, часто `(2) 2x6`.
+- Blocking по шагу считается кусками: формулы ниже.
 
-## COM Waste
-
-- Используй 1.1 в formulas, если source value уже не содержит 1.1.
-- Не дублируй waste через chained formulas.
-
-## Shaft Walls
-
-Shaft walls записывай отдельным блоком, даже если основной wall scope идет как panels/by others.
-Материал бери из wall type / detail: бывают `2-1/2"` CH + J-channel и `2"` H + C-channel assemblies.
-
-!!! note "Excel"
-    Формулы записаны как в русской локали Excel: `ОКРВВЕРХ(...; ...)`, аргументы через `;`
-    (в английской локали это `CEILING(..., ...)`). Вместо единиц измерения (`LFT`,
-    `Horizontal LFT`, `Perimeter LFT`, `Stock LF`) подставляй реальные source/stock cells.
-
-`Stock LF` обычно = `12`; panels идут в лист как `2x12 Panels`.
-
-### 2-1/2" CH + J-channel assembly
+## Blocking formulas { #blocking-formulas }
 
 ```excel
-1" Shaft Panels       = ОКРВВЕРХ(LFT * 1.1 / 24; 2)
-CH-channels vertical  = ОКРВВЕРХ(LFT * 0.5 * 1.1 / Stock LF; 2)
-J-channels horizontal = ОКРВВЕРХ(Horizontal LFT * 1.1 / Stock LF; 2)
+Flat 48" o.c.          = CEILING(LFT * 12 / 48 * 2 * 1.1 / Stock LF, 1)
+Diagonal 48" o.c.      = CEILING(LFT * 12 / 48 * 2.5 * 1.1 / Stock LF, 1)
+Blocking btw trusses   = CEILING(G * 12 / 48 * 2 / D * 1.1, 1)
+T blocking at gables   = EVEN(G / D)
 ```
 
-### 2" H + C-channel assembly
+### Blocking factor по типу { #blocking-factor }
 
-```excel
-1" Shaft Panels, 2 слоя = ОКРВВЕРХ(LFT * 2 * 1.1 / 24; 2)
-H-channels vertical     = ОКРВВЕРХ(LFT * 0.5 * 1.1 / Stock LF; 2)
-H-channels horizontal   = ОКРВВЕРХ(Horizontal LFT * 2 * 1.1 / Stock LF; 2)
-C-channels perimeter    = ОКРВВЕРХ(Perimeter LFT * 1.1 / Stock LF; 2)
-```
-
-## Dropped Ceiling Metal Joists
-
-```text
-12" C-type metal joists = Area * 0.75 * 1.1 LF
-```
-
-## Blocking formulas
-
-```excel
-Flat 48" o.c.     = ОКРВВЕРХ(LFT * 12 / 48 * 2 * 1.1 / Stock LF; 1)
-Diagonal 48" o.c. = ОКРВВЕРХ(LFT * 12 / 48 * 2.5 * 1.1 / Stock LF; 1)
-```
-
-### Blocking factor по типу
-
-Множитель зависит от типа блокинга (сколько кусков на пролёт):
-
-| Тип | Фактор |
+| Тип | Фактор кусков на пролёт |
 | --- | ---: |
 | Flat | `2` |
 | Diagonal | `2.5` |
-| Vertical | `1.5-2` |
+| Vertical | `1.5` ... `2` |
 
-Diagonal дороже flat (длиннее рез + угол); vertical - между ними, ближе к flat
-при плотной раскладке. Continuous blocking считается без factor (см. выше).
+Стены 10' и выше - два ряда blocking. Kitchen: `2x6`, 4 штуки по 14' на кухню; bath: 1 штука по 14' на ванную. Kickers только там, где они есть на детали.
 
-## Контрольные диапазоны количеств (sanity-check)
+## Формулы колонки C по типу строки
 
-Если для задачи отдельно настроен внешний процесс проверки и доступен проверенный
-корпус сопоставимых проектов, **итоговые количества** DFL можно сравнить по
-`(секция, строка)`, единицам и scope. Median / IQR и Tukey fences - способы
-статистического сравнения, а не обязательные нормы расхода. Выход за диапазон
-требует проверки причины: опечатка, единицы или особенность scope; сам по себе
-он не доказывает ошибку.
+| Тип строки | C | D |
+| --- | --- | --- |
+| Листы 4x8 (обшивка, subfloor) | `=CEILING(G/32*1.1,1)` | `4x8` |
+| Погонаж по длине стока | `=CEILING(G/D,1)` (D = 14 или 16) | `LFT` |
+| Plates | `=EVEN(G*H*1.1)` (H = число plates) | `LFT` |
+| Studs | `=CEILING(G*1.1,1)` на 16" o.c. | `pcs` |
+| Крепёж по шагу (anchors, ties, hangers) | `=CEILING(G*12/H*1.1,2)`; при 50 и больше родная значимость `,10` или `,1` | `pcs` |
+| Screws по фермам | `=CEILING(...,3)` | `pcs` |
+| Washers | `=C<строка анкеров>` или `=SUM(...)` одной строкой на группу | `pcs` |
+| H-clips | по толщине настила и шагу опор: `PSCL at 16"` = 6 на лист, не "4 на лист"; при T&G и настиле толще порога спецификации не нужны | `pcs` |
+| Truss bracing | `=CEILING(G/4/D,1)` на всю площадь под крышей, включая гараж | `pcs` |
+| Panel adhesive | `=C<subfloor>/3` | `tubes` |
+| Resilient channels | `=CEILING(area*12/spacing*1.1,10)`, только где показаны в типе стены | `LFT` |
+| Holdowns | `=G` к бетону, `=G*2` через деревянное перекрытие | `pcs` |
+| Двусторонний shear wall | G = сумма двух лиц, без ещё одного x2 | `SQ FT` |
 
-Упоминание `VALIDATE` и корпуса **180+ проектов** относится к прежнему описанию
-внешнего процесса; эта страница не подтверждает их текущую готовность или запуск.
-Не считай такую сверку встроенной автопроверкой OurPlanCore. Выполненную проверку
-подтверждает конкретный отчёт с источниками и замечаниями. Ручной
-[QA checklist](../start/quality-checklist.md) остаётся обязательным; границы
-внешнего процесса - в [ИИ-ассистент](ai-assist-system.md).
+Формулы смотрят на свой блок: свой header, свой множитель units, свой этаж. Скопированный этаж со ссылками в чужой блок - самая частая ошибка книги.
 
-## Kitchen and Bath Blocking
+## Кровля
 
-| Location | Правило |
+Уклон применяется один раз: площадь в плане x `sqrt(1 + (rise/12)^2)`.
+
+| Pitch | Фактор |
+| --- | ---: |
+| 4/12 | 1.054 |
+| 6/12 | 1.118 |
+| 8/12 | 1.202 |
+| 12/12 | 1.414 |
+
+Уклон из листа, у каждого корпуса свой (гараж 4/12 при доме 6/12). Число в имени `rf 6` - это rise на 12.
+
+## Округление
+
+| Что | Правило |
 | --- | --- |
-| Kitchen | 2x6 blocking, 4 pieces of 14' на kitchen |
-| Bathroom | 2x6 blocking, 1 piece of 14' на bathroom |
+| Штучный крепёж меньше 50 | вверх до чётного (significance 2) |
+| 50 и больше | значимость шаблона: `,10` большие ties и screws, `,1` листы и рейки |
+| Доски, листы, трубы | целыми вверх; `2.75` и `9.6` в C не бывает |
+| Waste | один раз: если G уже с 1.1, в C второго 1.1 нет |
+
+## Shaft Walls { #shaft-walls }
+
+Shaft walls отдельным блоком, даже когда стены дома идут панелями by others. Материал из wall type и детали: бывают `2-1/2"` CH + J-channel и `2"` H + C-channel. `Stock LF` обычно 12; panels в лист как `2x12 Panels`.
+
+```excel
+2-1/2" CH + J:
+1" Shaft Panels        = CEILING(LFT * 1.1 / 24, 2)
+CH-channels vertical   = CEILING(LFT * 0.5 * 1.1 / Stock LF, 2)
+J-channels horizontal  = CEILING(Horizontal LFT * 1.1 / Stock LF, 2)
+
+2" H + C:
+1" Shaft Panels, 2 слоя = CEILING(LFT * 2 * 1.1 / 24, 2)
+H-channels vertical     = CEILING(LFT * 0.5 * 1.1 / Stock LF, 2)
+H-channels horizontal   = CEILING(Horizontal LFT * 2 * 1.1 / Stock LF, 2)
+C-channels perimeter    = CEILING(Perimeter LFT * 1.1 / Stock LF, 2)
+```
+
+Dropped ceiling metal joists: `12" C-type = Area * 0.75 * 1.1 LF`.
+
+## Проверка порядка величин
+
+Число выглядит странно - сравнить с типичным для похожего дома: [Ориентиры количеств](quantity-benchmarks.md). Это проверка разумности, не норма; расхождение значит "открой деталь и единицы", а не "исправь на среднее".
+
+## См. также
+
+- [DFL: как устроена книга](dfl-overview.md), [Подписи строк DFL](takeoff-items.md), [Советы и важные вещи](boss-feedback-rules.md)
+- [Joist](../work/horizontal/floor-framing/joist.md), [Rim Board](../work/horizontal/floor-framing/details/rim.md), [Blocking](../work/horizontal/floor-framing/details/blocking.md), [Shaft](../work/vertical/walls/shaft.md)

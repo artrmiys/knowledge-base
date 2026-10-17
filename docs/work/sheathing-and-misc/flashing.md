@@ -1,41 +1,73 @@
-# Flashing (roof / wall / deck)
-
-Эта страница - про flashing **на крыше, стенах и deck/balcony**: rake / eve /
-parapet / cap flashing, kick-out, step flashing, deck-to-wall flashing и т.п.
-
-!!! info "Flashing вокруг окон и дверей - на другой странице"
-    `Window Flashing` и `Sill Flashing` (включая разделение wood / Mtl /
-    CMU/concrete и опциональный wood jamb `1x4` / `2x4` P.T. на бетоне) -
-    относятся к Openings, не к крыше. См. **[Window Flashing](../vertical/openings/window-flashing.md)**.
+# Flashing (кровля, стены, deck)
 
 <figure markdown>
-  ![Roof to wall step and kick-out flashing](../../assets/images/roof/flashing.svg)
-  <figcaption>Roof-to-wall: step flashing + kick-out у низа примыкания (частый пропуск).</figcaption>
+  ![Примыкание ската к стене: step flashing и kick-out](../../assets/images/roof/flashing.svg)
+  <figcaption markdown="span">Примыкание ската к стене: step flashing ступеньками под siding, kick-out внизу. Step считаем LFT по примыканию, kick-out штуками.</figcaption>
 </figure>
 
-## Что считать
+<!-- TODO-PHOTO: step flashing at roof-to-wall with kick-out diverter, close-up on new construction -->
 
-- Roof flashing: rake / eve / parapet / cap, step flashing у дымоходов и
-  стен, kick-out у крыш, примыкающих к стене.
-- Wall flashing (горизонтальные швы, band flashing, water table).
-- Deck / balcony flashing - у примыкания к стене, под decking.
+## Что это
 
-## Правила
+Flashing - металл или лента на стыках, где вода может зайти под материал:
+примыкание ската к стене (step, kick-out), парапет (cap, coping, drip edge),
+горизонтальные швы стены (band, water table), примыкание deck или балкона к
+стене. Flashing вокруг окон и дверей - отдельная страница
+[Window Flashing](../vertical/openings/window-flashing.md): там другие строки
+и разделение по типу стены.
 
-- Если template разделяет trims и flashing, держи их отдельно.
-- Roof / wall / deck flashing считается **независимо** от openings flashing -
-  это разные строки в takeoff.
+## Где искать на чертежах
 
-## Проверить
+| Лист | Что взять |
+| --- | --- |
+| Architectural sections и details (`sec`, `d`) | Rake, eave, parapet, cap flashing, step и kick-out; на structural их нет |
+| Wall sections | Band flashing, water table, flashing над build-out |
+| Roof plan (`a105 rf`) | Примыкания к стенам, дымоходы, valleys под metal |
+| Deck / balcony details | Flashing по ledger и под decking |
+| Parapet details | Coping или drip edge по верху |
 
-- Rake / eve / parapet trim и flashing могут быть called out на architectural
-  sheets, **не на structural** - открой и тот, и другой набор листов.
-- На примыканиях roof-to-wall и chimney-to-roof проверь kick-out / step
-  flashing - их часто забывают.
+## Как мерить в OurPlanCore
 
-## See also
+1. Инструмент Line по длине стыка: примыкание ската к стене, верх парапета,
+   ledger балкона. Единица LFT. Kick-out - Count по точкам.
+2. Имя = продукт и место: `step flashing`, `drip edge prpt`, `ledger flashing
+   blcny`. Папка по принятому дереву job (`roof misc` или `trims`).
+3. Парапет: длина верха парапета из `parapets/prpt ...`; coping отдельной
+   строкой или в Drip Edge по детали.
+4. Roof, wall и deck flashing считаются независимо от flashing проёмов: это
+   разные строки.
 
-- [Window Flashing](../vertical/openings/window-flashing.md) - flashing
-  вокруг окон и дверей.
-- [Exterior Wall Materials](../vertical/sheathing/exterior-materials.md)
-- [Eve](eve.md), [Rake](rake.md)
+!!! warning "Уточняется"
+    Единой ветки для flashing в дереве нет; подтверждённые имена позиций
+    есть только для окон (Window Flashing). Держи flashing в одной папке job.
+
+## Как назвать в дереве и строка DFL
+
+| Имя в дереве | Строка DFL | Материал | Unit |
+| --- | --- | --- | --- |
+| `roof misc/step flashing` | `Flashings at Wall` | step flashing, kick-out `pcs` | `LFT`, `pcs` |
+| `parapets/prpt 3.4 3 2 par` | `Flashing` | `Drip Edge` / coping | `LFT` |
+| `sqfts/rf mtl 4` (valleys) | `Ice and Water (eves&valleys)` | по spec | `SQ FT` / `LFT` |
+| `framing/blcny/details/ledger flashing` | `Head Trim Flashing` / `Flashing(s)` | по детали | `LFT` |
+
+## Частые ошибки
+
+- Kick-out и step flashing на примыканиях roof-to-wall забыты.
+- Flashing парапета и coping посчитаны дважды (строка Flashing и Drip Edge).
+- Flashing искали только на structural листах.
+- Roof flashing смешан со строками Window Flashing.
+
+Все ошибки по кровле: [common-mistakes](../../start/common-mistakes.md#roof).
+
+## Пример
+
+```text
+Flashing             Drip Edge            186   LFT   parapet top, 5/A501
+Flashings at Wall    Step flashing         64   LFT   roof to wall, 7/A502
+Kick-out             pcs                    4   pcs
+```
+
+## См. также
+
+- [Window Flashing](../vertical/openings/window-flashing.md), [Exterior Wall Materials](../vertical/sheathing/exterior-materials.md)
+- [Parapet](../vertical/walls/parapet.md), [Eve / Eave](eve.md), [Rake](rake.md)

@@ -1,87 +1,89 @@
-# Balcony build-up
-
-Balcony - это полная сборка от structural framing снизу до finish сверху.
-Эта страница - **карта сборки + finish/trim слои**. **Структурный каркас**
-вынесен в отдельную страницу.
+# Balcony build-up (слои балкона: от каркаса до отделки)
 
 <figure markdown>
   ![Balcony build-up assembly stack](../../assets/images/trims/balcony-buildup.svg)
-  <figcaption>Сборка снизу вверх: structure - sleepers - EPDM - decking. Decking часто by others.</figcaption>
+  <figcaption markdown="span">Снизу вверх: каркас, sleepers, EPDM, decking. Строки 1-6 считает страница каркаса, строки 7-12 здесь. Pavers и membrane часто by others.</figcaption>
 </figure>
 
-!!! abstract "Где структурный каркас"
-    Posts / Post Bases / Caps / Beam / Ledger / Box / Joists / Hangers /
-    Blocking / Rim / Sleepers / structural Subfloor / Stringers - детально в
-    [Deck / Porch / Balcony Frame](../deck/deck-porch-balcony-frame.md).
-    Здесь - finish: decking finish, soffit, fascia/edge trim, flashing,
-    composition.
+## Что это
 
-!!! info "Template-макрос"
-    Весь блок целиком вставляет `B_Balcony_Insert_Template_FromText` -
-    командой `b 12x30` или `b 1.3x1.9 u2`. Defaults: beam `2x10 P.T.`,
-    posts `6x6 P.T.`, OC `16"`. Подробно - [Trim macros](macros.md).
+Карта всех слоёв балкона и канон по finish-слоям: post wrap, EPDM, decking
+как finish, soffit снизу, fascia и edge trim, flashing у стены, composition с
+pavers. Каркас (posts, beam, ledger, joists, hangers, sleepers, subfloor)
+считается на [Deck / Porch / Balcony Frame](../deck/deck-porch-balcony-frame.md),
+перила на [Rails & Decking](rails-decking.md). Страница
+[Balcony Trims](../deck/balcony-trims.md) это короткий указатель сюда.
 
-## Карта сборки снизу вверх { .kb-section-title .kb-st--green }
+## Где искать на чертежах
 
-| # | Label | Материал | Unit | Scope |
+| Лист | Что взять |
+| --- | --- |
+| Разрез балкона A4xx | Порядок слоёв: subfloor, sleepers, membrane, decking или pavers |
+| Детали A5xx (balcony edge, wall flashing) | Fascia, edge trim, soffit, flashing, post wrap |
+| Spec и notes | `Pavers Deck System by others`, продукт decking (DuxxBak, composite) |
+| Scope задания | Frame only: строки 7-12 не вставлять |
+
+## Как мерить в OurPlanCore
+
+Площади и длины берутся из размеров блока W x D и множителя G
+(см. [каркас](../deck/deck-porch-balcony-frame.md)). Soffit снизу и decking
+равны площади балкона, trims и flashing идут по периметру: фронт и бока
+открыты, сторона у стены даёт flashing.
+
+## Как назвать в дереве и строка DFL
+
+| # | Строка DFL | Материал | Unit | Кто считает |
 | --- | --- | --- | --- | --- |
-| 1 | `Posts` + `Post Bases` + `Post Caps` | `6x6 P.T.` + `ABU66`/`BCS2` | `pcs` | - [Frame](../deck/deck-porch-balcony-frame.md) |
-| 2 | `Beam (…)` (multi-ply) | `2x10 P.T.` | `LFT` | - Frame |
-| 3 | `Ledger` / `Box` | `2x10 P.T.` | `LFT` | - Frame |
-| 4 | `Joists` + `Hangers` + `Blocking` + `Rim` | `2x10/2x12 P.T.` @16" | `LFT`/`pcs` | - Frame |
-| 5 | `Sleepers` (часто 2 слоя) | `2x4 P.T.` | `LFT` | - Frame |
-| 6 | `Subfloor` (structural) / `Stringers` | `3/4" CDX` / `2x12` | `4x8`/`pcs` | - Frame |
-| 7 | `Post Wrap` | `1x` / `5/4x` | `LFT` | **finish** |
-| 8 | `EPDM` | `EPDM` membrane | `SQ FT` | **finish** |
-| 9 | `Decking` (finish) | `5/4x6` Composite/Azek/Wd | `SQ FT` | **finish** |
-| 10 | `Soffits at Balcony` | `Beadboard` | `SQ FT` | **finish** |
-| 11 | `Balcony Trims` | fascia / edge trim `1x` / `5/4x` | `LFT` | **finish** |
-| 12 | `Flashings at Wall` | `Copper` / drip edge | `LFT` | **finish** |
+| 1 | `Posts` + `Post Bases` + `Post Caps` | `6x6 P.T.`, по schedule | pcs | каркас |
+| 2 | `Beam (3)` фронт, `Beam (2)` бока | `2x12 P.T.` | LFT | каркас |
+| 3 | `Ledger` + screws, `Box` если балка не flush | `2x12 P.T.` | LFT | каркас |
+| 4 | `Joists` + `Hangers Zmax` + `End Joists` | `2x12 P.T.` 16" o.c. | LFT, pcs | каркас |
+| 5 | `Sleepers` (Terrace, часто 2 слоя) | `2x4 P.T.` | LFT | каркас |
+| 6 | `Subfloor` (Terrace) | `3/4" Ply` | 4x8 | каркас |
+| 7 | `Post Wrap` | `1x8` / `5/4x` | LFT | **здесь** |
+| 8 | `EPDM` | membrane | SQ FT | **здесь**, если наш по spec |
+| 9 | `Decking` | `2x6 DuxxBak` (балкон), `5/4x6` (Terrace) | SQ FT | **здесь**, `=W*D*G` |
+| 10 | `Soffits at Balcony` | `Beadboard` | SQ FT | **здесь**, `=W*D*G` |
+| 11 | `Balcony Trims` / `Fascia` | `1x10`, `5/4x8` | LFT | **здесь**, `=(W+2*D)*G` |
+| 12 | `Flashings at Wall` | `Copper` / drip edge | LFT | **здесь**, `=W*G` |
 
-!!! warning "Frame и finish - раздельно"
-    Строки 1-6 (structural) считаются по
-    [Frame](../deck/deck-porch-balcony-frame.md), не растворяются в
-    `Balcony Trims`. Здесь - только finish (строки 7-12).
+Строки 7-12 вставляются только когда отделка в scope. Размер не указан:
+`TBD` и нота `Note: All trims to be verified. Scaled per elevations`.
 
-## Finish-слои { .kb-section-title .kb-st--cyan }
+## Composition с pavers
 
-- **`Post Wrap`** - обшивка structural post (`1x`/`5/4x`), `LFT`.
-- **`EPDM`** - гидроизоляция под decking, `SQ FT`.
-- **`Decking`** (finish) - `5/4x6` Composite/Azek/Wd, `SQ FT`; полный разбор -
-  [Rails & Decking](rails-decking.md).
-- **`Soffits at Balcony`** - `Beadboard`, `SQ FT` (низ балкона).
-- **`Balcony Trims`** - fascia / edge trim по периметру, `LFT`.
-- **`Flashings at Wall`** - `Copper` / drip edge примыкание к стене, `LFT`.
+Балкон на плите или над гаражом вместо decking на sleepers:
 
-## Composition (paver-вариант) { .kb-section-title .kb-st--magenta }
+| Слой сверху вниз | Scope |
+| --- | --- |
+| `Porcelain Pavers` + `Thinset Mortar` | обычно by others, нота `Note: Pavers Deck System are by others` |
+| `Roofing Membrane`, `Tapered Rigid Insulation` | проверить scope |
+| `Conc. Deck`, `Structural Steel` | structural, не trim |
 
-Если balcony не deck-on-sleepers, а **paver on membrane** - слои сверху вниз:
+Над гаражом с фермами и LW concrete блок считается как Terrace:
+`3/4" Ply` subfloor, `2x4 P.T.` sleepers, `5/4x6` decking.
 
-| Слой | Что это | Scope |
-| --- | --- | --- |
-| `Porcelain Pavers` | финиш | часто **by others** |
-| `Thinset Mortar` | клей | by others с pavers |
-| `Roofing Membrane` | гидроизоляция | проверь scope |
-| `Tapered Rigid Insulation` | разуклонка | проверь scope |
-| `Conc. Deck` | плита | structural |
-| `Structural Steel` | каркас | structural - не trim |
+## Частые ошибки
 
-!!! danger "Pavers / membrane часто by others"
-    `Note: Pavers Deck System are by others`. Тогда из composition считаем
-    только наш framing/trim, paver-систему - нет. То же правило исключений:
-    [Exclusions](exclusions.md).
+- Строки каркаса продублированы в блоке отделки (sleepers дважды).
+- Decking `5/4x6` на обычном балконе вместо `2x6 DuxxBak` по детали.
+- Pavers и membrane by others посчитаны как материал.
+- Отделка вставлена при scope Frame only.
+- Площадь decking без множителя units.
+- Все ошибки раздела: [Deck, porch, балконы](../../start/common-mistakes.md#deck).
 
-## Чек перед выводом (finish) { .kb-section-title .kb-st--green }
+## Пример
 
-- [ ] Структурный каркас посчитан по [Frame](../deck/deck-porch-balcony-frame.md)?
-- [ ] Post wrap / EPDM / decking finish / soffit / trim / flashing - все слои?
-- [ ] Decking finish в `SQ FT`; trim/flashing в `LFT`?
-- [ ] Composition: pavers/membrane - by others проверено?
-- [ ] Finish отделён от structural (не дублирует Frame)?
+```text
+Post Wrap            1x8          96  LFT    4 sides x 4' x 6 posts
+Decking              2x6 DuxxBak  576 SQ FT  =12*8*G          5/A550
+Soffits at Balcony   Beadboard    576 SQ FT  =12*8*G          6/A550
+Balcony Trims        1x10         168 LFT    =(12+2*8)*G      6/A550
+Flashings at Wall    Copper       72  LFT    =12*G            7/A550
+```
 
-## See also
+## См. также
 
-- [Deck / Porch / Balcony Frame](../deck/deck-porch-balcony-frame.md) - структурный каркас
-- [Porch / Deck / Balcony](porch-deck-balcony.md) , [Rails & Decking](rails-decking.md)
-- [Trim macros](macros.md)
-- [Balcony Trims](../deck/balcony-trims.md) , [Hangers](../../reference/hangers.md) , [Standard notes](../../reference/standard-notes.md)
+- [Deck / Porch / Balcony Frame](../deck/deck-porch-balcony-frame.md), [Rails & Decking](rails-decking.md), [Balcony Trims](../deck/balcony-trims.md)
+- [Porch / Deck / Balcony](porch-deck-balcony.md), [Exclusions и J-Channel](exclusions.md)
+- [Блоки DFL](../../reference/dfl-blocks.md), [Standard notes](../../reference/standard-notes.md)

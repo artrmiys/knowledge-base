@@ -1,116 +1,106 @@
-# Reconstruction / Реконструкция
+# Reconstruction (реконструкция)
 
-Reconstruction jobs - это проекты, где часть здания уже существует, часть
-демонтируется, а часть добавляется заново. Главная сложность: не считать весь
-дом как new construction и не потерять места, где new framing должен
-подключиться к existing.
+Часть здания уже существует, часть сносится, часть добавляется. Главная
+сложность: не посчитать весь дом как новый и не потерять места, где новый
+каркас подключается к существующему.
 
 <figure markdown>
   ![Existing, demo and new legend](../assets/images/work-types/reconstruction.svg)
-  <figcaption>Existing - не считать , Demo - если в scope , New + connections - считаем.</figcaption>
+  <figcaption markdown="span">Existing - не считать, Demo - только если в scope, New и connections - считаем.</figcaption>
 </figure>
 
-!!! note "Черновик"
-    Эта страница пока написана как рабочая шпаргалка без отдельного source.
-    Когда появятся реальные project notes / feedback, перенеси сюда точные
-    правила и обнови source map.
+## Что это
 
-## Типовой scope
+Заказ на существующее здание: надстройка, перепланировка, замена перекрытий,
+новые проёмы, ремонт кровли или porch. Scope приходит с пометкой вроде
+`Frame. Interior trim and Int doors. NO metal` или `Revision`. Правила панелей
+здесь не действуют на новые стены внутри existing frame:
+[Wall Panels](../work/vertical/walls/wall-panels.md#reconstruction-existing).
 
-- New walls, openings, floor/roof framing и sheathing, которые показаны как new.
-- Repair/rebuild areas: rotten framing, replaced subfloor, patched roof,
-  rebuilt porch/deck, new beams/posts.
-- New connection materials: hangers, straps, anchors, bolts, blocking, ledgers.
-- Temporary or permanent bracing, если это показано в structural notes.
-- Exterior envelope changes: WRB/Tyvek, sheathing patches, siding backing,
-  insulation, flashing.
+## Чем отличается
 
-## Что не считать автоматически
-
-- Existing framing, который остаётся без изменений.
-- Demolition-only items, если takeoff scope не просит demo.
-- Existing walls/openings, которые только показаны для context.
-- Old joists/rafters/studs, если note says `existing to remain`.
-- Finish materials, если scope только structural/framing.
-
-## Разделяй existing / demo / new
-
-| Mark на чертежах | Как читать | Что делать в takeoff |
+| | Новое строительство | Reconstruction |
 | --- | --- | --- |
-| `Existing` / `E` | Уже построено | Не считать, если не shown as repair/replacement. |
-| `Existing to remain` | Остаётся | Не добавлять material. Проверить только connection к new work. |
-| `Demo` / dashed removal | Удаляется | Считать только если demo scope requested. |
-| `New` / dark line / keyed note | Новая работа | Считать как обычный material scope. |
-| `Replace in kind` | Заменить таким же | Считать replacement area/length, но не весь existing run. |
-| `Patch` / `Repair` | Локальный ремонт | Считать только указанную зону и добавить note. |
+| План этажа | Весь план мерный | План существующего этажа часто только контекст; мерить по new work plan |
+| Стены | По wall schedule | Только `New`, `Replace`, `Patch`; `Existing to remain` не считать |
+| Панели | Возможны | Новые стены внутри existing frame всегда stick |
+| Главное | Полнота | Соединения new-to-existing: ledgers, straps, anchors, hangers |
 
-## Главные правила
+## Что считать и что нет
 
-- **Новые/заменяемые стены внутри existing frame считаем как stick framing**,
-  даже если общий scope содержит wall panels. См. [Wall Panels](../work/vertical/walls/wall-panels.md#reconstruction-existing).
-- Если detail требует новый subfloor по всей existing площади, считаем весь
-  этот новый слой; сохранение старого пола не отменяет указанное покрытие.
-- Сначала прочитай legend: line weights, dashed lines, hatch и keynote symbols.
-- Не используй план существующего этажа как полный takeoff plan. Он часто нужен
-  только для context.
-- New-to-existing connections важнее обычных повторов: ledgers, anchors,
-  straps, hangers, blocking и bearing points легко пропустить.
-- Если drawings показывают только область ремонта, не умножай её на весь floor.
-- Если opening переносится или расширяется, проверь header, king/jack studs,
-  sill condition и sheathing patch.
-- Если existing roof/floor вскрывается, проверь temporary support notes и
-  sistering/scab/reinforcement details.
-- Old sizes могут не совпадать с new sizes: не предполагай `2x10`, если detail
-  показывает actual existing member.
+**Считать:** new walls, openings, перекрытия и кровля, показанные как new;
+repair и rebuild зоны (rotten framing, replaced subfloor, patched roof, rebuilt
+porch, new beams и posts); new connections (hangers, straps, anchors, bolts,
+blocking, ledgers); bracing, если в structural notes; envelope: WRB, sheathing
+patches, siding backing, insulation, flashing; новый subfloor поверх всего
+существующего пола, если деталь так требует (старый пол накрывают целиком).
 
-## Где смотреть
+**Не считать:** existing framing без изменений; demo-only items без demo scope;
+existing walls и openings, показанные для контекста; old joists и rafters с нотой
+`existing to remain`; отделку при structural scope; стальные перегородки при
+`NO metal` (нота `Metal Studs by others`).
+
+## Как читать марки
+
+| Mark на чертежах | Как читать | Что делать |
+| --- | --- | --- |
+| `Existing` / `E` | Уже построено | Не считать, если не показан repair или replacement |
+| `Existing to remain` | Остаётся | Материал не добавлять; проверить только connection к new work |
+| `Demo` / пунктир | Удаляется | Считать только при demo scope |
+| `New` / толстая линия / keyed note | Новая работа | Считать как обычный material scope |
+| `Replace in kind` | Заменить таким же | Считать replacement area или length, не весь existing run |
+| `Patch` / `Repair` | Локальный ремонт | Только указанную зону, плюс нота |
+
+## На что смотреть
 
 | Где на чертежах | Что проверить |
 | --- | --- |
-| Cover / code / general notes | Что входит в remodel/reconstruction scope |
+| Cover, code, general notes | Что входит в remodel scope; тип конструкции |
 | Demo plans | Что удаляется и что остаётся |
 | New work plans | Где реально появляется new framing |
-| Structural details | Connections to existing, ledgers, straps, anchors |
-| Elevations / sections | Height changes, roof tie-ins, wall rebuild zones |
-| Keynotes | Patch/repair/replace notes, которые не видны на плане |
-| Photos / field notes | Existing condition, если drawings неполные |
+| Structural details | Connections to existing: ledgers, straps, anchors, sistering |
+| Elevations, sections | Изменения высот, roof tie-ins, зоны перестройки стен |
+| Keynotes | Patch, repair, replace, которые не видны на плане |
+| Photos, field notes | Existing condition, если чертежи неполные |
+
+- Сначала легенда: line weights, пунктир, hatch, keynote symbols.
+- Opening переносится или расширяется: header, king/jack studs, sill, sheathing patch.
+- Existing roof или floor вскрывается: temporary support, sistering, scab, reinforcement.
+- Старые сечения не равны новым: не предполагать `2x10`, если деталь показывает actual existing member.
+- Если чертежи показывают только область ремонта, не умножать её на весь этаж.
 
 ## Частые items
 
 | Item | Когда появляется | Проверить |
 | --- | --- | --- |
-| Ledgers | New floor/deck/roof attaches to existing wall | Size, fasteners, PT/FRT, spacing |
-| Hangers | New joists connect to existing beam/wall/ledger | Top mount vs face mount, skew, width |
-| Blocking | Edge support, drywall backing, roof/floor patch | Это new blocking или existing? |
-| Sistered joists/rafters | Усиление existing member | Length, count, side, fasteners |
-| New headers | New/expanded openings | Ply count, LVL/2x, bearing |
-| Anchor bolts / straps | New wall or ledger to existing concrete/framing | Material, spacing, embed/detail |
-| Sheathing patch | Wall/roof/floor repair | Thickness, FRT/Zip/OSB/CDX, one side or both |
-| Flashing / WRB | Tie-in at envelope | Не смешивать с full new wall sheathing |
+| Ledgers | New floor, deck или roof к existing wall | Размер, крепёж, P.T. или FRT, шаг |
+| Hangers | New joists к existing beam, wall, ledger | Top mount или face mount, skew, ширина |
+| Blocking | Edge support, drywall backing, roof или floor patch | New или existing? |
+| Sistered joists, rafters | Усиление existing member | Длина, число, сторона, крепёж |
+| New headers | Новые и расширенные проёмы | Plies, LVL или 2x, bearing |
+| Anchor bolts, straps | New wall или ledger к existing concrete или framing | Материал, шаг, embed по детали |
+| Sheathing patch | Ремонт стены, кровли, пола | Толщина, FRT, Zip, OSB; одна сторона или две |
+| New subfloor | Деталь "new subfloor over existing" | Вся площадь нового слоя |
 
-## Output notes
+## Частые ошибки
 
-Пиши assumptions видимо, особенно когда scope неясный:
+- Demo plan принят за material takeoff.
+- Patch зона растянута на весь этаж.
+- Новый subfloor поверх старого пола пропущен ("он же есть").
+- Стальные перегородки посчитаны при `NO metal` или не отмечены нотой.
+- Все ошибки по стенам - [Частые ошибки](../start/common-mistakes.md#walls).
+
+## Ноты в DFL
 
 - `Existing framing to remain - not counted.`
 - `Counted new work only per shaded/keyed repair area.`
 - `Header counted only at enlarged opening.`
-- `Ledger/hangers counted at new-to-existing connection.`
+- `Ledger and hangers counted at new-to-existing connection per <деталь>.`
 - `Demo shown for context only - no demo material counted.`
+- `Metal Studs by others.`
 
-## Проверить перед сдачей
+## См. также
 
-- [ ] Existing и new work разделены.
-- [ ] Demo plan не принят за material takeoff.
-- [ ] Все new-to-existing connections проверены.
-- [ ] Patch/repair zones не растянуты на весь floor.
-- [ ] Headers/openings проверены только там, где opening new/modified.
-- [ ] Notes в output объясняют, что не считалось и почему.
-
-## See also
-
-- [Residential](residential.md)
-- [COM Commercial](com.md)
-- [Exterior Walls](../work/vertical/walls/exterior.md)
-- [Headers](../work/vertical/openings/headers.md)
-- [Hangers](../reference/hangers.md)
+- [Wall Panels](../work/vertical/walls/wall-panels.md), [Exterior Walls](../work/vertical/walls/exterior.md)
+- [Headers](../work/vertical/openings/headers.md), [Hangers](../reference/hangers.md)
+- [Правила клиентов и типов заказов](../start/client-rules.md)

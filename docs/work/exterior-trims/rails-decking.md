@@ -1,108 +1,91 @@
-# Rails & Decking
-
-Полный scope перил и настила deck/porch. Это **не "trim"**, это отдельный
-материал: decking, railing-системы, post hardware, ballusters, cap rail,
-fascia/skirt/risers/stringer, lattice.
+# Rails & Decking (перила и настил: канон по типам)
 
 <figure markdown>
   ![Railing components and decking](../../assets/images/trims/rails-decking.svg)
-  <figcaption>Posts , cap rail , balusters , decking - каждый своя строка.</figcaption>
+  <figcaption markdown="span">Posts, cap rail, balusters, decking: у каждого своя строка. Composite перила считаем системой, деревянные крашеные поэлементно.</figcaption>
 </figure>
 
-!!! tip "Railing считается одним из двух способов"
-    - **Системой / секциями** - заводская система: `6' Rail section`,
-      `8' Stair Rail section`, `36" Rail System composite` (`unit` / `pcs`).
-    - **Поэлементно** - `Posts` + `Balustrades` + `Rails (top & bottom)` +
-      `Cap Rail` (posts/balusters в `pcs`, rails/cap в `LFT`).
+<!-- TODO-PHOTO: composite railing on a deck with 4x4 post sleeves and caps, EN: "composite deck railing post sleeve cap" -->
 
-    Способ выбирает деталь/спецификация. Не смешивай оба на одном участке.
+## Что это
 
-## Railing-системы по типу { .kb-section-title .kb-st--green }
+Перила и настил балконов, porch и deck: railing-системы (composite, Azek,
+wood, cable, metal), decking, hardware постов, balusters, cap rail, deck
+fascia, skirt, risers, lattice. Это не trim и не каркас: каркас на
+[Deck / Porch / Balcony Frame](../deck/deck-porch-balcony-frame.md), слои
+балкона на [Balcony build-up](balcony-buildup.md). Эта страница канон по
+типам перил; короткая версия для блока балкона на [Railing](../deck/railing.md).
 
-| Тип | Состав | Заметка |
-| --- | --- | --- |
-| **Composite** | Decking `5/4x6 Composite`, posts `4x4 PT` + `Sleeve/Cap for 4x4`, `6' Rail section`, `Stair Rail section` | `Note: Railing called composite; Decking assumed Composite` |
-| **Azek / PVC** | `5/4x6 Azek` decking, `4x4 PT` + Post Anchors `DTT2Z` + `4x4 Post Sleeve` `36"` + caps, `36" Rail System composite`, `1x12 Azek` deck fascia | `Note: Railing system assumed Azek or eq` |
-| **Wood painted** | `4x4 posts` + `pyramid` cap, `2x2 ballusters`, `2x4 rails`, `2x6 cap rail`, `1x6` risers, `1x12` skirt | `verify grade` |
-| **Cable rail** | `4x4 PT` / `1-1/2x1-1/2 Mtl post` + sleeve/base/cap, `Cable` / `Cable SS` (assumed 7 runs), `2x4`/`2x6 Cap Rail` | `Note: Railing appear to be cable; verify product` |
-| **Metal / aluminum** | `Mtl post`, `Metal Subrail SS`, cap rail | `Note: Aluminum railing materials are by others` - часто **by others** |
+## Где искать на чертежах
 
-!!! warning "Aluminum / metal rail часто by others"
-    `Note: aluminum railing are by others` / `Aluminum railing materials are
-    by others; verify components`. Тогда railing **не считаем**, оставляем
-    видимую note (см. [Standard notes](../../reference/standard-notes.md)).
+| Лист | Что взять |
+| --- | --- |
+| Elevations | Тип перил (composite, wood, cable, aluminum), высота 36" или 42", decking виден или нет |
+| Детали A5xx (railing detail, deck edge) | Post, sleeve, cap, rail sections или balusters, cap rail, fascia, skirt |
+| Spec и notes | `Railing by others`, продукт (Trex, Azek, DuxxBak), `verify` |
+| Планы | Длина перил по сторонам, количество балконов и порчей каждого типа |
 
-## Decking { .kb-section-title .kb-st--cyan }
+## Как мерить в OurPlanCore
 
-| Label | Типовой материал | Unit |
-| --- | --- | --- |
-| `Decking` / `Decking&Treds` | `5/4x6` (Wd / Azek / Trex / Composite), `5/4x4 T&G Mahogany`, `1x6 T&G Red Cedar` | `SQFT` |
-| `Treads` | по материалу decking | `LFT` / `pcs` |
+Decking и перила берутся из размеров блока: площадь `W x D`, перила фронт
+`W` плюс открытые бока `D`, умноженные на число экземпляров G. Площадь
+балконов и порчей как Area лежит в `sqfts/blcny` и `sqfts/porch`; deck у
+земли со сложным контуром обводят Area в `sqfts` с понятным именем, перила
+по изломанному контуру Line. Продукт и высоту в имя не писать, они живут в DFL.
 
-- Decking считается по **площади** настила (`SQFT`). Treads (проступи лестницы)
-  - отдельно.
-- Материал часто `TBD` / `verify`: `Note: Decking & Railing products to
-  verify`. Не угадывай product.
+## Как назвать в дереве и строка DFL
 
-## Post hardware (всегда набором) { .kb-section-title .kb-st--magenta }
+Способ счёта один на участок: **система** (заводские секции) или
+**поэлементно**. Composite и Azek всегда система; поэлементно только wood
+painted. Не смешивать.
 
-Post на rail почти никогда не один SKU - это **набор**:
+| Тип | Строки DFL | Unit | Правило |
+| --- | --- | --- | --- |
+| Composite / Azek (система) | `Note: Railing called composite; Decking assumed Composite`, `Posts at Rails 4x4 P.T.`, `Post Sleeve` `Sleeve for 4x4`, `Post Cap` `Cap for 4x4`, `Rail sections` `6' Rail section` | pcs, unit | посты `=2*G` на балкон; секции фронт и бока отдельными строками |
+| Wood painted (поэлементно) | `Posts at Rails 4x4 P.T.`, `Balustrades 2x2`, `Rails (top & bottom) 2x4`, `Cap Rail 2x6` | pcs, LFT | `Balustrades =EVEN(G*2.2)`, `Rails =EVEN(G*2.2)`, `Cap Rail =EVEN(G*1.1)`, G = LFT перил x units |
+| Cable | `Posts at Rails 4x4 P.T.` или `Mtl post`, sleeve/cap, `Cables SS`, `Cap Rail 2x6` | pcs, LFT | cables = прогон x число тросов (`assumed 7 runs`), нота `verify product` |
+| Aluminum / metal | `Note: Aluminum railing materials are by others; verify components` | | материал не считаем, нота обязательна |
 
-| Label | Пример | Unit |
-| --- | --- | --- |
-| `Posts at Rails` | `4x4 PT`, `2x4 posts`, `1-1/2x1-1/2 Mtl post` | `pcs` + высота (`4'`, `36"`) |
-| `Post Sleeve` / `Post Sleeves` | `Sleeve for 4x4`, `4x4 Post Sleeve 36"` | `pcs` |
-| `Post Cap` / `Post Caps` | `Cap for 4x4`, `pyramid` | `pcs` |
-| `Post Base` / `Post Bases` | `Post base for 4x4`, `ABU66 Zmax` | `pcs` |
-| `Post Anchors` | `DTT2Z` | `pcs` |
-| `Post Wrap` | `1x` обшивка | `LFT` / `pcs` |
+Decking и периметр:
 
-!!! tip "Проверь полноту набора"
-    Если есть `Posts at Rails`, ищи sleeve + cap (+ base/anchor). Пропуск
-    одного элемента набора - частая ошибка.
+| Строка DFL | Материал | Unit | Правило |
+| --- | --- | --- | --- |
+| `Decking` балкона | `2x6 DuxxBak` | SQ FT | `=W*D*G`; в Terrace над гаражом `5/4x6` поверх `3/4" Ply` и `Sleepers 2x4 P.T.` |
+| `Decking` deck / porch | `5/4x6` Composite, Azek, Wd, `5/4x4 T&G Mahogany` | SQ FT | продукт по spec, иначе `TBD` и нота |
+| `Treads` | по материалу decking | LFT / pcs | отдельно от площади |
+| `Deck Fascia` / `Deck Skirt` | `1x8`, `1x10`, `1x12 Azek` | LFT | по открытому периметру |
+| `Deck Risers`, `Stringer trim` | `1x6`, `1x8`, `1x12` | LFT | лестница deck |
+| `Lattice` + `Lattice wrap trim` | `PVC lattice`, `5/4x6` | SQ FT + LFT | площадь плюс обрамление |
 
-## Balusters / rails / cap { .kb-section-title .kb-st--green }
+Посты на улице всегда `P.T.`; под крышей (закрытый porch) обычные.
+Post base и anchor (`ABU66 Zmax`, `DTT2Z`) только когда деталь их показывает,
+строки каркаса с деталью в E, формат по [Hangers](../../reference/hangers.md#dfl-format).
+Полный состав блока: [Блоки DFL](../../reference/dfl-blocks.md).
 
-| Label | Типовой размер | Unit |
-| --- | --- | --- |
-| `Balustrades` / `Ballustardes` | `2x2 ballusters` | `pcs` |
-| `Rails (top & bottom)` | `1x3`, `2x4 rails` | `LFT` (×2: верх+низ) |
-| `Cap Rail` | `2x4 tapered`, `2x6 cap rail`, `5/4x6` | `LFT` |
-| `Cables` | `Cable`, `Cable SS` | `LFT` (× число прогонов, напр. 7) |
-| `Rail sections` / `Stair Rail section` | `4'`/`5'`/`6'`/`8'`/`11'` section | `unit` |
+## Частые ошибки
 
-- `Rails (top & bottom)` - это **две** нитки (верх и низ): LFT × 2.
-- `Cables` - длина прогона × количество тросов (`assumed 7 pcs run`).
+- Три поста на балкон вместо двух; угловой балкон у двух стен несёт один.
+- Система и поэлементный счёт смешаны: `Rail sections` вместе с `Balustrades`.
+- Aluminum перила посчитаны как материал.
+- `Rails (top & bottom)` взяты одной ниткой вместо двух.
+- Decking балкона `5/4x6` вместо `2x6 DuxxBak` по детали.
+- Продукт угадан вместо `TBD` и ноты `Decking & Railing products to verify`.
+- Все ошибки раздела: [Deck, porch, балконы](../../start/common-mistakes.md#deck).
 
-## Deck периметр: fascia / skirt / risers / stringer { .kb-section-title .kb-st--cyan }
+## Пример
 
-| Label | Типовой размер | Unit |
-| --- | --- | --- |
-| `Deck Fascia` | `1x8`, `1x10`, `1x12 Azek` | `LFT` |
-| `Deck Skirt` | `1x12` | `LFT` |
-| `Deck Risers` / `Risers` | `1x6`, `1x8` | `LFT` |
-| `Stringer trim` | `1x12` | `LFT` |
-| `Lattice` | `PVC lattice`, `Lattice diamond` | `SQ FT` |
-| `Lattice wrap trim` / `vertical trim` | `5/4x8` / `5/4x6` | `LFT` |
+```text
+Note: Railing called composite; Decking assumed Composite
+Posts at Rails   4x4 P.T.          12  pcs    =2*G       4'
+Post Sleeve      Sleeve for 4x4    12  pcs    =C<posts>
+Post Cap         Cap for 4x4       12  pcs    =C<posts>
+Rail sections    6' Rail section   12  unit   front 12'
+Rail sections    6' Rail section   16  unit   sides 2 x 8'
+Decking          2x6 DuxxBak       576 SQ FT  =12*8*G    5/A550
+```
 
-- Lattice - площадь (`SQ FT`) + обрамление по периметру (`LFT`).
+## См. также
 
-## Чек перед выводом { .kb-section-title .kb-st--magenta }
-
-- [ ] Определён тип railing-системы (composite / Azek / wood / cable / metal)?
-- [ ] Metal/aluminum rail - проверено by others?
-- [ ] Выбран один способ: секции **или** поэлементно?
-- [ ] Post = post + sleeve + cap (+ base/anchor) - полный набор?
-- [ ] Decking в `SQFT`; treads отдельно?
-- [ ] `Rails (top & bottom)` посчитаны ×2 нитки?
-- [ ] Cables = прогон × число тросов?
-- [ ] Deck fascia / skirt / risers / stringer / lattice не пропущены?
-- [ ] Материал `TBD`/`verify` оставлен видимым, не угадан?
-
-## See also
-
-- [Porch / Deck / Balcony](porch-deck-balcony.md)
-- [Balcony build-up](balcony-buildup.md)
-- [Soffit & Fascia](soffit-fascia.md)
-- [Balcony Trims](../deck/balcony-trims.md) , [Railing](../deck/railing.md)
-- [Material catalog](../../reference/material-catalog.md)
+- [Railing](../deck/railing.md), [Deck / Porch / Balcony Frame](../deck/deck-porch-balcony-frame.md), [Balcony build-up](balcony-buildup.md)
+- [Porch / Deck / Balcony](porch-deck-balcony.md), [Soffit & Fascia](soffit-fascia.md)
+- [Блоки DFL](../../reference/dfl-blocks.md), [Material catalog](../../reference/material-catalog.md), [Standard notes](../../reference/standard-notes.md)

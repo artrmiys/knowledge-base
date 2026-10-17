@@ -1,93 +1,104 @@
-# Underlayment - что за siding
+# Underlayment (что за siding: WRB, furring, accessories)
 
-За siding есть слои, которые легко пропустить: WRB / housewrap, sheathing,
-furring / rainscreen, Cedar Breather, starter / J-channel / corners,
-flashing. Смотри **wall sections**, не только elevation.
+<!-- TODO-PHOTO: house wrap WRB over sheathing with furring strips before siding, EN: "house wrap sheathing furring strips rainscreen construction" -->
 
-## Слои стены снаружи внутрь { .kb-section-title .kb-st--green }
+## Что это
 
-1. **Siding** (поле, `SQ FT`) - см. [Типы siding](types.md).
-2. **Rainscreen / furring** - `1x4` / `2x4`, P.T. или нет (опционально).
-3. **WRB / housewrap** - Tyvek, или Zip (WRB integral).
-4. **Sheathing** - CDX / Zip / OSB (свой scope).
+Слои между siding и каркасом, которые не видны на фасаде: WRB (weather
+resistive barrier), sheathing, furring или rainscreen, Cedar Breather,
+starter, J-channel и corner posts, flashing. Смотреть wall sections и wall
+types, не только elevations. Sheathing считается в
+[Wall Sheathing](../vertical/sheathing/wall-sheathing.md).
+
+## Где искать на чертежах
+
+| Лист | Что взять |
+| --- | --- |
+| Wall types (`wt`) и wall sections | Порядок слоёв: siding, furring, WRB, sheathing, studs |
+| Spec division 07 и notes | Продукт WRB: housewrap (Tyvek), fluid-applied, self-adhered, Zip |
+| Details окон и стыков | Z-flashing, head flashing, kickout, step flashing |
+| Elevations | Vinyl: где starter, J-channel, corners |
+
+## Слои стены снаружи внутрь
+
+1. Siding (поле, `SQ FT`), см. [Типы siding](types.md).
+2. Furring или rainscreen `1x4` / `2x4`, P.T. или нет (если показан).
+3. WRB по спецификации, или Zip (WRB встроен в sheathing).
+4. Sheathing (CDX, OSB, Zip): свой scope.
 5. Stud wall.
 
-## WRB / Housewrap { .kb-section-title .kb-st--cyan }
+## WRB, не Vapor Barrier
 
-| Label | Материал | Unit |
+| Строка DFL | Материал | Unit | Правило |
+| --- | --- | --- | --- |
+| `WRB` | `Tyvek` или другой housewrap | SQ FT | только если спецификация называет housewrap |
+| `WRB` | `fluid-applied` (продукт по spec) | SQ FT | Tyvek не писать |
+| Zip system | `7/16" Zip` + `Zip Tape` | 4x8, rolls | отдельный WRB не нужен, не дублировать |
+
+- Наружный барьер называется WRB, weather barrier или air barrier.
+  `Vapor Barrier` это другой слой и другое место в стене; так строку не
+  называть.
+- Площадь WRB равна площади стен с вычетом проёмов один раз; окна меньше
+  4' не вычитаются. Soffit porch и canopy из exterior gypsum тоже идут в
+  WRB.
+- Спек-ячейка WRB в шапке DFL (O4) заполняется при создании job, ссылка на
+  лист без слова `per` (`A3.0`).
+
+## Furring / Rainscreen
+
+Рейка между WRB и siding, часто пропускается. `1x4` или `2x4`, P.T. или
+нет по разрезу; LFT по шагу или SQ FT, если сплошной. Полное правило и
+jambs: [Furring & Window Jambs](../exterior-trims/furring-and-jambs.md).
+
+## Cedar Breather
+
+Вентилируемая сетка под cedar shingle или shake на сплошном основании.
+Считается `SQ FT` площади shingle-стен; проверь детали, если siding
+cedar shingle на solid sheathing.
+
+## Vinyl accessories
+
+| Строка DFL | Где | Unit |
 | --- | --- | --- |
-| `House wrap` / `WRB` | `Tyvek` | `SQ FT` (стена) или rolls |
-| `Vapor Barrier` | `Tyvek` | `SQ FT` |
-| Zip system | `7/16` / `1/2` Zip + `Zip Tape` | sheet / rolls |
+| `Starter strip` | низ первого ряда | LFT |
+| `J-Channel` | вокруг окон и дверей, под soffit, у corner, по rake | LFT |
+| `Corner posts` (outside, inside) | углы | LFT |
+| `Undersill / finish trim` | под окном, у верха стены | LFT |
 
-- При **Zip** отдельный housewrap не нужен (WRB встроен) - не дублируй.
-- Tyvek считается по площади стены (часто = siding SQ FT + factor).
+При vinyl `Ext. Casing` нередко и есть `Vinyl J-channel`: не дублировать с
+`5/4` wood casing. Канон: [Exclusions и J-Channel](../exterior-trims/exclusions.md).
 
-## Furring / Rainscreen { .kb-section-title .kb-st--magenta }
-
-Рейка между WRB и siding: вентзазор / ровное основание. **Часто пропускают.**
-
-- `1x4` или `2x4`, **P.T. или не P.T.** - берётся из section.
-- Считается `LFT` (по spacing, 16" o.c.) или `SQ FT` стены, если сплошной.
-- P.T. внизу / у foundation / влажно; выше - обычно не P.T.
-
-Полное правило и макрос - [Furring & Window Jambs](../exterior-trims/furring-and-jambs.md).
-
-## Cedar Breather { .kb-section-title .kb-st--green }
-
-Вентилируемая сетка-мат под **cedar shingle/shake** на сплошном основании
-(чтобы дранка сохла с тыла).
-
-- Появляется в Standarts как `Cedar Breather`.
-- Считается `SQ FT` площади shingle-стены.
-- Если siding = cedar shingle на solid sheathing - проверь, есть ли он в деталях.
-
-## Vinyl accessories / starter / J-channel / corners { .kb-section-title .kb-st--cyan }
-
-Для vinyl (и иногда fiber-cement) siding нужны accessories - это **не поле**,
-а отдельные `LFT`-строки (часто учитываются как trim):
-
-| Accessory | Где | Unit |
-| --- | --- | --- |
-| `Starter strip` | низ первого ряда | `LFT` |
-| `J-Channel` | вокруг окон/дверей, под soffit, у corner, gable/rake | `LFT` |
-| `Corner posts` (outside/inside) | углы | `LFT` |
-| `Undersill / finish trim` | под окном, у верха стены | `LFT` |
-
-- При vinyl siding `Ext. Casing` нередко **и есть** `Vinyl J-channel` - не
-  дублируй с `5/4` wood casing. См.
-  [Exterior Trims - Exclusions и J-Channel](../exterior-trims/exclusions.md).
-
-<figure markdown>
-  ![Housewrap / sheathing behind siding](../../assets/images/trims/ext-cornerboard-nailing.png)
-  <figcaption>Housewrap - sheathing - stud за siding; corner нужен solid nailing base.</figcaption>
-</figure>
-
-## Flashing за / в siding { .kb-section-title .kb-st--magenta }
+## Flashing в siding
 
 | Flashing | Где | Unit |
 | --- | --- | --- |
-| Z-flashing | горизонтальные стыки panel siding | `LFT` |
-| Head flashing / drip cap | над окнами/дверями, head trim | `LFT` |
-| Kickout flashing | где крыша встречает стену (roof-wall) | `pcs` |
-| Step flashing | вдоль ската у стены | `LFT` |
-| Band / watertable flashing | под горизонтальным trim-поясом | `LFT` |
+| Z-flashing | горизонтальные стыки panel siding | LFT |
+| Head flashing / drip cap | над окнами, дверями, head trim | LFT |
+| Kickout flashing | крыша встречает стену | pcs |
+| Step flashing | вдоль ската у стены | LFT |
+| Band / watertable flashing | под горизонтальным поясом | LFT |
 
-- Flashing держи **видимой строкой**, не растворяй в siding SQ FT.
-- Head/band flashing часто = `drip edge` (см. [Casing, Corner & Band](../exterior-trims/casing-corner-band.md)).
+Flashing видимой строкой, не растворять в siding SQ FT. Оконный flashing
+подробно: [Window flashing](../vertical/openings/window-flashing.md).
 
-## Чек { .kb-section-title .kb-st--green }
+## Частые ошибки
 
-- [ ] WRB определён (Tyvek vs Zip-integral) - без дублей?
-- [ ] Открыл sections - есть ли furring/rainscreen (size, P.T.)?
-- [ ] Cedar shingle на solid - Cedar Breather учтён?
-- [ ] Vinyl: starter / J-channel / corners / undersill посчитаны (LFT)?
-- [ ] При vinyl: casing = J-channel, без двойного счёта?
-- [ ] Z / head / kickout / step flashing - видимыми строками?
+- `Vapor Barrier` вместо WRB; Tyvek при fluid-applied.
+- Zip и отдельный housewrap посчитаны вместе.
+- Furring пропущен, потому что нет на фасаде.
+- Проёмы не вычтены из WRB или вычтены дважды.
+- Все ошибки по обшивке: [Обшивка](../../start/common-mistakes.md#sheathing).
 
-## See also
+## Пример
 
-- [Overview](overview.md) , [Типы siding](types.md) , [Измерение](measure.md)
-- [Furring & Window Jambs](../exterior-trims/furring-and-jambs.md)
-- [Exterior Trims - Exclusions и J-Channel](../exterior-trims/exclusions.md)
+```text
+WRB            fluid-applied (per spec 07 27 26)   8 420  SQ FT   =C<walls SF>-C<openings>   A3.0
+Furring        1x4 P.T. @ 16" o.c.                 6 950  LFT     =CEILING(8420*12/16*1.1,10) 7/A401
+Cedar Breather                                     1 240  SQ FT   gable shingle areas          A201
+```
+
+## См. также
+
+- [Siding](overview.md), [Типы siding](types.md), [Измерение](measure.md), [EIFS / Stucco / Veneer](eifs-stucco-veneer.md)
+- [Wall Sheathing](../vertical/sheathing/wall-sheathing.md), [Exterior Wall Materials](../vertical/sheathing/exterior-materials.md), [Furring & Window Jambs](../exterior-trims/furring-and-jambs.md)
 - [Material catalog](../../reference/material-catalog.md)

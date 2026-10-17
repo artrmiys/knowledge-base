@@ -16,7 +16,7 @@ topic page.
     Product family, spacing, hangers и EWP naming должны быть видны рядом с
     картинками, а не спрятаны в длинном тексте.
 
-    [:octicons-arrow-right-24: Открыть Joist](../work/horizontal/floor-framing/joist.md)
+    [Открыть Joist](../work/horizontal/floor-framing/joist.md)
 
 -   :material-format-paint:{ .lg .middle } **Interior Trims**
 
@@ -25,7 +25,7 @@ topic page.
     Base, Crown, Casing и Door/Window Trim лучше проверять по rule cards:
     картинка + правило + что делать в takeoff.
 
-    [:octicons-arrow-right-24: Открыть Interior Trims](../work/interior-trims/overview.md)
+    [Открыть Interior Trims](../work/interior-trims/overview.md)
 
 -   :material-wall:{ .lg .middle } **Exterior Wall**
 
@@ -34,7 +34,7 @@ topic page.
     Wall height, bottom plate, shear/draft-stop notes и material variants
     должны читаться как чек-лист.
 
-    [:octicons-arrow-right-24: Открыть Exterior](../work/vertical/walls/exterior.md)
+    [Открыть Exterior](../work/vertical/walls/exterior.md)
 
 -   :material-clipboard-check-outline:{ .lg .middle } **QA**
 
@@ -43,7 +43,7 @@ topic page.
     Перед output проверь scope, drawings, formulas, waste, FRT, hangers и
     client-specific rules.
 
-    [:octicons-arrow-right-24: Открыть QA checklist](quality-checklist.md)
+    [Открыть QA checklist](quality-checklist.md)
 
 </div>
 

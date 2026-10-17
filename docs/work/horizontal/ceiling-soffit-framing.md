@@ -1,68 +1,66 @@
-# Ceiling / Soffit Framing (interior)
-
-Внутренний **каркас потолков и софитов** - отдельный framing-scope, не finish-trim
-и не roof soffit. Сюда попадают dropped soffits, потолочные короба, потолок мех-комнаты
-и потолок кухни. Источник - **RCP** (reflected ceiling plan) + mech/detail-листы.
+# Ceiling / Soffit Framing (каркас потолков и коробов внутри)
 
 <figure markdown>
   ![Dropped ceiling soffit framing](../../assets/images/framing/ceiling-soffit.svg)
-  <figcaption>Dropped soffit - 2x frame по периметру короба; источник RCP, не structural план.</figcaption>
+  <figcaption markdown="span">Dropped soffit: короб из 2x по периметру ниже потолка. Источник - RCP, на structural плане его нет. Считается каркас (plates, frame, screws), отделка - в Interior Trims.</figcaption>
 </figure>
 
-!!! abstract "Где что (не путать)"
-    - **Эта страница** - *каркас* потолков/софитов внутри (2x framing, plates, screws).
-    - **Finish-отделка** потолка (crown, beadboard, gypsum) - [Interior Trims](../interior-trims/overview.md).
-    - **Roof eave soffit** (под свесом крыши) - [Eve / Eave](../sheathing-and-misc/eve.md).
-    - **Soffit plywood под roof trusses** - [Roof Sheathing](roof-framing/roof-sheathing.md).
+<!-- TODO-PHOTO: interior dropped soffit framing 2x4 before drywall, EN query "dropped soffit framing 2x4 ceiling" -->
 
-## Что встречается { .kb-section-title .kb-st--green }
+## Что это
 
-| Секция | Что это | Типично |
-| --- | --- | --- |
-| **Interior Soffit Framing** | каркас внутренних софитов / потолочных коробов (dropped soffit) | `2x4` frame по периметру короба |
-| **Interior Kitchen Ceiling Materials** | потолок кухни, считается **per unit** | материалы потолка (LFT/SQ FT) |
-| **Ceiling Mech framing** | потолок под мех-оборудование (mech room / penthouse / screen) | `2x6` Plate + Frame + Screws |
-| **Interior Materials** | общие материалы внутренней отделки/потолков | LFT / SQ FT |
-| **Interior Gable Walls** | внутренняя сторона фронтонных стен | по [Gable](../vertical/walls/gable.md) |
+Внутренний каркас потолков и коробов: dropped soffits над кухней и в коридорах, потолочные короба под воздуховоды, потолок мех-комнаты (`Ceiling Mech`), потолок кухни per unit. Это framing-scope, не отделка и не наружный soffit. Отделка потолка (crown, гипс) - [Interior Trims](../interior-trims/overview.md); roof soffit под свесом - [Eve / Eave](../sheathing-and-misc/eve.md); soffit plywood под roof trusses - [Roof Sheathing](roof-framing/roof-sheathing.md); опора гипса на стене параллельно joists - [Bracing for Drywall](floor-framing/details/bracingdrywall.md).
 
-Организуются **per floor / per area** (1st / 2nd / Loft), как и interior trims.
+## Где искать на чертежах
 
-## Ceiling Mech - состав каркаса { .kb-section-title .kb-st--cyan }
-
-Потолок мех-комнаты (характерно для **MC / 1-storey** проектов; в многоэтажке
-вместо него - ceiling per floor в truss-heel зоне):
-
-| Строка | Материал | Что | Unit |
-| --- | --- | --- | --- |
-| `Plate (1) Ceiling Mech` | `2x6` | опорная плита по периметру | LFT |
-| `Frame N" o.c. Ceiling Mech` | `2x6` | балки потолка с шагом (типично `24" o.c.`) | LFT / pcs |
-| `Screws N" o.c. (2)` | structural screws | крепёж, 2 на узел (`16" o.c.`) | pcs |
-
-- Frame несёт detail-callout (напр. `A454`) - тот же ceiling-detail, что и во
-  "Frame Ceiling" в truss-heel зоне. Сверяй callout в [PDF](../../reference/ourplanecore.md).
-- Площадь/периметр потолка - manual measured с A-планов (не из общего sqft).
-
-## Где искать { .kb-section-title .kb-st--magenta }
-
-| Лист / источник | Что взять |
+| Лист | Что взять |
 | --- | --- |
-| **RCP** (reflected ceiling plan) | dropped soffits, потолочные короба, высоты потолков |
+| RCP (`a8.01 1st rcp`) | dropped soffits, короба, высоты потолков, зоны по units |
 | Mech / MEP-планы | mech-room ceiling, screens, оборудование над потолком |
-| Architectural sections | глубина dropped soffit, конструкция короба |
-| Kitchen / unit plans | kitchen ceiling per unit |
+| Sections, ceiling details (`A454`) | глубина короба, конструкция, сечение plates и frame, шаг |
+| Kitchen и unit plans | kitchen ceiling per unit |
 
-## Чек перед выводом { .kb-section-title .kb-st--cyan }
+## Как мерить в OurPlanCore
 
-- [ ] Dropped soffits с RCP не пропущены (их часто нет на structural плане)?
-- [ ] Ceiling Mech: Plate + Frame `N" o.c.` + Screws - все три строки?
-- [ ] Kitchen ceiling посчитан **per unit**, не одной площадью?
-- [ ] Каркас (эта страница) отделён от finish-отделки потолка (Interior Trims)?
-- [ ] Detail-callout у Frame сверен с PDF (не скопирован вслепую)?
+На листе RCP (точка листа по этажу): Line (L) по периметру каждого короба для plates, Area (A) по площади потолка для frame с шагом. Площадь и периметр меряются вручную с A-листов, не берутся из общего sqft этажа. Ветка для таких позиций в дереве не закреплена.
+
+!!! warning "Уточняется"
+    Куда класть soffit-позиции в дереве (`framing/<этаж> framing/details/soffit` или `roof misc`) - не подтверждено сданными работами.
+
+## Как назвать в дереве и строка DFL
+
+Секции организуются per floor или per area (1st, 2nd, Loft), как interior trims.
+
+| Секция | A (Label) | B | C | D | E |
+| --- | --- | --- | --- | --- | --- |
+| Interior Soffit Framing | `Plate (2)` + `Frame 16" o.c.` | `2x4` | периметр x 2 x 1.1; площадь x 12 / шаг | `LFT` | RCP |
+| Ceiling Mech | `Plate (1) Ceiling Mech` | `2x6` | `=ОКРВВЕРХ(G*H*1.1;10)` | `LFT` | детали |
+| Ceiling Mech | `Frame 24" o.c. Ceiling Mech` | `2x6` | `=ОКРВВЕРХ(G*12/H/D;10)` | `12` | `A454` |
+| Ceiling Mech | `Screws 16" o.c. (2)` | `Screws 0.22 x 4"` | `=ОКРВВЕРХ(G*12*1.1/H*2;10)` | `pcs` | `10/19/S500` |
+| Kitchen Ceiling | материалы потолка кухни | по спецификации | per unit x число units | `LFT` / `SQ FT` | unit plan |
+| Ceiling per floor (многоэтажка) | `Plate (1) Ceiling`, `Plate (2) Vertical Frame`, `Frame 24" o.c. Ceiling`, `Vertical Frame 24" o.c. Ceiling` | `2x4` | `=ОКРВВЕРХ(G*H*1.1;10)`, `=ОКРВВЕРХ(G*12/H;10)` | `LFT` | `A454` |
+
+Ceiling Mech характерен для одноэтажных проектов с мех-комнатой; в многоэтажке вместо него ceiling per floor в зоне truss heel: [Truss Heel](../vertical/sheathing/truss-heel.md). `G` - периметр или площадь с A-планов, `H` - число plates или шаг, `D` - длина доски.
+
+## Частые ошибки
+
+- Dropped soffits с RCP не посчитаны: на structural плане их нет.
+- Ceiling Mech без одной из трёх строк (plate, frame, screws).
+- Kitchen ceiling посчитан одной площадью, а нужно per unit.
+- Dropped soffit записан как bracing или как deflection-track стена.
+- Callout детали у Frame скопирован из прошлого дома, не сверен с листом.
+- Каркас и отделка потолка смешаны в одной секции.
+- [Все ошибки по перекрытиям](../../start/common-mistakes.md#floor)
+
+## Пример
+
+| A | B | C | D | E | G | H |
+| --- | --- | --- | --- | --- | --- | --- |
+| `Plate (1) Ceiling Mech` | `2x6` | `=ОКРВВЕРХ(G*H*1.1;10)` | LFT | | 1395 | 1 |
+| `Frame 24" o.c. Ceiling Mech` | `2x6` | `=ОКРВВЕРХ(G*12/H/D;10)` | 12 | `A454` | 3896 | 24 |
+| `Screws 16" o.c. (2)` | `Screws 0.22 x 4"` | `=ОКРВВЕРХ(G*12*1.1/H*2;10)` | pcs | `10/19/S500` | 1395 | 16 |
 
 ## См. также
 
-- [Interior Trims - Обзор](../interior-trims/overview.md) - finish-отделка (crown/base/casing).
-- [Eve / Eave](../sheathing-and-misc/eve.md) - наружный roof soffit.
-- [Roof Sheathing](roof-framing/roof-sheathing.md) - soffit plywood под trusses.
-- [Truss Heel](../vertical/sheathing/truss-heel.md) - ceiling per floor (multi-storey аналог).
-- [Quantity benchmarks](../../reference/quantity-benchmarks.md) , [ИИ-ассистент](../../reference/ai-assist-system.md).
+- [Interior Trims, обзор](../interior-trims/overview.md), [Eve / Eave](../sheathing-and-misc/eve.md), [Roof Sheathing](roof-framing/roof-sheathing.md)
+- [Truss Heel](../vertical/sheathing/truss-heel.md), [Bracing for Drywall](floor-framing/details/bracingdrywall.md), [Quantity benchmarks](../../reference/quantity-benchmarks.md)
