@@ -12,51 +12,51 @@
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Value` |  | нижняя полоса: нижняя полоса, строка 1 | Write only values for the same selected takeoff scope into one Excel column | [Инструменты замера](ourplancore-tools.md) |
-    | `Excel` |  | нижняя полоса: нижняя полоса, строка 1 | Write the selected takeoff folder/item to the active cell in an already open Excel workbook | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Include takeoff comments in Excel export` |  | нижняя полоса: нижняя полоса, строка 1 | Include takeoff and measurement comments in Excel exports (filled = on; default = off) | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Pan` | `V` | нижняя полоса: нижняя полоса, строка 1 | Pan (V) | [Инструменты замера](ourplancore-tools.md) |
-    | `Select` | `E` | нижняя полоса: нижняя полоса, строка 1 | Box select measurements (E). Ctrl+C copy, Ctrl+V paste | [Инструменты замера](ourplancore-tools.md) |
-    | `Scale` | `S` | нижняя полоса: нижняя полоса, строка 1 | Set scale (S) | [Инструменты замера](ourplancore-tools.md) |
-    | `Ruler` | `R` | нижняя полоса: нижняя полоса, строка 1 | Place a dimension/ruler markup on the PDF (R) | [Инструменты замера](ourplancore-tools.md) |
-    | `Ruler Sheet Visibility` |  | нижняя полоса: нижняя полоса, строка 1 | Hide all ruler markups on this sheet | [Инструменты замера](ourplancore-tools.md) |
-    | `Pitch` |  | нижняя полоса: нижняя полоса, строка 1 | Draw two points and show roof pitch as rise:12 | [Инструменты замера](ourplancore-tools.md) |
-    | `Count` | `P` | нижняя полоса: нижняя полоса, строка 1 | Create a new Count item and start recording (P). Use the active target Record button to continue an existing item | [Инструменты замера](ourplancore-tools.md) |
-    | `Similar` |  | нижняя полоса: нижняя полоса, строка 1 | Find similar symbols on this sheet, name the result, and add reviewed markers as a Count item | [Инструменты замера](ourplancore-tools.md) |
-    | `P Line` |  | нижняя полоса: нижняя полоса, строка 1 | Create Count points along selected Line measurement(s) with a spacing | [Инструменты замера](ourplancore-tools.md) |
-    | `Break` |  | нижняя полоса: нижняя полоса, строка 1 | Break selected Lines into separate one-segment measurements. The measured total does not change; Ctrl+Z restores them. Ctrl+Shift+B: Break, Ctrl+Shift+V: Break H/V | [Правка и привязки](ourplancore-editing.md) |
-    | `Break H/V` |  | нижняя полоса: нижняя полоса, строка 1 | Break H/V: file horizontal and vertical segments into two new takeoffs (filled = on). Ctrl+Shift+V runs Break H/V directly | [Правка и привязки](ourplancore-editing.md) |
-    | `Ends` |  | нижняя полоса: нижняя полоса, строка 1 | Place Count marks on both ends of every selected Line segment. Works on the sheet selection, or on one or more Line takeoffs selected in the Takeoffs tree | [Правка и привязки](ourplancore-editing.md) |
-    | `Default Count display for newly created Count takeoffs` |  | нижняя полоса: нижняя полоса, строка 1 | Default Count display for newly created Count takeoffs |  |
-    | `Line` | `L` | нижняя полоса: нижняя полоса, строка 1 | Create a new Line item and start recording (L). Use the active target Record button to continue an existing item | [Инструменты замера](ourplancore-tools.md) |
-    | `Repeat Line` |  | нижняя полоса: нижняя полоса, строка 1 | Repeat Line: create a Line item, then draw separate two-point segments. Esc stops. | [Правка и привязки](ourplancore-editing.md) |
-    | `Area` | `A` | нижняя полоса: нижняя полоса, строка 1 | Create a new Area item and start recording (A). Use the active target Record button to continue an existing item | [Инструменты замера](ourplancore-tools.md) |
-    | `J Area` | `J` | нижняя полоса: нижняя полоса, строка 1 | Create a new Joist Area item and start recording (J) | [Инструменты замера](ourplancore-tools.md) |
-    | `Beam` | `B` | нижняя полоса: нижняя полоса, строка 1 | Measure a beam length, create a Count item, and place the first Count mark (B) | [Инструменты замера](ourplancore-tools.md) |
-    | `Repeat Beam` |  | нижняя полоса: нижняя полоса, строка 1 | Repeat Beam: measure and create each Beam, then draw the next. Esc stops. | [Правка и привязки](ourplancore-editing.md) |
-    | `Open` | `O` | нижняя полоса: нижняя полоса, строка 1 | Measure an opening box, create a Count item, and place the Count mark in the center (O) | [Инструменты замера](ourplancore-tools.md) |
-    | `Cut` | `X` | нижняя полоса: нижняя полоса, строка 1 | Cut Area holes or erase Line pieces (X, F9 toggles box) | [Правка и привязки](ourplancore-editing.md) |
-    | `Merge` | `Ctrl+M` | нижняя полоса: нижняя полоса, строка 1 | Merge selected Takeoffs from all sheets, or selected measurement segments (Ctrl+M) | [Правка и привязки](ourplancore-editing.md) |
-    | `Split` | `Ctrl+Shift+M` | нижняя полоса: нижняя полоса, строка 1 | Split whole Takeoffs across all sheets, or selected measurements or Count marks (Ctrl+Shift+M) | [Правка и привязки](ourplancore-editing.md) |
-    | `Combine` |  | нижняя полоса: нижняя полоса, строка 1 | Boolean-combine two or more selected Areas: union, subtract, intersect, remove overlap, divide | [Правка и привязки](ourplancore-editing.md) |
-    | `Snap` | `F3` | нижняя полоса: нижняя полоса, строка 1 | Snap to existing takeoff points (F3) | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `PDF` | `Ctrl+F3` | нижняя полоса: нижняя полоса, строка 1 | Snap to PDF vector corners and points (Ctrl+F3) | [Инструменты замера](ourplancore-tools.md) |
-    | `Ortho` | `F8` | нижняя полоса: нижняя полоса, строка 1 | Lock drawing and editing horizontally/vertically (F8; Shift temporarily forces Ortho) | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Box` | `F9` | нижняя полоса: нижняя полоса, строка 1 | Draw Line/Area measurements by two opposite box corners (F9) | [Инструменты замера](ourplancore-tools.md) |
+    | `Value` |  | нижняя полоса: нижняя полоса, строка 1 | Пишет в открытую книгу Excel только колонку `Value` для той же выборки. | [Инструменты замера](ourplancore-tools.md) |
+    | `Excel` |  | нижняя полоса: нижняя полоса, строка 1 | Пишет выбранную папку или позицию в активную ячейку открытой книги Excel. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Include takeoff comments in Excel export` |  | нижняя полоса: нижняя полоса, строка 1 | Добавляет комментарии позиций и замеров в выгрузку Excel; по умолчанию выключено. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Pan` | `V` | нижняя полоса: нижняя полоса, строка 1 | Включает инструмент сдвига листа левой кнопкой мыши. | [Инструменты замера](ourplancore-tools.md) |
+    | `Select` | `E` | нижняя полоса: нижняя полоса, строка 1 | Выделяет замеры рамкой; `Ctrl+C` копирует, `Ctrl+V` вставляет. | [Инструменты замера](ourplancore-tools.md) |
+    | `Scale` | `S` | нижняя полоса: нижняя полоса, строка 1 | Включает инструмент задания масштаба листа по известной длине. | [Инструменты замера](ourplancore-tools.md) |
+    | `Ruler` | `R` | нижняя полоса: нижняя полоса, строка 1 | Ставит на лист пометку-размер линейкой, которая не входит в замеры. | [Инструменты замера](ourplancore-tools.md) |
+    | `Ruler Sheet Visibility` |  | нижняя полоса: нижняя полоса, строка 1 | Прячет или показывает все пометки линейки на этом листе. | [Инструменты замера](ourplancore-tools.md) |
+    | `Pitch` |  | нижняя полоса: нижняя полоса, строка 1 | Рисует линию по двум точкам и показывает уклон крыши на 12. | [Инструменты замера](ourplancore-tools.md) |
+    | `Count` | `P` | нижняя полоса: нижняя полоса, строка 1 | Создаёт новую позицию Count и начинает запись; для старой позиции жми `Record`. | [Инструменты замера](ourplancore-tools.md) |
+    | `Similar` |  | нижняя полоса: нижняя полоса, строка 1 | Ищет на листе похожие значки и добавляет проверенные точки в позицию Count. | [Инструменты замера](ourplancore-tools.md) |
+    | `P Line` |  | нижняя полоса: нижняя полоса, строка 1 | Расставляет точки Count вдоль выбранных линий с заданным шагом. | [Инструменты замера](ourplancore-tools.md) |
+    | `Break` |  | нижняя полоса: нижняя полоса, строка 1 | Разбивает выбранные линии на отдельные отрезки; общая длина не меняется, `Ctrl+Z` возвращает. | [Правка и привязки](ourplancore-editing.md) |
+    | `Break H/V` |  | нижняя полоса: нижняя полоса, строка 1 | Раскладывает горизонтальные и вертикальные отрезки линий в две новые позиции. | [Правка и привязки](ourplancore-editing.md) |
+    | `Ends` |  | нижняя полоса: нижняя полоса, строка 1 | Ставит точки Count на обоих концах каждого отрезка выбранных линий. | [Правка и привязки](ourplancore-editing.md) |
+    | `Default Count display for newly created Count takeoffs` |  | нижняя полоса: нижняя полоса, строка 1 | Выбирает, как по умолчанию показываются точки у новых позиций Count. |  |
+    | `Line` | `L` | нижняя полоса: нижняя полоса, строка 1 | Создаёт новую позицию Line и начинает запись; для старой позиции жми `Record`. | [Инструменты замера](ourplancore-tools.md) |
+    | `Repeat Line` |  | нижняя полоса: нижняя полоса, строка 1 | Создаёт позицию Line и рисует подряд отдельные отрезки по две точки; `Esc` останавливает. | [Правка и привязки](ourplancore-editing.md) |
+    | `Area` | `A` | нижняя полоса: нижняя полоса, строка 1 | Создаёт новую позицию Area и начинает запись; для старой позиции жми `Record`. | [Инструменты замера](ourplancore-tools.md) |
+    | `J Area` | `J` | нижняя полоса: нижняя полоса, строка 1 | Создаёт новую позицию `Joist Area` и начинает запись площади. | [Инструменты замера](ourplancore-tools.md) |
+    | `Beam` | `B` | нижняя полоса: нижняя полоса, строка 1 | Меряет длину балки, создаёт позицию Count и ставит первую точку. | [Инструменты замера](ourplancore-tools.md) |
+    | `Repeat Beam` |  | нижняя полоса: нижняя полоса, строка 1 | Меряет балки одну за другой, каждая получает свою позицию; `Esc` останавливает. | [Правка и привязки](ourplancore-editing.md) |
+    | `Open` | `O` | нижняя полоса: нижняя полоса, строка 1 | Меряет рамку проёма, создаёт позицию Count и ставит точку в центре. | [Инструменты замера](ourplancore-tools.md) |
+    | `Cut` | `X` | нижняя полоса: нижняя полоса, строка 1 | Вырезает отверстия в площадях или стирает куски линий; `F9` включает рамку. | [Правка и привязки](ourplancore-editing.md) |
+    | `Merge` | `Ctrl+M` | нижняя полоса: нижняя полоса, строка 1 | Объединяет выбранные позиции со всех листов или выбранные отрезки замеров. | [Правка и привязки](ourplancore-editing.md) |
+    | `Split` | `Ctrl+Shift+M` | нижняя полоса: нижняя полоса, строка 1 | Делит позиции по всем листам или выносит выбранные замеры и точки отдельно. | [Правка и привязки](ourplancore-editing.md) |
+    | `Combine` |  | нижняя полоса: нижняя полоса, строка 1 | Сочетает две и больше площади: сложение, вычитание, пересечение, снятие перекрытий, деление. | [Правка и привязки](ourplancore-editing.md) |
+    | `Snap` | `F3` | нижняя полоса: нижняя полоса, строка 1 | Включает привязку к точкам существующих замеров. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `PDF` | `Ctrl+F3` | нижняя полоса: нижняя полоса, строка 1 | Включает привязку к углам и точкам векторов PDF. | [Инструменты замера](ourplancore-tools.md) |
+    | `Ortho` | `F8` | нижняя полоса: нижняя полоса, строка 1 | Ограничивает рисование и правку горизонталью и вертикалью; `Shift` включает временно. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Box` | `F9` | нижняя полоса: нижняя полоса, строка 1 | Рисует линии и площади прямоугольником по двум противоположным углам. | [Инструменты замера](ourplancore-tools.md) |
 
 ??? note "нижняя полоса, строка 2 (9)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Flip H` |  | нижняя полоса: нижняя полоса, строка 2 | Mirror selected measurements/markups horizontally | [Правка и привязки](ourplancore-editing.md) |
-    | `Flip V` |  | нижняя полоса: нижняя полоса, строка 2 | Mirror selected measurements/markups vertically | [Правка и привязки](ourplancore-editing.md) |
-    | `Reset Rotate Selection` |  | нижняя полоса: нижняя полоса, строка 2 | Center rotate slider for another relative adjustment | [Инструменты замера](ourplancore-tools.md) |
-    | `Set` |  | нижняя полоса: нижняя полоса, строка 2 | Apply scale | [Инструменты замера](ourplancore-tools.md) |
-    | `Presets` |  | нижняя полоса: нижняя полоса, строка 2 | Common scale presets | [Инструменты замера](ourplancore-tools.md) |
-    | `AI Settings` |  | нижняя полоса: нижняя полоса, строка 2 | OpenAI key status and model settings | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Fit page` | `F` | нижняя полоса: нижняя полоса, строка 2 | Fit page (F) | [Инструменты замера](ourplancore-tools.md) |
-    | `Zoom in` | `Ctrl++` | нижняя полоса: нижняя полоса, строка 2 | Zoom in (Ctrl++) | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Zoom out` | `Ctrl+-` | нижняя полоса: нижняя полоса, строка 2 | Zoom out (Ctrl+-) | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Flip H` |  | нижняя полоса: нижняя полоса, строка 2 | Зеркально отражает выбранные замеры и пометки по горизонтали. | [Правка и привязки](ourplancore-editing.md) |
+    | `Flip V` |  | нижняя полоса: нижняя полоса, строка 2 | Зеркально отражает выбранные замеры и пометки по вертикали. | [Правка и привязки](ourplancore-editing.md) |
+    | `Reset Rotate Selection` |  | нижняя полоса: нижняя полоса, строка 2 | Возвращает ползунок поворота выделения в центр для следующей поправки. | [Инструменты замера](ourplancore-tools.md) |
+    | `Set` |  | нижняя полоса: нижняя полоса, строка 2 | Применяет введённый в поле масштаб к активному листу. | [Инструменты замера](ourplancore-tools.md) |
+    | `Presets` |  | нижняя полоса: нижняя полоса, строка 2 | Открывает список ходовых масштабов чертежей для быстрого выбора. | [Инструменты замера](ourplancore-tools.md) |
+    | `AI Settings` |  | нижняя полоса: нижняя полоса, строка 2 | Показывает состояние ключа OpenAI и настройки модели ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Fit page` | `F` | нижняя полоса: нижняя полоса, строка 2 | Вписывает активный лист целиком в окно просмотра. | [Инструменты замера](ourplancore-tools.md) |
+    | `Zoom in` | `Ctrl++` | нижняя полоса: нижняя полоса, строка 2 | Приближает активный лист на один шаг масштаба. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Zoom out` | `Ctrl+-` | нижняя полоса: нижняя полоса, строка 2 | Отдаляет активный лист на один шаг масштаба. | [Горячие клавиши](ourplancore-shortcuts.md) |
 
 ## Лента: верхние вкладки Main, Page, Annotation, Viewport, Display (69)
 
@@ -64,145 +64,145 @@
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Open / Import` |  | лента: лента Main, JOB | Open jobs, switch job folders, create jobs, or import PDF/OurPlanCore/PlanSwift into the current job | [Проекты и сохранение](job-creation-storage.md) |
-    | `PlanSwift` |  | лента: лента Main, JOB | Separate PlanSwift job converter | [Проекты и сохранение](job-creation-storage.md) |
-    | `PDF Takeoffs` |  | лента: лента Main, JOB | Import PDF pages and measurement annotations as takeoffs | [Прочее](ourplancore-extras-other.md) |
-    | `Save As` |  | лента: лента Main, JOB | Save the current project to a new location | [Проекты и сохранение](job-creation-storage.md) |
-    | `In Progress` |  | лента: лента Main, JOB | Set this project's Job Tracker card to In Progress via the configured external command | [Проекты и сохранение](job-creation-storage.md) |
+    | `Open / Import` |  | лента: лента Main, JOB | Открывает проекты, меняет папку проектов, создаёт проект или импортирует PDF и PlanSwift. | [Проекты и сохранение](job-creation-storage.md) |
+    | `PlanSwift` |  | лента: лента Main, JOB | Переводит проект PlanSwift в новый проект OurPlanCore, исходник не меняется. | [Проекты и сохранение](job-creation-storage.md) |
+    | `PDF Takeoffs` |  | лента: лента Main, JOB | Переносит листы PDF вместе с замерами и линейками PDF в позиции takeoff. | [Прочее](ourplancore-extras-other.md) |
+    | `Save As` |  | лента: лента Main, JOB | Сохраняет текущий проект в новое место на диске. | [Проекты и сохранение](job-creation-storage.md) |
+    | `In Progress` |  | лента: лента Main, JOB | Переводит карточку проекта в Job Tracker в статус `In Progress` внешней командой. | [Проекты и сохранение](job-creation-storage.md) |
 
 ??? note "лента Main, PDF (6)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Export` |  | лента: лента Main, PDF | Export selected/all sheets to a PDF | [Дополнительно](ourplancore-extras.md) |
-    | `Name` |  | лента: лента Main, PDF | Preview and apply PDF sheet names | [Листы (Pages)](ourplancore-pages.md) |
-    | `Scale` |  | лента: лента Main, PDF | Preview and apply PDF sheet scale | [Листы (Pages)](ourplancore-pages.md) |
-    | `Name+Scale` |  | лента: лента Main, PDF | Preview and apply PDF sheet names and scale | [Листы (Pages)](ourplancore-pages.md) |
-    | `AI Fill` |  | лента: лента Main, PDF | Queue GPT fallback for missing PDF sheet metadata | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Crop Hints` |  | лента: лента Main, PDF | Draw reusable AI Fill crop boxes for sheet number and scale | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Export` |  | лента: лента Main, PDF | Выгружает выбранные или все листы в один PDF. | [Дополнительно](ourplancore-extras.md) |
+    | `Name` |  | лента: лента Main, PDF | Показывает и применяет автоматические имена листов из PDF. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Scale` |  | лента: лента Main, PDF | Показывает и применяет автоматические масштабы листов из PDF. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Name+Scale` |  | лента: лента Main, PDF | Показывает и применяет автоматические имена и масштабы листов из PDF. | [Листы (Pages)](ourplancore-pages.md) |
+    | `AI Fill` |  | лента: лента Main, PDF | Ставит в очередь GPT для листов, у которых не найдены метаданные. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Crop Hints` |  | лента: лента Main, PDF | Рисует области номера, названия и масштаба листа для автоимён и `AI Fill`. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "лента Page, ADD (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Add Pages` |  | лента: лента Page, ADD | Import PDF pages into the current job | [Проекты и сохранение](job-creation-storage.md) |
-    | `Blank Sheet` |  | лента: лента Page, ADD | Create an empty sheet in the current job without selecting a PDF | [Листы (Pages)](ourplancore-pages.md) |
-    | `PDF Takeoffs` |  | лента: лента Page, ADD | Import PDF pages plus PDF measurement annotations into takeoffs | [Прочее](ourplancore-extras-other.md) |
+    | `Add Pages` |  | лента: лента Page, ADD | Импортирует страницы PDF в текущий проект. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Blank Sheet` |  | лента: лента Page, ADD | Создаёт пустой лист в текущем проекте без PDF. | [Листы (Pages)](ourplancore-pages.md) |
+    | `PDF Takeoffs` |  | лента: лента Page, ADD | Переносит листы PDF вместе с замерами и линейками PDF в позиции takeoff. | [Прочее](ourplancore-extras-other.md) |
 
 ??? note "лента Page, ROTATE (5)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Left` |  | лента: лента Page, ROTATE | Rotate the active page left | [Листы (Pages)](ourplancore-pages.md) |
-    | `Right` |  | лента: лента Page, ROTATE | Rotate the active page right | [Листы (Pages)](ourplancore-pages.md) |
-    | `180` |  | лента: лента Page, ROTATE | Rotate the active page 180 degrees | [Листы (Pages)](ourplancore-pages.md) |
-    | `Level` |  | лента: лента Page, ROTATE | Reset page view to fit and clear temporary drawing input | [Листы (Pages)](ourplancore-pages.md) |
-    | `Batch Rotate` |  | лента: лента Page, ROTATE | Rotate selected pages | [Листы (Pages)](ourplancore-pages.md) |
+    | `Left` |  | лента: лента Page, ROTATE | Поворачивает активный лист на 90 градусов влево. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Right` |  | лента: лента Page, ROTATE | Поворачивает активный лист на 90 градусов вправо. | [Листы (Pages)](ourplancore-pages.md) |
+    | `180` |  | лента: лента Page, ROTATE | Поворачивает активный лист на 180 градусов. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Level` |  | лента: лента Page, ROTATE | Вписывает лист в окно и сбрасывает недорисованный ввод. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Batch Rotate` |  | лента: лента Page, ROTATE | Поворачивает сразу все выбранные листы на заданный угол. | [Листы (Pages)](ourplancore-pages.md) |
 
 ??? note "лента Page, FLIP (2)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Vertical` |  | лента: лента Page, FLIP | Flip the active page vertically | [Правка и привязки](ourplancore-editing.md) |
-    | `Horizontal` |  | лента: лента Page, FLIP | Flip the active page horizontally | [Правка и привязки](ourplancore-editing.md) |
+    | `Vertical` |  | лента: лента Page, FLIP | Отражает активный лист по вертикали, сверху вниз. | [Правка и привязки](ourplancore-editing.md) |
+    | `Horizontal` |  | лента: лента Page, FLIP | Отражает активный лист по горизонтали, слева направо. | [Правка и привязки](ourplancore-editing.md) |
 
 ??? note "лента Page, IMAGE (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Invert` |  | лента: лента Page, IMAGE | Invert the active page colors | [Листы (Pages)](ourplancore-pages.md) |
-    | `Copy` |  | лента: лента Page, IMAGE | Copy a rendered PNG of the active page to the clipboard | [Правка и привязки](ourplancore-editing.md) |
-    | `Crop New Page` |  | лента: лента Page, IMAGE | Create a new page from the currently visible viewport area | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Crop to Sheet` |  | лента: лента Page, IMAGE | Crop to Sheet: copy boxed details from any sheets onto one target sheet at true scale; move and rotate them there with Select | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Invert` |  | лента: лента Page, IMAGE | Инвертирует цвета активного листа, белое становится чёрным. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Copy` |  | лента: лента Page, IMAGE | Копирует картинку PNG активного листа в буфер обмена. | [Правка и привязки](ourplancore-editing.md) |
+    | `Crop New Page` |  | лента: лента Page, IMAGE | Создаёт новый лист из видимой сейчас части листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Crop to Sheet` |  | лента: лента Page, IMAGE | Копирует узлы в рамках с разных листов на один лист в истинном масштабе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "лента Page, PAGE (5)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Batch Rename` |  | лента: лента Page, PAGE | Rename selected pages in order | [Листы (Pages)](ourplancore-pages.md) |
-    | `Batch Overlay` |  | лента: лента Page, PAGE | Pair sheets and apply overlay layers to multiple pages | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Set Origin` |  | лента: лента Page, PAGE | Mark the current visible page center as the page origin | [Листы (Pages)](ourplancore-pages.md) |
-    | `Offset Origin` |  | лента: лента Page, PAGE | Nudge the stored page origin | [Листы (Pages)](ourplancore-pages.md) |
-    | `Close Page` |  | лента: лента Page, PAGE | Close the active page tab | [Листы (Pages)](ourplancore-pages.md) |
+    | `Batch Rename` |  | лента: лента Page, PAGE | Переименовывает выбранные листы по порядку одним действием. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Batch Overlay` |  | лента: лента Page, PAGE | Подбирает пары листов и применяет наложения сразу ко многим листам проекта. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Set Origin` |  | лента: лента Page, PAGE | Ставит центр видимой части листа как начало координат листа. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Offset Origin` |  | лента: лента Page, PAGE | Сдвигает сохранённое ранее начало координат листа на заданное смещение. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Close Page` |  | лента: лента Page, PAGE | Закрывает вкладку активного листа в окне просмотра. | [Листы (Pages)](ourplancore-pages.md) |
 
 ??? note "лента Annotation, MARKUP TOOLS (9)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Highlighter` | `Shift+H` | лента: лента Annotation, MARKUP TOOLS | Draw a transparent highlighter box (Shift+H) | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Draw line` | `D` | лента: лента Annotation, MARKUP TOOLS | Draw a simple non-takeoff line markup (D) | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Arrow` |  | лента: лента Annotation, MARKUP TOOLS | Draw a simple non-takeoff arrow markup | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Box` |  | лента: лента Annotation, MARKUP TOOLS | Draw a simple non-takeoff box markup | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Cloud` |  | лента: лента Annotation, MARKUP TOOLS | Draw a cloud annotation | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Area fill` |  | лента: лента Annotation, MARKUP TOOLS | Draw a filled color area annotation | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Hide area (white)` |  | лента: лента Annotation, MARKUP TOOLS | Hide area: cover part of the sheet with solid white (screen and PDF output) | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Note` | `N` | лента: лента Annotation, MARKUP TOOLS | Write a text note on the sheet (N) | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Style` |  | лента: лента Annotation, MARKUP TOOLS | Annotation tools, color, and thickness |  |
+    | `Highlighter` | `Shift+H` | лента: лента Annotation, MARKUP TOOLS | Рисует на листе полупрозрачную пометку маркером, она не входит в замеры. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Draw line` | `D` | лента: лента Annotation, MARKUP TOOLS | Рисует на листе простую линию-пометку, которая не входит в замеры. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Arrow` |  | лента: лента Annotation, MARKUP TOOLS | Рисует на листе простую стрелку-пометку, которая не входит в замеры. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Box` |  | лента: лента Annotation, MARKUP TOOLS | Рисует простой прямоугольник-пометку, который не входит в замеры. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Cloud` |  | лента: лента Annotation, MARKUP TOOLS | Рисует на листе облако-пометку для выделения изменений. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Area fill` |  | лента: лента Annotation, MARKUP TOOLS | Рисует на листе пометку в виде залитой цветом области, не замер. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Hide area (white)` |  | лента: лента Annotation, MARKUP TOOLS | Закрывает часть листа сплошным белым на экране и в выгрузке PDF. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Note` | `N` | лента: лента Annotation, MARKUP TOOLS | Пишет текстовую заметку в указанном месте листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Style` |  | лента: лента Annotation, MARKUP TOOLS | Открывает инструменты пометок с выбором цвета и толщины. |  |
 
 ??? note "лента Annotation, STYLE (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Annotation line thickness` |  | лента: лента Annotation, STYLE | Annotation line thickness | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Annotation line thickness` |  | лента: лента Annotation, STYLE | Задаёт толщину линий у пометок на листе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "лента Viewport, LINES & AREA (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Line measurement thickness` |  | лента: лента Viewport, LINES & AREA | Line measurement thickness 0.25 - 4.0 | [Settings и модули](ourplancore-settings.md) |
-    | `Count marker size` |  | лента: лента Viewport, LINES & AREA | Count marker size 0.25 - 4.0 | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Area boundary thickness` |  | лента: лента Viewport, LINES & AREA | Area boundary thickness 0.25 - 4.0 | [Settings и модули](ourplancore-settings.md) |
-    | `Area fill opacity` |  | лента: лента Viewport, LINES & AREA | Area fill opacity 0 - 100 % | [Settings и модули](ourplancore-settings.md) |
+    | `Line measurement thickness` |  | лента: лента Viewport, LINES & AREA | Задаёт толщину линий у линейных замеров, от 0.25 до 4.0. | [Settings и модули](ourplancore-settings.md) |
+    | `Count marker size` |  | лента: лента Viewport, LINES & AREA | Задаёт размер значков подсчёта Count, от 0.25 до 4.0. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Area boundary thickness` |  | лента: лента Viewport, LINES & AREA | Задаёт толщину контура у замеров площади, от 0.25 до 4.0. | [Settings и модули](ourplancore-settings.md) |
+    | `Area fill opacity` |  | лента: лента Viewport, LINES & AREA | Задаёт прозрачность заливки площадей, от 0 до 100 процентов. | [Settings и модули](ourplancore-settings.md) |
 
 ??? note "лента Viewport, RULER / EXTRA (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Ruler screen thickness` |  | лента: лента Viewport, RULER / EXTRA | Ruler screen thickness 0.5 - 6 px | [Инструменты замера](ourplancore-tools.md) |
+    | `Ruler screen thickness` |  | лента: лента Viewport, RULER / EXTRA | Задаёт толщину линии линейки на экране, от 0.5 до 6 пикселей. | [Инструменты замера](ourplancore-tools.md) |
 
 ??? note "лента Viewport, PDF SNAP (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `PDF Snap Tab continuation radius` |  | лента: лента Viewport, PDF SNAP | PDF Snap Tab continuation radius 4 - 96 screen px | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `PDF Snap Tab continuation radius` |  | лента: лента Viewport, PDF SNAP | Задаёт радиус продолжения привязки к PDF клавишей `Tab`, от 4 до 96 пикселей. | [Привязки и трассировка](ourplancore-snap-trace.md) |
 
 ??? note "лента Display, LABELS (7)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `All` |  | лента: лента Display, LABELS | Show every measurement label category | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Line` |  | лента: лента Display, LABELS | Show length label on each line measurement | [Правка и привязки](ourplancore-editing.md) |
-    | `Area` |  | лента: лента Display, LABELS | Show area label on each area measurement | [Инструменты замера](ourplancore-tools.md) |
-    | `Joist` |  | лента: лента Display, LABELS | Show joist summary and segment labels on area joist layouts | [Инструменты замера](ourplancore-tools.md) |
-    | `Count` |  | лента: лента Display, LABELS | Show count label on each count measurement | [Инструменты замера](ourplancore-tools.md) |
-    | `Value label size` |  | лента: лента Display, LABELS | Value label size 0.25 - 3.0 | [Settings и модули](ourplancore-settings.md) |
-    | `w/ page` |  | лента: лента Display, LABELS | Off (default): labels keep a fixed screen size when zooming. On: labels grow/shrink with page zoom. | [Settings и модули](ourplancore-settings.md) |
+    | `All` |  | лента: лента Display, LABELS | Показывает подписи замеров всех видов на листе. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Line` |  | лента: лента Display, LABELS | Показывает подпись длины у каждого линейного замера. | [Правка и привязки](ourplancore-editing.md) |
+    | `Area` |  | лента: лента Display, LABELS | Показывает подпись площади у каждого замера площади. | [Инструменты замера](ourplancore-tools.md) |
+    | `Joist` |  | лента: лента Display, LABELS | Показывает итог и подписи отрезков у раскладок балок в `Joist Area`. | [Инструменты замера](ourplancore-tools.md) |
+    | `Count` |  | лента: лента Display, LABELS | Показывает подпись количества у каждого замера Count. | [Инструменты замера](ourplancore-tools.md) |
+    | `Value label size` |  | лента: лента Display, LABELS | Задаёт размер подписей значений на листе, от 0.25 до 3.0. | [Settings и модули](ourplancore-settings.md) |
+    | `w/ page` |  | лента: лента Display, LABELS | Включает рост и уменьшение подписей вместе с масштабом листа; выключено, размер постоянный. | [Settings и модули](ourplancore-settings.md) |
 
 ??? note "лента Display, OVERLAYS / RENDER (10)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Show` |  | лента: лента Display, OVERLAYS / RENDER | Show or hide the legend overlay on the active sheet | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Legend: Size` |  | лента: лента Display, OVERLAYS / RENDER | Pick legend size preset | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Pos` |  | лента: лента Display, OVERLAYS / RENDER | Pick legend anchor (corner/edge of the sheet) | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Legend: w/page` |  | лента: лента Display, OVERLAYS / RENDER | Off (default): legend keeps a fixed screen size when zooming. On: legend grows/shrinks with page zoom. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Header: Size` |  | лента: лента Display, OVERLAYS / RENDER | Pick header size preset | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Header: w/page` |  | лента: лента Display, OVERLAYS / RENDER | Off (default): header keeps a fixed screen size when zooming. On: header grows/shrinks with page zoom. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Fast pan/zoom` |  | лента: лента Display, OVERLAYS / RENDER | Simplify overlays while panning or zooming. Faster on heavy sheets, off by default for full visual quality. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `PDF layers` |  | лента: лента Display, OVERLAYS / RENDER | Enable the PDF Layers panel and per-page layer scanning. Off by default: pages render faster without layer discovery. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Static image` |  | лента: лента Display, OVERLAYS / RENDER | On by default (PlanSwift-style): show each page as one fixed 150 DPI raster image with no live re-rendering while you zoom or pan. Turn on PDF layers to use the live layer renderer instead. Trade-off: the image softens above ~200% zoom - enable 'Black vector' for crisp linework. | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Black vector` |  | лента: лента Display, OVERLAYS / RENDER | Draw crisp black vector linework on top of the static image, razor-sharp at any zoom. Only lines are vector - text, hatches and fills stay raster; scanned PDFs have no vectors to draw. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Show` |  | лента: лента Display, OVERLAYS / RENDER | Показывает или прячет легенду на активном листе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Legend: Size` |  | лента: лента Display, OVERLAYS / RENDER | Выбирает готовый размер легенды на листе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Pos` |  | лента: лента Display, OVERLAYS / RENDER | Выбирает угол или край листа, к которому привязана легенда. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Legend: w/page` |  | лента: лента Display, OVERLAYS / RENDER | Включает рост и уменьшение легенды вместе с масштабом листа; выключено, размер постоянный. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Header: Size` |  | лента: лента Display, OVERLAYS / RENDER | Выбирает готовый размер заголовка на листе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Header: w/page` |  | лента: лента Display, OVERLAYS / RENDER | Включает рост и уменьшение заголовка вместе с масштабом листа; выключено, размер постоянный. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Fast pan/zoom` |  | лента: лента Display, OVERLAYS / RENDER | Упрощает наложения во время сдвига и масштабирования, тяжёлые листы двигаются быстрее. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `PDF layers` |  | лента: лента Display, OVERLAYS / RENDER | Включает панель `PDF Layers` и поиск слоёв на листах; без неё листы грузятся быстрее. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Static image` |  | лента: лента Display, OVERLAYS / RENDER | Показывает лист одной картинкой 150 DPI без перерисовки при сдвиге и масштабе. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Black vector` |  | лента: лента Display, OVERLAYS / RENDER | Рисует поверх картинки листа чёткие чёрные векторные линии при любом масштабе. | [Листы (Pages)](ourplancore-pages.md) |
 
 ??? note "лента Display, UNITS & VIEW (6)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `ft / sf` |  | лента: лента Display, UNITS & VIEW | Imperial units (ft / sf / ea). Off = metric. | [Settings и модули](ourplancore-settings.md) |
-    | `Viewport PDF render RAM/quality profile` |  | лента: лента Display, UNITS & VIEW | Viewport PDF render RAM/quality profile Options: Balanced, High, Max. | [Settings и модули](ourplancore-settings.md) |
-    | `Choose the background around the sheet` |  | лента: лента Display, UNITS & VIEW | Choose the background around the sheet Options: White, Gray, Dark. | [Settings и модули](ourplancore-settings.md) |
-    | `Choose a softer page background tint` |  | лента: лента Display, UNITS & VIEW | Choose a softer page background tint Options: White, Soft gray, Medium gray, Dark gray, Warm, Soft green, Black. | [Settings и модули](ourplancore-settings.md) |
-    | `Dark` |  | лента: лента Display, UNITS & VIEW | Toggle dark/light UI theme | [Settings и модули](ourplancore-settings.md) |
-    | `Mouse-wheel zoom step per notch` |  | лента: лента Display, UNITS & VIEW | Mouse-wheel zoom step per notch 1.05 - 2.5x (PlanSwift-fast at 2x) | [Settings и модули](ourplancore-settings.md) |
+    | `ft / sf` |  | лента: лента Display, UNITS & VIEW | Включает имперские единицы ft, sf, ea; выключено, метрические. | [Settings и модули](ourplancore-settings.md) |
+    | `Viewport PDF render RAM/quality profile` |  | лента: лента Display, UNITS & VIEW | Выбирает профиль памяти и качества отрисовки PDF: `Balanced`, `High` или `Max`. | [Settings и модули](ourplancore-settings.md) |
+    | `Choose the background around the sheet` |  | лента: лента Display, UNITS & VIEW | Выбирает цвет фона вокруг листа: белый, серый или тёмный. | [Settings и модули](ourplancore-settings.md) |
+    | `Choose a softer page background tint` |  | лента: лента Display, UNITS & VIEW | Выбирает мягкий оттенок фона самого листа, от белого до чёрного. | [Settings и модули](ourplancore-settings.md) |
+    | `Dark` |  | лента: лента Display, UNITS & VIEW | Переключает тёмную и светлую тему интерфейса. | [Settings и модули](ourplancore-settings.md) |
+    | `Mouse-wheel zoom step per notch` |  | лента: лента Display, UNITS & VIEW | Задаёт шаг масштаба на один щелчок колеса мыши, от 1.05 до 2.5. | [Settings и модули](ourplancore-settings.md) |
 
 ## Полоса XL (Excel) справа от листа (21)
 
@@ -210,27 +210,27 @@
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `ALL` |  | полоса XL: полоса XL | Run ALL for one selected building/root: SQFT, Walls, Gables, Truss Heel, Parapet, Eve/Rakes, Openings, then framing floors and shifted Headers | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Legend (LG)` |  | полоса XL: полоса XL | Open the job-specific legend used by Beams, Posts, and Headers. ALL also exports framing floors. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `SQFT (SF)` |  | полоса XL: полоса XL | SQFT: append to J:L, select J:K, run A2_SQFT_calc | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Walls (WL)` |  | полоса XL: полоса XL | Walls: run A3, preserve mandatory A:H output rows, then delete zero rows | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Gables (GB)` |  | полоса XL: полоса XL | Gables: append to J:L, select J:K, run A2_SQFT_calc | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Truss Heel (TH)` |  | полоса XL: полоса XL | Truss Heel: append to J:L, select J:K, run A2_SQFT_calc | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Parapet (PP)` |  | полоса XL: полоса XL | Parapet: append to J:L, select J:K, run A4_Parapet | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Eve/Rakes (E/R)` |  | полоса XL: полоса XL | Eve/Rakes: Eve by LF descending, then Rake by LF descending; run A6_Eve_Rakes | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Openings (OP)` |  | полоса XL: полоса XL | Openings: append from Z158, run C_SumNearWindowValues per floor, then A5_Openings | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Sheathing (SH)` |  | полоса XL: полоса XL | Sheathing: run A7_walls_sheathing with the Zip / Ply / OSB text of column J (or 'wall sheathing = ...' from the LG legend); it keeps one sheathing system and removes the other rows. Runs after Walls in ALL. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Shear walls (SW)` |  | полоса XL: полоса XL | Shear walls: stage shear walls/<floor>/shear and holdowns in J:L, fill the Shear Walls row (interior walls, ext walls use the wall sheathing) and one Holdowns row per holdown in each floor's walls block. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Shaft walls (SHF)` |  | полоса XL: полоса XL | Shaft walls: stage the shaft wall lines and add (or update) the Shaft walls block above the first framing list: panels, CH and J channels from LF x wall height. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Units (UN)` |  | полоса XL: полоса XL | Units: build the units table (Mark x 2x4/2x6/half sizes, per-floor counts and SUMPRODUCT totals) at the anchor set in Settings (AM3) from units/<Mark size> lines and units/<floor>/<Mark> counts. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Balconies (BL)` |  | полоса XL: полоса XL | Balconies: one '#n Upper Balcony/Terrace List W' x L' N units' block per balcony size (and '#n Porch Framing List' per porch size) from SQFT areas named blcny / balcony / porch, copied from the template's #1 block. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Framing (FR)` |  | полоса XL: полоса XL | Framing ALL for the selected building: posts, beams and joists replace their rows in each floor framing list (other template rows stay), headers go to the wall block one floor down, details are staged in J:L. A missing list (6th floor, balcony) is added. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Posts (PS)` |  | полоса XL: полоса XL | Posts: replace the Posts rows in each framing list of the selected building. Uses the LG legend for sizes. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Beams (BM)` |  | полоса XL: полоса XL | Beams: replace the Beam rows in each framing list of the selected building. Uses the LG legend for sizes. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Headers (HD)` |  | полоса XL: полоса XL | Headers: rebuild the header rows of the wall block one floor below each framing floor; Wall Sheathing and the rows after it stay. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Joists (JS)` |  | полоса XL: полоса XL | Joists: replace the Joist rows in each framing list; Extra joists of the same length join the row and short joists go on double stock (Settings). | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Details (DT)` |  | полоса XL: полоса XL | Details: stage the detail lines of each floor in J:L under a label row, once. A group already staged is left alone. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Stairs (ST)` |  | полоса XL: полоса XL | Stairs: add the stair takeoffs before Subfloor of each framing list; a repeated export replaces them. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `ALL` |  | полоса XL: полоса XL | Запускает всю настроенную цепочку макросов Excel для одного выбранного корпуса. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Legend (LG)` |  | полоса XL: полоса XL | Открывает легенду проекта, по которой выгружаются Beams, Posts и Headers. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `SQFT (SF)` |  | полоса XL: полоса XL | Добавляет выбранные строки SQFT в шаблон и запускает макрос `A2_SQFT_calc`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Walls (WL)` |  | полоса XL: полоса XL | Добавляет строки стен с группами этажей и запускает макрос `A3_Walls_Calc_AllGroup`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Gables (GB)` |  | полоса XL: полоса XL | Добавляет выбранные строки Gables и запускает макрос `A2_SQFT_calc`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Truss Heel (TH)` |  | полоса XL: полоса XL | Добавляет выбранные строки Truss Heel и запускает макрос `A2_SQFT_calc`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Parapet (PP)` |  | полоса XL: полоса XL | Добавляет выбранные строки Parapet и запускает макрос `A4_Parapet`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Eve/Rakes (E/R)` |  | полоса XL: полоса XL | Добавляет строки Eves и Rakes по убыванию длины и запускает `A6_Eve_Rakes`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Openings (OP)` |  | полоса XL: полоса XL | Добавляет проёмы с `Z158`, группирует близкие окна по этажам и запускает `A5_Openings`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Sheathing (SH)` |  | полоса XL: полоса XL | Запускает макрос `A7_walls_sheathing` и оставляет одну систему обшивки по колонке J или легенде. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Shear walls (SW)` |  | полоса XL: полоса XL | Заполняет строки Shear Walls и Holdowns в блоке стен каждого этажа. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Shaft walls (SHF)` |  | полоса XL: полоса XL | Добавляет или обновляет блок Shaft walls с панелями и профилями CH и J. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Units (UN)` |  | полоса XL: полоса XL | Строит таблицу типовых квартир с подсчётом по этажам и итогами `SUMPRODUCT`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Balconies (BL)` |  | полоса XL: полоса XL | Создаёт по блоку списка на каждый размер балкона, террасы и porch из площадей SQFT. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Framing (FR)` |  | полоса XL: полоса XL | Выгружает posts, beams, joists, headers и details выбранного корпуса в framing lists. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Posts (PS)` |  | полоса XL: полоса XL | Заменяет строки Posts в каждом framing list выбранного корпуса по легенде. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Beams (BM)` |  | полоса XL: полоса XL | Заменяет строки Beam в каждом framing list выбранного корпуса по легенде. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Headers (HD)` |  | полоса XL: полоса XL | Пересобирает строки headers в блоке стен этажом ниже каждого framing floor. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Joists (JS)` |  | полоса XL: полоса XL | Заменяет строки Joist в каждом framing list; Extra joists той же длины добавляются в строку. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Details (DT)` |  | полоса XL: полоса XL | Один раз выкладывает линии узлов каждого этажа в колонки J, K, L. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Stairs (ST)` |  | полоса XL: полоса XL | Добавляет замеры лестниц перед строкой Subfloor каждого framing list. | [Экспорт в Excel](ourplancore-excel.md) |
 
 ## Полосы значков слева и справа от листа (набор по умолчанию) (33)
 
@@ -238,44 +238,44 @@
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Open Selected in Tabs` |  | полоса значков: левая полоса значков | Open the selected Pages sheets as tabs. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Detach to Windows` |  | полоса значков: левая полоса значков | Open the selected Pages sheets in detached windows. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Tile on Monitor 2` |  | полоса значков: левая полоса значков | Tile the selected sheets on monitor 2. | [Workspace, Job Tracker, CLI](ourplancore-workspace.md) |
-    | `Overlay` |  | полоса значков: левая полоса значков | Choose a matching sheet overlay for the active sheet. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Move Overlay by Points` |  | полоса значков: левая полоса значков | Align the active sheet overlay by matching points. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Name / Scale Setup` | `F5` | полоса значков: левая полоса значков | Open the manual Name / Scale window for the active sheet. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Pages A-Z` |  | полоса значков: левая полоса значков | Sort children of the selected Pages folder (or root) alphabetically. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Pages Z-A` |  | полоса значков: левая полоса значков | Sort children of the selected Pages folder (or root) in reverse alphabetical order. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Pages A/S` |  | полоса значков: левая полоса значков | Move A sheets to Arch, S sheets to Struct, and trailing '-' sheets to others. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Pages D/Sec/WT` |  | полоса значков: левая полоса значков | Move suffix sheets into details/sections/units and reorder v/wt/ft/sv/sw at Pages root. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Auto Page Folders` |  | полоса значков: левая полоса значков | Create the standard page folder tree. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Collapse Pages Tree` |  | полоса значков: левая полоса значков | Collapse all Pages nodes. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Expand Pages Tree` |  | полоса значков: левая полоса значков | Expand all Pages nodes. | [Инструменты замера](ourplancore-tools.md) |
-    | `Configure the command strip (gear)` |  | полоса значков: левая полоса значков | Configure the left command strip: pick any commands for the strip. |  |
+    | `Open Selected in Tabs` |  | полоса значков: левая полоса значков | Открывает выбранные в дереве Pages листы во вкладках. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Detach to Windows` |  | полоса значков: левая полоса значков | Открывает выбранные в дереве Pages листы в отдельных окнах. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Tile on Monitor 2` |  | полоса значков: левая полоса значков | Открывает выбранные листы в отдельных окнах и раскладывает их плиткой на втором мониторе. | [Workspace, Job Tracker, CLI](ourplancore-workspace.md) |
+    | `Overlay` |  | полоса значков: левая полоса значков | Подбирает подходящий лист для наложения на активный. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Move Overlay by Points` |  | полоса значков: левая полоса значков | Совмещает наложение активного листа по парам точек. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Name / Scale Setup` | `F5` | полоса значков: левая полоса значков | Открывает окно ручной настройки имени и масштаба активного листа. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Pages A-Z` |  | полоса значков: левая полоса значков | Сортирует содержимое выбранной папки Pages или корня по алфавиту. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Pages Z-A` |  | полоса значков: левая полоса значков | Сортирует содержимое выбранной папки Pages или корня в обратном алфавитном порядке. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Pages A/S` |  | полоса значков: левая полоса значков | Раскладывает листы A в `Arch`, листы S в `Struct`, остальные в прочие. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Pages D/Sec/WT` |  | полоса значков: левая полоса значков | Раскладывает листы с суффиксами по папкам details, sections, units и упорядочивает корень Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Auto Page Folders` |  | полоса значков: левая полоса значков | Создаёт стандартное дерево папок листов в выбранной папке Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Collapse Pages Tree` |  | полоса значков: левая полоса значков | Сворачивает все папки в дереве Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Expand Pages Tree` |  | полоса значков: левая полоса значков | Разворачивает все папки в дереве Pages. | [Инструменты замера](ourplancore-tools.md) |
+    | `Configure the command strip (gear)` |  | полоса значков: левая полоса значков | Открывает настройку полосы значков: какие команды на ней показывать. |  |
 
 ??? note "правая полоса значков (19)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Quick Calculator` |  | полоса значков: правая полоса значков | Toggle the slide-out calculator with feet-inches math. | [Workspace, Job Tracker, CLI](ourplancore-workspace.md) |
-    | `New Takeoff Item` | `T` | полоса значков: правая полоса значков | Create a takeoff item under the selected/root folder. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `New Takeoff Folder` |  | полоса значков: правая полоса значков | Create a takeoff folder under the selected/root folder. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Record Active Takeoff` | `Space` | полоса значков: правая полоса значков | Start or stop recording into the active target item. | [Инструменты замера](ourplancore-tools.md) |
-    | `Show Active Takeoff` |  | полоса значков: правая полоса значков | Scroll the Takeoffs tree to the active target item. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Active Takeoff Properties` |  | полоса значков: правая полоса значков | Edit properties for the active target item. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Merge Selected Takeoffs / Measurements` | `Ctrl+M` | полоса значков: правая полоса значков | Merge selected takeoff items from all sheets, or move selected measurement segments into another takeoff. | [Правка и привязки](ourplancore-editing.md) |
-    | `Split Selected Takeoffs / Measurements` | `Ctrl+Shift+M` | полоса значков: правая полоса значков | Split whole takeoffs across all sheets, or move selected measurements or Count marks into a new takeoff. | [Правка и привязки](ourplancore-editing.md) |
-    | `Sort Takeoffs A-Z` |  | полоса значков: правая полоса значков | Sort children of the selected Takeoffs folder (or root) alphabetically. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Takeoffs Z-A` |  | полоса значков: правая полоса значков | Sort children of the selected Takeoffs folder (or root) in reverse alphabetical order. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Takeoffs: Walls` |  | полоса значков: правая полоса значков | Sort wall takeoffs in the selected folder and subfolders: ext, corr, dem, then 2x6/2x4 sizes. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Takeoffs: Details by Sheet` |  | полоса значков: правая полоса значков | Group detail takeoffs like 1/A501 by the sheet after the slash, ordered as in the Pages tree. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Auto Takeoff Tree` |  | полоса значков: правая полоса значков | Create the standard takeoff folder tree. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Create Takeoffs From Pages` |  | полоса значков: правая полоса значков | Create top takeoff folders from CAPS page/folder names. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Export to Current Excel` |  | полоса значков: правая полоса значков | Write selected takeoff folder/item rows to the active cell in an open Excel workbook. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Collapse Takeoffs Tree` |  | полоса значков: правая полоса значков | Collapse all Takeoffs nodes. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Expand Takeoffs Tree` |  | полоса значков: правая полоса значков | Expand all Takeoffs nodes. | [Инструменты замера](ourplancore-tools.md) |
-    | `Configure the command strip (gear)` |  | полоса значков: правая полоса значков | Configure the right command strip: pick any commands for the strip. |  |
-    | `Terminal (>_)` |  | полоса значков: правая полоса значков | Show / hide Codex and Claude terminals | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Quick Calculator` |  | полоса значков: правая полоса значков | Показывает или прячет выдвижной калькулятор со счётом в футах и дюймах. | [Workspace, Job Tracker, CLI](ourplancore-workspace.md) |
+    | `New Takeoff Item` | `T` | полоса значков: правая полоса значков | Создаёт позицию takeoff в выбранной папке или в корне. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `New Takeoff Folder` |  | полоса значков: правая полоса значков | Создаёт папку takeoff в выбранной папке или в корне. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Record Active Takeoff` | `Space` | полоса значков: правая полоса значков | Начинает или останавливает запись в активную позицию. | [Инструменты замера](ourplancore-tools.md) |
+    | `Show Active Takeoff` |  | полоса значков: правая полоса значков | Прокручивает дерево Takeoffs к активной позиции. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Active Takeoff Properties` |  | полоса значков: правая полоса значков | Открывает свойства активной позиции для правки. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Merge Selected Takeoffs / Measurements` | `Ctrl+M` | полоса значков: правая полоса значков | Объединяет выбранные позиции со всех листов или переносит выбранные замеры в другую позицию. | [Правка и привязки](ourplancore-editing.md) |
+    | `Split Selected Takeoffs / Measurements` | `Ctrl+Shift+M` | полоса значков: правая полоса значков | Делит позиции по всем листам или выносит выбранные замеры и точки в новую позицию. | [Правка и привязки](ourplancore-editing.md) |
+    | `Sort Takeoffs A-Z` |  | полоса значков: правая полоса значков | Сортирует содержимое выбранной папки Takeoffs или корня по алфавиту. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Takeoffs Z-A` |  | полоса значков: правая полоса значков | Сортирует содержимое выбранной папки Takeoffs или корня в обратном алфавитном порядке. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Takeoffs: Walls` |  | полоса значков: правая полоса значков | Сортирует стены в папке и подпапках: ext, corr, dem, затем сечения 2x6 и 2x4. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Takeoffs: Details by Sheet` |  | полоса значков: правая полоса значков | Группирует узлы вида `1/A501` по листу после косой черты в порядке дерева Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Auto Takeoff Tree` |  | полоса значков: правая полоса значков | Создаёт стандартное дерево папок takeoff для нового проекта. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Create Takeoffs From Pages` |  | полоса значков: правая полоса значков | Создаёт верхние папки takeoff по именам листов и папок Pages, набранным заглавными. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Export to Current Excel` |  | полоса значков: правая полоса значков | Пишет выбранную папку или позицию в активную ячейку открытой книги Excel. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Collapse Takeoffs Tree` |  | полоса значков: правая полоса значков | Сворачивает все папки в дереве Takeoffs. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Expand Takeoffs Tree` |  | полоса значков: правая полоса значков | Разворачивает все папки в дереве Takeoffs. | [Инструменты замера](ourplancore-tools.md) |
+    | `Configure the command strip (gear)` |  | полоса значков: правая полоса значков | Открывает настройку полосы значков: какие команды на ней показывать. |  |
+    | `Terminal (>_)` |  | полоса значков: правая полоса значков | Показывает или прячет терминалы Codex и Claude с контекстом листа, кропов и закладок. | [Консоль ИИ](ourplancore-ai-console.md) |
 
 ## Панели и вкладки рабочей области (168)
 
@@ -283,359 +283,359 @@
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Close other sheets and keep the main viewport sheet` |  | панель: Main View, панель Pages | Close every other sheet tab and all detached windows; keep the sheet shown in the main viewport | [Листы (Pages)](ourplancore-pages.md) |
-    | `Close detached sheets on monitor 2` |  | панель: Main View, панель Pages | Close all detached sheet windows on monitor 2 | [Листы (Pages)](ourplancore-pages.md) |
-    | `Tile M2` |  | панель: Main View, панель Pages | Open selected Pages sheets in detached windows and tile them on monitor 2 | [Листы (Pages)](ourplancore-pages.md) |
-    | `Toggle vertical Tile M2 layout` |  | панель: Main View, панель Pages | Toggle vertical Tile M2 layout (filled = vertical) | [Листы (Pages)](ourplancore-pages.md) |
-    | `Open` |  | панель: Main View, панель Pages | Open the selected Pages sheets | [Листы (Pages)](ourplancore-pages.md) |
-    | `Refresh Pages tree` |  | панель: Main View, панель Pages | Refresh Pages tree | [Листы (Pages)](ourplancore-pages.md) |
-    | `Collapse all Pages nodes` |  | панель: Main View, панель Pages | Collapse all Pages nodes | [Листы (Pages)](ourplancore-pages.md) |
-    | `Expand all Pages nodes` |  | панель: Main View, панель Pages | Expand all Pages nodes | [Инструменты замера](ourplancore-tools.md) |
-    | `New Folder` |  | панель: Main View, панель Pages | Create a new folder under the selected Pages folder | [Листы (Pages)](ourplancore-pages.md) |
-    | `Name` |  | панель: Main View, панель Pages | Preview automatic names for the selected sheet or folder | [Листы (Pages)](ourplancore-pages.md) |
-    | `Scale` |  | панель: Main View, панель Pages | Preview automatic scales for the selected sheet or folder | [Листы (Pages)](ourplancore-pages.md) |
-    | `Name+Scale` |  | панель: Main View, панель Pages | Preview automatic names and scales for the selected sheet or folder | [Листы (Pages)](ourplancore-pages.md) |
+    | `Close other sheets and keep the main viewport sheet` |  | панель: Main View, панель Pages | Закрывает все прочие вкладки и отдельные окна листов, оставляет лист в главном окне. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Close detached sheets on monitor 2` |  | панель: Main View, панель Pages | Закрывает все отдельные окна листов на втором мониторе. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Tile M2` |  | панель: Main View, панель Pages | Открывает выбранные листы в отдельных окнах и раскладывает их плиткой на втором мониторе. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Toggle vertical Tile M2 layout` |  | панель: Main View, панель Pages | Переключает раскладку плитки на втором мониторе на вертикальную и обратно. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Open` |  | панель: Main View, панель Pages | Открывает выбранные в дереве Pages листы. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Refresh Pages tree` |  | панель: Main View, панель Pages | Перечитывает дерево Pages из папки текущего проекта. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Collapse all Pages nodes` |  | панель: Main View, панель Pages | Сворачивает все папки в дереве Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Expand all Pages nodes` |  | панель: Main View, панель Pages | Разворачивает все папки в дереве Pages. | [Инструменты замера](ourplancore-tools.md) |
+    | `New Folder` |  | панель: Main View, панель Pages | Создаёт новую папку внутри выбранной папки Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Name` |  | панель: Main View, панель Pages | Показывает и применяет автоматические имена листов из PDF. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Scale` |  | панель: Main View, панель Pages | Показывает и применяет автоматические масштабы листов из PDF. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Name+Scale` |  | панель: Main View, панель Pages | Показывает и применяет автоматические имена и масштабы листов из PDF. | [Листы (Pages)](ourplancore-pages.md) |
 
 ??? note "Main View, панель Pages, быстрая строка (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Folder Template Mode` |  | панель: Main View, панель Pages, быстрая строка | Folder template mode for Pages and Takeoffs Options: Auto, COM, EWP. | [Листы (Pages)](ourplancore-pages.md) |
-    | `+ New` |  | панель: Main View, панель Pages, быстрая строка | Create pages and folders | [Листы (Pages)](ourplancore-pages.md) |
-    | `Setup` |  | панель: Main View, панель Pages, быстрая строка | Page setup and sorting actions | [Листы (Pages)](ourplancore-pages.md) |
+    | `Folder Template Mode` |  | панель: Main View, панель Pages, быстрая строка | Выбирает шаблон папок для Pages и Takeoffs: `Auto`, `COM` или `EWP`. | [Листы (Pages)](ourplancore-pages.md) |
+    | `+ New` |  | панель: Main View, панель Pages, быстрая строка | Открывает меню создания листов и папок в дереве Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Setup` |  | панель: Main View, панель Pages, быстрая строка | Открывает меню настройки и сортировки листов в дереве Pages. | [Листы (Pages)](ourplancore-pages.md) |
 
 ??? note "Main View > Pages, панель Pages (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Match page folder case exactly` |  | панель: Main View > Pages, панель Pages | Match page folder case exactly | [Листы (Pages)](ourplancore-pages.md) |
+    | `Match page folder case exactly` |  | панель: Main View > Pages, панель Pages | Ищет папки Pages с точным учётом заглавных и строчных букв. | [Листы (Pages)](ourplancore-pages.md) |
 
 ??? note "Main View > PDF Layers, панель Pages (7)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Load` |  | панель: Main View > PDF Layers, панель Pages | Scan PDF layers for the active page on demand | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `All On` |  | панель: Main View > PDF Layers, панель Pages | Show all PDF layers on the active page | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `All Off` |  | панель: Main View > PDF Layers, панель Pages | Hide all PDF layers on the active page | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Clear Hi` |  | панель: Main View > PDF Layers, панель Pages | Clear the layer highlight overlay | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Layer Trace` |  | панель: Main View > PDF Layers, панель Pages | Isolate and trace the selected PDF layer | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Full` |  | панель: Main View > PDF Layers, панель Pages | Cycle the layer-trace dimming (Full / dimmed / off) | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Apply` |  | панель: Main View > PDF Layers, панель Pages |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Load` |  | панель: Main View > PDF Layers, панель Pages | Ищет слои PDF на активном листе по запросу. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `All On` |  | панель: Main View > PDF Layers, панель Pages | Включает все слои PDF на активном листе. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `All Off` |  | панель: Main View > PDF Layers, панель Pages | Выключает все слои PDF на активном листе. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Clear Hi` |  | панель: Main View > PDF Layers, панель Pages | Снимает подсветку выделенных слоёв PDF на листе. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Layer Trace` |  | панель: Main View > PDF Layers, панель Pages | Выделяет выбранный слой PDF и обводит его линии в замер. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Full` |  | панель: Main View > PDF Layers, панель Pages | Переключает затемнение в `Layer Trace`: полное, приглушённое или выключенное; то же делает `Tab`. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Apply` |  | панель: Main View > PDF Layers, панель Pages | Применяет трассировку активного слоя PDF в точке под указателем. | [Привязки и трассировка](ourplancore-snap-trace.md) |
 
 ??? note "Main View, панель Bookmarks (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Return Bookmarks to the tab list` |  | панель: Main View, панель Bookmarks | Return Bookmarks to the tab list | [Прочее](ourplancore-extras-other.md) |
+    | `Return Bookmarks to the tab list` |  | панель: Main View, панель Bookmarks | Возвращает панель закладок обратно в список вкладок. | [Прочее](ourplancore-extras-other.md) |
 
 ??? note "Main View, панель Templates (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Return Templates to the tab list` |  | панель: Main View, панель Templates | Return Templates to the tab list |  |
+    | `Return Templates to the tab list` |  | панель: Main View, панель Templates | Возвращает панель шаблонов обратно в список вкладок. |  |
 
 ??? note "Main View, стартовая карточка (проект не открыт) (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Open a recent job - Recently used` |  | панель: Main View, стартовая карточка (проект не открыт) | Pick from recently used jobs | [Проекты и сохранение](job-creation-storage.md) |
-    | `New blank job - Start empty` |  | панель: Main View, стартовая карточка (проект не открыт) | Create an empty job; add sheets later | [Проекты и сохранение](job-creation-storage.md) |
-    | `New job from PDFs - Import a folder of drawings` |  | панель: Main View, стартовая карточка (проект не открыт) | Create a job from a folder of PDF drawings | [Проекты и сохранение](job-creation-storage.md) |
-    | `Open sample job - Explore a demo` |  | панель: Main View, стартовая карточка (проект не открыт) | Open the bundled sample job to explore | [Проекты и сохранение](job-creation-storage.md) |
+    | `Open a recent job - Recently used` |  | панель: Main View, стартовая карточка (проект не открыт) | Открывает проект из списка недавно использованных. | [Проекты и сохранение](job-creation-storage.md) |
+    | `New blank job - Start empty` |  | панель: Main View, стартовая карточка (проект не открыт) | Создаёт пустой проект, листы можно добавить позже. | [Проекты и сохранение](job-creation-storage.md) |
+    | `New job from PDFs - Import a folder of drawings` |  | панель: Main View, стартовая карточка (проект не открыт) | Создаёт проект из папки с чертежами PDF. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Open sample job - Explore a demo` |  | панель: Main View, стартовая карточка (проект не открыт) | Открывает встроенный учебный проект для знакомства с программой. | [Проекты и сохранение](job-creation-storage.md) |
 
 ??? note "Main View, строка Layer Trace (2)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Manual` |  | панель: Main View, строка Layer Trace | Toggle Manual / PDF Layer Trace mode in the viewport | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Full` |  | панель: Main View, строка Layer Trace | Cycle Layer Trace mode (Tab while Layer Trace is on) | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Manual` |  | панель: Main View, строка Layer Trace | Переключает ручную трассировку и трассировку по слою PDF на листе. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Full` |  | панель: Main View, строка Layer Trace | Переключает затемнение в `Layer Trace`: полное, приглушённое или выключенное; то же делает `Tab`. | [Привязки и трассировка](ourplancore-snap-trace.md) |
 
 ??? note "Main View, панель Takeoffs (8)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Refresh Takeoffs tree` |  | панель: Main View, панель Takeoffs | Refresh Takeoffs tree | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Collapse all Takeoffs nodes` |  | панель: Main View, панель Takeoffs | Collapse all Takeoffs nodes | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Expand all Takeoffs nodes` |  | панель: Main View, панель Takeoffs | Expand all Takeoffs nodes | [Инструменты замера](ourplancore-tools.md) |
-    | `New Folder` |  | панель: Main View, панель Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `New Item` | `T` | панель: Main View, панель Takeoffs | Create a takeoff item (T) | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Delete Empty` |  | панель: Main View, панель Takeoffs | Delete all takeoff items with zero measurement sections; Ctrl+Z restores the batch | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `More` |  | панель: Main View, панель Takeoffs | More takeoff actions | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Export` |  | панель: Main View, панель Takeoffs | Save or export quantities | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Refresh Takeoffs tree` |  | панель: Main View, панель Takeoffs | Перечитывает дерево Takeoffs из папки текущего проекта. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Collapse all Takeoffs nodes` |  | панель: Main View, панель Takeoffs | Сворачивает все папки в дереве Takeoffs. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Expand all Takeoffs nodes` |  | панель: Main View, панель Takeoffs | Разворачивает все папки в дереве Takeoffs. | [Инструменты замера](ourplancore-tools.md) |
+    | `New Folder` |  | панель: Main View, панель Takeoffs | Создаёт папку takeoff в выбранной папке или в корне. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `New Item` | `T` | панель: Main View, панель Takeoffs | Создаёт позицию takeoff в выбранной папке или в корне. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Delete Empty` |  | панель: Main View, панель Takeoffs | Удаляет все позиции без замеров; `Ctrl+Z` возвращает всю пачку. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `More` |  | панель: Main View, панель Takeoffs | Открывает меню дополнительных действий панели Takeoffs, активной позиции или `AI Inbox`. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Export` |  | панель: Main View, панель Takeoffs | Открывает меню сохранения и выгрузки количеств. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 
 ??? note "Main View, панель Takeoffs, строка активной позиции (7)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Record` | `Space` | панель: Main View, панель Takeoffs, строка активной позиции | Start or stop recording into the active takeoff item (Space) | [Инструменты замера](ourplancore-tools.md) |
-    | `More` |  | панель: Main View, панель Takeoffs, строка активной позиции | More active target actions | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Props` |  | панель: Main View, панель Takeoffs, строка активной позиции | Edit active takeoff item properties | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Find` |  | панель: Main View, панель Takeoffs, строка активной позиции | Show active takeoff item in the tree | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Sheet` |  | панель: Main View, панель Takeoffs, строка активной позиции | Choose a takeoff item measured on this sheet | [Листы (Pages)](ourplancore-pages.md) |
-    | `Switch to next takeoff item` |  | панель: Main View, панель Takeoffs, строка активной позиции | Switch to next takeoff item | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Switch to previous takeoff item` |  | панель: Main View, панель Takeoffs, строка активной позиции | Switch to previous takeoff item | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Record` | `Space` | панель: Main View, панель Takeoffs, строка активной позиции | Начинает или останавливает запись в активную позицию. | [Инструменты замера](ourplancore-tools.md) |
+    | `More` |  | панель: Main View, панель Takeoffs, строка активной позиции | Открывает меню дополнительных действий панели Takeoffs, активной позиции или `AI Inbox`. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Props` |  | панель: Main View, панель Takeoffs, строка активной позиции | Открывает свойства активной позиции для правки. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Find` |  | панель: Main View, панель Takeoffs, строка активной позиции | Прокручивает дерево Takeoffs к активной позиции. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Sheet` |  | панель: Main View, панель Takeoffs, строка активной позиции | Выбирает позицию takeoff из тех, что уже меряли на этом листе. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Switch to next takeoff item` |  | панель: Main View, панель Takeoffs, строка активной позиции | Делает активной следующую позицию takeoff в списке целей. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Switch to previous takeoff item` |  | панель: Main View, панель Takeoffs, строка активной позиции | Делает активной предыдущую позицию takeoff в списке целей. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 
 ??? note "Main View, панель Takeoffs, дерево (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Match takeoff folder case exactly` |  | панель: Main View, панель Takeoffs, дерево | Match takeoff folder case exactly | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Match takeoff folder case exactly` |  | панель: Main View, панель Takeoffs, дерево | Ищет папки Takeoffs с точным учётом заглавных и строчных букв. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 
 ??? note "Main View, AI Inbox (6)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Toggle AI Inbox` |  | панель: Main View, AI Inbox | Expand or collapse the AI Inbox | [ИИ и терминалы](ourplancore-ai.md) |
-    | `+ Add` |  | панель: Main View, AI Inbox |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Run AI` |  | панель: Main View, AI Inbox |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `More` |  | панель: Main View, AI Inbox | More AI Inbox actions | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Filter AI markers by type` |  | панель: Main View, AI Inbox | Filter AI markers by type | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Filter AI markers by sample kind` |  | панель: Main View, AI Inbox | Filter AI markers by sample kind | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Toggle AI Inbox` |  | панель: Main View, AI Inbox | Сворачивает или разворачивает панель `AI Inbox`. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `+ Add` |  | панель: Main View, AI Inbox | Сохраняет ручное наблюдение или заметку-маркер ИИ для проекта и листа. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Run AI` |  | панель: Main View, AI Inbox | Запускает выбранный запрос из `AI Inbox`. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `More` |  | панель: Main View, AI Inbox | Открывает меню дополнительных действий панели Takeoffs, активной позиции или `AI Inbox`. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Filter AI markers by type` |  | панель: Main View, AI Inbox | Фильтрует маркеры ИИ в `AI Inbox` по типу. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Filter AI markers by sample kind` |  | панель: Main View, AI Inbox | Фильтрует маркеры ИИ в `AI Inbox` по виду образца. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "Sheet Manager, группа PDF (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Import PDF(s)` |  | панель: Sheet Manager, группа PDF | Add one or many PDF files to the current job | [Менеджеры](ourplancore-managers.md) |
-    | `PDF Takeoffs` |  | панель: Sheet Manager, группа PDF | Import PDF measurement annotations into takeoff items | [Прочее](ourplancore-extras-other.md) |
-    | `Export PDF` |  | панель: Sheet Manager, группа PDF | Export selected or all sheets to PDF | [PDF и сдача](ourplancore-pdf.md) |
+    | `Import PDF(s)` |  | панель: Sheet Manager, группа PDF | Добавляет один или несколько PDF в текущий проект. | [Менеджеры](ourplancore-managers.md) |
+    | `PDF Takeoffs` |  | панель: Sheet Manager, группа PDF | Переносит листы PDF вместе с замерами и линейками PDF в позиции takeoff. | [Прочее](ourplancore-extras-other.md) |
+    | `Export PDF` |  | панель: Sheet Manager, группа PDF | Выгружает выбранные или все листы в один PDF. | [PDF и сдача](ourplancore-pdf.md) |
 
 ??? note "Sheet Manager, группа Raster (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `PDF` |  | панель: Sheet Manager, группа Raster | Disable raster rendering for the selected sheets | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Auto` |  | панель: Sheet Manager, группа Raster | Restore adaptive raster DPI for the selected sheets | [Листы (Pages)](ourplancore-pages.md) |
-    | `Options...` |  | панель: Sheet Manager, группа Raster | Raster format, prepare, first-frame, cleanup, and cancel options | [Проекты и сохранение](job-creation-storage.md) |
+    | `PDF` |  | панель: Sheet Manager, группа Raster | Выключает растровую отрисовку у выбранных листов, они рисуются из PDF. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Auto` |  | панель: Sheet Manager, группа Raster | В Sheet Manager возвращает адаптивный DPI листов; в 3D сам строит стены, плиты и крыши. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Options...` |  | панель: Sheet Manager, группа Raster | Открывает настройки растра: формат, подготовка, первый кадр, чистка и отмена. | [Проекты и сохранение](job-creation-storage.md) |
 
 ??? note "Sheet Manager, группа Format (6)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Sheet Manager Raster Format Box` |  | панель: Sheet Manager, группа Format | Auto keeps the existing WebP-preferred cache behavior; PNG is useful for difficult raster-like PDFs Options: Auto, WebP, PNG. |  |
-    | `Prepare` |  | панель: Sheet Manager, группа Format | Build the last selected DPI cache without changing PDF/raster state | [Менеджеры](ourplancore-managers.md) |
-    | `First On` |  | панель: Sheet Manager, группа Format | Open selected raster sheets from the pre-rendered raster image as the first frame | [Менеджеры](ourplancore-managers.md) |
-    | `First Off` |  | панель: Sheet Manager, группа Format | Keep selected raster sheets on the normal PDF/preview-first opening path | [Менеджеры](ourplancore-managers.md) |
-    | `Clean` |  | панель: Sheet Manager, группа Format | Delete unused raster image variants for selected sheets; keeps the active raster image | [Проекты и сохранение](job-creation-storage.md) |
-    | `Cancel` |  | панель: Sheet Manager, группа Format | Cancel background raster work after the current sheet finishes | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Sheet Manager Raster Format Box` |  | панель: Sheet Manager, группа Format | Выбирает формат кеша растра: `Auto` с WebP, `WebP` или `PNG` для трудных PDF. |  |
+    | `Prepare` |  | панель: Sheet Manager, группа Format | Готовит кеш растра последнего выбранного DPI, не меняя режим листа. | [Менеджеры](ourplancore-managers.md) |
+    | `First On` |  | панель: Sheet Manager, группа Format | Открывает выбранные растровые листы сразу с готовой картинки как первого кадра. | [Менеджеры](ourplancore-managers.md) |
+    | `First Off` |  | панель: Sheet Manager, группа Format | Открывает выбранные растровые листы обычным путём через PDF и превью. | [Менеджеры](ourplancore-managers.md) |
+    | `Clean` |  | панель: Sheet Manager, группа Format | Удаляет неиспользуемые варианты растра у выбранных листов, активный растр остаётся. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Cancel` |  | панель: Sheet Manager, группа Format | Отменяет фоновую работу с растром после текущего листа. | [Привязки и трассировка](ourplancore-snap-trace.md) |
 
 ??? note "Sheet Manager, группа Metadata (8)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Refresh` |  | панель: Sheet Manager, группа Metadata | Reload the sheet table from current page folders | [Листы (Pages)](ourplancore-pages.md) |
-    | `Analyze` |  | панель: Sheet Manager, группа Metadata | Read PDF text/layers and preview sheet metadata | [Листы (Pages)](ourplancore-pages.md) |
-    | `Auto Name` |  | панель: Sheet Manager, группа Metadata | Preview automatic sheet names | [Settings и модули](ourplancore-settings.md) |
-    | `Auto Scale` |  | панель: Sheet Manager, группа Metadata | Preview automatic sheet scales | [Листы (Pages)](ourplancore-pages.md) |
-    | `Name+Scale` |  | панель: Sheet Manager, группа Metadata | Preview names and scales together | [Листы (Pages)](ourplancore-pages.md) |
-    | `AI Fill` |  | панель: Sheet Manager, группа Metadata | Queue GPT fallback for missing sheet metadata | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Crop Hints` |  | панель: Sheet Manager, группа Metadata | Draw reusable sheet number, title, and scale regions | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Apply Checked` |  | панель: Sheet Manager, группа Metadata | Apply checked rename/scale rows to the job | [Менеджеры](ourplancore-managers.md) |
+    | `Refresh` |  | панель: Sheet Manager, группа Metadata | Перечитывает таблицу текущего менеджера: листов, позиций, отчёта, материалов или ИИ. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Analyze` |  | панель: Sheet Manager, группа Metadata | Читает текст и слои PDF и показывает найденные метаданные листов. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Auto Name` |  | панель: Sheet Manager, группа Metadata | Показывает предложенные автоматические имена листов до применения. | [Settings и модули](ourplancore-settings.md) |
+    | `Auto Scale` |  | панель: Sheet Manager, группа Metadata | Показывает предложенные автоматические масштабы листов до применения. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Name+Scale` |  | панель: Sheet Manager, группа Metadata | Показывает предложенные имена и масштабы листов вместе. | [Листы (Pages)](ourplancore-pages.md) |
+    | `AI Fill` |  | панель: Sheet Manager, группа Metadata | Ставит в очередь GPT для листов, у которых не найдены метаданные. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Crop Hints` |  | панель: Sheet Manager, группа Metadata | Рисует области номера, названия и масштаба листа для автоимён и `AI Fill`. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Apply Checked` |  | панель: Sheet Manager, группа Metadata | Применяет к проекту отмеченные строки переименования и масштаба. | [Менеджеры](ourplancore-managers.md) |
 
 ??? note "Sheet Manager, группа Open (5)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Open Sheet` |  | панель: Sheet Manager, группа Open | Switch to the selected sheet in Main View | [Менеджеры](ourplancore-managers.md) |
-    | `Open Tabs` |  | панель: Sheet Manager, группа Open | Open the selected sheets as viewport tabs | [Менеджеры](ourplancore-managers.md) |
-    | `Detach` |  | панель: Sheet Manager, группа Open | Open the selected sheets in detached windows | [Листы (Pages)](ourplancore-pages.md) |
-    | `Tile M2` |  | панель: Sheet Manager, группа Open | Open selected sheets in detached windows and tile them on monitor 2 | [Листы (Pages)](ourplancore-pages.md) |
-    | `Open JSON` |  | панель: Sheet Manager, группа Open | Open the PDF metadata JSON for inspection | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Open Sheet` |  | панель: Sheet Manager, группа Open | Открывает выбранный лист в главной рабочей области. | [Менеджеры](ourplancore-managers.md) |
+    | `Open Tabs` |  | панель: Sheet Manager, группа Open | Открывает выбранные листы во вкладках окна просмотра. | [Менеджеры](ourplancore-managers.md) |
+    | `Detach` |  | панель: Sheet Manager, группа Open | Открывает выбранные листы в отдельных окнах. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Tile M2` |  | панель: Sheet Manager, группа Open | Открывает выбранные листы в отдельных окнах плиткой на втором мониторе. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Open JSON` |  | панель: Sheet Manager, группа Open | Открывает файл JSON с метаданными PDF для проверки. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "Sheet Manager, группа Organize (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Sort A/S` |  | панель: Sheet Manager, группа Organize | Sort A/S sheets inside the selected Pages folder; if no folder is selected, sort all Pages | [Листы (Pages)](ourplancore-pages.md) |
-    | `D/Sec/WT` |  | панель: Sheet Manager, группа Organize | Sort suffix sheets inside the selected Pages folder; if no folder is selected, sort all Pages | [Листы (Pages)](ourplancore-pages.md) |
-    | `Repair Links` |  | панель: Sheet Manager, группа Organize | Reconnect saved measurements to current page folders | [Листы (Pages)](ourplancore-pages.md) |
-    | `Auto Folders` |  | панель: Sheet Manager, группа Organize | Create standard page folders under the selected Pages folder | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort A/S` |  | панель: Sheet Manager, группа Organize | Раскладывает листы A в `Arch`, листы S в `Struct`, остальные в прочие. | [Листы (Pages)](ourplancore-pages.md) |
+    | `D/Sec/WT` |  | панель: Sheet Manager, группа Organize | Раскладывает листы с суффиксами по папкам details, sections, units и упорядочивает корень Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Repair Links` |  | панель: Sheet Manager, группа Organize | Заново привязывает замеры к листам после переименования или импорта страниц. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Auto Folders` |  | панель: Sheet Manager, группа Organize | Создаёт стандартное дерево папок листов в выбранной папке Pages. | [Листы (Pages)](ourplancore-pages.md) |
 
 ??? note "Takeoff Manager, группа File (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Save` |  | панель: Takeoff Manager, группа File | Save the current job | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Save` |  | панель: Takeoff Manager, группа File | Сохраняет текущий проект со всеми замерами. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 
 ??? note "Takeoff Manager, группа Item (6)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Refresh` |  | панель: Takeoff Manager, группа Item | Reload the takeoff manager table | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Set Active` |  | панель: Takeoff Manager, группа Item | Make the selected takeoff item the active drawing target | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Properties` |  | панель: Takeoff Manager, группа Item | Edit the selected takeoff item's properties | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Open Estimating` |  | панель: Takeoff Manager, группа Item | Open the full estimating table window | [Менеджеры](ourplancore-managers.md) |
-    | `New Folder` |  | панель: Takeoff Manager, группа Item | Create a takeoff folder | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `New Item` |  | панель: Takeoff Manager, группа Item | Create a takeoff item | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Refresh` |  | панель: Takeoff Manager, группа Item | Перечитывает таблицу текущего менеджера: листов, позиций, отчёта, материалов или ИИ. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Set Active` |  | панель: Takeoff Manager, группа Item | Делает выбранную позицию активной целью для рисования. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Properties` |  | панель: Takeoff Manager, группа Item | Открывает свойства выбранной позиции takeoff для правки. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Open Estimating` |  | панель: Takeoff Manager, группа Item | Открывает отдельное окно с полной таблицей `Estimating` по всем замерам. | [Менеджеры](ourplancore-managers.md) |
+    | `New Folder` |  | панель: Takeoff Manager, группа Item | Создаёт папку takeoff в выбранной папке или в корне. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `New Item` |  | панель: Takeoff Manager, группа Item | Создаёт позицию takeoff в выбранной папке или в корне. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 
 ??? note "Takeoff Manager, группа Tree (2)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Auto Tree` |  | панель: Takeoff Manager, группа Tree | Create a standard takeoff tree | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `From Pages` |  | панель: Takeoff Manager, группа Tree | Create takeoff folders/items from the page structure | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Auto Tree` |  | панель: Takeoff Manager, группа Tree | Создаёт стандартное дерево папок takeoff для нового проекта. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `From Pages` |  | панель: Takeoff Manager, группа Tree | Создаёт верхние папки takeoff по именам листов и папок Pages, набранным заглавными. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 
 ??? note "Takeoff Manager, группа Export (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Export CSV` |  | панель: Takeoff Manager, группа Export | Export quantities to CSV | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `TXT` |  | панель: Takeoff Manager, группа Export | Export quantities to text | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Excel` |  | панель: Takeoff Manager, группа Export | Export quantities to Excel | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Current Excel` |  | панель: Takeoff Manager, группа Export | Write the selected takeoff folder/item to the active cell in an already open Excel workbook | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Export CSV` |  | панель: Takeoff Manager, группа Export | Выгружает строки замеров в файл CSV. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `TXT` |  | панель: Takeoff Manager, группа Export | Выгружает выбранные или все замеры в текстовый формат PlanSwift. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Excel` |  | панель: Takeoff Manager, группа Export | Выгружает выбранные или все замеры в `.xlsx`, колонки J, K, L начиная с J10. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Current Excel` |  | панель: Takeoff Manager, группа Export | Пишет выбранную папку или позицию в активную ячейку открытой книги Excel. | [Экспорт в Excel](ourplancore-excel.md) |
 
 ??? note "Report Builder, группа Template (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Reload` |  | панель: Report Builder, группа Template | Reload TemplateCom.xlsm into the report builder table | [Менеджеры](ourplancore-managers.md) |
+    | `Reload` |  | панель: Report Builder, группа Template | Заново загружает `TemplateCom.xlsm` в таблицу конструктора отчётов. | [Менеджеры](ourplancore-managers.md) |
 
 ??? note "Report Builder, группа Table (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Refresh` |  | панель: Report Builder, группа Table | Refresh the report builder view | [Менеджеры](ourplancore-managers.md) |
+    | `Refresh` |  | панель: Report Builder, группа Table | Перечитывает таблицу текущего менеджера: листов, позиций, отчёта, материалов или ИИ. | [Менеджеры](ourplancore-managers.md) |
 
 ??? note "Report Builder, группа Walls (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Apply Walls` |  | панель: Report Builder, группа Walls | Apply the A3 wall block rule to the selected source rows in J:K | [Менеджеры](ourplancore-managers.md) |
+    | `Apply Walls` |  | панель: Report Builder, группа Walls | Применяет правило блока стен A3 к выбранным строкам в колонках J и K. | [Менеджеры](ourplancore-managers.md) |
 
 ??? note "Materials, группа Extract (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Extract` |  | панель: Materials, группа Extract | Extract material evidence from the current job's source PDFs | [Менеджеры](ourplancore-managers.md) |
-    | `Report Sheet` |  | панель: Materials, группа Extract | Create a copyable Materials Report sheet from the current job's existing pages | [Менеджеры](ourplancore-managers.md) |
-    | `Refresh` |  | панель: Materials, группа Extract | Reload the latest material extraction output | [Менеджеры](ourplancore-managers.md) |
+    | `Extract` |  | панель: Materials, группа Extract | Извлекает сведения о материалах из исходных PDF текущего проекта. | [Менеджеры](ourplancore-managers.md) |
+    | `Report Sheet` |  | панель: Materials, группа Extract | Создаёт лист `Materials Report` для копирования из уже имеющихся листов проекта. | [Менеджеры](ourplancore-managers.md) |
+    | `Refresh` |  | панель: Materials, группа Extract | Перечитывает таблицу текущего менеджера: листов, позиций, отчёта, материалов или ИИ. | [Менеджеры](ourplancore-managers.md) |
 
 ??? note "Materials, группа Open (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `JSON` |  | панель: Materials, группа Open | Open the full material extraction JSON | [Менеджеры](ourplancore-managers.md) |
-    | `Rows CSV` |  | панель: Materials, группа Open | Open material evidence rows as CSV | [Менеджеры](ourplancore-managers.md) |
-    | `Summary CSV` |  | панель: Materials, группа Open | Open grouped material summary as CSV | [Менеджеры](ourplancore-managers.md) |
-    | `Folder` |  | панель: Materials, группа Open | Open the job material extraction output folder | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `JSON` |  | панель: Materials, группа Open | Открывает полный JSON результата извлечения материалов. | [Менеджеры](ourplancore-managers.md) |
+    | `Rows CSV` |  | панель: Materials, группа Open | Открывает строки найденных материалов в виде CSV. | [Менеджеры](ourplancore-managers.md) |
+    | `Summary CSV` |  | панель: Materials, группа Open | Открывает сводку материалов по группам в виде CSV. | [Менеджеры](ourplancore-managers.md) |
+    | `Folder` |  | панель: Materials, группа Open | Открывает папку проекта с результатами извлечения материалов. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 
 ??? note "AI Manager, группа Setup (2)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `AI Settings` |  | панель: AI Manager, группа Setup | Open model and key status settings | [ИИ и терминалы](ourplancore-ai.md) |
-    | `+ Add` |  | панель: AI Manager, группа Setup | Add a manual AI observation or marker note | [ИИ и терминалы](ourplancore-ai.md) |
+    | `AI Settings` |  | панель: AI Manager, группа Setup | Показывает состояние ключа OpenAI и настройки модели ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `+ Add` |  | панель: AI Manager, группа Setup | Сохраняет ручное наблюдение или заметку-маркер ИИ для проекта и листа. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "AI Manager, группа Review (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Refresh` |  | панель: AI Manager, группа Review | Reload the AI manager table | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Open Details` |  | панель: AI Manager, группа Review | Open details for the selected AI item | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Go to Page` |  | панель: AI Manager, группа Review | Switch to the selected item's source page | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Run AI` |  | панель: AI Manager, группа Review | Run AI for the selected eligible item | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Refresh` |  | панель: AI Manager, группа Review | Перечитывает таблицу текущего менеджера: листов, позиций, отчёта, материалов или ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Open Details` |  | панель: AI Manager, группа Review | Открывает окно подробностей выбранной записи ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Go to Page` |  | панель: AI Manager, группа Review | Открывает лист, к которому относится выбранная запись, наблюдение или замер. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Run AI` |  | панель: AI Manager, группа Review | Отправляет в ИИ запрос выбранной записи или наблюдения. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "AI Manager, группа Batch (2)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Run New` |  | панель: AI Manager, группа Batch | Run all new queued AI bookmark requests | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Retry Failed` |  | панель: AI Manager, группа Batch | Retry failed AI bookmark requests | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Run New` |  | панель: AI Manager, группа Batch | Отправляет в OpenAI только новые закладки-кропы. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Retry Failed` |  | панель: AI Manager, группа Batch | Повторяет только закладки-кропы, запрос по которым не удался. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "AI Manager, группа Markers (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Create Set` |  | панель: AI Manager, группа Markers | Create a named marker set from reviewed markers | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Marker Sets` |  | панель: AI Manager, группа Markers | Manage saved marker sets | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Export Markers` |  | панель: AI Manager, группа Markers | Export reviewed AI markers | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Create Set` |  | панель: AI Manager, группа Markers | Сохраняет текущие фильтры проверенных маркеров как именованный набор. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Marker Sets` |  | панель: AI Manager, группа Markers | Открывает окно управления сохранёнными наборами маркеров ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Export Markers` |  | панель: AI Manager, группа Markers | Выгружает контекст видимых проверенных маркеров в JSON. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "3D, группа Build (5)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Auto` |  | панель: 3D, группа Build | Auto-build walls, sqft slabs, and RF/roof areas when available | [3D и менеджеры](ourplancore-3d.md) |
-    | `Wall` |  | панель: 3D, группа Build | Build wall prisms from selected line takeoffs | [3D и менеджеры](ourplancore-3d.md) |
-    | `Roof Base` |  | панель: 3D, группа Build | Create a roof footprint from selected area takeoffs | [3D крыша](ourplancore-3d-roof.md) |
-    | `Select Edge` |  | панель: 3D, группа Build | Select roof base edges on the sheet; save per-edge pitch from the side panel | [3D крыша](ourplancore-3d-roof.md) |
-    | `Generate Roof` |  | панель: 3D, группа Build | Build ridge, hip, and valley geometry from the saved per-edge roof pitches | [3D крыша](ourplancore-3d-roof.md) |
+    | `Auto` |  | панель: 3D, группа Build | В Sheet Manager возвращает адаптивный DPI листов; в 3D сам строит стены, плиты и крыши. | [3D и менеджеры](ourplancore-3d.md) |
+    | `Wall` |  | панель: 3D, группа Build | Строит в 3D стены из выбранных линейных позиций и замеров. | [3D и менеджеры](ourplancore-3d.md) |
+    | `Roof Base` |  | панель: 3D, группа Build | Создаёт основание крыши для 3D из выбранных замеров площади. | [3D крыша](ourplancore-3d-roof.md) |
+    | `Select Edge` |  | панель: 3D, группа Build | Выбирает на листе нижние рёбра крыши; уклон каждого ребра сохраняется в боковой панели. | [3D крыша](ourplancore-3d-roof.md) |
+    | `Generate Roof` |  | панель: 3D, группа Build | Строит коньки, вальмы и ендовы по сохранённым уклонам рёбер крыши. | [3D крыша](ourplancore-3d-roof.md) |
 
 ??? note "3D, группа Rafters (5)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Pick Faces` |  | панель: 3D, группа Rafters | Click roof faces in the 3D view to toggle rafters on each face | [3D крыша](ourplancore-3d-roof.md) |
-    | `Whole Roof` |  | панель: 3D, группа Rafters | Lay rafters on every face of every generated roof | [3D крыша](ourplancore-3d-roof.md) |
-    | `Rafter spacing o.c` |  | панель: 3D, группа Rafters | Rafter spacing o.c. (measured horizontally along the eave) | [3D крыша](ourplancore-3d-roof.md) |
-    | `Rafter member size` |  | панель: 3D, группа Rafters | Rafter member size; depth extrudes below the roof plane and walls trim to the rafter underside | [3D крыша](ourplancore-3d-roof.md) |
-    | `Clear` |  | панель: 3D, группа Rafters | Remove rafters from all roofs | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Pick Faces` |  | панель: 3D, группа Rafters | Щелчок по скату в 3D включает или выключает стропила на нём. | [3D крыша](ourplancore-3d-roof.md) |
+    | `Whole Roof` |  | панель: 3D, группа Rafters | Раскладывает стропила на всех скатах всех построенных крыш. | [3D крыша](ourplancore-3d-roof.md) |
+    | `Rafter spacing o.c` |  | панель: 3D, группа Rafters | Задаёт шаг стропил по осям, по горизонтали вдоль карниза. | [3D крыша](ourplancore-3d-roof.md) |
+    | `Rafter member size` |  | панель: 3D, группа Rafters | Задаёт сечение стропил; глубина уходит под плоскость крыши, стены подрезаются. | [3D крыша](ourplancore-3d-roof.md) |
+    | `Clear` |  | панель: 3D, группа Rafters | В 3D убирает стропила со всех крыш; в легенде XL очищает и сохраняет текст. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "3D, группа Viewer (5)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Fit` |  | панель: 3D, группа Viewer | Fit the clean 3D viewer scene | [3D и менеджеры](ourplancore-3d.md) |
-    | `Iso` |  | панель: 3D, группа Viewer | Show isometric view | [3D и менеджеры](ourplancore-3d.md) |
-    | `Top` |  | панель: 3D, группа Viewer | Show top view | [3D и менеджеры](ourplancore-3d.md) |
-    | `Front` |  | панель: 3D, группа Viewer | Show front view | [3D и менеджеры](ourplancore-3d.md) |
-    | `Reset` |  | панель: 3D, группа Viewer | Reset the 3D camera view | [3D и менеджеры](ourplancore-3d.md) |
+    | `Fit` |  | панель: 3D, группа Viewer | Вписывает всю сцену 3D в окно просмотра. | [3D и менеджеры](ourplancore-3d.md) |
+    | `Iso` |  | панель: 3D, группа Viewer | Поворачивает модель 3D в изометрический вид сбоку и сверху. | [3D и менеджеры](ourplancore-3d.md) |
+    | `Top` |  | панель: 3D, группа Viewer | Показывает модель 3D сверху, как план здания. | [3D и менеджеры](ourplancore-3d.md) |
+    | `Front` |  | панель: 3D, группа Viewer | Показывает модель 3D спереди, как фасад здания. | [3D и менеджеры](ourplancore-3d.md) |
+    | `Reset` |  | панель: 3D, группа Viewer | Сбрасывает вид камеры 3D или сдвиг, масштаб и поворот наложенного листа. | [3D и менеджеры](ourplancore-3d.md) |
 
 ??? note "легенда XL (кнопка LG) (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Hide the Excel legend panel` |  | панель: легенда XL (кнопка LG) | Hide the Excel legend panel | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Add missing codes` |  | панель: легенда XL (кнопка LG) | Add a line for every post, beam and header code of this job that the legend does not have yet | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Save for job` |  | панель: легенда XL (кнопка LG) |  | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Clear` |  | панель: легенда XL (кнопка LG) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Hide the Excel legend panel` |  | панель: легенда XL (кнопка LG) | Прячет панель легенды Excel, открытую кнопкой `LG`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Add missing codes` |  | панель: легенда XL (кнопка LG) | Добавляет в легенду строку для каждого кода post, beam и header, которого там нет. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Save for job` |  | панель: легенда XL (кнопка LG) | Сохраняет текст легенды для текущего проекта. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Clear` |  | панель: легенда XL (кнопка LG) | В 3D убирает стропила со всех крыш; в легенде XL очищает и сохраняет текст. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "Quick Calculator (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Hide the calculator panel` |  | панель: Quick Calculator | Hide the calculator panel |  |
+    | `Hide the calculator panel` |  | панель: Quick Calculator | Прячет выдвижную панель калькулятора `Quick Calculator`. |  |
 
 ??? note "панель Pages, вкладка Overlay (19)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Show overlay` |  | панель: панель Pages, вкладка Overlay |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Add...` |  | панель: панель Pages, вкладка Overlay |  | [Settings и модули](ourplancore-settings.md) |
-    | `Open Source` |  | панель: панель Pages, вкладка Overlay |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Choose / Replace...` |  | панель: панель Pages, вкладка Overlay |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Next Match` |  | панель: панель Pages, вкладка Overlay |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Remove` |  | панель: панель Pages, вкладка Overlay |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Move active layer down` |  | панель: панель Pages, вкладка Overlay | Move active layer down |  |
-    | `Move active layer up` |  | панель: панель Pages, вкладка Overlay | Move active layer up |  |
-    | `Auto Fit` |  | панель: панель Pages, вкладка Overlay |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Find Best` |  | панель: панель Pages, вкладка Overlay |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Edit by Points` |  | панель: панель Pages, вкладка Overlay |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Reset` |  | панель: панель Pages, вкладка Overlay |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Red` |  | панель: панель Pages, вкладка Overlay | Red |  |
-    | `Blue` |  | панель: панель Pages, вкладка Overlay | Blue |  |
-    | `Green` |  | панель: панель Pages, вкладка Overlay | Green | [Settings и модули](ourplancore-settings.md) |
-    | `Orange` |  | панель: панель Pages, вкладка Overlay | Orange |  |
-    | `Magenta` |  | панель: панель Pages, вкладка Overlay | Magenta | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Gray` |  | панель: панель Pages, вкладка Overlay | Gray | [Settings и модули](ourplancore-settings.md) |
-    | `Choose custom color` |  | панель: панель Pages, вкладка Overlay | Choose custom color |  |
+    | `Show overlay` |  | панель: панель Pages, вкладка Overlay | Показывает или прячет наложенный лист или слой наложения. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Add...` |  | панель: панель Pages, вкладка Overlay | Добавляет ещё один слой наложения к активному листу. | [Settings и модули](ourplancore-settings.md) |
+    | `Open Source` |  | панель: панель Pages, вкладка Overlay | Открывает исходный лист, который наложен на активный. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Choose / Replace...` |  | панель: панель Pages, вкладка Overlay | Выбирает или заменяет лист, который накладывается на активный. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Next Match` |  | панель: панель Pages, вкладка Overlay | Подставляет следующий подходящий лист-кандидат для наложения. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Remove` |  | панель: панель Pages, вкладка Overlay | Убирает активное наложение с текущего листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Move active layer down` |  | панель: панель Pages, вкладка Overlay | Опускает активный слой наложения на одну позицию ниже. |  |
+    | `Move active layer up` |  | панель: панель Pages, вкладка Overlay | Поднимает активный слой наложения на одну позицию выше. |  |
+    | `Auto Fit` |  | панель: панель Pages, вкладка Overlay | Автоматически совмещает наложенный лист с активным. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Find Best` |  | панель: панель Pages, вкладка Overlay | Ищет в проекте лучший лист для наложения на активный. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Edit by Points` |  | панель: панель Pages, вкладка Overlay | Совмещает наложение по парам точек на двух листах. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Reset` |  | панель: панель Pages, вкладка Overlay | Сбрасывает вид камеры 3D или сдвиг, масштаб и поворот наложенного листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Red` |  | панель: панель Pages, вкладка Overlay | Делает наложенный лист красным, чтобы отличать его от основного. |  |
+    | `Blue` |  | панель: панель Pages, вкладка Overlay | Делает наложенный лист синим, чтобы отличать его от основного. |  |
+    | `Green` |  | панель: панель Pages, вкладка Overlay | Делает наложенный лист зелёным, чтобы отличать его от основного. | [Settings и модули](ourplancore-settings.md) |
+    | `Orange` |  | панель: панель Pages, вкладка Overlay | Делает наложенный лист оранжевым, чтобы отличать его от основного. |  |
+    | `Magenta` |  | панель: панель Pages, вкладка Overlay | Делает наложенный лист пурпурным, чтобы отличать его от основного. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Gray` |  | панель: панель Pages, вкладка Overlay | Делает наложенный лист серым, чтобы отличать его от основного. | [Settings и модули](ourplancore-settings.md) |
+    | `Choose custom color` |  | панель: панель Pages, вкладка Overlay | Открывает выбор своего цвета для наложенного листа. |  |
 
 ??? note "панель терминала Codex / Claude (13)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Detach terminal to its own window` |  | панель: панель терминала Codex / Claude | Detach terminal to its own window; keep conversation running | [Консоль ИИ](ourplancore-ai-console.md) |
-    | `Settings -> Terminals` |  | панель: панель терминала Codex / Claude | Settings -> Terminals | [Консоль ИИ](ourplancore-ai-console.md) |
-    | `Terminal actions` |  | панель: панель терминала Codex / Claude | Terminal actions | [Консоль ИИ](ourplancore-ai-console.md) |
-    | `Hide panel` |  | панель: панель терминала Codex / Claude | Hide panel; keep both conversations running | [Консоль ИИ](ourplancore-ai-console.md) |
-    | `Codex` |  | панель: панель терминала Codex / Claude |  | [Консоль ИИ](ourplancore-ai-console.md) |
-    | `Claude` |  | панель: панель терминала Codex / Claude |  | [Консоль ИИ](ourplancore-ai-console.md) |
-    | `Run` |  | панель: панель терминала Codex / Claude | Run / resume using the selected E-Wood shortcut |  |
-    | `Attach` |  | панель: панель терминала Codex / Claude | Attach an already open Git Bash / mintty window | [Консоль ИИ](ourplancore-ai-console.md) |
-    | `Reasoning effort for the next launch` |  | панель: панель терминала Codex / Claude | Reasoning effort for the next launch. Quick: low; Balanced: medium; Deep: high. Existing sessions use their own controls. | [Консоль ИИ](ourplancore-ai-console.md) |
-    | `Context` |  | панель: панель терминала Codex / Claude | Open the live plan context file | [Консоль ИИ](ourplancore-ai-console.md) |
-    | `Paste context` |  | панель: панель терминала Codex / Claude | Paste the context message into the terminal without Enter; submit it at the assistant prompt | [Консоль ИИ](ourplancore-ai-console.md) |
-    | `AI Inbox` |  | панель: панель терминала Codex / Claude | Open AI Inbox / AI Manager | [Консоль ИИ](ourplancore-ai-console.md) |
-    | `AI Crop +` |  | панель: панель терминала Codex / Claude | Draw an AI crop and share its PNG with the terminal context | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Detach terminal to its own window` |  | панель: панель терминала Codex / Claude | Выносит терминал в отдельное окно, разговор продолжается. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Settings -> Terminals` |  | панель: панель терминала Codex / Claude | Открывает раздел настроек `Terminals` с профилями Claude и Codex. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Terminal actions` |  | панель: панель терминала Codex / Claude | Открывает меню терминала в узкой панели: вынести в окно или открыть настройки. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Hide panel` |  | панель: панель терминала Codex / Claude | Прячет панель терминала, оба разговора продолжаются. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Codex` |  | панель: панель терминала Codex / Claude | Переключает панель терминала на разговор с Codex. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Claude` |  | панель: панель терминала Codex / Claude | Переключает панель терминала на разговор с Claude. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Run` |  | панель: панель терминала Codex / Claude | Запускает или продолжает ассистента выбранным ярлыком E-Wood. |  |
+    | `Attach` |  | панель: панель терминала Codex / Claude | Подключает к панели уже открытое окно Git Bash или mintty. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Reasoning effort for the next launch` |  | панель: панель терминала Codex / Claude | Выбирает усилие рассуждения для следующего запуска: Quick, Balanced или Deep. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Context` |  | панель: панель терминала Codex / Claude | Открывает файл живого контекста листа для ассистента. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Paste context` |  | панель: панель терминала Codex / Claude | Вставляет сообщение с контекстом в терминал без `Enter`, отправить надо самому. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `AI Inbox` |  | панель: панель терминала Codex / Claude | Открывает `AI Inbox` и менеджер ИИ. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `AI Crop +` |  | панель: панель терминала Codex / Claude | Рисует кроп для ИИ и передаёт его PNG в контекст терминала. | [Консоль ИИ](ourplancore-ai-console.md) |
 
 ## Контекстные меню и меню кнопок (369)
 
@@ -643,705 +643,705 @@
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Union` |  | меню: меню кнопки Combine, нижняя полоса, строка 1 | merge into one area | [Правка и привязки](ourplancore-editing.md) |
-    | `Subtract` |  | меню: меню кнопки Combine, нижняя полоса, строка 1 | first minus the others | [Правка и привязки](ourplancore-editing.md) |
-    | `Intersect` |  | меню: меню кнопки Combine, нижняя полоса, строка 1 | keep only the overlap | [Правка и привязки](ourplancore-editing.md) |
-    | `Remove Overlap` |  | меню: меню кнопки Combine, нижняя полоса, строка 1 | trim double counting | [Правка и привязки](ourplancore-editing.md) |
-    | `Divide` |  | меню: меню кнопки Combine, нижняя полоса, строка 1 | split into exclusive + overlap pieces | [Правка и привязки](ourplancore-editing.md) |
+    | `Union` |  | меню: меню кнопки Combine, нижняя полоса, строка 1 | Сливает выбранные площади в одну общую площадь. | [Правка и привязки](ourplancore-editing.md) |
+    | `Subtract` |  | меню: меню кнопки Combine, нижняя полоса, строка 1 | Вычитает из первой выбранной площади все остальные выбранные. | [Правка и привязки](ourplancore-editing.md) |
+    | `Intersect` |  | меню: меню кнопки Combine, нижняя полоса, строка 1 | Оставляет только общую часть всех выбранных площадей. | [Правка и привязки](ourplancore-editing.md) |
+    | `Remove Overlap` |  | меню: меню кнопки Combine, нижняя полоса, строка 1 | Обрезает перекрытия выбранных площадей, чтобы ничего не считалось дважды. | [Правка и привязки](ourplancore-editing.md) |
+    | `Divide` |  | меню: меню кнопки Combine, нижняя полоса, строка 1 | Делит выбранные площади на отдельные части и общий кусок перекрытия. | [Правка и привязки](ourplancore-editing.md) |
 
 ??? note "меню кнопки Open, Main View, панель Pages (2)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Open as Tabs` |  | меню: меню кнопки Open, Main View, панель Pages |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Detach to windows` |  | меню: меню кнопки Open, Main View, панель Pages |  | [Листы (Pages)](ourplancore-pages.md) |
+    | `Open as Tabs` |  | меню: меню кнопки Open, Main View, панель Pages | Открывает выбранные в дереве Pages листы во вкладках. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Detach to windows` |  | меню: меню кнопки Open, Main View, панель Pages | Открывает выбранные в дереве Pages листы в отдельных окнах. | [Листы (Pages)](ourplancore-pages.md) |
 
 ??? note "меню кнопки + New, Main View, панель Pages, быстрая строка (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `New Folder` |  | меню: меню кнопки + New, Main View, панель Pages, быстрая строка |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Blank Sheet` |  | меню: меню кнопки + New, Main View, панель Pages, быстрая строка |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Auto Folders` |  | меню: меню кнопки + New, Main View, панель Pages, быстрая строка |  | [Листы (Pages)](ourplancore-pages.md) |
+    | `New Folder` |  | меню: меню кнопки + New, Main View, панель Pages, быстрая строка | Создаёт новую папку внутри выбранной папки Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Blank Sheet` |  | меню: меню кнопки + New, Main View, панель Pages, быстрая строка | Создаёт пустой лист в текущем проекте без PDF. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Auto Folders` |  | меню: меню кнопки + New, Main View, панель Pages, быстрая строка | Создаёт стандартное дерево папок листов в выбранной папке Pages. | [Листы (Pages)](ourplancore-pages.md) |
 
 ??? note "меню кнопки Setup, Main View, панель Pages, быстрая строка (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Name / Scale...` |  | меню: меню кнопки Setup, Main View, панель Pages, быстрая строка |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort: A -> Arch / S -> Struct` |  | меню: меню кнопки Setup, Main View, панель Pages, быстрая строка |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort: D / Sec / WT suffix` |  | меню: меню кнопки Setup, Main View, панель Pages, быстрая строка |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Repair page links` |  | меню: меню кнопки Setup, Main View, панель Pages, быстрая строка |  | [Листы (Pages)](ourplancore-pages.md) |
+    | `Name / Scale...` |  | меню: меню кнопки Setup, Main View, панель Pages, быстрая строка | Открывает окно ручной настройки имени и масштаба активного листа. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort: A -> Arch / S -> Struct` |  | меню: меню кнопки Setup, Main View, панель Pages, быстрая строка | Раскладывает листы A в `Arch`, листы S в `Struct`, остальные в прочие. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort: D / Sec / WT suffix` |  | меню: меню кнопки Setup, Main View, панель Pages, быстрая строка | Раскладывает листы с суффиксами по папкам details, sections, units и упорядочивает корень Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Repair page links` |  | меню: меню кнопки Setup, Main View, панель Pages, быстрая строка | Заново привязывает замеры к листам после переименования или импорта страниц. | [Листы (Pages)](ourplancore-pages.md) |
 
 ??? note "меню кнопки More, Main View, панель Takeoffs (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Roof Base from area` |  | меню: меню кнопки More, Main View, панель Takeoffs |  | [3D крыша](ourplancore-3d-roof.md) |
-    | `Auto Tree` |  | меню: меню кнопки More, Main View, панель Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `From Pages` |  | меню: меню кнопки More, Main View, панель Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Roof Base from area` |  | меню: меню кнопки More, Main View, панель Takeoffs | Создаёт основание крыши для 3D из выбранных замеров площади. | [3D крыша](ourplancore-3d-roof.md) |
+    | `Auto Tree` |  | меню: меню кнопки More, Main View, панель Takeoffs | Создаёт стандартное дерево папок takeoff для нового проекта. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `From Pages` |  | меню: меню кнопки More, Main View, панель Takeoffs | Создаёт верхние папки takeoff по именам листов и папок Pages, набранным заглавными. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 
 ??? note "меню кнопки More (AI Inbox) (5)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Run New Bookmarks` |  | меню: меню кнопки More (AI Inbox) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Retry Failed Bookmarks` |  | меню: меню кнопки More (AI Inbox) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Create Marker Set` |  | меню: меню кнопки More (AI Inbox) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Manage Marker Sets...` |  | меню: меню кнопки More (AI Inbox) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Export Marker Context` |  | меню: меню кнопки More (AI Inbox) |  | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Run New Bookmarks` |  | меню: меню кнопки More (AI Inbox) | Отправляет в OpenAI только новые закладки-кропы. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Retry Failed Bookmarks` |  | меню: меню кнопки More (AI Inbox) | Повторяет только закладки-кропы, запрос по которым не удался. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Create Marker Set` |  | меню: меню кнопки More (AI Inbox) | Сохраняет текущие фильтры проверенных маркеров как именованный набор. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Manage Marker Sets...` |  | меню: меню кнопки More (AI Inbox) | Открывает окно управления сохранёнными наборами маркеров ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Export Marker Context` |  | меню: меню кнопки More (AI Inbox) | Выгружает контекст видимых проверенных маркеров в JSON. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "меню записи AI Inbox (7)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Refresh Inbox` |  | меню: меню записи AI Inbox |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Open Details` |  | меню: меню записи AI Inbox |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Go to Page` |  | меню: меню записи AI Inbox |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Run AI Request` |  | меню: меню записи AI Inbox |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Open Project Context` |  | меню: меню записи AI Inbox |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Use in Codex / Claude terminal` |  | меню: меню записи AI Inbox |  | [Консоль ИИ](ourplancore-ai-console.md) |
-    | `Refresh Inbox` |  | меню: меню записи AI Inbox |  | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Refresh Inbox` |  | меню: меню записи AI Inbox | Перечитывает список записей `AI Inbox` из папки проекта. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Open Details` |  | меню: меню записи AI Inbox | Открывает окно подробностей выбранной записи ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Go to Page` |  | меню: меню записи AI Inbox | Открывает лист, к которому относится выбранная запись, наблюдение или замер. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Run AI Request` |  | меню: меню записи AI Inbox | Отправляет запрос выбранной записи в ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Open Project Context` |  | меню: меню записи AI Inbox | Открывает файл контекста проекта для ИИ в формате Markdown. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Use in Codex / Claude terminal` |  | меню: меню записи AI Inbox | Передаёт контекст проекта в терминал Codex или Claude. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Refresh Inbox` |  | меню: меню записи AI Inbox | Перечитывает список записей `AI Inbox` из папки проекта. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "меню записи AI Inbox > Crop (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Open Crop` |  | меню: меню записи AI Inbox > Crop |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Open Crop Folder` |  | меню: меню записи AI Inbox > Crop |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Bookmark Crop For Batch AI` |  | меню: меню записи AI Inbox > Crop |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Open Bookmark JSON` |  | меню: меню записи AI Inbox > Crop |  |  |
+    | `Open Crop` |  | меню: меню записи AI Inbox > Crop | Открывает картинку кропа, по которой сделана запись или наблюдение ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Open Crop Folder` |  | меню: меню записи AI Inbox > Crop | Открывает в проводнике папку с картинкой кропа выбранной записи. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Bookmark Crop For Batch AI` |  | меню: меню записи AI Inbox > Crop | Ставит кроп записи в закладки для пакетной отправки в ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Open Bookmark JSON` |  | меню: меню записи AI Inbox > Crop | Открывает файл JSON закладки-кропа выбранной записи. |  |
 
 ??? note "меню записи AI Inbox > Marker (8)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Edit Marker` |  | меню: меню записи AI Inbox > Marker |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Delete Marker` |  | меню: меню записи AI Inbox > Marker |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Find Similar From Marker` |  | меню: меню записи AI Inbox > Marker |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Create Marker Set From Filter` |  | меню: меню записи AI Inbox > Marker |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Manage Marker Sets...` |  | меню: меню записи AI Inbox > Marker |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Export Marker Context` |  | меню: меню записи AI Inbox > Marker |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Hide This Marker Type` |  | меню: меню записи AI Inbox > Marker |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Show All Marker Types` |  | меню: меню записи AI Inbox > Marker |  | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Edit Marker` |  | меню: меню записи AI Inbox > Marker | Открывает правку типа, подписи и места выбранного маркера ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Delete Marker` |  | меню: меню записи AI Inbox > Marker | Удаляет выбранный маркер ИИ из проекта. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Find Similar From Marker` |  | меню: меню записи AI Inbox > Marker | Ставит в очередь поиск похожих значков по выбранному маркеру. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Create Marker Set From Filter` |  | меню: меню записи AI Inbox > Marker | Создаёт набор маркеров из записей, видимых по текущему фильтру. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Manage Marker Sets...` |  | меню: меню записи AI Inbox > Marker | Открывает окно управления сохранёнными наборами маркеров. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Export Marker Context` |  | меню: меню записи AI Inbox > Marker | Выгружает контекст маркеров в JSON и сразу открывает файл. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Hide This Marker Type` |  | меню: меню записи AI Inbox > Marker | Прячет в `AI Inbox` все маркеры того же типа. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Show All Marker Types` |  | меню: меню записи AI Inbox > Marker | Снова показывает все спрятанные типы маркеров в `AI Inbox`. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "меню записи AI Inbox > AI Response (5)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Add Manual AI Response` |  | меню: меню записи AI Inbox > AI Response |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Preview Action Draft` |  | меню: меню записи AI Inbox > AI Response |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Review Action Draft` |  | меню: меню записи AI Inbox > AI Response |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Apply Sheet Metadata Response` |  | меню: меню записи AI Inbox > AI Response |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Clear Action Preview` |  | меню: меню записи AI Inbox > AI Response |  | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Add Manual AI Response` |  | меню: меню записи AI Inbox > AI Response | Добавляет к записи ответ ИИ вручную, например скопированный из чата. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Preview Action Draft` |  | меню: меню записи AI Inbox > AI Response | Показывает на листе черновик действий, предложенных ответом ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Review Action Draft` |  | меню: меню записи AI Inbox > AI Response | Открывает проверку черновика действий ИИ перед применением. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Apply Sheet Metadata Response` |  | меню: меню записи AI Inbox > AI Response | Применяет имя и масштаб листа из ответа ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Clear Action Preview` |  | меню: меню записи AI Inbox > AI Response | Убирает с листа предпросмотр черновика действий ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "меню записи AI Inbox > Files (5)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Open Request JSON` |  | меню: меню записи AI Inbox > Files |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Open Layer JSON` |  | меню: меню записи AI Inbox > Files |  |  |
-    | `Open Response JSON` |  | меню: меню записи AI Inbox > Files |  |  |
-    | `Open Action Draft JSON` |  | меню: меню записи AI Inbox > Files |  |  |
-    | `Open Marker JSON` |  | меню: меню записи AI Inbox > Files |  |  |
+    | `Open Request JSON` |  | меню: меню записи AI Inbox > Files | Открывает файл JSON запроса к ИИ выбранной записи. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Open Layer JSON` |  | меню: меню записи AI Inbox > Files | Открывает файл JSON с описанием слоёв PDF для записи. |  |
+    | `Open Response JSON` |  | меню: меню записи AI Inbox > Files | Открывает файл JSON ответа ИИ выбранной записи. |  |
+    | `Open Action Draft JSON` |  | меню: меню записи AI Inbox > Files | Открывает файл JSON черновика действий ИИ. |  |
+    | `Open Marker JSON` |  | меню: меню записи AI Inbox > Files | Открывает файл JSON выбранного маркера ИИ. |  |
 
 ??? note "меню Count Display (символ метки Count) (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Symbol: Cross, Square, Star, Triangle, Diamond, Ring, Circle` |  | меню: меню Count Display (символ метки Count) |  | [Инструменты замера](ourplancore-tools.md) |
+    | `Symbol: Cross, Square, Star, Triangle, Diamond, Ring, Circle` |  | меню: меню Count Display (символ метки Count) | Выбирает значок точки Count: крест, квадрат, звезда, треугольник, ромб, кольцо или круг. | [Инструменты замера](ourplancore-tools.md) |
 
 ??? note "меню кнопки символа Count по умолчанию (нижняя полоса) (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Symbol: Cross, Square, Star, Triangle, Diamond, Ring, Circle` |  | меню: меню кнопки символа Count по умолчанию (нижняя полоса) |  | [Инструменты замера](ourplancore-tools.md) |
+    | `Symbol: Cross, Square, Star, Triangle, Diamond, Ring, Circle` |  | меню: меню кнопки символа Count по умолчанию (нижняя полоса) | Выбирает значок точки Count: крест, квадрат, звезда, треугольник, ромб, кольцо или круг. | [Инструменты замера](ourplancore-tools.md) |
 
 ??? note "меню вьюпорта в отдельном окне листа (10)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Copy Measurement` |  | меню: меню вьюпорта в отдельном окне листа |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Show on This Sheet` |  | меню: меню вьюпорта в отдельном окне листа |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Paste Measurements to This Sheet` |  | меню: меню вьюпорта в отдельном окне листа |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Takeoff Properties...` |  | меню: меню вьюпорта в отдельном окне листа |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Measurement Properties...` |  | меню: меню вьюпорта в отдельном окне листа |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Rename Measurement` |  | меню: меню вьюпорта в отдельном окне листа |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Use Area As Joists...` |  | меню: меню вьюпорта в отдельном окне листа |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Refresh Regular Joists in All Area Segments` |  | меню: меню вьюпорта в отдельном окне листа |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Set / Reset Joist Direction` |  | меню: меню вьюпорта в отдельном окне листа |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Delete Nearest Extra Joist` |  | меню: меню вьюпорта в отдельном окне листа |  | [Правка и привязки](ourplancore-editing.md) |
+    | `Copy Measurement` |  | меню: меню вьюпорта в отдельном окне листа | Копирует выбранные замеры и пометки в буфер обмена программы. | [Правка и привязки](ourplancore-editing.md) |
+    | `Show on This Sheet` |  | меню: меню вьюпорта в отдельном окне листа | Показывает или прячет эту позицию takeoff только на этом листе. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Paste Measurements to This Sheet` |  | меню: меню вьюпорта в отдельном окне листа | Вставляет скопированные замеры на этот лист. | [Правка и привязки](ourplancore-editing.md) |
+    | `Takeoff Properties...` |  | меню: меню вьюпорта в отдельном окне листа | Открывает свойства позиции, к которой относится выбранный замер. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Measurement Properties...` |  | меню: меню вьюпорта в отдельном окне листа | Открывает свойства выбранного замера для правки. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Rename Measurement` |  | меню: меню вьюпорта в отдельном окне листа | Переименовывает выбранный замер или его позицию. | [Правка и привязки](ourplancore-editing.md) |
+    | `Use Area As Joists...` |  | меню: меню вьюпорта в отдельном окне листа | Превращает выбранную площадь в раскладку балок `Joist Area`. | [Инструменты замера](ourplancore-tools.md) |
+    | `Refresh Regular Joists in All Area Segments` |  | меню: меню вьюпорта в отдельном окне листа | Пересчитывает обычные балки во всех площадях позиции `Joist Area`. | [Инструменты замера](ourplancore-tools.md) |
+    | `Set / Reset Joist Direction` |  | меню: меню вьюпорта в отдельном окне листа | Задаёт или сбрасывает направление балок в выбранной площади. | [Инструменты замера](ourplancore-tools.md) |
+    | `Delete Nearest Extra Joist` |  | меню: меню вьюпорта в отдельном окне листа | Удаляет дополнительную балку Extra Joist, ближайшую к указателю. | [Правка и привязки](ourplancore-editing.md) |
 
 ??? note "меню пресетов толщины линий (лента Viewport) (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Custom...` |  | меню: меню пресетов толщины линий (лента Viewport) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Custom...` |  | меню: меню пресетов толщины линий (лента Viewport) | Задаёт свой размер или толщину числом вместо готового пресета. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "меню пресетов размера точек (лента Viewport) (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Custom...` |  | меню: меню пресетов размера точек (лента Viewport) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Custom...` |  | меню: меню пресетов размера точек (лента Viewport) | Задаёт свой размер или толщину числом вместо готового пресета. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "меню вьюпорта > размер легенды / шапки (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Custom...` |  | меню: меню вьюпорта > размер легенды / шапки |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Custom...` |  | меню: меню вьюпорта > размер легенды / шапки | Задаёт свой размер или толщину числом вместо готового пресета. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "меню кнопки Size (лента Display) (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Custom...` |  | меню: меню кнопки Size (лента Display) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Custom...` |  | меню: меню кнопки Size (лента Display) | Задаёт свой размер или толщину числом вместо готового пресета. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "меню вьюпорта: легенда и подписи (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Scale Legend With Sheet` |  | меню: меню вьюпорта: легенда и подписи |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Scale Measurement Labels With Sheet` |  | меню: меню вьюпорта: легенда и подписи |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Scale Sheet Header With Sheet` |  | меню: меню вьюпорта: легенда и подписи |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Legend` |  | меню: меню вьюпорта: легенда и подписи |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Scale Legend With Sheet` |  | меню: меню вьюпорта: легенда и подписи | Меняет размер легенды вместе с масштабом листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Scale Measurement Labels With Sheet` |  | меню: меню вьюпорта: легенда и подписи | Меняет размер подписей замеров вместе с масштабом листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Scale Sheet Header With Sheet` |  | меню: меню вьюпорта: легенда и подписи | Меняет размер заголовка листа вместе с масштабом листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Legend` |  | меню: меню вьюпорта: легенда и подписи | Показывает или прячет легенду на активном листе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "меню строки Estimating (5)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Go to Page` |  | меню: меню строки Estimating |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Select on Canvas` |  | меню: меню строки Estimating |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Measurement Properties...` |  | меню: меню строки Estimating |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Rename Measurement` |  | меню: меню строки Estimating |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Delete Measurement` |  | меню: меню строки Estimating |  | [Правка и привязки](ourplancore-editing.md) |
+    | `Go to Page` |  | меню: меню строки Estimating | Открывает лист, к которому относится выбранная запись, наблюдение или замер. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Select on Canvas` |  | меню: меню строки Estimating | Выделяет на листе замеры выбранных строк или секций. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Measurement Properties...` |  | меню: меню строки Estimating | Открывает свойства выбранного замера для правки. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Rename Measurement` |  | меню: меню строки Estimating | Переименовывает выбранный замер или его позицию. | [Правка и привязки](ourplancore-editing.md) |
+    | `Delete Measurement` |  | меню: меню строки Estimating | Удаляет выбранный замер с листа и из позиции. | [Правка и привязки](ourplancore-editing.md) |
 
 ??? note "меню кнопки Export (панель Takeoffs) (6)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Save` |  | меню: меню кнопки Export (панель Takeoffs) |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Save As...` |  | меню: меню кнопки Export (панель Takeoffs) |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Export CSV` |  | меню: меню кнопки Export (панель Takeoffs) |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Export TXT` |  | меню: меню кнопки Export (панель Takeoffs) |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Export Excel` |  | меню: меню кнопки Export (панель Takeoffs) |  | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Export to Current Excel` |  | меню: меню кнопки Export (панель Takeoffs) |  | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Save` |  | меню: меню кнопки Export (панель Takeoffs) | Сохраняет текущий проект со всеми замерами. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Save As...` |  | меню: меню кнопки Export (панель Takeoffs) | Сохраняет текущий проект в новое место на диске. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Export CSV` |  | меню: меню кнопки Export (панель Takeoffs) | Выгружает строки замеров в файл CSV. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Export TXT` |  | меню: меню кнопки Export (панель Takeoffs) | Выгружает выбранные или все замеры в текстовый формат PlanSwift. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Export Excel` |  | меню: меню кнопки Export (панель Takeoffs) | Выгружает выбранные или все замеры в `.xlsx`, колонки J, K, L начиная с J10. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Export to Current Excel` |  | меню: меню кнопки Export (панель Takeoffs) | Пишет выбранную папку или позицию в активную ячейку открытой книги Excel. | [Экспорт в Excel](ourplancore-excel.md) |
 
 ??? note "меню кнопки Open / Import > Open A Project (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Open project...` |  | меню: меню кнопки Open / Import > Open A Project |  | [Проекты и сохранение](job-creation-storage.md) |
+    | `Open project...` |  | меню: меню кнопки Open / Import > Open A Project | Открывает окно выбора проекта со списком недавних. | [Проекты и сохранение](job-creation-storage.md) |
 
 ??? note "меню кнопки Open / Import > Create A New Job (8)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Blank project - start empty` |  | меню: меню кнопки Open / Import > Create A New Job |  | [Проекты и сохранение](job-creation-storage.md) |
-    | `New project from a folder of PDFs...` |  | меню: меню кнопки Open / Import > Create A New Job |  | [Проекты и сохранение](job-creation-storage.md) |
-    | `Import PDF Takeoffs...` |  | меню: меню кнопки Open / Import > Create A New Job |  | [Прочее](ourplancore-extras-other.md) |
-    | `Sample job (demo to explore)` |  | меню: меню кнопки Open / Import > Create A New Job |  | [Проекты и сохранение](job-creation-storage.md) |
-    | `Undo Last Page Sort` |  | меню: меню кнопки Open / Import > Create A New Job |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Undo Last Page Operation` |  | меню: меню кнопки Open / Import > Create A New Job |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Project Data Recovery...` |  | меню: меню кнопки Open / Import > Create A New Job |  | [Проекты и сохранение](job-creation-storage.md) |
-    | `Manage job folders...` |  | меню: меню кнопки Open / Import > Create A New Job |  | [Проекты и сохранение](job-creation-storage.md) |
+    | `Blank project - start empty` |  | меню: меню кнопки Open / Import > Create A New Job | Создаёт пустой проект, листы добавляются позже. | [Проекты и сохранение](job-creation-storage.md) |
+    | `New project from a folder of PDFs...` |  | меню: меню кнопки Open / Import > Create A New Job | Создаёт новый проект из папки с чертежами PDF. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Import PDF Takeoffs...` |  | меню: меню кнопки Open / Import > Create A New Job | Переносит листы PDF вместе с замерами и линейками PDF в позиции takeoff. | [Прочее](ourplancore-extras-other.md) |
+    | `Sample job (demo to explore)` |  | меню: меню кнопки Open / Import > Create A New Job | Создаёт и открывает учебный пример проекта с подсказками. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Undo Last Page Sort` |  | меню: меню кнопки Open / Import > Create A New Job | Отменяет последнюю сортировку листов в дереве Pages. | [Правка и привязки](ourplancore-editing.md) |
+    | `Undo Last Page Operation` |  | меню: меню кнопки Open / Import > Create A New Job | Отменяет последнее действие с листами: сортировку, перенос или переименование. | [Правка и привязки](ourplancore-editing.md) |
+    | `Project Data Recovery...` |  | меню: меню кнопки Open / Import > Create A New Job | Восстанавливает повреждённые файлы проекта из проверенной копии. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Manage job folders...` |  | меню: меню кнопки Open / Import > Create A New Job | Открывает управление папками, в которых лежат проекты. | [Проекты и сохранение](job-creation-storage.md) |
 
 ??? note "меню кнопки Open / Import > Import into the current job > Create A New Job (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `PDF file(s)...` |  | меню: меню кнопки Open / Import > Import into the current job > Create A New Job |  | [Проекты и сохранение](job-creation-storage.md) |
-    | `Folder of PDFs...` |  | меню: меню кнопки Open / Import > Import into the current job > Create A New Job |  | [Проекты и сохранение](job-creation-storage.md) |
-    | `OurPlanCore project...` |  | меню: меню кнопки Open / Import > Import into the current job > Create A New Job |  | [Проекты и сохранение](job-creation-storage.md) |
-    | `PlanSwift project...` |  | меню: меню кнопки Open / Import > Import into the current job > Create A New Job |  | [Проекты и сохранение](job-creation-storage.md) |
+    | `PDF file(s)...` |  | меню: меню кнопки Open / Import > Import into the current job > Create A New Job | Добавляет один или несколько PDF в текущий проект. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Folder of PDFs...` |  | меню: меню кнопки Open / Import > Import into the current job > Create A New Job | Импортирует все PDF из выбранной папки и её подпапок в текущий проект. | [Проекты и сохранение](job-creation-storage.md) |
+    | `OurPlanCore project...` |  | меню: меню кнопки Open / Import > Import into the current job > Create A New Job | Импортирует другой проект OurPlanCore в текущий проект. | [Проекты и сохранение](job-creation-storage.md) |
+    | `PlanSwift project...` |  | меню: меню кнопки Open / Import > Import into the current job > Create A New Job | Импортирует проект PlanSwift в текущий проект в папку `01. planswift`. | [Проекты и сохранение](job-creation-storage.md) |
 
 ??? note "меню кнопки Batch Rotate (лента Page) (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Rotate Selected Left` |  | меню: меню кнопки Batch Rotate (лента Page) |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Rotate Selected Right` |  | меню: меню кнопки Batch Rotate (лента Page) |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Rotate Selected 180` |  | меню: меню кнопки Batch Rotate (лента Page) |  | [Правка и привязки](ourplancore-editing.md) |
+    | `Rotate Selected Left` |  | меню: меню кнопки Batch Rotate (лента Page) | Поворачивает все выбранные листы на 90 градусов влево. | [Правка и привязки](ourplancore-editing.md) |
+    | `Rotate Selected Right` |  | меню: меню кнопки Batch Rotate (лента Page) | Поворачивает все выбранные листы на 90 градусов вправо. | [Правка и привязки](ourplancore-editing.md) |
+    | `Rotate Selected 180` |  | меню: меню кнопки Batch Rotate (лента Page) | Поворачивает все выбранные листы на 180 градусов. | [Правка и привязки](ourplancore-editing.md) |
 
 ??? note "меню легенды листа > Legend Group (2)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `New Group...` |  | меню: меню легенды листа > Legend Group |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Main Legend` |  | меню: меню легенды листа > Legend Group |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `New Group...` |  | меню: меню легенды листа > Legend Group | Создаёт новую группу легенды из выбранных строк. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Main Legend` |  | меню: меню легенды листа > Legend Group | Возвращает выбранные строки из группы в основную легенду листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "меню папки в Pages (7)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Undo Last Page Delete` |  | меню: меню папки в Pages |  | [Правка и привязки](ourplancore-editing.md) |
-    | `New Blank Sheet` |  | меню: меню папки в Pages |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Batch Overlay...` |  | меню: меню папки в Pages |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `New Folder` |  | меню: меню папки в Pages |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Rename Folder` |  | меню: меню папки в Pages |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Delete Folder` |  | меню: меню папки в Pages |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Open in Explorer` |  | меню: меню папки в Pages |  | [Листы (Pages)](ourplancore-pages.md) |
+    | `Undo Last Page Delete` |  | меню: меню папки в Pages | Возвращает последний удалённый лист или папку в дерево Pages. | [Правка и привязки](ourplancore-editing.md) |
+    | `New Blank Sheet` |  | меню: меню папки в Pages | Создаёт пустой лист в выбранной папке Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Batch Overlay...` |  | меню: меню папки в Pages | Подбирает пары листов и применяет наложения сразу ко многим листам проекта. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `New Folder` |  | меню: меню папки в Pages | Создаёт новую папку внутри выбранной папки. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Rename Folder` |  | меню: меню папки в Pages | Переименовывает выбранную папку в дереве Pages или Takeoffs. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Delete Folder` |  | меню: меню папки в Pages | Удаляет выбранную папку или все выбранные строки дерева Pages. | [Правка и привязки](ourplancore-editing.md) |
+    | `Open in Explorer` |  | меню: меню папки в Pages | Открывает папку на диске в проводнике Windows. | [Листы (Pages)](ourplancore-pages.md) |
 
 ??? note "меню папки в Pages > Clipboard (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Copy Folder` |  | меню: меню папки в Pages > Clipboard |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Cut Folder` |  | меню: меню папки в Pages > Clipboard |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Paste Into Folder` |  | меню: меню папки в Pages > Clipboard |  | [Правка и привязки](ourplancore-editing.md) |
+    | `Copy Folder` |  | меню: меню папки в Pages > Clipboard | Копирует выбранную папку или строки в буфер дерева. | [Правка и привязки](ourplancore-editing.md) |
+    | `Cut Folder` |  | меню: меню папки в Pages > Clipboard | Вырезает выбранную папку или строки для переноса в другое место дерева. | [Правка и привязки](ourplancore-editing.md) |
+    | `Paste Into Folder` |  | меню: меню папки в Pages > Clipboard | Вставляет скопированные или вырезанные строки в эту папку. | [Правка и привязки](ourplancore-editing.md) |
 
 ??? note "меню папки в Pages > Organize (13)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Auto Create Folders` |  | меню: меню папки в Pages > Organize |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Move Up` |  | меню: меню папки в Pages > Organize |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Move Down` |  | меню: меню папки в Pages > Organize |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Children A-Z` |  | меню: меню папки в Pages > Organize |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Children Z-A` |  | меню: меню папки в Pages > Organize |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Sheet Legends Auto in Folder` |  | меню: меню папки в Pages > Organize |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Sort Sheet Legends A-Z in Folder` |  | меню: меню папки в Pages > Organize |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Sort Sheet Legends by Key (before space) in Folder` |  | меню: меню папки в Pages > Organize |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Reset Sheet Legend Orders in Folder` |  | меню: меню папки в Pages > Organize |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Sort A/S in This Folder` |  | меню: меню папки в Pages > Organize |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort D/Sec/WT in This Folder` |  | меню: меню папки в Pages > Organize |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Undo Last Page Sort` |  | меню: меню папки в Pages > Organize |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Repair Measurement Links` |  | меню: меню папки в Pages > Organize |  | [Листы (Pages)](ourplancore-pages.md) |
+    | `Auto Create Folders` |  | меню: меню папки в Pages > Organize | Создаёт в этой папке стандартные папки листов по шаблону. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Move Up` |  | меню: меню папки в Pages > Organize | Поднимает выбранные строки на одну позицию вверх в дереве. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Move Down` |  | меню: меню папки в Pages > Organize | Опускает выбранные строки на одну позицию вниз в дереве. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Children A-Z` |  | меню: меню папки в Pages > Organize | Сортирует всё содержимое этой папки по алфавиту. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Children Z-A` |  | меню: меню папки в Pages > Organize | Сортирует содержимое папки в обратном алфавитном порядке. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Sheet Legends Auto in Folder` |  | меню: меню папки в Pages > Organize | Возвращает автоматический порядок легенд у всех листов папки. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Sort Sheet Legends A-Z in Folder` |  | меню: меню папки в Pages > Organize | Сортирует строки легенд у всех листов папки по алфавиту. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Sort Sheet Legends by Key (before space) in Folder` |  | меню: меню папки в Pages > Organize | Сортирует легенды листов папки по началу имени до первого пробела. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Reset Sheet Legend Orders in Folder` |  | меню: меню папки в Pages > Organize | Сбрасывает ручной порядок легенд у всех листов папки. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Sort A/S in This Folder` |  | меню: меню папки в Pages > Organize | Раскладывает листы этой папки по `Arch` и `Struct` по префиксам A и S. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort D/Sec/WT in This Folder` |  | меню: меню папки в Pages > Organize | Раскладывает листы этой папки по папкам суффиксов: details, sections, units. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Undo Last Page Sort` |  | меню: меню папки в Pages > Organize | Отменяет последнюю сортировку листов в дереве Pages. | [Правка и привязки](ourplancore-editing.md) |
+    | `Repair Measurement Links` |  | меню: меню папки в Pages > Organize | Заново привязывает сохранённые замеры к текущим папкам листов. | [Листы (Pages)](ourplancore-pages.md) |
 
 ??? note "меню папки в Pages > PDF Metadata (5)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Analyze PDF Metadata` |  | меню: меню папки в Pages > PDF Metadata |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Auto Rename from PDF...` |  | меню: меню папки в Pages > PDF Metadata |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Auto Scale from PDF...` |  | меню: меню папки в Pages > PDF Metadata |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Auto Rename + Scale from PDF...` |  | меню: меню папки в Pages > PDF Metadata |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Queue GPT Metadata Fallback` |  | меню: меню папки в Pages > PDF Metadata |  | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Analyze PDF Metadata` |  | меню: меню папки в Pages > PDF Metadata | Читает текст и штамп PDF и показывает найденные имена и масштабы. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Auto Rename from PDF...` |  | меню: меню папки в Pages > PDF Metadata | Показывает и применяет имена листов, найденные в PDF. | [Правка и привязки](ourplancore-editing.md) |
+    | `Auto Scale from PDF...` |  | меню: меню папки в Pages > PDF Metadata | Показывает и применяет масштабы листов, найденные в PDF. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Auto Rename + Scale from PDF...` |  | меню: меню папки в Pages > PDF Metadata | Показывает и применяет имена и масштабы листов, найденные в PDF. | [Правка и привязки](ourplancore-editing.md) |
+    | `Queue GPT Metadata Fallback` |  | меню: меню папки в Pages > PDF Metadata | Ставит в очередь GPT для листов, где имя или масштаб не нашлись. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "меню папки в Pages > Learning (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Capture Final Learning Snapshot` |  | меню: меню папки в Pages > Learning |  |  |
-    | `Review Project Learned Rules...` |  | меню: меню папки в Pages > Learning |  |  |
-    | `Review Global Learned Rules...` |  | меню: меню папки в Pages > Learning |  |  |
+    | `Capture Final Learning Snapshot` |  | меню: меню папки в Pages > Learning | Запоминает итоговые имена и масштабы листов для обучения автоимён. |  |
+    | `Review Project Learned Rules...` |  | меню: меню папки в Pages > Learning | Открывает выученные правила имён листов этого проекта. |  |
+    | `Review Global Learned Rules...` |  | меню: меню папки в Pages > Learning | Открывает выученные правила имён листов для всех проектов. |  |
 
 ??? note "меню листа в Pages (13)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Open in New Tab` |  | меню: меню листа в Pages |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Open Selected in New Tabs` |  | меню: меню листа в Pages |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Detach Sheet to Window` |  | меню: меню листа в Pages |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Tile Sheet on Monitor 2` |  | меню: меню листа в Pages |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Set Scale...` |  | меню: меню листа в Pages |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Apply Current Sheet Scale` |  | меню: меню листа в Pages |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Export Sheet to PDF...` |  | меню: меню листа в Pages |  | [PDF и сдача](ourplancore-pdf.md) |
-    | `Rename Page` |  | меню: меню листа в Pages |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Delete Page` |  | меню: меню листа в Pages |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Duplicate Page` |  | меню: меню листа в Pages |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `New Blank Sheet in Parent` |  | меню: меню листа в Pages |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Change Sheet Size...` |  | меню: меню листа в Pages |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Open Page Folder in Explorer` |  | меню: меню листа в Pages |  |  |
+    | `Open in New Tab` |  | меню: меню листа в Pages | Открывает лист в новой вкладке окна просмотра. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Open Selected in New Tabs` |  | меню: меню листа в Pages | Открывает все выбранные листы в новых вкладках. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Detach Sheet to Window` |  | меню: меню листа в Pages | Открывает выбранный лист в отдельном плавающем окне. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Tile Sheet on Monitor 2` |  | меню: меню листа в Pages | Открывает лист в отдельном окне плиткой на втором мониторе. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Set Scale...` |  | меню: меню листа в Pages | Ставит один масштаб на выбранные листы. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Apply Current Sheet Scale` |  | меню: меню листа в Pages | Переносит масштаб активного листа на выбранные листы. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Export Sheet to PDF...` |  | меню: меню листа в Pages | Выгружает выбранный лист или выбранные листы в файл PDF. | [PDF и сдача](ourplancore-pdf.md) |
+    | `Rename Page` |  | меню: меню листа в Pages | Переименовывает выбранный лист в дереве Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Delete Page` |  | меню: меню листа в Pages | Удаляет выбранный лист или все выбранные листы. | [Правка и привязки](ourplancore-editing.md) |
+    | `Duplicate Page` |  | меню: меню листа в Pages | Делает копию выбранного листа рядом с ним. | [Листы (Pages)](ourplancore-pages.md) |
+    | `New Blank Sheet in Parent` |  | меню: меню листа в Pages | Создаёт пустой лист в той же папке, где лежит выбранный. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Change Sheet Size...` |  | меню: меню листа в Pages | Меняет размер бумаги у пустого листа. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Open Page Folder in Explorer` |  | меню: меню листа в Pages | Открывает папку листа на диске в проводнике Windows. |  |
 
 ??? note "меню листа в Pages > Clipboard (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Copy Page` |  | меню: меню листа в Pages > Clipboard |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Cut Page` |  | меню: меню листа в Pages > Clipboard |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Paste Into Parent Folder` |  | меню: меню листа в Pages > Clipboard |  | [Правка и привязки](ourplancore-editing.md) |
+    | `Copy Page` |  | меню: меню листа в Pages > Clipboard | Копирует выбранный лист или листы в буфер дерева. | [Правка и привязки](ourplancore-editing.md) |
+    | `Cut Page` |  | меню: меню листа в Pages > Clipboard | Вырезает выбранный лист или листы для переноса в другую папку. | [Правка и привязки](ourplancore-editing.md) |
+    | `Paste Into Parent Folder` |  | меню: меню листа в Pages > Clipboard | Вставляет скопированные строки в папку, где лежит выбранная строка. | [Правка и привязки](ourplancore-editing.md) |
 
 ??? note "меню листа в Pages > Organize (12)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Move Up` |  | меню: меню листа в Pages > Organize |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Move Down` |  | меню: меню листа в Pages > Organize |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Move to Folder...` |  | меню: меню листа в Pages > Organize |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Sheet Legend Auto` |  | меню: меню листа в Pages > Organize |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Sort Sheet Legend A-Z` |  | меню: меню листа в Pages > Organize |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Sort Sheet Legend by Key (before space)` |  | меню: меню листа в Pages > Organize |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Reset Sheet Legend Order` |  | меню: меню листа в Pages > Organize |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Legend Groups...` |  | меню: меню листа в Pages > Organize |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Copy Legend Groups to Selected Sheets` |  | меню: меню листа в Pages > Organize |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Sort A/S into Arch/Struct` |  | меню: меню листа в Pages > Organize |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort D/Sec/WT by Suffix` |  | меню: меню листа в Pages > Organize |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Repair Measurement Links` |  | меню: меню листа в Pages > Organize |  | [Листы (Pages)](ourplancore-pages.md) |
+    | `Move Up` |  | меню: меню листа в Pages > Organize | Поднимает выбранные строки на одну позицию вверх в дереве. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Move Down` |  | меню: меню листа в Pages > Organize | Опускает выбранные строки на одну позицию вниз в дереве. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Move to Folder...` |  | меню: меню листа в Pages > Organize | Переносит выбранный лист в другую папку по выбору. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Sheet Legend Auto` |  | меню: меню листа в Pages > Organize | Возвращает автоматический порядок строк легенды на этом листе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Sort Sheet Legend A-Z` |  | меню: меню листа в Pages > Organize | Сортирует строки легенды этого листа по алфавиту. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Sort Sheet Legend by Key (before space)` |  | меню: меню листа в Pages > Organize | Сортирует легенду листа по началу имени до первого пробела. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Reset Sheet Legend Order` |  | меню: меню листа в Pages > Organize | Сбрасывает ручной порядок строк легенды этого листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Legend Groups...` |  | меню: меню листа в Pages > Organize | Открывает окно групп легенды выбранных листов. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Copy Legend Groups to Selected Sheets` |  | меню: меню листа в Pages > Organize | Копирует группы легенды этого листа на другие выбранные листы. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Sort A/S into Arch/Struct` |  | меню: меню листа в Pages > Organize | Раскладывает выбранные листы в папки `Arch` и `Struct` по префиксам. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort D/Sec/WT by Suffix` |  | меню: меню листа в Pages > Organize | Раскладывает выбранные листы по папкам суффиксов имени. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Repair Measurement Links` |  | меню: меню листа в Pages > Organize | Заново привязывает сохранённые замеры к текущим папкам листов. | [Листы (Pages)](ourplancore-pages.md) |
 
 ??? note "меню листа в Pages > PDF Metadata (6)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Analyze PDF Metadata` |  | меню: меню листа в Pages > PDF Metadata |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Auto Rename from PDF...` |  | меню: меню листа в Pages > PDF Metadata |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Auto Scale from PDF...` |  | меню: меню листа в Pages > PDF Metadata |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Auto Rename + Scale from PDF...` |  | меню: меню листа в Pages > PDF Metadata |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Queue GPT Metadata Fallback` |  | меню: меню листа в Pages > PDF Metadata |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Open source_pdf.json` |  | меню: меню листа в Pages > PDF Metadata |  |  |
+    | `Analyze PDF Metadata` |  | меню: меню листа в Pages > PDF Metadata | Читает текст и штамп PDF и показывает найденные имена и масштабы. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Auto Rename from PDF...` |  | меню: меню листа в Pages > PDF Metadata | Показывает и применяет имена листов, найденные в PDF. | [Правка и привязки](ourplancore-editing.md) |
+    | `Auto Scale from PDF...` |  | меню: меню листа в Pages > PDF Metadata | Показывает и применяет масштабы листов, найденные в PDF. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Auto Rename + Scale from PDF...` |  | меню: меню листа в Pages > PDF Metadata | Показывает и применяет имена и масштабы листов, найденные в PDF. | [Правка и привязки](ourplancore-editing.md) |
+    | `Queue GPT Metadata Fallback` |  | меню: меню листа в Pages > PDF Metadata | Ставит в очередь GPT для листов, где имя или масштаб не нашлись. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Open source_pdf.json` |  | меню: меню листа в Pages > PDF Metadata | Открывает файл `source_pdf.json` с метаданными PDF этого листа. |  |
 
 ??? note "меню листа в Pages > Learning (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Capture Final Learning Snapshot` |  | меню: меню листа в Pages > Learning |  |  |
-    | `Review Project Learned Rules...` |  | меню: меню листа в Pages > Learning |  |  |
-    | `Review Global Learned Rules...` |  | меню: меню листа в Pages > Learning |  |  |
+    | `Capture Final Learning Snapshot` |  | меню: меню листа в Pages > Learning | Запоминает итоговые имена и масштабы листов для обучения автоимён. |  |
+    | `Review Project Learned Rules...` |  | меню: меню листа в Pages > Learning | Открывает выученные правила имён листов этого проекта. |  |
+    | `Review Global Learned Rules...` |  | меню: меню листа в Pages > Learning | Открывает выученные правила имён листов для всех проектов. |  |
 
 ??? note "меню вкладки листа (5)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Detach Tab to Window` |  | меню: меню вкладки листа |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Tile Tab on Monitor 2` |  | меню: меню вкладки листа |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Detach All ... Tabs to Windows` |  | меню: меню вкладки листа |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Tile All ... Tabs on Monitor 2` |  | меню: меню вкладки листа |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Close Tab` |  | меню: меню вкладки листа |  | [Листы (Pages)](ourplancore-pages.md) |
+    | `Detach Tab to Window` |  | меню: меню вкладки листа | Выносит эту вкладку листа в отдельное окно. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Tile Tab on Monitor 2` |  | меню: меню вкладки листа | Выносит эту вкладку в отдельное окно плиткой на втором мониторе. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Detach All ... Tabs to Windows` |  | меню: меню вкладки листа | Выносит все открытые вкладки листов в отдельные окна. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Tile All ... Tabs on Monitor 2` |  | меню: меню вкладки листа | Выносит все открытые вкладки в окна плиткой на втором мониторе. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Close Tab` |  | меню: меню вкладки листа | Закрывает эту вкладку листа в окне просмотра. | [Листы (Pages)](ourplancore-pages.md) |
 
 ??? note "меню легенды листа (позиция под листом в Pages) (13)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Select Linked Takeoff` |  | меню: меню легенды листа (позиция под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Rename Linked Takeoff...` |  | меню: меню легенды листа (позиция под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Show on This Sheet` |  | меню: меню легенды листа (позиция под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Hide Selected on This Sheet` |  | меню: меню легенды листа (позиция под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Show Selected on This Sheet` |  | меню: меню легенды листа (позиция под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Move Backward` |  | меню: меню легенды листа (позиция под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Move Forward` |  | меню: меню легенды листа (позиция под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Move Up in Legend` |  | меню: меню легенды листа (позиция под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Move Down in Legend` |  | меню: меню легенды листа (позиция под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Sort Sheet Legend Auto` |  | меню: меню легенды листа (позиция под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Sort Sheet Legend A-Z` |  | меню: меню легенды листа (позиция под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Sort Sheet Legend by Key (before space)` |  | меню: меню легенды листа (позиция под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Reset Sheet Legend Order` |  | меню: меню легенды листа (позиция под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Select Linked Takeoff` |  | меню: меню легенды листа (позиция под листом в Pages) | Выделяет в дереве Takeoffs позицию, связанную с этой строкой легенды. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Rename Linked Takeoff...` |  | меню: меню легенды листа (позиция под листом в Pages) | Переименовывает позицию takeoff, связанную с этой строкой легенды. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Show on This Sheet` |  | меню: меню легенды листа (позиция под листом в Pages) | Показывает или прячет эту позицию takeoff только на этом листе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Hide Selected on This Sheet` |  | меню: меню легенды листа (позиция под листом в Pages) | Прячет выбранные позиции только на этом листе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Show Selected on This Sheet` |  | меню: меню легенды листа (позиция под листом в Pages) | Показывает выбранные позиции на этом листе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Move Backward` |  | меню: меню легенды листа (позиция под листом в Pages) | Отодвигает выбранные позиции назад, их замеры рисуются под другими. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Move Forward` |  | меню: меню легенды листа (позиция под листом в Pages) | Выдвигает выбранные позиции вперёд, их замеры рисуются поверх других. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Move Up in Legend` |  | меню: меню легенды листа (позиция под листом в Pages) | Поднимает выбранные строки выше в легенде листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Move Down in Legend` |  | меню: меню легенды листа (позиция под листом в Pages) | Опускает выбранные строки ниже в легенде листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Sort Sheet Legend Auto` |  | меню: меню легенды листа (позиция под листом в Pages) | Возвращает автоматический порядок строк легенды на этом листе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Sort Sheet Legend A-Z` |  | меню: меню легенды листа (позиция под листом в Pages) | Сортирует строки легенды этого листа по алфавиту. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Sort Sheet Legend by Key (before space)` |  | меню: меню легенды листа (позиция под листом в Pages) | Сортирует легенду листа по началу имени до первого пробела. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Reset Sheet Legend Order` |  | меню: меню легенды листа (позиция под листом в Pages) | Сбрасывает ручной порядок строк легенды этого листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "меню слоя PDF (Pages > PDF Layers) (9)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Save Layer Info for AI` |  | меню: меню слоя PDF (Pages > PDF Layers) |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Queue AI Request for This Layer` |  | меню: меню слоя PDF (Pages > PDF Layers) |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Use for Layer Trace` |  | меню: меню слоя PDF (Pages > PDF Layers) |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Trace Full Layer to Takeoff` |  | меню: меню слоя PDF (Pages > PDF Layers) |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Trace Nearest Edge to Takeoff` |  | меню: меню слоя PDF (Pages > PDF Layers) |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Trace Point to Takeoff` |  | меню: меню слоя PDF (Pages > PDF Layers) |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Trace All Edges to Takeoff` |  | меню: меню слоя PDF (Pages > PDF Layers) |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Show Layer` |  | меню: меню слоя PDF (Pages > PDF Layers) |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Highlight Layer` |  | меню: меню слоя PDF (Pages > PDF Layers) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Save Layer Info for AI` |  | меню: меню слоя PDF (Pages > PDF Layers) | Сохраняет сведения о слое PDF в контекст для ИИ. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Queue AI Request for This Layer` |  | меню: меню слоя PDF (Pages > PDF Layers) | Ставит в очередь запрос к ИИ по этому слою PDF. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Use for Layer Trace` |  | меню: меню слоя PDF (Pages > PDF Layers) | Выбирает этот слой PDF для трассировки `Layer Trace`. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Trace Full Layer to Takeoff` |  | меню: меню слоя PDF (Pages > PDF Layers) | Обводит все линии слоя PDF в один замер. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Trace Nearest Edge to Takeoff` |  | меню: меню слоя PDF (Pages > PDF Layers) | Обводит ближайшую к указателю грань слоя PDF в замер. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Trace Point to Takeoff` |  | меню: меню слоя PDF (Pages > PDF Layers) | Ставит замер-точку по точке слоя PDF под указателем. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Trace All Edges to Takeoff` |  | меню: меню слоя PDF (Pages > PDF Layers) | Обводит все грани слоя PDF отдельными отрезками в замер. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Show Layer` |  | меню: меню слоя PDF (Pages > PDF Layers) | Показывает или прячет этот слой PDF на листе. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Highlight Layer` |  | меню: меню слоя PDF (Pages > PDF Layers) | Подсвечивает этот слой PDF на листе или снимает подсветку. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "меню вьюпорта: кроп (Crop to Sheet) (12)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Open Source Sheet (...)` |  | меню: меню вьюпорта: кроп (Crop to Sheet) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Open Source Sheet (...)` |  | меню: меню вьюпорта: кроп (Crop to Sheet) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Rotate Crop 90° Clockwise` |  | меню: меню вьюпорта: кроп (Crop to Sheet) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Rotate Crop 90° Counterclockwise` |  | меню: меню вьюпорта: кроп (Crop to Sheet) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Mirror Crop Horizontal` |  | меню: меню вьюпорта: кроп (Crop to Sheet) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Mirror Crop Vertical` |  | меню: меню вьюпорта: кроп (Crop to Sheet) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Reset Crop to 100% (true scale)` |  | меню: меню вьюпорта: кроп (Crop to Sheet) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Opacity...` |  | меню: меню вьюпорта: кроп (Crop to Sheet) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Bring to Front` |  | меню: меню вьюпорта: кроп (Crop to Sheet) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Send to Back` |  | меню: меню вьюпорта: кроп (Crop to Sheet) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Bring Forward` |  | меню: меню вьюпорта: кроп (Crop to Sheet) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Send Backward` |  | меню: меню вьюпорта: кроп (Crop to Sheet) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Open Source Sheet (...)` |  | меню: меню вьюпорта: кроп (Crop to Sheet) | Открывает лист, с которого вырезан этот кроп. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Open Source Sheet (...)` |  | меню: меню вьюпорта: кроп (Crop to Sheet) | Открывает лист, с которого вырезан этот кроп. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Rotate Crop 90° Clockwise` |  | меню: меню вьюпорта: кроп (Crop to Sheet) | Поворачивает выбранный кроп на 90 градусов по часовой стрелке. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Rotate Crop 90° Counterclockwise` |  | меню: меню вьюпорта: кроп (Crop to Sheet) | Поворачивает выбранный кроп на 90 градусов против часовой стрелки. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Mirror Crop Horizontal` |  | меню: меню вьюпорта: кроп (Crop to Sheet) | Зеркально отражает выбранный кроп по горизонтали. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Mirror Crop Vertical` |  | меню: меню вьюпорта: кроп (Crop to Sheet) | Зеркально отражает выбранный кроп по вертикали. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Reset Crop to 100% (true scale)` |  | меню: меню вьюпорта: кроп (Crop to Sheet) | Возвращает кропу истинный масштаб 100 процентов. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Opacity...` |  | меню: меню вьюпорта: кроп (Crop to Sheet) | Задаёт прозрачность выбранного кропа на листе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Bring to Front` |  | меню: меню вьюпорта: кроп (Crop to Sheet) | Выносит выбранный кроп поверх всех остальных кропов. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Send to Back` |  | меню: меню вьюпорта: кроп (Crop to Sheet) | Убирает выбранный кроп под все остальные кропы. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Bring Forward` |  | меню: меню вьюпорта: кроп (Crop to Sheet) | Поднимает выбранный кроп на один слой выше. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Send Backward` |  | меню: меню вьюпорта: кроп (Crop to Sheet) | Опускает выбранный кроп на один слой ниже. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "меню листа в Pages > Sheet Overlay (5)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Overlay Properties...` |  | меню: меню листа в Pages > Sheet Overlay |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Use This Sheet as Current Overlay` |  | меню: меню листа в Pages > Sheet Overlay |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Add This Sheet as New Overlay` |  | меню: меню листа в Pages > Sheet Overlay |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Overlay Properties...` |  | меню: меню листа в Pages > Sheet Overlay |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Clear Current Sheet Overlay` |  | меню: меню листа в Pages > Sheet Overlay |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Overlay Properties...` |  | меню: меню листа в Pages > Sheet Overlay | Открывает свойства наложения: видимость, цвет, совмещение. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Use This Sheet as Current Overlay` |  | меню: меню листа в Pages > Sheet Overlay | Делает этот лист текущим наложением на активный лист. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Add This Sheet as New Overlay` |  | меню: меню листа в Pages > Sheet Overlay | Добавляет этот лист новым слоем наложения на активный лист. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Overlay Properties...` |  | меню: меню листа в Pages > Sheet Overlay | Открывает свойства наложения: видимость, цвет, совмещение. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Clear Current Sheet Overlay` |  | меню: меню листа в Pages > Sheet Overlay | Убирает текущее наложение с активного листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "меню слоя наложения (под листом в Pages) (7)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Overlay Properties...` |  | меню: меню слоя наложения (под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Open Overlay Sheet` |  | меню: меню слоя наложения (под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Show Overlay` |  | меню: меню слоя наложения (под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Open Overlay Sheet` |  | меню: меню слоя наложения (под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Move Layer Up` |  | меню: меню слоя наложения (под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Move Layer Down` |  | меню: меню слоя наложения (под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Remove Overlay Layer` |  | меню: меню слоя наложения (под листом в Pages) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Overlay Properties...` |  | меню: меню слоя наложения (под листом в Pages) | Открывает свойства наложения: видимость, цвет, совмещение. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Open Overlay Sheet` |  | меню: меню слоя наложения (под листом в Pages) | Открывает лист, который наложен этим слоем. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Show Overlay` |  | меню: меню слоя наложения (под листом в Pages) | Показывает или прячет наложенный лист или слой наложения. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Open Overlay Sheet` |  | меню: меню слоя наложения (под листом в Pages) | Открывает лист, который наложен этим слоем. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Move Layer Up` |  | меню: меню слоя наложения (под листом в Pages) | Поднимает слой наложения на одну позицию выше. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Move Layer Down` |  | меню: меню слоя наложения (под листом в Pages) | Опускает слой наложения на одну позицию ниже. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Remove Overlay Layer` |  | меню: меню слоя наложения (под листом в Pages) | Удаляет этот слой наложения с листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "меню вьюпорта: наложение листа (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Overlay Properties...` |  | меню: меню вьюпорта: наложение листа |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Auto Fit Overlay` |  | меню: меню вьюпорта: наложение листа |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Fit by 2 Points` |  | меню: меню вьюпорта: наложение листа |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Overlay Properties...` |  | меню: меню вьюпорта: наложение листа | Открывает свойства наложения: видимость, цвет, совмещение. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Auto Fit Overlay` |  | меню: меню вьюпорта: наложение листа | Автоматически совмещает наложенный лист с активным. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Fit by 2 Points` |  | меню: меню вьюпорта: наложение листа | Совмещает наложенный лист по двум парам точек. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "меню More активной позиции (панель Takeoffs) (5)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Properties...` |  | меню: меню More активной позиции (панель Takeoffs) |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Find in Tree` |  | меню: меню More активной позиции (панель Takeoffs) |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Sheet Targets...` |  | меню: меню More активной позиции (панель Takeoffs) |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Previous Target` |  | меню: меню More активной позиции (панель Takeoffs) |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Next Target` |  | меню: меню More активной позиции (панель Takeoffs) |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Properties...` |  | меню: меню More активной позиции (панель Takeoffs) | Открывает свойства активной позиции для правки. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Find in Tree` |  | меню: меню More активной позиции (панель Takeoffs) | Прокручивает дерево Takeoffs к активной позиции. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Sheet Targets...` |  | меню: меню More активной позиции (панель Takeoffs) | Показывает позиции, которые меряли на этом листе, для выбора цели. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Previous Target` |  | меню: меню More активной позиции (панель Takeoffs) | Делает активной предыдущую позицию takeoff в списке целей. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Next Target` |  | меню: меню More активной позиции (панель Takeoffs) | Делает активной следующую позицию takeoff в списке целей. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 
 ??? note "меню Sheet активной позиции (панель Takeoffs) (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Next Sheet Target` |  | меню: меню Sheet активной позиции (панель Takeoffs) |  | [Листы (Pages)](ourplancore-pages.md) |
+    | `Next Sheet Target` |  | меню: меню Sheet активной позиции (панель Takeoffs) | Делает активной следующую позицию, у которой есть замеры на активном листе. | [Листы (Pages)](ourplancore-pages.md) |
 
 ??? note "меню секции (замера) в Takeoffs (18)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Section Properties...` |  | меню: меню секции (замера) в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Set Notes...` |  | меню: меню секции (замера) в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Rename Section` |  | меню: меню секции (замера) в Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Go to Page` |  | меню: меню секции (замера) в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Select on Canvas` |  | меню: меню секции (замера) в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Merge Segment...` |  | меню: меню секции (замера) в Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Split Segment...` |  | меню: меню секции (замера) в Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Create Count Points Along ... Lines...` |  | меню: меню секции (замера) в Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Break ... Lines Into Segments` |  | меню: меню секции (замера) в Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Count Points At ... Line Ends...` |  | меню: меню секции (замера) в Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Create Line Grid...` |  | меню: меню секции (замера) в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Refresh Regular Joists in All Area Segments` |  | меню: меню секции (замера) в Takeoffs |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Start Extra Joists Mode (D)` | `D` | меню: меню секции (замера) в Takeoffs |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Set / Reset Joist Direction` |  | меню: меню секции (замера) в Takeoffs |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Set Direction for All Areas` |  | меню: меню секции (замера) в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Move Up` |  | меню: меню секции (замера) в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Move Down` |  | меню: меню секции (замера) в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Delete Section` |  | меню: меню секции (замера) в Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
+    | `Section Properties...` |  | меню: меню секции (замера) в Takeoffs | Открывает свойства выбранной секции замера в дереве Takeoffs. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Set Notes...` |  | меню: меню секции (замера) в Takeoffs | Пишет заметки к выбранным секциям замера. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Rename Section` |  | меню: меню секции (замера) в Takeoffs | Переименовывает выбранную секцию замера в дереве Takeoffs. | [Правка и привязки](ourplancore-editing.md) |
+    | `Go to Page` |  | меню: меню секции (замера) в Takeoffs | Открывает лист, к которому относится выбранная запись, наблюдение или замер. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Select on Canvas` |  | меню: меню секции (замера) в Takeoffs | Выделяет на листе замеры выбранных строк или секций. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Merge Segment...` |  | меню: меню секции (замера) в Takeoffs | Объединяет выбранные позиции со всех листов или переносит выбранные замеры в другую позицию. | [Правка и привязки](ourplancore-editing.md) |
+    | `Split Segment...` |  | меню: меню секции (замера) в Takeoffs | Делит позиции по всем листам или выносит выбранные замеры и точки в новую позицию. | [Правка и привязки](ourplancore-editing.md) |
+    | `Create Count Points Along ... Lines...` |  | меню: меню секции (замера) в Takeoffs | Расставляет точки Count вдоль выбранных линий с заданным шагом. | [Правка и привязки](ourplancore-editing.md) |
+    | `Break ... Lines Into Segments` |  | меню: меню секции (замера) в Takeoffs | Разбивает выбранные ломаные линии на отдельные отрезки. | [Правка и привязки](ourplancore-editing.md) |
+    | `Count Points At ... Line Ends...` |  | меню: меню секции (замера) в Takeoffs | Ставит точки Count на концах выбранных линий. | [Правка и привязки](ourplancore-editing.md) |
+    | `Create Line Grid...` |  | меню: меню секции (замера) в Takeoffs | Строит внутри площади сетку линий с заданным шагом по горизонтали и вертикали. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Refresh Regular Joists in All Area Segments` |  | меню: меню секции (замера) в Takeoffs | Пересчитывает обычные балки во всех площадях позиции `Joist Area`. | [Инструменты замера](ourplancore-tools.md) |
+    | `Start Extra Joists Mode (D)` | `D` | меню: меню секции (замера) в Takeoffs | Включает режим рисования дополнительных балок Extra Joists. | [Инструменты замера](ourplancore-tools.md) |
+    | `Set / Reset Joist Direction` |  | меню: меню секции (замера) в Takeoffs | Задаёт или сбрасывает направление балок в выбранной площади. | [Инструменты замера](ourplancore-tools.md) |
+    | `Set Direction for All Areas` |  | меню: меню секции (замера) в Takeoffs | Задаёт одно направление балок для всех площадей позиции. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Move Up` |  | меню: меню секции (замера) в Takeoffs | Поднимает выбранные строки на одну позицию вверх в дереве. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Move Down` |  | меню: меню секции (замера) в Takeoffs | Опускает выбранные строки на одну позицию вниз в дереве. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Delete Section` |  | меню: меню секции (замера) в Takeoffs | Удаляет выбранную секцию замера вместе с её геометрией на листе. | [Правка и привязки](ourplancore-editing.md) |
 
 ??? note "меню позиции в Takeoffs (17)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Set Active Target` |  | меню: меню позиции в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `New Section` |  | меню: меню позиции в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Create Line Grid...` |  | меню: меню позиции в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Trace Walls Inside Area...` |  | меню: меню позиции в Takeoffs |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Create Count Points Along Lines...` |  | меню: меню позиции в Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Break Lines Into Segments` |  | меню: меню позиции в Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Count Points At Line Ends...` |  | меню: меню позиции в Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Find Similar...` |  | меню: меню позиции в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Merge Selected Takeoffs...` |  | меню: меню позиции в Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Split Selected Takeoffs...` |  | меню: меню позиции в Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Undo Takeoff Merge / Split` |  | меню: меню позиции в Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Rename...` |  | меню: меню позиции в Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Delete item + measurements` |  | меню: меню позиции в Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Duplicate Item` |  | меню: меню позиции в Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Properties...` |  | меню: меню позиции в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Bulk Properties...` |  | меню: меню позиции в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Set Unit Price` |  | меню: меню позиции в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Set Active Target` |  | меню: меню позиции в Takeoffs | Делает эту позицию активной целью для рисования. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `New Section` |  | меню: меню позиции в Takeoffs | Добавляет новую секцию замера в эту позицию. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Create Line Grid...` |  | меню: меню позиции в Takeoffs | Строит внутри площади сетку линий с заданным шагом по горизонтали и вертикали. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Trace Walls Inside Area...` |  | меню: меню позиции в Takeoffs | Обводит стены внутри выбранной площади линейными замерами по толщине и минимальной длине. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Create Count Points Along Lines...` |  | меню: меню позиции в Takeoffs | Расставляет точки Count вдоль линий позиции с заданным шагом. | [Правка и привязки](ourplancore-editing.md) |
+    | `Break Lines Into Segments` |  | меню: меню позиции в Takeoffs | Разбивает ломаные линии позиции на отдельные отрезки. | [Правка и привязки](ourplancore-editing.md) |
+    | `Count Points At Line Ends...` |  | меню: меню позиции в Takeoffs | Ставит точки Count на концах выбранных линий, у каждой позиции своя Count. | [Правка и привязки](ourplancore-editing.md) |
+    | `Find Similar...` |  | меню: меню позиции в Takeoffs | Ищет похожие значки или замеры по образцу этой позиции или замера. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Merge Selected Takeoffs...` |  | меню: меню позиции в Takeoffs | Объединяет выбранные позиции со всех листов или переносит выбранные замеры в другую позицию. | [Правка и привязки](ourplancore-editing.md) |
+    | `Split Selected Takeoffs...` |  | меню: меню позиции в Takeoffs | Делит позиции по всем листам или выносит выбранные замеры и точки в новую позицию. | [Правка и привязки](ourplancore-editing.md) |
+    | `Undo Takeoff Merge / Split` |  | меню: меню позиции в Takeoffs | Отменяет последнее объединение или разделение позиций. | [Правка и привязки](ourplancore-editing.md) |
+    | `Rename...` |  | меню: меню позиции в Takeoffs | Переименовывает выбранную позицию takeoff в дереве. | [Правка и привязки](ourplancore-editing.md) |
+    | `Delete item + measurements` |  | меню: меню позиции в Takeoffs | Удаляет выбранную позицию вместе со всеми её замерами на всех листах. | [Правка и привязки](ourplancore-editing.md) |
+    | `Duplicate Item` |  | меню: меню позиции в Takeoffs | Делает копию выбранной позиции рядом с ней в дереве. | [Правка и привязки](ourplancore-editing.md) |
+    | `Properties...` |  | меню: меню позиции в Takeoffs | Открывает свойства выбранной позиции takeoff для правки. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Bulk Properties...` |  | меню: меню позиции в Takeoffs | Меняет свойства сразу у всех выбранных позиций. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Set Unit Price` |  | меню: меню позиции в Takeoffs | Задаёт цену за единицу для выбранной позиции. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 
 ??? note "меню позиции в Takeoffs > Joist (5)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Use Area As Joists...` |  | меню: меню позиции в Takeoffs > Joist |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Refresh Regular Joists in All Area Segments` |  | меню: меню позиции в Takeoffs > Joist |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Start Extra Joists Mode (D)` | `D` | меню: меню позиции в Takeoffs > Joist |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Set / Reset Joist Direction` |  | меню: меню позиции в Takeoffs > Joist |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Set Direction for All Areas` |  | меню: меню позиции в Takeoffs > Joist |  | [Инструменты замера](ourplancore-tools.md) |
+    | `Use Area As Joists...` |  | меню: меню позиции в Takeoffs > Joist | Превращает выбранную площадь в раскладку балок `Joist Area`. | [Инструменты замера](ourplancore-tools.md) |
+    | `Refresh Regular Joists in All Area Segments` |  | меню: меню позиции в Takeoffs > Joist | Пересчитывает обычные балки во всех площадях позиции `Joist Area`. | [Инструменты замера](ourplancore-tools.md) |
+    | `Start Extra Joists Mode (D)` | `D` | меню: меню позиции в Takeoffs > Joist | Включает режим рисования дополнительных балок Extra Joists. | [Инструменты замера](ourplancore-tools.md) |
+    | `Set / Reset Joist Direction` |  | меню: меню позиции в Takeoffs > Joist | Задаёт или сбрасывает направление балок в выбранной площади. | [Инструменты замера](ourplancore-tools.md) |
+    | `Set Direction for All Areas` |  | меню: меню позиции в Takeoffs > Joist | Задаёт одно направление балок для всех площадей позиции. | [Инструменты замера](ourplancore-tools.md) |
 
 ??? note "меню позиции в Takeoffs > Clipboard (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Copy Item` |  | меню: меню позиции в Takeoffs > Clipboard |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Cut Item` |  | меню: меню позиции в Takeoffs > Clipboard |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Paste Into Parent Folder` |  | меню: меню позиции в Takeoffs > Clipboard |  | [Правка и привязки](ourplancore-editing.md) |
+    | `Copy Item` |  | меню: меню позиции в Takeoffs > Clipboard | Копирует выбранную позицию или позиции в буфер дерева. | [Правка и привязки](ourplancore-editing.md) |
+    | `Cut Item` |  | меню: меню позиции в Takeoffs > Clipboard | Вырезает выбранную позицию или позиции для переноса в другую папку. | [Правка и привязки](ourplancore-editing.md) |
+    | `Paste Into Parent Folder` |  | меню: меню позиции в Takeoffs > Clipboard | Вставляет скопированные строки в папку, где лежит выбранная строка. | [Правка и привязки](ourplancore-editing.md) |
 
 ??? note "меню позиции в Takeoffs > Organize (2)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Move Up` |  | меню: меню позиции в Takeoffs > Organize |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Move Down` |  | меню: меню позиции в Takeoffs > Organize |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Move Up` |  | меню: меню позиции в Takeoffs > Organize | Поднимает выбранные строки на одну позицию вверх в дереве. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Move Down` |  | меню: меню позиции в Takeoffs > Organize | Опускает выбранные строки на одну позицию вниз в дереве. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 
 ??? note "меню папки в Takeoffs (8)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `New Folder` |  | меню: меню папки в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `New Item` |  | меню: меню папки в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Rename Folder...` |  | меню: меню папки в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Delete folder + children` |  | меню: меню папки в Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Folder Properties...` |  | меню: меню папки в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Bulk Item Properties...` |  | меню: меню папки в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Random Colors for Items` |  | меню: меню папки в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Open in Explorer` |  | меню: меню папки в Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `New Folder` |  | меню: меню папки в Takeoffs | Создаёт папку takeoff в выбранной папке или в корне. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `New Item` |  | меню: меню папки в Takeoffs | Создаёт позицию takeoff в выбранной папке или в корне. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Rename Folder...` |  | меню: меню папки в Takeoffs | Переименовывает выбранную папку в дереве Pages или Takeoffs. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Delete folder + children` |  | меню: меню папки в Takeoffs | Удаляет папку вместе со всеми вложенными позициями и их замерами. | [Правка и привязки](ourplancore-editing.md) |
+    | `Folder Properties...` |  | меню: меню папки в Takeoffs | Открывает свойства папки: цвет, цена и заметки по умолчанию. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Bulk Item Properties...` |  | меню: меню папки в Takeoffs | Меняет свойства сразу у всех позиций внутри папки. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Random Colors for Items` |  | меню: меню папки в Takeoffs | Даёт случайные разные цвета всем позициям внутри папки. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Open in Explorer` |  | меню: меню папки в Takeoffs | Открывает папку на диске в проводнике Windows. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 
 ??? note "меню папки в Takeoffs > Clipboard (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Copy Folder` |  | меню: меню папки в Takeoffs > Clipboard |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Cut Folder` |  | меню: меню папки в Takeoffs > Clipboard |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Paste Into Folder` |  | меню: меню папки в Takeoffs > Clipboard |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Duplicate Folder` |  | меню: меню папки в Takeoffs > Clipboard |  | [Правка и привязки](ourplancore-editing.md) |
+    | `Copy Folder` |  | меню: меню папки в Takeoffs > Clipboard | Копирует выбранную папку или строки в буфер дерева. | [Правка и привязки](ourplancore-editing.md) |
+    | `Cut Folder` |  | меню: меню папки в Takeoffs > Clipboard | Вырезает выбранную папку или строки для переноса в другое место дерева. | [Правка и привязки](ourplancore-editing.md) |
+    | `Paste Into Folder` |  | меню: меню папки в Takeoffs > Clipboard | Вставляет скопированные или вырезанные строки в эту папку. | [Правка и привязки](ourplancore-editing.md) |
+    | `Duplicate Folder` |  | меню: меню папки в Takeoffs > Clipboard | Делает копию выбранной папки со всем содержимым. | [Правка и привязки](ourplancore-editing.md) |
 
 ??? note "меню папки в Takeoffs > Organize (6)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Auto Create Tree` |  | меню: меню папки в Takeoffs > Organize |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Create Folders From Pages` |  | меню: меню папки в Takeoffs > Organize |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Move Up` |  | меню: меню папки в Takeoffs > Organize |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Move Down` |  | меню: меню папки в Takeoffs > Organize |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Sort Children A-Z` |  | меню: меню папки в Takeoffs > Organize |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Children Z-A` |  | меню: меню папки в Takeoffs > Organize |  | [Листы (Pages)](ourplancore-pages.md) |
+    | `Auto Create Tree` |  | меню: меню папки в Takeoffs > Organize | Создаёт в этой папке стандартное дерево папок и позиций takeoff. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Create Folders From Pages` |  | меню: меню папки в Takeoffs > Organize | Создаёт папки takeoff по структуре листов в дереве Pages. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Move Up` |  | меню: меню папки в Takeoffs > Organize | Поднимает выбранные строки на одну позицию вверх в дереве. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Move Down` |  | меню: меню папки в Takeoffs > Organize | Опускает выбранные строки на одну позицию вниз в дереве. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Sort Children A-Z` |  | меню: меню папки в Takeoffs > Organize | Сортирует всё содержимое этой папки по алфавиту. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Children Z-A` |  | меню: меню папки в Takeoffs > Organize | Сортирует содержимое папки в обратном алфавитном порядке. | [Листы (Pages)](ourplancore-pages.md) |
 
 ??? note "меню корня Takeoffs (6)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Auto Create Tree` |  | меню: меню корня Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Create Folders From Pages` |  | меню: меню корня Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Paste Into Root` |  | меню: меню корня Takeoffs |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Sort Root A-Z` |  | меню: меню корня Takeoffs |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Root Z-A` |  | меню: меню корня Takeoffs |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Open Takeoffs in Explorer` |  | меню: меню корня Takeoffs |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Auto Create Tree` |  | меню: меню корня Takeoffs | Создаёт в этой папке стандартное дерево папок и позиций takeoff. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Create Folders From Pages` |  | меню: меню корня Takeoffs | Создаёт папки takeoff по структуре листов в дереве Pages. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Paste Into Root` |  | меню: меню корня Takeoffs | Вставляет скопированные или вырезанные строки в корень дерева Takeoffs. | [Правка и привязки](ourplancore-editing.md) |
+    | `Sort Root A-Z` |  | меню: меню корня Takeoffs | Сортирует верхний уровень дерева Takeoffs по алфавиту. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Root Z-A` |  | меню: меню корня Takeoffs | Сортирует верхний уровень дерева Takeoffs в обратном алфавитном порядке. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Open Takeoffs in Explorer` |  | меню: меню корня Takeoffs | Открывает папку Takeoffs проекта в проводнике Windows. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 
 ??? note "меню позиции в Takeoffs > 3D (2)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Wall` |  | меню: меню позиции в Takeoffs > 3D |  | [3D и менеджеры](ourplancore-3d.md) |
-    | `Roof Base from Area` |  | меню: меню позиции в Takeoffs > 3D |  | [3D крыша](ourplancore-3d-roof.md) |
+    | `Wall` |  | меню: меню позиции в Takeoffs > 3D | Строит в 3D стены из выбранных линейных позиций и замеров. | [3D и менеджеры](ourplancore-3d.md) |
+    | `Roof Base from Area` |  | меню: меню позиции в Takeoffs > 3D | Строит основание крыши в 3D из выбранных площадей. | [3D крыша](ourplancore-3d-roof.md) |
 
 ??? note "меню панели Templates (8)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Create New Takeoff` |  | меню: меню панели Templates |  | [Прочее](ourplancore-extras-other.md) |
-    | `Add Folder` |  | меню: меню панели Templates |  | [Проекты и сохранение](job-creation-storage.md) |
-    | `Add Line` |  | меню: меню панели Templates |  |  |
-    | `Add Area` |  | меню: меню панели Templates |  |  |
-    | `Add Count` |  | меню: меню панели Templates |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Edit` |  | меню: меню панели Templates |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Duplicate` |  | меню: меню панели Templates |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Delete` |  | меню: меню панели Templates |  | [Правка и привязки](ourplancore-editing.md) |
+    | `Create New Takeoff` |  | меню: меню панели Templates | Создаёт позицию takeoff в проекте по выбранному шаблону. | [Прочее](ourplancore-extras-other.md) |
+    | `Add Folder` |  | меню: меню панели Templates | Добавляет новую папку в дерево шаблонов панели Templates. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Add Line` |  | меню: меню панели Templates | Добавляет в шаблон новую позицию типа Line. |  |
+    | `Add Area` |  | меню: меню панели Templates | Добавляет в шаблон новую позицию типа Area. |  |
+    | `Add Count` |  | меню: меню панели Templates | Добавляет в шаблон новую позицию типа Count. | [Инструменты замера](ourplancore-tools.md) |
+    | `Edit` |  | меню: меню панели Templates | Открывает правку выбранного элемента шаблона в панели Templates. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Duplicate` |  | меню: меню панели Templates | Делает копию выбранного элемента шаблона рядом с ним. | [Правка и привязки](ourplancore-editing.md) |
+    | `Delete` |  | меню: меню панели Templates | Удаляет выбранный элемент из дерева шаблонов. | [Правка и привязки](ourplancore-editing.md) |
 
 ??? note "меню вьюпорта > 3D (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Create Roof Base from Areas` |  | меню: меню вьюпорта > 3D |  | [3D крыша](ourplancore-3d-roof.md) |
-    | `Roof Edge Select` |  | меню: меню вьюпорта > 3D |  | [3D крыша](ourplancore-3d-roof.md) |
-    | `Clear Roof Base` |  | меню: меню вьюпорта > 3D |  | [3D крыша](ourplancore-3d-roof.md) |
+    | `Create Roof Base from Areas` |  | меню: меню вьюпорта > 3D | Строит основание крыши из площадей RF и открывает вкладку 3D. | [3D крыша](ourplancore-3d-roof.md) |
+    | `Roof Edge Select` |  | меню: меню вьюпорта > 3D | Включает или выключает выбор рёбер крыши на листе для задания уклона. | [3D крыша](ourplancore-3d-roof.md) |
+    | `Clear Roof Base` |  | меню: меню вьюпорта > 3D | Удаляет основание крыши, направляющие и построенные скаты. | [3D крыша](ourplancore-3d-roof.md) |
 
 ??? note "меню вьюпорта > 3D (ребро крыши) (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Add Edge to Selection` |  | меню: меню вьюпорта > 3D (ребро крыши) |  | [3D крыша](ourplancore-3d-roof.md) |
-    | `Clear Edge Selection` |  | меню: меню вьюпорта > 3D (ребро крыши) |  | [3D крыша](ourplancore-3d-roof.md) |
-    | `Set Edge as Eave + Pitch ...` |  | меню: меню вьюпорта > 3D (ребро крыши) |  | [3D крыша](ourplancore-3d-roof.md) |
-    | `Set Edge as Rake` |  | меню: меню вьюпорта > 3D (ребро крыши) |  | [3D крыша](ourplancore-3d-roof.md) |
+    | `Add Edge to Selection` |  | меню: меню вьюпорта > 3D (ребро крыши) | Добавляет ребро крыши к выбору или убирает его из выбора. | [3D крыша](ourplancore-3d-roof.md) |
+    | `Clear Edge Selection` |  | меню: меню вьюпорта > 3D (ребро крыши) | Снимает выбор со всех рёбер крыши. | [3D крыша](ourplancore-3d-roof.md) |
+    | `Set Edge as Eave + Pitch ...` |  | меню: меню вьюпорта > 3D (ребро крыши) | Делает выбранные рёбра карнизом с текущим уклоном ската. | [3D крыша](ourplancore-3d-roof.md) |
+    | `Set Edge as Rake` |  | меню: меню вьюпорта > 3D (ребро крыши) | Делает выбранные рёбра фронтонным свесом `Rake` без ската. | [3D крыша](ourplancore-3d-roof.md) |
 
 ??? note "меню вьюпорта (правый клик по листу) (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Open Project Context` |  | меню: меню вьюпорта (правый клик по листу) |  | [Проекты и сохранение](job-creation-storage.md) |
+    | `Open Project Context` |  | меню: меню вьюпорта (правый клик по листу) | Открывает файл контекста проекта для ИИ в формате Markdown. | [Проекты и сохранение](job-creation-storage.md) |
 
 ??? note "меню вьюпорта: буфер замеров (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Copy Measurement` |  | меню: меню вьюпорта: буфер замеров |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Paste Measurements to This Sheet` |  | меню: меню вьюпорта: буфер замеров |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Merge Segment...` |  | меню: меню вьюпорта: буфер замеров |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Split Segment...` |  | меню: меню вьюпорта: буфер замеров |  | [Правка и привязки](ourplancore-editing.md) |
+    | `Copy Measurement` |  | меню: меню вьюпорта: буфер замеров | Копирует выбранные замеры в буфер программы. | [Правка и привязки](ourplancore-editing.md) |
+    | `Paste Measurements to This Sheet` |  | меню: меню вьюпорта: буфер замеров | Вставляет скопированные замеры на этот лист. | [Правка и привязки](ourplancore-editing.md) |
+    | `Merge Segment...` |  | меню: меню вьюпорта: буфер замеров | Объединяет выбранные позиции со всех листов или переносит выбранные замеры в другую позицию. | [Правка и привязки](ourplancore-editing.md) |
+    | `Split Segment...` |  | меню: меню вьюпорта: буфер замеров | Делит позиции по всем листам или выносит выбранные замеры и точки в новую позицию. | [Правка и привязки](ourplancore-editing.md) |
 
 ??? note "меню вьюпорта > AI Assist (точка листа) (12)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `AI crop here -> note` |  | меню: меню вьюпорта > AI Assist (точка листа) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `AI quick box here -> note` |  | меню: меню вьюпорта > AI Assist (точка листа) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Save AI crop here` |  | меню: меню вьюпорта > AI Assist (точка листа) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Save AI marker here` |  | меню: меню вьюпорта > AI Assist (точка листа) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Ask AI about this point / area` |  | меню: меню вьюпорта > AI Assist (точка листа) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Read text near point` |  | меню: меню вьюпорта > AI Assist (точка листа) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Save observation here` |  | меню: меню вьюпорта > AI Assist (точка листа) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Add as pending check` |  | меню: меню вьюпорта > AI Assist (точка листа) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Suggest takeoff item here` |  | меню: меню вьюпорта > AI Assist (точка листа) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Trace wall from this point` |  | меню: меню вьюпорта > AI Assist (точка листа) |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Trace closed area` |  | меню: меню вьюпорта > AI Assist (точка листа) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Check missed takeoffs on this page` |  | меню: меню вьюпорта > AI Assist (точка листа) |  | [ИИ и терминалы](ourplancore-ai.md) |
+    | `AI crop here -> note` |  | меню: меню вьюпорта > AI Assist (точка листа) | Рисует кроп в этом месте, ИИ читает его и пишет заметку на листе. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `AI quick box here -> note` |  | меню: меню вьюпорта > AI Assist (точка листа) | Берёт быстрый кроп вокруг точки, ИИ читает его и пишет заметку. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Save AI crop here` |  | меню: меню вьюпорта > AI Assist (точка листа) | Сохраняет кроп этого места листа как запись для ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Save AI marker here` |  | меню: меню вьюпорта > AI Assist (точка листа) | Ставит в этой точке маркер ИИ с типом и подписью. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Ask AI about this point / area` |  | меню: меню вьюпорта > AI Assist (точка листа) | Создаёт в `AI Inbox` запрос объяснить, что важно в этом месте плана. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Read text near point` |  | меню: меню вьюпорта > AI Assist (точка листа) | Создаёт в `AI Inbox` запрос прочитать и пересказать текст рядом с точкой. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Save observation here` |  | меню: меню вьюпорта > AI Assist (точка листа) | Сохраняет ручное наблюдение, привязанное к этой точке листа. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Add as pending check` |  | меню: меню вьюпорта > AI Assist (точка листа) | Добавляет это место в `AI Inbox` как проверку до финального замера. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Suggest takeoff item here` |  | меню: меню вьюпорта > AI Assist (точка листа) | Предлагает позицию takeoff для этого места листа. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Trace wall from this point` |  | меню: меню вьюпорта > AI Assist (точка листа) | Создаёт запрос обвести стену от этой точки с предпросмотром. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Trace closed area` |  | меню: меню вьюпорта > AI Assist (точка листа) | Создаёт запрос обвести замкнутую площадь от этой точки с предпросмотром. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Check missed takeoffs on this page` |  | меню: меню вьюпорта > AI Assist (точка листа) | Создаёт запрос ИИ проверить, что на листе ничего не пропущено. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "меню вьюпорта: разметка (annotation) (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Copy Markup` |  | меню: меню вьюпорта: разметка (annotation) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Paste Markups Here` |  | меню: меню вьюпорта: разметка (annotation) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Edit Note...` |  | меню: меню вьюпорта: разметка (annotation) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Delete Markup` |  | меню: меню вьюпорта: разметка (annotation) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Copy Markup` |  | меню: меню вьюпорта: разметка (annotation) | Копирует выбранные пометки листа в буфер. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Paste Markups Here` |  | меню: меню вьюпорта: разметка (annotation) | Вставляет скопированные пометки в это место листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Edit Note...` |  | меню: меню вьюпорта: разметка (annotation) | Открывает правку текста выбранной заметки на листе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Delete Markup` |  | меню: меню вьюпорта: разметка (annotation) | Удаляет выбранную пометку или заметку с листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "меню вьюпорта > AI Assist (замер) (7)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `AI crop here -> note` |  | меню: меню вьюпорта > AI Assist (замер) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Save measurement AI crop` |  | меню: меню вьюпорта > AI Assist (замер) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Save measurement as AI marker` |  | меню: меню вьюпорта > AI Assist (замер) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Explain measurement` |  | меню: меню вьюпорта > AI Assist (замер) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Find similar` |  | меню: меню вьюпорта > AI Assist (замер) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Link to observation` |  | меню: меню вьюпорта > AI Assist (замер) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Create note from measurement` |  | меню: меню вьюпорта > AI Assist (замер) |  | [ИИ и терминалы](ourplancore-ai.md) |
+    | `AI crop here -> note` |  | меню: меню вьюпорта > AI Assist (замер) | Рисует кроп в этом месте, ИИ читает его и пишет заметку на листе. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Save measurement AI crop` |  | меню: меню вьюпорта > AI Assist (замер) | Сохраняет кроп вокруг выбранного замера как запись для ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Save measurement as AI marker` |  | меню: меню вьюпорта > AI Assist (замер) | Сохраняет выбранный замер как маркер ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Explain measurement` |  | меню: меню вьюпорта > AI Assist (замер) | Создаёт запрос ИИ объяснить замер и проверить, подходит ли он позиции. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Find similar` |  | меню: меню вьюпорта > AI Assist (замер) | Ищет похожие значки или замеры по образцу этой позиции или замера. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Link to observation` |  | меню: меню вьюпорта > AI Assist (замер) | Создаёт запрос связать этот замер с наблюдением или заметкой проекта. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Create note from measurement` |  | меню: меню вьюпорта > AI Assist (замер) | Создаёт заметку проекта по данным выбранного замера. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "меню Attach (терминал) (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Refresh` |  | меню: меню Attach (терминал) |  | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Refresh` |  | меню: меню Attach (терминал) | Перечитывает список открытых окон mintty для подключения к терминалу. | [Консоль ИИ](ourplancore-ai-console.md) |
 
 ??? note "меню More (терминал) (2)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Detach to window` |  | меню: меню More (терминал) |  | [Консоль ИИ](ourplancore-ai-console.md) |
-    | `Settings -> Terminals` |  | меню: меню More (терминал) |  | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Detach to window` |  | меню: меню More (терминал) | Выносит терминал в отдельное окно, разговор продолжается. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Settings -> Terminals` |  | меню: меню More (терминал) | Открывает раздел настроек `Terminals` с профилями Claude и Codex. | [Консоль ИИ](ourplancore-ai-console.md) |
 
 ??? note "меню Style (лента Annotation) (8)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Highlighter` |  | меню: меню Style (лента Annotation) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Draw line` |  | меню: меню Style (лента Annotation) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Arrow` |  | меню: меню Style (лента Annotation) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Box` |  | меню: меню Style (лента Annotation) |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Cloud` |  | меню: меню Style (лента Annotation) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Area fill` |  | меню: меню Style (лента Annotation) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Hide area (white)` |  | меню: меню Style (лента Annotation) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Note` |  | меню: меню Style (лента Annotation) |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Highlighter` |  | меню: меню Style (лента Annotation) | Рисует на листе полупрозрачную пометку маркером, она не входит в замеры. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Draw line` |  | меню: меню Style (лента Annotation) | Рисует на листе простую линию-пометку, которая не входит в замеры. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Arrow` |  | меню: меню Style (лента Annotation) | Рисует на листе простую стрелку-пометку, которая не входит в замеры. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Box` |  | меню: меню Style (лента Annotation) | Выбирает инструмент прямоугольника-пометки, который не входит в замеры. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Cloud` |  | меню: меню Style (лента Annotation) | Рисует на листе облако-пометку для выделения изменений. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Area fill` |  | меню: меню Style (лента Annotation) | Рисует на листе пометку в виде залитой цветом области, не замер. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Hide area (white)` |  | меню: меню Style (лента Annotation) | Закрывает часть листа сплошным белым на экране и в выгрузке PDF. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Note` |  | меню: меню Style (лента Annotation) | Пишет текстовую заметку в указанном месте листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "меню вьюпорта: выбранный замер (16)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Takeoff Properties...` |  | меню: меню вьюпорта: выбранный замер |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Measurement Properties...` |  | меню: меню вьюпорта: выбранный замер |  | [Дополнительно](ourplancore-extras.md) |
-    | `Trace Walls Inside Area...` |  | меню: меню вьюпорта: выбранный замер |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Use Area As Joists...` |  | меню: меню вьюпорта: выбранный замер |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Refresh Regular Joists in All Area Segments` |  | меню: меню вьюпорта: выбранный замер |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Start Extra Joists Mode (D)` | `D` | меню: меню вьюпорта: выбранный замер |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Delete Nearest Extra Joist` |  | меню: меню вьюпорта: выбранный замер |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Set / Reset Joist Direction` |  | меню: меню вьюпорта: выбранный замер |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Set Direction for All Areas` |  | меню: меню вьюпорта: выбранный замер |  | [Дополнительно](ourplancore-extras.md) |
-    | `Create Count Points Along ... Lines...` |  | меню: меню вьюпорта: выбранный замер |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Break ... Lines Into Segments` |  | меню: меню вьюпорта: выбранный замер |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Count Points At ... Line Ends...` |  | меню: меню вьюпорта: выбранный замер |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Rename Measurement` |  | меню: меню вьюпорта: выбранный замер |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Insert Vertex Here` |  | меню: меню вьюпорта: выбранный замер |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Remove Nearest Vertex` |  | меню: меню вьюпорта: выбранный замер |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Delete Measurement` |  | меню: меню вьюпорта: выбранный замер |  | [Правка и привязки](ourplancore-editing.md) |
+    | `Takeoff Properties...` |  | меню: меню вьюпорта: выбранный замер | Открывает свойства позиции, к которой относится выбранный замер. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Measurement Properties...` |  | меню: меню вьюпорта: выбранный замер | Открывает свойства выбранного замера для правки. | [Дополнительно](ourplancore-extras.md) |
+    | `Trace Walls Inside Area...` |  | меню: меню вьюпорта: выбранный замер | Обводит стены внутри выбранной площади линейными замерами по толщине и минимальной длине. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Use Area As Joists...` |  | меню: меню вьюпорта: выбранный замер | Превращает выбранную площадь в раскладку балок `Joist Area`. | [Инструменты замера](ourplancore-tools.md) |
+    | `Refresh Regular Joists in All Area Segments` |  | меню: меню вьюпорта: выбранный замер | Пересчитывает обычные балки во всех площадях позиции `Joist Area`. | [Инструменты замера](ourplancore-tools.md) |
+    | `Start Extra Joists Mode (D)` | `D` | меню: меню вьюпорта: выбранный замер | Включает режим рисования дополнительных балок Extra Joists. | [Инструменты замера](ourplancore-tools.md) |
+    | `Delete Nearest Extra Joist` |  | меню: меню вьюпорта: выбранный замер | Удаляет дополнительную балку Extra Joist, ближайшую к указателю. | [Правка и привязки](ourplancore-editing.md) |
+    | `Set / Reset Joist Direction` |  | меню: меню вьюпорта: выбранный замер | Задаёт или сбрасывает направление балок в выбранной площади. | [Инструменты замера](ourplancore-tools.md) |
+    | `Set Direction for All Areas` |  | меню: меню вьюпорта: выбранный замер | Задаёт одно направление балок для всех площадей позиции. | [Дополнительно](ourplancore-extras.md) |
+    | `Create Count Points Along ... Lines...` |  | меню: меню вьюпорта: выбранный замер | Расставляет точки Count вдоль выбранных линий с заданным шагом. | [Правка и привязки](ourplancore-editing.md) |
+    | `Break ... Lines Into Segments` |  | меню: меню вьюпорта: выбранный замер | Разбивает выбранные ломаные линии на отдельные отрезки. | [Правка и привязки](ourplancore-editing.md) |
+    | `Count Points At ... Line Ends...` |  | меню: меню вьюпорта: выбранный замер | Ставит точки Count на концах выбранных линий. | [Правка и привязки](ourplancore-editing.md) |
+    | `Rename Measurement` |  | меню: меню вьюпорта: выбранный замер | Переименовывает выбранный замер или его позицию. | [Правка и привязки](ourplancore-editing.md) |
+    | `Insert Vertex Here` |  | меню: меню вьюпорта: выбранный замер | Добавляет вершину в выбранный замер в месте щелчка. | [Правка и привязки](ourplancore-editing.md) |
+    | `Remove Nearest Vertex` |  | меню: меню вьюпорта: выбранный замер | Удаляет вершину замера, ближайшую к указателю. | [Правка и привязки](ourplancore-editing.md) |
+    | `Delete Measurement` |  | меню: меню вьюпорта: выбранный замер | Удаляет выбранный замер с листа и из позиции. | [Правка и привязки](ourplancore-editing.md) |
 
 ## Кнопки панелей и окон, которые строятся в коде (20)
 
@@ -1349,41 +1349,41 @@
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Go to Page` |  | панель: окно Observation Details |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Open Crop` |  | панель: окно Observation Details |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Request JSON` |  | панель: окно Observation Details |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Run AI` |  | панель: окно Observation Details |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `AI Response` |  | панель: окно Observation Details |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Project Context` |  | панель: окно Observation Details |  | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Go to Page` |  | панель: окно Observation Details | Открывает лист, к которому относится выбранная запись, наблюдение или замер. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Open Crop` |  | панель: окно Observation Details | Открывает картинку кропа, по которой сделана запись или наблюдение ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Request JSON` |  | панель: окно Observation Details | Открывает файл JSON запроса к ИИ по этому наблюдению. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Run AI` |  | панель: окно Observation Details | Отправляет в ИИ запрос выбранной записи или наблюдения. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `AI Response` |  | панель: окно Observation Details | Добавляет ответ ИИ к наблюдению вручную. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Project Context` |  | панель: окно Observation Details | Открывает файл контекста проекта для ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "панель 3D Massing (AI Inbox) (12)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Build 3D Draft` |  | панель: панель 3D Massing (AI Inbox) | Build AI_Context/3d_massing/model.json from current AI markers | [3D и менеджеры](ourplancore-3d.md) |
-    | `3D From Takeoffs` |  | панель: панель 3D Massing (AI Inbox) | Build 3D draft from Walls/Areas/Sqft level Line/Area measurements |  |
-    | `AI 3D Sort` |  | панель: панель 3D Massing (AI Inbox) | Send takeoff metadata to OpenAI for structured role/level sorting, then build the 3D draft deterministically |  |
-    | `3D Window` |  | панель: панель 3D Massing (AI Inbox) | Open a separate orbitable 3D viewport with saved marker points |  |
-    | `Auto Roof` |  | панель: панель 3D Massing (AI Inbox) | Queue reviewable AI roof marker candidates from the active sheet |  |
-    | `Review Roof` |  | панель: панель 3D Massing (AI Inbox) | Review and save roof type, pitch, notes, and guide points before accepting roof geometry | [3D и менеджеры](ourplancore-3d.md) |
-    | `Review Openings` |  | панель: панель 3D Massing (AI Inbox) | Review projected door/window/opening markers before accepting the 3D draft |  |
-    | `Accept 3D` |  | панель: панель 3D Massing (AI Inbox) | Mark the current 3D massing draft as reviewed project context | [3D и менеджеры](ourplancore-3d.md) |
-    | `Open JSON` |  | панель: панель 3D Massing (AI Inbox) | Open AI_Context/3d_massing/model.json | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Jump` |  | панель: панель 3D Massing (AI Inbox) | Open the source marker sheet |  |
-    | `Marker JSON` |  | панель: панель 3D Massing (AI Inbox) | Open the selected source marker JSON |  |
-    | `Crop` |  | панель: панель 3D Massing (AI Inbox) | Open the selected source marker crop | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Build 3D Draft` |  | панель: панель 3D Massing (AI Inbox) | Строит черновик 3D-модели `model.json` из текущих маркеров ИИ. | [3D и менеджеры](ourplancore-3d.md) |
+    | `3D From Takeoffs` |  | панель: панель 3D Massing (AI Inbox) | Строит черновик 3D из линий и площадей уровней Walls, Areas, Sqft. |  |
+    | `AI 3D Sort` |  | панель: панель 3D Massing (AI Inbox) | Отправляет данные позиций в OpenAI для разбора ролей и уровней, затем строит черновик 3D. |  |
+    | `3D Window` |  | панель: панель 3D Massing (AI Inbox) | Открывает отдельное окно 3D с вращением и сохранёнными точками маркеров. |  |
+    | `Auto Roof` |  | панель: панель 3D Massing (AI Inbox) | Ставит в очередь ИИ-кандидатов маркеров крыши с активного листа для проверки. |  |
+    | `Review Roof` |  | панель: панель 3D Massing (AI Inbox) | Проверяет и сохраняет тип крыши, уклон, заметки и точки направляющих. | [3D и менеджеры](ourplancore-3d.md) |
+    | `Review Openings` |  | панель: панель 3D Massing (AI Inbox) | Проверяет маркеры дверей, окон и проёмов перед принятием черновика 3D. |  |
+    | `Accept 3D` |  | панель: панель 3D Massing (AI Inbox) | Отмечает черновик 3D как проверенный контекст проекта. | [3D и менеджеры](ourplancore-3d.md) |
+    | `Open JSON` |  | панель: панель 3D Massing (AI Inbox) | Открывает файл черновика 3D `AI_Context/3d_massing/model.json` во внешней программе. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Jump` |  | панель: панель 3D Massing (AI Inbox) | Открывает лист, на котором стоит исходный маркер. |  |
+    | `Marker JSON` |  | панель: панель 3D Massing (AI Inbox) | Открывает файл JSON выбранного исходного маркера ИИ. |  |
+    | `Crop` |  | панель: панель 3D Massing (AI Inbox) | Открывает картинку кропа выбранного исходного маркера ИИ. | [Консоль ИИ](ourplancore-ai-console.md) |
 
 ??? note "окно Export PDF (предпросмотр) (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Preview` |  | панель: окно Export PDF (предпросмотр) | Preview the current sheet's exported PDF. Updates live when PDF Output settings change. | [PDF и сдача](ourplancore-pdf.md) |
+    | `Preview` |  | панель: окно Export PDF (предпросмотр) | Показывает PDF текущего листа, как он выгрузится; обновляется при смене настроек PDF Output. | [PDF и сдача](ourplancore-pdf.md) |
 
 ??? note "окно PlanSwift Import Complete (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Open Report` |  | панель: окно PlanSwift Import Complete |  |  |
+    | `Open Report` |  | панель: окно PlanSwift Import Complete | Открывает отчёт о переносе проекта PlanSwift. |  |
 
 ## Палитра команд (Ctrl+Shift+P) (126)
 
@@ -1391,182 +1391,182 @@
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Open / Import` | `Ctrl+O` | палитра команд: File | Open the job picker. The top toolbar button also contains PDF import. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Open Project File` |  | палитра команд: File | Open a portable .ourplan project file. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Open Recent Job` | `Ctrl+Shift+O` | палитра команд: File | Open the Recent Jobs picker. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Open Jobs Folder` |  | палитра команд: File | Open a root folder that contains multiple jobs. | [Проекты и сохранение](job-creation-storage.md) |
-    | `New PDF Job` |  | палитра команд: File | Create a new OurPlanCore job from a folder of PDFs. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Blank Job` |  | палитра команд: File | Create an empty OurPlanCore job without selecting PDFs. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Create Sample Job` |  | палитра команд: File | Create and open a guided local sample project. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Import PlanSwift Job` |  | палитра команд: File | Convert a read-only PlanSwift job into a new OurPlanCore job. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Import PlanSwift to Current Job` |  | палитра команд: File | Import a read-only PlanSwift job under 01. planswift in the current job. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Import PDF(s)` |  | палитра команд: File | Import one or many PDF files into the current job. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Import PDF Folder` |  | палитра команд: File | Recursively import every PDF file from a selected folder into the current job. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Import PDF Takeoffs` |  | палитра команд: File | Create a new job from PDF takeoffs or import PDF rulers/takeoffs into the current job. | [Прочее](ourplancore-extras-other.md) |
-    | `Export PDF` |  | палитра команд: File | Export selected/all sheets to a PDF. | [PDF и сдача](ourplancore-pdf.md) |
-    | `Save` | `Ctrl+S` | палитра команд: File | Save current takeoff data. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Save As` | `Ctrl+Shift+S` | палитра команд: File | Save the active project to a new location using its current format. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Export CSV` |  | палитра команд: File | Export takeoff rows to CSV. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Export TXT` |  | палитра команд: File | Export selected/all takeoffs in PlanSwift text format. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Export Excel` |  | палитра команд: File | Export selected/all takeoffs to .xlsx columns J/K/L from J10. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Export to Current Excel` |  | палитра команд: File | Write selected takeoff folder/item rows to the active cell in an open Excel workbook. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Export Values to Current Excel` |  | палитра команд: File | Write only the Value column for the same selected takeoff scope. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Excel Macro: SQFT` |  | палитра команд: File | Append selected SQFT rows to TemplateCom and run A2_SQFT_calc. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Excel Macro: Walls` |  | палитра команд: File | Append selected wall rows with numeric floor groups and run A3_Walls_Calc_AllGroup. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Excel Macro: Openings` |  | палитра команд: File | Append openings from Z158, group near window values per floor, then run A5_Openings. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Excel Macro: Gables` |  | палитра команд: File | Append selected Gables rows and run A2_SQFT_calc. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Excel Macro: Truss Heel` |  | палитра команд: File | Append selected Truss Heel rows and run A2_SQFT_calc. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Excel Macro: Parapet` |  | палитра команд: File | Append selected Parapet rows and run A4_Parapet. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Excel Macro: Eve / Rakes` |  | палитра команд: File | Append selected Eves and Rakes rows and run A6_Eve_Rakes. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Excel Macro: ALL` |  | палитра команд: File | Run the configured Excel macro sequence for one selected building/root. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Open / Import` | `Ctrl+O` | палитра команд: File | Открывает выбор проекта; кнопка на верхней панели также импортирует PDF. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Open Project File` |  | палитра команд: File | Открывает переносимый файл проекта `.ourplan` с диска. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Open Recent Job` | `Ctrl+Shift+O` | палитра команд: File | Открывает список недавних проектов для быстрого выбора. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Open Jobs Folder` |  | палитра команд: File | Открывает корневую папку, в которой лежит несколько проектов. | [Проекты и сохранение](job-creation-storage.md) |
+    | `New PDF Job` |  | палитра команд: File | Создаёт новый проект OurPlanCore из папки с PDF. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Blank Job` |  | палитра команд: File | Создаёт пустой проект OurPlanCore без выбора PDF. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Create Sample Job` |  | палитра команд: File | Создаёт и открывает учебный пример проекта с подсказками. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Import PlanSwift Job` |  | палитра команд: File | Переводит проект PlanSwift в новый проект OurPlanCore, исходник не меняется. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Import PlanSwift to Current Job` |  | палитра команд: File | Импортирует проект PlanSwift в текущий проект в папку `01. planswift`. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Import PDF(s)` |  | палитра команд: File | Добавляет один или несколько PDF в текущий проект. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Import PDF Folder` |  | палитра команд: File | Импортирует все PDF из выбранной папки и её подпапок в текущий проект. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Import PDF Takeoffs` |  | палитра команд: File | Переносит листы PDF вместе с замерами и линейками PDF в позиции takeoff. | [Прочее](ourplancore-extras-other.md) |
+    | `Export PDF` |  | палитра команд: File | Выгружает выбранные или все листы в один PDF. | [PDF и сдача](ourplancore-pdf.md) |
+    | `Save` | `Ctrl+S` | палитра команд: File | Сохраняет текущий проект со всеми замерами. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Save As` | `Ctrl+Shift+S` | палитра команд: File | Сохраняет текущий проект в новое место в том же формате. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Export CSV` |  | палитра команд: File | Выгружает строки замеров в файл CSV. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Export TXT` |  | палитра команд: File | Выгружает выбранные или все замеры в текстовый формат PlanSwift. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Export Excel` |  | палитра команд: File | Выгружает выбранные или все замеры в `.xlsx`, колонки J, K, L начиная с J10. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Export to Current Excel` |  | палитра команд: File | Пишет выбранную папку или позицию в активную ячейку открытой книги Excel. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Export Values to Current Excel` |  | палитра команд: File | Пишет в открытую книгу Excel только колонку `Value` для той же выборки. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Excel Macro: SQFT` |  | палитра команд: File | Добавляет выбранные строки SQFT в шаблон и запускает макрос `A2_SQFT_calc`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Excel Macro: Walls` |  | палитра команд: File | Добавляет строки стен с группами этажей и запускает макрос `A3_Walls_Calc_AllGroup`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Excel Macro: Openings` |  | палитра команд: File | Добавляет проёмы с `Z158`, группирует близкие окна по этажам и запускает `A5_Openings`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Excel Macro: Gables` |  | палитра команд: File | Добавляет выбранные строки Gables и запускает макрос `A2_SQFT_calc`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Excel Macro: Truss Heel` |  | палитра команд: File | Добавляет выбранные строки Truss Heel и запускает макрос `A2_SQFT_calc`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Excel Macro: Parapet` |  | палитра команд: File | Добавляет выбранные строки Parapet и запускает макрос `A4_Parapet`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Excel Macro: Eve / Rakes` |  | палитра команд: File | Добавляет строки Eves и Rakes по убыванию длины и запускает `A6_Eve_Rakes`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Excel Macro: ALL` |  | палитра команд: File | Запускает всю настроенную цепочку макросов Excel для одного выбранного корпуса. | [Экспорт в Excel](ourplancore-excel.md) |
 
 ??? note "View (14)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Fit Page` | `F` | палитра команд: View | Fit the active page to the viewport. | [Инструменты замера](ourplancore-tools.md) |
-    | `Zoom In` | `Ctrl++` | палитра команд: View | Zoom into the active page. | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Zoom Out` | `Ctrl+-` | палитра команд: View | Zoom out of the active page. | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Add Bookmark` | `B, K` | палитра команд: View | Name and save the active sheet and current zoom/pan as a bookmark. | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Hide / Show All Takeoffs` |  | палитра команд: View | Toggle current takeoffs on the active sheet. New measurements stay visible. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Hide Selected Takeoffs Only` | `H` | палитра команд: View | Turn off visibility for the whole takeoff of each selected segment on this sheet. No selection leaves visibility unchanged; use the takeoff visibility switch to show it again. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Toggle Dark Theme` |  | палитра команд: View | Switch between light and dark UI theme. | [Начало работы](ourplancore-start.md) |
-    | `Page Background` |  | палитра команд: View | Open page background presets. | [Settings и модули](ourplancore-settings.md) |
-    | `Toggle AI Inbox` |  | палитра команд: View | Collapse or expand the AI Inbox panel. | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Quick Calculator` |  | палитра команд: View | Toggle the slide-out calculator with feet-inches math. | [Workspace, Job Tracker, CLI](ourplancore-workspace.md) |
-    | `Codex / Claude Terminal` |  | палитра команд: View | Show or hide the terminal panel with live plan, AI crop and bookmark context. | [Консоль ИИ](ourplancore-ai-console.md) |
-    | `Show Takeoffs Tab` |  | палитра команд: View | Select the Takeoffs workspace tab. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Show Estimating Tab` |  | палитра команд: View | Select the Estimating workspace tab. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Show 3D Tab` |  | палитра команд: View | Select the right-side 3D wall viewer tab. | [3D и менеджеры](ourplancore-3d.md) |
+    | `Fit Page` | `F` | палитра команд: View | Вписывает активный лист целиком в окно просмотра. | [Инструменты замера](ourplancore-tools.md) |
+    | `Zoom In` | `Ctrl++` | палитра команд: View | Приближает активный лист на один шаг масштаба. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Zoom Out` | `Ctrl+-` | палитра команд: View | Отдаляет активный лист на один шаг масштаба. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Add Bookmark` | `B, K` | палитра команд: View | Сохраняет активный лист с текущим масштабом и положением как именованную закладку. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Hide / Show All Takeoffs` |  | палитра команд: View | Прячет или показывает все замеры на активном листе; новые замеры остаются видны. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Hide Selected Takeoffs Only` | `H` | палитра команд: View | Прячет на листе всю позицию каждого выбранного замера; вернуть можно переключателем видимости. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Toggle Dark Theme` |  | палитра команд: View | Переключает светлую и тёмную тему интерфейса. | [Начало работы](ourplancore-start.md) |
+    | `Page Background` |  | палитра команд: View | Открывает готовые варианты цвета фона под листом. | [Settings и модули](ourplancore-settings.md) |
+    | `Toggle AI Inbox` |  | палитра команд: View | Сворачивает или разворачивает панель `AI Inbox`. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Quick Calculator` |  | палитра команд: View | Показывает или прячет выдвижной калькулятор со счётом в футах и дюймах. | [Workspace, Job Tracker, CLI](ourplancore-workspace.md) |
+    | `Codex / Claude Terminal` |  | палитра команд: View | Показывает или прячет терминалы Codex и Claude с контекстом листа, кропов и закладок. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Show Takeoffs Tab` |  | палитра команд: View | Открывает вкладку `Takeoffs` в боковой панели рабочей области. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Show Estimating Tab` |  | палитра команд: View | Открывает вкладку `Estimating` в боковой панели рабочей области. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Show 3D Tab` |  | палитра команд: View | Открывает вкладку 3D-просмотра стен в правой панели. | [3D и менеджеры](ourplancore-3d.md) |
 
 ??? note "Workspace (7)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Show Main View` |  | палитра команд: Workspace | Switch to the drawing canvas workspace. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Show Sheet Manager` |  | палитра команд: Workspace | Switch to the sheet table / PDF metadata workspace. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Show Takeoff Manager` |  | палитра команд: Workspace | Switch to the takeoff item manager workspace. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Show Report Builder` |  | палитра команд: Workspace | Switch to the spreadsheet-style report builder workspace. | [Менеджеры](ourplancore-managers.md) |
-    | `Show Materials` |  | палитра команд: Workspace | Switch to the material extraction workspace. | [Менеджеры](ourplancore-managers.md) |
-    | `Show AI Manager` |  | палитра команд: Workspace | Switch to the AI inbox and marker manager workspace. | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Show 3D Viewer` |  | палитра команд: Workspace | Switch to the clean 3D viewer workspace. | [3D и менеджеры](ourplancore-3d.md) |
+    | `Show Main View` |  | палитра команд: Workspace | Переключает на рабочую область с листом и инструментами замера. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Show Sheet Manager` |  | палитра команд: Workspace | Переключает на таблицу листов с метаданными PDF. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Show Takeoff Manager` |  | палитра команд: Workspace | Переключает на рабочую область менеджера позиций takeoff. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Show Report Builder` |  | палитра команд: Workspace | Переключает на конструктор отчётов в виде таблицы. | [Менеджеры](ourplancore-managers.md) |
+    | `Show Materials` |  | палитра команд: Workspace | Переключает на рабочую область извлечения материалов. | [Менеджеры](ourplancore-managers.md) |
+    | `Show AI Manager` |  | палитра команд: Workspace | Переключает на менеджер ИИ с входящими запросами и маркерами. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Show 3D Viewer` |  | палитра команд: Workspace | Переключает на рабочую область с чистым 3D-просмотром модели. | [3D и менеджеры](ourplancore-3d.md) |
 
 ??? note "Tools (22)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Select Tool` | `E` | палитра команд: Tools | Use box selection and measurement editing. | [Инструменты замера](ourplancore-tools.md) |
-    | `Pan Tool` | `V` | палитра команд: Tools | Use left-button panning; right-button pan still works. | [Инструменты замера](ourplancore-tools.md) |
-    | `Scale Tool` | `S` | палитра команд: Tools | Draw a calibration line for sheet scale. | [Инструменты замера](ourplancore-tools.md) |
-    | `Ruler Tool` | `R` | палитра команд: Tools | Measure a temporary distance without creating a takeoff. | [Инструменты замера](ourplancore-tools.md) |
-    | `Pitch Tool` |  | палитра команд: Tools | Draw a two-point roof-slope line and show its rise per 12. | [Инструменты замера](ourplancore-tools.md) |
-    | `Highlighter Tool` | `Shift+H` | палитра команд: Tools | Draw a transparent highlighter markup. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Draw Line / Extra Joists` | `D` | палитра команд: Tools | D toggles continuous Extra Joists for one selected Joist Area segment; otherwise it selects Draw Line. | [Инструменты замера](ourplancore-tools.md) |
-    | `Draw Box Tool` |  | палитра команд: Tools | Draw a page annotation box. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Note Tool` | `N` | палитра команд: Tools | Write a text note on the active sheet. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Count Tool` | `P` | палитра команд: Tools | Record count marks into a takeoff item. | [Инструменты замера](ourplancore-tools.md) |
-    | `Similar Count` |  | палитра команд: Tools | Find look-alike symbols on the active sheet, name the result, and add reviewed markers as a Count item. | [Инструменты замера](ourplancore-tools.md) |
-    | `Points Along Line(s)` |  | палитра команд: Tools | Create Count points along the selected Line measurement(s) at a spacing. | [Правка и привязки](ourplancore-editing.md) |
-    | `Line Tool` | `L` | палитра команд: Tools | Record line measurements into a takeoff item. | [Инструменты замера](ourplancore-tools.md) |
-    | `Area Tool` | `A` | палитра команд: Tools | Record area measurements into a takeoff item. | [Инструменты замера](ourplancore-tools.md) |
-    | `J Area Tool` | `J` | палитра команд: Tools | Create a joist area takeoff and record area measurements. | [Инструменты замера](ourplancore-tools.md) |
-    | `Beam Tool` | `B` | палитра команд: Tools | Measure a beam length, create a Count item, and place the first Count mark. | [Инструменты замера](ourplancore-tools.md) |
-    | `Openings Tool` | `O` | палитра команд: Tools | Measure an opening box, create a size-only Count item, and place the mark in the center. | [Инструменты замера](ourplancore-tools.md) |
-    | `Area Cut Tool` | `X` | палитра команд: Tools | Cut a hole out of the selected area measurement. | [Правка и привязки](ourplancore-editing.md) |
-    | `Toggle Record` | `Space` | палитра команд: Tools | Toggle digitizer record mode for the current drawing tool. | [Инструменты замера](ourplancore-tools.md) |
-    | `Toggle Snap` | `F3` | палитра команд: Tools | Toggle snap to existing takeoff points. | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Toggle PDF Snap` | `Ctrl+F3` | палитра команд: Tools | Toggle snap to PDF vector corners and points. | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Toggle Ortho` | `F8` | палитра команд: Tools | Toggle horizontal/vertical Ortho; Shift temporarily forces it. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Select Tool` | `E` | палитра команд: Tools | Включает выделение рамкой и правку замеров. | [Инструменты замера](ourplancore-tools.md) |
+    | `Pan Tool` | `V` | палитра команд: Tools | Двигает лист левой кнопкой мыши; правая кнопка тоже двигает. | [Инструменты замера](ourplancore-tools.md) |
+    | `Scale Tool` | `S` | палитра команд: Tools | Задаёт масштаб листа по калибровочной линии известной длины. | [Инструменты замера](ourplancore-tools.md) |
+    | `Ruler Tool` | `R` | палитра команд: Tools | Меряет расстояние временно, без создания замера. | [Инструменты замера](ourplancore-tools.md) |
+    | `Pitch Tool` |  | палитра команд: Tools | Рисует линию ската по двум точкам и показывает уклон на 12. | [Инструменты замера](ourplancore-tools.md) |
+    | `Highlighter Tool` | `Shift+H` | палитра команд: Tools | Рисует на листе полупрозрачную пометку, как маркером. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Draw Line / Extra Joists` | `D` | палитра команд: Tools | Рисует линию-пометку; при одной выбранной `Joist Area` включает непрерывные Extra Joists. | [Инструменты замера](ourplancore-tools.md) |
+    | `Draw Box Tool` |  | палитра команд: Tools | Рисует на листе прямоугольник-пометку, который не входит в замеры. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Note Tool` | `N` | палитра команд: Tools | Пишет текстовую заметку на активном листе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Count Tool` | `P` | палитра команд: Tools | Ставит точки подсчёта в позицию takeoff. | [Инструменты замера](ourplancore-tools.md) |
+    | `Similar Count` |  | палитра команд: Tools | Ищет на листе похожие значки и добавляет проверенные точки в позицию Count. | [Инструменты замера](ourplancore-tools.md) |
+    | `Points Along Line(s)` |  | палитра команд: Tools | Расставляет точки Count вдоль выбранных линий с заданным шагом. | [Правка и привязки](ourplancore-editing.md) |
+    | `Line Tool` | `L` | палитра команд: Tools | Записывает линейные замеры в позицию takeoff. | [Инструменты замера](ourplancore-tools.md) |
+    | `Area Tool` | `A` | палитра команд: Tools | Записывает замеры площади в позицию takeoff. | [Инструменты замера](ourplancore-tools.md) |
+    | `J Area Tool` | `J` | палитра команд: Tools | Создаёт позицию `Joist Area` и записывает в неё площади. | [Инструменты замера](ourplancore-tools.md) |
+    | `Beam Tool` | `B` | палитра команд: Tools | Меряет длину балки, создаёт позицию Count и ставит первую точку. | [Инструменты замера](ourplancore-tools.md) |
+    | `Openings Tool` | `O` | палитра команд: Tools | Меряет рамку проёма, создаёт позицию Count по размеру и ставит точку в центре. | [Инструменты замера](ourplancore-tools.md) |
+    | `Area Cut Tool` | `X` | палитра команд: Tools | Вырезает отверстие внутри выбранного замера площади. | [Правка и привязки](ourplancore-editing.md) |
+    | `Toggle Record` | `Space` | палитра команд: Tools | Включает или выключает запись текущим инструментом замера. | [Инструменты замера](ourplancore-tools.md) |
+    | `Toggle Snap` | `F3` | палитра команд: Tools | Включает или выключает привязку к точкам существующих замеров. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Toggle PDF Snap` | `Ctrl+F3` | палитра команд: Tools | Включает или выключает привязку к углам и точкам векторов PDF. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Toggle Ortho` | `F8` | палитра команд: Tools | Включает режим `Ortho` только по горизонтали и вертикали; `Shift` включает его временно. | [Привязки и трассировка](ourplancore-snap-trace.md) |
 
 ??? note "Edit (12)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Copy Selected Measurements` | `Ctrl+C` | палитра команд: Edit | Copy the selected measurements. | [Правка и привязки](ourplancore-editing.md) |
-    | `Paste Measurements` | `Ctrl+V` | палитра команд: Edit | Paste copied measurements to the active page. | [Правка и привязки](ourplancore-editing.md) |
-    | `Merge Selected Takeoffs / Measurements` | `Ctrl+M` | палитра команд: Edit | Merge selected takeoff items from all sheets, or move selected measurement segments into another takeoff. | [Правка и привязки](ourplancore-editing.md) |
-    | `Split Selected Takeoffs / Measurements` | `Ctrl+Shift+M` | палитра команд: Edit | Split whole takeoffs across all sheets, or move selected measurements or Count marks into a new takeoff. | [Правка и привязки](ourplancore-editing.md) |
-    | `Break Lines Into Segments` | `Ctrl+Shift+B` | палитра команд: Edit | Split every selected multi-segment Line into one measurement per segment in its own takeoff, whatever the H/V dot. The measured total does not change. | [Правка и привязки](ourplancore-editing.md) |
-    | `Break Lines Into Horizontal / Vertical` | `Ctrl+Shift+V` | палитра команд: Edit | Break H/V: file every segment of the selected Lines into '<takeoff> - Horizontal' and '<takeoff> - Vertical', whatever the H/V dot. | [Правка и привязки](ourplancore-editing.md) |
-    | `Count Points At Line Ends` |  | палитра команд: Edit | Place a Count mark on both ends of every selected Line segment; each source takeoff gets its own Count takeoff. | [Правка и привязки](ourplancore-editing.md) |
-    | `Combine Areas: Union` |  | палитра команд: Edit | Merge the selected Areas into one. | [Правка и привязки](ourplancore-editing.md) |
-    | `Combine Areas: Subtract` |  | палитра команд: Edit | Subtract the later-selected Areas from the first-selected one. | [Правка и привязки](ourplancore-editing.md) |
-    | `Combine Areas: Intersect` |  | палитра команд: Edit | Keep only the region shared by all selected Areas. | [Правка и привязки](ourplancore-editing.md) |
-    | `Combine Areas: Remove Overlap` |  | палитра команд: Edit | Trim overlaps between selected Areas so nothing is counted twice; the first-selected Area wins. | [Правка и привязки](ourplancore-editing.md) |
-    | `Combine Areas: Divide` |  | палитра команд: Edit | Split selected Areas into exclusive parts plus a separate overlap area. | [Правка и привязки](ourplancore-editing.md) |
+    | `Copy Selected Measurements` | `Ctrl+C` | палитра команд: Edit | Копирует выбранные замеры и пометки в буфер обмена программы. | [Правка и привязки](ourplancore-editing.md) |
+    | `Paste Measurements` | `Ctrl+V` | палитра команд: Edit | Вставляет скопированные замеры на активный лист у указателя. | [Правка и привязки](ourplancore-editing.md) |
+    | `Merge Selected Takeoffs / Measurements` | `Ctrl+M` | палитра команд: Edit | Объединяет выбранные позиции со всех листов или переносит выбранные замеры в другую позицию. | [Правка и привязки](ourplancore-editing.md) |
+    | `Split Selected Takeoffs / Measurements` | `Ctrl+Shift+M` | палитра команд: Edit | Делит позиции по всем листам или выносит выбранные замеры и точки в новую позицию. | [Правка и привязки](ourplancore-editing.md) |
+    | `Break Lines Into Segments` | `Ctrl+Shift+B` | палитра команд: Edit | Разбивает выбранные ломаные линии на отдельные отрезки; общая длина не меняется. | [Правка и привязки](ourplancore-editing.md) |
+    | `Break Lines Into Horizontal / Vertical` | `Ctrl+Shift+V` | палитра команд: Edit | Раскладывает отрезки выбранных линий в позиции `Horizontal` и `Vertical`. | [Правка и привязки](ourplancore-editing.md) |
+    | `Count Points At Line Ends` |  | палитра команд: Edit | Ставит точки Count на обоих концах каждого выбранного отрезка линии. | [Правка и привязки](ourplancore-editing.md) |
+    | `Combine Areas: Union` |  | палитра команд: Edit | Сливает выбранные площади в одну общую площадь. | [Правка и привязки](ourplancore-editing.md) |
+    | `Combine Areas: Subtract` |  | палитра команд: Edit | Вычитает выбранные позже площади из первой выбранной. | [Правка и привязки](ourplancore-editing.md) |
+    | `Combine Areas: Intersect` |  | палитра команд: Edit | Оставляет только общую часть всех выбранных площадей. | [Правка и привязки](ourplancore-editing.md) |
+    | `Combine Areas: Remove Overlap` |  | палитра команд: Edit | Обрезает перекрытия выбранных площадей, чтобы ничего не считалось дважды; первая площадь главная. | [Правка и привязки](ourplancore-editing.md) |
+    | `Combine Areas: Divide` |  | палитра команд: Edit | Делит выбранные площади на отдельные части и общую площадь перекрытия. | [Правка и привязки](ourplancore-editing.md) |
 
 ??? note "Pages (13)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Sort Pages A-Z` |  | палитра команд: Pages | Sort children of the selected Pages folder (or root) alphabetically. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Pages Z-A` |  | палитра команд: Pages | Sort children of the selected Pages folder (or root) in reverse alphabetical order. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Pages A/S` |  | палитра команд: Pages | Move A sheets to Arch, S sheets to Struct, and trailing '-' sheets to others. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Blank Sheet` |  | палитра команд: Pages | Create an empty sheet in the current job. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Pages D/Sec/WT` |  | палитра команд: Pages | Move suffix sheets into details/sections/units and reorder v/wt/ft/sv/sw at Pages root. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Repair Measurement Links` |  | палитра команд: Pages | Reconnect stale measurement page links after page renames/imports. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Auto Page Folders` |  | палитра команд: Pages | Create the standard page folder tree. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Auto Name PDF` |  | палитра команд: Pages | Preview and apply PDF sheet names. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Auto Scale PDF` |  | палитра команд: Pages | Preview and apply PDF sheet scales. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Auto Name + Scale PDF` |  | палитра команд: Pages | Preview and apply PDF sheet names and scales. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Set Scale` | `F4` | палитра команд: Pages | Set one scale on the selected sheets, or on the active sheet when there is no Pages selection. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Name / Scale Setup` | `F5` | палитра команд: Pages | Open the manual Name / Scale window for the active sheet. | [Листы (Pages)](ourplancore-pages.md) |
-    | `AI Fill PDF Metadata` |  | палитра команд: Pages | Queue GPT fallback for missing sheet metadata. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Sort Pages A-Z` |  | палитра команд: Pages | Сортирует содержимое выбранной папки Pages или корня по алфавиту. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Pages Z-A` |  | палитра команд: Pages | Сортирует содержимое выбранной папки Pages или корня в обратном алфавитном порядке. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Pages A/S` |  | палитра команд: Pages | Раскладывает листы A в `Arch`, листы S в `Struct`, остальные в прочие. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Blank Sheet` |  | палитра команд: Pages | Создаёт пустой лист в текущем проекте без PDF. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Pages D/Sec/WT` |  | палитра команд: Pages | Раскладывает листы с суффиксами по папкам details, sections, units и упорядочивает корень Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Repair Measurement Links` |  | палитра команд: Pages | Заново привязывает замеры к листам после переименования или импорта страниц. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Auto Page Folders` |  | палитра команд: Pages | Создаёт стандартное дерево папок листов в выбранной папке Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Auto Name PDF` |  | палитра команд: Pages | Показывает и применяет автоматические имена листов из PDF. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Auto Scale PDF` |  | палитра команд: Pages | Показывает и применяет автоматические масштабы листов из PDF. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Auto Name + Scale PDF` |  | палитра команд: Pages | Показывает и применяет автоматические имена и масштабы листов из PDF. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Set Scale` | `F4` | палитра команд: Pages | Ставит один масштаб на выбранные листы или на активный лист. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Name / Scale Setup` | `F5` | палитра команд: Pages | Открывает окно ручной настройки имени и масштаба активного листа. | [Листы (Pages)](ourplancore-pages.md) |
+    | `AI Fill PDF Metadata` |  | палитра команд: Pages | Ставит в очередь GPT для листов, у которых не найдены метаданные. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "Sheets (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Overlay` |  | палитра команд: Sheets | Choose a matching sheet overlay for the active sheet. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Batch Overlay` |  | палитра команд: Sheets | Pair target and overlay sheets across the whole job. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Move Overlay by Points` |  | палитра команд: Sheets | Align the active sheet overlay by matching points. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Overlay` |  | палитра команд: Sheets | Подбирает подходящий лист для наложения на активный. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Batch Overlay` |  | палитра команд: Sheets | Подбирает пары основных и накладываемых листов по всему проекту. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Move Overlay by Points` |  | палитра команд: Sheets | Совмещает наложение активного листа по парам точек. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "Materials (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Extract Materials` |  | палитра команд: Materials | Extract material evidence and schedules from the current job PDFs. | [Менеджеры](ourplancore-managers.md) |
+    | `Extract Materials` |  | палитра команд: Materials | Извлекает из PDF проекта найденные материалы и спецификации. | [Менеджеры](ourplancore-managers.md) |
 
 ??? note "PDF Layers (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `PDF Layers All On` |  | палитра команд: PDF Layers | Turn all active page PDF layers on. | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `PDF Layers All Off` |  | палитра команд: PDF Layers | Turn all active page PDF layers off. | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Clear PDF Layer Highlights` |  | палитра команд: PDF Layers | Clear highlighted PDF layers. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `PDF Layers All On` |  | палитра команд: PDF Layers | Включает все слои PDF на активном листе. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `PDF Layers All Off` |  | палитра команд: PDF Layers | Выключает все слои PDF на активном листе. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Clear PDF Layer Highlights` |  | палитра команд: PDF Layers | Снимает подсветку выделенных слоёв PDF на листе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "Takeoffs (15)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `New Takeoff Folder` |  | палитра команд: Takeoffs | Create a takeoff folder under the selected/root folder. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `New Takeoff Item` | `T` | палитра команд: Takeoffs | Create a takeoff item under the selected/root folder. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Refresh Takeoffs Tree` |  | палитра команд: Takeoffs | Reload the Takeoffs tree from the current job folder. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Show Active Takeoff` |  | палитра команд: Takeoffs | Scroll the Takeoffs tree to the active target item. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Active Takeoff Properties` |  | палитра команд: Takeoffs | Edit properties for the active target item. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Record Active Takeoff` | `Space` | палитра команд: Takeoffs | Start or stop recording into the active target item. | [Инструменты замера](ourplancore-tools.md) |
-    | `Previous Takeoff Target` |  | палитра команд: Takeoffs | Switch the active target to the previous takeoff item. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Next Takeoff Target` |  | палитра команд: Takeoffs | Switch the active target to the next takeoff item. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Next Sheet Takeoff Target` |  | палитра команд: Takeoffs | Switch to the next takeoff item measured on the active sheet. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Takeoffs A-Z` |  | палитра команд: Takeoffs | Sort children of the selected Takeoffs folder (or root) alphabetically. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Takeoffs Z-A` |  | палитра команд: Takeoffs | Sort children of the selected Takeoffs folder (or root) in reverse alphabetical order. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Takeoffs: Walls` |  | палитра команд: Takeoffs | Sort wall takeoffs in the selected folder and subfolders: ext, corr, dem, then 2x6/2x4 sizes. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Sort Takeoffs: Details by Sheet` |  | палитра команд: Takeoffs | Group detail takeoffs like 1/A501 by the sheet after the slash, ordered as in the Pages tree. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Auto Takeoff Tree` |  | палитра команд: Takeoffs | Create the standard takeoff folder tree. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Create Takeoffs From Pages` |  | палитра команд: Takeoffs | Create top takeoff folders from CAPS page/folder names. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `New Takeoff Folder` |  | палитра команд: Takeoffs | Создаёт папку takeoff в выбранной папке или в корне. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `New Takeoff Item` | `T` | палитра команд: Takeoffs | Создаёт позицию takeoff в выбранной папке или в корне. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Refresh Takeoffs Tree` |  | палитра команд: Takeoffs | Перечитывает дерево Takeoffs из папки текущего проекта. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Show Active Takeoff` |  | палитра команд: Takeoffs | Прокручивает дерево Takeoffs к активной позиции. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Active Takeoff Properties` |  | палитра команд: Takeoffs | Открывает свойства активной позиции для правки. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Record Active Takeoff` | `Space` | палитра команд: Takeoffs | Начинает или останавливает запись в активную позицию. | [Инструменты замера](ourplancore-tools.md) |
+    | `Previous Takeoff Target` |  | палитра команд: Takeoffs | Делает активной предыдущую позицию takeoff в списке целей. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Next Takeoff Target` |  | палитра команд: Takeoffs | Делает активной следующую позицию takeoff в списке целей. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Next Sheet Takeoff Target` |  | палитра команд: Takeoffs | Делает активной следующую позицию, у которой есть замеры на активном листе. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Takeoffs A-Z` |  | палитра команд: Takeoffs | Сортирует содержимое выбранной папки Takeoffs или корня по алфавиту. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Takeoffs Z-A` |  | палитра команд: Takeoffs | Сортирует содержимое выбранной папки Takeoffs или корня в обратном алфавитном порядке. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Takeoffs: Walls` |  | палитра команд: Takeoffs | Сортирует стены в папке и подпапках: ext, corr, dem, затем сечения 2x6 и 2x4. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Takeoffs: Details by Sheet` |  | палитра команд: Takeoffs | Группирует узлы вида `1/A501` по листу после косой черты в порядке дерева Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Auto Takeoff Tree` |  | палитра команд: Takeoffs | Создаёт стандартное дерево папок takeoff для нового проекта. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Create Takeoffs From Pages` |  | палитра команд: Takeoffs | Создаёт верхние папки takeoff по именам листов и папок Pages, набранным заглавными. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 
 ??? note "AI (8)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `OpenAI Settings` |  | палитра команд: AI | Review key status and AI model settings. | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Add AI Observation` |  | палитра команд: AI | Save a manual AI observation for the active job/page. | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Run Selected AI Request` |  | палитра команд: AI | Run the selected AI Inbox request. | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Run New Crop Bookmarks` |  | палитра команд: AI | Send only new crop bookmarks to OpenAI. | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Retry Failed Crop Bookmarks` |  | палитра команд: AI | Retry only failed crop bookmarks. | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Create Marker Set` |  | палитра команд: AI | Save the current marker filters as a marker set. | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Manage Marker Sets` |  | палитра команд: AI | Open marker set management. | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Export Marker Context` |  | палитра команд: AI | Export visible marker context JSON. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `OpenAI Settings` |  | палитра команд: AI | Показывает состояние ключа OpenAI и настройки модели ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Add AI Observation` |  | палитра команд: AI | Сохраняет ручное наблюдение или заметку-маркер ИИ для проекта и листа. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Run Selected AI Request` |  | палитра команд: AI | Запускает выбранный запрос из `AI Inbox`. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Run New Crop Bookmarks` |  | палитра команд: AI | Отправляет в OpenAI только новые закладки-кропы. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Retry Failed Crop Bookmarks` |  | палитра команд: AI | Повторяет только закладки-кропы, запрос по которым не удался. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Create Marker Set` |  | палитра команд: AI | Сохраняет текущие фильтры проверенных маркеров как именованный набор. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Manage Marker Sets` |  | палитра команд: AI | Открывает окно управления сохранёнными наборами маркеров ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Export Marker Context` |  | палитра команд: AI | Выгружает контекст видимых проверенных маркеров в JSON. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ## Справка по клавишам (F1) (91)
 
@@ -1574,147 +1574,147 @@
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Show / close this shortcut guide` | `F1` | F1: GLOBAL |  | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Close help or cancel the active action` | `Esc` | F1: GLOBAL |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Open / import a job` | `Ctrl+O` | F1: GLOBAL |  | [Проекты и сохранение](job-creation-storage.md) |
-    | `Open Recent Jobs` | `Ctrl+Shift+O` | F1: GLOBAL |  | [Проекты и сохранение](job-creation-storage.md) |
-    | `Save the current job` | `Ctrl+S` | F1: GLOBAL |  | [Проекты и сохранение](job-creation-storage.md) |
-    | `Save the current project to a new location` | `Ctrl+Shift+S` | F1: GLOBAL |  | [Проекты и сохранение](job-creation-storage.md) |
-    | `Merge selected measurement segments` | `Ctrl+M` | F1: GLOBAL |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Split measurements / Count marks` | `Ctrl+Shift+M` | F1: GLOBAL |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Break selected Lines into segments` | `Ctrl+Shift+B` | F1: GLOBAL |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Break selected Lines into Horizontal / Vertical takeoffs` | `Ctrl+Shift+V` | F1: GLOBAL |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Open Command Palette` | `Ctrl+Shift+P` | F1: GLOBAL |  | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Start / stop Record` | `Space` | F1: GLOBAL |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Create a new takeoff item` | `T` | F1: GLOBAL |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Hide selected takeoffs only` | `H` | F1: GLOBAL | One selected segment hides its whole takeoff on this sheet. Restore with its visibility switch. No selection: no change. Roof guide keeps H for Hip | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Add a bookmark` | `B, K` | F1: GLOBAL | Press in sequence within 0.9 sec | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Set scale on selected sheet(s)` | `F4` | F1: GLOBAL |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Open Name / Scale` | `F5` | F1: GLOBAL |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Collapse Pages and Takeoffs trees` | `-` | F1: GLOBAL |  | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Show / close this shortcut guide` | `F1` | F1: GLOBAL | Открывает или закрывает справку по горячим клавишам программы. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Close help or cancel the active action` | `Esc` | F1: GLOBAL | Закрывает справку или отменяет текущее действие, шаг трассировки и режим `Layer Trace`. | [Инструменты замера](ourplancore-tools.md) |
+    | `Open / import a job` | `Ctrl+O` | F1: GLOBAL | Открывает выбор проекта; кнопка на верхней панели также импортирует PDF. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Open Recent Jobs` | `Ctrl+Shift+O` | F1: GLOBAL | Открывает список недавних проектов для быстрого выбора. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Save the current job` | `Ctrl+S` | F1: GLOBAL | Сохраняет текущий проект со всеми замерами. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Save the current project to a new location` | `Ctrl+Shift+S` | F1: GLOBAL | Сохраняет текущий проект в новое место в том же формате. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Merge selected measurement segments` | `Ctrl+M` | F1: GLOBAL | Объединяет выбранные позиции со всех листов или переносит выбранные замеры в другую позицию. | [Правка и привязки](ourplancore-editing.md) |
+    | `Split measurements / Count marks` | `Ctrl+Shift+M` | F1: GLOBAL | Делит позиции по всем листам или выносит выбранные замеры и точки в новую позицию. | [Правка и привязки](ourplancore-editing.md) |
+    | `Break selected Lines into segments` | `Ctrl+Shift+B` | F1: GLOBAL | Разбивает выбранные ломаные линии на отдельные отрезки; общая длина не меняется. | [Правка и привязки](ourplancore-editing.md) |
+    | `Break selected Lines into Horizontal / Vertical takeoffs` | `Ctrl+Shift+V` | F1: GLOBAL | Раскладывает отрезки выбранных линий в позиции `Horizontal` и `Vertical`. | [Правка и привязки](ourplancore-editing.md) |
+    | `Open Command Palette` | `Ctrl+Shift+P` | F1: GLOBAL | Открывает палитру команд с поиском по всем функциям программы. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Start / stop Record` | `Space` | F1: GLOBAL | Включает или выключает запись текущим инструментом замера. | [Инструменты замера](ourplancore-tools.md) |
+    | `Create a new takeoff item` | `T` | F1: GLOBAL | Создаёт новую позицию takeoff в выбранной папке дерева. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Hide selected takeoffs only` | `H` | F1: GLOBAL | Прячет на листе всю позицию каждого выбранного замера; вернуть можно переключателем видимости. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Add a bookmark` | `B, K` | F1: GLOBAL | Сохраняет активный лист с текущим масштабом и положением как именованную закладку. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Set scale on selected sheet(s)` | `F4` | F1: GLOBAL | Ставит один масштаб на выбранные листы или на активный лист. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Open Name / Scale` | `F5` | F1: GLOBAL | Открывает окно ручной настройки имени и масштаба активного листа. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Collapse Pages and Takeoffs trees` | `-` | F1: GLOBAL | Сворачивает все папки в деревьях Pages и Takeoffs. | [Горячие клавиши](ourplancore-shortcuts.md) |
 
 ??? note "DRAWING TOOLS (14)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Pan` | `V` | F1: DRAWING TOOLS |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Select` | `E` | F1: DRAWING TOOLS |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Scale` | `S` | F1: DRAWING TOOLS |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Ruler` | `R` | F1: DRAWING TOOLS |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Highlighter` | `Shift+H` | F1: DRAWING TOOLS |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Draw Line / Extra Joists` | `D` | F1: DRAWING TOOLS | One selected Joist Area: toggle continuous mode; D or Esc exits | [Инструменты замера](ourplancore-tools.md) |
-    | `Beam` | `B` | F1: DRAWING TOOLS |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Openings` | `O` | F1: DRAWING TOOLS |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Note` | `N` | F1: DRAWING TOOLS |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Count` | `P` | F1: DRAWING TOOLS |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Line` | `L` | F1: DRAWING TOOLS |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Area` | `A` | F1: DRAWING TOOLS |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Joist Area` | `J` | F1: DRAWING TOOLS |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Area Cut` | `X` | F1: DRAWING TOOLS |  | [Правка и привязки](ourplancore-editing.md) |
+    | `Pan` | `V` | F1: DRAWING TOOLS | Двигает лист левой кнопкой мыши; правая кнопка тоже двигает. | [Инструменты замера](ourplancore-tools.md) |
+    | `Select` | `E` | F1: DRAWING TOOLS | Включает выделение рамкой и правку замеров. | [Инструменты замера](ourplancore-tools.md) |
+    | `Scale` | `S` | F1: DRAWING TOOLS | Задаёт масштаб листа по калибровочной линии известной длины. | [Инструменты замера](ourplancore-tools.md) |
+    | `Ruler` | `R` | F1: DRAWING TOOLS | Меряет расстояние временно, без создания замера. | [Инструменты замера](ourplancore-tools.md) |
+    | `Highlighter` | `Shift+H` | F1: DRAWING TOOLS | Рисует на листе полупрозрачную пометку, как маркером. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Draw Line / Extra Joists` | `D` | F1: DRAWING TOOLS | Рисует линию-пометку; при одной выбранной `Joist Area` включает непрерывные Extra Joists. | [Инструменты замера](ourplancore-tools.md) |
+    | `Beam` | `B` | F1: DRAWING TOOLS | Меряет длину балки, создаёт позицию Count и ставит первую точку. | [Инструменты замера](ourplancore-tools.md) |
+    | `Openings` | `O` | F1: DRAWING TOOLS | Меряет рамку проёма, создаёт позицию Count по размеру и ставит точку в центре. | [Инструменты замера](ourplancore-tools.md) |
+    | `Note` | `N` | F1: DRAWING TOOLS | Пишет текстовую заметку на активном листе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Count` | `P` | F1: DRAWING TOOLS | Ставит точки подсчёта в позицию takeoff. | [Инструменты замера](ourplancore-tools.md) |
+    | `Line` | `L` | F1: DRAWING TOOLS | Записывает линейные замеры в позицию takeoff. | [Инструменты замера](ourplancore-tools.md) |
+    | `Area` | `A` | F1: DRAWING TOOLS | Записывает замеры площади в позицию takeoff. | [Инструменты замера](ourplancore-tools.md) |
+    | `Joist Area` | `J` | F1: DRAWING TOOLS | Создаёт позицию `Joist Area` и записывает в неё площади. | [Инструменты замера](ourplancore-tools.md) |
+    | `Area Cut` | `X` | F1: DRAWING TOOLS | Вырезает отверстие внутри выбранного замера площади. | [Правка и привязки](ourplancore-editing.md) |
 
 ??? note "VIEWPORT & DRAWING (15)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Complete the current drawing` | `C` | F1: VIEWPORT & DRAWING |  | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Fit sheet to viewport` | `F` | F1: VIEWPORT & DRAWING |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Rename the selected object's takeoff` | `F2` | F1: VIEWPORT & DRAWING |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Toggle takeoff-point Snap` | `F3` | F1: VIEWPORT & DRAWING |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Toggle PDF vector Snap` | `Ctrl+F3` | F1: VIEWPORT & DRAWING |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Toggle Ortho` | `F8` | F1: VIEWPORT & DRAWING |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Temporarily force Ortho` | `Shift` | F1: VIEWPORT & DRAWING | While drawing or editing | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Toggle Box mode` | `F9` | F1: VIEWPORT & DRAWING |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Zoom in` | `Ctrl++` | F1: VIEWPORT & DRAWING |  | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Zoom out` | `Ctrl+-` | F1: VIEWPORT & DRAWING |  | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Undo viewport action / last point` | `Ctrl+Z / Backspace` | F1: VIEWPORT & DRAWING |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Select all objects on active sheet` | `Ctrl+A` | F1: VIEWPORT & DRAWING |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Copy selected measurements / markups` | `Ctrl+C` | F1: VIEWPORT & DRAWING |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Paste at the pointer` | `Ctrl+V` | F1: VIEWPORT & DRAWING |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Delete the selected object` | `Delete` | F1: VIEWPORT & DRAWING |  | [Правка и привязки](ourplancore-editing.md) |
+    | `Complete the current drawing` | `C` | F1: VIEWPORT & DRAWING | Завершает текущий рисуемый замер или пометку, как двойной щелчок. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Fit sheet to viewport` | `F` | F1: VIEWPORT & DRAWING | Вписывает активный лист целиком в окно просмотра. | [Инструменты замера](ourplancore-tools.md) |
+    | `Rename the selected object's takeoff` | `F2` | F1: VIEWPORT & DRAWING | Переименовывает позицию takeoff, к которой относится выбранный на листе объект. | [Правка и привязки](ourplancore-editing.md) |
+    | `Toggle takeoff-point Snap` | `F3` | F1: VIEWPORT & DRAWING | Включает или выключает привязку к точкам существующих замеров. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Toggle PDF vector Snap` | `Ctrl+F3` | F1: VIEWPORT & DRAWING | Включает или выключает привязку к углам и точкам векторов PDF. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Toggle Ortho` | `F8` | F1: VIEWPORT & DRAWING | Включает режим `Ortho` только по горизонтали и вертикали; `Shift` включает его временно. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Temporarily force Ortho` | `Shift` | F1: VIEWPORT & DRAWING | Пока клавиша зажата при рисовании или правке, включает режим `Ortho`. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Toggle Box mode` | `F9` | F1: VIEWPORT & DRAWING | Включает режим `Box`: линия, площадь и вырез рисуются прямоугольником по двум углам. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Zoom in` | `Ctrl++` | F1: VIEWPORT & DRAWING | Приближает активный лист на один шаг масштаба. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Zoom out` | `Ctrl+-` | F1: VIEWPORT & DRAWING | Отдаляет активный лист на один шаг масштаба. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Undo viewport action / last point` | `Ctrl+Z / Backspace` | F1: VIEWPORT & DRAWING | Отменяет последнее действие на листе или последнюю поставленную точку. | [Правка и привязки](ourplancore-editing.md) |
+    | `Select all objects on active sheet` | `Ctrl+A` | F1: VIEWPORT & DRAWING | Выделяет все объекты на активном листе. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Copy selected measurements / markups` | `Ctrl+C` | F1: VIEWPORT & DRAWING | Копирует выбранные замеры и пометки в буфер обмена программы. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Paste at the pointer` | `Ctrl+V` | F1: VIEWPORT & DRAWING | Вставляет скопированные замеры на активный лист у указателя. | [Правка и привязки](ourplancore-editing.md) |
+    | `Delete the selected object` | `Delete` | F1: VIEWPORT & DRAWING | Удаляет выбранный на листе замер или пометку. | [Правка и привязки](ourplancore-editing.md) |
 
 ??? note "SELECTION MODIFIERS (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Add to / toggle selection` | `Ctrl` | F1: SELECTION MODIFIERS |  | [3D крыша](ourplancore-3d-roof.md) |
-    | `Remove from selection` | `Ctrl+Shift` | F1: SELECTION MODIFIERS |  | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Select vertices / handles` | `Alt` | F1: SELECTION MODIFIERS | Click or box-select | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Add to / toggle selection` | `Ctrl` | F1: SELECTION MODIFIERS | С зажатой клавишей щелчок добавляет объект к выделению или снимает с него. | [3D крыша](ourplancore-3d-roof.md) |
+    | `Remove from selection` | `Ctrl+Shift` | F1: SELECTION MODIFIERS | С зажатыми клавишами щелчок или рамка убирают объекты из выделения. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Select vertices / handles` | `Alt` | F1: SELECTION MODIFIERS | С зажатой клавишей щелчок или рамка выделяют вершины и ручки замеров. | [Горячие клавиши](ourplancore-shortcuts.md) |
 
 ??? note "PAGES TREE (10)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Clear the Pages selection` | `Esc` | F1: PAGES TREE |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Copy / cut / paste` | `Ctrl+C / X / V` | F1: PAGES TREE |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Duplicate with the exact name` | `Ctrl+D` | F1: PAGES TREE |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Move page, folder, or legend row` | `Ctrl+Up / Down` | F1: PAGES TREE |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Restore the last Pages deletion` | `Ctrl+Z` | F1: PAGES TREE |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Rename page or folder` | `F2` | F1: PAGES TREE |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Delete selected page(s) / folder(s)` | `Delete` | F1: PAGES TREE |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Select a range` | `Shift+click` | F1: PAGES TREE |  |  |
-    | `Toggle one row` | `Ctrl+click` | F1: PAGES TREE |  |  |
-    | `Add a range` | `Ctrl+Shift+click` | F1: PAGES TREE |  |  |
+    | `Clear the Pages selection` | `Esc` | F1: PAGES TREE | Снимает выделение со всех строк в дереве Pages. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Copy / cut / paste` | `Ctrl+C / X / V` | F1: PAGES TREE | Копирует, вырезает и вставляет выбранные строки в дереве Pages или Takeoffs. | [Правка и привязки](ourplancore-editing.md) |
+    | `Duplicate with the exact name` | `Ctrl+D` | F1: PAGES TREE | Делает копию выбранного листа или папки Pages с тем же именем. | [Правка и привязки](ourplancore-editing.md) |
+    | `Move page, folder, or legend row` | `Ctrl+Up / Down` | F1: PAGES TREE | Двигает выбранный лист, папку или строку легенды вверх или вниз. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Restore the last Pages deletion` | `Ctrl+Z` | F1: PAGES TREE | Возвращает последнее удаление в дереве Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Rename page or folder` | `F2` | F1: PAGES TREE | Переименовывает выбранный лист или папку в дереве Pages. | [Правка и привязки](ourplancore-editing.md) |
+    | `Delete selected page(s) / folder(s)` | `Delete` | F1: PAGES TREE | Удаляет выбранные листы или папки из дерева Pages. | [Правка и привязки](ourplancore-editing.md) |
+    | `Select a range` | `Shift+click` | F1: PAGES TREE | Щелчок с `Shift` выделяет диапазон строк от прошлого выбора. |  |
+    | `Toggle one row` | `Ctrl+click` | F1: PAGES TREE | Щелчок с `Ctrl` добавляет одну строку к выделению или снимает её. |  |
+    | `Add a range` | `Ctrl+Shift+click` | F1: PAGES TREE | Щелчок с `Ctrl+Shift` добавляет диапазон строк к уже выделенным. |  |
 
 ??? note "TAKEOFFS TREE (9)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Copy / cut / paste` | `Ctrl+C / X / V` | F1: TAKEOFFS TREE |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Duplicate with the exact name` | `Ctrl+D` | F1: TAKEOFFS TREE |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Move item, folder, or section` | `Ctrl+Up / Down` | F1: TAKEOFFS TREE |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Select section measurements on canvas` | `Ctrl+Enter` | F1: TAKEOFFS TREE |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Restore the last takeoff-tree deletion` | `Ctrl+Z` | F1: TAKEOFFS TREE |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Rename item, folder, or section` | `F2` | F1: TAKEOFFS TREE |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Delete selected node(s)` | `Delete` | F1: TAKEOFFS TREE |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Range / toggle selection` | `Shift / Ctrl+click` | F1: TAKEOFFS TREE |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Start marquee selection from a row` | `Alt+drag` | F1: TAKEOFFS TREE |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Copy / cut / paste` | `Ctrl+C / X / V` | F1: TAKEOFFS TREE | Копирует, вырезает и вставляет выбранные строки в дереве Pages или Takeoffs. | [Правка и привязки](ourplancore-editing.md) |
+    | `Duplicate with the exact name` | `Ctrl+D` | F1: TAKEOFFS TREE | Делает копию выбранной позиции или папки Takeoffs с тем же именем. | [Правка и привязки](ourplancore-editing.md) |
+    | `Move item, folder, or section` | `Ctrl+Up / Down` | F1: TAKEOFFS TREE | Двигает выбранную позицию, папку или секцию вверх или вниз в дереве. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Select section measurements on canvas` | `Ctrl+Enter` | F1: TAKEOFFS TREE | Выделяет на листе замеры выбранных секций дерева Takeoffs. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Restore the last takeoff-tree deletion` | `Ctrl+Z` | F1: TAKEOFFS TREE | Возвращает последнее удаление в дереве Takeoffs. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Rename item, folder, or section` | `F2` | F1: TAKEOFFS TREE | Переименовывает выбранную позицию, папку или секцию в дереве Takeoffs. | [Правка и привязки](ourplancore-editing.md) |
+    | `Delete selected node(s)` | `Delete` | F1: TAKEOFFS TREE | Удаляет выбранные узлы из дерева Takeoffs. | [Правка и привязки](ourplancore-editing.md) |
+    | `Range / toggle selection` | `Shift / Ctrl+click` | F1: TAKEOFFS TREE | Щелчок с `Shift` выделяет диапазон, с `Ctrl` добавляет или снимает строку. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Start marquee selection from a row` | `Alt+drag` | F1: TAKEOFFS TREE | Перетаскивание с `Alt` от строки начинает выделение рамкой в дереве. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 
 ??? note "BOOKMARKS & AI INBOX (2)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Open the selected bookmark / AI entry` | `Enter` | F1: BOOKMARKS & AI INBOX |  | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Delete the selected bookmark` | `Delete` | F1: BOOKMARKS & AI INBOX |  | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Open the selected bookmark / AI entry` | `Enter` | F1: BOOKMARKS & AI INBOX | Открывает выбранную закладку или запись `AI Inbox` на её листе. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Delete the selected bookmark` | `Delete` | F1: BOOKMARKS & AI INBOX | Удаляет выбранную закладку из списка закладок. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "SHEET OVERLAY (6)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Move the overlay` | `Ctrl+Alt+drag` | F1: SHEET OVERLAY |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Nudge the overlay` | `Ctrl+Alt+Arrows` | F1: SHEET OVERLAY |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Scale the overlay` | `Ctrl+Alt++ / -` | F1: SHEET OVERLAY |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Rotate the overlay` | `Ctrl+Alt+[ / ]` | F1: SHEET OVERLAY |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Reset overlay transform` | `Ctrl+Alt+0` | F1: SHEET OVERLAY |  | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Use fine movement / scale / rotation` | `+ Shift` | F1: SHEET OVERLAY |  |  |
+    | `Move the overlay` | `Ctrl+Alt+drag` | F1: SHEET OVERLAY | Перетаскивание с `Ctrl+Alt` двигает наложенный лист. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Nudge the overlay` | `Ctrl+Alt+Arrows` | F1: SHEET OVERLAY | Стрелки с `Ctrl+Alt` сдвигают наложенный лист на небольшой шаг. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Scale the overlay` | `Ctrl+Alt++ / -` | F1: SHEET OVERLAY | Клавиши плюс и минус с `Ctrl+Alt` увеличивают или уменьшают наложенный лист. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Rotate the overlay` | `Ctrl+Alt+[ / ]` | F1: SHEET OVERLAY | Квадратные скобки с `Ctrl+Alt` поворачивают наложенный лист. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Reset overlay transform` | `Ctrl+Alt+0` | F1: SHEET OVERLAY | Сбрасывает сдвиг, масштаб и поворот наложенного листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Use fine movement / scale / rotation` | `+ Shift` | F1: SHEET OVERLAY | Добавленный `Shift` делает сдвиг, масштаб и поворот наложения точнее. |  |
 
 ??? note "3D ROOF GUIDE MODE (8)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Ridge guide` | `R` | F1: 3D ROOF GUIDE MODE |  | [3D крыша](ourplancore-3d-roof.md) |
-    | `Hip guide` | `H` | F1: 3D ROOF GUIDE MODE |  | [3D крыша](ourplancore-3d-roof.md) |
-    | `Valley guide` | `V` | F1: 3D ROOF GUIDE MODE |  | [3D крыша](ourplancore-3d-roof.md) |
-    | `Eave guide` | `E` | F1: 3D ROOF GUIDE MODE |  | [3D крыша](ourplancore-3d-roof.md) |
-    | `Rake guide` | `K` | F1: 3D ROOF GUIDE MODE |  | [3D крыша](ourplancore-3d-roof.md) |
-    | `Pitch guide` | `P` | F1: 3D ROOF GUIDE MODE |  | [3D крыша](ourplancore-3d-roof.md) |
-    | `Remove the last guide point` | `Backspace / Ctrl+Z` | F1: 3D ROOF GUIDE MODE |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Cancel guide / leave Roof mode` | `Esc` | F1: 3D ROOF GUIDE MODE |  | [3D крыша](ourplancore-3d-roof.md) |
+    | `Ridge guide` | `R` | F1: 3D ROOF GUIDE MODE | В режиме направляющих 3D-крыши рисует линию конька (`Ridge`). | [3D крыша](ourplancore-3d-roof.md) |
+    | `Hip guide` | `H` | F1: 3D ROOF GUIDE MODE | В режиме направляющих 3D-крыши рисует линию вальмы (`Hip`). | [3D крыша](ourplancore-3d-roof.md) |
+    | `Valley guide` | `V` | F1: 3D ROOF GUIDE MODE | В режиме направляющих 3D-крыши рисует линию ендовы (`Valley`). | [3D крыша](ourplancore-3d-roof.md) |
+    | `Eave guide` | `E` | F1: 3D ROOF GUIDE MODE | В режиме направляющих 3D-крыши рисует линию карниза (`Eave`). | [3D крыша](ourplancore-3d-roof.md) |
+    | `Rake guide` | `K` | F1: 3D ROOF GUIDE MODE | В режиме направляющих 3D-крыши рисует линию фронтонного свеса (`Rake`). | [3D крыша](ourplancore-3d-roof.md) |
+    | `Pitch guide` | `P` | F1: 3D ROOF GUIDE MODE | В режиме направляющих 3D-крыши рисует направляющую уклона ската (`Pitch`). | [3D крыша](ourplancore-3d-roof.md) |
+    | `Remove the last guide point` | `Backspace / Ctrl+Z` | F1: 3D ROOF GUIDE MODE | Убирает последнюю поставленную точку направляющей 3D-крыши. | [Правка и привязки](ourplancore-editing.md) |
+    | `Cancel guide / leave Roof mode` | `Esc` | F1: 3D ROOF GUIDE MODE | Отменяет текущую направляющую или выходит из режима 3D-крыши. | [3D крыша](ourplancore-3d-roof.md) |
 
 ??? note "LAYER TRACE (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Cycle edge snap or trace mode / candidate` | `Tab` | F1: LAYER TRACE | After Layer Trace is enabled from its toolbar | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Advance the trace workflow` | `Enter` | F1: LAYER TRACE |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Cancel trace step / leave Layer Trace` | `Esc` | F1: LAYER TRACE |  | [Инструменты замера](ourplancore-tools.md) |
+    | `Cycle edge snap or trace mode / candidate` | `Tab` | F1: LAYER TRACE | В `Layer Trace` перебирает привязку к краю, режим трассировки или кандидата. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Advance the trace workflow` | `Enter` | F1: LAYER TRACE | Переходит к следующему шагу трассировки в режиме `Layer Trace`. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Cancel trace step / leave Layer Trace` | `Esc` | F1: LAYER TRACE | Закрывает справку или отменяет текущее действие, шаг трассировки и режим `Layer Trace`. | [Инструменты замера](ourplancore-tools.md) |
 
 ??? note "DIALOGS & LISTS (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Accept / open the selected result` | `Enter` | F1: DIALOGS & LISTS |  |  |
-    | `Close the active dialog` | `Esc` | F1: DIALOGS & LISTS |  |  |
-    | `Navigate palette / picker results` | `Up / Down` | F1: DIALOGS & LISTS |  |  |
+    | `Accept / open the selected result` | `Enter` | F1: DIALOGS & LISTS | Принимает или открывает выбранный результат в окне или списке. |  |
+    | `Close the active dialog` | `Esc` | F1: DIALOGS & LISTS | Закрывает активное окно или диалог без применения. |  |
+    | `Navigate palette / picker results` | `Up / Down` | F1: DIALOGS & LISTS | Стрелки вверх и вниз двигают выбор по результатам палитры и списков. |  |
 
 ## Клавиши по умолчанию, которых нет в палитре (61)
 
@@ -1722,102 +1722,102 @@
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Show / close the shortcut guide` | `F1` | клавиша: Workspace | Default key binding; editable in Settings > Keyboard Shortcuts. | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Open Command Palette` | `Ctrl+Shift+P` | клавиша: Workspace | Default key binding; editable in Settings > Keyboard Shortcuts. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Collapse Pages and Takeoffs trees` | `-` | клавиша: Workspace | Default key binding; editable in Settings > Keyboard Shortcuts. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Show / close the shortcut guide` | `F1` | клавиша: Workspace | Открывает или закрывает справку по горячим клавишам программы. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Open Command Palette` | `Ctrl+Shift+P` | клавиша: Workspace | Открывает палитру команд с поиском по всем функциям программы. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Collapse Pages and Takeoffs trees` | `-` | клавиша: Workspace | Сворачивает все папки в деревьях Pages и Takeoffs. | [Горячие клавиши](ourplancore-shortcuts.md) |
 
 ??? note "Viewport (9)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Toggle Box mode` | `F9` | клавиша: Viewport | Default key binding; editable in Settings > Keyboard Shortcuts. | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Undo viewport action / last point` | `Ctrl+Z / Backspace` | клавиша: Viewport | Default key binding; editable in Settings > Keyboard Shortcuts. | [Правка и привязки](ourplancore-editing.md) |
-    | `Select all objects on active sheet` | `Ctrl+A` | клавиша: Viewport | Default key binding; editable in Settings > Keyboard Shortcuts. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Delete the selected object` | `Delete` | клавиша: Viewport | Default key binding; editable in Settings > Keyboard Shortcuts. | [Правка и привязки](ourplancore-editing.md) |
-    | `Rename the selected object's takeoff` | `F2` | клавиша: Viewport | Default key binding; editable in Settings > Keyboard Shortcuts. | [Правка и привязки](ourplancore-editing.md) |
-    | `Complete the current drawing` | `C` | клавиша: Viewport | Default key binding; editable in Settings > Keyboard Shortcuts. | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Cancel the active action` | `Esc` | клавиша: Viewport | Default key binding; editable in Settings > Keyboard Shortcuts. | [Инструменты замера](ourplancore-tools.md) |
-    | `Cycle edge snap or trace mode / candidate` | `Tab` | клавиша: Viewport | Default key binding; editable in Settings > Keyboard Shortcuts. | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Advance the trace workflow` | `Enter` | клавиша: Viewport | Default key binding; editable in Settings > Keyboard Shortcuts. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Toggle Box mode` | `F9` | клавиша: Viewport | Включает режим `Box`: линия, площадь и вырез рисуются прямоугольником по двум углам. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Undo viewport action / last point` | `Ctrl+Z / Backspace` | клавиша: Viewport | Отменяет последнее действие на листе или последнюю поставленную точку. | [Правка и привязки](ourplancore-editing.md) |
+    | `Select all objects on active sheet` | `Ctrl+A` | клавиша: Viewport | Выделяет все объекты на активном листе. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Delete the selected object` | `Delete` | клавиша: Viewport | Удаляет выбранный на листе замер или пометку. | [Правка и привязки](ourplancore-editing.md) |
+    | `Rename the selected object's takeoff` | `F2` | клавиша: Viewport | Переименовывает позицию takeoff, к которой относится выбранный на листе объект. | [Правка и привязки](ourplancore-editing.md) |
+    | `Complete the current drawing` | `C` | клавиша: Viewport | Завершает текущий рисуемый замер или пометку, как двойной щелчок. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Cancel the active action` | `Esc` | клавиша: Viewport | Закрывает справку или отменяет текущее действие, шаг трассировки и режим `Layer Trace`. | [Инструменты замера](ourplancore-tools.md) |
+    | `Cycle edge snap or trace mode / candidate` | `Tab` | клавиша: Viewport | В `Layer Trace` перебирает привязку к краю, режим трассировки или кандидата. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Advance the trace workflow` | `Enter` | клавиша: Viewport | Переходит к следующему шагу трассировки в режиме `Layer Trace`. | [Привязки и трассировка](ourplancore-snap-trace.md) |
 
 ??? note "Pages (10)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Pages tree: copy` | `Ctrl+C` | клавиша: Pages | Default key binding; editable in Settings > Keyboard Shortcuts. | [Правка и привязки](ourplancore-editing.md) |
-    | `Pages tree: cut` | `Ctrl+X` | клавиша: Pages | Default key binding; editable in Settings > Keyboard Shortcuts. | [Правка и привязки](ourplancore-editing.md) |
-    | `Pages tree: paste` | `Ctrl+V` | клавиша: Pages | Default key binding; editable in Settings > Keyboard Shortcuts. | [Правка и привязки](ourplancore-editing.md) |
-    | `Pages tree: duplicate with the exact name` | `Ctrl+D` | клавиша: Pages | Default key binding; editable in Settings > Keyboard Shortcuts. | [Правка и привязки](ourplancore-editing.md) |
-    | `Pages tree: move up` | `Ctrl+Up` | клавиша: Pages | Default key binding; editable in Settings > Keyboard Shortcuts. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Pages tree: move down` | `Ctrl+Down` | клавиша: Pages | Default key binding; editable in Settings > Keyboard Shortcuts. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Pages tree: restore the last deletion` | `Ctrl+Z` | клавиша: Pages | Default key binding; editable in Settings > Keyboard Shortcuts. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Pages tree: rename page or folder` | `F2` | клавиша: Pages | Default key binding; editable in Settings > Keyboard Shortcuts. | [Правка и привязки](ourplancore-editing.md) |
-    | `Pages tree: delete selected` | `Delete` | клавиша: Pages | Default key binding; editable in Settings > Keyboard Shortcuts. | [Правка и привязки](ourplancore-editing.md) |
-    | `Pages tree: clear the selection` | `Esc` | клавиша: Pages | Default key binding; editable in Settings > Keyboard Shortcuts. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Pages tree: copy` | `Ctrl+C` | клавиша: Pages | Копирует выбранные листы или папки дерева Pages в буфер. | [Правка и привязки](ourplancore-editing.md) |
+    | `Pages tree: cut` | `Ctrl+X` | клавиша: Pages | Вырезает выбранные листы или папки дерева Pages для переноса. | [Правка и привязки](ourplancore-editing.md) |
+    | `Pages tree: paste` | `Ctrl+V` | клавиша: Pages | Вставляет скопированные или вырезанные листы в выбранную папку Pages. | [Правка и привязки](ourplancore-editing.md) |
+    | `Pages tree: duplicate with the exact name` | `Ctrl+D` | клавиша: Pages | Делает копию выбранного листа или папки Pages с тем же именем. | [Правка и привязки](ourplancore-editing.md) |
+    | `Pages tree: move up` | `Ctrl+Up` | клавиша: Pages | Поднимает выбранный лист или папку на одну строку в дереве Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Pages tree: move down` | `Ctrl+Down` | клавиша: Pages | Опускает выбранный лист или папку на одну строку в дереве Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Pages tree: restore the last deletion` | `Ctrl+Z` | клавиша: Pages | Возвращает последнее удаление в дереве Pages. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Pages tree: rename page or folder` | `F2` | клавиша: Pages | Переименовывает выбранный лист или папку в дереве Pages. | [Правка и привязки](ourplancore-editing.md) |
+    | `Pages tree: delete selected` | `Delete` | клавиша: Pages | Удаляет выбранные листы или папки из дерева Pages. | [Правка и привязки](ourplancore-editing.md) |
+    | `Pages tree: clear the selection` | `Esc` | клавиша: Pages | Снимает выделение со всех строк в дереве Pages. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ??? note "Takeoffs (10)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Takeoffs tree: copy` | `Ctrl+C` | клавиша: Takeoffs | Default key binding; editable in Settings > Keyboard Shortcuts. | [Правка и привязки](ourplancore-editing.md) |
-    | `Takeoffs tree: cut` | `Ctrl+X` | клавиша: Takeoffs | Default key binding; editable in Settings > Keyboard Shortcuts. | [Правка и привязки](ourplancore-editing.md) |
-    | `Takeoffs tree: paste` | `Ctrl+V` | клавиша: Takeoffs | Default key binding; editable in Settings > Keyboard Shortcuts. | [Правка и привязки](ourplancore-editing.md) |
-    | `Takeoffs tree: duplicate with the exact name` | `Ctrl+D` | клавиша: Takeoffs | Default key binding; editable in Settings > Keyboard Shortcuts. | [Правка и привязки](ourplancore-editing.md) |
-    | `Takeoffs tree: move up` | `Ctrl+Up` | клавиша: Takeoffs | Default key binding; editable in Settings > Keyboard Shortcuts. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Takeoffs tree: move down` | `Ctrl+Down` | клавиша: Takeoffs | Default key binding; editable in Settings > Keyboard Shortcuts. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Takeoffs tree: restore the last deletion` | `Ctrl+Z` | клавиша: Takeoffs | Default key binding; editable in Settings > Keyboard Shortcuts. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Takeoffs tree: rename item, folder, or section` | `F2` | клавиша: Takeoffs | Default key binding; editable in Settings > Keyboard Shortcuts. | [Правка и привязки](ourplancore-editing.md) |
-    | `Takeoffs tree: delete selected node(s)` | `Delete` | клавиша: Takeoffs | Default key binding; editable in Settings > Keyboard Shortcuts. | [Правка и привязки](ourplancore-editing.md) |
-    | `Select section measurements on canvas` | `Ctrl+Enter` | клавиша: Takeoffs | Default key binding; editable in Settings > Keyboard Shortcuts. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Takeoffs tree: copy` | `Ctrl+C` | клавиша: Takeoffs | Копирует выбранные позиции или папки дерева Takeoffs в буфер. | [Правка и привязки](ourplancore-editing.md) |
+    | `Takeoffs tree: cut` | `Ctrl+X` | клавиша: Takeoffs | Вырезает выбранные позиции или папки дерева Takeoffs для переноса. | [Правка и привязки](ourplancore-editing.md) |
+    | `Takeoffs tree: paste` | `Ctrl+V` | клавиша: Takeoffs | Вставляет скопированные или вырезанные позиции в выбранную папку Takeoffs. | [Правка и привязки](ourplancore-editing.md) |
+    | `Takeoffs tree: duplicate with the exact name` | `Ctrl+D` | клавиша: Takeoffs | Делает копию выбранной позиции или папки Takeoffs с тем же именем. | [Правка и привязки](ourplancore-editing.md) |
+    | `Takeoffs tree: move up` | `Ctrl+Up` | клавиша: Takeoffs | Поднимает выбранную позицию, папку или секцию на одну строку в дереве Takeoffs. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Takeoffs tree: move down` | `Ctrl+Down` | клавиша: Takeoffs | Опускает выбранную позицию, папку или секцию на одну строку в дереве Takeoffs. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Takeoffs tree: restore the last deletion` | `Ctrl+Z` | клавиша: Takeoffs | Возвращает последнее удаление в дереве Takeoffs. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Takeoffs tree: rename item, folder, or section` | `F2` | клавиша: Takeoffs | Переименовывает выбранную позицию, папку или секцию в дереве Takeoffs. | [Правка и привязки](ourplancore-editing.md) |
+    | `Takeoffs tree: delete selected node(s)` | `Delete` | клавиша: Takeoffs | Удаляет выбранные узлы из дерева Takeoffs. | [Правка и привязки](ourplancore-editing.md) |
+    | `Select section measurements on canvas` | `Ctrl+Enter` | клавиша: Takeoffs | Выделяет на листе замеры выбранных секций дерева Takeoffs. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 
 ??? note "Bookmarks (2)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Open the selected bookmark` | `Enter` | клавиша: Bookmarks | Default key binding; editable in Settings > Keyboard Shortcuts. | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Delete the selected bookmark` | `Delete` | клавиша: Bookmarks | Default key binding; editable in Settings > Keyboard Shortcuts. | [Правка и привязки](ourplancore-editing.md) |
+    | `Open the selected bookmark` | `Enter` | клавиша: Bookmarks | Открывает выбранную закладку на её листе с сохранённым масштабом. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Delete the selected bookmark` | `Delete` | клавиша: Bookmarks | Удаляет выбранную закладку из списка закладок. | [Правка и привязки](ourplancore-editing.md) |
 
 ??? note "Inbox (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Open the selected AI entry` | `Enter` | клавиша: Inbox | Default key binding; editable in Settings > Keyboard Shortcuts. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Open the selected AI entry` | `Enter` | клавиша: Inbox | Открывает выбранную запись `AI Inbox` на её листе. | [Горячие клавиши](ourplancore-shortcuts.md) |
 
 ??? note "Roof (8)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Ridge guide` | `R` | клавиша: Roof | Default key binding; editable in Settings > Keyboard Shortcuts. | [3D крыша](ourplancore-3d-roof.md) |
-    | `Hip guide` | `H` | клавиша: Roof | Default key binding; editable in Settings > Keyboard Shortcuts. | [3D крыша](ourplancore-3d-roof.md) |
-    | `Valley guide` | `V` | клавиша: Roof | Default key binding; editable in Settings > Keyboard Shortcuts. | [3D крыша](ourplancore-3d-roof.md) |
-    | `Eave guide` | `E` | клавиша: Roof | Default key binding; editable in Settings > Keyboard Shortcuts. | [3D крыша](ourplancore-3d-roof.md) |
-    | `Rake guide` | `K` | клавиша: Roof | Default key binding; editable in Settings > Keyboard Shortcuts. | [3D крыша](ourplancore-3d-roof.md) |
-    | `Pitch guide` | `P` | клавиша: Roof | Default key binding; editable in Settings > Keyboard Shortcuts. | [3D крыша](ourplancore-3d-roof.md) |
-    | `Cancel guide / leave Roof mode` | `Esc` | клавиша: Roof | Default key binding; editable in Settings > Keyboard Shortcuts. | [3D крыша](ourplancore-3d-roof.md) |
-    | `Remove the last guide point` | `Backspace / Ctrl+Z` | клавиша: Roof | Default key binding; editable in Settings > Keyboard Shortcuts. | [Правка и привязки](ourplancore-editing.md) |
+    | `Ridge guide` | `R` | клавиша: Roof | В режиме направляющих 3D-крыши рисует линию конька (`Ridge`). | [3D крыша](ourplancore-3d-roof.md) |
+    | `Hip guide` | `H` | клавиша: Roof | В режиме направляющих 3D-крыши рисует линию вальмы (`Hip`). | [3D крыша](ourplancore-3d-roof.md) |
+    | `Valley guide` | `V` | клавиша: Roof | В режиме направляющих 3D-крыши рисует линию ендовы (`Valley`). | [3D крыша](ourplancore-3d-roof.md) |
+    | `Eave guide` | `E` | клавиша: Roof | В режиме направляющих 3D-крыши рисует линию карниза (`Eave`). | [3D крыша](ourplancore-3d-roof.md) |
+    | `Rake guide` | `K` | клавиша: Roof | В режиме направляющих 3D-крыши рисует линию фронтонного свеса (`Rake`). | [3D крыша](ourplancore-3d-roof.md) |
+    | `Pitch guide` | `P` | клавиша: Roof | В режиме направляющих 3D-крыши рисует направляющую уклона ската (`Pitch`). | [3D крыша](ourplancore-3d-roof.md) |
+    | `Cancel guide / leave Roof mode` | `Esc` | клавиша: Roof | Отменяет текущую направляющую или выходит из режима 3D-крыши. | [3D крыша](ourplancore-3d-roof.md) |
+    | `Remove the last guide point` | `Backspace / Ctrl+Z` | клавиша: Roof | Убирает последнюю поставленную точку направляющей 3D-крыши. | [Правка и привязки](ourplancore-editing.md) |
 
 ??? note "Overlay (18)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Nudge the overlay left` | `Ctrl+Alt+Left` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Nudge the overlay right` | `Ctrl+Alt+Right` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Nudge the overlay up` | `Ctrl+Alt+Up` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Nudge the overlay down` | `Ctrl+Alt+Down` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Scale the overlay up` | `Ctrl+Alt++` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Scale the overlay down` | `Ctrl+Alt+-` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Rotate the overlay left` | `Ctrl+Alt+[` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Rotate the overlay right` | `Ctrl+Alt+]` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Reset overlay transform` | `Ctrl+Alt+0` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Fine nudge the overlay left` | `Ctrl+Alt+Shift+Left` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Fine nudge the overlay right` | `Ctrl+Alt+Shift+Right` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Fine nudge the overlay up` | `Ctrl+Alt+Shift+Up` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Fine nudge the overlay down` | `Ctrl+Alt+Shift+Down` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Fine scale the overlay up` | `Ctrl+Alt+Shift++` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Fine scale the overlay down` | `Ctrl+Alt+Shift+-` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Fine rotate the overlay left` | `Ctrl+Alt+Shift+[` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Fine rotate the overlay right` | `Ctrl+Alt+Shift+]` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Reset overlay transform (fine)` | `Ctrl+Alt+Shift+0` | клавиша: Overlay | Default key binding; editable in Settings > Keyboard Shortcuts. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Nudge the overlay left` | `Ctrl+Alt+Left` | клавиша: Overlay | Сдвигает наложенный лист на небольшой шаг влево. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Nudge the overlay right` | `Ctrl+Alt+Right` | клавиша: Overlay | Сдвигает наложенный лист на небольшой шаг вправо. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Nudge the overlay up` | `Ctrl+Alt+Up` | клавиша: Overlay | Сдвигает наложенный лист на небольшой шаг вверх. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Nudge the overlay down` | `Ctrl+Alt+Down` | клавиша: Overlay | Сдвигает наложенный лист на небольшой шаг вниз. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Scale the overlay up` | `Ctrl+Alt++` | клавиша: Overlay | Немного увеличивает масштаб наложенного листа одним шагом. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Scale the overlay down` | `Ctrl+Alt+-` | клавиша: Overlay | Немного уменьшает масштаб наложенного листа одним шагом. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Rotate the overlay left` | `Ctrl+Alt+[` | клавиша: Overlay | Поворачивает наложенный лист на небольшой угол влево. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Rotate the overlay right` | `Ctrl+Alt+]` | клавиша: Overlay | Поворачивает наложенный лист на небольшой угол вправо. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Reset overlay transform` | `Ctrl+Alt+0` | клавиша: Overlay | Сбрасывает сдвиг, масштаб и поворот наложенного листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Fine nudge the overlay left` | `Ctrl+Alt+Shift+Left` | клавиша: Overlay | Сдвигает наложенный лист влево на самый мелкий шаг. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Fine nudge the overlay right` | `Ctrl+Alt+Shift+Right` | клавиша: Overlay | Сдвигает наложенный лист вправо на самый мелкий шаг. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Fine nudge the overlay up` | `Ctrl+Alt+Shift+Up` | клавиша: Overlay | Сдвигает наложенный лист вверх на самый мелкий шаг. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Fine nudge the overlay down` | `Ctrl+Alt+Shift+Down` | клавиша: Overlay | Сдвигает наложенный лист вниз на самый мелкий шаг. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Fine scale the overlay up` | `Ctrl+Alt+Shift++` | клавиша: Overlay | Увеличивает масштаб наложенного листа на самый мелкий шаг. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Fine scale the overlay down` | `Ctrl+Alt+Shift+-` | клавиша: Overlay | Уменьшает масштаб наложенного листа на самый мелкий шаг. | [Горячие клавиши](ourplancore-shortcuts.md) |
+    | `Fine rotate the overlay left` | `Ctrl+Alt+Shift+[` | клавиша: Overlay | Поворачивает наложенный лист влево на самый мелкий угол. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Fine rotate the overlay right` | `Ctrl+Alt+Shift+]` | клавиша: Overlay | Поворачивает наложенный лист вправо на самый мелкий угол. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Reset overlay transform (fine)` | `Ctrl+Alt+Shift+0` | клавиша: Overlay | Сбрасывает сдвиг, масштаб и поворот наложенного листа, вариант клавиши с `Shift`. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
 ## Settings: категории и разделы (45)
 
@@ -1825,81 +1825,81 @@
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Modules` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Settings и модули](ourplancore-settings.md) |
-    | `Page Folders` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Settings и модули](ourplancore-settings.md) |
-    | `Blank Sheets` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Settings и модули](ourplancore-settings.md) |
-    | `Auto Tree` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Settings и модули](ourplancore-settings.md) |
-    | `From Pages` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Settings и модули](ourplancore-settings.md) |
-    | `Takeoff Templates` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Settings и модули](ourplancore-settings.md) |
-    | `Sheet Takeoff Routing` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Settings и модули](ourplancore-settings.md) |
-    | `Takeoff Name Routing` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Settings и модули](ourplancore-settings.md) |
-    | `Takeoff Colors` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Settings и модули](ourplancore-settings.md) |
-    | `AI Crop Notes` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Sort A/S` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Settings и модули](ourplancore-settings.md) |
-    | `Sort D/Sec/WT` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Settings и модули](ourplancore-settings.md) |
-    | `Auto Rename / Scale` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Settings и модули](ourplancore-settings.md) |
-    | `Excel Actions` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Project Storage` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Settings и модули](ourplancore-settings.md) |
-    | `Agent Bridge` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Settings и модули](ourplancore-settings.md) |
-    | `Terminals` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Консоль ИИ](ourplancore-ai-console.md) |
-    | `Workspace` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Settings и модули](ourplancore-settings.md) |
-    | `Keyboard Shortcuts` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Settings и модули](ourplancore-settings.md) |
-    | `Defaults` |  | Settings: Settings, категория | Settings category (default, presets, per-job override). | [Settings и модули](ourplancore-settings.md) |
+    | `Modules` |  | Settings: Settings, категория | Включает и выключает модули программы и задаёт команду для Job Tracker. | [Settings и модули](ourplancore-settings.md) |
+    | `Page Folders` |  | Settings: Settings, категория | Редактирует стандартные папки Pages, которые создаёт `Auto Folders`, для шаблонов Auto, COM, EWP. | [Settings и модули](ourplancore-settings.md) |
+    | `Blank Sheets` |  | Settings: Settings, категория | Задаёт размер пустого листа по умолчанию и пресеты бумаги. | [Settings и модули](ourplancore-settings.md) |
+    | `Auto Tree` |  | Settings: Settings, категория | Редактирует дерево папок и позиций, которое строит `More > Auto Tree`. | [Settings и модули](ourplancore-settings.md) |
+    | `From Pages` |  | Settings: Settings, категория | Редактирует верхние папки Takeoffs, которые создаются из структуры листов. | [Settings и модули](ourplancore-settings.md) |
+    | `Takeoff Templates` |  | Settings: Settings, категория | Хранит заготовки деревьев и позиций для вставки во вкладке Templates. | [Settings и модули](ourplancore-settings.md) |
+    | `Sheet Takeoff Routing` |  | Settings: Settings, категория | Задаёт уровни, точки W, F, S, U и папки, куда ложится новый замер. | [Settings и модули](ourplancore-settings.md) |
+    | `Takeoff Name Routing` |  | Settings: Settings, категория | Задаёт правила, по которым имя или инструмент отправляют замер в свою папку. | [Settings и модули](ourplancore-settings.md) |
+    | `Takeoff Colors` |  | Settings: Settings, категория | Задаёт постоянный цвет позиций с точным именем, например `bft`. | [Settings и модули](ourplancore-settings.md) |
+    | `AI Crop Notes` |  | Settings: Settings, категория | Задаёт формат строк Tag и Size в заметках из кропа таблицы ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Sort A/S` |  | Settings: Settings, категория | Редактирует правила раскладки листов A в `Arch` и S в `Struct`. | [Settings и модули](ourplancore-settings.md) |
+    | `Sort D/Sec/WT` |  | Settings: Settings, категория | Редактирует правила, по которым суффикс имени листа отправляет его в папку. | [Settings и модули](ourplancore-settings.md) |
+    | `Auto Rename / Scale` |  | Settings: Settings, категория | Настраивает движок автоимён и масштабов листов, правила суффиксов и чтение штампа ИИ. | [Settings и модули](ourplancore-settings.md) |
+    | `Excel Actions` |  | Settings: Settings, категория | Настраивает кнопки полосы XL и порядок шагов выгрузки `ALL`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Project Storage` |  | Settings: Settings, категория | Показывает, где проект занимает место, и безопасно ужимает `snap.json`. | [Settings и модули](ourplancore-settings.md) |
+    | `Agent Bridge` |  | Settings: Settings, категория | Настраивает доступ локального ассистента к открытому проекту. | [Settings и модули](ourplancore-settings.md) |
+    | `Terminals` |  | Settings: Settings, категория | Настраивает терминалы Claude и Codex: профиль, ширину, усилие и контекст. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Workspace` |  | Settings: Settings, категория | Настраивает сервер, устройство, синхронизацию и работу со второго компьютера. | [Settings и модули](ourplancore-settings.md) |
+    | `Keyboard Shortcuts` |  | Settings: Settings, категория | Открывает редактор горячих клавиш, глобально или для проекта. | [Settings и модули](ourplancore-settings.md) |
+    | `Defaults` |  | Settings: Settings, категория | Собирает общие настройки: зум колесом, фоновый прогрев, кеш растра, DPI, линию Beam. | [Settings и модули](ourplancore-settings.md) |
 
 ??? note "Settings > Defaults (6)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Beam annotation line` |  | Settings: Settings > Defaults | Section of the settings panel. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Viewport interaction` |  | Settings: Settings > Defaults | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
-    | `Background performance` |  | Settings: Settings > Defaults | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
-    | `Tree display` |  | Settings: Settings > Defaults | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
-    | `Display & export defaults` |  | Settings: Settings > Defaults | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
-    | `Sheet Manager raster DPI presets` |  | Settings: Settings > Defaults | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
+    | `Beam annotation line` |  | Settings: Settings > Defaults | Добавляет к каждой новой балке Beam линию-пометку с цветом и отступом размера. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Viewport interaction` |  | Settings: Settings > Defaults | Задаёт шаг масштаба колесом мыши в окне листа. | [Settings и модули](ourplancore-settings.md) |
+    | `Background performance` |  | Settings: Settings > Defaults | Включает фоновый прогрев листов проекта и чистку неиспользуемого кеша растра. | [Settings и модули](ourplancore-settings.md) |
+    | `Tree display` |  | Settings: Settings > Defaults | Показывает строки секций и точек под позициями в дереве Takeoffs. | [Settings и модули](ourplancore-settings.md) |
+    | `Display & export defaults` |  | Settings: Settings > Defaults | Открывает ленты Viewport, Display и PDF Output с настройками по умолчанию. | [Settings и модули](ourplancore-settings.md) |
+    | `Sheet Manager raster DPI presets` |  | Settings: Settings > Defaults | Задаёт числа кнопок DPI в Sheet Manager, от 72 до 400. | [Settings и модули](ourplancore-settings.md) |
 
 ??? note "Settings > Excel Actions (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Excel macro actions` |  | Settings: Settings > Excel Actions | Section of the settings panel. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Floor folder matching` |  | Settings: Settings > Excel Actions | Section of the settings panel. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Framing folders -> Excel blocks` |  | Settings: Settings > Excel Actions | Section of the settings panel. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Walls extras: sheathing, shear walls, shaft, units, balconies` |  | Settings: Settings > Excel Actions | Section of the settings panel. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Excel macro actions` |  | Settings: Settings > Excel Actions | Список кнопок полосы XL и последовательность шагов для `ALL`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Floor folder matching` |  | Settings: Settings > Excel Actions | Задаёт слова, по которым папка считается этажом, например `1, 1st, first`. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Framing folders -> Excel blocks` |  | Settings: Settings > Excel Actions | Сопоставляет папки framing в дереве с блоками строк в книге Excel. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Walls extras: sheathing, shear walls, shaft, units, balconies` |  | Settings: Settings > Excel Actions | Настраивает выгрузку обшивки, shear walls, shaft walls, квартир и балконов в Excel. | [Экспорт в Excel](ourplancore-excel.md) |
 
 ??? note "Settings > Project Storage (6)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Project format` |  | Settings: Settings > Project Storage | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
-    | `Current project` |  | Settings: Settings > Project Storage | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
-    | `Storage breakdown` |  | Settings: Settings > Project Storage | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
-    | `Safe compact preview` |  | Settings: Settings > Project Storage | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
-    | `Review-only findings` |  | Settings: Settings > Project Storage | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
-    | `Details` |  | Settings: Settings > Project Storage | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
+    | `Project format` |  | Settings: Settings > Project Storage | Показывает формат хранения открытого проекта; новые проекты всегда один файл `.ourplan`. | [Settings и модули](ourplancore-settings.md) |
+    | `Current project` |  | Settings: Settings > Project Storage | Показывает путь и общий размер открытого проекта. | [Settings и модули](ourplancore-settings.md) |
+    | `Storage breakdown` |  | Settings: Settings > Project Storage | Показывает, сколько места занимает каждая часть проекта. | [Settings и модули](ourplancore-settings.md) |
+    | `Safe compact preview` |  | Settings: Settings > Project Storage | Показывает, что можно безопасно ужать в проекте, до самого сжатия. | [Settings и модули](ourplancore-settings.md) |
+    | `Review-only findings` |  | Settings: Settings > Project Storage | Перечисляет находки по размеру проекта, которые надо проверить вручную. | [Settings и модули](ourplancore-settings.md) |
+    | `Details` |  | Settings: Settings > Project Storage | Показывает подробный отчёт анализа хранения проекта. | [Settings и модули](ourplancore-settings.md) |
 
 ??? note "Settings > Auto Rename / Scale (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Deterministic Auto Name / Scale policy` |  | Settings: Settings > Auto Rename / Scale | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
-    | `Evidence, confidence, and preservation` |  | Settings: Settings > Auto Rename / Scale | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
-    | `Suffix generation rules (first enabled match wins)` |  | Settings: Settings > Auto Rename / Scale | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
-    | `Learned rules (lower-priority evidence)` |  | Settings: Settings > Auto Rename / Scale | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
+    | `Deterministic Auto Name / Scale policy` |  | Settings: Settings > Auto Rename / Scale | Выбирает пресет движка имён и масштабов и проверяет правила на выбранных листах. | [Settings и модули](ourplancore-settings.md) |
+    | `Evidence, confidence, and preservation` |  | Settings: Settings > Auto Rename / Scale | Задаёт источники доказательств, пороги уверенности и защиту уже проверенных имён и масштабов. | [Settings и модули](ourplancore-settings.md) |
+    | `Suffix generation rules (first enabled match wins)` |  | Settings: Settings > Auto Rename / Scale | Таблица правил суффиксов листа; срабатывает первая включённая подходящая строка. | [Settings и модули](ourplancore-settings.md) |
+    | `Learned rules (lower-priority evidence)` |  | Settings: Settings > Auto Rename / Scale | Хранит выученные правила имён листов, глобально или для проекта, с низшим приоритетом. | [Settings и модули](ourplancore-settings.md) |
 
 ??? note "Settings > Sheet Takeoff Routing (3)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Levels` |  | Settings: Settings > Sheet Takeoff Routing | Section of the settings panel. | [Маршрутизация и правила](ourplancore-routing.md) |
-    | `Rows` |  | Settings: Settings > Sheet Takeoff Routing | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
-    | `Tool destinations` |  | Settings: Settings > Sheet Takeoff Routing | Section of the settings panel. | [Маршрутизация и правила](ourplancore-routing.md) |
+    | `Levels` |  | Settings: Settings > Sheet Takeoff Routing | Таблица уровней: метка точки, папки этажа для walls, framing, shear и теги имени. | [Маршрутизация и правила](ourplancore-routing.md) |
+    | `Rows` |  | Settings: Settings > Sheet Takeoff Routing | Таблица строк точек маршрутизации; строка U одной точкой ведёт все этажи в units. | [Settings и модули](ourplancore-settings.md) |
+    | `Tool destinations` |  | Settings: Settings > Sheet Takeoff Routing | Задаёт папку назначения для замеров каждого инструмента. | [Маршрутизация и правила](ourplancore-routing.md) |
 
 ??? note "Settings > Workspace (2)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Connect another computer` |  | Settings: Settings > Workspace | Section of the settings panel. | [Workspace, Job Tracker, CLI](ourplancore-workspace.md) |
-    | `Projects` |  | Settings: Settings > Workspace | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
+    | `Connect another computer` |  | Settings: Settings > Workspace | Подключает второй компьютер к рабочему пространству одноразовым кодом. | [Workspace, Job Tracker, CLI](ourplancore-workspace.md) |
+    | `Projects` |  | Settings: Settings > Workspace | Список общих проектов: поделиться текущим, открыть, разобрать конфликты, применить общие пресеты. | [Settings и модули](ourplancore-settings.md) |
 
 ## Окна и диалоги (46)
 
@@ -1907,65 +1907,65 @@
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Open Read-Only` |  | окно: окно Job Is Already Open | Open without saving or modifying this job | [Проекты и сохранение](job-creation-storage.md) |
-    | `Retry` |  | окно: окно Job Is Already Open | Check the lease again | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Take Over` |  | окно: окно Job Is Already Open | Replace the current lease after an additional confirmation | [Проекты и сохранение](job-creation-storage.md) |
+    | `Open Read-Only` |  | окно: окно Job Is Already Open | Открывает проект только для просмотра, без сохранения и изменений. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Retry` |  | окно: окно Job Is Already Open | Ещё раз проверяет, занят ли проект другим окном или компьютером. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Take Over` |  | окно: окно Job Is Already Open | Забирает проект у другого окна после дополнительного подтверждения. | [Проекты и сохранение](job-creation-storage.md) |
 
 ??? note "окно Open Project (5)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `+ Add folder` |  | окно: окно Open Project | Add a folder containing OurPlanCore jobs | [Проекты и сохранение](job-creation-storage.md) |
-    | `Remove folder` |  | окно: окно Open Project | Remove the selected source folder from this list. Files stay on disk. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Open` |  | окно: окно Open Project |  | [Проекты и сохранение](job-creation-storage.md) |
-    | `PDF project` |  | окно: окно Open Project | Create a new project from PDFs | [Проекты и сохранение](job-creation-storage.md) |
-    | `Blank project` |  | окно: окно Open Project | Create an empty project | [Проекты и сохранение](job-creation-storage.md) |
+    | `+ Add folder` |  | окно: окно Open Project | Добавляет в список папку, в которой лежат проекты OurPlanCore. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Remove folder` |  | окно: окно Open Project | Убирает выбранную папку из списка; файлы на диске остаются. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Open` |  | окно: окно Open Project | Открывает выбранный в списке проект в главном окне. | [Проекты и сохранение](job-creation-storage.md) |
+    | `PDF project` |  | окно: окно Open Project | Создаёт новый проект из файлов PDF. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Blank project` |  | окно: окно Open Project | Создаёт пустой проект без листов PDF. | [Проекты и сохранение](job-creation-storage.md) |
 
 ??? note "окно (27)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Create Line Grid` |  | окно: окно |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Batch Overlay` |  | окно: окно | Buttons: Apply overlays. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Command Palette` |  | окно: окно |  | [Начало работы](ourplancore-start.md) |
-    | `Estimating` |  | окно: окно |  | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Recover Keyboard Shortcuts` |  | окно: окно |  |  |
-    | `Keyboard Shortcuts` |  | окно: окно |  | [Settings и модули](ourplancore-settings.md) |
-    | `Rename Legend Group` |  | окно: окно |  |  |
-    | `Count Points At Line Ends` |  | окно: окно |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Marker Sets` |  | окно: окно | Buttons: Apply Filter, Rename..., Delete, Open JSON. | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Rename Marker Set` |  | окно: окно |  |  |
-    | `Review Opening Projections` |  | окно: окно | Buttons: Keep All, Reject All, Save Reviewed Openings. |  |
-    | `Paste Measurements` |  | окно: окно |  | [Правка и привязки](ourplancore-editing.md) |
-    | `OpenAI Settings` |  | окно: окно | Buttons: Save Key To User Env, Clear User Env Key. | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Import OurPlanCore into Current Job` |  | окно: окно | Buttons: Choose .ourplan file..., Choose project folder.... | [Проекты и сохранение](job-creation-storage.md) |
-    | `Overlay Color` |  | окно: окно | Buttons: Use Color. |  |
-    | `Page Setup` |  | окно: окно |  | [Листы (Pages)](ourplancore-pages.md) |
-    | `Export PDF` |  | окно: окно | Buttons: All, None. | [PDF и сдача](ourplancore-pdf.md) |
-    | `Import PDF Takeoffs` |  | окно: окно | Buttons: Scan / Preview, Browse.... | [Прочее](ourplancore-extras-other.md) |
-    | `Create Count Points Along Line(s)` |  | окно: окно |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Project Data Recovery` |  | окно: окно |  | [Проекты и сохранение](job-creation-storage.md) |
-    | `Review Roof Draft` |  | окно: окно | Buttons: Keep All, Reject All, Save Reviewed Roof. |  |
-    | `Crop to Sheet` |  | окно: окно | Buttons: Start Cropping, Existing sheet, New blank sheet. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
-    | `Choose Sheet Overlay Candidate` |  | окно: окно | Buttons: Use Selected, Use + Review Overlay, Use + Open Source, Use + Edit Transform, Use + Edit by Points. |  |
-    | `Takeoff Folder Properties` |  | окно: окно | Buttons: None. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Trace Walls Inside Area` |  | окно: окно |  | [Привязки и трассировка](ourplancore-snap-trace.md) |
-    | `Job Is Already Open` |  | окно: окно | Buttons: Open Read-Only, Retry, Take Over. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Open Project` |  | окно: окно | Buttons: + Add folder, Remove folder, Open, PDF project, Blank project. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Create Line Grid` |  | окно: окно | Строит внутри площади сетку линий с заданным шагом по горизонтали и вертикали. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Batch Overlay` |  | окно: окно | Подбирает пары листов и применяет наложения сразу ко многим листам проекта. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Command Palette` |  | окно: окно | Окно поиска и запуска любой команды программы по названию. | [Начало работы](ourplancore-start.md) |
+    | `Estimating` |  | окно: окно | Таблица всех замеров с фильтром, переходом на лист, правкой и копированием строк. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Recover Keyboard Shortcuts` |  | окно: окно | Восстанавливает испорченный файл горячих клавиш из копии или сбрасывает к исходным. |  |
+    | `Keyboard Shortcuts` |  | окно: окно | Редактор горячих клавиш: назначить, сбросить, глобально или для проекта. | [Settings и модули](ourplancore-settings.md) |
+    | `Rename Legend Group` |  | окно: окно | Переименовывает группу строк легенды на листе. |  |
+    | `Count Points At Line Ends` |  | окно: окно | Ставит точки Count на концах выбранных линий, у каждой позиции своя Count. | [Правка и привязки](ourplancore-editing.md) |
+    | `Marker Sets` |  | окно: окно | Список наборов маркеров ИИ: применить фильтр, переименовать, удалить, открыть JSON. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Rename Marker Set` |  | окно: окно | Переименовывает выбранный набор маркеров ИИ в списке наборов. |  |
+    | `Review Opening Projections` |  | окно: окно | Проверка спроецированных проёмов для 3D: оставить, отклонить, сохранить проверенные. |  |
+    | `Paste Measurements` |  | окно: окно | Спрашивает, вставлять замеры в те же позиции или в новые. | [Правка и привязки](ourplancore-editing.md) |
+    | `OpenAI Settings` |  | окно: окно | Сохраняет или стирает ключ OpenAI в переменных среды пользователя. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Import OurPlanCore into Current Job` |  | окно: окно | Импортирует другой проект OurPlanCore, файл `.ourplan` или папку, в текущий проект. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Overlay Color` |  | окно: окно | Выбирает цвет, которым рисуется наложенный лист. |  |
+    | `Page Setup` |  | окно: окно | Плавающее окно имени и масштаба листа с переходом по листам проекта. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Export PDF` |  | окно: окно | Выбор листов и настроек для выгрузки в PDF; кнопки `All` и `None`. | [PDF и сдача](ourplancore-pdf.md) |
+    | `Import PDF Takeoffs` |  | окно: окно | Выбирает PDF, показывает найденные замеры и импортирует их в позиции takeoff. | [Прочее](ourplancore-extras-other.md) |
+    | `Create Count Points Along Line(s)` |  | окно: окно | Расставляет точки Count вдоль выбранных линий с заданным шагом. | [Правка и привязки](ourplancore-editing.md) |
+    | `Project Data Recovery` |  | окно: окно | Восстанавливает повреждённые файлы проекта из проверенной копии. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Review Roof Draft` |  | окно: окно | Проверка черновика крыши для 3D: оставить, отклонить, сохранить проверенную крышу. |  |
+    | `Crop to Sheet` |  | окно: окно | Копирует узлы в рамках с разных листов на один лист в истинном масштабе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Choose Sheet Overlay Candidate` |  | окно: окно | Выбирает лист для наложения и сразу открывает проверку, исходник или правку совмещения. |  |
+    | `Takeoff Folder Properties` |  | окно: окно | Свойства папки takeoff: цвет, цена и заметки по умолчанию для новых позиций. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Trace Walls Inside Area` |  | окно: окно | Обводит стены внутри выбранной площади линейными замерами по толщине и минимальной длине. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Job Is Already Open` |  | окно: окно | Предупреждает, что проект уже открыт, и предлагает просмотр, повтор или перехват. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Open Project` |  | окно: окно | Окно выбора проекта: папки проектов, открыть, создать из PDF или пустой. | [Проекты и сохранение](job-creation-storage.md) |
 
 ??? note "окно (строится в коде главного окна) (11)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Create Marker Set` |  | окно: окно (строится в коде главного окна) |  | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Merge Into Takeoff` |  | окно: окно (строится в коде главного окна) |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Import PDF Options` |  | окно: окно (строится в коде главного окна) |  | [Проекты и сохранение](job-creation-storage.md) |
-    | `PlanSwift Import Complete` |  | окно: окно (строится в коде главного окна) | Buttons: Open Report. |  |
-    | `Sheet Overlay Transform` |  | окно: окно (строится в коде главного окна) |  |  |
-    | `Takeoff Item Properties` |  | окно: окно (строится в коде главного окна) |  | [Инструменты замера](ourplancore-tools.md) |
-    | `Split Selected Takeoffs` |  | окно: окно (строится в коде главного окна) |  | [Правка и привязки](ourplancore-editing.md) |
-    | `Create Takeoff From Template` |  | окно: окно (строится в коде главного окна) |  |  |
-    | `Add Template Preset` |  | окно: окно (строится в коде главного окна) |  |  |
-    | `Edit Template Preset` |  | окно: окно (строится в коде главного окна) |  |  |
-    | `Workspace conflicts` |  | окно: окно (строится в коде главного окна) |  |  |
+    | `Create Marker Set` |  | окно: окно (строится в коде главного окна) | Создаёт именованный набор из проверенных маркеров ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Merge Into Takeoff` |  | окно: окно (строится в коде главного окна) | Выбирает позицию, в которую перенести выбранные замеры. | [Правка и привязки](ourplancore-editing.md) |
+    | `Import PDF Options` |  | окно: окно (строится в коде главного окна) | Настраивает импорт страниц PDF: кеш растра и индекс привязки к чёрным линиям. | [Проекты и сохранение](job-creation-storage.md) |
+    | `PlanSwift Import Complete` |  | окно: окно (строится в коде главного окна) | Сообщает итог переноса проекта PlanSwift и открывает отчёт. |  |
+    | `Sheet Overlay Transform` |  | окно: окно (строится в коде главного окна) | Точно задаёт сдвиг, масштаб и поворот наложенного листа числами. |  |
+    | `Takeoff Item Properties` |  | окно: окно (строится в коде главного окна) | Свойства позиции takeoff: имя, раскладка балок, уклон, вид Count, цвет, цена и заметки. | [Инструменты замера](ourplancore-tools.md) |
+    | `Split Selected Takeoffs` |  | окно: окно (строится в коде главного окна) | Делит выбранные позиции по всем листам: каждую секцию отдельно или по листам. | [Правка и привязки](ourplancore-editing.md) |
+    | `Create Takeoff From Template` |  | окно: окно (строится в коде главного окна) | Создаёт позицию или дерево позиций из сохранённого шаблона. |  |
+    | `Add Template Preset` |  | окно: окно (строится в коде главного окна) | Добавляет новый пресет шаблона позиций в список шаблонов. |  |
+    | `Edit Template Preset` |  | окно: окно (строится в коде главного окна) | Правит имя и содержимое выбранного пресета шаблона позиций. |  |
+    | `Workspace conflicts` |  | окно: окно (строится в коде главного окна) | Показывает конфликты версий проекта между компьютерами рабочего пространства. |  |
 
