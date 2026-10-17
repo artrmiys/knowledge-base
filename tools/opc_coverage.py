@@ -361,6 +361,7 @@ def compute(inv: dict, pages: list[Page], rules) -> dict:
 
 SUGGEST_RULES = [
     # (regex on "surface|group|title", page)
+    (r"calculator|bookmark|template|planswift|pdf takeoffs|detach|tile m2|monitor 2", "ourplancore-extras-other.md"),
     (r"терминал|codex|claude|terminal|attach", "ourplancore-ai-console.md"),
     (r"3d.*(roof|rafter|edge|eave|rake|pitch|ridge)|roof base|roof|rafter", "ourplancore-3d-roof.md"),
     (r"3d|massing|wall from|viewer", "ourplancore-3d.md"),

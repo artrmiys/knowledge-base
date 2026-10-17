@@ -65,7 +65,7 @@
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
     | `Open / Import` |  | лента: лента Main, JOB | Открывает проекты, меняет папку проектов, создаёт проект или импортирует PDF и PlanSwift. | [Проекты и сохранение](job-creation-storage.md) |
-    | `PlanSwift` |  | лента: лента Main, JOB | Переводит проект PlanSwift в новый проект OurPlanCore, исходник не меняется. | [Проекты и сохранение](job-creation-storage.md) |
+    | `PlanSwift` |  | лента: лента Main, JOB | Переводит проект PlanSwift в новый проект OurPlanCore, исходник не меняется. | [Прочее](ourplancore-extras-other.md) |
     | `PDF Takeoffs` |  | лента: лента Main, JOB | Переносит листы PDF вместе с замерами и линейками PDF в позиции takeoff. | [Прочее](ourplancore-extras-other.md) |
     | `Save As` |  | лента: лента Main, JOB | Сохраняет текущий проект в новое место на диске. | [Проекты и сохранение](job-creation-storage.md) |
     | `In Progress` |  | лента: лента Main, JOB | Переводит карточку проекта в Job Tracker в статус `In Progress` внешней командой. | [Проекты и сохранение](job-creation-storage.md) |
@@ -239,8 +239,8 @@
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
     | `Open Selected in Tabs` |  | полоса значков: левая полоса значков | Открывает выбранные в дереве Pages листы во вкладках. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Detach to Windows` |  | полоса значков: левая полоса значков | Открывает выбранные в дереве Pages листы в отдельных окнах. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Tile on Monitor 2` |  | полоса значков: левая полоса значков | Открывает выбранные листы в отдельных окнах и раскладывает их плиткой на втором мониторе. | [Workspace, Job Tracker, CLI](ourplancore-workspace.md) |
+    | `Detach to Windows` |  | полоса значков: левая полоса значков | Открывает выбранные в дереве Pages листы в отдельных окнах. | [Прочее](ourplancore-extras-other.md) |
+    | `Tile on Monitor 2` |  | полоса значков: левая полоса значков | Открывает выбранные листы в отдельных окнах и раскладывает их плиткой на втором мониторе. | [Прочее](ourplancore-extras-other.md) |
     | `Overlay` |  | полоса значков: левая полоса значков | Подбирает подходящий лист для наложения на активный. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
     | `Move Overlay by Points` |  | полоса значков: левая полоса значков | Совмещает наложение активного листа по парам точек. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
     | `Name / Scale Setup` | `F5` | полоса значков: левая полоса значков | Открывает окно ручной настройки имени и масштаба активного листа. | [Листы (Pages)](ourplancore-pages.md) |
@@ -257,7 +257,7 @@
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Quick Calculator` |  | полоса значков: правая полоса значков | Показывает или прячет выдвижной калькулятор со счётом в футах и дюймах. | [Workspace, Job Tracker, CLI](ourplancore-workspace.md) |
+    | `Quick Calculator` |  | полоса значков: правая полоса значков | Показывает или прячет выдвижной калькулятор со счётом в футах и дюймах. | [Прочее](ourplancore-extras-other.md) |
     | `New Takeoff Item` | `T` | полоса значков: правая полоса значков | Создаёт позицию takeoff в выбранной папке или в корне. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
     | `New Takeoff Folder` |  | полоса значков: правая полоса значков | Создаёт папку takeoff в выбранной папке или в корне. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
     | `Record Active Takeoff` | `Space` | полоса значков: правая полоса значков | Начинает или останавливает запись в активную позицию. | [Инструменты замера](ourplancore-tools.md) |
@@ -285,7 +285,7 @@
     | --- | --- | --- | --- | --- |
     | `Close other sheets and keep the main viewport sheet` |  | панель: Main View, панель Pages | Закрывает все прочие вкладки и отдельные окна листов, оставляет лист в главном окне. | [Листы (Pages)](ourplancore-pages.md) |
     | `Close detached sheets on monitor 2` |  | панель: Main View, панель Pages | Закрывает все отдельные окна листов на втором мониторе. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Tile M2` |  | панель: Main View, панель Pages | Открывает выбранные листы в отдельных окнах и раскладывает их плиткой на втором мониторе. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Tile M2` |  | панель: Main View, панель Pages | Открывает выбранные листы в отдельных окнах и раскладывает их плиткой на втором мониторе. | [Прочее](ourplancore-extras-other.md) |
     | `Toggle vertical Tile M2 layout` |  | панель: Main View, панель Pages | Переключает раскладку плитки на втором мониторе на вертикальную и обратно. | [Листы (Pages)](ourplancore-pages.md) |
     | `Open` |  | панель: Main View, панель Pages | Открывает выбранные в дереве Pages листы. | [Листы (Pages)](ourplancore-pages.md) |
     | `Refresh Pages tree` |  | панель: Main View, панель Pages | Перечитывает дерево Pages из папки текущего проекта. | [Листы (Pages)](ourplancore-pages.md) |
@@ -438,8 +438,8 @@
     | --- | --- | --- | --- | --- |
     | `Open Sheet` |  | панель: Sheet Manager, группа Open | Открывает выбранный лист в главной рабочей области. | [Менеджеры](ourplancore-managers.md) |
     | `Open Tabs` |  | панель: Sheet Manager, группа Open | Открывает выбранные листы во вкладках окна просмотра. | [Менеджеры](ourplancore-managers.md) |
-    | `Detach` |  | панель: Sheet Manager, группа Open | Открывает выбранные листы в отдельных окнах. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Tile M2` |  | панель: Sheet Manager, группа Open | Открывает выбранные листы в отдельных окнах плиткой на втором мониторе. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Detach` |  | панель: Sheet Manager, группа Open | Открывает выбранные листы в отдельных окнах. | [Прочее](ourplancore-extras-other.md) |
+    | `Tile M2` |  | панель: Sheet Manager, группа Open | Открывает выбранные листы в отдельных окнах плиткой на втором мониторе. | [Прочее](ourplancore-extras-other.md) |
     | `Open JSON` |  | панель: Sheet Manager, группа Open | Открывает файл JSON с метаданными PDF для проверки. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "Sheet Manager, группа Organize (4)"
@@ -488,7 +488,7 @@
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Reload` |  | панель: Report Builder, группа Template | Заново загружает `TemplateCom.xlsm` в таблицу конструктора отчётов. | [Менеджеры](ourplancore-managers.md) |
+    | `Reload` |  | панель: Report Builder, группа Template | Заново загружает `TemplateCom.xlsm` в таблицу конструктора отчётов. | [ИИ и терминалы](ourplancore-ai.md) |
 
 ??? note "Report Builder, группа Table (1)"
 
@@ -654,7 +654,7 @@
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
     | `Open as Tabs` |  | меню: меню кнопки Open, Main View, панель Pages | Открывает выбранные в дереве Pages листы во вкладках. | [Листы (Pages)](ourplancore-pages.md) |
-    | `Detach to windows` |  | меню: меню кнопки Open, Main View, панель Pages | Открывает выбранные в дереве Pages листы в отдельных окнах. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Detach to windows` |  | меню: меню кнопки Open, Main View, панель Pages | Открывает выбранные в дереве Pages листы в отдельных окнах. | [Прочее](ourplancore-extras-other.md) |
 
 ??? note "меню кнопки + New, Main View, панель Pages, быстрая строка (3)"
 
@@ -852,7 +852,7 @@
     | `PDF file(s)...` |  | меню: меню кнопки Open / Import > Import into the current job > Create A New Job | Добавляет один или несколько PDF в текущий проект. | [Проекты и сохранение](job-creation-storage.md) |
     | `Folder of PDFs...` |  | меню: меню кнопки Open / Import > Import into the current job > Create A New Job | Импортирует все PDF из выбранной папки и её подпапок в текущий проект. | [Проекты и сохранение](job-creation-storage.md) |
     | `OurPlanCore project...` |  | меню: меню кнопки Open / Import > Import into the current job > Create A New Job | Импортирует другой проект OurPlanCore в текущий проект. | [Проекты и сохранение](job-creation-storage.md) |
-    | `PlanSwift project...` |  | меню: меню кнопки Open / Import > Import into the current job > Create A New Job | Импортирует проект PlanSwift в текущий проект в папку `01. planswift`. | [Проекты и сохранение](job-creation-storage.md) |
+    | `PlanSwift project...` |  | меню: меню кнопки Open / Import > Import into the current job > Create A New Job | Импортирует проект PlanSwift в текущий проект в папку `01. planswift`. | [Прочее](ourplancore-extras-other.md) |
 
 ??? note "меню кнопки Batch Rotate (лента Page) (3)"
 
@@ -1222,9 +1222,9 @@
     | `Add Line` |  | меню: меню панели Templates | Добавляет в шаблон новую позицию типа Line. |  |
     | `Add Area` |  | меню: меню панели Templates | Добавляет в шаблон новую позицию типа Area. |  |
     | `Add Count` |  | меню: меню панели Templates | Добавляет в шаблон новую позицию типа Count. | [Инструменты замера](ourplancore-tools.md) |
-    | `Edit` |  | меню: меню панели Templates | Открывает правку выбранного элемента шаблона в панели Templates. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Edit` |  | меню: меню панели Templates | Открывает правку выбранного элемента шаблона в панели Templates. | [Прочее](ourplancore-extras-other.md) |
     | `Duplicate` |  | меню: меню панели Templates | Делает копию выбранного элемента шаблона рядом с ним. | [Правка и привязки](ourplancore-editing.md) |
-    | `Delete` |  | меню: меню панели Templates | Удаляет выбранный элемент из дерева шаблонов. | [Правка и привязки](ourplancore-editing.md) |
+    | `Delete` |  | меню: меню панели Templates | Удаляет выбранный элемент из дерева шаблонов. | [Прочее](ourplancore-extras-other.md) |
 
 ??? note "меню вьюпорта > 3D (3)"
 
@@ -1306,7 +1306,7 @@
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Detach to window` |  | меню: меню More (терминал) | Выносит терминал в отдельное окно, разговор продолжается. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Detach to window` |  | меню: меню More (терминал) | Выносит терминал в отдельное окно, разговор продолжается. | [Прочее](ourplancore-extras-other.md) |
     | `Settings -> Terminals` |  | меню: меню More (терминал) | Открывает раздел настроек `Terminals` с профилями Claude и Codex. | [Консоль ИИ](ourplancore-ai-console.md) |
 
 ??? note "меню Style (лента Annotation) (8)"
@@ -1398,8 +1398,8 @@
     | `New PDF Job` |  | палитра команд: File | Создаёт новый проект OurPlanCore из папки с PDF. | [Проекты и сохранение](job-creation-storage.md) |
     | `Blank Job` |  | палитра команд: File | Создаёт пустой проект OurPlanCore без выбора PDF. | [Проекты и сохранение](job-creation-storage.md) |
     | `Create Sample Job` |  | палитра команд: File | Создаёт и открывает учебный пример проекта с подсказками. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Import PlanSwift Job` |  | палитра команд: File | Переводит проект PlanSwift в новый проект OurPlanCore, исходник не меняется. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Import PlanSwift to Current Job` |  | палитра команд: File | Импортирует проект PlanSwift в текущий проект в папку `01. planswift`. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Import PlanSwift Job` |  | палитра команд: File | Переводит проект PlanSwift в новый проект OurPlanCore, исходник не меняется. | [Прочее](ourplancore-extras-other.md) |
+    | `Import PlanSwift to Current Job` |  | палитра команд: File | Импортирует проект PlanSwift в текущий проект в папку `01. planswift`. | [Прочее](ourplancore-extras-other.md) |
     | `Import PDF(s)` |  | палитра команд: File | Добавляет один или несколько PDF в текущий проект. | [Проекты и сохранение](job-creation-storage.md) |
     | `Import PDF Folder` |  | палитра команд: File | Импортирует все PDF из выбранной папки и её подпапок в текущий проект. | [Проекты и сохранение](job-creation-storage.md) |
     | `Import PDF Takeoffs` |  | палитра команд: File | Переносит листы PDF вместе с замерами и линейками PDF в позиции takeoff. | [Прочее](ourplancore-extras-other.md) |
@@ -1433,7 +1433,7 @@
     | `Toggle Dark Theme` |  | палитра команд: View | Переключает светлую и тёмную тему интерфейса. | [Начало работы](ourplancore-start.md) |
     | `Page Background` |  | палитра команд: View | Открывает готовые варианты цвета фона под листом. | [Settings и модули](ourplancore-settings.md) |
     | `Toggle AI Inbox` |  | палитра команд: View | Сворачивает или разворачивает панель `AI Inbox`. | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Quick Calculator` |  | палитра команд: View | Показывает или прячет выдвижной калькулятор со счётом в футах и дюймах. | [Workspace, Job Tracker, CLI](ourplancore-workspace.md) |
+    | `Quick Calculator` |  | палитра команд: View | Показывает или прячет выдвижной калькулятор со счётом в футах и дюймах. | [Прочее](ourplancore-extras-other.md) |
     | `Codex / Claude Terminal` |  | палитра команд: View | Показывает или прячет терминалы Codex и Claude с контекстом листа, кропов и закладок. | [Консоль ИИ](ourplancore-ai-console.md) |
     | `Show Takeoffs Tab` |  | палитра команд: View | Открывает вкладку `Takeoffs` в боковой панели рабочей области. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
     | `Show Estimating Tab` |  | палитра команд: View | Открывает вкладку `Estimating` в боковой панели рабочей области. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
@@ -1674,7 +1674,7 @@
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
     | `Open the selected bookmark / AI entry` | `Enter` | F1: BOOKMARKS & AI INBOX | Открывает выбранную закладку или запись `AI Inbox` на её листе. | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Delete the selected bookmark` | `Delete` | F1: BOOKMARKS & AI INBOX | Удаляет выбранную закладку из списка закладок. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Delete the selected bookmark` | `Delete` | F1: BOOKMARKS & AI INBOX | Удаляет выбранную закладку из списка закладок. | [Прочее](ourplancore-extras-other.md) |
 
 ??? note "SHEET OVERLAY (6)"
 
@@ -1775,7 +1775,7 @@
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
     | `Open the selected bookmark` | `Enter` | клавиша: Bookmarks | Открывает выбранную закладку на её листе с сохранённым масштабом. | [Горячие клавиши](ourplancore-shortcuts.md) |
-    | `Delete the selected bookmark` | `Delete` | клавиша: Bookmarks | Удаляет выбранную закладку из списка закладок. | [Правка и привязки](ourplancore-editing.md) |
+    | `Delete the selected bookmark` | `Delete` | клавиша: Bookmarks | Удаляет выбранную закладку из списка закладок. | [Прочее](ourplancore-extras-other.md) |
 
 ??? note "Inbox (1)"
 
@@ -1830,7 +1830,7 @@
     | `Blank Sheets` |  | Settings: Settings, категория | Задаёт размер пустого листа по умолчанию и пресеты бумаги. | [Settings и модули](ourplancore-settings.md) |
     | `Auto Tree` |  | Settings: Settings, категория | Редактирует дерево папок и позиций, которое строит `More > Auto Tree`. | [Settings и модули](ourplancore-settings.md) |
     | `From Pages` |  | Settings: Settings, категория | Редактирует верхние папки Takeoffs, которые создаются из структуры листов. | [Settings и модули](ourplancore-settings.md) |
-    | `Takeoff Templates` |  | Settings: Settings, категория | Хранит заготовки деревьев и позиций для вставки во вкладке Templates. | [Settings и модули](ourplancore-settings.md) |
+    | `Takeoff Templates` |  | Settings: Settings, категория | Хранит заготовки деревьев и позиций для вставки во вкладке Templates. | [Прочее](ourplancore-extras-other.md) |
     | `Sheet Takeoff Routing` |  | Settings: Settings, категория | Задаёт уровни, точки W, F, S, U и папки, куда ложится новый замер. | [Settings и модули](ourplancore-settings.md) |
     | `Takeoff Name Routing` |  | Settings: Settings, категория | Задаёт правила, по которым имя или инструмент отправляют замер в свою папку. | [Settings и модули](ourplancore-settings.md) |
     | `Takeoff Colors` |  | Settings: Settings, категория | Задаёт постоянный цвет позиций с точным именем, например `bft`. | [Settings и модули](ourplancore-settings.md) |
