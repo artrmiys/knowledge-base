@@ -5,7 +5,10 @@
   <figcaption markdown="span">Архивный 3D-вид: красным выделен каркас навеса по фасадам, вынесен вверх. Свои joists или rafters, балка по краю, крепление к стене и soffit снизу - отдельный блок, не часть main roof.</figcaption>
 </figure>
 
-<!-- TODO-PHOTO: wood-framed entrance canopy with exposed rafters and soffit, EN query "entrance canopy wood framing" -->
+<figure markdown>
+  ![Козырёк над входом на деревянных кронштейнах](../../../assets/images/photos/roof/entry-canopy-timber-brackets.jpg){ width="360" }
+  <figcaption markdown="span">Canopy над входом: односкатная мини-крыша на двух деревянных кронштейнах у стены, снизу подшивка soffit, по краю fascia. Считаются rafters или joists навеса, балка по краю, кронштейны или посты, крепление к стене, soffit и fascia - всё отдельным блоком. Фото: discoverydreamhomes.com, [источник](https://www.discoverydreamhomes.com/), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это
 

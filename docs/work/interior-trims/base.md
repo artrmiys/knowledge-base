@@ -1,6 +1,9 @@
 # Base (плинтус)
 
-<!-- TODO-PHOTO: wood baseboard trim at wall and floor, EN: "wood baseboard trim installed wall floor" -->
+<figure markdown>
+  ![Деревянный baseboard у пола упирается в door casing](../../assets/images/photos/trims/baseboard-meets-casing.jpg){ width="420" }
+  <figcaption markdown="span">Wood baseboard по низу стены упирается в door casing: base считается LFT по периметру комнаты, проём двери из периметра вычитается, casing идёт своей строкой. Фото: nadinestay.com, [источник](https://nadinestay.com/blog/how-to-install-floor-trim-like-the-professionals), найдено через Pinterest.</figcaption>
+</figure>
 
 <figure markdown>
   ![No baseboard behind kitchen cabinets](../../assets/images/trims/int-trims-07.png)

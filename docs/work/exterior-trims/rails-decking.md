@@ -5,7 +5,10 @@
   <figcaption markdown="span">Posts, cap rail, balusters, decking: у каждого своя строка. Composite перила считаем системой, деревянные крашеные поэлементно.</figcaption>
 </figure>
 
-<!-- TODO-PHOTO: composite railing on a deck with 4x4 post sleeves and caps, EN: "composite deck railing post sleeve cap" -->
+<figure markdown>
+  ![Composite перила deck: пост в sleeve с cap, top rail, balusters](../../assets/images/photos/deck/composite-railing-post-cap.jpg){ width="360" }
+  <figcaption markdown="span">Composite railing на deck: пост закрыт белым sleeve с cap, сверху cap rail под дерево, balusters между top и bottom rail, настил composite. Такую систему считаем LFT перил плюс посты штуками; decking отдельно SQ FT. Фото: timbertech.com, [источник](https://www.timbertech.com/products/railing/), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это
 

@@ -5,7 +5,10 @@
   <figcaption markdown="span">Structural screws (SDS, SDWS, SDWC) по деталям соединений: ledger к фермам, пакеты LVL, замена ties. Считаются в pcs по шагу или по числу на узел.</figcaption>
 </figure>
 
-<!-- TODO-PHOTO: Simpson SDWS structural screws in a ledger, EN query "Simpson SDWS structural screw ledger" -->
+<figure markdown>
+  ![Ledger прикручен к стене дома структурными саморезами с шестигранной головкой](../../../../assets/images/photos/hardware/ledger-structural-screws.jpg){ width="360" }
+  <figcaption markdown="span">P.T. ledger deck на стене: структурные саморезы с шестигранной головкой парами по шагу, вверху hanger под joist. Screws считаем штуками по детали ledger (число на точку на шаг), без шайб и гаек. Фото: greenbuildingadvisor.com, [источник](http://www.greenbuildingadvisor.com/homes/durable-deck-ties-home-landscape), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это
 

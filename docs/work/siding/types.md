@@ -40,7 +40,10 @@ Gable shingle accent почти всегда отдельная строка о�
 
 ## Panel / Board and batten / Shiplap
 
-<!-- TODO-PHOTO: fiber cement panel siding with battens on a multifamily building, EN: "fiber cement panel siding battens apartment" -->
+<figure markdown>
+  ![Фасад из панелей fiber cement с открытыми стыками](../../assets/images/photos/siding/fiber-cement-panels-facade.jpg){ width="360" }
+  <figcaption markdown="span">Panel siding из fiber cement: крупные листы на открытых креплениях, стыки по сетке. Считаем SQ FT поля плюс LFT стыков под Z-flashing или battens и trim по краям. Фото: engineeredassemblies.com, [источник](http://www.engineeredassemblies.com/products/equitone-fibre-cement/), найдено через Pinterest.</figcaption>
+</figure>
 
 | Пример строки | Заметка |
 | --- | --- |

@@ -1,6 +1,9 @@
 # Underlayment (что за siding: WRB, furring, accessories)
 
-<!-- TODO-PHOTO: house wrap WRB over sheathing with furring strips before siding, EN: "house wrap sheathing furring strips rainscreen construction" -->
+<figure markdown>
+  ![Угол стены: furring strips поверх обшивки до siding](../../assets/images/photos/siding/furring-strips-over-sheathing-corner.jpg)
+  <figcaption markdown="span">Угол дома до siding: поверх обшивки с функцией WRB прибиты вертикальные furring strips (rainscreen), внизу лента по стыку с фундаментом. Furring считается LFT по шагу на площадь стены, WRB - SQ FT по площади стены. Фото: greenbuildingadvisor.com, [источник](http://www.greenbuildingadvisor.com/blogs/dept/musings/all-about-rainscreens), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это
 

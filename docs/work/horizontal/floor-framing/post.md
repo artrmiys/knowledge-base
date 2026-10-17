@@ -5,7 +5,10 @@
   <figcaption markdown="span">Архивный 3D-вид каркаса: синим выделены posts, красным ridge, жёлтым балки крыши. Пост считается на том этаже, который он держит, с полной высотой от базы до низа балки.</figcaption>
 </figure>
 
-<!-- TODO-PHOTO: wood 6x6 post with Simpson post cap (CCQ/BC) and ABU post base under a built-up beam, EN query "6x6 post cap base beam Simpson" -->
+<figure markdown>
+  ![Балка deck опирается на пост 6x6 через металлический post cap](../../../assets/images/photos/framing/post-cap-beam-on-6x6.jpg){ width="520" }
+  <figcaption markdown="span">Пост 6x6 под балкой deck: сверху post cap, который держит балку, ниже стойка до post base. В DFL пост одной строкой с полной высотой, Post Cap и Post Base отдельными строками по числу постов. Фото: plasticinehouse.com, [источник](https://plasticinehouse.com/joining-beams-over-posts/), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это
 

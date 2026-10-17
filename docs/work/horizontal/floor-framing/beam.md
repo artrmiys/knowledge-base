@@ -5,7 +5,10 @@
   <figcaption markdown="span">Инструмент Beam: две точки по балке от опоры до опоры, программа округляет длину и создаёт Count-позицию `FB1 8` с первой меткой. Вторая балка той же марки и длины идёт в ту же позицию второй точкой.</figcaption>
 </figure>
 
-<!-- TODO-PHOTO: multi-ply LVL beam bearing on wood posts in a floor frame, EN query "LVL beam built-up on posts floor framing" -->
+<figure markdown>
+  ![Flush LVL балка с joists на hangers](../../../assets/images/photos/framing/lvl-flush-beam-joist-hangers.jpg){ width="520" }
+  <figcaption markdown="span">Flush beam из LVL в уровне joists: joists с обеих сторон висят на face-mount hangers. Балка идёт одной Count-позицией с длиной в имени, hangers считаются по числу концов joists на ней. Фото: plasticinehouse.com, [источник](https://plasticinehouse.com/how-far-can-a-lvl-beam-span-without-support/), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это
 

@@ -1,6 +1,9 @@
 # Anchor Bolts (анкеры sill plate и крепёж ledger)
 
-<!-- TODO-PHOTO: anchor bolt with square washer and nut through P.T. sill plate on concrete, EN: "anchor bolt sill plate washer nut concrete" -->
+<figure markdown>
+  ![P.T. sill plate на фундаменте с анкерами, шайбами и гайками](../../assets/images/photos/deck/sill-plate-anchor-nuts-foundation.jpg){ width="520" }
+  <figcaption markdown="span">Угол фундамента: P.T. sill plate на sill seal, сквозь доску анкеры с шайбой и гайкой. Три строки DFL: `Anchor Bolts` по шагу из anchorage schedule, `Washers` и `Nuts` по числу болтов. Фото: hunker.com, [источник](https://www.hunker.com/13715964/what-is-a-sill-plate), найдено через Pinterest.</figcaption>
+</figure>
 
 <figure markdown>
   ![Anchor bolt through sill plate](../../assets/images/framing/anchor-bolt.svg)

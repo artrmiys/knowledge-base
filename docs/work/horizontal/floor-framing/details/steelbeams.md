@@ -5,7 +5,10 @@
   <figcaption markdown="span">Стальная балка by others, но деревянный nailer на верхней полке, filler в стенке и болты к ним - наши строки. Top nailer задаёт top-mount hanger для joists.</figcaption>
 </figure>
 
-<!-- TODO-PHOTO: wood nailer plate bolted to top flange of steel W-beam with joists on hangers, EN query "steel beam wood nailer top flange joists" -->
+<figure markdown>
+  ![Стальная балка в подвале под деревянными joists перекрытия](../../../../assets/images/photos/framing/steel-beam-under-floor-joists.jpg)
+  <figcaption markdown="span">Подвал: стальная W-балка на трубчатых колоннах несёт деревянные joists. Сталь и колонны by others; наши строки - nailer по верхней полке, болты к нему с шайбами и гайками, hangers, если joists висят сбоку. Фото: housedigest.com, [источник](https://www.housedigest.com/1919599/diy-solution-turn-steel-ugly-basement-support-beam/), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это
 

@@ -5,7 +5,10 @@
   <figcaption markdown="span">Rim board закрывает торцы joists по периметру перекрытия и несёт стену выше. Считается в LFT по периметру, не в 16' досках.</figcaption>
 </figure>
 
-<!-- TODO-PHOTO: engineered rim board at I-joist ends on top plate, EN query "rim board I-joist floor framing" -->
+<figure markdown>
+  ![Rim joist по периметру перекрытия на sill plate](../../../../assets/images/photos/framing/rim-joist-floor-perimeter.jpg){ width="520" }
+  <figcaption markdown="span">Перекрытие первого этажа: rim по всему периметру на sill plate, в него упираются торцы joists. Считаем LFT по периметру здания и по краям проёмов перекрытия; с I-joists материал rim только engineered. Фото: hunker.com, [источник](https://www.hunker.com/13720287/what-is-a-rim-joist), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это
 

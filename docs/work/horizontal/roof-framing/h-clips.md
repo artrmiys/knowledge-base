@@ -5,7 +5,10 @@
   <figcaption markdown="span">Одна клипса на общий стык двух листов между опорами. Фрагмент схемы установки PSCL: Simpson Strong-Tie, каталог C-C-2026, p. 340. Считаем стыки, не кромки.</figcaption>
 </figure>
 
-<!-- TODO-PHOTO: H-clip (panel sheathing clip) installed between plywood roof sheathing panels on trusses, close-up -->
+<figure markdown>
+  ![H-clips на кромке листа plywood между стропилами](../../../assets/images/photos/roof/h-clips-plywood-rafters.jpg)
+  <figcaption markdown="span">Ряд H-clips на свободной кромке первого листа roof sheathing: по одной клипсе в каждом пролёте между rafters, следующий лист защёлкнется в них. Считаем клипсы по стыкам листов, не по кромкам. Фото: ggrhomeinspections.com, [источник](https://ggrhomeinspections.com/h-clips/page/2), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это
 

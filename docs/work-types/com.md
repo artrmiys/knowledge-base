@@ -33,7 +33,10 @@ fire hangers у шахт; кровля плоская с parapets или с pigg
 
 ## Два типа COM плана
 
-<!-- TODO-PHOTO: prefabricated wood wall panels being installed by crane on a multifamily building; EN query "prefabricated wood wall panels installation crane" -->
+<figure markdown>
+  ![Готовая каркасная панель стены подаётся краном на здание](../assets/images/photos/work-types/prefab-wall-panel-crane.jpg)
+  <figcaption markdown="span">Панельный COM: стеновая панель с обшивкой и утеплителем собрана на заводе и ставится краном. На таком проекте стены считает панельщик, а в DFL идут только элементы, которые собирают на площадке (см. таблицу ниже). Фото: phoenixhaus.com, [источник](https://phoenixhaus.com/gallery), найдено через Pinterest.</figcaption>
+</figure>
 
 | Тип | Что считаем | Что не считаем |
 | --- | --- | --- |

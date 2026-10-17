@@ -5,7 +5,10 @@
   <figcaption markdown="span">Деталь карниза: высота пятки фермы 1'-7" между верхом стены и низом настила, вертикальная полоса 1/2" OSB на пятке, ниже Zip стены, снаружи 2x8 sub-fascia и 1x8 fascia. Высоту берём с такой детали или из truss package. Архивный фрагмент.</figcaption>
 </figure>
 
-<!-- TODO-PHOTO: raised heel (energy heel) roof truss on wall top plate, eave side, with vertical sheathing strip at the heel -->
+<figure markdown>
+  ![Фермы с поднятой пяткой на верхней доске стены](../../../assets/images/photos/sheathing/raised-heel-truss-at-wall.jpg){ width="480" }
+  <figcaption markdown="span">Raised heel: вертикальная стойка пятки фермы над top plate, к стене ферма притянута страпами. Полоса обшивки truss heel закрывает именно этот торец по всей eave-стороне: длина стены на высоту пятки. Фото: greenbuildingadvisor.com, [источник](https://www.greenbuildingadvisor.com/article/raised-heel-trusses-make-better-enclosures), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это
 

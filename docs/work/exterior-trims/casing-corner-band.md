@@ -1,6 +1,9 @@
 # Casing, Corner & Band (наружные наличники, угловые доски, пояса)
 
-<!-- TODO-PHOTO: exterior window with 5/4 PVC casing, head crown and drip cap on lap siding, EN: "exterior window trim casing drip cap lap siding" -->
+<figure markdown>
+  ![Наружный наличник окна из PVC с head crown на lap siding](../../assets/images/photos/trims/ext-window-casing-head-crown.jpg)
+  <figcaption markdown="span">Верхний угол окна: плоский PVC casing по бокам и сверху, над ним head crown с cap. Casing sides и head считаются LFT от размеров проёма, crown и cap - отдельные строки по ширине head. Фото: elitetrimworks.com, [источник](https://elitetrimworks.com/products/pvc-rams-crown-2), найдено через Pinterest.</figcaption>
+</figure>
 
 <figure markdown>
   ![Corner board over siding](../../assets/images/trims/ext-cornerboard-vinyl.png)

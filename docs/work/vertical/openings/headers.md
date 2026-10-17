@@ -5,7 +5,10 @@
   <figcaption markdown="span">Header лежит на jack studs, king studs держат пакет по краям. `(2)` и `(3)` в имени - число слоёв (plies).</figcaption>
 </figure>
 
-<!-- TODO-PHOTO: window header with king and jack studs, wood framing photo, EN query "window header king stud jack stud framing" -->
+<figure markdown>
+  ![Три оконных проёма в каркасе: headers на jack studs](../../../assets/images/photos/openings/window-headers-jack-king-studs.jpg)
+  <figcaption markdown="span">Наружная стена изнутри: над каждым окном сдвоенный header лежит на jack studs, по краям king studs, под окном sill с cripples. Каждый проём даёт один header в строку `ext` по размеру из header schedule; cripples и jacks в header не входят. Фото: thespruce.com, [источник](https://www.thespruce.com/what-size-header-is-needed-for-a-window-5092377), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это
 

@@ -1,6 +1,9 @@
 # Railing (перила: посты и строки блока)
 
-<!-- TODO-PHOTO: composite deck railing with 4x4 posts, sleeves and caps, EN: "composite deck railing post sleeve cap" -->
+<figure markdown>
+  ![Composite перила deck: пост в sleeve с cap, top rail, balusters](../../assets/images/photos/deck/composite-railing-post-cap.jpg){ width="360" }
+  <figcaption markdown="span">Угол composite railing: пост 4x4 закрыт sleeve с cap, cap rail сверху, balusters между rails. В блоке балкона: посты штуками по углам и шагу, railing LFT по периметру без проёма лестницы. Фото: timbertech.com, [источник](https://www.timbertech.com/products/railing/), найдено через Pinterest.</figcaption>
+</figure>
 
 <figure markdown>
   ![Railing assembly, archive](../../assets/images/confluence/confluence-151.png)

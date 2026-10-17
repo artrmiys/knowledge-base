@@ -5,7 +5,10 @@
   <figcaption markdown="span">Dropped soffit: короб из 2x по периметру ниже потолка. Источник - RCP, на structural плане его нет. Считается каркас (plates, frame, screws), отделка - в Interior Trims.</figcaption>
 </figure>
 
-<!-- TODO-PHOTO: interior dropped soffit framing 2x4 before drywall, EN query "dropped soffit framing 2x4 ceiling" -->
+<figure markdown>
+  ![Вскрытый короб dropped soffit под потолком: каркас из 2x и трубы внутри](../../assets/images/photos/framing/dropped-soffit-box-framing.jpg){ width="420" }
+  <figcaption markdown="span">Dropped soffit со снятым гипсом: короб из 2x подвешен под joists перекрытия вдоль стены, внутри проходят трубы и воздуховод. На RCP такой короб виден линией с отметкой высоты; считаем plates по периметру и frame по площади. Фото: themakerista.com, [источник](http://www.themakerista.com/the-kitchen-gut-job-and-hiccups/), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это
 

@@ -5,9 +5,18 @@
   <figcaption markdown="span">Finish-системы by others. WRB, sheathing, furring и wood/PVC trim вокруг них наши. J-channel наш только при vinyl siding.</figcaption>
 </figure>
 
-<!-- TODO-PHOTO: EIFS installation with EPS boards and base coat mesh, EN: "EIFS installation insulation board mesh base coat" -->
-<!-- TODO-PHOTO: three-coat stucco over metal lath, EN: "stucco scratch coat metal lath wall" -->
-<!-- TODO-PHOTO: adhered stone veneer on house wall, EN: "manufactured stone veneer installation house" -->
+<figure markdown>
+  ![Слои EIFS: плиты EPS, сетка и base coat](../../assets/images/photos/siding/eifs-eps-mesh-base-coat.jpg){ width="520" }
+  <figcaption markdown="span">EIFS в работе: плиты EPS на тарельчатых дюбелях, поверх стеклосетка, которую втирают в base coat. Всё это by others; наши строки - sheathing и WRB под плитами и trim по краям. Фото: estimatingedge.com, [источник](https://www.estimatingedge.com/construction/eifs/), найдено через Pinterest.</figcaption>
+</figure>
+<figure markdown>
+  ![Scratch coat штукатурки по metal lath на стене дома](../../assets/images/photos/siding/stucco-scratch-coat-over-lath.jpg){ width="420" }
+  <figcaption markdown="span">Three-coat stucco: первый слой (scratch coat) с бороздами поверх metal lath, окна заклеены. Stucco by others; наш scope под ним - sheathing, WRB и wood trim у проёмов. Фото: hometips.com, [источник](https://www.hometips.com/buying-guides/walls-siding-stucco.html), найдено через Pinterest.</figcaption>
+</figure>
+<figure markdown>
+  ![Укладка stone veneer на scratch coat по metal lath](../../assets/images/photos/siding/stone-veneer-over-lath-scratch-coat.jpg){ width="420" }
+  <figcaption markdown="span">Adhered stone veneer: сверху видна metal lath, ниже scratch coat, на него на раствор кладут камень. Весь пакет by others; под ним наши sheathing и WRB, по краям wood trim. Фото: mountainviewstone.net, [источник](https://mountainviewstone.net/blogs/carved-in-stone/can-you-install-stone-veneer-over-drywall), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это
 

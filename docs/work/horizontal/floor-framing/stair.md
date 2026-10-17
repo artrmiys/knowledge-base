@@ -5,7 +5,10 @@
   <figcaption markdown="span">Stair-блок: stringers несут treads и risers, марш опирается на площадку (platform beam, joists, ledger). Hangers лестницы идут в этом же блоке.</figcaption>
 </figure>
 
-<!-- TODO-PHOTO: wood stair stringers 2x12 with treads during framing, EN query "stair stringers framing construction" -->
+<figure markdown>
+  ![Лестница в стадии каркаса: stringers с временными treads](../../../assets/images/photos/framing/stair-stringers-treads-framing.jpg){ width="360" }
+  <figcaption markdown="span">Марш на стройке: четыре stringers из 2x12 с вырезами под ступени, временные treads из обрезков, низ марша стоит на площадке. В DFL stringers штуками по длине марша, treads и risers по числу ступеней. Фото: finehomebuilding.com, [источник](https://www.finehomebuilding.com/project-guides/framing/how-to-cut-stair-stringers), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это
 

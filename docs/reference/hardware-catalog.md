@@ -84,7 +84,15 @@ Cap и base на каждую стойку, модель по детали; ба
 - Hangers на оба конца каждого joist, по сборкам, а не по закупочным доскам; только целые штуки.
 - Модель по детали: `U210-2`, если деталь даёт его, а не `LUS210-2`.
 
-<!-- TODO-PHOTO: joist hanger LUS on ledger, hurricane tie H2.5A at truss, post base ABU66 on concrete; EN query "joist hanger ledger deck", "hurricane tie truss plate", "post base bracket deck concrete" -->
+<figure markdown>
+  ![Face-mount joist hanger прибит к балке deck](../assets/images/photos/hardware/joist-hanger-on-beam.jpg){ width="520" }
+  <figcaption markdown="span">Face-mount hanger на P.T. балке: по одному на каждый конец joist, который висит на балке или ledger; снаружи модель с `Zmax`. Фото: plasticinehouse.com, [источник](https://plasticinehouse.com/joist-hangers/), найдено через Pinterest.</figcaption>
+</figure>
+
+<figure markdown>
+  ![Фермы на верхней доске стены со страпами-ties](../assets/images/photos/hardware/truss-strap-tie-top-plate.jpg){ width="520" }
+  <figcaption markdown="span">Ties от стены к каждой ферме: штука на ферму на каждой опоре, модель из truss schedule или деталей (H2.5A, страп), под обшивкой без `Zmax`. Фото: greenbuildingadvisor.com, [источник](http://greenbuildingadvisor.com/), найдено через Pinterest.</figcaption>
+</figure>
 
 ## См. также
 

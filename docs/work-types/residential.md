@@ -8,7 +8,10 @@
   <figcaption markdown="span">Walls + openings, floor/roof framing, sheathing, SQFT, roof/deck/porch. Порядок тот же, что в меню "Работа".</figcaption>
 </figure>
 
-<!-- TODO-PHOTO: stick-framed house under construction, walls and roof trusses visible; EN query "wood frame house under construction stick framing" -->
+<figure markdown>
+  ![Стик-каркас дома: стены, стропила, настил пола](../assets/images/photos/work-types/stick-framed-house-walls-rafters.jpg){ width="420" }
+  <figcaption markdown="span">Residential в стадии каркаса: стены из 2x с обшивкой по углам, стропила на коньковой балке, настил пола OSB, временные раскосы. Всё это обычный полный scope: walls, openings, floor и roof framing, sheathing. Фото: threediamondsconstruction.com, [источник](http://threediamondsconstruction.com/), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это
 

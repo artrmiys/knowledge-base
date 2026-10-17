@@ -5,7 +5,10 @@
   <figcaption markdown="span">Примыкание ската к стене: step flashing ступеньками под siding, kick-out внизу. Step считаем LFT по примыканию, kick-out штуками.</figcaption>
 </figure>
 
-<!-- TODO-PHOTO: step flashing at roof-to-wall with kick-out diverter, close-up on new construction -->
+<figure markdown>
+  ![Kick-out flashing внизу примыкания ската к стене](../../assets/images/photos/roof/kickout-step-flashing-siding.jpg)
+  <figcaption markdown="span">Низ примыкания ската к стене: последняя ступень step flashing переходит в kick-out, который выводит воду поверх siding в водосток. Step flashing считаем LFT по линии примыкания, kick-out - одна штука на каждый нижний конец такой линии. Фото: finehomebuilding.com, [источник](https://www.finehomebuilding.com/2022/12/12/kickout-flashing-for-seamless-siding-and-trim), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это
 

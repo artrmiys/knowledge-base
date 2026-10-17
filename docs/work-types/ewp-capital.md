@@ -9,7 +9,10 @@ I-joists, LVL / PSL / LSL / GL балки и engineered rim. Есть два п�
   <figcaption markdown="span">EWP only: считаем I-joists, LVL/PSL/GL, engineered rim и hangers к ним. 2x, фермы, гвозди - нет.</figcaption>
 </figure>
 
-<!-- TODO-PHOTO: floor framing with I-joists, LVL beam and rim board, no people; EN query "I-joist floor framing LVL beam engineered wood" -->
+<figure markdown>
+  ![I-joists перекрытия опираются на балку над стойкой](../assets/images/photos/work-types/ijoists-on-beam-post.jpg){ width="520" }
+  <figcaption markdown="span">EWP на стройке: I-joists лежат на клеёной балке, балка на стойке с металлическим post cap. В заказе "только EWP" считаем I-joists, балку и hangers к ним; стойку 2x и фермы на заднем плане - нет. Фото: redbuilt.com, [источник](http://www.redbuilt.com/commercial-systems/i-joists), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это за материалы
 
