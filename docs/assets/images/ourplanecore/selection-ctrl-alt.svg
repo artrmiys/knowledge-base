@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" role="img" aria-labelledby="t d">
+  <title id="t">Selecting objects and vertices: click, box, Ctrl, Ctrl+Shift, Alt</title>
+  <desc id="d">Two columns. Left: objects: click or box replaces the selection, Ctrl adds, Ctrl+Shift removes; box direction note. Right: vertices of the selected Line or Area with Alt: handle toggles one, box toggles handles inside, body selects all, empty space clears. Bottom: Shift without Ctrl is Ortho.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    
+    <style>
+      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
+      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
+      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
+      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
+      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
+      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+    </style>
+  </defs>
+  <rect x="0.5" y="0.5" width="999" height="499" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<rect x="20" y="40" width="470" height="360" rx="10" fill="#fbfcfd" stroke="#6b7378" stroke-width="1.4"/><text class="lab" x="36" y="70" style="font-size:18px">Объекты</text>
+<text class="small" x="36" y="92" >замеры на листе: Line, Area, Count</text>
+<rect x="36" y="120" width="51.6" height="24" rx="5" fill="#fff" stroke="#3a3f44" stroke-width="1.4"/><rect x="37" y="141" width="49.6" height="3" rx="1" fill="#c9cfd5"/><text x="61.8" y="137" text-anchor="middle" style="font:700 13px 'JetBrains Mono', Consolas, monospace;fill:#1f2a1f">клик</text><text class="note" x="99.6" y="136" >или рамка</text>
+<text class="mono" x="336" y="136" style="font-size:13.5px">заменить выделение</text>
+<rect x="36" y="170" width="51.6" height="24" rx="5" fill="#fff" stroke="#3a3f44" stroke-width="1.4"/><rect x="37" y="191" width="49.6" height="3" rx="1" fill="#c9cfd5"/><text x="61.8" y="187" text-anchor="middle" style="font:700 13px 'JetBrains Mono', Consolas, monospace;fill:#1f2a1f">Ctrl</text><text class="lab2" x="97.6" y="186" >+</text>
+<rect x="111.6" y="170" width="51.6" height="24" rx="5" fill="#fff" stroke="#3a3f44" stroke-width="1.4"/><rect x="112.6" y="191" width="49.6" height="3" rx="1" fill="#c9cfd5"/><text x="137.4" y="187" text-anchor="middle" style="font:700 13px 'JetBrains Mono', Consolas, monospace;fill:#1f2a1f">клик</text><text class="note" x="175.2" y="186" >или рамка</text>
+<text class="mono" x="336" y="186" style="font-size:13.5px">добавить</text>
+<rect x="36" y="220" width="51.6" height="24" rx="5" fill="#fff" stroke="#3a3f44" stroke-width="1.4"/><rect x="37" y="241" width="49.6" height="3" rx="1" fill="#c9cfd5"/><text x="61.8" y="237" text-anchor="middle" style="font:700 13px 'JetBrains Mono', Consolas, monospace;fill:#1f2a1f">Ctrl</text><text class="lab2" x="97.6" y="236" >+</text>
+<rect x="111.6" y="220" width="60" height="24" rx="5" fill="#fff" stroke="#3a3f44" stroke-width="1.4"/><rect x="112.6" y="241" width="58" height="3" rx="1" fill="#c9cfd5"/><text x="141.6" y="237" text-anchor="middle" style="font:700 13px 'JetBrains Mono', Consolas, monospace;fill:#1f2a1f">Shift</text><text class="note" x="183.6" y="236" >+ клик или рамка</text>
+<text class="mono" x="336" y="236" style="font-size:13.5px">убрать из выделения</text>
+<rect x="36" y="270" width="90" height="46" fill="#dbeafe" fill-opacity="0.5" stroke="#1e88e5" stroke-width="1.4"/><line x1="36" y1="270" x2="124" y2="314" stroke="#1e88e5" stroke-width="1.6" marker-end="url(#arrInk)"/><rect x="56" y="280" width="40" height="20" fill="none" stroke="#2e7d32" stroke-width="2" />
+<rect x="106" y="290" width="40" height="20" fill="none" stroke="#6b7378" stroke-width="1.2" stroke-dasharray="3 2"/>
+<text class="small" x="136" y="288" >слева направо: берёт то,</text>
+<text class="small" x="136" y="304" >что целиком внутри</text>
+<rect x="36" y="326" width="90" height="46" fill="#fdf2e9" stroke="#e65100" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="124" y1="326" x2="36" y2="370" stroke="#e65100" stroke-width="1.6" marker-end="url(#arrInk)"/><rect x="56" y="336" width="40" height="20" fill="none" stroke="#2e7d32" stroke-width="2" />
+<rect x="106" y="346" width="40" height="20" fill="none" stroke="#2e7d32" stroke-width="2" />
+<text class="small" x="136" y="344" >справа налево:</text>
+<text class="small" x="136" y="360" >всё задетое</text>
+<text class="small" x="290" y="300" >рамка = протянуть мышью</text>
+<text class="small" x="290" y="316" >по пустому месту листа</text>
+<rect x="510" y="40" width="470" height="360" rx="10" fill="#fbfcfd" stroke="#6b7378" stroke-width="1.4"/><text class="lab" x="526" y="70" style="font-size:18px">Вершины выбранного Line или Area</text>
+<text class="small" x="526" y="92" >ручки на углах; сначала выдели сам замер</text>
+<rect x="526" y="120" width="43.2" height="24" rx="5" fill="#fff" stroke="#3a3f44" stroke-width="1.4"/><rect x="527" y="141" width="41.2" height="3" rx="1" fill="#c9cfd5"/><text x="547.6" y="137" text-anchor="middle" style="font:700 13px 'JetBrains Mono', Consolas, monospace;fill:#1f2a1f">Alt</text><text class="lab2" x="579.2" y="136" >+</text>
+<rect x="593.2" y="120" width="51.6" height="24" rx="5" fill="#fff" stroke="#3a3f44" stroke-width="1.4"/><rect x="594.2" y="141" width="49.6" height="3" rx="1" fill="#c9cfd5"/><text x="619" y="137" text-anchor="middle" style="font:700 13px 'JetBrains Mono', Consolas, monospace;fill:#1f2a1f">клик</text><text class="note" x="656.8" y="136" >по ручке</text>
+<text class="mono" x="816" y="136" style="font-size:13.5px">переключить одну</text>
+<rect x="526" y="166" width="43.2" height="24" rx="5" fill="#fff" stroke="#3a3f44" stroke-width="1.4"/><rect x="527" y="187" width="41.2" height="3" rx="1" fill="#c9cfd5"/><text x="547.6" y="183" text-anchor="middle" style="font:700 13px 'JetBrains Mono', Consolas, monospace;fill:#1f2a1f">Alt</text><text class="lab2" x="579.2" y="182" >+</text>
+<rect x="593.2" y="166" width="60" height="24" rx="5" fill="#fff" stroke="#3a3f44" stroke-width="1.4"/><rect x="594.2" y="187" width="58" height="3" rx="1" fill="#c9cfd5"/><text x="623.2" y="183" text-anchor="middle" style="font:700 13px 'JetBrains Mono', Consolas, monospace;fill:#1f2a1f">рамка</text><text class="note" x="665.2" y="182" ></text>
+<text class="mono" x="816" y="182" style="font-size:13.5px">переключить в рамке</text>
+<rect x="526" y="212" width="43.2" height="24" rx="5" fill="#fff" stroke="#3a3f44" stroke-width="1.4"/><rect x="527" y="233" width="41.2" height="3" rx="1" fill="#c9cfd5"/><text x="547.6" y="229" text-anchor="middle" style="font:700 13px 'JetBrains Mono', Consolas, monospace;fill:#1f2a1f">Alt</text><text class="lab2" x="579.2" y="228" >+</text>
+<rect x="593.2" y="212" width="51.6" height="24" rx="5" fill="#fff" stroke="#3a3f44" stroke-width="1.4"/><rect x="594.2" y="233" width="49.6" height="3" rx="1" fill="#c9cfd5"/><text x="619" y="229" text-anchor="middle" style="font:700 13px 'JetBrains Mono', Consolas, monospace;fill:#1f2a1f">клик</text><text class="note" x="656.8" y="228" >по телу</text>
+<text class="mono" x="816" y="228" style="font-size:13.5px">все вершины</text>
+<rect x="526" y="258" width="43.2" height="24" rx="5" fill="#fff" stroke="#3a3f44" stroke-width="1.4"/><rect x="527" y="279" width="41.2" height="3" rx="1" fill="#c9cfd5"/><text x="547.6" y="275" text-anchor="middle" style="font:700 13px 'JetBrains Mono', Consolas, monospace;fill:#1f2a1f">Alt</text><text class="lab2" x="579.2" y="274" >+</text>
+<rect x="593.2" y="258" width="51.6" height="24" rx="5" fill="#fff" stroke="#3a3f44" stroke-width="1.4"/><rect x="594.2" y="279" width="49.6" height="3" rx="1" fill="#c9cfd5"/><text x="619" y="275" text-anchor="middle" style="font:700 13px 'JetBrains Mono', Consolas, monospace;fill:#1f2a1f">клик</text><text class="note" x="656.8" y="274" >по пустому</text>
+<text class="mono" x="816" y="274" style="font-size:13.5px">снять выбор</text>
+<polyline points="540,370 600,340 660,366 720,336" fill="none" stroke="#2e7d32" stroke-width="3"/><rect x="535" y="365" width="10" height="10" fill="#fff" stroke="#2e7d32" stroke-width="1.6"/><rect x="595" y="335" width="10" height="10" fill="#2e7d32" stroke="#2e7d32" stroke-width="1.6"/><rect x="655" y="361" width="10" height="10" fill="#2e7d32" stroke="#2e7d32" stroke-width="1.6"/><rect x="715" y="331" width="10" height="10" fill="#fff" stroke="#2e7d32" stroke-width="1.6"/><text class="small" x="740" y="352" >зелёная ручка = выбранная вершина</text>
+<text class="small" x="740" y="368" >выбранные вершины двигаются вместе</text>
+<rect x="20" y="420" width="960" height="46" rx="8" fill="#dff2df" stroke="#2e7d32" stroke-width="1.4"/><rect x="36" y="432" width="60" height="24" rx="5" fill="#fff" stroke="#3a3f44" stroke-width="1.4"/><rect x="37" y="453" width="58" height="3" rx="1" fill="#c9cfd5"/><text x="66" y="449" text-anchor="middle" style="font:700 13px 'JetBrains Mono', Consolas, monospace;fill:#1f2a1f">Shift</text><text class="note" x="106" y="448" >без Ctrl = Ortho: линия идёт только по горизонтали и вертикали (при рисовании и перетаскивании)</text>
+<text class="small" x="20" y="488" >Рамка и клики работают на листе; выделение в дереве Takeoffs подсвечивает замеры на листе.</text>
+</svg>

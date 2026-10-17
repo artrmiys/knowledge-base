@@ -58,23 +58,34 @@ nav:
 
   - OurPlanCore:
       - OurPlanCore 3.0: reference/ourplanecore.md
+      - Первые шаги, 10 уроков: reference/ourplancore-course.md
       - Каждый день:
           - Начало работы: reference/ourplancore-start.md
           - Проекты и сохранение: reference/job-creation-storage.md
           - Листы (Pages): reference/ourplancore-pages.md
+          - Раскладка по листам и роутинг: reference/ourplancore-split-by-sheets.md
           - Инструменты замера: reference/ourplancore-tools.md
           - Дерево Takeoffs: reference/ourplancore-takeoffs.md
+          - Несколько зданий: reference/ourplancore-buildings.md
           - Имена и автомаршрут: reference/takeoff-naming.md
           - Экспорт в Excel: reference/ourplancore-excel.md
           - PDF и сдача: reference/ourplancore-pdf.md
       - Продвинутое:
+          - Правка и привязки: reference/ourplancore-editing.md
+          - Merge, Split, Break пошагово: reference/ourplancore-edit-takeoffs.md
           - Маршрутизация и правила: reference/ourplancore-routing.md
-          - Merge, Split, Break: reference/ourplancore-edit-takeoffs.md
           - Кропы, маска, наложения, легенда: reference/ourplancore-sheets-advanced.md
           - Settings и модули: reference/ourplancore-settings.md
-          - ИИ и терминалы: reference/ourplancore-ai.md
-          - Workspace, Job Tracker, CLI: reference/ourplancore-workspace.md
-          - 3D и менеджеры: reference/ourplancore-3d.md
+          - Консоль ИИ: reference/ourplancore-ai-console.md
+          - ИИ в программе: reference/ourplancore-ai.md
+          - Workspace и CLI: reference/ourplancore-workspace.md
+          - 3D-крыша: reference/ourplancore-3d-roof.md
+      - Дополнительные возможности:
+          - Что сюда вошло: reference/ourplancore-extras.md
+          - Snap и трассировка: reference/ourplancore-snap-trace.md
+          - Менеджеры: reference/ourplancore-managers.md
+          - 3D и Massing: reference/ourplancore-3d.md
+          - Прочее: reference/ourplancore-extras-other.md
       - Идеи и планы: reference/ourplancore-ideas.md
       - Справка:
           - Горячие клавиши: reference/ourplancore-shortcuts.md

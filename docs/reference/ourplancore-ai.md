@@ -1,6 +1,6 @@
 # ИИ в OurPlanCore
 
-Здесь - все места, где OurPlanCore 3.0 зовёт модель или внешнего агента: заметки из кропов, чтение штампов листов, AI Inbox, терминалы Claude и Codex в окне программы и Agent Bridge. Нужно, когда хочется ускорить рутину, но так, чтобы каждый результат ИИ оставался на проверке у эстиматора.
+Здесь - все места, где OurPlanCore 3.0 зовёт модель или внешнего агента: заметки из кропов и их формат (AI Crop Notes), чтение штампов листов, AI Inbox и AI Manager коротко, Agent Bridge. Нужно, когда хочется ускорить рутину, но так, чтобы каждый результат ИИ оставался на проверке у эстиматора. Терминалы Claude и Codex в окне программы со всеми кнопками, контекстом и сценариями описаны отдельно: [Консоль ИИ](ourplancore-ai-console.md).
 
 ## Что есть и что для этого нужно
 
@@ -12,7 +12,7 @@
 | Similar с перепроверкой AI | совет, какой символ выбран | да | модуль AI, галка в диалоге Similar |
 | OCR при Name | чтение номера листа без текстового слоя (Tesseract) | нет | работает всегда |
 | AI по картинке штампа | имя листа, которое не удалось прочитать текстом и OCR | да | галка в `Settings > Auto Rename / Scale` |
-| Терминалы `>_` | Claude или Codex в панели справа с живым контекстом плана | да | Git Bash и CLI ассистента, вход один раз |
+| Терминалы `>_` ([консоль ИИ](ourplancore-ai-console.md)) | Claude или Codex в панели справа с живым контекстом плана | да | Git Bash и CLI ассистента, вход один раз |
 | Agent Bridge | агент правит открытый проект через программу | нет (локально) | `Settings > Agent Bridge` |
 
 Ключ OpenAI задаётся в диалоге `AI Settings` (кнопка на полосе инструментов, в AI Manager или команда `OpenAI Settings` в палитре); он сохраняется в переменные окружения пользователя Windows, в проект не пишется. Модель по умолчанию `gpt-5-mini`, список моделей там же. Всё, что помечено "да", уходит в сеть кропами листа: на чужих чертежах учитывайте это.
@@ -24,9 +24,16 @@
   <figcaption markdown="span">Разделитель Tag/size и предпросмотр: слева вставленный текст, справа как он лягет в заметку.</figcaption>
 </figure>
 
-1. ПКМ по листу: `AI crop here -> note` (обвести область) или `AI quick box here -> note`.
-2. Запрос уходит в AI Inbox; ответ по schedule вида `Tag - Size` программа переформатирует в компактные строки `HP1  (2) 2x8` без повторных заголовков и линий таблицы.
-3. Заметка ложится в выбранный takeoff; исходный ответ остаётся в AI Inbox.
+### Как получить заметку из кропа таблицы { #crop-note }
+
+Зачем: строки schedule в Notes позиции без ручного набора.
+Нужно: модуль AI, ключ в `AI Settings`, выбранная позиция в Takeoffs.
+
+1. Щёлкните ПКМ по листу и выберите **AI crop here -> note** (обвести область) или **AI quick box here -> note**.
+2. Дождитесь ответа в AI Inbox: ответ по schedule вида `Tag - Size` программа переформатирует в компактные строки `HP1  (2) 2x8` без повторных заголовков и линий таблицы.
+3. Проверьте строки по таблице на листе.
+
+Результат: заметка в Notes выбранной позиции; исходный ответ остаётся в AI Inbox.
 
 `Settings > AI Crop Notes`: `Tag/size separator`, предпросмотр (`Preview - paste the recognized text on the left`), галка `Original tables`, Reset, глобально и для проекта. Другой текст заметки не трогается.
 
@@ -34,16 +41,7 @@
 
 ## AI Inbox и AI Manager
 
-AI Inbox - панель внизу Main View (модуль AI): запросы, ответы, наблюдения, маркеры. AI Manager - отдельная рабочая вкладка с таблицей (`Type`, `Page`, `Observation`, `Quality`, `Time`):
-
-| Группа | Кнопки |
-| --- | --- |
-| Setup | `AI Settings`, `+ Add`, `Refresh` |
-| Review | `Open Details`, `Go to Page`, `Run AI` |
-| Batch | `Run New` (все новые запросы по закладкам), `Retry Failed` |
-| Markers | `Create Set`, `Marker Sets`, `Export Markers` |
-
-Маркер - проверенный образец символа; по нему работает `Find Similar From Marker`. Выводы ИИ в Inbox - черновики, не замеры: в дерево они попадают только после подтверждения.
+AI Inbox - панель внизу Main View (модуль AI): запросы, ответы, наблюдения, маркеры. AI Manager - отдельная вкладка с таблицей запросов, кнопками `Run AI`, `Run New`, `Retry Failed` и наборами маркеров. Выводы ИИ в Inbox - черновики, не замеры: в дерево они попадают только после подтверждения. Кнопки и колонки вкладки: [Менеджеры, AI Inbox и AI Manager](ourplancore-managers.md#ai-manager).
 
 ## AI при чтении имён листов {#sheet-names}
 
@@ -55,37 +53,7 @@ AI Inbox - панель внизу Main View (модуль AI): запросы, 
 
 ## Терминалы Claude и Codex {#terminals}
 
-<figure markdown>
-  ![Панель терминала](../assets/images/ourplancore/v3/terminal-panel.png)
-  <figcaption markdown="span">Панель `>_`: переключатель Codex / Claude, Run и Attach, выбор усилия, строка ctx и кнопки контекста.</figcaption>
-</figure>
-
-Кнопка `>_` на правой командной полосе (`Show / hide Codex and Claude terminals`) открывает панель с Git Bash внутри окна программы.
-
-| Элемент | Что делает |
-| --- | --- |
-| `Codex` / `Claude` | какой ассистент запускать |
-| `Run` | запустить или продолжить сессию через ярлык ассистента (при включённом Workspace ярлык не нужен) |
-| `Attach` | подхватить уже открытое окно Git Bash или mintty |
-| `Quick` / `Balanced` / `Deep` / `Provider default` | усилие рассуждения для следующего запуска: low, medium, high или как у провайдера |
-| `ctx` | краткая строка текущего контекста: проект, лист, выбранная закладка или кроп |
-| `Context` | открыть файл живого контекста |
-| `Paste context` | вставить сообщение с контекстом в терминал без Enter |
-| `AI Inbox`, `AI Crop +` | открыть Inbox; нарисовать кроп и добавить его PNG в контекст |
-| стрелка, шестерёнка, крестик | открепить панель в окно; `Settings > Terminals`; скрыть панель (сессия продолжает работать) |
-
-Контекст: программа ведёт для сессии краткий `context-summary.json` (лист, выбранный кроп, счётчики, дескриптор моста) и полный `context.json`; ассистент читает их по стартовому сообщению и перед задачами по плану. Файлы живут в профиле программы, не в проекте.
-
-`Settings > Terminals`: `Default profile`, `Panel width` (340-900), `Reasoning effort for new sessions`, галки `Start with current sheet / crop and a short index; load details on demand`, `Give new terminal sessions the live plan context`, `Include bookmarks and their PNG crop paths`, `Include AI Inbox, requests, responses and AI crops`, шаблон сообщения с `{context}`, пути ярлыков.
-
-### Типовой запуск
-
-1. Открыть лист, выделить проблемное место (закладка или `AI Crop +`).
-2. `>_`, `Claude`, `Quick`, `Run`. Ассистент подтверждает проект и лист.
-3. Написать задачу: "проверь holdowns на s201 2nd". Для правок в проекте ассистент пользуется Agent Bridge.
-4. Крестик скрывает панель, диалог живёт; `Deep` - для сложного разбора.
-
-Нужны Git Bash и установленный CLI ассистента со входом один раз на компьютере. Ярлыки по умолчанию лежат на рабочем столе; при Workspace запуск идёт из управляемой папки.
+Кнопка `>_` на правой командной полосе открывает панель с Git Bash внутри окна программы: ассистент видит проект, лист, выделение, закладки и кропы через живой файл контекста, а правит проект через Agent Bridge. Кнопки панели, строка `ctx`, `AI Crop +`, `Settings > Terminals`, сценарии и что делать, если терминал не стартует: [Консоль ИИ](ourplancore-ai-console.md).
 
 ## Agent Bridge {#bridge}
 
@@ -114,8 +82,10 @@ AI Inbox - панель внизу Main View (модуль AI): запросы, 
 
 ## См. также
 
+- [Консоль ИИ](ourplancore-ai-console.md) - терминалы Claude и Codex в окне
+- [Менеджеры](ourplancore-managers.md) - AI Manager, Sheet Manager
 - [Settings: все категории](ourplancore-settings.md)
 - [Workspace и второй компьютер](ourplancore-workspace.md)
-- [Листы Pages](ourplancore-pages.md) - Name, Scale, Sheet Manager
-- [Правка takeoff](ourplancore-edit-takeoffs.md) - Similar на других листах
+- [Листы Pages](ourplancore-pages.md) - Name, Scale
+- [Правка и привязки](ourplancore-editing.md) - Similar
 - [Идеи и планы](ourplancore-ideas.md) - что про ИИ ещё в планах

@@ -21,6 +21,17 @@
 
 Проектные копии лежат внутри проекта в `AI_Context/settings/*.json`, глобальные - в профиле программы (`%LOCALAPPDATA%\OurPlanCore\presets`). Правило: меняете под один проект - `Save as this job`; меняете навсегда - `Save global default`; сломали - `Reset` и Save.
 
+### Как изменить правило только для одного проекта { #job-override }
+
+Зачем: нестандартный проект (шестой этаж, другие папки) не ломает правила остальных работ.
+
+1. Откройте вкладку **Settings** и нужную категорию в списке слева.
+2. Поправьте поля или строки таблицы в черновике.
+3. Нажмите **Apply** и проверьте поведение в Main View.
+4. Нажмите **Save as this job**.
+
+Результат: статус категории говорит `Using this job's override`; остальные проекты живут по глобальному правилу. **Clear job override** возвращает проект к глобальному, **Reset** и **Save global default** меняют встроенное для всех.
+
 ## Карта категорий
 
 <figure markdown>
@@ -30,12 +41,12 @@
 
 | Категория | Что настраивает | Когда трогать | Подробно |
 | --- | --- | --- | --- |
-| Modules | 19 модулей и команда Job Tracker | нет вкладки или кнопки; включить Sheet Manager, 3D, AI | [Модули](ourplancore-workspace.md#modules) |
+| Modules | 19 модулей и команда Job Tracker | нет вкладки или кнопки; включить Sheet Manager, 3D, AI | [Модули](ourplancore-workspace.md#modules), [Дополнительные возможности](ourplancore-extras.md) |
 | Page Folders | стандартные папки Pages для шаблонов Auto / COM / EWP | другой состав папок `00. imported` | [Pages](ourplancore-pages.md) |
 | Blank Sheets | размер по умолчанию и пресеты бумаги | часто нужен другой формат пустого листа | [Пустые листы](ourplancore-sheets-advanced.md#blank) |
 | Auto Tree | дерево Takeoffs, которое строит `More > Auto Tree` | свой канон папок | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 | From Pages | дерево из структуры листов | редко | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-| Takeoff Templates | сохранённые заготовки деревьев и позиций | повторяющиеся наборы позиций | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+| Takeoff Templates | сохранённые заготовки деревьев и позиций | повторяющиеся наборы позиций | [Прочее, Templates](ourplancore-extras-other.md#templates) |
 | Sheet Takeoff Routing | точки W/F/S/U, уровни, папки по инструментам, авто-точка по имени | takeoff ложится не в ту папку | [Маршрутизация](ourplancore-routing.md) |
 | Takeoff Name Routing | правила имя или инструмент, потом папка | eve, rake, prpt, Openings в своих папках | [Маршрутизация](ourplancore-routing.md#name-routing) |
 | Takeoff Colors | фиксированный цвет для точного имени (`bft`) | нужен ещё один фиксированный цвет | [Маршрутизация](ourplancore-routing.md#colors) |
@@ -46,7 +57,7 @@
 | Excel Actions | кнопки полосы XL и последовательность ALL | свой порядок шагов экспорта | [Excel](ourplancore-excel.md) |
 | Project Storage | размер проекта, `Preview safe compact`, `Compact snap.json` | проект раздулся | [Проекты и сохранение](job-creation-storage.md) |
 | Agent Bridge | доступ локального ассистента к открытому проекту | работа с агентом | [ИИ](ourplancore-ai.md#bridge) |
-| Terminals | профиль Claude или Codex, ширина, усилие, контекст | панель `>_` | [ИИ](ourplancore-ai.md#terminals) |
+| Terminals | профиль Claude или Codex, ширина, усилие, контекст | панель `>_` | [Консоль ИИ](ourplancore-ai-console.md#settings) |
 | Workspace | сервер, устройство, синхронизация, второй компьютер | работа с двух ПК | [Workspace](ourplancore-workspace.md#workspace) |
 | Keyboard Shortcuts | кнопка `Open Keyboard Shortcuts...` | переназначить клавишу | [Горячие клавиши](ourplancore-shortcuts.md#remap) |
 | Defaults | зум колесом, фоновый прогрев, кеш растра, строки секций в дереве, линия Beam | общая настройка под себя | ниже |

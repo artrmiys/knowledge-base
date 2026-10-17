@@ -26,7 +26,7 @@
 | Новый takeoff не создаётся, сообщение про root | зелёная точка указывает на удалённую папку | нажать красную точку и выбрать корпус заново |
 | Копия при вставке легла в другую подпапку | галка `Copies keep their source folders` | в `Settings > Sheet Takeoff Routing` включить или выключить, проверить строку `Root:` в диалоге вставки |
 
-Разбор правил - [Маршрутизация takeoff](ourplancore-routing.md).
+Разбор правил - [Маршрутизация takeoff](ourplancore-routing.md); какой лист под какой вид работ и копии под shear - [Раскладка по листам](ourplancore-split-by-sheets.md); несколько корпусов - [Несколько зданий](ourplancore-buildings.md).
 
 ## Медленно {#speed}
 
@@ -65,6 +65,8 @@
 | Агент ответил таймаутом | исход неизвестен | не повторять запрос с новым ID; `inspect` и проверить дерево |
 | `Synchronization is running` | идёт синхронизация | подождать и повторить `Sync now` или `Share current saved project` |
 | Конфликт версий проекта | правили на двух компьютерах | `Settings > Workspace > Review conflicts`: `Keep this computer`, `Use server version` или `Open preserved files` |
+
+Все сообщения панели терминала и что с ними делать: [Консоль ИИ, если терминал не стартует](ourplancore-ai-console.md#not-starting).
 
 ## Конвейер и Job Tracker {#cli}
 
