@@ -3,8 +3,8 @@
 OurPlanCore - программа для замеров по PDF-чертежам: лист, масштаб, замер, дерево Takeoffs, потом экспорт в Excel DFL и PDF. Здесь карта окна, устройство раздела и путь от открытого проекта до сдачи.
 
 <figure markdown>
-  ![Окно OurPlanCore с открытым листом](../assets/images/ourplancore/v3/window.png)
-  <figcaption markdown="span">Окно целиком. Номера зон расшифрованы в таблице ниже.</figcaption>
+  ![Окно OurPlanCore с открытым листом](../assets/images/ourplancore/v3/window-map.png)
+  <figcaption markdown="span">Окно целиком, зоны пронумерованы: 1 ленты, 2 Pages, 3 лист, 4 Takeoffs, 5 полоса инструментов, 6 полоса XL, 7 строка статуса. Подробно в таблице ниже.</figcaption>
 </figure>
 
 ## Карта окна { #window-map }
