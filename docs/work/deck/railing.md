@@ -30,6 +30,11 @@ wood, cable, metal), decking и hardware постов полностью раз�
 экземпляров G. Сложный контур (терраса, porch по периметру) обводят Line на
 плане. Площадь и точки блока: [Deck / Porch / Balcony Frame](deck-porch-balcony-frame.md).
 
+<figure markdown>
+  ![Railing: система или поэлементно](../../assets/images/trims/railing-system-vs-elements.svg)
+  <figcaption markdown="span">Composite считается системой, wood painted поэлементно. Подробные строки на странице Rails and Decking.</figcaption>
+</figure>
+
 ## Как назвать в дереве и строка DFL
 
 Способ один на участок: заводская **система** или **поэлементно**. Composite

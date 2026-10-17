@@ -1,22 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
-  <title id="t">Basement wall on concrete slab</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" role="img" aria-labelledby="t d">
+  <title id="t">Basement plan with the Area takeoff named base</title>
+  <desc id="d">Plan of a basement: foundation walls as a grey band, the slab inside with an L-shaped green Area polygon named base following the inside face of the walls. Notes on what the area drives.</desc>
   <defs>
-    <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
-    <pattern id="c" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#e7e9ec"/><circle cx="2" cy="2" r="0.9" fill="#9aa0a8"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    
+    <style>
+      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
+      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
+      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
+      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
+      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
+      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+    </style>
   </defs>
-  <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Basement - стена на бетоне</text>
-  <text class="s" x="32" y="62">Btm plate всегда P.T. (контакт с бетоном). Box sheathing + vapor barrier.</text>
-  <!-- concrete wall -->
-  <rect x="150" y="120" width="44" height="150" fill="url(#c)" stroke="#3a3a3a" stroke-width="1.5"/>
-  <!-- studs -->
-  <g fill="url(#w)" stroke="#3a3a3a" stroke-width="1.3"><rect x="210" y="120" width="16" height="130"/><rect x="270" y="120" width="16" height="130"/><rect x="330" y="120" width="16" height="130"/></g>
-  <!-- PT bottom plate -->
-  <rect x="200" y="250" width="160" height="18" fill="#caa27b" stroke="#6c4b2a" stroke-width="1.6"/>
-  <!-- slab -->
-  <rect x="150" y="268" width="260" height="20" fill="url(#c)" stroke="#3a3a3a" stroke-width="1.4"/>
-  <line x1="280" y1="255" x2="540" y2="245" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="248">Btm plate - всегда P.T.</text>
-  <line x1="278" y1="150" x2="540" y2="140" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="143">Studs (по высоте)</text>
-  <line x1="172" y1="180" x2="540" y2="195" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="198">Concrete / foundation</text>
+  <rect x="0.5" y="0.5" width="999" height="539" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="lab" x="60" y="46" >План подвала (foundation plan), Area по плите</text>
+<polygon points="60.0,70.0 580.0,70.0 580.0,300.0 420.0,300.0 420.0,440.0 60.0,440.0" fill="url(#conc)" stroke="#6b7378" stroke-width="1.6" stroke-linejoin="round" />
+<polygon points="78.0,88.0 562.0,88.0 562.0,282.0 402.0,282.0 402.0,422.0 78.0,422.0" fill="#fbfbfc" stroke="#6b7378" stroke-width="1.2" stroke-linejoin="round" />
+<polygon points="78.0,88.0 562.0,88.0 562.0,282.0 402.0,282.0 402.0,422.0 78.0,422.0" fill="#2e7d32" stroke="#2e7d32" stroke-width="2.4" stroke-linejoin="round" fill-opacity="0.16" stroke-dasharray="10 6"/>
+<text class="mono" x="240" y="240" text-anchor="middle" style="font-size:30px;font-weight:700">base</text>
+<text class="mono2" x="240" y="268" text-anchor="middle" >Area  1 846 SQ FT</text>
+<rect x="234" y="154" width="12" height="12" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.1" />
+<rect x="394" y="154" width="12" height="12" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.1" />
+<rect x="234" y="324" width="12" height="12" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.1" />
+<text class="side" x="430" y="380" >unexcavated</text>
+<text class="small" x="70" y="464" >контур по внутренней грани стен (по плите), не по наружному периметру</text>
+<text class="mono" x="630" y="90" style="font-size:16px">sqfts/base</text>
+<text class="lab2" x="750" y="90" fill="#1e88e5">Area</text>
+<text class="note" x="630" y="120" >Один тип = одна позиция: несколько</text>
+<text class="note" x="630" y="138" >полигонов складываются внутри неё.</text>
+<text class="note" x="630" y="170" >Не рисовать прямоугольник под</text>
+<text class="note" x="630" y="188" >известное число: контур реальный.</text>
+<text class="lab2" x="630" y="224" >Что тянет площадь:</text>
+<text class="note" x="630" y="248" >Front Page: Basement SQ FT</text>
+<text class="note" x="630" y="268" >over-slab слои по assembly:</text>
+<text class="note" x="630" y="288" >   sleepers, underlayment, rigid</text>
+<text class="note" x="630" y="308" >subfloor на joists здесь обычно нет</text>
+<text class="small" x="630" y="350" >Стены подвала: страница Walls, Basement</text>
+<text class="small" x="630" y="368" >(sill plate, P.T. plates, studs у плиты).</text>
+<text class="small" x="630" y="400" >Posts и колонны на плите: framing/posts.</text>
+<rect x="60" y="488" width="22" height="14" fill="#2e7d32" stroke="#2e7d32" stroke-width="1.2"/><text class="cap" x="90" y="500" >Area base</text>
+<rect x="178.8" y="488" width="22" height="14" fill="url(#conc)" stroke="#6b7378" stroke-width="1.2"/><text class="cap" x="208.8" y="500" >foundation wall</text>
+<rect x="340.8" y="488" width="22" height="14" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2"/><text class="cap" x="370.8" y="500" >post</text>
 </svg>

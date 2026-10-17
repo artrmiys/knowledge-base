@@ -1,6 +1,9 @@
 # Soffit & Fascia (подшивка свесов, торцевые доски, columns)
 
-<!-- TODO-PHOTO: house eave with vented soffit panel, fascia board and frieze under it, EN: "roof eave soffit fascia frieze house" -->
+<figure markdown>
+  ![Угол свеса крыши снизу: вентилируемый soffit и fascia](../../assets/images/photos/trims/soffit-vented-panel-fascia.jpg)
+  <figcaption markdown="span">Угол eave снизу: панели вентилируемого soffit между стеной и fascia, по торцу fascia с водостоком. Soffit считаем площадью (длина свеса на ширину), fascia - LFT по той же линии. Фото: brothersgutters.com, [источник](https://brothersgutters.com/gutter-services/exterior-solutions/fascia-board/), найдено через Pinterest.</figcaption>
+</figure>
 
 <figure markdown>
   ![Cornice eave return](../../assets/images/trims/ext-eave-return.png)

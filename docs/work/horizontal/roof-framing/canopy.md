@@ -38,6 +38,11 @@ Canopy - небольшой навес над входом или вдоль ф�
   <figcaption markdown="span">J Area: контур, направление и шаг; программа считает количество и длины.</figcaption>
 </figure>
 
+<figure markdown>
+  ![Разрез canopy](../../../assets/images/roof/canopy-parts.svg)
+  <figcaption markdown="span">Canopy у стены: ledger или стальная пластина с анкерами, joists, балка по краю, настил и soffit. Canopy не входит в eve/rake.</figcaption>
+</figure>
+
 ## Как назвать в дереве и строка DFL
 
 Экспорт: кнопки FR и JS полосы XL кладут позиции canopy в `Canopy Framing List`; если листа нет, он создаётся копией ближайшего этажа. Состав блока по детали:

@@ -16,6 +16,11 @@ Truss heel - вертикальная полоса обшивки в торце 
 ([Gable Sheathing](gable.md)); на eave-сторонах её легко забыть. Это не
 [Box Sheathing](box-sheathing.md) и не soffit.
 
+<figure markdown>
+  ![Truss heel у карниза](../../../assets/images/sheathing/truss-heel.svg)
+  <figcaption markdown="span">Raised heel фермы на top plate: полоса обшивки по высоте пятки (в имени высота в футах), выше начинается кровля.</figcaption>
+</figure>
+
 ## Где искать на чертежах
 
 | Лист | Что взять |

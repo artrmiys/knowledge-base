@@ -27,6 +27,11 @@ types, не только elevations. Sheathing считается в
 4. Sheathing (CDX, OSB, Zip): свой scope.
 5. Stud wall.
 
+<figure markdown>
+  ![Слои стены снаружи внутрь](../../assets/images/siding/wall-layers-wrb.svg)
+  <figcaption markdown="span">Siding, furring, WRB, sheathing, stud. WRB называется по спецификации, у Zip барьер уже встроен в лист.</figcaption>
+</figure>
+
 ## WRB, не Vapor Barrier
 
 | Строка DFL | Материал | Unit | Правило |

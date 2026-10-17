@@ -33,6 +33,11 @@ Decking и перила берутся из размеров блока: пло�
 земли со сложным контуром обводят Area в `sqfts` с понятным именем, перила
 по изломанному контуру Line. Продукт и высоту в имя не писать, они живут в DFL.
 
+<figure markdown>
+  ![Railing: система или поэлементно](../../assets/images/trims/railing-system-vs-elements.svg)
+  <figcaption markdown="span">Слева composite как система (посты с sleeve и cap, секции 6'), справа wood painted поэлементно (posts, balusters, rails, cap rail). Два поста на балкон, способы в одном блоке не смешивать.</figcaption>
+</figure>
+
 ## Как назвать в дереве и строка DFL
 
 Способ счёта один на участок: **система** (заводские секции) или

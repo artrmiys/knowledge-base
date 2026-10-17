@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" role="img" aria-labelledby="t d">
+  <title id="t">Truss heel: raised heel at the eave with the vertical sheathing strip</title>
+  <desc id="d">Section at the eave: wall with double top plate, raised-heel truss with bottom chord tail, 1 foot 7 inch heel web, top chord and roof sheathing, the vertical heel sheathing strip above the top plate, wall sheathing below, overhang with sub-fascia and fascia.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    
+    <style>
+      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
+      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
+      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
+      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
+      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
+      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+    </style>
+  </defs>
+  <rect x="0.5" y="0.5" width="999" height="579" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<rect x="420" y="438" width="33" height="130" fill="#f4e9d7" stroke="#8a6a3f" stroke-width="1.1" stroke-dasharray="4 3"/>
+<rect x="420" y="420" width="33" height="9" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3" />
+<rect x="420" y="429" width="33" height="9" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3" />
+<rect x="412" y="420" width="8" height="148" fill="url(#hatchGrey)" stroke="#9aa4ad" stroke-width="1.2" />
+<rect x="276" y="396" width="504" height="24" fill="#f4e9d7" stroke="#8a6a3f" stroke-width="1.1" stroke-dasharray="4 3"/>
+<rect x="420" y="306" width="14" height="90" fill="#f4e9d7" stroke="#8a6a3f" stroke-width="1.1" stroke-dasharray="4 3"/>
+<polygon points="276.0,378.0 780.0,126.0 769.3,104.5 265.3,356.5" fill="#f4e9d7" stroke="#8a6a3f" stroke-width="1.1" stroke-linejoin="round" stroke-dasharray="4 3"/>
+<polygon points="265.3,356.5 769.3,104.5 765.7,97.4 261.7,349.4" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.2" stroke-linejoin="round" />
+<rect x="412" y="300" width="8" height="120" fill="#00897b" stroke="#00897b" stroke-width="1.6" fill-opacity="0.8"/>
+<rect x="266" y="376" width="10" height="60" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3" />
+<rect x="260" y="374" width="6" height="64" fill="#f7f3ea" stroke="#8a6a3f" stroke-width="1.2" />
+<rect x="266" y="420" width="146" height="6" fill="#f3e9d2" stroke="#8a6a3f" stroke-width="1.1" />
+<line class="dim" x1="490" y1="420" x2="490" y2="306"/>
+<text class="dimt" x="490" y="363" text-anchor="middle" ></text>
+<text class="lab2" x="502" y="359" >heel 1'-7"</text>
+<text class="mono2" x="502" y="377" >= 1.58 ft</text>
+<line class="dim" x1="276" y1="460" x2="420" y2="460"/>
+<text class="dimt" x="348" y="474" text-anchor="middle" >overhang 24"</text>
+<text class="side" x="250" y="530" >EXT</text>
+<text class="side" x="470" y="530" >INT</text>
+<line class="lead" x1="688" y1="110" x2="620" y2="196"/>
+<text class="lab2" x="700" y="106" >Roof sheathing</text>
+<text class="small" x="700" y="124" >страница Roof Sheathing</text>
+<line class="lead" x1="688" y1="200" x2="480" y2="278"/>
+<text class="note" x="700" y="196" >Top chord, truss by others</text>
+<line class="lead" x1="688" y1="300" x2="440" y2="360"/>
+<text class="note" x="700" y="296" >Heel web</text>
+<line class="lead" x1="240" y1="250" x2="414" y2="363"/>
+<text class="lab" x="50" y="236" >Truss heel sheathing</text>
+<text class="mono2" x="50" y="255" >Truss Heel | 1/2" OSB | SQ FT</text>
+<text class="small" x="50" y="273" >= LFT карниза x высота пятки</text>
+<text class="mono2" x="50" y="291" >trussheel 1.58 | Line</text>
+<line class="lead" x1="200" y1="372" x2="258" y2="408"/>
+<text class="note" x="50" y="350" >Sub-fascia 2x8, fascia 1x8</text>
+<text class="small" x="50" y="368" >страница Eve</text>
+<line class="lead" x1="200" y1="500" x2="410" y2="500"/>
+<text class="note" x="50" y="496" >Wall sheathing / Zip</text>
+<text class="small" x="50" y="514" >в строке стены, не heel</text>
+<text class="lab" x="60" y="50" >Raised heel у карниза (eave side)</text>
+<text class="note" x="60" y="70" >высота пятки с детали карниза или из truss package</text>
+<text class="note" x="60" y="556" >Heel только на eave-сторонах; на rake-сторонах полоса = gable. Высоту пятки не путать с выносом eve (дюймы).</text>
+</svg>

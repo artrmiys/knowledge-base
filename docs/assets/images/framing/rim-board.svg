@@ -1,25 +1,113 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
-  <title id="t">Rim board at joist ends on top plate</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 600" role="img" aria-labelledby="t d">
+  <title id="t">Rim board closes the joist ends around the floor perimeter</title>
+  <desc id="d">Oblique view of a floor corner: double top plates, joists running back, rim board along the front edge closing the joist ends (cut away at the right to show the ends), second rim along the side. Inset: rim thickness options.</desc>
   <defs>
-    <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}.b{stroke:#3a3a3a;stroke-width:1.5;fill:url(#w)}</style>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    
+    <style>
+      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
+      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
+      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
+      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
+      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
+      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+    </style>
   </defs>
-  <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Rim board - закрывает торцы joists по краю</text>
-  <text class="s" x="32" y="62">LFT по периметру; factor 1.05 (EWP) / 1.1 (прочее). Нужен и at roof TJI.</text>
-  <!-- wall + plate -->
-  <rect x="120" y="210" width="420" height="40" fill="url(#w)" stroke="#3a3a3a" stroke-width="1.5"/>
-  <!-- joists (ends) -->
-  <rect x="200" y="120" width="22" height="90" class="b"/>
-  <rect x="270" y="120" width="22" height="90" class="b"/>
-  <rect x="340" y="120" width="22" height="90" class="b"/>
-  <rect x="410" y="120" width="22" height="90" class="b"/>
-  <!-- rim board on edge -->
-  <rect x="160" y="120" width="14" height="90" fill="#caa27b" stroke="#6c4b2a" stroke-width="1.8"/>
-  <line x1="167" y1="120" x2="600" y2="95" stroke="#2e7d32" stroke-width="1.4"/>
-  <text class="l" x="608" y="98">Rim board (LFT)</text>
-  <line x1="289" y1="165" x2="600" y2="165" stroke="#2e7d32" stroke-width="1.4"/>
-  <text class="l" x="608" y="168">Joists</text>
-  <line x1="330" y1="230" x2="600" y2="235" stroke="#2e7d32" stroke-width="1.4"/>
-  <text class="l" x="608" y="238">Top plate / wall</text>
+  <rect x="0.5" y="0.5" width="1059" height="599" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<polygon points="735.2,342.0 756.0,330.0 756.0,304.0 735.2,316.0" fill="#bfad90" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="195.2,316.0 735.2,316.0 756.0,304.0 216.0,304.0" fill="#eedec3" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="195.2,342.0 735.2,342.0 735.2,316.0 195.2,316.0" fill="#e9d3b0" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="749.8,307.6 756.0,304.0 756.0,204.0 749.8,207.6" fill="#bfad90" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="209.8,207.6 749.8,207.6 756.0,204.0 216.0,204.0" fill="#eedec3" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="209.8,307.6 749.8,307.6 749.8,207.6 209.8,207.6" fill="#e9d3b0" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="100.0,420.0 256.0,330.0 256.0,304.0 100.0,394.0" fill="#bfad90" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="60.0,394.0 100.0,394.0 256.0,304.0 216.0,304.0" fill="#eedec3" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="60.0,420.0 100.0,420.0 100.0,394.0 60.0,394.0" fill="#e9d3b0" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="600.0,420.0 620.8,408.0 620.8,382.0 600.0,394.0" fill="#bfad90" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="60.0,394.0 600.0,394.0 620.8,382.0 80.8,382.0" fill="#eedec3" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="60.0,420.0 600.0,420.0 600.0,394.0 60.0,394.0" fill="#e9d3b0" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="72.0,394.0 228.0,304.0 228.0,204.0 72.0,294.0" fill="#bfad90" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="60.0,294.0 72.0,294.0 228.0,204.0 216.0,204.0" fill="#eedec3" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="60.0,394.0 72.0,394.0 72.0,294.0 60.0,294.0" fill="#e9d3b0" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="140.2,390.4 283.8,307.6 283.8,207.6 140.2,290.4" fill="#bfad90" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="126.2,290.4 140.2,290.4 283.8,207.6 269.8,207.6" fill="#eedec3" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="126.2,390.4 140.2,390.4 140.2,290.4 126.2,290.4" fill="url(#endgrain)" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="240.2,390.4 383.8,307.6 383.8,207.6 240.2,290.4" fill="#bfad90" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="226.2,290.4 240.2,290.4 383.8,207.6 369.8,207.6" fill="#eedec3" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="226.2,390.4 240.2,390.4 240.2,290.4 226.2,290.4" fill="url(#endgrain)" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="340.2,390.4 483.8,307.6 483.8,207.6 340.2,290.4" fill="#bfad90" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="326.2,290.4 340.2,290.4 483.8,207.6 469.8,207.6" fill="#eedec3" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="326.2,390.4 340.2,390.4 340.2,290.4 326.2,290.4" fill="url(#endgrain)" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="440.2,390.4 583.8,307.6 583.8,207.6 440.2,290.4" fill="#bfad90" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="426.2,290.4 440.2,290.4 583.8,207.6 569.8,207.6" fill="#eedec3" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="426.2,390.4 440.2,390.4 440.2,290.4 426.2,290.4" fill="url(#endgrain)" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="540.2,390.4 683.8,307.6 683.8,207.6 540.2,290.4" fill="#bfad90" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="526.2,290.4 540.2,290.4 683.8,207.6 669.8,207.6" fill="#eedec3" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="526.2,390.4 540.2,390.4 540.2,290.4 526.2,290.4" fill="url(#endgrain)" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="460.0,394.0 466.2,390.4 466.2,290.4 460.0,294.0" fill="#bfad90" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="60.0,294.0 460.0,294.0 466.2,290.4 66.2,290.4" fill="#eedec3" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="60.0,394.0 460.0,394.0 460.0,294.0 60.0,294.0" fill="#e9d3b0" stroke="#3a3f44" stroke-width="1.3" stroke-linejoin="round" />
+<path d="M460.0,394.0 l6,-12 l-8,-14 l8,-14 l-8,-14 l8,-14 l-8,-14 l8,-14 L460.0,294.0" fill="#fff" stroke="#3a3f44" stroke-width="1.3"/><polyline points="218.9,205.8 69.1,292.2 463.1,292.2" fill="none" stroke="#2e7d32" stroke-width="3" stroke-dasharray="10 6"/><text class="lab" x="60" y="70" >Rim board: LFT по периметру перекрытия</text>
+<text class="note" x="60" y="92" >закрывает торцы joists; на верхней доске стены</text>
+<line class="lead" x1="200" y1="100" x2="129.12" y2="290.2"/>
+<text class="lab2" x="60" y="150" >второй Rim вдоль joists</text>
+<text class="note" x="60" y="168" >та же строка, та же LFT</text>
+<line class="lead" x1="150" y1="176" x2="168" y2="284"/>
+<line class="lead" x1="748" y1="262" x2="535.24" y2="340.4"/>
+<text class="lab" x="760" y="258" >торец joist</text>
+<text class="note" x="760" y="277" >rim обрезан, чтобы показать торец</text>
+<line class="lead" x1="748" y1="330" x2="360" y2="344"/>
+<text class="lab" x="760" y="326" >Rim board</text>
+<text class="mono" x="760" y="345" >11-7/8" Rim | LFT</text>
+<line class="lead" x1="748" y1="400" x2="510" y2="407"/>
+<text class="lab" x="760" y="396" >Top plate (стена)</text>
+<text class="note" x="760" y="415" >считается в стене</text>
+<line class="lead" x1="748" y1="200" x2="405" y2="249"/>
+<text class="lab" x="760" y="196" >Joists</text>
+<text class="note" x="760" y="215" >страница Joist</text>
+<text class="lab2" x="760" y="470" >Factor</text>
+<text class="mono" x="760" y="489" >1.05 только EWP</text>
+<text class="mono" x="760" y="507" >1.1 остальные типы работ</text>
+<text class="lab2" x="60" y="470" >Толщина rim (сечение):</text>
+<rect x="60" y="484" width="17.6" height="70" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.4" />
+<text class="mono2" x="94" y="518" >1-1/8" OSB Rim</text>
+<text class="small" x="94" y="536" >частый тонкий</text>
+<rect x="225" y="484" width="19.2" height="70" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.4" />
+<text class="mono2" x="259" y="518" >1-1/4" LSL Rim</text>
+<text class="small" x="259" y="536" >если specified LSL</text>
+<rect x="390" y="484" width="24" height="70" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.4" />
+<text class="mono2" x="424" y="518" >1-1/2" LSL Rim</text>
+<text class="small" x="424" y="536" >stronger rim</text>
+<rect x="555" y="484" width="27.2" height="70" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.4" />
+<text class="mono2" x="589" y="518" >1-3/4" LVL Rim</text>
+<text class="small" x="589" y="536" >deck / corridor, по detail</text>
 </svg>

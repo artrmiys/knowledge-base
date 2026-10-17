@@ -42,6 +42,11 @@ Hip - наклонное наружное ребро, где два ската �
   <figcaption markdown="span">Инструмент Beam: две точки по элементу, длина округляется программой и попадает в имя позиции.</figcaption>
 </figure>
 
+<figure markdown>
+  ![Длина hip и valley](../../../assets/images/roof/hip-valley-length.svg)
+  <figcaption markdown="span">Длина по плану умножается на коэффициент уклона: так получается длина доски. При разных уклонах скатов длину брать с разреза.</figcaption>
+</figure>
+
 ## Как назвать в дереве и строка DFL
 
 Путь: `framing/roof framing/beams/hip <сечение> <длина>`. Если шаблон проекта считает hip, valley и ridge одной строкой, Label `Ridge / Valley / Hip` в LFT.

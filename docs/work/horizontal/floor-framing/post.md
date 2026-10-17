@@ -35,6 +35,11 @@ Post - отдельная стойка под балкой, не stud стены
   <figcaption markdown="span">Count-позиция поста: одна точка в центре каждого поста, имя с маркой, сечением и высотой.</figcaption>
 </figure>
 
+<figure markdown>
+  ![Высота поста](../../../assets/images/framing/post-height.svg)
+  <figcaption markdown="span">Пост, который проходит через несколько этажей, считается один раз на верхнем этаже, который он держит. Высота от базы до низа балки, а не floor-to-floor.</figcaption>
+</figure>
+
 ## Как назвать в дереве и строка DFL
 
 Путь: `framing/<поддерживаемый этаж> framing/posts/<марка сечение высота>`. Высота в имени в футах.

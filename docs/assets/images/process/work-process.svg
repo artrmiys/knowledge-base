@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1245 700" role="img" aria-labelledby="t d">
+  <title id="t">Work process: from the client folder to .Finished, eight steps</title>
+  <desc id="d">Eight numbered blocks in two rows: project received, PDF analysis, project in OurPlanCore, measuring by the Work menu, Excel DFL and notes, check, export, delivery; a branch from export for revisions with Changes.txt. Colour shows who does the step: grey automation at intake, green estimator, blue delivery.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    
+    <style>
+      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
+      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
+      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
+      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
+      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
+      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+    </style>
+  </defs>
+  <rect x="0.5" y="0.5" width="1244" height="699" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<rect x="20" y="70" width="290" height="175" rx="10" fill="#e9ecef" stroke="#6b7378" stroke-width="2"/><circle cx="46" cy="98" r="16" fill="#6b7378"/><text x="46" y="104" text-anchor="middle" style="font:700 17px Inter, 'Segoe UI', Arial, sans-serif;fill:#fff">1</text><text class="lab" x="70" y="104" style="font-size:18px">Проект пришёл</text>
+<text class="note" x="36" y="136" style="font-size:18px">Dropbox, номер, папка,</text>
+<text class="note" x="36" y="159" style="font-size:18px">scope</text>
+<rect x="325" y="70" width="290" height="175" rx="10" fill="#e9ecef" stroke="#6b7378" stroke-width="2"/><circle cx="351" cy="98" r="16" fill="#6b7378"/><text x="351" y="104" text-anchor="middle" style="font:700 17px Inter, 'Segoe UI', Arial, sans-serif;fill:#fff">2</text><text class="lab" x="375" y="104" style="font-size:18px">Анализ PDF</text>
+<text class="note" x="341" y="136" style="font-size:18px">листы, обшивка, масштабы,</text>
+<text class="note" x="341" y="159" style="font-size:18px">противоречия</text>
+<rect x="630" y="70" width="290" height="175" rx="10" fill="#dff2df" stroke="#2e7d32" stroke-width="2"/><path d="M630,80 a10,10 0 0 1 10,-10 h270 a10,10 0 0 1 10,10 v76 h-290 z" fill="#e9ecef" stroke="#6b7378" stroke-width="2"/><rect x="630" y="70" width="290" height="175" rx="10" fill="none" stroke="#2e7d32" stroke-width="2"/><circle cx="656" cy="98" r="16" fill="#6b7378"/><text x="656" y="104" text-anchor="middle" style="font:700 17px Inter, 'Segoe UI', Arial, sans-serif;fill:#fff">3</text><text class="lab" x="680" y="104" style="font-size:18px">Проект в OurPlanCore</text>
+<text class="note" x="646" y="136" style="font-size:18px">авто: имена листов, масштаб,</text>
+<text class="note" x="646" y="159" style="font-size:18px">точки W/F/S/U</text>
+<text class="note" x="646" y="182" style="font-size:18px">эстиматор: Auto Tree,</text>
+<text class="note" x="646" y="205" style="font-size:18px">Excel по корпусам</text>
+<rect x="935" y="70" width="290" height="175" rx="10" fill="#dff2df" stroke="#2e7d32" stroke-width="2"/><circle cx="961" cy="98" r="16" fill="#2e7d32"/><text x="961" y="104" text-anchor="middle" style="font:700 17px Inter, 'Segoe UI', Arial, sans-serif;fill:#fff">4</text><text class="lab" x="985" y="104" style="font-size:18px">Замеры по меню Работа</text>
+<text class="note" x="951" y="136" style="font-size:18px">walls, openings, sheathing,</text>
+<text class="note" x="951" y="159" style="font-size:18px">sqfts, framing, shear,</text>
+<text class="note" x="951" y="182" style="font-size:18px">eves, deck</text>
+<rect x="935" y="335" width="290" height="175" rx="10" fill="#dff2df" stroke="#2e7d32" stroke-width="2"/><circle cx="961" cy="363" r="16" fill="#2e7d32"/><text x="961" y="369" text-anchor="middle" style="font:700 17px Inter, 'Segoe UI', Arial, sans-serif;fill:#fff">5</text><text class="lab" x="985" y="369" style="font-size:18px">Excel DFL и ноты</text>
+<text class="note" x="951" y="401" style="font-size:18px">полоса XL, ноты, формулы</text>
+<rect x="630" y="335" width="290" height="175" rx="10" fill="#dff2df" stroke="#2e7d32" stroke-width="2"/><circle cx="656" cy="363" r="16" fill="#2e7d32"/><text x="656" y="369" text-anchor="middle" style="font:700 17px Inter, 'Segoe UI', Arial, sans-serif;fill:#fff">6</text><text class="lab" x="680" y="369" style="font-size:18px">Проверка</text>
+<text class="note" x="646" y="401" style="font-size:18px">чек-лист, Estimating Total</text>
+<rect x="325" y="335" width="290" height="175" rx="10" fill="#dbeafe" stroke="#1e88e5" stroke-width="2"/><circle cx="351" cy="363" r="16" fill="#1e88e5"/><text x="351" y="369" text-anchor="middle" style="font:700 17px Inter, 'Segoe UI', Arial, sans-serif;fill:#fff">7</text><text class="lab" x="375" y="369" style="font-size:18px">Экспорт</text>
+<text class="note" x="341" y="401" style="font-size:18px">PDF только листов с замерами,</text>
+<text class="note" x="341" y="424" style="font-size:18px">по корпусам; processed xlsx</text>
+<rect x="20" y="335" width="290" height="175" rx="10" fill="#dbeafe" stroke="#1e88e5" stroke-width="2"/><circle cx="46" cy="363" r="16" fill="#1e88e5"/><text x="46" y="369" text-anchor="middle" style="font:700 17px Inter, 'Segoe UI', Arial, sans-serif;fill:#fff">8</text><text class="lab" x="70" y="369" style="font-size:18px">Сдача</text>
+<text class="note" x="36" y="401" style="font-size:18px">.Finished, имя как при приёме</text>
+<line x1="310" y1="157.5" x2="324" y2="157.5" stroke="#3a3f44" stroke-width="2.2" marker-end="url(#arrInk)"/><line x1="615" y1="157.5" x2="629" y2="157.5" stroke="#3a3f44" stroke-width="2.2" marker-end="url(#arrInk)"/><line x1="920" y1="157.5" x2="934" y2="157.5" stroke="#3a3f44" stroke-width="2.2" marker-end="url(#arrInk)"/><line x1="1080.0" y1="245" x2="1080.0" y2="333" stroke="#3a3f44" stroke-width="2.2" marker-end="url(#arrInk)"/><line x1="935" y1="422.5" x2="921" y2="422.5" stroke="#3a3f44" stroke-width="2.2" marker-end="url(#arrInk)"/><line x1="630" y1="422.5" x2="616" y2="422.5" stroke="#3a3f44" stroke-width="2.2" marker-end="url(#arrInk)"/><line x1="325" y1="422.5" x2="311" y2="422.5" stroke="#3a3f44" stroke-width="2.2" marker-end="url(#arrInk)"/><line x1="470.0" y1="510" x2="470.0" y2="538" stroke="#3a3f44" stroke-width="2.2" marker-end="url(#arrInk)"/><rect x="325" y="540" width="290" height="64" rx="10" fill="#fff" stroke="#1e88e5" stroke-width="2" stroke-dasharray="7 5"/><text class="lab" x="343" y="566" style="font-size:18px">Ревизия: Changes.txt</text>
+<text class="note" x="343" y="590" style="font-size:17px">секции Changes и Open items</text>
+<rect x="20" y="644" width="30" height="20" rx="4" fill="#e9ecef" stroke="#6b7378" stroke-width="2"/><text class="note" x="60" y="660" style="font-size:17px">автоматика при приёме</text>
+<rect x="360" y="644" width="30" height="20" rx="4" fill="#dff2df" stroke="#2e7d32" stroke-width="2"/><text class="note" x="400" y="660" style="font-size:17px">эстиматор</text>
+<rect x="700" y="644" width="30" height="20" rx="4" fill="#dbeafe" stroke="#1e88e5" stroke-width="2"/><text class="note" x="740" y="660" style="font-size:17px">сдача</text>
+</svg>

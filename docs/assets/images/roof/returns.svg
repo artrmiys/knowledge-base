@@ -1,21 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
-  <title id="t">Eave return boxed corner</title>
-  <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
-  <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Return - "коробка", где eave заворачивается к rake</text>
-  <text class="s" x="32" y="62">Отдельный bucket: свой framing/trim. Чаще на architectural details.</text>
-  <!-- wall corner -->
-  <rect x="160" y="150" width="320" height="110" fill="#f3f6f9" stroke="#9bb0c2" stroke-width="1.4"/>
-  <!-- rake (sloped) coming down -->
-  <line x1="180" y1="90" x2="320" y2="170" stroke="#c0392b" stroke-width="5"/>
-  <!-- eave (horizontal) -->
-  <line x1="320" y1="170" x2="500" y2="170" stroke="#2e7d32" stroke-width="5"/>
-  <!-- return box -->
-  <rect x="300" y="158" width="40" height="34" fill="#fff3c4" stroke="#c78b00" stroke-width="3"/>
-  <line x1="320" y1="175" x2="560" y2="150" stroke="#2e7d32" stroke-width="1.4"/>
-  <text class="l" x="568" y="153">Return (boxed corner)</text>
-  <line x1="240" y1="130" x2="560" y2="120" stroke="#2e7d32" stroke-width="1.4"/>
-  <text class="l" x="568" y="123">Rake</text>
-  <line x1="420" y1="170" x2="560" y2="195" stroke="#2e7d32" stroke-width="1.4"/>
-  <text class="l" x="568" y="198">Eave</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" role="img" aria-labelledby="t d">
+  <title id="t">Returns: the boxed corner where the eave meets the rake, two variants</title>
+  <desc id="d">Top left: isometric house key with eave, rake and return colours. Below: gable end elevation of the corner for a cornice (boxed) return and for a pork chop return, with what is counted in each.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    
+    <style>
+      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
+      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
+      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
+      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
+      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
+      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+    </style>
+  </defs>
+  <rect x="0.5" y="0.5" width="999" height="649" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<polygon points="40.0,250.0 150.0,250.0 150.0,178.5 95.0,151.0 40.0,178.5" fill="#f4f6f8" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
+<polygon points="150.0,250.0 241.5,197.2 241.5,125.7 150.0,178.5" fill="#e3e8ec" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
+<polygon points="22.2,180.0 90.4,145.9 191.1,87.9 122.9,122.0" fill="#dfe3e8" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
+<polygon points="90.4,145.9 158.6,180.0 259.3,122.0 191.1,87.9" fill="#d7dde3" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
+<polygon points="158.6,180.0 259.3,122.0 259.3,126.4 158.6,184.4" fill="#c3cad1" stroke="#3a3f44" stroke-width="1" stroke-linejoin="round" />
+<line x1="158.6" y1="180.0" x2="259.3" y2="122.0" stroke="#1e88e5" stroke-width="2.8" stroke-linecap="round"/>
+<polyline points="22.2,180.0 90.4,145.9 158.6,180.0" fill="none" stroke="#e65100" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="158.6,186.6 164.2,183.4 164.2,176.8 158.6,180.0" fill="#beaec6" stroke="#8e24aa" stroke-width="1.6" stroke-linejoin="round" />
+<polygon points="139.9,180.0 158.6,180.0 164.2,176.8 145.5,176.8" fill="#eddff5" stroke="#8e24aa" stroke-width="1.6" stroke-linejoin="round" />
+<polygon points="139.9,186.6 158.6,186.6 158.6,180.0 139.9,180.0" fill="#e8d5f2" stroke="#8e24aa" stroke-width="1.6" stroke-linejoin="round" />
+<text class="lab" x="40" y="50" >Где это на доме</text>
+<rect x="40" y="66" width="22" height="14" fill="#1e88e5" stroke="#1e88e5" stroke-width="1.2"/><text class="cap" x="70" y="78" >Eave</text>
+<rect x="122.8" y="66" width="22" height="14" fill="#e65100" stroke="#e65100" stroke-width="1.2"/><text class="cap" x="152.8" y="78" >Rake</text>
+<rect x="205.6" y="66" width="22" height="14" fill="#e8d5f2" stroke="#8e24aa" stroke-width="1.2"/><text class="cap" x="235.6" y="78" >Return</text>
+<line class="lead" x1="292" y1="110" x2="155.274" y2="179.34"/>
+<text class="lab2" x="300" y="108" >Return: угол, где</text>
+<text class="note" x="300" y="126" >eave встречает rake</text>
+<text class="lab" x="60" y="318" >Cornice (boxed) return</text>
+<text class="note" x="60" y="338" >фасад фронтона, угол крупно</text>
+<polygon points="150.0,410.0 410.0,280.0 410.0,550.0 150.0,550.0" fill="#f4f6f8" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
+<line x1="150" y1="450" x2="410" y2="450" stroke="#c5ccd3" stroke-width="1"/><line x1="150" y1="468" x2="410" y2="468" stroke="#c5ccd3" stroke-width="1"/><line x1="150" y1="486" x2="410" y2="486" stroke="#c5ccd3" stroke-width="1"/><line x1="150" y1="504" x2="410" y2="504" stroke="#c5ccd3" stroke-width="1"/><line x1="150" y1="522" x2="410" y2="522" stroke="#c5ccd3" stroke-width="1"/><line x1="150" y1="540" x2="410" y2="540" stroke="#c5ccd3" stroke-width="1"/><rect x="90" y="410" width="60" height="30" fill="#e3e8ec" stroke="#3a3f44" stroke-width="1.4" />
+<line x1="90" y1="410" x2="90" y2="440" stroke="#1e88e5" stroke-width="6"/><rect x="150" y="410" width="70" height="30" fill="#e8d5f2" stroke="#8e24aa" stroke-width="2.2" />
+<line x1="150" y1="417" x2="220" y2="417" stroke="#8e24aa" stroke-width="1"/><line x1="150" y1="433" x2="220" y2="433" stroke="#8e24aa" stroke-width="1"/><polygon points="220.0,410.0 410.0,315.0 410.0,329.0 220.0,424.0" fill="#fbe3d3" stroke="#e65100" stroke-width="2" stroke-linejoin="round" />
+<text class="lab" x="540" y="318" >Pork chop return</text>
+<text class="note" x="540" y="338" >rake идёт до низа,</text>
+<text class="note" x="540" y="356" >торец закрыт доской</text>
+<polygon points="660.0,410.0 920.0,280.0 920.0,550.0 660.0,550.0" fill="#f4f6f8" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
+<line x1="660" y1="450" x2="920" y2="450" stroke="#c5ccd3" stroke-width="1"/><line x1="660" y1="468" x2="920" y2="468" stroke="#c5ccd3" stroke-width="1"/><line x1="660" y1="486" x2="920" y2="486" stroke="#c5ccd3" stroke-width="1"/><line x1="660" y1="504" x2="920" y2="504" stroke="#c5ccd3" stroke-width="1"/><line x1="660" y1="522" x2="920" y2="522" stroke="#c5ccd3" stroke-width="1"/><line x1="660" y1="540" x2="920" y2="540" stroke="#c5ccd3" stroke-width="1"/><rect x="600" y="410" width="60" height="30" fill="none" stroke="#3a3f44" stroke-width="1.2" stroke-dasharray="4 3"/>
+<polygon points="600.0,410.0 920.0,250.0 920.0,264.0 600.0,424.0" fill="#fbe3d3" stroke="#e65100" stroke-width="2" stroke-linejoin="round" />
+<polygon points="600.0,440.0 660.0,440.0 660.0,394.0 600.0,424.0" fill="#e8d5f2" stroke="#8e24aa" stroke-width="2.2" stroke-linejoin="round" />
+<line x1="600" y1="424" x2="600" y2="440" stroke="#1e88e5" stroke-width="6"/><line class="lead" x1="150" y1="578" x2="185" y2="444"/>
+<text class="lab2" x="60" y="592" >return box: soffit + fascia + crown</text>
+<text class="mono" x="60" y="611" >Returns | 12" | LFT или pcs</text>
+<text class="small" x="60" y="630" >rake кончается на return; eave до угла</text>
+<line class="lead" x1="660" y1="578" x2="630" y2="436"/>
+<text class="lab2" x="540" y="592" >pork chop: одна доска-заглушка</text>
+<text class="mono" x="540" y="611" >pcs; eave и rake считаются до угла</text>
+<text class="small" x="540" y="630" >rake идёт до самого низа</text>
 </svg>

@@ -5,7 +5,10 @@
   <figcaption markdown="span">Window Flashing - три стороны (head и два jamb), Sill Flashing - корытце по низу. У двери только три стороны: снизу threshold, не pan.</figcaption>
 </figure>
 
-<!-- TODO-PHOTO: window sill pan flashing installed at rough opening, EN query "window sill pan flashing rough opening" -->
+<figure markdown>
+  ![Проём окна в обшивке с лентой flashing по jambs, head и sill](../../../assets/images/photos/openings/window-ro-flashing-tape.jpg){ width="420" }
+  <figcaption markdown="span">Rough opening окна до установки: лента по двум jambs и head идёт в строку `Window Flashing`, лента-корытце по низу проёма с заходом на стену - в `Sill Flashing`. Длины берём из размеров W и H проёма. Фото: terrylove.com, [источник](https://terrylove.com/forums/index.php?threads/add-2-or-3-foam-to-raised-ranch.85703/), найдено через Pinterest.</figcaption>
+</figure>
 
 ## Что это
 

@@ -28,6 +28,11 @@
   <figcaption markdown="span">Зелёная точка - активный корпус: новые замеры ложатся в его папки. Переключить - щёлкнуть точку у другого корпуса.</figcaption>
 </figure>
 
+<figure markdown>
+  ![Ветки framing и shear walls](../assets/images/process/takeoff-tree-framing.svg)
+  <figcaption markdown="span">Вторая половина дерева: framing по этажам (beams, headers, posts, joists, details, stairs) и shear walls с holdowns. Примеры имён справа.</figcaption>
+</figure>
+
 ## Ветки и форматы имён
 
 | Ветка | Путь | Инструмент | Имя позиции | Примеры |

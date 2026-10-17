@@ -38,7 +38,10 @@ shower screen и pergola.
 
 ## Porch trims
 
-<!-- TODO-PHOTO: porch ceiling beadboard soffit with header fascia and columns, EN: "porch ceiling beadboard columns fascia" -->
+<figure markdown>
+  ![Потолок крыльца: подшивка досками, кронштейны и колонны](../../assets/images/photos/trims/porch-ceiling-beadboard-columns.jpg){ width="360" }
+  <figcaption markdown="span">Потолок porch снизу: подшивка досками (строка `Soffits at Porch`, SQ FT), по краю fascia (`Fascia Trim at Hdr outside`), декоративные кронштейны и обшитые колонны. Каждый элемент считается отдельной строкой с множителем блока. Фото: hbelementsinc.com, [источник](https://www.hbelementsinc.com/portfolio/soffit-ceilings/), найдено через Pinterest.</figcaption>
+</figure>
 
 | Строка DFL | Типовой size | Unit | Заметка |
 | --- | --- | --- | --- |
@@ -59,6 +62,11 @@ shower screen и pergola.
   это отделка поверх.
 - Нет деталей: `Note: No Details provided; all trims are assumed per
   elevations`, все строки с `assumed`.
+
+<figure markdown>
+  ![Отделка porch в разрезе](../../assets/images/trims/porch-trims.svg)
+  <figcaption markdown="span">Разрез porch header: fascia trim снаружи и внутри, soffit trim, frieze, crown, beadboard soffit (SQ FT), обшивка колонны.</figcaption>
+</figure>
 
 ## Flare / shingled bump
 
