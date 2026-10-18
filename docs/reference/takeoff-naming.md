@@ -37,7 +37,7 @@
 | Beam | `walls/2nd floor walls` | `framing/2nd floor framing/beams` | `shear walls/2nd floor/shear` | `units` |
 | Openings | `openings` (правило по инструменту) | `openings` | `openings` | `units` |
 
-Этажи: `B` (basement), `1`-`5`, `L` (loft), `R` (roof); папки `basement foor walls`, `loft walls`, `roof framing` и так далее задаются в настройках. Count на F-листе ложится в корень этажа `framing/2nd floor framing`: посты и headers потом переносятся в `posts` и `headers/ext|int` руками или именем папки при создании. Недостающие папки создаются при подтверждении в диалоге.
+Этажи: `B` (basement), `1`-`5`, `L` (loft), `R` (roof); папки `basement foor walls`, `loft walls`, `roof framing` и так далее задаются в настройках. Count на F-листе обычно ложится в корень этажа `framing/2nd floor framing`. Если имя Count/Points оканчивается на пробел и `Post`, позиция идёт в `framing/2nd floor framing/posts`. Имя с окончанием ` Stair` на F-листе идёт в `framing/2nd floor framing/stairs` любым инструментом. Регистр букв не важен; посты или лестницы на другом этаже идут в соответствующую папку своего этажа. Недостающие папки создаются при подтверждении в диалоге.
 
 Как точки ставятся и снимаются: [Листы, точки W/F/S/U](ourplancore-pages.md#dots). Коротко: `a` плюс этаж даёт W, `s` плюс этаж даёт F, последний тег `u` даёт U; руками - щелчок по точке; весь проект - `Settings > Sheet Takeoff Routing > Route sheets without a dot now`.
 
@@ -45,7 +45,7 @@
 
 ## Правила по имени и инструменту { #name-rules }
 
-Правила стоят выше точки листа (кроме листа U): `eve 24 main` на W-листе всё равно уйдёт в `eves rakes/eves`. Сравнение по подстроке без учёта регистра, первое совпадение сверху выигрывает.
+Правила стоят выше точки листа (кроме листа U): `eve 24 main` на W-листе всё равно уйдёт в `eves rakes/eves`. Обычные правила ищут подстроку без учёта регистра; ` Post` и ` Stair` требуют слова в конце имени и F-листа. Первое совпадение сверху выигрывает.
 
 | Совпадение | Папка |
 | --- | --- |
@@ -56,6 +56,8 @@
 | `rake` | `eves rakes/rakes` |
 | `prpt` | `parapets` |
 | `trussheel` | `trussheel` |
+| Count/Points с ` Post` в конце на F-листе | `framing/<этаж> framing/posts` |
+| ` Stair` в конце на F-листе, любой инструмент | `framing/<этаж> framing/stairs` |
 
 `gable stick` стоит выше `gable`, иначе он тоже уходил бы в trusses. Папка `eves` пишется так, не `eaves`. Правила редактируются в `Settings > Takeoff Name Routing` (порядок, `Preview name`, global и per job): [Маршрутизация: настройки](ourplancore-routing.md).
 
@@ -98,7 +100,7 @@
 
 ## Порядок легенды листа { #legend-order }
 
-Легенда листа строится автоматически: линии, потом площади, потом точки. `Pages > лист > Organize`: `Sort Sheet Legend Auto`, `A-Z`, `by Key (before space)` (по части имени до первого пробела, числа по значению: `A1 2x4, A1 2x6, A2 2x4, A10 2x4, B1 2x4`), `Reset Sheet Legend Order`. То же для нескольких листов, для папки (`... in Folder`) и в меню позиции под листом. Группы легенды: [Листы: продвинутое](ourplancore-sheets-advanced.md).
+Легенда листа по умолчанию делится на блоки по папкам Takeoffs, в порядке из `Settings > Sheet Legend`. Например, `walls` идёт в `Walls`, `framing/<этаж>/posts` в `Posts`, `sqfts` в `SQFTs`. `Pages > лист > Organize`: `Sort Sheet Legend Auto`, `A-Z`, `by Key (before space)` (по части имени до первого пробела, числа по значению: `A1 2x4, A1 2x6, A2 2x4, A10 2x4, B1 2x4`), `Reset Sheet Legend Order`. Отключить автоматические блоки только на одном листе и оставить ручные группы можно кнопкой рядом с замком кропов: [Листы: легенда](ourplancore-sheets-advanced.md#legend).
 
 ## См. также
 

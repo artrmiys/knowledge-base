@@ -49,6 +49,7 @@
 | Takeoff Templates | сохранённые заготовки деревьев и позиций | повторяющиеся наборы позиций | [Прочее, Templates](ourplancore-extras-other.md#templates) |
 | Sheet Takeoff Routing | точки W/F/S/U, уровни, папки по инструментам, авто-точка по имени | takeoff ложится не в ту папку | [Маршрутизация](ourplancore-routing.md) |
 | Takeoff Name Routing | правила имя или инструмент, потом папка | eve, rake, prpt, Openings в своих папках | [Маршрутизация](ourplancore-routing.md#name-routing) |
+| Sheet Legend | названия и порядок автоматических блоков по папкам Takeoffs | изменить порядок Walls, Posts, Beams, Details, SQFTs | [Легенда листа](ourplancore-sheets-advanced.md#legend) |
 | Takeoff Colors | фиксированный цвет для точного имени (`bft`) | нужен ещё один фиксированный цвет | [Маршрутизация](ourplancore-routing.md#colors) |
 | AI Crop Notes | формат строк Tag/Size в заметках из AI crop | заметки из schedule читаются плохо | [ИИ](ourplancore-ai.md#crop-notes) |
 | Sort A/S | правила `Sort: A - Arch / S - Struct`, листы на `-` в `--------others` | нестандартные префиксы листов | [Pages](ourplancore-pages.md) |
@@ -56,6 +57,7 @@
 | Auto Rename / Scale | движок имён и масштаба, правила суффиксов, колонка Kept, AI по штампу | Name даёт плохие имена | [Pages](ourplancore-pages.md), [ИИ](ourplancore-ai.md#sheet-names) |
 | Excel Actions | кнопки полосы XL и последовательность ALL | свой порядок шагов экспорта | [Excel](ourplancore-excel.md) |
 | Project Storage | размер проекта, `Preview safe compact`, `Compact snap.json` | проект раздулся | [Проекты и сохранение](job-creation-storage.md) |
+| Autosave Recovery | интервалы повторов после ошибки автосохранения | нужно изменить ожидание следующей попытки | [Автосохранение](job-creation-storage.md#autosave) |
 | Agent Bridge | доступ локального ассистента к открытому проекту | работа с агентом | [ИИ](ourplancore-ai.md#bridge) |
 | Terminals | профиль Claude или Codex, ширина, усилие, контекст | панель `>_` | [Консоль ИИ](ourplancore-ai-console.md#settings) |
 | Workspace | сервер, устройство, синхронизация, второй компьютер | работа с двух ПК | [Workspace](ourplancore-workspace.md#workspace) |
@@ -86,9 +88,9 @@
 
 Размер по умолчанию (36 x 24 in) и таблица пресетов `Name`, `Width (in)`, `Height (in)`. Порядок: проектная копия, потом глобальная, потом 36 x 24. Пресеты видны в диалоге Blank Sheet и в Crop to Sheet.
 
-### Sheet Takeoff Routing, Takeoff Name Routing, Takeoff Colors
+### Sheet Takeoff Routing, Takeoff Name Routing, Sheet Legend, Takeoff Colors
 
-Три категории одной темы: куда и каким цветом ложится новый takeoff. Полностью разобраны на странице [Маршрутизация takeoff](ourplancore-routing.md).
+Первые две категории задают папку новой позиции; Takeoff Colors - её цвет. Подробно: [Маршрутизация takeoff](ourplancore-routing.md). Sheet Legend задаёт автоматические блоки по текущим папкам Takeoffs и их порядок на листе. Есть Apply, Reset, глобальная настройка и вариант только для проекта. На отдельном листе автоматические блоки можно выключить кнопкой у легенды, сохранив возможность ручных групп: [Легенда листа](ourplancore-sheets-advanced.md#legend).
 
 ### AI Crop Notes
 

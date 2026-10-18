@@ -100,26 +100,28 @@
   <figcaption markdown="span">Упорядоченная таблица правил и поле Preview name: введите имя будущего takeoff и увидите папку.</figcaption>
 </figure>
 
-Правила по умолчанию (сверху вниз, первое совпадение выигрывает, поиск по части слова без учёта регистра):
+Правила по умолчанию (сверху вниз, первое совпадение выигрывает; режим совпадения указан в колонке Match):
 
-| Name contains | Tool | Destination |
-| --- | --- | --- |
-| (пусто) | Openings | `openings` |
-| `gable stick` | Any | `gables/gable stick` |
-| `gable` | Any | `gables/gable trusses` |
-| `eve` | Any | `eves rakes/eves` |
-| `rake` | Any | `eves rakes/rakes` |
-| `prpt` | Any | `parapets` |
-| `trussheel` | Any | `trussheel` |
+| Name text | Match | Tool | Sheet row | Destination |
+| --- | --- | --- | --- | --- |
+| (пусто) | Contains | Openings | Any | `openings` |
+| `gable stick` | Contains | Any | Any | `gables/gable stick` |
+| `gable` | Contains | Any | Any | `gables/gable trusses` |
+| `eve` | Contains | Any | Any | `eves rakes/eves` |
+| `rake` | Contains | Any | Any | `eves rakes/rakes` |
+| `prpt` | Contains | Any | Any | `parapets` |
+| `trussheel` | Contains | Any | Any | `trussheel` |
+| `post` | EndsWithWord | Count | F | `framing/{framingFloor}/posts` |
+| `stair` | EndsWithWord | Any | F | `framing/{framingFloor}/stairs` |
 
-Порядок важен: `gable stick` стоит выше `gable`, иначе все gable stick уходили бы в trusses. Путь считается от корпуса (зелёная точка, Building root или корень Takeoffs).
+Порядок важен: `gable stick` стоит выше `gable`, иначе все gable stick уходили бы в trusses. `EndsWithWord` для `post` и `stair` требует пробел перед словом в конце имени, без учёта регистра. Эти два правила действуют только на F-листе; `{framingFloor}` берётся из выбранного этажа. Путь считается от корпуса (зелёная точка, Building root или корень Takeoffs).
 
 ### Как добавить или изменить правило { #add-rule }
 
-Зачем: позиции с нужным словом в имени сами ложатся в свою папку на любом листе.
+Зачем: позиции с нужным словом в имени сами ложатся в свою папку на подходящем листе.
 
 1. Откройте **Settings > Takeoff Name Routing** и проверьте галку **Enable name and tool rules**.
-2. Добавьте строку: **Name contains** - слово в имени (например `siding`), **Tool** - `Any` или конкретный инструмент, **Destination** - папка (`roof misc/siding`). Галка **Enabled** в строке временно выключает правило без удаления.
+2. Добавьте строку: **Name text** - текст имени (например `siding`), **Match** - `Contains` или `EndsWithWord`, **Tool** - `Any` или конкретный инструмент, **Sheet row** - `Any` или `F`, **Destination** - папка (`roof misc/siding`). Галка **Enabled** в строке временно выключает правило без удаления.
 3. Поставьте правило выше более общих кнопками **Move up** / **Move down**.
 4. Проверьте в поле **Preview name**: впишите `6" vertical siding` и прочитайте путь.
 5. Нажмите **Apply** (действует до перезапуска), **Save global default** (для всех проектов) или **Save as this job** (только для открытого). **Reset** возвращает таблицу выше, **Clear job override** снимает проектную копию.
