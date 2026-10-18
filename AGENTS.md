@@ -100,7 +100,7 @@ project-root/
 Каноны программы и правила проверки версии перечислены в
 [maintenance](docs/start/maintenance.md). Текущий аудит и постраничная глубина
 проверки — [AUDIT.md](AUDIT.md) и [DOCUMENT_REGISTER.md](DOCUMENT_REGISTER.md).
-Описание OurPlanCore сверено с 3.0.0 на 17.10.2026 (кадры `assets/images/ourplancore/v3/`). При следующем релизе
+Описание OurPlanCore сверено с 3.0.2 на 17.10.2026 (кадры `assets/images/ourplancore/v3/`, ролики `assets/images/ourplancore/demo/`, вставка роликов разметкой `video.kb-demo`). При следующем релизе
 сверяй фактическое поведение и обновляй затронутые сценарии; дату нельзя менять
 без проверки. Сохраняй старые URL `reference/ourplanecore/` и
 `reference/job-creation-storage/`. Таблица клавиш имеет один канон:
