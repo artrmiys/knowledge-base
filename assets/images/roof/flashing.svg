@@ -1,23 +1,101 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
-  <title id="t">Roof to wall step and kick-out flashing</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-labelledby="t d">
+  <title id="t">Roof to wall: step flashing, kick-out and siding over the flashing</title>
+  <desc id="d">Oblique view of a roof slope meeting a side wall: shingle courses, step flashing pieces stepping up the intersection under the siding, kick-out at the bottom end over the gutter, counter flashing note for masonry.</desc>
   <defs>
-    <pattern id="o" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#eef2f6"/><circle cx="2" cy="2" r="1" fill="#9bb0c2"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    
+    <style>
+      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
+      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
+      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
+      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
+      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
+      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+    </style>
   </defs>
-  <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Flashing — roof-to-wall, step и kick-out</text>
-  <text class="s" x="32" y="62">Отдельно от window flashing. Kick-out у низа примыкания часто забывают.</text>
-  <!-- wall -->
-  <rect x="120" y="80" width="60" height="200" fill="url(#o)" stroke="#3a3a3a" stroke-width="1.5"/>
-  <!-- sloped roof meeting wall -->
-  <polygon points="180,180 520,260 520,290 180,210" fill="#dfe7ee" stroke="#3a3a3a" stroke-width="1.5"/>
-  <!-- step flashing (zigzag at junction) -->
-  <polyline points="180,200 196,196 196,182 212,178 212,164 228,160" fill="none" stroke="#c0392b" stroke-width="3"/>
-  <!-- kick-out at bottom -->
-  <path d="M180,205 q-18,6 -26,22" fill="none" stroke="#c0392b" stroke-width="4"/>
-  <line x1="205" y1="185" x2="560" y2="150" stroke="#2e7d32" stroke-width="1.4"/>
-  <text class="l" x="568" y="153">Step flashing</text>
-  <line x1="160" y1="222" x2="560" y2="220" stroke="#2e7d32" stroke-width="1.4"/>
-  <text class="l" x="568" y="223">Kick-out flashing</text>
-  <text class="l" x="120" y="300" fill="#5a6a5a"></text>
+  <rect x="0.5" y="0.5" width="999" height="599" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<polygon points="140.0,470.0 580.0,470.0 580.0,140.0 140.0,140.0" fill="#f1ede4" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
+<polygon points="140.0,400.0 580.0,180.0 491.6,231.0 51.6,451.0" fill="#d7dde3" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
+<line x1="170.0" y1="385.0" x2="81.6" y2="436.0" stroke="#aeb7c0" stroke-width="1"/><line x1="200.0" y1="370.0" x2="111.6" y2="421.0" stroke="#aeb7c0" stroke-width="1"/><line x1="230.0" y1="355.0" x2="141.6" y2="406.0" stroke="#aeb7c0" stroke-width="1"/><line x1="260.0" y1="340.0" x2="171.6" y2="391.0" stroke="#aeb7c0" stroke-width="1"/><line x1="290.0" y1="325.0" x2="201.6" y2="376.0" stroke="#aeb7c0" stroke-width="1"/><line x1="320.0" y1="310.0" x2="231.6" y2="361.0" stroke="#aeb7c0" stroke-width="1"/><line x1="350.0" y1="295.0" x2="261.6" y2="346.0" stroke="#aeb7c0" stroke-width="1"/><line x1="380.0" y1="280.0" x2="291.6" y2="331.0" stroke="#aeb7c0" stroke-width="1"/><line x1="410.0" y1="265.0" x2="321.6" y2="316.0" stroke="#aeb7c0" stroke-width="1"/><line x1="440.0" y1="250.0" x2="351.6" y2="301.0" stroke="#aeb7c0" stroke-width="1"/><line x1="470.0" y1="235.0" x2="381.6" y2="286.0" stroke="#aeb7c0" stroke-width="1"/><line x1="500.0" y1="220.0" x2="411.6" y2="271.0" stroke="#aeb7c0" stroke-width="1"/><line x1="530.0" y1="205.0" x2="441.6" y2="256.0" stroke="#aeb7c0" stroke-width="1"/><line x1="560.0" y1="190.0" x2="471.6" y2="241.0" stroke="#aeb7c0" stroke-width="1"/><polygon points="51.6,465.0 140.0,414.0 140.0,400.0 51.6,451.0" fill="#9fa5ab" stroke="#4d5861" stroke-width="1.2" stroke-linejoin="round" />
+<polygon points="39.6,451.0 51.6,451.0 140.0,400.0 128.0,400.0" fill="#d2d7dc" stroke="#4d5861" stroke-width="1.2" stroke-linejoin="round" />
+<polygon points="39.6,465.0 51.6,465.0 51.6,451.0 39.6,451.0" fill="#c3cad1" stroke="#4d5861" stroke-width="1.2" stroke-linejoin="round" />
+<polygon points="140.0,400.0 174.0,383.0 160.5,390.8 126.5,407.8" fill="#b9c3cc" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="140.0,400.0 174.0,383.0 174.0,339.0 140.0,356.0" fill="#9aa5b1" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="170.0,385.0 204.0,368.0 190.5,375.8 156.5,392.8" fill="#b9c3cc" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="170.0,385.0 204.0,368.0 204.0,324.0 170.0,341.0" fill="#9aa5b1" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="200.0,370.0 234.0,353.0 220.5,360.8 186.5,377.8" fill="#b9c3cc" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="200.0,370.0 234.0,353.0 234.0,309.0 200.0,326.0" fill="#9aa5b1" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="230.0,355.0 264.0,338.0 250.5,345.8 216.5,362.8" fill="#b9c3cc" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="230.0,355.0 264.0,338.0 264.0,294.0 230.0,311.0" fill="#9aa5b1" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="260.0,340.0 294.0,323.0 280.5,330.8 246.5,347.8" fill="#b9c3cc" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="260.0,340.0 294.0,323.0 294.0,279.0 260.0,296.0" fill="#9aa5b1" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="290.0,325.0 324.0,308.0 310.5,315.8 276.5,332.8" fill="#b9c3cc" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="290.0,325.0 324.0,308.0 324.0,264.0 290.0,281.0" fill="#9aa5b1" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="320.0,310.0 354.0,293.0 340.5,300.8 306.5,317.8" fill="#b9c3cc" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="320.0,310.0 354.0,293.0 354.0,249.0 320.0,266.0" fill="#9aa5b1" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="350.0,295.0 384.0,278.0 370.5,285.8 336.5,302.8" fill="#b9c3cc" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="350.0,295.0 384.0,278.0 384.0,234.0 350.0,251.0" fill="#9aa5b1" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="380.0,280.0 414.0,263.0 400.5,270.8 366.5,287.8" fill="#b9c3cc" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="380.0,280.0 414.0,263.0 414.0,219.0 380.0,236.0" fill="#9aa5b1" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="410.0,265.0 444.0,248.0 430.5,255.8 396.5,272.8" fill="#b9c3cc" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="410.0,265.0 444.0,248.0 444.0,204.0 410.0,221.0" fill="#9aa5b1" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="440.0,250.0 474.0,233.0 460.5,240.8 426.5,257.8" fill="#b9c3cc" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="440.0,250.0 474.0,233.0 474.0,189.0 440.0,206.0" fill="#9aa5b1" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="470.0,235.0 504.0,218.0 490.5,225.8 456.5,242.8" fill="#b9c3cc" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="470.0,235.0 504.0,218.0 504.0,174.0 470.0,191.0" fill="#9aa5b1" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="500.0,220.0 534.0,203.0 520.5,210.8 486.5,227.8" fill="#b9c3cc" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="500.0,220.0 534.0,203.0 534.0,159.0 500.0,176.0" fill="#9aa5b1" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="530.0,205.0 564.0,188.0 550.5,195.8 516.5,212.8" fill="#b9c3cc" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="530.0,205.0 564.0,188.0 564.0,144.0 530.0,161.0" fill="#9aa5b1" stroke="#4d5861" stroke-width="1" stroke-linejoin="round" />
+<polygon points="140.0,400.0 113.2,406.0 113.2,372.0 140.0,356.0" fill="#8d99a6" stroke="#4d5861" stroke-width="1.4" stroke-linejoin="round" />
+<polygon points="140.0,374.0 580.0,154.0 580.0,140.0 140.0,140.0" fill="#e6dcc8" stroke="#3a3f44" stroke-width="1.2" stroke-linejoin="round" />
+<line x1="164.0" y1="362.0" x2="580.0" y2="362.0" stroke="#b8a888" stroke-width="1"/><line x1="200.0" y1="344.0" x2="580.0" y2="344.0" stroke="#b8a888" stroke-width="1"/><line x1="236.0" y1="326.0" x2="580.0" y2="326.0" stroke="#b8a888" stroke-width="1"/><line x1="272.0" y1="308.0" x2="580.0" y2="308.0" stroke="#b8a888" stroke-width="1"/><line x1="308.0" y1="290.0" x2="580.0" y2="290.0" stroke="#b8a888" stroke-width="1"/><line x1="344.0" y1="272.0" x2="580.0" y2="272.0" stroke="#b8a888" stroke-width="1"/><line x1="380.0" y1="254.0" x2="580.0" y2="254.0" stroke="#b8a888" stroke-width="1"/><line x1="416.0" y1="236.0" x2="580.0" y2="236.0" stroke="#b8a888" stroke-width="1"/><line x1="452.0" y1="218.0" x2="580.0" y2="218.0" stroke="#b8a888" stroke-width="1"/><line x1="488.0" y1="200.0" x2="580.0" y2="200.0" stroke="#b8a888" stroke-width="1"/><line x1="524.0" y1="182.0" x2="580.0" y2="182.0" stroke="#b8a888" stroke-width="1"/><line x1="560.0" y1="164.0" x2="580.0" y2="164.0" stroke="#b8a888" stroke-width="1"/><line class="lead" x1="688" y1="150" x2="350" y2="265"/>
+<text class="lab" x="700" y="150" >Step flashing</text>
+<text class="mono" x="700" y="169" >Step Flashing | LFT</text>
+<text class="small" x="700" y="187" >по длине примыкания ската к стене</text>
+<line class="lead" x1="688" y1="90" x2="470" y2="145"/>
+<text class="lab" x="700" y="90" >Siding поверх flashing</text>
+<text class="small" x="700" y="109" >зазор 1-2"; на кирпиче: counter flashing</text>
+<line class="lead" x1="688" y1="250" x2="124.4" y2="389"/>
+<text class="lab" x="700" y="250" >Kick-out</text>
+<text class="mono" x="700" y="269" >Kick-out | pcs</text>
+<text class="small" x="700" y="287" >частый пропуск; один на каждый низ</text>
+<line class="lead" x1="688" y1="340" x2="73.6" y2="442"/>
+<text class="lab" x="700" y="340" >Gutter</text>
+<text class="red" x="700" y="359" >by others</text>
+<line class="lead" x1="688" y1="420" x2="227.6" y2="361"/>
+<text class="lab" x="700" y="420" >Shingles / roofing</text>
+<text class="red" x="700" y="439" >by others</text>
+<text class="lab" x="60" y="50" >Roof-to-wall примыкание</text>
+<text class="note" x="60" y="72" >так же у дымохода и у стены над нижней крышей</text>
+<text class="note" x="60" y="560" >Flashing окон и дверей (Window Flashing, Sill Flashing) считается на странице Openings, не здесь.</text>
 </svg>

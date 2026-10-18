@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 980" role="img" aria-labelledby="t d">
+  <title id="t">Order of sections in the Detailed Frame List</title>
+  <desc id="d">Vertical band of DFL sections from the header with main notes down to interior and drywall; balcony blocks in orange, porch blocks in green, notes in yellow; on the right the XL strip buttons that write into each section.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    
+    <style>
+      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
+      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
+      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
+      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
+      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
+      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+    </style>
+  </defs>
+  <rect x="0.5" y="0.5" width="999" height="979" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="lab" x="60" y="44" >Секции сверху вниз</text>
+<text class="lab" x="660" y="44" >Кнопки полосы XL</text>
+<rect x="60" y="70" width="560" height="48" rx="6" fill="#f7f8fa" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="70" y="90" >Шапка: Detailed Material List, главные ноты, Description</text>
+<rect x="70" y="97" width="540" height="17" fill="#FFFF00" stroke="#c9b400" stroke-width="0.8"/><text class="small" x="74" y="110" style="font-size:12px" fill="#c62828" font-weight="700">Note: главные ноты (красный жирный)</text>
+<rect x="60" y="126" width="560" height="48" rx="6" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="70" y="156" >Foundation Walls</text>
+<rect x="60" y="182" width="560" height="48" rx="6" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="70" y="212" >Basement Floor Walls</text>
+<rect x="60" y="238" width="560" height="48" rx="6" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="70" y="258" >1st ... Nth Floor Walls (в конце этажа блок Holdowns)</text>
+<rect x="70" y="265" width="540" height="17" fill="#FFFF00" stroke="#c9b400" stroke-width="0.8"/><text class="small" x="74" y="278" style="font-size:12px">Note: локальные ноты под заголовком (чёрный обычный)</text>
+<line x1="620" y1="262.0" x2="654" y2="262.0" stroke="#2e7d32" stroke-width="1.4"/><rect x="660" y="244" width="82" height="36" rx="5" fill="#2e7d32" opacity="0.9"/><text x="668" y="267.0" style="font:700 14px 'JetBrains Mono', Consolas, monospace;fill:#fff">WL  SW</text><rect x="60" y="294" width="560" height="48" rx="6" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="70" y="324" >Gable Walls #1 / #2 (после пустой строки Draft Stop)</text>
+<line x1="620" y1="318.0" x2="654" y2="318.0" stroke="#2e7d32" stroke-width="1.4"/><rect x="660" y="300" width="38" height="36" rx="5" fill="#2e7d32" opacity="0.9"/><text x="668" y="323.0" style="font:700 14px 'JetBrains Mono', Consolas, monospace;fill:#fff">GB</text><rect x="60" y="350" width="560" height="48" rx="6" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="70" y="380" >Parapet Walls</text>
+<line x1="620" y1="374.0" x2="654" y2="374.0" stroke="#2e7d32" stroke-width="1.4"/><rect x="660" y="356" width="38" height="36" rx="5" fill="#2e7d32" opacity="0.9"/><text x="668" y="379.0" style="font:700 14px 'JetBrains Mono', Consolas, monospace;fill:#fff">PP</text><rect x="60" y="406" width="560" height="48" rx="6" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="70" y="436" >Truss Heel Sheathing / Shaft walls</text>
+<line x1="620" y1="430.0" x2="654" y2="430.0" stroke="#2e7d32" stroke-width="1.4"/><rect x="660" y="412" width="38" height="36" rx="5" fill="#2e7d32" opacity="0.9"/><text x="668" y="435.0" style="font:700 14px 'JetBrains Mono', Consolas, monospace;fill:#fff">TH</text><rect x="60" y="462" width="560" height="48" rx="6" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="70" y="492" >Wall Materials</text>
+<rect x="60" y="518" width="560" height="48" rx="6" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="70" y="548" >1st ... Nth Floor Framing List (по этажам)</text>
+<line x1="620" y1="542.0" x2="654" y2="542.0" stroke="#2e7d32" stroke-width="1.4"/><rect x="660" y="524" width="38" height="36" rx="5" fill="#2e7d32" opacity="0.9"/><text x="668" y="547.0" style="font:700 14px 'JetBrains Mono', Consolas, monospace;fill:#fff">FR</text><rect x="60" y="574" width="560" height="48" rx="6" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="70" y="604" >Loft Framing List</text>
+<rect x="60" y="630" width="560" height="48" rx="6" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="70" y="650" >Roof Frame list</text>
+<rect x="70" y="657" width="540" height="17" fill="#FFFF00" stroke="#c9b400" stroke-width="0.8"/><text class="small" x="74" y="670" style="font-size:12px">Note: локальные ноты под заголовком (чёрный обычный)</text>
+<rect x="60" y="686" width="560" height="48" rx="6" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="70" y="716" >Roof System Misc / Roof Products</text>
+<line x1="620" y1="710.0" x2="654" y2="710.0" stroke="#2e7d32" stroke-width="1.4"/><rect x="660" y="692" width="93" height="36" rx="5" fill="#2e7d32" opacity="0.9"/><text x="668" y="715.0" style="font:700 14px 'JetBrains Mono', Consolas, monospace;fill:#fff">SF  E-R</text><rect x="60" y="742" width="560" height="48" rx="6" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="70" y="772" >Soffits and Fascias, Exterior Trims, Siding</text>
+<rect x="60" y="798" width="190" height="48" rx="6" fill="#FABF8F" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="70" y="824" >#N Upper Balcony List</text>
+<rect x="258" y="798" width="190" height="48" rx="6" fill="#99CC00" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="268" y="824" >#N Porch Framing List</text>
+<rect x="456" y="798" width="164" height="48" rx="6" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="466" y="824" >Canopy Framing List</text>
+<line x1="620" y1="822.0" x2="654" y2="822.0" stroke="#2e7d32" stroke-width="1.4"/><rect x="660" y="804" width="38" height="36" rx="5" fill="#2e7d32" opacity="0.9"/><text x="668" y="827.0" style="font:700 14px 'JetBrains Mono', Consolas, monospace;fill:#fff">BL</text><rect x="60" y="854" width="560" height="48" rx="6" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="70" y="884" >Interior, Drywall</text>
+<path d="M626,518 h8 V678 h-8" fill="none" stroke="#2e7d32" stroke-width="1.4"/><text class="note" x="760" y="80" >WL стены, SW holdowns</text>
+<text class="note" x="760" y="102" >GB gables, TH truss heel</text>
+<text class="note" x="760" y="124" >PP parapets</text>
+<text class="note" x="760" y="146" >FR framing по этажам:</text>
+<text class="note" x="760" y="168" >   posts, beams, headers,</text>
+<text class="note" x="760" y="190" >   joists, details, stairs</text>
+<text class="note" x="760" y="212" >SF площади, Front Page</text>
+<text class="note" x="760" y="234" >E-R eves и rakes</text>
+<text class="note" x="760" y="256" >BL блоки балконов и porch</text>
+<rect x="60" y="944" width="22" height="14" fill="#FABF8F" stroke="#3a3f44" stroke-width="1.2"/><text class="cap" x="90" y="956" >балкон</text>
+<rect x="157.2" y="944" width="22" height="14" fill="#99CC00" stroke="#3a3f44" stroke-width="1.2"/><text class="cap" x="187.2" y="956" >porch</text>
+<rect x="247.2" y="944" width="22" height="14" fill="#FFFF00" stroke="#c9b400" stroke-width="1.2"/><text class="cap" x="277.2" y="956" >ноты</text>
+<rect x="330.0" y="944" width="22" height="14" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.2"/><text class="cap" x="360" y="956" >секция</text>
+<text class="small" x="560" y="956" >Секция = заголовок, ноты, строки с формулами, пустая строка между группами.</text>
+</svg>

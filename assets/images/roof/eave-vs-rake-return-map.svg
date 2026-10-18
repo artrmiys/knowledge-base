@@ -1,53 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
-  <title id="title">Eave vs rake vs return — roof edge map</title>
-  <desc id="desc">Oblique view of a gable roof showing the eave (horizontal bottom edge), the rake (sloped gable edge) and the return (boxed corner) as separate takeoff buckets.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-labelledby="t d">
+  <title id="t">Eave, rake, return and truss heel: four separate takeoff buckets</title>
+  <desc id="d">Isometric gable house: eave along the side wall in blue, rake along the gable slope in orange, return box at the corner in purple, truss heel vertical strip above the top plate in teal. Each with its unit and takeoff name.</desc>
   <defs>
-    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L8,3 z" fill="#1f2a1f"/>
-    </marker>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    
     <style>
-      .ttl{font:700 30px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
-      .sub{font:400 20px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}
-      .lab{font:700 24px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
-      .note{font:400 18px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}
-      .lead{stroke:#1f2a1f;stroke-width:2;fill:none;marker-end:url(#arrow)}
+      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
+      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
+      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
+      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
+      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
+      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
     </style>
   </defs>
-
-  <rect width="1280" height="760" fill="#ffffff"/>
-  <text class="ttl" x="56" y="74">Eave / Rake / Return — три разных bucket</text>
-  <text class="sub" x="56" y="108">Eave = горизонтальный низ свеса · Rake = наклонная кромка фронтона · Return = угловая коробка.</text>
-
-  <!-- side wall (parallelogram) -->
-  <polygon points="540,620 540,400 900,250 900,470" fill="#f3f6f9" stroke="#3a3a3a" stroke-width="2"/>
-  <!-- front gable wall -->
-  <polygon points="320,620 540,620 540,400 430,330 320,400" fill="#eef2f6" stroke="#3a3a3a" stroke-width="2"/>
-  <!-- front gable roof (the two rake faces, shown as gable triangle face overhang) -->
-  <polygon points="300,410 430,318 560,410 540,400 430,330 320,400" fill="#dfe7ee" stroke="#3a3a3a" stroke-width="2"/>
-  <!-- side roof plane -->
-  <polygon points="430,318 770,190 940,260 560,410" fill="#cdd9e3" stroke="#3a3a3a" stroke-width="2"/>
-
-  <!-- RAKE edge (front sloped) -->
-  <line x1="300" y1="410" x2="430" y2="318" stroke="#c0392b" stroke-width="6"/>
-  <line x1="430" y1="318" x2="560" y2="410" stroke="#c0392b" stroke-width="6"/>
-  <!-- EAVE edge (side bottom of roof) -->
-  <line x1="560" y1="410" x2="940" y2="260" stroke="#2e7d32" stroke-width="6"/>
-  <!-- RETURN box at the corner -->
-  <rect x="544" y="398" width="34" height="26" fill="#fff3c4" stroke="#c78b00" stroke-width="3"/>
-
-  <!-- legend swatches + leaders -->
-  <line class="lead" x1="365" y1="362" x2="250" y2="300"/>
-  <rect x="60" y="262" width="24" height="12" fill="#c0392b"/>
-  <text class="lab" x="94" y="276">Rake</text>
-  <text class="note" x="94" y="300">наклонная кромка на gable — своя LFT-строка</text>
-
-  <line class="lead" x1="760" y1="320" x2="900" y2="360"/>
-  <rect x="980" y="350" width="24" height="12" fill="#2e7d32"/>
-  <text class="lab" x="1014" y="364">Eave</text>
-  <text class="note" x="900" y="392">горизонтальный низ свеса — LFT + soffit SQFT</text>
-
-  <line class="lead" x1="561" y1="411" x2="470" y2="500"/>
-  <rect x="300" y="520" width="24" height="14" fill="#fff3c4" stroke="#c78b00" stroke-width="2"/>
-  <text class="lab" x="334" y="534">Return</text>
-  <text class="note" x="334" y="558">коробка, где eave заворачивается к rake — отдельная строка</text>
+  <rect x="0.5" y="0.5" width="999" height="639" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<polygon points="200.0,560.0 420.0,560.0 420.0,417.0 310.0,362.0 200.0,417.0" fill="#f4f6f8" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
+<polygon points="420.0,560.0 603.0,454.4 603.0,311.4 420.0,417.0" fill="#e3e8ec" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
+<polygon points="164.4,417.9 300.8,349.7 502.2,233.5 365.8,301.7" fill="#dfe3e8" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
+<polygon points="300.8,349.7 437.2,417.9 638.6,301.7 502.2,233.5" fill="#d7dde3" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
+<polygon points="437.2,417.9 638.6,301.7 638.6,310.5 437.2,426.7" fill="#c3cad1" stroke="#3a3f44" stroke-width="1" stroke-linejoin="round" />
+<polygon points="420.0,417.0 603.0,311.4 603.0,293.8 420.0,399.4" fill="#00897b" stroke="#00897b" stroke-width="1" stroke-linejoin="round" fill-opacity="0.8"/>
+<line x1="437.2" y1="417.9" x2="638.6" y2="301.7" stroke="#1e88e5" stroke-width="5.5" stroke-linecap="round"/>
+<polyline points="164.4,417.9 300.8,349.7 437.2,417.9" fill="none" stroke="#e65100" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="437.2,431.1 447.4,425.2 447.4,412.0 437.2,417.9" fill="#beaec6" stroke="#8e24aa" stroke-width="1.6" stroke-linejoin="round" />
+<polygon points="399.8,417.9 437.2,417.9 447.4,412.0 410.0,412.0" fill="#eddff5" stroke="#8e24aa" stroke-width="1.6" stroke-linejoin="round" />
+<polygon points="399.8,431.1 437.2,431.1 437.2,417.9 399.8,417.9" fill="#e8d5f2" stroke="#8e24aa" stroke-width="1.6" stroke-linejoin="round" />
+<rect x="40" y="38" width="22" height="14" fill="#1e88e5" stroke="#1e88e5" stroke-width="1.2"/><text class="cap" x="70" y="50" >Eave</text>
+<rect x="122.8" y="38" width="22" height="14" fill="#e65100" stroke="#e65100" stroke-width="1.2"/><text class="cap" x="152.8" y="50" >Rake</text>
+<rect x="205.6" y="38" width="22" height="14" fill="#e8d5f2" stroke="#8e24aa" stroke-width="1.2"/><text class="cap" x="235.6" y="50" >Return</text>
+<rect x="302.8" y="38" width="22" height="14" fill="#00897b" stroke="#00897b" stroke-width="1.2"/><text class="cap" x="332.8" y="50" >Truss heel</text>
+<line class="lead" x1="150" y1="150" x2="237.248" y2="378.48"/>
+<text class="lab" x="40" y="120" style="font-size:18px">Rake</text>
+<text class="note" x="40" y="142" >наклонная кромка фронтона; LFT</text>
+<text class="mono" x="40" y="162" >eves rakes/rakes/rake 12 main</text>
+<text class="small" x="40" y="180" >число = вынос в дюймах</text>
+<line class="lead" x1="708" y1="302" x2="576.528" y2="338.68"/>
+<text class="lab" x="720" y="298" style="font-size:18px">Eave</text>
+<text class="note" x="720" y="320" >горизонтальный низ свеса; LFT,</text>
+<text class="note" x="720" y="338" >soffit SQFT = LFT x вынос</text>
+<text class="mono" x="720" y="358" >eves rakes/eves/eve 24 main</text>
+<line class="lead" x1="708" y1="442" x2="476.912" y2="376.52"/>
+<text class="lab" x="720" y="438" style="font-size:18px">Truss heel</text>
+<text class="note" x="720" y="460" >вертикальная полоса обшивки</text>
+<text class="note" x="720" y="478" >над top plate до низа кровли; LFT</text>
+<text class="mono" x="720" y="498" >trussheel/trussheel 1.25</text>
+<text class="small" x="720" y="516" >число = высота пятки в футах</text>
+<line class="lead" x1="430" y1="598" x2="414.548" y2="432.48"/>
+<text class="lab" x="300" y="614" style="font-size:18px">Return</text>
+<text class="note" x="370" y="614" >коробка в углу, где eave встречает rake; отдельная строка</text>
+<text class="mono" x="370" y="632" >eves rakes/eves/returns 12</text>
+<text class="note" x="720" y="560" >Canopy и porch soffit: свой scope,</text>
+<text class="note" x="720" y="578" >не в eve (двойной учёт).</text>
 </svg>

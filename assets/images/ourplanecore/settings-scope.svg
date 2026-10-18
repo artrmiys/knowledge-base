@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" role="img" aria-labelledby="t d">
+  <title id="t">Settings levels: job, global, built-in; the draft in the Settings window and its buttons</title>
+  <desc id="d">Three stacked levels from strongest at the top: job settings saved in the project, global defaults in the program profile, built-in values. On the right the draft in the Settings window with Apply, Reset, Save global default, Save as this job and Clear job override, with arrows to the levels they write.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    
+    <style>
+      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
+      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
+      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
+      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
+      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
+      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+    </style>
+  </defs>
+  <rect x="0.5" y="0.5" width="899" height="469" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="lab" x="20" y="34" >Уровни настроек: действует самый верхний заданный</text>
+<rect x="90" y="60" width="420" height="86" rx="8" fill="#dff2df" stroke="#2e7d32" stroke-width="2"/><text class="lab" x="104" y="88" style="font-size:17px">Проект</text>
+<text class="mono" x="104" y="112" >Save as this job</text>
+<text class="small" x="104" y="134" >лежит в проекте: AI_Context/settings</text>
+<rect x="90" y="164" width="420" height="86" rx="8" fill="#eef6ee" stroke="#2e7d32" stroke-width="2"/><text class="lab" x="104" y="192" style="font-size:17px">Глобально</text>
+<text class="mono" x="104" y="216" >Save global default</text>
+<text class="small" x="104" y="238" >профиль программы, для всех проектов</text>
+<rect x="90" y="268" width="420" height="86" rx="8" fill="#eceff2" stroke="#6b7378" stroke-width="2"/><text class="lab" x="104" y="296" style="font-size:17px">Встроенные значения</text>
+<text class="small" x="104" y="342" >как программа работала изначально</text>
+<line x1="56" y1="354" x2="56" y2="60" stroke="#2e7d32" stroke-width="2.4" marker-end="url(#arr)"/><text x="46" y="207.0" transform="rotate(-90 46,207.0)" text-anchor="middle" style="font:600 13px Inter, 'Segoe UI', Arial, sans-serif;fill:#2e7d32">сильнее</text><text class="small" x="90" y="390" >Проектная копия перекрывает глобальную; нет копии - берётся глобальная; нет и её - встроенная.</text>
+<rect x="600" y="60" width="280" height="294" rx="8" fill="#fff" stroke="#1e88e5" stroke-width="2" stroke-dasharray="7 5"/><text class="lab2" x="614" y="86" style="font-size:15px">Черновик в окне Settings</text>
+<rect x="614" y="106" width="54.0" height="22" rx="5" fill="#dbeafe" stroke="#1e88e5" stroke-width="1.2"/><text class="mono2" x="622" y="121" fill="#1e88e5" style="font-size:12.5px">Apply</text>
+<text class="small" x="614" y="144" >применить сейчас, без записи</text>
+<rect x="614" y="156" width="54.0" height="22" rx="5" fill="#dbeafe" stroke="#1e88e5" stroke-width="1.2"/><text class="mono2" x="622" y="171" fill="#1e88e5" style="font-size:12.5px">Reset</text>
+<text class="small" x="614" y="194" >вернуть встроенные в черновик</text>
+<rect x="614" y="206" width="160.4" height="22" rx="5" fill="#dbeafe" stroke="#1e88e5" stroke-width="1.2"/><text class="mono2" x="622" y="221" fill="#1e88e5" style="font-size:12.5px">Save global default</text>
+<text class="small" x="614" y="244" >записать на уровень Глобально</text>
+<rect x="614" y="256" width="137.6" height="22" rx="5" fill="#dbeafe" stroke="#1e88e5" stroke-width="1.2"/><text class="mono2" x="622" y="271" fill="#1e88e5" style="font-size:12.5px">Save as this job</text>
+<text class="small" x="614" y="294" >записать на уровень Проект</text>
+<rect x="614" y="306" width="152.79999999999998" height="22" rx="5" fill="#dbeafe" stroke="#1e88e5" stroke-width="1.2"/><text class="mono2" x="622" y="321" fill="#1e88e5" style="font-size:12.5px">Clear job override</text>
+<text class="small" x="614" y="344" >убрать проектную копию</text>
+<line x1="600" y1="217" x2="514" y2="207.0" stroke="#2e7d32" stroke-width="1.6" marker-end="url(#arr)"/><line x1="600" y1="267" x2="514" y2="103.0" stroke="#2e7d32" stroke-width="1.6" marker-end="url(#arr)"/><line x1="514" y1="311.0" x2="598" y2="167" stroke="#6b7378" stroke-width="1.4" marker-end="url(#arrInk)"/><text class="small" x="520" y="303" >Reset</text>
+<text class="note" x="20" y="430" >Действует самый верхний заданный уровень. Apply меняет поведение сразу, на уровни ничего не пишет.</text>
+</svg>

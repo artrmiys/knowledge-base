@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
-  <title id="title">Eave section — takeoff parts and units</title>
+  <title id="title">Eave section - takeoff parts and units</title>
   <desc id="desc">Section through a roof eave: rafter tail, roof sheathing, truss heel, subfascia, fascia and soffit, each with its takeoff unit (LFT or SQFT).</desc>
   <defs>
     <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
@@ -25,7 +25,7 @@
   </defs>
 
   <rect width="1280" height="760" fill="#ffffff"/>
-  <text class="ttl" x="56" y="74">Eave — это разные buckets: LFT по кромке, SQFT по soffit</text>
+  <text class="ttl" x="56" y="74">Eave - это разные buckets: LFT по кромке, SQFT по soffit</text>
   <text class="sub" x="56" y="108">Один eave = framing + sheathing + fascia/subfascia + soffit. Не сворачивай в одну строку.</text>
 
   <!-- WALL -->

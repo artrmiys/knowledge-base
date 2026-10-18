@@ -5,7 +5,7 @@
     <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Cantilever — вынос за опору без нижней поддержки</text>
+  <text class="t" x="32" y="40">Cantilever - вынос за опору без нижней поддержки</text>
   <text class="s" x="32" y="62">Меняет rim/edge material, blocking и нередко holdowns.</text>
   <!-- support wall -->
   <rect x="300" y="200" width="40" height="70" fill="url(#w)" stroke="#3a3a3a" stroke-width="1.4"/>
@@ -17,7 +17,7 @@
   <!-- support line -->
   <line x1="320" y1="186" x2="320" y2="200" stroke="#2e7d32" stroke-width="2" stroke-dasharray="4 3"/>
   <text class="s" x="350" y="225">support</text>
-  <text class="s" x="470" y="150">cantilever →</text>
+  <text class="s" x="470" y="150">cantilever -</text>
   <line x1="573" y1="180" x2="600" y2="170" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="608" y="173">Rim / edge при выносе</text>
   <line x1="250" y1="178" x2="600" y2="210" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="608" y="213">Joists через опору</text>
 </svg>

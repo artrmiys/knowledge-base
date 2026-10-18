@@ -2,8 +2,8 @@
   <title id="t">Ridge hip and valley on a roof plan</title>
   <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}</style>
   <rect width="760" height="320" fill="#fff"/>
-  <text class="t" x="32" y="40">Ridge / Hip / Valley — линии пересечения скатов</text>
-  <text class="s" x="32" y="62">Ridge — верх · Hip — наружное ребро · Valley — внутренняя ендова.</text>
+  <text class="t" x="32" y="40">Ridge / Hip / Valley - линии пересечения скатов</text>
+  <text class="s" x="32" y="62">Ridge - верх , Hip - наружное ребро , Valley - внутренняя ендова.</text>
   <!-- hip roof plan outline -->
   <polygon points="120,110 520,110 520,280 120,280" fill="#eef2f6" stroke="#3a3a3a" stroke-width="1.6"/>
   <!-- hips to ridge -->

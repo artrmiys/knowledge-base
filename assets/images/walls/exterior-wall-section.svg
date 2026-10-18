@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="title desc">
-  <title id="title">Exterior wall section — takeoff layers</title>
+  <title id="title">Exterior wall section - takeoff layers</title>
   <desc id="desc">Architectural section of an exterior stud wall: WRB, sheathing, studs with batt insulation, blocking, P.T. bottom plate and interior gypsum, with takeoff checkpoints.</desc>
   <defs>
     <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
@@ -32,7 +32,7 @@
   </defs>
 
   <rect class="bg" width="920" height="520"/>
-  <text class="ttl" x="40" y="56">Exterior wall — считай по слоям, не одной строкой</text>
+  <text class="ttl" x="40" y="56">Exterior wall - считай по слоям, не одной строкой</text>
   <text class="sub" x="40" y="80">Источник: Arch / Energy / Wall-type notes; Structural-исключения проверь отдельно.</text>
 
   <!-- wall section, exterior (left) -> interior (right) -->
@@ -75,7 +75,7 @@
 
   <line class="lead" x1="260" y1="269" x2="560" y2="324"/>
   <text class="lab" x="572" y="321">Tall-wall blocking</text>
-  <text class="note" x="572" y="340">10&#39;+ стены — часто два ряда</text>
+  <text class="note" x="572" y="340">10&#39;+ стены - часто два ряда</text>
 
   <line class="lead" x1="250" y1="413" x2="560" y2="386"/>
   <text class="lab" x="572" y="383">P.T. bottom plate</text>

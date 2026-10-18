@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="t d">
-  <title id="t">CMU wall — continuous insulation layer stack</title>
+  <title id="t">CMU wall - continuous insulation layer stack</title>
   <desc id="d">Section of a CMU wall: masonry veneer, continuous insulation, Z metal furring, air barrier, concrete masonry units. Frame may be by others but insulation, furring and flashing are counted.</desc>
   <defs>
     <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
@@ -31,7 +31,7 @@
   </defs>
 
   <rect width="920" height="520" fill="#ffffff"/>
-  <text class="ttl" x="40" y="56">CMU стена — каркас чужой, оболочка наша</text>
+  <text class="ttl" x="40" y="56">CMU стена - каркас чужой, оболочка наша</text>
   <text class="sub" x="40" y="80">Insulation at CMU, Z-furring и flashing считаем, даже если CMU by others.</text>
 
   <g>
@@ -47,15 +47,15 @@
 
   <line class="lead" x1="137" y1="150" x2="560" y2="142"/>
   <text class="lab" x="572" y="139">Masonry / stone veneer</text>
-  <text class="note" x="572" y="158">обычно by others — verify</text>
+  <text class="note" x="572" y="158">обычно by others - verify</text>
 
   <line class="lead" x1="171" y1="205" x2="560" y2="206"/>
   <text class="lab" x="572" y="203">Continuous insulation</text>
-  <text class="note" x="572" y="222">= «Insulation at CMU», SQ FT — наша строка</text>
+  <text class="note" x="572" y="222">= "Insulation at CMU", SQ FT - наша строка</text>
 
   <line class="lead" x1="193" y1="258" x2="560" y2="272"/>
   <text class="lab" x="572" y="269">Z metal furring</text>
-  <text class="note" x="572" y="288">держит rigid на блоке; client против metal — verify</text>
+  <text class="note" x="572" y="288">держит rigid на блоке; client против metal - verify</text>
 
   <line class="lead" x1="200" y1="320" x2="560" y2="338"/>
   <text class="lab" x="572" y="335">Air barrier</text>

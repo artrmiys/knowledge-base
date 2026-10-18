@@ -6,7 +6,7 @@
     <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Anchor bolt — крепит sill plate к бетону</text>
+  <text class="t" x="32" y="40">Anchor bolt - крепит sill plate к бетону</text>
   <text class="s" x="32" y="62">Дефолт 5/8" Titen HD ×5½", emb 3½". Шаг по SW-schedule на shear walls.</text>
   <!-- concrete -->
   <rect x="120" y="180" width="420" height="90" fill="url(#c)" stroke="#3a3a3a" stroke-width="1.5"/>

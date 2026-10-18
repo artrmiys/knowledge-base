@@ -5,7 +5,7 @@
     <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
   </defs>
   <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Loft — антресольный уровень внутри объёма</text>
+  <text class="t" x="32" y="40">Loft - антресольный уровень внутри объёма</text>
   <text class="s" x="32" y="62">Floor area + guard по открытому краю. Уточни: floor- или roof-framing.</text>
   <!-- outer room -->
   <polygon points="120,90 420,90 420,260 120,260" fill="#f7f9fb" stroke="#9bb0c2" stroke-width="1.4"/>
