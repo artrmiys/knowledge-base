@@ -34,6 +34,12 @@ Workflow `.github/workflows/deploy.yml` настроен на push в `main` и 
 - Описание сверено с 3.0.2: записи 3.0.1 и 3.0.2 в "Что нового", шаги
   3D-крыши разделены на `Auto` и `Roof Base`, статусы сохранения.
 
+Опубликовано 17 октября 2026 после разрешения владельца: исходники `bc24d1f`
+(main перемотан с `kb-rebuild-3.0`), сборка `gh-pages` / `6762cf0` через
+`tools/deploy.ps1`. Push в `main` workflow не запустил (последние запуски
+Actions в октябре 2025). На сайте проверены страницы раздела, ролики, старые
+URL `reference/ourplanecore/` и `reference/job-creation-storage/`.
+
 ## 2026-10-15 — OurPlanCore 2.2.33: точка U, легенда по ключу, Break с клавиатуры
 
 - Имена takeoffs: новый раздел о точках листа W/F/S/U (куда идут новые takeoff,
