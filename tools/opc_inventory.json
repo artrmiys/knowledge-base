@@ -7,15 +7,15 @@
   "defaults": 61,
   "ribbon": 69,
   "toolstrip": 40,
-  "context-menu": 369,
-  "workspace": 168,
+  "context-menu": 371,
+  "workspace": 169,
   "xl": 21,
   "dialog": 46,
-  "strip": 33,
+  "strip": 32,
   "panel": 20,
-  "settings": 45
+  "settings": 47
  },
- "total": 1089,
+ "total": 1093,
  "items": [
   {
    "surface": "palette",
@@ -527,15 +527,12 @@
   {
    "surface": "palette",
    "group": "View",
-   "title": "Codex / Claude Terminal",
+   "title": "Codex / Claude / DeepSeek Terminal",
    "shortcut": "",
    "description": "Show or hide the terminal panel with live plan, AI crop and bookmark context.",
    "source": "MainWindow.CommandPalette.cs:106",
    "id": "view.terminal",
-   "key": "view.terminal",
-   "aliases": [
-    "Terminal (>_)"
-   ]
+   "key": "view.terminal"
   },
   {
    "surface": "palette",
@@ -7124,7 +7121,7 @@
    "group": "панель терминала Codex / Claude",
    "title": "Hide panel",
    "shortcut": "",
-   "description": "Hide panel; keep both conversations running",
+   "description": "Hide panel; keep connected conversations running",
    "source": "Controls/TerminalPanel.xaml:54",
    "control": "Button",
    "handler": "Hide_Click",
@@ -7155,10 +7152,21 @@
   {
    "surface": "workspace",
    "group": "панель терминала Codex / Claude",
+   "title": "DeepSeek",
+   "shortcut": "",
+   "description": "",
+   "source": "Controls/TerminalPanel.xaml:59",
+   "control": "ToggleButton",
+   "handler": "DeepSeek_Click",
+   "key": "workspace|deepseek"
+  },
+  {
+   "surface": "workspace",
+   "group": "панель терминала Codex / Claude",
    "title": "▶ Run",
    "shortcut": "",
    "description": "Run / resume using the selected E-Wood shortcut",
-   "source": "Controls/TerminalPanel.xaml:59",
+   "source": "Controls/TerminalPanel.xaml:60",
    "control": "Button",
    "handler": "Run_Click",
    "key": "workspace|▶ run"
@@ -7169,7 +7177,7 @@
    "title": "Attach ▾",
    "shortcut": "",
    "description": "Attach an already open Git Bash / mintty window",
-   "source": "Controls/TerminalPanel.xaml:60",
+   "source": "Controls/TerminalPanel.xaml:61",
    "control": "Button",
    "handler": "Attach_Click",
    "key": "workspace|attach ▾"
@@ -7180,7 +7188,7 @@
    "title": "Reasoning effort for the next launch",
    "shortcut": "",
    "description": "Reasoning effort for the next launch. Quick: low; Balanced: medium; Deep: high. Existing sessions use their own controls.",
-   "source": "Controls/TerminalPanel.xaml:66",
+   "source": "Controls/TerminalPanel.xaml:67",
    "control": "ComboBox",
    "key": "workspace|reasoning effort for the next launch"
   },
@@ -7190,7 +7198,7 @@
    "title": "Context",
    "shortcut": "",
    "description": "Open the live plan context file",
-   "source": "Controls/TerminalPanel.xaml:72",
+   "source": "Controls/TerminalPanel.xaml:73",
    "control": "Button",
    "handler": "Context_Click",
    "key": "workspace|context"
@@ -7201,7 +7209,7 @@
    "title": "Paste context",
    "shortcut": "",
    "description": "Paste the context message into the terminal without Enter; submit it at the assistant prompt",
-   "source": "Controls/TerminalPanel.xaml:73",
+   "source": "Controls/TerminalPanel.xaml:74",
    "control": "Button",
    "handler": "Paste_Click",
    "key": "workspace|paste context"
@@ -7212,7 +7220,7 @@
    "title": "AI Inbox",
    "shortcut": "",
    "description": "Open AI Inbox / AI Manager",
-   "source": "Controls/TerminalPanel.xaml:74",
+   "source": "Controls/TerminalPanel.xaml:75",
    "control": "Button",
    "handler": "Inbox_Click",
    "key": "workspace|ai inbox"
@@ -7223,7 +7231,7 @@
    "title": "AI Crop +",
    "shortcut": "",
    "description": "Draw an AI crop and share its PNG with the terminal context",
-   "source": "Controls/TerminalPanel.xaml:75",
+   "source": "Controls/TerminalPanel.xaml:76",
    "control": "Button",
    "handler": "Crop_Click",
    "key": "workspace|ai crop +"
@@ -7707,19 +7715,6 @@
    "key": "strip|configure the command strip (gear)"
   },
   {
-   "surface": "strip",
-   "group": "правая полоса значков",
-   "title": "Terminal (>_)",
-   "shortcut": "",
-   "description": "Show / hide Codex and Claude terminals",
-   "source": "MainWindow.SideStrips.cs:208",
-   "id": "view.terminal",
-   "key": "view.terminal",
-   "aliases": [
-    "Codex / Claude Terminal"
-   ]
-  },
-  {
    "surface": "context-menu",
    "group": "меню кнопки More (AI Inbox)",
    "title": "Run New Bookmarks",
@@ -8033,11 +8028,11 @@
   {
    "surface": "context-menu",
    "group": "меню записи AI Inbox",
-   "title": "Use in Codex / Claude terminal",
+   "title": "Use in Codex / Claude / DeepSeek terminal",
    "shortcut": "",
    "description": "",
    "source": "MainWindow.AiInbox.cs:240",
-   "key": "context-menu|use in codex / claude terminal"
+   "key": "context-menu|use in codex / claude / deepseek terminal"
   },
   {
    "surface": "context-menu",
@@ -8089,10 +8084,23 @@
   {
    "surface": "context-menu",
    "group": "меню вьюпорта в отдельном окне листа",
+   "title": "Enable Automatic Legend Blocks on This Sheet",
+   "shortcut": "",
+   "description": "",
+   "source": "MainWindow.DetachedSheets.cs:241",
+   "aliases": [
+    "Disable Automatic Legend Blocks on This Sheet"
+   ],
+   "dynamic": true,
+   "key": "context-menu|enable automatic legend blocks on this sheet"
+  },
+  {
+   "surface": "context-menu",
+   "group": "меню вьюпорта в отдельном окне листа",
    "title": "Copy Measurement",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.DetachedSheets.cs:242",
+   "source": "MainWindow.DetachedSheets.cs:253",
    "aliases": [
     "Copy Selected Measurements",
     "Copy selected measurements / markups"
@@ -8107,7 +8115,7 @@
    "title": "Show on This Sheet",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.DetachedSheets.cs:315",
+   "source": "MainWindow.DetachedSheets.cs:326",
    "aliases": [
     "Hide on This Sheet"
    ],
@@ -8134,11 +8142,24 @@
   },
   {
    "surface": "context-menu",
+   "group": "меню вьюпорта: легенда и подписи",
+   "title": "Enable Automatic Legend Blocks on This Sheet",
+   "shortcut": "",
+   "description": "",
+   "source": "MainWindow.DisplaySettings.OverlayMenus.cs:18",
+   "aliases": [
+    "Disable Automatic Legend Blocks on This Sheet"
+   ],
+   "dynamic": true,
+   "key": "context-menu|enable automatic legend blocks on this sheet"
+  },
+  {
+   "surface": "context-menu",
    "group": "меню вьюпорта > размер легенды / шапки",
    "title": "Custom...",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.DisplaySettings.OverlayMenus.cs:114",
+   "source": "MainWindow.DisplaySettings.OverlayMenus.cs:121",
    "key": "context-menu|custom"
   },
   {
@@ -8147,7 +8168,7 @@
    "title": "Custom...",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.DisplaySettings.OverlayMenus.cs:180",
+   "source": "MainWindow.DisplaySettings.OverlayMenus.cs:187",
    "key": "context-menu|custom"
   },
   {
@@ -8156,7 +8177,7 @@
    "title": "Scale Legend With Sheet",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.DisplaySettings.OverlayMenus.cs:20",
+   "source": "MainWindow.DisplaySettings.OverlayMenus.cs:27",
    "key": "context-menu|scale legend with sheet"
   },
   {
@@ -8165,7 +8186,7 @@
    "title": "Scale Measurement Labels With Sheet",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.DisplaySettings.OverlayMenus.cs:30",
+   "source": "MainWindow.DisplaySettings.OverlayMenus.cs:37",
    "key": "context-menu|scale measurement labels with sheet"
   },
   {
@@ -8174,7 +8195,7 @@
    "title": "Scale Sheet Header With Sheet",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.DisplaySettings.OverlayMenus.cs:40",
+   "source": "MainWindow.DisplaySettings.OverlayMenus.cs:47",
    "key": "context-menu|scale sheet header with sheet"
   },
   {
@@ -8183,7 +8204,7 @@
    "title": "Legend",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.DisplaySettings.OverlayMenus.cs:53",
+   "source": "MainWindow.DisplaySettings.OverlayMenus.cs:60",
    "key": "context-menu|legend"
   },
   {
@@ -8485,7 +8506,7 @@
    "title": "New Group...",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.PageLegendGroups.cs:31",
+   "source": "MainWindow.PageLegendGroups.cs:30",
    "dynamic": true,
    "key": "context-menu|new group"
   },
@@ -8495,7 +8516,7 @@
    "title": "Main Legend",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.PageLegendGroups.cs:43",
+   "source": "MainWindow.PageLegendGroups.cs:42",
    "dynamic": true,
    "key": "context-menu|main legend"
   },
@@ -9490,7 +9511,7 @@
    "title": "Open Source Sheet (...)",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.SheetCrops.cs:227",
+   "source": "MainWindow.SheetCrops.cs:231",
    "dynamic": true,
    "key": "context-menu|open source sheet (...)"
   },
@@ -9500,7 +9521,7 @@
    "title": "Open Source Sheet (...)",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.SheetCrops.cs:254",
+   "source": "MainWindow.SheetCrops.cs:258",
    "dynamic": true,
    "key": "context-menu|open source sheet (...)"
   },
@@ -10627,7 +10648,7 @@
    "title": "Add Edge to Selection",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.ThreeDRoof.cs:150",
+   "source": "MainWindow.ThreeDRoof.cs:160",
    "aliases": [
     "Remove Edge from Selection"
    ],
@@ -10640,7 +10661,7 @@
    "title": "Clear Edge Selection",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.ThreeDRoof.cs:152",
+   "source": "MainWindow.ThreeDRoof.cs:162",
    "key": "context-menu|clear edge selection"
   },
   {
@@ -10649,7 +10670,7 @@
    "title": "Set Edge as Eave + Pitch ...",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.ThreeDRoof.cs:154",
+   "source": "MainWindow.ThreeDRoof.cs:164",
    "dynamic": true,
    "key": "context-menu|set edge as eave + pitch"
   },
@@ -10659,7 +10680,7 @@
    "title": "Set Edge as Rake",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.ThreeDRoof.cs:156",
+   "source": "MainWindow.ThreeDRoof.cs:166",
    "dynamic": true,
    "key": "context-menu|set edge as rake"
   },
@@ -10877,7 +10898,7 @@
    "title": "Refresh",
    "shortcut": "",
    "description": "",
-   "source": "Controls/TerminalPanel.xaml.cs:72",
+   "source": "Controls/TerminalPanel.xaml.cs:75",
    "key": "context-menu|refresh"
   },
   {
@@ -10886,7 +10907,7 @@
    "title": "Detach to window",
    "shortcut": "",
    "description": "",
-   "source": "Controls/TerminalPanel.xaml.cs:97",
+   "source": "Controls/TerminalPanel.xaml.cs:101",
    "dynamic": true,
    "key": "context-menu|detach to window"
   },
@@ -10896,7 +10917,7 @@
    "title": "Settings → Terminals",
    "shortcut": "",
    "description": "",
-   "source": "Controls/TerminalPanel.xaml.cs:99",
+   "source": "Controls/TerminalPanel.xaml.cs:103",
    "key": "context-menu|settings → terminals"
   },
   {
@@ -10977,7 +10998,7 @@
    "title": "Paste Measurements to This Sheet",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.DetachedSheets.cs:250",
+   "source": "MainWindow.DetachedSheets.cs:261",
    "aliases": [
     "Paste {...} Measurement(s) to This Sheet"
    ],
@@ -10990,7 +11011,7 @@
    "title": "Takeoff Properties...",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.DetachedSheets.cs:268",
+   "source": "MainWindow.DetachedSheets.cs:279",
    "key": "context-menu|takeoff properties"
   },
   {
@@ -10999,7 +11020,7 @@
    "title": "Measurement Properties...",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.DetachedSheets.cs:273",
+   "source": "MainWindow.DetachedSheets.cs:284",
    "dynamic": true,
    "key": "context-menu|measurement properties"
   },
@@ -11009,7 +11030,7 @@
    "title": "Rename Measurement",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.DetachedSheets.cs:278",
+   "source": "MainWindow.DetachedSheets.cs:289",
    "dynamic": true,
    "key": "context-menu|rename measurement"
   },
@@ -11019,7 +11040,7 @@
    "title": "Use Area As Joists...",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.DetachedSheets.cs:288",
+   "source": "MainWindow.DetachedSheets.cs:299",
    "aliases": [
     "Joist Properties..."
    ],
@@ -11032,7 +11053,7 @@
    "title": "Refresh Regular Joists in All Area Segments",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.DetachedSheets.cs:293",
+   "source": "MainWindow.DetachedSheets.cs:304",
    "key": "context-menu|refresh regular joists in all area segments"
   },
   {
@@ -11041,7 +11062,7 @@
    "title": "Set / Reset Joist Direction",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.DetachedSheets.cs:298",
+   "source": "MainWindow.DetachedSheets.cs:309",
    "key": "context-menu|set / reset joist direction"
   },
   {
@@ -11050,7 +11071,7 @@
    "title": "Delete Nearest Extra Joist",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.DetachedSheets.cs:303",
+   "source": "MainWindow.DetachedSheets.cs:314",
    "key": "context-menu|delete nearest extra joist"
   },
   {
@@ -11059,7 +11080,7 @@
    "title": "Rotate Crop 90° Clockwise",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.SheetCrops.cs:234",
+   "source": "MainWindow.SheetCrops.cs:238",
    "key": "context-menu|rotate crop 90° clockwise"
   },
   {
@@ -11068,7 +11089,7 @@
    "title": "Rotate Crop 90° Counterclockwise",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.SheetCrops.cs:235",
+   "source": "MainWindow.SheetCrops.cs:239",
    "key": "context-menu|rotate crop 90° counterclockwise"
   },
   {
@@ -11077,7 +11098,7 @@
    "title": "Mirror Crop Horizontal",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.SheetCrops.cs:236",
+   "source": "MainWindow.SheetCrops.cs:240",
    "key": "context-menu|mirror crop horizontal"
   },
   {
@@ -11086,7 +11107,7 @@
    "title": "Mirror Crop Vertical",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.SheetCrops.cs:238",
+   "source": "MainWindow.SheetCrops.cs:242",
    "key": "context-menu|mirror crop vertical"
   },
   {
@@ -11095,7 +11116,7 @@
    "title": "Reset Crop to 100% (true scale)",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.SheetCrops.cs:240",
+   "source": "MainWindow.SheetCrops.cs:244",
    "key": "context-menu|reset crop to 100% (true scale)"
   },
   {
@@ -11104,7 +11125,7 @@
    "title": "Opacity...",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.SheetCrops.cs:249",
+   "source": "MainWindow.SheetCrops.cs:253",
    "key": "context-menu|opacity"
   },
   {
@@ -11113,7 +11134,7 @@
    "title": "Bring to Front",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.SheetCrops.cs:250",
+   "source": "MainWindow.SheetCrops.cs:254",
    "key": "context-menu|bring to front"
   },
   {
@@ -11122,7 +11143,7 @@
    "title": "Send to Back",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.SheetCrops.cs:251",
+   "source": "MainWindow.SheetCrops.cs:255",
    "key": "context-menu|send to back"
   },
   {
@@ -11131,7 +11152,7 @@
    "title": "Bring Forward",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.SheetCrops.cs:252",
+   "source": "MainWindow.SheetCrops.cs:256",
    "key": "context-menu|bring forward"
   },
   {
@@ -11140,7 +11161,7 @@
    "title": "Send Backward",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.SheetCrops.cs:253",
+   "source": "MainWindow.SheetCrops.cs:257",
    "key": "context-menu|send backward"
   },
   {
@@ -11646,10 +11667,19 @@
   {
    "surface": "settings",
    "group": "Settings, категория",
-   "title": "Takeoff Colors",
+   "title": "Sheet Legend",
    "shortcut": "",
    "description": "Settings category (default, presets, per-job override).",
    "source": "MainWindow.SettingsManager.cs:58",
+   "key": "settings|sheet legend"
+  },
+  {
+   "surface": "settings",
+   "group": "Settings, категория",
+   "title": "Takeoff Colors",
+   "shortcut": "",
+   "description": "Settings category (default, presets, per-job override).",
+   "source": "MainWindow.SettingsManager.cs:59",
    "key": "settings|takeoff colors"
   },
   {
@@ -11658,7 +11688,7 @@
    "title": "AI Crop Notes",
    "shortcut": "",
    "description": "Settings category (default, presets, per-job override).",
-   "source": "MainWindow.SettingsManager.cs:59",
+   "source": "MainWindow.SettingsManager.cs:60",
    "key": "settings|ai crop notes"
   },
   {
@@ -11667,7 +11697,7 @@
    "title": "Sort A/S",
    "shortcut": "",
    "description": "Settings category (default, presets, per-job override).",
-   "source": "MainWindow.SettingsManager.cs:60",
+   "source": "MainWindow.SettingsManager.cs:61",
    "key": "settings|sort a/s"
   },
   {
@@ -11676,7 +11706,7 @@
    "title": "Sort D/Sec/WT",
    "shortcut": "",
    "description": "Settings category (default, presets, per-job override).",
-   "source": "MainWindow.SettingsManager.cs:61",
+   "source": "MainWindow.SettingsManager.cs:62",
    "key": "settings|sort d/sec/wt"
   },
   {
@@ -11685,7 +11715,7 @@
    "title": "Auto Rename / Scale",
    "shortcut": "",
    "description": "Settings category (default, presets, per-job override).",
-   "source": "MainWindow.SettingsManager.cs:62",
+   "source": "MainWindow.SettingsManager.cs:63",
    "key": "settings|auto rename / scale"
   },
   {
@@ -11694,7 +11724,7 @@
    "title": "Excel Actions",
    "shortcut": "",
    "description": "Settings category (default, presets, per-job override).",
-   "source": "MainWindow.SettingsManager.cs:63",
+   "source": "MainWindow.SettingsManager.cs:64",
    "key": "settings|excel actions"
   },
   {
@@ -11703,8 +11733,17 @@
    "title": "Project Storage",
    "shortcut": "",
    "description": "Settings category (default, presets, per-job override).",
-   "source": "MainWindow.SettingsManager.cs:64",
+   "source": "MainWindow.SettingsManager.cs:65",
    "key": "settings|project storage"
+  },
+  {
+   "surface": "settings",
+   "group": "Settings, категория",
+   "title": "Autosave Recovery",
+   "shortcut": "",
+   "description": "Settings category (default, presets, per-job override).",
+   "source": "MainWindow.SettingsManager.cs:66",
+   "key": "settings|autosave recovery"
   },
   {
    "surface": "settings",
@@ -11712,7 +11751,7 @@
    "title": "Agent Bridge",
    "shortcut": "",
    "description": "Settings category (default, presets, per-job override).",
-   "source": "MainWindow.SettingsManager.cs:65",
+   "source": "MainWindow.SettingsManager.cs:67",
    "key": "settings|agent bridge"
   },
   {
@@ -11721,7 +11760,7 @@
    "title": "Terminals",
    "shortcut": "",
    "description": "Settings category (default, presets, per-job override).",
-   "source": "MainWindow.SettingsManager.cs:66",
+   "source": "MainWindow.SettingsManager.cs:68",
    "key": "settings|terminals"
   },
   {
@@ -11730,7 +11769,7 @@
    "title": "Workspace",
    "shortcut": "",
    "description": "Settings category (default, presets, per-job override).",
-   "source": "MainWindow.SettingsManager.cs:67",
+   "source": "MainWindow.SettingsManager.cs:69",
    "key": "settings|workspace"
   },
   {
@@ -11739,7 +11778,7 @@
    "title": "Keyboard Shortcuts",
    "shortcut": "",
    "description": "Settings category (default, presets, per-job override).",
-   "source": "MainWindow.SettingsManager.cs:68",
+   "source": "MainWindow.SettingsManager.cs:70",
    "key": "settings|keyboard shortcuts"
   },
   {
@@ -11748,7 +11787,7 @@
    "title": "Defaults",
    "shortcut": "",
    "description": "Settings category (default, presets, per-job override).",
-   "source": "MainWindow.SettingsManager.cs:69",
+   "source": "MainWindow.SettingsManager.cs:71",
    "key": "settings|defaults"
   },
   {
@@ -11766,7 +11805,7 @@
    "title": "Viewport interaction",
    "shortcut": "",
    "description": "Section of the settings panel.",
-   "source": "MainWindow.SettingsManager.cs:597",
+   "source": "MainWindow.SettingsManager.cs:605",
    "key": "settings|viewport interaction"
   },
   {
@@ -11775,7 +11814,7 @@
    "title": "Background performance",
    "shortcut": "",
    "description": "Section of the settings panel.",
-   "source": "MainWindow.SettingsManager.cs:641",
+   "source": "MainWindow.SettingsManager.cs:649",
    "key": "settings|background performance"
   },
   {
@@ -11784,7 +11823,7 @@
    "title": "Tree display",
    "shortcut": "",
    "description": "Section of the settings panel.",
-   "source": "MainWindow.SettingsManager.cs:682",
+   "source": "MainWindow.SettingsManager.cs:690",
    "key": "settings|tree display"
   },
   {
@@ -11793,7 +11832,7 @@
    "title": "Display & export defaults",
    "shortcut": "",
    "description": "Section of the settings panel.",
-   "source": "MainWindow.SettingsManager.cs:701",
+   "source": "MainWindow.SettingsManager.cs:709",
    "key": "settings|display & export defaults"
   },
   {
