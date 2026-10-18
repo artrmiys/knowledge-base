@@ -44,6 +44,7 @@ extra_css:
   - assets/stylesheets/extra.css
 extra_javascript:
   - assets/js/zoom.js
+  - assets/js/demo-video.js
 
 nav:
   - Главная: index.md

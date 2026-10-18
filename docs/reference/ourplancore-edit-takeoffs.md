@@ -51,7 +51,10 @@
 
 Результат: статус `Merged 3 takeoffs into ext 2x6 9.09 (12 sections). Ctrl+Z in Takeoffs to undo.` Секции со всех листов переехали в выбранную позицию, остальные строки исчезли. Геометрия не склеивается: линии остаются отдельными сегментами, метки отдельными метками.
 
-<!-- DEMO: d-merge -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-merge.png"><source src="../../assets/images/ourplancore/demo/d-merge.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: сегмент стены попал не в ту позицию; ++ctrl+m++ и `Merge Into Takeoff` переносят его в `ext 2x6 9.09`.</figcaption>
+</figure>
 
 !!! tip "Советы"
     - Удалённые при объединении позиции хранятся в `AI_Context/takeoff-merge-trash` внутри проекта; ++ctrl+z++ в дереве возвращает их, пока сессия открыта.
@@ -85,7 +88,10 @@
 
 Результат: статус `Split 1 takeoff(s); created 2 new takeoff(s). Ctrl+Z in Takeoffs to undo.` Первая группа осталась в исходной позиции, остальные стали соседними позициями с тем же именем, папкой и свойствами, но новым цветом. Секции сохраняют лист, масштаб и геометрию; пустые позиции не меняются.
 
-<!-- DEMO: d-split -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-split.png"><source src="../../assets/images/ourplancore/demo/d-split.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: двери на двух листах в одной позиции, ++ctrl+shift+m++, `Separate takeoffs by sheet`: две позиции, по одной на лист.</figcaption>
+</figure>
 
 Раскладка позиций по листам для Excel подробно: [Split по листам](ourplancore-split-by-sheets.md).
 
@@ -126,7 +132,10 @@
 
 Результат: статус `Broke 1 line(s) into 7 segments: 4 to bft - Horizontal, 3 to bft - Vertical. Ctrl+Z puts the lines back.` Рядом с исходной позицией появились `<имя> - Horizontal` (цвет исходной) и `<имя> - Vertical` (контрастный цвет). Исходная позиция остаётся, даже пустая, чтобы ++ctrl+z++ вернул ломаные.
 
-<!-- DEMO: d-break-ends -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-break-ends.png"><source src="../../assets/images/ourplancore/demo/d-break-ends.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++ctrl+shift+v++ делит стену на `Horizontal` и `Vertical`, затем `Ends` ставит метки на концах линий.</figcaption>
+</figure>
 
 !!! tip "Советы"
     - Повторный запуск доливает сегменты в ту же пару `- Horizontal` / `- Vertical`, новая пара не создаётся.
@@ -162,7 +171,10 @@
 
 Результат: отдельный Count с метками вдоль линии. Линия остаётся и даёт погонаж. `No Count points were created` означает, что шаг больше длины линии.
 
-<!-- DEMO: d-pline -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-pline.png"><source src="../../assets/images/ourplancore/demo/d-pline.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: выделить перегородки, `P Line`, имя `posts 2x4`, шаг 48: метки встают вдоль линий.</figcaption>
+</figure>
 
 ## Как вырезать проём из площади и стереть кусок линии { #cut }
 
@@ -176,7 +188,10 @@
 
 Результат: статус `Cut (polygon): 1 area changed ...` или с числом удалённых и добавленных линий. Вырез (cutout) потом можно выбрать кликом внутри него, подвинуть, скопировать с площадью или удалить ++delete++ (площадь остаётся).
 
-<!-- DEMO: d-cut -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-cut.png"><source src="../../assets/images/ourplancore/demo/d-cut.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++x++ с ++f9++ вырезает прямоугольник из площади; тот же приём режет линию стены по проёму двери.</figcaption>
+</figure>
 
 !!! warning "Cut без цели"
     Если первый клик был вне любой площади и ничего не выбрано, `Cut` режет все линии листа, которых касается контур. Выделяйте цель до резки.
@@ -199,7 +214,10 @@
 
 Результат: статус `Combine union: 2 area(s) merged into 1` и подобные. `Combine: the selected areas do not overlap` значит, что пересечения нет. Для вырезов внутри одной Area проще `Cut`.
 
-<!-- DEMO: d-combine -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-combine.png"><source src="../../assets/images/ourplancore/demo/d-combine.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: щелчок по `1st`, ++ctrl++ и щелчок по балкону, `Combine > Subtract`: площадь этажа уменьшилась на нахлёст.</figcaption>
+</figure>
 
 ## Как найти такие же символы { #similar }
 
@@ -214,7 +232,10 @@
 
 Результат: метки в активном Count или в новом `Similar Count`. Галка `Ask AI to identify the symbol` работает онлайн и только подсказывает имя (нужны модуль AI и ключ). Подробно про поиск по листам: [Similar по всем листам](ourplancore-extras-other.md#similar).
 
-<!-- DEMO: d-similar -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-similar.png"><source src="../../assets/images/ourplancore/demo/d-similar.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `Similar`, рамка вокруг окна, галки `Match rotated copies` и `Search all sheets`, `Add`. Ожидание поиска по листам вырезано.</figcaption>
+</figure>
 
 ## Как отразить, повернуть и масштабировать выбранное { #transform }
 
@@ -228,7 +249,10 @@
 
 Результат: статус `Mirrored selection horizontal`, `Rotated selection 90 deg`, `Scaled selection 1.25x`. Движение ползунка отменяется одним ++ctrl+z++. Направление joists поворачивается вместе с J Area. Клавиши `Mirror selected objects horizontally / vertically` по умолчанию не назначены.
 
-<!-- DEMO: d-transform -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-transform.png"><source src="../../assets/images/ourplancore/demo/d-transform.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: рамка по замерам, `Flip H`, `Flip V`, ползунок `Rot`; три ++ctrl+z++ возвращают всё назад.</figcaption>
+</figure>
 
 ## Как повторять отрезки и балки { #repeat }
 
@@ -242,7 +266,10 @@
 
 Результат: статус `Repeat drawing stopped`, серия замеров в дереве.
 
-<!-- DEMO: d-repeat -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-repeat.png"><source src="../../assets/images/ourplancore/demo/d-repeat.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `Repeat Line`, имя `blk 2x10`, отрезки парами щелчков без переключения инструмента, ++esc++ заканчивает.</figcaption>
+</figure>
 
 ## Ловушки { #traps }
 

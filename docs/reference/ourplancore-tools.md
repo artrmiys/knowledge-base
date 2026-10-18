@@ -37,7 +37,10 @@
 
 ## Как нарисовать стену: Line { #line }
 
-<!-- DEMO: d-line-walls -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-line-walls.png"><source src="../../assets/images/ourplancore/demo/d-line-walls.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++l++, имя `ext 2x6 9.09`, строка маршрута `walls/1st floor walls`, щелчки по оси наружной стены и ++c++.</figcaption>
+</figure>
 
 <figure markdown>
   ![Line по стенам](../assets/images/ourplancore/v3/measure-line-walls.png)
@@ -60,7 +63,10 @@
 
 ## Как снять площадь: Area { #area }
 
-<!-- DEMO: d-area -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-area.png"><source src="../../assets/images/ourplancore/demo/d-area.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++a++, контур этажа `1st` и ++c++; затем ++x++ (`Cut`) с ++f9++ (`Box`) вырезает ванную из площади.</figcaption>
+</figure>
 
 <figure markdown>
   ![Area площади этажа](../assets/images/ourplancore/v3/measure-area-floor.png)
@@ -81,7 +87,10 @@
 
 ## Как посчитать штуки: Count { #count }
 
-<!-- DEMO: d-count -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-count.png"><source src="../../assets/images/ourplancore/demo/d-count.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++p++, имя `HDU5 SB5x24`, четыре точки по концам shear walls; итог 4 ea.</figcaption>
+</figure>
 
 <figure markdown>
   ![Count точками](../assets/images/ourplancore/v3/measure-count.png)
@@ -102,7 +111,10 @@
 
 ## Как посчитать joists: J Area { #jarea }
 
-<!-- DEMO: d-jarea -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-jarea.png"><source src="../../assets/images/ourplancore/demo/d-jarea.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++j++, имя `2x10 16"`, контур перекрытия и линия направления joists; программа считает штуки и погонаж.</figcaption>
+</figure>
 
 <figure markdown>
   ![J Area с направлением и шагом](../assets/images/ourplancore/v3/measure-joist-area.png)
@@ -138,7 +150,10 @@
 
 ## Как замерить балку: Beam { #beam }
 
-<!-- DEMO: d-beam -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-beam.png"><source src="../../assets/images/ourplancore/demo/d-beam.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++b++, два конца балки, имя `FB1`; программа дописывает длину в имя: `FB1 52`.</figcaption>
+</figure>
 
 <figure markdown>
   ![Beam с длиной в имени](../assets/images/ourplancore/v3/measure-beam.png)
@@ -158,7 +173,10 @@
 
 ## Как посчитать проёмы: Openings { #openings }
 
-<!-- DEMO: d-openings -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-openings.png"><source src="../../assets/images/ourplancore/demo/d-openings.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++o++, рамка по окну, имя `4.0x4.0`, остальные окна по одному щелчку; итог 4 ea.</figcaption>
+</figure>
 
 <figure markdown>
   ![Openings](../assets/images/ourplancore/v3/measure-openings.png)

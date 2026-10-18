@@ -42,6 +42,11 @@
 3. Включённый модуль добавляет свою вкладку в строку режимов (Sheet Manager, Takeoff Manager, Report Builder, Materials, AI Manager, 3D) или кнопки на ленту (`Name`, `Scale`, `Name+Scale`, `In Progress`).
 4. Выключенный модуль прячет кнопки и вкладку; клавиша на спрятанную команду не срабатывает.
 
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-settings.png"><source src="../../assets/images/ourplancore/demo/d-settings.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `Settings`, разделы маршрутов и цветов, затем `Modules`: галки AI и 3D, `Apply` и `Save global default`; в строке режимов появились вкладки AI Manager и 3D.</figcaption>
+</figure>
+
 Полный список модулей с группами: [Workspace и модули](ourplancore-workspace.md#modules).
 
 ## Редкие пункты меню замера на листе { #measurement-menu }

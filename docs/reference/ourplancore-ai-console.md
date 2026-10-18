@@ -2,7 +2,10 @@
 
 Здесь: панель `>_` с терминалами Claude и Codex внутри окна программы, что они знают о проекте (строка `ctx`, файл контекста), как отправить ассистенту кроп листа, как он правит открытый проект через Agent Bridge и как продолжить беседу на втором компьютере. Нужно, когда хочется спросить у ассистента про текущий лист, получить ноты из таблицы schedule или поручить ему рутину в дереве, не выходя из программы. Остальные места с ИИ (AI Crop Notes, AI Manager, чтение штампов, настройки Agent Bridge) - [ИИ в программе](ourplancore-ai.md).
 
-<!-- DEMO: d-terminal -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-terminal.png"><source src="../../assets/images/ourplancore/demo/d-terminal.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: кнопка `>_` открывает консоль: выбор Codex или Claude, уровень `Quick / Balanced / Deep`, строка контекста с проектом и листом.</figcaption>
+</figure>
 
 <figure markdown>
   ![Панель терминала](../assets/images/ourplancore/v3/terminal-panel.png)
@@ -72,7 +75,10 @@
 
 ## Как отправить кроп листа в консоль: AI Crop + { #crop }
 
-<!-- DEMO: d-ai-crop -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-ai-crop.png"><source src="../../assets/images/ourplancore/demo/d-ai-crop.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `AI Crop +` и рамка по части плана: кроп попадает в контекст консоли и в AI Inbox.</figcaption>
+</figure>
 
 Зачем: ассистент видит таблицу или узел картинкой, а не догадывается по тексту.
 Нужно: модуль AI включён, проект не read-only, терминал подключён.

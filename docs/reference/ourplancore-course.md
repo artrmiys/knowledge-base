@@ -6,7 +6,10 @@
 
 ## Урок 1. Открыть демо-проект и осмотреться { #lesson-1 }
 
-<!-- DEMO: d-open-sample -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-open-sample.png"><source src="../../assets/images/ourplancore/demo/d-open-sample.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `Open sample job` на стартовой карточке создаёт демо-проект; дальше листы W, F, S и U со своими легендами и вкладка 3D.</figcaption>
+</figure>
 
 Цель: открыть учебный проект и узнать, где что лежит в окне.
 
@@ -23,7 +26,10 @@
 
 ## Урок 2. Листы: имя, масштаб, точка листа { #lesson-2 }
 
-<!-- DEMO: d-sheet-rename-dot -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-sheet-rename-dot.png"><source src="../../assets/images/ourplancore/demo/d-sheet-rename-dot.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++ctrl+d++ делает копию листа, ++f2++ даёт ей имя `a101 1st sw`, щелчок по точке S/1 под `Scale` задаёт маршрут `S 1st floor`.</figcaption>
+</figure>
 
 Цель: понять, что у листа есть имя по канону, масштаб и точка W/F/S/U, и научиться ставить их руками.
 
@@ -34,7 +40,10 @@
 5. Нажмите `F2` на копии, впишите `a101 1st sw`, `Enter`, затем ПКМ по копии и **Move to Folder...**, если хотите убрать её в отдельную папку.
 6. Откройте копию и щёлкните точку в строке `S`, столбец `1`, под заголовком Scale.
 
-<!-- DEMO: d-scale -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-scale.png"><source src="../../assets/images/ourplancore/demo/d-scale.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: на листе с неверным масштабом ++f4++ и ввод `1/8" = 1'0"`; длина в легенде пересчитывается сразу.</figcaption>
+</figure>
 
 Если масштаба у листа нет: нажмите `S`, щёлкните два конца известного размера, впишите длину (`20'` или `1/8" = 1'0"`), `Enter`; для нескольких листов выделите их в Pages и нажмите `F4`.
 
@@ -44,7 +53,10 @@
 
 ## Урок 3. Роутинг: куда ляжет замер { #lesson-3 }
 
-<!-- DEMO: d-routing -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-routing.png"><source src="../../assets/images/ourplancore/demo/d-routing.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация на реальном проекте: стена на W-листе уходит в `walls/3rd floor walls`, балка на F-листе в `framing/3rd floor framing/beams`, shear wall на копии листа с точкой S в `shear walls`.</figcaption>
+</figure>
 
 Цель: увидеть, как точка листа и имя позиции сами выбирают папку в дереве.
 
@@ -61,7 +73,10 @@
 
 ## Урок 4. Стены: Line { #lesson-4 }
 
-<!-- DEMO: d-line-walls -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-line-walls.png"><source src="../../assets/images/ourplancore/demo/d-line-walls.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++l++, имя `ext 2x6 9.09`, строка маршрута `walls/1st floor walls`, щелчки по оси наружной стены и ++c++.</figcaption>
+</figure>
 
 Цель: нарисовать наружные стены этажа одной позицией и продолжить её через Record.
 
@@ -78,7 +93,10 @@
 
 ## Урок 5. Проёмы: Openings { #lesson-5 }
 
-<!-- DEMO: d-openings -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-openings.png"><source src="../../assets/images/ourplancore/demo/d-openings.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++o++, рамка по окну, имя `4.0x4.0`, остальные окна по одному щелчку; итог 4 ea.</figcaption>
+</figure>
 
 Цель: посчитать окна и двери позициями-размерами, по одной точке на проём.
 
@@ -95,7 +113,10 @@
 
 ## Урок 6. Площади: Area и Cut { #lesson-6 }
 
-<!-- DEMO: d-area -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-area.png"><source src="../../assets/images/ourplancore/demo/d-area.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++a++, контур этажа `1st` и ++c++; затем ++x++ (`Cut`) с ++f9++ (`Box`) вырезает ванную из площади.</figcaption>
+</figure>
 
 Цель: снять площадь этажа и вырезать из неё шахту.
 
@@ -111,7 +132,10 @@
 
 ## Урок 7. Framing на F-листе: J Area и Beam { #lesson-7 }
 
-<!-- DEMO: d-jarea -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-jarea.png"><source src="../../assets/images/ourplancore/demo/d-jarea.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++j++, имя `2x10 16"`, контур перекрытия и линия направления joists; программа считает штуки и погонаж.</figcaption>
+</figure>
 
 Цель: посчитать joists зоной и балку с заказной длиной на структурном плане.
 
@@ -120,7 +144,10 @@
 3. Проведите линию направления вдоль joists, когда программа спросит; `Shift` держит направление по осям.
 4. Прочитайте `Total`: штуки и погонные футы, позиция в `framing/1st floor framing/joists`.
 
-<!-- DEMO: d-beam -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-beam.png"><source src="../../assets/images/ourplancore/demo/d-beam.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++b++, два конца балки, имя `FB1`; программа дописывает длину в имя: `FB1 52`.</figcaption>
+</figure>
 
 5. Нажмите `B`, проведите от опоры до опоры балки, в диалоге впишите марку `FB1`, **OK**: программа дописала длину в футах, округлённую вверх (`FB1 14`), позиция в `.../beams`.
 6. Нажмите `P`, имя `C4 20`, щёлкните символ поста: позиция в корне `framing/1st floor framing`; перетащите её в папку `posts`.
@@ -131,7 +158,10 @@
 
 ## Урок 8. Проверка: легенда, Hide, Total { #lesson-8 }
 
-<!-- DEMO: d-legend-groups -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-legend-groups.png"><source src="../../assets/images/ourplancore/demo/d-legend-groups.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: две позиции под листом в Pages, правый щелчок `Legend Group > New Group`; легенда на листе делится на блоки walls и openings.</figcaption>
+</figure>
 
 Цель: убедиться, что на листе и в дереве всё на месте, прежде чем выгружать.
 
@@ -139,7 +169,10 @@
 2. ПКМ по листу в Pages, **Organize > Sort Sheet Legend by Key (before space)**: позиции отсортированы по первому слову имени.
 3. Раскройте лист в Pages: под ним те же позиции, что в легенде.
 
-<!-- DEMO: d-hide -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-hide.png"><source src="../../assets/images/ourplancore/demo/d-hide.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++h++ прячет выделенную позицию на листе, точка видимости под листом в Pages возвращает её.</figcaption>
+</figure>
 
 4. Выделите позицию `1st` в Takeoffs и нажмите `H`: площадь исчезла с листа, статус `Hidden 1 whole takeoff(s)`.
 5. Щёлкните точку видимости у позиции под листом в Pages: площадь вернулась.
@@ -168,7 +201,10 @@
 
 ## Урок 10. PDF и сдача { #lesson-10 }
 
-<!-- DEMO: d-preview -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-preview.png"><source src="../../assets/images/ourplancore/demo/d-preview.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `PDF Output > Preview`; превью листа перерисовывается при смене прозрачности и размера легенды на ленте.</figcaption>
+</figure>
 
 Цель: получить PDF только с листами, где есть замеры, и проверить его до экспорта.
 
@@ -176,7 +212,10 @@
 2. Откройте ленту **PDF Output** и нажмите **Preview**: окно показывает текущий лист так, как он напечатается.
 3. Поменяйте **Opac** на 70 и размер **Legend**: превью перерисовалось.
 
-<!-- DEMO: d-export-pdf -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-export-pdf.png"><source src="../../assets/images/ourplancore/demo/d-export-pdf.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `Main > Export`, галки нужных листов, `Export`; статус `Exported PDF (2 sheet(s))`.</figcaption>
+</figure>
 
 4. Нажмите **Main > PDF > Export**, отметьте в диалоге только листы с замерами, оставьте галки **Measurements** и **Legend**.
 5. Нажмите **Export**, назовите файл `<проект> Bldg A.pdf`, сохраните.

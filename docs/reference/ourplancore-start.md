@@ -35,7 +35,10 @@
 
 ## Демо-проект: экскурсия { #demo }
 
-<!-- DEMO: d-open-sample -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-open-sample.png"><source src="../../assets/images/ourplancore/demo/d-open-sample.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `Open sample job` на стартовой карточке создаёт демо-проект; дальше листы W, F, S и U со своими легендами и вкладка 3D.</figcaption>
+</figure>
 
 Демо-проект - учебная работа без клиентских данных. На нём пробуют каждую кнопку, не боясь испортить: его можно создать заново в любой момент. По нему же идёт курс [Первые шаги: 10 уроков](ourplancore-course.md).
 
@@ -92,6 +95,11 @@
 | `Ctrl+O` | `Open / Import`; `Ctrl+Shift+O` - недавние проекты |
 
 Команда без клавиши (например `Ends`, `Toggle Dark Theme`, `Hide / Show All Takeoffs`) запускается из палитры или получает клавишу в `Settings > Keyboard Shortcuts`. Клавиши работают по физическим кнопкам в английской и русской раскладке. Полный список - [Горячие клавиши](ourplancore-shortcuts.md).
+
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-command-palette.png"><source src="../../assets/images/ourplancore/demo/d-command-palette.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++ctrl+shift+p++, набрать `show all`, ++enter++: команда `Hide / Show All Takeoffs` прячет все замеры листа, второй запуск показывает их.</figcaption>
+</figure>
 
 ## Тема и вид листа
 

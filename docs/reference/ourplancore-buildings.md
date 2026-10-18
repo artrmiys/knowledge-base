@@ -2,7 +2,10 @@
 
 Здесь: как вести проект с несколькими корпусами в одном файле: папка на корпус в Takeoffs и в Pages, зелёная и красная точки в заголовке Takeoffs (куда пишутся новые замеры), как точки листа W/F/S/U работают внутри выбранного корпуса, копирование одинаковых корпусов, отдельная книга Excel и отдельный PDF на корпус. Нужно на каждом проекте, где больше одного здания: таунхаусы, дом с гаражом и storage, комплекс из корпусов A, B, C.
 
-<!-- DEMO: d-buildings -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-buildings.png"><source src="../../assets/images/ourplancore/demo/d-buildings.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация на проекте с несколькими корпусами: зелёная точка на папке корпуса направляет новые замеры в него, красная возвращает корень `Takeoffs`.</figcaption>
+</figure>
 
 <figure markdown>
   ![Дерево Takeoffs с папками корпусов](../assets/images/ourplancore/v3/buildings-tree.png)

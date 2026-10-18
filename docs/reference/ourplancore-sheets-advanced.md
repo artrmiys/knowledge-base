@@ -16,7 +16,10 @@
 
 ### Как собрать детали на один лист { #crop-steps }
 
-<!-- DEMO: d-crop-to-sheet -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-crop-to-sheet.png"><source src="../../assets/images/ourplancore/demo/d-crop-to-sheet.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `Page > Crop to Sheet`, цель `Details`, два кропа с разных листов ложатся рядом на один лист.</figcaption>
+</figure>
 
 Зачем: все узлы проекта на одном чистом листе в истинном масштабе для PDF клиенту.
 Нужно: листы с деталями открываются; пустой лист-цель можно создать в самом диалоге.
@@ -74,7 +77,10 @@ Undo работает на целевом листе (перенос, повор
 
 ### Как создать пустой лист { #blank-steps }
 
-<!-- DEMO: d-blank-sheet -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-blank-sheet.png"><source src="../../assets/images/ourplancore/demo/d-blank-sheet.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `Page > Blank Sheet`, имя `Details`, размер `Tabloid (17 x 11)`, `Create`.</figcaption>
+</figure>
 
 Зачем: чистый лист под кропы деталей или под схему.
 
@@ -129,6 +135,11 @@ Undo работает на целевом листе (перенос, повор
 
 Результат: S-план в цвете поверх A-плана, под листом в Pages появился узел слоя наложения; статус `Overlay fit by two points: <масштаб>x, rotation <угол> deg`.
 
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-overlay.png"><source src="../../assets/images/ourplancore/demo/d-overlay.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ПКМ по S-листу в Pages, `Sheet Overlay > Use This Sheet as Current Overlay`, ПКМ по листу `Auto Fit Overlay`, затем вкладка `Overlay` и галка `Show overlay`.</figcaption>
+</figure>
+
 !!! tip "Советы"
     - Совмещение по точкам запускают три одинаковые команды: `Fit by 2 Points` в меню листа, кнопка `Edit by Points` во вкладке `Overlay` и `Move Overlay by Points` (палитра команд и значок на левой полосе).
     - Клик цепляется к ближайшей точке PDF в пределах 14 px (в статусе `snapped to ...`), поэтому щёлкайте по углам стен и пересечениям осей.
@@ -161,7 +172,10 @@ Undo работает на целевом листе (перенос, повор
 
 ### Как наложить S-планы на A-планы для всех этажей: Batch Overlay { #batch-overlay }
 
-<!-- DEMO: d-batch-overlay -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-batch-overlay.png"><source src="../../assets/images/ourplancore/demo/d-batch-overlay.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `Page > Batch Overlay`, S-лист наложением на A-лист с прозрачностью 60, `Apply overlays`; в Pages появился узел `Overlay`.</figcaption>
+</figure>
 
 <figure markdown>
   ![Окно Batch Overlay](../assets/images/ourplancore/v3/batch-overlay.png)
@@ -265,7 +279,10 @@ Undo работает на целевом листе (перенос, повор
 
 ## Как закрыть часть листа маской: Hide { #hide-mask }
 
-<!-- DEMO: d-hide-mask -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-hide-mask.png"><source src="../../assets/images/ourplancore/demo/d-hide-mask.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `Annotation > Hide`, четыре щелчка вокруг подписи и ++c++ дают белую маску; ++ctrl+z++ убирает её.</figcaption>
+</figure>
 
 <figure markdown>
   ![Hide-маска поверх части листа](../assets/images/ourplancore/v3/sheet-hide-mask.png)

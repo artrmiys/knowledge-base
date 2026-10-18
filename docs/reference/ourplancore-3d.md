@@ -2,7 +2,10 @@
 
 Здесь: вкладка 3D, которая по умолчанию выключена: стены и плиты из замеров, общий вьюер, и честный статус старого AI Massing. Нужно, когда хочется увидеть корпус в объёме или когда спрашивают "а что с 3D". Крыша в 3D описана отдельно: [3D-крыша](ourplancore-3d-roof.md). Вкладки Sheet Manager, Takeoff Manager, Report Builder и Materials: [Менеджеры](ourplancore-managers.md).
 
-<!-- DEMO: d-3d -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-3d.png"><source src="../../assets/images/ourplancore/demo/d-3d.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: вкладка 3D на демо-проекте: стены, плита и двускатная крыша; вращение мышью, виды `Front` и `Iso`.</figcaption>
+</figure>
 
 ## Статус коротко
 
@@ -17,6 +20,11 @@
 1. Откройте **Settings > Modules**, поставьте галку **3D**, нажмите **Save global default** (или **Apply** до перезапуска).
 2. В строке режимов появилась вкладка **3D**; под Takeoffs появился под-таб `3D`.
 3. Чтобы перейти к ним без мыши, откройте палитру команд (++ctrl+shift+p++): `Show 3D Viewer` открывает вкладку 3D в строке режимов, `Show 3D Tab` выбирает под-таб `3D` рядом с Takeoffs.
+
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-settings.png"><source src="../../assets/images/ourplancore/demo/d-settings.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `Settings > Modules`, галки AI и 3D, `Apply` и `Save global default`; в строке режимов появилась вкладка 3D.</figcaption>
+</figure>
 
 <figure markdown>
   ![Вкладка 3D](../assets/images/ourplancore/v3/view-3d.png)

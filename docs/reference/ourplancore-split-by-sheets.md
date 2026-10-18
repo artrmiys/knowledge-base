@@ -2,7 +2,10 @@
 
 Здесь: как комплект чертежей раскладывается на рабочие листы под виды работ, какой лист несёт какую точку W/F/S/U, что на нём рисуется и почему новая позиция сама уходит в нужную ветку дерева. Нужно в начале каждого проекта и когда дерево "само" разложилось не так. Механика правил - [Имена и автомаршрут](takeoff-naming.md), настройки - [Маршрутизация: настройки](ourplancore-routing.md), канон папок и имён - [Дерево takeoff и имена листов](../start/takeoff-structure.md).
 
-<!-- DEMO: d-routing -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-routing.png"><source src="../../assets/images/ourplancore/demo/d-routing.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация на реальном проекте: стена на W-листе уходит в `walls/3rd floor walls`, балка на F-листе в `framing/3rd floor framing/beams`, shear wall на копии листа с точкой S в `shear walls`.</figcaption>
+</figure>
 
 <figure markdown>
   ![Листы под виды работ и ветки дерева одного корпуса](../assets/images/ourplanecore/sheets-to-tree.svg)
@@ -83,7 +86,10 @@ trussheel/                    trussheel 0.66
 
 ## Как сделать копию листа под shear walls { #copy-dot }
 
-<!-- DEMO: d-sheet-rename-dot -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-sheet-rename-dot.png"><source src="../../assets/images/ourplancore/demo/d-sheet-rename-dot.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++ctrl+d++ делает копию листа, ++f2++ даёт ей имя `a101 1st sw`, щелчок по точке S/1 под `Scale` задаёт маршрут `S 1st floor`.</figcaption>
+</figure>
 
 Зачем: shear walls и holdowns второго этажа на отдельной копии структурного плана, со своей легендой и своим местом в дереве.
 Нужно: структурный план `s201 2nd` назван и с масштабом; папка `Struct/Shear` в Pages.

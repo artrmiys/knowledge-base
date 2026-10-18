@@ -18,7 +18,10 @@
 
 ## Как экспортировать PDF { #export }
 
-<!-- DEMO: d-export-pdf -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-export-pdf.png"><source src="../../assets/images/ourplancore/demo/d-export-pdf.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `Main > Export`, галки нужных листов, `Export`; статус `Exported PDF (2 sheet(s))`.</figcaption>
+</figure>
 
 Зачем: файл клиенту только с листами, где есть замеры.
 Нужно: замеры проверены, лишнее спрятано.
@@ -64,7 +67,10 @@
 
 ## Как проверить лист до экспорта: Preview { #preview }
 
-<!-- DEMO: d-preview -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-preview.png"><source src="../../assets/images/ourplancore/demo/d-preview.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `PDF Output > Preview`; превью листа перерисовывается при смене прозрачности и размера легенды на ленте.</figcaption>
+</figure>
 
 <figure markdown>
   ![Окно Preview](../assets/images/ourplancore/v3/pdf-preview.png)
@@ -83,7 +89,10 @@
 
 ## Легенда листа { #legend }
 
-<!-- DEMO: d-legend-groups -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-legend-groups.png"><source src="../../assets/images/ourplancore/demo/d-legend-groups.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: две позиции под листом в Pages, правый щелчок `Legend Group > New Group`; легенда на листе делится на блоки walls и openings.</figcaption>
+</figure>
 
 <figure markdown>
   ![Легенда листа с группами](../assets/images/ourplancore/v3/sheet-legend.png)

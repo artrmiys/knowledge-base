@@ -56,7 +56,10 @@
 
 ## Как создать позицию: New Item { #new-item }
 
-<!-- DEMO: d-new-item -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-new-item.png"><source src="../../assets/images/ourplancore/demo/d-new-item.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++t++, имя `C4 20`, тип `Count`, вид метки `Diamond`, маршрут в `framing/1st floor framing`.</figcaption>
+</figure>
 
 <figure markdown>
   ![Диалог New Takeoff Item](../assets/images/ourplancore/v3/new-item-dialog.png)
@@ -76,7 +79,10 @@
 
 ## Как продолжить позицию: Record { #record }
 
-<!-- DEMO: d-record -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-record.png"><source src="../../assets/images/ourplancore/demo/d-record.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: выделить позицию, ++space++ (`Record`), дорисовать перегородку и ++c++; `Total` растёт в той же позиции.</figcaption>
+</figure>
 
 Зачем: дорисовать участок в существующую позицию, не создавая дубль.
 
@@ -93,7 +99,10 @@
 
 ## Как скопировать замеры на другой лист или корпус { #copy }
 
-<!-- DEMO: d-copy-paste -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-copy-paste.png"><source src="../../assets/images/ourplancore/demo/d-copy-paste.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++ctrl+c++ на одном листе, ++ctrl+v++ на другом, в окне `Paste Measurements` выбор `New takeoffs`.</figcaption>
+</figure>
 
 <figure markdown>
   ![Диалог Paste Measurements](../assets/images/ourplancore/v3/paste-dialog.png)
@@ -114,7 +123,10 @@
 
 ## Как спрятать позицию на листе { #hide }
 
-<!-- DEMO: d-hide -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-hide.png"><source src="../../assets/images/ourplancore/demo/d-hide.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++h++ прячет выделенную позицию на листе, точка видимости под листом в Pages возвращает её.</figcaption>
+</figure>
 
 Зачем: убрать готовое с глаз при проверке, спрятать чужой корпус перед PDF.
 

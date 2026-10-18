@@ -462,3 +462,9 @@
   border: 1px solid var(--md-default-fg-color--lightest);
   background: #000;
 }
+
+/* Clips play on screen only (assets/js/demo-video.js); click pauses. */
+.md-typeset figure video.kb-demo {
+  width: 100%;
+  cursor: pointer;
+}

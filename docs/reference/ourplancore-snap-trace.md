@@ -32,7 +32,10 @@
 
 Результат: контур без щелей в углах; `Total` показывает длину или площадь.
 
-<!-- DEMO: d-snap -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-snap.png"><source src="../../assets/images/ourplancore/demo/d-snap.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++f3++ (`Snap`) и ++f8++ (`Ortho`) ведут линию от концов соседней; ++f9++ (`Box`) рисует прямоугольную площадь двумя щелчками.</figcaption>
+</figure>
 
 !!! tip "Советы"
     - ++shift++ держит ось и при перетаскивании ручки или всего замера (`Shift = ortho` в статусе).

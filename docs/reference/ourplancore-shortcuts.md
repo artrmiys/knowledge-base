@@ -69,6 +69,8 @@
 
 Подробно о Merge, Split, Break - [Правка takeoff](ourplancore-edit-takeoffs.md).
 
+Повтора отменённого действия (Redo, ++ctrl+y++) в программе нет: ++ctrl+z++ отменяет шаг безвозвратно, поэтому перед серией отмен проверяйте, что откатываете.
+
 ## Деревья Pages и Takeoffs
 
 | Клавиша | Pages | Takeoffs |

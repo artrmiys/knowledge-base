@@ -6,7 +6,12 @@
 
 <figure markdown>
   ![Полоса XL](../assets/images/ourplancore/v3/excel-strip.png)
-  <figcaption markdown="span">Верх полосы: `ALL` и `LG`, ниже кнопки стен и площадей, дальше начинается framing (`FR`). На низком окне нижние кнопки framing уходят за край, разверните окно. Подсказка каждой кнопки говорит, что она делает.</figcaption>
+  <figcaption markdown="span">Верх полосы: `ALL` и `LG`, ниже кнопки стен и площадей, дальше начинается framing (`FR`). На низком окне полоса прокручивается колесом мыши до нижних кнопок framing. Подсказка каждой кнопки говорит, что она делает.</figcaption>
+</figure>
+
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-xl-scroll.png"><source src="../../assets/images/ourplancore/demo/d-xl-scroll.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: открыт AI Inbox, полоса XL стала короткой; колесо мыши над полосой прокручивает её до `FR`, `PS`, `BM`, `HD` и обратно.</figcaption>
 </figure>
 
 ## Что нужно до нажатия

@@ -60,7 +60,10 @@
 
 Результат: `Deleted N selected vertex/vertices`. ++ctrl+z++ возвращает.
 
-<!-- DEMO: d-vertex-edit -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-vertex-edit.png"><source src="../../assets/images/ourplancore/demo/d-vertex-edit.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: правый щелчок по линии, `Insert Vertex Here`, перетаскивание вершины, затем `Remove Nearest Vertex`.</figcaption>
+</figure>
 
 ## Undo: где какой { #undo }
 
@@ -136,7 +139,10 @@ Beam и Openings хранятся как Count с меткой, поэтому �
 
 Результат: позиция в `walls/<этаж> floor walls`, `Total` показывает длину. Лишняя точка во время рисования убирается ++backspace++.
 
-<!-- DEMO: d-line-walls -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-line-walls.png"><source src="../../assets/images/ourplancore/demo/d-line-walls.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++l++, имя `ext 2x6 9.09`, строка маршрута `walls/1st floor walls`, щелчки по оси наружной стены и ++c++.</figcaption>
+</figure>
 
 ### Как разбить линию на отрезки и разнести по горизонтали и вертикали { #recipe-break }
 
@@ -150,7 +156,10 @@ Beam и Openings хранятся как Count с меткой, поэтому �
 
 Результат: два отдельных итога. Обычный `Break` (++ctrl+shift+b++) режет на отрезки, оставляя их в той же позиции. Схема: [что делает Break и Break H/V](#break-scheme).
 
-<!-- DEMO: d-break-ends -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-break-ends.png"><source src="../../assets/images/ourplancore/demo/d-break-ends.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++ctrl+shift+v++ делит стену на `Horizontal` и `Vertical`, затем `Ends` ставит метки на концах линий.</figcaption>
+</figure>
 
 ### Как слить сегменты из разных позиций в одну { #recipe-merge-segments }
 
@@ -163,7 +172,10 @@ Beam и Openings хранятся как Count с меткой, поэтому �
 
 Результат: статус `Merged 2 segment(s) into ext 2x6 9.09`, цвет сегментов сменился на цвет позиции. Чтобы слить две целые позиции, выделите их строки в дереве и нажмите ++ctrl+m++: [Merge целых позиций](ourplancore-edit-takeoffs.md#merge-takeoffs).
 
-<!-- DEMO: d-merge -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-merge.png"><source src="../../assets/images/ourplancore/demo/d-merge.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: сегмент стены попал не в ту позицию; ++ctrl+m++ и `Merge Into Takeoff` переносят его в `ext 2x6 9.09`.</figcaption>
+</figure>
 
 ### Как разделить позицию по листам { #recipe-split-sheets }
 
@@ -178,7 +190,10 @@ Beam и Openings хранятся как Count с меткой, поэтому �
 
 Результат: три позиции с одним именем и свойствами, отделённые получили новый цвет. Подробно про раскладку по листам: [страница Split по листам](ourplancore-split-by-sheets.md).
 
-<!-- DEMO: d-split -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-split.png"><source src="../../assets/images/ourplancore/demo/d-split.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: двери на двух листах в одной позиции, ++ctrl+shift+m++, `Separate takeoffs by sheet`: две позиции, по одной на лист.</figcaption>
+</figure>
 
 ### Как вырезать проём из площади и стереть кусок линии { #recipe-cut }
 
@@ -192,7 +207,10 @@ Beam и Openings хранятся как Count с меткой, поэтому �
 
 Результат: статус `Cut (box): ...` с числом изменённых площадей и линий, `Total` уменьшился. Если первый клик был вне площади, `Cut` режет все линии листа, которых касается контур: сначала выделяйте цель.
 
-<!-- DEMO: d-cut -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-cut.png"><source src="../../assets/images/ourplancore/demo/d-cut.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: ++x++ с ++f9++ вырезает прямоугольник из площади; тот же приём режет линию стены по проёму двери.</figcaption>
+</figure>
 
 ### Как объединить или вычесть площади { #recipe-combine }
 
@@ -206,7 +224,10 @@ Beam и Openings хранятся как Count с меткой, поэтому �
 
 Результат: статус `Combine remove overlap: trimmed 1 area(s) against the first-selected`. Порядок выбора важен: первой кликайте ту площадь, которая должна остаться целой.
 
-<!-- DEMO: d-combine -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-combine.png"><source src="../../assets/images/ourplancore/demo/d-combine.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: щелчок по `1st`, ++ctrl++ и щелчок по балкону, `Combine > Subtract`: площадь этажа уменьшилась на нахлёст.</figcaption>
+</figure>
 
 ### Как поставить точки на концах и вдоль линии { #recipe-points }
 
@@ -219,7 +240,10 @@ Beam и Openings хранятся как Count с меткой, поэтому �
 
 Результат: два новых Count в той же папке, статус `End points created: N Count mark(s)`. Лишние метки на стыках снимаются ++alt++ + клик и ++delete++.
 
-<!-- DEMO: d-pline -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-pline.png"><source src="../../assets/images/ourplancore/demo/d-pline.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: выделить перегородки, `P Line`, имя `posts 2x4`, шаг 48: метки встают вдоль линий.</figcaption>
+</figure>
 
 ### Как найти такие же символы на других листах { #recipe-similar }
 
@@ -227,13 +251,16 @@ Beam и Openings хранятся как Count с меткой, поэтому �
 Нужно: активный Count или готовность завести новый, лист открыт.
 
 1. Нажмите `Similar`, обведите рамкой один символ.
-2. В диалоге выберите порог `Default` (или `Strict`, если ловит лишнее), галку `Search all sheets in this job`.
+2. В диалоге выберите порог `Default` (или `Strict`, если ловит лишнее), галку `Search all sheets in this job`. Поиск по всем листам идёт десятки секунд даже на маленьком проекте (на демо около 35 с), кнопка `Add` ждёт его конца: не щёлкайте повторно.
 3. Посмотрите метки: синие добавятся, оранжевые слабые, серые уже посчитаны. При сомнении нажмите `Strong only`.
 4. Нажмите кнопку `Add N to <имя>`.
 
 Результат: метки добавлены в Count на текущем и других листах, статус перечисляет добавленное. Поиск ищет похожую картинку, не назначение: проверьте оранжевые.
 
-<!-- DEMO: d-similar -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-similar.png"><source src="../../assets/images/ourplancore/demo/d-similar.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `Similar`, рамка вокруг окна, галки `Match rotated copies` и `Search all sheets`, `Add`. Ожидание поиска по листам вырезано.</figcaption>
+</figure>
 
 ### Как повторить рисование серии { #recipe-repeat }
 
@@ -247,7 +274,10 @@ Beam и Openings хранятся как Count с меткой, поэтому �
 
 Результат: серия отрезков или балок без переключения инструмента.
 
-<!-- DEMO: d-repeat -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-repeat.png"><source src="../../assets/images/ourplancore/demo/d-repeat.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `Repeat Line`, имя `blk 2x10`, отрезки парами щелчков без переключения инструмента, ++esc++ заканчивает.</figcaption>
+</figure>
 
 ### Как отразить и повернуть замеры { #recipe-transform }
 
@@ -262,7 +292,10 @@ Beam и Openings хранятся как Count с меткой, поэтому �
 
 Результат: статус `Mirrored selection horizontal`, `Rotated selection 90 deg`. Один ++ctrl+z++ отменяет всё движение ползунка. Клавиши для зеркала назначаются в редакторе клавиш (`Mirror selected objects horizontally / vertically`).
 
-<!-- DEMO: d-transform -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-transform.png"><source src="../../assets/images/ourplancore/demo/d-transform.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: рамка по замерам, `Flip H`, `Flip V`, ползунок `Rot`; три ++ctrl+z++ возвращают всё назад.</figcaption>
+</figure>
 
 ### Как исправить замер, который ушёл не в ту позицию { #recipe-wrong-takeoff }
 

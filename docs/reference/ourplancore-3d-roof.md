@@ -2,7 +2,10 @@
 
 Здесь: как из площадей скатов и карнизов получить объёмную крышу во вкладке 3D, задать уклон рёбрам, достроить свесы и стропила и забрать из модели длины ridge, hip, valley и eave в дерево Takeoffs. Нужно на сложной крыше (L, U, несколько уклонов, dormer), когда по плану не видно, где пройдут hip и valley, и когда клиент просит длины рёбер. Простая двускатная крыша меряется без 3D: Area по скату с уклоном в имени ([Roof](../work/sqfts/roof.md)). Стены в 3D, общий вьюер и архивный Massing - [3D и Massing](ourplancore-3d.md).
 
-<!-- DEMO: d-3d-roof -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-3d-roof.png"><source src="../../assets/images/ourplancore/demo/d-3d-roof.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация на реальном проекте: выделить площадь крыши `rf 4`, `3D > Auto` строит вальмовую крышу; вторая крыша из второй площади, выбор в `Roof Mesh`.</figcaption>
+</figure>
 
 <figure markdown>
   ![Вкладка 3D с крышей](../assets/images/ourplancore/v3/view-3d.png)
@@ -44,7 +47,10 @@
 
 ## Как задать уклон рёбрам { #edges }
 
-<!-- DEMO: d-3d-pitch -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-3d-pitch.png"><source src="../../assets/images/ourplancore/demo/d-3d-pitch.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: `Roof Base`, выбор рёбер, `Defines Slope` с уклоном 6/12 и `Save Edge(s)`, одно ребро 12/12, `Generate Roof`.</figcaption>
+</figure>
 
 Зачем: разные уклоны на скатах, фронтон вместо вальмы, свес нужной ширины.
 Нужно: Roof Base создана.
@@ -57,6 +63,11 @@
 6. Нажмите **Generate Roof**.
 
 Результат: статус `3D Roof: saved edge properties to N edge(s)` и затем `Roof generated`; в блоке **Roof Edge** у выбранного ребра видны уклон и свес, фронтонные рёбра не поднимают скат.
+
+<figure markdown>
+  ![Боковая панель 3D: Roof Edge и Roof Mesh](../assets/images/ourplancore/v3/3d-side-panel.png){ width="320" }
+  <figcaption markdown="span">Под-таб `3D` рядом с Takeoffs: кнопки `Roof Base`, `Select Edge`, поле `Default`, блок `Roof Edge` с галкой `Defines Slope (eave)`, `Pitch`, `Overhang in` и `Save Edge(s)`, ниже список `Roof Mesh` с ползунками сдвига.</figcaption>
+</figure>
 
 !!! tip "Советы"
     - Ошибка `invalid edge pitch` значит неверный формат: только `6/12`, `4` или десятичная доля подъёма на фут.
@@ -77,7 +88,10 @@
 
 ## Как получить стропила и проверить длины { #rafters }
 
-<!-- DEMO: d-3d-rafters -->
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-3d-rafters.png"><source src="../../assets/images/ourplancore/demo/d-3d-rafters.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: шаг 24", сечение 2x8, `Whole Roof`; в статусе число стропил и погонаж.</figcaption>
+</figure>
 
 Зачем: прикинуть количество и длины стропил по граням, увидеть глубину сечения под скатом.
 Нужно: крыша сгенерирована (`Roof Base`, рёбра, `Generate Roof`), иначе статус `Rafters: generate the roof first`.
