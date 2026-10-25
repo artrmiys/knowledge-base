@@ -7,8 +7,8 @@ theme:
   name: material
   custom_dir: overrides
   language: ru
-  logo: assets/images/brand/icon-kb-128.png
-  favicon: assets/images/brand/icon-kb-128.png
+  logo: assets/images/brand/icon-kb-new-256.png
+  favicon: assets/images/brand/icon-kb-new-256.png
   features:
     - navigation.tabs
     - navigation.tabs.sticky
