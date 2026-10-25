@@ -94,6 +94,16 @@ nav:
           - Что нового: reference/ourplancore-changelog.md
           - Все функции программы: reference/ourplancore-all-functions.md
 
+  - OurPDF:
+      - Что такое OurPDF: ourpdf/index.md
+      - Окно программы: ourpdf/window.md
+      - Измерения: ourpdf/measure.md
+      - Комментарии и сохранение: ourpdf/comments-save.md
+      - Страницы, правка, слои: ourpdf/pages-edit.md
+      - Вид и настройки: ourpdf/view-settings.md
+      - Горячие клавиши: ourpdf/shortcuts.md
+      - Управление нейросетями: ourpdf/ai.md
+
   - Работа:
       - Типы работ:
           - Residential: work-types/residential.md
