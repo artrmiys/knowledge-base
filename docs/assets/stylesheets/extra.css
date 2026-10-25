@@ -1,7 +1,7 @@
 /* ==========================================================================
    Estimating Knowledge Base — OurCore Design Code v0.2 skin.
-   Закон: blue (#2f7fd6/#4ea1ff) = «выбрано/ссылка», sage = бренд (узко),
-   плотно, без неона. Токены — в tokens.css.
+   Pastel sage selection, lavender brand markers, calm light and dark surfaces.
+   Tokens live in tokens.css; layout and typography stay unchanged.
    ========================================================================== */
 
 :root {
@@ -9,14 +9,22 @@
   --kb-border:     var(--ds-line);
   --kb-accent-bar: var(--ds-sage);
 
-  /* Декоративные маркеры секций/карточек — строго в законе (blue/sage/warn) */
-  --kb-mk-cyan:    var(--ds-info);
-  --kb-mk-blue:    var(--ds-info);
-  --kb-mk-violet:  var(--ds-info);
-  --kb-mk-green:   var(--ds-sage);
-  --kb-mk-magenta: var(--ds-sage);
-  --kb-mk-amber:   var(--ds-warn);
-  --kb-mk-orange:  var(--ds-warn);
+  --kb-mk-cyan:    #5b8692;
+  --kb-mk-blue:    #597e9b;
+  --kb-mk-violet:  #786f9d;
+  --kb-mk-green:   #507c68;
+  --kb-mk-magenta: #9b6f85;
+  --kb-mk-amber:   #98723e;
+  --kb-mk-orange:  #a36e58;
+}
+[data-md-color-scheme="slate"] {
+  --kb-mk-cyan:    #b6d8dc;
+  --kb-mk-blue:    #bad1e9;
+  --kb-mk-violet:  #d0bee1;
+  --kb-mk-green:   #b2d9c4;
+  --kb-mk-magenta: #e2b6c7;
+  --kb-mk-amber:   #e9c994;
+  --kb-mk-orange:  #e5b8a3;
 }
 
 /* --- Шапка / табы: нейтральные, плоские, с тонкой границей --------------- */
@@ -44,16 +52,15 @@
 .md-search__form:hover { background: var(--ds-surface-2); }
 [data-md-toggle="search"]:checked ~ .md-header .md-search__form { background: var(--ds-bg); }
 
-/* --- Фон страницы: очень тонкий sage→white сверху (как в KB-макете) ------ */
+/* --- A shallow pastel wash at the top, without an overlay on content ----- */
 .md-main {
   background:
-    linear-gradient(180deg, rgba(31,158,56,0.06) 0%, transparent 320px),
+    linear-gradient(180deg, rgba(181,205,187,0.13) 0%, transparent 320px),
     var(--ds-bg);
 }
 [data-md-color-scheme="slate"] .md-main {
   background:
-    radial-gradient(1000px 520px at 16% -6%, rgba(42,210,75,0.10), transparent 60%),
-    radial-gradient(820px 460px at 90% 2%, rgba(42,210,75,0.06), transparent 58%),
+    linear-gradient(180deg, rgba(178,217,196,0.045) 0%, transparent 320px),
     var(--ds-bg);
 }
 
