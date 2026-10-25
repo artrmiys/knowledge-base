@@ -60,7 +60,7 @@
 }
 [data-md-color-scheme="slate"] .md-main {
   background:
-    linear-gradient(180deg, rgba(178,217,196,0.045) 0%, transparent 320px),
+    linear-gradient(180deg, rgba(173,212,220,0.045) 0%, transparent 320px),
     var(--ds-bg);
 }
 
