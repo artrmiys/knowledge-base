@@ -18,22 +18,22 @@
 
 :root {
   /* --- Акценты ----------------------------------------------------------- */
-  --ds-info:        #1f9e38;   /* GREEN = бренд/active/ссылка (на светлом) */
-  --ds-info-soft:   rgba(31,158,56,0.10);
-  --ds-info-line:   rgba(31,158,56,0.32);
+  --ds-info:        #396d8b;
+  --ds-info-soft:   rgba(88,145,174,0.12);
+  --ds-info-line:   rgba(88,145,174,0.34);
 
-  --ds-sage:        #2e7d32;   /* тёмно-зелёный brand-маркер (узко) */
-  --ds-sage-soft:   rgba(46,125,50,0.12);
-  --ds-sage-line:   rgba(46,125,50,0.35);
+  --ds-sage:        #4c7c64;
+  --ds-sage-soft:   rgba(117,166,137,0.14);
+  --ds-sage-line:   rgba(117,166,137,0.36);
 
   /* обратная совместимость со старыми именами (всё → новый закон) */
   --ds-blue:        var(--ds-info);
   --ds-blue-dark:   var(--ds-info);
-  --ds-blue-light:  #4ea1ff;
+  --ds-blue-light:  #8fbdd3;
   --ds-blue-soft:   var(--ds-info-soft);
   --ds-green:       var(--ds-sage);
   --ds-green-dark:  var(--ds-sage);
-  --ds-green-darker:#588a64;
+  --ds-green-darker:#365e4c;
   --ds-green-soft:  var(--ds-sage-soft);
   --ds-accent:      var(--ds-sage);
   --ds-accent-soft: var(--ds-sage-soft);
@@ -70,24 +70,24 @@
   --ds-font-mono: "JetBrains Mono", "Consolas", ui-monospace, monospace;
 
   /* --- Нейтральная рампа: СВЕТЛАЯ (KB-вариант) --------------------------- */
-  --ds-bg:        #ffffff;
-  --ds-surface:   #f7f8fa;
-  --ds-surface-2: #f1f4f8;
-  --ds-line:      #e6e9ee;
-  --ds-line-soft: #eef1f4;
+  --ds-bg:        #f9f8f3;
+  --ds-surface:   #fffefa;
+  --ds-surface-2: #edf2ed;
+  --ds-line:      #dce5dc;
+  --ds-line-soft: #e8eee7;
   --ds-text:      #1a2330;
   --ds-text-2:    #4a5666;
   --ds-text-3:    #7a8694;
   --ds-text-4:    #a8b1bd;
-  --ds-code-bg:   #f1f3f6;
+  --ds-code-bg:   #f1f4ee;
 
   /* ---- Material mapping (light) ---------------------------------------- */
   --md-text-font: "Inter";
   --md-code-font: "JetBrains Mono";
 
   --md-primary-fg-color:        var(--ds-info);
-  --md-primary-fg-color--light: #45c25f;
-  --md-primary-fg-color--dark:  #18802d;
+  --md-primary-fg-color--light: #6895ac;
+  --md-primary-fg-color--dark:  #315d78;
   --md-accent-fg-color:         var(--ds-info);
 
   --md-typeset-a-color:         var(--ds-info);
@@ -104,35 +104,35 @@
 [data-md-color-scheme="slate"],
 .theme-dark,
 [data-theme="dark"] {
-  --ds-info:        #2ad24b;   /* GREEN bright на тёмном */
-  --ds-info-soft:   rgba(42,210,75,0.16);
-  --ds-info-line:   rgba(42,210,75,0.34);
+  --ds-info:        #8fbdd3;
+  --ds-info-soft:   rgba(143,189,211,0.16);
+  --ds-info-line:   rgba(143,189,211,0.34);
 
-  --ds-sage:        #56e070;
-  --ds-sage-soft:   rgba(42,210,75,0.12);
-  --ds-sage-line:   rgba(42,210,75,0.32);
+  --ds-sage:        #9cc2ae;
+  --ds-sage-soft:   rgba(156,194,174,0.13);
+  --ds-sage-line:   rgba(156,194,174,0.32);
 
-  --ds-blue-light:  #4ea1ff;
+  --ds-blue-light:  #8fbdd3;
   --ds-green-darker:#7aa886;
 
   --ds-ok:   #4dcc8b;
   --ds-warn: #f0b34d;
   --ds-err:  #f06b5a;
 
-  --ds-bg:        #0a0f17;
-  --ds-surface:   #0f1724;
-  --ds-surface-2: #15212f;
-  --ds-line:      #1d2a3a;
-  --ds-line-soft: #182434;
+  --ds-bg:        #171917;
+  --ds-surface:   #202421;
+  --ds-surface-2: #2a302b;
+  --ds-line:      #3a4840;
+  --ds-line-soft: #303b34;
   --ds-text:      #e7ecf2;
   --ds-text-2:    #9faabb;
   --ds-text-3:    #6c7888;
   --ds-text-4:    #4a5564;
-  --ds-code-bg:   #121b27;
+  --ds-code-bg:   #252b27;
 
   --md-primary-fg-color:        var(--ds-info);
-  --md-primary-fg-color--light: #56e070;
-  --md-primary-fg-color--dark:  #1f9e38;
+  --md-primary-fg-color--light: #afd1df;
+  --md-primary-fg-color--dark:  #5d91ad;
   --md-accent-fg-color:         var(--ds-info);
 
   --md-typeset-a-color:         var(--ds-info);
