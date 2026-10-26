@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" role="img" aria-labelledby="t d">
+  <title id="t">Deck section: ledger, joist in hanger, beam on post, decking, railing</title>
+  <desc id="d">Section through a deck: house wall with bolted ledger and flashing, joist in a hanger, drop beam on a post with cap and base on a footing, rim joist, decking boards, railing post with cap. Callouts give the takeoff lines the deck SQFT drives.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    
+    <style>
+      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
+      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
+      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
+      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
+      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
+      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+    </style>
+  </defs>
+  <rect x="0.5" y="0.5" width="999" height="579" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<rect x="80" y="60" width="40" height="440" fill="url(#batt)" stroke="#caa64a" stroke-width="1" />
+<rect x="80" y="60" width="40" height="440" fill="none" stroke="#3a3f44" stroke-width="1.4" />
+<rect x="120" y="60" width="10" height="440" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.2" />
+<rect x="130" y="60" width="8" height="140" fill="#d7c3a6" stroke="#8a6a3f" stroke-width="1.2" />
+<rect x="130" y="310" width="8" height="190" fill="#d7c3a6" stroke="#8a6a3f" stroke-width="1.2" />
+<text class="side" x="84" y="530" >HOUSE</text>
+<rect x="138" y="210" width="14" height="90" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.6" />
+<line x1="126" y1="232" x2="156" y2="232" stroke="#4d5861" stroke-width="4"/><rect x="152" y="227" width="6" height="10" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/><line x1="126" y1="278" x2="156" y2="278" stroke="#4d5861" stroke-width="4"/><rect x="152" y="273" width="6" height="10" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/><path d="M134,196 V208 H154 V214" fill="none" stroke="#4d5861" stroke-width="2.5"/><rect x="152" y="210" width="568" height="90" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.5" />
+<path d="M152,214 V296 H176 V214" fill="none" stroke="#4d5861" stroke-width="3"/><rect x="600" y="300" width="30" height="86" fill="url(#endgrain)" stroke="#6c4b2a" stroke-width="1.6" />
+<line x1="615" y1="300" x2="615" y2="386" stroke="#6c4b2a" stroke-width="1.2"/><rect x="590" y="386" width="50" height="110" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.6" />
+<path d="M596,386 V372 H634 V386" fill="none" stroke="#4d5861" stroke-width="3"/><path d="M596,496 V480 H634 V496" fill="none" stroke="#4d5861" stroke-width="3"/><rect x="570" y="496" width="90" height="40" fill="url(#conc)" stroke="#6b7378" stroke-width="1.4" />
+<rect x="720" y="210" width="14" height="90" fill="url(#endgrain)" stroke="#6c4b2a" stroke-width="1.6" />
+<rect x="734" y="60" width="30" height="240" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.6" />
+<line x1="714" y1="240" x2="770" y2="240" stroke="#4d5861" stroke-width="4"/><line x1="714" y1="280" x2="770" y2="280" stroke="#4d5861" stroke-width="4"/><rect x="728" y="50" width="42" height="10" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.4" />
+<rect x="734" y="180" width="30" height="8" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.2" />
+<rect x="140" y="196" width="44" height="14" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2" />
+<rect x="190" y="196" width="44" height="14" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2" />
+<rect x="240" y="196" width="44" height="14" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2" />
+<rect x="290" y="196" width="44" height="14" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2" />
+<rect x="340" y="196" width="44" height="14" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2" />
+<rect x="390" y="196" width="44" height="14" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2" />
+<rect x="440" y="196" width="44" height="14" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2" />
+<rect x="490" y="196" width="44" height="14" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2" />
+<rect x="540" y="196" width="44" height="14" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2" />
+<rect x="590" y="196" width="44" height="14" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2" />
+<rect x="640" y="196" width="44" height="14" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2" />
+<rect x="690" y="196" width="44" height="14" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2" />
+<path d="M560,536 H700" stroke="#3a3f44" stroke-width="1.2" stroke-dasharray="6 4"/><text class="small" x="704" y="540" >grade</text>
+<circle class="numc" cx="145" cy="190" r="11"/><text class="numt" x="145" y="194.5">1</text>
+<circle class="numc" cx="165" cy="320" r="11"/><text class="numt" x="165" y="324.5">2</text>
+<circle class="numc" cx="400" cy="255" r="11"/><text class="numt" x="400" y="259.5">3</text>
+<circle class="numc" cx="400" cy="180" r="11"/><text class="numt" x="400" y="184.5">4</text>
+<circle class="numc" cx="615" cy="330" r="11"/><text class="numt" x="615" y="334.5">5</text>
+<circle class="numc" cx="615" cy="440" r="11"/><text class="numt" x="615" y="444.5">6</text>
+<circle class="numc" cx="727" cy="320" r="11"/><text class="numt" x="727" y="324.5">7</text>
+<circle class="numc" cx="749" cy="120" r="11"/><text class="numt" x="749" y="124.5">8</text>
+<circle class="numc" cx="104" cy="232" r="11"/><text class="numt" x="104" y="236.5">9</text>
+<circle class="numc" cx="793" cy="57" r="11"/><text class="numt" x="793" y="61.5">1</text>
+<text class="lab2" x="812" y="62" >Ledger + flashing</text>
+<text class="mono2" x="812" y="79" >Ledger | 2x10 P.T. | LFT</text>
+<circle class="numc" cx="793" cy="109" r="11"/><text class="numt" x="793" y="113.5">2</text>
+<text class="lab2" x="812" y="114" >Hanger у ledger</text>
+<text class="mono2" x="812" y="131" >Hangers | LUS28 | pcs</text>
+<circle class="numc" cx="793" cy="161" r="11"/><text class="numt" x="793" y="165.5">3</text>
+<text class="lab2" x="812" y="166" >Joists @ 16" o.c.</text>
+<text class="mono2" x="812" y="183" >Joists | 2x10 P.T. | LFT</text>
+<circle class="numc" cx="793" cy="213" r="11"/><text class="numt" x="793" y="217.5">4</text>
+<text class="lab2" x="812" y="218" >Decking</text>
+<text class="mono2" x="812" y="235" >Decking | SQ FT -&gt; pcs</text>
+<circle class="numc" cx="793" cy="265" r="11"/><text class="numt" x="793" y="269.5">5</text>
+<text class="lab2" x="812" y="270" >Beam (2) ply</text>
+<text class="mono2" x="812" y="287" >Beam | (2)2x10 P.T. | LFT</text>
+<circle class="numc" cx="793" cy="317" r="11"/><text class="numt" x="793" y="321.5">6</text>
+<text class="lab2" x="812" y="322" >Post + cap + base</text>
+<text class="mono2" x="812" y="339" >Posts | 6x6 P.T. | pcs</text>
+<circle class="numc" cx="793" cy="369" r="11"/><text class="numt" x="793" y="373.5">7</text>
+<text class="lab2" x="812" y="374" >Rim joist</text>
+<text class="mono2" x="812" y="391" >Rim | 2x10 P.T. | LFT</text>
+<circle class="numc" cx="793" cy="421" r="11"/><text class="numt" x="793" y="425.5">8</text>
+<text class="lab2" x="812" y="426" >Railing post + cap</text>
+<text class="mono2" x="812" y="443" >Railing | LFT (стр. Rails)</text>
+<circle class="numc" cx="793" cy="473" r="11"/><text class="numt" x="793" y="477.5">9</text>
+<text class="lab2" x="812" y="478" >Ledger bolts</text>
+<text class="mono2" x="812" y="495" >Titen HD | pcs</text>
+<text class="note" x="80" y="566" >Deck SQFT = площадь настила: тянет decking (area x 1.1), framing (страница Deck frame), railing, attachment.</text>
+</svg>

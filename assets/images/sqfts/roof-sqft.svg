@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" role="img" aria-labelledby="t d">
+  <title id="t">Roof SQFT: plan area times slope factor</title>
+  <desc id="d">Left: roof plan of a gable roof with ridge, eaves, rakes, slope arrows and pitch 6/12. Right: formula, slope factor table, triangle explaining the factor, flat roof layers inset.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    
+    <style>
+      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
+      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
+      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
+      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
+      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
+      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+    </style>
+  </defs>
+  <rect x="0.5" y="0.5" width="999" height="579" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="lab" x="70" y="50" >Roof plan (горизонтальная проекция)</text>
+<rect x="70" y="90" width="400" height="300" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.6" />
+<line x1="70" y1="240.0" x2="470" y2="240.0" stroke="#3a3f44" stroke-width="2.2"/><line x1="170" y1="220.0" x2="170" y2="130" stroke="#3a3f44" stroke-width="1.6" marker-end="url(#arrInk)"/><line x1="170" y1="260.0" x2="170" y2="350" stroke="#3a3f44" stroke-width="1.6" marker-end="url(#arrInk)"/><line x1="270" y1="220.0" x2="270" y2="130" stroke="#3a3f44" stroke-width="1.6" marker-end="url(#arrInk)"/><line x1="270" y1="260.0" x2="270" y2="350" stroke="#3a3f44" stroke-width="1.6" marker-end="url(#arrInk)"/><line x1="370" y1="220.0" x2="370" y2="130" stroke="#3a3f44" stroke-width="1.6" marker-end="url(#arrInk)"/><line x1="370" y1="260.0" x2="370" y2="350" stroke="#3a3f44" stroke-width="1.6" marker-end="url(#arrInk)"/><text class="lab2" x="300" y="230" >6/12</text>
+<text class="lab2" x="300" y="264" >6/12</text>
+<text class="small" x="78" y="234" >ridge</text>
+<line x1="70" y1="90" x2="470" y2="90" stroke="#1e88e5" stroke-width="5"/><line x1="70" y1="390" x2="470" y2="390" stroke="#1e88e5" stroke-width="5"/><line x1="70" y1="90" x2="70" y2="390" stroke="#e65100" stroke-width="5"/><line x1="470" y1="90" x2="470" y2="390" stroke="#e65100" stroke-width="5"/><text class="cap" x="70" y="78" fill="#1e88e5" font-weight="600">eave</text>
+<text class="cap" x="64" y="410" text-anchor="end" fill="#e65100" font-weight="600">rake</text>
+<line class="dim" x1="70" y1="430" x2="470" y2="430"/>
+<text class="dimt" x="270" y="444" text-anchor="middle" >L</text>
+<line class="dim" x1="496" y1="90" x2="496" y2="390"/>
+<text class="dimt" x="512" y="240" text-anchor="middle" >W</text>
+<text class="lab2" x="70" y="470" >В OurPlanCore: Area по контуру плана, позиция sqfts/rf 6</text>
+<text class="note" x="70" y="490" >rf 6 = уклон 6:12; гараж, porch, overframe отдельными контурами</text>
+<text class="lab2" x="70" y="520" >Flat roof: позиция flat, factor 1; та же площадь на каждый слой:</text>
+<text class="note" x="70" y="540" >sheathing, rigid XPS, cover board (Densdeck 1/4"), protection board</text>
+<text class="lab" x="560" y="50" >Roof SQFT = L x W (план) x slope factor</text>
+<text class="mono2" x="560" y="74" >factor = sqrt(1 + (rise / 12)^2), применить ровно один раз</text>
+<text class="small" x="560" y="92" >(Pitch в программе или в Excel, не дважды)</text>
+<text class="lab2" x="560" y="130" >Pitch</text>
+<text class="lab2" x="650" y="130" >Factor</text>
+<text class="mono2" x="560" y="154" >4/12</text>
+<text class="mono2" x="650" y="154" >1.054</text>
+<text class="mono2" x="560" y="178" >6/12</text>
+<text class="mono2" x="650" y="178" >1.118</text>
+<text class="mono2" x="560" y="202" >8/12</text>
+<text class="mono2" x="650" y="202" >1.202</text>
+<text class="mono2" x="560" y="226" >10/12</text>
+<text class="mono2" x="650" y="226" >1.302</text>
+<text class="mono2" x="560" y="250" >12/12</text>
+<text class="mono2" x="650" y="250" >1.414</text>
+<line x1="560" y1="136" x2="720" y2="136" stroke="#3a3f44" stroke-width="1"/><text class="note" x="560" y="288" >Пример: план 1000 SQ FT, rf 6:</text>
+<text class="mono" x="560" y="308" >1000 x 1.118 = 1118 SQ FT sheathing</text>
+<polygon points="790.0,215.0 940.0,215.0 940.0,140.0" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.6" stroke-linejoin="round" />
+<line x1="790" y1="215" x2="940" y2="140" stroke="#e65100" stroke-width="4"/><text class="dimt" x="865" y="235" text-anchor="middle" >run 12 (план)</text>
+<text class="dimt" x="948" y="182.5" >rise 6</text>
+<text class="dimt" x="796" y="156" >скат = 13.42</text>
+<text class="mono2" x="790" y="259" >13.42 / 12 = 1.118</text>
+<text class="lab2" x="720" y="370" >Flat roof слои</text>
+<rect x="720" y="380" width="120" height="16" fill="#f1f3f5" stroke="#c62828" stroke-width="1.2" />
+<text class="red" x="850" y="393" >membrane: by others</text>
+<rect x="720" y="398" width="120" height="16" fill="#eef0f2" stroke="#9aa4ad" stroke-width="1.2" />
+<text class="small" x="850" y="411" >cover board 1/4"</text>
+<rect x="720" y="416" width="120" height="16" fill="url(#rigid)" stroke="#b8862b" stroke-width="1.2" />
+<text class="small" x="850" y="429" >rigid XPS</text>
+<rect x="720" y="434" width="120" height="16" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.2" />
+<text class="small" x="850" y="447" >sheathing</text>
+<rect x="720" y="452" width="120" height="30" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2" />
+<text class="small" x="850" y="472" >joists / TJI (+ rim)</text>
+<text class="note" x="720" y="508" >каждый слой = та же SQ FT</text>
+</svg>

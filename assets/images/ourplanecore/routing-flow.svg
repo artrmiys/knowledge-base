@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-labelledby="t d">
+  <title id="t">Sheet dot plus item name decide where a new takeoff lands</title>
+  <desc id="d">Four inputs left to right: building root with a green dot, sheet dot W F S U with floor, tool, item name words that override the row; result path on the right. Below: rule order 1 to 5 and four examples.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    
+    <style>
+      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
+      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
+      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
+      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
+      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
+      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+    </style>
+  </defs>
+  <rect x="0.5" y="0.5" width="899" height="439" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="lab" x="20" y="34" >Точка листа + имя позиции = куда ляжет новый takeoff</text>
+<rect x="20" y="52" width="148" height="118" rx="8" fill="#dff2df" stroke="#2e7d32" stroke-width="1.8"/><text class="lab2" x="32" y="76" style="font-size:15px">1. Корпус</text>
+<text class="small" x="32" y="96" >папка с зелёной точкой,</text>
+<text class="small" x="32" y="112" >например D4;</text>
+<text class="small" x="32" y="128" >иначе корень Takeoffs</text>
+<rect x="184" y="52" width="148" height="118" rx="8" fill="#eceff2" stroke="#6b7378" stroke-width="1.8"/><text class="lab2" x="196" y="76" style="font-size:15px">2. Лист</text>
+<text class="small" x="196" y="96" >точка W / F / S / U,</text>
+<text class="small" x="196" y="112" >строка и этаж:</text>
+<text class="small" x="196" y="128" >s201 2nd, точка F 2</text>
+<rect x="348" y="52" width="148" height="118" rx="8" fill="#eceff2" stroke="#6b7378" stroke-width="1.8"/><text class="lab2" x="360" y="76" style="font-size:15px">3. Инструмент</text>
+<text class="small" x="360" y="96" >Line, Area, Count,</text>
+<text class="small" x="360" y="112" >Beam, Openings</text>
+<rect x="512" y="52" width="148" height="118" rx="8" fill="#eceff2" stroke="#6b7378" stroke-width="1.8"/><text class="lab2" x="524" y="76" style="font-size:15px">4. Имя позиции</text>
+<text class="small" x="524" y="96" >слова eve, rake, gable,</text>
+<text class="small" x="524" y="112" >prpt, trussheel</text>
+<text class="small" x="524" y="128" >перебивают строку</text>
+<text class="lab" x="172" y="117" text-anchor="middle" style="font-size:22px">+</text>
+<text class="lab" x="336" y="117" text-anchor="middle" style="font-size:22px">+</text>
+<text class="lab" x="500" y="117" text-anchor="middle" style="font-size:22px">+</text>
+<line x1="664" y1="111.0" x2="700" y2="111.0" stroke="#2e7d32" stroke-width="2.4" marker-end="url(#arr)"/><rect x="704" y="52" width="176" height="118" rx="8" fill="#dff2df" stroke="#2e7d32" stroke-width="2.6"/><text class="lab2" x="716" y="78" style="font-size:15px">Результат: путь</text>
+<text class="mono" x="716" y="104" style="font-size:15px;font-weight:700">D4/framing/</text>
+<text class="mono" x="716" y="124" style="font-size:15px;font-weight:700">2nd floor framing/</text>
+<text class="mono" x="716" y="144" style="font-size:15px;font-weight:700">beams</text>
+<text class="lab2" x="20" y="190" style="font-size:14px">Порядок правил: первое сработавшее выигрывает</text>
+<rect x="20" y="200" width="164" height="34" rx="6" fill="#fff" stroke="#6b7378" stroke-width="1.4"/><circle cx="36" cy="217" r="10" fill="#2e7d32"/><text x="36" y="221" text-anchor="middle" style="font:700 12px Inter, 'Segoe UI', Arial, sans-serif;fill:#fff">1</text><text class="small" x="52" y="221" >лист U</text>
+<line x1="184" y1="217" x2="191" y2="217" stroke="#6b7378" stroke-width="1.4"/><rect x="192" y="200" width="164" height="34" rx="6" fill="#fff" stroke="#6b7378" stroke-width="1.4"/><circle cx="208" cy="217" r="10" fill="#2e7d32"/><text x="208" y="221" text-anchor="middle" style="font:700 12px Inter, 'Segoe UI', Arial, sans-serif;fill:#fff">2</text><text class="small" x="224" y="214" style="font-size:11.5px">правило по имени /</text>
+<text class="small" x="224" y="227" style="font-size:11.5px">инструменту</text>
+<line x1="356" y1="217" x2="363" y2="217" stroke="#6b7378" stroke-width="1.4"/><rect x="364" y="200" width="164" height="34" rx="6" fill="#fff" stroke="#6b7378" stroke-width="1.4"/><circle cx="380" cy="217" r="10" fill="#2e7d32"/><text x="380" y="221" text-anchor="middle" style="font:700 12px Inter, 'Segoe UI', Arial, sans-serif;fill:#fff">3</text><text class="small" x="396" y="221" >точка W / F / S</text>
+<line x1="528" y1="217" x2="535" y2="217" stroke="#6b7378" stroke-width="1.4"/><rect x="536" y="200" width="164" height="34" rx="6" fill="#fff" stroke="#6b7378" stroke-width="1.4"/><circle cx="552" cy="217" r="10" fill="#2e7d32"/><text x="552" y="221" text-anchor="middle" style="font:700 12px Inter, 'Segoe UI', Arial, sans-serif;fill:#fff">4</text><text class="small" x="568" y="214" style="font-size:11.5px">лист без точки</text>
+<text class="small" x="568" y="227" style="font-size:11.5px">(старый классификатор)</text>
+<line x1="700" y1="217" x2="707" y2="217" stroke="#6b7378" stroke-width="1.4"/><rect x="708" y="200" width="164" height="34" rx="6" fill="#fff" stroke="#6b7378" stroke-width="1.4"/><circle cx="724" cy="217" r="10" fill="#2e7d32"/><text x="724" y="221" text-anchor="middle" style="font:700 12px Inter, 'Segoe UI', Arial, sans-serif;fill:#fff">5</text><text class="small" x="740" y="221" >выделенная папка</text>
+<text class="lab2" x="20" y="270" style="font-size:14px">Примеры</text>
+<text class="small" x="20" y="292" >лист + точка</text>
+<text class="small" x="190" y="292" >инструмент</text>
+<text class="small" x="290" y="292" >имя</text>
+<text class="small" x="430" y="292" >даёт</text>
+<text class="mono2" x="20" y="316" >a101 1st  W</text>
+<text class="mono2" x="190" y="316" >Line</text>
+<text class="mono2" x="290" y="316" >ext 2x6 9.09</text>
+<text class="mono" x="430" y="316" style="font-size:13.5px">walls/1st floor walls</text>
+<text class="mono2" x="20" y="340" >a101 1st  W</text>
+<text class="mono2" x="190" y="340" >Line</text>
+<text class="mono2" x="290" y="340" >eve 24 main</text>
+<text class="mono" x="430" y="340" style="font-size:13.5px">eves rakes/eves  (имя сильнее строки W)</text>
+<text class="mono2" x="20" y="364" >s201 2nd  F</text>
+<text class="mono2" x="190" y="364" >Beam</text>
+<text class="mono2" x="290" y="364" >FB1 8</text>
+<text class="mono" x="430" y="364" style="font-size:13.5px">framing/2nd floor framing/beams</text>
+<text class="mono2" x="20" y="388" >a3011 u   U</text>
+<text class="mono2" x="190" y="388" >любой</text>
+<text class="mono2" x="290" y="388" >любое имя</text>
+<text class="mono" x="430" y="388" style="font-size:13.5px">units  (U сильнее всего)</text>
+</svg>

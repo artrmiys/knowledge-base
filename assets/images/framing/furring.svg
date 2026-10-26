@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-labelledby="t d">
+  <title id="t">Two kinds of furring: Z metal furring on CMU and 1x4 P.T. furring under siding</title>
+  <desc id="d">Left: plan section of a CMU wall with rigid insulation held by Z metal furring and gypsum. Right: plan section of a stud wall with sheathing, WRB, 1x4 P.T. furring strips at 16 inch on center and siding.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    
+    <style>
+      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
+      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
+      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
+      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
+      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
+      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+    </style>
+  </defs>
+  <rect x="0.5" y="0.5" width="999" height="559" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="lab" x="60" y="50" >(a) CMU + Z metal furring</text>
+<text class="note" x="60" y="70" >план-сечение; слева бетонная сторона</text>
+<rect x="60" y="110" width="128" height="320" fill="url(#cmu)" stroke="#6b7378" stroke-width="1.6" />
+<rect x="188" y="110" width="24" height="320" fill="url(#rigid)" stroke="#b8862b" stroke-width="1.2" />
+<path d="M188,170 h-0 v0 M188,160 V170 H212 V182" fill="none" stroke="#4d5861" stroke-width="3.5"/><path d="M188,362 h-0 v0 M188,352 V362 H212 V374" fill="none" stroke="#4d5861" stroke-width="3.5"/><rect x="212" y="110" width="13" height="320" fill="#eef0f2" stroke="#9aa4ad" stroke-width="1.3" />
+<text class="side" x="60" y="452" >CMU / concrete</text>
+<text class="side" x="190" y="452" >INT</text>
+<line class="lead" x1="238" y1="150" x2="160" y2="155"/>
+<text class="lab" x="250" y="150" >CMU wall</text>
+<text class="red" x="250" y="169" >by others, не считаем</text>
+<line class="lead" x1="238" y1="230" x2="212" y2="174"/>
+<text class="lab" x="250" y="230" >Z furring (metal) @ 24" o.c.</text>
+<text class="mono" x="250" y="249" >Z Furring | LFT</text>
+<line class="lead" x1="238" y1="310" x2="200" y2="310"/>
+<text class="lab" x="250" y="310" >Rigid insulation 1-1/2"</text>
+<text class="mono" x="250" y="329" >Insulation at CMU | SQ FT</text>
+<line class="lead" x1="238" y1="390" x2="218" y2="390"/>
+<text class="lab" x="250" y="390" >Gypsum</text>
+<text class="red" x="250" y="409" >by others, не считаем</text>
+<text class="small" x="250" y="450" >Металл клиент может не хотеть видеть:</text>
+<text class="small" x="250" y="466" >проверь scope перед выводом Z furring.</text>
+<text class="lab" x="540" y="50" >(b) Furring под siding</text>
+<text class="note" x="540" y="70" >план-сечение; слева улица</text>
+<rect x="540" y="110" width="13" height="320" fill="#d7c3a6" stroke="#8a6a3f" stroke-width="1.3" />
+<rect x="553" y="150" width="13" height="56" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.3" />
+<rect x="553" y="310" width="13" height="56" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.3" />
+<rect x="566" y="110" width="4" height="320" fill="#d9f2d8" stroke="#2e7d32" stroke-width="1.2" />
+<rect x="570" y="110" width="13" height="320" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.3" />
+<rect x="583" y="110" width="88" height="320" fill="url(#batt)" stroke="#caa64a" stroke-width="1" />
+<rect x="583" y="166" width="88" height="24" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3" />
+<rect x="583" y="326" width="88" height="24" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3" />
+<rect x="671" y="110" width="13" height="320" fill="#eef0f2" stroke="#9aa4ad" stroke-width="1.3" />
+<text class="side" x="540" y="452" >EXT</text>
+<text class="side" x="660" y="452" >INT</text>
+<line class="lead" x1="708" y1="140" x2="548" y2="150"/>
+<text class="lab" x="720" y="140" >Siding</text>
+<text class="note" x="720" y="159" >страница Siding</text>
+<line class="lead" x1="708" y1="200" x2="561" y2="170"/>
+<text class="lab" x="720" y="200" >Furring 1x4 P.T. @ 16" o.c.</text>
+<text class="mono" x="720" y="219" >Furring | 1x4 P.T. | LFT</text>
+<text class="small" x="720" y="237" >или SQ FT стены, если сплошной</text>
+<line class="lead" x1="708" y1="280" x2="568" y2="280"/>
+<text class="lab" x="720" y="280" >WRB (Tyvek, Zip tape)</text>
+<text class="note" x="720" y="299" >отдельная строка, если scope просит</text>
+<line class="lead" x1="708" y1="340" x2="576" y2="340"/>
+<text class="lab" x="720" y="340" >Sheathing</text>
+<text class="note" x="720" y="359" >страница Wall Sheathing</text>
+<line class="lead" x1="708" y1="400" x2="623" y2="400"/>
+<text class="lab" x="720" y="400" >Studs 2x6 + batt</text>
+<text class="note" x="720" y="419" >стена; batt не считаем</text>
+<line class="lead" x1="708" y1="460" x2="677" y2="460"/>
+<text class="lab" x="720" y="460" >Gypsum</text>
+<text class="red" x="720" y="479" >by others, не считаем</text>
+<text class="note" x="60" y="516" >P.T. у фундамента и во влажных зонах, выше обычно не P.T.: это разные строки.</text>
+<text class="note" x="60" y="536" >Не добавляй 2x4 furring на CMU, если detail просит только insulation.</text>
+</svg>

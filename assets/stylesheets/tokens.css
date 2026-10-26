@@ -1,0 +1,141 @@
+/* ==========================================================================
+   OurCore Design Code v0.2 — shared tokens  ·  prefix: ds-*
+   --------------------------------------------------------------------------
+   Единый дизайн-код трёх инструментов (Knowledge Base, Pay, takeoff-app).
+
+   Pastel palette: sage for links and selection, lavender for small brand markers,
+   and muted peach/blue for section icons. Keep text contrast on both themes.
+     • Цифры — JetBrains Mono, tabular.
+     • Тёмная И светлая тема — обе первоклассные (dark-first по духу).
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* --- Акценты ----------------------------------------------------------- */
+  --ds-info:        #426d5e;
+  --ds-info-soft:   rgba(145,190,166,0.20);
+  --ds-info-line:   rgba(66,109,94,0.38);
+
+  --ds-sage:        #746f99;
+  --ds-sage-soft:   rgba(174,160,199,0.19);
+  --ds-sage-line:   rgba(116,111,153,0.38);
+
+  /* обратная совместимость со старыми именами (всё → новый закон) */
+  --ds-blue:        var(--ds-info);
+  --ds-blue-dark:   var(--ds-info);
+  --ds-blue-light:  #acc8da;
+  --ds-blue-soft:   var(--ds-info-soft);
+  --ds-green:       var(--ds-sage);
+  --ds-green-dark:  var(--ds-sage);
+  --ds-green-darker:#345849;
+  --ds-green-soft:  var(--ds-sage-soft);
+  --ds-accent:      var(--ds-sage);
+  --ds-accent-soft: var(--ds-sage-soft);
+  --ds-link:        var(--ds-info);
+  --ds-link-soft:   var(--ds-info-soft);
+
+  /* --- Статусы ----------------------------------------------------------- */
+  --ds-ok:      #3f7860;
+  --ds-warn:    #946d38;
+  --ds-err:     #a05a61;
+  --ds-success: var(--ds-ok);
+  --ds-warning: var(--ds-warn);
+  --ds-danger:  var(--ds-err);
+  --ds-info-status: var(--ds-info);
+
+  /* --- Маркеры takeoff (канвас takeoff-app) ------------------------------ */
+  --ds-mk-line:  #1a5ba8;
+  --ds-mk-area:  #6a4fb6;
+  --ds-mk-joist: #1b7a60;
+  --ds-mk-count: #b83276;
+
+  /* --- Форма ------------------------------------------------------------- */
+  --ds-radius:      10px;   /* карточки, панели, таблицы            */
+  --ds-radius-sm:   5px;    /* inline-код, kbd, чипы                */
+  --ds-radius-lg:   14px;
+  --ds-radius-pill: 999px;
+
+  --ds-shadow-sm: 0 1px 3px rgba(49,64,55,0.06);
+  --ds-shadow-md: 0 4px 14px rgba(49,64,55,0.09);
+  --ds-shadow-lg: 0 14px 40px rgba(49,64,55,0.16);
+
+  /* --- Типографика ------------------------------------------------------- */
+  --ds-font-text: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --ds-font-mono: "JetBrains Mono", "Consolas", ui-monospace, monospace;
+
+  /* --- Нейтральная рампа: СВЕТЛАЯ (KB-вариант) --------------------------- */
+  --ds-bg:        #f5f7f2;
+  --ds-surface:   #fffefa;
+  --ds-surface-2: #eaf0e9;
+  --ds-line:      #d9e3da;
+  --ds-line-soft: #e7ede6;
+  --ds-text:      #25332c;
+  --ds-text-2:    #506057;
+  --ds-text-3:    #66776d;
+  --ds-text-4:    #8e9c92;
+  --ds-code-bg:   #edf1e9;
+
+  /* ---- Material mapping (light) ---------------------------------------- */
+  --md-text-font: "Inter";
+  --md-code-font: "JetBrains Mono";
+
+  --md-primary-fg-color:        var(--ds-info);
+  --md-primary-fg-color--light: #80a995;
+  --md-primary-fg-color--dark:  #345849;
+  --md-accent-fg-color:         var(--ds-info);
+
+  --md-typeset-a-color:         var(--ds-info);
+  --md-default-bg-color:        var(--ds-bg);
+  --md-default-fg-color:        var(--ds-text);
+  --md-default-fg-color--light:    rgba(37,51,44,0.67);
+  --md-default-fg-color--lighter:  rgba(37,51,44,0.38);
+  --md-default-fg-color--lightest: rgba(37,51,44,0.11);
+  --md-code-bg-color:           var(--ds-code-bg);
+  --md-code-fg-color:           var(--ds-text);
+}
+
+/* --- Нейтральная рампа: ТЁМНАЯ (master) --------------------------------- */
+[data-md-color-scheme="slate"],
+.theme-dark,
+[data-theme="dark"] {
+  --ds-info:        #add4dc;
+  --ds-info-soft:   rgba(173,212,220,0.15);
+  --ds-info-line:   rgba(173,212,220,0.38);
+
+  --ds-sage:        #cbbde3;
+  --ds-sage-soft:   rgba(203,189,227,0.15);
+  --ds-sage-line:   rgba(203,189,227,0.38);
+
+  --ds-blue-light:  #add4dc;
+  --ds-green-darker:#91b7c3;
+
+  --ds-ok:   #aed9b8;
+  --ds-warn: #e9c994;
+  --ds-err:  #e4a5a8;
+
+  --ds-bg:        #1b2029;
+  --ds-surface:   #252c38;
+  --ds-surface-2: #303a48;
+  --ds-line:      #3e4a5b;
+  --ds-line-soft: #323d4b;
+  --ds-text:      #f0f2f5;
+  --ds-text-2:    #c2cbd6;
+  --ds-text-3:    #a8b5c4;
+  --ds-text-4:    #8494a5;
+  --ds-code-bg:   #2a3441;
+
+  --md-primary-fg-color:        var(--ds-info);
+  --md-primary-fg-color--light: #d5ebee;
+  --md-primary-fg-color--dark:  #8db9c5;
+  --md-accent-fg-color:         var(--ds-info);
+
+  --md-typeset-a-color:         var(--ds-info);
+  --md-default-bg-color:        var(--ds-bg);
+  --md-default-fg-color:        var(--ds-text);
+  --md-default-fg-color--light:    rgba(240,242,245,0.70);
+  --md-default-fg-color--lighter:  rgba(240,242,245,0.40);
+  --md-default-fg-color--lightest: rgba(240,242,245,0.13);
+  --md-code-bg-color:           var(--ds-code-bg);
+  --md-code-fg-color:           var(--ds-text);
+}

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-labelledby="t d">
+  <title id="t">Box sheathing: a narrow band over the floor band only, compared with truss heel</title>
+  <desc id="d">Left: section at the floor line with the lower wall, rim and joists, upper wall; the exterior sheathing is highlighted only over the floor band (box sheathing) while the panel sheathing above and below is greyed out. Right: roof condition with the truss heel strip above the top plate, a separate bucket.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    
+    <style>
+      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
+      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
+      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
+      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
+      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
+      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+    </style>
+  </defs>
+  <rect x="0.5" y="0.5" width="999" height="619" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="lab" x="60" y="50" >Floor band (сечение у перекрытия)</text>
+<rect x="300" y="70" width="56" height="120" fill="#f4e9d7" stroke="#8a6a3f" stroke-width="1.1" stroke-dasharray="4 3"/>
+<rect x="300" y="190" width="56" height="14" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.4" />
+<rect x="300" y="204" width="260" height="12" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.3" />
+<rect x="300" y="216" width="20" height="110" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.5" />
+<rect x="320" y="216" width="240" height="110" fill="#f2e6d3" stroke="#8a6a3f" stroke-width="1.1" stroke-dasharray="4 3"/>
+<rect x="300" y="326" width="56" height="14" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.4" />
+<rect x="300" y="340" width="56" height="14" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.4" />
+<rect x="300" y="354" width="56" height="150" fill="#f4e9d7" stroke="#8a6a3f" stroke-width="1.1" stroke-dasharray="4 3"/>
+<rect x="286" y="70" width="14" height="120" fill="url(#hatchGrey)" stroke="#9aa4ad" stroke-width="1.2" />
+<rect x="286" y="354" width="14" height="150" fill="url(#hatchGrey)" stroke="#9aa4ad" stroke-width="1.2" />
+<rect x="286" y="190" width="14" height="164" fill="url(#sheath)" stroke="#2e7d32" stroke-width="2.2" />
+<line class="dim" x1="260" y1="190" x2="260" y2="354"/>
+<text class="dimt" x="260" y="272" text-anchor="middle" ></text>
+<text class="lab2" x="252" y="266" text-anchor="end" >box</text>
+<text class="small" x="252" y="284" text-anchor="end" >height</text>
+<path d="M280,70 l8,-6 l8,6 l8,-6 l8,6 l8,-6 l8,6 l8,-6 l8,6 l8,-6 l8,6" fill="none" stroke="#3a3f44" stroke-width="1"/><path d="M280,504 l8,-6 l8,6 l8,-6 l8,6 l8,-6 l8,6 l8,-6 l8,6 l8,-6 l8,6" fill="none" stroke="#3a3f44" stroke-width="1"/><text class="side" x="240" y="530" >EXT</text>
+<text class="side" x="320" y="530" >INT</text>
+<line class="lead" x1="548" y1="110" x2="298" y2="110"/>
+<text class="lab2" x="560" y="106" >Wall panel / full-height sheathing</text>
+<text class="small" x="560" y="124" >в панели (by others) или Wall Sheathing</text>
+<line class="lead" x1="548" y1="200" x2="360" y2="197"/>
+<text class="note" x="560" y="196" >Btm plate верхней стены</text>
+<line class="lead" x1="548" y1="270" x2="298" y2="270"/>
+<text class="lab" x="560" y="266" >Box sheathing</text>
+<text class="mono" x="560" y="286" >Box Sheathing | 7/16 OSB | SQ FT</text>
+<text class="small" x="560" y="304" >= периметр LFT x высота box</text>
+<line class="lead" x1="548" y1="340" x2="360" y2="340"/>
+<text class="note" x="560" y="336" >Top plates нижней стены</text>
+<line class="lead" x1="548" y1="390" x2="480" y2="270"/>
+<text class="note" x="560" y="386" >Rim + joists (перекрытие)</text>
+<line class="lead" x1="548" y1="430" x2="298" y2="430"/>
+<text class="note" x="560" y="426" >Panel ниже: не наша полоса</text>
+<text class="note" x="60" y="580" >Box = только полоса между панелями (floor band, parapet, loose wall).</text>
+<text class="note" x="60" y="600" >Ищи в sections и details, на плане её нет.</text>
+<text class="lab2" x="640" y="470" >Для контраста: truss heel</text>
+<rect x="880" y="468" width="56" height="100" fill="#f4e9d7" stroke="#8a6a3f" stroke-width="1.1" stroke-dasharray="4 3"/>
+<rect x="880" y="454" width="56" height="14" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3" />
+<rect x="880" y="440" width="56" height="14" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3" />
+<rect x="850" y="426" width="120" height="14" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3" />
+<rect x="880" y="380" width="14" height="46" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3" />
+<polygon points="850.0,396.0 970.0,336.0 970.0,322.0 850.0,382.0" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3" stroke-linejoin="round" />
+<polygon points="850.0,382.0 970.0,322.0 970.0,315.0 850.0,375.0" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.2" stroke-linejoin="round" />
+<rect x="866" y="468" width="14" height="100" fill="url(#hatchGrey)" stroke="#9aa4ad" stroke-width="1.2" />
+<rect x="866" y="386" width="14" height="54" fill="#00897b" stroke="#00897b" stroke-width="1.5" fill-opacity="0.7"/>
+<line class="lead" x1="828" y1="506" x2="864" y2="412"/>
+<text class="note" x="640" y="500" >Truss heel: полоса от top plate</text>
+<text class="note" x="640" y="518" >до низа кровли, своя страница</text>
+<text class="mono2" x="640" y="536" >trussheel 1.25 | LFT</text>
+</svg>
