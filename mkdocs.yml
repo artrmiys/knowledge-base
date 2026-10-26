@@ -96,6 +96,7 @@ nav:
 
   - OurPDF:
       - Что такое OurPDF: ourpdf/index.md
+      - Как мерить по шагам: ourpdf/how-to-measure.md
       - Окно программы: ourpdf/window.md
       - Измерения: ourpdf/measure.md
       - Комментарии и сохранение: ourpdf/comments-save.md
