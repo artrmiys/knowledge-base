@@ -5,8 +5,8 @@ hide:
 ---
 
 <div class="kb-hero" markdown>
-<p class="kb-hero__eyebrow">База знаний эстиматора E-Wood</p>
-<h1 class="kb-hero__title">Как мерить каркас в OurPlanCore 3.0 и заполнять DFL</h1>
+<h1 class="kb-hero__title">База знаний эстиматора</h1>
+<p class="kb-hero__lede">Как мерить, Что мерить и как заполнять DFL</p>
 <p class="kb-hero__lede">
 Процесс работы, дерево takeoff, правила по каждому элементу каркаса, Excel DFL и ноты,
 правила клиентов и частые ошибки. Поиск Ctrl+K ищет по английскому термину: "rim", "truss heel", "holdown".
