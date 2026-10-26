@@ -16,6 +16,7 @@ hide:
 [Мне надо померить ...](#measure){ .kb-hero__btn .kb-hero__btn--ghost }
 [OurPlanCore 3.0](reference/ourplanecore.md){ .kb-hero__btn .kb-hero__btn--ghost }
 [Частые ошибки](start/common-mistakes.md){ .kb-hero__btn .kb-hero__btn--ghost }
+[OurPDF](ourpdf/index.md){ .kb-hero__btn .kb-hero__btn--ghost }
 </div>
 </div>
 
