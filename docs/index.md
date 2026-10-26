@@ -19,7 +19,7 @@ hide:
 </div>
 </div>
 
-## Четыре входа { .kb-section-title .kb-st--cyan }
+## Пять входов { .kb-section-title .kb-st--cyan }
 
 <div class="grid cards" markdown>
 
@@ -54,6 +54,17 @@ hide:
     - [Горячие клавиши](reference/ourplancore-shortcuts.md)
     - [Имена takeoffs и точки листа](reference/takeoff-naming.md)
     - [Если что-то не работает](reference/ourplancore-troubleshooting.md)
+
+-   :material-file-pdf-box:{ .lg .middle .kb-mk--orange } **Программа OurPDF**
+
+    ---
+
+    Просмотр и разметка PDF-чертежей, замеры как в OurPlanCore:
+
+    - [Что такое OurPDF](ourpdf/index.md)
+    - [Как мерить по шагам](ourpdf/how-to-measure.md)
+    - [Измерения: все инструменты](ourpdf/measure.md)
+    - [Горячие клавиши](ourpdf/shortcuts.md)
 
 -   :material-account-tie:{ .lg .middle .kb-mk--magenta } **Правила клиентов и советы**
 
