@@ -7113,11 +7113,11 @@
 </tr>
 </tbody>
 </table>
-<p>Этажи: <code>B</code> (basement), <code>1</code>-<code>5</code>, <code>L</code> (loft), <code>R</code> (roof); папки <code>basement foor walls</code>, <code>loft walls</code>, <code>roof framing</code> и так далее задаются в настройках. Count на F-листе ложится в корень этажа <code>framing/2nd floor framing</code>: посты и headers потом переносятся в <code>posts</code> и <code>headers/ext|int</code> руками или именем папки при создании. Недостающие папки создаются при подтверждении в диалоге.</p>
+<p>Этажи: <code>B</code> (basement), <code>1</code>-<code>5</code>, <code>L</code> (loft), <code>R</code> (roof); папки <code>basement foor walls</code>, <code>loft walls</code>, <code>roof framing</code> и так далее задаются в настройках. Count на F-листе обычно ложится в корень этажа <code>framing/2nd floor framing</code>. Если имя Count/Points оканчивается на пробел и <code>Post</code>, позиция идёт в <code>framing/2nd floor framing/posts</code>. Имя с окончанием <code>Stair</code> на F-листе идёт в <code>framing/2nd floor framing/stairs</code> любым инструментом. Регистр букв не важен; посты или лестницы на другом этаже идут в соответствующую папку своего этажа. Недостающие папки создаются при подтверждении в диалоге.</p>
 <p>Как точки ставятся и снимаются: <a href="../ourplancore-pages/#dots">Листы, точки W/F/S/U</a>. Коротко: <code>a</code> плюс этаж даёт W, <code>s</code> плюс этаж даёт F, последний тег <code>u</code> даёт U; руками - щелчок по точке; весь проект - <code>Settings &gt; Sheet Takeoff Routing &gt; Route sheets without a dot now</code>.</p>
 <p>При вставке <code>New takeoffs</code> копия ложится в ту же папку, что исходник, но в корпусе назначения; на листе с другой точкой того же ряда меняется только этаж (<a href="../ourplancore-takeoffs/#copy">копирование</a>).</p>
 <h2 id="name-rules">Правила по имени и инструменту<a class="headerlink" href="#name-rules" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Правила стоят выше точки листа (кроме листа U): <code>eve 24 main</code> на W-листе всё равно уйдёт в <code>eves rakes/eves</code>. Сравнение по подстроке без учёта регистра, первое совпадение сверху выигрывает.</p>
+<p>Правила стоят выше точки листа (кроме листа U): <code>eve 24 main</code> на W-листе всё равно уйдёт в <code>eves rakes/eves</code>. Обычные правила ищут подстроку без учёта регистра; <code>Post</code> и <code>Stair</code> требуют слова в конце имени и F-листа. Первое совпадение сверху выигрывает.</p>
 <table>
 <thead>
 <tr>
@@ -7153,6 +7153,14 @@
 <tr>
 <td><code>trussheel</code></td>
 <td><code>trussheel</code></td>
+</tr>
+<tr>
+<td>Count/Points с <code>Post</code> в конце на F-листе</td>
+<td><code>framing/&lt;этаж&gt; framing/posts</code></td>
+</tr>
+<tr>
+<td><code>Stair</code> в конце на F-листе, любой инструмент</td>
+<td><code>framing/&lt;этаж&gt; framing/stairs</code></td>
 </tr>
 </tbody>
 </table>
@@ -7208,7 +7216,7 @@
 <h2 id="colors">Цвета<a class="headerlink" href="#colors" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Имя ровно <code>bft</code> всегда светло-серое: при создании, переименовании, случайных цветах и копировании (<code>Settings &gt; Takeoff Colors</code>, <code>Exact name</code>, <code>Fixed color</code>). Остальные позиции получают случайный цвет без серого, чёрного и белого; <code>Split</code> даёт новой части новый цвет.</p>
 <h2 id="legend-order">Порядок легенды листа<a class="headerlink" href="#legend-order" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Легенда листа строится автоматически: линии, потом площади, потом точки. <code>Pages &gt; лист &gt; Organize</code>: <code>Sort Sheet Legend Auto</code>, <code>A-Z</code>, <code>by Key (before space)</code> (по части имени до первого пробела, числа по значению: <code>A1 2x4, A1 2x6, A2 2x4, A10 2x4, B1 2x4</code>), <code>Reset Sheet Legend Order</code>. То же для нескольких листов, для папки (<code>... in Folder</code>) и в меню позиции под листом. Группы легенды: <a href="../ourplancore-sheets-advanced/">Листы: продвинутое</a>.</p>
+<p>Легенда листа по умолчанию делится на блоки по папкам Takeoffs, в порядке из <code>Settings &gt; Sheet Legend</code>. Например, <code>walls</code> идёт в <code>Walls</code>, <code>framing/&lt;этаж&gt;/posts</code> в <code>Posts</code>, <code>sqfts</code> в <code>SQFTs</code>. <code>Pages &gt; лист &gt; Organize</code>: <code>Sort Sheet Legend Auto</code>, <code>A-Z</code>, <code>by Key (before space)</code> (по части имени до первого пробела, числа по значению: <code>A1 2x4, A1 2x6, A2 2x4, A10 2x4, B1 2x4</code>), <code>Reset Sheet Legend Order</code>. Отключить автоматические блоки только на одном листе и оставить ручные группы можно кнопкой рядом с замком кропов: <a href="../ourplancore-sheets-advanced/#legend">Листы: легенда</a>.</p>
 <h2 id="_2">См. также<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li><a href="../../start/takeoff-structure/">Дерево takeoff и имена листов</a>: канон папок, форматы и единицы в имени</li>

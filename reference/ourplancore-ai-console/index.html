@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#claude-codex" class="md-skip">
+        <a href="#claude-codex-deepseek" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -7106,8 +7106,8 @@
 
 
 
-<h1 id="claude-codex">Консоль ИИ: терминалы Claude и Codex<a class="headerlink" href="#claude-codex" title="Прямая ссылка на раздел">&para;</a></h1>
-<p>Здесь: панель <code>&gt;_</code> с терминалами Claude и Codex внутри окна программы, что они знают о проекте (строка <code>ctx</code>, файл контекста), как отправить ассистенту кроп листа, как он правит открытый проект через Agent Bridge и как продолжить беседу на втором компьютере. Нужно, когда хочется спросить у ассистента про текущий лист, получить ноты из таблицы schedule или поручить ему рутину в дереве, не выходя из программы. Остальные места с ИИ (AI Crop Notes, AI Manager, чтение штампов, настройки Agent Bridge) - <a href="../ourplancore-ai/">ИИ в программе</a>.</p>
+<h1 id="claude-codex-deepseek">Консоль ИИ: терминалы Claude, Codex и DeepSeek<a class="headerlink" href="#claude-codex-deepseek" title="Прямая ссылка на раздел">&para;</a></h1>
+<p>Здесь: панель <code>&gt;_</code> с терминалами Claude, Codex и DeepSeek внутри окна программы, что они знают о проекте (строка <code>ctx</code>, файл контекста), как отправить ассистенту кроп листа, как он правит открытый проект через Agent Bridge и как продолжить беседу на втором компьютере. Нужно, когда хочется спросить у ассистента про текущий лист, получить ноты из таблицы schedule или поручить ему рутину в дереве, не выходя из программы. Остальные места с ИИ (AI Crop Notes, AI Manager, чтение штампов, настройки Agent Bridge) - <a href="../ourplancore-ai/">ИИ в программе</a>.</p>
 <figure>
 <video class="kb-demo" loop="loop" muted="muted" playsinline="playsinline" poster="../../assets/images/ourplancore/demo/d-terminal.png" preload="none"><source src="../../assets/images/ourplancore/demo/d-terminal.mp4" type="video/mp4"></video>
 <figcaption>Демонстрация: кнопка <code>&gt;_</code> открывает консоль: выбор Codex или Claude, уровень <code>Quick / Balanced / Deep</code>, строка контекста с проектом и листом.</figcaption>
@@ -7128,8 +7128,8 @@
 <p>Зачем: Claude или Codex рядом с чертежом, с живым контекстом проекта.
 Нужно: Git Bash и CLI ассистента установлены (<a href="#setup">выше</a>).</p>
 <ol>
-<li>Нажмите <code>&gt;_</code> на правой командной полосе (<code>Show / hide Codex and Claude terminals</code>, команда палитры <code>Codex / Claude Terminal</code>): панель открылась справа от листа.</li>
-<li>Выберите профиль <strong>Claude</strong> или <strong>Codex</strong>.</li>
+<li>Нажмите <code>&gt;_</code> на правой командной полосе (команда палитры <code>Codex / Claude / DeepSeek Terminal</code>): панель открылась справа от листа.</li>
+<li>Выберите профиль <strong>Claude</strong>, <strong>Codex</strong> или <strong>DeepSeek</strong>. DeepSeek запускается через локальный Codex CLI; отправленные запросы оплачиваются по API.</li>
 <li>Выберите усилие в списке: <strong>Quick</strong> для вопросов по листу, <strong>Deep</strong> для разбора.</li>
 <li>Нажмите <strong>Run</strong> и дождитесь статуса <code>Connected - context sent at startup</code>; ассистент коротко подтверждает проект и лист.</li>
 <li>Напишите задачу в терминале.</li>
@@ -7146,8 +7146,8 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Codex</code> / <code>Claude</code></td>
-<td>профиль: у каждого свой терминал, оба живут одновременно, переключение не рвёт сессии</td>
+<td><code>Codex</code> / <code>Claude</code> / <code>DeepSeek</code></td>
+<td>профиль: у каждого свой терминал, переключение не рвёт сессии</td>
 </tr>
 <tr>
 <td><code>Run</code></td>
@@ -7239,7 +7239,7 @@
 <li>Написать ассистенту в терминале, что с кропом делать: "выпиши ноты из этой таблицы", "какая марка header над проёмом 3". Он открывает PNG по пути из контекста.</li>
 </ol>
 <p>Результат: статус <code>AI crop saved - available in context and AI Inbox</code>, запись выбрана в Inbox, строка <code>ctx</code> показывает <code>Crop</code> на единицу больше.</p>
-<p>Так же в контекст попадает выбранная закладка (<code>B</code>, <code>K</code>, вкладка Bookmarks) и выбранная запись AI Inbox: достаточно выделить её перед вопросом. Пункт <code>Use in Codex / Claude terminal</code> в меню записи AI Inbox делает это одним щелчком: открывает панель <code>&gt;_</code> и сразу обновляет контекст с этой записью. В уже идущую беседу её нужно передать кнопкой <code>Paste context</code>, новая сессия получит её при <code>Run</code>.</p>
+<p>Так же в контекст попадает выбранная закладка (<code>B</code>, <code>K</code>, вкладка Bookmarks) и выбранная запись AI Inbox: достаточно выделить её перед вопросом. Пункт <code>Use in Codex / Claude / DeepSeek terminal</code> в меню записи AI Inbox делает это одним щелчком: открывает панель <code>&gt;_</code> и сразу обновляет контекст с этой записью. В уже идущую беседу её нужно передать кнопкой <code>Paste context</code>, новая сессия получит её при <code>Run</code>.</p>
 <h2 id="bridge">Правки проекта через Agent Bridge<a class="headerlink" href="#bridge" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Ассистент не трогает файлы проекта. В блоке <code>bridge</code> контекста лежит сессия открытого проекта и путь к клиенту <code>agent_bridge.py</code> (папка <code>Tools\AgentBridge</code> рядом с EXE). Порядок на его стороне: <code>inspect</code> (снимок дерева и ревизия), <code>apply</code> с этой ревизией (создать, переименовать, перенести, скопировать, удалить папки и позиции, добавить замеры), <code>save</code>, при ошибке <code>undo</code>. Изменения появляются в дереве и на листе сразу, удалённое уходит в <code>AI_Context/agent-trash</code>.</p>
 <p>Что проверить эстиматору после работы ассистента: дерево (имена по канону, папка, тип замера), <code>Total</code> у новых позиций, <code>Ctrl+S</code>. Мост выключен или проект read-only - ассистент ответит, что правок сделать не может; включить <code>Settings &gt; Agent Bridge</code>. Ограничения моста (масштаб страницы не ставит, команды палитры только запускает, один агент на сессию): <a href="../ourplancore-ai/#bridge">Agent Bridge</a>.</p>

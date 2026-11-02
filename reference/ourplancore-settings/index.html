@@ -1558,10 +1558,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sheet-takeoff-routing-takeoff-name-routing-takeoff-colors" class="md-nav__link">
+  <a href="#sheet-takeoff-routing-takeoff-name-routing-sheet-legend-takeoff-colors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sheet Takeoff Routing, Takeoff Name Routing, Takeoff Colors
+        Sheet Takeoff Routing, Takeoff Name Routing, Sheet Legend, Takeoff Colors
       
     </span>
   </a>
@@ -7119,10 +7119,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sheet-takeoff-routing-takeoff-name-routing-takeoff-colors" class="md-nav__link">
+  <a href="#sheet-takeoff-routing-takeoff-name-routing-sheet-legend-takeoff-colors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sheet Takeoff Routing, Takeoff Name Routing, Takeoff Colors
+        Sheet Takeoff Routing, Takeoff Name Routing, Sheet Legend, Takeoff Colors
       
     </span>
   </a>
@@ -7376,6 +7376,12 @@
 <td><a href="../ourplancore-routing/#name-routing">Маршрутизация</a></td>
 </tr>
 <tr>
+<td>Sheet Legend</td>
+<td>названия и порядок автоматических блоков по папкам Takeoffs</td>
+<td>изменить порядок Walls, Posts, Beams, Details, SQFTs</td>
+<td><a href="../ourplancore-sheets-advanced/#legend">Легенда листа</a></td>
+</tr>
+<tr>
 <td>Takeoff Colors</td>
 <td>фиксированный цвет для точного имени (<code>bft</code>)</td>
 <td>нужен ещё один фиксированный цвет</td>
@@ -7416,6 +7422,12 @@
 <td>размер проекта, <code>Preview safe compact</code>, <code>Compact snap.json</code></td>
 <td>проект раздулся</td>
 <td><a href="../job-creation-storage/">Проекты и сохранение</a></td>
+</tr>
+<tr>
+<td>Autosave Recovery</td>
+<td>интервалы повторов после ошибки автосохранения</td>
+<td>нужно изменить ожидание следующей попытки</td>
+<td><a href="../job-creation-storage/#autosave">Автосохранение</a></td>
 </tr>
 <tr>
 <td>Agent Bridge</td>
@@ -7466,8 +7478,8 @@
 <figcaption>Размер по умолчанию и таблица пресетов бумаги.</figcaption>
 </figure>
 <p>Размер по умолчанию (36 x 24 in) и таблица пресетов <code>Name</code>, <code>Width (in)</code>, <code>Height (in)</code>. Порядок: проектная копия, потом глобальная, потом 36 x 24. Пресеты видны в диалоге Blank Sheet и в Crop to Sheet.</p>
-<h3 id="sheet-takeoff-routing-takeoff-name-routing-takeoff-colors">Sheet Takeoff Routing, Takeoff Name Routing, Takeoff Colors<a class="headerlink" href="#sheet-takeoff-routing-takeoff-name-routing-takeoff-colors" title="Прямая ссылка на раздел">&para;</a></h3>
-<p>Три категории одной темы: куда и каким цветом ложится новый takeoff. Полностью разобраны на странице <a href="../ourplancore-routing/">Маршрутизация takeoff</a>.</p>
+<h3 id="sheet-takeoff-routing-takeoff-name-routing-sheet-legend-takeoff-colors">Sheet Takeoff Routing, Takeoff Name Routing, Sheet Legend, Takeoff Colors<a class="headerlink" href="#sheet-takeoff-routing-takeoff-name-routing-sheet-legend-takeoff-colors" title="Прямая ссылка на раздел">&para;</a></h3>
+<p>Первые две категории задают папку новой позиции; Takeoff Colors - её цвет. Подробно: <a href="../ourplancore-routing/">Маршрутизация takeoff</a>. Sheet Legend задаёт автоматические блоки по текущим папкам Takeoffs и их порядок на листе. Есть Apply, Reset, глобальная настройка и вариант только для проекта. На отдельном листе автоматические блоки можно выключить кнопкой у легенды, сохранив возможность ручных групп: <a href="../ourplancore-sheets-advanced/#legend">Легенда листа</a>.</p>
 <h3 id="ai-crop-notes">AI Crop Notes<a class="headerlink" href="#ai-crop-notes" title="Прямая ссылка на раздел">&para;</a></h3>
 <p>Форматирует ответ AI на кроп таблицы schedule в строки <code>HP1  (2) 2x8</code>. Поля <code>Tag/size separator</code>, предпросмотр (<code>paste the recognized text on the left</code>), галка оригинальных таблиц. Исходный ответ остаётся в AI Inbox.</p>
 <h3 id="sort-as-sort-dsecwt">Sort A/S и Sort D/Sec/WT<a class="headerlink" href="#sort-as-sort-dsecwt" title="Прямая ссылка на раздел">&para;</a></h3>

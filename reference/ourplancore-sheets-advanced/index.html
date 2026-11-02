@@ -7309,11 +7309,11 @@
 <ol>
 <li>Откройте лист с деталями и нажмите <strong>Page &gt; IMAGE &gt; Crop to Sheet</strong>.</li>
 <li>Выберите в диалоге цель: <strong>Existing sheet</strong> (в списке пустые листы и листы, где уже есть кропы) или <strong>New blank sheet</strong> с именем и размером из пресетов Blank Sheet. Галка <strong>Open the target sheet after each crop</strong> открывает цель после каждого кропа. Нажмите <strong>Start Cropping</strong>.</li>
-<li>Щёлкните два противоположных угла вокруг детали (Snap и PDF snap работают). Кусок копируется на цель в 100 % масштабе и ставится справа от предыдущего, потом следующим рядом. Строка состояния: <code>Crop to Sheet &gt; &lt;цель&gt;: click two opposite corners of each detail. Esc stops.</code></li>
+<li>Щёлкните два противоположных угла вокруг детали (Snap и PDF snap работают). Кусок копируется на цель в 100 % масштабе. Первый кроп ставится сверху слева с отступом, следующие идут вправо с зазором; у правого края новый ряд начинается ниже. Уже занятые места пропускаются. Строка состояния: <code>Crop to Sheet &gt; &lt;цель&gt;: click two opposite corners of each detail. Esc stops.</code></li>
 <li>Переключайтесь на другие листы-источники и продолжайте: цель остаётся той же, пока не запустить инструмент заново.</li>
 <li>Нажмите <span class="keys"><kbd class="key-escape">Esc</kbd></span>, чтобы сбросить недорисованный бокс, второй <span class="keys"><kbd class="key-escape">Esc</kbd></span> выходит в Select.</li>
 </ol>
-<p>Результат: на листе-цели кропы в ряд, каждый со ссылкой на лист-источник. Незамасштабированная цель берёт масштаб первого источника; кроп с другим масштабом источника отмечается в строке состояния.</p>
+<p>Результат: кропы идут по листу слева направо, затем ниже, без перекрытия друг друга. Отступ от края по умолчанию 36 pt, зазор 18 pt. Если свободного места для целого кропа нет, он не добавляется: статус предлагает лист большего размера или новый лист. Каждый кроп хранит ссылку на лист-источник. Незамасштабированная цель берёт масштаб первого источника; кроп с другим масштабом источника отмечается в строке состояния.</p>
 <h3 id="_1">На целевом листе<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h3>
 <figure>
 <p><img alt="Кропы на листе Details" src="../../assets/images/ourplancore/v3/sheet-crops.png" />
@@ -7623,9 +7623,10 @@
 <figure>
 <p><img alt="Легенда листа с группами" src="../../assets/images/ourplancore/v3/sheet-legend.png" />
   </p>
-<figcaption>Главная легенда у якоря и отдельные озаглавленные блоки групп.</figcaption>
+<figcaption>Пример ручных групп в легенде; автоматические блоки берут названия из правил для папок Takeoffs.</figcaption>
 </figure>
 <p>Легенда - список takeoff, измеренных на листе; в Pages это узлы под листом. Где её настраивать:</p>
+<p>По умолчанию позиции на каждом листе автоматически собраны в блоки по папкам Takeoffs: <code>walls</code> попадает в <code>Walls</code>, <code>openings</code> в <code>Openings</code>, <code>sqfts</code> в <code>SQFTs</code>; у framing отдельные блоки <code>Posts</code>, <code>Beams</code>, <code>Details</code>, <code>Stairs</code>. Порядок блоков задаётся в <strong>Settings &gt; Sheet Legend</strong>: на framing сначала <code>Posts</code>, потом <code>Beams</code>, <code>Details</code> и остальные; <code>SQFTs</code> идёт после других измерений. Позиция без подходящего правила попадает в <code>Other</code>. При переносе позиции в другую папку меняется и её автоматический блок.</p>
 <table>
 <thead>
 <tr>
@@ -7637,6 +7638,10 @@
 <tr>
 <td>Показ, размер, положение</td>
 <td>лента Display, группа Legend: <code>Show</code>, <code>Size</code>, <code>Pos</code>, <code>w/page</code></td>
+</tr>
+<tr>
+<td>Автоматические блоки этого листа</td>
+<td>круглая кнопка с тремя линиями рядом с замком кропов под Scale или ПКМ по листу: <code>Disable Automatic Legend Blocks on This Sheet</code> / <code>Enable Automatic Legend Blocks on This Sheet</code></td>
 </tr>
 <tr>
 <td>Порядок</td>
@@ -7660,9 +7665,10 @@
 </tr>
 </tbody>
 </table>
-<p><code>Auto</code> - живой порядок: сначала Line (стены: corners, ext по высоте, коридоры и дальше), потом Area, потом Count; новая позиция сама встаёт на своё место. <code>A-Z</code>, <code>by Key</code> и ручные <code>Move Up in Legend</code> / <code>Move Down in Legend</code> записывают свой порядок листа; <code>Sort Sheet Legend Auto</code> и <code>Reset Sheet Legend Order</code> его снимают и возвращают живой.</p>
+<p>Автоматические блоки включены для листа по умолчанию. Кнопка выключает их только на этом листе: позиции снова идут одной общей легендой, как раньше. После этого можно создать ручные группы через <code>Legend Group &gt; New Group...</code> или оставить одну общую легенду. Ручные группы сохраняются при переключении режима.</p>
+<p><code>Auto</code> - живой порядок по настроенным блокам; внутри блока действует прежняя сортировка позиций. Когда автоматические блоки выключены, прежний порядок идёт по типам: Line, затем Area, затем Count. <code>A-Z</code>, <code>by Key</code> и ручные <code>Move Up in Legend</code> / <code>Move Down in Legend</code> записывают свой порядок листа; <code>Sort Sheet Legend Auto</code> и <code>Reset Sheet Legend Order</code> его снимают и возвращают живой.</p>
 <p><code>Sort Sheet Legend by Key (before space)</code> сортирует по части имени до первого пробела, числа по значению: <code>A1 2x4, A1 2x6, A2 2x4, A10 2x4, B1 2x4, B1A 2x4</code>. Удобно для units и марок.</p>
-<p>Группы хранятся в <code>source.json</code> листа (<code>legend_groups</code>), не откатываются Undo, одинаково показываются на экране, в откреплённом окне и в PDF. Без групп легенда рисуется как раньше.</p>
+<p>Ручные группы хранятся в <code>source.json</code> листа (<code>legend_groups</code>), не откатываются Undo, одинаково показываются на экране, в откреплённом окне и в PDF. Автоматические блоки строятся из текущих папок Takeoffs; их названия и порядок правятся глобально или для проекта в <code>Settings &gt; Sheet Legend</code>.</p>
 <h3 id="legend-node-menu">Меню позиции под листом в Pages<a class="headerlink" href="#legend-node-menu" title="Прямая ссылка на раздел">&para;</a></h3>
 <p>ПКМ по узлу takeoff под листом; при нескольких выделенных узлах пункт пишет число, например <code>Hide 3 Selected on This Sheet</code>. Спрятать позицию с листа быстрее клавишей <span class="keys"><kbd class="key-h">H</kbd></span>: <a href="../ourplancore-takeoffs/#hide">дерево Takeoffs</a>.</p>
 <details class="note">

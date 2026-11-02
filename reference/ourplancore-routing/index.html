@@ -7367,59 +7367,89 @@
   </p>
 <figcaption>Упорядоченная таблица правил и поле Preview name: введите имя будущего takeoff и увидите папку.</figcaption>
 </figure>
-<p>Правила по умолчанию (сверху вниз, первое совпадение выигрывает, поиск по части слова без учёта регистра):</p>
+<p>Правила по умолчанию (сверху вниз, первое совпадение выигрывает; режим совпадения указан в колонке Match):</p>
 <table>
 <thead>
 <tr>
-<th>Name contains</th>
+<th>Name text</th>
+<th>Match</th>
 <th>Tool</th>
+<th>Sheet row</th>
 <th>Destination</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>(пусто)</td>
+<td>Contains</td>
 <td>Openings</td>
+<td>Any</td>
 <td><code>openings</code></td>
 </tr>
 <tr>
 <td><code>gable stick</code></td>
+<td>Contains</td>
+<td>Any</td>
 <td>Any</td>
 <td><code>gables/gable stick</code></td>
 </tr>
 <tr>
 <td><code>gable</code></td>
+<td>Contains</td>
+<td>Any</td>
 <td>Any</td>
 <td><code>gables/gable trusses</code></td>
 </tr>
 <tr>
 <td><code>eve</code></td>
+<td>Contains</td>
+<td>Any</td>
 <td>Any</td>
 <td><code>eves rakes/eves</code></td>
 </tr>
 <tr>
 <td><code>rake</code></td>
+<td>Contains</td>
+<td>Any</td>
 <td>Any</td>
 <td><code>eves rakes/rakes</code></td>
 </tr>
 <tr>
 <td><code>prpt</code></td>
+<td>Contains</td>
+<td>Any</td>
 <td>Any</td>
 <td><code>parapets</code></td>
 </tr>
 <tr>
 <td><code>trussheel</code></td>
+<td>Contains</td>
+<td>Any</td>
 <td>Any</td>
 <td><code>trussheel</code></td>
 </tr>
+<tr>
+<td><code>post</code></td>
+<td>EndsWithWord</td>
+<td>Count</td>
+<td>F</td>
+<td><code>framing/{framingFloor}/posts</code></td>
+</tr>
+<tr>
+<td><code>stair</code></td>
+<td>EndsWithWord</td>
+<td>Any</td>
+<td>F</td>
+<td><code>framing/{framingFloor}/stairs</code></td>
+</tr>
 </tbody>
 </table>
-<p>Порядок важен: <code>gable stick</code> стоит выше <code>gable</code>, иначе все gable stick уходили бы в trusses. Путь считается от корпуса (зелёная точка, Building root или корень Takeoffs).</p>
+<p>Порядок важен: <code>gable stick</code> стоит выше <code>gable</code>, иначе все gable stick уходили бы в trusses. <code>EndsWithWord</code> для <code>post</code> и <code>stair</code> требует пробел перед словом в конце имени, без учёта регистра. Эти два правила действуют только на F-листе; <code>{framingFloor}</code> берётся из выбранного этажа. Путь считается от корпуса (зелёная точка, Building root или корень Takeoffs).</p>
 <h3 id="add-rule">Как добавить или изменить правило<a class="headerlink" href="#add-rule" title="Прямая ссылка на раздел">&para;</a></h3>
-<p>Зачем: позиции с нужным словом в имени сами ложатся в свою папку на любом листе.</p>
+<p>Зачем: позиции с нужным словом в имени сами ложатся в свою папку на подходящем листе.</p>
 <ol>
 <li>Откройте <strong>Settings &gt; Takeoff Name Routing</strong> и проверьте галку <strong>Enable name and tool rules</strong>.</li>
-<li>Добавьте строку: <strong>Name contains</strong> - слово в имени (например <code>siding</code>), <strong>Tool</strong> - <code>Any</code> или конкретный инструмент, <strong>Destination</strong> - папка (<code>roof misc/siding</code>). Галка <strong>Enabled</strong> в строке временно выключает правило без удаления.</li>
+<li>Добавьте строку: <strong>Name text</strong> - текст имени (например <code>siding</code>), <strong>Match</strong> - <code>Contains</code> или <code>EndsWithWord</code>, <strong>Tool</strong> - <code>Any</code> или конкретный инструмент, <strong>Sheet row</strong> - <code>Any</code> или <code>F</code>, <strong>Destination</strong> - папка (<code>roof misc/siding</code>). Галка <strong>Enabled</strong> в строке временно выключает правило без удаления.</li>
 <li>Поставьте правило выше более общих кнопками <strong>Move up</strong> / <strong>Move down</strong>.</li>
 <li>Проверьте в поле <strong>Preview name</strong>: впишите <code>6" vertical siding</code> и прочитайте путь.</li>
 <li>Нажмите <strong>Apply</strong> (действует до перезапуска), <strong>Save global default</strong> (для всех проектов) или <strong>Save as this job</strong> (только для открытого). <strong>Reset</strong> возвращает таблицу выше, <strong>Clear job override</strong> снимает проектную копию.</li>

@@ -7438,15 +7438,16 @@
 <td>идёт запись; не закрывать программу</td>
 </tr>
 <tr>
-<td><code>Save: Failed - N pending</code></td>
-<td>запись не удалась; держать программу открытой и нажать <code>Ctrl+S</code>. С 3.0.2 файл, поменявшийся во время записи, ошибкой не считается: программа повторяет сама. <code>Failed</code> остаётся для настоящих ошибок, и после них автосохранение ждёт ручного <code>Ctrl+S</code></td>
+<td><code>Save: Failed</code> с временем следующей попытки</td>
+<td>запись не удалась; работа остаётся в рабочей копии. Программа повторяет через 30, 60 и 120 секунд, затем каждые 5 минут до успешного сохранения. <code>Ctrl+S</code> запускает попытку сразу; копировать <code>.ourplan</code> можно только после <code>Save: Saved</code></td>
 </tr>
 <tr>
 <td><code>Save: Protected data - open Project Data Recovery</code></td>
-<td>повреждён файл метаданных; открыть восстановление</td>
+<td>файл проекта не читается или повреждён; временно недоступный файл программа проверяет снова, повреждённый требует ручного восстановления</td>
 </tr>
 </tbody>
 </table>
+<p>Интервалы повторов можно изменить в <strong>Settings &gt; Autosave Recovery</strong>: <code>After first failure</code>, <code>After second failure</code>, <code>After third failure</code>, <code>After later failures</code> в секундах. Значения по умолчанию 30, 60, 120, 300; допустимы 5-3600 секунд в неубывающем порядке. В категории есть Apply, Reset, Save global default, Save as this job и Clear job override.</p>
 <h3 id="backup">Как передать или скопировать проект<a class="headerlink" href="#backup" title="Прямая ссылка на раздел">&para;</a></h3>
 <p>Зачем: копия на другой диск, передача коллеге, точка возврата перед рискованной правкой.</p>
 <ol>
@@ -7471,11 +7472,11 @@
 </tr>
 <tr>
 <td><code>Save: Failed</code></td>
-<td>не закрывать программу; нажать <code>Ctrl+S</code> и дождаться <code>Save: Saved</code>; если не помогает, <code>Save As...</code> в другое место. Рабочую копию не удалять. Статус сам не сбросится: автосохранение ждёт ручного <code>Ctrl+S</code></td>
+<td>держать программу открытой; она повторит сохранение сама, а <code>Ctrl+S</code> пробует сразу. Дождаться <code>Save: Saved</code>; если ошибка не исчезает, <code>Save As...</code> в другое место. Рабочую копию не удалять</td>
 </tr>
 <tr>
 <td><code>Save: Protected data</code></td>
-<td><strong>Open / Import &gt; Project Data Recovery...</strong>: выбрать запись, <strong>Retry reading</strong> после снятия блокировки (сообщение <code>used by another process</code> значит, что файл листа держит другая программа, например синхронизация папки: с 3.0.2 короткую блокировку программа пережидает сама, при долгой хватает Retry reading) или <strong>Restore from copy...</strong> из известной исправной копии; после восстановления закрыть окно, программа перечитает данные</td>
+<td>при временной блокировке файла программа проверяет его каждые 30 секунд и снимает защиту только после успешной загрузки тех же данных. Если файл повреждён или защита остаётся, открыть <strong>Open / Import &gt; Project Data Recovery...</strong> и выбрать <strong>Retry reading</strong> либо <strong>Restore from copy...</strong> из известной исправной копии; после восстановления программа перечитает данные</td>
 </tr>
 <tr>
 <td>Файл <code>.ourplan</code> не открывается</td>
