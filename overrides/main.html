@@ -21,3 +21,11 @@
   <meta name="twitter:description" content="{{ social_description | e }}" />
   <meta name="twitter:image" content="{{ social_image }}" />
 {% endblock %}
+
+{% block content %}
+  {{ super() }}
+  {% if page and not page.is_homepage and page.url != "start/suggest-change/" %}
+    {% set kb_page_url = "https://artrmiys.github.io/knowledge-base/" ~ page.url %}
+    <p class="kb-suggest"><a href="https://github.com/artrmiys/knowledge-base/issues/new?template=popravka.yml&page={{ kb_page_url | urlencode }}&title={{ ("Поправка: " ~ page.title) | urlencode }}" target="_blank" rel="noopener">Предложить поправку к этой странице</a></p>
+  {% endif %}
+{% endblock %}
