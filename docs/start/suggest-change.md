@@ -1,22 +1,22 @@
 # Приёмная поправок
 
-Нашли ошибку, устаревшее правило или чего-то не хватает? Напишите сюда. Писать может любой, а меняет сайт только владелец: он читает поправки и сам решает, что внести.
+Нашли ошибку, устаревшее правило или чего-то не хватает? Напишите здесь. Регистрация не нужна. Поправку читает только владелец сайта, он же решает, что внести.
 
-[Предложить поправку](https://github.com/artrmiys/knowledge-base/issues/new?template=popravka.yml){ .md-button .md-button--primary target="_blank" rel="noopener" }
-[Все поправки](https://github.com/artrmiys/knowledge-base/issues?q=is%3Aissue){ .md-button target="_blank" rel="noopener" }
-
-## Как отправить
-
-1. Нажмите кнопку выше или ссылку "Предложить поправку" внизу нужной страницы: адрес страницы подставится сам.
-2. Войдите в GitHub. Аккаунт нужен, он бесплатный и регистрируется за минуту.
-3. Напишите, что не так и как должно быть, и нажмите "Create".
-
-## Что писать нельзя
-
-!!! warning "Поправки видны всем в интернете"
-    Не пишите имена клиентов, адреса объектов, цены и пароли. Не прикладывайте снимки планов с title block.
-
-## Что будет дальше
-
-- Открытая поправка ждёт, пока её прочитает владелец.
-- Закрытая поправка рассмотрена: внесена на сайт или отклонена, причина будет в комментарии.
+<form id="kb-fix-form" class="kb-form">
+  <p id="kb-fix-page" class="kb-form__page" hidden></p>
+  <input type="hidden" name="page">
+  <label>Что не так
+    <textarea name="what" rows="5" maxlength="2000" required></textarea>
+  </label>
+  <label>Как должно быть (если знаете)
+    <textarea name="how" rows="3" maxlength="2000"></textarea>
+  </label>
+  <label>Ваше имя (можно не писать)
+    <input type="text" name="name" maxlength="80" autocomplete="name">
+  </label>
+  <label class="kb-form__trap" aria-hidden="true">Не заполняйте
+    <input type="text" name="website" tabindex="-1" autocomplete="off">
+  </label>
+  <button type="submit">Отправить</button>
+  <p id="kb-fix-status" class="kb-form__status" role="status"></p>
+</form>

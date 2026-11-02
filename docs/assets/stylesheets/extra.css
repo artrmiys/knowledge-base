@@ -482,3 +482,44 @@
   font-size: 0.72rem;
   opacity: 0.75;
 }
+
+/* Corrections form: start/suggest-change */
+.md-typeset .kb-form { max-width: 34rem; margin-top: 1.2rem; }
+.md-typeset .kb-form label { display: block; margin-bottom: 0.9rem; font-weight: 600; }
+.md-typeset .kb-form textarea,
+.md-typeset .kb-form input[type="text"] {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0.3rem;
+  padding: 0.5rem 0.6rem;
+  font: inherit;
+  font-weight: 400;
+  color: var(--md-default-fg-color);
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 6px;
+}
+.md-typeset .kb-form textarea { resize: vertical; }
+.md-typeset .kb-form textarea:focus,
+.md-typeset .kb-form input[type="text"]:focus {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 1px;
+}
+.md-typeset .kb-form button {
+  padding: 0.5rem 1.4rem;
+  font: inherit;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  background: var(--md-default-bg-color);
+  border: 2px solid var(--md-default-fg-color);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.md-typeset .kb-form button:hover { background: var(--md-default-fg-color--lightest); }
+.md-typeset .kb-form button:disabled { opacity: 0.5; cursor: default; }
+.md-typeset .kb-form__page { margin: 0 0 0.9rem; opacity: 0.75; overflow-wrap: anywhere; }
+.md-typeset .kb-form__status { min-height: 1.4em; margin: 0.8rem 0 0; font-weight: 600; }
+.md-typeset .kb-form__status--error { color: var(--ds-err, #c62828); }
+/* Hidden from people, bots fill it in. */
+.md-typeset .kb-form__trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
