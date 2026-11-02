@@ -1,0 +1,38 @@
+name: Поправка на сайт
+description: Что исправить или добавить в Knowledge Base
+title: "Поправка: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Поправки видны всем в интернете. Не пишите имена клиентов, адреса, цены и пароли, не прикладывайте снимки планов с title block.
+  - type: input
+    id: page
+    attributes:
+      label: Страница
+      description: Адрес страницы. Если открыли форму со страницы сайта, он уже подставлен.
+      placeholder: https://artrmiys.github.io/knowledge-base/...
+    validations:
+      required: false
+  - type: textarea
+    id: what
+    attributes:
+      label: Что не так
+      description: Что написано неверно, непонятно или чего не хватает.
+    validations:
+      required: true
+  - type: textarea
+    id: how
+    attributes:
+      label: Как должно быть
+      description: Ваш вариант текста или правила, если он есть.
+    validations:
+      required: false
+  - type: input
+    id: source
+    attributes:
+      label: Откуда это известно
+      description: Необязательно. Правило клиента, деталь на плане, разговор с проверяющим.
+    validations:
+      required: false
