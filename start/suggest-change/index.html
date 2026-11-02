@@ -710,24 +710,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Приёмная поправок
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -744,58 +726,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Как отправить
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Что писать нельзя
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Что будет дальше
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -6837,47 +6767,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Как отправить
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Что писать нельзя
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Что будет дальше
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -6895,25 +6784,25 @@
 
 
 <h1 id="_1">Приёмная поправок<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h1>
-<p>Нашли ошибку, устаревшее правило или чего-то не хватает? Напишите сюда. Писать может любой, а меняет сайт только владелец: он читает поправки и сам решает, что внести.</p>
-<p><a class="md-button md-button--primary" href="https://github.com/artrmiys/knowledge-base/issues/new?template=popravka.yml" rel="noopener" target="_blank">Предложить поправку</a>
-<a class="md-button" href="https://github.com/artrmiys/knowledge-base/issues?q=is%3Aissue" rel="noopener" target="_blank">Все поправки</a></p>
-<h2 id="_2">Как отправить<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
-<ol>
-<li>Нажмите кнопку выше или ссылку "Предложить поправку" внизу нужной страницы: адрес страницы подставится сам.</li>
-<li>Войдите в GitHub. Аккаунт нужен, он бесплатный и регистрируется за минуту.</li>
-<li>Напишите, что не так и как должно быть, и нажмите "Create".</li>
-</ol>
-<h2 id="_3">Что писать нельзя<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Поправки видны всем в интернете</p>
-<p>Не пишите имена клиентов, адреса объектов, цены и пароли. Не прикладывайте снимки планов с title block.</p>
-</div>
-<h2 id="_4">Что будет дальше<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
-<ul>
-<li>Открытая поправка ждёт, пока её прочитает владелец.</li>
-<li>Закрытая поправка рассмотрена: внесена на сайт или отклонена, причина будет в комментарии.</li>
-</ul>
+<p>Нашли ошибку, устаревшее правило или чего-то не хватает? Напишите здесь. Регистрация не нужна. Поправку читает только владелец сайта, он же решает, что внести.</p>
+<form id="kb-fix-form" class="kb-form">
+  <p id="kb-fix-page" class="kb-form__page" hidden></p>
+  <input type="hidden" name="page">
+  <label>Что не так
+    <textarea name="what" rows="5" maxlength="2000" required></textarea>
+  </label>
+  <label>Как должно быть (если знаете)
+    <textarea name="how" rows="3" maxlength="2000"></textarea>
+  </label>
+  <label>Ваше имя (можно не писать)
+    <input type="text" name="name" maxlength="80" autocomplete="name">
+  </label>
+  <label class="kb-form__trap" aria-hidden="true">Не заполняйте
+    <input type="text" name="website" tabindex="-1" autocomplete="off">
+  </label>
+  <button type="submit">Отправить</button>
+  <p id="kb-fix-status" class="kb-form__status" role="status"></p>
+</form>
 
 
 
@@ -7016,6 +6905,8 @@
         <script src="../../assets/js/zoom.js"></script>
       
         <script src="../../assets/js/demo-video.js"></script>
+      
+        <script src="../../assets/js/suggest.js"></script>
       
     
   </body>
