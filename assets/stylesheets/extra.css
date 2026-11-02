@@ -475,3 +475,10 @@
   width: 100%;
   cursor: pointer;
 }
+
+/* Link to the corrections form under every page (overrides/main.html). */
+.md-typeset .kb-suggest {
+  margin-top: 2.5em;
+  font-size: 0.72rem;
+  opacity: 0.75;
+}
