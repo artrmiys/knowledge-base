@@ -7028,6 +7028,10 @@
 
 <h1 id="porch-holdowns-dfl">Блоки балконов, porch и holdowns в DFL<a class="headerlink" href="#porch-holdowns-dfl" title="Прямая ссылка на раздел">&para;</a></h1>
 <p>Здесь: как расписать в книге блок балкона, блок porch и блок holdowns так, как это делается в сданных работах. Блок = заголовок с заливкой, ноты под ним, строки с формулами, белые пустые строки между группами. Блок вставляется копией эталона (блок <code>#1</code> шаблона или блок из прошлой сдачи), а не набирается руками.</p>
+<div class="admonition warning">
+<p class="admonition-title">Новые правила оформления групп (ноябрь 2026)</p>
+<p>Группа лежит внутри Framing, желательно сразу после framing list своего этажа. Decking, railing и trims стоят сразу за каркасом <strong>под своими заголовками</strong>. Ноты только под заголовком. Полное правило со схемой: <a href="../dfl-overview/#groups">Формат файла, группы</a>.</p>
+</div>
 <figure>
 <p><img alt="Каркас балкона в плане" src="../../assets/images/framing/deck-frame-plan.svg" />
   </p>
@@ -7051,11 +7055,23 @@
 <tbody>
 <tr>
 <td>Заголовок балкона</td>
-<td><code>="#N Upper Balcony List W' x D' "&amp;G&amp;" unit"&amp;H</code>, заливка A:B оранжевая <code>FABF8F</code>, жирный чёрный; терраса над гаражом - <code>Upper Balcony/Terrace List</code></td>
+<td><code>="#N Upper Balcony List W' x D' "&amp;G&amp;" unit"&amp;H</code>, заливка A:B, жирный чёрный; в шаблоне заливка <code>FABF8F</code>, в эталонах заголовки групп зелёные <code>99CC00</code>, для нового заголовка берите зелёный (<a href="../dfl-overview/#open">что пока не уточнено</a>); терраса над гаражом - <code>Upper Balcony/Terrace List</code></td>
 </tr>
 <tr>
 <td>Заголовок porch</td>
 <td><code>#N Porch Framing List W' x D'</code>, заливка A:B зелёная <code>99CC00</code>, жирный чёрный</td>
+</tr>
+<tr>
+<td>Заголовок ground deck</td>
+<td>обязательно <code>Deck</code> и <code>Frame</code> или <code>Framing</code>, плюс уровень и расположение: <code>Rear Ground Deck Frame</code>, <code>Ground Deck Framing List (left)</code>. <code>Rear Deck</code> программа не распознает</td>
+</tr>
+<tr>
+<td>Текст в заголовке</td>
+<td>только в A, столбцы B-F пустые; деталь или лист пишите заметкой под заголовком</td>
+</tr>
+<tr>
+<td>Несколько одинаковых по типу</td>
+<td>указывайте расположение: где какой балкон, какой porch</td>
 </tr>
 <tr>
 <td>Units</td>
@@ -7063,7 +7079,11 @@
 </tr>
 <tr>
 <td>Ноты</td>
-<td>сразу под заголовком, стиль локальной ноты (<a href="../standard-notes/">Ноты в DFL</a>)</td>
+<td>под заголовком, не над ним; префикс и жёлтый фон (<a href="../dfl-overview/#notes">Заметки</a>)</td>
+</tr>
+<tr>
+<td>Decking, railing, trims</td>
+<td>сразу за каркасом, каждый под своей строкой-заголовком: <code>Balcony Railing</code>, <code>Ground Deck Decking (rear)</code>, <code>Canopy Trims</code>, <code>Decking and Railing</code>, <code>Porch Trims</code></td>
 </tr>
 <tr>
 <td>Пустые строки</td>
@@ -7137,19 +7157,19 @@
 </tr>
 <tr>
 <td><code>Decking</code></td>
-<td><code>2x6 DuxxBak</code>, SQ FT, E = деталь; <code>5/4x6</code> только на террасе над гаражом (там subfloor <code>3/4" Ply</code> + sleepers <code>2x4 P.T.</code> + <code>5/4x6</code>)</td>
+<td>под своим заголовком; <code>2x6 DuxxBak</code>, SQ FT, E = деталь; <code>5/4x6</code> только на террасе над гаражом (там subfloor <code>3/4" Ply</code> + sleepers <code>2x4 P.T.</code> + <code>5/4x6</code>)</td>
 <td>A-деталь</td>
 </tr>
 <tr>
 <td><code>Fascia</code>, <code>Soffits</code>, <code>Post Wrap</code>, flashing</td>
-<td>только если отделка в scope; Frame only - не вставлять</td>
+<td>под заголовком trims (<code>Balcony Trims</code>), только если отделка в scope; Frame only - не вставлять</td>
 <td>scope</td>
 </tr>
 </tbody>
 </table>
 <p>Бетонные и ферменные балконы (низ - жилое, LW concrete) в деревянный блок не входят: bases = 0 на этих стеках и нота <code>counted separately</code>.</p>
 <h2 id="_4">Перила<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Railing всегда есть в блоке: либо системой, либо поэлементно, по детали. Не смешивать на одном балконе.</p>
+<p>Railing всегда есть у балкона: либо системой, либо поэлементно, по детали. Не смешивать на одном балконе. Строки перил идут сразу за каркасом под своим заголовком (<code>Balcony Railing</code> или общий <code>Decking and Railing</code>), нота про систему под ним.</p>
 <table>
 <thead>
 <tr>
@@ -7219,6 +7239,7 @@
 <h2 id="_5">Частые ошибки<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Балконный блок без своего множителя units или с множителем из чужого блока.</li>
+<li>Нота над заголовком блока; decking и railing прямо под заголовком каркаса; группа вынесена в конец листа.</li>
 <li>Porch зеркалён с балконов вместо отдельного счёта; porch SQFT на Front Page пуст.</li>
 <li>Три поста на перила вместо двух; система и поэлементный railing смешаны.</li>
 <li>Hangers балкона без <code>Zmax</code>; cap <code>BCS2-3/6</code> на всё подряд без учёта plies.</li>
@@ -7227,15 +7248,17 @@
 <p>Все ошибки: <a href="../../start/common-mistakes/#deck">Deck, porch, балконы</a>, <a href="../../start/common-mistakes/#holdowns">Shear walls и holdowns</a>.</p>
 <h2 id="_6">Пример<a class="headerlink" href="#_6" title="Прямая ссылка на раздел">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#2 Upper Balcony List 12&#39; x 7&#39;   4 unit            (G заголовка = 4)
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Note: Railing is composite per A6.2; posts, sleeves, caps and rail sections counted.
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Posts                      6x6 P.T.           =2*G       pcs   10&#39;     S4.1
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Post Caps                  BC46 Zmax          =2*G       pcs           3/S4.1
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Beam (2)                   2x12 P.T.          =2*CEILING(12/14,1)*G    LFT   B3 S4.1
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Joists 16&quot; o.c.            2x12 P.T.          =CEILING((7*12/16+1)/2,1)*G   LFT  S4.1
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Hangers                    LUS210 Zmax        =CEILING(10*G,2)         pcs   7/S4.1
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Decking                    2x6 DuxxBak        =CEILING(12*7*1.1,10)*G  SQ FT 5/A5.5
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Posts at Rails 4x4 P.T.    4x4 P.T.           =2*G       pcs   4&#39;
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Rail sections 6&#39;           6&#39; Rail section    =EVEN(19/6*G)  pcs
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Posts                      6x6 P.T.           =2*G       pcs   10&#39;     S4.1
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Post Caps                  BC46 Zmax          =2*G       pcs           3/S4.1
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Beam (2)                   2x12 P.T.          =2*CEILING(12/14,1)*G    LFT   B3 S4.1
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Joists 16&quot; o.c.            2x12 P.T.          =CEILING((7*12/16+1)/2,1)*G   LFT  S4.1
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Hangers                    LUS210 Zmax        =CEILING(10*G,2)         pcs   7/S4.1
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Balcony Decking and Railing                        (свой заголовок)
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Note: Railing is composite per A6.2; posts, sleeves, caps and rail sections counted.
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Decking                    2x6 DuxxBak        =CEILING(12*7*1.1,10)*G  SQ FT 5/A5.5
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Posts at Rails 4x4 P.T.    4x4 P.T.           =2*G       pcs   4&#39;
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Rail sections 6&#39;           6&#39; Rail section    =EVEN(19/6*G)  pcs
 </span></code></pre></div>
 <h2 id="_7">См. также<a class="headerlink" href="#_7" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

@@ -6263,7 +6263,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Два вида нот
+        Где стоит нота
       
     </span>
   </a>
@@ -6913,7 +6913,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Два вида нот
+        Где стоит нота
       
     </span>
   </a>
@@ -7027,31 +7027,35 @@
 
 
 <h1 id="dfl">Ноты в DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h1>
-<p>Здесь: какие бывают ноты в книге, где они стоят, как оформлены, как написать текст и когда нота не нужна. Нота = строка в колонке A с префиксом <code>Note:</code>, объясняющая решение или допущение, которого не видно из самой строки.</p>
+<p>Здесь: какие бывают ноты в книге, где они стоят, как написать текст и когда нота не нужна. Нота = строка в колонке A с префиксом <code>Important:</code>, <code>Note:</code> или <code>Comment:</code> на жёлтом фоне, объясняющая решение или допущение, которого не видно из самой строки.</p>
+<div class="admonition warning">
+<p class="admonition-title">Без префикса или без жёлтого нота потеряется</p>
+<p>Лист читает программа. Строка без одного из трёх префиксов или без жёлтого фона не попадёт в итоговый файл как заметка, а заметка над заголовком уйдёт в предыдущий блок. Полное правило со схемами: <a href="../dfl-overview/#notes">Формат файла, заметки</a>.</p>
+</div>
 <figure>
-<p><img alt="Два вида нот в DFL" src="../../assets/images/reference/dfl-notes-two-kinds.svg" />
+<p><img alt="Три уровня заметок" src="../../assets/images/reference/dfl-note-levels.svg" />
   </p>
-<figcaption>Главные ноты в шапке (между Detailed Material List и Description), локальные ноты сразу под заголовком своего блока.</figcaption>
+<figcaption>Три уровня заметок на жёлтом фоне и продолжение на второй строке. Внизу строки, которые не дойдут до итогового файла.</figcaption>
 </figure>
-<h2 id="_1">Два вида нот<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
+<h2 id="_1">Где стоит нота<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
 <tr>
 <th></th>
 <th>Главная нота (шапка)</th>
-<th>Локальная нота (блок)</th>
+<th>Нота секции или блока</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Где</td>
 <td>в блоке между <code>Detailed Material List</code> и <code>Description</code>, новая ставится первой</td>
-<td>сразу под заголовком своей секции (<code>Roof Frame list</code>, <code>1st Floor Walls</code>), после уже лежащих там нот</td>
+<td><strong>под</strong> заголовком своей секции (<code>Roof Frame list</code>, <code>1st Floor Walls</code>), после уже лежащих там нот. Нота об одной группе строк внутри секции: сразу над этими строками</td>
 </tr>
 <tr>
 <td>Вид</td>
-<td>жёлтый фон <code>FFFF00</code>, красный жирный текст</td>
-<td>жёлтый фон и чёрный обычный текст, либо без заливки чёрный жирный: как соседняя нота того же блока. Ноты про headers без заливки, чёрные жирные</td>
+<td>жёлтый фон A:F. <code>Important:</code> красный жирный</td>
+<td>жёлтый фон A:F. <code>Note:</code> и <code>Comment:</code> чёрные, в эталонах жирные. <code>Important:</code> красный жирный, допускается и здесь</td>
 </tr>
 <tr>
 <td>О чём</td>
@@ -7065,20 +7069,21 @@
 </tr>
 </tbody>
 </table>
+<p>Уровень выбирайте по цене ошибки: <code>Important:</code> глобальные решения с большой разницей в цене, <code>Note:</code> средняя важность, <code>Comment:</code> мелочь про один элемент. <a href="../dfl-overview/#notes">Таблица и примеры</a>.</p>
 <ul>
-<li>Нота про конкретный блок живёт в этом блоке, а не в шапке. Префикс раздела в тексте не нужен: внутри <code>Roof Frame list</code> пишется <code>Note: Typical trusses are RT-1 at 24" o.c. per note 2 on S1-5.</code>, а не <code>Note: Roof framing ...</code>.</li>
-<li>Текст в A, G:H пустые, только диапазон A:H. Отдельный лист под заметки и комментарии Excel к ячейкам не делаются.</li>
+<li>Нота про конкретный блок живёт в этом блоке, а не в шапке. Текст должен читаться и без блока: при сборке заметки уходят в общий список, повторы удаляются, похожие объединяются. Не <code>Note: No changes in this area</code>, а <code>Note: No changes for the 1st floor walls</code>.</li>
+<li>Текст в A, столбцы B-F и G:H пустые, только диапазон A:H. Отдельный лист под заметки и комментарии Excel к ячейкам не делаются.</li>
 <li>Ссылка в локальной ноте - на деталь своего типа стены. Похожая картинка на соседней детали (например, стена шахты вместо наружной) не подходит: проверять заголовок детали.</li>
 </ul>
 <h2 id="_2">Как написать текст<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <ol>
 <li>Живая фраза с глаголом, полными словами: <code>joists use</code>, <code>roof uses</code>, <code>clips counted at</code>. Сокращения живут в B и D, не в ноте.</li>
-<li>Один факт = одна нота. Две мысли - две строки <code>Note:</code>.</li>
+<li>Один факт = одна нота. Две мысли - две строки <code>Note:</code>. Длинную мысль можно продолжить следующей строкой без префикса, с тем же жёлтым фоном.</li>
 <li>Длина: цель 80 знаков, потолок 100 (нота должна влезать в A:F). Не влезло - вторая строка, а не телеграф; ячейки не объединять, шрифт не мельчить, колонки не расширять.</li>
 <li>Источник всегда номером листа или детали: <code>per S201</code>, <code>per 8/S3.0</code>, <code>; see 4/A703</code>. Не <code>per page</code>, не номер страницы PDF. Источника нет - <code>assumed; verify</code>.</li>
 <li>Разделитель внутри <code>;</code>, в конце точка. Без <code>=</code>, стрелок, тире-разделителей, скобок с оценками. Диапазоны словами: <code>levels 2 thru 6</code>, <code>S203 thru S206</code>. Дефис только внутри размера <code>9'-1 1/8"</code>.</li>
 <li>Расхождение листов: вести с того значения, что посчитано, цитировать один авторитетный лист, у второй стороны лист можно опустить: <code>Note: Roof sheathing differ, 19/32" per struct S612, 15/32" per arch; counted 19/32"; verify.</code></li>
-<li>Optional только с причиной, в заголовке блока <code>(Optional)</code> и первой нотой условие.</li>
+<li>Optional только с причиной: нота с условием над строками, сами строки покрашены цветом опции (<a href="../dfl-overview/#options">Опции</a>).</li>
 </ol>
 <table>
 <thead>
@@ -7222,6 +7227,7 @@
 </ul>
 <h2 id="optional">Optional только с причиной<a class="headerlink" href="#optional" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Замечание ревьюера клиента: называть позицию optional можно только тогда, когда она целиком допущение, и причина написана рядом.</p>
+<p>Опцию определяет цвет фона строк, а не слово: без цвета строка пойдёт в общий список как обязательная. Как красить: <a href="../dfl-overview/#options">Опции и цвет</a>.</p>
 <ul>
 <li><code>Note: Optional framing for unspecified roof corridor frame; assumed 2x10; verify if truss.</code></li>
 <li><code>Note: Verify spacing of 2x10 corridor joists; not indicated; assumed 16" o.c.</code></li>
@@ -7232,7 +7238,7 @@
 <ul>
 <li><code>Walls are panels by others</code> удаляется, если в scope нет panel; <code>Roof and Floor Trusses are by others</code> не трогать без проверки. <code>Floor trusses are by others; verify</code> стоит в каждом Floor Framing List, где перекрытие на фермах.</li>
 <li>Progress set без конструктива: развёрнутая главная нота, что beams, posts, balcony, shear walls и heights <code>assumed; verify</code>; окна по рисунку; стены под бетоном опционально stick с нотой.</li>
-<li>Библиотека готовых формулировок:</li>
+<li>Библиотека готовых формулировок. Если решение меняет цену по-крупному, ставьте префикс <code>Important:</code> вместо <code>Note:</code>:</li>
 </ul>
 <details class="note">
 <summary>Библиотека формулировок (лист Standarts, подставляй свой лист)</summary>
@@ -7257,8 +7263,8 @@
 </ul>
 <p><strong>By others</strong></p>
 <ul>
-<li><code>Note: All EWP products are by others.</code></li>
-<li><code>Note: Floor trusses are by others; verify.</code></li>
+<li><code>Important: All EWP products are by others.</code></li>
+<li><code>Important: Floor trusses are by others; verify.</code></li>
 <li><code>Note: Metal studs are by others.</code></li>
 <li><code>Note: Aluminum railing materials are by others; verify components.</code></li>
 <li><code>Note: Anchor bolts are Hilti by others.</code></li>
@@ -7269,7 +7275,7 @@
 <li><code>Note: Framing plans are not provided; all framing assumed for budget only.</code></li>
 <li><code>Note: Plans are preliminary; no sections, details or framing plans; budget only.</code></li>
 <li><code>Note: Plans are not to scale; verify all lengths.</code></li>
-<li><code>Note: Existing structure to remain; products listed for new construction only.</code></li>
+<li><code>Important: Existing structure to remain; products listed for new construction only.</code></li>
 </ul>
 <p><strong>Decks, balcony, stairs</strong></p>
 <ul>
@@ -7290,8 +7296,9 @@
 <ul>
 <li>Телеграф и ноты длиннее A:F (130 знаков и больше).</li>
 <li><code>per page</code> или номер страницы PDF вместо номера листа.</li>
-<li>Нота про блок в шапке; красный жирный стиль на локальной ноте.</li>
-<li><code>optional</code> без причины; нота противоречит строке.</li>
+<li>Нота без жёлтого фона или без префикса; нота над заголовком своего блока.</li>
+<li>Нота про блок в шапке; <code>Important:</code> на мелочи, из-за которой главное теряется.</li>
+<li><code>optional</code> без причины или без цвета; нота противоречит строке.</li>
 <li>Спек-ячейки оставлены до сдачи, в P/S написано <code>per 8/S3.0</code> или <code>not shown</code>.</li>
 </ul>
 <p>Все ошибки по книге: <a href="../../start/common-mistakes/#excel">Частые ошибки, Excel DFL и ноты</a>.</p>

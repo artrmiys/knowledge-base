@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="365" viewBox="0 0 800 365" role="img" aria-labelledby="t d">
+  <title id="t">Section header: right and wrong</title>
+  <desc id="d">Three spreadsheet fragments: a correct header with bold text, a coloured cell and empty columns B to F; a header with text in B; a bold header with no colour.</desc>
+  <style>text{font-family:Inter,"Segoe UI",Arial,sans-serif}.h{font-size:15px;font-weight:700;fill:#1f2328}.t{font-size:13px;fill:#1f2328}.n{font-size:13px}.c{font-size:12.5px}.cb{font-size:12.5px;font-weight:700}.col{font-size:11px;fill:#5a6168}.sm{font-size:12px;fill:#5a6168}.bt{font-size:13.5px;font-weight:600;fill:#1f2328}</style>
+  <rect width="800" height="365" fill="#ffffff"/>
+  <circle cx="25" cy="35" r="9" fill="#2e7d32"/>
+  <path d="M20.5,35 L24,38.5 L30,31" fill="none" stroke="#fff" stroke-width="2.2"/>
+  <text class="h" x="42" y="40" fill="#2e7d32">Заголовок секции</text>
+  <rect x="16" y="50" width="178" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="105.0" y="63" text-anchor="middle">A</text>
+  <rect x="194" y="50" width="126" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="257.0" y="63" text-anchor="middle">B</text>
+  <rect x="320" y="50" width="40" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="340.0" y="63" text-anchor="middle">C</text>
+  <rect x="360" y="50" width="44" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="382.0" y="63" text-anchor="middle">D</text>
+  <rect x="404" y="50" width="58" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="433.0" y="63" text-anchor="middle">E</text>
+  <rect x="462" y="50" width="52" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="488.0" y="63" text-anchor="middle">F</text>
+  <rect x="16" y="68" width="178" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="68" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="68" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="68" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="68" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="68" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="84" fill="#1f2328">Soffits and Fascias</text>
+  <rect x="16" y="91" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="91" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="91" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="91" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="91" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="91" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="107" fill="#1f2328">Soffits at Eves</text>
+  <text class="c" x="257.0" y="107" fill="#1f2328" text-anchor="middle">Wood Soffit</text>
+  <text class="c" x="340.0" y="107" fill="#1f2328" text-anchor="middle">180</text>
+  <text class="c" x="382.0" y="107" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <path d="M532,89 L526,89 L526,79.5 L518,79.5" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <path d="M514,79.5 L522,75.5 L522,83.5 z" fill="#2e7d32"/>
+  <text class="n" x="538" y="85" fill="#2e7d32">Жирный текст, цветной фон, название</text>
+  <text class="n" x="538" y="101" fill="#2e7d32">в A, столбцы B-F пустые.</text>
+  <circle cx="25" cy="139" r="9" fill="#c62828"/>
+  <path d="M21,135 L29,143 M29,135 L21,143" fill="none" stroke="#fff" stroke-width="2.2"/>
+  <text class="h" x="42" y="144" fill="#c62828">Текст в столбце B</text>
+  <rect x="16" y="154" width="178" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="105.0" y="167" text-anchor="middle">A</text>
+  <rect x="194" y="154" width="126" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="257.0" y="167" text-anchor="middle">B</text>
+  <rect x="320" y="154" width="40" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="340.0" y="167" text-anchor="middle">C</text>
+  <rect x="360" y="154" width="44" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="382.0" y="167" text-anchor="middle">D</text>
+  <rect x="404" y="154" width="58" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="433.0" y="167" text-anchor="middle">E</text>
+  <rect x="462" y="154" width="52" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="488.0" y="167" text-anchor="middle">F</text>
+  <rect x="16" y="172" width="178" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="172" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="172" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="172" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="172" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="172" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="188" fill="#1f2328">Soffits and Fascias</text>
+  <text class="cb" x="257.0" y="188" fill="#1f2328" text-anchor="middle">Verify all materials</text>
+  <rect x="16" y="195" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="195" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="195" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="195" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="195" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="195" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="211" fill="#1f2328">Soffits at Eves</text>
+  <text class="c" x="257.0" y="211" fill="#1f2328" text-anchor="middle">Wood Soffit</text>
+  <text class="c" x="340.0" y="211" fill="#1f2328" text-anchor="middle">180</text>
+  <text class="c" x="382.0" y="211" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <path d="M532,209 L526,209 L526,183.5 L518,183.5" fill="none" stroke="#c62828" stroke-width="1.2"/>
+  <path d="M514,183.5 L522,179.5 L522,187.5 z" fill="#c62828"/>
+  <text class="n" x="538" y="189" fill="#c62828">Это уже не заголовок: материалы</text>
+  <text class="n" x="538" y="205" fill="#c62828">секции смешаются с предыдущей.</text>
+  <text class="n" x="538" y="221" fill="#c62828">Пояснение пишите заметкой под</text>
+  <text class="n" x="538" y="237" fill="#c62828">заголовком.</text>
+  <circle cx="25" cy="268" r="9" fill="#c62828"/>
+  <path d="M21,264 L29,272 M29,264 L21,272" fill="none" stroke="#fff" stroke-width="2.2"/>
+  <text class="h" x="42" y="273" fill="#c62828">Заголовок без цвета</text>
+  <rect x="16" y="283" width="178" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="105.0" y="296" text-anchor="middle">A</text>
+  <rect x="194" y="283" width="126" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="257.0" y="296" text-anchor="middle">B</text>
+  <rect x="320" y="283" width="40" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="340.0" y="296" text-anchor="middle">C</text>
+  <rect x="360" y="283" width="44" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="382.0" y="296" text-anchor="middle">D</text>
+  <rect x="404" y="283" width="58" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="433.0" y="296" text-anchor="middle">E</text>
+  <rect x="462" y="283" width="52" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="488.0" y="296" text-anchor="middle">F</text>
+  <rect x="16" y="301" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="301" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="301" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="301" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="301" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="301" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="317" fill="#1f2328">Drywall &amp; Insulation</text>
+  <rect x="16" y="324" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="324" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="324" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="324" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="324" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="324" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="340" fill="#1f2328">Drywall at walls</text>
+  <text class="c" x="257.0" y="340" fill="#1f2328" text-anchor="middle">5/8" Gyp</text>
+  <text class="c" x="340.0" y="340" fill="#1f2328" text-anchor="middle">320</text>
+  <text class="c" x="382.0" y="340" fill="#1f2328" text-anchor="middle">4x8</text>
+  <path d="M532,322 L526,322 L526,312.5 L518,312.5" fill="none" stroke="#c62828" stroke-width="1.2"/>
+  <path d="M514,312.5 L522,308.5 L522,316.5 z" fill="#c62828"/>
+  <text class="n" x="538" y="318" fill="#c62828">Одного жирного шрифта мало: такая</text>
+  <text class="n" x="538" y="334" fill="#c62828">строка считается обычной.</text>
+</svg>

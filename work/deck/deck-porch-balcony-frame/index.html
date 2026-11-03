@@ -7122,10 +7122,13 @@ stringers. <strong>Balcony</strong> стоит у стены верхнего э
 <figcaption>Балкон у стены: ledger со screws, joists P.T. на hangers Zmax, end joist, beam на посту с cap, decking и перила. Каждая выноска это строка блока в DFL.</figcaption>
 </figure>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Заголовок блока: <code>#N Upper Balcony List W' x D' &lt;G&gt; unit</code>, заливка A:B
-оранжевая <code>FABF8F</code>; porch <code>#N Porch Framing List W' x D'</code>, заливка зелёная
-<code>99CC00</code>. Строки с нулём и пустые строки шаблона удаляются. Подробный состав
-блока с формулами: <a href="../../../reference/dfl-blocks/">Блоки DFL</a>.</p>
+<p>Заголовок блока: <code>#N Upper Balcony List W' x D' &lt;G&gt; unit</code>; porch
+<code>#N Porch Framing List W' x D'</code>, заливка A:B зелёная <code>99CC00</code>; каркас ground deck
+обязательно со словами <code>Deck</code> и <code>Frame</code> или <code>Framing</code>. Группа стоит внутри Framing,
+decking, railing и trims идут за каркасом под своими заголовками, ноты под
+заголовком: <a href="../../../reference/dfl-overview/#groups">Формат файла, группы</a>. Строки с
+нулём и пустые строки шаблона удаляются. Подробный состав блока с формулами:
+<a href="../../../reference/dfl-blocks/">Блоки DFL</a>.</p>
 <table>
 <thead>
 <tr>

@@ -1,0 +1,263 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="758" viewBox="0 0 800 758" role="img" aria-labelledby="t d">
+  <title id="t">Rules for special rows</title>
+  <desc id="d">Fragments: a steel plate row right after a wood beam, the word Insulation in column B, a detail reference in column B with a labelled picture, door type labels and trim material types in column F.</desc>
+  <style>text{font-family:Inter,"Segoe UI",Arial,sans-serif}.h{font-size:15px;font-weight:700;fill:#1f2328}.t{font-size:13px;fill:#1f2328}.n{font-size:13px}.c{font-size:12.5px}.cb{font-size:12.5px;font-weight:700}.col{font-size:11px;fill:#5a6168}.sm{font-size:12px;fill:#5a6168}.bt{font-size:13.5px;font-weight:600;fill:#1f2328}</style>
+  <rect width="800" height="758" fill="#ffffff"/>
+  <text class="h" x="16" y="40">Flitch beam: пластина сразу после деревянной балки</text>
+  <rect x="16" y="50" width="178" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="105.0" y="63" text-anchor="middle">A</text>
+  <rect x="194" y="50" width="126" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="257.0" y="63" text-anchor="middle">B</text>
+  <rect x="320" y="50" width="40" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="340.0" y="63" text-anchor="middle">C</text>
+  <rect x="360" y="50" width="44" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="382.0" y="63" text-anchor="middle">D</text>
+  <rect x="404" y="50" width="58" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="433.0" y="63" text-anchor="middle">E</text>
+  <rect x="462" y="50" width="52" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="488.0" y="63" text-anchor="middle">F</text>
+  <rect x="16" y="68" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="68" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="68" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="68" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="68" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="68" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="84" fill="#1f2328">Beam (4) Dropped</text>
+  <text class="c" x="257.0" y="84" fill="#1f2328" text-anchor="middle">1 3/4 x 14 LVL</text>
+  <text class="c" x="340.0" y="84" fill="#1f2328" text-anchor="middle">8</text>
+  <text class="c" x="382.0" y="84" fill="#1f2328" text-anchor="middle">16</text>
+  <rect x="16" y="91" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="91" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="91" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="91" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="91" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="91" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="107" fill="#1f2328">Steel plate (1)</text>
+  <text class="c" x="257.0" y="107" fill="#1f2328" text-anchor="middle">1/4x14</text>
+  <text class="c" x="340.0" y="107" fill="#1f2328" text-anchor="middle">1</text>
+  <text class="c" x="382.0" y="107" fill="#1f2328" text-anchor="middle">16</text>
+  <path d="M532,102.5 L526,102.5 L526,102.5 L518,102.5" fill="none" stroke="#5a6168" stroke-width="1.2"/>
+  <path d="M514,102.5 L522,98.5 L522,106.5 z" fill="#5a6168"/>
+  <text class="n" x="538" y="98.5" fill="#1f2328">Отдельной строкой. Так же под Ridge</text>
+  <text class="n" x="538" y="114.5" fill="#1f2328">со стальной вставкой.</text>
+  <text class="h" x="16" y="150.5">Insulation: слово целиком в столбце B</text>
+  <rect x="16" y="160.5" width="178" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="105.0" y="173.5" text-anchor="middle">A</text>
+  <rect x="194" y="160.5" width="126" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="257.0" y="173.5" text-anchor="middle">B</text>
+  <rect x="320" y="160.5" width="40" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="340.0" y="173.5" text-anchor="middle">C</text>
+  <rect x="360" y="160.5" width="44" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="382.0" y="173.5" text-anchor="middle">D</text>
+  <rect x="404" y="160.5" width="58" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="433.0" y="173.5" text-anchor="middle">E</text>
+  <rect x="462" y="160.5" width="52" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="488.0" y="173.5" text-anchor="middle">F</text>
+  <rect x="16" y="178.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="178.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="178.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="178.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="178.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="178.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="194.5" fill="#1f2328">Rigid insulation wall</text>
+  <text class="c" x="257.0" y="194.5" fill="#1f2328" text-anchor="middle">R8 Insulation</text>
+  <text class="c" x="340.0" y="194.5" fill="#1f2328" text-anchor="middle">1700</text>
+  <text class="c" x="382.0" y="194.5" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <rect x="16" y="201.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="201.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="201.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="201.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="201.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="201.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="217.5" fill="#1f2328">Insulation</text>
+  <text class="c" x="257.0" y="217.5" fill="#1f2328" text-anchor="middle">Batt R-21</text>
+  <text class="c" x="340.0" y="217.5" fill="#1f2328" text-anchor="middle">900</text>
+  <text class="c" x="382.0" y="217.5" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <path d="M532,199.5 L526,199.5 L526,190.0 L518,190.0" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <path d="M514,190.0 L522,186.0 L522,194.0 z" fill="#2e7d32"/>
+  <text class="n" x="538" y="195.5" fill="#2e7d32">Верно: Batt Insulation R-21, 1-1/2</text>
+  <text class="n" x="538" y="211.5" fill="#2e7d32">Rigid Insulation.</text>
+  <path d="M532,246.5 L526,246.5 L526,213.0 L518,213.0" fill="none" stroke="#c62828" stroke-width="1.2"/>
+  <path d="M514,213.0 L522,209.0 L522,217.0 z" fill="#c62828"/>
+  <text class="n" x="538" y="234.5" fill="#c62828">Неверно: Batt R-21, 1-1/2 Rigid,</text>
+  <text class="n" x="538" y="250.5" fill="#c62828">Insul. Материал уйдёт не в свою</text>
+  <text class="n" x="538" y="266.5" fill="#c62828">группу.</text>
+  <text class="h" x="16" y="302.5">Деталь с картинкой: ссылка в столбце B, картинка подписана</text>
+  <rect x="16" y="312.5" width="178" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="105.0" y="325.5" text-anchor="middle">A</text>
+  <rect x="194" y="312.5" width="126" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="257.0" y="325.5" text-anchor="middle">B</text>
+  <rect x="320" y="312.5" width="40" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="340.0" y="325.5" text-anchor="middle">C</text>
+  <rect x="360" y="312.5" width="44" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="382.0" y="325.5" text-anchor="middle">D</text>
+  <rect x="404" y="312.5" width="58" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="433.0" y="325.5" text-anchor="middle">E</text>
+  <rect x="462" y="312.5" width="52" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="488.0" y="325.5" text-anchor="middle">F</text>
+  <rect x="16" y="330.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="330.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="330.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="330.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="330.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="330.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="346.5" fill="#1f2328">Crowns</text>
+  <text class="c" x="257.0" y="346.5" fill="#1f2328" text-anchor="middle">3" Crown, det.1</text>
+  <text class="c" x="340.0" y="346.5" fill="#1f2328" text-anchor="middle">120</text>
+  <text class="c" x="382.0" y="346.5" fill="#1f2328" text-anchor="middle">LFT</text>
+  <rect x="16" y="353.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="353.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="353.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="353.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="353.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="353.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="369.5" fill="#1f2328">Crowns</text>
+  <text class="c" x="257.0" y="369.5" fill="#1f2328" text-anchor="middle">5" Crown, det.2</text>
+  <text class="c" x="340.0" y="369.5" fill="#1f2328" text-anchor="middle">120</text>
+  <text class="c" x="382.0" y="369.5" fill="#1f2328" text-anchor="middle">LFT</text>
+  <rect x="16" y="376.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="376.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="376.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="376.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="376.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="376.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="16" y="399.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="399.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="399.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="399.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="399.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="399.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="415.5" fill="#1f2328">Det. 1</text>
+  <text class="cb" x="340.0" y="415.5" fill="#1f2328" text-anchor="middle">Det. 2</text>
+  <rect x="16" y="422.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="422.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="422.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="422.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="422.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="422.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="16" y="445.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="445.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="445.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="445.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="445.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="445.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="16" y="468.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="468.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="468.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="468.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="468.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="468.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <path d="M532,351.5 L526,351.5 L526,342.0 L518,342.0" fill="none" stroke="#5a6168" stroke-width="1.2"/>
+  <path d="M514,342.0 L522,338.0 L522,346.0 z" fill="#5a6168"/>
+  <text class="n" x="538" y="347.5" fill="#1f2328">Строка материала ссылается на</text>
+  <text class="n" x="538" y="363.5" fill="#1f2328">картинку.</text>
+  <path d="M532,411.0 L526,411.0 L526,411.0 L518,411.0" fill="none" stroke="#5a6168" stroke-width="1.2"/>
+  <path d="M514,411.0 L522,407.0 L522,415.0 z" fill="#5a6168"/>
+  <text class="n" x="538" y="407.0" fill="#1f2328">Картинка лежит в таблице, номер над</text>
+  <text class="n" x="538" y="423.0" fill="#1f2328">ней: Detail 1 или Det. 1.</text>
+  <path d="M66,426.5 L106,426.5 L106,436.5 C92,438.5 88,450.5 96,460.5 L96,484.5 L66,484.5 L66,472.5 C78,466.5 82,452.5 72,442.5 z" fill="#e9eef2" stroke="#3a3f44" stroke-width="1.2"/>
+  <path d="M322,426.5 L372,426.5 L372,436.5 C358,438.5 354,450.5 362,460.5 L362,484.5 L322,484.5 L322,472.5 C334,466.5 338,452.5 328,442.5 z" fill="#e9eef2" stroke="#3a3f44" stroke-width="1.2"/>
+  <text class="h" x="16" y="521.5">Двери, cased openings и трим: тип в столбце F</text>
+  <rect x="16" y="531.5" width="178" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="105.0" y="544.5" text-anchor="middle">A</text>
+  <rect x="194" y="531.5" width="126" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="257.0" y="544.5" text-anchor="middle">B</text>
+  <rect x="320" y="531.5" width="40" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="340.0" y="544.5" text-anchor="middle">C</text>
+  <rect x="360" y="531.5" width="44" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="382.0" y="544.5" text-anchor="middle">D</text>
+  <rect x="404" y="531.5" width="58" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="433.0" y="544.5" text-anchor="middle">E</text>
+  <rect x="462" y="531.5" width="52" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="488.0" y="544.5" text-anchor="middle">F</text>
+  <rect x="16" y="549.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="549.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="549.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="549.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="549.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="549.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="565.5" fill="#1f2328">1st Floor</text>
+  <rect x="16" y="572.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="572.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="572.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="572.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="572.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="572.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="588.5" fill="#1f2328">Int. Doors</text>
+  <text class="c" x="257.0" y="588.5" fill="#1f2328" text-anchor="middle">3080 Elev</text>
+  <text class="c" x="340.0" y="588.5" fill="#1f2328" text-anchor="middle">1</text>
+  <text class="c" x="382.0" y="588.5" fill="#1f2328" text-anchor="middle">Unit</text>
+  <text class="c" x="467" y="588.5" fill="#1f2328">Type A</text>
+  <rect x="16" y="595.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="595.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="595.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="595.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="595.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="595.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="611.5" fill="#1f2328">Int. Doors</text>
+  <text class="c" x="257.0" y="611.5" fill="#1f2328" text-anchor="middle">2880</text>
+  <text class="c" x="340.0" y="611.5" fill="#1f2328" text-anchor="middle">3</text>
+  <text class="c" x="382.0" y="611.5" fill="#1f2328" text-anchor="middle">Unit</text>
+  <rect x="16" y="618.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="618.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="618.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="618.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="618.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="618.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="634.5" fill="#1f2328">Int. Doors</text>
+  <text class="c" x="257.0" y="634.5" fill="#1f2328" text-anchor="middle">21080 pocket</text>
+  <text class="c" x="340.0" y="634.5" fill="#1f2328" text-anchor="middle">1</text>
+  <text class="c" x="382.0" y="634.5" fill="#1f2328" text-anchor="middle">Unit</text>
+  <text class="c" x="467" y="634.5" fill="#1f2328">Type B</text>
+  <rect x="16" y="641.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="641.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="641.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="641.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="641.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="641.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="16" y="664.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="664.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="664.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="664.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="664.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="664.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="680.5" fill="#1f2328">Cased Openings</text>
+  <text class="c" x="257.0" y="680.5" fill="#1f2328" text-anchor="middle">21080 CO</text>
+  <text class="c" x="340.0" y="680.5" fill="#1f2328" text-anchor="middle">1</text>
+  <text class="c" x="382.0" y="680.5" fill="#1f2328" text-anchor="middle">Unit</text>
+  <text class="c" x="467" y="680.5" fill="#1f2328">Type A</text>
+  <rect x="16" y="687.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="687.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="687.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="687.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="687.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="687.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="16" y="710.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="710.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="710.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="710.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="710.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="710.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="726.5" fill="#1f2328">Crowns (all rooms)</text>
+  <text class="c" x="257.0" y="726.5" fill="#1f2328" text-anchor="middle">3"</text>
+  <text class="c" x="340.0" y="726.5" fill="#1f2328" text-anchor="middle">240</text>
+  <text class="c" x="382.0" y="726.5" fill="#1f2328" text-anchor="middle">LF</text>
+  <text class="c" x="467" y="726.5" fill="#1f2328">IL326</text>
+  <path d="M532,570.5 L526,570.5 L526,561.0 L518,561.0" fill="none" stroke="#5a6168" stroke-width="1.2"/>
+  <path d="M514,561.0 L522,557.0 L522,565.0 z" fill="#5a6168"/>
+  <text class="n" x="538" y="566.5" fill="#1f2328">Метка этажа без цвета: обычная</text>
+  <text class="n" x="538" y="582.5" fill="#1f2328">строка, это допустимо.</text>
+  <path d="M532,617.5 L526,617.5 L526,584.0 L518,584.0" fill="none" stroke="#5a6168" stroke-width="1.2"/>
+  <path d="M514,584.0 L522,580.0 L522,588.0 z" fill="#5a6168"/>
+  <text class="n" x="538" y="605.5" fill="#1f2328">Метка типа начинается со слова</text>
+  <text class="n" x="538" y="621.5" fill="#1f2328">Type. Двери складываются внутри</text>
+  <text class="n" x="538" y="637.5" fill="#1f2328">своего типа.</text>
+  <path d="M532,664.5 L526,664.5 L526,630.0 L518,630.0" fill="none" stroke="#5a6168" stroke-width="1.2"/>
+  <path d="M514,630.0 L522,626.0 L522,634.0 z" fill="#5a6168"/>
+  <text class="n" x="538" y="660.5" fill="#1f2328">Физический вид и рейтинг остаются в</text>
+  <text class="n" x="538" y="676.5" fill="#1f2328">B: pocket, FR s/cl.</text>
+  <path d="M532,722.0 L526,722.0 L526,722.0 L518,722.0" fill="none" stroke="#5a6168" stroke-width="1.2"/>
+  <path d="M514,722.0 L522,718.0 L522,726.0 z" fill="#5a6168"/>
+  <text class="n" x="538" y="718.0" fill="#1f2328">Размер в B, марка или тип материала</text>
+  <text class="n" x="538" y="734.0" fill="#1f2328">в F: IL326, MD-01.</text>
+</svg>

@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540" role="img" aria-labelledby="t d">
+  <title id="t">Deck block: frame, decking and railing under separate headers</title>
+  <desc id="d">Spreadsheet fragment of a ground deck: a framing subsection whose name has Deck and Frame, a note under it, frame rows, then Decking and Railing under their own coloured headers.</desc>
+  <style>text{font-family:Inter,"Segoe UI",Arial,sans-serif}.h{font-size:15px;font-weight:700;fill:#1f2328}.t{font-size:13px;fill:#1f2328}.n{font-size:13px}.c{font-size:12.5px}.cb{font-size:12.5px;font-weight:700}.col{font-size:11px;fill:#5a6168}.sm{font-size:12px;fill:#5a6168}.bt{font-size:13.5px;font-weight:600;fill:#1f2328}</style>
+  <rect width="800" height="540" fill="#ffffff"/>
+  <text class="h" x="16" y="40">Каркас, потом decking, railing и trims под своими заголовками</text>
+  <rect x="16" y="50" width="178" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="105.0" y="63" text-anchor="middle">A</text>
+  <rect x="194" y="50" width="126" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="257.0" y="63" text-anchor="middle">B</text>
+  <rect x="320" y="50" width="40" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="340.0" y="63" text-anchor="middle">C</text>
+  <rect x="360" y="50" width="44" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="382.0" y="63" text-anchor="middle">D</text>
+  <rect x="404" y="50" width="58" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="433.0" y="63" text-anchor="middle">E</text>
+  <rect x="462" y="50" width="52" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="488.0" y="63" text-anchor="middle">F</text>
+  <rect x="16" y="68" width="178" height="23" fill="#99CC00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="68" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="68" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="68" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="68" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="68" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="84" fill="#1f2328">Rear Ground Deck Frame</text>
+  <rect x="16" y="91" width="178" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="91" width="126" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="91" width="40" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="91" width="44" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="91" width="58" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="91" width="52" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="107" fill="#1f2328">Note: All Deck frame is assumed; verify</text>
+  <rect x="16" y="114" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="114" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="114" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="114" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="114" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="114" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="130" fill="#1f2328">Posts</text>
+  <text class="c" x="257.0" y="130" fill="#1f2328" text-anchor="middle">6x6 P.T.</text>
+  <text class="c" x="340.0" y="130" fill="#1f2328" text-anchor="middle">2</text>
+  <text class="c" x="382.0" y="130" fill="#1f2328" text-anchor="middle">8</text>
+  <rect x="16" y="137" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="137" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="137" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="137" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="137" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="137" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="153" fill="#1f2328">Post Bases</text>
+  <text class="c" x="257.0" y="153" fill="#1f2328" text-anchor="middle">ABU66 Zmax</text>
+  <text class="c" x="340.0" y="153" fill="#1f2328" text-anchor="middle">2</text>
+  <text class="c" x="382.0" y="153" fill="#1f2328" text-anchor="middle">pcs</text>
+  <rect x="16" y="160" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="160" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="160" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="160" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="160" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="160" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="16" y="183" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="183" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="183" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="183" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="183" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="183" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="199" fill="#1f2328">Joists</text>
+  <text class="c" x="257.0" y="199" fill="#1f2328" text-anchor="middle">2x10 P.T.</text>
+  <text class="c" x="340.0" y="199" fill="#1f2328" text-anchor="middle">12</text>
+  <text class="c" x="382.0" y="199" fill="#1f2328" text-anchor="middle">12</text>
+  <rect x="16" y="206" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="206" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="206" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="206" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="206" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="206" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="222" fill="#1f2328">Hangers</text>
+  <text class="c" x="257.0" y="222" fill="#1f2328" text-anchor="middle">LUS210 Zmax</text>
+  <text class="c" x="340.0" y="222" fill="#1f2328" text-anchor="middle">24</text>
+  <text class="c" x="382.0" y="222" fill="#1f2328" text-anchor="middle">pcs</text>
+  <rect x="16" y="229" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="229" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="229" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="229" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="229" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="229" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="16" y="252" width="178" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="252" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="252" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="252" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="252" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="252" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="268" fill="#1f2328">Ground Deck Decking (rear)</text>
+  <rect x="16" y="275" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="275" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="275" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="275" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="275" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="275" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="291" fill="#1f2328">Decking</text>
+  <text class="c" x="257.0" y="291" fill="#1f2328" text-anchor="middle">5/4x6</text>
+  <text class="c" x="340.0" y="291" fill="#1f2328" text-anchor="middle">60</text>
+  <text class="c" x="382.0" y="291" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <rect x="16" y="298" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="298" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="298" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="298" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="298" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="298" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="16" y="321" width="178" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="321" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="321" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="321" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="321" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="321" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="337" fill="#1f2328">Ground Deck Railing (rear)</text>
+  <rect x="16" y="344" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="344" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="344" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="344" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="344" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="344" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="360" fill="#1f2328">Posts at Rails</text>
+  <text class="c" x="257.0" y="360" fill="#1f2328" text-anchor="middle">4x4 posts</text>
+  <text class="c" x="340.0" y="360" fill="#1f2328" text-anchor="middle">6</text>
+  <text class="c" x="382.0" y="360" fill="#1f2328" text-anchor="middle">4</text>
+  <rect x="16" y="367" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="367" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="367" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="367" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="367" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="367" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="383" fill="#1f2328">Rail sections</text>
+  <text class="c" x="257.0" y="383" fill="#1f2328" text-anchor="middle">6' Rail section</text>
+  <text class="c" x="340.0" y="383" fill="#1f2328" text-anchor="middle">2</text>
+  <text class="c" x="382.0" y="383" fill="#1f2328" text-anchor="middle">unit</text>
+  <path d="M532,105 L526,105 L526,79.5 L518,79.5" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <path d="M514,79.5 L522,75.5 L522,83.5 z" fill="#2e7d32"/>
+  <text class="n" x="538" y="85" fill="#2e7d32">В названии каркаса террасы есть</text>
+  <text class="n" x="538" y="101" fill="#2e7d32">Deck и Frame (или Framing), плюс</text>
+  <text class="n" x="538" y="117" fill="#2e7d32">уровень и расположение. Иначе</text>
+  <text class="n" x="538" y="133" fill="#2e7d32">программа не найдёт блок.</text>
+  <path d="M532,160 L526,160 L526,102.5 L518,102.5" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <path d="M514,102.5 L522,98.5 L522,106.5 z" fill="#2e7d32"/>
+  <text class="n" x="538" y="156" fill="#2e7d32">Заметка под заголовком своего</text>
+  <text class="n" x="538" y="172" fill="#2e7d32">блока, на жёлтом.</text>
+  <path d="M532,263.5 L526,263.5 L526,263.5 L518,263.5" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <path d="M514,263.5 L522,259.5 L522,267.5 z" fill="#2e7d32"/>
+  <text class="n" x="538" y="251.5" fill="#2e7d32">Decking не лежит под заголовком</text>
+  <text class="n" x="538" y="267.5" fill="#2e7d32">каркаса: у него своя цветная</text>
+  <text class="n" x="538" y="283.5" fill="#2e7d32">строка-заголовок.</text>
+  <path d="M532,332.5 L526,332.5 L526,332.5 L518,332.5" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <path d="M514,332.5 L522,328.5 L522,336.5 z" fill="#2e7d32"/>
+  <text class="n" x="538" y="328.5" fill="#2e7d32">Railing тоже. То же самое для Trims</text>
+  <text class="n" x="538" y="344.5" fill="#2e7d32">у балкона, porch, canopy.</text>
+  <circle cx="25" cy="415" r="9" fill="#c62828"/>
+  <path d="M21,411 L29,419 M29,411 L21,419" fill="none" stroke="#fff" stroke-width="2.2"/>
+  <text class="h" x="42" y="420" fill="#c62828">Неверные названия</text>
+  <rect x="16" y="430" width="178" height="23" fill="#99CC00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="430" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="430" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="430" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="430" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="430" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="446" fill="#1f2328">Rear Deck</text>
+  <rect x="16" y="453" width="178" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="453" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="453" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="453" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="453" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="453" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="469" fill="#1f2328">Ground deck</text>
+  <rect x="16" y="476" width="178" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="476" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="476" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="476" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="476" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="476" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="492" fill="#1f2328">Balcony deck</text>
+  <rect x="16" y="499" width="178" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="499" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="499" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="499" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="499" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="499" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="515" fill="#1f2328">Ground Rail</text>
+  <path d="M532,475 L526,475 L526,464.5 L518,464.5" fill="none" stroke="#c62828" stroke-width="1.2"/>
+  <path d="M514,464.5 L522,460.5 L522,468.5 z" fill="#c62828"/>
+  <text class="n" x="538" y="447" fill="#c62828">Rear Deck: нет Frame. Ground deck,</text>
+  <text class="n" x="538" y="463" fill="#c62828">Balcony deck, Ground Rail:</text>
+  <text class="n" x="538" y="479" fill="#c62828">непонятно, что внутри. Верно:</text>
+  <text class="n" x="538" y="495" fill="#c62828">Balcony Railing, Canopy Trims,</text>
+  <text class="n" x="538" y="511" fill="#c62828">Decking and Railing.</text>
+</svg>
