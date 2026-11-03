@@ -65,9 +65,8 @@
   <text class="n" x="404" y="219" fill="#1f2328">заголовком пустая строка.</text>
   <path d="M398,265 L380,265 L380,265 L368,265" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
   <path d="M362,265 L370,261 L370,269 z" fill="#2e7d32"/>
-  <text class="n" x="404" y="253" fill="#1f2328">Группа стоит внутри Framing, желательно сразу</text>
-  <text class="n" x="404" y="269" fill="#1f2328">после подсекции каркаса своего этажа, а не в</text>
-  <text class="n" x="404" y="285" fill="#1f2328">конце листа.</text>
+  <text class="n" x="404" y="253" fill="#1f2328">Группа стоит внутри Framing, сразу за Framing</text>
+  <text class="n" x="404" y="269" fill="#1f2328">List своего этажа. Не в конце листа.</text>
   <path d="M398,325 L380,325 L380,311 L368,311" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
   <path d="M362,311 L370,307 L370,315 z" fill="#2e7d32"/>
   <text class="n" x="404" y="321" fill="#1f2328">Decking, railing и trims сразу за каркасом</text>
@@ -76,11 +75,6 @@
   <path d="M362,438 L370,434 L370,442 z" fill="#2e7d32"/>
   <text class="n" x="404" y="434" fill="#1f2328">Балконы и порчи указывают уровень и</text>
   <text class="n" x="404" y="450" fill="#1f2328">расположение, если их несколько.</text>
-  <path d="M398,519 L380,519 L380,519 L368,519" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
-  <path d="M362,519 L370,515 L370,523 z" fill="#2e7d32"/>
-  <text class="n" x="404" y="507" fill="#1f2328">Где именно кончается Framing, руководство не</text>
-  <text class="n" x="404" y="523" fill="#1f2328">уточняет. Roof System Misc показан внутри</text>
-  <text class="n" x="404" y="539" fill="#1f2328">условно.</text>
   <path d="M398,658 L380,658 L380,658 L368,658" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
   <path d="M362,658 L370,654 L370,662 z" fill="#2e7d32"/>
   <text class="n" x="404" y="654" fill="#1f2328">Цвета как в эталонах. Руководство требует</text>
