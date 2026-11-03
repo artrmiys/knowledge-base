@@ -7425,7 +7425,7 @@
 <figure>
 <p><img alt="Порядок секций DFL" src="../../assets/images/reference/dfl-sections-order.svg" />
   </p>
-<figcaption>Секции сверху вниз: шапка с заметками, стены, фронтоны и парапеты, Wall Materials, framing lists по этажам с группами deck, балконов и porch внутри, кровля, отделка.</figcaption>
+<figcaption>Секции сверху вниз: шапка с заметками, Foundation, этаж за этажом стены и framing list с группами deck, балконов и porch, потом фронтоны, парапеты, Wall Materials, кровля, отделка.</figcaption>
 </figure>
 <table>
 <thead>
@@ -7457,7 +7457,7 @@
 </tr>
 <tr>
 <td>4</td>
-<td><code>1st ... Nth Floor Walls</code></td>
+<td><code>1st ... Nth Floor Walls</code>, стены каждого этажа перед его framing list</td>
 <td>bracing ext/cor/dem, flashing, studs, plates, headers, WRB, wall sheathing + tape, box sheathing + tape; в конце этажа блок <code>Holdowns</code></td>
 <td><code>walls/&lt;этаж&gt; floor walls/&lt;категория сечение высота&gt;</code>, <code>openings</code>, <code>shear walls/&lt;этаж&gt;/holdowns</code></td>
 </tr>
@@ -7481,7 +7481,7 @@
 </tr>
 <tr>
 <td>8</td>
-<td><code>Wall Materials</code> с <code>1st ... Nth Floor Framing List</code>, <code>Loft Framing List</code>, <code>Roof Frame list</code></td>
+<td><code>1st ... Nth Floor Framing List</code> сразу за стенами своего этажа; <code>Wall Materials</code>, <code>Loft Framing List</code>, <code>Roof Frame list</code> в конце Framing</td>
 <td>beams, joists, hangers, rim, ribbon, blocking, ties, stair, subfloor, panel adhesive</td>
 <td><code>framing/&lt;этаж&gt; framing/beams, joists, details, stairs</code>, <code>sqfts/&lt;этаж&gt;</code></td>
 </tr>
@@ -7511,7 +7511,7 @@
 </tr>
 </tbody>
 </table>
-<p>В двух файлах-эталонах на небольших домах <code>1st Floor Framing List</code> стоит перед <code>1st Floor Walls</code>. Порядок этих двух секций руководство не задаёт: оставляйте как в шаблоне.</p>
+<p><strong>Порядок в готовом файле:</strong> этаж за этажом: стены, потом framing list этого этажа с его группами, потом следующий этаж. В шаблоне заполняйте как обычно: Process Excels расставит секции и группы сам. В двух файлах-эталонах на небольших домах <code>1st Floor Framing List</code> стоит перед <code>1st Floor Walls</code>, руководство этот порядок не задаёт, у нас сначала стены.</p>
 <h2 id="ourplancore">Как замеры из OurPlanCore становятся строками<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Полоса XL в программе пишет замеры в книгу и запускает макросы книги (подробно про кнопки: <a href="../ourplanecore/">OurPlanCore, Estimating и экспорт</a>). Общая схема одна для всех кнопок:</p>
 <ol>
@@ -7645,8 +7645,12 @@
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>1st Floor Walls                           жёлтый
 </span></code></pre></div>
 <h3 id="notes">Заметки<a class="headerlink" href="#notes" title="Прямая ссылка на раздел">&para;</a></h3>
-<p>Заметка = строка с префиксом в A, <strong>жёлтый фон на A:F</strong>, столбцы B-F пустые. <strong>Строка внутри секции без одного из трёх префиксов или без жёлтого фона в итоговый файл как заметка не попадёт.</strong></p>
-<p><strong>В шапке листа</strong> (выше <code>Description</code>) жёлтый только у <code>Important:</code>. Обычная <code>Note:</code> в шапке чёрная жирная, без заливки.</p>
+<p>Заметка = строка с префиксом в A, столбцы B-F пустые. По руководству у всех заметок жёлтый фон, а строка без него в итоговый файл как заметка не попадает. У нас так:</p>
+<ul>
+<li><strong>В шапке листа</strong> (выше <code>Description</code>): <code>Important:</code> красный жирный на жёлтом, обычная <code>Note:</code> красная жирная без заливки.</li>
+<li><strong>Сразу под заголовком секции:</strong> жёлтый фон на A:F.</li>
+<li><strong>Внутри секции над своими строками</strong> и строка счёта <code>Note: 2 Stairs</code>: жирная без заливки, как раньше.</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -7866,8 +7870,8 @@
 <td>кода цвета в руководстве нет. Для пометки на проверку берём <code>FABF8F</code>. Светло-персиковый <code>FCE5D7</code> на картинке руководства стоит как опция, поэтому для опций персиковые оттенки не берите. Заголовки групп делайте зелёными <code>99CC00</code>, как в эталонах</td>
 </tr>
 <tr>
-<td>Заметки шапки без жёлтого</td>
-<td>в эталоне наверху есть <code>Note:</code> без заливки, а текст руководства говорит, что такие строки теряются. Делаем так: в шапке <code>Important:</code> жёлтый, обычная <code>Note:</code> без заливки. Если окажется, что такие заметки пропадают из итогового листа, правило поменяем</td>
+<td>Заметки без жёлтого</td>
+<td>в эталоне наверху есть <code>Note:</code> красным без заливки, а текст руководства говорит, что строки без жёлтого теряются. Делаем как описано в <a href="#notes">Заметках</a>. Если такие заметки начнут пропадать из итогового листа, правило поменяем</td>
 </tr>
 <tr>
 <td>Изменено больше половины листа</td>

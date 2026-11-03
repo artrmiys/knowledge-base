@@ -1,82 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="687" viewBox="0 0 800 687" role="img" aria-labelledby="t d">
-  <title id="t">Order of sections in the source file</title>
-  <desc id="d">Vertical stack of sections from the header with notes down to interior trims. Deck, balcony and porch groups sit inside Framing right after the framing list of their floor, each with decking, railing and trims under their own headers.</desc>
-  <style>text{font-family:Inter,"Segoe UI",Arial,sans-serif}.h{font-size:15px;font-weight:700;fill:#1f2328}.t{font-size:13px;fill:#1f2328}.n{font-size:13px}.c{font-size:12.5px}.cb{font-size:12.5px;font-weight:700}.col{font-size:11px;fill:#5a6168}.sm{font-size:12px;fill:#5a6168}.bt{font-size:13.5px;font-weight:600;fill:#1f2328}</style>
-  <rect width="800" height="687" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="734" viewBox="0 0 800 734" role="img" aria-labelledby="t d">
+  <title id="t">Order of sections in the finished file</title>
+  <desc id="d">Vertical stack of sections from the header with notes down to interior trims. Floor by floor: the walls, then the framing list of that floor with its deck, balcony and porch groups, then the next floor.</desc>
+  <style>text{font-family:Inter,"Segoe UI",Arial,sans-serif}.n{font-size:13px}.cb{font-size:12.5px;font-weight:700}.bt{font-size:13.5px;font-weight:600;fill:#1f2328}</style>
+  <rect width="800" height="734" fill="#ffffff"/>
   <rect x="60" y="22" width="300" height="23" fill="#CCFFFF" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="68" y="38">Detailed Material List</text>
+  <text class="cb" x="68" y="38" fill="#1f2328">Detailed Material List</text>
   <rect x="60" y="45" width="300" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="68" y="61">Important: на жёлтом, Note: без заливки</text>
+  <text class="cb" x="68" y="61" fill="#1f2328">Important: жёлтый, Note: без заливки</text>
   <rect x="60" y="68" width="300" height="23" fill="#f2f3f5" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="68" y="84">Description, Size, Quantities, Units</text>
+  <text class="cb" x="68" y="84" fill="#1f2328">Description, Size, Quantities, Units</text>
   <rect x="60" y="103" width="300" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="68" y="119">Foundation Walls</text>
+  <text class="cb" x="68" y="119" fill="#1f2328">Foundation Walls</text>
   <rect x="60" y="126" width="300" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="68" y="142">Basement Floor Walls</text>
-  <rect x="60" y="149" width="300" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="68" y="165">1st ... Nth Floor Walls</text>
-  <rect x="60" y="172" width="300" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="68" y="188">Gable, Truss Heel, Parapet, Shaft Walls</text>
-  <rect x="60" y="195" width="300" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="68" y="211">Wall Materials</text>
-  <rect x="60" y="230" width="300" height="23" fill="#99CC00" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="68" y="246">1st Floor Framing List</text>
-  <rect x="94" y="253" width="266" height="23" fill="#99CC00" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="102" y="269">Rear Ground Deck Frame</text>
-  <rect x="94" y="276" width="266" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="102" y="292">Ground Deck Decking (rear)</text>
-  <rect x="94" y="299" width="266" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="102" y="315">Ground Deck Railing (rear)</text>
-  <rect x="60" y="334" width="300" height="23" fill="#99CC00" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="68" y="350">2nd Floor Framing List</text>
-  <rect x="94" y="357" width="266" height="23" fill="#99CC00" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="102" y="373">#1 Upper Balcony List</text>
+  <text class="cb" x="68" y="142" fill="#1f2328">Basement Floor Walls</text>
+  <rect x="60" y="161" width="300" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="68" y="177" fill="#1f2328">1st Floor Walls</text>
+  <rect x="60" y="184" width="300" height="23" fill="#99CC00" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="68" y="200" fill="#1f2328">1st Floor Framing List</text>
+  <rect x="94" y="207" width="266" height="23" fill="#99CC00" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="102" y="223" fill="#1f2328">Rear Ground Deck Frame</text>
+  <rect x="94" y="230" width="266" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="102" y="246" fill="#1f2328">Ground Deck Decking (rear)</text>
+  <rect x="94" y="253" width="266" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="102" y="269" fill="#1f2328">Ground Deck Railing (rear)</text>
+  <rect x="60" y="288" width="300" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="68" y="304" fill="#1f2328">2nd Floor Walls</text>
+  <rect x="60" y="311" width="300" height="23" fill="#99CC00" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="68" y="327" fill="#1f2328">2nd Floor Framing List</text>
+  <rect x="94" y="334" width="266" height="23" fill="#99CC00" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="102" y="350" fill="#1f2328">#1 Upper Balcony List</text>
+  <rect x="94" y="357" width="266" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="102" y="373" fill="#1f2328">Balcony Railing</text>
   <rect x="94" y="380" width="266" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="102" y="396">Balcony Railing</text>
-  <rect x="94" y="403" width="266" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="102" y="419">Balcony Trims</text>
-  <rect x="94" y="426" width="266" height="23" fill="#99CC00" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="102" y="442">2nd Floor Porch Framing List</text>
-  <rect x="94" y="449" width="266" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="102" y="465">Porch Trims</text>
-  <rect x="60" y="484" width="300" height="23" fill="#99CC00" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="68" y="500">Roof Frame list</text>
-  <rect x="60" y="507" width="300" height="23" fill="#99CC00" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="68" y="523">Roof System Misc</text>
-  <rect x="60" y="542" width="300" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="68" y="558">Roof Products</text>
-  <rect x="60" y="565" width="300" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="68" y="581">Soffits and Fascias</text>
-  <rect x="60" y="588" width="300" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="68" y="604">Exterior Trims</text>
-  <rect x="60" y="611" width="300" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="68" y="627">Siding</text>
-  <rect x="60" y="646" width="300" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.8"/>
-  <text class="cb" x="68" y="662">Interior Doors&amp;Trims</text>
-  <path d="M52,149 L38,149 L38,530 L52,530" fill="none" stroke="#2e7d32" stroke-width="2"/>
-  <text transform="rotate(-90 26 339.5)" class="bt" x="26" y="339.5" text-anchor="middle">Framing</text>
-  <path d="M398,57 L380,57 L380,57 L368,57" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <text class="cb" x="102" y="396" fill="#1f2328">Balcony Trims</text>
+  <rect x="60" y="415" width="300" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="68" y="431" fill="#1f2328">3rd ... Nth Floor Walls</text>
+  <rect x="60" y="438" width="300" height="23" fill="#99CC00" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="68" y="454" fill="#1f2328">3rd ... Nth Floor Framing List</text>
+  <rect x="60" y="473" width="300" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="68" y="489" fill="#1f2328">Gable, Truss Heel, Parapet, Shaft Walls</text>
+  <rect x="60" y="496" width="300" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="68" y="512" fill="#1f2328">Wall Materials</text>
+  <rect x="60" y="531" width="300" height="23" fill="#99CC00" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="68" y="547" fill="#1f2328">Roof Frame list</text>
+  <rect x="60" y="554" width="300" height="23" fill="#99CC00" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="68" y="570" fill="#1f2328">Roof System Misc</text>
+  <rect x="60" y="589" width="300" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="68" y="605" fill="#1f2328">Roof Products</text>
+  <rect x="60" y="612" width="300" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="68" y="628" fill="#1f2328">Soffits and Fascias</text>
+  <rect x="60" y="635" width="300" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="68" y="651" fill="#1f2328">Exterior Trims</text>
+  <rect x="60" y="658" width="300" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="68" y="674" fill="#1f2328">Siding</text>
+  <rect x="60" y="693" width="300" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="cb" x="68" y="709" fill="#1f2328">Interior Doors&amp;Trims</text>
+  <path d="M52,161 L38,161 L38,577 L52,577" fill="none" stroke="#2e7d32" stroke-width="2"/>
+  <text transform="rotate(-90 26 369)" class="bt" x="26" y="369" text-anchor="middle">Framing</text>
+  <path d="M398,57 L368,57" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
   <path d="M362,57 L370,53 L370,61 z" fill="#2e7d32"/>
   <text class="n" x="404" y="53" fill="#1f2328">Главные решения по дому. Заметки секций стоят</text>
   <text class="n" x="404" y="69" fill="#1f2328">под заголовком своей секции.</text>
-  <path d="M398,207 L380,207 L380,207 L368,207" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
-  <path d="M362,207 L370,203 L370,211 z" fill="#2e7d32"/>
-  <text class="n" x="404" y="203" fill="#1f2328">Заголовок: жирный, цвет, B-F пустые. Перед</text>
-  <text class="n" x="404" y="219" fill="#1f2328">заголовком пустая строка.</text>
-  <path d="M398,265 L380,265 L380,265 L368,265" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <path d="M398,173 L368,173" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <path d="M362,173 L370,169 L370,177 z" fill="#2e7d32"/>
+  <text class="n" x="404" y="169" fill="#1f2328">Этаж за этажом: сначала стены, потом framing</text>
+  <text class="n" x="404" y="185" fill="#1f2328">list этого этажа, потом следующий этаж.</text>
+  <path d="M398,219 L368,219" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <path d="M362,219 L370,215 L370,223 z" fill="#2e7d32"/>
+  <text class="n" x="404" y="215" fill="#1f2328">Группа сразу за framing list своего этажа.</text>
+  <text class="n" x="404" y="231" fill="#1f2328">Не в конце листа.</text>
+  <path d="M398,265 L368,265" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
   <path d="M362,265 L370,261 L370,269 z" fill="#2e7d32"/>
-  <text class="n" x="404" y="253" fill="#1f2328">Группа стоит внутри Framing, сразу за Framing</text>
-  <text class="n" x="404" y="269" fill="#1f2328">List своего этажа. Не в конце листа.</text>
-  <path d="M398,325 L380,325 L380,311 L368,311" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
-  <path d="M362,311 L370,307 L370,315 z" fill="#2e7d32"/>
-  <text class="n" x="404" y="321" fill="#1f2328">Decking, railing и trims сразу за каркасом</text>
-  <text class="n" x="404" y="337" fill="#1f2328">своей группы, под своими заголовками.</text>
-  <path d="M398,438 L380,438 L380,438 L368,438" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
-  <path d="M362,438 L370,434 L370,442 z" fill="#2e7d32"/>
-  <text class="n" x="404" y="434" fill="#1f2328">Балконы и порчи указывают уровень и</text>
-  <text class="n" x="404" y="450" fill="#1f2328">расположение, если их несколько.</text>
-  <path d="M398,658 L380,658 L380,658 L368,658" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
-  <path d="M362,658 L370,654 L370,662 z" fill="#2e7d32"/>
-  <text class="n" x="404" y="654" fill="#1f2328">Цвета как в эталонах. Руководство требует</text>
-  <text class="n" x="404" y="670" fill="#1f2328">заливку заголовка, конкретный цвет не задаёт.</text>
+  <text class="n" x="404" y="261" fill="#1f2328">Decking, railing и trims сразу за каркасом</text>
+  <text class="n" x="404" y="277" fill="#1f2328">своей группы, под своими заголовками.</text>
+  <path d="M398,346 L368,346" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <path d="M362,346 L370,342 L370,350 z" fill="#2e7d32"/>
+  <text class="n" x="404" y="342" fill="#1f2328">Балконы и порчи указывают уровень и</text>
+  <text class="n" x="404" y="358" fill="#1f2328">расположение, если их несколько.</text>
+  <path d="M398,508 L368,508" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <path d="M362,508 L370,504 L370,512 z" fill="#2e7d32"/>
+  <text class="n" x="404" y="504" fill="#1f2328">Заголовок: жирный, цвет, B-F пустые. Перед</text>
+  <text class="n" x="404" y="520" fill="#1f2328">заголовком пустая строка.</text>
+  <path d="M398,705 L368,705" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <path d="M362,705 L370,701 L370,709 z" fill="#2e7d32"/>
+  <text class="n" x="404" y="701" fill="#1f2328">Цвета как в эталонах. Руководство требует</text>
+  <text class="n" x="404" y="717" fill="#1f2328">заливку заголовка, конкретный цвет не задаёт.</text>
 </svg>
