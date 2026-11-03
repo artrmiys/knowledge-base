@@ -60,6 +60,7 @@ tracks. Подробно - [Metal Tracks / CFMF](../work/vertical/walls/metal-tr
   спокойно делается панелью; не добавлять optional stick из-за соседства с CMU.
   Exterior build-ups не исключать из панелей автоматически: проверить конструкцию.
 - **Optional.** "Be careful calling anything option, unless it totally assumed."
+  Строки опции красятся своим цветом ([Опции и цвет](../reference/dfl-overview.md#options)).
   У optional-блока обязательна нота с причиной: что не указано, что принято,
   что проверить. Пример: `Optional framing for unspecified roof corridor frame (assumed 2x10 - verify if truss)`.
 - **H-clips** только для square edge, не для T&G.

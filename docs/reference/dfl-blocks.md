@@ -2,6 +2,9 @@
 
 Здесь: как расписать в книге блок балкона, блок porch и блок holdowns так, как это делается в сданных работах. Блок = заголовок с заливкой, ноты под ним, строки с формулами, белые пустые строки между группами. Блок вставляется копией эталона (блок `#1` шаблона или блок из прошлой сдачи), а не набирается руками.
 
+!!! warning "Новые правила оформления групп (ноябрь 2026)"
+    Группа лежит внутри Framing, желательно сразу после framing list своего этажа. Decking, railing и trims стоят сразу за каркасом **под своими заголовками**. Ноты только под заголовком. Полное правило со схемой: [Формат файла, группы](dfl-overview.md#groups).
+
 <figure markdown>
   ![Каркас балкона в плане](../assets/images/framing/deck-frame-plan.svg)
   <figcaption markdown="span">Каркас балкона: ledger у стены, joists с hangers, beam на posts, box или rim по периметру. Каждый элемент - своя строка блока.</figcaption>
@@ -18,10 +21,14 @@
 
 | Элемент | Как |
 | --- | --- |
-| Заголовок балкона | `="#N Upper Balcony List W' x D' "&G&" unit"&H`, заливка A:B оранжевая `FABF8F`, жирный чёрный; терраса над гаражом - `Upper Balcony/Terrace List` |
+| Заголовок балкона | `="#N Upper Balcony List W' x D' "&G&" unit"&H`, заливка A:B, жирный чёрный; в шаблоне заливка `FABF8F`, в эталонах заголовки групп зелёные `99CC00`, для нового заголовка берите зелёный ([что пока не уточнено](dfl-overview.md#open)); терраса над гаражом - `Upper Balcony/Terrace List` |
 | Заголовок porch | `#N Porch Framing List W' x D'`, заливка A:B зелёная `99CC00`, жирный чёрный |
+| Заголовок ground deck | обязательно `Deck` и `Frame` или `Framing`, плюс уровень и расположение: `Rear Ground Deck Frame`, `Ground Deck Framing List (left)`. `Rear Deck` программа не распознает |
+| Текст в заголовке | только в A, столбцы B-F пустые; деталь или лист пишите заметкой под заголовком |
+| Несколько одинаковых по типу | указывайте расположение: где какой балкон, какой porch |
 | Units | G заголовка = число экземпляров; площадные строки парсят W и D из заголовка и множат на G заголовка |
-| Ноты | сразу под заголовком, стиль локальной ноты ([Ноты в DFL](standard-notes.md)) |
+| Ноты | под заголовком, не над ним; префикс и жёлтый фон ([Заметки](dfl-overview.md#notes)) |
+| Decking, railing, trims | сразу за каркасом, каждый под своей строкой-заголовком: `Balcony Railing`, `Ground Deck Decking (rear)`, `Canopy Trims`, `Decking and Railing`, `Porch Trims` |
 | Пустые строки | белые, формат с белой пустой строки; заливка только на нотах и заголовке |
 | Нули | строки с C = 0 и пустые шаблонные строки удалить |
 
@@ -39,14 +46,14 @@
 | `End Joists` | крайние joists другим сечением, hangers `LUC210 Zmax` (скрытые полки) | S-деталь |
 | `Hangers` | `LUS210 Zmax` joist к ledger; `HUC212-2 Zmax` балка в балку; LVL-балка `HUC410 Zmax` | S-детали |
 | Соединения балка к посту | `ML210Z`, `HL33Z`, through bolts + washers + nuts, SDS: каждое своей строкой, E = деталь | S-детали |
-| `Decking` | `2x6 DuxxBak`, SQ FT, E = деталь; `5/4x6` только на террасе над гаражом (там subfloor `3/4" Ply` + sleepers `2x4 P.T.` + `5/4x6`) | A-деталь |
-| `Fascia`, `Soffits`, `Post Wrap`, flashing | только если отделка в scope; Frame only - не вставлять | scope |
+| `Decking` | под своим заголовком; `2x6 DuxxBak`, SQ FT, E = деталь; `5/4x6` только на террасе над гаражом (там subfloor `3/4" Ply` + sleepers `2x4 P.T.` + `5/4x6`) | A-деталь |
+| `Fascia`, `Soffits`, `Post Wrap`, flashing | под заголовком trims (`Balcony Trims`), только если отделка в scope; Frame only - не вставлять | scope |
 
 Бетонные и ферменные балконы (низ - жилое, LW concrete) в деревянный блок не входят: bases = 0 на этих стеках и нота `counted separately`.
 
 ## Перила
 
-Railing всегда есть в блоке: либо системой, либо поэлементно, по детали. Не смешивать на одном балконе.
+Railing всегда есть у балкона: либо системой, либо поэлементно, по детали. Не смешивать на одном балконе. Строки перил идут сразу за каркасом под своим заголовком (`Balcony Railing` или общий `Decking and Railing`), нота про систему под ним.
 
 | Тип | Строки |
 | --- | --- |
@@ -87,6 +94,7 @@ Railing всегда есть в блоке: либо системой, либо
 ## Частые ошибки
 
 - Балконный блок без своего множителя units или с множителем из чужого блока.
+- Нота над заголовком блока; decking и railing прямо под заголовком каркаса; группа вынесена в конец листа.
 - Porch зеркалён с балконов вместо отдельного счёта; porch SQFT на Front Page пуст.
 - Три поста на перила вместо двух; система и поэлементный railing смешаны.
 - Hangers балкона без `Zmax`; cap `BCS2-3/6` на всё подряд без учёта plies.
@@ -98,12 +106,14 @@ Railing всегда есть в блоке: либо системой, либо
 
 ```text
 #2 Upper Balcony List 12' x 7'   4 unit            (G заголовка = 4)
-Note: Railing is composite per A6.2; posts, sleeves, caps and rail sections counted.
 Posts                      6x6 P.T.           =2*G       pcs   10'     S4.1
 Post Caps                  BC46 Zmax          =2*G       pcs           3/S4.1
 Beam (2)                   2x12 P.T.          =2*CEILING(12/14,1)*G    LFT   B3 S4.1
 Joists 16" o.c.            2x12 P.T.          =CEILING((7*12/16+1)/2,1)*G   LFT  S4.1
 Hangers                    LUS210 Zmax        =CEILING(10*G,2)         pcs   7/S4.1
+
+Balcony Decking and Railing                        (свой заголовок)
+Note: Railing is composite per A6.2; posts, sleeves, caps and rail sections counted.
 Decking                    2x6 DuxxBak        =CEILING(12*7*1.1,10)*G  SQ FT 5/A5.5
 Posts at Rails 4x4 P.T.    4x4 P.T.           =2*G       pcs   4'
 Rail sections 6'           6' Rail section    =EVEN(19/6*G)  pcs

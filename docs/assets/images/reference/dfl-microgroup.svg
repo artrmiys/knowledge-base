@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="416" viewBox="0 0 800 416" role="img" aria-labelledby="t d">
+  <title id="t">Microgroups</title>
+  <desc id="d">A panel group that starts after a label row and ends on a blank row; a wrong group whose first row sits directly under a material row.</desc>
+  <style>text{font-family:Inter,"Segoe UI",Arial,sans-serif}.h{font-size:15px;font-weight:700;fill:#1f2328}.t{font-size:13px;fill:#1f2328}.n{font-size:13px}.c{font-size:12.5px}.cb{font-size:12.5px;font-weight:700}.col{font-size:11px;fill:#5a6168}.sm{font-size:12px;fill:#5a6168}.bt{font-size:13.5px;font-weight:600;fill:#1f2328}</style>
+  <rect width="800" height="416" fill="#ffffff"/>
+  <circle cx="25" cy="35" r="9" fill="#2e7d32"/>
+  <path d="M20.5,35 L24,38.5 L30,31" fill="none" stroke="#fff" stroke-width="2.2"/>
+  <text class="h" x="42" y="40" fill="#2e7d32">Микрогруппа: начало по первому слову, конец на пустой строке</text>
+  <rect x="16" y="50" width="178" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="105.0" y="63" text-anchor="middle">A</text>
+  <rect x="194" y="50" width="126" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="257.0" y="63" text-anchor="middle">B</text>
+  <rect x="320" y="50" width="40" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="340.0" y="63" text-anchor="middle">C</text>
+  <rect x="360" y="50" width="44" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="382.0" y="63" text-anchor="middle">D</text>
+  <rect x="404" y="50" width="58" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="433.0" y="63" text-anchor="middle">E</text>
+  <rect x="462" y="50" width="52" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="488.0" y="63" text-anchor="middle">F</text>
+  <rect x="16" y="68" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="68" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="68" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="68" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="68" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="68" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="84" fill="#1f2328">Living rm Trims:</text>
+  <rect x="16" y="91" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="91" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="91" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="91" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="91" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="91" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="107" fill="#1f2328">Panel</text>
+  <text class="c" x="257.0" y="107" fill="#1f2328" text-anchor="middle">1" Panel</text>
+  <text class="c" x="340.0" y="107" fill="#1f2328" text-anchor="middle">36</text>
+  <text class="c" x="382.0" y="107" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <rect x="16" y="114" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="114" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="114" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="114" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="114" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="114" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="130" fill="#1f2328">Over Panel</text>
+  <text class="c" x="257.0" y="130" fill="#1f2328" text-anchor="middle">1" Mldg</text>
+  <text class="c" x="340.0" y="130" fill="#1f2328" text-anchor="middle">34</text>
+  <text class="c" x="382.0" y="130" fill="#1f2328" text-anchor="middle">LFT</text>
+  <rect x="16" y="137" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="137" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="137" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="137" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="137" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="137" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="153" fill="#1f2328">Trims (low)</text>
+  <text class="c" x="257.0" y="153" fill="#1f2328" text-anchor="middle">5/4x8</text>
+  <text class="c" x="340.0" y="153" fill="#1f2328" text-anchor="middle">12</text>
+  <text class="c" x="382.0" y="153" fill="#1f2328" text-anchor="middle">LFT</text>
+  <rect x="16" y="160" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="160" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="160" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="160" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="160" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="160" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="176" fill="#1f2328">Trims</text>
+  <text class="c" x="257.0" y="176" fill="#1f2328" text-anchor="middle">5/4x6</text>
+  <text class="c" x="340.0" y="176" fill="#1f2328" text-anchor="middle">20</text>
+  <text class="c" x="382.0" y="176" fill="#1f2328" text-anchor="middle">LFT</text>
+  <rect x="16" y="183" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="183" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="183" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="183" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="183" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="183" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="16" y="206" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="206" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="206" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="206" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="206" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="206" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="222" fill="#1f2328">Post Wrap, front</text>
+  <text class="c" x="257.0" y="222" fill="#1f2328" text-anchor="middle">1x8</text>
+  <text class="c" x="340.0" y="222" fill="#1f2328" text-anchor="middle">222</text>
+  <text class="c" x="382.0" y="222" fill="#1f2328" text-anchor="middle">LFT</text>
+  <rect x="16" y="229" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="229" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="229" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="229" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="229" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="229" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="245" fill="#1f2328">Post Base</text>
+  <text class="c" x="257.0" y="245" fill="#1f2328" text-anchor="middle">1x6</text>
+  <text class="c" x="340.0" y="245" fill="#1f2328" text-anchor="middle">36</text>
+  <text class="c" x="382.0" y="245" fill="#1f2328" text-anchor="middle">LFT</text>
+  <rect x="16" y="252" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="252" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="252" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="252" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="252" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="252" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <path d="M532,97 L526,97 L526,79.5 L518,79.5" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <path d="M514,79.5 L522,75.5 L522,83.5 z" fill="#2e7d32"/>
+  <text class="n" x="538" y="85" fill="#2e7d32">Строка выше: пустая, метка или</text>
+  <text class="n" x="538" y="101" fill="#2e7d32">заголовок. Отдельный заголовок</text>
+  <text class="n" x="538" y="117" fill="#2e7d32">группе не нужен.</text>
+  <path d="M532,152 L526,152 L526,102.5 L518,102.5" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <path d="M514,102.5 L522,98.5 L522,106.5 z" fill="#2e7d32"/>
+  <text class="n" x="538" y="140" fill="#2e7d32">Первая строка начинается в A со</text>
+  <text class="n" x="538" y="156" fill="#2e7d32">слова группы, дальше любое</text>
+  <text class="n" x="538" y="172" fill="#2e7d32">описание.</text>
+  <path d="M532,199 L526,199 L526,194.5 L518,194.5" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <path d="M514,194.5 L522,190.5 L522,198.5 z" fill="#2e7d32"/>
+  <text class="n" x="538" y="195" fill="#2e7d32">Группа кончается, когда пусты A, B</text>
+  <text class="n" x="538" y="211" fill="#2e7d32">и C, либо на заголовке.</text>
+  <text class="bt" x="16" y="289">Слова группы: Corner Board, Panel, Planter Box, Post Wrap, Pilaster Wrap, Column Wrap, Lattice</text>
+  <circle cx="25" cy="314" r="9" fill="#c62828"/>
+  <path d="M21,310 L29,318 M29,310 L21,318" fill="none" stroke="#fff" stroke-width="2.2"/>
+  <text class="h" x="42" y="319" fill="#c62828">Строка выше: материал</text>
+  <rect x="16" y="329" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="329" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="329" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="329" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="329" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="329" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="345" fill="#1f2328">Ext Casing</text>
+  <text class="c" x="257.0" y="345" fill="#1f2328" text-anchor="middle">5/4x4</text>
+  <text class="c" x="340.0" y="345" fill="#1f2328" text-anchor="middle">580</text>
+  <text class="c" x="382.0" y="345" fill="#1f2328" text-anchor="middle">LFT</text>
+  <rect x="16" y="352" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="352" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="352" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="352" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="352" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="352" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="368" fill="#1f2328">Panel</text>
+  <text class="c" x="257.0" y="368" fill="#1f2328" text-anchor="middle">Cement Panel</text>
+  <text class="c" x="340.0" y="368" fill="#1f2328" text-anchor="middle">120</text>
+  <text class="c" x="382.0" y="368" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <rect x="16" y="375" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="375" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="375" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="375" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="375" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="375" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="391" fill="#1f2328">Over Panel</text>
+  <text class="c" x="257.0" y="391" fill="#1f2328" text-anchor="middle">1x2</text>
+  <text class="c" x="340.0" y="391" fill="#1f2328" text-anchor="middle">30</text>
+  <text class="c" x="382.0" y="391" fill="#1f2328" text-anchor="middle">LFT</text>
+  <path d="M532,363.5 L526,363.5 L526,363.5 L518,363.5" fill="none" stroke="#c62828" stroke-width="1.2"/>
+  <path d="M514,363.5 L522,359.5 L522,367.5 z" fill="#c62828"/>
+  <text class="n" x="538" y="351.5" fill="#c62828">Разделитель обязателен: группа не</text>
+  <text class="n" x="538" y="367.5" fill="#c62828">начнётся сразу под строкой с</text>
+  <text class="n" x="538" y="383.5" fill="#c62828">материалом.</text>
+</svg>
