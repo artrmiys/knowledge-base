@@ -3,12 +3,66 @@
 Здесь: из чего состоит рабочая книга Excel (Detailed Frame List), какие в ней колонки, в каком порядке идут секции, как строки связаны с замерами в OurPlanCore и как оформить файл, чтобы его правильно прочитала программа обработки.
 
 !!! warning "Новые правила оформления (ноябрь 2026)"
-    Лист теперь читает программа: она ориентируется на цвет, префиксы и слова. Изменилось главное: **заметка без жёлтого фона или без префикса теряется**, **любая цветная строка материала считается опцией**, **заметка над заголовком уходит в предыдущий блок**. Всё с примерами: [Формат исходного файла](#source-format).
+    Лист теперь читает программа: она ориентируется на цвет, префиксы и слова. Изменилось главное: **заметка без префикса теряется**, **любая цветная строка материала считается опцией**, **заметка над заголовком уходит в предыдущий блок**. Всё с примерами: [Формат исходного файла](#source-format).
 
 <figure markdown>
   ![Зоны листа Detailed Frame List](../assets/images/reference/dfl-layout.svg)
   <figcaption markdown="span">Лист Detailed Frame List: слева сдаваемая таблица A:H, справа рабочие зоны (экспорт из программы, матрица стен, спек-ячейки, калькулятор высот, справочники). Строки вставляются только в A:H.</figcaption>
 </figure>
+
+## Что где на этой странице { #map }
+
+<div class="grid cards" markdown>
+
+-   :material-layers-triple-outline:{ .lg .middle } **Порядок секций**
+
+    ---
+
+    Какая секция за какой идёт: перекрытие этажа, его блоки, стены, следующий этаж.
+
+    [Смотреть порядок](#_2)
+
+-   :material-table-column:{ .lg .middle } **Колонки и зоны**
+
+    ---
+
+    Что писать в A:H и что считается справа.
+
+    [Колонки A:H](#ah), [рабочие зоны](#zones)
+
+-   :material-note-text-outline:{ .lg .middle } **Заметки**
+
+    ---
+
+    Important, Note, Comment: где стоят и как выглядят.
+
+    [Заметки](#notes)
+
+-   :material-palette-outline:{ .lg .middle } **Опции и цвет**
+
+    ---
+
+    Цветная строка уходит из общего списка, оранжевая идёт на проверку.
+
+    [Опции](#options), [ревизия](#review)
+
+-   :material-home-floor-1:{ .lg .middle } **Балконы, порчи, деки**
+
+    ---
+
+    Как назвать блок и где окажутся decking, railing и trims.
+
+    [Группы](#groups), [куда встаёт блок](#section-blocks)
+
+-   :material-check-all:{ .lg .middle } **Перед отправкой**
+
+    ---
+
+    13 пунктов, которые стоит пройти перед сдачей файла.
+
+    [Чек-лист](#checklist)
+
+</div>
 
 ## Что это
 
@@ -56,29 +110,116 @@ DFL (Detailed Frame List) - книга Excel, в которой лежит ве�
 
 ## Порядок секций
 
-Секция = заголовок с заливкой, под ним её заметки, строки с формулами, пустая белая строка между группами. Лишние секции под scope убирают макросы `A9_Fame_only` (только каркас) и `A9_1_wall_panel` (панельный дом), а пустые и нулевые строки удаляются перед сдачей.
+Лист `Detailed Frame List` читается сверху вниз, как идёт стройка.
+
+!!! tip "Коротко"
+    **Фундамент, перекрытие 1-го этажа, блоки 1-го этажа, стены 1-го этажа, перекрытие 2-го этажа, блоки, стены** и так до верха. Потом лофт, фронтоны, парапеты, шахты, Wall Materials, кровля, отделка.
+
+    Заполняйте шаблон как обычно: в нём секции стоят иначе, а нужный порядок сделает Process Excels в готовой копии.
 
 <figure markdown>
   ![Порядок секций DFL](../assets/images/reference/dfl-sections-order.svg)
-  <figcaption markdown="span">Секции сверху вниз по ходу стройки: шапка с заметками, Foundation, этаж за этажом framing list с группами deck, балконов и porch и стены, потом фронтоны, парапеты, Wall Materials, кровля, отделка.</figcaption>
+  <figcaption markdown="span">Все секции и блоки сверху вниз в готовом файле, по ходу стройки.</figcaption>
 </figure>
 
-| # | Секция | Что внутри | Замер в дереве OurPlanCore |
-| --- | --- | --- | --- |
-| 1 | Шапка `Detailed Material List`, главные ноты, `Description` | решения по дому: тип конструкции, FRT, обшивка, by others | - |
-| 2 | `Foundation Walls` | sill sealer, termite shield, anchor bolts по шагу, washers | `walls` первого этажа, `shear walls` |
-| 3 | `Basement Floor Walls` | plates P.T., studs, blocking (стик-фрейм под плитой) | `walls/base floor walls` |
-| 4 | `1st ... Nth Floor Walls`, стены каждого этажа сразу за его framing list | bracing ext/cor/dem, flashing, studs, plates, headers, WRB, wall sheathing + tape, box sheathing + tape; в конце этажа блок `Holdowns` | `walls/<этаж> floor walls/<категория сечение высота>`, `openings`, `shear walls/<этаж>/holdowns` |
-| 5 | `Gable Walls #1 / #2` | studs for gables, sheathing, bracing, blocking; после пустой строки `Draft Stop` | `gables/gable stick`, `gables/gable trusses`, `gables/gable trusses/draft stop` |
-| 6 | `Parapet Walls` | plates, studs, обшивка по трём сторонам, blocking, coping | `parapets/<зона>/prpt Hout Hin Wtop` |
-| 7 | `Truss Heel Sheathing`, `Shaft walls` | полоса обшивки пятки ферм; shaft liner и channels | `trussheel`, стены шахт |
-| 8 | `1st ... Nth Floor Framing List` перед стенами своего этажа; `Loft Framing List` за верхними стенами; `Wall Materials`, `Roof Frame list` в конце Framing | beams, joists, hangers, rim, ribbon, blocking, ties, stair, subfloor, panel adhesive | `framing/<этаж> framing/beams, joists, details, stairs`, `sqfts/<этаж>` |
-| 9 | Группы: `Rear Ground Deck Frame`, `#N Upper Balcony List`, `#N Porch Framing List`, `Canopy Framing List` | внутри Framing, после framing list своего этажа; decking, railing, trims за каркасом под своими заголовками ([Группы](#groups), [Блоки](dfl-blocks.md)) | `sqfts/blcny`, `sqfts/porch`, точки блоков |
-| 10 | `Roof System Misc`, `Roof Products` | обшивка кровли по уклонам, H-clips, insulation, frame for rakes и soffits, sub fascia, blocking at eves, ties | `sqfts/rf 6`, `sqfts/flat`, `eves rakes/eves`, `eves rakes/rakes` |
-| 11 | `Soffits and Fascias`, `Exterior Trims`, `Siding` | только если отделка в scope | `trims`, `siding` |
-| 12 | `Interior Doors&Trims`, `Drywall & Insulation` | только если в scope | `trims`, `units` |
+### Из чего состоит секция в Excel { #section-anatomy }
 
-**Порядок в готовом файле идёт по ходу стройки:** перекрытие этажа (framing list с его группами), потом стены этого этажа, потом перекрытие следующего. Так же стоит и в файлах-эталонах. В шаблоне заполняйте как обычно: Process Excels расставит секции и группы сам.
+Секция занимает столбцы A:H и идёт от своего заголовка до заголовка следующей секции.
+
+| Что | Как выглядит в Excel | Пример |
+| --- | --- | --- |
+| Заголовок | жирный текст в A, цветной фон, B-F пустые. Перед ним одна пустая строка, сразу под ним пустой строки нет | `1st Floor Walls` |
+| Заметка под заголовком | сразу под заголовком, жёлтый фон на A:F | `Note: Floor Trusses are by others` |
+| Строки материала | A подпись, B размер или продукт, C количество, D единица, E лист или деталь | `Bracing Ext Walls`, `2x4`, `76`, `14` |
+| Группа строк | строки одного узла идут подряд, между группами одна пустая строка | hangers сразу за своими joists |
+| Заметка внутри секции | над строками, к которым относится, жирная без заливки, над ней пустая строка | `Note: Optional garage headers added; verify` |
+| Счёт лестниц | жирная строка без заливки, число в G, окончание в H | `Note: 2 Stairs`, G `2`, H `s` |
+
+Цвет заголовка подсказывает вид секции:
+
+| Цвет | Какие секции |
+| --- | --- |
+| Жёлтый `FFFF00`, только A | `Foundation Walls`, стены этажей, `Gable Walls`, `Truss Heel`, `Parapet Walls`, `Shaft walls`, `Interior Doors&Trims` |
+| Зелёный `99CC00`, A или A:B | framing lists, каркас балконов, порчей, деков и навесов, `Wall Materials`, `Roof Frame list`, `Roof System Misc` |
+| Светло-зелёный `CCFFCC`, только A | decking, railing и trims группы, `Soffits and Fascias`, `Exterior Trims`, `Siding` |
+
+### Что за чем идёт { #section-list }
+
+| # | Заголовок в A | Что в этой секции | Откуда замер в OurPlanCore |
+| --- | --- | --- | --- |
+| 1 | `Detailed Material List`, заметки шапки, `Description` | решения по дому: тип конструкции, FRT, обшивка, что by others. Строка `Description` это шапка столбцов | - |
+| 2 | `Foundation Walls` | sill sealer, termite shield, sill plate, anchor bolts по шагу, washers | `walls` первого этажа, `shear walls` |
+| 3 | `Basement Floor Walls` | plates P.T., studs, blocking, bracing, flashing, box sheathing, holdowns | `walls/base floor walls` |
+| 4 | `1st Floor Framing List` | columns и posts, beams, joists, rim и ribbon, blocking, bracing for trusses, draft stop, лестницы, в конце subfloor и panel adhesive | `framing/1st framing/beams, joists, details, stairs`, `sqfts/1st` |
+| 5 | Группы 1-го этажа: `Ground Deck...`, `Front Porch...`, `Canopy...`, `1st Floor Balcony...` | каркас группы, под ней decking, railing и trims со своими заголовками ([Группы](#groups), [Блоки](dfl-blocks.md)) | `sqfts/porch`, `sqfts/deck`, точки блоков |
+| 6 | `1st Floor Walls` | bracing, flashing, studs, plates, headers, WRB, wall sheathing и tape, box sheathing и tape, в конце `Holdowns` | `walls/<этаж> floor walls/<категория сечение высота>`, `openings`, `shear walls/<этаж>/holdowns` |
+| 7 | `2nd Floor Framing List`, группы 2-го этажа, `2nd Floor Walls` | то же для 2-го этажа. Группы с `Upper` в названии стоят здесь | те же папки 2-го этажа, `sqfts/blcny` |
+| 8 | Так же `3rd ... Nth` | перекрытие, группы, стены каждого следующего этажа | те же папки по этажам |
+| 9 | `Loft Framing List` | перекрытие лофта, сразу за верхними стенами | `framing/loft framing` |
+| 10 | `Gable Walls #1 / #2` | studs for gables, sheathing, bracing, blocking; после пустой строки `Draft Stop` | `gables/gable stick`, `gables/gable trusses`, `gables/gable trusses/draft stop` |
+| 11 | `Truss Heel`, `Parapet Walls`, `Shaft walls` | обшивка пятки ферм; plates, studs и обшивка парапета, coping; shaft liner и channels | `trussheel`, `parapets/<зона>/prpt Hout Hin Wtop`, стены шахт |
+| 12 | `Wall Materials`, `Ceiling Materials` | blocking и jambs по деталям, рамы подвесных потолков | `details`, замеры по RCP |
+| 13 | `Roof Frame list`, `Roof System Misc` | ridge, rafters, ties; обшивка кровли по уклонам, H-clips, frame for rakes и soffits, sub fascia, blocking at eves. Здесь заканчивается Framing | `framing/roof framing`, `sqfts/rf 6`, `sqfts/flat`, `eves rakes/eves`, `eves rakes/rakes` |
+| 14 | `Roof Products`, `Soffits and Fascias`, `Exterior Trims`, `Siding` | только если отделка в scope | `trims`, `siding` |
+| 15 | `Interior Doors&Trims` | только если в scope; по этажам жирные метки без цвета `1st Floor`, `2nd Floor` | `trims`, `units` |
+
+Лишние секции под scope убирают макросы `A9_Fame_only` (только каркас) и `A9_1_wall_panel` (панельный дом), а пустые и нулевые строки удаляются перед сдачей.
+
+### Как это выглядит на листе { #section-sheet }
+
+<figure markdown>
+  ![Два этажа на листе Excel](../assets/images/reference/dfl-floor-cycle.svg)
+  <figcaption markdown="span">Два этажа в готовом файле: перекрытие, блок своего этажа, стены, перекрытие следующего этажа. Данные условные.</figcaption>
+</figure>
+
+### Шаблон и готовый файл { #section-template }
+
+В шаблоне всё лежит по видам работ: сначала все стены, потом все перекрытия, блоки в самом конце. В готовом файле то же самое лежит по этажам.
+
+| Шаблон, где вы заполняете | Готовый файл после Process Excels |
+| --- | --- |
+| `Foundation Walls`, `Basement Floor Walls` | то же |
+| `1st`, `2nd`, `3rd Floor Walls` подряд | `1st Floor Framing List`, группы 1-го этажа, `1st Floor Walls` |
+| `Gable Walls`, `Truss Heel`, `Parapet Walls`, `Shaft walls`, `Wall Materials` | `2nd Floor Framing List`, группы 2-го этажа, `2nd Floor Walls` |
+| `1st`, `2nd`, `3rd Floor Framing List` подряд, `Loft Framing List` | `3rd Floor Framing List`, группы, `3rd Floor Walls`, `Loft Framing List` |
+| `Roof Frame list`, `Roof System Misc` | `Gable Walls`, `Truss Heel`, `Parapet Walls`, `Shaft walls`, `Wall Materials` |
+| блоки балконов, порчей, деков, навесов | `Roof Frame list`, `Roof System Misc` |
+| `Roof Products` и отделка | то же |
+
+!!! warning "Руками секции не переставляйте"
+    Формулы и зоны справа привязаны к строкам шаблона. Process Excels переносит только столбцы A:H и только в готовой копии, рабочая книга остаётся как есть.
+
+!!! success "Количества не меняются"
+    После переноса программа сверяет все материалы, `Front Page` и `Mat List`. Если что-то не сходится, файл не создаётся. Что изменилось, записано в отчёте `dfl_rules_report.txt` рядом с готовыми файлами.
+
+!!! note "Строки J:L остаются на своих местах"
+    В готовом файле у перенесённых секций они уже не стоят рядом со своими строками. Ссылки G на K верные, а сверять замеры удобнее в рабочей книге.
+
+### Куда встаёт блок { #section-blocks }
+
+!!! tip "Пишите уровень в названии блока"
+    Этаж блока программа берёт из заголовка. Нет уровня: блок встанет на 1-й этаж.
+
+| В названии блока | Куда встанет | Пример |
+| --- | --- | --- |
+| номер этажа | за framing list этого этажа | `#1 1st Floor Balcony List`, `2nd Floor Porch Framing List` |
+| `Upper` | за `2nd Floor Framing List` | `#1 Upper Balcony List` |
+| уровня нет или `Ground` | за `1st Floor Framing List` | `Front Porch Framing List`, `Ground Deck Framing List (left)`, `Rear Canopy Framing List` |
+| `Roof` | перед кровельными секциями | `Roof Deck Framing`, `Side Roof Framing List` |
+
+Несколько блоков одного этажа идут в том порядке, в каком они были в шаблоне. Decking, railing и trims идут сразу за каркасом своего блока.
+
+### Особые случаи { #section-cases }
+
+| Случай | Что будет в готовом файле |
+| --- | --- |
+| Первый этаж на плите | `1st Floor Framing List` остаётся с одной заметкой `Note: First Floor is on the concrete slab`, блоки 1-го этажа стоят за ним |
+| Первый этаж бетонный | `1st Floor Walls Materials at Concrete` на месте стен 1-го этажа, дальше `2nd Floor Framing List` |
+| Одинаковые этажи | заголовки `4th Floor Framing List is the same as 3rd Floor`, `3rd Floor Walls is the same as 2nd Floor Walls` стоят в том же порядке, как обычные |
+| Один список на два этажа | `1st - 2nd Floors Framing List` встаёт перед `1st Floor Walls` |
+| У этажа есть framing, но нет своих стен | framing list встаёт за стенами этажа ниже |
+| Нет framing list нужного этажа | блок встаёт за ближайшим framing list ниже |
+| В доме нет ни одного framing list | блоки встают перед кровельными секциями |
 
 ## Как замеры из OurPlanCore становятся строками
 
@@ -344,10 +485,11 @@ Post wrap, panels, corner boards и похожие узлы часто зака�
 - Вставка целой строки листа вместо A:H: правые зоны поехали.
 - `FT` в D, `5th` вместо `Loft`, porch SQFT на Front Page не заполнен.
 - Спек-ячейки оставлены на сдачу: половина E-ячеек со ссылкой `per page`.
-- Заметка без жёлтого фона или без префикса: в итоговый файл не попадёт.
+- Заметка без префикса `Important:`, `Note:` или `Comment:`: в итоговый файл не попадёт.
 - Заметка над заголовком блока: уйдёт в предыдущий блок.
 - `(optional)` словом без цвета: опция уйдёт в общий список как обязательный материал.
 - Вся строка покрашена в ревизии или "для себя": станет опцией и исчезнет из общего списка.
+- Блок без уровня в названии: встанет на 1-й этаж, даже если он на 2-м.
 
 Все ошибки по книге: [Частые ошибки, Excel DFL и ноты](../start/common-mistakes.md#excel).
 
