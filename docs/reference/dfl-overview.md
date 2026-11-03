@@ -60,7 +60,7 @@ DFL (Detailed Frame List) - книга Excel, в которой лежит ве�
 
 <figure markdown>
   ![Порядок секций DFL](../assets/images/reference/dfl-sections-order.svg)
-  <figcaption markdown="span">Секции сверху вниз: шапка с заметками, стены, фронтоны и парапеты, Wall Materials, framing lists по этажам с группами deck, балконов и porch внутри, кровля, отделка.</figcaption>
+  <figcaption markdown="span">Секции сверху вниз: шапка с заметками, Foundation, этаж за этажом стены и framing list с группами deck, балконов и porch, потом фронтоны, парапеты, Wall Materials, кровля, отделка.</figcaption>
 </figure>
 
 | # | Секция | Что внутри | Замер в дереве OurPlanCore |
@@ -68,17 +68,17 @@ DFL (Detailed Frame List) - книга Excel, в которой лежит ве�
 | 1 | Шапка `Detailed Material List`, главные ноты, `Description` | решения по дому: тип конструкции, FRT, обшивка, by others | - |
 | 2 | `Foundation Walls` | sill sealer, termite shield, anchor bolts по шагу, washers | `walls` первого этажа, `shear walls` |
 | 3 | `Basement Floor Walls` | plates P.T., studs, blocking (стик-фрейм под плитой) | `walls/base floor walls` |
-| 4 | `1st ... Nth Floor Walls` | bracing ext/cor/dem, flashing, studs, plates, headers, WRB, wall sheathing + tape, box sheathing + tape; в конце этажа блок `Holdowns` | `walls/<этаж> floor walls/<категория сечение высота>`, `openings`, `shear walls/<этаж>/holdowns` |
+| 4 | `1st ... Nth Floor Walls`, стены каждого этажа перед его framing list | bracing ext/cor/dem, flashing, studs, plates, headers, WRB, wall sheathing + tape, box sheathing + tape; в конце этажа блок `Holdowns` | `walls/<этаж> floor walls/<категория сечение высота>`, `openings`, `shear walls/<этаж>/holdowns` |
 | 5 | `Gable Walls #1 / #2` | studs for gables, sheathing, bracing, blocking; после пустой строки `Draft Stop` | `gables/gable stick`, `gables/gable trusses`, `gables/gable trusses/draft stop` |
 | 6 | `Parapet Walls` | plates, studs, обшивка по трём сторонам, blocking, coping | `parapets/<зона>/prpt Hout Hin Wtop` |
 | 7 | `Truss Heel Sheathing`, `Shaft walls` | полоса обшивки пятки ферм; shaft liner и channels | `trussheel`, стены шахт |
-| 8 | `Wall Materials` с `1st ... Nth Floor Framing List`, `Loft Framing List`, `Roof Frame list` | beams, joists, hangers, rim, ribbon, blocking, ties, stair, subfloor, panel adhesive | `framing/<этаж> framing/beams, joists, details, stairs`, `sqfts/<этаж>` |
+| 8 | `1st ... Nth Floor Framing List` сразу за стенами своего этажа; `Wall Materials`, `Loft Framing List`, `Roof Frame list` в конце Framing | beams, joists, hangers, rim, ribbon, blocking, ties, stair, subfloor, panel adhesive | `framing/<этаж> framing/beams, joists, details, stairs`, `sqfts/<этаж>` |
 | 9 | Группы: `Rear Ground Deck Frame`, `#N Upper Balcony List`, `#N Porch Framing List`, `Canopy Framing List` | внутри Framing, после framing list своего этажа; decking, railing, trims за каркасом под своими заголовками ([Группы](#groups), [Блоки](dfl-blocks.md)) | `sqfts/blcny`, `sqfts/porch`, точки блоков |
 | 10 | `Roof System Misc`, `Roof Products` | обшивка кровли по уклонам, H-clips, insulation, frame for rakes и soffits, sub fascia, blocking at eves, ties | `sqfts/rf 6`, `sqfts/flat`, `eves rakes/eves`, `eves rakes/rakes` |
 | 11 | `Soffits and Fascias`, `Exterior Trims`, `Siding` | только если отделка в scope | `trims`, `siding` |
 | 12 | `Interior Doors&Trims`, `Drywall & Insulation` | только если в scope | `trims`, `units` |
 
-В двух файлах-эталонах на небольших домах `1st Floor Framing List` стоит перед `1st Floor Walls`. Порядок этих двух секций руководство не задаёт: оставляйте как в шаблоне.
+**Порядок в готовом файле:** этаж за этажом: стены, потом framing list этого этажа с его группами, потом следующий этаж. В шаблоне заполняйте как обычно: Process Excels расставит секции и группы сам. В двух файлах-эталонах на небольших домах `1st Floor Framing List` стоит перед `1st Floor Walls`, руководство этот порядок не задаёт, у нас сначала стены.
 
 ## Как замеры из OurPlanCore становятся строками
 
@@ -169,9 +169,11 @@ Decking, Posts at Rails, Post Sleeve, Post cap, Rail sections, Post Wrap, Deck F
 
 ### Заметки { #notes }
 
-Заметка = строка с префиксом в A, **жёлтый фон на A:F**, столбцы B-F пустые. **Строка внутри секции без одного из трёх префиксов или без жёлтого фона в итоговый файл как заметка не попадёт.**
+Заметка = строка с префиксом в A, столбцы B-F пустые. По руководству у всех заметок жёлтый фон, а строка без него в итоговый файл как заметка не попадает. У нас так:
 
-**В шапке листа** (выше `Description`) жёлтый только у `Important:`. Обычная `Note:` в шапке чёрная жирная, без заливки.
+- **В шапке листа** (выше `Description`): `Important:` красный жирный на жёлтом, обычная `Note:` красная жирная без заливки.
+- **Сразу под заголовком секции:** жёлтый фон на A:F.
+- **Внутри секции над своими строками** и строка счёта `Note: 2 Stairs`: жирная без заливки, как раньше.
 
 | Префикс | Когда | Вид | Примеры |
 | --- | --- | --- | --- |
@@ -310,7 +312,7 @@ Post wrap, panels, corner boards и похожие узлы часто зака�
 | Вопрос | Что известно |
 | --- | --- |
 | Какой именно цвет считается оранжевым | кода цвета в руководстве нет. Для пометки на проверку берём `FABF8F`. Светло-персиковый `FCE5D7` на картинке руководства стоит как опция, поэтому для опций персиковые оттенки не берите. Заголовки групп делайте зелёными `99CC00`, как в эталонах |
-| Заметки шапки без жёлтого | в эталоне наверху есть `Note:` без заливки, а текст руководства говорит, что такие строки теряются. Делаем так: в шапке `Important:` жёлтый, обычная `Note:` без заливки. Если окажется, что такие заметки пропадают из итогового листа, правило поменяем |
+| Заметки без жёлтого | в эталоне наверху есть `Note:` красным без заливки, а текст руководства говорит, что строки без жёлтого теряются. Делаем как описано в [Заметках](#notes). Если такие заметки начнут пропадать из итогового листа, правило поменяем |
 | Изменено больше половины листа | в руководстве не описано. Как раньше: одна заметка в шапке, без подсветки |
 
 Где разбор и руководство расходятся, главным считается руководство:
