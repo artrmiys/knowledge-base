@@ -7425,7 +7425,7 @@
 <figure>
 <p><img alt="Порядок секций DFL" src="../../assets/images/reference/dfl-sections-order.svg" />
   </p>
-<figcaption>Секции сверху вниз: шапка с заметками, Foundation, этаж за этажом стены и framing list с группами deck, балконов и porch, потом фронтоны, парапеты, Wall Materials, кровля, отделка.</figcaption>
+<figcaption>Секции сверху вниз по ходу стройки: шапка с заметками, Foundation, этаж за этажом framing list с группами deck, балконов и porch и стены, потом фронтоны, парапеты, Wall Materials, кровля, отделка.</figcaption>
 </figure>
 <table>
 <thead>
@@ -7457,7 +7457,7 @@
 </tr>
 <tr>
 <td>4</td>
-<td><code>1st ... Nth Floor Walls</code>, стены каждого этажа перед его framing list</td>
+<td><code>1st ... Nth Floor Walls</code>, стены каждого этажа сразу за его framing list</td>
 <td>bracing ext/cor/dem, flashing, studs, plates, headers, WRB, wall sheathing + tape, box sheathing + tape; в конце этажа блок <code>Holdowns</code></td>
 <td><code>walls/&lt;этаж&gt; floor walls/&lt;категория сечение высота&gt;</code>, <code>openings</code>, <code>shear walls/&lt;этаж&gt;/holdowns</code></td>
 </tr>
@@ -7481,7 +7481,7 @@
 </tr>
 <tr>
 <td>8</td>
-<td><code>1st ... Nth Floor Framing List</code> сразу за стенами своего этажа; <code>Wall Materials</code>, <code>Loft Framing List</code>, <code>Roof Frame list</code> в конце Framing</td>
+<td><code>1st ... Nth Floor Framing List</code> перед стенами своего этажа; <code>Loft Framing List</code> за верхними стенами; <code>Wall Materials</code>, <code>Roof Frame list</code> в конце Framing</td>
 <td>beams, joists, hangers, rim, ribbon, blocking, ties, stair, subfloor, panel adhesive</td>
 <td><code>framing/&lt;этаж&gt; framing/beams, joists, details, stairs</code>, <code>sqfts/&lt;этаж&gt;</code></td>
 </tr>
@@ -7511,7 +7511,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Порядок в готовом файле:</strong> этаж за этажом: стены, потом framing list этого этажа с его группами, потом следующий этаж. В шаблоне заполняйте как обычно: Process Excels расставит секции и группы сам. В двух файлах-эталонах на небольших домах <code>1st Floor Framing List</code> стоит перед <code>1st Floor Walls</code>, руководство этот порядок не задаёт, у нас сначала стены.</p>
+<p><strong>Порядок в готовом файле идёт по ходу стройки:</strong> перекрытие этажа (framing list с его группами), потом стены этого этажа, потом перекрытие следующего. Так же стоит и в файлах-эталонах. В шаблоне заполняйте как обычно: Process Excels расставит секции и группы сам.</p>
 <h2 id="ourplancore">Как замеры из OurPlanCore становятся строками<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Полоса XL в программе пишет замеры в книгу и запускает макросы книги (подробно про кнопки: <a href="../ourplanecore/">OurPlanCore, Estimating и экспорт</a>). Общая схема одна для всех кнопок:</p>
 <ol>
