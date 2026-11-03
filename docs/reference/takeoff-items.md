@@ -37,6 +37,8 @@
 
 `Foundation Walls`, `Basement Floor Walls`, `1st ... 4th Floor Walls`, `Gable Walls`, `Parapet Walls`, `Wall Materials`, `1st ... 4th Floor Framing List`, `Loft Framing List`, `Roof Frame list`, `Roof System Misc`, `Roof Products`, `Covered Front Porch Framing List`, `#N Upper Balcony List W' x D'`, `#N Porch Framing List W' x D'`, `Canopy Framing List`, `Exterior Trims`, `Interior Doors&Trims`.
 
+Оформление: жирный, цветной фон, столбцы B-F пустые. Подсекции групп: `Rear Ground Deck Frame`, `Balcony Railing`, `Ground Deck Decking (rear)`, `Canopy Trims`, `Porch Trims`. [Формат файла](dfl-overview.md#source-format).
+
 ### Стены
 
 | Подпись | Когда |

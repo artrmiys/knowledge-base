@@ -66,10 +66,13 @@ stringers. **Balcony** стоит у стены верхнего этажа на
 
 ## Как назвать в дереве и строка DFL
 
-Заголовок блока: `#N Upper Balcony List W' x D' <G> unit`, заливка A:B
-оранжевая `FABF8F`; porch `#N Porch Framing List W' x D'`, заливка зелёная
-`99CC00`. Строки с нулём и пустые строки шаблона удаляются. Подробный состав
-блока с формулами: [Блоки DFL](../../reference/dfl-blocks.md).
+Заголовок блока: `#N Upper Balcony List W' x D' <G> unit`; porch
+`#N Porch Framing List W' x D'`, заливка A:B зелёная `99CC00`; каркас ground deck
+обязательно со словами `Deck` и `Frame` или `Framing`. Группа стоит внутри Framing,
+decking, railing и trims идут за каркасом под своими заголовками, ноты под
+заголовком: [Формат файла, группы](../../reference/dfl-overview.md#groups). Строки с
+нулём и пустые строки шаблона удаляются. Подробный состав блока с формулами:
+[Блоки DFL](../../reference/dfl-blocks.md).
 
 | Имя в дереве | Строка DFL | Unit | Формула или правило |
 | --- | --- | --- | --- |

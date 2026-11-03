@@ -110,9 +110,10 @@ joists только J Area, балки только Beam, проёмы толь�
    `pcs` для крепежа, SF для листов. Имена строк - [Имена строк DFL](../reference/takeoff-items.md).
 3. Формулы только от собственных входов блока; новую формулу проверяй на первой
    строке сразу. Не множить на 1.1 второй раз - [Формулы](../reference/formulas.md).
-4. Ноты: главные в шапке (жёлтый фон, красный жирный), локальные сразу под
+4. Ноты: префикс `Important:`, `Note:` или `Comment:`, жёлтый фон, всегда под
    заголовком своего блока. Живая фраза, до 80 знаков, `per <лист>`, без `=`.
-   Образцы - [Стандартные notes](../reference/standard-notes.md).
+   Образцы - [Стандартные notes](../reference/standard-notes.md). Заголовки, опции
+   цветом, группы и отметки ревизии - [Формат файла](../reference/dfl-overview.md#source-format).
 5. Балконы, porch, holdowns - блоками по образцу сданных работ:
    [Deck / Porch / Balcony](../work/deck/deck-porch-balcony-frame.md),
    [Shear Wall](../work/vertical/sheathing/shear-wall.md).

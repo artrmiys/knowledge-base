@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="446" viewBox="0 0 800 446" role="img" aria-labelledby="t d">
+  <title id="t">Note placement</title>
+  <desc id="d">A note under the section header is right; a note above the header is wrong because it falls into the previous block. A second pair shows a vague and a concrete text.</desc>
+  <style>text{font-family:Inter,"Segoe UI",Arial,sans-serif}.h{font-size:15px;font-weight:700;fill:#1f2328}.t{font-size:13px;fill:#1f2328}.n{font-size:13px}.c{font-size:12.5px}.cb{font-size:12.5px;font-weight:700}.col{font-size:11px;fill:#5a6168}.sm{font-size:12px;fill:#5a6168}.bt{font-size:13.5px;font-weight:600;fill:#1f2328}</style>
+  <rect width="800" height="446" fill="#ffffff"/>
+  <circle cx="25" cy="35" r="9" fill="#2e7d32"/>
+  <path d="M20.5,35 L24,38.5 L30,31" fill="none" stroke="#fff" stroke-width="2.2"/>
+  <text class="h" x="42" y="40" fill="#2e7d32">Заметка под заголовком своей секции</text>
+  <rect x="16" y="50" width="178" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="105.0" y="63" text-anchor="middle">A</text>
+  <rect x="194" y="50" width="126" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="257.0" y="63" text-anchor="middle">B</text>
+  <rect x="320" y="50" width="40" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="340.0" y="63" text-anchor="middle">C</text>
+  <rect x="360" y="50" width="44" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="382.0" y="63" text-anchor="middle">D</text>
+  <rect x="404" y="50" width="58" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="433.0" y="63" text-anchor="middle">E</text>
+  <rect x="462" y="50" width="52" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="488.0" y="63" text-anchor="middle">F</text>
+  <rect x="16" y="68" width="178" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="68" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="68" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="68" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="68" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="68" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="84" fill="#1f2328">Decking</text>
+  <rect x="16" y="91" width="178" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="91" width="126" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="91" width="40" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="91" width="44" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="91" width="58" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="91" width="52" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="107" fill="#1f2328">Note: Composite Railing w/ black Alum Balusters</text>
+  <rect x="16" y="114" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="114" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="114" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="114" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="114" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="114" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="130" fill="#1f2328">Decking</text>
+  <text class="c" x="257.0" y="130" fill="#1f2328" text-anchor="middle">1x6 PVC</text>
+  <text class="c" x="340.0" y="130" fill="#1f2328" text-anchor="middle">20</text>
+  <text class="c" x="382.0" y="130" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <path d="M532,102.5 L526,102.5 L526,102.5 L518,102.5" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <path d="M514,102.5 L522,98.5 L522,106.5 z" fill="#2e7d32"/>
+  <text class="n" x="538" y="98.5" fill="#2e7d32">Программа читает всё под заголовком</text>
+  <text class="n" x="538" y="114.5" fill="#2e7d32">до следующего заголовка.</text>
+  <circle cx="25" cy="162" r="9" fill="#c62828"/>
+  <path d="M21,158 L29,166 M29,158 L21,166" fill="none" stroke="#fff" stroke-width="2.2"/>
+  <text class="h" x="42" y="167" fill="#c62828">Заметка над заголовком</text>
+  <rect x="16" y="177" width="178" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="105.0" y="190" text-anchor="middle">A</text>
+  <rect x="194" y="177" width="126" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="257.0" y="190" text-anchor="middle">B</text>
+  <rect x="320" y="177" width="40" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="340.0" y="190" text-anchor="middle">C</text>
+  <rect x="360" y="177" width="44" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="382.0" y="190" text-anchor="middle">D</text>
+  <rect x="404" y="177" width="58" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="433.0" y="190" text-anchor="middle">E</text>
+  <rect x="462" y="177" width="52" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="488.0" y="190" text-anchor="middle">F</text>
+  <rect x="16" y="195" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="195" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="195" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="195" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="195" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="195" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="211" fill="#1f2328">Hangers</text>
+  <text class="c" x="257.0" y="211" fill="#1f2328" text-anchor="middle">LUS210</text>
+  <text class="c" x="340.0" y="211" fill="#1f2328" text-anchor="middle">48</text>
+  <text class="c" x="382.0" y="211" fill="#1f2328" text-anchor="middle">pcs</text>
+  <rect x="16" y="218" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="218" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="218" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="218" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="218" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="218" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="16" y="241" width="178" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="241" width="126" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="241" width="40" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="241" width="44" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="241" width="58" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="241" width="52" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="257" fill="#1f2328">Note: Composite Railing w/ black Alum Balusters</text>
+  <rect x="16" y="264" width="178" height="23" fill="#CCFFCC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="264" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="264" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="264" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="264" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="264" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="280" fill="#1f2328">Decking</text>
+  <rect x="16" y="287" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="287" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="287" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="287" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="287" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="287" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="303" fill="#1f2328">Decking</text>
+  <text class="c" x="257.0" y="303" fill="#1f2328" text-anchor="middle">1x6 PVC</text>
+  <text class="c" x="340.0" y="303" fill="#1f2328" text-anchor="middle">20</text>
+  <text class="c" x="382.0" y="303" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <path d="M532,252.5 L526,252.5 L526,252.5 L518,252.5" fill="none" stroke="#c62828" stroke-width="1.2"/>
+  <path d="M514,252.5 L522,248.5 L522,256.5 z" fill="#c62828"/>
+  <text class="n" x="538" y="248.5" fill="#c62828">Эта заметка уйдёт в предыдущий</text>
+  <text class="n" x="538" y="264.5" fill="#c62828">блок: к Hangers, а не к Decking.</text>
+  <text class="h" x="16" y="340">Текст заметки должен читаться отдельно от листа</text>
+  <rect x="16" y="350" width="178" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="350" width="126" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="350" width="40" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="350" width="44" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="350" width="58" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="350" width="52" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="366" fill="#1f2328">Note: No changes in this area</text>
+  <rect x="16" y="373" width="178" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="373" width="126" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="373" width="40" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="373" width="44" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="373" width="58" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="373" width="52" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="389" fill="#1f2328">Note: No changes for the 1st floor walls</text>
+  <path d="M532,379 L526,379 L526,361.5 L518,361.5" fill="none" stroke="#c62828" stroke-width="1.2"/>
+  <path d="M514,361.5 L522,357.5 L522,365.5 z" fill="#c62828"/>
+  <text class="n" x="538" y="367" fill="#c62828">Неверно: повторы удаляются, заметки</text>
+  <text class="n" x="538" y="383" fill="#c62828">собираются вместе, и уже непонятно,</text>
+  <text class="n" x="538" y="399" fill="#c62828">о чём речь.</text>
+  <path d="M532,418 L526,418 L526,384.5 L518,384.5" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
+  <path d="M514,384.5 L522,380.5 L522,388.5 z" fill="#2e7d32"/>
+  <text class="n" x="538" y="422" fill="#2e7d32">Верно: видно, к чему относится.</text>
+</svg>

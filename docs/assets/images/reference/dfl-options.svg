@@ -1,0 +1,299 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="890" viewBox="0 0 800 890" role="img" aria-labelledby="t d">
+  <title id="t">Option blocks by colour</title>
+  <desc id="d">Five fragments: one option with a blank row inside, two options of different colours in a section, one option spread over a section, named options, and an orange row that is not an option.</desc>
+  <style>text{font-family:Inter,"Segoe UI",Arial,sans-serif}.h{font-size:15px;font-weight:700;fill:#1f2328}.t{font-size:13px;fill:#1f2328}.n{font-size:13px}.c{font-size:12.5px}.cb{font-size:12.5px;font-weight:700}.col{font-size:11px;fill:#5a6168}.sm{font-size:12px;fill:#5a6168}.bt{font-size:13.5px;font-weight:600;fill:#1f2328}</style>
+  <rect width="800" height="890" fill="#ffffff"/>
+  <text class="h" x="16" y="40">Один блок: заметка над ним, пустая строка внутри остаётся в блоке</text>
+  <rect x="16" y="50" width="178" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="105.0" y="63" text-anchor="middle">A</text>
+  <rect x="194" y="50" width="126" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="257.0" y="63" text-anchor="middle">B</text>
+  <rect x="320" y="50" width="40" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="340.0" y="63" text-anchor="middle">C</text>
+  <rect x="360" y="50" width="44" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="382.0" y="63" text-anchor="middle">D</text>
+  <rect x="404" y="50" width="58" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="433.0" y="63" text-anchor="middle">E</text>
+  <rect x="462" y="50" width="52" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="488.0" y="63" text-anchor="middle">F</text>
+  <rect x="16" y="68" width="178" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="68" width="126" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="68" width="40" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="68" width="44" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="68" width="58" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="68" width="52" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="84" fill="#1f2328">Note: Optional headers are provided for existing part</text>
+  <rect x="16" y="91" width="178" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="91" width="126" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="91" width="40" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="91" width="44" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="91" width="58" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="91" width="52" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="107" fill="#1f2328">Ext. Headers up to 48" (2)</text>
+  <text class="c" x="257.0" y="107" fill="#1f2328" text-anchor="middle">2x10</text>
+  <text class="c" x="340.0" y="107" fill="#1f2328" text-anchor="middle">10</text>
+  <text class="c" x="382.0" y="107" fill="#1f2328" text-anchor="middle">8</text>
+  <rect x="16" y="114" width="178" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="114" width="126" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="114" width="40" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="114" width="44" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="114" width="58" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="114" width="52" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="130" fill="#1f2328">Ext. Headers over 72" (3)</text>
+  <text class="c" x="257.0" y="130" fill="#1f2328" text-anchor="middle">1 3/4 x 9 1/4 LVL</text>
+  <text class="c" x="340.0" y="130" fill="#1f2328" text-anchor="middle">3</text>
+  <text class="c" x="382.0" y="130" fill="#1f2328" text-anchor="middle">10</text>
+  <text class="c" x="409" y="130" fill="#1f2328">assumed</text>
+  <rect x="16" y="137" width="178" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="137" width="126" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="137" width="40" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="137" width="44" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="137" width="58" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="137" width="52" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="16" y="160" width="178" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="160" width="126" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="160" width="40" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="160" width="44" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="160" width="58" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="160" width="52" height="23" fill="#E6B8B8" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="176" fill="#1f2328">Insulation</text>
+  <text class="c" x="257.0" y="176" fill="#1f2328" text-anchor="middle">Rigid Insulation</text>
+  <text class="c" x="340.0" y="176" fill="#1f2328" text-anchor="middle">50</text>
+  <text class="c" x="382.0" y="176" fill="#1f2328" text-anchor="middle">SF</text>
+  <rect x="16" y="183" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="183" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="183" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="183" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="183" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="183" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <path d="M532,125.5 L526,125.5 L526,125.5 L518,125.5" fill="none" stroke="#5a6168" stroke-width="1.2"/>
+  <path d="M514,125.5 L522,121.5 L522,129.5 z" fill="#5a6168"/>
+  <text class="n" x="538" y="113.5" fill="#1f2328">Цвет ставьте на всю строку</text>
+  <text class="n" x="538" y="129.5" fill="#1f2328">материала. Любой, кроме белого и</text>
+  <text class="n" x="538" y="145.5" fill="#1f2328">оранжевого, и светлый.</text>
+  <path d="M532,194.5 L526,194.5 L526,194.5 L518,194.5" fill="none" stroke="#5a6168" stroke-width="1.2"/>
+  <path d="M514,194.5 L522,190.5 L522,198.5 z" fill="#5a6168"/>
+  <text class="n" x="538" y="190.5" fill="#1f2328">Блок заканчивается при смене цвета,</text>
+  <text class="n" x="538" y="206.5" fill="#1f2328">на белой строке или на заголовке.</text>
+  <text class="h" x="16" y="242.5">Два цвета в одной секции: две разные опции</text>
+  <rect x="16" y="252.5" width="178" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="105.0" y="265.5" text-anchor="middle">A</text>
+  <rect x="194" y="252.5" width="126" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="257.0" y="265.5" text-anchor="middle">B</text>
+  <rect x="320" y="252.5" width="40" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="340.0" y="265.5" text-anchor="middle">C</text>
+  <rect x="360" y="252.5" width="44" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="382.0" y="265.5" text-anchor="middle">D</text>
+  <rect x="404" y="252.5" width="58" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="433.0" y="265.5" text-anchor="middle">E</text>
+  <rect x="462" y="252.5" width="52" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="488.0" y="265.5" text-anchor="middle">F</text>
+  <rect x="16" y="270.5" width="178" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="270.5" width="126" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="270.5" width="40" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="270.5" width="44" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="270.5" width="58" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="270.5" width="52" height="23" fill="#FFFF00" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="cb" x="21" y="286.5" fill="#1f2328">Note: Structural and architectural differ; verify</text>
+  <rect x="16" y="293.5" width="178" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="293.5" width="126" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="293.5" width="40" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="293.5" width="44" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="293.5" width="58" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="293.5" width="52" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="309.5" fill="#1f2328">Ext. Headers over 72" (3)</text>
+  <text class="c" x="257.0" y="309.5" fill="#1f2328" text-anchor="middle">1 3/4 x 11 7/8 LVL</text>
+  <text class="c" x="340.0" y="309.5" fill="#1f2328" text-anchor="middle">3</text>
+  <text class="c" x="382.0" y="309.5" fill="#1f2328" text-anchor="middle">16</text>
+  <text class="c" x="409" y="309.5" fill="#1f2328">assumed</text>
+  <rect x="16" y="316.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="316.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="316.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="316.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="316.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="316.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="16" y="339.5" width="178" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="339.5" width="126" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="339.5" width="40" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="339.5" width="44" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="339.5" width="58" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="339.5" width="52" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="355.5" fill="#1f2328">Ext. Headers over 72" (3)</text>
+  <text class="c" x="257.0" y="355.5" fill="#1f2328" text-anchor="middle">2x12</text>
+  <text class="c" x="340.0" y="355.5" fill="#1f2328" text-anchor="middle">3</text>
+  <text class="c" x="382.0" y="355.5" fill="#1f2328" text-anchor="middle">16</text>
+  <text class="c" x="409" y="355.5" fill="#1f2328">assumed</text>
+  <path d="M532,305.0 L526,305.0 L526,305.0 L518,305.0" fill="none" stroke="#5a6168" stroke-width="1.2"/>
+  <path d="M514,305.0 L522,301.0 L522,309.0 z" fill="#5a6168"/>
+  <text class="n" x="538" y="301.0" fill="#1f2328">Варианты не сольются. Разные цвета</text>
+  <text class="n" x="538" y="317.0" fill="#1f2328">берите заметно разные.</text>
+  <text class="h" x="16" y="392.5">Один цвет в разных местах секции: одна опция</text>
+  <rect x="16" y="402.5" width="178" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="105.0" y="415.5" text-anchor="middle">A</text>
+  <rect x="194" y="402.5" width="126" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="257.0" y="415.5" text-anchor="middle">B</text>
+  <rect x="320" y="402.5" width="40" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="340.0" y="415.5" text-anchor="middle">C</text>
+  <rect x="360" y="402.5" width="44" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="382.0" y="415.5" text-anchor="middle">D</text>
+  <rect x="404" y="402.5" width="58" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="433.0" y="415.5" text-anchor="middle">E</text>
+  <rect x="462" y="402.5" width="52" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="488.0" y="415.5" text-anchor="middle">F</text>
+  <rect x="16" y="420.5" width="178" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="420.5" width="126" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="420.5" width="40" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="420.5" width="44" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="420.5" width="58" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="420.5" width="52" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="436.5" fill="#1f2328">Rigid Insulation (hdrs)</text>
+  <text class="c" x="257.0" y="436.5" fill="#1f2328" text-anchor="middle">Rigid Insulation</text>
+  <text class="c" x="340.0" y="436.5" fill="#1f2328" text-anchor="middle">100</text>
+  <text class="c" x="382.0" y="436.5" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <rect x="16" y="443.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="443.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="443.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="443.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="443.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="443.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="16" y="466.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="466.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="466.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="466.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="466.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="466.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="482.5" fill="#1f2328">Window Flashing</text>
+  <text class="c" x="257.0" y="482.5" fill="#1f2328" text-anchor="middle">Window Flashing</text>
+  <text class="c" x="340.0" y="482.5" fill="#1f2328" text-anchor="middle">350</text>
+  <text class="c" x="382.0" y="482.5" fill="#1f2328" text-anchor="middle">LFT</text>
+  <rect x="16" y="489.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="489.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="489.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="489.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="489.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="489.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="16" y="512.5" width="178" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="512.5" width="126" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="512.5" width="40" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="512.5" width="44" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="512.5" width="58" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="512.5" width="52" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="528.5" fill="#1f2328">Wall Sheathing</text>
+  <text class="c" x="257.0" y="528.5" fill="#1f2328" text-anchor="middle">Zip R-6</text>
+  <text class="c" x="340.0" y="528.5" fill="#1f2328" text-anchor="middle">56</text>
+  <text class="c" x="382.0" y="528.5" fill="#1f2328" text-anchor="middle">4x8</text>
+  <rect x="16" y="535.5" width="178" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="535.5" width="126" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="535.5" width="40" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="535.5" width="44" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="535.5" width="58" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="535.5" width="52" height="23" fill="#C5D9F1" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="551.5" fill="#1f2328">Tape</text>
+  <text class="c" x="257.0" y="551.5" fill="#1f2328" text-anchor="middle">Zip Tape</text>
+  <text class="c" x="340.0" y="551.5" fill="#1f2328" text-anchor="middle">1130</text>
+  <text class="c" x="382.0" y="551.5" fill="#1f2328" text-anchor="middle">LFT</text>
+  <path d="M532,478.0 L526,478.0 L526,478.0 L518,478.0" fill="none" stroke="#5a6168" stroke-width="1.2"/>
+  <path d="M514,478.0 L522,474.0 L522,482.0 z" fill="#5a6168"/>
+  <text class="n" x="538" y="450.0" fill="#1f2328">Строки одного цвета группируются</text>
+  <text class="n" x="538" y="466.0" fill="#1f2328">вместе, даже если разбросаны.</text>
+  <text class="n" x="538" y="482.0" fill="#1f2328">Совпадение цвета проверяется внутри</text>
+  <text class="n" x="538" y="498.0" fill="#1f2328">секции: в другой секции тот же цвет</text>
+  <text class="n" x="538" y="514.0" fill="#1f2328">не мешает.</text>
+  <text class="h" x="16" y="588.5">Именованные опции</text>
+  <rect x="16" y="598.5" width="178" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="105.0" y="611.5" text-anchor="middle">A</text>
+  <rect x="194" y="598.5" width="126" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="257.0" y="611.5" text-anchor="middle">B</text>
+  <rect x="320" y="598.5" width="40" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="340.0" y="611.5" text-anchor="middle">C</text>
+  <rect x="360" y="598.5" width="44" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="382.0" y="611.5" text-anchor="middle">D</text>
+  <rect x="404" y="598.5" width="58" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="433.0" y="611.5" text-anchor="middle">E</text>
+  <rect x="462" y="598.5" width="52" height="18" fill="#e7e9ec" stroke="#3a3f44" stroke-width="0.6"/>
+  <text class="col" x="488.0" y="611.5" text-anchor="middle">F</text>
+  <rect x="16" y="616.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="616.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="616.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="616.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="616.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="616.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="632.5" fill="#1f2328">Option Cupola</text>
+  <rect x="16" y="639.5" width="178" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="639.5" width="126" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="639.5" width="40" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="639.5" width="44" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="639.5" width="58" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="639.5" width="52" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="655.5" fill="#1f2328">Louver</text>
+  <text class="c" x="257.0" y="655.5" fill="#1f2328" text-anchor="middle">9x21</text>
+  <text class="c" x="340.0" y="655.5" fill="#1f2328" text-anchor="middle">8</text>
+  <text class="c" x="382.0" y="655.5" fill="#1f2328" text-anchor="middle">pcs</text>
+  <rect x="16" y="662.5" width="178" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="662.5" width="126" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="662.5" width="40" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="662.5" width="44" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="662.5" width="58" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="662.5" width="52" height="23" fill="#E2EFDB" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="678.5" fill="#1f2328">Trim cupola</text>
+  <text class="c" x="257.0" y="678.5" fill="#1f2328" text-anchor="middle">5/4x4</text>
+  <text class="c" x="340.0" y="678.5" fill="#1f2328" text-anchor="middle">18</text>
+  <text class="c" x="382.0" y="678.5" fill="#1f2328" text-anchor="middle">LFT</text>
+  <rect x="16" y="685.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="685.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="685.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="685.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="685.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="685.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="16" y="708.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="708.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="708.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="708.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="708.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="708.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="724.5" fill="#1f2328">Option Panel</text>
+  <rect x="16" y="731.5" width="178" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="731.5" width="126" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="731.5" width="40" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="731.5" width="44" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="731.5" width="58" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="731.5" width="52" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="747.5" fill="#1f2328">Panel</text>
+  <text class="c" x="257.0" y="747.5" fill="#1f2328" text-anchor="middle">1x6 vert gap T&amp;G</text>
+  <text class="c" x="340.0" y="747.5" fill="#1f2328" text-anchor="middle">190</text>
+  <text class="c" x="382.0" y="747.5" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <rect x="16" y="754.5" width="178" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="754.5" width="126" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="754.5" width="40" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="754.5" width="44" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="754.5" width="58" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="754.5" width="52" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="770.5" fill="#1f2328">Over Panel</text>
+  <text class="c" x="257.0" y="770.5" fill="#1f2328" text-anchor="middle">1x10</text>
+  <text class="c" x="340.0" y="770.5" fill="#1f2328" text-anchor="middle">18</text>
+  <text class="c" x="382.0" y="770.5" fill="#1f2328" text-anchor="middle">LFT</text>
+  <path d="M532,653.5 L526,653.5 L526,628.0 L518,628.0" fill="none" stroke="#5a6168" stroke-width="1.2"/>
+  <path d="M514,628.0 L522,624.0 L522,632.0 z" fill="#5a6168"/>
+  <text class="n" x="538" y="633.5" fill="#1f2328">Строка-название над цветными</text>
+  <text class="n" x="538" y="649.5" fill="#1f2328">строками, B-F пустые.</text>
+  <text class="n" x="538" y="665.5" fill="#1f2328">Необязательна: без неё программа</text>
+  <text class="n" x="538" y="681.5" fill="#1f2328">назовёт Option 1, Option 2.</text>
+  <circle cx="25" cy="802.5" r="9" fill="#c62828"/>
+  <path d="M21,798.5 L29,806.5 M29,798.5 L21,806.5" fill="none" stroke="#fff" stroke-width="2.2"/>
+  <text class="h" x="42" y="807.5" fill="#c62828">Оранжевый: это не опция</text>
+  <rect x="16" y="817.5" width="178" height="23" fill="#FFC000" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="817.5" width="126" height="23" fill="#FFC000" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="817.5" width="40" height="23" fill="#FFC000" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="817.5" width="44" height="23" fill="#FFC000" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="817.5" width="58" height="23" fill="#FFC000" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="817.5" width="52" height="23" fill="#FFC000" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="21" y="833.5" fill="#1f2328">Blocking</text>
+  <text class="c" x="257.0" y="833.5" fill="#1f2328" text-anchor="middle">2x6</text>
+  <text class="c" x="340.0" y="833.5" fill="#1f2328" text-anchor="middle">192</text>
+  <text class="c" x="382.0" y="833.5" fill="#1f2328" text-anchor="middle">LFT</text>
+  <path d="M532,846.5 L526,846.5 L526,829.0 L518,829.0" fill="none" stroke="#c62828" stroke-width="1.2"/>
+  <path d="M514,829.0 L522,825.0 L522,833.0 z" fill="#c62828"/>
+  <text class="n" x="538" y="834.5" fill="#c62828">Оранжевый занят пометкой для</text>
+  <text class="n" x="538" y="850.5" fill="#c62828">проверяющего. Опция, покрашенная</text>
+  <text class="n" x="538" y="866.5" fill="#c62828">оранжевым, будет пропущена.</text>
+</svg>
