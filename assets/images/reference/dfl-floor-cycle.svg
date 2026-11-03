@@ -1,0 +1,525 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="930" height="830" viewBox="0 0 930 830" role="img" aria-labelledby="t d">
+  <title id="t">Two floors on the finished sheet</title>
+  <desc id="d">Excel rows of the finished file: framing list of the first floor, a porch block of that floor, walls of the first floor, then framing list of the second floor, a balcony block with its decking and railing subsection, and walls of the second floor. Notes on the right explain each kind of row.</desc>
+  <style>text{font-family:Inter,"Segoe UI",Arial,sans-serif;font-size:12px;fill:#1f2328}.b{font-weight:700}.c{text-anchor:middle}.t{font-size:12.5px;font-weight:700}.g{fill:#4b5158;font-size:11.5px}.n{fill:#80868b;font-size:10.5px;text-anchor:middle}</style>
+  <rect width="930" height="830" fill="#ffffff"/>
+  <rect x="16" y="12" width="634" height="24" fill="#f2f3f5" stroke="#3a3f44" stroke-width="0.8"/>
+  <text class="b c" text-anchor="middle" x="176.0" y="28">A Description</text>
+  <text class="b c" text-anchor="middle" x="366.0" y="28">B Size</text>
+  <text class="b c" text-anchor="middle" x="451.0" y="28">C</text>
+  <text class="b c" text-anchor="middle" x="506.0" y="28">D Units</text>
+  <text class="b c" text-anchor="middle" x="573.0" y="28">E Sheet</text>
+  <text class="b c" text-anchor="middle" x="630.0" y="28">F</text>
+  <rect x="16" y="36" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="50">51</text>
+  <rect x="46" y="36" width="260" height="20" fill="#99CC00"/>
+  <path d="M46,36 V56" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,36 V56" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,36 V56" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,36 V56" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,36 V56" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,36 V56" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,36 V56" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,56 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text class="b" x="52" y="50">1st Floor Framing List</text>
+  <rect x="16" y="56" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="70">52</text>
+  <rect x="46" y="56" width="604" height="20" fill="#FFFF00"/>
+  <path d="M46,56 V76" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,56 V76" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,76 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="70">Note: Floor Trusses are by others</text>
+  <rect x="16" y="76" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="90">53</text>
+  <path d="M46,76 V96" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,76 V96" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,76 V96" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,76 V96" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,76 V96" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,76 V96" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,76 V96" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,96 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="90">Beam (3)</text>
+  <text class="c" text-anchor="middle" x="366.0" y="90">1 3/4 x 18 LVL</text>
+  <text class="c" text-anchor="middle" x="451.0" y="90">3</text>
+  <text class="c" text-anchor="middle" x="506.0" y="90">16</text>
+  <text x="542" y="90">H5</text>
+  <rect x="16" y="96" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="110">54</text>
+  <path d="M46,96 V116" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,96 V116" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,96 V116" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,96 V116" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,96 V116" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,96 V116" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,96 V116" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,116 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="110">Bracing for Trusses</text>
+  <text class="c" text-anchor="middle" x="366.0" y="110">2x6</text>
+  <text class="c" text-anchor="middle" x="451.0" y="110">36</text>
+  <text class="c" text-anchor="middle" x="506.0" y="110">16</text>
+  <text x="542" y="110">assumed</text>
+  <rect x="16" y="116" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="130">55</text>
+  <path d="M46,116 V136" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,116 V136" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,116 V136" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,116 V136" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,116 V136" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,116 V136" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,116 V136" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,136 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <rect x="16" y="136" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="150">56</text>
+  <path d="M46,136 V156" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,136 V156" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,136 V156" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,136 V156" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,136 V156" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,136 V156" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,136 V156" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,156 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text class="b" x="52" y="150">Note: 2 Stairs</text>
+  <rect x="16" y="156" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="170">57</text>
+  <path d="M46,156 V176" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,156 V176" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,156 V176" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,156 V176" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,156 V176" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,156 V176" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,156 V176" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,176 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="170">Stringers (3)</text>
+  <text class="c" text-anchor="middle" x="366.0" y="170">2x12</text>
+  <text class="c" text-anchor="middle" x="451.0" y="170">6</text>
+  <text class="c" text-anchor="middle" x="506.0" y="170">12</text>
+  <rect x="16" y="176" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="190">58</text>
+  <path d="M46,176 V196" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,176 V196" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,176 V196" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,176 V196" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,176 V196" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,176 V196" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,176 V196" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,196 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <rect x="16" y="196" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="210">59</text>
+  <path d="M46,196 V216" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,196 V216" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,196 V216" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,196 V216" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,196 V216" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,196 V216" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,196 V216" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,216 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="210">Subfloor</text>
+  <text class="c" text-anchor="middle" x="366.0" y="210">3/4" T&amp;G</text>
+  <text class="c" text-anchor="middle" x="451.0" y="210">221</text>
+  <text class="c" text-anchor="middle" x="506.0" y="210">4x8</text>
+  <text x="542" y="210">A4-03</text>
+  <rect x="16" y="216" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="230">60</text>
+  <path d="M46,216 V236" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,216 V236" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,216 V236" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,216 V236" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,216 V236" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,216 V236" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,216 V236" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,236 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="230">Panel Adheasive</text>
+  <text class="c" text-anchor="middle" x="366.0" y="230">29OZ</text>
+  <text class="c" text-anchor="middle" x="451.0" y="230">74</text>
+  <text class="c" text-anchor="middle" x="506.0" y="230">tubes</text>
+  <rect x="16" y="236" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="250">61</text>
+  <path d="M46,236 V256" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,236 V256" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,236 V256" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,236 V256" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,236 V256" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,236 V256" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,236 V256" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,256 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <rect x="16" y="256" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="270">62</text>
+  <rect x="46" y="256" width="380" height="20" fill="#99CC00"/>
+  <path d="M46,256 V276" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,256 V276" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,256 V276" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,256 V276" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,256 V276" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,256 V276" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,276 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text class="b" x="52" y="270">Front Porch Framing List 15' x 5' 1 unit</text>
+  <rect x="16" y="276" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="290">63</text>
+  <rect x="46" y="276" width="604" height="20" fill="#FFFF00"/>
+  <path d="M46,276 V296" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,276 V296" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,296 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="290">Note: Porch roof framing assumed 2x8; verify</text>
+  <rect x="16" y="296" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="310">64</text>
+  <path d="M46,296 V316" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,296 V316" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,296 V316" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,296 V316" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,296 V316" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,296 V316" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,296 V316" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,316 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="310">Posts</text>
+  <text class="c" text-anchor="middle" x="366.0" y="310">4x4 P.T.</text>
+  <text class="c" text-anchor="middle" x="451.0" y="310">2</text>
+  <text class="c" text-anchor="middle" x="506.0" y="310">8</text>
+  <text x="542" y="310">S1.1</text>
+  <rect x="16" y="316" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="330">65</text>
+  <path d="M46,316 V336" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,316 V336" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,316 V336" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,316 V336" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,316 V336" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,316 V336" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,316 V336" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,336 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="330">Post Bases</text>
+  <text class="c" text-anchor="middle" x="366.0" y="330">ABU44 Zmax</text>
+  <text class="c" text-anchor="middle" x="451.0" y="330">2</text>
+  <text class="c" text-anchor="middle" x="506.0" y="330">pcs</text>
+  <rect x="16" y="336" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="350">66</text>
+  <path d="M46,336 V356" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,336 V356" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,336 V356" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,336 V356" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,336 V356" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,336 V356" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,336 V356" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,356 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="350">Beam (2)</text>
+  <text class="c" text-anchor="middle" x="366.0" y="350">2x10</text>
+  <text class="c" text-anchor="middle" x="451.0" y="350">2</text>
+  <text class="c" text-anchor="middle" x="506.0" y="350">16</text>
+  <text x="542" y="350">assumed</text>
+  <rect x="16" y="356" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="370">67</text>
+  <path d="M46,356 V376" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,356 V376" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,356 V376" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,356 V376" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,356 V376" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,356 V376" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,356 V376" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,376 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <rect x="16" y="376" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="390">68</text>
+  <rect x="46" y="376" width="260" height="20" fill="#FFFF00"/>
+  <path d="M46,376 V396" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,376 V396" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,376 V396" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,376 V396" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,376 V396" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,376 V396" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,376 V396" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,396 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text class="b" x="52" y="390">1st Floor Walls</text>
+  <rect x="16" y="396" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="410">69</text>
+  <path d="M46,396 V416" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,396 V416" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,396 V416" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,396 V416" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,396 V416" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,396 V416" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,396 V416" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,416 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="410">Bracing Ext Walls</text>
+  <text class="c" text-anchor="middle" x="366.0" y="410">2x4</text>
+  <text class="c" text-anchor="middle" x="451.0" y="410">76</text>
+  <text class="c" text-anchor="middle" x="506.0" y="410">14</text>
+  <rect x="16" y="416" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="430">70</text>
+  <path d="M46,416 V436" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,416 V436" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,416 V436" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,416 V436" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,416 V436" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,416 V436" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,416 V436" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,436 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="430">Window Flashing</text>
+  <text class="c" text-anchor="middle" x="366.0" y="430">Flashing Tape</text>
+  <text class="c" text-anchor="middle" x="451.0" y="430">950</text>
+  <text class="c" text-anchor="middle" x="506.0" y="430">LFT</text>
+  <rect x="16" y="436" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="450">71</text>
+  <path d="M46,436 V456" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,436 V456" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,436 V456" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,436 V456" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,436 V456" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,436 V456" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,436 V456" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,456 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="450">Box Sheathing</text>
+  <text class="c" text-anchor="middle" x="366.0" y="450">7/16" Zip</text>
+  <text class="c" text-anchor="middle" x="451.0" y="450">31</text>
+  <text class="c" text-anchor="middle" x="506.0" y="450">4x8</text>
+  <text x="542" y="450">S3.0</text>
+  <rect x="16" y="456" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="470">72</text>
+  <path d="M46,456 V476" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,456 V476" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,456 V476" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,456 V476" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,456 V476" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,456 V476" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,456 V476" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,476 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="470">Holdowns (2) btm top</text>
+  <text class="c" text-anchor="middle" x="366.0" y="470">HDU4</text>
+  <text class="c" text-anchor="middle" x="451.0" y="470">4</text>
+  <text class="c" text-anchor="middle" x="506.0" y="470">pcs</text>
+  <text x="542" y="470">SW-2</text>
+  <rect x="16" y="476" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="490">73</text>
+  <path d="M46,476 V496" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,476 V496" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,476 V496" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,476 V496" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,476 V496" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,476 V496" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,476 V496" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,496 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <rect x="16" y="496" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="510">74</text>
+  <rect x="46" y="496" width="260" height="20" fill="#99CC00"/>
+  <path d="M46,496 V516" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,496 V516" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,496 V516" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,496 V516" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,496 V516" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,496 V516" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,496 V516" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,516 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text class="b" x="52" y="510">2nd Floor Framing List</text>
+  <rect x="16" y="516" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="530">75</text>
+  <path d="M46,516 V536" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,516 V536" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,516 V536" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,516 V536" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,516 V536" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,516 V536" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,516 V536" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,536 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="530">Beam (3)</text>
+  <text class="c" text-anchor="middle" x="366.0" y="530">1 3/4 x 18 LVL</text>
+  <text class="c" text-anchor="middle" x="451.0" y="530">3</text>
+  <text class="c" text-anchor="middle" x="506.0" y="530">20</text>
+  <text x="542" y="530">H5</text>
+  <rect x="16" y="536" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="550">76</text>
+  <path d="M46,536 V556" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,536 V556" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,536 V556" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,536 V556" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,536 V556" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,536 V556" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,536 V556" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,556 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="550">Subfloor</text>
+  <text class="c" text-anchor="middle" x="366.0" y="550">3/4" T&amp;G</text>
+  <text class="c" text-anchor="middle" x="451.0" y="550">329</text>
+  <text class="c" text-anchor="middle" x="506.0" y="550">4x8</text>
+  <text x="542" y="550">A4-03</text>
+  <rect x="16" y="556" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="570">77</text>
+  <path d="M46,556 V576" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,556 V576" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,556 V576" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,556 V576" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,556 V576" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,556 V576" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,556 V576" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,576 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <rect x="16" y="576" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="590">78</text>
+  <rect x="46" y="576" width="380" height="20" fill="#99CC00"/>
+  <path d="M46,576 V596" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,576 V596" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,576 V596" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,576 V596" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,576 V596" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,576 V596" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,596 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text class="b" x="52" y="590">#1 Upper Balcony List 7' x 6' 2 units</text>
+  <rect x="16" y="596" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="610">79</text>
+  <rect x="46" y="596" width="604" height="20" fill="#FFFF00"/>
+  <path d="M46,596 V616" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,596 V616" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,616 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="610">Note: Railing composite per A4-03</text>
+  <rect x="16" y="616" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="630">80</text>
+  <path d="M46,616 V636" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,616 V636" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,616 V636" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,616 V636" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,616 V636" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,616 V636" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,616 V636" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,636 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="630">Posts</text>
+  <text class="c" text-anchor="middle" x="366.0" y="630">6x6 P.T.</text>
+  <text class="c" text-anchor="middle" x="451.0" y="630">4</text>
+  <text class="c" text-anchor="middle" x="506.0" y="630">12</text>
+  <text x="542" y="630">A4-03</text>
+  <rect x="16" y="636" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="650">81</text>
+  <path d="M46,636 V656" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,636 V656" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,636 V656" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,636 V656" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,636 V656" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,636 V656" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,636 V656" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,656 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="650">Joists 16" o.c.</text>
+  <text class="c" text-anchor="middle" x="366.0" y="650">2x8 P.T.</text>
+  <text class="c" text-anchor="middle" x="451.0" y="650">12</text>
+  <text class="c" text-anchor="middle" x="506.0" y="650">12</text>
+  <text x="542" y="650">A4-03</text>
+  <rect x="16" y="656" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="670">82</text>
+  <path d="M46,656 V676" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,656 V676" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,656 V676" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,656 V676" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,656 V676" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,656 V676" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,656 V676" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,676 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <rect x="16" y="676" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="690">83</text>
+  <rect x="46" y="676" width="260" height="20" fill="#CCFFCC"/>
+  <path d="M46,676 V696" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,676 V696" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,676 V696" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,676 V696" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,676 V696" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,676 V696" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,676 V696" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,696 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text class="b" x="52" y="690">#1 Upper Balcony Decking and Railing</text>
+  <rect x="16" y="696" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="710">84</text>
+  <path d="M46,696 V716" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,696 V716" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,696 V716" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,696 V716" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,696 V716" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,696 V716" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,696 V716" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,716 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="710">Decking</text>
+  <text class="c" text-anchor="middle" x="366.0" y="710">5/4" Decking</text>
+  <text class="c" text-anchor="middle" x="451.0" y="710">130</text>
+  <text class="c" text-anchor="middle" x="506.0" y="710">SQ FT</text>
+  <text x="542" y="710">A4-03</text>
+  <rect x="16" y="716" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="730">85</text>
+  <path d="M46,716 V736" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,716 V736" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,716 V736" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,716 V736" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,716 V736" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,716 V736" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,716 V736" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,736 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="730">Rail sections</text>
+  <text class="c" text-anchor="middle" x="366.0" y="730">8' Rail section</text>
+  <text class="c" text-anchor="middle" x="451.0" y="730">2</text>
+  <text class="c" text-anchor="middle" x="506.0" y="730">unit</text>
+  <rect x="16" y="736" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="750">86</text>
+  <path d="M46,736 V756" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,736 V756" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,736 V756" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,736 V756" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,736 V756" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,736 V756" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,736 V756" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,756 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <rect x="16" y="756" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="770">87</text>
+  <rect x="46" y="756" width="260" height="20" fill="#FFFF00"/>
+  <path d="M46,756 V776" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,756 V776" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,756 V776" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,756 V776" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,756 V776" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,756 V776" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,756 V776" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,776 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text class="b" x="52" y="770">2nd Floor Walls</text>
+  <rect x="16" y="776" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="790">88</text>
+  <path d="M46,776 V796" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,776 V796" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,776 V796" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,776 V796" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,776 V796" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,776 V796" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,776 V796" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,796 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="790">Bracing Ext Walls</text>
+  <text class="c" text-anchor="middle" x="366.0" y="790">2x4</text>
+  <text class="c" text-anchor="middle" x="451.0" y="790">60</text>
+  <text class="c" text-anchor="middle" x="506.0" y="790">14</text>
+  <rect x="16" y="796" width="30" height="20" fill="#f2f3f5"/>
+  <text class="n" text-anchor="middle" x="31" y="810">89</text>
+  <path d="M46,796 V816" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M306,796 V816" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M426,796 V816" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M476,796 V816" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M536,796 V816" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M610,796 V816" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M650,796 V816" stroke="#3a3f44" stroke-width="0.5"/>
+  <path d="M16,816 H650" stroke="#3a3f44" stroke-width="0.5"/>
+  <text x="52" y="810">Box Sheathing</text>
+  <text class="c" text-anchor="middle" x="366.0" y="810">7/16" Zip</text>
+  <text class="c" text-anchor="middle" x="451.0" y="810">24</text>
+  <text class="c" text-anchor="middle" x="506.0" y="810">4x8</text>
+  <text x="542" y="810">S3.0</text>
+  <path d="M658,39 h8 V253 h-8" fill="none" stroke="#2e7d32" stroke-width="1.6"/>
+  <text class="t" x="674" y="119.5" fill="#2e7d32">Перекрытие 1-го этажа</text>
+  <text class="g" x="674" y="134.5">Заголовок: жирный, цвет только в A.</text>
+  <text class="g" x="674" y="149.5">Заметка под ним: жёлтая на A:F.</text>
+  <text class="g" x="674" y="164.5">Счёт лестниц: жирный без заливки.</text>
+  <text class="g" x="674" y="179.5">В конце subfloor и panel adhesive.</text>
+  <path d="M658,259 h8 V373 h-8" fill="none" stroke="#2e7d32" stroke-width="1.6"/>
+  <text class="t" x="674" y="304.5" fill="#2e7d32">Блок 1-го этажа</text>
+  <text class="g" x="674" y="319.5">Сразу за framing list своего этажа.</text>
+  <text class="g" x="674" y="334.5">Заголовок блока: цвет на A:B.</text>
+  <path d="M658,379 h8 V493 h-8" fill="none" stroke="#2e7d32" stroke-width="1.6"/>
+  <text class="t" x="674" y="424.5" fill="#2e7d32">Стены 1-го этажа</text>
+  <text class="g" x="674" y="439.5">Идут после перекрытия и блоков.</text>
+  <text class="g" x="674" y="454.5">Группы разделены пустой строкой.</text>
+  <path d="M658,499 h8 V573 h-8" fill="none" stroke="#2e7d32" stroke-width="1.6"/>
+  <text class="t" x="674" y="532.0" fill="#2e7d32">Перекрытие 2-го этажа</text>
+  <text class="g" x="674" y="547.0">Начинается следующий этаж.</text>
+  <path d="M658,579 h8 V753 h-8" fill="none" stroke="#2e7d32" stroke-width="1.6"/>
+  <text class="t" x="674" y="647.0" fill="#2e7d32">Блок 2-го этажа</text>
+  <text class="g" x="674" y="662.0">Upper в названии: сюда, за 2nd Floor.</text>
+  <text class="g" x="674" y="677.0">Decking и railing под своим светло-</text>
+  <text class="g" x="674" y="692.0">зелёным заголовком, не под каркасом.</text>
+  <path d="M658,759 h8 V813 h-8" fill="none" stroke="#2e7d32" stroke-width="1.6"/>
+  <text class="t" x="674" y="782.0" fill="#2e7d32">Стены 2-го этажа</text>
+  <text class="g" x="674" y="797.0">Дальше 3-й этаж, затем кровля.</text>
+</svg>
