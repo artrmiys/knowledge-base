@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400" role="img" aria-labelledby="title desc">
+  <title id="title">Link to Excel: число идёт из позиции в ячейку, четыре состояния связи</title>
+  <desc id="desc">Позиция в Takeoffs пишет своё число в одну ячейку книги, только в одну сторону. Значок у позиции показывает состояние: Linked, Pending, Conflict или Broken.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#2e7d32"/></marker>
+  </defs>
+  <rect width="900" height="400" rx="12" fill="#f5f7f5"/>
+  <g font-family="Segoe UI,Arial,sans-serif" fill="#183323">
+    <text x="30" y="38" font-size="22" font-weight="600">Одна позиция, одно число, одна ячейка</text>
+
+    <g fill="#fff" stroke="#a8bcab" stroke-width="1.5">
+      <rect x="30" y="60" width="300" height="104" rx="8"/>
+      <rect x="570" y="60" width="300" height="104" rx="8"/>
+    </g>
+    <text x="48" y="90" font-size="19" font-weight="600">Takeoffs</text>
+    <text x="48" y="118" font-size="16">ext 2x6 9.09</text>
+    <text x="48" y="144" font-size="16">Value: 120.5</text>
+    <g fill="none" stroke="#6b7378" stroke-width="2" stroke-linecap="round">
+      <path d="M236 112L246 102M240 96L246 90A7 7 0 0 1 256 100L250 106M242 118L236 124A7 7 0 0 1 226 114L232 108"/>
+    </g>
+    <text x="264" y="112" font-size="13" fill="#4b5563">значок</text>
+
+    <text x="588" y="90" font-size="19" font-weight="600">Книга Excel</text>
+    <text x="588" y="118" font-size="16">лист, ячейка G12</text>
+    <text x="588" y="144" font-size="16">в ячейке: 120.5</text>
+
+    <g stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrow)"><path d="M336 112H562"/></g>
+    <text x="378" y="100" font-size="16" font-weight="600">число, только туда</text>
+    <text x="360" y="136" font-size="14" fill="#4b5563">правка ячейки замер не меняет</text>
+
+    <g fill="#fff" stroke-width="2">
+      <rect x="30" y="186" width="195" height="190" rx="8" stroke="#6b7378"/>
+      <rect x="245" y="186" width="195" height="190" rx="8" stroke="#c9970c"/>
+      <rect x="460" y="186" width="195" height="190" rx="8" stroke="#e07b00"/>
+      <rect x="675" y="186" width="195" height="190" rx="8" stroke="#c62828"/>
+    </g>
+    <text x="46" y="216" font-size="18" font-weight="600">Linked</text>
+    <text x="46" y="238" font-size="14" fill="#4b5563">значок серый</text>
+    <text x="46" y="270" font-size="15">Число в ячейке</text>
+    <text x="46" y="290" font-size="15">совпадает.</text>
+    <text x="46" y="330" font-size="15" font-weight="600">Ничего не надо.</text>
+
+    <text x="261" y="216" font-size="18" font-weight="600">Pending</text>
+    <text x="261" y="238" font-size="14" fill="#4b5563">значок жёлтый</text>
+    <text x="261" y="270" font-size="15">Число ждёт: книга</text>
+    <text x="261" y="290" font-size="15">закрыта или занята.</text>
+    <text x="261" y="330" font-size="15" font-weight="600">Ctrl+S или</text>
+    <text x="261" y="350" font-size="15" font-weight="600">Update Links.</text>
+
+    <text x="476" y="216" font-size="18" font-weight="600">Conflict</text>
+    <text x="476" y="238" font-size="14" fill="#4b5563">значок оранжевый</text>
+    <text x="476" y="270" font-size="15">Ячейку поправили</text>
+    <text x="476" y="290" font-size="15">руками.</text>
+    <text x="476" y="330" font-size="15" font-weight="600">Overwrite the Cell или</text>
+    <text x="476" y="350" font-size="15" font-weight="600">Keep the Cell and Unlink.</text>
+
+    <text x="691" y="216" font-size="18" font-weight="600">Broken</text>
+    <text x="691" y="238" font-size="14" fill="#4b5563">значок красный</text>
+    <text x="691" y="270" font-size="15">Удалили строку</text>
+    <text x="691" y="290" font-size="15">или позицию.</text>
+    <text x="691" y="330" font-size="15" font-weight="600">Unlink и связать</text>
+    <text x="691" y="350" font-size="15" font-weight="600">заново.</text>
+  </g>
+</svg>

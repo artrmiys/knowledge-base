@@ -1295,6 +1295,78 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как держать число в ячейке: Link to Excel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Как держать число в ячейке: Link to Excel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#link-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что происходит дальше
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Состояния: значок у позиции
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-joist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Joists: какое число
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Все связи проекта: All Excel Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Настройки: Settings &gt; Excel Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#template" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7114,6 +7186,78 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как держать число в ячейке: Link to Excel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Как держать число в ячейке: Link to Excel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#link-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что происходит дальше
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Состояния: значок у позиции
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-joist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Joists: какое число
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Все связи проекта: All Excel Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Настройки: Settings &gt; Excel Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#template" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7187,7 +7331,7 @@
 
 
 <h1 id="excel">Экспорт в Excel<a class="headerlink" href="#excel" title="Прямая ссылка на раздел">&para;</a></h1>
-<p>Здесь: полоса XL справа от листа, что каждая кнопка берёт из дерева и куда пишет в книге <code>TemplateCom.xlsm</code>, легенда LG, точка "комментарии", кнопки <code>Value</code> и <code>Excel</code>, настройка кнопок в <code>Settings &gt; Excel Actions</code>, порядок работы и ошибки. Нужно после замеров, перед работой в DFL.</p>
+<p>Здесь: полоса XL справа от листа, что каждая кнопка берёт из дерева и куда пишет в книге <code>TemplateCom.xlsm</code>, легенда LG, точка "комментарии", кнопки <code>Value</code> и <code>Excel</code>, постоянная связь позиции с ячейкой <code>Link to Excel</code>, настройка кнопок в <code>Settings &gt; Excel Actions</code>, порядок работы и ошибки. Нужно после замеров, перед работой в DFL.</p>
 <!-- DEMO: d-excel-xl -->
 
 <figure>
@@ -7421,6 +7565,10 @@
 <td>пишет только числа той же выборки в одну колонку от активной ячейки</td>
 </tr>
 <tr>
+<td><code>Link to Excel</code></td>
+<td>пишет число одной позиции в активную ячейку и держит его в ней: <a href="#link">ниже</a></td>
+</tr>
+<tr>
 <td><code>Export &gt; Export CSV / TXT / Excel</code></td>
 <td>выгрузка дерева в файл</td>
 </tr>
@@ -7439,6 +7587,210 @@
 <li>Щёлкните ячейку назначения в Excel и нажмите <code>Excel</code>.</li>
 </ol>
 <p>Результат: под строкой позиции идут строки комментариев (сначала позиции, потом замеров, одинаковые не повторяются) и пустая строка после них.</p>
+<h2 id="link">Как держать число в ячейке: Link to Excel<a class="headerlink" href="#link" title="Прямая ссылка на раздел">&para;</a></h2>
+<p><code>Value</code> пишет число один раз. <strong>Link to Excel</strong> пишет число в ячейку и запоминает связь: поменяли замер, ячейка обновилась сама. Одна позиция, одно число, одна ячейка.</p>
+<div class="admonition warning">
+<p class="admonition-title">Только в одну сторону, из OurPlanCore в Excel</p>
+<p>Правка ячейки замер не меняет. Открытую книгу программа не сохраняет, сохраняете вы. Пока вы не нажали Link, программа к Excel не обращается: проект без связей Excel не трогает.</p>
+</div>
+<figure>
+<p><img alt="Как работает Link to Excel" src="../../assets/images/ourplanecore/excel-link-states.svg" />
+  </p>
+<figcaption>Число идёт из позиции в ячейку. Цвет значка у строки позиции показывает состояние связи. Имена на схеме примерные.</figcaption>
+</figure>
+<p>Зачем: число в книге само идёт за замером, не надо повторять <code>Value</code> после каждой правки.
+Нужно: версия 3.0.28 или новее, книга открыта в Excel и сохранена файлом, проект открыт не только для чтения.</p>
+<ol>
+<li>В Takeoffs выделите одну позицию. Строка замера под позицией считается этой позицией; папка не подходит, как и позиция-аннотация без количества.</li>
+<li>В Excel щёлкните нужную ячейку.</li>
+<li>В OurPlanCore нажмите <strong>Link to Excel</strong> внизу справа, рядом с <code>Value</code> и <code>Excel</code>. Та же команда: правая кнопка по позиции, <strong>Excel Link &gt; Link to Excel</strong>, или палитра <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-p">P</kbd></span>. Клавиши по умолчанию нет.</li>
+<li>Если в ячейке уже есть текст, другое число, формула или другая связь, программа спросит: <strong>Replace</strong> или <strong>Cancel</strong>.</li>
+<li>Прочитайте статус внизу: <code>Linked &lt;позиция&gt; to &lt;книга&gt; &lt;лист!ячейка&gt;: &lt;число&gt;</code>. У строки позиции появился значок-цепочка.</li>
+<li>Поменяйте замер и посмотрите на ячейку: число обновится через короткую паузу.</li>
+<li>Сохраните книгу в Excel сами.</li>
+</ol>
+<p>Результат: число позиции стоит в ячейке и идёт за замером. Значение то же, что пишет <code>Value</code>: те же единицы и округление.</p>
+<p>Функция новая. На первой книге сверьте ячейку с <code>Total</code> в дереве своими глазами.</p>
+<h3 id="link-update">Что происходит дальше<a class="headerlink" href="#link-update" title="Прямая ссылка на раздел">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Что случилось</th>
+<th>Что происходит</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>книга открыта</td>
+<td>ячейка обновляется после короткой паузы. Активный лист, выделение и режим расчёта в Excel остаются как были. Запись из программы очищает отмену (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>) самого Excel: формулу, заменённую через <strong>Replace</strong>, отменой не вернуть</td>
+</tr>
+<tr>
+<td>Excel занят или правится ячейка</td>
+<td>связь ждёт (<code>Pending</code>), программа пробует снова сама</td>
+</tr>
+<tr>
+<td>книга закрыта</td>
+<td>связь ждёт (<code>Pending</code>). Число пишется при сохранении проекта (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>, автосохранение не считается) или по <strong>Update Links</strong>: в скрытом Excel с выключенными макросами, с копией книги до записи, потом запись читается обратно с диска</td>
+</tr>
+<tr>
+<td>вставили строки над ячейкой</td>
+<td>связь держится за скрытое имя <code>_OPLink_...</code> в книге, оно идёт за ячейкой. Адрес программа не угадывает</td>
+</tr>
+<tr>
+<td>удалили строку с ячейкой, руками или макросом</td>
+<td>связь <code>Broken</code>, ничего не пишется</td>
+</tr>
+<tr>
+<td>позицию переименовали или перенесли в другую папку</td>
+<td>связь идёт за ней. Копия позиции остаётся без связи</td>
+</tr>
+<tr>
+<td>позицию удалили</td>
+<td>связь <code>Broken</code>, ячейка остаётся как есть; <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> в программе возвращает связь</td>
+</tr>
+</tbody>
+</table>
+<p>Сами Link и Unlink не отменяются <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>. Копии книги лежат в профиле программы, <code>%LOCALAPPDATA%\OurPlanCore\excel-link-backups</code> (у Lite своя папка профиля, <code>%LOCALAPPDATA%\OurPlanCore Lite</code>), рядом с книгой их нет.</p>
+<h3 id="link-states">Состояния: значок у позиции<a class="headerlink" href="#link-states" title="Прямая ссылка на раздел">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Состояние</th>
+<th>Значок</th>
+<th>Что значит</th>
+<th>Что делать</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Linked</code></td>
+<td>серый</td>
+<td>в ячейке число этой позиции</td>
+<td>ничего</td>
+</tr>
+<tr>
+<td><code>Pending</code></td>
+<td>жёлтый</td>
+<td>новое число ещё не записано: книга закрыта, Excel занят, книга или файл только для чтения, файл занят другой программой или пропал, ячейка защищена, у joists не задано направление</td>
+<td>закрытая книга: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> или <strong>Update Links</strong>. Причину пишет подсказка значка</td>
+</tr>
+<tr>
+<td><code>Conflict</code></td>
+<td>оранжевый</td>
+<td>ячейку изменили руками или вписали в неё формулу. Поверх программа не пишет</td>
+<td><strong>Overwrite the Cell</strong> (число программы поверх) или <strong>Keep the Cell and Unlink</strong> (ячейка остаётся, связи больше нет)</td>
+</tr>
+<tr>
+<td><code>Broken</code></td>
+<td>красный</td>
+<td>позицию удалили, строку или ячейку удалили (<code>#REF!</code>), скрытое имя пропало из книги, у joists стало другое число длин. Ничего не пишется</td>
+<td>удалённую позицию вернёт <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>. Иначе <strong>Unlink</strong> и свяжите заново</td>
+</tr>
+</tbody>
+</table>
+<p>Подсказка значка: состояние, книга, лист и ячейка, последнее записанное число, причина.</p>
+<h3 id="link-joist">Joists: какое число<a class="headerlink" href="#link-joist" title="Прямая ссылка на раздел">&para;</a></h3>
+<p>У позиции <code>J Area</code> одного числа нет (<code>Value</code> пишет туда строку текста), поэтому Link спрашивает, какое число идёт в эту ячейку:</p>
+<table>
+<thead>
+<tr>
+<th>Вариант в окне</th>
+<th>Что это</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Count of the 16 length: 45</code></td>
+<td>штуки этой заказной длины</td>
+</tr>
+<tr>
+<td><code>Length 16</code></td>
+<td>сама заказная длина</td>
+</tr>
+<tr>
+<td><code>Total count, all lengths: ...</code></td>
+<td>все штуки, если длин несколько</td>
+</tr>
+<tr>
+<td><code>Total length, all lengths: ...</code></td>
+<td>суммарная длина, если длин несколько</td>
+</tr>
+</tbody>
+</table>
+<p>Для второго числа щёлкните другую ячейку и нажмите Link ещё раз. Связь держится за "длину номер N из M": если число длин в позиции изменилось, связь станет <code>Broken</code> и попросит связать заново, чужое число в ячейку не попадёт. Итоги переживают любую такую правку. Без заданного направления joists программа не свяжет: <code>Set the joist direction before linking this takeoff.</code></p>
+<h3 id="link-list">Все связи проекта: All Excel Links<a class="headerlink" href="#link-list" title="Прямая ссылка на раздел">&para;</a></h3>
+<p>Откройте: правая кнопка по позиции, <strong>Excel Link &gt; All Excel Links...</strong>, или команда <code>Excel Links...</code> в палитре. В окне <code>Excel Links</code> колонки <code>Takeoff</code>, <code>Workbook</code>, <code>Cell</code>, <code>Last value</code>, <code>State</code>, <code>Why</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Кнопка</th>
+<th>Что делает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Go to Cell</strong></td>
+<td>показывает ячейку в Excel, закрытую книгу сначала открывает</td>
+</tr>
+<tr>
+<td><strong>Overwrite the Cell</strong>, <strong>Keep the Cell and Unlink</strong></td>
+<td>видны, когда выбрана связь в <code>Conflict</code></td>
+</tr>
+<tr>
+<td><code>Unlink</code></td>
+<td>связи больше нет, число остаётся в ячейке. Если книга закрыта, её скрытое имя остаётся там до <strong>Remove All Links</strong></td>
+</tr>
+<tr>
+<td><strong>Update Links</strong></td>
+<td>записывает всё, что ждёт, в том числе в закрытые книги, и заново проверяет скрытые имена оборванных связей. Эта кнопка работает при любых настройках. То же: <strong>Excel Link &gt; Update Links</strong> или <code>Update Excel Links</code> в палитре</td>
+</tr>
+<tr>
+<td><strong>Point to New Path...</strong></td>
+<td>книгу перенесли или переименовали. Новая книга не создаётся</td>
+</tr>
+<tr>
+<td><strong>Remove All Links from This Workbook...</strong></td>
+<td>см. ниже</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Перед сдачей книги клиенту</p>
+<p><strong>All Excel Links...</strong>, выберите связь с этой книгой, <strong>Remove All Links from This Workbook...</strong>. Числа остаются в ячейках, скрытые имена уходят из книги. Уходят все, также сделанные другими проектами и OurPDF.</p>
+</div>
+<h3 id="link-settings">Настройки: Settings &gt; Excel Links<a class="headerlink" href="#link-settings" title="Прямая ссылка на раздел">&para;</a></h3>
+<p>Заголовок раздела <code>Link to Excel behaviour</code>. Есть <strong>Apply</strong>, <strong>Reset</strong>, <strong>Save global default</strong>, <strong>Save as this job</strong>, <strong>Clear job override</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>По умолчанию</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Update an open workbook at once</code></td>
+<td>вкл; выключено: в открытую книгу пишет только <strong>Update Links</strong></td>
+</tr>
+<tr>
+<td><code>Update a closed workbook when the job is saved</code></td>
+<td>вкл; выключено: ждёт <strong>Update Links</strong></td>
+</tr>
+<tr>
+<td><code>Backups kept per workbook</code></td>
+<td>5, от 1 до 50</td>
+</tr>
+<tr>
+<td><code>Delay before an open workbook is updated, ms</code></td>
+<td>800, от 100 до 10000</td>
+</tr>
+<tr>
+<td><code>Time limit for a closed workbook, seconds</code></td>
+<td>180, от 15 до 1800; после него программа останавливает свой скрытый Excel, связи остаются <code>Pending</code></td>
+</tr>
+</tbody>
+</table>
+<p>В OurPlanCore Lite кнопка, меню, окно и этот раздел Settings те же. Полосы XL в Lite нет. Такая же связь есть в <a href="../../ourpdf/excel-link/">OurPDF</a>.</p>
 <h2 id="template">Шаблон TemplateCom<a class="headerlink" href="#template" title="Прямая ссылка на раздел">&para;</a></h2>
 <p><code>TemplateCom.xlsm</code> лежит в папке обновлений программы рядом с <code>ourplancore.exe</code>. На каждый корпус делается копия (<code>Bldng#A.xlsm</code>), имя книги равно Job Name на Front Page. Листы: <code>Front Page</code> (площади, Total SQFT), <code>Detailed Frame List</code> (сдаваемые колонки <code>A:H</code> и рабочие зоны справа: <code>J:N</code> экспорт, <code>O:AB</code> матрица стен, спек-ячейки <code>O:S</code>, калькулятор высот), <code>Standarts</code> (библиотека нот), <code>Mat List</code>. Макросы серии A запускает полоса XL, серии B, C, X, Y - клавиши в Excel. Подробно: <a href="../dfl-overview/">DFL: как устроена книга</a>, <a href="../excel-hotkeys/">Макросы и клавиши Excel</a>, <a href="../standard-notes/">Стандартные notes</a>.</p>
 <h2 id="rerun">Повторный экспорт<a class="headerlink" href="#rerun" title="Прямая ссылка на раздел">&para;</a></h2>
@@ -7543,6 +7895,34 @@
 <tr>
 <td>Book не изменилась</td>
 <td>макросы запрещены в Excel; проверить Trust Center</td>
+</tr>
+<tr>
+<td><code>Select one takeoff before pressing Link to Excel.</code></td>
+<td>в Takeoffs ничего не выделено или выделено несколько позиций</td>
+</tr>
+<tr>
+<td><code>Link to Excel takes one takeoff, not a folder: one number goes to one cell.</code></td>
+<td>выделена папка; выделить одну позицию</td>
+</tr>
+<tr>
+<td><code>Open Excel, open a workbook, click the destination cell, then press Link to Excel again.</code></td>
+<td>Excel не найден; открыть книгу, щёлкнуть ячейку</td>
+</tr>
+<tr>
+<td><code>Save the workbook first: a link needs its file path.</code></td>
+<td>книга новая, у неё нет файла; сохранить её</td>
+</tr>
+<tr>
+<td><code>Excel is busy or a cell is being edited. Finish it and try again.</code></td>
+<td>Excel занят или в нём правится ячейка; закончить и нажать ещё раз</td>
+</tr>
+<tr>
+<td><code>An annotation takeoff has no quantity to link.</code></td>
+<td>у позиции-аннотации нет количества</td>
+</tr>
+<tr>
+<td><code>The workbook is open read-only.</code>, <code>The cell is protected.</code></td>
+<td>снять только чтение или защиту листа</td>
 </tr>
 </tbody>
 </table>

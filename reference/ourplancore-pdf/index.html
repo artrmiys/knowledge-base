@@ -1284,6 +1284,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#adobe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как поправить готовый PDF в Adobe Acrobat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Как поправить готовый PDF в Adobe Acrobat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adobe-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как выключить
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7036,6 +7064,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#adobe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как поправить готовый PDF в Adobe Acrobat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Как поправить готовый PDF в Adobe Acrobat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adobe-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как выключить
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7109,7 +7165,7 @@
 
 
 <h1 id="pdf">PDF и сдача<a class="headerlink" href="#pdf" title="Прямая ссылка на раздел">&para;</a></h1>
-<p>Здесь: экспорт листов с замерами в PDF, отдельный файл на корпус, лента PDF Output и живой Preview, легенда листа, что ещё входит в сдачу. Нужно в конце работы и при ревизии.</p>
+<p>Здесь: экспорт листов с замерами в PDF, отдельный файл на корпус, правка готового PDF в Adobe Acrobat, лента PDF Output и живой Preview, легенда листа, что ещё входит в сдачу. Нужно в конце работы и при ревизии.</p>
 <figure>
 <p><img alt="Диалог Export PDF" src="../../assets/images/ourplancore/v3/export-pdf.png" />
   </p>
@@ -7121,6 +7177,7 @@
 <li>Разные корпуса - разные PDF. Замеры других корпусов на общем листе скрываются перед экспортом.</li>
 <li><code>Measurements</code> включены всегда, <code>Legend</code> обычно включена, <code>Markups</code> - только если разметка нужна клиенту (маска Hide и кропы печатаются и без неё).</li>
 <li>Ревизия "только новое": по веткам нового комплекта, остальное скрыть.</li>
+<li>По умолчанию линии, площади и подписи в PDF можно двигать в Adobe Acrobat, у клиента тоже. Нужен PDF без этого: <a href="#adobe-off">выключите <code>Editable</code></a>.</li>
 </ul>
 <p>Полный состав сдачи (processed xlsx, <code>Changes.txt</code>, папка <code>.Finished</code>): <a href="../../start/workflow/">Процесс работы, экспорт и сдача</a>.</p>
 <h2 id="export">Как экспортировать PDF<a class="headerlink" href="#export" title="Прямая ссылка на раздел">&para;</a></h2>
@@ -7150,11 +7207,173 @@
 <li>Верните видимость точками у позиций под листом в Pages и повторите для следующего корпуса.</li>
 </ol>
 <p>Результат: файл на корпус; конвейер делает то же автоматически по зелёной точке (<a href="../ourplancore-buildings/#pdf">CLI</a>).</p>
+<h2 id="adobe">Как поправить готовый PDF в Adobe Acrobat<a class="headerlink" href="#adobe" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>С версии 3.0.27 экспорт по умолчанию кладёт замеры в PDF отдельными объектами (аннотациями), а не рисует их в странице. Вид тот же: цвета, толщины и подписи OurPlanCore. В Adobe Acrobat такие объекты можно двигать, править и удалять. В OurPlanCore Lite то же самое.</p>
+<figure>
+<p><img alt="Что двигается в Adobe Acrobat" src="../../assets/images/ourplanecore/adobe-what-moves.svg" />
+  </p>
+<figcaption>Проверено мышью в Acrobat на тестовых файлах: линии, площади и подписи двигаются, точки и площади joists нет.</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Объект</th>
+<th>В Acrobat</th>
+<th>Что важно</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Линии (<code>Line</code>)</td>
+<td>двигаются</td>
+<td></td>
+</tr>
+<tr>
+<td>Площади (<code>Area</code>)</td>
+<td>двигаются</td>
+<td></td>
+</tr>
+<tr>
+<td>Подписи</td>
+<td>двигаются</td>
+<td>подпись не привязана к своей линии: сдвинули линию, подпись двигайте отдельно</td>
+</tr>
+<tr>
+<td>Точки (<code>Count</code>, <code>Beam</code>)</td>
+<td>не двигаются</td>
+<td></td>
+</tr>
+<tr>
+<td>Площади joists (<code>J Area</code>)</td>
+<td>не двигаются</td>
+<td>контур, joists и подписи здесь один объект</td>
+</tr>
+<tr>
+<td>Легенда</td>
+<td>не должна двигаться</td>
+<td>тот же тип объекта, что у <code>Count</code>; отдельно её не пробовали. Лежит поверх всех замеров и подписей</td>
+</tr>
+<tr>
+<td>Заголовок листа, разметка <code>Annotation</code></td>
+<td>не двигаются</td>
+<td>они в самой странице, это не объекты</td>
+</tr>
+</tbody>
+</table>
+<p>Зачем: мелкая правка прямо в PDF, без нового экспорта.
+Нужно: PDF, выгруженный с включённой галкой <code>Editable</code>, и Adobe Acrobat.</p>
+<ol>
+<li>Экспортируйте PDF как обычно (<a href="#export">выше</a>). Галка <strong>PDF Output &gt; ADOBE &gt; Editable</strong> стоит по умолчанию.</li>
+<li>Откройте PDF в Adobe Acrobat.</li>
+<li>Щёлкните линию, площадь или подпись и тяните мышью.</li>
+<li>Сохраните PDF в Acrobat.</li>
+</ol>
+<p>Результат: объект сдвинут в этом PDF, и только в нём.</p>
+<div class="admonition warning">
+<p class="admonition-title">Правка в Adobe не пересчитывает подписи и легенду</p>
+<p>Числа на подписях и в легенде остаются прежними. Правка живёт только в этом PDF: проект OurPlanCore не меняется, новый экспорт её не повторит. Изменилось количество - поправьте замер в программе и экспортируйте заново.</p>
+</div>
+<p>После правки Acrobat рисует объект сам, поэтому вид немного меняется:</p>
+<ul>
+<li>у линии остаются цвет, толщина и прозрачность, точки в её вершинах пропадают;</li>
+<li>у площади заливка сохраняет свою прозрачность, и она же ложится на контур; у площади с вырезами контура нет.</li>
+</ul>
+<h3 id="adobe-off">Как выключить<a class="headerlink" href="#adobe-off" title="Прямая ссылка на раздел">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Где</th>
+<th>Что сделать</th>
+<th>Действует</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PDF Output &gt; ADOBE &gt; Editable</strong></td>
+<td>снять галку</td>
+<td>до открытия другого проекта</td>
+</tr>
+<tr>
+<td><strong>Settings &gt; PDF Editable Export</strong></td>
+<td>снять <code>Export measurements as annotations</code>, нажать <strong>Save global default</strong> или <strong>Save as this job</strong></td>
+<td>на все проекты или на один; <strong>Clear job override</strong> убирает настройку проекта, <strong>Reset</strong> загружает значения по умолчанию</td>
+</tr>
+</tbody>
+</table>
+<p>Галка снята: каждый замер и легенда нарисованы в странице, как в старом экспорте, легенда под замерами.</p>
+<figure>
+<p><img alt="Settings, раздел PDF Editable Export" src="../../assets/images/ourplancore/v3/settings-pdf-editable-export.png" />
+  </p>
+<figcaption>Заголовок раздела <code>PDF editable export (Adobe)</code>. Снято на сгенерированном проекте в 3.0.27: раздела <code>Excel Links</code> в списке слева тогда ещё не было.</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>По умолчанию</th>
+<th>Что делает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Export measurements as annotations</code></td>
+<td>вкл</td>
+<td>тот же выключатель, что <code>Editable</code></td>
+</tr>
+<tr>
+<td><code>Lines (PolyLine: move, drag vertices)</code></td>
+<td>вкл</td>
+<td>линии отдельными объектами</td>
+</tr>
+<tr>
+<td><code>Areas (Polygon: move, drag vertices)</code></td>
+<td>вкл</td>
+<td>площади отдельными объектами</td>
+</tr>
+<tr>
+<td><code>Counts (one object per point)</code></td>
+<td>вкл</td>
+<td>точки отдельными объектами, один объект на точку</td>
+</tr>
+<tr>
+<td><code>Joist areas (one object with contour, joists, labels)</code></td>
+<td>вкл</td>
+<td>площадь joists одним объектом</td>
+</tr>
+<tr>
+<td><code>Labels as separate text boxes</code></td>
+<td>вкл</td>
+<td>снято: подписи нарисованы в странице</td>
+</tr>
+<tr>
+<td><code>Legend (one object on top of everything)</code></td>
+<td>вкл</td>
+<td>снято: легенда нарисована в странице, под замерами</td>
+</tr>
+<tr>
+<td><code>Adobe measurement data (value updates when a vertex moves)</code></td>
+<td>вкл</td>
+<td>добавляет масштаб листа к линиям и площадям, чтобы своё значение считал сам Acrobat; подписи и легенду OurPlanCore это не меняет</td>
+</tr>
+<tr>
+<td><code>Line ends in Adobe</code></td>
+<td><code>None</code></td>
+<td><code>Circle</code> - круглые концы линии после правки в Acrobat, примерно втрое крупнее точек экспорта</td>
+</tr>
+<tr>
+<td><code>Counts, joists, legend as</code></td>
+<td><code>Stamp</code></td>
+<td>тип объекта. Менять не нужно: другие типы не проверены и при сдвиге могут потерять вид</td>
+</tr>
+</tbody>
+</table>
+<p>Настройка типов не меняет ни лист на экране, ни сами замеры, только то, как они лежат в PDF.</p>
+<p>В Lite лента и раздел те же, настройки Lite хранит отдельно от полной версии.</p>
 <h2 id="output">Лента PDF Output: справка<a class="headerlink" href="#output" title="Прямая ссылка на раздел">&para;</a></h2>
 <figure>
 <p><img alt="Лента PDF Output" src="../../assets/images/ourplancore/v3/ribbon-pdf-output.png" />
   </p>
-<figcaption>Настройки печати живут отдельно от экранных (<code>Viewport</code>, <code>Display</code>): на экране толсто, в PDF тонко.</figcaption>
+<figcaption>Настройки печати живут отдельно от экранных (<code>Viewport</code>, <code>Display</code>): на экране толсто, в PDF тонко. Кадр снят раньше: группы <code>ADOBE</code> на нём ещё нет.</figcaption>
 </figure>
 <table>
 <thead>
@@ -7179,6 +7398,11 @@
 <td><code>OVERLAYS</code></td>
 <td><code>Legend</code>, <code>Header</code></td>
 <td>размер легенды и заголовка листа</td>
+</tr>
+<tr>
+<td><code>ADOBE</code></td>
+<td><code>Editable</code></td>
+<td>замеры в PDF отдельными объектами, которые двигаются в Adobe Acrobat (<a href="#adobe">подробно</a>); по умолчанию включено</td>
 </tr>
 <tr>
 <td><code>INCLUDE</code></td>
@@ -7257,6 +7481,7 @@
 <li>Легенда перекрыла чертёж: сдвинуть <code>Pos</code> или уменьшить <code>Legend</code> в PDF Output.</li>
 <li>Линии стен закрыли размеры: уменьшить <code>Line</code> или поставить <code>Opac</code>.</li>
 <li>Одинаковые цвета соседних позиций: легенда нечитаема (<a href="../ourplancore-takeoffs/#colors">цвета</a>).</li>
+<li>Сдвинули или вытянули линию в Acrobat, а подпись и легенда остались со старым числом. Так и должно быть: Adobe их не пересчитывает, правьте замер в программе (<a href="#adobe">подробно</a>).</li>
 </ul>
 <p>Все ошибки сдачи: <a href="../../start/common-mistakes/#delivery">Частые ошибки, сдача</a>.</p>
 <h2 id="_3">См. также<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
