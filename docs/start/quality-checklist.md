@@ -86,6 +86,7 @@
 
 - [ ] Проект OurPlanCore сохранён; PDF только листов с замерами, на каждый корпус свой.
 - [ ] Processed xlsx сделан после последней правки, ноты и строки на месте.
+- [ ] Если делали [Auto Link](../reference/ourplancore-excel.md#auto-link): строки `Probable` просмотрены сразу, чужие сняты.
 - [ ] Если в книге есть [Link to Excel](../reference/ourplancore-excel.md#link-list): связей в `Pending`, `Conflict` и `Broken` нет, перед сдачей клиенту связи убраны через `Remove All Links from This Workbook...`.
 - [ ] Ревизия: `Changes.txt` заполнен (`Changes` и `Open items`), каждый пункт подтверждён листом нового сета; открытое не выдано за исправленное.
 - [ ] Ревизия: сравнение "было / стало" с прошлой сдачей по Excel и PDF: что добавлено, что удалено, формулировки нот.

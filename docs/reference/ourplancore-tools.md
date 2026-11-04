@@ -33,7 +33,7 @@
 | `Cut`, `P Line`, `Similar`, `Repeat`, `Merge`, `Split`, `Break`, `Ends`, `Combine`, `Transform` | `X`, `Ctrl+M`, `Ctrl+Shift+M`, `Ctrl+Shift+B` | правка готовых замеров и позиций, поиск похожих символов, серии отрезков | [Правка и привязки](ourplancore-editing.md) |
 | `Snap`, `PDF`, `Ortho`, `Box` | `F3`, `Ctrl+F3`, `F8`, `F9` | привязки: к своим точкам, к чертежу, к осям, двумя углами | [Правка и привязки](ourplancore-editing.md) |
 
-Кнопки `Value` и `Excel` справа пишут выбранную позицию в открытую книгу Excel: [Экспорт в Excel](ourplancore-excel.md#value). Кнопка `Link to Excel` рядом с ними держит число позиции в ячейке и обновляет его сама: [Link to Excel](ourplancore-excel.md#link).
+Кнопки `Value` и `Excel` справа пишут выбранную позицию в открытую книгу Excel: [Экспорт в Excel](ourplancore-excel.md#value). Кнопка `Link to Excel` рядом с ними держит число позиции в ячейке и обновляет его сама: [Link to Excel](ourplancore-excel.md#link). Кнопка `Auto Link` на DFL связывает сразу все позиции, чьи числа уже стоят в списке `J:L`: [Auto Link](ourplancore-excel.md#auto-link).
 
 ## Как нарисовать стену: Line { #line }
 
