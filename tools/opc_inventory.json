@@ -2,20 +2,20 @@
  "generated_by": "tools/opc_inventory.py",
  "src": "E:\\---\\OurPlanCore\\ourplanecore",
  "counts": {
-  "palette": 136,
+  "palette": 138,
   "f1": 91,
   "defaults": 61,
   "ribbon": 72,
-  "toolstrip": 41,
-  "context-menu": 384,
+  "toolstrip": 42,
+  "context-menu": 386,
   "workspace": 178,
   "xl": 22,
   "dialog": 47,
   "strip": 32,
   "panel": 22,
-  "settings": 44
+  "settings": 45
  },
- "total": 1130,
+ "total": 1136,
  "items": [
   {
    "surface": "palette",
@@ -287,10 +287,30 @@
   {
    "surface": "palette",
    "group": "File",
+   "title": "Auto Link",
+   "shortcut": "",
+   "description": "DFL only: link the takeoffs whose numbers already stand in the J:L list, at once. No cell changes.",
+   "source": "MainWindow.CommandPalette.cs:85",
+   "id": "file.autoLinkExcel",
+   "key": "file.autoLinkExcel"
+  },
+  {
+   "surface": "palette",
+   "group": "File",
+   "title": "Reset All Excel Links",
+   "shortcut": "",
+   "description": "End all Excel links of this job, after a confirmation. Cells keep their values.",
+   "source": "MainWindow.CommandPalette.cs:86",
+   "id": "file.resetExcelLinks",
+   "key": "file.resetExcelLinks"
+  },
+  {
+   "surface": "palette",
+   "group": "File",
    "title": "Update Excel Links",
    "shortcut": "",
    "description": "Write every pending linked number, also into closed workbooks.",
-   "source": "MainWindow.CommandPalette.cs:85",
+   "source": "MainWindow.CommandPalette.cs:87",
    "id": "file.updateExcelLinks",
    "key": "file.updateExcelLinks"
   },
@@ -300,7 +320,7 @@
    "title": "Excel Links...",
    "shortcut": "",
    "description": "List every link of this job to Excel: go to its cell, unlink, clean a workbook.",
-   "source": "MainWindow.CommandPalette.cs:86",
+   "source": "MainWindow.CommandPalette.cs:88",
    "id": "file.excelLinks",
    "key": "file.excelLinks"
   },
@@ -310,7 +330,7 @@
    "title": "Excel Macro: SQFT",
    "shortcut": "",
    "description": "Append selected SQFT rows to TemplateCom and run A2_SQFT_calc.",
-   "source": "MainWindow.CommandPalette.cs:87",
+   "source": "MainWindow.CommandPalette.cs:89",
    "id": "file.excelMacroSqft",
    "key": "file.excelMacroSqft",
    "aliases": [
@@ -323,7 +343,7 @@
    "title": "Excel Macro: Walls",
    "shortcut": "",
    "description": "Append selected wall rows with numeric floor groups and run A3_Walls_Calc_AllGroup.",
-   "source": "MainWindow.CommandPalette.cs:88",
+   "source": "MainWindow.CommandPalette.cs:90",
    "id": "file.excelMacroWalls",
    "key": "file.excelMacroWalls",
    "aliases": [
@@ -336,7 +356,7 @@
    "title": "Excel Macro: Openings",
    "shortcut": "",
    "description": "Append openings from Z158, group near window values per floor, then run A5_Openings.",
-   "source": "MainWindow.CommandPalette.cs:89",
+   "source": "MainWindow.CommandPalette.cs:91",
    "id": "file.excelMacroOpenings",
    "key": "file.excelMacroOpenings",
    "aliases": [
@@ -349,7 +369,7 @@
    "title": "Excel Macro: Gables",
    "shortcut": "",
    "description": "Append selected Gables rows and run A2_SQFT_calc.",
-   "source": "MainWindow.CommandPalette.cs:90",
+   "source": "MainWindow.CommandPalette.cs:92",
    "id": "file.excelMacroGables",
    "key": "file.excelMacroGables",
    "aliases": [
@@ -362,7 +382,7 @@
    "title": "Excel Macro: Truss Heel",
    "shortcut": "",
    "description": "Append selected Truss Heel rows and run A2_SQFT_calc.",
-   "source": "MainWindow.CommandPalette.cs:91",
+   "source": "MainWindow.CommandPalette.cs:93",
    "id": "file.excelMacroTrussHeel",
    "key": "file.excelMacroTrussHeel",
    "aliases": [
@@ -375,7 +395,7 @@
    "title": "Excel Macro: Parapet",
    "shortcut": "",
    "description": "Append selected Parapet rows and run A4_Parapet.",
-   "source": "MainWindow.CommandPalette.cs:92",
+   "source": "MainWindow.CommandPalette.cs:94",
    "id": "file.excelMacroParapet",
    "key": "file.excelMacroParapet",
    "aliases": [
@@ -388,7 +408,7 @@
    "title": "Excel Macro: Eve / Rakes",
    "shortcut": "",
    "description": "Append selected Eves and Rakes rows and run A6_Eve_Rakes.",
-   "source": "MainWindow.CommandPalette.cs:93",
+   "source": "MainWindow.CommandPalette.cs:95",
    "id": "file.excelMacroEveRakes",
    "key": "file.excelMacroEveRakes",
    "aliases": [
@@ -401,7 +421,7 @@
    "title": "Excel Macro: ALL",
    "shortcut": "",
    "description": "Run the configured Excel macro sequence for one selected building/root.",
-   "source": "MainWindow.CommandPalette.cs:94",
+   "source": "MainWindow.CommandPalette.cs:96",
    "id": "file.excelMacroAll",
    "key": "file.excelMacroAll",
    "aliases": [
@@ -414,7 +434,7 @@
    "title": "Fit Page",
    "shortcut": "F",
    "description": "Fit the active page to the viewport.",
-   "source": "MainWindow.CommandPalette.cs:96",
+   "source": "MainWindow.CommandPalette.cs:98",
    "id": "view.fit",
    "key": "view.fit",
    "aliases": [
@@ -428,7 +448,7 @@
    "title": "Zoom In",
    "shortcut": "Ctrl++",
    "description": "Zoom into the active page.",
-   "source": "MainWindow.CommandPalette.cs:97",
+   "source": "MainWindow.CommandPalette.cs:99",
    "id": "view.zoomIn",
    "key": "view.zoomIn",
    "aliases": [
@@ -441,7 +461,7 @@
    "title": "Zoom Out",
    "shortcut": "Ctrl+-",
    "description": "Zoom out of the active page.",
-   "source": "MainWindow.CommandPalette.cs:98",
+   "source": "MainWindow.CommandPalette.cs:100",
    "id": "view.zoomOut",
    "key": "view.zoomOut",
    "aliases": [
@@ -454,7 +474,7 @@
    "title": "Add Bookmark",
    "shortcut": "B, K",
    "description": "Name and save the active sheet and current zoom/pan as a bookmark.",
-   "source": "MainWindow.CommandPalette.cs:99",
+   "source": "MainWindow.CommandPalette.cs:101",
    "id": "view.addBookmark",
    "key": "view.addBookmark",
    "aliases": [
@@ -467,7 +487,7 @@
    "title": "Hide / Show All Takeoffs",
    "shortcut": "",
    "description": "Toggle current takeoffs on the active sheet. New measurements stay visible.",
-   "source": "MainWindow.CommandPalette.cs:100",
+   "source": "MainWindow.CommandPalette.cs:102",
    "id": "view.toggleTakeoffVisibility",
    "key": "view.toggleTakeoffVisibility"
   },
@@ -477,7 +497,7 @@
    "title": "Hide Selected Takeoffs Only",
    "shortcut": "H",
    "description": "Turn off visibility for the whole takeoff of each selected segment on this sheet. No selection leaves visibility unchanged; use the takeoff visibility switch to show it again.",
-   "source": "MainWindow.CommandPalette.cs:101",
+   "source": "MainWindow.CommandPalette.cs:103",
    "id": "view.hideSelectedTakeoffs",
    "key": "view.hideSelectedTakeoffs",
    "aliases": [
@@ -490,7 +510,7 @@
    "title": "Toggle Dark Theme",
    "shortcut": "",
    "description": "Switch between light and dark UI theme.",
-   "source": "MainWindow.CommandPalette.cs:102",
+   "source": "MainWindow.CommandPalette.cs:104",
    "id": "view.toggleTheme",
    "key": "view.toggleTheme"
   },
@@ -500,7 +520,7 @@
    "title": "Page Background",
    "shortcut": "",
    "description": "Open page background presets.",
-   "source": "MainWindow.CommandPalette.cs:103",
+   "source": "MainWindow.CommandPalette.cs:105",
    "id": "view.viewportBackground",
    "key": "view.viewportBackground"
   },
@@ -510,7 +530,7 @@
    "title": "Toggle AI Inbox",
    "shortcut": "",
    "description": "Collapse or expand the AI Inbox panel.",
-   "source": "MainWindow.CommandPalette.cs:104",
+   "source": "MainWindow.CommandPalette.cs:106",
    "id": "view.toggleInbox",
    "key": "view.toggleInbox"
   },
@@ -520,7 +540,7 @@
    "title": "Show Main View",
    "shortcut": "",
    "description": "Switch to the drawing canvas workspace.",
-   "source": "MainWindow.CommandPalette.cs:105",
+   "source": "MainWindow.CommandPalette.cs:107",
    "id": "view.mainView",
    "key": "view.mainView"
   },
@@ -530,7 +550,7 @@
    "title": "Show Sheet Manager",
    "shortcut": "",
    "description": "Switch to the sheet table / PDF metadata workspace.",
-   "source": "MainWindow.CommandPalette.cs:106",
+   "source": "MainWindow.CommandPalette.cs:108",
    "id": "view.sheetManager",
    "key": "view.sheetManager"
   },
@@ -540,7 +560,7 @@
    "title": "Show Takeoff Manager",
    "shortcut": "",
    "description": "Switch to the takeoff item manager workspace.",
-   "source": "MainWindow.CommandPalette.cs:107",
+   "source": "MainWindow.CommandPalette.cs:109",
    "id": "view.takeoffManager",
    "key": "view.takeoffManager"
   },
@@ -550,7 +570,7 @@
    "title": "Show Report Builder",
    "shortcut": "",
    "description": "Switch to the spreadsheet-style report builder workspace.",
-   "source": "MainWindow.CommandPalette.cs:108",
+   "source": "MainWindow.CommandPalette.cs:110",
    "id": "view.reportBuilder",
    "key": "view.reportBuilder"
   },
@@ -560,7 +580,7 @@
    "title": "Quick Calculator",
    "shortcut": "",
    "description": "Toggle the slide-out calculator with feet-inches math.",
-   "source": "MainWindow.CommandPalette.cs:109",
+   "source": "MainWindow.CommandPalette.cs:111",
    "id": "view.quickCalc",
    "key": "view.quickCalc"
   },
@@ -570,7 +590,7 @@
    "title": "Codex / Claude / DeepSeek Terminal",
    "shortcut": "",
    "description": "Show or hide the terminal panel with live plan, AI crop and bookmark context.",
-   "source": "MainWindow.CommandPalette.cs:110",
+   "source": "MainWindow.CommandPalette.cs:112",
    "id": "view.terminal",
    "key": "view.terminal"
   },
@@ -580,7 +600,7 @@
    "title": "Show Materials",
    "shortcut": "",
    "description": "Switch to the material extraction workspace.",
-   "source": "MainWindow.CommandPalette.cs:111",
+   "source": "MainWindow.CommandPalette.cs:113",
    "id": "view.materialsManager",
    "key": "view.materialsManager"
   },
@@ -590,7 +610,7 @@
    "title": "Show AI Manager",
    "shortcut": "",
    "description": "Switch to the AI inbox and marker manager workspace.",
-   "source": "MainWindow.CommandPalette.cs:112",
+   "source": "MainWindow.CommandPalette.cs:114",
    "id": "view.aiManager",
    "key": "view.aiManager"
   },
@@ -600,7 +620,7 @@
    "title": "Show 3D Viewer",
    "shortcut": "",
    "description": "Switch to the clean 3D viewer workspace.",
-   "source": "MainWindow.CommandPalette.cs:113",
+   "source": "MainWindow.CommandPalette.cs:115",
    "id": "view.3dManager",
    "key": "view.3dManager"
   },
@@ -610,7 +630,7 @@
    "title": "Show Takeoffs Tab",
    "shortcut": "",
    "description": "Select the Takeoffs workspace tab.",
-   "source": "MainWindow.CommandPalette.cs:114",
+   "source": "MainWindow.CommandPalette.cs:116",
    "id": "view.takeoffsTab",
    "key": "view.takeoffsTab"
   },
@@ -620,7 +640,7 @@
    "title": "Show Estimating Tab",
    "shortcut": "",
    "description": "Select the Estimating workspace tab.",
-   "source": "MainWindow.CommandPalette.cs:115",
+   "source": "MainWindow.CommandPalette.cs:117",
    "id": "view.estimatingTab",
    "key": "view.estimatingTab"
   },
@@ -630,7 +650,7 @@
    "title": "Show 3D Tab",
    "shortcut": "",
    "description": "Select the right-side 3D wall viewer tab.",
-   "source": "MainWindow.CommandPalette.cs:116",
+   "source": "MainWindow.CommandPalette.cs:118",
    "id": "view.3dTab",
    "key": "view.3dTab"
   },
@@ -640,7 +660,7 @@
    "title": "Select Tool",
    "shortcut": "E",
    "description": "Use box selection and measurement editing.",
-   "source": "MainWindow.CommandPalette.cs:118",
+   "source": "MainWindow.CommandPalette.cs:120",
    "id": "tool.select",
    "key": "tool.select",
    "aliases": [
@@ -653,7 +673,7 @@
    "title": "Pan Tool",
    "shortcut": "V",
    "description": "Use left-button panning; right-button pan still works.",
-   "source": "MainWindow.CommandPalette.cs:119",
+   "source": "MainWindow.CommandPalette.cs:121",
    "id": "tool.pan",
    "key": "tool.pan",
    "aliases": [
@@ -666,7 +686,7 @@
    "title": "Scale Tool",
    "shortcut": "S",
    "description": "Draw a calibration line for sheet scale.",
-   "source": "MainWindow.CommandPalette.cs:120",
+   "source": "MainWindow.CommandPalette.cs:122",
    "id": "tool.scale",
    "key": "tool.scale",
    "aliases": [
@@ -679,7 +699,7 @@
    "title": "Ruler Tool",
    "shortcut": "R",
    "description": "Measure a temporary distance without creating a takeoff.",
-   "source": "MainWindow.CommandPalette.cs:121",
+   "source": "MainWindow.CommandPalette.cs:123",
    "id": "tool.ruler",
    "key": "tool.ruler",
    "aliases": [
@@ -692,7 +712,7 @@
    "title": "Pitch Tool",
    "shortcut": "",
    "description": "Draw a two-point roof-slope line and show its rise per 12.",
-   "source": "MainWindow.CommandPalette.cs:122",
+   "source": "MainWindow.CommandPalette.cs:124",
    "id": "tool.pitch",
    "key": "tool.pitch"
   },
@@ -702,7 +722,7 @@
    "title": "Highlighter Tool",
    "shortcut": "Shift+H",
    "description": "Draw a transparent highlighter markup.",
-   "source": "MainWindow.CommandPalette.cs:123",
+   "source": "MainWindow.CommandPalette.cs:125",
    "id": "tool.highlight",
    "key": "tool.highlight",
    "aliases": [
@@ -715,7 +735,7 @@
    "title": "Draw Line / Extra Joists",
    "shortcut": "D",
    "description": "D toggles continuous Extra Joists for one selected Joist Area segment; otherwise it selects Draw Line.",
-   "source": "MainWindow.CommandPalette.cs:124",
+   "source": "MainWindow.CommandPalette.cs:126",
    "id": "tool.drawLine",
    "key": "tool.drawLine"
   },
@@ -725,7 +745,7 @@
    "title": "Draw Box Tool",
    "shortcut": "",
    "description": "Draw a page annotation box.",
-   "source": "MainWindow.CommandPalette.cs:125",
+   "source": "MainWindow.CommandPalette.cs:127",
    "id": "tool.drawBox",
    "key": "tool.drawBox"
   },
@@ -735,7 +755,7 @@
    "title": "Note Tool",
    "shortcut": "N",
    "description": "Write a text note on the active sheet.",
-   "source": "MainWindow.CommandPalette.cs:126",
+   "source": "MainWindow.CommandPalette.cs:128",
    "id": "tool.note",
    "key": "tool.note",
    "aliases": [
@@ -748,7 +768,7 @@
    "title": "Count Tool",
    "shortcut": "P",
    "description": "Record count marks into a takeoff item.",
-   "source": "MainWindow.CommandPalette.cs:127",
+   "source": "MainWindow.CommandPalette.cs:129",
    "id": "tool.count",
    "key": "tool.count",
    "aliases": [
@@ -761,7 +781,7 @@
    "title": "Similar Count",
    "shortcut": "",
    "description": "Find look-alike symbols on the active sheet, name the result, and add reviewed markers as a Count item.",
-   "source": "MainWindow.CommandPalette.cs:128",
+   "source": "MainWindow.CommandPalette.cs:130",
    "id": "tool.similar",
    "key": "tool.similar",
    "aliases": [
@@ -774,7 +794,7 @@
    "title": "Points Along Line(s)",
    "shortcut": "",
    "description": "Create Count points along the selected Line measurement(s) at a spacing.",
-   "source": "MainWindow.CommandPalette.cs:129",
+   "source": "MainWindow.CommandPalette.cs:131",
    "id": "tool.pointAlongLine",
    "key": "tool.pointAlongLine"
   },
@@ -784,7 +804,7 @@
    "title": "Line Tool",
    "shortcut": "L",
    "description": "Record line measurements into a takeoff item.",
-   "source": "MainWindow.CommandPalette.cs:130",
+   "source": "MainWindow.CommandPalette.cs:132",
    "id": "tool.line",
    "key": "tool.line",
    "aliases": [
@@ -797,7 +817,7 @@
    "title": "Area Tool",
    "shortcut": "A",
    "description": "Record area measurements into a takeoff item.",
-   "source": "MainWindow.CommandPalette.cs:131",
+   "source": "MainWindow.CommandPalette.cs:133",
    "id": "tool.area",
    "key": "tool.area",
    "aliases": [
@@ -810,7 +830,7 @@
    "title": "J Area Tool",
    "shortcut": "J",
    "description": "Create a joist area takeoff and record area measurements.",
-   "source": "MainWindow.CommandPalette.cs:132",
+   "source": "MainWindow.CommandPalette.cs:134",
    "id": "tool.joistArea",
    "key": "tool.joistArea",
    "aliases": [
@@ -823,7 +843,7 @@
    "title": "Annotation Area",
    "shortcut": "",
    "description": "Draw an annotation area takeoff: tree and legend 'annotation', no quantity.",
-   "source": "MainWindow.CommandPalette.cs:133",
+   "source": "MainWindow.CommandPalette.cs:135",
    "id": "tool.annotationArea",
    "key": "tool.annotationArea"
   },
@@ -833,7 +853,7 @@
    "title": "Annotation Line",
    "shortcut": "",
    "description": "Draw an annotation line takeoff: tree and legend 'annotation', no quantity.",
-   "source": "MainWindow.CommandPalette.cs:134",
+   "source": "MainWindow.CommandPalette.cs:136",
    "id": "tool.annotationLine",
    "key": "tool.annotationLine"
   },
@@ -843,7 +863,7 @@
    "title": "Annotation Point",
    "shortcut": "",
    "description": "Draw annotation points: tree and legend 'annotation', no quantity.",
-   "source": "MainWindow.CommandPalette.cs:135",
+   "source": "MainWindow.CommandPalette.cs:137",
    "id": "tool.annotationPoint",
    "key": "tool.annotationPoint"
   },
@@ -853,7 +873,7 @@
    "title": "Beam Tool",
    "shortcut": "B",
    "description": "Measure a beam length, create a Count item, and place the first Count mark.",
-   "source": "MainWindow.CommandPalette.cs:136",
+   "source": "MainWindow.CommandPalette.cs:138",
    "id": "tool.beam",
    "key": "tool.beam",
    "aliases": [
@@ -866,7 +886,7 @@
    "title": "Openings Tool",
    "shortcut": "O",
    "description": "Measure an opening box, create a size-only Count item, and place the mark in the center.",
-   "source": "MainWindow.CommandPalette.cs:137",
+   "source": "MainWindow.CommandPalette.cs:139",
    "id": "tool.openings",
    "key": "tool.openings",
    "aliases": [
@@ -879,7 +899,7 @@
    "title": "Area Cut Tool",
    "shortcut": "X",
    "description": "Cut a hole out of the selected area measurement.",
-   "source": "MainWindow.CommandPalette.cs:138",
+   "source": "MainWindow.CommandPalette.cs:140",
    "id": "tool.areaCut",
    "key": "tool.areaCut",
    "aliases": [
@@ -892,7 +912,7 @@
    "title": "Toggle Record",
    "shortcut": "Space",
    "description": "Toggle digitizer record mode for the current drawing tool.",
-   "source": "MainWindow.CommandPalette.cs:139",
+   "source": "MainWindow.CommandPalette.cs:141",
    "id": "tool.toggleRecord",
    "key": "tool.toggleRecord",
    "aliases": [
@@ -905,7 +925,7 @@
    "title": "Toggle Snap",
    "shortcut": "F3",
    "description": "Toggle snap to existing takeoff points.",
-   "source": "MainWindow.CommandPalette.cs:140",
+   "source": "MainWindow.CommandPalette.cs:142",
    "id": "tool.toggleSnap",
    "key": "tool.toggleSnap",
    "aliases": [
@@ -918,7 +938,7 @@
    "title": "Toggle PDF Snap",
    "shortcut": "Ctrl+F3",
    "description": "Toggle snap to PDF vector corners and points.",
-   "source": "MainWindow.CommandPalette.cs:141",
+   "source": "MainWindow.CommandPalette.cs:143",
    "id": "tool.togglePdfSnap",
    "key": "tool.togglePdfSnap",
    "aliases": [
@@ -931,7 +951,7 @@
    "title": "Toggle Ortho",
    "shortcut": "F8",
    "description": "Toggle horizontal/vertical Ortho; Shift temporarily forces it.",
-   "source": "MainWindow.CommandPalette.cs:142",
+   "source": "MainWindow.CommandPalette.cs:144",
    "id": "tool.toggleOrtho",
    "key": "tool.toggleOrtho"
   },
@@ -941,7 +961,7 @@
    "title": "Copy Selected Measurements",
    "shortcut": "Ctrl+C",
    "description": "Copy the selected measurements.",
-   "source": "MainWindow.CommandPalette.cs:144",
+   "source": "MainWindow.CommandPalette.cs:146",
    "id": "edit.copyMeasurements",
    "key": "edit.copyMeasurements",
    "aliases": [
@@ -955,7 +975,7 @@
    "title": "Paste Measurements",
    "shortcut": "Ctrl+V",
    "description": "Paste copied measurements to the active page.",
-   "source": "MainWindow.CommandPalette.cs:145",
+   "source": "MainWindow.CommandPalette.cs:147",
    "id": "edit.pasteMeasurements",
    "key": "edit.pasteMeasurements",
    "aliases": [
@@ -968,7 +988,7 @@
    "title": "Merge Selected Takeoffs / Measurements",
    "shortcut": "Ctrl+M",
    "description": "Merge selected takeoff items from all sheets, or move selected measurement segments into another takeoff.",
-   "source": "MainWindow.CommandPalette.cs:146",
+   "source": "MainWindow.CommandPalette.cs:148",
    "id": "edit.mergeMeasurements",
    "key": "edit.mergeMeasurements",
    "aliases": [
@@ -983,7 +1003,7 @@
    "title": "Split Selected Takeoffs / Measurements",
    "shortcut": "Ctrl+Shift+M",
    "description": "Split whole takeoffs across all sheets, or move selected measurements or Count marks into a new takeoff.",
-   "source": "MainWindow.CommandPalette.cs:147",
+   "source": "MainWindow.CommandPalette.cs:149",
    "id": "edit.splitMeasurements",
    "key": "edit.splitMeasurements",
    "aliases": [
@@ -998,7 +1018,7 @@
    "title": "Break Lines Into Segments",
    "shortcut": "Ctrl+Shift+B",
    "description": "Split every selected multi-segment Line into one measurement per segment in its own takeoff, whatever the H/V dot. The measured total does not change.",
-   "source": "MainWindow.CommandPalette.cs:148",
+   "source": "MainWindow.CommandPalette.cs:150",
    "id": "edit.breakLineSegments",
    "key": "edit.breakLineSegments",
    "aliases": [
@@ -1011,7 +1031,7 @@
    "title": "Break Lines Into Horizontal / Vertical",
    "shortcut": "Ctrl+Shift+V",
    "description": "Break H/V: file every segment of the selected Lines into '<takeoff> - Horizontal' and '<takeoff> - Vertical', whatever the H/V dot.",
-   "source": "MainWindow.CommandPalette.cs:149",
+   "source": "MainWindow.CommandPalette.cs:151",
    "id": "edit.breakLineSegmentsByAxis",
    "key": "edit.breakLineSegmentsByAxis",
    "aliases": [
@@ -1024,7 +1044,7 @@
    "title": "Count Points At Line Ends",
    "shortcut": "",
    "description": "Place a Count mark on both ends of every selected Line segment; each source takeoff gets its own Count takeoff.",
-   "source": "MainWindow.CommandPalette.cs:150",
+   "source": "MainWindow.CommandPalette.cs:152",
    "id": "edit.pointsAtLineEnds",
    "key": "edit.pointsAtLineEnds"
   },
@@ -1034,7 +1054,7 @@
    "title": "Combine Areas: Union",
    "shortcut": "",
    "description": "Merge the selected Areas into one.",
-   "source": "MainWindow.CommandPalette.cs:151",
+   "source": "MainWindow.CommandPalette.cs:153",
    "id": "edit.combineUnion",
    "key": "edit.combineUnion"
   },
@@ -1044,7 +1064,7 @@
    "title": "Combine Areas: Subtract",
    "shortcut": "",
    "description": "Subtract the later-selected Areas from the first-selected one.",
-   "source": "MainWindow.CommandPalette.cs:152",
+   "source": "MainWindow.CommandPalette.cs:154",
    "id": "edit.combineSubtract",
    "key": "edit.combineSubtract"
   },
@@ -1054,7 +1074,7 @@
    "title": "Combine Areas: Intersect",
    "shortcut": "",
    "description": "Keep only the region shared by all selected Areas.",
-   "source": "MainWindow.CommandPalette.cs:153",
+   "source": "MainWindow.CommandPalette.cs:155",
    "id": "edit.combineIntersect",
    "key": "edit.combineIntersect"
   },
@@ -1064,7 +1084,7 @@
    "title": "Combine Areas: Remove Overlap",
    "shortcut": "",
    "description": "Trim overlaps between selected Areas so nothing is counted twice; the first-selected Area wins.",
-   "source": "MainWindow.CommandPalette.cs:154",
+   "source": "MainWindow.CommandPalette.cs:156",
    "id": "edit.combineRemoveOverlap",
    "key": "edit.combineRemoveOverlap"
   },
@@ -1074,7 +1094,7 @@
    "title": "Combine Areas: Divide",
    "shortcut": "",
    "description": "Split selected Areas into exclusive parts plus a separate overlap area.",
-   "source": "MainWindow.CommandPalette.cs:155",
+   "source": "MainWindow.CommandPalette.cs:157",
    "id": "edit.combineDivide",
    "key": "edit.combineDivide"
   },
@@ -1084,7 +1104,7 @@
    "title": "Sort Pages A-Z",
    "shortcut": "",
    "description": "Sort children of the selected Pages folder (or root) alphabetically.",
-   "source": "MainWindow.CommandPalette.cs:157",
+   "source": "MainWindow.CommandPalette.cs:159",
    "id": "pages.sortAz",
    "key": "pages.sortAz"
   },
@@ -1094,7 +1114,7 @@
    "title": "Sort Pages Z-A",
    "shortcut": "",
    "description": "Sort children of the selected Pages folder (or root) in reverse alphabetical order.",
-   "source": "MainWindow.CommandPalette.cs:158",
+   "source": "MainWindow.CommandPalette.cs:160",
    "id": "pages.sortZa",
    "key": "pages.sortZa"
   },
@@ -1104,7 +1124,7 @@
    "title": "Sort Pages A/S",
    "shortcut": "",
    "description": "Move A sheets to Arch, S sheets to Struct, and trailing '-' sheets to others.",
-   "source": "MainWindow.CommandPalette.cs:159",
+   "source": "MainWindow.CommandPalette.cs:161",
    "id": "pages.sortArchStruct",
    "key": "pages.sortArchStruct",
    "aliases": [
@@ -1118,7 +1138,7 @@
    "title": "Blank Sheet",
    "shortcut": "",
    "description": "Create an empty sheet in the current job.",
-   "source": "MainWindow.CommandPalette.cs:160",
+   "source": "MainWindow.CommandPalette.cs:162",
    "id": "pages.blankSheet",
    "key": "pages.blankSheet"
   },
@@ -1128,7 +1148,7 @@
    "title": "Sort Pages D/Sec/WT",
    "shortcut": "",
    "description": "Move suffix sheets into details/sections/units and reorder v/wt/ft/sv/sw at Pages root.",
-   "source": "MainWindow.CommandPalette.cs:161",
+   "source": "MainWindow.CommandPalette.cs:163",
    "id": "pages.sortSuffix",
    "key": "pages.sortSuffix",
    "aliases": [
@@ -1142,7 +1162,7 @@
    "title": "Repair Measurement Links",
    "shortcut": "",
    "description": "Reconnect stale measurement page links after page renames/imports.",
-   "source": "MainWindow.CommandPalette.cs:162",
+   "source": "MainWindow.CommandPalette.cs:164",
    "id": "pages.repairLinks",
    "key": "pages.repairLinks",
    "aliases": [
@@ -1156,7 +1176,7 @@
    "title": "Auto Page Folders",
    "shortcut": "",
    "description": "Create the standard page folder tree.",
-   "source": "MainWindow.CommandPalette.cs:163",
+   "source": "MainWindow.CommandPalette.cs:165",
    "id": "pages.autoFolders",
    "key": "pages.autoFolders",
    "aliases": [
@@ -1169,7 +1189,7 @@
    "title": "Auto Name PDF",
    "shortcut": "",
    "description": "Preview and apply PDF sheet names.",
-   "source": "MainWindow.CommandPalette.cs:164",
+   "source": "MainWindow.CommandPalette.cs:166",
    "id": "pages.autoName",
    "key": "pages.autoName",
    "aliases": [
@@ -1182,7 +1202,7 @@
    "title": "Auto Scale PDF",
    "shortcut": "",
    "description": "Preview and apply PDF sheet scales.",
-   "source": "MainWindow.CommandPalette.cs:165",
+   "source": "MainWindow.CommandPalette.cs:167",
    "id": "pages.autoScale",
    "key": "pages.autoScale",
    "aliases": [
@@ -1195,7 +1215,7 @@
    "title": "Auto Name + Scale PDF",
    "shortcut": "",
    "description": "Preview and apply PDF sheet names and scales.",
-   "source": "MainWindow.CommandPalette.cs:166",
+   "source": "MainWindow.CommandPalette.cs:168",
    "id": "pages.autoNameScale",
    "key": "pages.autoNameScale",
    "aliases": [
@@ -1208,7 +1228,7 @@
    "title": "Set Scale",
    "shortcut": "F4",
    "description": "Set one scale on the selected sheets, or on the active sheet when there is no Pages selection.",
-   "source": "MainWindow.CommandPalette.cs:167",
+   "source": "MainWindow.CommandPalette.cs:169",
    "id": "pages.setScale",
    "key": "pages.setScale"
   },
@@ -1218,7 +1238,7 @@
    "title": "Name / Scale Setup",
    "shortcut": "F5",
    "description": "Open the manual Name / Scale window for the active sheet.",
-   "source": "MainWindow.CommandPalette.cs:168",
+   "source": "MainWindow.CommandPalette.cs:170",
    "id": "pages.nameScaleSetup",
    "key": "pages.nameScaleSetup",
    "aliases": [
@@ -1231,7 +1251,7 @@
    "title": "AI Fill PDF Metadata",
    "shortcut": "",
    "description": "Queue GPT fallback for missing sheet metadata.",
-   "source": "MainWindow.CommandPalette.cs:169",
+   "source": "MainWindow.CommandPalette.cs:171",
    "id": "pages.aiFillMetadata",
    "key": "pages.aiFillMetadata",
    "aliases": [
@@ -1244,7 +1264,7 @@
    "title": "Overlay",
    "shortcut": "",
    "description": "Choose a matching sheet overlay for the active sheet.",
-   "source": "MainWindow.CommandPalette.cs:170",
+   "source": "MainWindow.CommandPalette.cs:172",
    "id": "sheet.overlay",
    "key": "sheet.overlay"
   },
@@ -1254,7 +1274,7 @@
    "title": "Batch Overlay",
    "shortcut": "",
    "description": "Pair target and overlay sheets across the whole job.",
-   "source": "MainWindow.CommandPalette.cs:171",
+   "source": "MainWindow.CommandPalette.cs:173",
    "id": "sheet.overlayBatch",
    "key": "sheet.overlayBatch"
   },
@@ -1264,7 +1284,7 @@
    "title": "Move Overlay by Points",
    "shortcut": "",
    "description": "Align the active sheet overlay by matching points.",
-   "source": "MainWindow.CommandPalette.cs:172",
+   "source": "MainWindow.CommandPalette.cs:174",
    "id": "sheet.overlayPoints",
    "key": "sheet.overlayPoints"
   },
@@ -1274,7 +1294,7 @@
    "title": "Extract Materials",
    "shortcut": "",
    "description": "Extract material evidence and schedules from the current job PDFs.",
-   "source": "MainWindow.CommandPalette.cs:173",
+   "source": "MainWindow.CommandPalette.cs:175",
    "id": "materials.extract",
    "key": "materials.extract"
   },
@@ -1284,7 +1304,7 @@
    "title": "PDF Layers All On",
    "shortcut": "",
    "description": "Turn all active page PDF layers on.",
-   "source": "MainWindow.CommandPalette.cs:174",
+   "source": "MainWindow.CommandPalette.cs:176",
    "id": "layers.allOn",
    "key": "layers.allOn",
    "aliases": [
@@ -1297,7 +1317,7 @@
    "title": "PDF Layers All Off",
    "shortcut": "",
    "description": "Turn all active page PDF layers off.",
-   "source": "MainWindow.CommandPalette.cs:175",
+   "source": "MainWindow.CommandPalette.cs:177",
    "id": "layers.allOff",
    "key": "layers.allOff",
    "aliases": [
@@ -1310,7 +1330,7 @@
    "title": "Clear PDF Layer Highlights",
    "shortcut": "",
    "description": "Clear highlighted PDF layers.",
-   "source": "MainWindow.CommandPalette.cs:176",
+   "source": "MainWindow.CommandPalette.cs:178",
    "id": "layers.clearHighlight",
    "key": "layers.clearHighlight",
    "aliases": [
@@ -1323,7 +1343,7 @@
    "title": "New Takeoff Folder",
    "shortcut": "",
    "description": "Create a takeoff folder under the selected/root folder.",
-   "source": "MainWindow.CommandPalette.cs:178",
+   "source": "MainWindow.CommandPalette.cs:180",
    "id": "takeoffs.newFolder",
    "key": "takeoffs.newFolder",
    "aliases": [
@@ -1336,7 +1356,7 @@
    "title": "New Takeoff Item",
    "shortcut": "T",
    "description": "Create a takeoff item under the selected/root folder.",
-   "source": "MainWindow.CommandPalette.cs:179",
+   "source": "MainWindow.CommandPalette.cs:181",
    "id": "takeoffs.newItem",
    "key": "takeoffs.newItem",
    "aliases": [
@@ -1349,7 +1369,7 @@
    "title": "Refresh Takeoffs Tree",
    "shortcut": "",
    "description": "Reload the Takeoffs tree from the current job folder.",
-   "source": "MainWindow.CommandPalette.cs:180",
+   "source": "MainWindow.CommandPalette.cs:182",
    "id": "takeoffs.refresh",
    "key": "takeoffs.refresh",
    "aliases": [
@@ -1362,7 +1382,7 @@
    "title": "Show Active Takeoff",
    "shortcut": "",
    "description": "Scroll the Takeoffs tree to the active target item.",
-   "source": "MainWindow.CommandPalette.cs:181",
+   "source": "MainWindow.CommandPalette.cs:183",
    "id": "takeoffs.activeFind",
    "key": "takeoffs.activeFind",
    "aliases": [
@@ -1376,7 +1396,7 @@
    "title": "Active Takeoff Properties",
    "shortcut": "",
    "description": "Edit properties for the active target item.",
-   "source": "MainWindow.CommandPalette.cs:182",
+   "source": "MainWindow.CommandPalette.cs:184",
    "id": "takeoffs.activeProperties",
    "key": "takeoffs.activeProperties",
    "aliases": [
@@ -1390,7 +1410,7 @@
    "title": "Record Active Takeoff",
    "shortcut": "Space",
    "description": "Start or stop recording into the active target item.",
-   "source": "MainWindow.CommandPalette.cs:183",
+   "source": "MainWindow.CommandPalette.cs:185",
    "id": "takeoffs.activeRecord",
    "key": "takeoffs.activeRecord",
    "aliases": [
@@ -1403,7 +1423,7 @@
    "title": "Previous Takeoff Target",
    "shortcut": "",
    "description": "Switch the active target to the previous takeoff item.",
-   "source": "MainWindow.CommandPalette.cs:184",
+   "source": "MainWindow.CommandPalette.cs:186",
    "id": "takeoffs.activePrevious",
    "key": "takeoffs.activePrevious",
    "aliases": [
@@ -1417,7 +1437,7 @@
    "title": "Next Takeoff Target",
    "shortcut": "",
    "description": "Switch the active target to the next takeoff item.",
-   "source": "MainWindow.CommandPalette.cs:185",
+   "source": "MainWindow.CommandPalette.cs:187",
    "id": "takeoffs.activeNext",
    "key": "takeoffs.activeNext",
    "aliases": [
@@ -1431,7 +1451,7 @@
    "title": "Next Sheet Takeoff Target",
    "shortcut": "",
    "description": "Switch to the next takeoff item measured on the active sheet.",
-   "source": "MainWindow.CommandPalette.cs:186",
+   "source": "MainWindow.CommandPalette.cs:188",
    "id": "takeoffs.activeSheetNext",
    "key": "takeoffs.activeSheetNext",
    "aliases": [
@@ -1444,7 +1464,7 @@
    "title": "Sort Takeoffs A-Z",
    "shortcut": "",
    "description": "Sort children of the selected Takeoffs folder (or root) alphabetically.",
-   "source": "MainWindow.CommandPalette.cs:187",
+   "source": "MainWindow.CommandPalette.cs:189",
    "id": "takeoffs.sortAz",
    "key": "takeoffs.sortAz"
   },
@@ -1454,7 +1474,7 @@
    "title": "Sort Takeoffs Z-A",
    "shortcut": "",
    "description": "Sort children of the selected Takeoffs folder (or root) in reverse alphabetical order.",
-   "source": "MainWindow.CommandPalette.cs:188",
+   "source": "MainWindow.CommandPalette.cs:190",
    "id": "takeoffs.sortZa",
    "key": "takeoffs.sortZa"
   },
@@ -1464,7 +1484,7 @@
    "title": "Sort Takeoffs: Walls",
    "shortcut": "",
    "description": "Sort wall takeoffs in the selected folder and subfolders: ext, corr, dem, then 2x6/2x4 sizes.",
-   "source": "MainWindow.CommandPalette.cs:189",
+   "source": "MainWindow.CommandPalette.cs:191",
    "id": "takeoffs.sortWalls",
    "key": "takeoffs.sortWalls"
   },
@@ -1474,7 +1494,7 @@
    "title": "Sort Takeoffs: Template Order",
    "shortcut": "",
    "description": "Put Takeoffs folders in the folder template order (the Auto Create Takeoff Tree order), inside every building folder.",
-   "source": "MainWindow.CommandPalette.cs:190",
+   "source": "MainWindow.CommandPalette.cs:192",
    "id": "takeoffs.sortTemplate",
    "key": "takeoffs.sortTemplate"
   },
@@ -1484,7 +1504,7 @@
    "title": "Sort Takeoffs: Details by Sheet",
    "shortcut": "",
    "description": "Group detail takeoffs like 1/A501 by the sheet after the slash, ordered as in the Pages tree.",
-   "source": "MainWindow.CommandPalette.cs:191",
+   "source": "MainWindow.CommandPalette.cs:193",
    "id": "takeoffs.sortDetails",
    "key": "takeoffs.sortDetails"
   },
@@ -1494,7 +1514,7 @@
    "title": "Auto Takeoff Tree",
    "shortcut": "",
    "description": "Create the standard takeoff folder tree.",
-   "source": "MainWindow.CommandPalette.cs:192",
+   "source": "MainWindow.CommandPalette.cs:194",
    "id": "takeoffs.autoTree",
    "key": "takeoffs.autoTree",
    "aliases": [
@@ -1507,7 +1527,7 @@
    "title": "Create Takeoffs From Pages",
    "shortcut": "",
    "description": "Create top takeoff folders from CAPS page/folder names.",
-   "source": "MainWindow.CommandPalette.cs:193",
+   "source": "MainWindow.CommandPalette.cs:195",
    "id": "takeoffs.fromPages",
    "key": "takeoffs.fromPages",
    "aliases": [
@@ -1520,7 +1540,7 @@
    "title": "OpenAI Settings",
    "shortcut": "",
    "description": "Review key status and AI model settings.",
-   "source": "MainWindow.CommandPalette.cs:195",
+   "source": "MainWindow.CommandPalette.cs:197",
    "id": "ai.settings",
    "key": "ai.settings",
    "aliases": [
@@ -1533,7 +1553,7 @@
    "title": "Explain Detail (crops -> assembly diagram)",
    "shortcut": "",
    "description": "Crop one or more areas around a detail; the terminal assistant explains it and draws a step-by-step isometric diagram.",
-   "source": "MainWindow.CommandPalette.cs:196",
+   "source": "MainWindow.CommandPalette.cs:198",
    "id": "ai.explainDetail",
    "key": "ai.explainDetail"
   },
@@ -1543,7 +1563,7 @@
    "title": "Explain Detail + Image",
    "shortcut": "",
    "description": "Like Explain Detail, plus a generated illustration image.",
-   "source": "MainWindow.CommandPalette.cs:197",
+   "source": "MainWindow.CommandPalette.cs:199",
    "id": "ai.explainDetailImage",
    "key": "ai.explainDetailImage"
   },
@@ -1553,7 +1573,7 @@
    "title": "Add AI Observation",
    "shortcut": "",
    "description": "Save a manual AI observation for the active job/page.",
-   "source": "MainWindow.CommandPalette.cs:198",
+   "source": "MainWindow.CommandPalette.cs:200",
    "id": "ai.addObservation",
    "key": "ai.addObservation",
    "aliases": [
@@ -1566,7 +1586,7 @@
    "title": "Run Selected AI Request",
    "shortcut": "",
    "description": "Run the selected AI Inbox request.",
-   "source": "MainWindow.CommandPalette.cs:199",
+   "source": "MainWindow.CommandPalette.cs:201",
    "id": "ai.runSelected",
    "key": "ai.runSelected",
    "aliases": [
@@ -1579,7 +1599,7 @@
    "title": "Run New Crop Bookmarks",
    "shortcut": "",
    "description": "Send only new crop bookmarks to OpenAI.",
-   "source": "MainWindow.CommandPalette.cs:200",
+   "source": "MainWindow.CommandPalette.cs:202",
    "id": "ai.runNewBookmarks",
    "key": "ai.runNewBookmarks",
    "aliases": [
@@ -1593,7 +1613,7 @@
    "title": "Retry Failed Crop Bookmarks",
    "shortcut": "",
    "description": "Retry only failed crop bookmarks.",
-   "source": "MainWindow.CommandPalette.cs:201",
+   "source": "MainWindow.CommandPalette.cs:203",
    "id": "ai.retryFailedBookmarks",
    "key": "ai.retryFailedBookmarks",
    "aliases": [
@@ -1607,7 +1627,7 @@
    "title": "Create Marker Set",
    "shortcut": "",
    "description": "Save the current marker filters as a marker set.",
-   "source": "MainWindow.CommandPalette.cs:202",
+   "source": "MainWindow.CommandPalette.cs:204",
    "id": "ai.createMarkerSet",
    "key": "ai.createMarkerSet",
    "aliases": [
@@ -1620,7 +1640,7 @@
    "title": "Manage Marker Sets",
    "shortcut": "",
    "description": "Open marker set management.",
-   "source": "MainWindow.CommandPalette.cs:203",
+   "source": "MainWindow.CommandPalette.cs:205",
    "id": "ai.manageMarkerSets",
    "key": "ai.manageMarkerSets",
    "aliases": [
@@ -1634,7 +1654,7 @@
    "title": "Export Marker Context",
    "shortcut": "",
    "description": "Export visible marker context JSON.",
-   "source": "MainWindow.CommandPalette.cs:204",
+   "source": "MainWindow.CommandPalette.cs:206",
    "id": "ai.exportMarkers",
    "key": "ai.exportMarkers",
    "aliases": [
@@ -4372,10 +4392,22 @@
   {
    "surface": "toolstrip",
    "group": "нижняя полоса, строка 1",
+   "title": "Auto Link",
+   "shortcut": "",
+   "description": "DFL only: link the takeoffs whose numbers already stand in the J:L list, at once. No cell changes. The result window can undo it",
+   "source": "MainWindow.xaml:737",
+   "control": "Button",
+   "id": "file.autoLinkExcel",
+   "handler": "BtnAutoLink_Click",
+   "key": "file.autoLinkExcel"
+  },
+  {
+   "surface": "toolstrip",
+   "group": "нижняя полоса, строка 1",
    "title": "Value",
    "shortcut": "",
    "description": "Write only values for the same selected takeoff scope into one Excel column",
-   "source": "MainWindow.xaml:737",
+   "source": "MainWindow.xaml:743",
    "control": "Button",
    "id": "file.exportCurrentExcelValues",
    "handler": "BtnExportCurrentExcelValues_Click",
@@ -4390,7 +4422,7 @@
    "title": "Excel",
    "shortcut": "",
    "description": "Write the selected takeoff folder/item to the active cell in an already open Excel workbook",
-   "source": "MainWindow.xaml:743",
+   "source": "MainWindow.xaml:749",
    "control": "Button",
    "id": "file.exportCurrentExcel",
    "handler": "BtnExportCurrentExcel_Click",
@@ -4406,7 +4438,7 @@
    "title": "Include takeoff comments in Excel export",
    "shortcut": "",
    "description": "Include takeoff and measurement comments in Excel exports (filled = on; default = off)",
-   "source": "MainWindow.xaml:749",
+   "source": "MainWindow.xaml:755",
    "control": "ToggleButton",
    "handler": "BtnExcelExportNotes_Changed",
    "key": "toolstrip|include takeoff comments in excel export"
@@ -4417,7 +4449,7 @@
    "title": "Pan",
    "shortcut": "V",
    "description": "Pan (V)",
-   "source": "MainWindow.xaml:772",
+   "source": "MainWindow.xaml:778",
    "control": "RadioButton",
    "handler": "BtnTool_Click",
    "key": "toolstrip|pan"
@@ -4428,7 +4460,7 @@
    "title": "Select",
    "shortcut": "E",
    "description": "Box select measurements (E). Ctrl+C copy, Ctrl+V paste",
-   "source": "MainWindow.xaml:780",
+   "source": "MainWindow.xaml:786",
    "control": "RadioButton",
    "handler": "BtnTool_Click",
    "key": "toolstrip|select"
@@ -4439,7 +4471,7 @@
    "title": "Scale",
    "shortcut": "S",
    "description": "Set scale (S)",
-   "source": "MainWindow.xaml:789",
+   "source": "MainWindow.xaml:795",
    "control": "RadioButton",
    "handler": "BtnTool_Click",
    "key": "toolstrip|scale"
@@ -4450,7 +4482,7 @@
    "title": "Ruler",
    "shortcut": "R",
    "description": "Place a dimension/ruler markup on the PDF (R)",
-   "source": "MainWindow.xaml:798",
+   "source": "MainWindow.xaml:804",
    "control": "RadioButton",
    "handler": "BtnTool_Click",
    "key": "toolstrip|ruler"
@@ -4461,7 +4493,7 @@
    "title": "Ruler Sheet Visibility",
    "shortcut": "",
    "description": "Hide all ruler markups on this sheet",
-   "source": "MainWindow.xaml:802",
+   "source": "MainWindow.xaml:808",
    "control": "ToggleButton",
    "handler": "BtnRulerSheetVisibility_Changed",
    "key": "toolstrip|ruler sheet visibility"
@@ -4472,7 +4504,7 @@
    "title": "Pitch",
    "shortcut": "",
    "description": "Draw two points and show roof pitch as rise:12",
-   "source": "MainWindow.xaml:810",
+   "source": "MainWindow.xaml:816",
    "control": "RadioButton",
    "handler": "BtnTool_Click",
    "key": "toolstrip|pitch"
@@ -4483,7 +4515,7 @@
    "title": "Count",
    "shortcut": "P",
    "description": "Create a new Count item and start recording (P). Use the active target Record button to continue an existing item",
-   "source": "MainWindow.xaml:819",
+   "source": "MainWindow.xaml:825",
    "control": "RadioButton",
    "handler": "BtnTool_Click",
    "key": "toolstrip|count"
@@ -4494,7 +4526,7 @@
    "title": "Similar",
    "shortcut": "",
    "description": "Find similar symbols on this sheet, name the result, and add reviewed markers as a Count item",
-   "source": "MainWindow.xaml:827",
+   "source": "MainWindow.xaml:833",
    "control": "Button",
    "id": "tool.similar",
    "handler": "BtnSimilarCount_Click",
@@ -4509,7 +4541,7 @@
    "title": "P Line",
    "shortcut": "",
    "description": "Create Count points along selected Line measurement(s) with a spacing",
-   "source": "MainWindow.xaml:838",
+   "source": "MainWindow.xaml:844",
    "control": "Button",
    "handler": "BtnPointAlongLine_Click",
    "key": "toolstrip|p line"
@@ -4520,7 +4552,7 @@
    "title": "Break",
    "shortcut": "",
    "description": "Break selected Lines into separate one-segment measurements. The measured total does not change; Ctrl+Z restores them. Ctrl+Shift+B: Break, Ctrl+Shift+V: Break H/V",
-   "source": "MainWindow.xaml:850",
+   "source": "MainWindow.xaml:856",
    "control": "Button",
    "handler": "BtnBreakLineSegments_Click",
    "key": "toolstrip|break"
@@ -4531,7 +4563,7 @@
    "title": "Break H/V",
    "shortcut": "",
    "description": "Break H/V: file horizontal and vertical segments into two new takeoffs (filled = on). Ctrl+Shift+V runs Break H/V directly",
-   "source": "MainWindow.xaml:861",
+   "source": "MainWindow.xaml:867",
    "control": "ToggleButton",
    "handler": "BtnBreakLineSegmentsByAxis_Changed",
    "key": "toolstrip|break h/v"
@@ -4542,7 +4574,7 @@
    "title": "Ends",
    "shortcut": "",
    "description": "Place Count marks on both ends of every selected Line segment. Works on the sheet selection, or on one or more Line takeoffs selected in the Takeoffs tree",
-   "source": "MainWindow.xaml:870",
+   "source": "MainWindow.xaml:876",
    "control": "Button",
    "handler": "BtnPointsAtLineEnds_Click",
    "key": "toolstrip|ends"
@@ -4553,7 +4585,7 @@
    "title": "Default Count display for newly created Count takeoffs",
    "shortcut": "",
    "description": "Default Count display for newly created Count takeoffs",
-   "source": "MainWindow.xaml:881",
+   "source": "MainWindow.xaml:887",
    "control": "Button",
    "handler": "BtnCountSymbolDefault_Click",
    "key": "toolstrip|default count display for newly created count takeoffs"
@@ -4564,7 +4596,7 @@
    "title": "Line",
    "shortcut": "L",
    "description": "Create a new Line item and start recording (L). Use the active target Record button to continue an existing item",
-   "source": "MainWindow.xaml:889",
+   "source": "MainWindow.xaml:895",
    "control": "RadioButton",
    "handler": "BtnTool_Click",
    "key": "toolstrip|line"
@@ -4575,7 +4607,7 @@
    "title": "Repeat Line",
    "shortcut": "",
    "description": "Repeat Line: create a Line item, then draw separate two-point segments. Esc stops.",
-   "source": "MainWindow.xaml:897",
+   "source": "MainWindow.xaml:903",
    "control": "RadioButton",
    "handler": "BtnRepeatDrawing_Click",
    "key": "toolstrip|repeat line"
@@ -4586,7 +4618,7 @@
    "title": "Area",
    "shortcut": "A",
    "description": "Create a new Area item and start recording (A). Use the active target Record button to continue an existing item",
-   "source": "MainWindow.xaml:901",
+   "source": "MainWindow.xaml:907",
    "control": "RadioButton",
    "handler": "BtnTool_Click",
    "key": "toolstrip|area"
@@ -4597,7 +4629,7 @@
    "title": "J Area",
    "shortcut": "J",
    "description": "Create a new Joist Area item and start recording (J)",
-   "source": "MainWindow.xaml:909",
+   "source": "MainWindow.xaml:915",
    "control": "RadioButton",
    "handler": "BtnTool_Click",
    "key": "toolstrip|j area"
@@ -4608,7 +4640,7 @@
    "title": "Beam",
    "shortcut": "B",
    "description": "Measure a beam length, create a Count item, and place the first Count mark (B)",
-   "source": "MainWindow.xaml:917",
+   "source": "MainWindow.xaml:923",
    "control": "RadioButton",
    "handler": "BtnTool_Click",
    "key": "toolstrip|beam"
@@ -4619,7 +4651,7 @@
    "title": "Repeat Beam",
    "shortcut": "",
    "description": "Repeat Beam: measure and create each Beam, then draw the next. Esc stops.",
-   "source": "MainWindow.xaml:925",
+   "source": "MainWindow.xaml:931",
    "control": "RadioButton",
    "handler": "BtnRepeatDrawing_Click",
    "key": "toolstrip|repeat beam"
@@ -4630,7 +4662,7 @@
    "title": "Open",
    "shortcut": "O",
    "description": "Measure an opening box, create a Count item, and place the Count mark in the center (O)",
-   "source": "MainWindow.xaml:929",
+   "source": "MainWindow.xaml:935",
    "control": "RadioButton",
    "handler": "BtnTool_Click",
    "key": "toolstrip|open"
@@ -4641,7 +4673,7 @@
    "title": "Cut",
    "shortcut": "X",
    "description": "Cut Area holes or erase Line pieces (X, F9 toggles box)",
-   "source": "MainWindow.xaml:937",
+   "source": "MainWindow.xaml:943",
    "control": "RadioButton",
    "handler": "BtnTool_Click",
    "key": "toolstrip|cut"
@@ -4652,7 +4684,7 @@
    "title": "Merge",
    "shortcut": "Ctrl+M",
    "description": "Merge selected Takeoffs from all sheets, or selected measurement segments (Ctrl+M)",
-   "source": "MainWindow.xaml:945",
+   "source": "MainWindow.xaml:951",
    "control": "Button",
    "handler": "BtnMergeSelectedMeasurements_Click",
    "key": "toolstrip|merge"
@@ -4663,7 +4695,7 @@
    "title": "Split",
    "shortcut": "Ctrl+Shift+M",
    "description": "Split whole Takeoffs across all sheets, or selected measurements or Count marks (Ctrl+Shift+M)",
-   "source": "MainWindow.xaml:956",
+   "source": "MainWindow.xaml:962",
    "control": "Button",
    "handler": "BtnSplitSelectedMeasurements_Click",
    "key": "toolstrip|split"
@@ -4674,7 +4706,7 @@
    "title": "Combine",
    "shortcut": "",
    "description": "Boolean-combine two or more selected Areas: union, subtract, intersect, remove overlap, divide",
-   "source": "MainWindow.xaml:967",
+   "source": "MainWindow.xaml:973",
    "control": "Button",
    "handler": "DropdownButton_Click",
    "key": "toolstrip|combine"
@@ -4685,7 +4717,7 @@
    "title": "Union",
    "shortcut": "",
    "description": "merge into one area",
-   "source": "MainWindow.xaml:981",
+   "source": "MainWindow.xaml:987",
    "control": "MenuItem",
    "handler": "BtnCombineUnion_Click",
    "key": "context-menu|union"
@@ -4696,7 +4728,7 @@
    "title": "Subtract",
    "shortcut": "",
    "description": "first minus the others",
-   "source": "MainWindow.xaml:982",
+   "source": "MainWindow.xaml:988",
    "control": "MenuItem",
    "handler": "BtnCombineSubtract_Click",
    "key": "context-menu|subtract"
@@ -4707,7 +4739,7 @@
    "title": "Intersect",
    "shortcut": "",
    "description": "keep only the overlap",
-   "source": "MainWindow.xaml:983",
+   "source": "MainWindow.xaml:989",
    "control": "MenuItem",
    "handler": "BtnCombineIntersect_Click",
    "key": "context-menu|intersect"
@@ -4718,7 +4750,7 @@
    "title": "Remove Overlap",
    "shortcut": "",
    "description": "trim double counting",
-   "source": "MainWindow.xaml:985",
+   "source": "MainWindow.xaml:991",
    "control": "MenuItem",
    "handler": "BtnCombineRemoveOverlap_Click",
    "key": "context-menu|remove overlap"
@@ -4729,7 +4761,7 @@
    "title": "Divide",
    "shortcut": "",
    "description": "split into exclusive + overlap pieces",
-   "source": "MainWindow.xaml:986",
+   "source": "MainWindow.xaml:992",
    "control": "MenuItem",
    "handler": "BtnCombineDivide_Click",
    "key": "context-menu|divide"
@@ -4740,7 +4772,7 @@
    "title": "Snap",
    "shortcut": "F3",
    "description": "Snap to existing takeoff points (F3)",
-   "source": "MainWindow.xaml:992",
+   "source": "MainWindow.xaml:998",
    "control": "ToggleButton",
    "handler": "BtnSnap_Checked",
    "key": "toolstrip|snap"
@@ -4751,7 +4783,7 @@
    "title": "PDF",
    "shortcut": "Ctrl+F3",
    "description": "Snap to PDF vector corners and points (Ctrl+F3)",
-   "source": "MainWindow.xaml:1001",
+   "source": "MainWindow.xaml:1007",
    "control": "ToggleButton",
    "handler": "BtnPdfSnap_Checked",
    "key": "toolstrip|pdf"
@@ -4762,7 +4794,7 @@
    "title": "Ortho",
    "shortcut": "F8",
    "description": "Lock drawing and editing horizontally/vertically (F8; Shift temporarily forces Ortho)",
-   "source": "MainWindow.xaml:1010",
+   "source": "MainWindow.xaml:1016",
    "control": "ToggleButton",
    "handler": "BtnOrtho_Checked",
    "key": "toolstrip|ortho"
@@ -4773,7 +4805,7 @@
    "title": "Box",
    "shortcut": "F9",
    "description": "Draw Line/Area measurements by two opposite box corners (F9)",
-   "source": "MainWindow.xaml:1019",
+   "source": "MainWindow.xaml:1025",
    "control": "ToggleButton",
    "handler": "BtnBoxMode_Checked",
    "key": "toolstrip|box"
@@ -4784,7 +4816,7 @@
    "title": "Flip H",
    "shortcut": "",
    "description": "Mirror selected measurements/markups horizontally",
-   "source": "MainWindow.xaml:1041",
+   "source": "MainWindow.xaml:1047",
    "control": "Button",
    "handler": "BtnMirrorHorizontal_Click",
    "key": "toolstrip|flip h"
@@ -4795,7 +4827,7 @@
    "title": "Flip V",
    "shortcut": "",
    "description": "Mirror selected measurements/markups vertically",
-   "source": "MainWindow.xaml:1049",
+   "source": "MainWindow.xaml:1055",
    "control": "Button",
    "handler": "BtnMirrorVertical_Click",
    "key": "toolstrip|flip v"
@@ -4806,7 +4838,7 @@
    "title": "Reset Rotate Selection",
    "shortcut": "",
    "description": "Center rotate slider for another relative adjustment",
-   "source": "MainWindow.xaml:1068",
+   "source": "MainWindow.xaml:1074",
    "control": "Button",
    "handler": "BtnResetRotateSelection_Click",
    "key": "toolstrip|reset rotate selection"
@@ -4817,7 +4849,7 @@
    "title": "Set",
    "shortcut": "",
    "description": "Apply scale",
-   "source": "MainWindow.xaml:1100",
+   "source": "MainWindow.xaml:1106",
    "control": "Button",
    "handler": "BtnSetScale_Click",
    "key": "toolstrip|set"
@@ -4828,7 +4860,7 @@
    "title": "Presets",
    "shortcut": "",
    "description": "Common scale presets",
-   "source": "MainWindow.xaml:1102",
+   "source": "MainWindow.xaml:1108",
    "control": "Button",
    "handler": "BtnScalePresets_Click",
    "key": "toolstrip|presets"
@@ -4839,7 +4871,7 @@
    "title": "AI Settings",
    "shortcut": "",
    "description": "OpenAI key status and model settings",
-   "source": "MainWindow.xaml:1114",
+   "source": "MainWindow.xaml:1120",
    "control": "Button",
    "id": "ai.settings",
    "handler": "BtnOpenAiSettings_Click",
@@ -4854,7 +4886,7 @@
    "title": "Fit page",
    "shortcut": "F",
    "description": "Fit page (F)",
-   "source": "MainWindow.xaml:1120",
+   "source": "MainWindow.xaml:1126",
    "control": "Button",
    "id": "view.fit",
    "handler": "BtnFit_Click",
@@ -4870,7 +4902,7 @@
    "title": "Zoom in",
    "shortcut": "Ctrl++",
    "description": "Zoom in (Ctrl++)",
-   "source": "MainWindow.xaml:1123",
+   "source": "MainWindow.xaml:1129",
    "control": "Button",
    "id": "view.zoomIn",
    "handler": "BtnZoomIn_Click",
@@ -4885,7 +4917,7 @@
    "title": "Zoom out",
    "shortcut": "Ctrl+-",
    "description": "Zoom out (Ctrl+-)",
-   "source": "MainWindow.xaml:1127",
+   "source": "MainWindow.xaml:1133",
    "control": "Button",
    "id": "view.zoomOut",
    "handler": "BtnZoomOut_Click",
@@ -4900,7 +4932,7 @@
    "title": "Close other sheets and keep the main viewport sheet",
    "shortcut": "",
    "description": "Close every other sheet tab and all detached windows; keep the sheet shown in the main viewport",
-   "source": "MainWindow.xaml:1186",
+   "source": "MainWindow.xaml:1192",
    "control": "Button",
    "handler": "BtnPagesCloseAllExceptViewport_Click",
    "key": "workspace|close other sheets and keep the main viewport sheet"
@@ -4911,7 +4943,7 @@
    "title": "Close detached sheets on monitor 2",
    "shortcut": "",
    "description": "Close all detached sheet windows on monitor 2",
-   "source": "MainWindow.xaml:1191",
+   "source": "MainWindow.xaml:1197",
    "control": "Button",
    "handler": "BtnPagesCloseDetachedSecondMonitor_Click",
    "key": "workspace|close detached sheets on monitor 2"
@@ -4922,7 +4954,7 @@
    "title": "Tile M2",
    "shortcut": "",
    "description": "Open selected Pages sheets in detached windows and tile them on monitor 2",
-   "source": "MainWindow.xaml:1215",
+   "source": "MainWindow.xaml:1221",
    "control": "Button",
    "id": "pages.tileM2",
    "handler": "BtnPagesTileSecondMonitor_Click",
@@ -4937,7 +4969,7 @@
    "title": "Toggle vertical Tile M2 layout",
    "shortcut": "",
    "description": "Toggle vertical Tile M2 layout (filled = vertical)",
-   "source": "MainWindow.xaml:1222",
+   "source": "MainWindow.xaml:1228",
    "control": "ToggleButton",
    "handler": "BtnPagesTileSecondMonitorVertical_Changed",
    "key": "workspace|toggle vertical tile m2 layout"
@@ -4948,7 +4980,7 @@
    "title": "Open",
    "shortcut": "",
    "description": "Open the selected Pages sheets",
-   "source": "MainWindow.xaml:1231",
+   "source": "MainWindow.xaml:1237",
    "control": "Button",
    "handler": "DropdownButton_Click",
    "key": "workspace|open"
@@ -4959,7 +4991,7 @@
    "title": "Open as Tabs",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.xaml:1244",
+   "source": "MainWindow.xaml:1250",
    "control": "MenuItem",
    "id": "pages.openTabs",
    "handler": "BtnPagesOpenTabs_Click",
@@ -4974,7 +5006,7 @@
    "title": "Detach to windows",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.xaml:1245",
+   "source": "MainWindow.xaml:1251",
    "control": "MenuItem",
    "id": "pages.detach",
    "handler": "BtnPagesDetach_Click",
@@ -4989,7 +5021,7 @@
    "title": "Refresh Pages tree",
    "shortcut": "",
    "description": "Refresh Pages tree",
-   "source": "MainWindow.xaml:1249",
+   "source": "MainWindow.xaml:1255",
    "control": "Button",
    "handler": "BtnRefreshPagesTree_Click",
    "key": "workspace|refresh pages tree"
@@ -5000,7 +5032,7 @@
    "title": "Collapse all Pages nodes",
    "shortcut": "",
    "description": "Collapse all Pages nodes",
-   "source": "MainWindow.xaml:1259",
+   "source": "MainWindow.xaml:1265",
    "control": "Button",
    "id": "pages.collapseTree",
    "handler": "BtnCollapsePagesTree_Click",
@@ -5015,7 +5047,7 @@
    "title": "Expand all Pages nodes",
    "shortcut": "",
    "description": "Expand all Pages nodes",
-   "source": "MainWindow.xaml:1269",
+   "source": "MainWindow.xaml:1275",
    "control": "Button",
    "id": "pages.expandTree",
    "handler": "BtnExpandPagesTree_Click",
@@ -5030,7 +5062,7 @@
    "title": "Folder Template Mode",
    "shortcut": "",
    "description": "Folder template mode for Pages and Takeoffs Options: Auto, COM, EWP.",
-   "source": "MainWindow.xaml:1300",
+   "source": "MainWindow.xaml:1306",
    "control": "ComboBox",
    "key": "workspace|folder template mode"
   },
@@ -5040,7 +5072,7 @@
    "title": "+ New",
    "shortcut": "",
    "description": "Create pages and folders",
-   "source": "MainWindow.xaml:1311",
+   "source": "MainWindow.xaml:1317",
    "control": "Button",
    "handler": "DropdownButton_Click",
    "key": "workspace|+ new"
@@ -5051,7 +5083,7 @@
    "title": "New Folder",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.xaml:1325",
+   "source": "MainWindow.xaml:1331",
    "control": "MenuItem",
    "id": "pages.newFolder",
    "handler": "BtnNewPageFolder_Click",
@@ -5063,7 +5095,7 @@
    "title": "Blank Sheet",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.xaml:1326",
+   "source": "MainWindow.xaml:1332",
    "control": "MenuItem",
    "id": "pages.blankSheet",
    "handler": "BtnNewBlankPage_Click",
@@ -5075,7 +5107,7 @@
    "title": "Auto Folders",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.xaml:1328",
+   "source": "MainWindow.xaml:1334",
    "control": "MenuItem",
    "id": "pages.autoFolders",
    "handler": "BtnAutoPageFolders_Click",
@@ -5090,7 +5122,7 @@
    "title": "Setup",
    "shortcut": "",
    "description": "Page setup and sorting actions",
-   "source": "MainWindow.xaml:1332",
+   "source": "MainWindow.xaml:1338",
    "control": "Button",
    "handler": "DropdownButton_Click",
    "key": "workspace|setup"
@@ -5101,7 +5133,7 @@
    "title": "Name / Scale…",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.xaml:1345",
+   "source": "MainWindow.xaml:1351",
    "control": "MenuItem",
    "id": "pages.nameScaleSetup",
    "handler": "BtnFloatingPageSetup_Click",
@@ -5116,7 +5148,7 @@
    "title": "Sort: A → Arch / S → Struct",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.xaml:1347",
+   "source": "MainWindow.xaml:1353",
    "control": "MenuItem",
    "id": "pages.sortArchStruct",
    "handler": "BtnSortPagesArchStruct_Click",
@@ -5132,7 +5164,7 @@
    "title": "Sort: D / Sec / WT suffix",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.xaml:1348",
+   "source": "MainWindow.xaml:1354",
    "control": "MenuItem",
    "id": "pages.sortSuffix",
    "handler": "BtnSortPagesSuffix_Click",
@@ -5148,7 +5180,7 @@
    "title": "Repair page links",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.xaml:1349",
+   "source": "MainWindow.xaml:1355",
    "control": "MenuItem",
    "id": "pages.repairLinks",
    "handler": "BtnRepairMeasurementPageLinks_Click",
@@ -5164,7 +5196,7 @@
    "title": "New Folder",
    "shortcut": "",
    "description": "Create a new folder under the selected Pages folder",
-   "source": "MainWindow.xaml:1364",
+   "source": "MainWindow.xaml:1370",
    "control": "Button",
    "id": "pages.newFolder",
    "handler": "BtnNewPageFolder_Click",
@@ -5176,7 +5208,7 @@
    "title": "Name",
    "shortcut": "",
    "description": "Preview automatic names for the selected sheet or folder",
-   "source": "MainWindow.xaml:1371",
+   "source": "MainWindow.xaml:1377",
    "control": "Button",
    "id": "pages.autoName",
    "handler": "BtnAutoRenamePdf_Click",
@@ -5191,7 +5223,7 @@
    "title": "Scale",
    "shortcut": "",
    "description": "Preview automatic scales for the selected sheet or folder",
-   "source": "MainWindow.xaml:1377",
+   "source": "MainWindow.xaml:1383",
    "control": "Button",
    "id": "pages.autoScale",
    "handler": "BtnAutoScalePdf_Click",
@@ -5206,7 +5238,7 @@
    "title": "Name+Scale",
    "shortcut": "",
    "description": "Preview automatic names and scales for the selected sheet or folder",
-   "source": "MainWindow.xaml:1383",
+   "source": "MainWindow.xaml:1389",
    "control": "Button",
    "id": "pages.autoNameScale",
    "handler": "BtnAutoRenameScalePdf_Click",
@@ -5221,7 +5253,7 @@
    "title": "Match page folder case exactly",
    "shortcut": "",
    "description": "Match page folder case exactly",
-   "source": "MainWindow.xaml:1423",
+   "source": "MainWindow.xaml:1429",
    "control": "ToggleButton",
    "handler": "PagesFolderSearchCaseToggle_Changed",
    "key": "workspace|match page folder case exactly"
@@ -5232,7 +5264,7 @@
    "title": "Load",
    "shortcut": "",
    "description": "Scan PDF layers for the active page on demand",
-   "source": "MainWindow.xaml:1456",
+   "source": "MainWindow.xaml:1462",
    "control": "Button",
    "handler": "BtnLayersLoad_Click",
    "key": "workspace|load"
@@ -5243,7 +5275,7 @@
    "title": "All On",
    "shortcut": "",
    "description": "Show all PDF layers on the active page",
-   "source": "MainWindow.xaml:1463",
+   "source": "MainWindow.xaml:1469",
    "control": "Button",
    "id": "layers.allOn",
    "handler": "BtnLayersOn_Click",
@@ -5258,7 +5290,7 @@
    "title": "All Off",
    "shortcut": "",
    "description": "Hide all PDF layers on the active page",
-   "source": "MainWindow.xaml:1470",
+   "source": "MainWindow.xaml:1476",
    "control": "Button",
    "id": "layers.allOff",
    "handler": "BtnLayersOff_Click",
@@ -5273,7 +5305,7 @@
    "title": "Clear Hi",
    "shortcut": "",
    "description": "Clear the layer highlight overlay",
-   "source": "MainWindow.xaml:1476",
+   "source": "MainWindow.xaml:1482",
    "control": "Button",
    "id": "layers.clearHighlight",
    "handler": "BtnLayersClearHi_Click",
@@ -5288,7 +5320,7 @@
    "title": "Layer Trace",
    "shortcut": "",
    "description": "Isolate and trace the selected PDF layer",
-   "source": "MainWindow.xaml:1485",
+   "source": "MainWindow.xaml:1491",
    "control": "ToggleButton",
    "handler": "BtnLayerTraceMode_Click",
    "key": "workspace|layer trace"
@@ -5299,7 +5331,7 @@
    "title": "Full",
    "shortcut": "",
    "description": "Cycle the layer-trace dimming (Full / dimmed / off)",
-   "source": "MainWindow.xaml:1492",
+   "source": "MainWindow.xaml:1498",
    "control": "Button",
    "handler": "BtnLayerTraceCycle_Click",
    "key": "workspace|full"
@@ -5310,7 +5342,7 @@
    "title": "Apply",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.xaml:1499",
+   "source": "MainWindow.xaml:1505",
    "control": "Button",
    "handler": "BtnLayerTraceApply_Click",
    "key": "workspace|apply"
@@ -5321,7 +5353,7 @@
    "title": "Return Bookmarks to the tab list",
    "shortcut": "",
    "description": "Return Bookmarks to the tab list",
-   "source": "MainWindow.xaml:1538",
+   "source": "MainWindow.xaml:1544",
    "control": "ToggleButton",
    "handler": "BookmarkDockToggle_Changed",
    "key": "workspace|return bookmarks to the tab list"
@@ -5332,7 +5364,7 @@
    "title": "Return Templates to the tab list",
    "shortcut": "",
    "description": "Return Templates to the tab list",
-   "source": "MainWindow.xaml:1567",
+   "source": "MainWindow.xaml:1573",
    "control": "ToggleButton",
    "handler": "TemplatesDockToggle_Changed",
    "key": "workspace|return templates to the tab list"
@@ -5343,7 +5375,7 @@
    "title": "XL",
    "shortcut": "",
    "description": "Show / hide ALL selection dots; the export selection is preserved",
-   "source": "MainWindow.xaml:1654",
+   "source": "MainWindow.xaml:1660",
    "control": "Button",
    "handler": "BtnExcelDotsVisibility_Click",
    "key": "xl|xl"
@@ -5354,7 +5386,7 @@
    "title": "ALL",
    "shortcut": "",
    "description": "Run ALL for one selected building/root: SQFT, Walls, Gables, Truss Heel, Parapet, Eve/Rakes, Openings, then framing floors and shifted Headers",
-   "source": "MainWindow.xaml:1658",
+   "source": "MainWindow.xaml:1664",
    "control": "Button",
    "id": "file.excelMacroAll",
    "handler": "BtnExcelMacroAll_Click",
@@ -5369,7 +5401,7 @@
    "title": "Legend (LG)",
    "shortcut": "",
    "description": "Open the job-specific legend used by Beams, Posts, and Headers. ALL also exports framing floors.",
-   "source": "MainWindow.xaml:1666",
+   "source": "MainWindow.xaml:1672",
    "control": "Button",
    "handler": "BtnExcelFramingLegend_Click",
    "key": "xl|legend (lg)"
@@ -5380,7 +5412,7 @@
    "title": "SQFT (SF)",
    "shortcut": "",
    "description": "SQFT: append to J:L, select J:K, run A2_SQFT_calc",
-   "source": "MainWindow.xaml:1676",
+   "source": "MainWindow.xaml:1682",
    "control": "Button",
    "id": "file.excelMacroSqft",
    "handler": "BtnExcelMacroSqft_Click",
@@ -5395,7 +5427,7 @@
    "title": "Walls (WL)",
    "shortcut": "",
    "description": "Walls: run A3, preserve mandatory A:H output rows, then delete zero rows",
-   "source": "MainWindow.xaml:1682",
+   "source": "MainWindow.xaml:1688",
    "control": "Button",
    "id": "file.excelMacroWalls",
    "handler": "BtnExcelMacroWalls_Click",
@@ -5410,7 +5442,7 @@
    "title": "Gables (GB)",
    "shortcut": "",
    "description": "Gables: append to J:L, select J:K, run A2_SQFT_calc",
-   "source": "MainWindow.xaml:1688",
+   "source": "MainWindow.xaml:1694",
    "control": "Button",
    "id": "file.excelMacroGables",
    "handler": "BtnExcelMacroGables_Click",
@@ -5425,7 +5457,7 @@
    "title": "Truss Heel (TH)",
    "shortcut": "",
    "description": "Truss Heel: append to J:L, select J:K, run A2_SQFT_calc",
-   "source": "MainWindow.xaml:1694",
+   "source": "MainWindow.xaml:1700",
    "control": "Button",
    "id": "file.excelMacroTrussHeel",
    "handler": "BtnExcelMacroTrussHeel_Click",
@@ -5440,7 +5472,7 @@
    "title": "Parapet (PP)",
    "shortcut": "",
    "description": "Parapet: append to J:L, select J:K, run A4_Parapet",
-   "source": "MainWindow.xaml:1700",
+   "source": "MainWindow.xaml:1706",
    "control": "Button",
    "id": "file.excelMacroParapet",
    "handler": "BtnExcelMacroParapet_Click",
@@ -5455,7 +5487,7 @@
    "title": "Eve/Rakes (E/R)",
    "shortcut": "",
    "description": "Eve/Rakes: Eve by LF descending, then Rake by LF descending; run A6_Eve_Rakes",
-   "source": "MainWindow.xaml:1706",
+   "source": "MainWindow.xaml:1712",
    "control": "Button",
    "id": "file.excelMacroEveRakes",
    "handler": "BtnExcelMacroEveRakes_Click",
@@ -5470,7 +5502,7 @@
    "title": "Openings (OP)",
    "shortcut": "",
    "description": "Openings: append from Z158, run C_SumNearWindowValues per floor, then A5_Openings",
-   "source": "MainWindow.xaml:1712",
+   "source": "MainWindow.xaml:1718",
    "control": "Button",
    "id": "file.excelMacroOpenings",
    "handler": "BtnExcelMacroOpenings_Click",
@@ -5485,7 +5517,7 @@
    "title": "Sheathing (SH)",
    "shortcut": "",
    "description": "Sheathing: run A7_walls_sheathing with the Zip / Ply / OSB text of column J (or 'wall sheathing = ...' from the LG legend); it keeps one sheathing system and removes the other rows. Runs after Walls in ALL.",
-   "source": "MainWindow.xaml:1718",
+   "source": "MainWindow.xaml:1724",
    "control": "Button",
    "handler": "BtnExcelSheathing_Click",
    "key": "xl|sheathing (sh)"
@@ -5496,7 +5528,7 @@
    "title": "Shear walls (SW)",
    "shortcut": "",
    "description": "Shear walls: stage shear walls/<floor>/shear and holdowns in J:L, fill the Shear Walls row (interior walls, ext walls use the wall sheathing) and one Holdowns row per holdown in each floor's walls block.",
-   "source": "MainWindow.xaml:1724",
+   "source": "MainWindow.xaml:1730",
    "control": "Button",
    "handler": "BtnExcelShear_Click",
    "key": "xl|shear walls (sw)"
@@ -5507,7 +5539,7 @@
    "title": "Shaft walls (SHF)",
    "shortcut": "",
    "description": "Shaft walls: stage the shaft wall lines and add (or update) the Shaft walls block above the first framing list: panels, CH and J channels from LF x wall height.",
-   "source": "MainWindow.xaml:1730",
+   "source": "MainWindow.xaml:1736",
    "control": "Button",
    "handler": "BtnExcelShaft_Click",
    "key": "xl|shaft walls (shf)"
@@ -5518,7 +5550,7 @@
    "title": "Units (UN)",
    "shortcut": "",
    "description": "Units: build the units table (Mark x 2x4/2x6/half sizes, per-floor counts and SUMPRODUCT totals) at the anchor set in Settings (AM3) from units/<Mark size> lines and units/<floor>/<Mark> counts.",
-   "source": "MainWindow.xaml:1736",
+   "source": "MainWindow.xaml:1742",
    "control": "Button",
    "handler": "BtnExcelUnits_Click",
    "key": "xl|units (un)"
@@ -5529,7 +5561,7 @@
    "title": "Balconies (BL)",
    "shortcut": "",
    "description": "Balconies: one '#n Upper Balcony/Terrace List W' x L' N units' block per balcony size (and '#n Porch Framing List' per porch size) from SQFT areas named blcny / balcony / porch, copied from the template's #1 block.",
-   "source": "MainWindow.xaml:1742",
+   "source": "MainWindow.xaml:1748",
    "control": "Button",
    "handler": "BtnExcelBalconies_Click",
    "key": "xl|balconies (bl)"
@@ -5540,7 +5572,7 @@
    "title": "Framing (FR)",
    "shortcut": "",
    "description": "Framing ALL for the selected building: posts, beams and joists replace their rows in each floor framing list (other template rows stay), headers go to the wall block one floor down, details are staged in J:L. A missing list (6th floor, balcony) is added.",
-   "source": "MainWindow.xaml:1750",
+   "source": "MainWindow.xaml:1756",
    "control": "Button",
    "handler": "BtnExcelFramingAll_Click",
    "key": "xl|framing (fr)"
@@ -5551,7 +5583,7 @@
    "title": "Posts (PS)",
    "shortcut": "",
    "description": "Posts: replace the Posts rows in each framing list of the selected building. Uses the LG legend for sizes.",
-   "source": "MainWindow.xaml:1756",
+   "source": "MainWindow.xaml:1762",
    "control": "Button",
    "handler": "BtnExcelFramingPosts_Click",
    "key": "xl|posts (ps)"
@@ -5562,7 +5594,7 @@
    "title": "Beams (BM)",
    "shortcut": "",
    "description": "Beams: replace the Beam rows in each framing list of the selected building. Uses the LG legend for sizes.",
-   "source": "MainWindow.xaml:1762",
+   "source": "MainWindow.xaml:1768",
    "control": "Button",
    "handler": "BtnExcelFramingBeams_Click",
    "key": "xl|beams (bm)"
@@ -5573,7 +5605,7 @@
    "title": "Headers (HD)",
    "shortcut": "",
    "description": "Headers: rebuild the header rows of the wall block one floor below each framing floor; Wall Sheathing and the rows after it stay.",
-   "source": "MainWindow.xaml:1768",
+   "source": "MainWindow.xaml:1774",
    "control": "Button",
    "handler": "BtnExcelFramingHeaders_Click",
    "key": "xl|headers (hd)"
@@ -5584,7 +5616,7 @@
    "title": "Joists (JS)",
    "shortcut": "",
    "description": "Joists: replace the Joist rows in each framing list; Extra joists of the same length join the row and short joists go on double stock (Settings).",
-   "source": "MainWindow.xaml:1774",
+   "source": "MainWindow.xaml:1780",
    "control": "Button",
    "handler": "BtnExcelFramingJoists_Click",
    "key": "xl|joists (js)"
@@ -5595,7 +5627,7 @@
    "title": "Details (DT)",
    "shortcut": "",
    "description": "Details: stage the detail lines of each floor in J:L under a label row, once. A group already staged is left alone.",
-   "source": "MainWindow.xaml:1780",
+   "source": "MainWindow.xaml:1786",
    "control": "Button",
    "handler": "BtnExcelFramingDetails_Click",
    "key": "xl|details (dt)"
@@ -5606,7 +5638,7 @@
    "title": "Stairs (ST)",
    "shortcut": "",
    "description": "Stairs: add the stair takeoffs before Subfloor of each framing list; a repeated export replaces them.",
-   "source": "MainWindow.xaml:1786",
+   "source": "MainWindow.xaml:1792",
    "control": "Button",
    "handler": "BtnExcelFramingStairs_Click",
    "key": "xl|stairs (st)"
@@ -5617,7 +5649,7 @@
    "title": "Open a recent job - Recently used",
    "shortcut": "",
    "description": "Pick from recently used jobs",
-   "source": "MainWindow.xaml:1868",
+   "source": "MainWindow.xaml:1874",
    "control": "Button",
    "handler": "StartOpenRecent_Click",
    "key": "workspace|open a recent job - recently used"
@@ -5628,7 +5660,7 @@
    "title": "New blank job - Start empty",
    "shortcut": "",
    "description": "Create an empty job; add sheets later",
-   "source": "MainWindow.xaml:1879",
+   "source": "MainWindow.xaml:1885",
    "control": "Button",
    "handler": "StartNewBlank_Click",
    "key": "workspace|new blank job - start empty"
@@ -5639,7 +5671,7 @@
    "title": "New job from PDFs - Import a folder of drawings",
    "shortcut": "",
    "description": "Create a job from a folder of PDF drawings",
-   "source": "MainWindow.xaml:1890",
+   "source": "MainWindow.xaml:1896",
    "control": "Button",
    "handler": "StartNewFromPdf_Click",
    "key": "workspace|new job from pdfs - import a folder of drawings"
@@ -5650,7 +5682,7 @@
    "title": "Open sample job - Explore a demo",
    "shortcut": "",
    "description": "Open the bundled sample job to explore",
-   "source": "MainWindow.xaml:1901",
+   "source": "MainWindow.xaml:1907",
    "control": "Button",
    "handler": "StartSample_Click",
    "key": "workspace|open sample job - explore a demo"
@@ -5661,7 +5693,7 @@
    "title": "Manual",
    "shortcut": "",
    "description": "Toggle Manual / PDF Layer Trace mode in the viewport",
-   "source": "MainWindow.xaml:1943",
+   "source": "MainWindow.xaml:1949",
    "control": "ToggleButton",
    "handler": "BtnViewportLayerTraceToggle_Click",
    "key": "workspace|manual"
@@ -5672,7 +5704,7 @@
    "title": "Full",
    "shortcut": "",
    "description": "Cycle Layer Trace mode (Tab while Layer Trace is on)",
-   "source": "MainWindow.xaml:1950",
+   "source": "MainWindow.xaml:1956",
    "control": "Button",
    "handler": "BtnViewportLayerTraceCycle_Click",
    "key": "workspace|full"
@@ -5683,7 +5715,7 @@
    "title": "Refresh Takeoffs tree",
    "shortcut": "",
    "description": "Refresh Takeoffs tree",
-   "source": "MainWindow.xaml:1972",
+   "source": "MainWindow.xaml:1978",
    "control": "Button",
    "id": "takeoffs.refresh",
    "handler": "BtnRefreshTakeoffsTree_Click",
@@ -5698,7 +5730,7 @@
    "title": "Collapse all Takeoffs nodes",
    "shortcut": "",
    "description": "Collapse all Takeoffs nodes",
-   "source": "MainWindow.xaml:1982",
+   "source": "MainWindow.xaml:1988",
    "control": "Button",
    "id": "takeoffs.collapseTree",
    "handler": "BtnCollapseTakeoffsTree_Click",
@@ -5713,7 +5745,7 @@
    "title": "Expand all Takeoffs nodes",
    "shortcut": "",
    "description": "Expand all Takeoffs nodes",
-   "source": "MainWindow.xaml:1992",
+   "source": "MainWindow.xaml:1998",
    "control": "Button",
    "id": "takeoffs.expandTree",
    "handler": "BtnExpandTakeoffsTree_Click",
@@ -5728,7 +5760,7 @@
    "title": "Record",
    "shortcut": "Space",
    "description": "Start or stop recording into the active takeoff item (Space)",
-   "source": "MainWindow.xaml:2017",
+   "source": "MainWindow.xaml:2023",
    "control": "Button",
    "id": "takeoffs.activeRecord",
    "handler": "BtnActiveTakeoffRecord_Click",
@@ -5743,7 +5775,7 @@
    "title": "More",
    "shortcut": "",
    "description": "More active target actions",
-   "source": "MainWindow.xaml:2026",
+   "source": "MainWindow.xaml:2032",
    "control": "Button",
    "handler": "BtnActiveTakeoffMore_Click",
    "key": "workspace|more"
@@ -5754,7 +5786,7 @@
    "title": "Props",
    "shortcut": "",
    "description": "Edit active takeoff item properties",
-   "source": "MainWindow.xaml:2035",
+   "source": "MainWindow.xaml:2041",
    "control": "Button",
    "id": "takeoffs.activeProperties",
    "handler": "BtnActiveTakeoffProperties_Click",
@@ -5770,7 +5802,7 @@
    "title": "Find",
    "shortcut": "",
    "description": "Show active takeoff item in the tree",
-   "source": "MainWindow.xaml:2045",
+   "source": "MainWindow.xaml:2051",
    "control": "Button",
    "id": "takeoffs.activeFind",
    "handler": "BtnActiveTakeoffFind_Click",
@@ -5786,7 +5818,7 @@
    "title": "Sheet",
    "shortcut": "",
    "description": "Choose a takeoff item measured on this sheet",
-   "source": "MainWindow.xaml:2055",
+   "source": "MainWindow.xaml:2061",
    "control": "Button",
    "handler": "BtnActiveTakeoffSheetNext_Click",
    "key": "workspace|sheet"
@@ -5797,7 +5829,7 @@
    "title": "Switch to next takeoff item",
    "shortcut": "",
    "description": "Switch to next takeoff item",
-   "source": "MainWindow.xaml:2065",
+   "source": "MainWindow.xaml:2071",
    "control": "Button",
    "id": "takeoffs.activeNext",
    "handler": "BtnActiveTakeoffNext_Click",
@@ -5813,7 +5845,7 @@
    "title": "Switch to previous takeoff item",
    "shortcut": "",
    "description": "Switch to previous takeoff item",
-   "source": "MainWindow.xaml:2075",
+   "source": "MainWindow.xaml:2081",
    "control": "Button",
    "id": "takeoffs.activePrevious",
    "handler": "BtnActiveTakeoffPrevious_Click",
@@ -5829,7 +5861,7 @@
    "title": "New Folder",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.xaml:2118",
+   "source": "MainWindow.xaml:2124",
    "control": "Button",
    "id": "takeoffs.newFolder",
    "handler": "BtnNewTakeoffFolder_Click",
@@ -5844,7 +5876,7 @@
    "title": "New Item",
    "shortcut": "T",
    "description": "Create a takeoff item (T)",
-   "source": "MainWindow.xaml:2122",
+   "source": "MainWindow.xaml:2128",
    "control": "Button",
    "id": "takeoffs.newItem",
    "handler": "BtnNewItem_Click",
@@ -5859,7 +5891,7 @@
    "title": "Delete Empty",
    "shortcut": "",
    "description": "Delete all takeoff items with zero measurement sections; Ctrl+Z restores the batch",
-   "source": "MainWindow.xaml:2128",
+   "source": "MainWindow.xaml:2134",
    "control": "Button",
    "handler": "BtnDeleteEmptyTakeoffs_Click",
    "key": "workspace|delete empty"
@@ -5870,7 +5902,7 @@
    "title": "More",
    "shortcut": "",
    "description": "More takeoff actions",
-   "source": "MainWindow.xaml:2135",
+   "source": "MainWindow.xaml:2141",
    "control": "Button",
    "handler": "DropdownButton_Click",
    "key": "workspace|more"
@@ -5881,7 +5913,7 @@
    "title": "Roof Base from area",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.xaml:2148",
+   "source": "MainWindow.xaml:2154",
    "control": "MenuItem",
    "id": "takeoffs.roofBase",
    "handler": "Btn3dRfRoof_Click",
@@ -5896,7 +5928,7 @@
    "title": "Auto Tree",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.xaml:2150",
+   "source": "MainWindow.xaml:2156",
    "control": "MenuItem",
    "id": "takeoffs.autoTree",
    "handler": "BtnAutoTakeoffTree_Click",
@@ -5911,7 +5943,7 @@
    "title": "From Pages",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.xaml:2151",
+   "source": "MainWindow.xaml:2157",
    "control": "MenuItem",
    "id": "takeoffs.fromPages",
    "handler": "BtnAutoTakeoffFromPages_Click",
@@ -5926,7 +5958,7 @@
    "title": "Export",
    "shortcut": "",
    "description": "Save or export quantities",
-   "source": "MainWindow.xaml:2155",
+   "source": "MainWindow.xaml:2161",
    "control": "Button",
    "handler": "BtnRightExportMenu_Click",
    "key": "workspace|export"
@@ -5937,7 +5969,7 @@
    "title": "Match takeoff folder case exactly",
    "shortcut": "",
    "description": "Match takeoff folder case exactly",
-   "source": "MainWindow.xaml:2185",
+   "source": "MainWindow.xaml:2191",
    "control": "ToggleButton",
    "handler": "TakeoffsFolderSearchCaseToggle_Changed",
    "key": "workspace|match takeoff folder case exactly"
@@ -5948,7 +5980,7 @@
    "title": "Toggle AI Inbox",
    "shortcut": "",
    "description": "Expand or collapse the AI Inbox",
-   "source": "MainWindow.xaml:2235",
+   "source": "MainWindow.xaml:2241",
    "control": "Button",
    "id": "view.toggleInbox",
    "handler": "BtnToggleInbox_Click",
@@ -5960,7 +5992,7 @@
    "title": "+ Add",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.xaml:2253",
+   "source": "MainWindow.xaml:2259",
    "control": "Button",
    "id": "ai.addObservation",
    "handler": "BtnAddObservation_Click",
@@ -5975,7 +6007,7 @@
    "title": "Run AI",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.xaml:2260",
+   "source": "MainWindow.xaml:2266",
    "control": "Button",
    "id": "ai.runSelected",
    "handler": "BtnRunAi_Click",
@@ -5990,7 +6022,7 @@
    "title": "More",
    "shortcut": "",
    "description": "More AI Inbox actions",
-   "source": "MainWindow.xaml:2266",
+   "source": "MainWindow.xaml:2272",
    "control": "Button",
    "handler": "BtnInboxMore_Click",
    "key": "workspace|more"
@@ -6001,7 +6033,7 @@
    "title": "Filter AI markers by type",
    "shortcut": "",
    "description": "Filter AI markers by type",
-   "source": "MainWindow.xaml:2286",
+   "source": "MainWindow.xaml:2292",
    "control": "ComboBox",
    "key": "workspace|filter ai markers by type"
   },
@@ -6011,7 +6043,7 @@
    "title": "Filter AI markers by sample kind",
    "shortcut": "",
    "description": "Filter AI markers by sample kind",
-   "source": "MainWindow.xaml:2291",
+   "source": "MainWindow.xaml:2297",
    "control": "ComboBox",
    "key": "workspace|filter ai markers by sample kind"
   },
@@ -6021,7 +6053,7 @@
    "title": "Import PDF(s)",
    "shortcut": "",
    "description": "Add one or many PDF files to the current job",
-   "source": "MainWindow.xaml:2341",
+   "source": "MainWindow.xaml:2347",
    "control": "Button",
    "id": "file.importPdf",
    "handler": "BtnImport_Click",
@@ -6036,7 +6068,7 @@
    "title": "PDF Takeoffs",
    "shortcut": "",
    "description": "Import PDF measurement annotations into takeoff items",
-   "source": "MainWindow.xaml:2342",
+   "source": "MainWindow.xaml:2348",
    "control": "Button",
    "id": "file.importPdfTakeoffs",
    "handler": "BtnImportPdfTakeoffs_Click",
@@ -6052,7 +6084,7 @@
    "title": "Export PDF",
    "shortcut": "",
    "description": "Export selected or all sheets to PDF",
-   "source": "MainWindow.xaml:2343",
+   "source": "MainWindow.xaml:2349",
    "control": "Button",
    "id": "file.exportPdf",
    "handler": "BtnExportPdf_Click",
@@ -6067,7 +6099,7 @@
    "title": "PDF",
    "shortcut": "",
    "description": "Disable raster rendering for the selected sheets",
-   "source": "MainWindow.xaml:2347",
+   "source": "MainWindow.xaml:2353",
    "control": "Button",
    "handler": "BtnSheetManagerRasterPreset_Click",
    "key": "workspace|pdf"
@@ -6078,7 +6110,7 @@
    "title": "Auto",
    "shortcut": "",
    "description": "Restore adaptive raster DPI for the selected sheets",
-   "source": "MainWindow.xaml:2348",
+   "source": "MainWindow.xaml:2354",
    "control": "Button",
    "handler": "BtnSheetManagerRasterPreset_Click",
    "key": "workspace|auto"
@@ -6089,7 +6121,7 @@
    "title": "Options…",
    "shortcut": "",
    "description": "Raster format, prepare, first-frame, cleanup, and cancel options",
-   "source": "MainWindow.xaml:2363",
+   "source": "MainWindow.xaml:2369",
    "control": "Button",
    "handler": "BtnSheetManagerRasterOptions_Click",
    "key": "workspace|options"
@@ -6100,7 +6132,7 @@
    "title": "Sheet Manager Raster Format Box",
    "shortcut": "",
    "description": "Auto keeps the existing WebP-preferred cache behavior; PNG is useful for difficult raster-like PDFs Options: Auto, WebP, PNG.",
-   "source": "MainWindow.xaml:2370",
+   "source": "MainWindow.xaml:2376",
    "control": "ComboBox",
    "key": "workspace|sheet manager raster format box"
   },
@@ -6110,7 +6142,7 @@
    "title": "Prepare",
    "shortcut": "",
    "description": "Build the last selected DPI cache without changing PDF/raster state",
-   "source": "MainWindow.xaml:2375",
+   "source": "MainWindow.xaml:2381",
    "control": "Button",
    "handler": "BtnSheetManagerPrepareRaster_Click",
    "key": "workspace|prepare"
@@ -6121,7 +6153,7 @@
    "title": "First On",
    "shortcut": "",
    "description": "Open selected raster sheets from the pre-rendered raster image as the first frame",
-   "source": "MainWindow.xaml:2376",
+   "source": "MainWindow.xaml:2382",
    "control": "Button",
    "handler": "BtnSheetManagerRasterFirstOn_Click",
    "key": "workspace|first on"
@@ -6132,7 +6164,7 @@
    "title": "First Off",
    "shortcut": "",
    "description": "Keep selected raster sheets on the normal PDF/preview-first opening path",
-   "source": "MainWindow.xaml:2377",
+   "source": "MainWindow.xaml:2383",
    "control": "Button",
    "handler": "BtnSheetManagerRasterFirstOff_Click",
    "key": "workspace|first off"
@@ -6143,7 +6175,7 @@
    "title": "Clean",
    "shortcut": "",
    "description": "Delete unused raster image variants for selected sheets; keeps the active raster image",
-   "source": "MainWindow.xaml:2378",
+   "source": "MainWindow.xaml:2384",
    "control": "Button",
    "handler": "BtnSheetManagerCompactRaster_Click",
    "key": "workspace|clean"
@@ -6154,7 +6186,7 @@
    "title": "Cancel",
    "shortcut": "",
    "description": "Cancel background raster work after the current sheet finishes",
-   "source": "MainWindow.xaml:2379",
+   "source": "MainWindow.xaml:2385",
    "control": "Button",
    "handler": "BtnSheetManagerCancelRaster_Click",
    "key": "workspace|cancel"
@@ -6165,7 +6197,7 @@
    "title": "Refresh",
    "shortcut": "",
    "description": "Reload the sheet table from current page folders",
-   "source": "MainWindow.xaml:2385",
+   "source": "MainWindow.xaml:2391",
    "control": "Button",
    "handler": "BtnSheetManagerRefresh_Click",
    "key": "workspace|refresh"
@@ -6176,7 +6208,7 @@
    "title": "Analyze",
    "shortcut": "",
    "description": "Read PDF text/layers and preview sheet metadata",
-   "source": "MainWindow.xaml:2386",
+   "source": "MainWindow.xaml:2392",
    "control": "Button",
    "handler": "BtnSheetManagerAnalyze_Click",
    "key": "workspace|analyze"
@@ -6187,7 +6219,7 @@
    "title": "Auto Name",
    "shortcut": "",
    "description": "Preview automatic sheet names",
-   "source": "MainWindow.xaml:2387",
+   "source": "MainWindow.xaml:2393",
    "control": "Button",
    "handler": "BtnSheetManagerAutoName_Click",
    "key": "workspace|auto name"
@@ -6198,7 +6230,7 @@
    "title": "Auto Scale",
    "shortcut": "",
    "description": "Preview automatic sheet scales",
-   "source": "MainWindow.xaml:2388",
+   "source": "MainWindow.xaml:2394",
    "control": "Button",
    "handler": "BtnSheetManagerAutoScale_Click",
    "key": "workspace|auto scale"
@@ -6209,7 +6241,7 @@
    "title": "Name+Scale",
    "shortcut": "",
    "description": "Preview names and scales together",
-   "source": "MainWindow.xaml:2389",
+   "source": "MainWindow.xaml:2395",
    "control": "Button",
    "handler": "BtnSheetManagerAutoNameScale_Click",
    "key": "workspace|name+scale"
@@ -6220,7 +6252,7 @@
    "title": "AI Fill",
    "shortcut": "",
    "description": "Queue GPT fallback for missing sheet metadata",
-   "source": "MainWindow.xaml:2390",
+   "source": "MainWindow.xaml:2396",
    "control": "Button",
    "id": "pages.aiFillMetadata",
    "handler": "BtnQueuePdfMetadataFallback_Click",
@@ -6235,7 +6267,7 @@
    "title": "Crop Hints",
    "shortcut": "",
    "description": "Draw reusable sheet number, title, and scale regions",
-   "source": "MainWindow.xaml:2391",
+   "source": "MainWindow.xaml:2397",
    "control": "Button",
    "handler": "BtnPdfMetadataCropHints_Click",
    "key": "workspace|crop hints"
@@ -6246,7 +6278,7 @@
    "title": "Apply Checked",
    "shortcut": "",
    "description": "Apply checked rename/scale rows to the job",
-   "source": "MainWindow.xaml:2392",
+   "source": "MainWindow.xaml:2398",
    "control": "Button",
    "handler": "BtnSheetManagerApplyChecked_Click",
    "key": "workspace|apply checked"
@@ -6257,7 +6289,7 @@
    "title": "Open Sheet",
    "shortcut": "",
    "description": "Switch to the selected sheet in Main View",
-   "source": "MainWindow.xaml:2394",
+   "source": "MainWindow.xaml:2400",
    "control": "Button",
    "handler": "BtnSheetManagerOpenSheet_Click",
    "key": "workspace|open sheet"
@@ -6268,7 +6300,7 @@
    "title": "Open Tabs",
    "shortcut": "",
    "description": "Open the selected sheets as viewport tabs",
-   "source": "MainWindow.xaml:2395",
+   "source": "MainWindow.xaml:2401",
    "control": "Button",
    "handler": "BtnSheetManagerOpenTabs_Click",
    "key": "workspace|open tabs"
@@ -6279,7 +6311,7 @@
    "title": "Detach",
    "shortcut": "",
    "description": "Open the selected sheets in detached windows",
-   "source": "MainWindow.xaml:2396",
+   "source": "MainWindow.xaml:2402",
    "control": "Button",
    "handler": "BtnSheetManagerDetach_Click",
    "key": "workspace|detach"
@@ -6290,7 +6322,7 @@
    "title": "Tile M2",
    "shortcut": "",
    "description": "Open selected sheets in detached windows and tile them on monitor 2",
-   "source": "MainWindow.xaml:2397",
+   "source": "MainWindow.xaml:2403",
    "control": "Button",
    "handler": "BtnSheetManagerTileSecondMonitor_Click",
    "key": "workspace|tile m2"
@@ -6301,7 +6333,7 @@
    "title": "Open JSON",
    "shortcut": "",
    "description": "Open the PDF metadata JSON for inspection",
-   "source": "MainWindow.xaml:2398",
+   "source": "MainWindow.xaml:2404",
    "control": "Button",
    "handler": "BtnSheetManagerOpenJson_Click",
    "key": "workspace|open json"
@@ -6312,7 +6344,7 @@
    "title": "Sort A/S",
    "shortcut": "",
    "description": "Sort A/S sheets inside the selected Pages folder; if no folder is selected, sort all Pages",
-   "source": "MainWindow.xaml:2400",
+   "source": "MainWindow.xaml:2406",
    "control": "Button",
    "id": "pages.sortArchStruct",
    "handler": "BtnSortPagesArchStruct_Click",
@@ -6328,7 +6360,7 @@
    "title": "D/Sec/WT",
    "shortcut": "",
    "description": "Sort suffix sheets inside the selected Pages folder; if no folder is selected, sort all Pages",
-   "source": "MainWindow.xaml:2401",
+   "source": "MainWindow.xaml:2407",
    "control": "Button",
    "id": "pages.sortSuffix",
    "handler": "BtnSortPagesSuffix_Click",
@@ -6344,7 +6376,7 @@
    "title": "Repair Links",
    "shortcut": "",
    "description": "Reconnect saved measurements to current page folders",
-   "source": "MainWindow.xaml:2402",
+   "source": "MainWindow.xaml:2408",
    "control": "Button",
    "id": "pages.repairLinks",
    "handler": "BtnRepairMeasurementPageLinks_Click",
@@ -6360,7 +6392,7 @@
    "title": "Auto Folders",
    "shortcut": "",
    "description": "Create standard page folders under the selected Pages folder",
-   "source": "MainWindow.xaml:2403",
+   "source": "MainWindow.xaml:2409",
    "control": "Button",
    "id": "pages.autoFolders",
    "handler": "BtnAutoPageFolders_Click",
@@ -6375,7 +6407,7 @@
    "title": "Save",
    "shortcut": "",
    "description": "Save the current job",
-   "source": "MainWindow.xaml:2455",
+   "source": "MainWindow.xaml:2461",
    "control": "Button",
    "id": "file.save",
    "handler": "BtnSave_Click",
@@ -6390,7 +6422,7 @@
    "title": "Refresh",
    "shortcut": "",
    "description": "Reload the takeoff manager table",
-   "source": "MainWindow.xaml:2457",
+   "source": "MainWindow.xaml:2463",
    "control": "Button",
    "handler": "BtnTakeoffManagerRefresh_Click",
    "key": "workspace|refresh"
@@ -6401,7 +6433,7 @@
    "title": "Set Active",
    "shortcut": "",
    "description": "Make the selected takeoff item the active drawing target",
-   "source": "MainWindow.xaml:2458",
+   "source": "MainWindow.xaml:2464",
    "control": "Button",
    "handler": "BtnTakeoffManagerSetActive_Click",
    "key": "workspace|set active"
@@ -6412,7 +6444,7 @@
    "title": "Properties",
    "shortcut": "",
    "description": "Edit the selected takeoff item's properties",
-   "source": "MainWindow.xaml:2459",
+   "source": "MainWindow.xaml:2465",
    "control": "Button",
    "handler": "BtnTakeoffManagerProperties_Click",
    "key": "workspace|properties"
@@ -6423,7 +6455,7 @@
    "title": "Open Estimating",
    "shortcut": "",
    "description": "Open the full estimating table window",
-   "source": "MainWindow.xaml:2460",
+   "source": "MainWindow.xaml:2466",
    "control": "Button",
    "handler": "BtnTakeoffManagerOpenEstimating_Click",
    "key": "workspace|open estimating"
@@ -6434,7 +6466,7 @@
    "title": "New Folder",
    "shortcut": "",
    "description": "Create a takeoff folder",
-   "source": "MainWindow.xaml:2461",
+   "source": "MainWindow.xaml:2467",
    "control": "Button",
    "id": "takeoffs.newFolder",
    "handler": "BtnNewTakeoffFolder_Click",
@@ -6449,7 +6481,7 @@
    "title": "New Item",
    "shortcut": "",
    "description": "Create a takeoff item",
-   "source": "MainWindow.xaml:2462",
+   "source": "MainWindow.xaml:2468",
    "control": "Button",
    "id": "takeoffs.newItem",
    "handler": "BtnNewItem_Click",
@@ -6464,7 +6496,7 @@
    "title": "Auto Tree",
    "shortcut": "",
    "description": "Create a standard takeoff tree",
-   "source": "MainWindow.xaml:2464",
+   "source": "MainWindow.xaml:2470",
    "control": "Button",
    "id": "takeoffs.autoTree",
    "handler": "BtnAutoTakeoffTree_Click",
@@ -6479,7 +6511,7 @@
    "title": "From Pages",
    "shortcut": "",
    "description": "Create takeoff folders/items from the page structure",
-   "source": "MainWindow.xaml:2465",
+   "source": "MainWindow.xaml:2471",
    "control": "Button",
    "id": "takeoffs.fromPages",
    "handler": "BtnAutoTakeoffFromPages_Click",
@@ -6494,7 +6526,7 @@
    "title": "Export CSV",
    "shortcut": "",
    "description": "Export quantities to CSV",
-   "source": "MainWindow.xaml:2467",
+   "source": "MainWindow.xaml:2473",
    "control": "Button",
    "id": "file.exportCsv",
    "handler": "BtnExportCsv_Click",
@@ -6506,7 +6538,7 @@
    "title": "TXT",
    "shortcut": "",
    "description": "Export quantities to text",
-   "source": "MainWindow.xaml:2468",
+   "source": "MainWindow.xaml:2474",
    "control": "Button",
    "id": "file.exportTxt",
    "handler": "BtnExportTxt_Click",
@@ -6521,7 +6553,7 @@
    "title": "Excel",
    "shortcut": "",
    "description": "Export quantities to Excel",
-   "source": "MainWindow.xaml:2469",
+   "source": "MainWindow.xaml:2475",
    "control": "Button",
    "id": "file.exportExcel",
    "handler": "BtnExportExcel_Click",
@@ -6536,7 +6568,7 @@
    "title": "Current Excel",
    "shortcut": "",
    "description": "Write the selected takeoff folder/item to the active cell in an already open Excel workbook",
-   "source": "MainWindow.xaml:2470",
+   "source": "MainWindow.xaml:2476",
    "control": "Button",
    "id": "file.exportCurrentExcel",
    "handler": "BtnExportCurrentExcel_Click",
@@ -6552,7 +6584,7 @@
    "title": "Reload",
    "shortcut": "",
    "description": "Reload TemplateCom.xlsm into the report builder table",
-   "source": "MainWindow.xaml:2506",
+   "source": "MainWindow.xaml:2512",
    "control": "Button",
    "handler": "BtnReportBuilderReload_Click",
    "key": "workspace|reload"
@@ -6563,7 +6595,7 @@
    "title": "Refresh",
    "shortcut": "",
    "description": "Refresh the report builder view",
-   "source": "MainWindow.xaml:2514",
+   "source": "MainWindow.xaml:2520",
    "control": "Button",
    "handler": "BtnReportBuilderRefresh_Click",
    "key": "workspace|refresh"
@@ -6574,7 +6606,7 @@
    "title": "Apply Walls",
    "shortcut": "",
    "description": "Apply the A3 wall block rule to the selected source rows in J:K",
-   "source": "MainWindow.xaml:2516",
+   "source": "MainWindow.xaml:2522",
    "control": "Button",
    "handler": "BtnReportBuilderApplyWalls_Click",
    "key": "workspace|apply walls"
@@ -6585,7 +6617,7 @@
    "title": "Extract",
    "shortcut": "",
    "description": "Extract material evidence from the current job's source PDFs",
-   "source": "MainWindow.xaml:2568",
+   "source": "MainWindow.xaml:2574",
    "control": "Button",
    "handler": "BtnMaterialsExtract_Click",
    "key": "workspace|extract"
@@ -6596,7 +6628,7 @@
    "title": "Report Sheet",
    "shortcut": "",
    "description": "Create a copyable Materials Report sheet from the current job's existing pages",
-   "source": "MainWindow.xaml:2573",
+   "source": "MainWindow.xaml:2579",
    "control": "Button",
    "handler": "BtnMaterialsCreateReport_Click",
    "key": "workspace|report sheet"
@@ -6607,7 +6639,7 @@
    "title": "Refresh",
    "shortcut": "",
    "description": "Reload the latest material extraction output",
-   "source": "MainWindow.xaml:2576",
+   "source": "MainWindow.xaml:2582",
    "control": "Button",
    "handler": "BtnMaterialsRefresh_Click",
    "key": "workspace|refresh"
@@ -6618,7 +6650,7 @@
    "title": "JSON",
    "shortcut": "",
    "description": "Open the full material extraction JSON",
-   "source": "MainWindow.xaml:2578",
+   "source": "MainWindow.xaml:2584",
    "control": "Button",
    "handler": "BtnMaterialsOpenJson_Click",
    "key": "workspace|json"
@@ -6629,7 +6661,7 @@
    "title": "Rows CSV",
    "shortcut": "",
    "description": "Open material evidence rows as CSV",
-   "source": "MainWindow.xaml:2579",
+   "source": "MainWindow.xaml:2585",
    "control": "Button",
    "handler": "BtnMaterialsOpenRowsCsv_Click",
    "key": "workspace|rows csv"
@@ -6640,7 +6672,7 @@
    "title": "Summary CSV",
    "shortcut": "",
    "description": "Open grouped material summary as CSV",
-   "source": "MainWindow.xaml:2580",
+   "source": "MainWindow.xaml:2586",
    "control": "Button",
    "handler": "BtnMaterialsOpenSummaryCsv_Click",
    "key": "workspace|summary csv"
@@ -6651,7 +6683,7 @@
    "title": "Folder",
    "shortcut": "",
    "description": "Open the job material extraction output folder",
-   "source": "MainWindow.xaml:2581",
+   "source": "MainWindow.xaml:2587",
    "control": "Button",
    "handler": "BtnMaterialsOpenFolder_Click",
    "key": "workspace|folder"
@@ -6662,7 +6694,7 @@
    "title": "AI Settings",
    "shortcut": "",
    "description": "Open model and key status settings",
-   "source": "MainWindow.xaml:2629",
+   "source": "MainWindow.xaml:2635",
    "control": "Button",
    "id": "ai.settings",
    "handler": "BtnOpenAiSettings_Click",
@@ -6677,7 +6709,7 @@
    "title": "+ Add",
    "shortcut": "",
    "description": "Add a manual AI observation or marker note",
-   "source": "MainWindow.xaml:2630",
+   "source": "MainWindow.xaml:2636",
    "control": "Button",
    "id": "ai.addObservation",
    "handler": "BtnAddObservation_Click",
@@ -6692,7 +6724,7 @@
    "title": "Refresh",
    "shortcut": "",
    "description": "Reload the AI manager table",
-   "source": "MainWindow.xaml:2632",
+   "source": "MainWindow.xaml:2638",
    "control": "Button",
    "handler": "BtnAiManagerRefresh_Click",
    "key": "workspace|refresh"
@@ -6703,7 +6735,7 @@
    "title": "Open Details",
    "shortcut": "",
    "description": "Open details for the selected AI item",
-   "source": "MainWindow.xaml:2633",
+   "source": "MainWindow.xaml:2639",
    "control": "Button",
    "handler": "BtnAiManagerOpenDetails_Click",
    "key": "workspace|open details"
@@ -6714,7 +6746,7 @@
    "title": "Go to Page",
    "shortcut": "",
    "description": "Switch to the selected item's source page",
-   "source": "MainWindow.xaml:2634",
+   "source": "MainWindow.xaml:2640",
    "control": "Button",
    "handler": "BtnAiManagerGoToPage_Click",
    "key": "workspace|go to page"
@@ -6725,7 +6757,7 @@
    "title": "Run AI",
    "shortcut": "",
    "description": "Run AI for the selected eligible item",
-   "source": "MainWindow.xaml:2635",
+   "source": "MainWindow.xaml:2641",
    "control": "Button",
    "handler": "BtnAiManagerRunAi_Click",
    "key": "workspace|run ai"
@@ -6736,7 +6768,7 @@
    "title": "Run New",
    "shortcut": "",
    "description": "Run all new queued AI bookmark requests",
-   "source": "MainWindow.xaml:2637",
+   "source": "MainWindow.xaml:2643",
    "control": "Button",
    "id": "ai.runNewBookmarks",
    "handler": "BtnRunNewBookmarks_Click",
@@ -6752,7 +6784,7 @@
    "title": "Retry Failed",
    "shortcut": "",
    "description": "Retry failed AI bookmark requests",
-   "source": "MainWindow.xaml:2638",
+   "source": "MainWindow.xaml:2644",
    "control": "Button",
    "id": "ai.retryFailedBookmarks",
    "handler": "BtnRetryFailedBookmarks_Click",
@@ -6768,7 +6800,7 @@
    "title": "Create Set",
    "shortcut": "",
    "description": "Create a named marker set from reviewed markers",
-   "source": "MainWindow.xaml:2640",
+   "source": "MainWindow.xaml:2646",
    "control": "Button",
    "id": "ai.createMarkerSet",
    "handler": "BtnCreateMarkerSet_Click",
@@ -6783,7 +6815,7 @@
    "title": "Marker Sets",
    "shortcut": "",
    "description": "Manage saved marker sets",
-   "source": "MainWindow.xaml:2641",
+   "source": "MainWindow.xaml:2647",
    "control": "Button",
    "id": "ai.manageMarkerSets",
    "handler": "BtnManageMarkerSets_Click",
@@ -6799,7 +6831,7 @@
    "title": "Export Markers",
    "shortcut": "",
    "description": "Export reviewed AI markers",
-   "source": "MainWindow.xaml:2642",
+   "source": "MainWindow.xaml:2648",
    "control": "Button",
    "id": "ai.exportMarkers",
    "handler": "BtnExportMarkers_Click",
@@ -6814,7 +6846,7 @@
    "title": "Auto",
    "shortcut": "",
    "description": "Auto-build walls, sqft slabs, and RF/roof areas when available",
-   "source": "MainWindow.xaml:2674",
+   "source": "MainWindow.xaml:2680",
    "control": "Button",
    "handler": "Btn3dAutoBuildWalls_Click",
    "key": "workspace|auto"
@@ -6825,7 +6857,7 @@
    "title": "Wall",
    "shortcut": "",
    "description": "Build wall prisms from selected line takeoffs",
-   "source": "MainWindow.xaml:2675",
+   "source": "MainWindow.xaml:2681",
    "control": "Button",
    "handler": "Btn3dBuildWalls_Click",
    "key": "workspace|wall"
@@ -6836,7 +6868,7 @@
    "title": "Roof Base",
    "shortcut": "",
    "description": "Create a roof footprint from selected area takeoffs",
-   "source": "MainWindow.xaml:2676",
+   "source": "MainWindow.xaml:2682",
    "control": "Button",
    "id": "takeoffs.roofBase",
    "handler": "Btn3dRfRoof_Click",
@@ -6851,7 +6883,7 @@
    "title": "Select Edge",
    "shortcut": "",
    "description": "Select roof base edges on the sheet; save per-edge pitch from the side panel",
-   "source": "MainWindow.xaml:2677",
+   "source": "MainWindow.xaml:2683",
    "control": "Button",
    "handler": "Btn3dRoofEdges_Click",
    "key": "workspace|select edge"
@@ -6862,7 +6894,7 @@
    "title": "Generate Roof",
    "shortcut": "",
    "description": "Build ridge, hip, and valley geometry from the saved per-edge roof pitches",
-   "source": "MainWindow.xaml:2678",
+   "source": "MainWindow.xaml:2684",
    "control": "Button",
    "handler": "Btn3dBuildRoof_Click",
    "key": "workspace|generate roof"
@@ -6873,7 +6905,7 @@
    "title": "Pick Faces",
    "shortcut": "",
    "description": "Click roof faces in the 3D view to toggle rafters on each face",
-   "source": "MainWindow.xaml:2680",
+   "source": "MainWindow.xaml:2686",
    "control": "Button",
    "handler": "Btn3dRafterFaces_Click",
    "key": "workspace|pick faces"
@@ -6884,7 +6916,7 @@
    "title": "Whole Roof",
    "shortcut": "",
    "description": "Lay rafters on every face of every generated roof",
-   "source": "MainWindow.xaml:2681",
+   "source": "MainWindow.xaml:2687",
    "control": "Button",
    "handler": "Btn3dRafterAll_Click",
    "key": "workspace|whole roof"
@@ -6895,7 +6927,7 @@
    "title": "Rafter spacing o.c",
    "shortcut": "",
    "description": "Rafter spacing o.c. (measured horizontally along the eave)",
-   "source": "MainWindow.xaml:2682",
+   "source": "MainWindow.xaml:2688",
    "control": "ComboBox",
    "key": "workspace|rafter spacing o.c"
   },
@@ -6905,7 +6937,7 @@
    "title": "Rafter member size",
    "shortcut": "",
    "description": "Rafter member size; depth extrudes below the roof plane and walls trim to the rafter underside",
-   "source": "MainWindow.xaml:2683",
+   "source": "MainWindow.xaml:2689",
    "control": "ComboBox",
    "key": "workspace|rafter member size"
   },
@@ -6915,7 +6947,7 @@
    "title": "Clear",
    "shortcut": "",
    "description": "Remove rafters from all roofs",
-   "source": "MainWindow.xaml:2684",
+   "source": "MainWindow.xaml:2690",
    "control": "Button",
    "handler": "Btn3dRafterClear_Click",
    "key": "workspace|clear"
@@ -6926,7 +6958,7 @@
    "title": "Fit",
    "shortcut": "",
    "description": "Fit the clean 3D viewer scene",
-   "source": "MainWindow.xaml:2686",
+   "source": "MainWindow.xaml:2692",
    "control": "Button",
    "handler": "Btn3dViewerFit_Click",
    "key": "workspace|fit"
@@ -6937,7 +6969,7 @@
    "title": "Iso",
    "shortcut": "",
    "description": "Show isometric view",
-   "source": "MainWindow.xaml:2692",
+   "source": "MainWindow.xaml:2698",
    "control": "Button",
    "handler": "Btn3dViewerIso_Click",
    "key": "workspace|iso"
@@ -6948,7 +6980,7 @@
    "title": "Top",
    "shortcut": "",
    "description": "Show top view",
-   "source": "MainWindow.xaml:2698",
+   "source": "MainWindow.xaml:2704",
    "control": "Button",
    "handler": "Btn3dViewerTop_Click",
    "key": "workspace|top"
@@ -6959,7 +6991,7 @@
    "title": "Front",
    "shortcut": "",
    "description": "Show front view",
-   "source": "MainWindow.xaml:2704",
+   "source": "MainWindow.xaml:2710",
    "control": "Button",
    "handler": "Btn3dViewerFront_Click",
    "key": "workspace|front"
@@ -6970,7 +7002,7 @@
    "title": "Reset",
    "shortcut": "",
    "description": "Reset the 3D camera view",
-   "source": "MainWindow.xaml:2710",
+   "source": "MainWindow.xaml:2716",
    "control": "Button",
    "handler": "Btn3dViewerReset_Click",
    "key": "workspace|reset"
@@ -7957,7 +7989,7 @@
    "title": "Configure the command strip (gear)",
    "shortcut": "",
    "description": "Configure the left command strip: pick any commands for the strip.",
-   "source": "MainWindow.SideStrips.cs:200",
+   "source": "MainWindow.SideStrips.cs:202",
    "key": "strip|configure the command strip (gear)"
   },
   {
@@ -7966,7 +7998,7 @@
    "title": "Configure the command strip (gear)",
    "shortcut": "",
    "description": "Configure the right command strip: pick any commands for the strip.",
-   "source": "MainWindow.SideStrips.cs:201",
+   "source": "MainWindow.SideStrips.cs:203",
    "key": "strip|configure the command strip (gear)"
   },
   {
@@ -8524,7 +8556,7 @@
    "title": "Link to Excel",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.ExcelLinks.cs:452",
+   "source": "MainWindow.ExcelLinks.cs:603",
    "key": "context-menu|link to excel"
   },
   {
@@ -8533,7 +8565,7 @@
    "title": "Go to Cell",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.ExcelLinks.cs:458",
+   "source": "MainWindow.ExcelLinks.cs:609",
    "key": "context-menu|go to cell"
   },
   {
@@ -8542,7 +8574,7 @@
    "title": "Overwrite the Cell",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.ExcelLinks.cs:462",
+   "source": "MainWindow.ExcelLinks.cs:613",
    "key": "context-menu|overwrite the cell"
   },
   {
@@ -8551,7 +8583,7 @@
    "title": "Keep the Cell and Unlink",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.ExcelLinks.cs:463",
+   "source": "MainWindow.ExcelLinks.cs:614",
    "key": "context-menu|keep the cell and unlink"
   },
   {
@@ -8560,8 +8592,17 @@
    "title": "Unlink",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.ExcelLinks.cs:467",
+   "source": "MainWindow.ExcelLinks.cs:618",
    "key": "context-menu|unlink"
+  },
+  {
+   "surface": "context-menu",
+   "group": "меню позиции в Takeoffs > Excel Link",
+   "title": "Auto Link (DFL)",
+   "shortcut": "",
+   "description": "",
+   "source": "MainWindow.ExcelLinks.cs:622",
+   "key": "context-menu|auto link (dfl)"
   },
   {
    "surface": "context-menu",
@@ -8569,8 +8610,17 @@
    "title": "Update Links",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.ExcelLinks.cs:471",
+   "source": "MainWindow.ExcelLinks.cs:623",
    "key": "context-menu|update links"
+  },
+  {
+   "surface": "context-menu",
+   "group": "меню позиции в Takeoffs > Excel Link",
+   "title": "Reset All Links...",
+   "shortcut": "",
+   "description": "",
+   "source": "MainWindow.ExcelLinks.cs:624",
+   "key": "context-menu|reset all links"
   },
   {
    "surface": "context-menu",
@@ -8578,7 +8628,7 @@
    "title": "All Excel Links...",
    "shortcut": "",
    "description": "",
-   "source": "MainWindow.ExcelLinks.cs:472",
+   "source": "MainWindow.ExcelLinks.cs:625",
    "key": "context-menu|all excel links"
   },
   {
@@ -12129,6 +12179,15 @@
    "description": "Section of the settings panel.",
    "source": "MainWindow.SettingsManager.ExcelLinks.cs:17",
    "key": "settings|link to excel behaviour"
+  },
+  {
+   "surface": "settings",
+   "group": "Settings > Excel Links",
+   "title": "Auto Link",
+   "shortcut": "",
+   "description": "Section of the settings panel.",
+   "source": "MainWindow.SettingsManager.ExcelLinks.cs:28",
+   "key": "settings|auto link"
   },
   {
    "surface": "settings",

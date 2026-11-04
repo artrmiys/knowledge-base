@@ -57,7 +57,7 @@ OurPlanCore - программа для замеров по PDF-чертежам
     - [Дерево Takeoffs](ourplancore-takeoffs.md): новая позиция, Record, копирование, поиск
     - [Несколько зданий](ourplancore-buildings.md): папка на корпус, зелёная и красная точки, книга и PDF на корпус
     - [Имена и автомаршрут](takeoff-naming.md): почему позиция легла в эту папку
-    - [Экспорт в Excel](ourplancore-excel.md): полоса XL, шаблон TemplateCom, Link to Excel
+    - [Экспорт в Excel](ourplancore-excel.md): полоса XL, шаблон TemplateCom, Link to Excel, Auto Link
     - [PDF и сдача](ourplancore-pdf.md): Export PDF, PDF Output, Preview, правка в Adobe
 
 -   **Продвинутое**

@@ -95,7 +95,7 @@
 | Quick Calculator | Productivity | вкл | калькулятор футов и дюймов |
 | PDF Output | Output | вкл | лента PDF Output, Preview, экспорт |
 | Detached Sheets | Documents | вкл | открепленные окна листов, Tile M2 |
-| Excel Integration | Output | вкл | полоса XL, Value, Excel, Link to Excel |
+| Excel Integration | Output | вкл | полоса XL, Value, Excel, Link to Excel, Auto Link |
 | Job Tracker | Integrations | выкл | кнопка In Progress |
 
 Выключенный модуль прячет кнопки и вкладку; клавиша на его команду не срабатывает. Проектная копия модулей сильнее глобальной. Что делают выключенные по умолчанию модули и когда их включать: [Дополнительные возможности](ourplancore-extras.md).

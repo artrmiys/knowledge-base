@@ -4,15 +4,16 @@
 
 Здесь перечислена каждая кнопка, пункт меню, клавиша, категория Settings и окно OurPlanCore 3.0, по месту в интерфейсе. Колонка "Подробно" ведёт на страницу раздела, где функция описана; пустая ячейка значит, что подробного описания в базе пока нет (проверка: `python tools/opc_coverage.py`). Одна и та же функция часто доступна с нескольких поверхностей (лента, меню, палитра, клавиша), поэтому повторы здесь нормальны.
 
-Всего записей: 1130. С подробной страницей: 989. Пока без страницы: 26. Служебных и повторов, исключённых из проверки: 115.
+Всего записей: 1136. С подробной страницей: 995. Пока без страницы: 26. Служебных и повторов, исключённых из проверки: 115.
 
-## Нижняя полоса инструментов (41)
+## Нижняя полоса инструментов (42)
 
-??? note "нижняя полоса, строка 1 (32)"
+??? note "нижняя полоса, строка 1 (33)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
     | `Link to Excel` |  | нижняя полоса: нижняя полоса, строка 1 | Пишет число выбранной позиции в активную ячейку открытой книги и держит его там. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Auto Link` |  | нижняя полоса: нижняя полоса, строка 1 | Только DFL: сразу связывает позиции, чьи числа уже стоят в списке `J:L`. Ячейки не меняются, результат показывает окно. | [Инструменты замера](ourplancore-tools.md) |
     | `Value` |  | нижняя полоса: нижняя полоса, строка 1 | Пишет в открытую книгу Excel только колонку `Value` для той же выборки. | [Инструменты замера](ourplancore-tools.md) |
     | `Excel` |  | нижняя полоса: нижняя полоса, строка 1 | Пишет выбранную папку или позицию в активную ячейку открытой книги Excel. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Include takeoff comments in Excel export` |  | нижняя полоса: нижняя полоса, строка 1 | Добавляет комментарии позиций и замеров в выгрузку Excel; по умолчанию выключено. | [Экспорт в Excel](ourplancore-excel.md) |
@@ -656,7 +657,7 @@
     | `Send ↵` |  | панель: панель терминала Codex / Claude |  |  |
     | `Reference Close Button` |  | панель: панель терминала Codex / Claude | Keep the draft and return to the terminal |  |
 
-## Контекстные меню и меню кнопок (384)
+## Контекстные меню и меню кнопок (386)
 
 ??? note "меню кнопки Combine, нижняя полоса, строка 1 (5)"
 
@@ -836,7 +837,7 @@
     | `Rename Measurement` |  | меню: меню строки Estimating | Переименовывает выбранный замер или его позицию. | [Правка и привязки](ourplancore-editing.md) |
     | `Delete Measurement` |  | меню: меню строки Estimating | Удаляет выбранный замер с листа и из позиции. | [Правка и привязки](ourplancore-editing.md) |
 
-??? note "меню позиции в Takeoffs > Excel Link (7)"
+??? note "меню позиции в Takeoffs > Excel Link (9)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
@@ -845,7 +846,9 @@
     | `Overwrite the Cell` |  | меню: меню позиции в Takeoffs > Excel Link | Пишет число программы поверх ячейки, поправленной руками. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Keep the Cell and Unlink` |  | меню: меню позиции в Takeoffs > Excel Link | Оставляет ячейку как есть и разрывает связь. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Unlink` |  | меню: меню позиции в Takeoffs > Excel Link | Разрывает связь, число остаётся в ячейке. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Auto Link (DFL)` |  | меню: меню позиции в Takeoffs > Excel Link | Только DFL: сразу связывает позиции, чьи числа уже стоят в списке `J:L`. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Update Links` |  | меню: меню позиции в Takeoffs > Excel Link | Записывает все ждущие числа связей, также в закрытые книги. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Reset All Links...` |  | меню: меню позиции в Takeoffs > Excel Link | Снимает все связи проекта с Excel после вопроса. Значения в ячейках остаются. | [Экспорт в Excel](ourplancore-excel.md) |
     | `All Excel Links...` |  | меню: меню позиции в Takeoffs > Excel Link | Открывает список всех связей проекта с Excel. | [Экспорт в Excel](ourplancore-excel.md) |
 
 ??? note "меню кнопки Export (панель Takeoffs) (6)"
@@ -1446,9 +1449,9 @@
     | --- | --- | --- | --- | --- |
     | `More colors...` |  | панель: окно Takeoff Item Properties |  |  |
 
-## Палитра команд (Ctrl+Shift+P) (136)
+## Палитра команд (Ctrl+Shift+P) (138)
 
-??? note "File (32)"
+??? note "File (34)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
@@ -1474,6 +1477,8 @@
     | `Export to Current Excel` |  | палитра команд: File | Пишет выбранную папку или позицию в активную ячейку открытой книги Excel. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Export Values to Current Excel` |  | палитра команд: File | Пишет в открытую книгу Excel только колонку `Value` для той же выборки. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Link to Excel` |  | палитра команд: File | Пишет число выбранной позиции в активную ячейку открытой книги и держит его там. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Auto Link` |  | палитра команд: File | Только DFL: сразу связывает позиции, чьи числа уже стоят в списке `J:L`. Ячейки не меняются, результат показывает окно. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Reset All Excel Links` |  | палитра команд: File | Снимает все связи проекта с Excel после вопроса. Значения в ячейках остаются. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Update Excel Links` |  | палитра команд: File | Записывает все ждущие числа связей, также в закрытые книги. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Excel Links...` |  | палитра команд: File | Показывает все связи проекта с Excel: перейти к ячейке, разорвать, очистить книгу. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Excel Macro: SQFT` |  | палитра команд: File | Добавляет выбранные строки SQFT в шаблон и запускает макрос `A2_SQFT_calc`. | [Экспорт в Excel](ourplancore-excel.md) |
@@ -1890,7 +1895,7 @@
     | `Fine rotate the overlay right` | `Ctrl+Alt+Shift+]` | клавиша: Overlay | Поворачивает наложенный лист вправо на самый мелкий угол. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
     | `Reset overlay transform (fine)` | `Ctrl+Alt+Shift+0` | клавиша: Overlay | Сбрасывает сдвиг, масштаб и поворот наложенного листа, вариант клавиши с `Shift`. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
-## Settings: категории и разделы (44)
+## Settings: категории и разделы (45)
 
 ??? note "Settings > Agent Bridge (1)"
 
@@ -1950,11 +1955,12 @@
     | `Framing folders -> Excel blocks` |  | Settings: Settings > Excel Actions | Сопоставляет папки framing в дереве с блоками строк в книге Excel. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Walls extras: sheathing, shear walls, shaft, units, balconies` |  | Settings: Settings > Excel Actions | Настраивает выгрузку обшивки, shear walls, shaft walls, квартир и балконов в Excel. | [Экспорт в Excel](ourplancore-excel.md) |
 
-??? note "Settings > Excel Links (1)"
+??? note "Settings > Excel Links (2)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
     | `Link to Excel behaviour` |  | Settings: Settings > Excel Links | Как связь пишет в открытую и закрытую книгу, копии книги, паузы. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Auto Link` |  | Settings: Settings > Excel Links | Порог малых целых чисел, которым для связи нужно имя. | [Экспорт в Excel](ourplancore-excel.md) |
 
 ??? note "Settings > Excel Rules (1)"
 
