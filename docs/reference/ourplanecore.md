@@ -57,8 +57,8 @@ OurPlanCore - программа для замеров по PDF-чертежам
     - [Дерево Takeoffs](ourplancore-takeoffs.md): новая позиция, Record, копирование, поиск
     - [Несколько зданий](ourplancore-buildings.md): папка на корпус, зелёная и красная точки, книга и PDF на корпус
     - [Имена и автомаршрут](takeoff-naming.md): почему позиция легла в эту папку
-    - [Экспорт в Excel](ourplancore-excel.md): полоса XL и шаблон TemplateCom
-    - [PDF и сдача](ourplancore-pdf.md): Export PDF, PDF Output, Preview
+    - [Экспорт в Excel](ourplancore-excel.md): полоса XL, шаблон TemplateCom, Link to Excel
+    - [PDF и сдача](ourplancore-pdf.md): Export PDF, PDF Output, Preview, правка в Adobe
 
 -   **Продвинутое**
 
@@ -124,6 +124,8 @@ OurPlanCore - программа для замеров по PDF-чертежам
 | Merge и Split только сегментов | Merge и Split целых позиций из дерева, Break и Ends для линий | [Правка и привязки](ourplancore-editing.md) |
 | Excel руками по кускам | полоса XL: `ALL` и кнопки по секциям, framing, легенда `LG`, точка "комментарии" | [Экспорт в Excel](ourplancore-excel.md) |
 | PDF настраивали вслепую | живое `PDF Output > Preview`, `Opac` для линий | [PDF и сдача](ourplancore-pdf.md#preview) |
+| PDF правили только новым экспортом | линии, площади и подписи двигаются в Adobe Acrobat | [PDF и сдача](ourplancore-pdf.md#adobe) |
+| число в книге обновляли `Value` после каждой правки | `Link to Excel` держит число в ячейке само | [Экспорт в Excel](ourplancore-excel.md#link) |
 | детали узлов искали по листам | `Crop to Sheet` собирает узлы на чистый лист, маска `Hide` убирает лишнее | [Листы: продвинутое](ourplancore-sheets-advanced.md) |
 | имена листов проверяли по одному | `Name+Scale` по всему комплекту, OCR сканов, чтение штампа моделью, `Crop Hints` | [Листы](ourplancore-pages.md), [Менеджеры](ourplancore-managers.md#sheet-manager) |
 | клавиши зашиты | редактор `Settings > Keyboard Shortcuts`, клавиши работают в русской раскладке | [Горячие клавиши](ourplancore-shortcuts.md) |

@@ -824,6 +824,7 @@ MENU_LABELS = {
     ("MainWindow.TakeoffsMenus.cs", "AttachFolderContextMenu"): "меню папки в Takeoffs",
     ("MainWindow.TakeoffsMenus.cs", "BuildTakeoffsRootContextMenu"): "меню корня Takeoffs",
     ("MainWindow.TakeoffsMenus.cs", "BuildTakeoff3DMenu"): "меню позиции в Takeoffs > 3D",
+    ("MainWindow.ExcelLinks.cs", "BuildTakeoffExcelLinkMenu"): "меню позиции в Takeoffs > Excel Link",
     ("MainWindow.TakeoffSections.cs", "BuildTakeoffSectionContextMenu"): "меню секции (замера) в Takeoffs",
     ("MainWindow.TakeoffsActiveTarget.cs", "BtnActiveTakeoffMore_Click"): "меню More активной позиции (панель Takeoffs)",
     ("MainWindow.TakeoffsActiveTarget.cs", "ShowActiveSheetTakeoffTargetMenu"): "меню Sheet активной позиции (панель Takeoffs)",

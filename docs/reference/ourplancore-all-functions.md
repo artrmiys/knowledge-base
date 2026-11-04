@@ -4,14 +4,15 @@
 
 Здесь перечислена каждая кнопка, пункт меню, клавиша, категория Settings и окно OurPlanCore 3.0, по месту в интерфейсе. Колонка "Подробно" ведёт на страницу раздела, где функция описана; пустая ячейка значит, что подробного описания в базе пока нет (проверка: `python tools/opc_coverage.py`). Одна и та же функция часто доступна с нескольких поверхностей (лента, меню, палитра, клавиша), поэтому повторы здесь нормальны.
 
-Всего записей: 1093. С подробной страницей: 977. Пока без страницы: 0. Служебных и повторов, исключённых из проверки: 116.
+Всего записей: 1130. С подробной страницей: 989. Пока без страницы: 26. Служебных и повторов, исключённых из проверки: 115.
 
-## Нижняя полоса инструментов (40)
+## Нижняя полоса инструментов (41)
 
-??? note "нижняя полоса, строка 1 (31)"
+??? note "нижняя полоса, строка 1 (32)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
+    | `Link to Excel` |  | нижняя полоса: нижняя полоса, строка 1 | Пишет число выбранной позиции в активную ячейку открытой книги и держит его там. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Value` |  | нижняя полоса: нижняя полоса, строка 1 | Пишет в открытую книгу Excel только колонку `Value` для той же выборки. | [Инструменты замера](ourplancore-tools.md) |
     | `Excel` |  | нижняя полоса: нижняя полоса, строка 1 | Пишет выбранную папку или позицию в активную ячейку открытой книги Excel. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Include takeoff comments in Excel export` |  | нижняя полоса: нижняя полоса, строка 1 | Добавляет комментарии позиций и замеров в выгрузку Excel; по умолчанию выключено. | [Экспорт в Excel](ourplancore-excel.md) |
@@ -58,7 +59,7 @@
     | `Zoom in` | `Ctrl++` | нижняя полоса: нижняя полоса, строка 2 | Приближает активный лист на один шаг масштаба. | [Горячие клавиши](ourplancore-shortcuts.md) |
     | `Zoom out` | `Ctrl+-` | нижняя полоса: нижняя полоса, строка 2 | Отдаляет активный лист на один шаг масштаба. | [Горячие клавиши](ourplancore-shortcuts.md) |
 
-## Лента: верхние вкладки Main, Page, Annotation, Viewport, Display (69)
+## Лента: верхние вкладки Main, Page, Annotation, Viewport, Display (72)
 
 ??? note "лента Main, JOB (5)"
 
@@ -139,6 +140,14 @@
     | `Note` | `N` | лента: лента Annotation, MARKUP TOOLS | Пишет текстовую заметку в указанном месте листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
     | `Style` |  | лента: лента Annotation, MARKUP TOOLS | Открывает инструменты пометок с выбором цвета и толщины. |  |
 
+??? note "лента Annotation, TAKEOFF ANNOTATIONS (3)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `Annotation area` |  | лента: лента Annotation, TAKEOFF ANNOTATIONS | Annotation area: drawn into an annotation takeoff (tree and legend 'annotation', no quantity) | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Annotation line` |  | лента: лента Annotation, TAKEOFF ANNOTATIONS | Annotation line: drawn into an annotation takeoff (tree and legend 'annotation', no quantity) | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Annotation point` |  | лента: лента Annotation, TAKEOFF ANNOTATIONS | Annotation point: drawn into an annotation takeoff (tree and legend 'annotation', no quantity) |  |
+
 ??? note "лента Annotation, STYLE (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
@@ -204,12 +213,13 @@
     | `Dark` |  | лента: лента Display, UNITS & VIEW | Переключает тёмную и светлую тему интерфейса. | [Settings и модули](ourplancore-settings.md) |
     | `Mouse-wheel zoom step per notch` |  | лента: лента Display, UNITS & VIEW | Задаёт шаг масштаба на один щелчок колеса мыши, от 1.05 до 2.5. | [Settings и модули](ourplancore-settings.md) |
 
-## Полоса XL (Excel) справа от листа (21)
+## Полоса XL (Excel) справа от листа (22)
 
-??? note "полоса XL (21)"
+??? note "полоса XL (22)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
+    | `XL` |  | полоса XL: полоса XL | Show / hide ALL selection dots; the export selection is preserved | [Settings и модули](ourplancore-settings.md) |
     | `ALL` |  | полоса XL: полоса XL | Запускает всю настроенную цепочку макросов Excel для одного выбранного корпуса. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Legend (LG)` |  | полоса XL: полоса XL | Открывает легенду проекта, по которой выгружаются Beams, Posts и Headers. | [Экспорт в Excel](ourplancore-excel.md) |
     | `SQFT (SF)` |  | полоса XL: полоса XL | Добавляет выбранные строки SQFT в шаблон и запускает макрос `A2_SQFT_calc`. | [Экспорт в Excel](ourplancore-excel.md) |
@@ -276,7 +286,7 @@
     | `Expand Takeoffs Tree` |  | полоса значков: правая полоса значков | Разворачивает все папки в дереве Takeoffs. | [Инструменты замера](ourplancore-tools.md) |
     | `Configure the command strip (gear)` |  | полоса значков: правая полоса значков | Открывает настройку полосы значков: какие команды на ней показывать. |  |
 
-## Панели и вкладки рабочей области (169)
+## Панели и вкладки рабочей области (178)
 
 ??? note "Main View, панель Pages (12)"
 
@@ -618,7 +628,7 @@
     | `Gray` |  | панель: панель Pages, вкладка Overlay | Делает наложенный лист серым, чтобы отличать его от основного. | [Settings и модули](ourplancore-settings.md) |
     | `Choose custom color` |  | панель: панель Pages, вкладка Overlay | Открывает выбор своего цвета для наложенного листа. |  |
 
-??? note "панель терминала Codex / Claude (14)"
+??? note "панель терминала Codex / Claude (23)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
@@ -636,8 +646,17 @@
     | `Paste context` |  | панель: панель терминала Codex / Claude | Вставляет сообщение с контекстом в терминал без `Enter`, отправить надо самому. | [Консоль ИИ](ourplancore-ai-console.md) |
     | `AI Inbox` |  | панель: панель терминала Codex / Claude | Открывает `AI Inbox` и менеджер ИИ. | [Консоль ИИ](ourplancore-ai-console.md) |
     | `AI Crop +` |  | панель: панель терминала Codex / Claude | Рисует кроп для ИИ и передаёт его PNG в контекст терминала. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Explain` |  | панель: панель терминала Codex / Claude | Crop one or more areas around a detail (Esc when done), then Send: the assistant explains it and draws a step-by-step isometric assembly diagram (HTML) | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Explain + image` |  | панель: панель терминала Codex / Claude | Same as Explain, plus a generated illustration image (needs an assistant that can generate images, e.g. Codex) |  |
+    | `F7` | `F7` | панель: панель терминала Codex / Claude | Record speech locally (F7). Press again to stop and insert text without Enter. |  |
+    | `Cancel` |  | панель: панель терминала Codex / Claude | Отменяет фоновую работу с растром после текущего листа. | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Insert text` |  | панель: панель терминала Codex / Claude | Insert this draft into the selected terminal without Enter |  |
+    | `Copy` |  | панель: панель терминала Codex / Claude |  | [Правка и привязки](ourplancore-editing.md) |
+    | `Close` |  | панель: панель терминала Codex / Claude |  | [Консоль ИИ](ourplancore-ai-console.md) |
+    | `Send ↵` |  | панель: панель терминала Codex / Claude |  |  |
+    | `Reference Close Button` |  | панель: панель терминала Codex / Claude | Keep the draft and return to the terminal |  |
 
-## Контекстные меню и меню кнопок (371)
+## Контекстные меню и меню кнопок (384)
 
 ??? note "меню кнопки Combine, нижняя полоса, строка 1 (5)"
 
@@ -817,6 +836,18 @@
     | `Rename Measurement` |  | меню: меню строки Estimating | Переименовывает выбранный замер или его позицию. | [Правка и привязки](ourplancore-editing.md) |
     | `Delete Measurement` |  | меню: меню строки Estimating | Удаляет выбранный замер с листа и из позиции. | [Правка и привязки](ourplancore-editing.md) |
 
+??? note "меню позиции в Takeoffs > Excel Link (7)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `Link to Excel` |  | меню: меню позиции в Takeoffs > Excel Link | Связывает эту позицию с активной ячейкой открытой книги. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Go to Cell` |  | меню: меню позиции в Takeoffs > Excel Link | Показывает связанную ячейку в Excel, закрытую книгу сначала открывает. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Overwrite the Cell` |  | меню: меню позиции в Takeoffs > Excel Link | Пишет число программы поверх ячейки, поправленной руками. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Keep the Cell and Unlink` |  | меню: меню позиции в Takeoffs > Excel Link | Оставляет ячейку как есть и разрывает связь. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Unlink` |  | меню: меню позиции в Takeoffs > Excel Link | Разрывает связь, число остаётся в ячейке. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Update Links` |  | меню: меню позиции в Takeoffs > Excel Link | Записывает все ждущие числа связей, также в закрытые книги. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `All Excel Links...` |  | меню: меню позиции в Takeoffs > Excel Link | Открывает список всех связей проекта с Excel. | [Экспорт в Excel](ourplancore-excel.md) |
+
 ??? note "меню кнопки Export (панель Takeoffs) (6)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
@@ -834,7 +865,7 @@
     | --- | --- | --- | --- | --- |
     | `Open project...` |  | меню: меню кнопки Open / Import > Open A Project | Открывает окно выбора проекта со списком недавних. | [Проекты и сохранение](job-creation-storage.md) |
 
-??? note "меню кнопки Open / Import > Create A New Job (8)"
+??? note "меню кнопки Open / Import > Create A New Job (9)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
@@ -842,6 +873,7 @@
     | `New project from a folder of PDFs...` |  | меню: меню кнопки Open / Import > Create A New Job | Создаёт новый проект из папки с чертежами PDF. | [Проекты и сохранение](job-creation-storage.md) |
     | `Import PDF Takeoffs...` |  | меню: меню кнопки Open / Import > Create A New Job | Переносит листы PDF вместе с замерами и линейками PDF в позиции takeoff. | [Прочее](ourplancore-extras-other.md) |
     | `Sample job (demo to explore)` |  | меню: меню кнопки Open / Import > Create A New Job | Создаёт и открывает учебный пример проекта с подсказками. | [Проекты и сохранение](job-creation-storage.md) |
+    | `Create Excel workbook for this project...` |  | меню: меню кнопки Open / Import > Create A New Job |  |  |
     | `Undo Last Page Sort` |  | меню: меню кнопки Open / Import > Create A New Job | Отменяет последнюю сортировку листов в дереве Pages. | [Правка и привязки](ourplancore-editing.md) |
     | `Undo Last Page Operation` |  | меню: меню кнопки Open / Import > Create A New Job | Отменяет последнее действие с листами: сортировку, перенос или переименование. | [Правка и привязки](ourplancore-editing.md) |
     | `Project Data Recovery...` |  | меню: меню кнопки Open / Import > Create A New Job | Восстанавливает повреждённые файлы проекта из проверенной копии. | [Проекты и сохранение](job-creation-storage.md) |
@@ -1094,6 +1126,12 @@
     | --- | --- | --- | --- | --- |
     | `Next Sheet Target` |  | меню: меню Sheet активной позиции (панель Takeoffs) | Делает активной следующую позицию, у которой есть замеры на активном листе. | [Листы (Pages)](ourplancore-pages.md) |
 
+??? note "MainWindow.TakeoffsAnnotation.cs:BuildTakeoffAnnotationMenuItem (1)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `Make Quantity Takeoff` |  | меню: MainWindow.TakeoffsAnnotation.cs:BuildTakeoffAnnotationMenuItem |  |  |
+
 ??? note "меню секции (замера) в Takeoffs (18)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
@@ -1245,6 +1283,12 @@
     | `Set Edge as Eave + Pitch ...` |  | меню: меню вьюпорта > 3D (ребро крыши) | Делает выбранные рёбра карнизом с текущим уклоном ската. | [3D крыша](ourplancore-3d-roof.md) |
     | `Set Edge as Rake` |  | меню: меню вьюпорта > 3D (ребро крыши) | Делает выбранные рёбра фронтонным свесом `Rake` без ската. | [3D крыша](ourplancore-3d-roof.md) |
 
+??? note "меню Style > Color (1)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `More colors...` |  | меню: меню Style > Color |  |  |
+
 ??? note "меню вьюпорта (правый клик по листу) (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
@@ -1260,7 +1304,7 @@
     | `Merge Segment...` |  | меню: меню вьюпорта: буфер замеров | Объединяет выбранные позиции со всех листов или переносит выбранные замеры в другую позицию. | [Правка и привязки](ourplancore-editing.md) |
     | `Split Segment...` |  | меню: меню вьюпорта: буфер замеров | Делит позиции по всем листам или выносит выбранные замеры и точки в новую позицию. | [Правка и привязки](ourplancore-editing.md) |
 
-??? note "меню вьюпорта > AI Assist (точка листа) (12)"
+??? note "меню вьюпорта > AI Assist (точка листа) (14)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
@@ -1268,6 +1312,8 @@
     | `AI quick box here -> note` |  | меню: меню вьюпорта > AI Assist (точка листа) | Берёт быстрый кроп вокруг точки, ИИ читает его и пишет заметку. | [ИИ и терминалы](ourplancore-ai.md) |
     | `Save AI crop here` |  | меню: меню вьюпорта > AI Assist (точка листа) | Сохраняет кроп этого места листа как запись для ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
     | `Save AI marker here` |  | меню: меню вьюпорта > AI Assist (точка листа) | Ставит в этой точке маркер ИИ с типом и подписью. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Explain detail (crops -> diagram)` |  | меню: меню вьюпорта > AI Assist (точка листа) |  |  |
+    | `Explain detail + image` |  | меню: меню вьюпорта > AI Assist (точка листа) |  |  |
     | `Ask AI about this point / area` |  | меню: меню вьюпорта > AI Assist (точка листа) | Создаёт в `AI Inbox` запрос объяснить, что важно в этом месте плана. | [ИИ и терминалы](ourplancore-ai.md) |
     | `Read text near point` |  | меню: меню вьюпорта > AI Assist (точка листа) | Создаёт в `AI Inbox` запрос прочитать и пересказать текст рядом с точкой. | [ИИ и терминалы](ourplancore-ai.md) |
     | `Save observation here` |  | меню: меню вьюпорта > AI Assist (точка листа) | Сохраняет ручное наблюдение, привязанное к этой точке листа. | [ИИ и терминалы](ourplancore-ai.md) |
@@ -1324,12 +1370,13 @@
     | `Hide area (white)` |  | меню: меню Style (лента Annotation) | Закрывает часть листа сплошным белым на экране и в выгрузке PDF. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
     | `Note` |  | меню: меню Style (лента Annotation) | Пишет текстовую заметку в указанном месте листа. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
-??? note "меню вьюпорта: выбранный замер (16)"
+??? note "меню вьюпорта: выбранный замер (17)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
     | `Takeoff Properties...` |  | меню: меню вьюпорта: выбранный замер | Открывает свойства позиции, к которой относится выбранный замер. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
     | `Measurement Properties...` |  | меню: меню вьюпорта: выбранный замер | Открывает свойства выбранного замера для правки. | [Дополнительно](ourplancore-extras.md) |
+    | `Cut Out of This Area (X)` | `X` | меню: меню вьюпорта: выбранный замер |  | [Правка и привязки](ourplancore-editing.md) |
     | `Trace Walls Inside Area...` |  | меню: меню вьюпорта: выбранный замер | Обводит стены внутри выбранной площади линейными замерами по толщине и минимальной длине. | [Привязки и трассировка](ourplancore-snap-trace.md) |
     | `Use Area As Joists...` |  | меню: меню вьюпорта: выбранный замер | Превращает выбранную площадь в раскладку балок `Joist Area`. | [Инструменты замера](ourplancore-tools.md) |
     | `Refresh Regular Joists in All Area Segments` |  | меню: меню вьюпорта: выбранный замер | Пересчитывает обычные балки во всех площадях позиции `Joist Area`. | [Инструменты замера](ourplancore-tools.md) |
@@ -1345,7 +1392,7 @@
     | `Remove Nearest Vertex` |  | меню: меню вьюпорта: выбранный замер | Удаляет вершину замера, ближайшую к указателю. | [Правка и привязки](ourplancore-editing.md) |
     | `Delete Measurement` |  | меню: меню вьюпорта: выбранный замер | Удаляет выбранный замер с листа и из позиции. | [Правка и привязки](ourplancore-editing.md) |
 
-## Кнопки панелей и окон, которые строятся в коде (20)
+## Кнопки панелей и окон, которые строятся в коде (22)
 
 ??? note "окно Observation Details (6)"
 
@@ -1387,9 +1434,21 @@
     | --- | --- | --- | --- | --- |
     | `Open Report` |  | панель: окно PlanSwift Import Complete | Открывает отчёт о переносе проекта PlanSwift. |  |
 
-## Палитра команд (Ctrl+Shift+P) (126)
+??? note "окно Bulk Properties (1)"
 
-??? note "File (28)"
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `More colors...` |  | панель: окно Bulk Properties |  |  |
+
+??? note "окно Takeoff Item Properties (1)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `More colors...` |  | панель: окно Takeoff Item Properties |  |  |
+
+## Палитра команд (Ctrl+Shift+P) (136)
+
+??? note "File (32)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
@@ -1411,8 +1470,12 @@
     | `Export CSV` |  | палитра команд: File | Выгружает строки замеров в файл CSV. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
     | `Export TXT` |  | палитра команд: File | Выгружает выбранные или все замеры в текстовый формат PlanSwift. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
     | `Export Excel` |  | палитра команд: File | Выгружает выбранные или все замеры в `.xlsx`, колонки J, K, L начиная с J10. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Create Project Excel Workbook` |  | палитра команд: File | Copy the bundled TemplateCom.xlsm into a chosen project location. |  |
     | `Export to Current Excel` |  | палитра команд: File | Пишет выбранную папку или позицию в активную ячейку открытой книги Excel. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Export Values to Current Excel` |  | палитра команд: File | Пишет в открытую книгу Excel только колонку `Value` для той же выборки. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Link to Excel` |  | палитра команд: File | Пишет число выбранной позиции в активную ячейку открытой книги и держит его там. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Update Excel Links` |  | палитра команд: File | Записывает все ждущие числа связей, также в закрытые книги. | [Экспорт в Excel](ourplancore-excel.md) |
+    | `Excel Links...` |  | палитра команд: File | Показывает все связи проекта с Excel: перейти к ячейке, разорвать, очистить книгу. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Excel Macro: SQFT` |  | палитра команд: File | Добавляет выбранные строки SQFT в шаблон и запускает макрос `A2_SQFT_calc`. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Excel Macro: Walls` |  | палитра команд: File | Добавляет строки стен с группами этажей и запускает макрос `A3_Walls_Calc_AllGroup`. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Excel Macro: Openings` |  | палитра команд: File | Добавляет проёмы с `Z158`, группирует близкие окна по этажам и запускает `A5_Openings`. | [Экспорт в Excel](ourplancore-excel.md) |
@@ -1453,7 +1516,7 @@
     | `Show AI Manager` |  | палитра команд: Workspace | Переключает на менеджер ИИ с входящими запросами и маркерами. | [ИИ и терминалы](ourplancore-ai.md) |
     | `Show 3D Viewer` |  | палитра команд: Workspace | Переключает на рабочую область с чистым 3D-просмотром модели. | [3D и менеджеры](ourplancore-3d.md) |
 
-??? note "Tools (22)"
+??? note "Tools (25)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
@@ -1472,6 +1535,9 @@
     | `Line Tool` | `L` | палитра команд: Tools | Записывает линейные замеры в позицию takeoff. | [Инструменты замера](ourplancore-tools.md) |
     | `Area Tool` | `A` | палитра команд: Tools | Записывает замеры площади в позицию takeoff. | [Инструменты замера](ourplancore-tools.md) |
     | `J Area Tool` | `J` | палитра команд: Tools | Создаёт позицию `Joist Area` и записывает в неё площади. | [Инструменты замера](ourplancore-tools.md) |
+    | `Annotation Area` |  | палитра команд: Tools | Draw an annotation area takeoff: tree and legend 'annotation', no quantity. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Annotation Line` |  | палитра команд: Tools | Draw an annotation line takeoff: tree and legend 'annotation', no quantity. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
+    | `Annotation Point` |  | палитра команд: Tools | Draw annotation points: tree and legend 'annotation', no quantity. |  |
     | `Beam Tool` | `B` | палитра команд: Tools | Меряет длину балки, создаёт позицию Count и ставит первую точку. | [Инструменты замера](ourplancore-tools.md) |
     | `Openings Tool` | `O` | палитра команд: Tools | Меряет рамку проёма, создаёт позицию Count по размеру и ставит точку в центре. | [Инструменты замера](ourplancore-tools.md) |
     | `Area Cut Tool` | `X` | палитра команд: Tools | Вырезает отверстие внутри выбранного замера площади. | [Правка и привязки](ourplancore-editing.md) |
@@ -1537,7 +1603,7 @@
     | `PDF Layers All Off` |  | палитра команд: PDF Layers | Выключает все слои PDF на активном листе. | [Привязки и трассировка](ourplancore-snap-trace.md) |
     | `Clear PDF Layer Highlights` |  | палитра команд: PDF Layers | Снимает подсветку выделенных слоёв PDF на листе. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
-??? note "Takeoffs (15)"
+??? note "Takeoffs (16)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
@@ -1553,15 +1619,18 @@
     | `Sort Takeoffs A-Z` |  | палитра команд: Takeoffs | Сортирует содержимое выбранной папки Takeoffs или корня по алфавиту. | [Листы (Pages)](ourplancore-pages.md) |
     | `Sort Takeoffs Z-A` |  | палитра команд: Takeoffs | Сортирует содержимое выбранной папки Takeoffs или корня в обратном алфавитном порядке. | [Листы (Pages)](ourplancore-pages.md) |
     | `Sort Takeoffs: Walls` |  | палитра команд: Takeoffs | Сортирует стены в папке и подпапках: ext, corr, dem, затем сечения 2x6 и 2x4. | [Листы (Pages)](ourplancore-pages.md) |
+    | `Sort Takeoffs: Template Order` |  | палитра команд: Takeoffs | Put Takeoffs folders in the folder template order (the Auto Create Takeoff Tree order), inside every building folder. |  |
     | `Sort Takeoffs: Details by Sheet` |  | палитра команд: Takeoffs | Группирует узлы вида `1/A501` по листу после косой черты в порядке дерева Pages. | [Листы (Pages)](ourplancore-pages.md) |
     | `Auto Takeoff Tree` |  | палитра команд: Takeoffs | Создаёт стандартное дерево папок takeoff для нового проекта. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
     | `Create Takeoffs From Pages` |  | палитра команд: Takeoffs | Создаёт верхние папки takeoff по именам листов и папок Pages, набранным заглавными. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
 
-??? note "AI (8)"
+??? note "AI (10)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
     | `OpenAI Settings` |  | палитра команд: AI | Показывает состояние ключа OpenAI и настройки модели ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+    | `Explain Detail (crops -> assembly diagram)` |  | палитра команд: AI | Crop one or more areas around a detail; the terminal assistant explains it and draws a step-by-step isometric diagram. |  |
+    | `Explain Detail + Image` |  | палитра команд: AI | Like Explain Detail, plus a generated illustration image. |  |
     | `Add AI Observation` |  | палитра команд: AI | Сохраняет ручное наблюдение или заметку-маркер ИИ для проекта и листа. | [ИИ и терминалы](ourplancore-ai.md) |
     | `Run Selected AI Request` |  | палитра команд: AI | Запускает выбранный запрос из `AI Inbox`. | [ИИ и терминалы](ourplancore-ai.md) |
     | `Run New Crop Bookmarks` |  | палитра команд: AI | Отправляет в OpenAI только новые закладки-кропы. | [ИИ и терминалы](ourplancore-ai.md) |
@@ -1821,45 +1890,56 @@
     | `Fine rotate the overlay right` | `Ctrl+Alt+Shift+]` | клавиша: Overlay | Поворачивает наложенный лист вправо на самый мелкий угол. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
     | `Reset overlay transform (fine)` | `Ctrl+Alt+Shift+0` | клавиша: Overlay | Сбрасывает сдвиг, масштаб и поворот наложенного листа, вариант клавиши с `Shift`. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
 
-## Settings: категории и разделы (47)
+## Settings: категории и разделы (44)
 
-??? note "Settings, категория (22)"
-
-    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
-    | --- | --- | --- | --- | --- |
-    | `Modules` |  | Settings: Settings, категория | Включает и выключает модули программы и задаёт команду для Job Tracker. | [Settings и модули](ourplancore-settings.md) |
-    | `Page Folders` |  | Settings: Settings, категория | Редактирует стандартные папки Pages, которые создаёт `Auto Folders`, для шаблонов Auto, COM, EWP. | [Settings и модули](ourplancore-settings.md) |
-    | `Blank Sheets` |  | Settings: Settings, категория | Задаёт размер пустого листа по умолчанию и пресеты бумаги. | [Settings и модули](ourplancore-settings.md) |
-    | `Auto Tree` |  | Settings: Settings, категория | Редактирует дерево папок и позиций, которое строит `More > Auto Tree`. | [Settings и модули](ourplancore-settings.md) |
-    | `From Pages` |  | Settings: Settings, категория | Редактирует верхние папки Takeoffs, которые создаются из структуры листов. | [Settings и модули](ourplancore-settings.md) |
-    | `Takeoff Templates` |  | Settings: Settings, категория | Хранит заготовки деревьев и позиций для вставки во вкладке Templates. | [Прочее](ourplancore-extras-other.md) |
-    | `Sheet Takeoff Routing` |  | Settings: Settings, категория | Задаёт уровни, точки W, F, S, U и папки, куда ложится новый замер. | [Settings и модули](ourplancore-settings.md) |
-    | `Takeoff Name Routing` |  | Settings: Settings, категория | Задаёт правила, по которым имя или инструмент отправляют замер в свою папку. | [Settings и модули](ourplancore-settings.md) |
-    | `Sheet Legend` |  | Settings: Settings, категория | Задаёт названия и порядок автоматических блоков легенды по папкам Takeoffs глобально или для проекта. | [Settings и модули](ourplancore-settings.md) |
-    | `Takeoff Colors` |  | Settings: Settings, категория | Задаёт постоянный цвет позиций с точным именем, например `bft`. | [Settings и модули](ourplancore-settings.md) |
-    | `AI Crop Notes` |  | Settings: Settings, категория | Задаёт формат строк Tag и Size в заметках из кропа таблицы ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Sort A/S` |  | Settings: Settings, категория | Редактирует правила раскладки листов A в `Arch` и S в `Struct`. | [Settings и модули](ourplancore-settings.md) |
-    | `Sort D/Sec/WT` |  | Settings: Settings, категория | Редактирует правила, по которым суффикс имени листа отправляет его в папку. | [Settings и модули](ourplancore-settings.md) |
-    | `Auto Rename / Scale` |  | Settings: Settings, категория | Настраивает движок автоимён и масштабов листов, правила суффиксов и чтение штампа ИИ. | [Settings и модули](ourplancore-settings.md) |
-    | `Excel Actions` |  | Settings: Settings, категория | Настраивает кнопки полосы XL и порядок шагов выгрузки `ALL`. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Project Storage` |  | Settings: Settings, категория | Показывает, где проект занимает место, и безопасно ужимает `snap.json`. | [Settings и модули](ourplancore-settings.md) |
-    | `Autosave Recovery` |  | Settings: Settings, категория | Задаёт интервалы повторных попыток автосохранения после ошибки глобально или для проекта. | [Settings и модули](ourplancore-settings.md) |
-    | `Agent Bridge` |  | Settings: Settings, категория | Настраивает доступ локального ассистента к открытому проекту. | [Settings и модули](ourplancore-settings.md) |
-    | `Terminals` |  | Settings: Settings, категория | Настраивает терминалы Claude и Codex: профиль, ширину, усилие и контекст. | [Консоль ИИ](ourplancore-ai-console.md) |
-    | `Workspace` |  | Settings: Settings, категория | Настраивает сервер, устройство, синхронизацию и работу со второго компьютера. | [Settings и модули](ourplancore-settings.md) |
-    | `Keyboard Shortcuts` |  | Settings: Settings, категория | Открывает редактор горячих клавиш, глобально или для проекта. | [Settings и модули](ourplancore-settings.md) |
-    | `Defaults` |  | Settings: Settings, категория | Собирает общие настройки: зум колесом, фоновый прогрев, кеш растра, DPI, линию Beam. | [Settings и модули](ourplancore-settings.md) |
-
-??? note "Settings > Defaults (6)"
+??? note "Settings > Agent Bridge (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Beam annotation line` |  | Settings: Settings > Defaults | Добавляет к каждой новой балке Beam линию-пометку с цветом и отступом размера. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
-    | `Viewport interaction` |  | Settings: Settings > Defaults | Задаёт шаг масштаба колесом мыши в окне листа. | [Settings и модули](ourplancore-settings.md) |
-    | `Background performance` |  | Settings: Settings > Defaults | Включает фоновый прогрев листов проекта и чистку неиспользуемого кеша растра. | [Settings и модули](ourplancore-settings.md) |
-    | `Tree display` |  | Settings: Settings > Defaults | Показывает строки секций и точек под позициями в дереве Takeoffs. | [Settings и модули](ourplancore-settings.md) |
-    | `Display & export defaults` |  | Settings: Settings > Defaults | Открывает ленты Viewport, Display и PDF Output с настройками по умолчанию. | [Settings и модули](ourplancore-settings.md) |
-    | `Sheet Manager raster DPI presets` |  | Settings: Settings > Defaults | Задаёт числа кнопок DPI в Sheet Manager, от 72 до 400. | [Settings и модули](ourplancore-settings.md) |
+    | `Agent Bridge` |  | Settings: Settings > Agent Bridge | Настраивает доступ локального ассистента к открытому проекту. | [Settings и модули](ourplancore-settings.md) |
+
+??? note "Settings > AI Crop Notes (1)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `AI Crop Notes` |  | Settings: Settings > AI Crop Notes | Задаёт формат строк Tag и Size в заметках из кропа таблицы ИИ. | [ИИ и терминалы](ourplancore-ai.md) |
+
+??? note "Settings > Appearance (1)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `Appearance` |  | Settings: Settings > Appearance | Section of the settings panel. |  |
+
+??? note "Settings > Autocomplete (2)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `Autocomplete` |  | Settings: Settings > Autocomplete | Section of the settings panel. |  |
+    | `Try it` |  | Settings: Settings > Autocomplete | Section of the settings panel. |  |
+
+??? note "Settings > Autosave Recovery (1)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `Autosave Recovery` |  | Settings: Settings > Autosave Recovery | Задаёт интервалы повторных попыток автосохранения после ошибки глобально или для проекта. | [Settings и модули](ourplancore-settings.md) |
+
+??? note "Settings > ? (7)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `Beam annotation line` |  | Settings: Settings > ? | Добавляет к каждой новой балке Beam линию-пометку с цветом и отступом размера. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Viewport interaction` |  | Settings: Settings > ? | Задаёт шаг масштаба колесом мыши в окне листа. | [Settings и модули](ourplancore-settings.md) |
+    | `Background performance` |  | Settings: Settings > ? | Включает фоновый прогрев листов проекта и чистку неиспользуемого кеша растра. | [Settings и модули](ourplancore-settings.md) |
+    | `Tree display` |  | Settings: Settings > ? | Показывает строки секций и точек под позициями в дереве Takeoffs. | [Settings и модули](ourplancore-settings.md) |
+    | `Display & export defaults` |  | Settings: Settings > ? | Открывает ленты Viewport, Display и PDF Output с настройками по умолчанию. | [Settings и модули](ourplancore-settings.md) |
+    | `Measurement editing` |  | Settings: Settings > ? | Section of the settings panel. |  |
+    | `Sheet Manager raster DPI presets` |  | Settings: Settings > ? | Задаёт числа кнопок DPI в Sheet Manager, от 72 до 400. | [Settings и модули](ourplancore-settings.md) |
+
+??? note "Settings > Blank Sheets (1)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `Blank Sheets` |  | Settings: Settings > Blank Sheets | Задаёт размер пустого листа по умолчанию и пресеты бумаги. | [Settings и модули](ourplancore-settings.md) |
 
 ??? note "Settings > Excel Actions (4)"
 
@@ -1869,6 +1949,31 @@
     | `Floor folder matching` |  | Settings: Settings > Excel Actions | Задаёт слова, по которым папка считается этажом, например `1, 1st, first`. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Framing folders -> Excel blocks` |  | Settings: Settings > Excel Actions | Сопоставляет папки framing в дереве с блоками строк в книге Excel. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Walls extras: sheathing, shear walls, shaft, units, balconies` |  | Settings: Settings > Excel Actions | Настраивает выгрузку обшивки, shear walls, shaft walls, квартир и балконов в Excel. | [Экспорт в Excel](ourplancore-excel.md) |
+
+??? note "Settings > Excel Links (1)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `Link to Excel behaviour` |  | Settings: Settings > Excel Links | Как связь пишет в открытую и закрытую книгу, копии книги, паузы. | [Экспорт в Excel](ourplancore-excel.md) |
+
+??? note "Settings > Excel Rules (1)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `Excel Rules: clean-up after ALL` |  | Settings: Settings > Excel Rules | Section of the settings panel. |  |
+
+??? note "Settings > Sheet Legend (2)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `PDF legend placement` |  | Settings: Settings > Sheet Legend | Section of the settings panel. |  |
+    | `Sheet Legend` |  | Settings: Settings > Sheet Legend | Задаёт названия и порядок автоматических блоков легенды по папкам Takeoffs глобально или для проекта. | [Settings и модули](ourplancore-settings.md) |
+
+??? note "Settings > PDF Editable Export (1)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `PDF editable export (Adobe)` |  | Settings: Settings > PDF Editable Export | Какие замеры в PDF лежат объектами для правки в Adobe Acrobat. | [Settings и модули](ourplancore-settings.md) |
 
 ??? note "Settings > Project Storage (6)"
 
@@ -1890,22 +1995,48 @@
     | `Suffix generation rules (first enabled match wins)` |  | Settings: Settings > Auto Rename / Scale | Таблица правил суффиксов листа; срабатывает первая включённая подходящая строка. | [Settings и модули](ourplancore-settings.md) |
     | `Learned rules (lower-priority evidence)` |  | Settings: Settings > Auto Rename / Scale | Хранит выученные правила имён листов, глобально или для проекта, с низшим приоритетом. | [Settings и модули](ourplancore-settings.md) |
 
-??? note "Settings > Sheet Takeoff Routing (3)"
+??? note "Settings > Sheet Takeoff Routing (4)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
+    | `Sheet Takeoff Routing` |  | Settings: Settings > Sheet Takeoff Routing | Задаёт уровни, точки W, F, S, U и папки, куда ложится новый замер. | [Settings и модули](ourplancore-settings.md) |
     | `Levels` |  | Settings: Settings > Sheet Takeoff Routing | Таблица уровней: метка точки, папки этажа для walls, framing, shear и теги имени. | [Маршрутизация и правила](ourplancore-routing.md) |
     | `Rows` |  | Settings: Settings > Sheet Takeoff Routing | Таблица строк точек маршрутизации; строка U одной точкой ведёт все этажи в units. | [Settings и модули](ourplancore-settings.md) |
     | `Tool destinations` |  | Settings: Settings > Sheet Takeoff Routing | Задаёт папку назначения для замеров каждого инструмента. | [Маршрутизация и правила](ourplancore-routing.md) |
 
-??? note "Settings > Workspace (2)"
+??? note "Settings > Takeoff Colors (1)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
+    | `Takeoff Colors` |  | Settings: Settings > Takeoff Colors | Задаёт постоянный цвет позиций с точным именем, например `bft`. | [Settings и модули](ourplancore-settings.md) |
+
+??? note "Settings > Takeoff Name Routing (1)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `Takeoff Name Routing` |  | Settings: Settings > Takeoff Name Routing | Задаёт правила, по которым имя или инструмент отправляют замер в свою папку. | [Settings и модули](ourplancore-settings.md) |
+
+??? note "Settings > Terminals (1)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `Terminals` |  | Settings: Settings > Terminals | Настраивает терминалы Claude и Codex: профиль, ширину, усилие и контекст. | [Консоль ИИ](ourplancore-ai-console.md) |
+
+??? note "Settings > Voice Input (1)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `Voice Input` |  | Settings: Settings > Voice Input | Section of the settings panel. |  |
+
+??? note "Settings > Workspace (3)"
+
+    | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
+    | --- | --- | --- | --- | --- |
+    | `Workspace` |  | Settings: Settings > Workspace | Настраивает сервер, устройство, синхронизацию и работу со второго компьютера. | [Settings и модули](ourplancore-settings.md) |
     | `Connect another computer` |  | Settings: Settings > Workspace | Подключает второй компьютер к рабочему пространству одноразовым кодом. | [Workspace, Job Tracker, CLI](ourplancore-workspace.md) |
     | `Projects` |  | Settings: Settings > Workspace | Список общих проектов: поделиться текущим, открыть, разобрать конфликты, применить общие пресеты. | [Settings и модули](ourplancore-settings.md) |
 
-## Окна и диалоги (46)
+## Окна и диалоги (47)
 
 ??? note "окно Job Is Already Open (3)"
 
@@ -1925,14 +2056,16 @@
     | `PDF project` |  | окно: окно Open Project | Создаёт новый проект из файлов PDF. | [Проекты и сохранение](job-creation-storage.md) |
     | `Blank project` |  | окно: окно Open Project | Создаёт пустой проект без листов PDF. | [Проекты и сохранение](job-creation-storage.md) |
 
-??? note "окно (27)"
+??? note "окно (28)"
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
     | `Create Line Grid` |  | окно: окно | Строит внутри площади сетку линий с заданным шагом по горизонтали и вертикали. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
     | `Batch Overlay` |  | окно: окно | Подбирает пары листов и применяет наложения сразу ко многим листам проекта. | [Кропы, маска, наложения, легенда](ourplancore-sheets-advanced.md) |
     | `Command Palette` |  | окно: окно | Окно поиска и запуска любой команды программы по названию. | [Начало работы](ourplancore-start.md) |
+    | `DeepSeek API key` |  | окно: окно | Buttons: Save and start, Later. |  |
     | `Estimating` |  | окно: окно | Таблица всех замеров с фильтром, переходом на лист, правкой и копированием строк. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
+    | `Excel Links` |  | окно: окно | Окно со всеми связями проекта: ячейка, состояние, причина, кнопки действий. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Recover Keyboard Shortcuts` |  | окно: окно | Восстанавливает испорченный файл горячих клавиш из копии или сбрасывает к исходным. |  |
     | `Keyboard Shortcuts` |  | окно: окно | Редактор горячих клавиш: назначить, сбросить, глобально или для проекта. | [Settings и модули](ourplancore-settings.md) |
     | `Rename Legend Group` |  | окно: окно | Переименовывает группу строк легенды на листе. |  |
@@ -1943,7 +2076,6 @@
     | `Paste Measurements` |  | окно: окно | Спрашивает, вставлять замеры в те же позиции или в новые. | [Правка и привязки](ourplancore-editing.md) |
     | `OpenAI Settings` |  | окно: окно | Сохраняет или стирает ключ OpenAI в переменных среды пользователя. | [ИИ и терминалы](ourplancore-ai.md) |
     | `Import OurPlanCore into Current Job` |  | окно: окно | Импортирует другой проект OurPlanCore, файл `.ourplan` или папку, в текущий проект. | [Проекты и сохранение](job-creation-storage.md) |
-    | `Overlay Color` |  | окно: окно | Выбирает цвет, которым рисуется наложенный лист. |  |
     | `Page Setup` |  | окно: окно | Плавающее окно имени и масштаба листа с переходом по листам проекта. | [Листы (Pages)](ourplancore-pages.md) |
     | `Export PDF` |  | окно: окно | Выбор листов и настроек для выгрузки в PDF; кнопки `All` и `None`. | [PDF и сдача](ourplancore-pdf.md) |
     | `Import PDF Takeoffs` |  | окно: окно | Выбирает PDF, показывает найденные замеры и импортирует их в позиции takeoff. | [Прочее](ourplancore-extras-other.md) |
