@@ -16,7 +16,7 @@
         <link rel="prev" href="../window/">
       
       
-        <link rel="next" href="../comments-save/">
+        <link rel="next" href="../excel-link/">
       
       
         
@@ -2006,6 +2006,8 @@
       
         
       
+        
+      
     
     
     
@@ -2664,6 +2666,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../excel-link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Связь с Excel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -7839,7 +7869,7 @@
 
 
 <h1 id="_1">Измерения<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h1>
-<p>Главная часть OurPDF. Замеры как в Acrobat (расстояние, периметр, площадь) плюс то, к чему привыкли в OurPlanCore: клавиши <code>R</code>, <code>L</code>, <code>A</code>, <code>J</code>, <code>X</code>, <code>C</code>, режимы Орто и Box, Tab по линии чертежа, вырезы, joists и extra joists, сдвиг граней, выделение рамкой, длины в LF при наведении. Здесь по шагам: масштаб, блоки панели, каждый вид замера, правка, удаление точек, легенда, список и Excel.</p>
+<p>Главная часть OurPDF. Замеры как в Acrobat (расстояние, периметр, площадь) плюс то, к чему привыкли в OurPlanCore: клавиши <code>R</code>, <code>L</code>, <code>A</code>, <code>J</code>, <code>X</code>, <code>C</code>, режимы Орто и Box, Tab по линии чертежа, вырезы, joists и extra joists, сдвиг граней, выделение рамкой, длины в LF при наведении. Здесь по шагам: масштаб, блоки панели, каждый вид замера, правка, удаление точек, легенда, список и Excel. Связь строки легенды с ячейкой книги: отдельная страница <a href="../excel-link/">Связь с Excel</a>.</p>
 <figure>
 <p><img alt="Панель Измерение и замер площади" src="../../assets/images/ourpdf/measure-panel.png" />
   </p>
@@ -8003,7 +8033,7 @@
 </tr>
 <tr>
 <td>Масштаб</td>
-<td>поле со списком, калибровка, <code>...</code> (масштаб и точность), булавка; кнопка Excel, J2, круг формата</td>
+<td>поле со списком, калибровка, <code>...</code> (масштаб и точность), булавка; кнопки "Связать с Excel" и Excel, J2, круг формата</td>
 </tr>
 </tbody>
 </table>
@@ -8345,7 +8375,7 @@
 <figure>
 <p><img alt="Как выглядит выделение" src="../../assets/images/ourpdf/selection.png" />
   </p>
-<figcaption>Выбраны площадь UNIT 102 и линия коридора: линии толще, белые квадратики на точках, вокруг оранжевая рамка.</figcaption>
+<figcaption>Выбраны площадь UNIT 102 и линия коридора: линии толще, белые квадратики на точках, вокруг каждого синяя пунктирная рамка, снаружи оранжевая рамка с ручками.</figcaption>
 </figure>
 <h2 id="transform">Поворот, масштаб и Mirror<a class="headerlink" href="#transform" title="Прямая ссылка на раздел">&para;</a></h2>
 <figure>
@@ -8502,6 +8532,10 @@
 <td>не входит в экспорт по области легенды; строка состояния пишет, сколько не вошло</td>
 </tr>
 <tr>
+<td><a href="../excel-link/">связь с Excel</a></td>
+<td>входит в число: скрытие в ячейку ничего не пишет</td>
+</tr>
+<tr>
 <td>"Сохранить как", вжечь в лист</td>
 <td>не впечатывается</td>
 </tr>
@@ -8527,7 +8561,7 @@
 <figure>
 <p><img alt="Блок вида с кнопкой Excel" src="../../assets/images/ourpdf/excel-selection.png" />
   </p>
-<figcaption>Замок открыт, выделена площадь: блок вида пришёл с кнопкой Excel, переключателем J2 и кругом формата. При закрытом замке кнопка стоит в блоке "Масштаб".</figcaption>
+<figcaption>Замок открыт, выделена площадь: блок вида пришёл с кнопками "Связать с Excel" и Excel, переключателем J2 и кругом формата. При закрытом замке кнопка стоит в блоке "Масштаб".</figcaption>
 </figure>
 <ol>
 <li>Откройте книгу Excel и выберите ячейку, с которой должна начаться вставка.</li>
@@ -8562,6 +8596,7 @@
 </table>
 <p><strong>J2</strong> (синяя значит включена): длина до 8 футов включительно округляется вверх до целого фута, длиннее 8 футов вверх до чётного. Только при экспорте, геометрия не меняется. По умолчанию выключена.</p>
 <p>Экспорт пишет поверх значений в целевых ячейках: проверьте ячейку и свободное место. Нет открытой книги, ячейки защищены или объединены, книга только для чтения: вставка не получится, строка состояния скажет почему.</p>
+<p>Чтобы число строки легенды оставалось в ячейке и обновлялось само: <a href="../excel-link/">Связь с Excel</a>.</p>
 <h2 id="list">Список замеров и отдельный файл Excel<a class="headerlink" href="#list" title="Прямая ссылка на раздел">&para;</a></h2>
 <figure>
 <p><img alt="Вкладка Комментарии со списком замеров" src="../../assets/images/ourpdf/comments-list.png" />
@@ -8717,6 +8752,7 @@
 <h2 id="_9">См. также<a class="headerlink" href="#_9" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li><a href="../window/">Окно программы</a></li>
+<li><a href="../excel-link/">Связь с Excel</a></li>
 <li><a href="../comments-save/">Комментарии и сохранение</a></li>
 <li><a href="../shortcuts/">Горячие клавиши</a>: все клавиши и отличия от OurPlanCore</li>
 <li><a href="../../reference/ourplancore-tools/">Инструменты замера OurPlanCore</a>, <a href="../../reference/ourplancore-editing/">Правка и привязки OurPlanCore</a></li>
@@ -8781,13 +8817,13 @@
         
         
           
-          <a href="../comments-save/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Комментарии и сохранение">
+          <a href="../excel-link/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Связь с Excel">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Вперед
               </span>
               <div class="md-ellipsis">
-                Комментарии и сохранение
+                Связь с Excel
               </div>
             </div>
             <div class="md-footer__button md-icon">

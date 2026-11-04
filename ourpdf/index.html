@@ -2006,6 +2006,8 @@
       
         
       
+        
+      
     
     
     
@@ -2134,6 +2136,34 @@
     
   
     Измерения
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="excel-link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Связь с Excel
   
 
     
@@ -6919,7 +6949,7 @@
 
 
 <h1 id="ourpdf">OurPDF<a class="headerlink" href="#ourpdf" title="Прямая ссылка на раздел">&para;</a></h1>
-<p>OurPDF - программа для просмотра и разметки строительных чертежей в PDF. Окно и комментарии устроены как в Adobe Acrobat, а замеры как в OurPlanCore: те же клавиши <code>R</code>, <code>L</code>, <code>A</code>, <code>J</code>, <code>X</code>, Box двумя углами, Tab по линии чертежа, вырезы из площади и joists. Описание сверено с OurPDF 0.9.25 (ноябрь 2026).</p>
+<p>OurPDF - программа для просмотра и разметки строительных чертежей в PDF. Окно и комментарии устроены как в Adobe Acrobat, а замеры как в OurPlanCore: те же клавиши <code>R</code>, <code>L</code>, <code>A</code>, <code>J</code>, <code>X</code>, Box двумя углами, Tab по линии чертежа, вырезы из площади и joists. Описание сверено с OurPDF 0.9.26 (ноябрь 2026).</p>
 <figure>
 <p><img alt="Окно OurPDF с открытым демо-листом" src="../assets/images/ourpdf/window.png" />
   </p>
@@ -6928,7 +6958,7 @@
 <h2 id="_1">Что умеет и чего не делает<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Открывает PDF вкладками, листает, ищет текст, показывает слои, закладки и вложения.</li>
-<li>Меряет длины, ломаные, площади с вырезами, joists / rafters и штуки (Count) по масштабу листа; итог виден на листе, в легенде, в списке и выгружается в Excel.</li>
+<li>Меряет длины, ломаные, площади с вырезами, joists / rafters и штуки (Count) по масштабу листа; итог виден на листе, в легенде, в списке и выгружается в Excel; строку легенды можно <a href="excel-link/">связать с ячейкой книги</a>.</li>
 <li>Ставит комментарии: заметки, текст, маркер, рисование от руки, фигуры, облака.</li>
 <li>Записывает пометки и замеры в сам PDF по <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>, как Acrobat, и перед записью кладёт копию прежнего файла в резервные копии.</li>
 <li>Переставляет, поворачивает, удаляет и вытаскивает страницы, правит содержимое листа (текст, картинки, объекты).</li>
@@ -6986,6 +7016,7 @@
 <li><a href="window/">Окно программы</a>: меню, верхняя панель из блоков, замок, вкладки слева, полоса справа, строка состояния</li>
 <li><a href="how-to-measure/">Как мерить по шагам</a>: стены, площади, фасады, joists, проверка, правка, выгрузка</li>
 <li><a href="measure/">Измерения</a>: масштаб, привязки, расстояние, линия, площадь, Box, Tab, вырезы, joists, Count, правка точек и граней, легенда, список и Excel</li>
+<li><a href="excel-link/">Связь с Excel</a>: число строки легенды в ячейке книги, обновляется само</li>
 </ul>
 </li>
 <li>
@@ -7027,7 +7058,7 @@
 <td><code>%APPDATA%\OurPDF</code></td>
 </tr>
 <tr>
-<td>Пометки и масштабы, ещё не записанные в PDF, скрытые в легенде</td>
+<td>Пометки и масштабы, ещё не записанные в PDF, скрытые в легенде, связи с Excel</td>
 <td><code>%APPDATA%\OurPDF\markup</code></td>
 </tr>
 <tr>
@@ -7037,6 +7068,10 @@
 <tr>
 <td>Резервные копии перед <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span></td>
 <td><code>%LOCALAPPDATA%\OurPDF\backups</code></td>
+</tr>
+<tr>
+<td>Копии книг Excel перед записью</td>
+<td><code>%LOCALAPPDATA%\OurPDF\excel-link-backups</code></td>
 </tr>
 <tr>
 <td>Журналы</td>
