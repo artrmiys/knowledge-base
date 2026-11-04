@@ -2002,6 +2002,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2206,6 +2210,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../overlay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Наложение листов
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Кроп и новые листы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../view-settings/" class="md-nav__link">
         
   
@@ -2342,6 +2402,28 @@
     <span class="md-ellipsis">
       
         Поиск
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Наложение листов
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Кроп и новые листы
       
     </span>
   </a>
@@ -6998,6 +7080,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Наложение листов
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Кроп и новые листы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pages" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7093,8 +7197,9 @@
 
 
 <h1 id="ourpdf">Горячие клавиши OurPDF<a class="headerlink" href="#ourpdf" title="Прямая ссылка на раздел">&para;</a></h1>
-<p>Здесь: все клавиши OurPDF 0.9.0 с исходными назначениями, по группам; мышь и модификаторы; чем клавиши отличаются от OurPlanCore; как переназначить. "Нет" в колонке клавиши значит, что у команды нет клавиши по умолчанию, её можно назначить в Настройках.</p>
+<p>Здесь: все клавиши OurPDF 0.9.25 с исходными назначениями, по группам; мышь и модификаторы; чем клавиши отличаются от OurPlanCore; как переназначить. "Нет" в колонке клавиши значит, что у команды нет клавиши по умолчанию, её можно назначить в Настройках.</p>
 <p>Клавиша не срабатывает, пока фокус в текстовом поле: там буква печатается. Кликните по листу, и клавиши снова работают.</p>
+<p>В самой программе <span class="keys"><kbd class="key-f1">F1</kbd></span> открывает панель со всеми действующими клавишами, повторное <span class="keys"><kbd class="key-f1">F1</kbd></span> или <span class="keys"><kbd class="key-escape">Esc</kbd></span> закрывает.</p>
 <h2 id="tools">Инструменты и выделение<a class="headerlink" href="#tools" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7111,6 +7216,10 @@
 <tr>
 <td><span class="keys"><kbd class="key-e">E</kbd></span></td>
 <td>Выделение рамкой: слева направо то, что целиком внутри, справа налево то, что задето</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-t">T</kbd></span></td>
+<td>Выделить текст PDF: протянуть или двойной щелчок по слову, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> копирует</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-h">H</kbd></span></td>
@@ -7156,12 +7265,24 @@
 <td>Joists / rafters (Joist Area в OurPlanCore)</td>
 </tr>
 <tr>
+<td><span class="keys"><kbd class="key-p">P</kbd></span></td>
+<td>Count: счётные точки</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-b">B</kbd></span></td>
+<td>Break: разделить выбранную ломаную на отрезки</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span></td>
+<td>Продолжить тейкоф выбранного замера, ещё раз стоп</td>
+</tr>
+<tr>
 <td><span class="keys"><kbd class="key-x">X</kbd></span></td>
-<td>Вырез из площади: рамка или многоугольник (дырка, откус или деление)</td>
+<td>Вырез из площади и линий: рамка или многоугольник (дырка, откус или деление)</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-f9">F9</kbd></span></td>
-<td>Box: площадь, линия, joists и вырез двумя противоположными углами</td>
+<td>Box: площадь, линия, joists, вырез и обе стороны расстояния двумя противоположными углами</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-f8">F8</kbd></span></td>
@@ -7196,8 +7317,44 @@
 <td>Длины линий (LF) только при наведении или всегда на листе</td>
 </tr>
 <tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-e">E</kbd></span></td>
+<td>В открытый Excel: только числа</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-t">T</kbd></span></td>
+<td>В открытый Excel: имя или цвет, число, единица</td>
+</tr>
+<tr>
 <td>нет</td>
-<td>Экспорт замеров в Excel</td>
+<td>Экспорт замеров в файл Excel</td>
+</tr>
+<tr>
+<td>нет</td>
+<td>Округление joists J2</td>
+</tr>
+<tr>
+<td>нет</td>
+<td>Pitch, P Line, Ends</td>
+</tr>
+<tr>
+<td>нет</td>
+<td>Поворот, отражение, поворот и масштаб выбранных замеров</td>
+</tr>
+<tr>
+<td>нет</td>
+<td>Привязка: все типы вкл и выкл</td>
+</tr>
+<tr>
+<td>нет</td>
+<td>Легенда на листе: оставить или убрать</td>
+</tr>
+<tr>
+<td>нет</td>
+<td>Показать скрытые в легенде замеры</td>
+</tr>
+<tr>
+<td>нет</td>
+<td>Сбросить панель: блоки на исходные места</td>
 </tr>
 </tbody>
 </table>
@@ -7266,6 +7423,10 @@
 <td>Закрыть вкладку</td>
 </tr>
 <tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-t">T</kbd></span></td>
+<td>Открыть закрытый файл</td>
+</tr>
+<tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-comma">,</kbd></span></td>
 <td>Настройки</td>
 </tr>
@@ -7295,6 +7456,68 @@
 <tr>
 <td><span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f3">F3</kbd></span></td>
 <td>Найти предыдущее</td>
+</tr>
+</tbody>
+</table>
+<h2 id="overlay">Наложение листов<a class="headerlink" href="#overlay" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Клавиша</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-arrow-right">Right</kbd></span> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-arrow-up">Up</kbd></span> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-arrow-down">Down</kbd></span></td>
+<td>сдвиг активного слоя, 6 pt; с <span class="keys"><kbd class="key-shift">Shift</kbd></span> 1 pt</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-plus">+</kbd></span> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-minus">-</kbd></span></td>
+<td>масштаб слоя, x1.05; с <span class="keys"><kbd class="key-shift">Shift</kbd></span> x1.01</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd></span> и <code>[</code> или <code>]</code></td>
+<td>поворот слоя, 1 градус; с <span class="keys"><kbd class="key-shift">Shift</kbd></span> 0,25 градуса</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-0">0</kbd></span></td>
+<td>сброс положения слоя</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd></span> и тянуть</td>
+<td>двигать слой мышью без панели; с <span class="keys"><kbd class="key-shift">Shift</kbd></span> точнее</td>
+</tr>
+<tr>
+<td>нет</td>
+<td>Панель "Наложение", добавить слой, автоподгонка, следующее совпадение, по точкам, пакетом</td>
+</tr>
+</tbody>
+</table>
+<h2 id="crop">Кроп и новые листы<a class="headerlink" href="#crop" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Клавиша</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>нет</td>
+<td>Панель "Кроп"</td>
+</tr>
+<tr>
+<td>нет</td>
+<td>Кроп на лист</td>
+</tr>
+<tr>
+<td>нет</td>
+<td>Заблокировать или отпереть кропы листа</td>
+</tr>
+<tr>
+<td>нет</td>
+<td>Новый чистый лист, из видимой области, из рамки</td>
 </tr>
 </tbody>
 </table>
@@ -7392,7 +7615,7 @@
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-f5">F5</kbd></span></td>
-<td>Показать или скрыть правую панель (такеоффы)</td>
+<td>Показать или скрыть правую панель</td>
 </tr>
 </tbody>
 </table>
@@ -7509,6 +7732,14 @@
 <td>убрать ближайшую extra</td>
 </tr>
 <tr>
+<td>щелчок по значку строки легенды</td>
+<td>скрыть или показать тейкоф</td>
+</tr>
+<tr>
+<td>ручка блока панели, тянуть</td>
+<td>переставить блок; правая кнопка по ручке: сбросить панель</td>
+</tr>
+<tr>
 <td><span class="keys"><kbd class="key-shift">Shift</kbd></span> при рисовании фигуры</td>
 <td>ровно: квадрат, круг, 45 градусов</td>
 </tr>
@@ -7519,7 +7750,7 @@
 </tbody>
 </table>
 <h2 id="vs-ourplancore">Отличия от OurPlanCore<a class="headerlink" href="#vs-ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Клавиши замеров совпадают: <span class="keys"><kbd class="key-r">R</kbd></span>, <span class="keys"><kbd class="key-l">L</kbd></span>, <span class="keys"><kbd class="key-a">A</kbd></span>, <span class="keys"><kbd class="key-j">J</kbd></span>, <span class="keys"><kbd class="key-x">X</kbd></span>, <span class="keys"><kbd class="key-c">C</kbd></span>, <span class="keys"><kbd class="key-f8">F8</kbd></span>, <span class="keys"><kbd class="key-f9">F9</kbd></span>, <span class="keys"><kbd class="key-d">D</kbd></span>, <span class="keys"><kbd class="key-tab">Tab</kbd></span>, <span class="keys"><kbd class="key-backspace">Backspace</kbd></span>, <span class="keys"><kbd class="key-escape">Esc</kbd></span>. Остальное различается:</p>
+<p>Клавиши замеров совпадают: <span class="keys"><kbd class="key-r">R</kbd></span>, <span class="keys"><kbd class="key-l">L</kbd></span>, <span class="keys"><kbd class="key-a">A</kbd></span>, <span class="keys"><kbd class="key-j">J</kbd></span>, <span class="keys"><kbd class="key-x">X</kbd></span>, <span class="keys"><kbd class="key-c">C</kbd></span>, <span class="keys"><kbd class="key-f8">F8</kbd></span>, <span class="keys"><kbd class="key-f9">F9</kbd></span>, <span class="keys"><kbd class="key-d">D</kbd></span>, <span class="keys"><kbd class="key-p">P</kbd></span>, <span class="keys"><kbd class="key-space">Space</kbd></span>, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-b">B</kbd></span>, <span class="keys"><kbd class="key-tab">Tab</kbd></span>, <span class="keys"><kbd class="key-backspace">Backspace</kbd></span>, <span class="keys"><kbd class="key-escape">Esc</kbd></span>, <span class="keys"><kbd class="key-f1">F1</kbd></span>, клавиши наложения с <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd></span>. Остальное различается:</p>
 <table>
 <thead>
 <tr>
@@ -7570,14 +7801,9 @@
 <td>Fit: лист целиком</td>
 </tr>
 <tr>
-<td><span class="keys"><kbd class="key-p">P</kbd></span>, <span class="keys"><kbd class="key-b">B</kbd></span>, <span class="keys"><kbd class="key-o">O</kbd></span>, <span class="keys"><kbd class="key-space">Space</kbd></span></td>
-<td>нет: Count, Beam, Openings и Record в OurPDF нет</td>
-<td>Count, Beam, Openings, Record</td>
-</tr>
-<tr>
-<td><span class="keys"><kbd class="key-f1">F1</kbd></span></td>
-<td>нет (клавиши в Настройках)</td>
-<td>шпаргалка клавиш</td>
+<td><span class="keys"><kbd class="key-b">B</kbd></span>, <span class="keys"><kbd class="key-o">O</kbd></span></td>
+<td>нет: Beam и Openings в OurPDF нет</td>
+<td>Beam, Openings</td>
 </tr>
 </tbody>
 </table>

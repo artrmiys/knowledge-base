@@ -2002,6 +2002,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2186,6 +2190,62 @@
     
   
     Страницы, правка, слои
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="overlay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Наложение листов
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="crop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Кроп и новые листы
   
 
     
@@ -6859,19 +6919,20 @@
 
 
 <h1 id="ourpdf">OurPDF<a class="headerlink" href="#ourpdf" title="Прямая ссылка на раздел">&para;</a></h1>
-<p>OurPDF - программа для просмотра и разметки строительных чертежей в PDF. Окно и комментарии устроены как в Adobe Acrobat, а замеры как в OurPlanCore: те же клавиши <code>R</code>, <code>L</code>, <code>A</code>, <code>J</code>, <code>X</code>, Box двумя углами, Tab по линии чертежа, вырезы из площади и joists. Описание сверено с OurPDF 0.9.0 (октябрь 2026).</p>
+<p>OurPDF - программа для просмотра и разметки строительных чертежей в PDF. Окно и комментарии устроены как в Adobe Acrobat, а замеры как в OurPlanCore: те же клавиши <code>R</code>, <code>L</code>, <code>A</code>, <code>J</code>, <code>X</code>, Box двумя углами, Tab по линии чертежа, вырезы из площади и joists. Описание сверено с OurPDF 0.9.25 (ноябрь 2026).</p>
 <figure>
 <p><img alt="Окно OurPDF с открытым демо-листом" src="../assets/images/ourpdf/window.png" />
   </p>
-<figcaption>Окно OurPDF: меню и панель инструментов сверху, слева вкладки листа, справа полоса вкладок и инструментов, внизу строка состояния. Здесь и дальше картинки сняты на демонстрационном листе (вымышленный план, не реальный объект).</figcaption>
+<figcaption>Окно OurPDF: сверху меню, вкладка файла и две линии панели, слева вкладки листа, справа полоса вкладок и инструментов, внизу строка состояния. Здесь и дальше картинки сняты на демонстрационном листе (вымышленный план, не реальный объект).</figcaption>
 </figure>
 <h2 id="_1">Что умеет и чего не делает<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Открывает PDF вкладками, листает, ищет текст, показывает слои, закладки и вложения.</li>
-<li>Меряет длины, ломаные, площади с вырезами и joists / rafters по масштабу листа; итог виден на листе, в списке и выгружается в Excel.</li>
+<li>Меряет длины, ломаные, площади с вырезами, joists / rafters и штуки (Count) по масштабу листа; итог виден на листе, в легенде, в списке и выгружается в Excel.</li>
 <li>Ставит комментарии: заметки, текст, маркер, рисование от руки, фигуры, облака.</li>
 <li>Записывает пометки и замеры в сам PDF по <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>, как Acrobat, и перед записью кладёт копию прежнего файла в резервные копии.</li>
 <li>Переставляет, поворачивает, удаляет и вытаскивает страницы, правит содержимое листа (текст, картинки, объекты).</li>
+<li>Кладёт другой лист поверх текущего цветным слоем (<a href="overlay/">Наложение</a>), переносит детали с листа на лист (<a href="crop/">Кроп</a>), создаёт новые листы.</li>
 <li>Показывает проекты OurPlanCore (<code>.ourplan</code>) и их снимки только для просмотра.</li>
 <li>Ничего не загружает в интернет и не меняет проекты OurPlanCore. Takeoffs по-прежнему ведутся в OurPlanCore: замеры OurPDF живут в PDF и в дерево Takeoffs не попадают.</li>
 </ul>
@@ -6897,9 +6958,9 @@
 <h2 id="first-five-minutes">Первые пять минут<a class="headerlink" href="#first-five-minutes" title="Прямая ссылка на раздел">&para;</a></h2>
 <ol>
 <li><strong>Открыть PDF</strong>: перетащить в окно или <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span>.</li>
-<li><strong>Задать масштаб листа</strong>: кнопка-линейка на панели инструментов (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-m">M</kbd></span>), справа сверху поле "Масштаб листа": выбрать <code>1/8" = 1'-0"</code> или ввести свой и нажать <span class="keys"><kbd class="key-enter">Enter</kbd></span>. Подробно: <a href="measure/#scale">Масштаб и калибровка</a>.</li>
-<li><strong>Мерить</strong>: выбрать тип (расстояние <span class="keys"><kbd class="key-r">R</kbd></span>, линия <span class="keys"><kbd class="key-l">L</kbd></span>, площадь <span class="keys"><kbd class="key-a">A</kbd></span>), щёлкать по точкам. Курсор цепляется к линиям чертежа.</li>
-<li><strong>Смотреть значения</strong>: площадь подписана на листе, длина линии появляется при наведении мыши. Все замеры списком: вкладка "Комментарии" на полосе справа.</li>
+<li><strong>Задать масштаб листа</strong>: блок "Масштаб" во второй линии верхней панели: выбрать <code>1/8" = 1'-0"</code> или ввести свой и нажать <span class="keys"><kbd class="key-enter">Enter</kbd></span>. Подробно: <a href="measure/#scale">Масштаб и калибровка</a>.</li>
+<li><strong>Мерить</strong>: кнопка-линейка (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-m">M</kbd></span>), выбрать тип (расстояние <span class="keys"><kbd class="key-r">R</kbd></span>, линия <span class="keys"><kbd class="key-l">L</kbd></span>, площадь <span class="keys"><kbd class="key-a">A</kbd></span>), щёлкать по точкам. Курсор цепляется к линиям чертежа.</li>
+<li><strong>Смотреть значения</strong>: площадь подписана на листе, длина линии появляется при наведении мыши. Итоги по типам и цветам: вкладка "Легенда" на полосе справа. Все замеры по одному: вкладка "Комментарии".</li>
 <li><strong>Сохранить</strong>: замеры хранятся сразу, в профиле программы. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> записывает их в сам PDF, перед этим копия прежнего файла кладётся в папку резервных копий.</li>
 </ol>
 <div class="admonition tip">
@@ -6908,6 +6969,7 @@
 </div>
 <h2 id="built-in-guide">Руководство внутри программы<a class="headerlink" href="#built-in-guide" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
+<li><span class="keys"><kbd class="key-f1">F1</kbd></span> или <code>Справка &gt; Горячие клавиши</code>: панель со всеми действующими клавишами.</li>
 <li><code>Справка &gt; Как всё работает</code>: это же руководство в PDF, открывается вкладкой. Все вкладки, упор на измерения.</li>
 <li><code>Справка &gt; Для нейросетей</code>: описание моста, через который Claude и Codex управляют открытым OurPDF (<a href="ai/">Управление нейросетями</a>).</li>
 <li><code>Справка &gt; Горячие клавиши и настройки</code>: окно Настроек со списком всех клавиш.</li>
@@ -6921,9 +6983,9 @@
 <p><strong>Окно и измерения</strong></p>
 <hr />
 <ul>
-<li><a href="window/">Окно программы</a>: меню, панель инструментов, вкладки слева, полоса справа, строка состояния</li>
+<li><a href="window/">Окно программы</a>: меню, верхняя панель из блоков, замок, вкладки слева, полоса справа, строка состояния</li>
 <li><a href="how-to-measure/">Как мерить по шагам</a>: стены, площади, фасады, joists, проверка, правка, выгрузка</li>
-<li><a href="measure/">Измерения</a>: масштаб, привязки, расстояние, линия, площадь, Box, Tab, вырезы, joists, правка точек и граней, список и Excel</li>
+<li><a href="measure/">Измерения</a>: масштаб, привязки, расстояние, линия, площадь, Box, Tab, вырезы, joists, Count, правка точек и граней, легенда, список и Excel</li>
 </ul>
 </li>
 <li>
@@ -6932,6 +6994,8 @@
 <ul>
 <li><a href="comments-save/">Комментарии и сохранение</a>: заметки, текст, фигуры, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> в PDF, резервные копии, "Сохранить как"</li>
 <li><a href="pages-edit/">Страницы, правка, слои</a>: страницы, правка содержимого PDF, слои, поиск, снимки OurPlanCore</li>
+<li><a href="overlay/">Наложение листов</a>: другой лист поверх этого, совмещение, пакетом</li>
+<li><a href="crop/">Кроп на лист и новые листы</a>: деталь на другой лист, чистый лист, лист из области</li>
 </ul>
 </li>
 <li>
@@ -6963,8 +7027,12 @@
 <td><code>%APPDATA%\OurPDF</code></td>
 </tr>
 <tr>
-<td>Пометки и масштабы, ещё не записанные в PDF</td>
+<td>Пометки и масштабы, ещё не записанные в PDF, скрытые в легенде</td>
 <td><code>%APPDATA%\OurPDF\markup</code></td>
+</tr>
+<tr>
+<td>Наложения и замки кропов</td>
+<td><code>%APPDATA%\OurPDF\overlays</code></td>
 </tr>
 <tr>
 <td>Резервные копии перед <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span></td>

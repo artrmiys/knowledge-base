@@ -2002,6 +2002,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2225,6 +2229,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#compare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Сравнить два листа
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Собрать детали на один лист
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mistakes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2354,6 +2380,62 @@
     
   
     Страницы, правка, слои
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overlay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Наложение листов
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Кроп и новые листы
   
 
     
@@ -7031,6 +7113,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#compare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Сравнить два листа
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Собрать детали на один лист
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mistakes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7083,8 +7187,8 @@
 <h2 id="prepare">1. Подготовить лист<a class="headerlink" href="#prepare" title="Прямая ссылка на раздел">&para;</a></h2>
 <ol>
 <li>Откройте PDF (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span> или перетащите файл в окно) и перейдите на нужный лист.</li>
-<li>Включите измерение: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-m">M</kbd></span> или кнопка-линейка. Справа сверху появится панель "Измерение".</li>
-<li>В поле "Масштаб листа" выберите масштаб из штампа или подписи под видом (<code>1/8" = 1'-0"</code>) и нажмите <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</li>
+<li>Включите измерение: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-m">M</kbd></span> или кнопка-линейка. Кнопки стоят блоками в верхней панели (<a href="../window/#top-panel">Верхняя панель</a>).</li>
+<li>В блоке "Масштаб" выберите масштаб из штампа или подписи под видом (<code>1/8" = 1'-0"</code>) и нажмите <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</li>
 <li>Проверьте масштаб: <span class="keys"><kbd class="key-r">R</kbd></span> и два щелчка по концам известного размера (размерная цепочка, длинная стена). Значение должно совпасть с подписью на чертеже.</li>
 <li>Не совпало: кнопка калибровки рядом с полем масштаба, отметьте известный отрезок и введите его длину (<code>25'-6"</code>).</li>
 <li>Запомните масштаб в листе: кнопка с булавкой рядом с полем (или <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>). Файл потом откроется уже с ним, здесь и в Acrobat.</li>
@@ -7127,7 +7231,7 @@
 <tr>
 <td>Box (<span class="keys"><kbd class="key-f9">F9</kbd></span>)</td>
 <td>прямоугольник</td>
-<td><span class="keys"><kbd class="key-a">A</kbd></span>, <span class="keys"><kbd class="key-f9">F9</kbd></span>, щелчок в один угол, щелчок в противоположный</td>
+<td><span class="keys"><kbd class="key-a">A</kbd></span>, <span class="keys"><kbd class="key-f9">F9</kbd></span>, щелчок в один угол, щелчок в противоположный; под значением ширина x высота</td>
 </tr>
 <tr>
 <td>По углам</td>
@@ -7153,7 +7257,7 @@
 <figcaption>Зона joists: балки разложены с шагом, подпись "2x10 1152 FT (24 pcs)" считает код OurPlanCore.</figcaption>
 </figure>
 <ol>
-<li>Шестерёнка в панели "Измерение": тип (<code>2x10</code>), шаг (<code>16"</code>), уклон (пусто для joists, <code>6:12</code> для rafters), округление.</li>
+<li>Шестерёнка в блоке "Замер": тип (<code>2x10</code>), шаг (<code>16"</code>), уклон (пусто для joists, <code>6:12</code> для rafters), округление.</li>
 <li><span class="keys"><kbd class="key-j">J</kbd></span>, обведите зону как площадь (или <span class="keys"><kbd class="key-f9">F9</kbd></span> и два угла, или <span class="keys"><kbd class="key-tab">Tab</kbd></span> по контуру).</li>
 <li>Две точки вдоль направления балок (<span class="keys"><kbd class="key-enter">Enter</kbd></span> берёт длинную сторону).</li>
 <li>Лишние балки (двойные под стенами, у проёмов): выделите зону, <span class="keys"><kbd class="key-d">D</kbd></span>, щелчки внутри; <span class="keys"><kbd class="key-shift">Shift</kbd></span> и щелчок убирает, <span class="keys"><kbd class="key-d">D</kbd></span> или <span class="keys"><kbd class="key-escape">Esc</kbd></span> выход.</li>
@@ -7161,6 +7265,7 @@
 </ol>
 <h2 id="check-size">6. Проверить размер на чертеже<a class="headerlink" href="#check-size" title="Прямая ссылка на раздел">&para;</a></h2>
 <p><span class="keys"><kbd class="key-r">R</kbd></span> и два щелчка: получится размерная линия с засечками на концах, размер подписан на листе всегда. Так удобно сверить масштаб, проверить пролёт или ширину проёма. Ненужную потом удалите: выделите и <span class="keys"><kbd class="key-delete">Del</kbd></span>.</p>
+<p>Оба размера комнаты сразу: <span class="keys"><kbd class="key-r">R</kbd></span>, <span class="keys"><kbd class="key-f9">F9</kbd></span>, два противоположных угла. Получатся два отдельных расстояния от первого угла, горизонтальное и вертикальное (<a href="../measure/#box">Box</a>).</p>
 <h2 id="fix">7. Поправить замер<a class="headerlink" href="#fix" title="Прямая ссылка на раздел">&para;</a></h2>
 <figure>
 <p><img alt="Выбранная точка площади" src="../../assets/images/ourpdf/delete-points.png" />
@@ -7211,9 +7316,26 @@
 <ol>
 <li>Замеры сохраняются сами в профиле программы, пока PDF открыт.</li>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> записывает их в сам PDF (копия прежнего файла кладётся в резервные копии); их видно в Acrobat и Bluebeam.</li>
-<li>Список всех замеров: вкладка "Комментарии" на полосе справа.</li>
-<li>В Excel: правая кнопка при линейке, "Экспорт разметки измерений в Excel" (или кнопка "Замеры в Excel" в списке).</li>
+<li>Итоги по типам: вкладка "Легенда" на полосе справа. Список всех замеров: вкладка "Комментарии".</li>
+<li>В открытую книгу Excel: выберите ячейку, вернитесь в OurPDF, кнопка Excel в блоке "Масштаб", <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-e">E</kbd></span> или <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-t">T</kbd></span> (<a href="../measure/#excel">Excel</a>).</li>
+<li>Отдельным файлом <code>.xlsx</code>: кнопка "Замеры в Excel" в списке "Комментарии".</li>
 </ol>
+<h2 id="compare">10. Сравнить два листа<a class="headerlink" href="#compare" title="Прямая ссылка на раздел">&para;</a></h2>
+<ol>
+<li>Откройте новый лист, значок "Наложение" на левой полосе.</li>
+<li><code>Добавить...</code>, выберите старый лист этого PDF или страницу другого файла.</li>
+<li><code>Автоподгонка</code>. Не совпало: <code>По точкам</code>, или тяните оранжевую рамку.</li>
+<li>Цветные линии без чёрных под ними и есть отличия.</li>
+</ol>
+<p>Подробно: <a href="../overlay/">Наложение листов</a>. Наложение не пишется по <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> и не печатается.</p>
+<h2 id="details">11. Собрать детали на один лист<a class="headerlink" href="#details" title="Прямая ссылка на раздел">&para;</a></h2>
+<ol>
+<li>Значок "Кроп" на левой полосе, "Лист назначения": новый чистый лист, <code>Начать кроп</code>.</li>
+<li>На нужных листах протяните рамки вокруг деталей: они ложатся на новый лист в 100 %.</li>
+<li><span class="keys"><kbd class="key-escape">Esc</kbd></span>, откройте новый лист, расставьте кропы мышью.</li>
+<li>Мерьте поверх кропа как обычно, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>.</li>
+</ol>
+<p>Подробно: <a href="../crop/">Кроп на лист</a>.</p>
 <h2 id="mistakes">Частые ошибки<a class="headerlink" href="#mistakes" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7237,11 +7359,19 @@
 </tr>
 <tr>
 <td>точка встала на штриховку или текст</td>
-<td>приблизьте вид; отключите лишнюю привязку в панели "Измерение" или скройте слой штриховки (вкладка "Слои")</td>
+<td>приблизьте вид; отключите лишнюю привязку в блоке "Привязка" или скройте слой штриховки (вкладка "Слои")</td>
 </tr>
 <tr>
 <td>площадь посчитана дважды</td>
 <td>смотрите список "Комментарии": одинаковые значения рядом</td>
+</tr>
+<tr>
+<td>в Excel меньше, чем на листе</td>
+<td>скрытые в легенде замеры в экспорт по области не входят; строка состояния пишет сколько</td>
+</tr>
+<tr>
+<td>замеров нет на бумаге</td>
+<td>печать рисует файл как записан: сначала <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span></td>
 </tr>
 <tr>
 <td>проёмы не вычтены из фасада</td>
@@ -7254,6 +7384,7 @@
 <li><a href="../measure/">Измерения</a>: все инструменты подробно</li>
 <li><a href="../shortcuts/">Горячие клавиши</a></li>
 <li><a href="../comments-save/">Комментарии и сохранение</a></li>
+<li><a href="../overlay/">Наложение листов</a>, <a href="../crop/">Кроп на лист</a></li>
 </ul>
 
 

@@ -2002,6 +2002,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2276,6 +2280,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#where" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что куда попадает
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#print" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2321,6 +2336,62 @@
     
   
     Страницы, правка, слои
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overlay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Наложение листов
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Кроп и новые листы
   
 
     
@@ -6965,6 +7036,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#where" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что куда попадает
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#print" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7009,7 +7091,7 @@
 <figure>
 <p><img alt="Вкладка Комментарии" src="../../assets/images/ourpdf/comments-list.png" />
   </p>
-<figcaption>Вкладка "Комментарии" на полосе справа: все пометки и замеры документа. Сверху итог и что ещё не записано в файл, внизу <code>Удалить</code>, <code>Замеры в Excel...</code>, <code>Сохранить как PDF...</code>. Над листом карточка вида выбранной площади.</figcaption>
+<figcaption>Вкладка "Комментарии" на полосе справа: все пометки и замеры документа. Сверху итог и что ещё не записано в файл, внизу <code>Удалить</code>, <code>Замеры в Excel...</code>, <code>Сохранить как PDF...</code>. В верхней панели блок вида выбранной площади.</figcaption>
 </figure>
 <h2 id="comments">Инструменты комментариев<a class="headerlink" href="#comments" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Кнопки на панели инструментов сверху или значок "Комментарий" на полосе справа.</p>
@@ -7057,7 +7139,7 @@
 <ul>
 <li>Облако рисуется рамкой или по углам; по углам заканчивается <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</li>
 <li>Ломаная (без замера): щелчки по точкам, двойной щелчок или <span class="keys"><kbd class="key-enter">Enter</kbd></span> - конец.</li>
-<li>Цвет, толщина, шрифт и прозрачность задаются в той же карточке справа сверху, что и у замеров (<a href="../measure/#style">Вид замеров</a>).</li>
+<li>Цвет, толщина, шрифт и прозрачность задаются в том же блоке вида, что и у замеров (<a href="../measure/#style">Вид замеров</a>).</li>
 <li>По умолчанию комментарии красные (<code>#E5262B</code>), толщина линий 2, шрифт 12; маркер и заметка жёлтые (<code>#FFD400</code>). Менять в Настройках, раздел "Измерение и комментарии".</li>
 <li>Автор комментариев задаётся в Настройках; пусто = имя пользователя Windows.</li>
 </ul>
@@ -7066,7 +7148,7 @@
 <li>Инструмент <strong>Выделение</strong> (<span class="keys"><kbd class="key-v">V</kbd></span>): щелчок выбирает комментарий, <span class="keys"><kbd class="key-control">Ctrl</kbd></span> и щелчок добавляет к выбору, <span class="keys"><kbd class="key-e">E</kbd></span> включает выделение рамкой (<a href="../measure/#frame">рамка</a>).</li>
 <li>Перетащите, чтобы сдвинуть.</li>
 <li>Двойной щелчок по тексту или заметке: изменить текст. То же: правая кнопка, "Изменить текст".</li>
-<li><span class="keys"><kbd class="key-delete">Del</kbd></span> или кнопка <code>Удалить</code> в карточке и в списке "Комментарии" удаляют выбранное.</li>
+<li><span class="keys"><kbd class="key-delete">Del</kbd></span> или кнопка <code>Удалить</code> в блоке вида и в списке "Комментарии" удаляют выбранное.</li>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> и <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span> копируют и вставляют пометки, на другой лист в то же место.</li>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> отменяет, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span> повторяет.</li>
 </ol>
@@ -7117,11 +7199,16 @@
 </tr>
 <tr>
 <td>изменённая копия (после правки страниц или содержимого)</td>
-<td>сохраняется <strong>новым файлом</strong>; при закрытии такой вкладки программа спросит, сохранить ли её</td>
+<td>сохраняется <strong>в исходный файл</strong> под тем же именем, с проверкой и резервной копией прежнего. Настройка "Ctrl+S после правки страниц и содержимого" переключает на новый файл. При закрытии такой вкладки программа спросит, сохранить ли её</td>
+</tr>
+<tr>
+<td>наложения</td>
+<td><a href="../overlay/#save">в PDF не пишутся</a></td>
 </tr>
 </tbody>
 </table>
-<p>Что <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> сделает с открытым файлом, пишет строка состояния справа: у обычного PDF "Ctrl+S записывает разметку в этот файл".</p>
+<p>Что <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> сделает с открытым файлом, пишет строка состояния справа: у обычного PDF "Ctrl+S записывает разметку в этот файл", у изменённой копии "Ctrl+S - сохранить в исходный PDF".</p>
+<p>При закрытии файла с изменениями программа спрашивает, сохранить ли их. Да: записать в PDF. Нет: отбросить всё несохранённое с момента открытия или последнего <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>. Отмена: вернуться к файлу. Копия отброшенного черновика лежит в папке резервных копий, подпапка <code>markup-drafts</code>.</p>
 <h2 id="save-as">Сохранить как<a class="headerlink" href="#save-as" title="Прямая ссылка на раздел">&para;</a></h2>
 <p><code>Файл &gt; Сохранить как</code>, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-s">S</kbd></span>, кнопка на панели инструментов или <code>Сохранить как PDF...</code> во вкладке "Комментарии". Создаёт <strong>новый</strong> PDF, исходный не меняется.</p>
 <table>
@@ -7147,8 +7234,61 @@
 <li>Записать поверх открытого исходного PDF нельзя: выберите другое имя.</li>
 <li>Скрытые слои при flatten выключены в новом PDF по умолчанию; редактируемый вариант оставляет видимость, заданную в файле (<a href="../pages-edit/#layers">Слои</a>).</li>
 </ul>
+<h2 id="where">Что куда попадает<a class="headerlink" href="#where" title="Прямая ссылка на раздел">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Что</th>
+<th><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span></th>
+<th>Сохранить как, редактируемые</th>
+<th>Сохранить как, вжечь</th>
+<th>Печать</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>замеры и комментарии</td>
+<td>в файл</td>
+<td>в копию</td>
+<td>в лист, кроме скрытых</td>
+<td>только записанные в файл</td>
+</tr>
+<tr>
+<td>скрытые в легенде</td>
+<td>остаются в файле</td>
+<td>остаются в копии</td>
+<td>нет</td>
+<td>записанные печатаются</td>
+</tr>
+<tr>
+<td><a href="../overlay/">наложения</a></td>
+<td><strong>нет</strong>, только в профиле</td>
+<td><strong>нет</strong></td>
+<td>видимые слои, под пометками</td>
+<td><strong>нет</strong></td>
+</tr>
+<tr>
+<td><a href="../crop/">кропы</a></td>
+<td>в файл, штампом</td>
+<td>в копию, штампом</td>
+<td>в лист</td>
+<td>только записанные в файл</td>
+</tr>
+<tr>
+<td>легенда на листе</td>
+<td>нет</td>
+<td>нет</td>
+<td>нет</td>
+<td>нет</td>
+</tr>
+</tbody>
+</table>
 <h2 id="print">Печать<a class="headerlink" href="#print" title="Прямая ссылка на раздел">&para;</a></h2>
-<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span>, кнопка на панели или на полосе справа. Скрытые слои не печатаются.</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span>, кнопка на панели или на полосе справа. Скрытые слои PDF не печатаются.</p>
+<div class="admonition warning">
+<p class="admonition-title">Печать рисует файл, как он записан</p>
+<p>Перед печатью нажмите <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>, иначе новые замеры, комментарии и кропы на бумагу не попадут. Наложения не печатаются никогда: чтобы получить их на бумаге, сделайте "Сохранить как" с вжиганием и напечатайте этот файл.</p>
+</div>
 <h2 id="_2">См. также<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li><a href="../measure/">Измерения</a>: список замеров и Excel</li>
