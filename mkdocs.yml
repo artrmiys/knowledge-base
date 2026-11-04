@@ -103,6 +103,8 @@ nav:
       - Измерения: ourpdf/measure.md
       - Комментарии и сохранение: ourpdf/comments-save.md
       - Страницы, правка, слои: ourpdf/pages-edit.md
+      - Наложение листов: ourpdf/overlay.md
+      - Кроп и новые листы: ourpdf/crop.md
       - Вид и настройки: ourpdf/view-settings.md
       - Горячие клавиши: ourpdf/shortcuts.md
       - Управление нейросетями: ourpdf/ai.md
