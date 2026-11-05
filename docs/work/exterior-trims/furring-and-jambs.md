@@ -39,7 +39,7 @@ Line по разрезу на листе с точкой W.
 | `Furring` (сплошной) | `1x4` | SQ FT | когда деталь задаёт сплошную плоскость |
 | `Furring 2x4` | `2x4` / `2x4 P.T.` | LFT | толще по structural |
 | `Window jamb` | `2x4` / `2x8` / `2x10` | LFT | периметр 3 стороны (2 jambs + head) или 4 с sill, x число окон |
-| `Blocking around all openings` | `5/4x4 P.T.` | LFT | nailer под casing и flashing; вставляет `B_JambsAllBlock` |
+| `Jambs` (в старых книгах `Blocking around all openings`) | `5/4x4 P.T.` | LFT | nailer под casing и flashing; вставляет `B_JambsAllBlock` |
 | `2x blocking, rip as req'd` | `2x` | LFT | flare и bump по детали |
 
 - `P.T.` и не `P.T.` это разный продукт: P.T. у foundation и во влажных
@@ -67,7 +67,7 @@ Line по разрезу на листе с точкой W.
 ```text
 Furring 1x4 @ 16" o.c.         1x4 P.T.   1290  LFT   =CEILING(1560*12/16*1.1,10)   7/A401
 Window jamb                    2x8        612   LFT   =(2*5.5+3.3)*42 windows        4/A601
-Blocking around all openings   5/4x4 P.T. 650   LFT   B_JambsAllBlock                A601
+Jambs                          5/4x4 P.T. 650   LFT   B_JambsAllBlock                A601
 ```
 
 ## См. также

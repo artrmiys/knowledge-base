@@ -68,11 +68,11 @@
 
 | Макрос | Что вставляет | Потом поправить |
 | --- | --- | --- |
-| `B_JambsAllBlock` | `Wall Materials` и `Blocking around all openings 5/4x4 P.T.` с формулой по проёмам | size (`5/4x4`, `2x4`, `2x8`) и `P.T.` по детали |
-| `B_PaversBlock` | `Pavers` с нотой `Note: Pavers Deck System are by others`, Posts at Rails, Cables, Cap Rail | количества, scope by others |
+| `B_JambsAllBlock` | `Jambs 5/4x4 P.T.` с формулой по проёмам, заголовок `Wall Materials` только если его нет | size (`5/4x4`, `2x4`, `2x8`) и `P.T.` по детали |
+| `B_PaversBlock` | `Pavers` с нотой `Note: Pavers Deck System are by others` | площадь в G, scope by others. Рейлинг: `Decking + ... Railing` в меню [Insert Block](../../reference/ewood-tab.md#insert) |
 | `B_Balcony_Insert_Template_FromText` | балконный блок по команде `b 12x30` или `b 1.3x1.9 u2` (posts, beam, ledger, joists, decking, trims) | конструктив по S: cap по plies, hangers Zmax, decking по детали; см. [Блоки DFL](../../reference/dfl-blocks.md) |
-| `B_BoltsAdd` | Blocking, Anchor Bolts, Washers, Nuts (4 строки) | size и шаг по детали |
-| `B_ShaftWallsBlocks` | блок shaft wall | size и шаг |
+| `B_BoltsAdd` | Blocking, Anchor Bolts, Washers, Nuts (4 строки), G пустой | длины в G, size и шаг по детали |
+| `B_ShaftWallsBlocks` | два блока shaft wall, CH + J и H + C, G пустой | площадь в G, size и шаг; лишний блок уберёт `Delete Zeros` |
 
 ## Чистка после вставок
 

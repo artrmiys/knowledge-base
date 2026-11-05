@@ -4,6 +4,13 @@
 Workflow `.github/workflows/deploy.yml` настроен на push в `main` и ручной запуск;
 фактический результат публикации проверяется отдельно. Инструкция: [README](README.md).
 
+## 2026-11-05 - Вкладка E-Wood в Excel 2.3.1, OurPlanCore 3.0.30
+
+- Новая страница "Вкладка E-Wood в Excel": установка одним файлом, три шаблона, Duplicate Block, Insert Block, Sort Blocks, Notes + Look, все коды Check, Fix, Merge, Process, цвета заголовков, два языка, что делать при сообщениях.
+- Макросы и клавиши Excel, Trim macros, Furring and Jambs, Блоки: новые строки вставки, `Jambs` вместо `Blocking around all openings`, ссылки на вкладку.
+- OurPlanCore, что нового: 3.0.30.
+- Новые картинки `ewood-tab-1.png`, `ewood-tab-2.png`, `ewood-book-path.svg`.
+
 ## 2026-11-04 - Auto Link и Reset All Links: OurPlanCore 3.0.29, OurPDF 0.9.27
 
 - Экспорт в Excel: разделы Auto Link и Reset All Links; `Unlink` закрытой книги по коду 3.0.29. Что нового, Settings, инструменты, модули, проблемы, чек-лист сдачи: записи и ссылки. Инвентарь функций пересобран по коду 3.0.29.

@@ -7,6 +7,9 @@
   <figcaption markdown="span">Полоса XL в OurPlanCore пишет замеры в книгу и сама запускает расчётные макросы. Остальные макросы запускаются в Excel клавишей или через Alt+F8.</figcaption>
 </figure>
 
+!!! note "Вкладка E-Wood"
+    Все эти макросы и кнопки порядка, проверки и сдачи собраны на вкладке E-Wood, она ставится одним файлом: [Вкладка E-Wood в Excel](ewood-tab.md). С вкладки часть макросов вставки работает иначе, чем из книги: она написана там, где это так.
+
 !!! warning "Макрос ничего не делает"
     1. Открыта книга из шаблона `TemplateCom.xlsm` (копия в папке обновлений программы), а не чужой файл.
     2. Макросы разрешены: `File > Options > Trust Center > Macro Settings`.
@@ -87,11 +90,12 @@
 
 | Макрос | Что вставляет |
 | --- | --- |
-| `B_BoltsAdd` | 4 строки: `Blocking`, `Anchor Bolts`, `Washers`, `Nuts` (счёт парами, подписи из H) |
-| `B_Plate2_InsertOneRow`, `B_FrameOC_InsertOneRow` | строка `Plate (2) ... P.T.` или `Frame N" o.c.` с формулой |
-| `B_JambsAllBlock` | блок `Blocking around all openings` по проёмам |
-| `B_ShaftWallsBlocks` | блоки shaft walls (liner panels + channels) |
-| `B_PaversBlock` | `Pavers` с нотой `by others` и строками рейлинга |
+| `B_DuplicateBlock` | только на вкладке: копия блока под ним, следующий номер, свои единицы, ссылки на замеры очищены ([подробно](ewood-tab.md#duplicate)) |
+| `B_BoltsAdd` | 4 строки: `Blocking`, `Anchor Bolts`, `Washers`, `Nuts` (счёт парами, подписи из H). На вкладке G пустой, в подписи дюймы, в C множитель 1.1 |
+| `B_Plate2_InsertOneRow`, `B_FrameOC_InsertOneRow` | строка `Plate (2) ... P.T.` или `Frame N" o.c.` с формулой. На вкладке `Plate (2)` не вписывает `G=100` |
+| `B_JambsAllBlock` | на вкладке строка `Jambs` по проёмам, заголовок `Wall Materials` только если его нет; в старых книгах та же строка называется `Blocking around all openings` |
+| `B_ShaftWallsBlocks` | два блока shaft walls (liner panels + channels), на вкладке второй называется `Shaft Fire walls`, G пустой |
+| `B_PaversBlock` | `Pavers` с нотой `by others`; на вкладке без строк рейлинга, они есть в меню `Insert Block` |
 | `B_MetalStuds_ByJ` (`_16oc`, `_24oc`) | тройка `Tracks (1) btm`, `Deflection Tracks (1) top`, `Mtl Studs` из таблицы справа (размер, длина, единица, высота) |
 | `B_Balcony_Insert_Template_FromText` | балконный блок по команде `b 12x30`. В текущих книгах блок `#1` уже есть в шаблоне: заполнять его, а не вставлять второй ([Блоки](dfl-blocks.md)) |
 | `Y_add_2400V48` | проставить значения `2400 V48` по двухколоночному списку |
