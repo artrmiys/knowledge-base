@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="275" viewBox="0 0 760 275" role="img" aria-labelledby="t d">
+  <title id="t">Установка на другой компьютер</title>
+  <desc id="d">Скопировать файл; Закрыть Excel; Install; Открыть книгу DFL; DeepSeek Key</desc>
+  <style>text{font-family:Inter,"Segoe UI",Arial,sans-serif}.ttl{font-size:15px;font-weight:600;fill:#BDBDBD}.m{font-size:12.5px;font-weight:600;fill:#333;letter-spacing:.02em}.w{font-size:12.5px;font-weight:600;fill:#fff;letter-spacing:.02em}.g{font-size:12px;fill:#333}</style>
+  <rect width="760" height="275" fill="#ffffff"/>
+  <text class="ttl" x="10" y="22">Установка на другой компьютер</text>
+  <rect x="10" y="38" width="210" height="36" rx="6" fill="#fff" stroke="#333" stroke-width="2.5"/>
+  <line x1="220" y1="56" x2="240" y2="56" stroke="#333" stroke-width="2"/>
+  <rect x="240" y="38" width="510" height="36" rx="6" fill="#fff" stroke="#D0D0D0" stroke-width="2"/>
+  <text class="m" x="24" y="61">1. СКОПИРОВАТЬ ФАЙЛ</text>
+  <text class="g" x="254" y="61">EWoodTools-Setup.exe, один файл, внутри всё</text>
+  <rect x="10" y="85" width="210" height="36" rx="6" fill="#fff" stroke="#333" stroke-width="2.5"/>
+  <line x1="220" y1="103" x2="240" y2="103" stroke="#333" stroke-width="2"/>
+  <rect x="240" y="85" width="510" height="36" rx="6" fill="#fff" stroke="#D0D0D0" stroke-width="2"/>
+  <text class="m" x="24" y="108">2. ЗАКРЫТЬ EXCEL</text>
+  <text class="g" x="254" y="108">установщик не пойдёт, пока запущен любой Excel</text>
+  <rect x="10" y="132" width="210" height="36" rx="6" fill="#fff" stroke="#333" stroke-width="2.5"/>
+  <line x1="220" y1="150" x2="240" y2="150" stroke="#333" stroke-width="2"/>
+  <rect x="240" y="132" width="510" height="36" rx="6" fill="#fff" stroke="#D0D0D0" stroke-width="2"/>
+  <text class="m" x="24" y="155">3. INSTALL</text>
+  <text class="g" x="254" y="155">Windows может спросить: Подробнее, Выполнить в любом случае</text>
+  <rect x="10" y="179" width="210" height="36" rx="6" fill="#fff" stroke="#333" stroke-width="2.5"/>
+  <line x1="220" y1="197" x2="240" y2="197" stroke="#333" stroke-width="2"/>
+  <rect x="240" y="179" width="510" height="36" rx="6" fill="#fff" stroke="#D0D0D0" stroke-width="2"/>
+  <text class="m" x="24" y="202">4. ОТКРЫТЬ КНИГУ DFL</text>
+  <text class="g" x="254" y="202">вкладка E-Wood на ленте, слева шаблон книги</text>
+  <rect x="10" y="226" width="210" height="36" rx="6" fill="#333" stroke="#333" stroke-width="2.5"/>
+  <line x1="220" y1="244" x2="240" y2="244" stroke="#333" stroke-width="2"/>
+  <rect x="240" y="226" width="510" height="36" rx="6" fill="#fff" stroke="#D0D0D0" stroke-width="2"/>
+  <text class="w" x="24" y="249">5. DEEPSEEK KEY</text>
+  <text class="g" x="254" y="249">только для проверки английского и Improve Note</text>
+</svg>

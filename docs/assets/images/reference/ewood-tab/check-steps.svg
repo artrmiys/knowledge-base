@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="275" viewBox="0 0 760 275" role="img" aria-labelledby="t d">
+  <title id="t">Как работать со списком Check</title>
+  <desc id="d">Check; Сверху вниз; Сверить с чертежом; Поправить; Check ещё раз</desc>
+  <style>text{font-family:Inter,"Segoe UI",Arial,sans-serif}.ttl{font-size:15px;font-weight:600;fill:#BDBDBD}.m{font-size:12.5px;font-weight:600;fill:#333;letter-spacing:.02em}.w{font-size:12.5px;font-weight:600;fill:#fff;letter-spacing:.02em}.g{font-size:12px;fill:#333}</style>
+  <rect width="760" height="275" fill="#ffffff"/>
+  <text class="ttl" x="10" y="22">Как работать со списком Check</text>
+  <rect x="10" y="38" width="210" height="36" rx="6" fill="#fff" stroke="#333" stroke-width="2.5"/>
+  <line x1="220" y1="56" x2="240" y2="56" stroke="#333" stroke-width="2"/>
+  <rect x="240" y="38" width="510" height="36" rx="6" fill="#fff" stroke="#D0D0D0" stroke-width="2"/>
+  <text class="m" x="24" y="61">1. CHECK</text>
+  <text class="g" x="254" y="61">список откроется сам, файл лежит в _ewood_backups</text>
+  <rect x="10" y="85" width="210" height="36" rx="6" fill="#fff" stroke="#333" stroke-width="2.5"/>
+  <line x1="220" y1="103" x2="240" y2="103" stroke="#333" stroke-width="2"/>
+  <rect x="240" y="85" width="510" height="36" rx="6" fill="#fff" stroke="#D0D0D0" stroke-width="2"/>
+  <text class="m" x="24" y="108">2. СВЕРХУ ВНИЗ</text>
+  <text class="g" x="254" y="108">сначала ERR-CELL и BLOCK-REF: они меняют числа</text>
+  <rect x="10" y="132" width="210" height="36" rx="6" fill="#fff" stroke="#333" stroke-width="2.5"/>
+  <line x1="220" y1="150" x2="240" y2="150" stroke="#333" stroke-width="2"/>
+  <rect x="240" y="132" width="510" height="36" rx="6" fill="#fff" stroke="#D0D0D0" stroke-width="2"/>
+  <text class="m" x="24" y="155">3. СВЕРИТЬ С ЧЕРТЕЖОМ</text>
+  <text class="g" x="254" y="155">список только показывает, решаете вы</text>
+  <rect x="10" y="179" width="210" height="36" rx="6" fill="#fff" stroke="#333" stroke-width="2.5"/>
+  <line x1="220" y1="197" x2="240" y2="197" stroke="#333" stroke-width="2"/>
+  <rect x="240" y="179" width="510" height="36" rx="6" fill="#fff" stroke="#D0D0D0" stroke-width="2"/>
+  <text class="m" x="24" y="202">4. ПОПРАВИТЬ</text>
+  <text class="g" x="254" y="202">Notes + Look и Delete Zeros убирают часть сами</text>
+  <rect x="10" y="226" width="210" height="36" rx="6" fill="#333" stroke="#333" stroke-width="2.5"/>
+  <line x1="220" y1="244" x2="240" y2="244" stroke="#333" stroke-width="2"/>
+  <rect x="240" y="226" width="510" height="36" rx="6" fill="#fff" stroke="#D0D0D0" stroke-width="2"/>
+  <text class="w" x="24" y="249">5. CHECK ЕЩЁ РАЗ</text>
+  <text class="g" x="254" y="249">осталось то, что вы оставили намеренно</text>
+</svg>

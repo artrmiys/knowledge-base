@@ -4,6 +4,12 @@
 Workflow `.github/workflows/deploy.yml` настроен на push в `main` и ручной запуск;
 фактический результат публикации проверяется отдельно. Инструкция: [README](README.md).
 
+## 2026-11-05 - Вкладка E-Wood: подробно, с картинками, как в PDF
+
+- Страница "Вкладка E-Wood в Excel" собрана из того же источника, что PDF-инструкция (`excel_tools\addin\guide\build_kb_page.py`): все кнопки по группам с иконками и клавишами, схемы установки, пути книги, Duplicate Block и работы со списком Check.
+- Картинки того, что пишет каждая кнопка, сняты с копии шаблона TemplateCom без данных клиентов: блок до и после Duplicate Block, Shaft, три вида Decking, Decking внутри блока, Pavers, Bolts, Jambs. Пример строк отчёта Check, цвета заголовков с образцами.
+- Картинки в `assets/images/reference/ewood-tab/`, старые `ewood-tab-1.png`, `ewood-tab-2.png`, `ewood-book-path.svg` убраны.
+
 ## 2026-11-05 - Вкладка E-Wood в Excel 2.3.1, OurPlanCore 3.0.30
 
 - Новая страница "Вкладка E-Wood в Excel": установка одним файлом, три шаблона, Duplicate Block, Insert Block, Sort Blocks, Notes + Look, все коды Check, Fix, Merge, Process, цвета заголовков, два языка, что делать при сообщениях.
