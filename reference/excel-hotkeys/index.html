@@ -13,7 +13,7 @@
       
       
       
-        <link rel="prev" href="../dfl-blocks/">
+        <link rel="prev" href="../ewood-tab/">
       
       
         <link rel="next" href="../formulas/">
@@ -6179,6 +6179,8 @@
       
         
       
+        
+      
     
     
     
@@ -6326,6 +6328,34 @@
     
   
     Блоки балконов, porch и holdowns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ewood-tab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Вкладка E-Wood в Excel
   
 
     
@@ -7157,6 +7187,10 @@
   </p>
 <figcaption>Полоса XL в OurPlanCore пишет замеры в книгу и сама запускает расчётные макросы. Остальные макросы запускаются в Excel клавишей или через Alt+F8.</figcaption>
 </figure>
+<div class="admonition note">
+<p class="admonition-title">Вкладка E-Wood</p>
+<p>Все эти макросы и кнопки порядка, проверки и сдачи собраны на вкладке E-Wood, она ставится одним файлом: <a href="../ewood-tab/">Вкладка E-Wood в Excel</a>. С вкладки часть макросов вставки работает иначе, чем из книги: она написана там, где это так.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Макрос ничего не делает</p>
 <ol>
@@ -7404,24 +7438,28 @@
 </thead>
 <tbody>
 <tr>
+<td><code>B_DuplicateBlock</code></td>
+<td>только на вкладке: копия блока под ним, следующий номер, свои единицы, ссылки на замеры очищены (<a href="../ewood-tab/#duplicate">подробно</a>)</td>
+</tr>
+<tr>
 <td><code>B_BoltsAdd</code></td>
-<td>4 строки: <code>Blocking</code>, <code>Anchor Bolts</code>, <code>Washers</code>, <code>Nuts</code> (счёт парами, подписи из H)</td>
+<td>4 строки: <code>Blocking</code>, <code>Anchor Bolts</code>, <code>Washers</code>, <code>Nuts</code> (счёт парами, подписи из H). На вкладке G пустой, в подписи дюймы, в C множитель 1.1</td>
 </tr>
 <tr>
 <td><code>B_Plate2_InsertOneRow</code>, <code>B_FrameOC_InsertOneRow</code></td>
-<td>строка <code>Plate (2) ... P.T.</code> или <code>Frame N" o.c.</code> с формулой</td>
+<td>строка <code>Plate (2) ... P.T.</code> или <code>Frame N" o.c.</code> с формулой. На вкладке <code>Plate (2)</code> не вписывает <code>G=100</code></td>
 </tr>
 <tr>
 <td><code>B_JambsAllBlock</code></td>
-<td>блок <code>Blocking around all openings</code> по проёмам</td>
+<td>на вкладке строка <code>Jambs</code> по проёмам, заголовок <code>Wall Materials</code> только если его нет; в старых книгах та же строка называется <code>Blocking around all openings</code></td>
 </tr>
 <tr>
 <td><code>B_ShaftWallsBlocks</code></td>
-<td>блоки shaft walls (liner panels + channels)</td>
+<td>два блока shaft walls (liner panels + channels), на вкладке второй называется <code>Shaft Fire walls</code>, G пустой</td>
 </tr>
 <tr>
 <td><code>B_PaversBlock</code></td>
-<td><code>Pavers</code> с нотой <code>by others</code> и строками рейлинга</td>
+<td><code>Pavers</code> с нотой <code>by others</code>; на вкладке без строк рейлинга, они есть в меню <code>Insert Block</code></td>
 </tr>
 <tr>
 <td><code>B_MetalStuds_ByJ</code> (<code>_16oc</code>, <code>_24oc</code>)</td>
@@ -7533,7 +7571,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
         
           
-          <a href="../dfl-blocks/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Блоки балконов, porch и holdowns">
+          <a href="../ewood-tab/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Вкладка E-Wood в Excel">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -7543,7 +7581,7 @@
                 Назад
               </span>
               <div class="md-ellipsis">
-                Блоки балконов, porch и holdowns
+                Вкладка E-Wood в Excel
               </div>
             </div>
           </a>

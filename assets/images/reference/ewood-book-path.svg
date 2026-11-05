@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="330" viewBox="0 0 760 330" role="img" aria-labelledby="t d">
+  <title id="t">Путь книги</title>
+  <desc id="d">Шесть шагов столбиком: замеры в J:L, строки и блоки, Sort Blocks, Notes + Look, Check, Fix или Process. Справа у каждого шага, что он делает.</desc>
+  <style>text{font-family:Inter,"Segoe UI",Arial,sans-serif}.ttl{font-size:15px;font-weight:600;fill:#BDBDBD}.m{font-size:12.5px;font-weight:600;fill:#333;letter-spacing:.02em}.w{font-size:12.5px;font-weight:600;fill:#fff;letter-spacing:.02em}.g{font-size:12px;fill:#333}</style>
+  <rect width="760" height="330" fill="#ffffff"/>
+  <text class="ttl" x="10" y="22">Путь книги</text>
+  <g fill="#fff" stroke="#333" stroke-width="2.5">
+    <rect x="10" y="38" width="210" height="36" rx="6"/>
+    <rect x="10" y="85" width="210" height="36" rx="6"/>
+    <rect x="10" y="132" width="210" height="36" rx="6"/>
+    <rect x="10" y="179" width="210" height="36" rx="6"/>
+    <rect x="10" y="226" width="210" height="36" rx="6"/>
+  </g>
+  <rect x="10" y="273" width="210" height="36" rx="6" fill="#333" stroke="#333" stroke-width="2.5"/>
+  <g stroke="#333" stroke-width="2">
+    <line x1="220" y1="56" x2="240" y2="56"/>
+    <line x1="220" y1="103" x2="240" y2="103"/>
+    <line x1="220" y1="150" x2="240" y2="150"/>
+    <line x1="220" y1="197" x2="240" y2="197"/>
+    <line x1="220" y1="244" x2="240" y2="244"/>
+    <line x1="220" y1="291" x2="240" y2="291"/>
+  </g>
+  <g fill="#fff" stroke="#D0D0D0" stroke-width="2">
+    <rect x="240" y="38" width="510" height="36" rx="6"/>
+    <rect x="240" y="85" width="510" height="36" rx="6"/>
+    <rect x="240" y="132" width="510" height="36" rx="6"/>
+    <rect x="240" y="179" width="510" height="36" rx="6"/>
+    <rect x="240" y="226" width="510" height="36" rx="6"/>
+    <rect x="240" y="273" width="510" height="36" rx="6"/>
+  </g>
+  <text class="m" x="24" y="61">1. ЗАМЕРЫ В J:L</text>
+  <text class="m" x="24" y="108">2. СТРОКИ И БЛОКИ</text>
+  <text class="m" x="24" y="155">3. SORT BLOCKS</text>
+  <text class="m" x="24" y="202">4. NOTES + LOOK</text>
+  <text class="m" x="24" y="249">5. CHECK</text>
+  <text class="w" x="24" y="296">6. FIX ИЛИ PROCESS</text>
+  <text class="g" x="254" y="61">OurPlanCore пишет замеры и считает A-макросами</text>
+  <text class="g" x="254" y="108">Structure, Duplicate Block, Insert Block, правка руками</text>
+  <text class="g" x="254" y="155">блоки к своему этажу, порядок строительства</text>
+  <text class="g" x="254" y="202">ноты, цвета, сетка, формула размера</text>
+  <text class="g" x="254" y="249">список того, что решает человек; поправить и нажать ещё раз</text>
+  <text class="g" x="254" y="296">копия для просмотра или файл для сдачи</text>
+</svg>
