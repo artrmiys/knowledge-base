@@ -46,38 +46,9 @@ py -m venv .venv
 
 ## 3. Структура файлов
 
-```
-project-root/
-├── AGENTS.md                  ← этот файл, канон правил для Claude и Codex
-├── CLAUDE.md                  ← одна строка-импорт `@AGENTS.md`, не дополнять
-├── AGENT_NOTES.md             ← история решений и handoff (на старте не грузится, см. §12)
-├── README.md                  ← короткое описание для людей
-├── CHANGELOG.md               ← журнал изменений сайта (коммиты `docs(changelog)`)
-├── AUDIT.md                   ← рабочий аудит контента/структуры
-├── DESIGN_SYSTEM.md           ← заметки по дизайн-системе (токены, OurCore-скин)
-├── .github/AGENTS.md          ← СТАРАЯ упрощённая копия этого файла (см. §13.6)
-├── IMPORT_SOURCES.md          ← playbook по импорту из Trello/Confluence/Tilda
-├── mkdocs.yml                 ← КОНФИГ САЙТА (тема, плагины, навигация)
-├── .github/workflows/deploy.yml
-├── overrides/                 ← custom_dir темы Material
-│   └── partials/source.html   ← переопределённый partial (repo-ссылка в шапке)
-├── tools/
-│   └── trello_json_to_markdown.py   ← конвертер Trello JSON → MD
-├── docs/                      ← КОНТЕНТ САЙТА
-│   ├── index.md               ← главная (hero + маршруты по задачам)
-│   ├── assets/
-│   │   ├── images/            ← все картинки и схемы (см. раздел 7)
-│   │   ├── js/zoom.js         ← клик-зум картинок (подключён в extra_javascript)
-│   │   └── stylesheets/
-│   │       ├── tokens.css     ← ИСТОЧНИК ПРАВДЫ для токенов (--ds-*, --md-*, шрифты)
-│   │       └── extra.css      ← компоненты (.kb-hero, .kb-gallery, .kb-split, ...)
-│   ├── start/                 ← Workflow, QA, takeoff tool, Client Rules, ...
-│   ├── work/                  ← Walls, Framing, Sheathing, SQFTs, Trims
-│   ├── work-types/            ← COM, EWP/Capital, Residential
-│   └── reference/             ← Советы, Hangers, Formulas, Source Map
-├── site/                      ← БИЛД (в .gitignore)
-└── .venv/                     ← venv (в .gitignore)
-```
+Канон правил `AGENTS.md` (`CLAUDE.md` = импорт), контент сайта в `docs/` (`start/`, `work/`, `work-types/`,
+`reference/`, `assets/images/`, токены `assets/stylesheets/tokens.css`, компоненты `extra.css`), конфиг
+`mkdocs.yml`, конвертеры в `tools/`, история решений `AGENT_NOTES.md`. Полное дерево: `AGENTS_REFERENCE.md` §3.
 
 **Никогда не коммить:** `site/`, `.venv/`, `mkdocs-serve*.log`, `_scratch_workbooks/`,
 `imports/`, личные `.env`, `twist-*`/`probe-twist-*` снапшоты. Полный список — в `.gitignore`.
@@ -90,13 +61,8 @@ project-root/
 
 ### Топ-уровень (табы)
 
-1. **Главная** — `index.md`
-2. **Старт** — процесс, чек-листы, как пользоваться
-3. **OurPlanCore** - хаб 3.0 и три уровня: "Каждый день", "Продвинутое", "Идеи и планы", плюс "Справка" (клавиши, проблемы, что нового)
-4. **OurPDF** - просмотр и разметка PDF: окно, измерения (главная страница), связь с Excel, комментарии и сохранение, страницы и правка, наложение, кроп, вид и настройки, клавиши, нейросети; сверено с OurPDF 0.9.27
-5. **Работа** - типы работ, walls, framing, sheathing, SQFTs, trims; меню не сворачивать (см. AGENT_NOTES)
-6. **Excel и DFL** - книга DFL, подписи строк, ноты, блоки, макросы, формулы
-7. **Справочник** - советы, hangers, catalogs, термины; подраздел «Редактору KB»
+Главная, Старт, OurPlanCore, OurPDF, Работа, Excel и DFL, Справочник. Что внутри каждого таба:
+`AGENTS_REFERENCE.md` §4 (открыть перед правкой `nav`).
 
 Каноны программы и правила проверки версии перечислены в
 [maintenance](docs/start/maintenance.md). Текущий аудит и постраничная глубина
@@ -146,42 +112,10 @@ project-root/
 
 ## 6. Material features, которые включены
 
-В `mkdocs.yml` уже подключены:
-
-### Темы и режимы
-
-- **Light + Dark** с авто-переключением и тоггл-кнопкой в шапке. Обе темы —
-  первоклассные (dark-first по духу дизайн-кода).
-- **OurCore-скин на структуре Design Code v0.2, но акцент — ЗЕЛЁНЫЙ** (по явному
-  выбору пользователя: «зелёный было круто»). Закон цвета: **green
-  `#1f9e38`(light)/`#2ad24b`(dark) = бренд/active/ссылка/selected/primary**;
-  тёмно-зелёный (`#2e7d32`/`#56e070`) = узкий brand-маркер (1.5-px полоска под
-  активной вкладкой, left-border активного пункта nav/TOC, маркеры списков,
-  tip-callout). Статусы ok/warn/err. От v0.2 сохранены: плотность, ink-поверхности
-  light+dark, callout-admonitions, скругления 6/8/12/16, нейтральная шапка.
-  Декоративные `kb-st--*`/`kb-mk--*` → green/warn. Источник правды —
-  `tokens.css` (`--ds-*` + Material `--md-*`), компоненты — `extra.css`. SVG-схемы
-  используют accent `#2e7d32`. **Зелёный — основной; синий как primary не
-  возвращать без явной просьбы.**
-- Шрифты `Inter` (текст) + `JetBrains Mono` (код/числа), грузятся `@import` в
-  `tokens.css`. Цифры — моно, tabular.
-- Логотип/favicon — KB-глиф `assets/images/brand/icon-kb-128.png`.
-- Иконка GitHub в шапке + edit-кнопка на каждой странице (`edit_uri`).
-
-### Навигация, поиск, Markdown extensions
-
-Канон списка — `theme.features`, `plugins.search` и `markdown_extensions` в
-`mkdocs.yml`; здесь только то, чем пользоваться.
-
-- Навигация: табы сверху (sticky), заголовки разделов и section-index в
-  сайдбаре, кнопка «вверх», стрелки prev/next в подвале.
-- Поиск: подсказки, подсветка, share; языки индекса `en` + `ru`.
-- В страницах работает: `!!! note "Заголовок"`, сворачиваемый `??? tip`,
-  табы `=== "Tab 1"`, чеклисты `- [x]`, клавиши `++ctrl+s++`, `^^ins^^`,
-  `==mark==`, `~~strike~~`, иконки `:material-wall:` /
-  `:octicons-arrow-right-24:` / `:fontawesome-brands-github:`, вложенные
-  code/admonition, подсветка кода, классы и HTML-блоки (`attr_list` +
-  `md_in_html`), таблицы, `def_list`, сноски, `abbr`.
+Тема: зелёный OurCore-скин (урок `kb-theme-green-skin` в памяти knowledge-base); **синий как primary не
+возвращать без явной просьбы**; шрифты `Inter` + `JetBrains Mono` через `tokens.css`. В страницах доступны
+admonitions, табы, чеклисты, клавиши, иконки `:material-*:`, `attr_list` + `md_in_html`. Полный список
+включённого: `AGENTS_REFERENCE.md` §6, канон `mkdocs.yml`.
 
 ---
 
@@ -192,15 +126,7 @@ project-root/
 
 ### Куда класть файлы
 
-```
-docs/assets/images/
-├── walls/
-├── framing/
-├── roof/
-├── sheathing/
-├── hangers/
-└── trims/
-```
+Папки по теме: `docs/assets/images/<walls|framing|roof|sheathing|hangers|trims>/` (`AGENTS_REFERENCE.md` §7).
 
 - **Имена:** латиница, нижний регистр, тире. `exterior-2x6-section.png`.
 - **Форматы:** PNG/SVG для схем, JPG/WEBP для фото, SVG предпочтительно для линий.
@@ -216,19 +142,8 @@ docs/assets/images/
 
 ### Доступные CSS-классы (в [docs/assets/stylesheets/extra.css](docs/assets/stylesheets/extra.css))
 
-| Класс | Что |
-| --- | --- |
-| `.kb-hero` | Большой баннер главной (gradient + кнопки) |
-| `.kb-hero__btn`, `.kb-hero__btn--primary`, `.kb-hero__btn--ghost` | Кнопки в hero |
-| `.kb-section-title` | Заголовок секции на главной (с горизонтальной линией) |
-| `.kb-gallery` + `.kb-gallery__item` | Сетка миниатюр (контент или плейсхолдеры) |
-| `.kb-gallery__item--placeholder` | Пунктирная карточка-заглушка |
-| `.kb-gallery__caption` | Подпись под миниатюрой |
-| `.kb-split` | Двухколоночный layout (text + schema), на мобиле в один столбец |
-| `.kb-schema-full` | Картинка на всю ширину контента, с тенью |
-
-Material's native `grid cards` (`<div class="grid cards" markdown>...`) тоже
-работает — для главной и section-pages с большими карточками.
+Таблица классов (`.kb-hero`, `.kb-gallery`, `.kb-split`, `.kb-schema-full` и др.): `AGENTS_REFERENCE.md` §7.
+Material `grid cards` тоже работает.
 
 ---
 
@@ -273,27 +188,14 @@ Material's native `grid cards` (`<div class="grid cards" markdown>...`) тоже
 
 Полный playbook — [IMPORT_SOURCES.md](IMPORT_SOURCES.md). Кратко:
 
-| Источник | Что нужно | Инструмент |
-| --- | --- | --- |
-| **Tilda** (public) | URL | `WebFetch` (через Claude) или ручной просмотр |
-| **Trello** | JSON export или API token | `tools/trello_json_to_markdown.py` |
-| **Confluence** | Space export HTML/XML или API token | конвертер на запрос |
-| **Obsidian** | локальный путь | прямое чтение из `C:\Users\User\Documents\0.Obsidian` |
+Источники Tilda, Trello, Confluence, Obsidian и чем их брать: `AGENTS_REFERENCE.md` §9.
 
 **Trello/Confluence без авторизации не отдадут содержимое** — попытки скрейпа
 HTML вернут только JS-shell или 401. Не делай вид, что что-то импортировал —
 если данных нет, фиксируй это в рабочей заметке импорта, а не в публичных
 страницах сайта.
 
-### Запуск конвертера Trello
-
-```powershell
-.\.venv\Scripts\python.exe tools\trello_json_to_markdown.py `
-  --input C:\path\to\board.json `
-  --output imports\trello
-```
-
-Результат не идёт сразу в `docs/`. Сначала ревью в `imports/`, потом ручной
+Конвертер Trello: команда в `AGENTS_REFERENCE.md` §9. Результат не идёт сразу в `docs/`. Сначала ревью в `imports/`, потом ручной
 перенос только полезных правил в нужную topic page.
 
 ---
@@ -301,12 +203,6 @@ HTML вернут только JS-shell или 401. Не делай вид, чт
 ## 10. Деплой
 
 CI: [.github/workflows/deploy.yml](.github/workflows/deploy.yml)
-
-```yaml
-on: push (branches: [main])
-- pip install mkdocs mkdocs-material mkdocs-material-extensions
-- mkdocs gh-deploy --force --clean --remote-branch gh-pages
-```
 
 Ничего вручную пушить на gh-pages не надо. Просто `git push origin main` — Actions сам соберёт и задеплоит. Через ~1 минуту прод обновится.
 
@@ -338,16 +234,8 @@ broken links и опечатки в путях.
 ## 13. Тонкости / known issues
 
 1. **`site_url` сейчас не задан.** Локальный preview живёт на `/`. Не возвращай branded project-page prefix без явной просьбы.
-2. **Material's marketing warning.** При каждом билде печатается длинный блок
-   про MkDocs 2.0 — это маркетинг от squidfunk, к проекту отношения не имеет.
-   Игнорируй.
-3. **Большой `animation.gif` (18 МБ)** удалён из рабочей версии, но всё ещё
-   может быть в git history. Не добавляй тяжёлые медиа без LFS или сжатия.
-4. **Поиск на русском работает за счёт `plugins.search.lang: [en, ru]`.**
-   Если нужно сербский/немецкий — добавлять туда же.
-5. **Иконки `:material-*:` требуют `pymdownx.emoji` с Material extension.**
-   Уже подключено. Если случайно удалить из `mkdocs.yml`, иконки превратятся
-   в текст.
+2-5. Справка: предупреждение Material про MkDocs 2.0, старый `animation.gif` в истории git (тяжёлые медиа только
+   сжатыми или через LFS), поиск `en` + `ru`, иконки через `pymdownx.emoji`: `AGENTS_REFERENCE.md` §13.
 6. **Канон мануала — этот `AGENTS.md`.** `CLAUDE.md` содержит только импорт
    `@AGENTS.md`. `.github/AGENTS.md` — старая упрощённая копия (в ней
    устаревшая палитра `accent: lime` вместо green): не считай её авторитетной,
@@ -355,11 +243,8 @@ broken links и опечатки в путях.
 7. **`font: false` в теме.** Material НЕ грузит Google Fonts. Шрифты `Inter` +
    `JetBrains Mono` приходят через `@import` в `tokens.css`. Не включай
    `theme.font` обратно — будет дубль загрузки.
-8. **Клик-зум картинок** — кастомный `docs/assets/js/zoom.js`, подключён через
-   `extra_javascript`. Не плагин. Если зум сломался — смотри туда, не в mkdocs.yml.
-9. **`overrides/partials/source.html`** переопределяет partial Material
-   (`custom_dir: overrides`). После апгрейда `mkdocs-material` сверяй его с
-   апстримом — изменённый upstream-partial может разойтись.
+8-9. Клик-зум картинок (`docs/assets/js/zoom.js`) и переопределённый `overrides/partials/source.html` (сверять с
+   апстримом после апгрейда Material): `AGENTS_REFERENCE.md` §13.
 
 ---
 
