@@ -13,7 +13,7 @@ walls/framing/sheathing). Это **шпаргалка для конструкт�
 таблицы, и много схем/картинок.
 
 - **Стек:** [MkDocs](https://www.mkdocs.org/) + [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
-- **Деплой:** workflow в [.github/workflows/deploy.yml](.github/workflows/deploy.yml) настроен на push в `main` и ручной запуск; успешную публикацию проверять отдельно.
+- **Деплой:** a push to `main` does NOT update the site: Actions do not run (last run 2025-10-21, checked 2026-11-06); `gh-pages` is written by `mkdocs gh-deploy`. Publish with `.\tools\deploy.ps1` (strict build + gh-deploy of the working tree; dirty tree or divergence from origin: lesson `kb-main-diverged-publish-origin`). Check: a `Deployed <sha>` commit on `gh-pages`.
 - **Прод-URL:** https://artrmiys.github.io/knowledge-base/
 - **Репо:** repository URL
 - **Источник контента:** Obsidian-vault `C:\Users\User\Documents\0.Obsidian` + Tilda + Trello + локальные правки.
@@ -202,9 +202,7 @@ HTML вернут только JS-shell или 401. Не делай вид, чт
 
 ## 10. Деплой
 
-CI: [.github/workflows/deploy.yml](.github/workflows/deploy.yml)
-
-Ничего вручную пушить на gh-pages не надо. Просто `git push origin main` — Actions сам соберёт и задеплоит. Через ~1 минуту прод обновится.
+CI [.github/workflows/deploy.yml](.github/workflows/deploy.yml) does not run on push now (see "Деплой" at the top). Order: commit, `git push origin main` (history), then `.\tools\deploy.ps1` (publication); the site updates in about a minute, check the `Deployed <sha>` commit on `gh-pages`. A push that changes only files outside `docs/` (AGENTS.md and the like) needs no publication.
 
 ⚠️ Никогда **не пушь без `mkdocs build --strict`** локально. Строгий билд ловит
 broken links и опечатки в путях.
