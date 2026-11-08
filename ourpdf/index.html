@@ -6939,6 +6939,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#whats-new" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что нового в 1.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#files" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6979,7 +6990,7 @@
 
 
 <h1 id="ourpdf">OurPDF<a class="headerlink" href="#ourpdf" title="Прямая ссылка на раздел">&para;</a></h1>
-<p>OurPDF - программа для просмотра и разметки строительных чертежей в PDF. Окно и комментарии устроены как в Adobe Acrobat, а замеры как в OurPlanCore: те же клавиши <code>R</code>, <code>L</code>, <code>A</code>, <code>J</code>, <code>X</code>, Box двумя углами, Tab по линии чертежа, вырезы из площади и joists. Описание сверено с OurPDF 0.9.27 (ноябрь 2026).</p>
+<p>OurPDF - программа для просмотра и разметки строительных чертежей в PDF. Окно и комментарии устроены как в Adobe Acrobat, а замеры как в OurPlanCore: те же клавиши <code>R</code>, <code>L</code>, <code>A</code>, <code>J</code>, <code>X</code>, Box двумя углами, Tab по линии чертежа, вырезы из площади и joists. Описание сверено с OurPDF 1.0.0 (8 ноября 2026), что поменялось: <a href="#whats-new">Что нового в 1.0</a>.</p>
 <figure>
 <p><img alt="Окно OurPDF с открытым демо-листом" src="../assets/images/ourpdf/window.png" />
   </p>
@@ -7019,7 +7030,7 @@
 <ol>
 <li><strong>Открыть PDF</strong>: перетащить в окно или <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span>.</li>
 <li><strong>Задать масштаб листа</strong>: блок "Масштаб" во второй линии верхней панели: выбрать <code>1/8" = 1'-0"</code> или ввести свой и нажать <span class="keys"><kbd class="key-enter">Enter</kbd></span>. Подробно: <a href="measure/#scale">Масштаб и калибровка</a>.</li>
-<li><strong>Мерить</strong>: кнопка-линейка (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-m">M</kbd></span>), выбрать тип (расстояние <span class="keys"><kbd class="key-r">R</kbd></span>, линия <span class="keys"><kbd class="key-l">L</kbd></span>, площадь <span class="keys"><kbd class="key-a">A</kbd></span>), щёлкать по точкам. Курсор цепляется к линиям чертежа.</li>
+<li><strong>Мерить</strong>: кнопка-линейка, выбрать тип (расстояние <span class="keys"><kbd class="key-r">R</kbd></span>, линия <span class="keys"><kbd class="key-l">L</kbd></span>, площадь <span class="keys"><kbd class="key-a">A</kbd></span>), щёлкать по точкам. Курсор цепляется к линиям чертежа.</li>
 <li><strong>Смотреть значения</strong>: площадь подписана на листе, длина линии появляется при наведении мыши. Итоги по типам и цветам: вкладка "Легенда" на полосе справа. Все замеры по одному: вкладка "Комментарии".</li>
 <li><strong>Сохранить</strong>: замеры хранятся сразу, в профиле программы. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> записывает их в сам PDF, перед этим копия прежнего файла кладётся в папку резервных копий.</li>
 </ol>
@@ -7070,6 +7081,64 @@
 </li>
 </ul>
 </div>
+<h2 id="whats-new">Что нового в 1.0<a class="headerlink" href="#whats-new" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Изменения после версии 0.9.27, по порядку.</p>
+<table>
+<thead>
+<tr>
+<th>Версия</th>
+<th>Что изменилось</th>
+<th>Подробно</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.9.28, 0.9.29</td>
+<td>PDF, выгруженные из OurPlanCore, выглядят в OurPDF так же, как в Acrobat на этом компьютере</td>
+<td></td>
+</tr>
+<tr>
+<td>0.9.30</td>
+<td>Beam (<span class="keys"><kbd class="key-b">B</kbd></span>) и Openings (<span class="keys"><kbd class="key-o">O</kbd></span>), как в OurPlanCore</td>
+<td><a href="measure/#beam-openings">Beam и Openings</a></td>
+</tr>
+<tr>
+<td>0.9.30</td>
+<td>Merge (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-m">M</kbd></span>), Split, Combine: перенести замеры в другой или новый тейкоф, сложить, вычесть и поделить площади</td>
+<td><a href="measure/#merge-split">Merge, Split, Combine</a></td>
+</tr>
+<tr>
+<td>0.9.30</td>
+<td>вид концов линий и размеров: шарик, стрелка как в Acrobat, закрытая стрелка, засечка, квадрат, ромб, без концов</td>
+<td><a href="measure/#line-ends">Концы линий</a></td>
+</tr>
+<tr>
+<td>0.9.30</td>
+<td>каждый новый тейкоф получает случайный цвет, которого ещё нет на листе</td>
+<td><a href="measure/#style">Вид замеров</a></td>
+</tr>
+<tr>
+<td>0.9.31</td>
+<td>Split на <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-m">M</kbd></span>, как в OurPlanCore; у включения измерения клавиши больше нет (кнопка-линейка)</td>
+<td><a href="shortcuts/">Горячие клавиши</a></td>
+</tr>
+<tr>
+<td>0.9.31</td>
+<td>концы линий меняют только вид на экране, в PDF и в Acrobat всё как раньше</td>
+<td><a href="measure/#line-ends">Концы линий</a></td>
+</tr>
+<tr>
+<td>0.9.31</td>
+<td>в узком окне кнопки переносятся на следующую строку, а не обрезаются</td>
+<td><a href="window/">Окно программы</a></td>
+</tr>
+<tr>
+<td>1.0.0</td>
+<td><span class="keys"><kbd class="key-f3">F3</kbd></span> включает и выключает привязку к замерам, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f3">F3</kbd></span> привязку к линиям PDF, как в OurPlanCore; "Найти далее" теперь <span class="keys"><kbd class="key-enter">Enter</kbd></span> в поле поиска</td>
+<td><a href="measure/#snap">Привязки</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="files">Где что лежит<a class="headerlink" href="#files" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
