@@ -216,6 +216,8 @@
 !!! info "Только в полной версии"
     В OurPlanCore Lite полосы XL нет, как и разделов `Settings > Excel Actions` и `Excel Rules` и команды `Create Project Excel Workbook`. В Lite числа идут кнопками [выше](#lite), а макросы книги запускаются в Excel. Чем версии отличаются: [Lite и полная версия](ourplancore-lite.md).
 
+Полоса XL - вертикальная полоса кнопок справа от листа. В полной версии она включается и выключается в настройках: `Settings > Modules`, модуль `Excel Integration` (по умолчанию включён). Тот же модуль показывает кнопки `Excel`, `Value`, `Link to Excel` и `Auto Link`; если полосы не видно, первым делом проверьте эту галку. В Lite галка `Excel Integration` управляет только этими кнопками, полосу XL она не возвращает.
+
 <!-- DEMO: d-excel-xl -->
 
 <figure markdown>
