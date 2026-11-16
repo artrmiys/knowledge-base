@@ -39,7 +39,7 @@ walls/framing/sheathing). Это **шпаргалка для конструкт�
 
 ```powershell
 py -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -U mkdocs mkdocs-material mkdocs-material-extensions
+.\.venv\Scripts\python.exe -m pip install -U mkdocs mkdocs-material mkdocs-material-extensions mkdocs-static-i18n
 ```
 
 ---
@@ -77,6 +77,8 @@ py -m venv .venv
 `reference/ourplancore-all-functions.md`) и `python tools/opc_coverage.py`
 (код выхода 0 = всё описано). Не найденное дописывай на страницу по теме;
 служебное и дубли - в `tools/opc_coverage_ignore.txt` с причиной.
+The same run writes the English twin `ourplancore-all-functions.en.md`: a new description goes into both
+`tools/opc_descriptions_ru.json` and `opc_descriptions_en.json`; `--from-json` re-renders without the app source.
 
 ### Правила нейминга в `nav`
 
@@ -107,6 +109,14 @@ py -m venv .venv
 Файл `docs/start/workflow.md` — пример страницы целиком на русском (это
 процессная инструкция). Файл `docs/reference/hangers.md` — пример страницы
 с английскими таблицами (это reference). Так и держать.
+
+**English copy of the site (RU/EN switch, 2026-11-16).** Plugin `mkdocs-static-i18n`, suffix layout:
+`page.md` is Russian (default, URLs unchanged), `page.en.md` next to it is the full English page for US
+estimators, served under `/en/`; a page without `.en.md` shows the Russian text there. Change both files
+together. Links inside `.en.md` point to `page.md` (the plugin picks the English twin); keep image and raw
+HTML paths the same as in the Russian page (`hooks/i18n_en.py` adds the extra `../` on `/en/`). A new nav
+label needs an English entry in `nav_translations` (`mkdocs.yml`, plugin `i18n`). An English diagram goes
+next to the Russian one as `name.en.svg`/`name.en.png`, links stay the same.
 
 ---
 

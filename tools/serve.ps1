@@ -23,7 +23,7 @@ if (-not (Test-Path $Python)) {
 
 if (-not (Test-Path $ReadyMarker)) {
     Write-Host "Installing MkDocs dependencies..."
-    & $Python -m pip install -U mkdocs mkdocs-material mkdocs-material-extensions
+    & $Python -m pip install -U mkdocs mkdocs-material mkdocs-material-extensions mkdocs-static-i18n
     New-Item -ItemType File -Path $ReadyMarker -Force | Out-Null
 }
 
