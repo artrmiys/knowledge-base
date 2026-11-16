@@ -120,15 +120,25 @@ casing, band, corner и fascia это Line по итему на профиль (
 
 | A Description | B Size | C Qty | D Unit | E |
 | --- | --- | --- | --- | --- |
-| `Ext. Casing sides` | `5/4x4` | `=2*5.5*34` | LFT | `A601` |
-| `Head crowns` | `3-1/2" crown` | `=3.3*34` | LFT | `scaled` |
-| `CornerBoards` | `5/4x6` | `=8*28` | LFT | `A201` |
-| `Soffits at Porch` | `Beadboard` | `=12*8*G` | SQ FT | `6/A550` |
-| `Columns` | `12" Dia Fbg Non-taper w/c&b` | `4` | pcs | `8'` |
-| `Shutters - paneled` | `20"x60"` | `12` | pairs | `A201` |
+| `Ext Casing` | `5/4x4` | `=CEILING(G*1.1,10)` | LFT | `A601` |
+| `Crowns` | `3-1/2" crown` | `=CEILING(G*1.1,10)` | LFT | `scaled` |
+| `Corner Boards` | `5/4x6` | `=EVEN(G*2*1.1)` | LFT | `A201` |
+| `Soffits at Porch` | `Beadboard` | `=CEILING(G*1.1,10)*units` | SQ FT | `6/A550` |
+| `Columns` | `12" Dia Fbg Non-taper` | `4` | `8'` | `w/ cap & base` |
+| `Shutters` | `20"x60" paneled` | `12` | pairs | `A201` |
 
+- G это измеренная длина или площадь из дерева. Waste 1.1 и округление вверх
+  стоят в формуле C: до 10, а когда итог меньше 50, до 2.
+- `Corner Boards`: в G сумма высот наружных углов. Угол из двух досок:
+  `=EVEN(G*2*1.1)`, то есть 8 углов по 28' = 224 LFT углов дают 494 LFT досок.
+  Цельный L-профиль по детали: `=EVEN(G*1.1)`.
+- Подписи пиши как в шаблоне DFL: `Ext Casing`, `Corner Boards`, `Crowns`,
+  `Frieze Board`, `Over Fascia Trims`, `Fascia at Eves`, `Soffits at Eves`,
+  `Watertable Trim`, `Window Sills`. Макросы суммируют строки по тексту
+  подписи: `CornerBoards` и `Corner Boards` для них две разные строки.
 - `LFT` для погонажа, `SQ FT` для панелей и beadboard, `pcs` и `pairs`
-  для изделий. Высота columns и posts отдельно, не внутри описания.
+  для изделий. У `Columns` в D высота колонны (`8'`), в C число штук;
+  высота не пишется внутри описания.
 - Размер и профиль всегда видны (`5/4x4`, `3-1/2" crown`, `4" Vinyl
   corner`); generic `trim` не пишем.
 - В trims workbook для макросов строка это три колонки Label, Value,

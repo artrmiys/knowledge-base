@@ -35,10 +35,10 @@ Line по разрезу на листе с точкой W.
 
 | Строка DFL | Size | Unit | Правило |
 | --- | --- | --- | --- |
-| `Furring 1x4 @ 16" o.c.` | `1x4` или `1x4 P.T.` | LFT | `=CEILING(SF*12/16*1.1,10)`; шаг в строке |
+| `Furring 1x4 @ 16" o.c.` | `1x4` или `1x4 P.T.` | LFT | `=CEILING(G*12/16*1.1,10)`, G = площадь siding в SQ FT; шаг в строке |
 | `Furring` (сплошной) | `1x4` | SQ FT | когда деталь задаёт сплошную плоскость |
 | `Furring 2x4` | `2x4` / `2x4 P.T.` | LFT | толще по structural |
-| `Window jamb` | `2x4` / `2x8` / `2x10` | LFT | периметр 3 стороны (2 jambs + head) или 4 с sill, x число окон |
+| `Window jamb` | `2x4` / `2x8` / `2x10` | LFT | G = периметр 3 стороны (2 jambs + head) или 4 с sill, x число окон; C = G x 1.1 вверх до 10 |
 | `Jambs` (в старых книгах `Blocking around all openings`) | `5/4x4 P.T.` | LFT | nailer под casing и flashing; вставляет `B_JambsAllBlock` |
 | `2x blocking, rip as req'd` | `2x` | LFT | flare и bump по детали |
 
@@ -65,9 +65,12 @@ Line по разрезу на листе с точкой W.
 ## Пример
 
 ```text
-Furring 1x4 @ 16" o.c.         1x4 P.T.   1290  LFT   =CEILING(1560*12/16*1.1,10)   7/A401
-Window jamb                    2x8        612   LFT   =(2*5.5+3.3)*42 windows        4/A601
-Jambs                          5/4x4 P.T. 650   LFT   B_JambsAllBlock                A601
+Furring 1x4 @ 16" o.c.         1x4 P.T.   1290  LFT   =CEILING(1560*12/16*1.1,10)        7/A401
+Window jamb                    2x8        670   LFT   =CEILING((2*5.5+3.3)*42*1.1,10)    4/A601
+Jambs                          5/4x4 P.T. 650   LFT   B_JambsAllBlock                    A601
+
+Furring: 1560 x 12 / 16 = 1170, x 1.1 = 1287, вверх до 10 = 1290
+Window jamb: (2 x 5.5 + 3.3) x 42 окна = 600.6, x 1.1 = 660.7, вверх до 10 = 670
 ```
 
 ## См. также

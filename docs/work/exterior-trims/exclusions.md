@@ -25,7 +25,7 @@ stucco, stone и brick veneer, как их узнать на чертеже и �
 watertable, soffit, fascia, frieze, columns, porch и balcony trim, WRB и
 sheathing под облицовкой, furring. Если весь фасад EIFS или stone, trim
 может быть почти нулевым: не добивай количество, ставь ноту
-`Note: Stone Veneer by others`.
+`Note: Stone Veneer materials are by others`.
 
 ## J-Channel
 
@@ -35,13 +35,17 @@ siding. Он закрывает торец и даёт чистую линию �
 | Условие | Где идёт J-channel | Чей |
 | --- | --- | --- |
 | Vinyl siding | вокруг окон и дверей, под soffit и frieze, у corner posts, inside corners, по rake | **наш**, LFT |
-| Siding примыкает к другому материалу | стык со stone, brick, EIFS, decking, потолком porch | наш, если siding наш |
-| EIFS / stucco | casing bead, stop bead, track по низу, у dissimilar material | обычно by others с системой |
+| Vinyl siding примыкает к другому материалу | стык со stone, brick, EIFS, decking, потолком porch | наш, когда vinyl siding в нашем scope: это профиль siding, а не облицовки |
+| EIFS / stucco | casing bead, stop bead, track по низу, у dissimilar material | by others, идёт с системой |
 
-При vinyl siding `Ext. Casing` часто и есть `Vinyl J-channel`: строка
-`Ext. Casing | Vinyl J-channel | LFT`. Тогда не дублируй `5/4` wood casing.
-Количество: периметр всех openings плюс terminations. Слово `J-channel`
+При vinyl siding `Ext Casing` часто и есть J-channel: строка
+`Ext Casing | J-Channel | LFT`. Тогда не дублируй `5/4` wood casing.
+Количество: периметр всех openings плюс terminations. Слово `J-Channel`
 остаётся в строке, не сводить к generic `casing`.
+
+J-channel наш только как часть vinyl siding. Профили по краю EIFS и stucco
+(casing bead, stop bead, track) похожи на J-channel, но это accessory чужой
+системы: в наш DFL они не идут, даже когда siding рядом наш.
 
 ## Как мерить в OurPlanCore
 
@@ -54,7 +58,7 @@ others; площадь siding `0` и нота.
 
 - Stone или brick veneer посчитаны как siding.
 - При vinyl siding посчитаны и `J-channel`, и `5/4` casing на одни проёмы.
-- J-channel с EIFS записан как наш.
+- Casing bead или track системы EIFS записан как наш J-channel.
 - Trim вокруг veneer пропущен, потому что "стена by others".
 - Все ошибки по обшивке и WRB: [Обшивка](../../start/common-mistakes.md#sheathing).
 

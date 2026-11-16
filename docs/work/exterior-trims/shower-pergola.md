@@ -30,16 +30,16 @@ Area по soffit, в своём итеме, не в `eves rakes`. Каркас c
 
 | Элемент | Строка DFL | Материал | Unit |
 | --- | --- | --- | --- |
-| Shower screen | `Posts` | `4x4 P.T.`, `4x4 IPE` | pcs + высота (`7'`, `10'`, `14'`) |
+| Shower screen | `Posts` | `4x4 P.T.`, `4x4 IPE` | высота поста в D (`7`, `10`, `14`), C = штуки |
 | | `Jamb` | `5/4 IPE Jambs`, `2x4 P.T.` | pcs / LFT |
 | | `Slats` | `1x6 IPE` + `1x4 IPE` alternating, `1x6 Vert. Cedar BDS.` | SQ FT экрана, gap в ноте |
 | | `Cap` | `5/4 IPE Cap` | LFT |
-| Pergola / trellis | `1E Shape` | `4x10 Cedar 1E Shape` | pcs + длина |
-| | `Trellis` | `3x3` | pcs + длина |
-| | `Ledger`, `Brackets`, `Posts` | `2x4`, по детали, `4x4` / `6x6` | pcs, LFT |
+| Pergola / trellis | `1E Shape` | `4x10 Cedar 1E Shape` | длина доски в D, C = штуки |
+| | `Trellis` | `3x3` | длина рейки в D, C = штуки |
+| | `Ledger`, `Brackets`, `Posts` | `2x4`, по детали, `4x4` / `6x6` | ledger и posts: длина в D; brackets pcs |
 | Canopy | `Soffits at Canopy Eves` | `Azek Beadboard` | SQ FT |
 | | `Fascia at Canopies`, `Canopy Hdr wraps` | `1x6` / `1x8`, `1x4` | LFT |
-| | `Frame for Soffits` | по детали, 24" o.c. | LFT |
+| | `Frame for Soffits` | `2x4` по детали, 24" o.c. | `16` (доски по 16', как на [Eve](../sheathing-and-misc/eve.md)) |
 
 - Материал (IPE, cedar, P.T.) держи в строке, не своди к generic.
 - `Garage Shower Outside` отдельный участок со своими posts и slats.
@@ -55,7 +55,7 @@ Area по soffit, в своём итеме, не в `eves rakes`. Каркас c
 ## Пример
 
 ```text
-Posts   4x4 IPE                       6   pcs    10'    assumed  A502
+Posts   4x4 IPE                       6   10            assumed  A502
 Slats   1x6 + 1x4 IPE alternating     180 SQ FT  gap 1/4"        A502
 Cap     5/4 IPE Cap                   24  LFT                    A502
 ```

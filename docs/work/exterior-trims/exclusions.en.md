@@ -25,7 +25,7 @@ What stays ours next to them: wood/PVC casing, corner board, band,
 watertable, soffit, fascia, frieze, columns, porch and balcony trim, WRB and
 sheathing under the cladding, furring. If the whole elevation is EIFS or stone, trim
 can be close to zero: do not pad the quantity, add the note
-`Note: Stone Veneer by others`.
+`Note: Stone Veneer materials are by others`.
 
 ## J-Channel
 
@@ -35,13 +35,17 @@ siding. It covers the end and gives a clean termination line.
 | Condition | Where J-channel goes | Whose |
 | --- | --- | --- |
 | Vinyl siding | around windows and doors, under soffit and frieze, at corner posts, inside corners, along the rake | **ours**, LFT |
-| Siding meets another material | joint with stone, brick, EIFS, decking, porch ceiling | ours, if the siding is ours |
-| EIFS / stucco | casing bead, stop bead, track at the bottom, at dissimilar material | usually by others with the system |
+| Vinyl siding meets another material | joint with stone, brick, EIFS, decking, porch ceiling | ours when vinyl siding is in our scope: it is a siding profile, not a cladding one |
+| EIFS / stucco | casing bead, stop bead, track at the bottom, at dissimilar material | by others, comes with the system |
 
-With vinyl siding `Ext. Casing` is often the `Vinyl J-channel` itself: the row
-`Ext. Casing | Vinyl J-channel | LFT`. Then do not duplicate it with `5/4` wood casing.
-Quantity: perimeter of all openings plus terminations. The word `J-channel`
+With vinyl siding `Ext Casing` is often the J-channel itself: the row
+`Ext Casing | J-Channel | LFT`. Then do not duplicate it with `5/4` wood casing.
+Quantity: perimeter of all openings plus terminations. The word `J-Channel`
 stays in the row; do not reduce it to a generic `casing`.
+
+J-channel is ours only as part of vinyl siding. The edge profiles of EIFS and stucco
+(casing bead, stop bead, track) look like J-channel, but they are accessories of
+someone else's system: they do not go into our DFL even when the siding next to them is ours.
 
 ## How to measure in OurPlanCore
 
@@ -54,7 +58,7 @@ others; siding area `0` and a note.
 
 - Stone or brick veneer counted as siding.
 - With vinyl siding both `J-channel` and `5/4` casing counted on the same openings.
-- J-channel with EIFS written as ours.
+- A casing bead or track of the EIFS system written as our J-channel.
 - Trim around veneer missed because "the wall is by others".
 - All sheathing and WRB mistakes: [Sheathing](../../start/common-mistakes.md#sheathing).
 
