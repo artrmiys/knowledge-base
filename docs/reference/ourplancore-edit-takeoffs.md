@@ -230,7 +230,7 @@
 4. Проверьте метки: синие добавляются сразу, оранжевые слабые на проверку, серые галки уже посчитаны. `Include candidates` берёт и слабые, `Strong only` только надёжные.
 5. Нажмите `Add N to <имя>`.
 
-Результат: метки в активном Count или в новом `Similar Count`. Галка `Ask AI to identify the symbol` работает онлайн и только подсказывает имя (нужны модуль AI и ключ). Подробно про поиск по листам: [Similar по всем листам](ourplancore-extras-other.md#similar).
+Результат: метки в активном Count или в новом `Similar Count`. Галка `Ask AI to identify the symbol` работает онлайн и только подсказывает имя (нужны модуль AI и ключ, то есть полная версия; в Lite галка видна, но неактивна). Подробно про поиск по листам: [Similar по всем листам](ourplancore-extras-other.md#similar).
 
 <figure markdown>
   <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-similar.png"><source src="../../assets/images/ourplancore/demo/d-similar.mp4" type="video/mp4"></video>

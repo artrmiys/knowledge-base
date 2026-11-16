@@ -1,6 +1,6 @@
 # Snap и трассировка
 
-Здесь: переключатели на нижней полосе (`Snap`, `PDF`, `Ortho`, `Box`), вкладка PDF Layers и Layer Trace, трасса стен внутри площади и запросы трассы через AI Inbox. В повседневном замере контур обводится кликами с `Ortho` и `Snap`; трассировка нужна редко, когда чертёж векторный и стен много. Как эти приёмы сочетаются с правкой: [Правка замеров и привязки](ourplancore-editing.md).
+Здесь: переключатели на нижней полосе (`Snap`, `PDF`, `Ortho`, `Box`), вкладка PDF Layers и Layer Trace, трасса стен внутри площади и запросы трассы через AI Inbox (только полная версия). В повседневном замере контур обводится кликами с `Ortho` и `Snap`; трассировка нужна редко, когда чертёж векторный и стен много. Как эти приёмы сочетаются с правкой: [Правка замеров и привязки](ourplancore-editing.md).
 
 ## Привязки на полосе инструментов { #snap }
 
@@ -119,7 +119,7 @@
 | `Show Layer` / `Hide Layer` | включить или выключить слой, как галка в строке |
 | `Highlight Layer` / `Clear Highlight` | подсветить слой на листе или снять подсветку, как галка `Hi` |
 
-При включённом модуле AI сверху ещё два пункта, `Save Layer Info for AI` и `Queue AI Request for This Layer`: они пишут сведения о слое в AI Inbox ([ИИ в программе](ourplancore-ai.md)).
+В полной версии при включённом модуле AI сверху ещё два пункта, `Save Layer Info for AI` и `Queue AI Request for This Layer`: они пишут сведения о слое в AI Inbox ([ИИ в программе](ourplancore-ai.md)).
 
 ## Trace Walls Inside Area { #wall-trace }
 
@@ -147,7 +147,7 @@
 
 ## Запросы трассы через AI Inbox { #ai-trace }
 
-При включённом модуле AI в контекстном меню листа есть пункты `Trace wall from this point`, `Trace closed area` и `Check missed takeoffs on this page`. Они не рисуют сразу: создаётся запись в AI Inbox с текстом `Pending SmartTrace request` или `Pending SmartCheck request`, которую потом выполняют и проверяют через AI Manager или терминал ИИ ([консоль ИИ](ourplancore-ai-console.md), [AI Manager](ourplancore-managers.md#ai-manager)). В дерево результат попадает только после подтверждения.
+Только в полной версии: в Lite модуля AI нет, а Layer Trace и Trace Walls Inside Area выше работают. При включённом модуле AI в контекстном меню листа есть пункты `Trace wall from this point`, `Trace closed area` и `Check missed takeoffs on this page`. Они не рисуют сразу: создаётся запись в AI Inbox с текстом `Pending SmartTrace request` или `Pending SmartCheck request`, которую потом выполняют и проверяют через AI Manager или терминал ИИ ([консоль ИИ](ourplancore-ai-console.md), [AI Manager](ourplancore-ai.md#ai-manager)). В дерево результат попадает только после подтверждения.
 
 ## Ловушки { #traps }
 

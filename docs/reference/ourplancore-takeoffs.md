@@ -19,11 +19,11 @@
 | `Total` | итог активной позиции в её единицах |
 | `New Folder`, `New Item` (`T`) | папка и позиция под выделенной папкой |
 | `Delete Empty` | удалить позиции без замеров; `Ctrl+Z` возвращает пакетом |
-| `More` | `Roof Base from area`, `Auto Tree` (корни COM-шаблона), `From Pages` (папки по структуре листов) |
+| `More` | `Roof Base from area` (модуль 3D, только полная версия), `Auto Tree` (корни COM-шаблона), `From Pages` (папки по структуре листов) |
 | `Export` | `Save`, `Save As...`, `Export CSV`, `Export TXT`, `Export Excel`, `Export to Current Excel` |
 | Значки в шапке панели | `Refresh Takeoffs tree` - перечитать дерево из папки проекта, статус `Takeoffs tree refreshed.`; `Collapse all Takeoffs nodes` и `Expand all Takeoffs nodes` - свернуть или раскрыть все папки. Те же команды на правой полосе значков: `Collapse Takeoffs Tree`, `Expand Takeoffs Tree` |
 | Поиск | левое поле по имени папки, правое по имени позиции или замера; кнопка в левом поле `Match takeoff folder case exactly` (включена) различает `A` и `a`, выключенная ищет без учёта регистра |
-| Вкладки справа | `Takeoffs`, `Estimating`, `3D` (модуль), `Templates` |
+| Вкладки справа | `Takeoffs`, `Estimating`, `3D` (модуль, только полная версия), `Templates` |
 
 Под каждой позицией в дереве видны секции: замеры по листам; `Ctrl+Enter` выделяет замеры секции на листе.
 
@@ -224,7 +224,7 @@
     | `Create Count Points Along Lines...`, `Break Lines Into Segments`, `Count Points At Line Ends...` | у Line, модуль ([правка](ourplancore-edit-takeoffs.md)) |
     | `Find Similar...` | у Count, модуль: найти такие же символы на листе |
     | `Count Display` | значок точек Count |
-    | `3D` > `Wall`, `Roof Base from Area` | модуль 3D ([3D](ourplancore-3d.md)) |
+    | `3D` > `Wall`, `Roof Base from Area` | модуль 3D, только полная версия ([3D](ourplancore-3d.md)) |
     | `Merge Selected Takeoffs...`, `Split Selected Takeoffs...`, `Undo Takeoff Merge / Split` | модуль ([Merge и Split](ourplancore-edit-takeoffs.md)) |
     | `Rename...`, `Delete item + measurements`, `Duplicate Item` | переименовать, удалить с замерами (`Ctrl+Z` вернёт), копия рядом с тем же именем |
     | `Properties...`, `Bulk Properties...`, `Set Unit Price` | свойства одной позиции, нескольких сразу ([выше](#bulk)), цена (модуль Estimating) |
@@ -239,7 +239,7 @@
     | `Rename Folder...`, `Delete folder + children` | переименовать; удалить со всем содержимым (`Ctrl+Z` вернёт) |
     | `Folder Properties...` | окно `Takeoff Folder Properties` ([выше](#folder-props)) |
     | `Bulk Item Properties...`, `Random Colors for Items` | свойства или разные цвета всем позициям папки и подпапок |
-    | `Count Display`, `3D` | значок Count и 3D для позиций папки |
+    | `Count Display`, `3D` | значок Count и 3D для позиций папки (3D только в полной версии) |
     | `Clipboard` > `Copy Folder`, `Cut Folder`, `Paste Into Folder`, `Duplicate Folder` | копирование и перенос ветки |
     | `Organize` > `Auto Create Tree`, `Create Folders From Pages` | модуль Takeoff Automation: корни шаблона и папки по листам ([дерево](#tree)) |
     | `Organize` > `Move Up`, `Move Down`, `Sort Children A-Z`, `Sort Children Z-A` | порядок папки и сортировка её содержимого |

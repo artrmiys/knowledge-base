@@ -1,5 +1,8 @@
 # 3D-крыша
 
+!!! info "Только в полной версии"
+    В OurPlanCore Lite модуля 3D нет: ни вкладки 3D, ни `Roof Base`. В Lite крышу меряют площадями скатов с уклоном в имени ([Roof](../work/sqfts/roof.md)), рёбра - линиями ([Ridge / Valley / Hip](../work/sheathing-and-misc/ridgevalleyhip.md)). Чем версии отличаются: [Lite и полная версия](ourplancore-lite.md).
+
 Здесь: как из площадей скатов и карнизов получить объёмную крышу во вкладке 3D, задать уклон рёбрам, достроить свесы и стропила и забрать из модели длины ridge, hip, valley и eave в дерево Takeoffs. Нужно на сложной крыше (L, U, несколько уклонов, dormer), когда по плану не видно, где пройдут hip и valley, и когда клиент просит длины рёбер. Простая двускатная крыша меряется без 3D: Area по скату с уклоном в имени ([Roof](../work/sqfts/roof.md)). Стены в 3D, общий вьюер и архивный Massing - [3D и Massing](ourplancore-3d.md).
 
 <figure markdown>

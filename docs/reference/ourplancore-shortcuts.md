@@ -88,18 +88,18 @@
 | ++t++ | | New takeoff item (в рабочем окне) |
 | ++ctrl+shift+v++ | | Break H/V (не Paste) |
 
-Закладки и AI Inbox: ++enter++ открыть, ++delete++ удалить.
+Закладки и AI Inbox (AI Inbox только в полной версии): ++enter++ открыть, ++delete++ удалить.
 
 ## Roof guide и Sheet Overlay
 
 | Контекст | Клавиши |
 | --- | --- |
-| Roof guide (3D) | ++r++ Ridge, ++h++ Hip, ++v++ Valley, ++e++ Eave, ++k++ Rake, ++p++ Pitch; ++backspace++ / ++ctrl+z++ назад, ++esc++ отмена линии или выход |
+| Roof guide (3D, только полная версия) | ++r++ Ridge, ++h++ Hip, ++v++ Valley, ++e++ Eave, ++k++ Rake, ++p++ Pitch; ++backspace++ / ++ctrl+z++ назад, ++esc++ отмена линии или выход |
 | Sheet Overlay | ++ctrl+alt+left++ / ++right++ / ++up++ / ++down++ сдвиг; ++ctrl+alt+plus++ / ++ctrl+alt+minus++ масштаб; `Ctrl+Alt+[` / `Ctrl+Alt+]` поворот; ++ctrl+alt+0++ сброс; с ++shift++ точный шаг |
 
 ## Без клавиши по умолчанию
 
-Назначаются в редакторе: Mirror selected objects horizontally / vertically, Hide / Show All Takeoffs, Pitch, Similar, P Line, Ends, Repeat Line, Repeat Beam, Combine Areas (пять операций), Undo Last Page Sort, Undo Last Page Operation, Toggle Dark Theme, Codex / Claude Terminal и все пункты меню и лент (в каталоге больше 600 команд).
+Назначаются в редакторе: Mirror selected objects horizontally / vertically, Hide / Show All Takeoffs, Pitch, Similar, P Line, Ends, Repeat Line, Repeat Beam, Combine Areas (пять операций), Undo Last Page Sort, Undo Last Page Operation, Toggle Dark Theme, Codex / Claude Terminal (только полная версия) и все пункты меню и лент (в каталоге больше 600 команд).
 
 ## Русская раскладка
 
