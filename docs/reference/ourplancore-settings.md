@@ -41,7 +41,7 @@
 
 | Категория | Что настраивает | Когда трогать | Подробно |
 | --- | --- | --- | --- |
-| Modules | модули (16 в Lite, 19 в полной версии) и команда Job Tracker | нет вкладки или кнопки; включить Sheet Manager | [Модули](#modules), [Дополнительные возможности](ourplancore-extras.md) |
+| Modules | модули (17 в Lite, 20 в полной версии) и команда Job Tracker | нет вкладки или кнопки; включить Sheet Manager | [Модули](#modules), [Дополнительные возможности](ourplancore-extras.md) |
 | Page Folders | стандартные папки Pages для шаблонов Auto / COM / EWP | другой состав папок `00. imported` | [Pages](ourplancore-pages.md) |
 | Blank Sheets | размер по умолчанию и пресеты бумаги | часто нужен другой формат пустого листа | [Пустые листы](ourplancore-sheets-advanced.md#blank) |
 | Auto Tree | дерево Takeoffs, которое строит `More > Auto Tree` | свой канон папок | [Дерево Takeoffs](ourplancore-takeoffs.md) |
@@ -56,7 +56,7 @@
 | Sort A/S | правила `Sort: A - Arch / S - Struct`, листы на `-` в `--------others` | нестандартные префиксы листов | [Pages](ourplancore-pages.md) |
 | Sort D/Sec/WT | суффикс имени листа, потом папка (`sections`, `details`, `rcp`) | новые типы листов | [Pages](ourplancore-pages.md) |
 | Auto Rename / Scale | движок имён и масштаба, правила суффиксов, колонка Kept, AI по штампу (AI только в полной версии) | Name даёт плохие имена | [Pages](ourplancore-pages.md), [ИИ](ourplancore-ai.md#sheet-names) |
-| Excel Actions | кнопки полосы XL и последовательность ALL; только полная версия | свой порядок шагов экспорта | [Excel](ourplancore-excel.md#settings) |
+| Excel Actions | кнопки полосы XL и последовательность ALL; виден, пока включён модуль Excel Strip (XL) | свой порядок шагов экспорта | [Excel](ourplancore-excel.md#settings) |
 | Excel Links | как `Link to Excel` пишет в открытую и закрытую книгу, копии книги, порог малых чисел для `Auto Link` | не писать в открытую книгу сразу, другое число копий | [Экспорт в Excel](ourplancore-excel.md#link-settings) |
 | Project Storage | размер проекта, `Preview safe compact`, `Compact snap.json` | проект раздулся | [Проекты и сохранение](job-creation-storage.md) |
 | Autosave Recovery | интервалы повторов после ошибки автосохранения | нужно изменить ожидание следующей попытки | [Автосохранение](job-creation-storage.md#autosave) |
@@ -70,7 +70,7 @@
 
 ### Modules { #modules }
 
-Галки по модулям в группах Documents, Takeoff, Output, Assistance, Productivity, Integrations: в Lite их 16, в полной версии 19. Пресеты `Current default`, `All modules on`, `Takeoff Only`, `Minimal`; Apply, Save global, Save for this job, Clear job override, Reset. Здесь же команда модуля Job Tracker: `Executable`, `Arguments (one per line)`, `Save`, `Reset`.
+Галки по модулям в группах Documents, Takeoff, Output, Assistance, Productivity, Integrations: в Lite их 17, в полной версии 20. Пресеты `Current default`, `All modules on`, `Takeoff Only`, `Minimal`; Apply, Save global, Save for this job, Clear job override, Reset. Здесь же команда модуля Job Tracker: `Executable`, `Arguments (one per line)`, `Save`, `Reset`.
 
 | Модуль | Группа | По умолчанию | Что включает |
 | --- | --- | --- | --- |
@@ -91,7 +91,8 @@
 | Quick Calculator | Productivity | вкл | калькулятор футов и дюймов |
 | PDF Output | Output | вкл | лента PDF Output, Preview, экспорт |
 | Detached Sheets | Documents | вкл | открепленные окна листов, Tile M2 |
-| Excel Integration | Output | вкл | `Excel`, `Value`, `Link to Excel`, `Auto Link`; в полной версии ещё полоса XL |
+| Excel Integration | Output | вкл | `Excel`, `Value`, `Link to Excel`, `Auto Link`; без него не работает и полоса XL |
+| Excel Strip (XL) | Output | вкл в полной версии, выкл в Lite | полоса XL справа от листа, разделы Excel Actions и Excel Rules, в Lite ещё кнопка `XLS` на правой полосе команд; нужен Excel Integration |
 | Job Tracker | Integrations | выкл | кнопка In Progress |
 
 Выключенный модуль прячет кнопки и вкладку; клавиша на его команду не срабатывает. Проектная копия модулей сильнее глобальной. Модулей AI, 3D и Materials в Lite нет совсем, их не включит ни пресет, ни проект ([Lite и полная версия](ourplancore-lite.md)). Что делают выключенные по умолчанию модули и когда их включать: [Дополнительные возможности](ourplancore-extras.md).
@@ -155,7 +156,7 @@ Sort A/S: таблица `Match (sheet prefix / filename keyword)` и `Target` �
   <figcaption markdown="span">Кнопки полосы XL и порядок шагов для ALL.</figcaption>
 </figure>
 
-Только в полной версии: в Lite нет полосы XL и разделов Excel Actions и Excel Rules. Список кнопок полосы XL (`Action`), последовательность для `ALL`, галка `Insert numeric floor group rows (0-5) before the takeoff rows`, слова папок этажей (`1, 1st, first`). Как пользоваться полосой - [Экспорт в Excel](ourplancore-excel.md).
+Раздел виден, пока включён модуль `Excel Strip (XL)`: в полной версии он включён по умолчанию, в Lite его включают в Modules. Так же показывается соседний раздел Excel Rules. Список кнопок полосы XL (`Action`), последовательность для `ALL`, галка `Insert numeric floor group rows (0-5) before the takeoff rows`, слова папок этажей (`1, 1st, first`). Как пользоваться полосой - [Экспорт в Excel](ourplancore-excel.md).
 
 ### Project Storage
 

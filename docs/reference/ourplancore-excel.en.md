@@ -1,6 +1,6 @@
 # Export to Excel
 
-This page covers how to move numbers from the Takeoffs tree into the DFL workbook. In Lite these are the `Excel` and `Value` buttons at the bottom left, a permanent link from a takeoff to a cell with `Link to Excel`, `Auto Link` for the whole DFL, resetting links, and `Export > Export Excel` to a file. The XL strip to the right of the sheet, which writes sections into `TemplateCom.xlsm` and runs the workbook macros by itself, exists only in the full version: it is described at the end of the page ([XL strip](#xl)). You need it after measuring, before working in the DFL.
+This page covers how to move numbers from the Takeoffs tree into the DFL workbook. In Lite these are the `Excel` and `Value` buttons at the bottom left, a permanent link from a takeoff to a cell with `Link to Excel`, `Auto Link` for the whole DFL, resetting links, and `Export > Export Excel` to a file. The XL strip to the right of the sheet, which writes sections into `TemplateCom.xlsm` and runs the workbook macros by itself, is off by default in Lite and is turned on with a checkbox in `Settings > Modules`; it is described at the end of the page ([XL strip](#xl)). You need it after measuring, before working in the DFL.
 
 ## Excel in Lite { #lite }
 
@@ -12,7 +12,7 @@ This page covers how to move numbers from the Takeoffs tree into the DFL workboo
 | `Auto Link` | next to `Link to Excel` | link takeoffs to the `J:L` list of a DFL workbook in one click ([below](#auto-link)) |
 | `Export > Export Excel` | the `Export` menu of the Takeoffs panel | export of the tree to an `.xlsx` file, columns J/K/L from row 10 |
 
-Lite does not run the workbook macros: it has no XL strip. Run the calculation on the exported `J:L` list (areas, walls, openings, eaves) in Excel with the E-Wood tab buttons ([Calculation from takeoffs](ewood-tab.md#calculate)). Make the building workbook from the template in the `templates` folder of the shared Dropbox folder ([TemplateCom template](#template)).
+These buttons do not run the workbook macros. Run the calculation on the exported `J:L` list (areas, walls, openings, eaves) in Excel with the E-Wood tab buttons ([Calculation from takeoffs](ewood-tab.md#calculate)), or turn on the XL strip: it runs the macros itself ([XL strip](#xl)). Make the building workbook from the template in the `templates` folder of the shared Dropbox folder ([TemplateCom template](#template)).
 
 ## How to put one takeoff into a cell: Value and Excel { #value }
 
@@ -205,18 +205,18 @@ Section header `Link to Excel behaviour`. There are **Apply**, **Reset**, **Save
 | `Time limit for a closed workbook, seconds` | 180, from 15 to 1800; after it the app stops its hidden Excel, the links stay `Pending` |
 | `Lines and areas: a whole number below this needs its name` | `Auto Link` section, 10, from 0 to 1000; points always need a name |
 
-OurPlanCore Lite has the same button, menu, window and Settings section. Lite has no XL strip. [OurPDF](../ourpdf/excel-link.md) has the same link.
+OurPlanCore Lite has the same button, menu, window and Settings section. [OurPDF](../ourpdf/excel-link.md) has the same link.
 
 ## TemplateCom template { #template }
 
-`TemplateCom.xlsm` for Lite is in the shared Dropbox folder `Office Folder\programs\templates`; for the full version it is also in the update folder next to `ourplancore.exe`. Each building gets a copy (`Bldng#A.xlsm`); the workbook name equals the Job Name on the Front Page. Worksheets: `Front Page` (areas, Total SQFT), `Detailed Frame List` (the delivered columns `A:H` and work zones to the right: `J:N` export, `O:AB` wall matrix, spec cells `O:S`, height calculator), `Standarts` (notes library), `Mat List`. The A-series macros are run by the XL strip in the full version and by the E-Wood tab buttons in Lite ([Calculation from takeoffs](ewood-tab.md#calculate)); the B, C, X, Y series by hotkeys in Excel. Details: [DFL: how the workbook works](dfl-overview.md), [Excel macros and hotkeys](excel-hotkeys.md), [Standard notes](standard-notes.md).
+`TemplateCom.xlsm` for Lite is in the shared Dropbox folder `Office Folder\programs\templates`; for the full version it is also in the update folder next to `ourplancore.exe`. Each building gets a copy (`Bldng#A.xlsm`); the workbook name equals the Job Name on the Front Page. Worksheets: `Front Page` (areas, Total SQFT), `Detailed Frame List` (the delivered columns `A:H` and work zones to the right: `J:N` export, `O:AB` wall matrix, spec cells `O:S`, height calculator), `Standarts` (notes library), `Mat List`. The A-series macros are run by the XL strip, and without it (the Lite default) by the E-Wood tab buttons ([Calculation from takeoffs](ewood-tab.md#calculate)); the B, C, X, Y series by hotkeys in Excel. Details: [DFL: how the workbook works](dfl-overview.md), [Excel macros and hotkeys](excel-hotkeys.md), [Standard notes](standard-notes.md).
 
-## XL strip: full version only { #xl }
+## XL strip: the Excel Strip (XL) module { #xl }
 
-!!! info "Full version only"
-    OurPlanCore Lite has no XL strip, nor the `Settings > Excel Actions` and `Excel Rules` sections or the `Create Project Excel Workbook` command. In Lite numbers go through the buttons [above](#lite), and the workbook macros are run in Excel. How the versions differ: [Lite vs full version](ourplancore-lite.md).
+!!! info "In Lite the strip is turned on with a checkbox"
+    In OurPlanCore Lite the XL strip is off by default. To turn it on: `Settings > Modules`, check `Excel Strip (XL)` (the `Excel Integration` checkbox is needed too; it is on by default), then `Apply` or `Save global default`. You get the XL strip to the right of the sheet, the `XLS` button on the right command strip and the `Settings > Excel Actions` and `Excel Rules` sections. Uncheck it and all of that hides again. Lite has no `Create Project Excel Workbook` command: take the template from the `templates` folder in Dropbox ([TemplateCom template](#template)). How the versions differ: [Lite vs full version](ourplancore-lite.md).
 
-The XL strip is a vertical strip of buttons to the right of the sheet. In the full version it is turned on and off in the settings: `Settings > Modules`, the `Excel Integration` module (on by default). The same module shows the `Excel`, `Value`, `Link to Excel` and `Auto Link` buttons; if the strip is not visible, check this checkbox first. In Lite the `Excel Integration` checkbox controls only these buttons; it does not bring back the XL strip.
+The XL strip is a vertical strip of buttons to the right of the sheet. It is shown by the `Excel Strip (XL)` module in `Settings > Modules`: on by default in the full version, off in Lite. The strip also needs the `Excel Integration` module (on in both versions), which shows the `Excel`, `Value`, `Link to Excel` and `Auto Link` buttons. If the strip is not visible, check both checkboxes first.
 
 <!-- DEMO: d-excel-xl -->
 
@@ -232,8 +232,8 @@ The XL strip is a vertical strip of buttons to the right of the sheet. In the fu
 
 ### What you need before pressing
 
-- [ ] Excel has the building workbook open, made from `TemplateCom.xlsm` (a copy of the template from the app update folder), macros enabled. The app looks for an open `TemplateCom.xlsm` workbook; if there is none, it takes the active macro-enabled workbook (`.xlsm`) that has a `Detailed Frame List` worksheet.
-- [ ] The `Excel Integration` module is on (`Settings > Modules`, on by default).
+- [ ] Excel has the building workbook open, made from `TemplateCom.xlsm` (a copy of the template from the `templates` folder in Dropbox), macros enabled. The app looks for an open `TemplateCom.xlsm` workbook; if there is none, it takes the active macro-enabled workbook (`.xlsm`) that has a `Detailed Frame List` worksheet.
+- [ ] The `Excel Integration` and `Excel Strip (XL)` modules are on (`Settings > Modules`; in Lite `Excel Strip (XL)` is off by default).
 - [ ] **One** building (a folder with roots) or one export folder (`walls`, `sqfts`...) is selected in the Takeoffs tree. For `ALL` a selection from two buildings is not accepted ([multiple buildings](ourplancore-buildings.md#excel)).
 - [ ] The `LG` legend is filled with the job's beam, post and header codes (otherwise the workbook keeps codes instead of sizes).
 - [ ] The job is saved, `Total` checked on the large takeoffs.
@@ -339,7 +339,7 @@ Overview of all Settings sections: [Settings](ourplancore-settings.md).
 
 ## Common mistakes { #errors }
 
-The first rows of the table are XL strip messages (full version), then come the `Link to Excel` and `Auto Link` messages, which Lite has too.
+The first rows of the table are XL strip messages (in Lite, once the strip is turned on), then come the `Link to Excel` and `Auto Link` messages.
 
 | Message or symptom | Cause and what to do |
 | --- | --- |

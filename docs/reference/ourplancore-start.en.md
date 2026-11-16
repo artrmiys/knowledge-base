@@ -79,7 +79,7 @@ The exact contents of the demo after the 3.0.1 release should be checked against
 4. **Legend.** `Display > Legend Show`, then right-click the sheet, `Organize > Sort Sheet Legend by Key`; `H` on a takeoff hides it from the sheet, the dot next to the takeoff under the sheet in Pages brings it back. [Takeoffs tree](ourplancore-takeoffs.md#hide)
 5. **Crops and mask.** `Page > Blank Sheet`, then `Page > Crop to Sheet` from the plan onto the blank sheet; `Annotation > Hide` with a box over what is not needed. [Sheets: advanced](ourplancore-sheets-advanced.md)
 6. **3D (full version only).** Turn on the 3D module, select `rf 6`, the 3D tab, `Roof Base`, `Auto`, `Iso`. In Lite, skip this step. [3D roof](ourplancore-3d-roof.md)
-7. **Export.** `PDF Output > Preview`, `Main > Export` of one sheet; in an open copy of `TemplateCom.xlsm` click a cell, select a takeoff and press `Excel` at the bottom (in the full version also the XL strip, the `WL` button). [PDF and delivery](ourplancore-pdf.md), [Export to Excel](ourplancore-excel.md)
+7. **Export.** `PDF Output > Preview`, `Main > Export` of one sheet; in an open copy of `TemplateCom.xlsm` click a cell, select a takeoff and press `Excel` at the bottom (with the XL strip on, also the `WL` button). [PDF and delivery](ourplancore-pdf.md), [Export to Excel](ourplancore-excel.md)
 
 ### Broke the demo, what next
 

@@ -59,7 +59,8 @@ The version is in the window title and in the `Version ...` line of the app log.
 
 | Symptom | Cause | What to do |
 | --- | --- | --- |
-| No `>_` button, no XL strip, no AI Manager, 3D, Materials tabs | Lite is open: it does not have these | this is by design; the list: [Lite and the full version](ourplancore-lite.md#missing) |
+| No `>_` button, no AI Manager, 3D, Materials tabs | Lite is open: it does not have these | this is by design; the list: [Lite and the full version](ourplancore-lite.md#missing) |
+| No XL strip, no `XLS` button, no Excel Actions and Excel Rules sections | in Lite the `Excel Strip (XL)` module is off by default | `Settings > Modules`: check `Excel Strip (XL)` (and `Excel Integration`), `Apply` or `Save global default` |
 | A double click on an `.ourplan` does not open Lite | Lite does not register itself as the app for `.ourplan` | ++ctrl+o++ and `Open project...` or `Open project file...`, or drag the file into the window |
 | After switching to Lite the settings look brand new | Lite has its own profile `%LOCALAPPDATA%\OurPlanCore Lite` | set up what you need again in `Settings` and click `Save global default` |
 | `Name` does not name a scanned sheet | Lite has no OCR: the name is read only from the PDF text | name the sheet by hand (++f2++) |

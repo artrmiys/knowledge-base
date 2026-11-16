@@ -41,7 +41,7 @@ Result: the category status says `Using this job's override`; other jobs follow 
 
 | Category | What it sets | When to touch it | Details |
 | --- | --- | --- | --- |
-| Modules | modules (16 in Lite, 19 in the full version) and the Job Tracker command | a tab or button is missing; turn on Sheet Manager | [Modules](#modules), [Extra features](ourplancore-extras.md) |
+| Modules | modules (17 in Lite, 20 in the full version) and the Job Tracker command | a tab or button is missing; turn on Sheet Manager | [Modules](#modules), [Extra features](ourplancore-extras.md) |
 | Page Folders | standard Pages folders for the Auto / COM / EWP templates | a different set of `00. imported` folders | [Pages](ourplancore-pages.md) |
 | Blank Sheets | default size and paper presets | you often need a different blank sheet size | [Blank sheets](ourplancore-sheets-advanced.md#blank) |
 | Auto Tree | the Takeoffs tree that `More > Auto Tree` builds | your own folder canon | [Takeoffs tree](ourplancore-takeoffs.md) |
@@ -56,7 +56,7 @@ Result: the category status says `Using this job's override`; other jobs follow 
 | Sort A/S | the `Sort: A - Arch / S - Struct` rules, sheets ending in `-` go to `--------others` | non-standard sheet prefixes | [Pages](ourplancore-pages.md) |
 | Sort D/Sec/WT | sheet name suffix, then the folder (`sections`, `details`, `rcp`) | new sheet types | [Pages](ourplancore-pages.md) |
 | Auto Rename / Scale | the name and scale engine, suffix rules, the Kept column, AI from the title block (AI in the full version only) | Name gives bad names | [Pages](ourplancore-pages.md), [AI](ourplancore-ai.md#sheet-names) |
-| Excel Actions | XL strip buttons and the ALL sequence; full version only | your own order of export steps | [Excel](ourplancore-excel.md#settings) |
+| Excel Actions | XL strip buttons and the ALL sequence; shown while the Excel Strip (XL) module is on | your own order of export steps | [Excel](ourplancore-excel.md#settings) |
 | Excel Links | how `Link to Excel` writes to an open and a closed workbook, workbook backups, the small-number threshold for `Auto Link` | do not write to the open workbook right away, a different number of backups | [Excel export](ourplancore-excel.md#link-settings) |
 | Project Storage | job size, `Preview safe compact`, `Compact snap.json` | the job file got bloated | [Jobs and saving](job-creation-storage.md) |
 | Autosave Recovery | retry intervals after an autosave error | you need to change the wait before the next attempt | [Autosave](job-creation-storage.md#autosave) |
@@ -70,7 +70,7 @@ Result: the category status says `Using this job's override`; other jobs follow 
 
 ### Modules { #modules }
 
-Module checkboxes in the groups Documents, Takeoff, Output, Assistance, Productivity, Integrations: 16 in Lite, 19 in the full version. Presets `Current default`, `All modules on`, `Takeoff Only`, `Minimal`; Apply, Save global, Save for this job, Clear job override, Reset. The Job Tracker module command is here too: `Executable`, `Arguments (one per line)`, `Save`, `Reset`.
+Module checkboxes in the groups Documents, Takeoff, Output, Assistance, Productivity, Integrations: 17 in Lite, 20 in the full version. Presets `Current default`, `All modules on`, `Takeoff Only`, `Minimal`; Apply, Save global, Save for this job, Clear job override, Reset. The Job Tracker module command is here too: `Executable`, `Arguments (one per line)`, `Save`, `Reset`.
 
 | Module | Group | Default | What it turns on |
 | --- | --- | --- | --- |
@@ -91,7 +91,8 @@ Module checkboxes in the groups Documents, Takeoff, Output, Assistance, Producti
 | Quick Calculator | Productivity | on | feet and inches calculator |
 | PDF Output | Output | on | the PDF Output ribbon, Preview, export |
 | Detached Sheets | Documents | on | detached sheet windows, Tile M2 |
-| Excel Integration | Output | on | `Excel`, `Value`, `Link to Excel`, `Auto Link`; in the full version also the XL strip |
+| Excel Integration | Output | on | `Excel`, `Value`, `Link to Excel`, `Auto Link`; the XL strip needs it too |
+| Excel Strip (XL) | Output | on in the full version, off in Lite | the XL strip to the right of the sheet, the Excel Actions and Excel Rules sections, in Lite also the `XLS` button on the right command strip; needs Excel Integration |
 | Job Tracker | Integrations | off | the In Progress button |
 
 A disabled module hides its buttons and tab; a key for its command does not fire. The job copy of modules beats the global one. Lite has no AI, 3D and Materials modules at all, and neither a preset nor a job can turn them on ([Lite vs full version](ourplancore-lite.md)). What the modules that are off by default do and when to turn them on: [Extra features](ourplancore-extras.md).
@@ -155,7 +156,7 @@ Engine: `Ideal v3` (current), `Precise v2`, `Legacy`. A tag rule table with a `K
   <figcaption markdown="span">XL strip buttons and the order of steps for ALL.</figcaption>
 </figure>
 
-Full version only: Lite has no XL strip and no Excel Actions and Excel Rules sections. The list of XL strip buttons (`Action`), the sequence for `ALL`, the checkbox `Insert numeric floor group rows (0-5) before the takeoff rows`, floor folder words (`1, 1st, first`). How to use the strip: [Excel export](ourplancore-excel.md).
+The section is shown while the `Excel Strip (XL)` module is on: on by default in the full version, turned on in Modules in Lite. The Excel Rules section next to it is shown the same way. The list of XL strip buttons (`Action`), the sequence for `ALL`, the checkbox `Insert numeric floor group rows (0-5) before the takeoff rows`, floor folder words (`1, 1st, first`). How to use the strip: [Excel export](ourplancore-excel.md).
 
 ### Project Storage
 

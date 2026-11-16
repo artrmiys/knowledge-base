@@ -80,7 +80,7 @@ You need: copies of `TemplateCom.xlsm` per building, Excel open with macros enab
 1. Each building gets its own copy of `TemplateCom.xlsm`: workbook names by building (`Bldng A.xlsm`, `Bldng B.xlsm`), workbook name equals the Job Name on the Front Page.
 2. Open the building workbook, activate `Detailed Frame List`.
 3. In Lite: click a cell, select a folder or takeoff of **this** building in Takeoffs and press `Excel`, `Value` or `Link to Excel`. For `Auto Link` put the [green dot](#root) on the building: it takes only that building's takeoffs.
-4. In the full version, instead of step 3: select **one** building folder and press `ALL` on the XL strip. A selection from two buildings is not accepted: `Excel ALL found more than one building/root in the selection`. The `LG` legend is per workbook: the beam and post codes of that building.
+4. With the XL strip, instead of step 3 (in Lite the `Excel Strip (XL)` checkbox in `Settings > Modules` turns it on): select **one** building folder and press `ALL` on the XL strip. A selection from two buildings is not accepted: `Excel ALL found more than one building/root in the selection`. The `LG` legend is per workbook: the beam and post codes of that building.
 5. Repeat for the next building with its workbook.
 
 Result: the building workbook is filled with the numbers of this building only. The Lite buttons and the XL strip: [Export to Excel](ourplancore-excel.md).

@@ -4,15 +4,15 @@ OurPlanCore comes in two versions built from the same code. Estimators run **Lit
 
 <figure markdown>
   ![Lite and the full version](../assets/images/ourplanecore/lite-vs-full.svg)
-  <figcaption markdown="span">The full version does everything Lite does, plus the terminal, the AI module, 3D, the XL strip, Workspace and Materials. The app file size is at the bottom.</figcaption>
+  <figcaption markdown="span">The full version does everything Lite does, plus the terminal, the AI module, 3D, Workspace and Materials. Both have the XL strip; in Lite it is turned on in `Settings > Modules`. The app file size is at the bottom.</figcaption>
 </figure>
 
 ## Which version for whom { #who }
 
 | Version | For whom | What it gives |
 | --- | --- | --- |
-| Lite | estimators who do not use AI models | everything for takeoff and delivery: sheets, tools, the Takeoffs tree, PDF, Excel and `Link to Excel` |
-| Full | those who work with AI | the same plus the Claude, Codex and DeepSeek terminal in the window, the AI module, the 3D roof, the XL strip, Workspace for two computers |
+| Lite | estimators who do not use AI models | everything for takeoff and delivery: sheets, tools, the Takeoffs tree, PDF, Excel and `Link to Excel`; the XL strip with a checkbox in `Settings > Modules` |
+| Full | those who work with AI | the same plus the Claude, Codex and DeepSeek terminal in the window, the AI module, the 3D roof, Workspace for two computers |
 
 ## Where to get Lite and how it updates { #get }
 
@@ -30,7 +30,7 @@ Lite is built from the same code as the full version, but separately and not wit
 
 | `ourplancore.exe` file | Size |
 | --- | --- |
-| Lite (build of 11/11/2026) | about 92 MB |
+| Lite 3.0.36-lite (build of 11/16/2026) | 92.4 MB |
 | Full version (build of 11/14/2026) | about 254 MB |
 
 Lite is smaller because its file leaves out the DeepSeek and OpenCode engine, the copy of the knowledge base for the assistant, voice input, Tesseract OCR, the Python libraries for parsing PDFs and images, the `TemplateCom.xlsm` template, window snapshots for the sample job cards and the .NET language files other than English.
@@ -45,7 +45,6 @@ Lite is smaller because its file leaves out the DeepSeek and OpenCode engine, th
 | Voice input | `Settings > Voice Input` | - |
 | The 3D module | the 3D tab, 3D roof, Roof Base, 3D walls | [3D roof](ourplancore-3d-roof.md), [3D and Massing](ourplancore-3d.md) |
 | The Materials module | the Materials tab: materials from the PDF text | [Managers](ourplancore-managers.md#materials) |
-| The XL strip | the `ALL`, `LG`, `SF`, `WL` ... `ST` strip to the right of the sheet that writes into the workbook and runs its macros; the `Settings > Excel Actions` and `Excel Rules` sections; the Excel buttons on the side command strips | [Export to Excel, XL strip](ourplancore-excel.md#xl) |
 | `Create Project Excel Workbook` | the command that copies the built-in `TemplateCom.xlsm` into the job folder | take the template from the `templates` folder in Dropbox |
 | OCR of scans | reading the sheet number without a text layer | [Sheets](ourplancore-pages.md) |
 
@@ -67,12 +66,13 @@ This cannot be turned on: the AI, 3D and Materials modules are not in `Settings 
 | Settings | its own profile `%LOCALAPPDATA%\OurPlanCore Lite`: settings start from the built-in ones and do not mix with the full version's settings. Logs are in `%LOCALAPPDATA%\OurPlanCore Lite\roaming\logs` |
 | `.ourplan` files | Lite does not become the app for `.ourplan`, a double click on the file does not start it. Open the job from the app (++ctrl+o++, the `Open project file...` link) or drag the file into the window |
 | Scans | no OCR: the name and scale are read only from the PDF text, name a scanned sheet by hand (++f2++) |
+| The XL strip | off by default. To turn it on: `Settings > Modules`, check `Excel Strip (XL)` (together with `Excel Integration`, which is on from the start). You get the `ALL`, `LG`, `SF`, `WL` ... `ST` strip to the right of the sheet, the `XLS` button on the right command strip, the `Settings > Excel Actions` and `Excel Rules` sections; uncheck it and they hide. [XL strip](ourplancore-excel.md#xl) |
 | Both versions on one computer | they can be installed side by side: their profiles and settings are separate |
 
 ## How to tell which version is open { #which }
 
 1. Look at the window title: `OurPlanCore 3.0.x-lite - <job>` means Lite.
-2. Look at the right strip next to the sheet: Lite has no `>_` button and no XL strip with the `ALL`, `LG`, `SF` buttons.
+2. Look at the right command strip next to the sheet: Lite has no `>_` button. The XL strip with the `ALL`, `LG`, `SF` buttons does not tell the versions apart: Lite can have it turned on.
 
 If you need AI models, the terminal or 3D: that is the full version, everything about it is in the menu block "AI, terminal and 3D (full version)", starting with [AI in the app](ourplancore-ai.md).
 

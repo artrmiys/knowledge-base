@@ -65,7 +65,7 @@ The Takeoffs tree as a table: `Item`, `Type`, `Sections`, `Total`, `Unit`, `Pric
   <figcaption markdown="span">Report Builder reads `TemplateCom.xlsm` and shows the wall table.</figcaption>
 </figure>
 
-`Reload` reads the `TemplateCom.xlsm` template, `Refresh` updates the table, `Apply Walls` writes the walls into the workbook. This is the old path into Excel; today, in the full version, walls, areas and framing are written by the XL strip with per-section buttons and `ALL`; in Lite the numbers go through the `Excel`, `Value` and `Link to Excel` buttons ([Excel export](ourplancore-excel.md)). The tab stays for checking how old workbooks got their wall block.
+`Reload` reads the `TemplateCom.xlsm` template, `Refresh` updates the table, `Apply Walls` writes the walls into the workbook. This is the old path into Excel; today walls, areas and framing are written by the XL strip with per-section buttons and `ALL` (in Lite the `Excel Strip (XL)` checkbox in `Settings > Modules` turns it on); without it the numbers go through the `Excel`, `Value` and `Link to Excel` buttons ([Excel export](ourplancore-excel.md)). The tab stays for checking how old workbooks got their wall block.
 
 ## Materials { #materials }
 

@@ -2,7 +2,7 @@
 
 OurPlanCore is an app for taking off quantities from PDF drawings: sheet, scale, measurement, Takeoffs tree, then export to the Excel DFL and PDF. Here: the window map, how this section is organized, and the path from an open job to delivery.
 
-This section describes **OurPlanCore Lite**, the build estimators have: no AI models and no terminal, simpler and lighter. AI models, the terminal, 3D and the XL strip exist only in the full version; they are grouped in a separate menu block "AI, terminal and 3D (full version)" or marked on the page. Item-by-item differences: [Lite vs full version](ourplancore-lite.md).
+This section describes **OurPlanCore Lite**, the build estimators have: no AI models and no terminal, simpler and lighter. AI models, the terminal and 3D exist only in the full version; they are grouped in a separate menu block "AI, terminal and 3D (full version)" or marked on the page. Lite has the XL strip too: the `Excel Strip (XL)` checkbox in `Settings > Modules` turns it on. Item-by-item differences: [Lite vs full version](ourplancore-lite.md).
 
 <div class="grid cards" markdown>
 
@@ -28,7 +28,7 @@ This section describes **OurPlanCore Lite**, the build estimators have: no AI mo
 
 <figure markdown>
   ![OurPlanCore window with an open sheet](../assets/images/ourplancore/v3/window-map.png)
-  <figcaption markdown="span">The whole window, areas numbered: 1 ribbons, 2 Pages, 3 sheet, 4 Takeoffs, 5 tool strip, 6 XL strip, 7 status bar. Captured in the full version: Lite has no area 6. Details in the table below.</figcaption>
+  <figcaption markdown="span">The whole window, areas numbered: 1 ribbons, 2 Pages, 3 sheet, 4 Takeoffs, 5 tool strip, 6 XL strip, 7 status bar. Captured in the full version: in Lite area 6 appears after checking `Excel Strip (XL)` in `Settings > Modules`. Details in the table below.</figcaption>
 </figure>
 
 ## Window map { #window-map }
@@ -40,7 +40,7 @@ This section describes **OurPlanCore Lite**, the build estimators have: no AI mo
 | 3 | Sheet | tabs of open sheets and the drawing itself; under the Scale header the W/F/S/U dots and the crop lock | [Sheets](ourplancore-pages.md), [Tools](ourplancore-tools.md) |
 | 4 | Takeoffs panel | green and red root dots, the active takeoff row with `Record`, `Total`, `New Item`, tabs `Takeoffs`, `Estimating`, `Templates` | [Takeoffs tree](ourplancore-takeoffs.md), [Multiple buildings](ourplancore-buildings.md) |
 | 5 | Bottom tool strip | row 1: `Pan`, `Select`, `Scale`, `Ruler`, `Count`, `Line`, `Area`, `J Area`, `Beam`, `Open`, `Cut`, `Snap`, `Ortho`, `Box`; row 2: `Transform`, `Scale: 1:N`, `Presets`, `Fit` | [Tools](ourplancore-tools.md), [Editing and snaps](ourplancore-editing.md) |
-| 6 | XL strip (full version only) | Excel export buttons: `ALL`, `LG`, `SF`, `WL` ... `ST`; next to them the `>_` button of the AI console. Lite has neither this strip nor the button; Excel goes through the buttons at the bottom (`Excel`, `Value`, `Link to Excel`) | [Export to Excel](ourplancore-excel.md#lite), [AI console](ourplancore-ai-console.md) |
+| 6 | XL strip | Excel export buttons: `ALL`, `LG`, `SF`, `WL` ... `ST`; next to them the `>_` button of the AI console (full version only). In Lite the strip is off until `Excel Strip (XL)` is checked in `Settings > Modules`; without it Excel goes through the buttons at the bottom (`Excel`, `Value`, `Link to Excel`) | [Export to Excel](ourplancore-excel.md#lite), [XL strip](ourplancore-excel.md#xl), [AI console](ourplancore-ai-console.md) |
 | 7 | Status bar | `<sheet>`, `Scale:`, `Zoom:`, `Mode:`, `Takeoff: ... (Route: W 1st)`, `Save: Saved hh:mm:ss`, the last command's message | [Jobs and saving](job-creation-storage.md) |
 
 The `Takeoff:` field shows where the next measurement will go, `Save:` shows whether the job is saved. These two are worth checking more often than the rest.
@@ -65,7 +65,7 @@ Pages in this section have short clips, 10-20 seconds each, recorded in the app.
     - [Takeoffs tree](ourplancore-takeoffs.md): new takeoff, Record, copying, search
     - [Multiple buildings](ourplancore-buildings.md): a folder per building, green and red dots, a workbook and PDF per building
     - [Names and auto-routing](takeoff-naming.md): why a takeoff landed in this folder
-    - [Export to Excel](ourplancore-excel.md): Excel and Value, Link to Excel, Auto Link, TemplateCom template; XL strip in the full version
+    - [Export to Excel](ourplancore-excel.md): Excel and Value, Link to Excel, Auto Link, TemplateCom template; the XL strip (turned on in Settings in Lite)
     - [PDF and delivery](ourplancore-pdf.md): Export PDF, PDF Output, Preview, editing in Adobe
 
 -   **Advanced**
@@ -122,7 +122,7 @@ Pages in this section have short clips, 10-20 seconds each, recorded in the app.
 4. **Measurements by scope.** One scope per pass over the sheet: walls `L`, openings `O`, areas `A`, joists `J`, beams `B`, posts and holdowns `P`. `Space` continues the selected takeoff. [Tools](ourplancore-tools.md), takeoff order in the [workflow](../start/workflow.md)
 5. **Takeoff names.** The name carries the numbers for Excel: `ext 2x6 9.09`, `4.3x7.8 d`, `rf 6`, `eve 24 main`. A new takeoff goes into a folder by itself, based on the sheet dot and the name. [Names and auto-routing](takeoff-naming.md), [name formats](../start/takeoff-structure.md)
 6. **Check.** The `Estimating` tab, `Total` on a takeoff, the sheet legend (`Organize > Sort Sheet Legend by Key`), `H` hides finished work, `Delete Empty` removes empty takeoffs. [Tree](ourplancore-takeoffs.md)
-7. **Excel.** Open the building's workbook made from `TemplateCom.xlsm` (the `templates` folder in Dropbox), click a cell, select a takeoff or folder in Takeoffs and press `Excel` or `Value` at the bottom; a number that should follow the measurement goes in with the `Link to Excel` button; run the calculation from the `J:L` list with the E-Wood tab buttons in Excel. In the full version the XL strip does the same section by section (`ALL`, the `LG` legend). [Export to Excel](ourplancore-excel.md#lite), [DFL workbook](dfl-overview.md), [E-Wood tab](ewood-tab.md#calculate)
+7. **Excel.** Open the building's workbook made from `TemplateCom.xlsm` (the `templates` folder in Dropbox), click a cell, select a takeoff or folder in Takeoffs and press `Excel` or `Value` at the bottom; a number that should follow the measurement goes in with the `Link to Excel` button; run the calculation from the `J:L` list with the E-Wood tab buttons in Excel. The XL strip does the same section by section (`ALL`, the `LG` legend); in Lite turn it on first with the `Excel Strip (XL)` checkbox in `Settings > Modules`. [Export to Excel](ourplancore-excel.md#lite), [DFL workbook](dfl-overview.md), [E-Wood tab](ewood-tab.md#calculate)
 8. **PDF and delivery.** `Ctrl+S`, hide what is not needed (`H`, Hide mask), `PDF Output > Preview`, then `Main > Export`: only sheets with measurements, a separate PDF per building. Then the processed xlsx and `Changes.txt` for a revision. [PDF and delivery](ourplancore-pdf.md), [delivery](../start/workflow.md)
 
 ## What appeared in two months { #whats-new }
@@ -137,7 +137,7 @@ If you worked in a version from before mid-August, here is what changed in every
 | one Takeoffs root | green and red dots pick the building for new takeoffs; pasting copies mirrors the folders | [Multiple buildings](ourplancore-buildings.md) |
 | `H` was a marker | `H` hides a takeoff on the sheet, the marker moved to `Shift+H` | [Takeoffs tree](ourplancore-takeoffs.md#hide) |
 | Merge and Split for segments only | Merge and Split of whole takeoffs from the tree, Break and Ends for lines | [Editing and snaps](ourplancore-editing.md) |
-| Excel by hand, piece by piece | XL strip: `ALL` and buttons by section, framing, `LG` legend (full version only); the "comments" dot on the `Excel` button | [Export to Excel](ourplancore-excel.md) |
+| Excel by hand, piece by piece | XL strip: `ALL` and buttons by section, framing, `LG` legend (in Lite with the `Excel Strip (XL)` checkbox); the "comments" dot on the `Excel` button | [Export to Excel](ourplancore-excel.md) |
 | PDF set up blind | live `PDF Output > Preview`, `Opac` for lines | [PDF and delivery](ourplancore-pdf.md#preview) |
 | PDF fixed only by a new export | lines, areas and labels can be moved in Adobe Acrobat | [PDF and delivery](ourplancore-pdf.md#adobe) |
 | the number in the workbook was updated with `Value` after every edit | `Link to Excel` keeps the number in the cell by itself | [Export to Excel](ourplancore-excel.md#link) |

@@ -100,14 +100,15 @@ joists only with J Area, beams only with Beam, openings only with Openings. Name
 
 <figure markdown>
   ![XL strip for export to Excel](../assets/images/ourplancore/v3/excel-strip.png)
-  <figcaption markdown="span">Full version of OurPlanCore: the XL strip buttons send tree branches into the open TemplateCom workbook section by section; `ALL` does everything in order. Lite does not have this strip.</figcaption>
+  <figcaption markdown="span">The XL strip buttons send tree branches into the open TemplateCom workbook section by section; `ALL` does everything in order. In Lite the strip appears after checking `Excel Strip (XL)` in `Settings > Modules`.</figcaption>
 </figure>
 
 1. The building workbook is open, the DFL worksheet is active. In OurPlanCore Lite numbers go
    over with the `Excel`, `Value`, `Link to Excel` and `Auto Link` buttons, and the calculation
-   from the `J:L` list is run with the E-Wood tab buttons in Excel. In the full version the XL strip
+   from the `J:L` list is run with the E-Wood tab buttons in Excel. The XL strip
    sends takeoffs section by section (walls, sheathing, areas, openings, framing...) and
-   runs the macros itself. Details: [Export to Excel](../reference/ourplancore-excel.md),
+   runs the macros itself; it is on from the start in the full version, and in Lite the
+   `Excel Strip (XL)` checkbox in `Settings > Modules` turns it on. Details: [Export to Excel](../reference/ourplancore-excel.md),
    [Lite vs full version](../reference/ourplancore-lite.md).
 2. Wall height lives in column E of the stud row (to 1/8"), units in D: `LFT` for lumber,
    `pcs` for hardware, SF for panels. Row names: [DFL row names](../reference/takeoff-items.md).

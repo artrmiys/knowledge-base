@@ -195,7 +195,7 @@ Goal: send takeoff numbers into the DFL workbook and link one number to a measur
 
 Check yourself: `J:L` has wall rows with numbers in LF, the linked cell shows the same number as the takeoff's `Total` in the tree.
 
-In Lite, the calculation from the `J:L` list (wall matrix, areas, openings) is run with the E-Wood tab buttons in Excel ([Calculation from takeoffs](ewood-tab.md#calculate)). In the full version the XL strip does it: `LG`, then `ALL` exports the whole building and runs the workbook macros itself ([XL strip](ourplancore-excel.md#steps)).
+In Lite, the calculation from the `J:L` list (wall matrix, areas, openings) is run with the E-Wood tab buttons in Excel ([Calculation from takeoffs](ewood-tab.md#calculate)). The XL strip does it too: `LG`, then `ALL` exports the whole building and runs the workbook macros itself ([XL strip](ourplancore-excel.md#steps)). In the full version it is on from the start; in Lite turn it on with the `Excel Strip (XL)` checkbox in `Settings > Modules`.
 
 Details: [Export to Excel](ourplancore-excel.md#lite), [How the DFL workbook works](dfl-overview.md).
 

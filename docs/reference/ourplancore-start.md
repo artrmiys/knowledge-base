@@ -79,7 +79,7 @@
 4. **Легенда.** `Display > Legend Show`, затем ПКМ по листу `Organize > Sort Sheet Legend by Key`; `H` на позиции прячет её с листа, точка у позиции под листом в Pages возвращает. [Дерево Takeoffs](ourplancore-takeoffs.md#hide)
 5. **Кропы и маска.** `Page > Blank Sheet`, затем `Page > Crop to Sheet` с плана на пустой лист; `Annotation > Hide` боксом по лишнему. [Листы: продвинутое](ourplancore-sheets-advanced.md)
 6. **3D (только полная версия).** Включите модуль 3D, выделите `rf 6`, вкладка 3D, `Roof Base`, `Auto`, `Iso`. В Lite шаг пропустите. [3D-крыша](ourplancore-3d-roof.md)
-7. **Экспорт.** `PDF Output > Preview`, `Main > Export` одного листа; в открытой копии `TemplateCom.xlsm` щёлкните ячейку, выделите позицию и нажмите `Excel` внизу (в полной версии ещё полоса XL, кнопка `WL`). [PDF и сдача](ourplancore-pdf.md), [Экспорт в Excel](ourplancore-excel.md)
+7. **Экспорт.** `PDF Output > Preview`, `Main > Export` одного листа; в открытой копии `TemplateCom.xlsm` щёлкните ячейку, выделите позицию и нажмите `Excel` внизу (с включённой полосой XL ещё кнопка `WL`). [PDF и сдача](ourplancore-pdf.md), [Экспорт в Excel](ourplancore-excel.md)
 
 ### Испортил демо, что дальше
 

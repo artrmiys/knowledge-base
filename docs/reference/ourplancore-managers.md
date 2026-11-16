@@ -65,7 +65,7 @@
   <figcaption markdown="span">Report Builder читает `TemplateCom.xlsm` и показывает таблицу стен.</figcaption>
 </figure>
 
-`Reload` читает шаблон `TemplateCom.xlsm`, `Refresh` обновляет таблицу, `Apply Walls` пишет стены в книгу. Это прежний путь в Excel; сегодня в полной версии стены, площади и framing пишет полоса XL с кнопками по секциям и `ALL`, в Lite числа идут кнопками `Excel`, `Value` и `Link to Excel` ([экспорт в Excel](ourplancore-excel.md)). Вкладка остаётся для сверки, как старые книги получали блок стен.
+`Reload` читает шаблон `TemplateCom.xlsm`, `Refresh` обновляет таблицу, `Apply Walls` пишет стены в книгу. Это прежний путь в Excel; сегодня стены, площади и framing пишет полоса XL с кнопками по секциям и `ALL` (в Lite её включает галка `Excel Strip (XL)` в `Settings > Modules`), а без неё числа идут кнопками `Excel`, `Value` и `Link to Excel` ([экспорт в Excel](ourplancore-excel.md)). Вкладка остаётся для сверки, как старые книги получали блок стен.
 
 ## Materials { #materials }
 

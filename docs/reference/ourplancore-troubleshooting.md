@@ -59,7 +59,8 @@
 
 | Симптом | Причина | Что сделать |
 | --- | --- | --- |
-| Нет кнопки `>_`, полосы XL, вкладок AI Manager, 3D, Materials | открыта Lite: этого в ней нет | так и задумано; список - [Lite и полная версия](ourplancore-lite.md#missing) |
+| Нет кнопки `>_`, вкладок AI Manager, 3D, Materials | открыта Lite: этого в ней нет | так и задумано; список - [Lite и полная версия](ourplancore-lite.md#missing) |
+| Нет полосы XL, кнопки `XLS`, разделов Excel Actions и Excel Rules | в Lite модуль `Excel Strip (XL)` по умолчанию выключен | `Settings > Modules`: галка `Excel Strip (XL)` (и `Excel Integration`), `Apply` или `Save global default` |
 | Двойной щелчок по `.ourplan` не открывает Lite | Lite не регистрируется как программа для `.ourplan` | ++ctrl+o++ и `Open project...` или `Open project file...`, либо перетащить файл в окно |
 | После перехода на Lite настройки как новые | у Lite свой профиль `%LOCALAPPDATA%\OurPlanCore Lite` | настроить нужное заново в `Settings` и нажать `Save global default` |
 | `Name` не называет лист-скан | в Lite нет OCR: имя читается только из текста PDF | назвать лист руками (++f2++) |

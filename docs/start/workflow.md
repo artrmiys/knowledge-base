@@ -100,14 +100,16 @@ joists только J Area, балки только Beam, проёмы толь�
 
 <figure markdown>
   ![Полоса XL экспорта в Excel](../assets/images/ourplancore/v3/excel-strip.png)
-  <figcaption markdown="span">Полная версия OurPlanCore: кнопки полосы XL переносят ветки дерева в открытую книгу TemplateCom по секциям; `ALL` делает всё по порядку. В Lite этой полосы нет.</figcaption>
+  <figcaption markdown="span">Кнопки полосы XL переносят ветки дерева в открытую книгу TemplateCom по секциям; `ALL` делает всё по порядку. В Lite полоса появляется после галки `Excel Strip (XL)` в `Settings > Modules`.</figcaption>
 </figure>
 
 1. Книга корпуса открыта, лист DFL активен. В OurPlanCore Lite числа идут
    кнопками `Excel`, `Value`, `Link to Excel` и `Auto Link`, а расчёт по списку
-   `J:L` запускается кнопками вкладки E-Wood в Excel. В полной версии полоса XL
-   переносит замеры по секциям (стены, обшивка, площади, проёмы, framing...) и
-   сама запускает макросы. Подробно - [Экспорт в Excel](../reference/ourplancore-excel.md),
+   `J:L` запускается кнопками вкладки E-Wood в Excel. Полоса XL переносит
+   замеры по секциям (стены, обшивка, площади, проёмы, framing...) и сама
+   запускает макросы; в полной версии она включена сразу, в Lite её включает
+   галка `Excel Strip (XL)` в `Settings > Modules`. Подробно -
+   [Экспорт в Excel](../reference/ourplancore-excel.md),
    [Lite и полная версия](../reference/ourplancore-lite.md).
 2. Высота стены живёт в E строки студов (до 1/8"), единицы в D: `LFT` для досок,
    `pcs` для крепежа, SF для листов. Имена строк - [Имена строк DFL](../reference/takeoff-items.md).

@@ -1,6 +1,6 @@
 # Экспорт в Excel
 
-Здесь: как перенести числа из дерева Takeoffs в книгу DFL. В Lite это кнопки `Excel` и `Value` внизу слева, постоянная связь позиции с ячейкой `Link to Excel`, `Auto Link` на весь DFL, сброс связей и `Export > Export Excel` в файл. Полоса XL справа от листа, которая пишет секции в `TemplateCom.xlsm` и сама запускает макросы книги, есть только в полной версии: она описана в конце страницы ([Полоса XL](#xl)). Нужно после замеров, перед работой в DFL.
+Здесь: как перенести числа из дерева Takeoffs в книгу DFL. В Lite это кнопки `Excel` и `Value` внизу слева, постоянная связь позиции с ячейкой `Link to Excel`, `Auto Link` на весь DFL, сброс связей и `Export > Export Excel` в файл. Полоса XL справа от листа, которая пишет секции в `TemplateCom.xlsm` и сама запускает макросы книги, в Lite по умолчанию выключена и включается галкой в `Settings > Modules`; она описана в конце страницы ([Полоса XL](#xl)). Нужно после замеров, перед работой в DFL.
 
 ## Excel в Lite { #lite }
 
@@ -12,7 +12,7 @@
 | `Auto Link` | рядом с `Link to Excel` | связать позиции со списком `J:L` книги DFL одним нажатием ([ниже](#auto-link)) |
 | `Export > Export Excel` | меню `Export` панели Takeoffs | выгрузка дерева в файл `.xlsx`, колонки J/K/L от строки 10 |
 
-Макросы книги Lite не запускает: полосы XL в ней нет. Расчёт по выгруженному списку `J:L` (площади, стены, проёмы, карнизы) запускайте в Excel кнопками вкладки E-Wood ([Расчёт по замерам](ewood-tab.md#calculate)). Книгу корпуса делайте из шаблона в папке `templates` общей папки Dropbox ([Шаблон TemplateCom](#template)).
+Эти кнопки макросы книги не запускают. Расчёт по выгруженному списку `J:L` (площади, стены, проёмы, карнизы) запускайте в Excel кнопками вкладки E-Wood ([Расчёт по замерам](ewood-tab.md#calculate)) или включите полосу XL: она сама запускает макросы ([Полоса XL](#xl)). Книгу корпуса делайте из шаблона в папке `templates` общей папки Dropbox ([Шаблон TemplateCom](#template)).
 
 ## Как вписать одну позицию в ячейку: Value и Excel { #value }
 
@@ -205,18 +205,18 @@
 | `Time limit for a closed workbook, seconds` | 180, от 15 до 1800; после него программа останавливает свой скрытый Excel, связи остаются `Pending` |
 | `Lines and areas: a whole number below this needs its name` | раздел `Auto Link`, 10, от 0 до 1000; точкам имя нужно всегда |
 
-В OurPlanCore Lite кнопка, меню, окно и этот раздел Settings те же. Полосы XL в Lite нет. Такая же связь есть в [OurPDF](../ourpdf/excel-link.md).
+В OurPlanCore Lite кнопка, меню, окно и этот раздел Settings те же. Такая же связь есть в [OurPDF](../ourpdf/excel-link.md).
 
 ## Шаблон TemplateCom { #template }
 
-`TemplateCom.xlsm` для Lite лежит в общей папке Dropbox `Office Folder\programs\templates`, у полной версии ещё и в папке обновлений рядом с `ourplancore.exe`. На каждый корпус делается копия (`Bldng#A.xlsm`), имя книги равно Job Name на Front Page. Листы: `Front Page` (площади, Total SQFT), `Detailed Frame List` (сдаваемые колонки `A:H` и рабочие зоны справа: `J:N` экспорт, `O:AB` матрица стен, спек-ячейки `O:S`, калькулятор высот), `Standarts` (библиотека нот), `Mat List`. Макросы серии A в полной версии запускает полоса XL, в Lite - кнопки вкладки E-Wood ([Расчёт по замерам](ewood-tab.md#calculate)); серии B, C, X, Y - клавиши в Excel. Подробно: [DFL: как устроена книга](dfl-overview.md), [Макросы и клавиши Excel](excel-hotkeys.md), [Стандартные notes](standard-notes.md).
+`TemplateCom.xlsm` для Lite лежит в общей папке Dropbox `Office Folder\programs\templates`, у полной версии ещё и в папке обновлений рядом с `ourplancore.exe`. На каждый корпус делается копия (`Bldng#A.xlsm`), имя книги равно Job Name на Front Page. Листы: `Front Page` (площади, Total SQFT), `Detailed Frame List` (сдаваемые колонки `A:H` и рабочие зоны справа: `J:N` экспорт, `O:AB` матрица стен, спек-ячейки `O:S`, калькулятор высот), `Standarts` (библиотека нот), `Mat List`. Макросы серии A запускает полоса XL, а без неё (так в Lite по умолчанию) - кнопки вкладки E-Wood ([Расчёт по замерам](ewood-tab.md#calculate)); серии B, C, X, Y - клавиши в Excel. Подробно: [DFL: как устроена книга](dfl-overview.md), [Макросы и клавиши Excel](excel-hotkeys.md), [Стандартные notes](standard-notes.md).
 
-## Полоса XL: только полная версия { #xl }
+## Полоса XL: модуль Excel Strip (XL) { #xl }
 
-!!! info "Только в полной версии"
-    В OurPlanCore Lite полосы XL нет, как и разделов `Settings > Excel Actions` и `Excel Rules` и команды `Create Project Excel Workbook`. В Lite числа идут кнопками [выше](#lite), а макросы книги запускаются в Excel. Чем версии отличаются: [Lite и полная версия](ourplancore-lite.md).
+!!! info "В Lite полоса включается галкой"
+    В OurPlanCore Lite полоса XL по умолчанию выключена. Чтобы включить: `Settings > Modules`, галка `Excel Strip (XL)` (галка `Excel Integration` тоже нужна, она стоит по умолчанию), затем `Apply` или `Save global default`. Появятся полоса XL справа от листа, кнопка `XLS` на правой полосе команд и разделы `Settings > Excel Actions` и `Excel Rules`. Снимите галку, и всё это снова спрячется. Команды `Create Project Excel Workbook` в Lite нет: шаблон берите из папки `templates` в Dropbox ([Шаблон TemplateCom](#template)). Чем версии отличаются: [Lite и полная версия](ourplancore-lite.md).
 
-Полоса XL - вертикальная полоса кнопок справа от листа. В полной версии она включается и выключается в настройках: `Settings > Modules`, модуль `Excel Integration` (по умолчанию включён). Тот же модуль показывает кнопки `Excel`, `Value`, `Link to Excel` и `Auto Link`; если полосы не видно, первым делом проверьте эту галку. В Lite галка `Excel Integration` управляет только этими кнопками, полосу XL она не возвращает.
+Полоса XL - вертикальная полоса кнопок справа от листа. Её показывает модуль `Excel Strip (XL)` в `Settings > Modules`: в полной версии он включён по умолчанию, в Lite выключен. Полосе нужен и модуль `Excel Integration` (включён в обеих версиях), который показывает кнопки `Excel`, `Value`, `Link to Excel` и `Auto Link`. Если полосы не видно, первым делом проверьте обе галки.
 
 <!-- DEMO: d-excel-xl -->
 
@@ -232,8 +232,8 @@
 
 ### Что нужно до нажатия
 
-- [ ] В Excel открыта книга корпуса, сделанная из `TemplateCom.xlsm` (копия шаблона из папки обновлений программы), макросы разрешены. Программа ищет открытую книгу `TemplateCom.xlsm`; если её нет, берёт активную книгу с макросами (`.xlsm`), в которой есть лист `Detailed Frame List`.
-- [ ] Модуль `Excel Integration` включён (`Settings > Modules`, по умолчанию включён).
+- [ ] В Excel открыта книга корпуса, сделанная из `TemplateCom.xlsm` (копия шаблона из папки `templates` в Dropbox), макросы разрешены. Программа ищет открытую книгу `TemplateCom.xlsm`; если её нет, берёт активную книгу с макросами (`.xlsm`), в которой есть лист `Detailed Frame List`.
+- [ ] Модули `Excel Integration` и `Excel Strip (XL)` включены (`Settings > Modules`; в Lite `Excel Strip (XL)` по умолчанию выключен).
 - [ ] В дереве Takeoffs выделен **один** корпус (папка с корнями) или одна папка экспорта (`walls`, `sqfts`...). Для `ALL` выделение из двух корпусов не принимается ([несколько зданий](ourplancore-buildings.md#excel)).
 - [ ] Легенда `LG` заполнена кодами балок, постов и headers проекта (иначе в книге останутся коды вместо размеров).
 - [ ] Проект сохранён, `Total` у крупных позиций проверен.
@@ -339,7 +339,7 @@ Posts, beams и joists **заменяют** свои строки в списк�
 
 ## Частые ошибки { #errors }
 
-Первые строки таблицы - сообщения полосы XL (полная версия), дальше сообщения `Link to Excel` и `Auto Link`, они есть и в Lite.
+Первые строки таблицы - сообщения полосы XL (в Lite, когда полоса включена), дальше сообщения `Link to Excel` и `Auto Link`.
 
 | Сообщение или симптом | Причина и что делать |
 | --- | --- |
