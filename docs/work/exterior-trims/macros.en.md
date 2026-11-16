@@ -26,12 +26,19 @@ The trim calculation macros expect exactly three adjacent columns: `Label`,
 
 | Label | Value | Unit |
 | --- | --- | --- |
-| `Ext. Casing sides` | `380` | `LFT` |
-| `Head casing` | `204` | `LFT` |
+| `Ext Casing` | `11` | `FT` |
+| `Ext Casing Head` | `3.3` | `FT` |
+| (quantity row) | `34` | `EA` |
 | `Soffits at Porch` | `120` | `SQ FT` |
 | (quantity row) | `2` | `EA` |
 
-If the selection is not three columns, the macro shows an error and exits.
+If the selection is not three columns, the macro shows an error and exits. Unit must
+be exactly `FT`, `SQ FT` or `EA`: the macro silently skips a row with `LFT` or `LF`.
+There are two blocks here: the trim of one window (sides 2 x 5.5 = 11 FT, head
+3.3 FT) for 34 windows, and the ceiling of one porch for 2 porches. `C_TrimsCalc` gives
+`Ext Casing` 11 x 34 = 374, `Ext Casing Head` 3.3 x 34 = 112.2,
+`Soffits at Porch` 120 x 2 = 240. These are lengths before waste: the 1.1 allowance and
+the rounding come from the DFL row formula, not from Value.
 
 ## C_TrimsCalc: block x quantity
 
@@ -50,8 +57,9 @@ is made of. Do not replace the formula with a number.
 
 ## C_SumTheSameValues: collapse identical rows
 
-Key `Label + Unit`, values are summed. Useful when `CornerBoards
-5/4x6 | LFT` appears on every elevation and floor. Select the three columns,
+Key `Label + Unit`, values are summed. Useful when `Corner Boards
+5/4x6 | LFT` appears on every elevation and floor. The labels must match letter for
+letter: `CornerBoards` and `Corner Boards` will not be summed. Select the three columns,
 run it (default ++ctrl+shift+f++). The selection is cleared and replaced with
 unique rows with sums: work on a copy if you need the source rows.
 

@@ -62,7 +62,7 @@ loose - [Headers](../work/vertical/openings/headers.md).
 | Группа | Где | Как считать |
 | --- | --- | --- |
 | Field studs | По полю стены | По фактору шага (база16 = 1.1, база24 = 0.625) - [Формулы](../reference/formulas.md#stud-spacing-factors) |
-| Extra studs | Углы, T-пересечения, king/jack/cripple у проёмов | Фактор 1.1 частично закрывает; corners отдельной строкой на stick |
+| Extra studs | Углы, T-пересечения, king/jack/cripple у проёмов | Фактор 1.1 частично закрывает; на stick углы точками `corners`, шаблон добавляет их стойки в `Studs Ext` ([Corners](../work/vertical/walls/corners.md)) |
 | Dbl / extra на bearing walls | Нижние этажи, demising по structural | Отдельная строка Extra (Extra16 = 0.75, Extra24 = 0.5); plies и шаг из stud schedule каждого этажа |
 
 Bearing walls в дереве лежат в своей ветке `BW/<этаж>` (Line по полосе стены),
@@ -78,8 +78,10 @@ Bearing walls в дереве лежат в своей ветке `BW/<этаж>
   ([деталь](../work/vertical/walls/corridor.md)).
 - Шахты всегда: лифт, лестница, мусоропровод; материал по wall type
   ([Shaft](../work/vertical/walls/shaft.md)).
-- Bracing for drywall по высоте стены - таблица на странице
-  [Bracing for Drywall](../work/horizontal/floor-framing/details/bracingdrywall.md).
+- Bracing стен (`Bracing Ext Walls`, `Bracing Corridor`, `Bracing Demising`)
+  считается в штуках, длина доски по высоте стены: таблица на странице
+  [Bracing стен и Blocking for Drywall](../work/horizontal/floor-framing/details/bracingdrywall.md).
+  Опора гипса - другая строка, `Blocking for Drywall` в Floor Framing List.
   Blocking flat и diagonal 48" o.c. - формулы в [Формулы](../reference/formulas.md#blocking-formulas).
 
 <figure markdown>
@@ -109,7 +111,8 @@ Bearing walls в дереве лежат в своей ветке `BW/<этаж>
 | Любой | Если наружная стена FRT, то exterior blocking и parapets тоже FRT; FRT-полосы subfloor 2' или 4' по периметру своего этажа |
 
 Нота `all wood materials at exterior to be FRT` означает весь loose plywood
-FRT с `verify`. FRT и FRTW - разные обозначения, писать как в проекте.
+FRT с `verify`. FRT и FRTW - одно требование (fire-retardant-treated wood);
+в DFL пиши то обозначение, которое стоит в проекте.
 Таблица - [Советы: FRT](../reference/boss-feedback-rules.md#frt).
 
 <figure markdown>
@@ -135,7 +138,7 @@ FRT с `verify`. FRT и FRTW - разные обозначения, писать
 
 ## Частые ошибки
 
-- Тип стены назначен группой, высота стойки = floor-to-floor.
+- Тип стены назначен группой, высота стены взята как floor-to-floor.
 - Shaft walls выброшены как "panels by others".
 - Draft stop пропущен или скопирован из суммы shear.
 - Headers внутри панелей посчитаны отдельно.

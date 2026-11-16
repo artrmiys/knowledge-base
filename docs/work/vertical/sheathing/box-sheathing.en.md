@@ -18,7 +18,7 @@ roof) or with full wall sheathing ([Wall Sheathing](wall-sheathing.md)).
 
 | Sheet | What to take |
 | --- | --- |
-| Wall section (`sec`), floor framing detail | Strip height: joist depth + subfloor + plates per section; material |
+| Wall section (`sec`), floor framing detail | Strip height: joist depth + subfloor per section (the plates are already in the wall height); material |
 | Floor type schedule (`ft`) | Floor framing depth (TJI 11 7/8", 2x10, 14" open web) |
 | Panel notes, scope | Whether the box is in the panel or stays loose |
 | Attic / roof sections | Attic box: `extra plate + box = subfloor` on the top floor |
@@ -30,8 +30,12 @@ floor walls/ext ...` lines, strip height = floor framing depth with subfloor per
 this building. Area = perimeter x height. The Excel export (XL strip) puts
 Box Sheathing at the end of each floor's wall section with its own Tape row.
 
-- Each floor has its own strip: 1st, 2nd, 3rd. For the top floor under a
-  parapet the box is written into the parapet block with a Note.
+- Each floor has its own strip: 1st, 2nd, 3rd.
+- Top floor under trusses: there is no `Box Sheathing` row, the strip is counted in
+  the Truss Heel section, and the walls get the note
+  `Note: Box sheathing is included in Truss Heel section`.
+- Top floor under a flat roof with a parapet: the strip is written into the parapet block,
+  note `Note: Roof box included in Parapet Walls.`
 - The material is the same as the wall's (`$O$3` OSB or `$O$5` Zip) unless the detail
   calls for something else.
 - Openings are not subtracted from the strip.
@@ -40,9 +44,16 @@ Box Sheathing at the end of each floor's wall section with its own Tape row.
 
 | Source in the tree | DFL row | Material | Unit | Formula |
 | --- | --- | --- | --- | --- |
-| perimeter `walls/1st floor walls/ext ...` | `Box Sheathing` | `7/16" Zip` / `1/2" OSB` | `4x8` | `=CEILING(SQFT/32*1.1,1)` |
-| same area | `Tape` | `Zip Tape` (only with Zip) | `LFT` | `=CEILING(SQFT*0.4*1.1,10)` |
-| same area | `Vapor Barrier` (WRB) | per spec | `SQ FT` | as part of the wall |
+| perimeter `walls/1st floor walls/ext ...` | `Box Sheathing` | `7/16" Zip` / `1/2" OSB` | `4x8` | `=CEILING(G/32*1.1,1)` |
+| same area, Zip only | `Tape` | `Zip Tape` | `LFT` | `=CEILING(G*0.4*1.1,10)` |
+| same area, no Zip only | `Vapor Barrier` | WRB per spec | `SQ FT` | `=CEILING(G*1.1,10)` |
+
+G is the strip area in SQ FT (perimeter x height). `Box Sheathing` has its own
+barrier row with the same area right under it: `Tape` with Zip or `Vapor Barrier` with a
+plain sheet, never both. Zip has the barrier built in, so there is no WRB row.
+The strip Tape is counted in LFT (`G x 0.4 x 1.1`); the window perimeter is not
+added to it: it is already in the `Tape` of the floor walls. An `Insulation` row under the
+box appears only with continuous insulation outside the sheathing.
 
 ## Common mistakes
 
@@ -51,6 +62,7 @@ Box Sheathing at the end of each floor's wall section with its own Tape row.
 - Box forgotten on the top floor under the parapet, or counted twice there.
 - On a panel job the box thrown out together with the panels, although it stayed loose.
 - Copied detail labels not corrected for this floor.
+- Plates added to the strip height once more although they are already in the wall height.
 
 All mistakes: [common-mistakes](../../../start/common-mistakes.md#sheathing).
 

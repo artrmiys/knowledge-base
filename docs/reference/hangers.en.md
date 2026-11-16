@@ -47,8 +47,9 @@ Here: how to pick a hanger by condition (what it carries, what it sits on, which
 
     ---
 
-    There is an angle - do not use `ITS`. Face mount: `SUL / SUR` (45 degrees), other angle
-    `LSSR`; top flange: `LBV ... XL45 / XR45`; LPI slope and skew: `LSSU / LSSUH / LSSUI`.
+    There is an angle - do not use `ITS`. Face mount: `SUL / SUR` are made at 45 degrees only;
+    any other angle is `HU` with the suffix `SK<angle> L` or `R`; under 5 degrees treat it as straight.
+    A sloped rafter takes `LSSR` or `LRU`; top flange: `LBV ... XL45 / XR45`; LPI slope and skew: `LSSU / LSSUH / LSSUI`.
 
 -   :material-alert-octagon-outline: **Deep Joist**
 
@@ -70,11 +71,11 @@ Here: how to pick a hanger by condition (what it carries, what it sits on, which
 ## Critical rules
 
 - `ITS` - top flange for I-joist only and only up to 16" deep; there is no skewed `ITS`.
-- Skewed top mount: `WP / HUTF / LBV` per detail; skewed face mount: `SUL / SUR / HSUR`.
+- Skewed top mount: `WP / HUTF / LBV` per detail; skewed face mount at 45 degrees: `SUL / SUR`, for 2-ply LVL `HSUL410 / HSUR410`; any other angle: `HU ... SK<angle> L/R`.
 - EWP (`LVL`, `PSL`, `GL`, `TJI`, `LPI`): keep the exact family and section, do not turn it into a generic hanger.
 - Model per the detail: the detail says `U210-2` - write `U210-2`, not `LUS210-2`.
 - Hangers on both ends of every joist, counted by assemblies on the plan, not by purchase boards after the cut list; whole pieces only.
-- Exterior and on P.T. - `Zmax`. `H2.5A` ties to trusses under the sheathing - no `Zmax` unless the detail says otherwise.
+- Exterior and on P.T. - `Zmax`. Hardware inside a floor and in the roof (rafters, ridge) - no `Zmax`. `H2.5A` ties to trusses under the sheathing - no `Zmax` unless the detail says otherwise.
 - Repeated area (units x N): check that the hanger count repeats as many times as the framing.
 - The project schedule wins over the tables below; the tables are a hint, not a replacement for the engineer's detail.
 
@@ -84,10 +85,12 @@ Column B format, as in delivered jobs.
 
 | Rule | Do | Don't |
 | --- | --- | --- |
-| `Zmax` as a separate word after the model | `ABU66 Zmax`, `LUS210 Zmax`, `HHUS410 Zmax SK30 R` | `ABU66Z`, `LSSR28Z`, `LUS210Z` |
+| `Zmax` as a separate word after the model, only outdoors and on P.T. | `ABU66 Zmax`, `ABA66 Zmax`, `LUS210 Zmax`, `HHUS410 Zmax SK30 R` | `ABU66Z`, `LUS210Z`, `zmax` |
+| A model whose catalog name includes `Z` is written as the catalog prints it, without the word `Zmax` | `DTT2Z`, `LRU210Z`, `LRU212Z` | `DTT2 Zmax`, `LRU212Z Zmax` |
+| In the roof (rafters, ridge) hangers carry no `Z` and no `Zmax`; the one exception is `LRU...Z` | `LSSR210`, `LSSR2.56`, `LRU212Z` | `LSSR28Z`, `LSSR210 Zmax` |
 | Angle and hand as the suffix `SK<angle> <L or R>` | `HHUS410 Zmax SK30 R`, `HU612 Zmax SK60 L` | `skew 30 deg`, `special order`, `HDG` in B |
-| Skewed on sawn 2x: `SUL` left hand, `SUR` right hand, a separate row for each hand and each angle | `SUL28 Zmax` 12 pcs, `SUR28 Zmax` 16 pcs; angle in E `skewed 30°` | one row "all skewed as one SKU" |
-| `LSSR` only for an angle outside the `SUL / SUR` range | `LSSR28 Zmax`, E `skewed 60°` | `LSSR` on all skewed |
+| Skewed at 45 degrees on sawn 2x: `SUL` left hand, `SUR` right hand, a separate row for each hand | `SUL210 Zmax` 12 pcs, `SUR210 Zmax` 16 pcs; E `skewed 45°` | one row "all skewed as one SKU"; `SUL` or `SUR` at 30 or 60 degrees (they are made at 45 only) |
+| Skewed at any other angle: `HU` by section with the suffix `SK<angle> <L or R>`, a row per angle and hand | `HU210 SK30 R`, `HU210 SK60 L` | `SUL28` marked `skewed 30°`; `LSSR` on all skewed |
 | Fire hangers only over stair, elevator, shaft walls | `DHU210-2` with E = detail | `DHU` on a regular demising wall |
 | Ties | `H2.5A` without `Zmax` to trusses; `H3` on both sides of the truss if the detail says so; spacing = truss spacing; all bearing lines | `H2.5A Zmax` under sheathing, ties only on exterior walls |
 | Quantity | `pcs`, by assemblies, whole; under 50 - round up to even | by boards after the cut list |
@@ -168,6 +171,26 @@ First count on the plan how many go left and how many go right, then write the r
 | Cedar, glulam special | `CJTZ`, `CBH` | separate row, not a generic hanger |
 
 ## Hanger quick table { #tables }
+
+=== "Sawn 2x"
+
+    The most common case: a joist or rafter of regular lumber on a face mount.
+
+    | Member | Hanger |
+    | --- | --- |
+    | 2x4 | `LUS24` |
+    | 2x6 | `LUS26` |
+    | 2x8 | `LUS28` |
+    | 2x10 | `LUS210` |
+    | 2x12 | `LUS210` (there is no `LUS212` model) |
+    | (2) 2x8 | `LUS28-2` |
+    | (2) 2x10, (2) 2x12 | `LUS210-2` |
+    | beam (2) 2x8, (2) 2x10, (3) 2x10 | `HU28-2`, `HU210-2`, `HU210-3`; concealed flange `HUC28-2`, `HUC210-2` |
+    | sloped rafter to a ledger or ridge | `LRU26Z`, `LRU28Z`, `LRU210Z`, `LRU212Z` |
+    | skewed 2x at 45 degrees | `SUL210` left, `SUR210` right; double `SUL210-2`, `SUR210-2` |
+    | skewed 2x at another angle | `HU210 SK30 R`: `HU` by section, angle and hand as a suffix |
+
+    Outdoors and on P.T. add the word `Zmax` to the model: `LUS210 Zmax`.
 
 === "Beam Face Mount"
 

@@ -35,16 +35,16 @@ on [Canopy](../horizontal/roof-framing/canopy.md).
 
 | Element | DFL row | Material | Unit |
 | --- | --- | --- | --- |
-| Shower screen | `Posts` | `4x4 P.T.`, `4x4 IPE` | pcs + height (`7'`, `10'`, `14'`) |
+| Shower screen | `Posts` | `4x4 P.T.`, `4x4 IPE` | post height in D (`7`, `10`, `14`), C = count |
 | | `Jamb` | `5/4 IPE Jambs`, `2x4 P.T.` | pcs / LFT |
 | | `Slats` | `1x6 IPE` + `1x4 IPE` alternating, `1x6 Vert. Cedar BDS.` | SQ FT of screen, gap in the note |
 | | `Cap` | `5/4 IPE Cap` | LFT |
-| Pergola / trellis | `1E Shape` | `4x10 Cedar 1E Shape` | pcs + length |
-| | `Trellis` | `3x3` | pcs + length |
-| | `Ledger`, `Brackets`, `Posts` | `2x4`, per detail, `4x4` / `6x6` | pcs, LFT |
+| Pergola / trellis | `1E Shape` | `4x10 Cedar 1E Shape` | board length in D, C = count |
+| | `Trellis` | `3x3` | slat length in D, C = count |
+| | `Ledger`, `Brackets`, `Posts` | `2x4`, per detail, `4x4` / `6x6` | ledger and posts: length in D; brackets pcs |
 | Canopy | `Soffits at Canopy Eves` | `Azek Beadboard` | SQ FT |
 | | `Fascia at Canopies`, `Canopy Hdr wraps` | `1x6` / `1x8`, `1x4` | LFT |
-| | `Frame for Soffits` | per detail, 24" o.c. | LFT |
+| | `Frame for Soffits` | `2x4` per detail, 24" o.c. | `16` (16' boards, as on [Eve](../sheathing-and-misc/eve.md)) |
 
 - Keep the material (IPE, cedar, P.T.) in the row; do not reduce it to something generic.
 - `Garage Shower Outside` is a separate run with its own posts and slats.
@@ -60,7 +60,7 @@ on [Canopy](../horizontal/roof-framing/canopy.md).
 ## Example
 
 ```text
-Posts   4x4 IPE                       6   pcs    10'    assumed  A502
+Posts   4x4 IPE                       6   10            assumed  A502
 Slats   1x6 + 1x4 IPE alternating     180 SQ FT  gap 1/4"        A502
 Cap     5/4 IPE Cap                   24  LFT                    A502
 ```

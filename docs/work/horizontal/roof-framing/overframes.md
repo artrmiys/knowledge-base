@@ -43,7 +43,7 @@ Overframe (california framing, framed-over roof) - каркас крыши, по
 
 | Имя в дереве | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- | --- |
-| `sqfts/overframe 4` | `Roof Sheathing (overframes)` | по спецификации кровли | SQ FT x slope / 32 x 1.1 | `4x8` | лист |
+| `sqfts/overframe 4` | `Roof Sheathing (overframes)` | по спецификации кровли | SQ FT x slope / 32 x 1.1, вверх до листа | `4x8` | лист |
 | `details/sleepers` | `Sleepers` | `2x6` | `=ОКРВВЕРХ(G/D;1)` | `16` | деталь |
 | `joists/overframe 2x8 24"` | `Rafters 24" o.c.` | `2x8` | по J Area | длины | |
 | piggyback | `Sleepers` или `Bearing Plates` | `2x6` по детали | по truss detail: шаг (часто 4' o.c.) по площади верхних ферм | `16` | truss detail |
@@ -63,9 +63,11 @@ Piggyback - один узел, две записи одного и того же
 
 | A | B | C | D | E |
 | --- | --- | --- | --- | --- |
-| `Roof Sheathing (overframes)` | `19/32" OSB` | 14 | 4x8 | `overframe 4, 410 SF` |
+| `Roof Sheathing (overframes)` | `19/32" OSB` | 15 | 4x8 | `overframe 4, 410 SQ FT` |
 | `Sleepers` | `2x6` | 12 | 16 | `4/S301` |
 | `Rafters 24" o.c.` | `2x8` | 22 | 12 | `S201` |
+
+Sheathing: 410 SQ FT в плане при уклоне 4:12, 410 x 1.054 / 32 x 1.1 = 14.9, значит 15 листов.
 
 <figure markdown>
   ![Overframe вид 02](../../../assets/images/confluence/confluence-145.png)

@@ -7,37 +7,42 @@
 
 ## What it is
 
-The finish rows of a balcony block: fascia and edge trim around the perimeter, soffit
-underneath, post wrap, flashing at the wall. The full map of layers from frame to
-finish is on the canonical page
-[Balcony build-up](../exterior-trims/balcony-buildup.md); the frame is on
-[Deck / Porch / Balcony Frame](deck-porch-balcony-frame.md).
+A short pointer page. The finish rows of a balcony block (post wrap, EPDM, decking,
+soffit underneath, fascia and edge trim, flashing at the wall), with all formulas and
+an example, are covered on one page:
+[Balcony build-up](../exterior-trims/balcony-buildup.md). The block frame is on
+[Deck / Porch / Balcony Frame](deck-porch-balcony-frame.md), the railing on
+[Railing](railing.md). This page holds only what is not there.
 
 ## Where to find it on the plans
 
 | Sheet | What to take |
 | --- | --- |
 | Balcony section A4xx, details A5xx | Fascia, soffit (beadboard), flashing, post wrap: material and size |
-| Elevations | Visible trims, color and profile, what is hidden by the railing |
+| Elevations | Visible trims, color and profile, what is hidden by the railing, whether the post is wrapped |
 | Job scope | Frame only: do not insert trim at all |
 
 ## How to measure in OurPlanCore
 
-Lengths and areas come from the block size W x D and the multiplier G, as for
-railing. The soffit under the balcony is an Area along the real outline only when
-the outline is not a rectangle; W x D is usually enough.
+Balcony trim usually needs no takeoffs of its own: lengths and areas come from
+the block size W x D and the multiplier G, as for railing. The soffit underneath is traced
+as an Area only when the balcony outline is not a rectangle.
 
 ## Tree name and DFL row
 
-| DFL row | Material | Unit | Rule |
-| --- | --- | --- | --- |
-| `Balcony Trims` / `Fascia` | `1x10`, `5/4x8` | LFT | open sides: `=(W+2*D)*G` |
-| `Soffits at Balcony` | `Beadboard` | SQ FT | `=W*D*G` |
-| `Post Wrap` | `1x8` | LFT | by post height x 4 sides |
-| `Flashings at Wall` | `Copper` / drip edge | LFT | along the wall, `=W*G` |
+The table of rows, units and formulas: [Balcony build-up](../exterior-trims/balcony-buildup.md).
+Additions to it:
 
-Size not specified: `TBD` in the material and the note `Note: All trims to be verified.
-Scaled per elevations`.
+- Trim follows the block frame under its own header and only when trims are in
+  scope; with Frame only the block ends with the frame.
+- Write `Post Wrap` only when the elevation or a detail shows a wrapped post.
+  Four boards per post: G = post height x 4 sides x number of posts. Board
+  width = post face plus two board thicknesses: a 6x6 post takes `1x8`, a 4x4 post
+  takes `1x6`. Wrap not detailed: `assumed` in E.
+- Gypsum or metal soffit underneath by others: no `Soffits at Balcony`
+  row, a note stays.
+- Size not specified: `TBD` in the material and the note `Note: All trims to be verified.
+  Scaled per elevations`.
 
 ## Common mistakes
 

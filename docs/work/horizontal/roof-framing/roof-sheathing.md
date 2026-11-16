@@ -46,18 +46,27 @@ sub fascia, blocking at eves, truss bracing, ties.
 | `sqfts/rf 6` | `Roof Sheathing` | `19/32" Ply or OSB (40/20)` | `4x8` | `=ОКРВВЕРХ(G*1.118/32*1.1;1)` |
 | `sqfts/rf mtl 4` | `Roof Sheathing (metal)` | `1/2" Ply` под металл | `4x8` | то же с 1.054 |
 | `sqfts/ply flat` | `Roof Sheathing at Flat Roofs` | `3/4" Ply` | `4x8` | без уклона |
-| `sqfts/flat` | `Rigid Insulation`, `Densdeck` / cover board | по assembly | `SQ FT` | та же площадь |
+| `sqfts/flat` | `Cover Board` | `1/2" Cover Board` или Densdeck по assembly | `4x8` | `=ОКРВВЕРХ(G/32*1.1;1)` |
+| `sqfts/flat` | `Roof Insulation` | `Tapered Polyiso Insulation`, XPS по assembly | `SQ FT` | та же площадь x 1.1 |
 | `sqfts/rf 6` | `Clips` | `PSCL 19/32` | `pcs` | по [H-clips](h-clips.md) |
 
 Карнизный каркас в той же секции, по деталям этого дома:
 
-| Строка | Типично | Unit |
-| --- | --- | --- |
-| `Sub Fascia` | `2x6` / `2x8` | `LFT` по eave и rake |
-| `Blocking at Eves` | `2x6` | `LFT` |
-| `Bracing for Trusses` | по умолчанию `2x6` каждые 10', иначе по truss detail; на всю площадь под крышей, включая гараж | `LFT` |
-| `Simpson Ties at Eves` | `H2.5A` без Zmax (под обшивкой), шаг = шаг ферм, по всем линиям опирания | `pcs` |
-| `Frame for Soffits` / `Frame for Rakes` | `2x4 24" o.c.` | `LFT` |
+| Строка | Типично | C | D |
+| --- | --- | --- | --- |
+| `Sub Fascia` | `2x6` / `2x8` | `=ОКРВВЕРХ(G/D;1)`, G - LFT eave или rake | `16` |
+| `Blocking at Eves` | `2x6` | `=ОКРВВЕРХ(G/D*1.1;1)`, G - LFT eave | `16` |
+| `Truss Bracing` | `2x4` | `=ОКРВВЕРХ(G/4/D;1)`, G - площадь под фермами крыши в SQ FT | `16` |
+| `Simpson Ties at Eves 24" o.c.` | `H2.5A` без Zmax (под обшивкой), шаг = шаг ферм, по всем линиям опирания | `=ОКРВВЕРХ(G*12/H;10)`, G - LFT eave, H - шаг | `pcs` |
+| `Frame for Soffits 24" o.c.` / `Frame for Rakes 24" o.c.` | `2x4` / `2x6` по детали | доски по 16' из таблицы eaves и rakes | `16` |
+
+`Truss Bracing` - bracing ферм крыши:
+
+- `G` - площадь под фермами: SQ FT первого этажа плюс гараж и нижние крыши, если крыша накрывает больше первого этажа. Не наклонная площадь кровли.
+- `G/4` - один ряд bracing на каждые 4' длины фермы, это LFT; `/D` переводит в доски по 16'.
+- Только при roof trusses by others. Площадь, где rafters stick или TJI, в `G` не входит; stick-крыша - строки нет.
+- Замеренные линии bracing (`framing/roof framing/details/bft`, только под фермами плоской крыши, не над несущими стенами) идут строкой `Bracing for Trusses` в Roof Frame list: `2x6`, `=ОКРВВЕРХ(G/D;1)`, D `16`. Для одних и тех же ферм пишется одна из двух строк, не обе.
+- Bracing ферм перекрытия - строка `Bracing for Trusses` на странице [Blocking](../floor-framing/details/blocking.md).
 
 ## Частые ошибки
 
@@ -67,6 +76,9 @@ sub fascia, blocking at eves, truss bracing, ties.
 - На flat roof пропущены Densdeck / cover board и второй слой XPS.
 - Piggyback sleepers и 1x3 strapping под фермами пропущены.
 - Ties не по всем линиям опирания; шаг ties не равен шагу ферм.
+- `Truss Bracing` посчитан от наклонной площади кровли, записан у stick-крыши или вместе с `Bracing for Trusses` для тех же ферм.
+- Sub Fascia и Blocking at Eves записаны в LFT: это доски по 16'.
+- Cover board посчитан в SQ FT: это листы `4x8`.
 - Soffit снизу посчитан как площадь настила.
 
 Все ошибки по кровле: [common-mistakes](../../../start/common-mistakes.md#roof).
@@ -74,14 +86,17 @@ sub fascia, blocking at eves, truss bracing, ties.
 ## Пример
 
 ```text
-Roof Frame list
+Roof System Misc
 Note: Roof uses 19/32" exterior-rated plywood per S203; PSCL size matches.
 Roof Sheathing      19/32" Ply or OSB (40/20)   206   4x8    2/S500
 Clips               PSCL 19/32                  1240  pcs
-Sub Fascia          2x8                          310  LFT
-Blocking at Eves    2x6                          236  LFT
-Simpson Ties at Eves H2.5A                       236  pcs    S203
+Sub Fascia          2x8                           20  16
+Blocking at Eves    2x6                           17  16
+Truss Bracing       2x4                           79  16
+Simpson Ties at Eves 24" o.c.  H2.5A             120  pcs    S203
 ```
+
+Проверка: Sub Fascia 310 LFT / 16 = 19.4, значит 20 досок. Blocking at Eves 236 LFT / 16 x 1.1 = 16.2, значит 17. Truss Bracing: площадь под фермами 5000 SQ FT / 4 / 16 = 78.1, значит 79. Ties: 236 x 12 / 24 = 118, вверх до 10 = 120.
 
 <figure markdown>
   ![3D: плоскости скатов над каркасом ферм](../../../assets/images/confluence/confluence-150.png)

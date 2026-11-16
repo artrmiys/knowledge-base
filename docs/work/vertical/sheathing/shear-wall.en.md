@@ -36,9 +36,11 @@ material). Anchorage is a separate page: [Holdowns](holdowns.md).
    the S dot sends new takeoffs into `shear walls/<floor below>`.
 3. One takeoff per schedule row: do not merge `SW4-1` and `SW4-2` because
    their lengths match. One takeoff can contain several runs.
-4. Read the side: the outside face of an ext SW is already counted in ext walls,
-   only the inside face is needed. Label a two-sided SW "both sides"; its G =
-   the sum of the two faces, with no extra x2. `P` on the mark = perforated.
+4. Read the side: the outside face of an ext SW is already counted in the `Wall Sheathing`
+   of the exterior walls, only the inside face is needed (an ext SW sheathed on one side
+   gives no row). An interior SW sheathed on both sides is one line along the wall length;
+   the doubling sits in the DFL row (`(2 sides)` and `*2` in the formula), do not double
+   the length a second time. `P` on the mark = perforated.
 5. On a panel job one sheathed side is already in the panel; count only the required
    second side.
 
@@ -46,17 +48,28 @@ material). Anchorage is a separate page: [Holdowns](holdowns.md).
 
 | Takeoff name | DFL row | Material | Unit | Formula |
 | --- | --- | --- | --- | --- |
-| `shear walls/1st floor/shear/SW1-1` | `Wall Sheathing` in the floor's wall block, E = `SW1-1` | per schedule, for example `15/32" Ply` | `4x8` | `=CEILING(LFT*H/32*1.1,1)` |
-| `shear walls/1st floor/shear/WSW-C 7-16 OSB DTT2Z` | same, E = mark | `7/16" OSB` | `4x8` | same |
-| `shear walls/2nd floor/shear/ext W4B` | same | per schedule | `4x8` | same |
-| separately | `Draft Stop` | per detail | `4x8` | not from the SW total, see [Gable Sheathing](gable.md) |
+| `shear walls/1st floor/shear/SW1-1` | `Shear Walls SW1-1` in the floor's wall block, one row per mark | per schedule, for example `15/32" Ply` | `4x8` | `=CEILING(G*H/32*1.1,1)` |
+| `shear walls/1st floor/shear/WSW-C 7-16 OSB DTT2Z` | `Shear Walls WSW-C` | `7/16" OSB` | `4x8` | same |
+| interior SW sheathed on both sides | `Shear Walls SW-F (2 sides)` | per schedule | `4x8` | `=CEILING(G*H*2/32*1.1,1)` |
+| `shear walls/2nd floor/shear/ext W4B` | `Shear Walls W4B`, inside face only | per schedule | `4x8` | as for a one-sided wall |
+| separately | `Draft Stop` | from the roof plan legend | `SQ FT` | not from the SW total, see [Gable Sheathing](gable.md) |
+
+What the formula holds:
+
+- **G** is the SW length in LFT (it stays a length, no area goes into G).
+- **H** is the wall height of that floor in feet, the same one as in the wall name
+  (`ext 2x6 9.09` gives H = 9.09). A wall running floor to floor: H =
+  floor-to-floor.
+- `G x H` is the area of one face, `/32` turns it into `4x8` sheets, `x 1.1` is waste.
+- E holds the side and the sheet: `int S5.01`, `int one side`.
 
 Name = mark plus confirmed differences (material, thickness, fasteners).
 The SW button on the XL strip puts the areas into the floor's wall block.
 
 ## Common mistakes
 
-- Two sides counted as x2 on top of the sum of two faces, or `P` read as two sides.
+- Two sides doubled twice (in the length and with `*2` in the formula), or `P` read as two sides.
+- H holds the height of another floor, or floor-to-floor instead of the wall height.
 - Schedule rows with different specs merged by length.
 - SW floor taken from the sheet instead of the "walls below" notes: the SW ended up one floor too high.
 - Attic draft stop copied from the shear wall total.
@@ -74,6 +87,11 @@ Takeoffs/Main/shear walls/1st floor/shear/
   ext W4B                    Line  118 LFT
 Takeoffs/Main/shear walls/1st floor/holdowns/
   HDU11 SB1x30 S2.2          Count  14
+
+1st Floor Walls (wall height 9.09')
+Shear Walls SW1-1     15/32" Ply    27   4x8   int S5.01    86 x 9.09 / 32 x 1.1 = 26.9
+Shear Walls WSW-C     7/16" OSB     14   4x8   int S5.01    42 x 9.09 / 32 x 1.1 = 13.1
+Shear Walls W4B       15/32" Ply    37   4x8   int one side 118 x 9.09 / 32 x 1.1 = 36.9
 ```
 
 ## See also

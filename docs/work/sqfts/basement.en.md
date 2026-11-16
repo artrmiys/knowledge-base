@@ -36,13 +36,14 @@ underlayment, rigid) only when the assembly shows them. Basement wall framing
 | Tree name | DFL row | Material | Unit | Formula |
 | --- | --- | --- | --- | --- |
 | `sqfts/base` | Front Page, `Basement` | | `SQ FT` | as measured |
-| `sqfts/base` | `Sleepers` | `2x4 P.T.` per detail | `LFT` | by spacing |
+| `sqfts/base` | `Sleepers 16" o.c.` | `2x4 P.T.` per detail | `LFT` | `=CEILING(SQFT*12/16*1.1,10)`: at 16" spacing 1 SQ FT takes 12/16 = 0.75 LFT; 24" spacing: 12/24 = 0.5 |
 | `sqfts/base` | `Plywood` / `Underlayment` over slab | per assembly | `4x8` | `=CEILING(SQFT/32*1.1,1)` |
-| `sqfts/base` | `Rigid Insulation` over slab | per assembly | `SQ FT` | as measured |
+| `sqfts/base` | `Insulation` over slab | `2" XPS Insulation` per assembly | `SQ FT` | SQFT x 1.1: under 50 round up to 2, from 50 round up to 10 |
 
 ## Common mistakes
 
 - Plywood and sleepers on the slab missed because "it is concrete there".
+- Sleepers counted along the perimeter or by eye: the length comes from the area and the spacing.
 - Name `bsmt` instead of `base`: the area did not go to `sqfts`.
 - Basement measured to the 1st floor outline, not to the slab.
 
@@ -54,8 +55,8 @@ All area mistakes: [common-mistakes](../../start/common-mistakes.md#sqft).
 Takeoffs/Main/sqfts/
   base      Area   1620 SF   (a100 base)
 Basement
-Sleepers        2x4 P.T. 16" o.c.    1340   LFT   8/A500
-Plywood         3/4" T&G              56   4x8   over sleepers
+Sleepers 16" o.c.   2x4 P.T.    1340   LFT   8/A500          1620 x 12/16 x 1.1 = 1336.5, round up to 10
+Plywood             3/4" T&G      56   4x8   over sleepers   1620 / 32 x 1.1 = 55.7
 ```
 
 ## See also

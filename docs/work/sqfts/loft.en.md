@@ -30,10 +30,13 @@ is called `Loft`, not the next floor number. General measuring rules:
 3. Confirm the framing type: floor joists, roof-type or by others; that decides
    where the joists go ([Joist](../horizontal/floor-framing/joist.md)).
 
-!!! warning "To be confirmed"
-    The `loft` token in the name auto-routing is not confirmed: check that the takeoff
-    landed in `sqfts`; otherwise move it, or add a rule in
-    Settings > Takeoff Name Routing.
+!!! note "The name `loft` and the `sqfts` folder"
+    The word `loft` is not among the names the app sends to `sqfts` by itself
+    (the floors `1st`...`8th`, `base`, `porch`, `deck`, `blcny`, `cant`,
+    `flat`, `rf` go there). After creating the takeoff, check that it sits in `sqfts`; if
+    not, move it there or add a rule in Settings > Takeoff Name
+    Routing. The SF export understands the name `loft` and puts the area in the fifth
+    floor cell: the loft `Subfloor` row must point at it.
 
 ## Tree name and DFL row
 
@@ -41,13 +44,15 @@ is called `Loft`, not the next floor number. General measuring rules:
 | --- | --- | --- | --- | --- |
 | `sqfts/loft` | Front Page, `Loft` | | `SQ FT` | as measured |
 | `sqfts/loft` | `Subfloor` in `Loft Framing List` | `3/4" T&G` | `4x8` | `=CEILING(SQFT/32*1.1,1)` |
-| Line along the open edge | `Railing` / guard | per detail | `LFT` | |
+| J Area of the loft joist zone | `Joists 16" o.c.` in `Loft Framing List` | per the S plan | board length in feet | C = number of joists: [Joist](../horizontal/floor-framing/joist.md) |
+| Line along the open edge | `Railing` / guard | per detail | `LFT` | [Railing](../deck/railing.md) |
 
 ## Common mistakes
 
 - Loft not found: it is on the architectural sheets, the framing is on the structural ones.
 - Guard along the open perimeter forgotten.
 - Loft written as `5th` instead of `Loft` on the Front Page.
+- Joists written in `LFT`: C holds the number of boards, D the board length.
 
 All area mistakes: [common-mistakes](../../start/common-mistakes.md#sqft).
 
@@ -55,10 +60,10 @@ All area mistakes: [common-mistakes](../../start/common-mistakes.md#sqft).
 
 ```text
 Takeoffs/Main/sqfts/
-  loft      Area   340 SF
+  loft      Area   340 SF   (20' x 17')
 Loft Framing List
-Joists 16" o.c.    2x10     ...   LFT   S203
-Subfloor           3/4" T&G  12   4x8
+Joists 16" o.c.    2x10       16   18    S203   20 x 12/16 = 15, plus 1; 17' span = 18' board
+Subfloor           3/4" T&G   12   4x8          340 / 32 x 1.1 = 11.7
 ```
 
 ## See also

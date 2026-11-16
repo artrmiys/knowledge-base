@@ -13,9 +13,10 @@
 ## What it is
 
 Flashing is metal or tape at joints where water can get under the material:
-roof-to-wall intersections (step, kick-out), parapets (cap, coping, drip edge),
-horizontal wall joints (band, water table), deck or balcony-to-wall
-connections. Flashing around windows and doors is a separate page,
+roof edges (drip edge, rake edge), valleys, roof-to-wall intersections
+(step, kick-out), parapets (cap, coping, drip edge), horizontal wall joints
+(band, water table), terrace or balcony-to-wall connections. Flashing
+around windows and doors is a separate page,
 [Window Flashing](../vertical/openings/window-flashing.md): it has different rows
 and is split by wall type.
 
@@ -25,49 +26,80 @@ and is split by wall type.
 | --- | --- |
 | Architectural sections and details (`sec`, `d`) | Rake, eave, parapet, cap flashing, step and kick-out; they are not on the structural sheets |
 | Wall sections | Band flashing, water table, flashing over a build-out |
-| Roof plan (`a105 rf`) | Roof-to-wall intersections, chimneys, valleys under metal |
-| Deck / balcony details | Flashing along the ledger and under the decking |
+| Roof plan (`a105 rf`) | Roof-to-wall intersections, chimneys, valleys |
+| Deck / balcony details | Flashing at the terrace wall, at the membrane and sleepers |
 | Parapet details | Coping or drip edge on top |
+| Job scope | Whether roofing products are included (`+ roof`) |
 
 ## How to measure in OurPlanCore
 
-1. Line tool along the joint: roof-to-wall intersection, top of the parapet,
-   balcony ledger. LFT unit. Kick-outs are a Count of points.
-2. Name = product and location: `step flashing`, `drip edge prpt`, `ledger flashing
-   blcny`. Folder per the job's agreed tree (`roof misc` or `trims`).
-3. Parapet: the parapet top length from `parapets/prpt ...`; coping on a separate
-   row or in Drip Edge per detail.
-4. Roof, wall and deck flashing are counted independently of opening flashing: they are
+1. Not every row needs its own line. Drip Edge at the eaves reads the length of the
+   `eve` lines, Rake Edge the length of the `rake` lines, the parapet Drip Edge the
+   length of `parapets/prpt ...`, the terrace wall flashing the block size. Do not
+   measure these lengths a second time.
+2. Valleys and roof-to-wall intersections (step flashing): Line tool along the
+   joint, folder `roof misc` (where `ridge` also lives). Name = location:
+   `valley`, `roof to wall`. LFT unit.
+3. Kick-outs are a Count of points: one point for each lower end of a
+   roof-to-wall intersection.
+4. Parapet: coping goes into the parapet Drip Edge row, there is no separate
+   coping row.
+5. Roof, wall and deck flashing are counted independently of opening flashing: they are
    different rows.
 
-!!! warning "To be confirmed"
-    There is no single branch for flashing in the tree; confirmed takeoff names
-    exist only for windows (Window Flashing). Keep flashing in one folder per job.
+The roof `Flashing` rows (Drip Edge, Rake Edge, Valley Flashing,
+Roof-to-Wall) are written only when roofing products are in scope. The parapet
+Drip Edge and the terrace `Flashings at Wall` live in their own blocks and do not
+depend on that scope.
 
 ## Takeoff name and DFL row
 
-| Takeoff name | DFL row | Material | Unit |
-| --- | --- | --- | --- |
-| `roof misc/step flashing` | `Flashings at Wall` | step flashing, kick-out `pcs` | `LFT`, `pcs` |
-| `parapets/prpt 3.4 3 2 par` | `Flashing` | `Drip Edge` / coping | `LFT` |
-| `sqfts/rf mtl 4` (valleys) | `Ice and Water (eves&valleys)` | per spec | `SQ FT` / `LFT` |
-| `framing/blcny/details/ledger flashing` | `Head Trim Flashing` / `Flashing(s)` | per detail | `LFT` |
+The row label is always `Flashing`, the kind goes in B. The unit is `LFT` everywhere:
+length x 1.1, rounded up to 10.
+
+| Where the length comes from | DFL row | B | Unit | Formula C |
+| --- | --- | --- | --- | --- |
+| `eves rakes/eves/eve ...` lines | `Flashing` | `Drip Edge` | `LFT` | `=CEILING(eaves LFT*1.1,10)` |
+| `eves rakes/rakes/rake ...` lines | `Flashing` | `Rake Edge` | `LFT` | `=CEILING(rakes LFT*1.1,10)` |
+| `roof misc/valley` | `Flashing` | `Valley Flashing` | `LFT` | `=CEILING(valleys LFT*1.1,10)` |
+| `roof misc/roof to wall` | `Flashing` | `Roof-to-Wall` | `LFT` | `=CEILING(G*1.1,10)` |
+| Count at the lower ends of the intersections | `Flashing` | `Kick-out` | `pcs` | number of points |
+| eaves and valleys | `Ice and Water (eves&valleys)` | `3x50' rolls` | `rolls` | `=CEILING((eaves LFT + valleys LFT)/50,1)` |
+| `parapets/prpt 3.4 3 2 par` | `Flashing` in the Parapet Walls block | `Drip Edge` | `LFT` | G x 1.1: under 50 round up to 2, from 50 round up to 10 |
+| terrace block size | `Flashings at Wall` | `Copper` | `LFT` | length of the side at the wall x units, no waste |
+| window heads, bands, watertable | `Head Trim Flashing` in the Exterior Trims block | `Drip Edge` | `LFT` | G x 1.1, same rounding |
+
+`Flashings at Wall` is only for a terrace with a membrane; an open wood
+balcony in Frame scope has no flashing row.
 
 ## Common mistakes
 
-- Kick-outs and step flashing at roof-to-wall intersections forgotten.
-- Parapet flashing and coping counted twice (Flashing row and Drip Edge).
+- Kick-outs and flashing at roof-to-wall intersections forgotten.
+- Length written without 1.1, or the material written in `pcs` instead of `LFT`.
+- Parapet coping written as a separate row next to Drip Edge, or the parapet drip
+  edge repeated in the roof eave rows.
 - Flashing looked for only on the structural sheets.
 - Roof flashing mixed into the Window Flashing rows.
+- Roof `Flashing` rows inserted although roofing products are not in scope.
 
 All roof mistakes: [common-mistakes](../../start/common-mistakes.md#roof).
 
 ## Example
 
 ```text
-Flashing             Drip Edge            186   LFT   parapet top, 5/A501
-Flashings at Wall    Step flashing         64   LFT   roof to wall, 7/A502
-Kick-out             pcs                    4   pcs
+Takeoffs/Main/eves rakes/      eves 318 LFT, rakes 96 LFT
+Takeoffs/Main/roof misc/       valley 42 LFT, roof to wall 64 LFT
+Takeoffs/Main/parapets/        prpt 186 LFT
+
+Flashing                       Drip Edge         350   LFT   318 x 1.1 = 349.8
+Flashing                       Rake Edge         110   LFT    96 x 1.1 = 105.6
+Flashing                       Valley Flashing    50   LFT    42 x 1.1 = 46.2
+Flashing                       Roof-to-Wall       80   LFT    64 x 1.1 = 70.4    7/A502
+Flashing                       Kick-out            4   pcs    4 lower ends
+Ice and Water (eves&valleys)   3x50' rolls         8   rolls  (318 + 42) / 50 = 7.2
+
+Parapet Walls:
+Flashing                       Drip Edge         210   LFT   186 x 1.1 = 204.6   5/A501
 ```
 
 ## See also

@@ -37,20 +37,27 @@ types, not only the elevations. Sheathing is counted in
 
 ## WRB, not Vapor Barrier
 
-| DFL row | Material | Unit | Rule |
+| DFL row | Material in B | Unit | Rule |
 | --- | --- | --- | --- |
-| `WRB` | `Tyvek` or another housewrap | SQ FT | only if the spec names a housewrap |
-| `WRB` | `fluid-applied` (product per spec) | SQ FT | do not write Tyvek |
-| Zip system | `7/16" Zip` + `Zip Tape` | 4x8, rolls | no separate WRB needed, do not duplicate |
+| `Vapor Barrier` (template label) | `Tyvek` or another housewrap | SQ FT | only if the spec names a housewrap; `=CEILING(G*1.1,10)`, G = sheathing area of that wall |
+| `Vapor Barrier` | `fluid-applied` (product per spec) | SQ FT | do not write Tyvek |
+| `Wall Sheathing` + `Tape` (Zip system) | `7/16" Zip` + `Zip Tape` | 4x8, LFT | no `Vapor Barrier` row: the barrier is built into the sheet, do not duplicate |
 
-- The exterior barrier is called WRB, weather barrier or air barrier.
-  `Vapor Barrier` is a different layer in a different place in the wall; do not name
-  the row that way.
-- WRB area equals the wall area with openings deducted once; windows under
-  4' are not deducted. Exterior gypsum porch and canopy soffits also go into the
-  WRB.
-- The WRB spec cell in the DFL header (O4) is filled in when the job is created; the sheet
-  reference goes without the word `per` (`A3.0`).
+- The exterior barrier is called WRB, weather barrier or air barrier. The template
+  row is labeled `Vapor Barrier`, and that label in column A is not changed;
+  the real product goes into B. The mistake is to write `Vapor Barrier` as the
+  product, or to put Tyvek when the spec names something else.
+- `Zip Tape` is counted in `LFT`, not in rolls. Under `Wall Sheathing`:
+  `=CEILING((G*0.4+P)*1.1,10)`, where G is the SQ FT of Zip on that floor and P is the
+  perimeter of the windows and doors of that floor from the openings table. Under Box,
+  Gable and Truss Heel: `=CEILING(G*0.4*1.1,10)`. Zip on the roof:
+  (sheets x 32 x 0.4 + ridge + valleys) x 1.1.
+- WRB area equals the wall sheathing area: openings are deducted on their own floor
+  and once, windows narrower than 4' are not deducted, garage doors are (the same
+  rule as on [Wall Sheathing](../vertical/sheathing/wall-sheathing.md)).
+  Exterior gypsum porch and canopy soffits also go into the WRB.
+- The spec cells in the DFL header are filled in when the job is created: O4 WRB, O5
+  Zip, O6 Zip Tape; the sheet reference goes without the word `per` (`A3.0`).
 
 ## Furring / Rainscreen
 
@@ -73,7 +80,7 @@ cedar shingle on solid sheathing.
 | `Corner posts` (outside, inside) | corners | LFT |
 | `Undersill / finish trim` | under the window, at the top of the wall | LFT |
 
-With vinyl, `Ext. Casing` is often the `Vinyl J-channel` itself: do not duplicate it with
+With vinyl, `Ext Casing` is often the `J-Channel` itself: do not duplicate it with
 `5/4` wood casing. Canonical page: [Exclusions and J-Channel](../exterior-trims/exclusions.md).
 
 ## Flashing in siding
@@ -91,8 +98,9 @@ in detail: [Window flashing](../vertical/openings/window-flashing.md).
 
 ## Common mistakes
 
-- `Vapor Barrier` instead of WRB; Tyvek when the spec calls for fluid-applied.
+- `Vapor Barrier` written as the product in B instead of the WRB per spec; Tyvek when the spec calls for fluid-applied.
 - Zip and a separate housewrap counted together.
+- `Zip Tape` in rolls instead of LFT, or without the opening perimeter of the floor.
 - Furring missed because it is not on the elevation.
 - Openings not deducted from the WRB, or deducted twice.
 - All sheathing mistakes: [Sheathing](../../start/common-mistakes.md#sheathing).
@@ -100,9 +108,18 @@ in detail: [Window flashing](../vertical/openings/window-flashing.md).
 ## Example
 
 ```text
-WRB            fluid-applied (per spec 07 27 26)   8 420  SQ FT   =C<walls SF>-C<openings>   A3.0
-Furring        1x4 P.T. @ 16" o.c.                 6 950  LFT     =CEILING(8420*12/16*1.1,10) 7/A401
-Cedar Breather                                     1 240  SQ FT   gable shingle areas          A201
+Vapor Barrier   fluid-applied (spec 07 27 26)   9270  SQ FT   =CEILING(8420*1.1,10)         A3.0
+Furring         1x4 P.T. @ 16" o.c.             6950  LFT     =CEILING(8420*12/16*1.1,10)   7/A401
+Cedar Breather                                  1240  SQ FT   gable shingle areas           A201
+
+The same walls on Zip: no Vapor Barrier row, Tape instead
+Wall Sheathing  7/16" Zip                       290   4x8     =CEILING(8420/32*1.1,1)
+Tape            Zip Tape                        4410  LFT     =CEILING((8420*0.4+640)*1.1,10)
+
+WRB: 8420 x 1.1 = 9262, rounded up to 10 = 9270
+Furring: 8420 x 12 / 16 = 6315, x 1.1 = 6946.5, rounded up to 10 = 6950
+Zip: 8420 / 32 = 263.1, x 1.1 = 289.4, rounded up to a whole sheet = 290 sheets
+Tape: 8420 x 0.4 = 3368, + 640 LFT of opening perimeter = 4008, x 1.1 = 4408.8, rounded up to 10 = 4410
 ```
 
 ## See also

@@ -49,13 +49,12 @@ Different pitches on the two sides of a hip: only from the section. The app roun
 
 ## Takeoff name and DFL row
 
-Path: `framing/roof framing/beams/hip <size> <length>`. If the job template counts hip, valley and ridge on one row, the Label is `Ridge / Valley / Hip` in LFT.
+Path: `framing/roof framing/beams/hip <size> <length>`. In the DFL the hip is the `Hip plates` row: C is the number of boards, D is the even order length. A doubled hip is `Hip plates (2)`, C = points x 2.
 
 | Takeoff name | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- | --- |
-| `beams/hip 2x12 18` | `Hip Rafters` | `2x12` | points | `18` | `S201` |
-| `beams/hip (2) 1 3/4 x 11 7/8 LVL 22` | `Hip Rafters (2)` | `1 3/4 x 11 7/8 LVL` | points | `22` | `HB1` |
-| Line along ridge, hip and valley | `Ridge / Valley / Hip` | `2x12` | `=CEILING(G*1.1/D,1)` | `16` | |
+| `beams/hip 2x12 18` | `Hip plates` | `2x12` | points | `18` | `S201` |
+| `beams/hip (2) 1 3/4 x 11 7/8 LVL 22` | `Hip plates (2)` | `1 3/4 x 11 7/8 LVL` | points x 2 | `22` | `HB1` |
 
 ## Common mistakes
 
@@ -70,7 +69,7 @@ Path: `framing/roof framing/beams/hip <size> <length>`. If the job template coun
 
 | A | B | C | D | E |
 | --- | --- | --- | --- | --- |
-| `Hip Rafters` | `2x12` | 4 | 18 | `S201, pitch 6:12` |
+| `Hip plates` | `2x12` | 4 | 18 | `S201, pitch 6:12` |
 | `Rafters 16" o.c.` | `2x10` | 28 | 16 | `jack rafters at hips` |
 
 ## See also

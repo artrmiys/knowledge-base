@@ -53,7 +53,7 @@ frame scope interior trim is not counted.
 
     ---
 
-    Interior door and window casing: formula from the opening list, jamb.
+    Interior door and window casing: formula from the opening list, both faces and waste.
 
     [Casing](casing.md)
 
@@ -70,7 +70,8 @@ frame scope interior trim is not counted.
    door, with intentional breaks. Unit base separately from corridors and lobby.
 4. Make the list of doors and cased openings per floor, then the casing
    with a formula from the list.
-5. Trim not specified: write `not specified`, do not guess the product.
+5. Trim not specified: `TBD Base`, `TBD Casing`, `TBD Crowns` in B and a note, not
+   a guessed product.
 
 ## Key rules
 
@@ -86,10 +87,10 @@ frame scope interior trim is not counted.
 
 | Tree name | DFL row | Unit | Rule |
 | --- | --- | --- | --- |
-| `trims/baseboard 1st` | `Baseboard` | LFT | perimeter of finished rooms, formula with visible addends |
-| `trims/crown 1st` | `Crowns` | LFT | only rooms with crown per the schedule |
-| `openings` list | `Int. Doors`, `Cased Openings` | pcs | per floor, with the size designation |
-| | `Casing for Int. Doors` | LFT | formula from the door list |
+| `trims/baseboard 1st` | `Baseboard` | LFT | perimeter of finished rooms: a sum with visible addends in G, `=CEILING(G*1.1,10)` |
+| `trims/crown 1st` | `Crowns` | LFT | only rooms with crown per the schedule, `=CEILING(G*1.1,10)` |
+| `openings` list | `Int. Doors`, `Cased Openings` | unit | per floor, size code in B |
+| | `Casing for Int. Doors` | LFT | `=CEILING(2*SUM(perimeters)/12*1.1,10)`: door perimeters, both faces, 1.1 waste |
 
 ## Common mistakes
 

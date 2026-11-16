@@ -43,13 +43,14 @@ Beam tool (B) along the valley line on the roof framing sheet with the F dot. Th
 
 ## Takeoff name and DFL row
 
-Path: `framing/roof framing/beams/valley <size> <length>`. The template's combined row `Ridge / Valley / Hip` in LFT when the job does not split them.
+Path: `framing/roof framing/beams/valley <size> <length>`. In the DFL the valley is the `Valley plates` row: C is the number of boards, D is the even order length. A valley that the plan marks with a beam mark (`RB1`) is written `Valley Beam (n)`.
 
 | Takeoff name | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- | --- |
-| `beams/valley 2x12 16` | `Valley Rafters` | `2x12` | points | `16` | `S201` |
-| `beams/valley (2) 2x12 14` | `Valley Rafters (2)` | `2x12` | points | `14` | dormer |
-| `details/sleepers` | `Sleepers` | `2x6` | LFT / 16 | `16` | overframe |
+| `beams/valley 2x12 16` | `Valley plates` | `2x12` | points | `16` | `S201` |
+| `beams/valley (2) 2x12 14` | `Valley plates (2)` | `2x12` | points x 2 | `14` | dormer |
+| `beams/RB1 (2) 1 3/4 x 16 LVL 20` | `Valley Beam (2)` | `1 3/4 x 16 LVL` | points x 2 | `20` | `RB1` |
+| `details/sleepers` | `Sleepers` | `2x6` | `=CEILING(G/D,1)` | `16` | overframe |
 
 ## Common mistakes
 
@@ -64,7 +65,7 @@ Path: `framing/roof framing/beams/valley <size> <length>`. The template's combin
 
 | A | B | C | D | E |
 | --- | --- | --- | --- | --- |
-| `Valley Rafters` | `2x12` | 2 | 16 | `S201, pitch 8:12` |
+| `Valley plates` | `2x12` | 2 | 16 | `S201, pitch 8:12` |
 | `Rafters 16" o.c.` | `2x10` | 18 | 12 | `jack rafters at valley` |
 
 ## See also

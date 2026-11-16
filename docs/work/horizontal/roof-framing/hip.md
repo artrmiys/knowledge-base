@@ -49,13 +49,12 @@ Hip - наклонное наружное ребро, где два ската �
 
 ## Как назвать в дереве и строка DFL
 
-Путь: `framing/roof framing/beams/hip <сечение> <длина>`. Если шаблон проекта считает hip, valley и ridge одной строкой, Label `Ridge / Valley / Hip` в LFT.
+Путь: `framing/roof framing/beams/hip <сечение> <длина>`. В DFL hip идёт строкой `Hip plates`: C - число досок, D - чётная заказная длина. Двойной hip - `Hip plates (2)`, C = точки x 2.
 
 | Имя в дереве | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- | --- |
-| `beams/hip 2x12 18` | `Hip Rafters` | `2x12` | точки | `18` | `S201` |
-| `beams/hip (2) 1 3/4 x 11 7/8 LVL 22` | `Hip Rafters (2)` | `1 3/4 x 11 7/8 LVL` | точки | `22` | `HB1` |
-| Line по ridge, hip и valley | `Ridge / Valley / Hip` | `2x12` | `=ОКРВВЕРХ(G*1.1/D;1)` | `16` | |
+| `beams/hip 2x12 18` | `Hip plates` | `2x12` | точки | `18` | `S201` |
+| `beams/hip (2) 1 3/4 x 11 7/8 LVL 22` | `Hip plates (2)` | `1 3/4 x 11 7/8 LVL` | точки x 2 | `22` | `HB1` |
 
 ## Частые ошибки
 
@@ -70,7 +69,7 @@ Hip - наклонное наружное ребро, где два ската �
 
 | A | B | C | D | E |
 | --- | --- | --- | --- | --- |
-| `Hip Rafters` | `2x12` | 4 | 18 | `S201, pitch 6:12` |
+| `Hip plates` | `2x12` | 4 | 18 | `S201, pitch 6:12` |
 | `Rafters 16" o.c.` | `2x10` | 28 | 16 | `jack rafters at hips` |
 
 ## См. также

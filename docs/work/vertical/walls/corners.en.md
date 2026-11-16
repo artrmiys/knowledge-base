@@ -2,7 +2,7 @@
 
 <figure markdown>
   ![Three corner options in plan: 2-stud, 3-stud, California corner](../../../assets/images/framing/corners.svg)
-  <figcaption markdown="span">Wall corner in plan: 2-stud L, 3-stud, California corner with backing for gypsum. Stick: a separate row per floor. Panels: not counted.</figcaption>
+  <figcaption markdown="span">Wall corner in plan: 2-stud L, 3-stud, California corner with backing for gypsum. Stick: `corners` points per floor, the template adds the corner studs to `Studs Ext`. Panels: not counted.</figcaption>
 </figure>
 
 <!-- TODO-PHOTO: three stud corner wood framing photo, EN query "three stud corner framing" -->
@@ -11,8 +11,10 @@
 
 A corner is the stud pack where two walls meet: 2 or 3 studs, or a California corner.
 The stud factor `1.1` (one stud per foot plus waste) covers cutoffs and studs
-at openings, but corners and T-intersections on stick framing are counted on a separate
-row. On a panel job the corners are already inside the panel.
+at openings, and corners and T-intersections on stick framing are counted as `corners`
+points: the DFL template itself adds 2 LFT of studs per point to the first `Studs Ext`
+row of the floor. There is no separate `Corners` row in the DFL. On a panel job the
+corners are already inside the panel.
 
 ## Where to find it on the plans
 
@@ -34,17 +36,18 @@ itself counts as a wall token). Give it its own CountSymbol so the points look d
 
 | Takeoff name | DFL row | Unit | Formula / factor |
 | --- | --- | --- | --- |
-| `corners` (Count, 1st floor) | `Corners` 2x6 (wall size) | pcs | `corners x studs per corner` (2 or 3 per detail), length = stud height |
-| `corners` (Count, 2nd floor) | `Corners` on a separate row | pcs | per floor, not one total |
+| `corners` (Count, 1st floor) | no row of its own: the points go into G of the first `Studs Ext` row of the 1st floor | G in LFT | G = exterior wall LFT + 2 x number of points (template formula `=P40+Q38*2`, do not change it by hand) |
+| `corners` (Count, 2nd floor) | the same, in `Studs Ext` of the 2nd floor | G in LFT | per floor, each floor in its own folder |
 
-If no corner detail is shown, write a visible note: `Corners assumed 3 studs; verify`.
+A `Corners` row of its own counts the corners a second time: they already sit in G
+of the `Studs Ext` row, and C of that row (`G x 1.1`) turns them into studs.
 
 ## Common mistakes
 
 - Corners counted on a panel job: they are already in the panel.
-- All floors added into one row.
+- `corners` points of different floors in one takeoff: the corners land on the wrong floor.
 - T-intersections and backing forgotten although the detail shows them.
-- Corner counted as 2 studs when the detail shows 3.
+- A `Corners` row of its own added: the corners are counted twice.
 
 Walkthrough with examples: [all wall mistakes](../../../start/common-mistakes.md#walls).
 

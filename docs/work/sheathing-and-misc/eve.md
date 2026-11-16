@@ -12,8 +12,8 @@ soffit снизу и fascia по торцу. Rake - наклонная кром�
 ([Rake](rake.md)), return - коробка в углу, где eave заворачивает к rake
 ([Returns](returns.md)). Вертикальная полоса у пятки фермы над стеной - это
 [Truss Heel](../vertical/sheathing/truss-heel.md), не часть карниза. Из одной
-линии eave экспорт получает soffit (SQ FT), fascia и sub fascia (LFT) и каркас
-свеса.
+линии eave экспорт получает soffit (SQ FT), fascia (LFT), sub fascia и каркас
+свеса (доски по 16').
 
 ## Где искать на чертежах
 
@@ -45,17 +45,37 @@ soffit снизу и fascia по торцу. Rake - наклонная кром�
 
 | Имя в дереве | Строка DFL | Материал | Unit | Формула |
 | --- | --- | --- | --- | --- |
-| `eves rakes/eves/eve 24 main` | `Soffits at Eves` | `12" Vinyl vented` / beadboard / `5/8" Ext Gyp` | `SQ FT` или `LFT` | `LFT x 24/12` |
-| та же линия | `Fascia at Eves` | `1x8` / alum wrapped | `LFT` | `LFT x 1.1` |
-| та же линия | `Sub Fascia` | `2x8` | `LFT` | в блоке кровли |
-| та же линия | `Frame for Soffits 24" o.c.` | `2x4` или `2x6` по детали | `LFT` | по детали |
-| та же линия | `Blocking at Eves`, `Simpson Ties at Eves` | `2x6`, `H2.5A` | `LFT`, `pcs` | [Roof Sheathing](../horizontal/roof-framing/roof-sheathing.md) |
+| `eves rakes/eves/eve 24 main` | `Soffits at Eves` | `12" Vinyl vented` / `T&G beadboard` / `Soffit panel` | `SQ FT` | `=ЧЁТН((LFT eave + LFT returns)*вынос/12*1.1)` |
+| та же линия, soffit из одной доски или одной полосы на всю ширину | `Soffits at Eves` | `1x12`, `1x4` | `LFT` | `=ЧЁТН((LFT eave + LFT returns)*1.1)` |
+| та же линия | `Fascia at Eves` | `1x8`, по детали `1x10` или `1x6` | `LFT` | `=ЧЁТН((LFT eave + LFT returns)*1.1)` |
+| та же линия | `Sub Fascia` | `2x6`, по детали `2x8` | `16` | `=ОКРВВЕРХ(G/D;1)`, G = LFT eaves и returns, без 1.1 |
+| та же линия | `Frame for Soffits 24" o.c.` | `2x4`, по детали `2x6` | `16` | `=ОКРВВЕРХ(G/D;1)`, G = LFT x вынос / шаг + LFT |
+| та же линия | `Blocking at Eves` | `2x6`, по детали `2x4` или `2x8` | `16` | `=ОКРВВЕРХ(G/D*1.1;1)`, G = LFT eaves без returns |
+| та же линия | `Simpson Ties at Eves 24" o.c.` | `H2.5`, по S notes `H2.5A` (без Zmax) | `pcs` | `=ОКРВВЕРХ(G*12/H;10)`, H = шаг ферм; [Roof Sheathing](../horizontal/roof-framing/roof-sheathing.md) |
 | `eves rakes/eves/eve 12 porch` | те же строки в блоке porch | по детали porch | | отдельно от main |
 
-Экспорт в Excel: полоса XL, кнопка E/R; число выноса в имени читается
-макросом как ширина в дюймах. Vinyl soffit вводится как материал в SQ FT, не
-как строка каркаса. Если 30% и больше soffit = beadboard, весь soffit считаем
-beadboard и пишем Note, что это local rule.
+LFT - длина линии, вынос - число из её имени в дюймах. Экспорт в Excel: полоса
+XL, кнопка E/R; число выноса в имени читается макросом как ширина в дюймах.
+
+Soffit считаем в `SQ FT`: (LFT eave + LFT returns) x вынос / 12 x 1.1. В `LFT`
+только когда soffit закрыт одной доской или одной полосой на всю ширину
+(`1x12`, `1x4`, одна узкая vinyl-полоса): тогда ширина в формулу не входит.
+Примеры: панели 12" vinyl на свесе 24" = `SQ FT`; свес 9", закрытый одной
+`1x10` = `LFT`. Plywood soffit пишем `AC Ply` в `SQ FT`, не листами. Vinyl
+soffit - строка материала, не каркаса. Aluminum soffit и fascia в aluminum
+wrap - by others: строк soffit и fascia нет, только Note; sub fascia и каркас
+свеса под ними всё равно считаем.
+
+Soffit на чертежах не назван - дефолт по siding: vinyl siding = vinyl soffit
+в `SQ FT`; wood или composite clapboard = `1x` Azek в `LFT` (если много свесов
+шире 12", soffit panel в `SQ FT` на все); cedar shingles = beadboard в
+`SQ FT`; Hardie, board and batten и panels = soffit panel в `SQ FT`. Если 30%
+и больше soffit = beadboard, весь soffit считаем beadboard и пишем Note, что
+это local rule.
+
+`Sub Fascia`, `Frame for Soffits` и `Blocking at Eves` - каркас: в D длина
+доски 16', в C число досок. Aluminum-каркас soffit или короткий свес только с
+sub fascia и blocking: строки `Frame for Soffits` нет.
 
 ## Частые ошибки
 
@@ -64,6 +84,7 @@ beadboard и пишем Note, что это local rule.
 - Rake и returns слиты в eave, хотя строки разные.
 - Truss heel спрятан в soffit SQ FT.
 - `Soffit Eve Vinyl` введён как каркас, а не как SQ FT материала.
+- Soffit из панелей записан в `LFT`, или returns не прибавлены к soffit и fascia.
 - Frame for soffit `2x4` подставлен автоматически, хотя деталь даёт `2x6`.
 - Для кровли из `AJS Rafters` с открытым свесом посчитан простой rake вместо rafters вручную.
 
@@ -75,12 +96,15 @@ beadboard и пишем Note, что это local rule.
 Takeoffs/Main/eves rakes/eves/
   eve 24 main          Line  310 LFT
   eve 12 porch         Line   38 LFT
+  returns 24           Line    8 LFT
 Takeoffs/Main/eves rakes/rakes/
   rake 12 main         Line   96 LFT
-  returns 12           Line    8 LFT
 
-Soffits at Eves      12" Vinyl vented    620   SQ FT   310 x 2'
-Fascia at Eves       1x8 alum wrapped    341   LFT
+Main, вынос 24" (porch в своём блоке):
+Soffits at Eves              12" Vinyl vented    700   SQ FT   (310 + 8) x 24/12 x 1.1 = 699.6
+Fascia at Eves               1x8                 350   LFT     (310 + 8) x 1.1 = 349.8
+Sub Fascia                   2x8                  20   16      G = 310 + 8 = 318; 318 / 16 = 19.9
+Frame for Soffits 24" o.c.   2x4                  40   16      G = 318 x 24/24 + 318 = 636; 636 / 16 = 39.8
 ```
 
 <figure markdown>

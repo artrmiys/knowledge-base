@@ -59,15 +59,16 @@ furring, wood/PVC trim, soffit, fascia.
 
 | Элемент | Считаем? |
 | --- | --- |
-| WRB под облицовкой (по спецификации) | да, проверить scope |
+| WRB под облицовкой (по спецификации) | да, проверить scope; на стенах из Zip строки WRB нет, только `Tape` |
 | Sheathing (CDX, OSB, Zip) | да, свой scope |
 | Furring и каркас под облицовку | да, если показан |
 | Wood / PVC trim, corner, band, soffit, fascia | да |
 | Сам EIFS, stucco, stone, brick | нет |
 | Lath, base coat, brick ties, shelf angle, casing bead | нет, by others |
 
-- Нота обязательна: `Note: Stone Veneer by others`, `Note: Stucco by
-  others`, `Note: EIFS by others`.
+- Нота обязательна, первой под заголовком Siding: `Note: Stone Veneer
+  materials are by others`, `Note: EIFS, Stone and Brick Veneer materials
+  are by others` (перечисли то, что есть на фасадах).
 - Весь фасад EIFS, stucco или stone: siding `0 SQ FT` плюс нота, trim
   почти нулевой. Не добивай количество.
 - Accessory EIFS и stucco (casing bead, stop bead, track, expansion joint)
@@ -84,6 +85,7 @@ furring, wood/PVC trim, soffit, fascia.
 
 - Stone или brick veneer посчитаны как siding или как наша кладка.
 - WRB и sheathing под EIFS пропущены, потому что "стена by others".
+- На стенах из Zip под облицовкой добавлена строка WRB: у Zip барьер в листе, считается только `Tape`.
 - Casing bead EIFS записан как наш J-channel.
 - Нота by others не поставлена.
 - Все ошибки по обшивке и WRB: [Обшивка](../../start/common-mistakes.md#sheathing).
@@ -91,11 +93,16 @@ furring, wood/PVC trim, soffit, fascia.
 ## Пример
 
 ```text
-Note: Stone Veneer and EIFS are by others; WRB and sheathing counted
+Note: EIFS and Stone Veneer materials are by others
 Siding          Per plans: EIFS by others     0      SQ FT
-WRB             fluid-applied per spec        6 420  SQ FT   A3.0
-Wall Sheathing  7/16" Zip                     215    4x8     8/S3.0
-CornerBoards    5/4x6 PVC                     112    LFT     A201
+Wall Sheathing  7/16" Zip                     215    4x8     =CEILING(6250/32*1.1,1)           8/S3.0
+Tape            Zip Tape                      3460   LFT     =CEILING((6250*0.4+640)*1.1,10)
+Corner Boards   5/4x6 PVC                     124    LFT     =EVEN(56*2*1.1)                   A201
+
+Стены на Zip: строки Vapor Barrier (WRB) нет, барьер встроен в лист
+Sheathing: 6250 / 32 = 195.3, x 1.1 = 214.8, вверх до целого = 215 листов
+Tape: 6250 x 0.4 = 2500, + 640 LFT периметра проёмов = 3140, x 1.1 = 3454, вверх до 10 = 3460
+Corner Boards: 2 угла x 28' = 56, две доски на угол: 56 x 2 x 1.1 = 123.2, чётное вверх = 124
 ```
 
 ## См. также

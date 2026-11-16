@@ -17,7 +17,7 @@
 
 ## What it is
 
-A beam is a floor or roof beam that carries joists, rafters or posts: `(2) 2x10`, `(3) 1 3/4 x 11 7/8 LVL`, `5 1/4 x 11 7/8 PSL`, `5 1/2 x 14 GL`. A steel beam is by others, but the wood nailer on it is ours: [Steel Beam Web Fillers](details/steelbeams.md). A header over an opening is [Headers](../../vertical/openings/headers.md); a beam between doubled rafters in the roof is [Roof Header](../roof-framing/header.md). Flush (at joist depth, on hangers) and Dropped (below the joists) go into the Label.
+A beam is a floor or roof beam that carries joists, rafters or posts: `(2) 2x10`, `(3) 1 3/4 x 11 7/8 LVL`, `5 1/4 x 11 7/8 PSL`, `5 1/2 x 14 GL`. A steel beam is by others, but the wood nailer on it is ours: [Steel Beam Web Fillers](details/steelbeams.md). A header over an opening is [Headers](../../vertical/openings/headers.md); a beam between doubled rafters in the roof is [Roof Header](../roof-framing/header.md). Only `Flush` goes into the Label, and only when the schedule marks the beam as flush (at joist depth, on hangers): `Beam (2) Flush`. A dropped beam (below the joists) is a plain `Beam (n)`; the word `Dropped` is not written in the Label.
 
 ## Where to find it on the plans
 
@@ -49,7 +49,7 @@ Up to 6' and headers in walls: [full table on the Headers page](../../vertical/o
 Beam tool (B), framing sheet with the F point. Draw a line along the beam centerline from bearing face to bearing face; the length appears in the name by itself.
 
 - The app does the rounding: up to 8' inclusive it rounds up to the whole foot, longer rounds up to the next even foot (9.2' gives 10, 12.1' gives 14). Do not add feet yourself.
-- One built-up beam = one point with `(n)` in the name. Do not place n points and `(n)` at the same time.
+- One built-up beam = one point with `(n)` in the name. Do not place n points and `(n)` at the same time. The multiplication by plies is done in the DFL, not in the tree.
 - Draw every beam that is not part of the wall panels. Every mark on every floor where it is shown.
 - A mark with the letter H (`H5`) can be a beam by its role; do not move it to `headers` just because of the letter.
 - Ledger, rim, blocking, nailer are separate Lines in `details`, not beam points.
@@ -61,11 +61,13 @@ Path: `framing/<floor> framing/beams/<mark or size> <length>`. The size for a ma
 
 | Tree name | A (Label) | B (material) | C | D | E |
 | --- | --- | --- | --- | --- | --- |
-| `beams/FB1 8` | `Beam (2) Flush` | `2x10` | points | `8` | `FB1 per S601` |
-| `beams/(3) 1 3/4 x 11 7/8 LVL 14` | `Beam (3)` | `1 3/4 x 11 7/8 LVL` | points | `14` | |
-| `beams/B2 14` + LG `B2 - (3) 2x10` | `Beam (3) Dropped` | `2x10` | points | `14` | `B2` |
+| `beams/FB1 8` | `Beam (2) Flush` | `2x10` | points x 2 | `8` | `FB1 per S601` |
+| `beams/(3) 1 3/4 x 11 7/8 LVL 14` | `Beam (3)` | `1 3/4 x 11 7/8 LVL` | points x 3 | `14` | |
+| `beams/B2 14` + LG `B2 - (3) 2x10` | `Beam (3)` | `2x10` | points x 3 | `14` | `B2` |
 | `beams/int 4x10 4` | `Beam` | `4x10` | points | `4` | |
-| `beams/H5 8` | `Beam (2)` | per schedule | points | `8` | `H5` |
+| `beams/H5 8` | `Beam (2)` | per schedule | points x 2 | `8` | `H5` |
+
+`(n)` at the end of the Label is the number of plies in one beam. Column C counts every board: C = points x n. Two `(3)` beams give C = 6, not 2. The same rule applies to [Post](post.md) and to doubled and tripled rafters.
 
 Hangers for beams: by the built-up width and condition (face, top, concealed, skew), for every end that hangs on another beam or wall. Selection: [Hangers](../../../reference/hangers.md); how to write it in B: [hardware format in the DFL](../../../reference/hangers.md#dfl-format). Exterior and on P.T.: `Zmax` as a separate word.
 
@@ -85,6 +87,7 @@ Export: the BM button on the XL strip replaces only the beam rows on the floor w
 - A mark missed on one of the floors: the same `FB7` is on both S102 and S103.
 - Feet "for bearing" added to the tool length - the rounding is already done.
 - A pack of three LVLs written as three points plus `(3)` in the name: triple count.
+- C of a `Beam (3)` row holds the number of beams without x 3: a third of the boards is ordered.
 - PSL or squash blocks under the beam ends per schedule not counted (2 became 4).
 - Hangers not on both ends, or counted by purchase boards after cutting; the model does not match the detail (`U210-2`, not `LUS210-2`).
 - A beam inside a wall panel drawn on a panel job.
@@ -104,10 +107,12 @@ framing/
 
 | A | B | C | D | E |
 | --- | --- | --- | --- | --- |
-| `Beam (2) Flush` | `2x10` | 6 | 8 | `FB1 per S601` |
-| `Beam (2) Flush` | `2x10` | 2 | 10 | `FB1` |
-| `Beam (3)` | `1 3/4 x 11 7/8 LVL` | 3 | 14 | `S102` |
-| `Hangers` | `HU412` | 6 | pcs | `9/S501` |
+| `Beam (2) Flush` | `2x10` | 12 | 8 | `FB1 per S601` |
+| `Beam (2) Flush` | `2x10` | 4 | 10 | `FB1` |
+| `Beam (3)` | `1 3/4 x 11 7/8 LVL` | 9 | 14 | `S102` |
+| `Hangers` | `HHUS5.50/12` | 6 | pcs | `9/S501` |
+
+C = points x plies: 6 x 2 = 12, 2 x 2 = 4, 3 x 3 = 9. The hangers in the example are for the three `(3) 1 3/4 x 11 7/8 LVL` beams (a 5 1/4 x 11 7/8 pack), both ends hang: 3 x 2 = 6. The model follows the pack width from the [Hangers](../../../reference/hangers.md#tables) table; `HU412` would fit only a `(2)` pack 3 1/2" wide.
 
 ## See also
 

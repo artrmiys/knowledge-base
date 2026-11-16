@@ -19,7 +19,7 @@ this page covers only the framing.
 | --- | --- |
 | Basement plan `a100 base` | Which walls are wood and which are concrete or CMU |
 | Foundation plan `s101 f` | Slab, foundation walls, sill plates |
-| Wall section at the slab | Stud height: the basement often has three different heights |
+| Wall section at the slab | Wall height: the basement often has three different heights |
 | Wall type schedule | Size, P.T., furring at concrete |
 | Code summary | FRT below the podium on Type III |
 
@@ -44,20 +44,26 @@ Branch `walls/base floor walls`, names as for regular walls:
 | --- | --- | --- | --- | --- |
 | `ext 2x6 9.24` | `Plates Ext (1) btm` | `2x6 P.T.` (always on concrete) | LFT | `LFT x 1.1` |
 | same | `Plates Ext (2) dbl top` | `2x6` | LFT | `LFT x 2 x 1.1` |
-| same | `Studs Ext` | size by height | pcs | `LFT x 1.1` (16") |
-| same | `Blocking` `2x`, `Bracing` `2x4` | | LFT | by wall type |
-| same | `Box Sheathing` OSB, `Vapor Barrier` (WRB per spec) | | 4x8, SQ FT | [Box Sheathing](../sheathing/box-sheathing.md) |
-| `corr 2x6 9.24` | `Plates Corr btm` `2x6 P.T.` or `LSL P.T.` | | LFT | per detail |
+| same | `Studs Ext` | size by height | pieces, D = stud length | `LFT x 1.1` (16") |
+| same | `Blocking` | `2x6` (by wall size) | LFT | from the template matrix, rounded to even |
+| same | `Bracing Ext Walls` | `2x4` | pieces, D = board length: up to 10' = 14, up to 12' = 16, up to 16' = 18, above = 20 | `LFT / 8 x 1.1`: one board per 8 LFT of wall; only walls 7' and taller |
+| same | `Wall Sheathing` | as on the building walls (`7/16" Zip`, `1/2" OSB`) | 4x8 | `wall area x 1.1 / 32`, [Wall Sheathing](../sheathing/wall-sheathing.md) |
+| same | `Vapor Barrier` | WRB per spec; with Zip there is no row, only `Tape` | SQ FT | `area x 1.1` |
+| same | `Insulation` | only continuous insulation outside the sheathing or on concrete | SQ FT | `area x 1.1`; insulation between studs is not counted |
+| same | `Box Sheathing` | as on the wall | 4x8 | [Box Sheathing](../sheathing/box-sheathing.md) |
+| `corr 2x6 9.24` | `Plates Corr (1) btm` | `2x6 P.T.` or `LSL P.T.` per detail | LFT | `LFT x 1.1` |
+| same | `Bracing Corridor` | `2x4` | pieces, D as for `Bracing Ext Walls` | `LFT / 8 x 1.1` |
 | basement openings | `Window Flashing`, `Sill Flashing` | | LFT | [Window Flashing](../openings/window-flashing.md) |
-| `2x4 9.24` (under podium) | `Studs Interior` FRT on Type III | | pcs | note with the source |
+| `2x4 9.24` (under podium) | `Studs Interior` FRT on Type III | | pieces, D = stud length | note with the source |
 
 ## Common mistakes
 
-- One stud height for the whole basement when the section shows three different heights.
+- One wall height for the whole basement when the section shows three different heights.
 - Height taken as floor-to-floor without subtracting the subfloor and floor framing.
 - Walls below the podium thrown out as "panels by others".
 - A concrete wall traced as a wood wall.
 - Treated basement furring not split out as a separate P.T. assembly.
+- `Bracing` written in LFT: it is a count of boards, the board length sits in D.
 - The `Vapor Barrier` row says Tyvek although the spec calls for a different WRB.
 
 Walkthrough with examples: [all wall mistakes](../../../start/common-mistakes.md#walls).

@@ -69,15 +69,16 @@ up to the next whole foot; longer, to an even number).
 
 The `HD` button on the XL strip puts headers into the wall block of the floor **below**; the side
 `ext` / `int` is taken from the name. In the `LG` legend the row `HP2 - (2) 2x10`
-gives the size by code, otherwise the code itself lands in B.
+gives the size by code, otherwise the code itself lands in B. The number of plies sits at
+the end of the label in parentheses: `(2)`, `(3)`; C counts every board.
 
-| Takeoff name | DFL row | Unit | Formula / factor |
+| Takeoff name | DFL row | Unit (column D) | Formula / factor |
 | --- | --- | --- | --- |
-| `ext H228 4` | `Ext. Headers (2) up to 48"` `2x8` | pcs | count x plies, length from the name |
-| `ext H228 7` | `Ext. Headers (2) up to 72"` | pcs | |
-| `ext (3) 2x10 8` | `Ext. Headers (3) over 72"` `2x10` | pcs | three boards per header |
-| `int H228 4` | `Int. Headers (2)` | pcs | |
-| `9.0x6.8 gd` garage door | `Garage headers (3)` | pcs | per schedule |
+| `ext H228 4` | `Ext. Headers up to 48" (2)` `2x8` | pieces, D = `8` | `points x plies / 2`: two headers are cut from one board |
+| `ext H228 7` | `Ext. Headers up to 72" (2)` | pieces, D = `14` (up to 60": D = `12`) | `points x plies / 2` |
+| `ext (3) 2x10 8` | `Ext. Headers over 72" (3)` `2x10` | pieces, D = opening width + 1', rounded to even | `points x plies`: one header per board |
+| `int H228 4` | `Int. Headers (2)` | pieces, D = `8` | `points x plies / 2`; span over 4': `points x plies`, D by length |
+| `9.0x6.8 gd` garage door | `Ext. Grge Headers (3)` | pieces, D = door width + 1', rounded to even | `doors x plies`, size per schedule |
 | not on the plan | note `The headers indicated on the plan...` | | black bold text, no fill |
 
 If the exterior wall is FRT, the headers in its plane are FRT too; LVL/PSL are not used
@@ -104,6 +105,14 @@ framing/2nd floor framing/headers/
     ext (3) 2x10 8    Count, 2 ea     Notes: 4/S501, FRT per A001
   int/
     int H228 4        Count, 9 ea
+```
+
+DFL rows in the 1st floor wall block (`H228` = `(2) 2x8`):
+
+```text
+Ext. Headers up to 48" (2)    2x8     14   8    14 x 2 / 2
+Ext. Headers over 72" (3)     2x10     6   8    2 x 3
+Int. Headers (2)              2x8      9   8    9 x 2 / 2
 ```
 
 ## See also

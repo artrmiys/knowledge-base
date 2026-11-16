@@ -52,7 +52,12 @@ continuous insulation, WRB, flashing проёмов, bracing, window jambs и fu
   только снаружи после обшивки.
 - `Insulation at CMU` - continuous insulation на CMU стенах: отдельная
   строка, площадь обычно больше. Под ней Z metal furring.
-- Zip R пишется вместе с insulation (`Zip R-3` = обшивка плюс утеплитель).
+- Zip R несёт утеплитель в самом листе: продукт пишется в `Wall Sheathing`
+  (`Zip R-3`), отдельной строки `Insulation` нет.
+- Утеплитель между стойками (batt, mineral wool, spray foam, sound) by others:
+  строки нет. Rigid insulation над кровельным настилом - тоже continuous,
+  своя строка в кровле.
+- В B слово `Insulation` пишется полностью: `2" XPS Insulation`.
 - Единица `SQ FT`, вычеты проёмов те же, что у обшивки.
 
 <figure markdown>
@@ -67,7 +72,7 @@ continuous insulation, WRB, flashing проёмов, bracing, window jambs и fu
 | Строка | Материал | Unit | Когда |
 | --- | --- | --- | --- |
 | `Wall Sheathing` | `5/8" Type X` | `SQ FT` | Gypsum на metal стенах, даже если studs by others |
-| `Bracing Ext Walls` / `Bracing Corridor` / `Bracing Demising` | `2x4` | `LFT` | Bracing на metal стенах |
+| `Bracing Ext Walls` / `Bracing Corridor` / `Bracing Demising` | `2x4` | штуки, в D длина доски (до 10' = 14, до 12' = 16, до 16' = 18, выше = 20) | Bracing на metal стенах: `=G/8*1.1`, одна доска на 8 LFT стены; только стены от 7' |
 | `Window Flashing at Mtl Walls`, `Sill Flashing at Mtl Walls` | Flashing Tape / Sill Flashing | `LFT` | По типу стены, см. [Window Flashing](../openings/window-flashing.md) |
 | `Window Flashing at CMU Walls` | Flashing Tape | `LFT` | То же для CMU |
 | Window jambs | `2x4` / `2x8` по глубине стены | `LFT` | Если в metal стенах проём добирают доской; иначе Note `Assumed window jambs 2x4 are not used per A8.53; verify` |
@@ -83,7 +88,9 @@ Furring у CMU не добавляем как optional без детали. По
 - Слои gypsum не разделены: 1 слой, (2) layers, over FRT.
 - `Insulation` и `Insulation at CMU` слиты в одну строку.
 - Посчитан внутренний гипс, утеплитель между стойками или sound batt.
-- Написано "Vapor Barrier / Tyvek", хотя в спецификации fluid-applied WRB.
+- В B строки `Vapor Barrier` записан Tyvek, хотя в спецификации fluid-applied WRB.
+- При Zip добавлена строка `Vapor Barrier`: у Zip барьер встроен, нужны только `Tape` и flashing проёмов.
+- `Bracing` записан в LFT: это штуки досок.
 - Сборка дочитана не до конца: пропущен третий слой `5/8"`, Z-girt, overbuild.
 
 Все ошибки по обшивке: [common-mistakes](../../../start/common-mistakes.md#sheathing).
@@ -98,7 +105,7 @@ Wall Sheathing               1/2" Ply FRT            298   4x8
 Box Sheathing                1/2" Ply FRT             75   4x8
 Insulation                   1.5" Cont. Insulation  6670   SQ FT
 Insulation at CMU            1.5" Cont. Insulation 13350   SQ FT
-Bracing Ext Walls            2x4                     ...   LFT
+Bracing Ext Walls            2x4                      57   16      412 LFT / 8 x 1.1 = 56.7
 Window Flashing at Mtl Walls Flashing Tape          1650   LFT
 Sill Flashing at Mtl Walls   Sill Flashing           670   LFT
 Note: Assumed window jambs 2x4 are not used per A8.53; verify.

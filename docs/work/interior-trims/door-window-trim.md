@@ -9,7 +9,7 @@
 
 Список interior doors и cased openings по этажам с обозначением размера и
 типа, из которого формулой считается casing. Door schedule главнее плана:
-если он есть, заполняй из него. Формула casing и jamb на странице
+если он есть, заполняй из него. Формула casing на странице
 [Casing](casing.md), окна изнутри (casing, stool, apron) только когда они
 есть в finish schedule или details.
 
@@ -31,16 +31,25 @@ Shower glass doors не входят. Unit entry doors с fire rating отмеч
 
 ## Обозначения размеров
 
+Код размера читается так: первые цифры это ширина (футы и дюймы), последние
+две это высота (фут и дюймы). `2680` = 2'-6" x 8'-0", `3068` = 3'-0" x 6'-8",
+`9068` = 9'-0" x 6'-8". Дверь шире 3'-6" пишется парой: `5070` в schedule
+это `(2)2670`, `4070` это `(2)2070`.
+
 | Пример | Значение | Как записать |
 | --- | --- | --- |
 | `2680` | 2'-6" x 8'-0" | обычная single interior door |
 | `(2)2680` | две двери 2'-6" x 8'-0" | double door, pair marker виден |
 | `2680 Pocket` | pocket door | слово `Pocket` остаётся |
 | `(2)3080 Slider` | две створки 3'-0" x 8'-0" | quantity и `Slider` остаются |
-| `(2)2680 Bi-Fold` | closet bi-fold | `Bi-Fold`, не сводить к slider |
-| `9068 Bi-Fold` | широкий bi-fold 9'-0" x 8'-0" | один opening, створки не считаем отдельно |
+| `(2)2668 Bi-Fold` | closet bi-fold, две створки 2'-6" x 6'-8" | `Bi-Fold`, не сводить к slider |
+| `9068` bi-fold в schedule | широкий bi-fold 9'-0" x 6'-8" | шире 3'-6", значит парой: `(2)4668 Bi-Fold`; складные панели внутри створки отдельно не считаем |
 | `2680 Metal F.R. S.C.` | metal, fire-rated, self-closing | garage и mechanical; `F.R.` и `S.C.` остаются |
 | `4080 C.O.` | cased opening 4'-0" x 8'-0" | вводить как cased opening, не как door |
+
+Код стоит первым в колонке B, слова типа после него: формула шаблона читает
+код и удваивает пары, от этого зависит casing. Высота дверей не указана:
+принимай 6'-8" и пиши ноту в шапке.
 
 `F.R.` у двери значит fire-rated (дверь, рама и hardware как сборка).
 Не путать с `FRT`: это fire-retardant-treated пиломатериал каркаса.
@@ -49,26 +58,29 @@ Shower glass doors не входят. Unit entry doors с fire rating отмеч
 
 | Имя в дереве | Строка DFL | Unit | Правило |
 | --- | --- | --- | --- |
-| `openings/1/2680` | `Int. Doors 2680` | pcs | по этажам, из schedule |
-| `openings/1/(2)2680` | `Int. Doors (2)2680` | pcs | double как pair |
-| `openings/1/4080 C.O.` | `Cased Openings 4080` | pcs | отдельно от дверей |
-| | `Casing for Int. Doors` | LFT | формула от списка, см. [Casing](casing.md) |
+| `openings/1/2680` | `Int. Doors`, в B `2680` | unit | по этажам, из schedule |
+| `openings/1/(2)2680` | `Int. Doors`, в B `(2)2680` | unit | double как pair |
+| `openings/1/4080 C.O.` | `Cased Openings`, в B `4080 C.O.` | unit | отдельно от дверей, после пустой строки |
+| | `Casing for Int. Doors` | LFT | `=CEILING(2*SUM(perimeters)/12*1.1,10)`, см. [Casing](casing.md) |
 | | `Interior Doors&Trims` | | заголовок блока с нотой о профиле |
 
 Ввод в Excel:
 
 1. Все двери и cased openings вводятся по этажам до формул casing.
-2. Размеры переписываются в дюймах во вспомогательную таблицу: `2'-0" x
-   6'-8"` становится `24 x 80`.
-3. Mark и quantity копируются в helper table справа, из неё идут формулы
-   casing; повторяющиеся двери считаются формулой, а не ручным набором.
+2. Код размера стоит первым в колонке B (`2680`, `(2)2680 Bi-Fold`). Шаблон
+   сам переводит его в периметр в дюймах в колонке G: `2680` это 30" + 2 x
+   96" = 222", умноженные на количество; пара `(2)` удваивается.
+3. Формулу в G не трогай и не заменяй числом: из суммы G считается casing.
+   Одинаковые двери это одна строка с количеством, а не несколько строк.
 4. Перед выводом выдели ячейки количества и сравни сумму в строке
    состояния с числом дверей на планах.
 
 ## Частые ошибки
 
 - Двери посчитаны по стене или по ноте рядом, а не по символу двери.
-- Створки bi-fold посчитаны как отдельные двери.
+- Складные панели bi-fold посчитаны как отдельные двери.
+- Дверь шире 3'-6" записана одной дверью, а не парой `(2)`.
+- `9068` прочитан как 9'-0" x 8'-0": последние две цифры это высота 6'-8".
 - Shower glass doors введены как interior doors.
 - `Pocket`, `Slider`, `F.R. S.C.` потеряны при переносе в Excel.
 - Cased opening введён как дверь.
@@ -80,12 +92,19 @@ Shower glass doors не входят. Unit entry doors с fire rating отмеч
 Takeoffs/Main/openings/1/2680          Count   18
 Takeoffs/Main/openings/1/(2)2680       Count   3
 Takeoffs/Main/openings/1/4080 C.O.     Count   2
+Takeoffs/Main/openings/1/2680 Pocket   Count   2
 
-Int. Doors 2680              18  pcs   A601
-Int. Doors (2)2680           3   pcs   A601
-Int. Doors 2680 Pocket       2   pcs   A601
-Cased Openings 4080          2   pcs   A601
-Casing for Int. Doors        1x3-1/2   ...  LFT   =(2*8+2.5)*2*18+...
+Int. Doors       2680           18   unit   A601
+Int. Doors       (2)2680        3    unit   A601
+Int. Doors       2680 Pocket    2    unit   A601
+
+Cased Openings   4080 C.O.      2    unit   A601
+
+Casing for Int. Doors   1x3-1/2   1150  LFT   =CEILING(2*SUM(G)/12*1.1,10)
+
+Периметры: 2680 = 222", пара (2)2680 = 444", 4080 C.O. = 240"
+SUM = 222 x 18 + 444 x 3 + 222 x 2 + 240 x 2 = 6252"
+2 x 6252 / 12 = 1042 LFT, x 1.1 = 1146.2, вверх до 10 = 1150 LFT
 ```
 
 <details class="kb-figures kb-figures--rows">

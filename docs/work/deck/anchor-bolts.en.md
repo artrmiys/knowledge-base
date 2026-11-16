@@ -7,14 +7,16 @@
 
 <figure markdown>
   ![Anchor bolt through sill plate](../../assets/images/framing/anchor-bolt.svg)
-  <figcaption markdown="span">An anchor bolt with washer and nut fastens the P.T. plate to concrete. Size, embedment and spacing come from the anchorage schedule and the SW schedule; if they are blank, use the template default (below).</figcaption>
+  <figcaption markdown="span">An anchor bolt with washer and nut fastens the P.T. plate to concrete. Size, embedment and spacing come from the anchorage schedule and the SW schedule; if the plans give nothing, use the default `1/2" Ø` at 36" o.c. (below).</figcaption>
 </figure>
 
 ## What it is
 
-Anchors for the bottom plate on concrete or masonry, ledger fasteners for balconies and porches to
-the house, through bolts at beam-to-post connections. Each group is its own row: `Anchor
-Bolts`, `Washers`, `Nuts`. General rules for bolts and screws are on the
+This page sits in the Deck section, but almost all of it is about sill plate anchors
+to the foundation: the `Anchor Bolts` and `Washer` rows of the Foundation Walls block
+that fasten the bottom plate to concrete or masonry. Ledger fasteners for balconies and
+porches and through bolts at beam-to-post connections are the last rows of the table,
+with links. General rules for bolts and screws are on the
 [Bolts](../horizontal/floor-framing/details/bolts.md) page; holdown anchors are on
 [Shear Wall](../vertical/sheathing/shear-wall.md).
 
@@ -22,14 +24,15 @@ Bolts`, `Washers`, `Nuts`. General rules for bolts and screws are on the
 
 | Sheet | What to take |
 | --- | --- |
-| Sill and sole plate anchorage schedule (S0.x, S5xx) | Diameter, length, embedment (`emb`), spacing, product (Titen HD, wedge anchor, cast-in J-bolt) by wall type |
+| Sill and sole plate anchorage schedule (S0.x, S5xx), S general notes | Diameter, length, embedment (`emb`), spacing, product (Titen HD, wedge anchor, cast-in J-bolt) by wall type; plate washer |
 | Shear Wall Schedule | Its own anchor spacing under each SW mark, often tighter than typical |
 | Balcony and porch ledger details (S3xx) | Through bolts or screws, spacing, washers |
 | S general notes | Hilti or another product by others, minimum embedment |
 
-Size, embedment and spacing come from the anchorage schedule. Schedule not
-found: use the [template default](#default) (`1/2" Ø emb.`, 36" o.c.), put
-`assumed` in E and the note `Note: Anchor Bolts 1/2" Ø @ 36" o.c. assumed; verify`.
+Size, embedment and spacing are read again on every job from the S notes or the
+anchorage schedule. Only when the plans give nothing: the [default](#default)
+(`1/2" Ø emb.`, 36" o.c.), `assumed` in E and the note
+`Note: Anchor Bolts 1/2" Ø @ 36" o.c. assumed; verify`.
 
 ## How to measure in OurPlanCore
 
@@ -40,52 +43,72 @@ porch block. Spacing and anchor type are not needed in the name; they live in th
 
 ## Default when the plans have no anchorage schedule { #default }
 
-DFL template row (Foundation walls block):
+The default is used only when neither the anchorage schedule nor the S notes give
+an anchor:
 
-| DFL row | B (spec) | H (spacing) | Formula C |
-| --- | --- | --- | --- |
-| `Anchor Bolts 36" o.c.` | `1/2" Ø emb.` | `36` | `=CEILING((G*12/36)*1.1, 2)` |
-| `Washer 36" o.c.` | per detail, usually `3x3 Square` | `36` | same formula, one washer per bolt |
+| DFL row | B (spec) | H (spacing) | E | Formula C |
+| --- | --- | --- | --- | --- |
+| `Anchor Bolts 36" o.c.` | `1/2" Ø emb.` | `36` | `assumed` | `=CEILING(G*12/H*1.1,2)` |
+| `Washer 36" o.c.` | `3x3 Square` | | | same formula: one washer per bolt |
 
-G - length of walls on concrete. Shear walls get their own rows with their own spacing from the
-SW schedule; the default does not apply to them. If the sheets have an
-anchorage schedule or notes with a size, they win over the default.
+Under the block header goes the note `Note: Anchor Bolts 1/2" Ø @ 36" o.c. assumed;
+verify`. G is the length of walls on concrete. The DFL template has
+`5/8" Ø x 6" emb. Titen HD` at 48" o.c. in these rows: that is a template placeholder,
+not a default. It is always replaced with the job data or with the default from the
+table above. Shear walls get their own rows with their own spacing from the SW
+schedule; the default does not apply to them.
 
 ## Tree name and DFL row
 
-| DFL row | B (spec) | Unit | Formula |
+| DFL row | B (spec) | Unit | Formula and rule |
 | --- | --- | --- | --- |
-| `Anchor Bolts 48" o.c.` | `1/2" Ø x 4" emb Titen HD` | pcs | `=CEILING(G*12/48,2)`, E = `for Ext Walls` |
-| `Anchor Bolts 32" o.c.` | per SW schedule, same format | pcs | a separate row for each spacing |
-| `Washers` | `3x3` or plain per detail | pcs | equal to anchors |
-| `Nuts` | | pcs | equal to anchors |
-| `Through Bolts` (ledger, beam-to-post) | `1/2" Ø` per detail | pcs | spacing per detail, washers and nuts in their own rows |
+| `Anchor Bolts 48" o.c.` | as in the S notes or schedule: `5/8" Ø Titen HD 4" emb.` | pcs | `=CEILING(G*12/H*1.1,2)`; H = spacing, it prints in the label; G = exterior walls on concrete; E = sheet and `for Ext Walls` |
+| `Anchor Bolts 48" o.c.` (second row) | same anchor | pcs | same formula; G = corridor and demising walls of the 1st floor; E `for Corr and Demising` |
+| `SW Anchor Bolts 16" o.c.` | per the SW schedule | pcs | same formula; G = LFT of that SW mark on concrete, E = the mark; this length is deducted from G of the general row |
+| `Washer 48" o.c.` | `3x3 Square`; when the schedule names a plate washer, its model (`BP 5/8-3`, `BPS 1/2-3`) | pcs | same count as the anchors above it (with 1.1); when the building has one spacing |
+| `Washers` | same | pcs | when there are SW rows: one row per group, `=SUM(C of all anchors in the group)` |
+| `Nuts` | by anchor diameter | pcs | only for anchors that take a nut (cast-in J-bolt, wedge anchor), equal to the anchors; a Titen HD has no nut and no row |
+| `Through Bolts (4)` (beam-to-post, ledger in the balcony block) | `1/2" Ø x 10" Bolt` per detail | pcs | bolts per connection x connections x units; `Washers` 2 per bolt, `Nuts` 1 per bolt in their own rows |
 
-B format: diameter, length or embedment, product, in that order
-(`5/8" Ø x 7" emb`, `1/2" Ø x 4" emb Titen HD`); general rules for writing
-hardware are in [Hangers: how to write hardware in the DFL](../../reference/hangers.md#dfl-format).
-The block of four rows (Blocking, Anchor Bolts, Washers, Nuts) is inserted by the
-`B_BoltsAdd` macro, see [Excel macro hotkeys](../../reference/excel-hotkeys.md).
-Small hardware under 50 pieces is rounded up to an even number. Holdown anchors
-are counted in the holdowns block: [DFL blocks](../../reference/dfl-blocks.md#holdowns).
+- The 1.1 waste is in the anchor and washer formula always, no exceptions. Round
+  up to an even number.
+- Spacing, size and product in every row come from the plans of this job; washers
+  per the schedule, `3x3 Square` only when the schedule names no plate washer.
+- A Titen HD is a screw anchor: it has no nut. The block of four rows (Blocking,
+  Anchor Bolts, Washers, Nuts) is inserted by the `B_BoltsAdd` macro, see
+  [Excel macro hotkeys](../../reference/excel-hotkeys.md); with a Titen HD delete the
+  `Nuts` row.
+- B format: diameter, length or embedment, product, as printed on the sheet
+  (`5/8" Ø x 7" emb`, `1/2" Ø x 4" emb Titen HD`); general rules for writing
+  hardware are in [Hangers: how to write hardware in the DFL](../../reference/hangers.md#dfl-format).
+- Holdown anchors are counted in the holdowns block:
+  [DFL blocks](../../reference/dfl-blocks.md#holdowns).
 
 ## Common mistakes
 
 - One anchor spacing for the whole building without the SW schedule.
+- Formula without 1.1, or fewer washers than anchors.
+- The template placeholder `5/8" Titen HD` at 48" left in B although the plans give
+  another anchor or give nothing (then `1/2" Ø` at 36" and `assumed`).
+- A `Nuts` row for a Titen HD.
 - Wedge anchor replaced with Titen HD with no basis in the detail.
 - Openings not deducted from the anchor line, or deducted twice.
-- Washers copied with the old spacing and not recalculated.
+- Washers copied with the old spacing and not recalculated; `3x3` used when the
+  schedule names a plate washer.
 - Hilti by others counted as ours; the note must stay.
 - All mistakes for the section: [Deck, porch, balconies](../../start/common-mistakes.md#deck), [Shear walls and holdowns](../../start/common-mistakes.md#holdowns).
 
 ## Example
 
 ```text
-Anchor Bolts 48" o.c.   1/2" Ø x 4" emb Titen HD   42  pcs   =CEILING(G*12/48,2)   for Ext Walls  S0.2
-Anchor Bolts 32" o.c.   1/2" Ø x 4" emb Titen HD   18  pcs   SW1 per schedule       S502
-Washers                 3x3                60  pcs   =C<bolts>
-Nuts                                        60  pcs   =C<bolts>
+Exterior walls on concrete 194 LFT, of which SW1 is 24 LFT. Anchor and spacing per S0.2 and the SW schedule.
+
+Anchor Bolts 48" o.c.      5/8" Ø Titen HD 4" emb.   48  pcs   S0.2; for Ext Walls   G = 194 - 24 = 170; 170 x 12/48 x 1.1 = 46.8
+SW Anchor Bolts 16" o.c.   5/8" Ø Titen HD 4" emb.   20  pcs   SW1                   G = 24; 24 x 12/16 x 1.1 = 19.8
+Washers                    3x3 Square                68  pcs   =SUM(C of anchors)    48 + 20
 ```
+
+Titen HD: no `Nuts` row.
 
 ## See also
 

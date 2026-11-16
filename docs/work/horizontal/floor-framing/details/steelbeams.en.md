@@ -34,16 +34,20 @@ Line (L) along the steel beam centerline on the framing sheet with the F point: 
 
 ## Tree name and DFL row
 
-A block of four rows next to the beams of this floor. The nailer is double by default (note `double 2x plate`); single only if the detail clearly shows one layer. The bottom nailer under the flange and the filler are separate rows per the detail.
+A block of rows next to the beams of this floor. The nailer is double by default (note `double 2x plate`); single only if the detail clearly shows one layer. The bottom nailer under the flange and the filler are separate rows per the detail.
+
+Web fillers are counted only where the joists hang on the beam web (a flush steel beam, the detail shows wood in the web). At a dropped steel beam, where the beam is below the joists and they bear on top of the nailer, there are no web fillers: count only the nailer and the bolts.
 
 | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- |
 | `Nailer Plates for Steel Beam (2)` | `2x8` (by flange width, `3x DF ripped`) | `=CEILING(G*2/D,1)` | `16` | `14/S400` |
-| `Anchor Bolts 24" o.c. (2)` | `3/8" Ø` | `=CEILING(G*12/H*2*1.1,2)` | `pcs` | `note II.B` |
+| `Anchor Bolts 24" o.c. (2)` | `3/8" Ø` | `=CEILING(G*12/H*2,2)` | `pcs` | `note II.B` |
 | `Washers 24" o.c. (2)` | `3/8" Washers` | same formula | `pcs` | |
 | `Nuts 24" o.c. (2)` | `Nuts for 3/8" Ø` | same formula | `pcs` | |
-| `Web Filler` | `2x6` | `=CEILING(G*2/D,1)` | `16` | detail |
+| `Steel Beam Web Fillers 4x` | per detail: `2x10`, `2x12` | `=CEILING(G*H/D,1)`, H = 4 | `16` | W profile, detail |
 | `Hangers` | top-mount on the nailer, face-mount on the filler | by joists | `pcs` | detail |
+
+`G` is the steel beam length in LFT. In the nailer row the multiplier `2` is the number of layers. In the fillers row `H` is the number of packing layers for both sides of the web together (table below), and it prints in the Label: `4x`. In the bolt rows `H` is the spacing in inches and `2` is the bolts per point: for how to read the label see [Bolts](bolts.md).
 
 The washer for a nailer bolt is a regular washer; `3x3` only if the detail calls for it.
 
@@ -91,6 +95,7 @@ When the detail does not give the nailer size or the number of layers in the web
 - Bolts taken from the beams of another floor.
 - Face-mount hanger picked while the detail shows bearing on top of the nailer (top-mount), or the other way around.
 - Filler steel anchors with a 3x3 washer that is not specified.
+- Web fillers counted at a dropped steel beam: there the joists bear on the nailer, no fillers are needed.
 - `EWP by others`, and the LVL/LSL blocking at the steel beam per the detail not written.
 - [All floor framing mistakes](../../../../start/common-mistakes.md#floor)
 
@@ -99,9 +104,11 @@ When the detail does not give the nailer size or the number of layers in the web
 | A | B | C | D | E | G | H |
 | --- | --- | --- | --- | --- | --- | --- |
 | `Nailer Plates for Steel Beam (2)` | `2x8` | `=CEILING(G*2/D,1)` | 16 | `4/S5.6` | 86 | |
-| `Anchor Bolts 24" o.c. (2)` | `3/8" Ø` | `=CEILING(G*12/H*2*1.1,2)` | pcs | `note II.B` | 86 | 24 |
-| `Washers 24" o.c. (2)` | `3/8" Washers` | `=CEILING(G*12/H*2*1.1,2)` | pcs | | 86 | 24 |
-| `Nuts 24" o.c. (2)` | `Nuts for 3/8" Ø` | `=CEILING(G*12/H*2*1.1,2)` | pcs | | 86 | 24 |
+| `Anchor Bolts 24" o.c. (2)` | `3/8" Ø` | `=CEILING(G*12/H*2,2)` | pcs | `note II.B` | 86 | 24 |
+| `Washers 24" o.c. (2)` | `3/8" Washers` | `=CEILING(G*12/H*2,2)` | pcs | | | 2 |
+| `Nuts 24" o.c. (2)` | `Nuts for 3/8" Ø` | `=CEILING(G*12/H*2,2)` | pcs | | | |
+
+A dropped beam of 86 LFT, no fillers. Nailer: 86 x 2 / 16 = 10.75, so 11 boards of 16'. Bolts: 86 x 12 / 24 = 43 points, x 2 = 86; the same number of washers and nuts (their formulas take G and the spacing from the bolt row).
 
 ## See also
 

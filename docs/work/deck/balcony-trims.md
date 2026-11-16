@@ -7,37 +7,42 @@
 
 ## Что это
 
-Finish-строки балконного блока: fascia и edge trim по периметру, soffit
-снизу, post wrap, flashing у стены. Полная карта слоёв от каркаса до
-отделки на канонической странице
-[Balcony build-up](../exterior-trims/balcony-buildup.md); каркас на
-[Deck / Porch / Balcony Frame](deck-porch-balcony-frame.md).
+Короткий указатель. Finish-строки балконного блока (post wrap, EPDM, decking,
+soffit снизу, fascia и edge trim, flashing у стены) со всеми формулами и
+примером описаны на одной странице:
+[Balcony build-up](../exterior-trims/balcony-buildup.md). Каркас блока - на
+[Deck / Porch / Balcony Frame](deck-porch-balcony-frame.md), перила - на
+[Railing](railing.md). Здесь только то, чего там нет.
 
 ## Где искать на чертежах
 
 | Лист | Что взять |
 | --- | --- |
 | Разрез балкона A4xx, детали A5xx | Fascia, soffit (beadboard), flashing, post wrap: материал и размер |
-| Elevations | Видимые trims, цвет и профиль, что закрыто перилами |
+| Elevations | Видимые trims, цвет и профиль, что закрыто перилами, обшит ли пост |
 | Scope задания | Frame only: отделку не вставлять вообще |
 
 ## Как мерить в OurPlanCore
 
-Длины и площади берутся из размеров блока W x D и множителя G, как у
-перил. Soffit снизу балкона это Area по реальному контуру только когда
-контур не прямоугольник; обычно хватает W x D.
+Отдельных замеров отделке балкона обычно не нужно: длины и площади берутся из
+размеров блока W x D и множителя G, как у перил. Soffit снизу обводят Area
+только когда контур балкона не прямоугольник.
 
 ## Как назвать в дереве и строка DFL
 
-| Строка DFL | Материал | Unit | Правило |
-| --- | --- | --- | --- |
-| `Balcony Trims` / `Fascia` | `1x10`, `5/4x8` | LFT | открытые стороны: `=(W+2*D)*G` |
-| `Soffits at Balcony` | `Beadboard` | SQ FT | `=W*D*G` |
-| `Post Wrap` | `1x8` | LFT | по высоте поста x 4 стороны |
-| `Flashings at Wall` | `Copper` / drip edge | LFT | по стене, `=W*G` |
+Таблица строк, единиц и формул: [Balcony build-up](../exterior-trims/balcony-buildup.md).
+Дополнения к ней:
 
-Размер не указан: `TBD` в материале и нота `Note: All trims to be verified.
-Scaled per elevations`.
+- Отделка стоит за каркасом блока под своим заголовком и только когда trims в
+  scope; при Frame only блок заканчивается каркасом.
+- `Post Wrap` пишем только когда фасад или деталь показывают обшитый пост.
+  Четыре доски на пост: G = высота поста x 4 стороны x число постов. Ширина
+  доски = грань поста плюс две толщины доски: пост 6x6 это `1x8`, пост 4x4
+  это `1x6`. Обшивка не детализирована: в E `assumed`.
+- Soffit снизу из гипса или металла by others: строки `Soffits at Balcony`
+  нет, остаётся нота.
+- Размер не указан: `TBD` в материале и нота `Note: All trims to be verified.
+  Scaled per elevations`.
 
 ## Частые ошибки
 

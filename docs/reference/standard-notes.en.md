@@ -83,7 +83,7 @@ The spec cells to the right of the table are filled in from the PDF when each jo
 
 - P and S hold only the reference, without `per`, without `not shown; assumed` and without a thickness.
 - The item does not exist in the building (no flat roof): leave `per page`, do not make anything up.
-- A discrepancy between arch and S goes into a main note right away: `Note: Roof Sheathing differ, 15/32" Ply per 3/S3.0 and 1/2" OSB per A4-03; counted 1/2" CDX Ply.` No spec: `Note: Roof sheathing thickness is not specified; assumed 1/2" Ply; verify.` The structural sheet wins.
+- A discrepancy between arch and S goes into a main note right away: `Note: Roof Sheathing differ, 15/32" Ply per 3/S3.0 and 1/2" OSB per A4-03; counted 1/2" CDX Ply.` No spec: `Note: Roof sheathing thickness is not specified; assumed 1/2" Ply; verify.` The structural sheet wins on thickness and on which walls and sides are sheathed; the product (Zip, OSB, Ply) comes from the wall types on Arch ([Tips: sheathing](boss-feedback-rules.md#sheathing)).
 - `7/16" Zip` on S and `Zip R-3` in the wall type are one product, not a discrepancy: `Note: Wall Sheathing 7/16" Zip R3 per 8/S3.0 A2-00.`
 - E callout row by row in the `detail/sheet` format: `15/S311`, `9/13/S311`.
 

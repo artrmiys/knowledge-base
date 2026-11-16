@@ -43,10 +43,12 @@ Joists - балки перекрытия или плоской крыши с ш�
 | `Joists 16" o.c.` | `11 7/8 TJI 230` | 36 | `20` | `S102` |
 | `Joists 16" o.c.` | `11 7/8 TJI 230` | 45 | `12` | `90 pcs 6'` |
 | `Dbl Joists` | `11 7/8 TJI 230` | 4 | `20` | `under wall per S102` |
-| `Hangers` | `ITS2.37/11.88` | `=ЧЁТН(G*12/16)` | `pcs` | |
-| `Rim Board` | `11-7/8" LSL Rim` | LFT x 1.05 | `LFT` | |
+| `Hangers` | `ITS2.37/11.88` | число концов joists, которые висят | `pcs` | деталь |
+| `Rim Board` | `11-7/8" LSL Rim` | `=ОКРВВЕРХ(G/D;1)` | `16` | деталь |
 
-Hangers: на оба конца каждого joist, который висит; считать по сборкам, не по закупочным доскам после раскроя. Модель по детали (`U210-2`, не `LUS210-2`). `ITS` только top-flange до 16" глубины и без skew; глубже - `HIT`. Снаружи и на P.T. - `Zmax` отдельным словом; ties `H2.5A` к фермам под обшивкой без Zmax. Подбор: [Hangers](../../../reference/hangers.md), запись в B: [формат крепежа в DFL](../../../reference/hangers.md#dfl-format).
+Rim в framing-книге - доски по 16'; LFT x 1.05 остаётся только на EWP-only заказе: [Rim Board](details/rim.md).
+
+Hangers: на каждый конец joist, который висит (оба конца, если joist висит с двух сторон); считать по сборкам, не по закупочным доскам после раскроя. Если joists не перечислены штуками, а висят вдоль линии, считай по линии: `=ЧЁТН(G*12/16)`, где `G` - длина этой линии (ledger или балка) в LFT, а `12/16` - число joists на фут при шаге 16". Joists с обеих сторон линии - `G` x 2. Модель по детали (`U210-2`, не `LUS210-2`). `ITS` только top-flange до 16" глубины и без skew; глубже - `HIT`. Снаружи и на P.T. - `Zmax` отдельным словом; ties `H2.5A` к фермам под обшивкой без Zmax. Подбор: [Hangers](../../../reference/hangers.md), запись в B: [формат крепежа в DFL](../../../reference/hangers.md#dfl-format).
 
 <figure markdown>
   ![Face-mount joist hanger на балке](../../../assets/images/photos/framing/joist-hanger-on-joist.jpg)
@@ -60,9 +62,9 @@ Hangers: на оба конца каждого joist, который висит;
 - Обычная Area названа `2x8 16"`: количества нет, в Excel уходит площадь.
 - Шаг продолжен от внутренней балки заново или joist убран, хотя он не попадает на балку (допуск около 2").
 - Hangers не на оба конца; `ITS` на joists 18" и глубже; DHU там, где гипс кончается под перекрытием (нужен ITS).
-- Rim разбит на 16' и назван `1-3/4 LVL` без указания: [Rim Board](details/rim.md).
+- Линия rim в дереве порезана на куски по 16' (мерь одной Line, доски считает формула) или rim назван `1-3/4 LVL` без указания: [Rim Board](details/rim.md).
 - Rim у roof TJI забыт.
-- Серия потеряна: `TJI` вместо `11 7/8 TJI 230`; RED переписан в TJI; `TJI 9 1/2` не бывает серии 360/560.
+- Серия потеряна: `TJI` вместо `11 7/8 TJI 230`; RED переписан в TJI; `TJI 9 1/2` бывает только серий 110, 210, 230 (серии 360 и 560 начинаются с глубины 11 7/8).
 - Top chord bearing не замечен: там blocking вместо ribbon, см. [Ribbon Board](details/ribbon.md).
 - Длинные 2x ceiling joists со стыком на опоре посчитаны одной доской.
 - [Все ошибки по перекрытиям](../../../start/common-mistakes.md#floor)
@@ -84,6 +86,8 @@ framing/
 | `Joists 16" o.c.` | `11 7/8 TJI 230` | 36 | 20 | |
 | `Hangers` | `ITS2.37/11.88` | 42 | pcs | `9/S501` |
 
+Hangers в примере: 36 joists по 20' висят одним концом на flush-балке, другой конец лежит на стене - 36 штук; 3 коротких joists по 12' висят обоими концами - 6 штук. Итого 42.
+
 ## Профили I-joist (справка по производителям)
 
 Серию и глубину пиши как в schedule. Картинки архивные, для проверки названия семейства.
@@ -93,7 +97,7 @@ framing/
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">TJI</div>
-      <div class="kb-figure-row__rule">Серии 110, 210, 230, 360, 560. В строке <code>11 7/8 TJI 230</code>, не общий <code>TJI</code>.</div>
+      <div class="kb-figure-row__rule">Серии 110, 210, 230, 360, 560; глубина 9 1/2 есть только у 110, 210, 230. В строке <code>11 7/8 TJI 230</code>, не общий <code>TJI</code>.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-007.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-007.png" alt="TJI joist series" loading="lazy"></a>
   </figure>

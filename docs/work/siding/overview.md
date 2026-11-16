@@ -69,7 +69,9 @@ brick veneer это облицовка by others.
 2. Открой wall sections: WRB по спецификации, furring, Cedar Breather.
 3. Обведи площади по фасадам, стена за стеной; gables, dormers, bays и
    accent отдельными итемами.
-4. Вычеты по правилу: крупные проёмы один раз, окна меньше 4' не вычитаем.
+4. Вычеты: каждое окно и дверь вырезаются по раме один раз; в DFL идёт
+   чистая площадь. Правило "окна уже 4' не вычитаем" относится к обшивке
+   стен, не к siding.
 
 ## Как мерить в OurPlanCore
 
@@ -82,17 +84,18 @@ brick veneer это облицовка by others.
 
 | A Description | B Size | C Qty | D Unit | E |
 | --- | --- | --- | --- | --- |
-| `Siding` | `Hardi plank 6" exp` | `=L+R+Front+Rear` | SQ FT | `A201` |
-| `Siding Gable front` | `Vinyl Shingles` | `=...` | SQ FT | `A201` |
-| `Siding 2` | `Boral TruExt 1x10 Shiplap` | `=...` | SQ FT | `A202` |
-| `Siding` | `Per customer TBD` | `0` | SQ FT | нота |
+| `Siding Horizontal` | `Hardi plank` | `=CEILING(G*1.1,10)` | SQ FT | `6" Exp. A201` |
+| `Siding` | `Vinyl Shingles` | `=CEILING(G*1.1,10)` | SQ FT | `gable front A201` |
+| `Siding Vertical` | `Boral TruExt 1x10 Shiplap` | `=CEILING(G*1.1,10)` | SQ FT | `A202` |
+| `Siding` | `TBD Siding` | `0` | SQ FT | нота `Note: Siding is not specified; verify` |
 
-Материал и exposure всегда в строке; gable и accent отдельно; единица
-`SQ FT`, не `LFT`.
+В G чистая площадь суммой `=L+R+Front+Rear`, waste 1.1 стоит в формуле C.
+Материал всегда в B, exposure в E; gable и accent отдельно, горизонтальный
+и вертикальный отдельно; единица `SQ FT`, не `LFT`.
 
 ## Частые ошибки
 
-- WRB назван `Vapor Barrier`, или Tyvek при fluid-applied по спецификации.
+- В B наружного барьера написано `Vapor Barrier` или Tyvek вместо WRB по спецификации.
 - Stone или EIFS посчитаны как siding.
 - Accent во фронтоне слит с полем другого материала.
 - Измеренная площадь не перенесена в Excel или не обновлена после правок.

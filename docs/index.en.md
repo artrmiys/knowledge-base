@@ -35,7 +35,8 @@ client rules and common mistakes. Search (Ctrl+K) works best with the framing te
     3. [Takeoff tree and sheet names](start/takeoff-structure.md)
     4. [OurPlanCore 3.0: getting started](reference/ourplancore-start.md)
     5. [Job types](work-types/com.md) and [client rules](start/client-rules.md)
-    6. [Pre-delivery check](start/quality-checklist.md)
+    6. [How the DFL workbook works](reference/dfl-overview.md)
+    7. [Pre-delivery check](start/quality-checklist.md)
 
 -   :material-ruler:{ .lg .middle .kb-mk--green } **I need to measure ...**
 
@@ -134,7 +135,9 @@ client rules and common mistakes. Search (Ctrl+K) works best with the framing te
 
     ---
 
-    [Ridge / Hip / Valley](work/horizontal/roof-framing/ridge.md),
+    [Ridge](work/horizontal/roof-framing/ridge.md),
+    [Hip](work/horizontal/roof-framing/hip.md),
+    [Valley](work/horizontal/roof-framing/valley.md),
     [Overframes](work/horizontal/roof-framing/overframes.md),
     [Dormer](work/horizontal/roof-framing/dormer.md),
     [Canopy](work/horizontal/roof-framing/canopy.md),

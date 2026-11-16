@@ -82,11 +82,11 @@ The DFL (Detailed Frame List) is an Excel workbook that holds all the material f
 | **A** | Description: the row label, as in the template ([Labels](takeoff-items.md)) | `Studs Ext 16" o.c.`, `Box Sheathing`, `Holdowns (2) btm top` |
 | **B** | Size / spec: member size, product, hardware model | `2x6 P.T.`, `(2) 1 3/4 x 11 7/8 LVL`, `7/16" Zip`, `HHUS410 Zmax SK30 R` |
 | **C** | Quantity: always a formula from G and H, never a number typed by hand | `=CEILING(G41/32*1.1,1)` |
-| **D** | Unit: `LFT`, `SQ FT`, `4x8`, `pcs`, `50' rolls`. Write `LFT`, not `FT` | `LFT` |
+| **D** | Unit: `LFT`, `SQ FT`, `4x8`, `pcs`, `unit`, `tubes`, `50' rolls`. Write `LFT`, not `FT`, and `SQ FT`, not `SF`. For lumber ordered by the piece (studs, joists, beams, posts, headers, rim, ribbon, blocking in a framing list, ledger, bracing) D holds the board length in feet and C the number of boards; the formula then divides by D | `LFT`; `16` for `Rim Board`, `14` for `Bracing Ext Walls` |
 | **E** | Source or explanation: sheet and detail, wall mark, stud height, purpose | `8/S3.0`, `SW-2`, `11' 8 3/8"`, `for Ext Walls` |
 | **F** | Door or cased opening type tag, trim material type; the program ignores color in F, so it is used to mark a row ([File format](#rows)). Also wall mark tags | `Type A`, `IL326`, `IW2` |
 | **G** | Takeoff from OurPlanCore: LF, SF or number of points | `=K37` |
-| **H** | Formula parameter: spacing in inches, number of plies, height | `16`, `2` |
+| **H** | Formula parameter: spacing in inches, number of plies, height. What H holds for each row: [Formulas](formulas.md#legend) | `16`, `2` |
 
 Wall height lives in E of the stud row (to 1/8"); wall names in the app use decimal feet. The SW mark and the source sheet also go in E, not in a note: a fact in the row means no note is needed ([Notes in the DFL](standard-notes.md)).
 
@@ -132,8 +132,8 @@ A section takes columns A:H and runs from its header to the header of the next s
 | Note under the header | right under the header, yellow fill on A:F | `Note: Floor Trusses are by others` |
 | Material rows | A label, B size or product, C quantity, D unit, E sheet or detail | `Bracing Ext Walls`, `2x4`, `76`, `14` |
 | Row group | rows of one assembly go together, one blank row between groups | hangers right after their joists |
-| Note inside a section | above the rows it refers to, bold without fill, a blank row above it | `Note: Optional garage headers added; verify` |
-| Stair count | bold row without fill, number in G, ending in H | `Note: 2 Stairs`, G `2`, H `s` |
+| Note inside a section | above the rows it refers to, bold on yellow A:F, a blank row above it | `Note: Optional garage headers added; verify` |
+| Stair count | bold row on yellow A:F, number in G, ending in H | `Note: 2 Stairs`, G `2`, H `s` |
 
 The header color hints at the kind of section:
 
@@ -174,17 +174,27 @@ Sections not needed for the scope are removed by the macros `A9_Fame_only` (fram
 
 ### Template and finished file { #section-template }
 
-In the template everything is arranged by type of work: all walls first, then all framing, blocks at the very end. In the finished file the same content is arranged by floor.
+In the template everything is arranged by type of work: all walls first, then all framing, blocks at the very end. In the finished file the same content is arranged by floor. Below are two independent lists, top to bottom: a line of one list does not correspond to the line with the same number in the other.
 
-| Template, where you fill in | Finished file after Process Excels |
-| --- | --- |
-| `Foundation Walls`, `Basement Floor Walls` | the same |
-| `1st`, `2nd`, `3rd Floor Walls` in a row | `1st Floor Framing List`, 1st floor groups, `1st Floor Walls` |
-| `Gable Walls`, `Truss Heel`, `Parapet Walls`, `Shaft walls`, `Wall Materials` | `2nd Floor Framing List`, 2nd floor groups, `2nd Floor Walls` |
-| `1st`, `2nd`, `3rd Floor Framing List` in a row, `Loft Framing List` | `3rd Floor Framing List`, groups, `3rd Floor Walls`, `Loft Framing List` |
-| `Roof Frame list`, `Roof System Misc` | `Gable Walls`, `Truss Heel`, `Parapet Walls`, `Shaft walls`, `Wall Materials` |
-| balcony, porch, deck, canopy blocks | `Roof Frame list`, `Roof System Misc` |
-| `Roof Products` and trim | the same |
+**Template, where you fill in:**
+
+1. `Foundation Walls`, `Basement Floor Walls`
+2. `1st`, `2nd`, `3rd Floor Walls` in a row
+3. `Gable Walls`, `Truss Heel`, `Parapet Walls`, `Shaft walls`, `Wall Materials`
+4. `1st`, `2nd`, `3rd Floor Framing List` in a row, `Loft Framing List`
+5. `Roof Frame list`, `Roof System Misc`
+6. balcony, porch, deck, canopy blocks
+7. `Roof Products` and trim
+
+**Finished file after Process Excels:**
+
+1. `Foundation Walls`, `Basement Floor Walls`
+2. `1st Floor Framing List`, 1st floor groups, `1st Floor Walls`
+3. `2nd Floor Framing List`, 2nd floor groups, `2nd Floor Walls`
+4. `3rd Floor Framing List`, groups, `3rd Floor Walls`, `Loft Framing List`
+5. `Gable Walls`, `Truss Heel`, `Parapet Walls`, `Shaft walls`, `Wall Materials`
+6. `Roof Frame list`, `Roof System Misc`
+7. `Roof Products` and trim
 
 !!! warning "Do not rearrange sections by hand"
     Formulas and the right-hand areas are tied to the template rows. Process Excels moves only columns A:H and only in the finished copy; the working workbook stays as it is.
@@ -270,16 +280,10 @@ Header: **bold text + colored fill + name in column A + columns B-F empty**. A b
 
 <figure markdown>
   ![Section header: right and wrong](../assets/images/reference/dfl-headers.svg)
-  <figcaption markdown="span">A correct header, one with text in B, and one without color.</figcaption>
+  <figcaption markdown="span">Right: bold text in A and a fill, B-F empty. Wrong: text in B. Wrong: no color.</figcaption>
 </figure>
 
-Colors in the reference files (the guide does not set a specific color, the fill itself is required):
-
-| Color | Where in the reference files |
-| --- | --- |
-| Yellow `FFFF00`, A only | `Foundation Walls`, `Shaft Walls`, `1st Floor Walls`, `Interior Doors&Trims` |
-| Green `99CC00`, A or A:B | framing lists, group framing (`Porch Framing List 4pcs`, `Ground Deck Framing List (left)`, `Pergola 4 pcs`), `Roof Frame list`, `Roof System Misc` |
-| Light green `CCFFCC`, A only | `Decking`, `Decking and Railing`, `Porch Trims`, `Pergola Trims`, `Soffits and Fascias`, `Exterior Trims`, `Siding` |
+The guide does not set a specific color; the fill itself is required. Our three colors and which sections take which: [header color table](#section-anatomy). The reference files match: group framing (`Porch Framing List 4pcs`, `Ground Deck Framing List (left)`, `Pergola 4 pcs`) is green `99CC00`, their `Decking`, `Decking and Railing`, `Porch Trims`, `Pergola Trims` are light green `CCFFCC`.
 
 ### Groups: deck, porch, balconies, canopy { #groups }
 
@@ -314,7 +318,7 @@ A note = a row with a prefix in A, columns B-F empty. Per the guide all notes ha
 
 - **In the worksheet header** (above `Description`): `Important:` red bold on yellow, a regular `Note:` red bold without fill.
 - **Right under a section header:** yellow fill on A:F.
-- **Inside a section above its rows**, and the count row `Note: 2 Stairs`: bold without fill, as before.
+- **Inside a section above its rows**, and the count row `Note: 2 Stairs`: bold on yellow A:F, one blank row above. `Important:` is red, `Note:` and `Comment:` are black.
 
 | Prefix | When | Look | Examples |
 | --- | --- | --- | --- |
@@ -409,8 +413,8 @@ No separate header is needed. Add a picture for a complex assembly (column, pane
 | What | Rule | Right | Wrong |
 | --- | --- | --- | --- |
 | Hardware | a specific name in A; the location, if critical, after the name | `Hangers`, `Bolts`, `Washers`, `Ties`, `Post Caps`, `Anchor Bolts` | `Beam-to-Post`, `Opening`, `Stud`, `Hardware`, `Metal`, `Misc.` |
-| Insulation | the full word in column B, otherwise it lands in another group | `Batt Insulation R-21`, `1-1/2 Rigid Insulation` | `Batt R-21`, `1-1/2 Rigid`, `Insul.` |
-| Flitch beam | the steel plate as a separate row right after the wood beam (in the reference file also under Ridge) | `Beam (4) Dropped` + `Steel plate (1)`, B `1/4x14` | the plate at the end of the list |
+| Insulation | the full word in column B, otherwise it lands in another group. The row is needed only when insulation is in scope: for us that is continuous insulation outside the sheathing, on concrete or masonry, and rigid insulation above a roof deck. Insulation between studs, in floors and in roofs is by others, no row | `2" XPS Insulation`, `1-1/2 Rigid Insulation` | `2" XPS`, `1-1/2 Rigid`, `Insul.`; `Batt Insulation R-21` in a Frame workbook |
+| Flitch beam | the steel plate as a separate row right after the wood beam (in the reference file also under Ridge) | `Beam (3) Flush` + `Steel Plate (2)`, B `1/2 x 14` | the plate at the end of the list |
 | Detail with a picture | pictures in order (`Detail 1` or `Det. 1`), the material row has the reference in B | `22x42x6, det. 2`, `3" Crown, det.1` | a picture without a number, reference only in E |
 | Doors, cased openings | different types: a tag in F starting with the word `Type`; the physical kind and rating stay in B | F `Type A`; B `21080 pocket`, `2880 FR s/cl` | `A` without the word Type |
 | Trim with a material type | different material types in F | B `3"`, F `IL326`, `MD-01` | type lost, everything merged into one `3" crown` |

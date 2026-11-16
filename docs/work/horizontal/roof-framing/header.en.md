@@ -20,11 +20,11 @@ A roof header is a horizontal beam in a sloped roof that frames an opening (skyl
 
 ## How to measure in OurPlanCore
 
-Beam tool (B) between the reinforced rafters on the roof framing sheet with the F dot. One header = one point with `(n)` plies in the name; the app rounds the length (up to 8' to the foot, longer to an even number).
+Beam tool (B) between the reinforced rafters on the roof framing sheet with the F dot. One header = one point with `(n)` plies in the name; the app rounds the length (up to 8' to the foot, longer to an even number). In the DFL column C counts every board: points x plies.
 
 1. Headers on both sides of the same opening (top and bottom of a skylight) are two points.
 2. The reinforced rafters at the sides are their own takeoff, see [Dbl / Trpl Rafters](dbl-trpl-rafters.md).
-3. Hangers: header to rafters and cut rafters to header, by built-up width and skew/slope condition.
+3. Hangers: header to rafters and cut rafters to header, by built-up width and skew/slope condition. Roof hangers are written with no `Z` and no `Zmax` (`LSSR210`); the exception is the `LRU...Z` models.
 
 <figure markdown>
   ![Beam tool](../../../assets/images/ourplancore/v3/measure-beam.png)
@@ -35,10 +35,12 @@ Beam tool (B) between the reinforced rafters on the roof framing sheet with the 
 
 Path: `framing/roof framing/beams/<header size length>`. Do not put them in `headers`: the HD button on the XL strip would move them into the wall block of the floor below.
 
+In the DFL a roof header is a `Beam (n)` row in the Roof Frame list, by the same rule as the roof beams; the template row `Headers (n)` is not used. E holds the mark or the place (`skylight`).
+
 | Takeoff name | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- | --- |
-| `beams/rf header (2) 2x12 10` | `Header (2)` | `2x12` | points | `10` | `S201 skylight` |
-| `beams/rf header (3) 1 3/4 x 11 7/8 LVL 12` | `Header (3)` | `1 3/4 x 11 7/8 LVL` | points | `12` | detail |
+| `beams/rf header (2) 2x12 10` | `Beam (2)` | `2x12` | points x 2 | `10` | `S201 skylight` |
+| `beams/rf header (3) 1 3/4 x 11 7/8 LVL 12` | `Beam (3)` | `1 3/4 x 11 7/8 LVL` | points x 3 | `12` | detail |
 | `details/HU hdr` | `Hangers` | `LUS210-2`, `HU5.50/10` | per connection | `pcs` | detail |
 
 ## Common mistakes
@@ -54,10 +56,12 @@ Path: `framing/roof framing/beams/<header size length>`. Do not put them in `hea
 
 | A | B | C | D | E |
 | --- | --- | --- | --- | --- |
-| `Header (2)` | `2x12` | 2 | 10 | `skylight per S201` |
-| `Dbl Rafters` | `2x12` | 2 | 18 | `S201` |
-| `Hangers` | `LUS210-2` | 2 | pcs | `9/S501` |
-| `Hangers` | `LSSR210Z` | 6 | pcs | `rafters to header` |
+| `Beam (2)` | `2x12` | 4 | 10 | `skylight per S201` |
+| `Dbl Rafters` | `2x12` | 4 | 18 | `S201` |
+| `Hangers` | `LUS210-2` | 4 | pcs | `9/S501` |
+| `Hangers` | `LSSR210` | 6 | pcs | `rafters to header` |
+
+One skylight: 2 headers (top and bottom of the opening) x 2 plies = 4 boards; reinforced rafters on both sides of the opening, 2 places x 2 = 4. `LUS210-2`: 2 headers x 2 ends = 4. `LSSR210`: 6 cut rafters, one hanger per end at a header.
 
 <figure markdown>
   ![Second view of the roof header](../../../assets/images/confluence/confluence-138.png)

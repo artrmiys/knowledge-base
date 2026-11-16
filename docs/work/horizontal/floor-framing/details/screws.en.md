@@ -29,12 +29,21 @@ Length from the detail Line (`details/2x10 ledger + screws`, `details/12/S401`),
 
 ## Tree name and DFL row
 
-The screws row sits next to its connection. Formula in pcs: `G` - ledger LFT, `H` - spacing, multiplier - number of screws per connection, rounding significance = number per connection (3 per truss end gives `,3`); round a result under 50 up to an even number.
+The screws row sits right under its connection, and B holds the screw exactly as the detail calls it: `SDWS22600DB Screws`, without a code `1/4" x 4 1/2" SDS Screws`.
+
+Ledger screws are the `Screws (n) at Ledger` row:
+
+- `n` is the screws at one point (per stud or per truss end), and the point spacing `sp` comes from the detail;
+- `G` is the ledger LFT, the same lines as the `Ledger` row;
+- the screw count is `x = G*12/sp*n`, with no separate allowance;
+- one rounding, as on every count row: under 50 round up to even, 50 and over round up to 10: `=IF(x<50,CEILING(x,2),CEILING(x,10))`.
+
+Older books have the old form `Screws 16" o.c. (3)`: spacing in H, a `1.05` / `1.1` allowance and `,3` rounding. Do not write new ledger rows that way.
 
 | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- |
-| `Screws 16" o.c. (3)` | `SDWS 0.22 x 6"` | `=CEILING(G*12/H*3*1.1,3)` | `pcs` | `ledger per 4/S401` |
-| `Screws (2)` | `SDS 1/4 x 4 1/2` | connections x 2 | `pcs` | beam-to-post detail |
+| `Screws (3) at Ledger` | `SDWS22600DB Screws` | `=IF(G*12/16*3<50,CEILING(G*12/16*3,2),CEILING(G*12/16*3,10))` | `pcs` | `4/S401` |
+| `Screws (2)` | `1/4" x 4 1/2" SDS Screws` | connections x 2 | `pcs` | beam-to-post detail |
 | `Screws` | `SDWS 1/4 x 4 1/4` | `=4*4*G` per stair | `pcs` | stair detail |
 | `Screws 24" o.c.` | `SDWC 6"` | by truss spacing | `pcs` | `in lieu of H2.5A` |
 
@@ -42,6 +51,7 @@ The screws row sits next to its connection. Formula in pcs: `G` - ledger LFT, `H
 
 - Ledger screws not per the detail: 1 per end instead of 3 (84 became 132).
 - Screws taken from another floor, not from their own ledger.
+- The ledger row kept the old `1.05` / `1.1` allowance and `,3` rounding: there is one rounding, to even or to 10.
 - Details 1 and 3 look alike in the drawing, but the hardware is different.
 - Both H2.5A clips and SDWC counted when the detail says "in lieu of".
 - Nails counted in pieces.
@@ -49,10 +59,12 @@ The screws row sits next to its connection. Formula in pcs: `G` - ledger LFT, `H
 
 ## Example
 
-| A | B | C | D | E | G | H |
-| --- | --- | --- | --- | --- | --- | --- |
-| `Ledger` | `2x10` | `=CEILING(G*1.1/D,1)` | 16 | `4/S401` | 44 | |
-| `Screws 16" o.c. (3)` | `SDWS 0.22 x 6"` | `=CEILING(G*12/H*3*1.1,3)` | pcs | `4/S401` | 44 | 16 |
+| A | B | C | D | E | G |
+| --- | --- | --- | --- | --- | --- |
+| `Ledger` | `2x10` | `=CEILING(G/D,1)` | 16 | `4/S401` | 44 |
+| `Screws (3) at Ledger` | `SDWS22600DB Screws` | `=IF(G*12/16*3<50,CEILING(G*12/16*3,2),CEILING(G*12/16*3,10))` | pcs | `4/S401` | 44 |
+
+Ledger: 44 / 16 = 2.75, so 3 boards of 16'. Screws: 3 per stud at 16" o.c., 44 x 12 / 16 = 33 points, x 3 = 99; that is not under 50, so up to 10 = 100 pcs.
 
 ## See also
 

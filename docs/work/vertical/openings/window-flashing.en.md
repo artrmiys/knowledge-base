@@ -14,7 +14,9 @@
 
 Flashing around windows and doors is our scope, even when the wall framing is by
 others. Two different rows: **Window Flashing** (tape on the head and both jambs)
-and **Sill Flashing** (the pan under the window). Doors have no sill flashing. Roof,
+and **Sill Flashing** (the pan under the window). Doors and garage doors go into the same
+`Window Flashing` row with three sides and have no sill flashing; there is no separate
+`Door Flashing` row in the DFL. Roof,
 wall and deck flashing are on another page: [Flashing](../../sheathing-and-misc/flashing.md).
 
 ## Where to find it on the plans
@@ -38,13 +40,14 @@ schedule. Do not type lengths in by hand.
 
 | DFL row | Material | Unit | Formula |
 | --- | --- | --- | --- |
-| `Window Flashing` | `Flashing Tape` | LFT | `(2 x H + W) x qty` |
-| `Sill Flashing` | `Sill Flashing` | LFT | `W x qty` |
-| `Door Flashing` (3 sides) | `Flashing Tape` | LFT | `(2 x H + W) x qty`; no sill |
+| `Window Flashing` | `Flashing Tape` | LFT | `(2 x H + W) x qty x 1.1`; windows, ` d` doors and ` gd` garage doors together, three sides each |
+| `Sill Flashing` | `Sill Flashing` | LFT | `W x qty x 1.1`; windows only, doors and garage doors have no sill |
 | `Window Flashing at Mtl Walls`, `Sill Flashing at Mtl Walls` | same | LFT | separate rows for metal walls |
 | `Window Flashing at CMU Walls`, `Sill Flashing at CMU Walls` | same | LFT | separate rows for CMU and concrete |
 | `Window Jamb at CMU/Concrete` | `1x4 P.T.` or `2x4 P.T.` | LFT | per detail; flashing is counted even without a jamb |
 
+- The `x 1.1` waste is always there. Rounding: a result under 50 goes to 2, otherwise
+  to 10.
 - Wood walls: the base row is always there. Mtl and CMU walls are added on separate
   rows, even if the detail geometry is the same: for the client these are different
   subcontractors and different WRBs.
@@ -56,6 +59,7 @@ schedule. Do not type lengths in by hand.
 ## Common mistakes
 
 - A door got `Sill Flashing`: the ` d` or ` gd` tag is missing.
+- Doors put on a made-up `Door Flashing` row, or flashing figured without `x 1.1`.
 - Wood, Mtl and CMU walls merged into one row.
 - Size taken from the elevation instead of the schedule.
 - P.T. wood jamb on CMU not checked.
@@ -65,12 +69,22 @@ Walkthrough with examples: [all opening mistakes](../../../start/common-mistakes
 
 ## Example
 
+12 windows `3.0x5.0` and 2 doors `3.3x6.5 d` in wood walls, 6 windows `4.3x7.8`
+in metal walls, 4 windows `2.9x4.0` in CMU:
+
 ```text
-Window Flashing            Flashing Tape     LFT   =(2*5.0+3.0)*12
-Sill Flashing              Sill Flashing     LFT   =3.0*12
-Window Flashing at Mtl Walls   Flashing Tape   LFT   =(2*7.8+4.3)*6
-Window Jamb at CMU         2x4 P.T.          LFT   =(2*4.0+2.9)*4
+Window Flashing                Flashing Tape    210   LFT   =CEILING(((2*5.0+3.0)*12+(2*6.5+3.3)*2)*1.1,10)
+Sill Flashing                  Sill Flashing     40   LFT   =CEILING(3.0*12*1.1,2)
+Window Flashing at Mtl Walls   Flashing Tape    140   LFT   =CEILING((2*7.8+4.3)*6*1.1,10)
+Sill Flashing at Mtl Walls     Sill Flashing     30   LFT   =CEILING(4.3*6*1.1,2)
+Window Flashing at CMU Walls   Flashing Tape     48   LFT   =CEILING((2*4.0+2.9)*4*1.1,2)
+Sill Flashing at CMU Walls     Sill Flashing     14   LFT   =CEILING(2.9*4*1.1,2)
+Window Jamb at CMU/Concrete    2x4 P.T.          per detail  LFT   G = (2*4.0+2.9)*4 = 43.6
 ```
+
+Check of the first row: windows `13 x 12 = 156`, doors `16.3 x 2 = 32.6`, together
+`188.6 x 1.1 = 207.5`, to 10 = 210. Doors do not go into `Sill Flashing`:
+`3.0 x 12 x 1.1 = 39.6`, to 2 = 40.
 
 ## See also
 

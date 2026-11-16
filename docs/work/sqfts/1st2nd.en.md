@@ -30,6 +30,14 @@ cantilevered) follow the same rules with the specifics of their type.
 6. The area must reach Excel and update when the takeoff is edited: compare
    the number in the workbook with the app before delivery.
 7. Linear exclusions (`cat walk 4'`) are a length with a known width, not an Area.
+8. Overhangs and projections. The floor outline follows the outside face of the
+   exterior walls of that floor (the framing, not the sheathing or the siding). Roof
+   overhangs (eaves, rakes), canopies, open porches, decks and balconies are not part
+   of the floor area: they have their own takeoffs. A floor that projects past the floor
+   below (bay, bump-out, cantilever) is floor, so it stays inside the outline of its own
+   floor; in addition the same projection is traced as a separate `cant` Area, and it is
+   not deducted from the floor ([Cantilevered](cantilevered.md)). The roof area, on the
+   contrary, follows the roof edge with the overhangs included ([Roof](roof.md)).
 
 ## Where to find it on the plans
 
@@ -46,7 +54,7 @@ cantilevered) follow the same rules with the specifics of their type.
 | --- | --- | --- | --- | --- |
 | `sqfts/1st` | Front Page, `1st Floor` | | `SQ FT` | as measured |
 | `sqfts/1st` | `Subfloor` | `3/4" T&G` | `4x8` | `=CEILING(SQFT/32*1.1,1)` |
-| `sqfts/1st` | `Panel Adheasive` | `29OZ` | `pcs` | per template |
+| `sqfts/1st` | `Panel Adheasive` | `29OZ` | `tubes` | `=CEILING(Subfloor sheets/3,1)`: one tube per 3 sheets |
 | `sqfts/1st` | `Underlayment` and layers per assembly | per [Floor Sheathing](../vertical/sheathing/floor.md) | `4x8` | same |
 | `sqfts/open to below` | deduction | | `SQ FT` | minus |
 
@@ -58,6 +66,7 @@ the template spec cells.
 - Floors merged into one area, or one floor copied to another with someone else's formulas.
 - A shaft deducted twice (hole plus separate deduction).
 - A rectangle "to hit the number" instead of the plan outline.
+- Floor outline traced along the roof edge or together with the porch and balcony: overhangs and open platforms are not part of the floor.
 - Area fixed in the app, the old one left in Excel.
 - Porch and balcony empty on the Front Page (they are counted separately, see [Porch](porch.md), [Balcony](balcony.md)).
 

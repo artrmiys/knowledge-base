@@ -16,8 +16,8 @@ Here: typical values from delivered jobs, so you notice a number of the wrong or
 | Studs 24" o.c. | x0.625 | 0.5 plus 25% waste |
 | Joists | 12 / spacing + 1 | no stud waste |
 | General waste | x1.1 | once in the formula |
-| Rim EWP | x1.05 | EWP jobs only; others x1.1 |
-| Wall bracing | 1 per 8 ft | internal benchmark |
+| Rim EWP | x1.05 | EWP-only jobs only, where rim stays in LFT; in a regular workbook rim goes in 16' boards with no factor |
+| Wall bracing | 1 board per 8 LFT of wall, x1.1 | `=G/8*1.1`, in pieces; board length by wall height |
 
 Source of the multipliers: [Formulas and factors](formulas.md).
 

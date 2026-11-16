@@ -51,16 +51,30 @@ Post caps, bases and hangers do not belong here: they go in `framing/.../details
 | Holdown sits over a beam | do not add a transfer holdown under the beam (client instruction, 09/22) | as shown |
 | Threaded rod | only if shown | its own row |
 
-Count straps (`MSTC40`, `CS16`) as separate takeoffs, do not mix them with anchors.
+Count straps (`MSTC40`, `CS16`) as separate takeoffs, do not mix them with
+anchors. In the DFL this is the `Ties` row: a strap sold by the piece (`MSTC40`) in `pcs`,
+coil strap (`CS16`) in `LFT`.
+
+Two different `(2)` that must not be mixed up:
+
+- `(2)` in the row label `Holdowns (2) btm top` means two **levels**: a piece
+  below and a piece above the floor framing. C = points x 2.
+- `(2)` in the mark on the plan (`HD1 (2) DTT2Z`) means two **pieces at one connection**. In
+  the tree it is one point per connection, in the DFL the row is `Holdowns (2)` (the number of
+  pieces in one place goes in brackets, as in `Beam (2)`), C = points x 2, E holds the mark
+  `HD1`.
+
+Each doubling is applied once and only in C.
 
 ## Takeoff name and DFL row
 
 | Takeoff name | DFL row | B (model) | Unit | E |
 | --- | --- | --- | --- | --- |
 | `shear walls/1st floor/holdowns/HDU11 SB1x30 S2.2` | `Holdowns (1) btm` | `HDU11` | `pcs` | `SW-2` |
-| `shear walls/2nd floor/holdowns/HD1 (2) DTT2Z` | `Holdowns (2) btm top` | `DTT2Z` | `pcs` | SW mark |
+| `shear walls/1st floor/holdowns/HD1 (2) DTT2Z` | `Holdowns (2)`, C = points x 2 (two pieces per connection) | `DTT2Z` | `pcs` | `HD1` |
+| `shear walls/2nd floor/holdowns/HDU5 S2.2` | `Holdowns (2) btm top`, C = points x 2 (below and above the floor framing) | `HDU5` | `pcs` | SW mark |
 | `shear walls/1st floor/holdowns/DTT2Z at WSW-B` | `Holdowns (1) btm` | `DTT2Z` | `pcs` | `WSW-B` |
-| `shear walls/2nd floor/holdowns/MSTC40 type C S2.3` | `Straps` | `MSTC40` | `pcs` | `S2.3` |
+| `shear walls/2nd floor/holdowns/MSTC40 type C S2.3` | `Ties` | `MSTC40` | `pcs` | `S2.3` |
 
 Place in the DFL: the wall section of the floor whose SW the holdown restrains, a block at the end
 of the section after the last `Tape` (under Box Sheathing). G = number of points from
@@ -88,9 +102,9 @@ Takeoffs/Main/shear walls/2nd floor/holdowns/
 
 1st Floor Walls ... Tape
 Holdowns (1) btm        HDU11     14    pcs   SW-2
-Holdowns (1) btm        DTT2Z     12    pcs   HD1
+Holdowns (2)            DTT2Z     12    pcs   HD1     (6 points x 2 pieces per connection)
 2nd Floor Walls ... Tape
-Holdowns (2) btm top    HDU5      20    pcs   SW-3
+Holdowns (2) btm top    HDU5      20    pcs   SW-3    (10 points x 2 levels)
 ```
 
 ## See also

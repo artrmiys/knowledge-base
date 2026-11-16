@@ -44,7 +44,12 @@ hangers к ним; возможно колонны и stringers лестниц.
 - Rim: если LVL нигде не указан, не предполагать `1-3/4 LVL Rim`; по умолчанию
   `Rim` или продукт с пометкой assumed. Толщины rim 1-1/8" OSB, 1-1/2" LSL,
   1-3/4" LVL - [Rim Board](../work/horizontal/floor-framing/details/rim.md).
-- Rim factor 1.05; blocking continuous в LFT, фактор по [Формулам](../reference/formulas.md).
+- Rim и continuous blocking в этом заказе остаются в `LFT`: rim `x 1.05`,
+  blocking без фактора; rim не режется на доски по 16'. Фактор `1.05` -
+  **только для EWP-only**. В обычной framing-книге (Frame, COM, residential)
+  `Rim Board` - это доски по 16' через `=CEILING(G/D,1)` без отдельного
+  запаса: [Rim Board](../work/horizontal/floor-framing/details/rim.md),
+  [Формулы](../reference/formulas.md).
 - Одинаковый этаж: нота `4th floor frame is identical to 3rd floor`, но
   материалы перечислить.
 
@@ -59,6 +64,15 @@ EWP-балками), headers из 2x, кровля, eaves, truss heel, креп�
 **Не считать:** I-joists, LVL / PSL / LSL балки и headers, engineered rim.
 Строки с EWP убрать, не оставлять нулевыми.
 
+**Исключения (чек-лист):**
+
+- **Assumed LVL включаем всегда.** Если LVL назначили мы сами, потому что на
+  чертежах нет марки (header длинного окна без марки, ridge), он остаётся в
+  книге с `assumed`: в поставке EWP клиента его нет.
+- **`EWP Floors by others`** уже, чем `EWP by others`: by others только то,
+  что нарисовано на layout перекрытий (I-joists, балки и rim этих
+  перекрытий). Attic, roof и stick porch вместе с их LVL остаются нашими.
+
 Правила:
 
 - Нота в шапке `All EWP products are by others`. Шаблонная нота
@@ -71,6 +85,8 @@ EWP-балками), headers из 2x, кровля, eaves, truss heel, креп�
 ## Частые ошибки
 
 - EWP посчитан при `EWP by others` или не посчитан при EWP only.
+- При `EWP Floors by others` выброшены LVL кровли, attic и porch, или убран assumed LVL.
+- Rim `x 1.05` в LFT перенесён в обычную framing-книгу.
 - Rim записан как LVL без указания.
 - Hangers по закупочным доскам, а не по сборкам.
 - Все ошибки по перекрытиям - [Частые ошибки](../start/common-mistakes.md#floor).

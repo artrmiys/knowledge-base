@@ -47,12 +47,14 @@ Dormer - надстройка на скате с собственной крыш
 
 | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- |
-| `Studs 16" o.c.` | `2x6` | LFT x 1.1 | по высоте | `dormer walls per A301` |
-| `Header (2)` | `2x12` | точки | `8` | `dormer opening per S201` |
-| `Dbl Rafters` | `2x12` | точки | `18` | |
+| `Studs 16" o.c.` | `2x6` | по правилу стен: [Exterior Walls](../../vertical/walls/exterior.md) | по высоте | `dormer walls per A301` |
+| `Beam (2)` (roof header) | `2x12` | точки x 2 | `8` | `dormer opening per S201` |
+| `Dbl Rafters` | `2x12` | точки x 2 | `18` | |
 | `Rafters 16" o.c.` | `2x8` | по J Area | `10` | `dormer` |
-| `Valley Rafters` | `2x12` | точки | `12` | |
-| `Fascia at Eves (dormer)` | `1x8` | LFT | `LFT` | |
+| `Valley plates` | `2x12` | точки | `12` | |
+| `Fascia at Eves` | `1x6` | `G x 1.1`, вверх до чётного | `LFT` | `dormer` |
+
+`(n)` в Label - число plies; C = точки x plies. `Dbl Rafters` без скобок, но правило то же: места x 2.
 
 ## Частые ошибки
 
@@ -71,9 +73,20 @@ walls/2nd floor walls/ext 2x6 6.5 dormer      Line, 2 dormers
 gables/gable stick/dormer                     Area, 2 треугольника
 sqfts/rf 8 dormer                             Area
 framing/roof framing/beams/rf header (2) 2x12 8     2 точки
+framing/roof framing/beams/dbl rafters 2x12 18      4 точки
 framing/roof framing/beams/valley 2x12 12           4 точки
 eves rakes/rakes/rake 12 dormer               Line
 ```
+
+Строки каркаса крыши для этих двух dormers:
+
+| A | B | C | D | E |
+| --- | --- | --- | --- | --- |
+| `Beam (2)` | `2x12` | 4 | 8 | `dormer opening per S201` |
+| `Dbl Rafters` | `2x12` | 8 | 18 | `S201` |
+| `Valley plates` | `2x12` | 4 | 12 | `dormer` |
+
+`Beam (2)` (roof header): 2 точки x 2 = 4. `Dbl Rafters`: 4 места (по два на dormer) x 2 = 8. `Valley plates`: 4 точки, по одной доске.
 
 ## См. также
 

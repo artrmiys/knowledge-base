@@ -22,9 +22,9 @@ The ridge is the top horizontal member of a sloped roof that the rafters frame i
 
 Beam tool (B) along the ridge line on the roof framing sheet with the F dot. Length runs from the outside face of the exterior wall (not the inside face of the framing) to the end of the run. The app rounds the length: up to 8', up to the next foot; longer, to an even number.
 
-1. One ridge run = one point; a built-up ridge beam is one point with `(2)` in the name.
+1. One ridge run = one point; a built-up ridge beam is one point with `(2)` in the name. In the DFL column C counts every board: points x plies.
 2. A ridge beam needs posts or walls under its ends: the posts are counted in `roof framing/posts`.
-3. Rafters hang from the ridge beam on hangers (`LSSR`, `LRU`) per detail; no hangers at a ridge board.
+3. Rafters hang from the ridge beam on hangers (`LSSR`, `LRU`) per detail; no hangers at a ridge board. Roof hangers are written with no `Z` and no `Zmax` (`LSSR210`); the exception is the `LRU...Z` models, where Z is part of the name.
 4. Sub fascia and ridge beam per detail are separate rows, even when the rafters are by others.
 
 <figure markdown>
@@ -39,8 +39,8 @@ Path: `framing/roof framing/beams/<mark or size> <length>`. The ridge goes in `b
 | Takeoff name | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- | --- |
 | `beams/ridge 2x12 12` | `Ridge` | `2x12` | points | `12` | `S201` |
-| `beams/RB1 (2) 1 3/4 x 11 7/8 LVL 20` | `Ridge (2)` | `1 3/4 x 11 7/8 LVL` | points | `20` | `RB1 per S601` |
-| `details/LSSR` | `Hangers` | `LSSR2.1Z` | per rafter | `pcs` | detail |
+| `beams/RB1 (2) 1 3/4 x 11 7/8 LVL 20` | `Ridge (2)` | `1 3/4 x 11 7/8 LVL` | points x 2 | `20` | `RB1 per S601` |
+| `details/LSSR` | `Hangers` | `LSSR210` | per rafter | `pcs` | detail |
 
 Export: the BM button puts the roof beams into `Roof Frame List` (the worksheet is created as a copy of the nearest floor if it does not exist).
 
@@ -49,6 +49,8 @@ Export: the BM button puts the roof beams into `Roof Frame List` (the worksheet 
 - Ridge counted on a truss roof: it is inside the trusses, by others.
 - Length taken from the inside face of the wall or along a short line on the plan instead of to the outside face.
 - Ridge beam without posts and without the rafter hangers from the detail.
+- A roof hanger written with `Z` or `Zmax` (`LSSR210Z`): inside the roof write `LSSR210`.
+- C of `Ridge (2)` holds the number of runs without the x 2.
 - Several ridges at different heights written as one length.
 - Rim and blocking at roof TJI forgotten: a TJI roof is counted like floor framing.
 - [All roof mistakes](../../../start/common-mistakes.md#roof)
@@ -68,8 +70,10 @@ framing/
 | A | B | C | D | E |
 | --- | --- | --- | --- | --- |
 | `Ridge` | `2x12` | 2 | 12 | `S201` |
-| `Ridge (2)` | `1 3/4 x 11 7/8 LVL` | 1 | 20 | `RB1` |
+| `Ridge (2)` | `1 3/4 x 11 7/8 LVL` | 2 | 20 | `RB1` |
 | `Posts` | `4x4` | 2 | 10 | `6/S501` |
+
+`Ridge (2)`: 1 point x 2 plies = 2 LVL boards of 20'.
 
 ## See also
 

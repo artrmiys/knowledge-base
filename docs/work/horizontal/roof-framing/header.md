@@ -20,11 +20,11 @@ Roof header - горизонтальная балка в скатной крыш
 
 ## Как мерить в OurPlanCore
 
-Инструмент Beam (B) между усиленными rafters на листе roof framing с точкой F. Один header = одна точка с `(n)` plies в имени; программа округляет длину (до 8' до фута, длиннее до чётного).
+Инструмент Beam (B) между усиленными rafters на листе roof framing с точкой F. Один header = одна точка с `(n)` plies в имени; программа округляет длину (до 8' до фута, длиннее до чётного). В DFL колонка C считает все доски: точки x plies.
 
 1. Header на одном и том же проёме с двух сторон (верх и низ skylight) - две точки.
 2. Усиленные rafters по бокам - своя позиция на странице [Dbl / Trpl Rafters](dbl-trpl-rafters.md).
-3. Hangers: header к rafters и обрезанные rafters к header, по ширине built-up и условию skew/slope.
+3. Hangers: header к rafters и обрезанные rafters к header, по ширине built-up и условию skew/slope. Hangers кровли пишутся без `Z` и без `Zmax` (`LSSR210`); исключение - модели `LRU...Z`.
 
 <figure markdown>
   ![Инструмент Beam](../../../assets/images/ourplancore/v3/measure-beam.png)
@@ -35,10 +35,12 @@ Roof header - горизонтальная балка в скатной крыш
 
 Путь: `framing/roof framing/beams/<header сечение длина>`. В `headers` не кладём: кнопка HD полосы XL уносит их в блок стен этажа ниже.
 
+В DFL roof header - строка `Beam (n)` в Roof Frame list, по тому же правилу, что балки крыши; шаблонная строка `Headers (n)` не используется. В E - марка или место (`skylight`).
+
 | Имя в дереве | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- | --- |
-| `beams/rf header (2) 2x12 10` | `Header (2)` | `2x12` | точки | `10` | `S201 skylight` |
-| `beams/rf header (3) 1 3/4 x 11 7/8 LVL 12` | `Header (3)` | `1 3/4 x 11 7/8 LVL` | точки | `12` | деталь |
+| `beams/rf header (2) 2x12 10` | `Beam (2)` | `2x12` | точки x 2 | `10` | `S201 skylight` |
+| `beams/rf header (3) 1 3/4 x 11 7/8 LVL 12` | `Beam (3)` | `1 3/4 x 11 7/8 LVL` | точки x 3 | `12` | деталь |
 | `details/HU hdr` | `Hangers` | `LUS210-2`, `HU5.50/10` | по узлам | `pcs` | деталь |
 
 ## Частые ошибки
@@ -54,10 +56,12 @@ Roof header - горизонтальная балка в скатной крыш
 
 | A | B | C | D | E |
 | --- | --- | --- | --- | --- |
-| `Header (2)` | `2x12` | 2 | 10 | `skylight per S201` |
-| `Dbl Rafters` | `2x12` | 2 | 18 | `S201` |
-| `Hangers` | `LUS210-2` | 2 | pcs | `9/S501` |
-| `Hangers` | `LSSR210Z` | 6 | pcs | `rafters to header` |
+| `Beam (2)` | `2x12` | 4 | 10 | `skylight per S201` |
+| `Dbl Rafters` | `2x12` | 4 | 18 | `S201` |
+| `Hangers` | `LUS210-2` | 4 | pcs | `9/S501` |
+| `Hangers` | `LSSR210` | 6 | pcs | `rafters to header` |
+
+Один skylight: 2 headers (верх и низ проёма) x 2 plies = 4 доски; усиленные rafters с двух сторон проёма, 2 места x 2 = 4. `LUS210-2`: 2 headers x 2 конца = 4. `LSSR210`: 6 обрезанных rafters, по одному hanger на конец у header.
 
 <figure markdown>
   ![Второй вид roof header](../../../assets/images/confluence/confluence-138.png)

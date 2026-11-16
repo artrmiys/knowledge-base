@@ -9,7 +9,7 @@
 
 The list of interior doors and cased openings per floor, with size and
 type designation, from which the casing is calculated with a formula. The door schedule wins over the plan:
-if there is one, fill from it. The casing and jamb formula is on the
+if there is one, fill from it. The casing formula is on the
 [Casing](casing.md) page; interior window trim (casing, stool, apron) only when it
 is in the finish schedule or details.
 
@@ -31,16 +31,25 @@ name (`2680 F.R.`); hardware numbers are not needed.
 
 ## Size designations
 
+The size code reads like this: the first digits are the width (feet and inches), the
+last two are the height (foot and inches). `2680` = 2'-6" x 8'-0", `3068` = 3'-0" x 6'-8",
+`9068` = 9'-0" x 6'-8". A door wider than 3'-6" is written as a pair: `5070` in the
+schedule is `(2)2670`, `4070` is `(2)2070`.
+
 | Example | Meaning | How to write it |
 | --- | --- | --- |
 | `2680` | 2'-6" x 8'-0" | regular single interior door |
 | `(2)2680` | two doors 2'-6" x 8'-0" | double door, pair marker visible |
 | `2680 Pocket` | pocket door | the word `Pocket` stays |
 | `(2)3080 Slider` | two panels 3'-0" x 8'-0" | quantity and `Slider` stay |
-| `(2)2680 Bi-Fold` | closet bi-fold | `Bi-Fold`, do not reduce it to slider |
-| `9068 Bi-Fold` | wide bi-fold 9'-0" x 8'-0" | one opening, panels are not counted separately |
+| `(2)2668 Bi-Fold` | closet bi-fold, two leaves 2'-6" x 6'-8" | `Bi-Fold`, do not reduce it to slider |
+| `9068` bi-fold in the schedule | wide bi-fold 9'-0" x 6'-8" | wider than 3'-6", so a pair: `(2)4668 Bi-Fold`; the folding panels inside a leaf are not counted separately |
 | `2680 Metal F.R. S.C.` | metal, fire-rated, self-closing | garage and mechanical; `F.R.` and `S.C.` stay |
 | `4080 C.O.` | cased opening 4'-0" x 8'-0" | enter as a cased opening, not as a door |
+
+The code comes first in column B, the type words after it: the template formula reads
+the code and doubles pairs, and the casing depends on it. Door heights not given:
+assume 6'-8" and write a header note.
 
 `F.R.` on a door means fire-rated (door, frame and hardware as an assembly).
 Do not confuse it with `FRT`: that is fire-retardant-treated framing lumber.
@@ -49,26 +58,29 @@ Do not confuse it with `FRT`: that is fire-retardant-treated framing lumber.
 
 | Tree name | DFL row | Unit | Rule |
 | --- | --- | --- | --- |
-| `openings/1/2680` | `Int. Doors 2680` | pcs | per floor, from the schedule |
-| `openings/1/(2)2680` | `Int. Doors (2)2680` | pcs | double as a pair |
-| `openings/1/4080 C.O.` | `Cased Openings 4080` | pcs | separate from doors |
-| | `Casing for Int. Doors` | LFT | formula from the list, see [Casing](casing.md) |
+| `openings/1/2680` | `Int. Doors`, `2680` in B | unit | per floor, from the schedule |
+| `openings/1/(2)2680` | `Int. Doors`, `(2)2680` in B | unit | double as a pair |
+| `openings/1/4080 C.O.` | `Cased Openings`, `4080 C.O.` in B | unit | separate from doors, after a blank row |
+| | `Casing for Int. Doors` | LFT | `=CEILING(2*SUM(perimeters)/12*1.1,10)`, see [Casing](casing.md) |
 | | `Interior Doors&Trims` | | block header with a note about the profile |
 
 Excel entry:
 
 1. All doors and cased openings are entered per floor before the casing formulas.
-2. Sizes are rewritten in inches in a helper table: `2'-0" x
-   6'-8"` becomes `24 x 80`.
-3. Mark and quantity are copied to the helper table on the right; the casing formulas
-   come from it; repeated doors are counted with a formula, not typed by hand.
+2. The size code comes first in column B (`2680`, `(2)2680 Bi-Fold`). The template
+   converts it to a perimeter in inches in column G by itself: `2680` is 30" + 2 x
+   96" = 222", multiplied by the quantity; a `(2)` pair is doubled.
+3. Do not touch the G formula or replace it with a number: the casing is computed
+   from the sum of G. Identical doors are one row with a quantity, not several rows.
 4. Before output, select the quantity cells and compare the sum in the status
    bar with the number of doors on the plans.
 
 ## Common mistakes
 
 - Doors counted by the wall or by a nearby note, not by the door symbol.
-- Bi-fold panels counted as separate doors.
+- Folding bi-fold panels counted as separate doors.
+- A door wider than 3'-6" written as one door, not as a `(2)` pair.
+- `9068` read as 9'-0" x 8'-0": the last two digits are the height 6'-8".
 - Shower glass doors entered as interior doors.
 - `Pocket`, `Slider`, `F.R. S.C.` lost on the way to Excel.
 - A cased opening entered as a door.
@@ -80,12 +92,19 @@ Excel entry:
 Takeoffs/Main/openings/1/2680          Count   18
 Takeoffs/Main/openings/1/(2)2680       Count   3
 Takeoffs/Main/openings/1/4080 C.O.     Count   2
+Takeoffs/Main/openings/1/2680 Pocket   Count   2
 
-Int. Doors 2680              18  pcs   A601
-Int. Doors (2)2680           3   pcs   A601
-Int. Doors 2680 Pocket       2   pcs   A601
-Cased Openings 4080          2   pcs   A601
-Casing for Int. Doors        1x3-1/2   ...  LFT   =(2*8+2.5)*2*18+...
+Int. Doors       2680           18   unit   A601
+Int. Doors       (2)2680        3    unit   A601
+Int. Doors       2680 Pocket    2    unit   A601
+
+Cased Openings   4080 C.O.      2    unit   A601
+
+Casing for Int. Doors   1x3-1/2   1150  LFT   =CEILING(2*SUM(G)/12*1.1,10)
+
+Perimeters: 2680 = 222", pair (2)2680 = 444", 4080 C.O. = 240"
+SUM = 222 x 18 + 444 x 3 + 222 x 2 + 240 x 2 = 6252"
+2 x 6252 / 12 = 1042 LFT, x 1.1 = 1146.2, rounded up to 10 = 1150 LFT
 ```
 
 <details class="kb-figures kb-figures--rows">

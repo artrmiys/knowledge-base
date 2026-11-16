@@ -47,22 +47,36 @@ Truss heel - вертикальная полоса обшивки в торце 
 
 ## Как назвать в дереве и строка DFL
 
+У полосы своя секция шаблона DFL: **Truss Heel**. G - площадь полосы в SQ FT:
+сумма `длина x высота пятки` по всем позициям `trussheel` корпуса.
+
 | Имя в дереве | Строка DFL | Материал | Unit | Формула |
 | --- | --- | --- | --- | --- |
-| `trussheel/trussheel 1.25` | `Truss Heel Sheathing` (в блоке Gable Walls или кровли шаблона) | как у стены, например `7/16" Zip` | `4x8` | `=ОКРВВЕРХ(LFT*1.25/32*1.1;1)` |
-| та же площадь | `Vapor Barrier` (WRB) | по спецификации | `SQ FT` | `=ОКРВВЕРХ(SQFT*1.1;10)` |
-| та же длина | `Blocking at Eves` | `2x6` | `LFT` | по детали, см. [Roof Sheathing](../../horizontal/roof-framing/roof-sheathing.md) |
+| `trussheel/trussheel 1.25` | `Truss Heel Sheathing` | как у стены, например `7/16" Zip` | `4x8` | `=ОКРВВЕРХ(G/32*1.1;1)` |
+| та же площадь, Zip | `Tape` | `Zip Tape` | `LFT` | `=ОКРВВЕРХ(G*0.4*1.1;10)` |
+| та же площадь, без Zip | `Vapor Barrier` | WRB по спецификации | `SQ FT` | `G x 1.1`; меньше 50 - до 2, иначе до 10 |
+| та же площадь | `Insulation` | продукт из wall type | `SQ FT` | `G x 1.1`; строка только при continuous insulation снаружи обшивки |
+| длина карнизов `eves rakes/eve ...` | `Blocking at Eves` (секция кровли, только при фермах by others) | `2x6` или по детали карниза | штуки, D = `16` | `=ОКРВВЕРХ(G/D*1.1;1)`, см. [Roof Sheathing](../../horizontal/roof-framing/roof-sheathing.md) |
 
-!!! warning "Уточняется"
-    Точный Label строки пятки в текущем TemplateCom (блок и имя) проверить по
-    сданной книге; здесь дано описательное имя.
+- Zip или обычный лист - как у наружной стены. При Zip идёт пара
+  `Truss Heel Sheathing` + `Tape`, строк `Vapor Barrier` и `Insulation` нет:
+  барьер уже в листе. Без Zip идёт `Vapor Barrier`, а `Tape` нет.
+- `Insulation` пишется, только если wall type наружной стены несёт continuous
+  insulation снаружи обшивки. Утеплитель между стойками и на чердаке by
+  others, строки нет.
+- Полоса box верхнего этажа под фермами считается здесь, а не строкой
+  `Box Sheathing` в стенах верхнего этажа. В стенах остаётся нота
+  `Note: Box sheathing is included in Truss Heel section`.
+- Stick roof (rafters): пятки нет, секция Truss Heel удаляется. Плоская кровля
+  с парапетом: полоса уходит в Parapet Walls ([Parapet](../walls/parapet.md)).
 
 ## Частые ошибки
 
 - Полоса на eave-сторонах не посчитана вовсе (gable-стороны есть, eave нет).
 - Та же полоса посчитана и в gable, и в trussheel.
 - Высота взята из другого дома или прочитана как вынос в дюймах.
-- Написано "Vapor Barrier / Tyvek", хотя барьер в спецификации другой.
+- В B строки `Vapor Barrier` записан Tyvek, хотя барьер в спецификации другой; или `Vapor Barrier` оставлен при Zip.
+- При Zip забыта строка `Tape`.
 - При top chord bearing забыто blocking между фермами вместо ribbon.
 
 Все ошибки: [common-mistakes](../../../start/common-mistakes.md#sheathing).
@@ -74,6 +88,10 @@ Takeoffs/Main/trussheel/
   trussheel 1.25     Line  236 LFT   (eave-стороны main)
 Takeoffs/Grge/trussheel/
   trussheel 0.66     Line   84 LFT
+
+Truss Heel (Main, стены с Zip): G = 236 x 1.25 = 295 SQ FT
+Truss Heel Sheathing   7/16" Zip     11   4x8    295 / 32 x 1.1 = 10.1
+Tape                   Zip Tape     130   LFT    295 x 0.4 x 1.1 = 129.8
 ```
 
 ## См. также

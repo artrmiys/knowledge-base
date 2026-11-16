@@ -17,7 +17,7 @@ numbers. What exactly has been found in reviews and what it looks like:
 ## Walls {#walls}
 
 - [ ] The type of each wall run (ext, corridor, demising, unit, furring) taken from the wall schedule, not assigned as a group.
-- [ ] Stud height calculated from the section: floor-to-floor minus subfloor, floor framing, plates. Exact heights recorded (`9'-1 1/8"`).
+- [ ] Wall height calculated from the section: floor-to-floor minus subfloor and floor depth; plates are not deducted (this is the height of the assembled wall, the stud is picked from it). Exact heights recorded (`9'-1 1/8"`). [Wall height](../work/vertical/walls/exterior.md#stud-height).
 - [ ] P.T. plate only on concrete and masonry; double bottom plate only where a detail shows it.
 - [ ] Bearing walls: plies and spacing from the stud schedule of their own floor; extra plies on a separate Extra row.
 - [ ] Corridor 2x4 staggered = two rows at 16", 2x6 plates.
@@ -31,16 +31,16 @@ numbers. What exactly has been found in reviews and what it looks like:
 - [ ] One point per physical opening, size = the product from the schedule (not the head elevation).
 - [ ] Storefront once; a window and a door under one header = one opening.
 - [ ] Openings deducted from sheathing, WRB, insulation and the anchor line once, on their own floor; windows under 4' are not deducted.
-- [ ] Doors wider than 4' recorded as double; material and fire label stated.
+- [ ] Doors wider than 3'-6" recorded as double; material and fire label stated.
 - [ ] Jamb blocking at windows and interior doors; blocking around windows with Zip R or insulation.
 
 ## Sheathing {#sheathing}
 
 - [ ] Every assembly read through all layers (ZIP-R by facade type, second gypsum layer, cover board, Z-girt).
-- [ ] Exterior sheathing per Arch and energy notes, interior per Structural; a discrepancy recorded with a note citing both sources.
+- [ ] The exterior sheathing and barrier product taken from the wall types on Arch and the energy notes; thickness, panel grade and which walls and sides are sheathed checked against Structural (general notes, SW schedule); a discrepancy recorded with a note citing both sheets.
 - [ ] Product name as in the project; the exterior barrier is called WRB, product from the specification.
 - [ ] Shear walls: number of sides per schedule; on a panel job one side is in the panel; `P` = perforated.
-- [ ] Floor-height FRT strips 2' or 4' around the perimeter of their own floor; box sheathing, truss heel, gables, parapet (inside = outside minus insulation board) counted.
+- [ ] The FRT subfloor strip, 2' or 4' along the exterior walls of its own floor, when a note requires it ([Subfloor](../work/horizontal/floor-framing/subfloor.md)); box sheathing, truss heel, gables, parapet (inside = outside minus insulation board) counted.
 - [ ] Underlayment, sound membrane, 3/4 ply under bathrooms, new subfloor over existing (if the detail requires it).
 - [ ] Roof sheathing by pitch from the sheet, correction applied once; H-clips only for square edge, by support spacing and clip model.
 - [ ] The measured area made it to Excel and was updated after edits.
@@ -49,33 +49,33 @@ numbers. What exactly has been found in reviews and what it looks like:
 
 - [ ] Every beam mark on every floor; posts and PSL under beams per schedule; a post counted once, on the top floor it supports.
 - [ ] Joists only with J Area: direction, spacing, end joists, openings; lengths split in N / L pairs.
-- [ ] Rim: product per specification (`11-7/8" Rim`, `LSL Rim`), in LFT with a factor; rim at roof TJI too.
+- [ ] Rim: product per specification (`11-7/8" Rim`, `LSL Rim`); in a regular workbook in 16' boards (`=CEILING(G/D,1)`), in LFT with `1.05` only on an EWP-only job; rim at roof TJI too.
 - [ ] Hangers at both ends, by assembly, model per detail; Zmax outside and on P.T.; DHU only over stair, elevator and shaft walls.
-- [ ] Ties along all bearing lines, spacing = truss spacing; truss bracing over the whole area under the roof.
+- [ ] Ties along all bearing lines, spacing = truss spacing; `Truss Bracing` for roof trusses over the whole area under them, garage included; `Bracing for Trusses` for floor trusses by lines, not over bearing walls ([formulas](../reference/formulas.md#truss-bracing)).
 - [ ] Ledger and fasteners on their own floor as separate rows; bolts, washers, nuts separately.
-- [ ] Blocking: two rows for walls 10' and taller; drywall ledger; kitchen 2x6 4 per 14', bath 1 per 14'.
+- [ ] Blocking: two rows for walls 10' and taller; `Blocking for Drywall` at walls parallel to the joists; cabinet blocking: 4 pieces of `2x6` at 14' for each kitchen and 1 piece at 14' for each bathroom.
 - [ ] Stairs multiplied by the number of stairs; stringers per detail.
-- [ ] Attic draft stop as a separate row; piggyback sleepers; flat roof curb blocking `(2) 2x6 P.T.` if nothing is specified; densdeck or cover board on a flat roof.
+- [ ] Attic draft stop as a separate row in `Gable Walls`, in SQ FT; at piggyback trusses (a truss built in two parts by height) `2x6` sleepers between the parts; flat roof curb blocking `(2) 2x6 P.T.` if nothing is specified; densdeck or cover board on a flat roof.
 - [ ] Eaves: all runs; canopy and porch not in eve/rake; dropped soffits per RCP.
 
 ## Areas, deck and porch {#sqft}
 
 - [ ] Areas follow the real outline; balconies and porch as separate Front Page rows.
 - [ ] Each balcony and porch block has its own multiplier, formulas from its own header; porch counted independently of balconies.
-- [ ] Railing: as a system (composite) or by component (wood painted), not mixed; exterior posts P.T.
+- [ ] Railing: as a system (composite) or by component (wood painted), not mixed; all outdoor lumber P.T., roofed or not.
 - [ ] Porch: ceiling joists, ledger, hangers; framing not shown - note `assumed; verify`.
 
 ## Shear walls and holdowns {#holdowns}
 
 - [ ] Holdown model per the SW schedule of its own building and floor; one to concrete, two through a wood floor.
-- [ ] Anchors by spacing and by SW, type from the detail; washers per the table; double-sided SW = double anchorage.
+- [ ] Anchors by spacing and by SW, type from the detail; washers by the model in the schedule, `3x3 Square` only when no model is named; double-sided SW = double anchorage.
 - [ ] A35 and other SW hardware only where notes or details require it.
 
 ## Excel DFL and notes {#excel}
 
 - [ ] Formulas from the block's own inputs; the first row of every new formula checked; 1.1 not applied twice.
 - [ ] Copied blocks: references point to their own floor, detail labels corrected.
-- [ ] Units: `LFT` for lumber, `pcs` for hardware, SF for panels; the label matches the calculation.
+- [ ] Units in D: `LFT` for linear items, `pcs` for hardware, `4x8` for panels, `SQ FT` for areas; lumber by the piece has the board length in D and the formula divides by D; the label matches the calculation.
 - [ ] File formatting per the [format checklist](../reference/dfl-overview.md#checklist): headers, prefixes and yellow fill of notes, color-coded options, groups, types in F.
 - [ ] Notes: main ones in the header, local ones in their block; natural phrase, up to 80 characters, `per <sheet>`; every optional has a reason; a note does not contradict its row.
 - [ ] Template notes checked against scope (`Walls are panels by others` only with panel scope); zero and unused rows deleted.

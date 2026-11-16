@@ -18,7 +18,7 @@
 | Лист | Что взять |
 | --- | --- |
 | Arch roof plan (`a105 rf`) | Зоны по типам: shingles, metal, flat, canopy; уклоны |
-| Roof assemblies (`ft`), specs | Слои flat roof: cover board, rigid, tapered, XPS, EPDM; alternates |
+| Roof assemblies (`ft`), specs | Слои flat roof: cover board, insulation (rigid, tapered, XPS), EPDM; alternates |
 | Sections (`sec`) | Canopy и stair lid: второй слой настила, tapered, DensGlass снизу |
 | Structural notes | Настил под каждый тип: `19/32"`, `1/2" Ply` под металл, `3/4"` flat |
 
@@ -26,11 +26,11 @@
 
 | Тип | Имя в дереве | Что тянет в DFL | Unit |
 | --- | --- | --- | --- |
-| Скатная под shingles | `sqfts/rf 6` | `Roof Sheathing`, `Clips`, `Felt for Roof`, `Ice and Water (eves&valleys)` если в scope | `4x8`, `pcs`, `SQ FT` |
+| Скатная под shingles | `sqfts/rf 6` | `Roof Sheathing`, `Clips`; `Felt for Roof` и `Ice and Water (eves&valleys)` только когда кровельные материалы в scope | `4x8`, `pcs`, `SQ FT`, `rolls` |
 | Скатная под металл | `sqfts/rf mtl 4` | `Roof Sheathing (metal)` `1/2" Ply`; сам металл by others, `Metal Roofs` только в scope | `4x8` |
-| Overframe | `sqfts/overframe 4` | `Roof Sheathing (overframes)`, sleepers по детали | `4x8`, `LFT` |
-| Плоская | `sqfts/flat`, `sqfts/ply flat` | `Roof Sheathing at Flat Roofs` `3/4"`, `Densdeck` / cover board, `Rigid Insulation`, XPS, `EPDM at flat roofs` | `4x8`, `SQ FT` |
-| Canopy, upper porch | `sqfts/flat canopy` или по блоку canopy | `3/4" T&G`, tapered insulation, `5/8" Ext Gyp` или DensGlass снизу (две строки soffit) | `4x8`, `SQ FT` |
+| Overframe | `sqfts/overframe 4` | `Roof Sheathing (overframes)`, sleepers по детали ([Overframes](../horizontal/roof-framing/overframes.md)) | `4x8`, sleepers по своей странице |
+| Плоская | `sqfts/flat`, `sqfts/ply flat` | `Roof Sheathing at Flat Roofs` `3/4"` и `Cover Board` в листах; `Insulation` (rigid, tapered, XPS: площадь x число слоёв x 1.1) площадью; `EPDM at flat roofs` только когда кровельные материалы в scope, иначе мембрана by others и Note | `4x8`, `SQ FT` |
+| Canopy, upper porch | `sqfts/flat canopy` или по блоку canopy | `3/4" T&G`, tapered insulation, снизу `Soffit Gypsum` (`5/8" Ext Gyp`, DensGlass); два слоя = одна строка `Soffit Gypsum (2)` с x 2 в формуле | `4x8`, `SQ FT` |
 | Stair lid, mech screen | своя Area | два слоя настила (`1/2" Ply` + `3/4" OSB`), kickers по детали | `4x8` |
 
 Каждый тип - свой контур и свой уклон; уклон соседней крыши не наследуется.
@@ -39,8 +39,8 @@ Alternates (shingles и standing seam на одном плане): уточни 
 
 ## Частые ошибки
 
-- На flat roof пропущены Densdeck / cover board и второй слой XPS той же площади.
-- Canopy посчитан как кусок main roof без tapered и без нижнего гипса.
+- На flat roof пропущены `Cover Board` (Densdeck) и второй слой XPS той же площади.
+- Canopy посчитан как кусок main roof без tapered и без нижнего гипса, или два слоя гипса записаны двумя строками.
 - Piggyback trusses без sleepers.
 - Металл by others, но ply под него не посчитан.
 - Shingles и metal на одном плане, выбран один без Note.

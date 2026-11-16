@@ -83,7 +83,7 @@
 
 - В P и S только ссылка, без `per`, без `not shown; assumed` и без толщины.
 - Позиция в доме отсутствует (нет flat roof) - оставить `per page`, не выдумывать.
-- Расхождение арх и S сразу главной нотой: `Note: Roof Sheathing differ, 15/32" Ply per 3/S3.0 and 1/2" OSB per A4-03; counted 1/2" CDX Ply.` Нет спеки: `Note: Roof sheathing thickness is not specified; assumed 1/2" Ply; verify.` Структурный лист главнее.
+- Расхождение арх и S сразу главной нотой: `Note: Roof Sheathing differ, 15/32" Ply per 3/S3.0 and 1/2" OSB per A4-03; counted 1/2" CDX Ply.` Нет спеки: `Note: Roof sheathing thickness is not specified; assumed 1/2" Ply; verify.` Структурный лист главнее по толщине и по тому, какие стены и стороны обшиваются; продукт (Zip, OSB, Ply) берётся из типов стен на Arch ([Советы: обшивка](boss-feedback-rules.md#sheathing)).
 - `7/16" Zip` на S и `Zip R-3` в wall type - один продукт, не расхождение: `Note: Wall Sheathing 7/16" Zip R3 per 8/S3.0 A2-00.`
 - E-callout построчно в формате `деталь/лист`: `15/S311`, `9/13/S311`.
 

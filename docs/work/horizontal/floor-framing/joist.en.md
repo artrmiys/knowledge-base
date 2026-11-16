@@ -43,10 +43,12 @@ Export: the JS button on the XL strip writes joists as "count / length" pairs in
 | `Joists 16" o.c.` | `11 7/8 TJI 230` | 36 | `20` | `S102` |
 | `Joists 16" o.c.` | `11 7/8 TJI 230` | 45 | `12` | `90 pcs 6'` |
 | `Dbl Joists` | `11 7/8 TJI 230` | 4 | `20` | `under wall per S102` |
-| `Hangers` | `ITS2.37/11.88` | `=EVEN(G*12/16)` | `pcs` | |
-| `Rim Board` | `11-7/8" LSL Rim` | LFT x 1.05 | `LFT` | |
+| `Hangers` | `ITS2.37/11.88` | number of joist ends that hang | `pcs` | detail |
+| `Rim Board` | `11-7/8" LSL Rim` | `=CEILING(G/D,1)` | `16` | detail |
 
-Hangers: on both ends of every joist that hangs; count by assemblies, not by purchase boards after cutting. Model per the detail (`U210-2`, not `LUS210-2`). `ITS` is top-flange only up to 16" depth and with no skew; deeper - `HIT`. Exterior and on P.T.: `Zmax` as a separate word; `H2.5A` ties to trusses under the sheathing go without Zmax. Selection: [Hangers](../../../reference/hangers.md); how to write it in B: [hardware format in the DFL](../../../reference/hangers.md#dfl-format).
+In a framing book the rim is 16' boards; LFT x 1.05 stays only on an EWP-only job: [Rim Board](details/rim.md).
+
+Hangers: on every joist end that hangs (both ends if the joist hangs on both sides); count by assemblies, not by purchase boards after cutting. If the joists are not listed by the piece but hang along a line, count by the line: `=EVEN(G*12/16)`, where `G` is the length of that line (ledger or beam) in LFT and `12/16` is the number of joists per foot at 16" o.c. Joists on both sides of the line: `G` x 2. Model per the detail (`U210-2`, not `LUS210-2`). `ITS` is top-flange only up to 16" depth and with no skew; deeper - `HIT`. Exterior and on P.T.: `Zmax` as a separate word; `H2.5A` ties to trusses under the sheathing go without Zmax. Selection: [Hangers](../../../reference/hangers.md); how to write it in B: [hardware format in the DFL](../../../reference/hangers.md#dfl-format).
 
 <figure markdown>
   ![Face-mount joist hanger on a beam](../../../assets/images/photos/framing/joist-hanger-on-joist.jpg)
@@ -60,9 +62,9 @@ Spacing factor if you count by hand: `pcs = zone width LFT x 12 / spacing` plus 
 - A plain Area named `2x8 16"`: there is no count, the area goes to Excel.
 - Spacing restarted from an interior beam, or a joist removed though it does not land on the beam (tolerance about 2").
 - Hangers not on both ends; `ITS` on joists 18" and deeper; DHU where the drywall stops under the floor (ITS is needed).
-- Rim split into 16' and called `1-3/4 LVL` though not specified: [Rim Board](details/rim.md).
+- The rim line in the tree cut into 16' pieces (measure one Line, the formula counts the boards), or the rim called `1-3/4 LVL` though not specified: [Rim Board](details/rim.md).
 - Rim at roof TJI forgotten.
-- Series lost: `TJI` instead of `11 7/8 TJI 230`; RED rewritten as TJI; there is no `TJI 9 1/2` in the 360/560 series.
+- Series lost: `TJI` instead of `11 7/8 TJI 230`; RED rewritten as TJI; `TJI 9 1/2` comes only in series 110, 210, 230 (series 360 and 560 start at the 11 7/8 depth).
 - Top chord bearing missed: there it is blocking instead of a ribbon, see [Ribbon Board](details/ribbon.md).
 - Long 2x ceiling joists spliced over a support counted as one board.
 - [All floor framing mistakes](../../../start/common-mistakes.md#floor)
@@ -84,6 +86,8 @@ framing/
 | `Joists 16" o.c.` | `11 7/8 TJI 230` | 36 | 20 | |
 | `Hangers` | `ITS2.37/11.88` | 42 | pcs | `9/S501` |
 
+Hangers in the example: 36 joists of 20' hang on a flush beam at one end and bear on a wall at the other - 36 pcs; 3 short joists of 12' hang at both ends - 6 pcs. Total 42.
+
 ## I-joist profiles (manufacturer reference)
 
 Write the series and depth as in the schedule. The images are archived, for checking the family name.
@@ -93,7 +97,7 @@ Write the series and depth as in the schedule. The images are archived, for chec
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">TJI</div>
-      <div class="kb-figure-row__rule">Series 110, 210, 230, 360, 560. In the row <code>11 7/8 TJI 230</code>, not a generic <code>TJI</code>.</div>
+      <div class="kb-figure-row__rule">Series 110, 210, 230, 360, 560; the 9 1/2 depth exists only in 110, 210, 230. In the row <code>11 7/8 TJI 230</code>, not a generic <code>TJI</code>.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-007.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-007.png" alt="TJI joist series" loading="lazy"></a>
   </figure>

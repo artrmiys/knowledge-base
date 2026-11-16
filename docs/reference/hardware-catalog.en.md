@@ -9,7 +9,8 @@ Here: a glossary of the Simpson Strong-Tie hardware that shows up in the DFL: wh
 
 | Part | Meaning | Example |
 | --- | --- | --- |
-| `Zmax`, `Z` | hot-dip galvanized: exterior and on P.T. lumber | `LUS210 Zmax` (in B, written as a separate word) |
+| `Zmax` | hot-dip galvanized: exterior and on P.T. lumber. In B it is a separate word after the model | `LUS210 Zmax`, `ABU66 Zmax` |
+| `Z` at the end of a model | the same coating, but here `Z` is part of the catalog name: write the model as the catalog prints it, do not add the word `Zmax` | `DTT2Z`, `ML210Z`, `LRU212Z` |
 | `-2`, `-3` | number of plies of the carried beam | `HUC210-3` |
 | `E` on a holdown | embedded: cast-in anchor, not post-installed | `HDUE7` |
 | number in the model | section or load | `ABU66` for a 6x6, `HDU8` is stronger than `HDU4` |
@@ -19,7 +20,7 @@ Here: a glossary of the Simpson Strong-Tie hardware that shows up in the DFL: wh
 
 | Model | Used for |
 | --- | --- |
-| `LUS26`, `LUS28`, `LUS210`, `LUS212` (+`-2`, `-3`) | face mount for sawn 2x; the most common |
+| `LUS24`, `LUS26`, `LUS28`, `LUS210` (+`-2`, `-3`) | face mount for sawn 2x; the most common. A 2x12 also takes `LUS210`: there is no `LUS212` model |
 | `LUC26`, `LUC210` | concealed flange for 2x: end joists where the flange must not stick out |
 | `HU9`, `HU11`, `HU14`, `HU410`, `HU412`, `HU414`, `HU612` | heavy U for LVL and built-up beams |
 | `HHUS410`, `HHUS5.50/10`, `HHUS5.50/12`, `HGUS7.25/12` | heavy hi-cap for LVL, PSL, large beams |
@@ -48,7 +49,7 @@ Here: a glossary of the Simpson Strong-Tie hardware that shows up in the DFL: wh
 
 | Model | Used for |
 | --- | --- |
-| `ABU44`, `ABU66`, `ABU68`, `ABU88` (+`Zmax`), `ABA66Z` | post base by post section |
+| `ABU44`, `ABU66`, `ABU68`, `ABU88`, `ABA66` (+`Zmax`) | post base by post section |
 | `BC46 Zmax`, `BCS2-3/6 Zmax`, `BCS2-2/4` | cap by beam plies: 2-ply `BC46`, 3-ply `BCS2-3/6`; per schedule |
 | `CCQ44`, `CCQ46`, `CCQ66`, `CCQ68`, `ECCQ66` | column cap; `ECCQ` at an edge or cantilever |
 | `PC6Z`, `PB66 Zmax`, `CBSQ66 Zmax` | light cap and standoff base |

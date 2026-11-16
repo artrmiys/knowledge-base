@@ -26,12 +26,16 @@ A separate measurement is rarely needed: the length comes from the detail Line (
 
 ## Tree name and DFL row
 
-The `blt` macro (insert bolts) gives three rows at once. Formulas in pcs; a result under 50 is rounded up to an even number (significance 2).
+The `blt` macro (insert bolts) gives three rows at once. Formulas in pcs, rounded up to an even number (significance 2).
+
+How to read the label `Anchor Bolts 24" o.c. (2)`: it is the template label, built by the macro. `24" o.c.` is the spacing from column H of the bolts row, `(2)` is the number of bolts at one point (in the book it sits in H of the `Washers` row). The word `Anchor` here does not mean an anchor into concrete: through bolts of a nailer or ledger carry the same label.
+
+In the formula `G` is the length of the connection line in LFT (steel beam, ledger), `H` is the spacing in inches, `G*12/H` is the number of points, `2` is the bolts per point.
 
 | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- |
-| `Anchor Bolts 24" o.c. (2)` | `3/8" Ø x 6"` | `=CEILING(G*12/H*2*1.1,2)` | `pcs` | detail |
-| `Washers 24" o.c. (2)` | `3/8" Washers` | same formula | `pcs` | |
+| `Anchor Bolts 24" o.c. (2)` | `3/8" Ø x 6"` | `=CEILING(G*12/H*2,2)` | `pcs` | detail |
+| `Washers 24" o.c. (2)` | `3/8" Washers` | same formula; x 2 when there are washers on both sides | `pcs` | |
 | `Nuts 24" o.c. (2)` | `Nuts for 3/8" Ø` | same formula | `pcs` | |
 | `Bolts` | `1/2" Ø x 8" through` | connections x bolts per connection | `pcs` | beam-to-post detail |
 
@@ -54,9 +58,11 @@ The `blt` macro (insert bolts) gives three rows at once. Formulas in pcs; a resu
 
 | A | B | C | D | E | G | H |
 | --- | --- | --- | --- | --- | --- | --- |
-| `Anchor Bolts 24" o.c. (2)` | `3/8" Ø x 6"` | `=CEILING(G*12/H*2*1.1,2)` | pcs | `note II.B per S101` | 86 | 24 |
-| `Washers 24" o.c. (2)` | `3/8" Washers` | `=CEILING(G*12/H*2*1.1,2)` | pcs | | 86 | 24 |
-| `Nuts 24" o.c. (2)` | `Nuts for 3/8" Ø` | `=CEILING(G*12/H*2*1.1,2)` | pcs | | 86 | 24 |
+| `Anchor Bolts 24" o.c. (2)` | `3/8" Ø x 6"` | `=CEILING(G*12/H*2,2)` | pcs | `note II.B per S101` | 86 | 24 |
+| `Washers 24" o.c. (2)` | `3/8" Washers` | `=CEILING(G*12/H*2,2)` | pcs | | | 2 |
+| `Nuts 24" o.c. (2)` | `Nuts for 3/8" Ø` | `=CEILING(G*12/H*2,2)` | pcs | | | |
+
+A nailer on an 86 LFT steel beam, 2 bolts per point at 24" o.c.: 86 x 12 / 24 = 43 points, x 2 = 86 bolts; the same number of washers and nuts. In the book G and the spacing sit only in the bolt row, and the `Washers` and `Nuts` formulas take them from there; H of the `Washers` row holds 2 (bolts per point), and that number prints in the `(2)` of the labels.
 
 ## See also
 

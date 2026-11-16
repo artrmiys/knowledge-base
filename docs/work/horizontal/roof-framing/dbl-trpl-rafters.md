@@ -20,9 +20,9 @@ Dbl и Trpl Rafters - сдвоенные или строенные rafters: по
 
 ## Как мерить в OurPlanCore
 
-Инструмент Beam (B) вдоль rafter на листе roof framing с точкой F. Один пакет = одна точка с `(n)` в имени. Плановая длина умножается на коэффициент уклона (6:12 даёт 1.118, 8:12 даёт 1.202; таблица на странице [Hip](hip.md)) или берётся с разреза. Программа округляет заказную длину (до 8' до фута, длиннее до чётного).
+Инструмент Beam (B) вдоль rafter на листе roof framing с точкой F. Один пакет = одна точка с `(n)` в имени. В DFL колонка C считает все доски: места x plies. Плановая длина умножается на коэффициент уклона (6:12 даёт 1.118, 8:12 даёт 1.202; таблица на странице [Hip](hip.md)) или берётся с разреза. Программа округляет заказную длину (до 8' до фута, длиннее до чётного).
 
-Hangers нужны только когда rafters опираются на несущий ridge beam или деталь прямо их показывает: `LSSR`, `LRU` по ширине пакета. К ridge board hangers не ставятся.
+Hangers нужны только когда rafters опираются на несущий ridge beam или деталь прямо их показывает: `LSSR`, `LRU` по ширине пакета. К ridge board hangers не ставятся. Hangers кровли пишутся без `Z` и без `Zmax` (`LSSR210`, `LSSR2.56`); исключение - модели `LRU...Z` (`LRU212Z`), у них Z часть названия.
 
 <figure markdown>
   ![Инструмент Beam](../../../assets/images/ourplancore/v3/measure-beam.png)
@@ -41,15 +41,19 @@ Hangers нужны только когда rafters опираются на не�
 | Имя в дереве | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- | --- |
 | `beams/dbl rafters 2x12 18` | `Dbl Rafters` | `2x12` | точки x 2 | `18` | `S201` |
-| `beams/trpl rafters (3) 1 3/4 x 11 7/8 LVL 28` | `Trpl Rafters` | `1 3/4 x 11 7/8 LVL` | точки x 3 | `28` | `R2 per S601` |
-| `details/LSSR` | `Hangers` | `LSSR2.56Z`, `LRU212Z` | по узлам | `pcs` | деталь |
+| `beams/trpl rafters (3) 1 3/4 x 11 7/8 LVL 28` | `Trpl Rafters (3)` | `1 3/4 x 11 7/8 LVL` | точки x 3 | `28` | `R2 per S601` |
+| `details/LSSR` | `Hangers` | `LSSR2.56`, `LRU212Z` | по узлам | `pcs` | деталь |
+
+Одно правило для всех пакетов (балки, посты, headers, rafters): C = места x plies. Один skylight с усиленными rafters с двух сторон - это 2 места и C = 4 у `Dbl Rafters`.
 
 ## Частые ошибки
 
 - Длина взята с плана без уклона.
 - Пакет записан как одна доска: `(3)` потерян, или наоборот три точки и `(3)` вместе.
 - Hangers поставлены к ridge board, где их нет, или пропущены у ridge beam.
-- Hanger не по ширине пакета: `LSSR2.56` под один 2x вместо `LSSR410` под два.
+- Hanger не по ширине пакета: `LSSR210` под один 2x вместо `LSSR210-2` под два.
+- Hanger кровли записан с `Z` или `Zmax` (`LSSR2.56Z`): пишем `LSSR2.56`. `LRU212Z` остаётся как есть.
+- В C стоят точки без умножения на plies.
 - Усиленные rafters по детали "every other rafter doubled" усреднены в обычные rafters.
 - [Все ошибки по крыше](../../../start/common-mistakes.md#roof)
 
@@ -58,8 +62,10 @@ Hangers нужны только когда rafters опираются на не�
 | A | B | C | D | E |
 | --- | --- | --- | --- | --- |
 | `Dbl Rafters` | `2x12` | 4 | 18 | `S201, skylight` |
-| `Trpl Rafters` | `1 3/4 x 11 7/8 LVL` | 3 | 28 | `R2` |
-| `Hangers` | `LSSR2.56Z` | 2 | pcs | `rafters to ridge beam 7/S501` |
+| `Trpl Rafters (3)` | `1 3/4 x 11 7/8 LVL` | 3 | 28 | `R2` |
+| `Hangers` | `LSSR210-2` | 2 | pcs | `rafters to ridge beam 7/S501` |
+
+`Dbl Rafters`: 2 места у skylight x 2 = 4. `Trpl Rafters (3)`: 1 место x 3 = 3. Hangers: два пакета `Dbl Rafters` висят верхним концом на ridge beam, по одному hanger на пакет.
 
 <figure markdown>
   ![Второй вид dbl rafters](../../../assets/images/confluence/confluence-140.png)

@@ -125,15 +125,25 @@ from `siding`.
 
 | A Description | B Size | C Qty | D Unit | E |
 | --- | --- | --- | --- | --- |
-| `Ext. Casing sides` | `5/4x4` | `=2*5.5*34` | LFT | `A601` |
-| `Head crowns` | `3-1/2" crown` | `=3.3*34` | LFT | `scaled` |
-| `CornerBoards` | `5/4x6` | `=8*28` | LFT | `A201` |
-| `Soffits at Porch` | `Beadboard` | `=12*8*G` | SQ FT | `6/A550` |
-| `Columns` | `12" Dia Fbg Non-taper w/c&b` | `4` | pcs | `8'` |
-| `Shutters - paneled` | `20"x60"` | `12` | pairs | `A201` |
+| `Ext Casing` | `5/4x4` | `=CEILING(G*1.1,10)` | LFT | `A601` |
+| `Crowns` | `3-1/2" crown` | `=CEILING(G*1.1,10)` | LFT | `scaled` |
+| `Corner Boards` | `5/4x6` | `=EVEN(G*2*1.1)` | LFT | `A201` |
+| `Soffits at Porch` | `Beadboard` | `=CEILING(G*1.1,10)*units` | SQ FT | `6/A550` |
+| `Columns` | `12" Dia Fbg Non-taper` | `4` | `8'` | `w/ cap & base` |
+| `Shutters` | `20"x60" paneled` | `12` | pairs | `A201` |
 
+- G is the measured length or area from the tree. The 1.1 waste and the round-up
+  are in the C formula: to 10, or to 2 when the total is under 50.
+- `Corner Boards`: G is the sum of the outside corner heights. A corner made of two
+  boards: `=EVEN(G*2*1.1)`, so 8 corners at 28' = 224 LFT of corners give 494 LFT of
+  boards. A one-piece L profile per the detail: `=EVEN(G*1.1)`.
+- Write the labels as the DFL template does: `Ext Casing`, `Corner Boards`, `Crowns`,
+  `Frieze Board`, `Over Fascia Trims`, `Fascia at Eves`, `Soffits at Eves`,
+  `Watertable Trim`, `Window Sills`. The macros sum rows by the label text:
+  `CornerBoards` and `Corner Boards` are two different rows to them.
 - `LFT` for linear stock, `SQ FT` for panels and beadboard, `pcs` and `pairs`
-  for products. Column and post height separately, not inside the description.
+  for products. For `Columns` D holds the column height (`8'`) and C the count;
+  the height is not written inside the description.
 - Size and profile always visible (`5/4x4`, `3-1/2" crown`, `4" Vinyl
   corner`); never write a generic `trim`.
 - In the trims workbook for macros a row is three columns: Label, Value,

@@ -24,6 +24,10 @@ Roof SQFT - площадь кровли в плане, разбитая по у�
 ## Как мерить в OurPlanCore
 
 1. Area по плановой проекции каждого ската на плане кровли (точка W).
+   Контур идёт по кромке крыши (линия fascia) вместе со свесами eave и rake:
+   настил лежит и на свесе. По наружной грани стен кровлю не обводим. Общее
+   правило свесов для всех площадей:
+   [Floor SQFT, правило 8](1st2nd.md#rules).
    Один уклон и один материал = одна позиция; скаты одного уклона можно
    собрать полигонами в одной позиции.
 2. Имя `rf <уклон>`: `rf 6` = 6:12, `rf mtl 4` (под металл), `overframe 4`,
@@ -43,8 +47,16 @@ Roof SQFT - площадь кровли в плане, разбитая по у�
 | `sqfts/rf 6` | Front Page, `Roof` | | `SQ FT` | как измерено |
 | `sqfts/rf 6` | `Roof Sheathing` | `19/32" Ply or OSB` | `4x8` | `=ОКРВВЕРХ(SQFT*1.118/32*1.1;1)` |
 | `sqfts/rf 6` | `Clips` | `PSCL 19/32` | `pcs` | [H-clips](../horizontal/roof-framing/h-clips.md) |
-| `sqfts/flat` | `Rigid Insulation`, `Densdeck`, `EPDM` | по assembly | `SQ FT` | та же площадь |
+| `sqfts/flat` | `Roof Sheathing at Flat Roofs`, `Cover Board` | по assembly | `4x8` | `=ОКРВВЕРХ(SQFT/32*1.1;1)` |
+| `sqfts/flat` | `Insulation` (rigid, tapered) | по assembly | `SQ FT` | SQFT x слои x 1.1 |
+| `sqfts/flat`, только когда кровельные материалы в scope | `EPDM at flat roofs` в Roof Products | `EPDM` | `SQ FT` | `=ОКРВВЕРХ(SQFT*1.1;10)` |
 | `sqfts/rf mtl 4` | `Roof Sheathing (metal)` | `1/2" Ply` | `4x8` | с 1.054 |
+
+Мембрана flat roof (EPDM, TPO) - кровельный материал. Строка
+`EPDM at flat roofs` есть только когда кровельные материалы в scope
+(`+ roof`). В обычном заказе мембрана by others: строки нет, слои, которые
+считаем мы, и мембрана by others записаны в Note шапки:
+`Note: Roof R1 per A501: 5/8" gypsum, tapered polyiso; EPDM by others`.
 
 ## Частые ошибки
 
@@ -53,6 +65,7 @@ Roof SQFT - площадь кровли в плане, разбитая по у�
 - Все скаты одним полигоном без разделения по уклону и материалу.
 - Flat roof слои (Densdeck, XPS) пропущены, piggy sleepers забыты.
 - Soffit снизу принят за площадь настила.
+- Скат обведён по стенам без свесов: настила не хватит на карнизы.
 
 Все ошибки по площадям: [common-mistakes](../../start/common-mistakes.md#sqft).
 

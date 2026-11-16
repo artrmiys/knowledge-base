@@ -49,15 +49,20 @@ shower screen и pergola.
 | `Fascia Trim at Hdr inside` | `1x12` | LFT | по header изнутри |
 | `Soffit Trim at Hdr` | `1x4` / `1x6` / `1x12` | LFT | |
 | `Fascia Trim at House wall` | `5/4x6` / `5/4x12` | LFT | примыкание к дому |
-| `Soffits at Porch` | `Beadboard` / `Beadboard Vinyl` | SQ FT | потолок крыльца, `=W*D*G` |
+| `Soffits at Porch` | `Beadboard` / `Beadboard Vinyl` | SQ FT | потолок крыльца, `=CEILING(W*D*1.1,10)*units` |
 | `Frieze inside` | `5/4x12` | LFT | |
-| `Crowns outside` / `Crowns inside` | `3-1/2" crown` | LFT | часто `scaled` |
-| `Columns` | `10"-12" Dia Fbg`, `SQ Fluted` | pcs + высота | см. [Soffit & Fascia](soffit-fascia.md) |
-| `Column wrap` | `1x8` | LFT | обшивка стойки |
-| `Posts at Rails` | `4x4 P.T.` | pcs + 4' | плюс sleeve и cap, см. [Rails & Decking](rails-decking.md) |
-| `Porch deck Fascia` | `1x10` | LFT | |
+| `Crowns` | `3-1/2" crown` | LFT | снаружи и изнутри отдельными строками; часто `scaled` |
+| `Columns` | `10"-12" Dia Fbg`, `SQ Fluted` | высота колонны (`8'`), C = штуки | круглые и декоративные колонны, см. [Soffit & Fascia](soffit-fascia.md) |
+| `Post Wrap` | `1x8` (пост 6x6), `1x6` (пост 4x4) | LFT | обшивка стойки досками: G = высота x 4 стороны x число стоек, C = G x 1.1 вверх до 10 (меньше 50 - до 2) |
+| `Posts at Rails` | `4x4 P.T.` | `4` (длина поста), C = штуки | плюс sleeve и cap, см. [Rails & Decking](rails-decking.md) |
+| `Deck Fascia` | `1x8`, по детали `1x12 Azek` | LFT | открытые кромки настила одного блока x units |
 
-- Потолок porch в scope каркаса: `5/8" Gyp` одной строкой с двумя слоями в
+- `Post Wrap` считается в LFT досок, не штуками: четыре доски на стойку на
+  всю её высоту. Стойка 8' даёт 8 x 4 = 32 LFT, четыре такие стойки 128 LFT,
+  с waste 128 x 1.1 = 140.8, вверх до 10 = 150 LFT. В блоке porch G берётся на один
+  porch и формула умножается на units.
+- Потолок porch в scope каркаса: одна строка `Soffit Gypsum (2)`, SQ FT,
+  `=CEILING(area*2*1.1,2)*units`: два слоя стоят в подписи и один раз в
   формуле, см. [каркас](../deck/deck-porch-balcony-frame.md). Beadboard
   это отделка поверх.
 - Нет деталей: `Note: No Details provided; all trims are assumed per
@@ -83,14 +88,14 @@ shower screen и pergola.
 | `Trims` | `5/4x10` | LFT |
 | `Crowns` | `2" Crowns` | LFT |
 | `Flare Sheathing` | `1/2" CDX Ply` | 4x8 |
-| `WRB` | по спецификации стены | SQ FT |
+| `Vapor Barrier` (подпись шаблона) | WRB по спецификации стены | SQ FT |
 
 ## Частые ошибки
 
 - Porch SQFT на Front Page не заполнен, когда porch стоит стопкой с балконом.
 - Canopy и porch посчитаны повторно в eve и rake.
 - Отделка вставлена при scope Frame only.
-- Columns без типа и высоты; column wrap перепутан с column.
+- Columns без типа и высоты; `Post Wrap` перепутан с column или посчитан штуками.
 - Все ошибки раздела: [Deck, porch, балконы](../../start/common-mistakes.md#deck).
 
 ## См. также

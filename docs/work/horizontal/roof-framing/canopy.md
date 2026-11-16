@@ -19,7 +19,7 @@ Canopy - небольшой навес над входом или вдоль ф�
 | Лист | Что взять |
 | --- | --- |
 | Elevations, roof plan (A) | где canopy, размеры, уклон или flat |
-| Canopy details (A5xx, S5xx) | balки, rafters или joists, шаг, крепление к стене, посты |
+| Canopy details (A5xx, S5xx) | балки, rafters или joists, шаг, крепление к стене, посты |
 | RCP | soffit canopy: материал, слои, каркас soffit |
 | Roof assembly notes | настил canopy: `3/4" T&G OSB`, tapered insulation, cover board |
 | Steel details | стальная пластина и anchor bolts к стене или колонне |
@@ -48,28 +48,43 @@ Canopy - небольшой навес над входом или вдоль ф�
 
 ## Как назвать в дереве и строка DFL
 
-Экспорт: кнопки FR и JS полосы XL кладут позиции canopy в `Canopy Framing List`; если листа нет, он создаётся копией ближайшего этажа. Состав блока по детали:
+Экспорт: кнопки FR и JS полосы XL кладут позиции canopy в `Canopy Framing List`; если листа нет, он создаётся копией ближайшего этажа. Шапка блока: `<Location> Canopy Framing List <L>' x <W>' <G> unit<H>`, G - число одинаковых canopies. Состав блока по детали:
 
 | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- |
-| `Beams (3)` | `2x10` | точки | `12` | `FB30` |
-| `Plates (2) with steel plate` | `2x10` | LFT / 16 | `16` | деталь крепления |
-| `Rafters 16" o.c.` или `Joists 24" o.c.` | `2x10`, `2x6` | по J Area | длины | |
-| `Hangers` | `LUS210`, `HUC210-2` | по узлам | `pcs` | |
+| `Beam (3)` | `2x10 P.T.` | точки x 3 | `12` | `FB30` |
+| `Plates (2) with steel plate` | `2x10 P.T.` | `=ОКРВВЕРХ(G*2/D;1)` | `16` | деталь крепления |
+| `Rafters 16" o.c.` или `Joists 24" o.c.` | `2x10 P.T.`, `2x6 P.T.` | по J Area | длины | |
+| `Hangers` | `LUS210 Zmax`, `HUC210-2 Zmax` | по узлам | `pcs` | |
 | `Anchor Bolts` + `Washers` + `Nuts` | `3/4" Ø x 5"` | по детали | `pcs` | стальная пластина к стене |
-| `Roof Sheathing at Canopy` | `3/4" T&G OSB` | SQ FT / 32 x 1.1 | `4x8` | |
-| `Tapered Insulation` | по спецификации | SQ FT | `SQ FT` | |
-| `Soffits at Canopy (2)` | `5/8" Glassmat` или `5/8" Ext Gyp` | SQ FT x слои | `SQ FT` | RCP |
-| `Frame 16" o.c.` + `Plate (2)` | `2x4` | каркас soffit | `LFT` | RCP |
+
+- `(n)` в Label - число plies, C считает все доски: `Beam (3)` с тремя точками даёт C = 9.
+- Canopy стоит на улице: балки, rafters, joists, plates и ledger блока - `P.T.`, под крышей или нет; hangers с `Zmax` отдельным словом после модели.
+
+Строки canopy в других секциях:
+
+| Секция | A (Label) | B | C | D | E |
+| --- | --- | --- | --- | --- | --- |
+| Roof System Misc | `Roof Sheathing at Canopy Roofs` | `3/4" T&G OSB` | `=ОКРВВЕРХ(G/32*1.1;1)` | `4x8` | лист детали canopy |
+| Roof System Misc | `Roof Insulation` | `Tapered Polyiso Insulation`, по спецификации | SQ FT x 1.1 | `SQ FT` | лист assembly |
+| Canopy Trims | `Soffit Gypsum (2)` | `5/8" Glassmat Gyp` или `5/8" Ext Gyp` | `=ОКРВВЕРХ(G*2*1.1;2)` x число canopies | `SQ FT` | RCP |
+| Canopy Trims | `Frame 16" o.c.` + `Plate (2)` | `2x4`, без P.T. | каркас soffit | `LFT` | RCP |
+
+- Настил canopy со своей площадью (не входит в линии `rf` основной крыши) - строка `Roof Sheathing at Canopy Roofs` в Roof System Misc, под ней `Roof Insulation`, если assembly canopy показывает утеплитель. В блоке canopy настил второй раз не пишем. Если крыша canopy уже входит в линии `rf`, отдельной строки нет.
+- Отделка canopy (soffit gypsum, каркас soffit, fascia) - группа `Canopy Trims` сразу после блока, а не строки в общих секциях. Каркас soffit - `2x4` без P.T., как у frame for soffits.
+- Два слоя гипса на потолке canopy - одна строка `Soffit Gypsum (2)`: `G` - площадь одного canopy, слои стоят в Label и один раз как `x 2` в формуле, запас `1.1` всегда.
 
 Каркас не показан - note сразу под заголовком блока: `Note: Canopy framing is not specified; all framing assumed; verify`.
 
 ## Частые ошибки
 
 - Canopy посчитан в `eve` и `rake` основной крыши второй раз.
-- Soffit canopy посчитан обычным гипсом, а нужен exterior-grade (`5/8" Glassmat`, DensGlass), по детали два слоя.
+- Soffit canopy посчитан обычным гипсом, а нужен exterior-grade (`5/8" Glassmat Gyp`, DensGlass), по детали два слоя.
+- Два слоя гипса записаны двумя строками, без `x 2` или без запаса `1.1`.
 - Площадь soffit не попала в обшивку и WRB, если деталь так требует.
 - Настил canopy по основной спецификации кровли, а деталь даёт `3/4" T&G` + tapered insulation.
+- Настил canopy записан и в блоке, и в Roof System Misc: считается один раз.
+- Балки, rafters или joists canopy без `P.T.`, hangers без `Zmax`.
 - Крепление к стене (стальная пластина, anchor bolts, washers, nuts) пропущено.
 - Metal stud joists canopy посчитаны деревом или не посчитаны: по детали.
 - [Все ошибки по крыше](../../../start/common-mistakes.md#roof)
@@ -77,17 +92,26 @@ Canopy - небольшой навес над входом или вдоль ф�
 ## Пример
 
 ```text
-sqfts/flat canopy                              Area, 96 SF
+sqfts/flat canopy                              Area, 96 SQ FT
 framing/1st floor framing/joists/flat canopy 2x6 24"    J Area
 framing/1st floor framing/beams/FB30 12        3 точки
-framing/1st floor framing/details/canopy ledger   Line, 24 LF
+framing/1st floor framing/details/canopy ledger   Line, 24 LFT
 ```
+
+Блок canopy:
 
 | A | B | C | D | E |
 | --- | --- | --- | --- | --- |
-| `Beams (3)` | `2x10` | 3 | 12 | `FB30 per S601` |
-| `Joists 24" o.c.` | `2x6` | 7 | 8 | `11/A506` |
-| `Soffits at Canopy (2)` | `5/8" Glassmat` | 192 | SQ FT | `11/A506` |
+| `Beam (3)` | `2x10 P.T.` | 9 | 12 | `FB30 per S601` |
+| `Joists 24" o.c.` | `2x6 P.T.` | 7 | 8 | `11/A506` |
+
+Группа `Canopy Trims` после блока:
+
+| A | B | C | D | E |
+| --- | --- | --- | --- | --- |
+| `Soffit Gypsum (2)` | `5/8" Glassmat Gyp` | 212 | SQ FT | `11/A506` |
+
+`Beam (3)`: 3 точки x 3 plies = 9 досок. `Soffit Gypsum (2)`: 96 SQ FT x 2 слоя x 1.1 = 211.2, вверх до чётного = 212, один canopy.
 
 ## См. также
 

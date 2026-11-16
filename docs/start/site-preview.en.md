@@ -1,9 +1,10 @@
 # Page preview
 
-This page is a quick visual check: open it locally and look at
+This page is a quick visual check for the editor: open it locally and look at
 readability, image cards, tables and links between rules. It does not
-replace the working sections of the wiki; it shows what a good
-topic page should look like.
+replace the working sections; it shows what a good topic page should look like.
+The template is the same for the reader and the editor: it is also described in
+[How to use the KB](how-to-use.md).
 
 ## Quick route
 
@@ -49,13 +50,20 @@ topic page should look like.
 
 ## How a topic page should read
 
+A topic page of the "Work" section goes in this order:
+
 | Block | What it should contain | What it is for |
 | --- | --- | --- |
-| `What to count` | Specific takeoff items | So there is no argument over whether an item is in scope |
-| `Rules` | Short estimating rules | To apply the rule quickly in PlanSwift/Excel |
-| `Where to look` | Plan, schedule, notes, details | So the estimator does not search for the source at random |
-| `Visual check` | Image + rule + action note | So the image is not a separate gallery with no purpose |
-| `Check` | Final QA list | To catch mistakes before output |
+| Picture at the top | A section or plan of the element itself; every part has a number, and the number is a DFL row with its unit | So the worker recognizes the element on the drawing and sees at once which row it goes to |
+| `What it is` | How the element differs from its neighbor | So a Sill Plate is not mixed up with a Btm Plate |
+| `Where to find it in the drawings` | Sheet, schedule, notes, details | So nobody searches for the source at random |
+| `How to measure in OurPlanCore` | Tool (Line, Area, Count, J Area, Beam, Openings), what to trace, on a sheet with which point W/F/S/U; a screenshot of measuring this very element | So everybody measures the same way |
+| `How to name it in the tree and the DFL row` | Takeoff name, row label, column D, formula and factor | So the macros can read the name and the number adds up |
+| `Common mistakes` | What was found in reviews, with real numbers | To catch the mistake before delivery |
+| `Example` | 3-6 rows of the tree or the DFL; the arithmetic adds up and matches the neighboring pages | So there is something to check your own workbook against |
+| `See also` | Related pages | So a rule is not duplicated |
+
+One rule lives on one page. If a number or a unit is needed elsewhere, put a short version and a link there, not a second wording: two wordings drift apart sooner or later.
 
 !!! note "Main rule"
     An image must be tied to an action: what to check on the drawings and how
@@ -113,7 +121,9 @@ topic page should look like.
 
 ## Mini checklist before delivery
 
-- [ ] The rule is short and usable.
+- [ ] The rule is short and usable; the unit is as in column D (`LFT`, `SQ FT`, `4x8`, `pcs`).
+- [ ] The formula and the example are recalculated by hand; the number matches the neighboring pages and [Formulas](../reference/formulas.md).
+- [ ] The caption under a picture describes what the picture actually shows.
 - [ ] Technical terms kept in English: `Joist`, `Rim Board`, `FRT`,
   `Sheathing`, `Hangers`.
 - [ ] Explanations in the page language (Russian on Russian pages).
