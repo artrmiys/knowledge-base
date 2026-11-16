@@ -31,7 +31,7 @@ Lite is built from the same code as the full version, but separately and not wit
 | `ourplancore.exe` file | Size |
 | --- | --- |
 | Lite 3.0.36-lite (build of 11/16/2026) | 92.4 MB |
-| Full version (build of 11/14/2026) | about 254 MB |
+| Full version (3.0.35, build of 11/16/2026) | about 254 MB |
 
 Lite is smaller because its file leaves out the DeepSeek and OpenCode engine, the copy of the knowledge base for the assistant, voice input, Tesseract OCR, the Python libraries for parsing PDFs and images, the `TemplateCom.xlsm` template, window snapshots for the sample job cards and the .NET language files other than English.
 
