@@ -1,5 +1,10 @@
 # ИИ в OurPlanCore
 
+!!! info "Только в полной версии"
+    Эта страница открывает блок "Нейронки, терминал и 3D (полная версия)". В OurPlanCore Lite, которая стоит у эстиматоров, нет модуля AI, терминала, Workspace и 3D; `Settings > Agent Bridge` в Lite есть. Чем версии отличаются: [Lite и полная версия](ourplancore-lite.md).
+
+    Страницы блока: [ИИ в программе](ourplancore-ai.md) (эта), [Консоль ИИ и терминал](ourplancore-ai-console.md), [Workspace, второй компьютер](ourplancore-workspace.md), [3D-крыша](ourplancore-3d-roof.md), [3D и Massing](ourplancore-3d.md).
+
 Здесь - все места, где OurPlanCore 3.0 зовёт модель или внешнего агента: заметки из кропов и их формат (AI Crop Notes), чтение штампов листов, AI Inbox и AI Manager коротко, Agent Bridge. Нужно, когда хочется ускорить рутину, но так, чтобы каждый результат ИИ оставался на проверке у эстиматора. Терминалы Claude и Codex в окне программы со всеми кнопками, контекстом и сценариями описаны отдельно: [Консоль ИИ](ourplancore-ai-console.md).
 
 ## Что есть и что для этого нужно
@@ -10,10 +15,10 @@
 | AI Crop Notes | формат строк Tag/Size в таких заметках | нет | `Settings > AI Crop Notes` |
 | AI Inbox и AI Manager | очередь запросов, ответы, наблюдения, маркеры | да | модуль AI |
 | Similar с перепроверкой AI | совет, какой символ выбран | да | модуль AI, галка в диалоге Similar |
-| OCR при Name | чтение номера листа без текстового слоя (Tesseract) | нет | работает всегда |
+| OCR при Name | чтение номера листа без текстового слоя (Tesseract) | нет | работает всегда; в Lite OCR нет |
 | AI по картинке штампа | имя листа, которое не удалось прочитать текстом и OCR | да | галка в `Settings > Auto Rename / Scale` |
 | Терминалы `>_` ([консоль ИИ](ourplancore-ai-console.md)) | Claude или Codex в панели справа с живым контекстом плана | да | Git Bash и CLI ассистента, вход один раз |
-| Agent Bridge | агент правит открытый проект через программу | нет (локально) | `Settings > Agent Bridge` |
+| Agent Bridge | агент правит открытый проект через программу | нет (локально) | `Settings > Agent Bridge`; есть и в Lite |
 
 Ключ OpenAI задаётся в диалоге `AI Settings` (кнопка на полосе инструментов, в AI Manager или команда `OpenAI Settings` в палитре); он сохраняется в переменные окружения пользователя Windows, в проект не пишется. Модель по умолчанию `gpt-5-mini`, список моделей там же. Всё, что помечено "да", уходит в сеть кропами листа: на чужих чертежах учитывайте это.
 
@@ -41,7 +46,7 @@
 
 ## AI Inbox и AI Manager { #inbox }
 
-AI Inbox - панель внизу Main View (модуль AI): наблюдения, кропы, запросы к модели, ответы и маркеры проекта, новые сверху; у запроса в начале строки статус `[pending]`, `[running]`, `[done]`, `[failed]`. AI Manager - та же лента отдельной вкладкой с кнопками `Run AI`, `Run New`, `Retry Failed` и наборами маркеров ([Менеджеры](ourplancore-managers.md#ai-manager)). Выводы ИИ - черновики, не замеры: в дерево они попадают только после проверки ([ниже](#action-draft)). Всё хранится в проекте, в папке `AI_Context`.
+AI Inbox - панель внизу Main View (модуль AI): наблюдения, кропы, запросы к модели, ответы и маркеры проекта, новые сверху; у запроса в начале строки статус `[pending]`, `[running]`, `[done]`, `[failed]`. AI Manager - та же лента отдельной вкладкой с кнопками `Run AI`, `Run New`, `Retry Failed` и наборами маркеров ([ниже](#ai-manager)). Выводы ИИ - черновики, не замеры: в дерево они попадают только после проверки ([ниже](#action-draft)). Всё хранится в проекте, в папке `AI_Context`.
 
 <figure markdown>
   ![Панель AI Inbox](../assets/images/ourplancore/v3/ai-inbox.png)
@@ -58,6 +63,19 @@ AI Inbox - панель внизу Main View (модуль AI): наблюден
 | `More` | шапка | `Run New Bookmarks`, `Retry Failed Bookmarks` ([пакет](#batch)), `Create Marker Set`, `Manage Marker Sets...`, `Export Marker Context` ([меню записи](#inbox-menu)) |
 | `+ Add` | шапка | своя заметка-наблюдение к текущему листу |
 | ++enter++ | выбранная запись | окно Observation Details |
+
+### Вкладка AI Manager { #ai-manager }
+
+AI Manager - та же лента отдельной вкладкой строки режимов, с таблицей `Type`, `Page`, `Observation`, `Quality`, `Time`. Открывается командой палитры `Show AI Manager` при включённом модуле AI.
+
+| Группа | Кнопки |
+| --- | --- |
+| Setup | `AI Settings`, `+ Add`, `Refresh` |
+| Review | `Open Details`, `Go to Page`, `Run AI` |
+| Batch | `Run New` (все новые запросы по закладкам), `Retry Failed` |
+| Markers | `Create Set`, `Marker Sets`, `Export Markers` |
+
+Что попадает в Inbox: кропы `AI crop here -> note` и `AI quick box here -> note`, наблюдения `Save observation here`, `Add as pending check`, `Suggest takeoff item here`, запросы трассы `Trace wall from this point`, `Trace closed area`, `Check missed takeoffs on this page` ([трассировка](ourplancore-snap-trace.md#ai-trace)), кропы из консоли ИИ `AI Crop +` ([консоль](ourplancore-ai-console.md#crop)). Маркер - проверенный образец символа; по нему работает `Find Similar From Marker`. Выводы ИИ в Inbox - черновики, не замеры: в дерево они попадают только после подтверждения. Ключ и модель задаёт диалог `AI Settings`; формат заметок из кропов - `Settings > AI Crop Notes` ([выше](#crop-notes)).
 
 ### Как отправить запрос модели { #run-request }
 
@@ -188,7 +206,8 @@ AI Inbox - панель внизу Main View (модуль AI): наблюден
 ## См. также
 
 - [Консоль ИИ](ourplancore-ai-console.md) - терминалы Claude и Codex в окне
-- [Менеджеры](ourplancore-managers.md) - AI Manager, Sheet Manager
+- [Lite и полная версия](ourplancore-lite.md) - чего нет в Lite
+- [Менеджеры](ourplancore-managers.md) - Sheet Manager
 - [Settings: все категории](ourplancore-settings.md)
 - [Workspace и второй компьютер](ourplancore-workspace.md)
 - [Листы Pages](ourplancore-pages.md) - Name, Scale

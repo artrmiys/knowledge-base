@@ -1,89 +1,18 @@
 # Экспорт в Excel
 
-Здесь: полоса XL справа от листа, что каждая кнопка берёт из дерева и куда пишет в книге `TemplateCom.xlsm`, легенда LG, точка "комментарии", кнопки `Value` и `Excel`, постоянная связь позиции с ячейкой `Link to Excel`, `Auto Link` на весь DFL и сброс связей, настройка кнопок в `Settings > Excel Actions`, порядок работы и ошибки. Нужно после замеров, перед работой в DFL.
+Здесь: как перенести числа из дерева Takeoffs в книгу DFL. В Lite это кнопки `Excel` и `Value` внизу слева, постоянная связь позиции с ячейкой `Link to Excel`, `Auto Link` на весь DFL, сброс связей и `Export > Export Excel` в файл. Полоса XL справа от листа, которая пишет секции в `TemplateCom.xlsm` и сама запускает макросы книги, есть только в полной версии: она описана в конце страницы ([Полоса XL](#xl)). Нужно после замеров, перед работой в DFL.
 
-<!-- DEMO: d-excel-xl -->
+## Excel в Lite { #lite }
 
-<figure markdown>
-  ![Полоса XL](../assets/images/ourplancore/v3/excel-strip.png)
-  <figcaption markdown="span">Верх полосы: `ALL` и `LG`, ниже кнопки стен и площадей, дальше начинается framing (`FR`). На низком окне полоса прокручивается колесом мыши до нижних кнопок framing. Подсказка каждой кнопки говорит, что она делает.</figcaption>
-</figure>
-
-<figure markdown>
-  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-xl-scroll.png"><source src="../../assets/images/ourplancore/demo/d-xl-scroll.mp4" type="video/mp4"></video>
-  <figcaption markdown="span">Демонстрация: открыт AI Inbox, полоса XL стала короткой; колесо мыши над полосой прокручивает её до `FR`, `PS`, `BM`, `HD` и обратно.</figcaption>
-</figure>
-
-## Что нужно до нажатия
-
-- [ ] В Excel открыта книга корпуса, сделанная из `TemplateCom.xlsm` (копия шаблона из папки обновлений программы), макросы разрешены. Программа ищет открытую книгу `TemplateCom.xlsm`; если её нет, берёт активную книгу с макросами (`.xlsm`), в которой есть лист `Detailed Frame List`.
-- [ ] Модуль `Excel Integration` включён (`Settings > Modules`, по умолчанию включён).
-- [ ] В дереве Takeoffs выделен **один** корпус (папка с корнями) или одна папка экспорта (`walls`, `sqfts`...). Для `ALL` выделение из двух корпусов не принимается ([несколько зданий](ourplancore-buildings.md#excel)).
-- [ ] Легенда `LG` заполнена кодами балок, постов и headers проекта (иначе в книге останутся коды вместо размеров).
-- [ ] Проект сохранён, `Total` у крупных позиций проверен.
-
-## Как выгрузить корпус одной кнопкой: ALL { #steps }
-
-Зачем: вся книга корпуса за один прогон, шаги в правильном порядке.
-Нужно: список выше.
-
-1. Откройте книгу корпуса в Excel и активируйте лист `Detailed Frame List`.
-2. Выделите в OurPlanCore папку корпуса в Takeoffs (или корень при одном корпусе).
-3. Нажмите `LG`, впишите строки `H5 - (2) 1 3/4 x 11 7/8 LVL`, `C4 - 6x6`; кнопка **Add missing codes** добавляет пустые строки для всех кодов проекта без размера; нажмите **Save for job**.
-4. Нажмите `ALL`. Прочитайте, что программа пропустит (позиции без числа, имена не по формату), и нажмите **Continue**.
-5. Следите за подписью шагов `Excel ALL 3/12: Walls...` и дождитесь итога `Completed: ...` со списком пропущенного. Шаг, который не смог выполниться, перечисляется, а не останавливает остальные (кроме макросов серии A: они останавливают цепочку).
-6. Проверьте книгу: матрицу стен, Front Page, framing lists.
-7. Сохраните книгу в Excel сами: программа её не сохраняет.
-
-Результат: книга корпуса заполнена; поправили замер в программе - повторите нужную кнопку, не весь `ALL`.
-
-`ALL` по порядку: `UN`, `SF`, `WL` (сразу за ним `SH` и `SW`), `GB`, `TH`, `PP`, `E/R`, `OP`, `SHF`, затем framing целиком (`FR`), в конце `BL` (в `ALL` по умолчанию выключен). Что входит в `ALL`, настраивается в `Settings > Excel Actions`.
-
-## Кнопки полосы XL: справка { #buttons }
-
-Общая схема: позиции ветки пишутся в рабочую зону `J:L` листа (имя, число, единица; первое свободное место от строки 10), программа выделяет записанное и запускает макрос книги, макрос раскладывает строки в сдаваемые колонки `A:H`. Как устроена книга - [DFL: как устроена книга](dfl-overview.md), что делает каждый макрос - [Макросы и клавиши Excel](excel-hotkeys.md).
-
-| Кнопка | Берёт из дерева | Пишет в книге |
+| Что | Где | Что делает |
 | --- | --- | --- |
-| `ALL` | весь выделенный корпус | все шаги по порядку выше |
-| `LG` | - | открывает легенду проекта для `PS`, `BM`, `HD`; строка `wall sheathing = 7/16" Zip no insulation` нужна `SH`. Крестик в шапке панели (`Hide the Excel legend panel`) или повторное `LG` закрывают её без сохранения: сначала **Save for job**, иначе правка пропадёт; **Clear** очищает и сохраняет пустую легенду |
-| `SF` | `sqfts` (`sqft`) | `J:L`, макрос `A2_SQFT_calc`: площади этажей, Front Page, кровля по уклонам |
-| `WL` | `walls` | `J:L` с заголовками этажей, строгий порядок, макрос `A3_Walls_Calc_AllGroup`: матрица стен `O:AB` и строки Floor Walls; потом удаление нулевых строк в `A:H` блока стен (шаблонные строки Flashing, Headers, Wall Sheathing, Insulation, Box Sheathing, Tape, Shear Walls, Holdowns остаются) |
-| `GB` | `gables` | `J:L`, `A2_SQFT_calc` |
-| `TH` | `trussheel` | `J:L`, `A2_SQFT_calc` |
-| `PP` | `parapets` | `J:L`, `A4_Parapet`: три числа из хвоста имени `prpt 6.4 5.3 0.5` |
-| `E/R` | `eves rakes` | `J:L`: eve по убыванию LF, потом rake; `A6_Eve_Rakes` |
-| `OP` | `openings/<этаж>` | зона от `Z158` по этажам; на каждый этаж `C_SumNearWindowValues`, затем `A5_Openings`: headers по корзинам ширины и flashing. Имя должно начинаться с размера `ШxВ`, иначе позиция пропускается с предупреждением |
-| `SH` | текст обшивки из колонки J или строка `wall sheathing = ...` из `LG` | `A7_walls_sheathing`: оставляет одну систему обшивки (Zip, Ply, OSB), лишние строки убирает; в `ALL` идёт сразу после `WL` |
-| `SW` | `shear walls/<этаж>/shear` и `.../holdowns` | `J:L`; строка Shear Walls (внутренние; наружные берут wall sheathing) и одна строка Holdowns на каждый holdown в блоке стен этажа |
-| `SHF` | стены с именем, начинающимся на `shaft` | блок Shaft walls над первым framing list: панели, CH и J channels из LF на высоту стены |
-| `UN` | `units/<марка сечение>` (Line) и `units/<этаж>/<марка>` (Count) | таблица units от ячейки `AM3` (Settings): марка на `2x4` / `2x6` / half, счёт по этажам, итоги SUMPRODUCT |
-| `BL` | площади `sqfts` с именами `blcny`, `balcony`, `terrace`, `porch` | блоки `#n Upper Balcony/Terrace List W' x L' N units` и `#n Porch Framing List` на каждый размер, копией блока `#1` шаблона |
+| `Excel` | внизу слева | строки выделенной папки или позиции (имя, число, единица) от активной ячейки открытой книги ([ниже](#value)) |
+| `Value` | рядом с `Excel` | только числа той же выборки в одну колонку ([ниже](#value)) |
+| `Link to Excel` | рядом с `Value` | число одной позиции в ячейку; дальше ячейка обновляется сама ([ниже](#link)) |
+| `Auto Link` | рядом с `Link to Excel` | связать позиции со списком `J:L` книги DFL одним нажатием ([ниже](#auto-link)) |
+| `Export > Export Excel` | меню `Export` панели Takeoffs | выгрузка дерева в файл `.xlsx`, колонки J/K/L от строки 10 |
 
-??? note "BL отдельно от ALL"
-    Макрос блоков балконов пишет формулы в локализованной записи и рассчитан на русский интерфейс Excel; поэтому в `ALL` он выключен и запускается кнопкой `BL`. Включается в `Settings > Excel Actions`. Как выглядят блоки - [Блоки балконов, porch и holdowns](dfl-blocks.md).
-
-## Framing { #framing }
-
-| Кнопка | Берёт | Пишет |
-| --- | --- | --- |
-| `FR` | весь `framing` корпуса | все шаги ниже для каждого этажа; недостающий лист (`6th Floor Framing List`, `Balcony Framing List`) добавляется из ближайшего |
-| `PS` | `framing/<этаж> framing/posts` | строки Posts в framing list этажа; размер по коду из `LG` (`C_PostsSort`) |
-| `BM` | `.../beams` | строки Beam; размер по коду из `LG` |
-| `HD` | `.../headers/ext`, `.../headers/int` | строки headers в блоке стен **на этаж ниже** (перекрытие 2-го этажа лежит на стенах 1-го); Wall Sheathing и строки после него не трогаются |
-| `JS` | `.../joists` | строки Joists; Extra joists той же длины добавляются в строку; joists до 7' идут на сдвоенный сток (`45 x 12'` с нотой `90 pcs 6'`) |
-| `DT` | `.../details` | строки деталей в `J:L` под строкой-подписью, один раз; флаг в M по имени (`bft`, `bd`, ledger даёт `l`, ribbon `rb`, rim `r`, или `имя = флаги` из `LG`), затем `C_RimBoardBlockingHangers` |
-| `ST` | `.../stairs` | строки лестниц перед Subfloor; повторный экспорт заменяет |
-
-| Папка дерева | Framing list в книге | Headers идут в блок |
-| --- | --- | --- |
-| `framing/1st floor framing` | `1st Floor Framing List` | `Basement Floor Walls` |
-| `framing/2nd floor framing` | `2nd Floor Framing List` | `1st Floor Walls` |
-| `framing/3rd floor framing` ... `8th` | `3rd ... 8th Floor Framing List` | этаж ниже |
-| `framing/roof framing`, `loft framing` | `Roof Frame list` | - |
-| `framing/balcony`, `porch`, `canopy` | `Balcony / Porch / Canopy Framing List` | - |
-
-Posts, beams и joists **заменяют** свои строки в списке, остальные строки шаблона (Blocking, Rim, Hangers, Subfloor) остаются; второй прогон не ломает лист. Коды флагов и переопределения материала: [Дерево takeoff, коды деталей](../start/takeoff-structure.md).
+Макросы книги Lite не запускает: полосы XL в ней нет. Расчёт по выгруженному списку `J:L` (площади, стены, проёмы, карнизы) запускайте в Excel кнопками вкладки E-Wood ([Расчёт по замерам](ewood-tab.md#calculate)). Книгу корпуса делайте из шаблона в папке `templates` общей папки Dropbox ([Шаблон TemplateCom](#template)).
 
 ## Как вписать одну позицию в ячейку: Value и Excel { #value }
 
@@ -155,7 +84,7 @@ Posts, beams и joists **заменяют** свои строки в списк�
 | позицию переименовали или перенесли в другую папку | связь идёт за ней. Копия позиции остаётся без связи |
 | позицию удалили | связь `Broken`, ячейка остаётся как есть; ++ctrl+z++ в программе возвращает связь |
 
-Сами Link и Unlink не отменяются ++ctrl+z++. Копии книги лежат в профиле программы, `%LOCALAPPDATA%\OurPlanCore\excel-link-backups` (у Lite своя папка профиля, `%LOCALAPPDATA%\OurPlanCore Lite`), рядом с книгой их нет.
+Сами Link и Unlink не отменяются ++ctrl+z++. Копии книги лежат в профиле программы: у Lite в `%LOCALAPPDATA%\OurPlanCore Lite\local\excel-link-backups`, у полной версии в `%LOCALAPPDATA%\OurPlanCore\excel-link-backups`; рядом с книгой их нет.
 
 ### Состояния: значок у позиции { #link-states }
 
@@ -280,9 +209,97 @@ Posts, beams и joists **заменяют** свои строки в списк�
 
 ## Шаблон TemplateCom { #template }
 
-`TemplateCom.xlsm` лежит в папке обновлений программы рядом с `ourplancore.exe`. На каждый корпус делается копия (`Bldng#A.xlsm`), имя книги равно Job Name на Front Page. Листы: `Front Page` (площади, Total SQFT), `Detailed Frame List` (сдаваемые колонки `A:H` и рабочие зоны справа: `J:N` экспорт, `O:AB` матрица стен, спек-ячейки `O:S`, калькулятор высот), `Standarts` (библиотека нот), `Mat List`. Макросы серии A запускает полоса XL, серии B, C, X, Y - клавиши в Excel. Подробно: [DFL: как устроена книга](dfl-overview.md), [Макросы и клавиши Excel](excel-hotkeys.md), [Стандартные notes](standard-notes.md).
+`TemplateCom.xlsm` для Lite лежит в общей папке Dropbox `Office Folder\programs\templates`, у полной версии ещё и в папке обновлений рядом с `ourplancore.exe`. На каждый корпус делается копия (`Bldng#A.xlsm`), имя книги равно Job Name на Front Page. Листы: `Front Page` (площади, Total SQFT), `Detailed Frame List` (сдаваемые колонки `A:H` и рабочие зоны справа: `J:N` экспорт, `O:AB` матрица стен, спек-ячейки `O:S`, калькулятор высот), `Standarts` (библиотека нот), `Mat List`. Макросы серии A в полной версии запускает полоса XL, в Lite - кнопки вкладки E-Wood ([Расчёт по замерам](ewood-tab.md#calculate)); серии B, C, X, Y - клавиши в Excel. Подробно: [DFL: как устроена книга](dfl-overview.md), [Макросы и клавиши Excel](excel-hotkeys.md), [Стандартные notes](standard-notes.md).
 
-## Повторный экспорт { #rerun }
+## Полоса XL: только полная версия { #xl }
+
+!!! info "Только в полной версии"
+    В OurPlanCore Lite полосы XL нет, как и разделов `Settings > Excel Actions` и `Excel Rules` и команды `Create Project Excel Workbook`. В Lite числа идут кнопками [выше](#lite), а макросы книги запускаются в Excel. Чем версии отличаются: [Lite и полная версия](ourplancore-lite.md).
+
+<!-- DEMO: d-excel-xl -->
+
+<figure markdown>
+  ![Полоса XL](../assets/images/ourplancore/v3/excel-strip.png)
+  <figcaption markdown="span">Верх полосы: `ALL` и `LG`, ниже кнопки стен и площадей, дальше начинается framing (`FR`). На низком окне полоса прокручивается колесом мыши до нижних кнопок framing. Подсказка каждой кнопки говорит, что она делает.</figcaption>
+</figure>
+
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-xl-scroll.png"><source src="../../assets/images/ourplancore/demo/d-xl-scroll.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Демонстрация: открыт AI Inbox, полоса XL стала короткой; колесо мыши над полосой прокручивает её до `FR`, `PS`, `BM`, `HD` и обратно.</figcaption>
+</figure>
+
+### Что нужно до нажатия
+
+- [ ] В Excel открыта книга корпуса, сделанная из `TemplateCom.xlsm` (копия шаблона из папки обновлений программы), макросы разрешены. Программа ищет открытую книгу `TemplateCom.xlsm`; если её нет, берёт активную книгу с макросами (`.xlsm`), в которой есть лист `Detailed Frame List`.
+- [ ] Модуль `Excel Integration` включён (`Settings > Modules`, по умолчанию включён).
+- [ ] В дереве Takeoffs выделен **один** корпус (папка с корнями) или одна папка экспорта (`walls`, `sqfts`...). Для `ALL` выделение из двух корпусов не принимается ([несколько зданий](ourplancore-buildings.md#excel)).
+- [ ] Легенда `LG` заполнена кодами балок, постов и headers проекта (иначе в книге останутся коды вместо размеров).
+- [ ] Проект сохранён, `Total` у крупных позиций проверен.
+
+### Как выгрузить корпус одной кнопкой: ALL { #steps }
+
+Зачем: вся книга корпуса за один прогон, шаги в правильном порядке.
+Нужно: список выше.
+
+1. Откройте книгу корпуса в Excel и активируйте лист `Detailed Frame List`.
+2. Выделите в OurPlanCore папку корпуса в Takeoffs (или корень при одном корпусе).
+3. Нажмите `LG`, впишите строки `H5 - (2) 1 3/4 x 11 7/8 LVL`, `C4 - 6x6`; кнопка **Add missing codes** добавляет пустые строки для всех кодов проекта без размера; нажмите **Save for job**.
+4. Нажмите `ALL`. Прочитайте, что программа пропустит (позиции без числа, имена не по формату), и нажмите **Continue**.
+5. Следите за подписью шагов `Excel ALL 3/12: Walls...` и дождитесь итога `Completed: ...` со списком пропущенного. Шаг, который не смог выполниться, перечисляется, а не останавливает остальные (кроме макросов серии A: они останавливают цепочку).
+6. Проверьте книгу: матрицу стен, Front Page, framing lists.
+7. Сохраните книгу в Excel сами: программа её не сохраняет.
+
+Результат: книга корпуса заполнена; поправили замер в программе - повторите нужную кнопку, не весь `ALL`.
+
+`ALL` по порядку: `UN`, `SF`, `WL` (сразу за ним `SH` и `SW`), `GB`, `TH`, `PP`, `E/R`, `OP`, `SHF`, затем framing целиком (`FR`), в конце `BL` (в `ALL` по умолчанию выключен). Что входит в `ALL`, настраивается в `Settings > Excel Actions`.
+
+### Кнопки полосы XL: справка { #buttons }
+
+Общая схема: позиции ветки пишутся в рабочую зону `J:L` листа (имя, число, единица; первое свободное место от строки 10), программа выделяет записанное и запускает макрос книги, макрос раскладывает строки в сдаваемые колонки `A:H`. Как устроена книга - [DFL: как устроена книга](dfl-overview.md), что делает каждый макрос - [Макросы и клавиши Excel](excel-hotkeys.md).
+
+| Кнопка | Берёт из дерева | Пишет в книге |
+| --- | --- | --- |
+| `ALL` | весь выделенный корпус | все шаги по порядку выше |
+| `LG` | - | открывает легенду проекта для `PS`, `BM`, `HD`; строка `wall sheathing = 7/16" Zip no insulation` нужна `SH`. Крестик в шапке панели (`Hide the Excel legend panel`) или повторное `LG` закрывают её без сохранения: сначала **Save for job**, иначе правка пропадёт; **Clear** очищает и сохраняет пустую легенду |
+| `SF` | `sqfts` (`sqft`) | `J:L`, макрос `A2_SQFT_calc`: площади этажей, Front Page, кровля по уклонам |
+| `WL` | `walls` | `J:L` с заголовками этажей, строгий порядок, макрос `A3_Walls_Calc_AllGroup`: матрица стен `O:AB` и строки Floor Walls; потом удаление нулевых строк в `A:H` блока стен (шаблонные строки Flashing, Headers, Wall Sheathing, Insulation, Box Sheathing, Tape, Shear Walls, Holdowns остаются) |
+| `GB` | `gables` | `J:L`, `A2_SQFT_calc` |
+| `TH` | `trussheel` | `J:L`, `A2_SQFT_calc` |
+| `PP` | `parapets` | `J:L`, `A4_Parapet`: три числа из хвоста имени `prpt 6.4 5.3 0.5` |
+| `E/R` | `eves rakes` | `J:L`: eve по убыванию LF, потом rake; `A6_Eve_Rakes` |
+| `OP` | `openings/<этаж>` | зона от `Z158` по этажам; на каждый этаж `C_SumNearWindowValues`, затем `A5_Openings`: headers по корзинам ширины и flashing. Имя должно начинаться с размера `ШxВ`, иначе позиция пропускается с предупреждением |
+| `SH` | текст обшивки из колонки J или строка `wall sheathing = ...` из `LG` | `A7_walls_sheathing`: оставляет одну систему обшивки (Zip, Ply, OSB), лишние строки убирает; в `ALL` идёт сразу после `WL` |
+| `SW` | `shear walls/<этаж>/shear` и `.../holdowns` | `J:L`; строка Shear Walls (внутренние; наружные берут wall sheathing) и одна строка Holdowns на каждый holdown в блоке стен этажа |
+| `SHF` | стены с именем, начинающимся на `shaft` | блок Shaft walls над первым framing list: панели, CH и J channels из LF на высоту стены |
+| `UN` | `units/<марка сечение>` (Line) и `units/<этаж>/<марка>` (Count) | таблица units от ячейки `AM3` (Settings): марка на `2x4` / `2x6` / half, счёт по этажам, итоги SUMPRODUCT |
+| `BL` | площади `sqfts` с именами `blcny`, `balcony`, `terrace`, `porch` | блоки `#n Upper Balcony/Terrace List W' x L' N units` и `#n Porch Framing List` на каждый размер, копией блока `#1` шаблона |
+
+??? note "BL отдельно от ALL"
+    Макрос блоков балконов пишет формулы в локализованной записи и рассчитан на русский интерфейс Excel; поэтому в `ALL` он выключен и запускается кнопкой `BL`. Включается в `Settings > Excel Actions`. Как выглядят блоки - [Блоки балконов, porch и holdowns](dfl-blocks.md).
+
+### Framing { #framing }
+
+| Кнопка | Берёт | Пишет |
+| --- | --- | --- |
+| `FR` | весь `framing` корпуса | все шаги ниже для каждого этажа; недостающий лист (`6th Floor Framing List`, `Balcony Framing List`) добавляется из ближайшего |
+| `PS` | `framing/<этаж> framing/posts` | строки Posts в framing list этажа; размер по коду из `LG` (`C_PostsSort`) |
+| `BM` | `.../beams` | строки Beam; размер по коду из `LG` |
+| `HD` | `.../headers/ext`, `.../headers/int` | строки headers в блоке стен **на этаж ниже** (перекрытие 2-го этажа лежит на стенах 1-го); Wall Sheathing и строки после него не трогаются |
+| `JS` | `.../joists` | строки Joists; Extra joists той же длины добавляются в строку; joists до 7' идут на сдвоенный сток (`45 x 12'` с нотой `90 pcs 6'`) |
+| `DT` | `.../details` | строки деталей в `J:L` под строкой-подписью, один раз; флаг в M по имени (`bft`, `bd`, ledger даёт `l`, ribbon `rb`, rim `r`, или `имя = флаги` из `LG`), затем `C_RimBoardBlockingHangers` |
+| `ST` | `.../stairs` | строки лестниц перед Subfloor; повторный экспорт заменяет |
+
+| Папка дерева | Framing list в книге | Headers идут в блок |
+| --- | --- | --- |
+| `framing/1st floor framing` | `1st Floor Framing List` | `Basement Floor Walls` |
+| `framing/2nd floor framing` | `2nd Floor Framing List` | `1st Floor Walls` |
+| `framing/3rd floor framing` ... `8th` | `3rd ... 8th Floor Framing List` | этаж ниже |
+| `framing/roof framing`, `loft framing` | `Roof Frame list` | - |
+| `framing/balcony`, `porch`, `canopy` | `Balcony / Porch / Canopy Framing List` | - |
+
+Posts, beams и joists **заменяют** свои строки в списке, остальные строки шаблона (Blocking, Rim, Hangers, Subfloor) остаются; второй прогон не ломает лист. Коды флагов и переопределения материала: [Дерево takeoff, коды деталей](../start/takeoff-structure.md).
+
+### Повторный экспорт { #rerun }
 
 - Framing (`FR`, `PS`, `BM`, `HD`, `JS`, `ST`) заменяет свои строки: повторять можно сколько нужно. `DT` пишет группу один раз; уже выгруженная группа не трогается.
 - Серия A (`SF`, `WL`, `GB`, `TH`, `PP`, `E/R`, `OP`) дописывает новый блок в `J:L` на первое свободное место и прогоняет макрос по нему. Старый блок остаётся в рабочей зоне; строки `A:H` с формулой `=K37` смотрят на свой блок.
@@ -290,7 +307,7 @@ Posts, beams и joists **заменяют** свои строки в списк�
 !!! warning "Уточняется"
     Как чисто убрать прежний блок `J:L` перед повтором `WL` или `SF` (руками или макросом), проверяется на следующей сдаче.
 
-## Как поменять, что делает кнопка XL: Settings > Excel Actions { #settings }
+### Как поменять, что делает кнопка XL: Settings > Excel Actions { #settings }
 
 <figure markdown>
   ![Settings, раздел Excel Actions](../assets/images/ourplancore/v3/settings-excel-actions.png)
@@ -319,6 +336,8 @@ Posts, beams и joists **заменяют** свои строки в списк�
 Обзор всех разделов Settings: [Settings](ourplancore-settings.md).
 
 ## Частые ошибки { #errors }
+
+Первые строки таблицы - сообщения полосы XL (полная версия), дальше сообщения `Link to Excel` и `Auto Link`, они есть и в Lite.
 
 | Сообщение или симптом | Причина и что делать |
 | --- | --- |

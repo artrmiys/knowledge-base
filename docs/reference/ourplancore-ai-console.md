@@ -1,5 +1,8 @@
 # Консоль ИИ: терминалы Claude, Codex и DeepSeek
 
+!!! info "Только в полной версии"
+    В OurPlanCore Lite терминала нет: ни кнопки `>_`, ни команды палитры, ни `Settings > Terminals`. Чем версии отличаются: [Lite и полная версия](ourplancore-lite.md). Остальной блок полной версии: [ИИ в программе](ourplancore-ai.md).
+
 Здесь: панель `>_` с терминалами Claude, Codex и DeepSeek внутри окна программы, что они знают о проекте (строка `ctx`, файл контекста), как отправить ассистенту кроп листа, как он правит открытый проект через Agent Bridge и как продолжить беседу на втором компьютере. Нужно, когда хочется спросить у ассистента про текущий лист, получить ноты из таблицы schedule или поручить ему рутину в дереве, не выходя из программы. Остальные места с ИИ (AI Crop Notes, AI Manager, чтение штампов, настройки Agent Bridge) - [ИИ в программе](ourplancore-ai.md).
 
 <figure markdown>
@@ -163,6 +166,6 @@
 ## См. также
 
 - [ИИ в программе](ourplancore-ai.md): AI Crop Notes, чтение штампов, Agent Bridge
-- [Менеджеры: AI Inbox и AI Manager](ourplancore-managers.md#ai-manager)
+- [AI Inbox и AI Manager](ourplancore-ai.md#inbox)
 - [Workspace и второй компьютер](ourplancore-workspace.md)
 - [Settings и модули](ourplancore-settings.md)

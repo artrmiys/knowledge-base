@@ -4,17 +4,21 @@
 
 ## Где программа и как обновляется
 
+У эстиматоров стоит OurPlanCore Lite: без нейронок и терминала, легче полной версии. Чем они отличаются: [Lite и полная версия](ourplancore-lite.md).
+
 | Что | Где |
 | --- | --- |
-| Запуск | ярлык OurPlanCore на рабочем столе |
-| Сама программа | один файл `ourplancore.exe` в папке `Desktop\updates\OurPlanCore` |
-| Обновление | в ту же папку кладётся новый `ourplancore.exe`; прежний остаётся рядом как `.bak` для отката |
-| Шаблоны Excel | в той же папке: `TemplateCom.xlsm`, `TemplateResidential.xlsm` |
-| Версия | в заголовке окна: `OurPlanCore 3.0.0 - <проект>`; то же в свойствах файла и в первой строке `Version ...` лога `%APPDATA%\OurPlanCore\logs\app-<дата>.log`; что изменилось - [Что нового](ourplancore-changelog.md) |
+| Сама программа | один файл `ourplancore.exe` в общей папке Dropbox `Office Folder\programs` |
+| Запуск | этот файл или ярлык на него на рабочем столе |
+| Обновление | новый файл приходит в ту же папку через Dropbox и заменяет прежний; прошлой версии рядом нет. Что изменилось: папка `changes` там же и [Что нового](ourplancore-changelog.md) |
+| Шаблоны Excel | папка `templates` там же: `TemplateCom.xlsm`, `TemplateResidential.xlsm` |
+| Версия | в заголовке окна: `OurPlanCore 3.0.x-lite - <проект>`; то же в первой строке `Version ...` лога `%LOCALAPPDATA%\OurPlanCore Lite\roaming\logs\app-<дата>.log` |
 
 Проекты, настройки и шаблоны от обновления не зависят: они лежат отдельно (см. [Где лежат настройки](#settings)).
 
-!!! warning "Откат на .bak"
+Полная версия ставится отдельно: файл `ourplancore.exe` в папке `Desktop\updates\OurPlanCore`, рядом шаблоны Excel; в заголовке окна номер без `-lite`, лог в `%APPDATA%\OurPlanCore\logs`. При её обновлении прежний файл остаётся рядом как `.bak` для отката.
+
+!!! warning "Откат на .bak (полная версия)"
     Старая сборка читает кропы (Crop to Sheet) и маски Hide как обычную разметку и при сохранении теряет их поля. Откатился - не сохраняй проект с кропами, пока не вернулся на свежую сборку.
 
 ## Первый запуск и стартовый экран
@@ -37,7 +41,7 @@
 
 <figure markdown>
   <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-open-sample.png"><source src="../../assets/images/ourplancore/demo/d-open-sample.mp4" type="video/mp4"></video>
-  <figcaption markdown="span">Демонстрация: `Open sample job` на стартовой карточке создаёт демо-проект; дальше листы W, F, S и U со своими легендами и вкладка 3D.</figcaption>
+  <figcaption markdown="span">Демонстрация: `Open sample job` на стартовой карточке создаёт демо-проект; дальше листы W, F, S и U со своими легендами и вкладка 3D (она есть только в полной версии).</figcaption>
 </figure>
 
 Демо-проект - учебная работа без клиентских данных. На нём пробуют каждую кнопку, не боясь испортить: его можно создать заново в любой момент. По нему же идёт курс [Первые шаги: 10 уроков](ourplancore-course.md).
@@ -62,8 +66,8 @@
 | Карточки-подсказки `00. Guide` | листы-картинки в начале папки Pages | карта окна, лент и панелей прямо в программе |
 | План с точкой W, структурный план с точкой F, копия под shear walls с точкой S, план юнита с точкой U | листы в `00. Guide`, точки под заголовком Scale | как раскладывается комплект ([раскладка по листам](ourplancore-split-by-sheets.md)) |
 | Дерево по канону: `sqfts`, `walls/1st floor walls`, `framing/1st floor framing/...`, `openings`, `shear walls`, `eves rakes` | панель Takeoffs | имена позиций с числами для Excel, папки по этажам |
-| Контур крыши `rf 6` с карнизами | план кровли и `sqfts`, `eves rakes` | заготовка для 3D-крыши ([3D-крыша](ourplancore-3d-roof.md)) |
-| Заметка `Start here...` и наблюдения в AI Inbox | лист плана, панель Inbox при модуле AI | пример разметки и записей ИИ |
+| Контур крыши `rf 6` с карнизами | план кровли и `sqfts`, `eves rakes` | площадь кровли с уклоном в имени; в полной версии заготовка для [3D-крыши](ourplancore-3d-roof.md) |
+| Заметка `Start here...` и наблюдения в AI Inbox | лист плана; панель Inbox при модуле AI (только полная версия) | пример разметки и записей ИИ |
 
 Точный состав демо после выпуска 3.0.1 сверяется по самому проекту: названия позиций и листов в таблице ориентировочные.
 
@@ -74,8 +78,8 @@
 3. **Инструменты.** На том же плане `O` по двери, `A` по комнате, `X` вырез в площади; на структурном листе `J` зона joists и `B` балка от опоры до опоры. [Инструменты](ourplancore-tools.md)
 4. **Легенда.** `Display > Legend Show`, затем ПКМ по листу `Organize > Sort Sheet Legend by Key`; `H` на позиции прячет её с листа, точка у позиции под листом в Pages возвращает. [Дерево Takeoffs](ourplancore-takeoffs.md#hide)
 5. **Кропы и маска.** `Page > Blank Sheet`, затем `Page > Crop to Sheet` с плана на пустой лист; `Annotation > Hide` боксом по лишнему. [Листы: продвинутое](ourplancore-sheets-advanced.md)
-6. **3D.** Включите модуль 3D, выделите `rf 6`, вкладка 3D, `Roof Base`, `Auto`, `Iso`. [3D-крыша](ourplancore-3d-roof.md)
-7. **Экспорт.** `PDF Output > Preview`, `Main > Export` одного листа; при открытой копии `TemplateCom.xlsm` - полоса XL, кнопка `WL`. [PDF и сдача](ourplancore-pdf.md), [Экспорт в Excel](ourplancore-excel.md)
+6. **3D (только полная версия).** Включите модуль 3D, выделите `rf 6`, вкладка 3D, `Roof Base`, `Auto`, `Iso`. В Lite шаг пропустите. [3D-крыша](ourplancore-3d-roof.md)
+7. **Экспорт.** `PDF Output > Preview`, `Main > Export` одного листа; в открытой копии `TemplateCom.xlsm` щёлкните ячейку, выделите позицию и нажмите `Excel` внизу (в полной версии ещё полоса XL, кнопка `WL`). [PDF и сдача](ourplancore-pdf.md), [Экспорт в Excel](ourplancore-excel.md)
 
 ### Испортил демо, что дальше
 
@@ -91,7 +95,7 @@
 | Клавиша | Что открывает |
 | --- | --- |
 | `F1` | шпаргалка клавиш поверх окна; закрывается `Esc` |
-| `Ctrl+Shift+P` | палитра команд: категории File, View, Workspace, Tools, Edit, Pages, Sheets, Takeoffs, AI; набери часть названия и `Enter` |
+| `Ctrl+Shift+P` | палитра команд: категории File, View, Workspace, Tools, Edit, Pages, Sheets, Takeoffs и в полной версии AI; набери часть названия и `Enter` |
 | `Ctrl+O` | `Open / Import`; `Ctrl+Shift+O` - недавние проекты |
 
 Команда без клавиши (например `Ends`, `Toggle Dark Theme`, `Hide / Show All Takeoffs`) запускается из палитры или получает клавишу в `Settings > Keyboard Shortcuts`. Клавиши работают по физическим кнопкам в английской и русской раскладке. Полный список - [Горячие клавиши](ourplancore-shortcuts.md).
@@ -149,15 +153,16 @@
 
 | Что | Где |
 | --- | --- |
-| Общие настройки, клавиши, логи | `%APPDATA%\OurPlanCore` (`settings.json`, папка `logs`) |
-| Пресеты правил (маршрутизация, клавиши), кеши, терминалы | `%LOCALAPPDATA%\OurPlanCore` |
+| Общие настройки, клавиши, логи | Lite: `%LOCALAPPDATA%\OurPlanCore Lite\roaming` (`settings.json`, папка `logs`); полная версия: `%APPDATA%\OurPlanCore` |
+| Пресеты правил (маршрутизация, клавиши), кеши | Lite: `%LOCALAPPDATA%\OurPlanCore Lite\local`; полная версия: `%LOCALAPPDATA%\OurPlanCore`, там же файлы терминалов |
 | Настройки конкретного проекта | внутри проекта в `AI_Context/settings` |
 | Проекты | папка работ, которую показывает `Open project...` (`Manage job folders...` добавляет папки) |
 
-Каждый раздел `Settings` имеет `Reset`, `Save global default` и `Save as this job`: правило можно переопределить для одного проекта, не трогая общее. Какие разделы есть - [Settings и модули](ourplancore-settings.md). Часть вкладок (Sheet Manager, Takeoff Manager, Report Builder, Materials, AI, 3D, Job Tracker) по умолчанию выключена и включается в `Settings > Modules`; что они делают и когда нужны - [Дополнительные возможности](ourplancore-extras.md).
+У Lite свой профиль: её настройки начинаются со встроенных и не смешиваются с настройками полной версии. Каждый раздел `Settings` имеет `Reset`, `Save global default` и `Save as this job`: правило можно переопределить для одного проекта, не трогая общее. Какие разделы есть - [Settings и модули](ourplancore-settings.md). Часть вкладок (Sheet Manager, Takeoff Manager, Report Builder, Job Tracker) по умолчанию выключена и включается в `Settings > Modules`; Materials, AI и 3D есть только в полной версии. Что они делают и когда нужны - [Дополнительные возможности](ourplancore-extras.md).
 
 ## См. также
 
 - [OurPlanCore 3.0: хаб раздела](ourplanecore.md)
+- [Lite и полная версия](ourplancore-lite.md)
 - [Процесс работы](../start/workflow.md)
 - [Решение проблем](ourplancore-troubleshooting.md)

@@ -51,6 +51,7 @@ hide:
     ---
 
     - [Интерфейс и инструменты](reference/ourplanecore.md)
+    - [Lite и полная версия](reference/ourplancore-lite.md)
     - [Начало работы: первый проект](reference/ourplancore-start.md)
     - [Горячие клавиши](reference/ourplancore-shortcuts.md)
     - [Имена takeoffs и точки листа](reference/takeoff-naming.md)

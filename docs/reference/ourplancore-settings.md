@@ -19,7 +19,7 @@
 | `Save as this job` | записать только для открытого проекта (override) |
 | `Clear job override` | убрать проектную копию, снова действует глобальная |
 
-Проектные копии лежат внутри проекта в `AI_Context/settings/*.json`, глобальные - в профиле программы (`%LOCALAPPDATA%\OurPlanCore\presets`). Правило: меняете под один проект - `Save as this job`; меняете навсегда - `Save global default`; сломали - `Reset` и Save.
+Проектные копии лежат внутри проекта в `AI_Context/settings/*.json`, глобальные - в профиле программы (у Lite `%LOCALAPPDATA%\OurPlanCore Lite\local\presets`, у полной версии `%LOCALAPPDATA%\OurPlanCore\presets`). Профили раздельные: глобальные настройки полной версии в Lite не видны. Правило: меняете под один проект - `Save as this job`; меняете навсегда - `Save global default`; сломали - `Reset` и Save.
 
 ### Как изменить правило только для одного проекта { #job-override }
 
@@ -36,12 +36,12 @@
 
 <figure markdown>
   ![Вкладка Settings, список категорий слева](../assets/images/ourplancore/v3/settings-modules.png)
-  <figcaption markdown="span">Список категорий слева, панель выбранной категории справа. Первая категория - Modules.</figcaption>
+  <figcaption markdown="span">Список категорий слева, панель выбранной категории справа. Первая категория - Modules. Снято в полной версии: в Lite нет модулей AI, 3D и Materials и категорий их разделов.</figcaption>
 </figure>
 
 | Категория | Что настраивает | Когда трогать | Подробно |
 | --- | --- | --- | --- |
-| Modules | 19 модулей и команда Job Tracker | нет вкладки или кнопки; включить Sheet Manager, 3D, AI | [Модули](ourplancore-workspace.md#modules), [Дополнительные возможности](ourplancore-extras.md) |
+| Modules | модули (16 в Lite, 19 в полной версии) и команда Job Tracker | нет вкладки или кнопки; включить Sheet Manager | [Модули](#modules), [Дополнительные возможности](ourplancore-extras.md) |
 | Page Folders | стандартные папки Pages для шаблонов Auto / COM / EWP | другой состав папок `00. imported` | [Pages](ourplancore-pages.md) |
 | Blank Sheets | размер по умолчанию и пресеты бумаги | часто нужен другой формат пустого листа | [Пустые листы](ourplancore-sheets-advanced.md#blank) |
 | Auto Tree | дерево Takeoffs, которое строит `More > Auto Tree` | свой канон папок | [Дерево Takeoffs](ourplancore-takeoffs.md) |
@@ -52,25 +52,49 @@
 | Sheet Legend | названия и порядок автоматических блоков по папкам Takeoffs | изменить порядок Walls, Posts, Beams, Details, SQFTs | [Легенда листа](ourplancore-sheets-advanced.md#legend) |
 | PDF Editable Export | какие замеры в PDF лежат объектами для правки в Adobe Acrobat | выключить такой экспорт для всех или для проекта | [PDF и сдача](ourplancore-pdf.md#adobe-off) |
 | Takeoff Colors | фиксированный цвет для точного имени (`bft`) | нужен ещё один фиксированный цвет | [Маршрутизация](ourplancore-routing.md#colors) |
-| AI Crop Notes | формат строк Tag/Size в заметках из AI crop | заметки из schedule читаются плохо | [ИИ](ourplancore-ai.md#crop-notes) |
+| AI Crop Notes | формат строк Tag/Size в заметках из AI crop; только полная версия | заметки из schedule читаются плохо | [ИИ](ourplancore-ai.md#crop-notes) |
 | Sort A/S | правила `Sort: A - Arch / S - Struct`, листы на `-` в `--------others` | нестандартные префиксы листов | [Pages](ourplancore-pages.md) |
 | Sort D/Sec/WT | суффикс имени листа, потом папка (`sections`, `details`, `rcp`) | новые типы листов | [Pages](ourplancore-pages.md) |
-| Auto Rename / Scale | движок имён и масштаба, правила суффиксов, колонка Kept, AI по штампу | Name даёт плохие имена | [Pages](ourplancore-pages.md), [ИИ](ourplancore-ai.md#sheet-names) |
-| Excel Actions | кнопки полосы XL и последовательность ALL | свой порядок шагов экспорта | [Excel](ourplancore-excel.md) |
+| Auto Rename / Scale | движок имён и масштаба, правила суффиксов, колонка Kept, AI по штампу (AI только в полной версии) | Name даёт плохие имена | [Pages](ourplancore-pages.md), [ИИ](ourplancore-ai.md#sheet-names) |
+| Excel Actions | кнопки полосы XL и последовательность ALL; только полная версия | свой порядок шагов экспорта | [Excel](ourplancore-excel.md#settings) |
 | Excel Links | как `Link to Excel` пишет в открытую и закрытую книгу, копии книги, порог малых чисел для `Auto Link` | не писать в открытую книгу сразу, другое число копий | [Экспорт в Excel](ourplancore-excel.md#link-settings) |
 | Project Storage | размер проекта, `Preview safe compact`, `Compact snap.json` | проект раздулся | [Проекты и сохранение](job-creation-storage.md) |
 | Autosave Recovery | интервалы повторов после ошибки автосохранения | нужно изменить ожидание следующей попытки | [Автосохранение](job-creation-storage.md#autosave) |
 | Agent Bridge | доступ локального ассистента к открытому проекту | работа с агентом | [ИИ](ourplancore-ai.md#bridge) |
-| Terminals | профиль Claude или Codex, ширина, усилие, контекст | панель `>_` | [Консоль ИИ](ourplancore-ai-console.md#settings) |
-| Workspace | сервер, устройство, синхронизация, второй компьютер | работа с двух ПК | [Workspace](ourplancore-workspace.md#workspace) |
+| Terminals | профиль Claude или Codex, ширина, усилие, контекст; только полная версия | панель `>_` | [Консоль ИИ](ourplancore-ai-console.md#settings) |
+| Workspace | сервер, устройство, синхронизация, второй компьютер; только полная версия | работа с двух ПК | [Workspace](ourplancore-workspace.md#workspace) |
 | Keyboard Shortcuts | кнопка `Open Keyboard Shortcuts...` | переназначить клавишу | [Горячие клавиши](ourplancore-shortcuts.md#remap) |
 | Defaults | зум колесом, фоновый прогрев, кеш растра, кнопки DPI Sheet Manager, строки секций в дереве, линия Beam, переход к лентам вида | общая настройка под себя | [ниже](#defaults), [вид на экране](#display) |
 
 ## Коротко о каждой
 
-### Modules
+### Modules { #modules }
 
-Галки по 19 модулям в группах Documents, Takeoff, Output, Assistance, Productivity, Integrations; пресеты `Current default`, `All modules on`, `Takeoff Only`, `Minimal`. Здесь же команда модуля Job Tracker: `Executable`, `Arguments (one per line)`, `Save`, `Reset`. Выключенный модуль прячет свои кнопки и вкладку; клавиша на спрятанную команду не срабатывает. Список модулей - в [Workspace и модули](ourplancore-workspace.md#modules).
+Галки по модулям в группах Documents, Takeoff, Output, Assistance, Productivity, Integrations: в Lite их 16, в полной версии 19. Пресеты `Current default`, `All modules on`, `Takeoff Only`, `Minimal`; Apply, Save global, Save for this job, Clear job override, Reset. Здесь же команда модуля Job Tracker: `Executable`, `Arguments (one per line)`, `Save`, `Reset`.
+
+| Модуль | Группа | По умолчанию | Что включает |
+| --- | --- | --- | --- |
+| Annotations | Productivity | вкл | лента Annotation: Highlight, Draw Line, Arrow, Box, Cloud, Area, Hide, Note; кропы и маски в PDF |
+| PDF Layers | Documents | вкл | под-таб PDF Layers, подсветка слоёв, Layer Trace |
+| Sheet Overlay | Documents | вкл | под-таб Overlay, Batch Overlay |
+| Sheet Manager | Documents | выкл | вкладка Sheet Manager; кнопки Name, Scale, Name+Scale на ленте Main |
+| Takeoff Manager | Takeoff | выкл | вкладка Takeoff Manager |
+| Advanced Takeoff Tools | Takeoff | вкл | Similar, P Line, Combine, Beam, Openings, Break, Ends |
+| Takeoff Automation | Takeoff | вкл | Auto Tree, From Pages, автосоздание |
+| Takeoff Templates | Takeoff | вкл | вкладка Templates |
+| Estimating | Takeoff | вкл | вкладка Estimating и окно Estimating |
+| Report Builder | Output | выкл | вкладка Report Builder |
+| Materials | Output | выкл | вкладка Materials; только в полной версии |
+| AI | Assistance | выкл | AI Inbox, AI Manager, AI crop, маркеры, AI по штампу; только в полной версии |
+| 3D | Assistance | выкл | вкладка 3D и под-таб 3D в Takeoffs; только в полной версии |
+| Bookmarks | Productivity | вкл | под-таб Bkm, закладки и кропы-закладки |
+| Quick Calculator | Productivity | вкл | калькулятор футов и дюймов |
+| PDF Output | Output | вкл | лента PDF Output, Preview, экспорт |
+| Detached Sheets | Documents | вкл | открепленные окна листов, Tile M2 |
+| Excel Integration | Output | вкл | `Excel`, `Value`, `Link to Excel`, `Auto Link`; в полной версии ещё полоса XL |
+| Job Tracker | Integrations | выкл | кнопка In Progress |
+
+Выключенный модуль прячет кнопки и вкладку; клавиша на его команду не срабатывает. Проектная копия модулей сильнее глобальной. Модулей AI, 3D и Materials в Lite нет совсем, их не включит ни пресет, ни проект ([Lite и полная версия](ourplancore-lite.md)). Что делают выключенные по умолчанию модули и когда их включать: [Дополнительные возможности](ourplancore-extras.md).
 
 ### Page Folders, Auto Tree, From Pages, Takeoff Templates
 
@@ -96,7 +120,7 @@
 
 ### AI Crop Notes
 
-Форматирует ответ AI на кроп таблицы schedule в строки `HP1  (2) 2x8`. Поля `Tag/size separator`, предпросмотр (`paste the recognized text on the left`), галка оригинальных таблиц. Исходный ответ остаётся в AI Inbox.
+Только в полной версии. Форматирует ответ AI на кроп таблицы schedule в строки `HP1  (2) 2x8`. Поля `Tag/size separator`, предпросмотр (`paste the recognized text on the left`), галка оригинальных таблиц. Исходный ответ остаётся в AI Inbox.
 
 ### Sort A/S и Sort D/Sec/WT
 
@@ -131,7 +155,7 @@ Sort A/S: таблица `Match (sheet prefix / filename keyword)` и `Target` �
   <figcaption markdown="span">Кнопки полосы XL и порядок шагов для ALL.</figcaption>
 </figure>
 
-Список кнопок полосы XL (`Action`), последовательность для `ALL`, галка `Insert numeric floor group rows (0-5) before the takeoff rows`, слова папок этажей (`1, 1st, first`). Как пользоваться полосой - [Экспорт в Excel](ourplancore-excel.md).
+Только в полной версии: в Lite нет полосы XL и разделов Excel Actions и Excel Rules. Список кнопок полосы XL (`Action`), последовательность для `ALL`, галка `Insert numeric floor group rows (0-5) before the takeoff rows`, слова папок этажей (`1, 1st, first`). Как пользоваться полосой - [Экспорт в Excel](ourplancore-excel.md).
 
 ### Project Storage
 
@@ -144,7 +168,7 @@ Sort A/S: таблица `Match (sheet prefix / filename keyword)` и `Target` �
 
 ### Agent Bridge, Terminals, Workspace
 
-Три категории про ИИ и второй компьютер: [ИИ в программе](ourplancore-ai.md) и [Workspace](ourplancore-workspace.md). У Workspace настройки хранятся на каждом устройстве отдельно и не имеют проектной копии.
+Три категории про ИИ и второй компьютер: [ИИ в программе](ourplancore-ai.md) и [Workspace](ourplancore-workspace.md). Terminals и Workspace есть только в полной версии (как и Voice Input), Agent Bridge есть и в Lite. У Workspace настройки хранятся на каждом устройстве отдельно и не имеют проектной копии.
 
 ### Keyboard Shortcuts
 

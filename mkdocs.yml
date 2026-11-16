@@ -61,6 +61,7 @@ nav:
 
   - OurPlanCore:
       - OurPlanCore 3.0: reference/ourplanecore.md
+      - Lite и полная версия: reference/ourplancore-lite.md
       - Первые шаги, 10 уроков: reference/ourplancore-course.md
       - Каждый день:
           - Начало работы: reference/ourplancore-start.md
@@ -79,16 +80,17 @@ nav:
           - Маршрутизация и правила: reference/ourplancore-routing.md
           - Кропы, маска, наложения, легенда: reference/ourplancore-sheets-advanced.md
           - Settings и модули: reference/ourplancore-settings.md
-          - Консоль ИИ: reference/ourplancore-ai-console.md
-          - ИИ в программе: reference/ourplancore-ai.md
-          - Workspace и CLI: reference/ourplancore-workspace.md
-          - 3D-крыша: reference/ourplancore-3d-roof.md
       - Дополнительные возможности:
           - Что сюда вошло: reference/ourplancore-extras.md
           - Snap и трассировка: reference/ourplancore-snap-trace.md
           - Менеджеры: reference/ourplancore-managers.md
-          - 3D и Massing: reference/ourplancore-3d.md
           - Прочее: reference/ourplancore-extras-other.md
+      - Нейронки, терминал и 3D (полная версия):
+          - ИИ в программе: reference/ourplancore-ai.md
+          - Консоль ИИ и терминал: reference/ourplancore-ai-console.md
+          - Workspace, второй компьютер: reference/ourplancore-workspace.md
+          - 3D-крыша: reference/ourplancore-3d-roof.md
+          - 3D и Massing: reference/ourplancore-3d.md
       - Идеи и планы: reference/ourplancore-ideas.md
       - Справка:
           - Горячие клавиши: reference/ourplancore-shortcuts.md

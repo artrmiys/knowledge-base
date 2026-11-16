@@ -1,8 +1,8 @@
 # Менеджеры: Sheet Manager, Takeoff Manager, Report Builder, Materials, AI Manager, Job Tracker
 
-Здесь: вкладки строки режимов, которые по умолчанию выключены в `Settings > Modules`, и кнопка Job Tracker. Нужно, когда листов десятки и их удобнее править таблицей, когда нужен список материалов или цены, когда работает ИИ через AI Inbox, и когда карточку проекта в трекере хочется переключить из программы. Повседневный замер обходится без этих вкладок.
+Здесь: вкладки строки режимов, которые по умолчанию выключены в `Settings > Modules`, и кнопка Job Tracker. Нужно, когда листов десятки и их удобнее править таблицей, когда нужен список материалов или цены, когда работает ИИ через AI Inbox, и когда карточку проекта в трекере хочется переключить из программы. Повседневный замер обходится без этих вкладок. Materials, AI Manager и 3D есть только в полной версии; в Lite их нет ([Lite и полная версия](ourplancore-lite.md)).
 
-Включение: `Settings > Modules`, галка у модуля, `Apply` или `Save global default` ([как включить](ourplancore-extras.md#enable)). Вкладка появляется в строке режимов рядом с `Main View` и `Settings`. Из палитры команд (++ctrl+shift+p++) вкладки открываются командами `Show Sheet Manager`, `Show Takeoff Manager`, `Show Report Builder`, `Show Materials`, `Show AI Manager` и `Show 3D Viewer` ([3D](ourplancore-3d.md)); у выключенного модуля команда не срабатывает.
+Включение: `Settings > Modules`, галка у модуля, `Apply` или `Save global default` ([как включить](ourplancore-extras.md#enable)). Вкладка появляется в строке режимов рядом с `Main View` и `Settings`. Из палитры команд (++ctrl+shift+p++) вкладки открываются командами `Show Sheet Manager`, `Show Takeoff Manager`, `Show Report Builder`, а в полной версии ещё `Show Materials`, `Show AI Manager` и `Show 3D Viewer` ([3D](ourplancore-3d.md)); у выключенного модуля команда не срабатывает.
 
 ## Sheet Manager { #sheet-manager }
 
@@ -11,7 +11,7 @@
   <figcaption markdown="span">Таблица листов с предложенными именами, масштабом, источником и уверенностью. Галки `Rename` и `Scale Action` выбирают, что применить.</figcaption>
 </figure>
 
-Таблица всех листов для массовых операций. Включение модуля также добавляет на ленту Main кнопки `Name`, `Scale`, `Name+Scale`, а вместе с модулем AI - `AI Fill` и `Crop Hints`.
+Таблица всех листов для массовых операций. Включение модуля также добавляет на ленту Main кнопки `Name`, `Scale`, `Name+Scale`, а в полной версии вместе с модулем AI - `AI Fill` и `Crop Hints` (в Lite этих двух кнопок нет).
 
 | Группа | Кнопки |
 | --- | --- |
@@ -37,7 +37,7 @@
 ### Как задать области штампа: Crop Hints { #crop-hints }
 
 Зачем: комплект с нечитаемым штампом получает имена и масштаб по нарисованным один раз областям.
-Нужно: модули Sheet Manager и AI.
+Нужно: модули Sheet Manager и AI, то есть полная версия.
 
 1. Нажмите **Crop Hints** (лента Main или группа **Metadata**): программа открывает типовой лист комплекта со статусом `show Sheet title / number, then Scale on the middle <профиль> sheet`.
 2. Нарисуйте левой кнопкой три области: **Sheet #**, **Sheet Title**, **Scale**; правая или средняя кнопка двигает лист, **Clear Current** и **Clear All** стирают.
@@ -65,11 +65,11 @@
   <figcaption markdown="span">Report Builder читает `TemplateCom.xlsm` и показывает таблицу стен.</figcaption>
 </figure>
 
-`Reload` читает шаблон `TemplateCom.xlsm`, `Refresh` обновляет таблицу, `Apply Walls` пишет стены в книгу. Это прежний путь в Excel; сегодня стены, площади и framing пишет полоса XL с кнопками по секциям и `ALL` ([экспорт в Excel](ourplancore-excel.md)). Вкладка остаётся для сверки, как старые книги получали блок стен.
+`Reload` читает шаблон `TemplateCom.xlsm`, `Refresh` обновляет таблицу, `Apply Walls` пишет стены в книгу. Это прежний путь в Excel; сегодня в полной версии стены, площади и framing пишет полоса XL с кнопками по секциям и `ALL`, в Lite числа идут кнопками `Excel`, `Value` и `Link to Excel` ([экспорт в Excel](ourplancore-excel.md)). Вкладка остаётся для сверки, как старые книги получали блок стен.
 
 ## Materials { #materials }
 
-Вкладка читает материалы из самих чертежей, а не из дерева Takeoffs: упоминания материалов и таблицы schedules в тексте исходных PDF проекта.
+Только в полной версии: в Lite модуля Materials нет. Вкладка читает материалы из самих чертежей, а не из дерева Takeoffs: упоминания материалов и таблицы schedules в тексте исходных PDF проекта.
 
 ### Как собрать материалы из PDF проекта { #materials-extract }
 
@@ -88,16 +88,7 @@
 
 ## AI Inbox и AI Manager { #ai-manager }
 
-AI Inbox - панель внизу Main View (модуль AI): запросы, ответы, наблюдения, маркеры. AI Manager - отдельная вкладка с таблицей `Type`, `Page`, `Observation`, `Quality`, `Time`:
-
-| Группа | Кнопки |
-| --- | --- |
-| Setup | `AI Settings`, `+ Add`, `Refresh` |
-| Review | `Open Details`, `Go to Page`, `Run AI` |
-| Batch | `Run New` (все новые запросы по закладкам), `Retry Failed` |
-| Markers | `Create Set`, `Marker Sets`, `Export Markers` |
-
-Что попадает в Inbox: кропы `AI crop here -> note` и `AI quick box here -> note`, наблюдения `Save observation here`, `Add as pending check`, `Suggest takeoff item here`, запросы трассы `Trace wall from this point`, `Trace closed area`, `Check missed takeoffs on this page` ([трассировка](ourplancore-snap-trace.md#ai-trace)), кропы из консоли ИИ `AI Crop +` ([консоль](ourplancore-ai-console.md#crop)). Маркер - проверенный образец символа; по нему работает `Find Similar From Marker`. Выводы ИИ в Inbox - черновики, не замеры: в дерево они попадают только после подтверждения. Ключ и модель задаёт диалог `AI Settings`; формат заметок из кропов - `Settings > AI Crop Notes` ([ИИ в программе](ourplancore-ai.md#crop-notes)).
+Только в полной версии, вместе с модулем AI. Кнопки вкладки AI Manager, что попадает в AI Inbox и как проверять черновики ИИ - в блоке нейронок: [ИИ в программе, AI Inbox и AI Manager](ourplancore-ai.md#ai-manager).
 
 ## Job Tracker: кнопка In Progress { #job-tracker }
 
@@ -118,6 +109,6 @@ AI Inbox - панель внизу Main View (модуль AI): запросы, 
 ## См. также
 
 - [Дополнительные возможности](ourplancore-extras.md): таблица всех вынесенных функций
-- [Workspace и модули](ourplancore-workspace.md#modules): список модулей с группами
+- [Settings, Modules](ourplancore-settings.md#modules): список модулей с группами
 - [Листы (Pages)](ourplancore-pages.md), [Экспорт в Excel](ourplancore-excel.md)
-- [ИИ в программе](ourplancore-ai.md), [Консоль ИИ](ourplancore-ai-console.md)
+- [ИИ в программе](ourplancore-ai.md), [Консоль ИИ](ourplancore-ai-console.md): только полная версия

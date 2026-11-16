@@ -1,5 +1,8 @@
 # 3D и Massing
 
+!!! info "Только в полной версии"
+    В OurPlanCore Lite модуля 3D нет, и включить его нельзя. Чем версии отличаются: [Lite и полная версия](ourplancore-lite.md).
+
 Здесь: вкладка 3D, которая по умолчанию выключена: стены и плиты из замеров, общий вьюер, и честный статус старого AI Massing. Нужно, когда хочется увидеть корпус в объёме или когда спрашивают "а что с 3D". Крыша в 3D описана отдельно: [3D-крыша](ourplancore-3d-roof.md). Вкладки Sheet Manager, Takeoff Manager, Report Builder и Materials: [Менеджеры](ourplancore-managers.md).
 
 <figure markdown>
