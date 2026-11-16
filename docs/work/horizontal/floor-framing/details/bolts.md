@@ -1,8 +1,8 @@
 # Bolts (болты, шайбы, гайки)
 
 <figure markdown>
-  ![Anchor bolt through sill plate](../../../../assets/images/framing/anchor-bolt.svg)
-  <figcaption markdown="span">Болт с шайбой и гайкой: три строки в DFL. Шаг и диаметр по детали, одна шайба на болт, две - когда дерево с обеих сторон.</figcaption>
+  ![Through bolts балка-пост и болты nailer на стальной балке](../../../../assets/images/framing/through-bolt.svg)
+  <figcaption markdown="span">Сверху through bolt балки к посту: строки `Bolts`, `Washers` (две на болт, дерево с двух сторон) и `Nuts`. Снизу болты nailer на стальной балке с шагом 24" вразбежку: три строки шаблона с одной формулой.</figcaption>
 </figure>
 
 <!-- TODO-PHOTO: Simpson Titen HD anchor with plate washer in sill plate, EN query "Titen HD anchor washer sill plate" -->

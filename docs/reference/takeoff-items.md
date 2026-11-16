@@ -4,6 +4,11 @@
 
 ## Формат строки
 
+<figure markdown>
+  ![Анатомия строки DFL: колонки A-H](../assets/images/reference/dfl-row-anatomy.svg)
+  <figcaption markdown="span">Одна строка по колонкам: A подпись, B размер, C формула, D длина доски или единица, E лист, F тип, G замер, H параметр.</figcaption>
+</figure>
+
 | Колонка | Правило | Пример |
 | --- | --- | --- |
 | A | подпись из словаря ниже; шаг, plies и назначение в подписи | `Studs Ext 16" o.c.`, `Plates Ext (2) dbl top`, `Beam (3) Flush` |

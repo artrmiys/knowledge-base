@@ -221,7 +221,7 @@ The XL strip is a vertical strip of buttons to the right of the sheet. It is sho
 <!-- DEMO: d-excel-xl -->
 
 <figure markdown>
-  ![XL strip](../assets/images/ourplancore/v3/excel-strip.png)
+  ![XL strip buttons, labelled](../assets/images/ourplancore/v3/excel-strip.svg)
   <figcaption markdown="span">Top of the strip: `ALL` and `LG`, below them the wall and area buttons, then framing starts (`FR`). In a short window the strip scrolls with the mouse wheel down to the lower framing buttons. Each button's tooltip says what it does.</figcaption>
 </figure>
 

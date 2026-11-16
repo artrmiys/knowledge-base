@@ -221,7 +221,7 @@
 <!-- DEMO: d-excel-xl -->
 
 <figure markdown>
-  ![Полоса XL](../assets/images/ourplancore/v3/excel-strip.png)
+  ![Кнопки полосы XL с подписями](../assets/images/ourplancore/v3/excel-strip.svg)
   <figcaption markdown="span">Верх полосы: `ALL` и `LG`, ниже кнопки стен и площадей, дальше начинается framing (`FR`). На низком окне полоса прокручивается колесом мыши до нижних кнопок framing. Подсказка каждой кнопки говорит, что она делает.</figcaption>
 </figure>
 

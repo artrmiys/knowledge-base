@@ -99,7 +99,7 @@ joists только J Area, балки только Beam, проёмы толь�
 ## 5. Excel DFL и ноты
 
 <figure markdown>
-  ![Полоса XL экспорта в Excel](../assets/images/ourplancore/v3/excel-strip.png)
+  ![Кнопки полосы XL: какая ветка дерева идёт в какую часть книги](../assets/images/ourplancore/v3/excel-strip.svg)
   <figcaption markdown="span">Кнопки полосы XL переносят ветки дерева в открытую книгу TemplateCom по секциям; `ALL` делает всё по порядку. В Lite полоса появляется после галки `Excel Strip (XL)` в `Settings > Modules`.</figcaption>
 </figure>
 

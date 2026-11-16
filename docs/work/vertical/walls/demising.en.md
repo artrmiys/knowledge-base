@@ -1,8 +1,8 @@
 # Demising Walls
 
 <figure markdown>
-  ![Double demising wall in section with draft stop and gypsum](../../../assets/images/walls/demising-double-wall.svg)
-  <figcaption markdown="span">Double demising wall: two frames with an air gap, gypsum on both sides, 1/2" OSB draft stop in the floor framing. Each frame is its own line and its own DFL rows.</figcaption>
+  ![Double demising wall in section with draft stop and gypsum, one line in plan](../../../assets/images/walls/demising-double-wall.svg)
+  <figcaption markdown="span">Double demising wall: two frames with an air gap, gypsum on both sides, draft stop in the floor framing. Two identical frames are measured as one line `dem (2) 2x4 9.09` along the wall axis.</figcaption>
 </figure>
 
 ## What it is

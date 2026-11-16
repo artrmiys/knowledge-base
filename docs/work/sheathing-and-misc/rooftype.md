@@ -1,8 +1,8 @@
 # Roof Types (тип кровли и её слои)
 
 <figure markdown>
-  ![Слои плоской кровли](../../assets/images/roof/roof-type.svg)
-  <figcaption markdown="span">Flat roof: membrane, cover board, rigid insulation, настил. Все слои по одной площади, каждый своей строкой.</figcaption>
+  ![Типы кровли и их строки DFL](../../assets/images/roof/roof-type.svg)
+  <figcaption markdown="span">Четыре типа кровли: имя площади в дереве и строки, которые тянет каждый тип. У flat все слои по одной площади, каждый своей строкой.</figcaption>
 </figure>
 
 ## Что это

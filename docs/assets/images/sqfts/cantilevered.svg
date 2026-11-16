@@ -1,23 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
-  <title id="t">Cantilevered floor section</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540" role="img" aria-labelledby="t d">
+  <title id="t">Cantilevered floor in section and in plan</title>
+  <desc id="d">Section: floor joists run over the supporting wall and stick out past it, rim board at the end, blocking between joists over the wall, soffit under the overhang, upper wall on the overhang. Plan inset: the overhang is a separate Area named cant.</desc>
   <defs>
-    <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
+    <style>
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
+    </style>
   </defs>
-  <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Cantilever - вынос за опору без нижней поддержки</text>
-  <text class="s" x="32" y="62">Меняет rim/edge material, blocking и нередко holdowns.</text>
-  <!-- support wall -->
-  <rect x="300" y="200" width="40" height="70" fill="url(#w)" stroke="#3a3a3a" stroke-width="1.4"/>
-  <!-- joists cantilevering right -->
-  <rect x="150" y="170" width="430" height="16" fill="url(#w)" stroke="#3a3a3a" stroke-width="1.4"/>
-  <rect x="150" y="190" width="200" height="16" fill="url(#w)" stroke="#3a3a3a" stroke-width="1.2"/>
-  <!-- rim at cantilever edge -->
-  <rect x="566" y="160" width="14" height="40" fill="#caa27b" stroke="#6c4b2a" stroke-width="1.6"/>
-  <!-- support line -->
-  <line x1="320" y1="186" x2="320" y2="200" stroke="#2e7d32" stroke-width="2" stroke-dasharray="4 3"/>
-  <text class="s" x="350" y="225">support</text>
-  <text class="s" x="470" y="150">cantilever -</text>
-  <line x1="573" y1="180" x2="600" y2="170" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="608" y="173">Rim / edge при выносе</text>
-  <line x1="250" y1="178" x2="600" y2="210" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="608" y="213">Joists через опору</text>
+<rect x="0.5" y="0.5" width="879" height="539" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="side" x="40" y="46">РАЗРЕЗ</text>
+<text class="side" x="40" y="66">EXT</text>
+<text class="side" x="500" y="66">INT</text>
+<rect x="250" y="316" width="44" height="90" fill="url(#batt)" stroke="#caa64a" stroke-width="1"/>
+<rect x="250" y="316" width="44" height="90" fill="none" stroke="#3a3f44" stroke-width="1.4"/>
+<rect x="250" y="288" width="44" height="14" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.3"/>
+<rect x="250" y="302" width="44" height="14" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.3"/>
+<rect x="134" y="200" width="416" height="88" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.5"/>
+<rect x="120" y="200" width="14" height="88" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.5"/>
+<rect x="120" y="190" width="430" height="10" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="252" y="202" width="40" height="84" fill="url(#endgrain)" stroke="#2e7d32" stroke-width="2" stroke-dasharray="6 4"/>
+<rect x="120" y="176" width="44" height="14" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.3"/>
+<rect x="120" y="70" width="44" height="106" fill="url(#batt)" stroke="#caa64a" stroke-width="1"/>
+<rect x="120" y="70" width="44" height="106" fill="none" stroke="#3a3f44" stroke-width="1.4"/>
+<rect x="120" y="288" width="130" height="9" fill="#d7c3a6" stroke="#8a6a3f" stroke-width="1.3"/>
+<line x1="120" y1="350" x2="250" y2="350" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="dimt" x="185.0" y="343.0" text-anchor="middle">вынос</text>
+<text class="note" x="306" y="366">опора: стена ниже</text>
+<circle cx="127" cy="244" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="127" y="248.5">2</text>
+<circle cx="272" cy="244" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="272" y="248.5">3</text>
+<circle cx="222" cy="316" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="222" y="320.5">4</text>
+<line x1="222" y1="305" x2="222" y2="297" stroke="#3a3f44" stroke-width="1.1"/>
+<circle cx="420" cy="244" r="11" fill="#8a98a5" stroke="#fff" stroke-width="1.5"/><text class="numt" x="420" y="248.5">5</text>
+<text class="side" x="40" y="436">ПЛАН</text>
+<rect x="150" y="450" width="280" height="70" fill="#ffffff" stroke="#3a3f44" stroke-width="3"/>
+<rect x="100" y="462" width="50" height="46" fill="url(#hatchGreen)" stroke="#2e7d32" stroke-width="2.4" stroke-dasharray="8 5"/>
+<text class="mono" x="46" y="490">cant</text>
+<circle cx="125" cy="485" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="125" y="489.5">1</text>
+<text class="mono2" x="290" y="490" text-anchor="middle">2nd</text>
+<circle cx="600" cy="60" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="600" y="64.5">1</text>
+<text class="lab2" x="620" y="65">Площадь выноса</text>
+<text class="mono2" x="620" y="83">sqfts/cant | метка</text>
+<text class="mono2" x="620" y="100">Cantilevered | SQ FT</text>
+<circle cx="600" cy="136" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="600" y="140.5">2</text>
+<text class="lab2" x="620" y="141">Rim на выносе</text>
+<text class="mono2" x="620" y="159">Rim Board | по детали |</text>
+<text class="mono2" x="620" y="176">D 16, FRT как стена</text>
+<circle cx="600" cy="212" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="600" y="216.5">3</text>
+<text class="lab2" x="620" y="217">Blocking над опорой</text>
+<text class="mono2" x="620" y="235">Blocking | 2x | D 16</text>
+<circle cx="600" cy="288" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="600" y="292.5">4</text>
+<text class="lab2" x="620" y="293">Soffit снизу</text>
+<text class="mono2" x="620" y="311">Soffits at Floor Overhangs</text>
+<text class="mono2" x="620" y="328">| LFT или SQ FT</text>
+<circle cx="600" cy="364" r="11" fill="#8a98a5" stroke="#fff" stroke-width="1.5"/><text class="numt" x="600" y="368.5">5</text>
+<text class="lab2" x="620" y="369">Joists через опору</text>
+<text class="note" x="620" y="387">J Area этажа, второй раз</text>
+<text class="note" x="620" y="404">по площади не считать</text>
+<text class="note" x="600" y="452">Holdowns и straps: pcs,</text>
+<text class="note" x="600" y="471">только если показаны в детали.</text>
 </svg>

@@ -15,6 +15,11 @@ The canon for studs. At `16" o.c.` count one stud per foot of wall plus 10 perce
 | 16" o.c. | **1.1** | 1:1 plus 10% waste |
 | 24" o.c. | **0.625** | 0.5 plus 25% waste |
 
+<figure markdown>
+  ![Why studs at 16 o.c. are counted as 1.1 per foot](../assets/images/reference/studs-16oc.svg)
+  <figcaption markdown="span">Light studs are the regular ones at the spacing, 0.75 per foot by geometry. Green ones are added by corners, T-intersections, king, jack and cripples at openings: that is why we count one stud per foot plus 10%.</figcaption>
+</figure>
+
 - `pcs = wall LFT x factor`; stud height in column E of the row, to 1/8" (floor-to-floor minus subfloor, minus floor framing, minus plates).
 - Bearing walls as Extra: the main line with the regular factor, extra plies on a separate `double extra` row, subtract the base from the regular studs. Extra factors: `16" o.c.` 0.75, `24" o.c.` 0.5 (without the base row's waste).
 - A double wall = two frames only if the plan shows two frames; staggered corridor 2x4 = two rows at 16" o.c., 2x6 plates.
@@ -62,6 +67,11 @@ T blocking at gables   = EVEN(G / D)
 | Flat | `2` |
 | Diagonal | `2.5` |
 | Vertical | `1.5` ... `2` |
+
+<figure markdown>
+  ![Blocking at a spacing: flat, diagonal, vertical and the piece formula](../assets/images/reference/blocking-pieces.svg)
+  <figcaption markdown="span">One blocking piece between two members takes 2, 2.5 or 1.5-2 ft of board. The tree holds one line: the formula counts the points at the spacing and turns them into 16 ft boards.</figcaption>
+</figure>
 
 Walls 10' and taller get two rows of blocking. Kitchen: `2x6`, 4 pieces at 14' per kitchen; bath: 1 piece at 14' per bathroom. Kickers only where the detail shows them.
 

@@ -1,8 +1,8 @@
 # Balcony SQFT (площадь балкона)
 
 <figure markdown>
-  ![Слои балкона: каркас, sleepers, мембрана, настил](../../assets/images/sqfts/balcony.svg)
-  <figcaption markdown="span">Балкон: каркас, sleepers, membrane, decking. Площадь - Area `blcny`; типовые балконы размечаются блоками с точкой на каждый экземпляр.</figcaption>
+  ![План: каждый балкон свой полигон и своя точка](../../assets/images/sqfts/balcony.svg)
+  <figcaption markdown="span">Каждый балкон обводится своим полигоном, перемычкой их не соединяют. Площадь - Area `blcny`; типовые балконы размечаются блоками с точкой на каждый экземпляр.</figcaption>
 </figure>
 
 ## Что это

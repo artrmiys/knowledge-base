@@ -1,24 +1,142 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" role="img" aria-labelledby="t">
-  <title id="t">Balcony build-up assembly stack</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 722" role="img" aria-labelledby="t d">
+  <title id="t">Balcony build-up: frame rows and finish rows</title>
+  <desc id="d">Section of a balcony at the house wall: ledger, joists on hangers, dropped beam on a post, subfloor, membrane on the subfloor turned up the wall, sleepers over the membrane, decking on sleepers, soffit below, fascia at the edge, flashing at the wall, post wrap. Numbers 1 to 6 are frame rows, 7 to 12 finish rows.</desc>
   <defs>
-    <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
+    <style>
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
+    </style>
   </defs>
-  <rect width="760" height="320" fill="#fff"/>
-  <text class="t" x="32" y="40">Balcony build-up - полная сборка снизу вверх</text>
-  <text class="s" x="32" y="62">posts - beam - ledger/box - joists/hangers - subfloor - sleepers - EPDM - decking.</text>
-  <!-- stacked layers -->
-  <g stroke="#3a3a3a" stroke-width="1.3">
-    <rect x="150" y="240" width="340" height="22" fill="url(#w)"/>
-    <rect x="150" y="218" width="340" height="22" fill="url(#w)"/>
-    <rect x="150" y="200" width="340" height="18" fill="#eef3f7"/>
-    <rect x="170" y="180" width="20" height="20" fill="url(#w)"/><rect x="300" y="180" width="20" height="20" fill="url(#w)"/><rect x="440" y="180" width="20" height="20" fill="url(#w)"/>
-    <rect x="150" y="166" width="340" height="14" fill="#3a3a3a"/>
-    <rect x="150" y="150" width="340" height="16" fill="#ccd6c9"/>
-  </g>
-  <line x1="320" y1="158" x2="560" y2="150" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="153">Decking (часто by others)</text>
-  <line x1="320" y1="173" x2="560" y2="178" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="181">EPDM membrane</text>
-  <line x1="320" y1="190" x2="560" y2="206" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="209">Sleepers (часто 2 слоя)</text>
-  <line x1="320" y1="230" x2="560" y2="240" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="243">Subfloor + joists/hangers</text>
-  <text class="s" x="150" y="290">Структурный каркас (posts/beam/ledger) - отдельно от trim.</text>
+<rect x="0.5" y="0.5" width="879" height="721" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<rect x="40" y="70" width="34" height="520" fill="url(#batt)" stroke="#caa64a" stroke-width="1"/>
+<rect x="40" y="70" width="34" height="520" fill="none" stroke="#3a3f44" stroke-width="1.4"/>
+<rect x="74" y="70" width="9" height="520" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.2"/>
+<rect x="83" y="70" width="8" height="150" fill="#d7c3a6" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="83" y="372" width="8" height="218" fill="#d7c3a6" stroke="#8a6a3f" stroke-width="1.2"/>
+<text class="side" x="40" y="616">HOUSE</text>
+<rect x="83" y="280" width="16" height="86" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.6"/>
+<rect x="99" y="280" width="351" height="86" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.5"/>
+<path d="M99,286 V362 H121 V286" fill="none" stroke="#4d5861" stroke-width="3" stroke-linejoin="round"/>
+<rect x="450" y="280" width="14" height="86" fill="url(#endgrain)" stroke="#6c4b2a" stroke-width="1.6"/>
+<rect x="380" y="372" width="20" height="74" fill="url(#endgrain)" stroke="#6c4b2a" stroke-width="1.5"/>
+<rect x="400" y="372" width="20" height="74" fill="url(#endgrain)" stroke="#6c4b2a" stroke-width="1.5"/>
+<rect x="420" y="372" width="20" height="74" fill="url(#endgrain)" stroke="#6c4b2a" stroke-width="1.5"/>
+<rect x="392" y="446" width="36" height="150" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.6"/>
+<path d="M386,446 V434 H434 V446" fill="none" stroke="#4d5861" stroke-width="3" stroke-linejoin="round"/>
+<rect x="382" y="452" width="10" height="144" fill="#f4efe6" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="428" y="452" width="10" height="144" fill="#f4efe6" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="350" y="596" width="120" height="26" fill="url(#conc)" stroke="#6b7378" stroke-width="1.3"/>
+<rect x="99" y="366" width="281" height="6" fill="#f4efe6" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="91" y="270" width="373" height="10" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.2"/>
+<path d="M87,214 V267 H468 V284" fill="none" stroke="#37474f" stroke-width="3.5" stroke-linejoin="round"/>
+<rect x="104" y="252" width="30" height="13" fill="url(#endgrain)" stroke="#6c4b2a" stroke-width="1.3"/>
+<rect x="168" y="252" width="30" height="13" fill="url(#endgrain)" stroke="#6c4b2a" stroke-width="1.3"/>
+<rect x="232" y="252" width="30" height="13" fill="url(#endgrain)" stroke="#6c4b2a" stroke-width="1.3"/>
+<rect x="296" y="252" width="30" height="13" fill="url(#endgrain)" stroke="#6c4b2a" stroke-width="1.3"/>
+<rect x="360" y="252" width="30" height="13" fill="url(#endgrain)" stroke="#6c4b2a" stroke-width="1.3"/>
+<rect x="424" y="252" width="30" height="13" fill="url(#endgrain)" stroke="#6c4b2a" stroke-width="1.3"/>
+<rect x="96" y="238" width="42" height="14" fill="#c8b79b" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="142" y="238" width="42" height="14" fill="#c8b79b" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="188" y="238" width="42" height="14" fill="#c8b79b" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="234" y="238" width="42" height="14" fill="#c8b79b" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="280" y="238" width="42" height="14" fill="#c8b79b" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="326" y="238" width="42" height="14" fill="#c8b79b" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="372" y="238" width="42" height="14" fill="#c8b79b" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="418" y="238" width="42" height="14" fill="#c8b79b" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="468" y="238" width="9" height="134" fill="#f4efe6" stroke="#8a6a3f" stroke-width="1.3"/>
+<path d="M83,196 H95 V236 H112" fill="none" stroke="#b8732e" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="410" cy="520" r="11" fill="#6b7378" stroke="#fff" stroke-width="1.5"/><text class="numt" x="410" y="524.5">1</text>
+<circle cx="410" cy="410" r="11" fill="#6b7378" stroke="#fff" stroke-width="1.5"/><text class="numt" x="410" y="414.5">2</text>
+<circle cx="64" cy="330" r="11" fill="#6b7378" stroke="#fff" stroke-width="1.5"/><text class="numt" x="64" y="334.5">3</text>
+<line x1="75" y1="330" x2="86" y2="330" stroke="#8a98a5" stroke-width="1.3" marker-end="url(#arrGrey)"/>
+<circle cx="260" cy="323" r="11" fill="#6b7378" stroke="#fff" stroke-width="1.5"/><text class="numt" x="260" y="327.5">4</text>
+<circle cx="150" cy="200" r="11" fill="#6b7378" stroke="#fff" stroke-width="1.5"/><text class="numt" x="150" y="204.5">5</text>
+<line x1="144" y1="210" x2="122" y2="254" stroke="#8a98a5" stroke-width="1.3" marker-end="url(#arrGrey)"/>
+<circle cx="214" cy="200" r="11" fill="#6b7378" stroke="#fff" stroke-width="1.5"/><text class="numt" x="214" y="204.5">6</text>
+<line x1="214" y1="212" x2="214" y2="270" stroke="#8a98a5" stroke-width="1.3" marker-end="url(#arrGrey)"/>
+<circle cx="474" cy="520" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="474" y="524.5">7</text>
+<line x1="462" y1="520" x2="440" y2="520" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="310" cy="200" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="310" y="204.5">8</text>
+<line x1="308" y1="212" x2="300" y2="264" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="380" cy="200" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="380" y="204.5">9</text>
+<line x1="380" y1="212" x2="380" y2="238" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="240" cy="410" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="240" y="414.5">10</text>
+<line x1="240" y1="398" x2="240" y2="374" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="516" cy="300" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="516" y="304.5">11</text>
+<line x1="504" y1="300" x2="479" y2="300" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="130" cy="150" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="130" y="154.5">12</text>
+<line x1="124" y1="160" x2="98" y2="200" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="99" y1="100" x2="464" y2="100" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="dimt" x="280" y="90" text-anchor="middle">D (вылет от стены)</text>
+<text class="inkb" x="548" y="44">Каркас: считает страница каркаса</text>
+<circle cx="560" cy="72" r="11" fill="#6b7378" stroke="#fff" stroke-width="1.5"/><text class="numt" x="560" y="76.5">1</text>
+<text class="lab2" x="580" y="77">Posts + Post Bases + Post Caps</text>
+<text class="mono2" x="580" y="95">6x6 P.T.</text>
+<circle cx="560" cy="116" r="11" fill="#6b7378" stroke="#fff" stroke-width="1.5"/><text class="numt" x="560" y="120.5">2</text>
+<text class="lab2" x="580" y="121">Beam (3) фронт, Beam (2) бока</text>
+<text class="mono2" x="580" y="139">2x12 P.T.</text>
+<circle cx="560" cy="160" r="11" fill="#6b7378" stroke="#fff" stroke-width="1.5"/><text class="numt" x="560" y="164.5">3</text>
+<text class="lab2" x="580" y="165">Ledger + screws</text>
+<text class="mono2" x="580" y="183">2x12 P.T.</text>
+<circle cx="560" cy="204" r="11" fill="#6b7378" stroke="#fff" stroke-width="1.5"/><text class="numt" x="560" y="208.5">4</text>
+<text class="lab2" x="580" y="209">Joists + Hangers Zmax</text>
+<text class="mono2" x="580" y="227">2x12 P.T. 16" o.c.</text>
+<circle cx="560" cy="248" r="11" fill="#6b7378" stroke="#fff" stroke-width="1.5"/><text class="numt" x="560" y="252.5">5</text>
+<text class="lab2" x="580" y="253">Sleepers (Terrace)</text>
+<text class="mono2" x="580" y="271">2x4 P.T.</text>
+<circle cx="560" cy="292" r="11" fill="#6b7378" stroke="#fff" stroke-width="1.5"/><text class="numt" x="560" y="296.5">6</text>
+<text class="lab2" x="580" y="297">Subfloor (Terrace)</text>
+<text class="mono2" x="580" y="315">3/4" Ply | 4x8</text>
+<text class="green" x="548" y="352">Отделка: строки этой страницы</text>
+<circle cx="560" cy="380" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="560" y="384.5">7</text>
+<text class="lab2" x="580" y="385">Post Wrap</text>
+<text class="mono2" x="580" y="403">1x8 | LFT</text>
+<circle cx="560" cy="424" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="560" y="428.5">8</text>
+<text class="lab2" x="580" y="429">EPDM, если наш по spec</text>
+<text class="mono2" x="580" y="447">membrane | SQ FT</text>
+<circle cx="560" cy="468" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="560" y="472.5">9</text>
+<text class="lab2" x="580" y="473">Decking</text>
+<text class="mono2" x="580" y="491">2x6 DuxxBak | SQ FT</text>
+<circle cx="560" cy="512" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="560" y="516.5">10</text>
+<text class="lab2" x="580" y="517">Soffits at Balcony</text>
+<text class="mono2" x="580" y="535">Beadboard | SQ FT</text>
+<circle cx="560" cy="556" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="560" y="560.5">11</text>
+<text class="lab2" x="580" y="561">Balcony Trims / Fascia</text>
+<text class="mono2" x="580" y="579">1x10 | LFT</text>
+<circle cx="560" cy="600" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="560" y="604.5">12</text>
+<text class="lab2" x="580" y="605">Flashings at Wall</text>
+<text class="mono2" x="580" y="623">Copper | LFT</text>
+<text class="note" x="40" y="658">Decking =CEILING(W*D*units*1.1,10); Soffit =W*D*G;</text>
+<text class="note" x="40" y="678">Trims =(W+2*D)*G; Flashing =W*G. Обычный балкон: decking</text>
+<text class="note" x="40" y="698">2x6 DuxxBak прямо по joists, без 5 и 6.</text>
 </svg>

@@ -34,6 +34,11 @@ Here: what materials are called in the workbook (the `Mat List` tab) and in colu
 - With I-joists, engineered rim only; LVL rim only when a deck or corridor attaches to it.
 - Type III: LVL, PSL, LSL are not allowed in the exterior wall plane, do not write `LVL FRT`.
 
+<figure markdown>
+  ![EWP families in section: LVL, PSL, LSL, I-joist, rim board](../assets/images/reference/ewp-families.svg)
+  <figcaption markdown="span">EWP sections at one scale and how each is written in column B. LVL shows veneer layers and a ply count, PSL a massive section, an I-joist flanges and a thin web, rim a thin board.</figcaption>
+</figure>
+
 ## Sheathing, decking, barriers
 
 | Material | Thicknesses | How to write it |
@@ -47,6 +52,11 @@ Here: what materials are called in the workbook (the `Mat List` tab) and in colu
 | WRB | per spec: `Tyvek`, fluid-applied barrier | in the workbook the row is `Vapor Barrier` (template name); on the drawing it is WRB / Air Barrier, not a vapor barrier |
 | Insulation | `R-6`, `1"`, `1 1/2"`, `2"` rigid; tapered on a flat roof | only exterior, outside the sheathing; interior insulation and sound batt are not counted in frame scope |
 | Membrane | `EPDM`, `Ice & Water`, `Felt 15#`, `1/4" DensDeck` cover board | roofing per the section |
+
+<figure markdown>
+  ![4x8 sheets: Plywood, OSB, Zip, DensGlass, T&G subfloor](../assets/images/reference/sheet-types.svg)
+  <figcaption markdown="span">Five sheet goods that get mixed up on drawings: how they look, how they are written in B and where they go. All of them are `4x8` in D; Zip has the barrier built in, so only Tape is added.</figcaption>
+</figure>
 
 A conflict between arch and S on sheathing is resolved with a note: [Notes in DFL](standard-notes.md#spec-cells).
 

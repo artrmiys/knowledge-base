@@ -7,7 +7,7 @@ Here: what the working Excel workbook (Detailed Frame List) is made of, what col
 
 <figure markdown>
   ![Zones of the Detailed Frame List worksheet](../assets/images/reference/dfl-layout.svg)
-  <figcaption markdown="span">The Detailed Frame List worksheet: on the left the delivered table A:H, on the right the work areas (export from the app, wall matrix, spec cells, height calculator, lookup tables). Rows are inserted only in A:H.</figcaption>
+  <figcaption markdown="span">The Detailed Frame List worksheet: the delivered table A:H and the work areas right of H (export from the app, wall matrix, spec cells, height calculator, lookup tables). G takes its number from K of the export or from the matrix. Rows are inserted only in A:H.</figcaption>
 </figure>
 
 ## What is where on this page { #map }

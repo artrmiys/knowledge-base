@@ -4,6 +4,11 @@ Here: what a row is called in column A, what goes in the other columns, and whic
 
 ## Row format
 
+<figure markdown>
+  ![Anatomy of a DFL row: columns A-H](../assets/images/reference/dfl-row-anatomy.svg)
+  <figcaption markdown="span">One row column by column: A label, B size, C formula, D stock length or unit, E sheet, F type, G takeoff, H parameter. Callouts on the picture are in Russian.</figcaption>
+</figure>
+
 | Column | Rule | Example |
 | --- | --- | --- |
 | A | label from the dictionary below; spacing, plies and purpose go in the label | `Studs Ext 16" o.c.`, `Plates Ext (2) dbl top`, `Beam (3) Flush` |

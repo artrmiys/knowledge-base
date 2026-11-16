@@ -4,8 +4,8 @@ A single-family house, duplex or townhouse: one or two buildings, a garage, a po
 wood walls for the full height and regular stick framing.
 
 <figure markdown>
-  ![Residential scope overview](../assets/images/work-types/residential.svg)
-  <figcaption markdown="span">Walls + openings, floor/roof framing, sheathing, SQFT, roof/deck/porch. Same order as in the "Work" menu.</figcaption>
+  ![House, garage and porch: the tree branches they produce](../assets/images/work-types/residential.svg)
+  <figcaption markdown="span">House, garage and porch on the elevation and the tree branches their takeoffs go to: walls, openings, areas, roof by pitch, eaves. The garage has its own building `Grge` and its own pitch, the porch its own area and eave.</figcaption>
 </figure>
 
 <figure markdown>

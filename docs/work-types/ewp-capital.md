@@ -5,8 +5,8 @@ I-joists, LVL / PSL / LSL / GL балки и engineered rim. Есть два п�
 заказа: "только EWP" (Capital-тип) и "всё, кроме EWP" (`Frame. EWP by others`).
 
 <figure markdown>
-  ![EWP materials: I-joist, LVL beam, hanger](../assets/images/work-types/ewp-capital.svg)
-  <figcaption markdown="span">EWP only: считаем I-joists, LVL/PSL/GL, engineered rim и hangers к ним. 2x, фермы, гвозди - нет.</figcaption>
+  ![Разрез перекрытия: что считаем в заказе EWP only](../assets/images/work-types/ewp-capital.svg)
+  <figcaption markdown="span">EWP only на разрезе перекрытия: считаем I-joists, балку LVL/PSL/GL, engineered rim и hangers к ним (зелёные номера). Стены 2x, subfloor, фермы, ties и гвозди - нет (красные).</figcaption>
 </figure>
 
 <figure markdown>

@@ -10,6 +10,11 @@
   <figcaption markdown="span">Flush LVL beam at joist depth: joists on both sides hang on face-mount hangers. The beam is one Count takeoff with the length in the name; hangers are counted by the number of joist ends on it. Photo: plasticinehouse.com, [source](https://plasticinehouse.com/how-far-can-a-lvl-beam-span-without-support/), found via Pinterest.</figcaption>
 </figure>
 
+<figure markdown>
+  ![Flush and dropped beam in section](../../../assets/images/framing/beam-flush-dropped.svg)
+  <figcaption markdown="span">Flush and dropped beam, section across the beam. A flush beam sits level with the joists: the joists hang on hangers, the ceiling stays flat, rows `Beam (3) Flush` and Hangers. A dropped beam sits under the joists: no hangers at the beam, it shows below the ceiling, a plain `Beam (3)` row. C = points x plies.</figcaption>
+</figure>
+
 ## What it is
 
 A beam is a floor or roof beam that carries joists, rafters or posts: `(2) 2x10`, `(3) 1 3/4 x 11 7/8 LVL`, `5 1/4 x 11 7/8 PSL`, `5 1/2 x 14 GL`. A steel beam is by others, but the wood nailer on it is ours: [Steel Beam Web Fillers](details/steelbeams.md). A header over an opening is [Headers](../../vertical/openings/headers.md); a beam between doubled rafters in the roof is [Roof Header](../roof-framing/header.md). Flush (at joist depth, on hangers) and Dropped (below the joists) go into the Label.

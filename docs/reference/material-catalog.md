@@ -34,6 +34,11 @@
 - С I-joists только engineered rim; LVL rim - только когда к нему крепится deck или corridor.
 - Type III: LVL, PSL, LSL в плоскости наружной стены запрещены, `LVL FRT` не пишется.
 
+<figure markdown>
+  ![Семейства EWP в разрезе: LVL, PSL, LSL, I-joist, rim board](../assets/images/reference/ewp-families.svg)
+  <figcaption markdown="span">Сечения EWP в одном масштабе и запись в колонке B. LVL узнаётся по слоям шпона и числу ply, PSL по массивному сечению, I-joist по полкам и тонкой стенке, rim по тонкой доске.</figcaption>
+</figure>
+
 ## Обшивка, настил, барьеры
 
 | Материал | Толщины | Как пишется |
@@ -47,6 +52,11 @@
 | WRB | по спецификации: `Tyvek`, fluid-applied barrier | в книге строка `Vapor Barrier` (имя шаблона), на чертеже это WRB / Air Barrier, не vapor barrier |
 | Insulation | `R-6`, `1"`, `1 1/2"`, `2"` rigid; tapered на плоской кровле | только наружный после обшивки; внутренний утеплитель и sound batt во frame-scope не считаем |
 | Membrane | `EPDM`, `Ice & Water`, `Felt 15#`, `1/4" DensDeck` cover board | кровля по разрезу |
+
+<figure markdown>
+  ![Листы 4x8: Plywood, OSB, Zip, DensGlass, T&G subfloor](../assets/images/reference/sheet-types.svg)
+  <figcaption markdown="span">Пять листовых материалов, которые путают на чертеже: как выглядят, как пишутся в B и где стоят. Все в D идут как `4x8`; у Zip барьер встроен, поэтому только Tape.</figcaption>
+</figure>
 
 Расхождение арх и S по обшивке решается нотой: [Ноты в DFL](standard-notes.md#spec-cells).
 

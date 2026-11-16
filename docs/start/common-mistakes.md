@@ -15,6 +15,11 @@
 | Metal studs не посчитаны и нет ноты. | Клиент не видит, что стены из металла исключены сознательно. | Если металл by others, строки нет, но нота `Metal Studs by others` обязательна. Если считаем, пишем gauge (`6" 18ga mtl`). [Правила клиентов](client-rules.md#metal-studs), [Metal Tracks](../work/vertical/walls/metal-tracks.md) |
 | Shaft walls выброшены как "panels by others"; шахта лифта из CMU записана как shaftliner; мусоропровод пропущен. | Шахты почти никогда не входят в панели, а материал шахт разный. | Каждую шахту зафиксировать в takeoff и определить материал по плану и wall type. [Shaft](../work/vertical/walls/shaft.md), [Wall Panels](../work/vertical/walls/wall-panels.md) |
 
+<figure markdown>
+  ![Высота стены: так и не так](../assets/images/process/mistake-stud-height.svg)
+  <figcaption markdown="span">Высота в имени стены: floor-to-floor минус subfloor и глубина перекрытия, plates остаются внутри высоты. Floor-to-floor целиком завышает studs всего этажа.</figcaption>
+</figure>
+
 ## Проёмы {#openings}
 
 | Как выглядит | Почему плохо | Как правильно |
@@ -22,6 +27,16 @@
 | Проёмы не вычтены из обшивки, WRB, утеплителя и линии анкеров; или вычтены дважды (с плана и с фасада). | Обшивка и WRB завышены на десятки листов, либо занижены. | Вычитать один раз, по своему этажу, из всех строк, где это нужно. Окна меньше 4' не вычитаются. [Windows and Doors](../work/vertical/openings/windows-doors.md), [Wall Sheathing](../work/vertical/sheathing/wall-sheathing.md) |
 | Высота окна взята как отметка верха (head height), а не высота изделия. | Размер проёма в имени (`5.8x5.9`) и вычеты неверны. | Высота = размер изделия из schedule; отметка верха на фасаде не размер. Проверять, R.O. это или размер блока. [Windows and Doors](../work/vertical/openings/windows-doors.md) |
 | Полный storefront посчитан, а его дверь ещё раз как отдельный проём. | Двойной счёт. | Storefront один раз; дверь внутри составного проёма не второй opening. [Windows and Doors](../work/vertical/openings/windows-doors.md) |
+
+<figure markdown>
+  ![Высота окна: размер изделия, не отметка верха](../assets/images/process/mistake-window-height.svg)
+  <figcaption markdown="span">Высота проёма в имени - размер самого окна из schedule, а не отметка head height от пола.</figcaption>
+</figure>
+
+<figure markdown>
+  ![Проём вычтен один раз и дважды](../assets/images/process/mistake-double-deduction.svg)
+  <figcaption markdown="span">Проём шире 4' вычитается один раз по своему этажу; окно уже 4' не вычитается. Вычет и с плана, и с фасада занижает обшивку.</figcaption>
+</figure>
 
 ## Перекрытия и балки {#floor}
 
@@ -85,6 +100,11 @@
 | Измеренная в OurPlanCore площадь не дошла до Excel или не обновилась после правки. | DFL не совпадает с takeoff. | После каждого изменения замера обновить число в DFL; перед сдачей сверить ключевые G с деревом. [Чек-лист](quality-checklist.md) |
 | Единица `FT` вместо `LFT`; подпись не совпадает с расчётом (`Plate (2)` при одинарной, `Posts (3)` при двух). | Формат не по шаблону, клиент читает неверно. | В D `LFT` для досок, `pcs` для крепежа, SF для листов; подпись = то, что считает формула. [Takeoff item labels](../reference/takeoff-items.md) |
 
+<figure markdown>
+  ![Заметка под заголовком своей секции](../assets/images/reference/dfl-note-placement.svg)
+  <figcaption markdown="span">Нота стоит под заголовком своей секции, с префиксом и жёлтым фоном. Нота над заголовком уходит в предыдущий блок.</figcaption>
+</figure>
+
 ## Листы и дерево в OurPlanCore {#pages}
 
 | Как выглядит | Почему плохо | Как правильно |
@@ -92,6 +112,11 @@
 | Масштаб взят из подписи листа (1/8"), а лист напечатан в 3/16"; лист с несколькими масштабами оставлен с одним. | Все длины и площади листа неверны. | Масштаб проверять по известному размеру и осям; лист с несколькими масштабами калибровать по зоне. [Дерево takeoff](takeoff-structure.md), [OurPlanCore: начало работы](../reference/ourplancore-start.md) |
 | Joists нарисованы обычной Area с именем `2x8 16"`; балка или проём заведены как обычный Count. | Экспорт не видит направление, шаг и длины. | Joists только J Area, балки Beam, проёмы Openings. [Joist](../work/horizontal/floor-framing/joist.md), [Beam](../work/horizontal/floor-framing/beam.md) |
 | Все позиции одним цветом и одним значком; к мерному плану дописан тег `f`; тег листа не последним (`1st overall`). | Легенда нечитаема, точка W/F/S/U не ставится. | У каждой новой позиции свой Color, у точечных свой CountSymbol. Имя листа `a101 1st`, тег в конце, `f` только фундамент. [Дерево takeoff](takeoff-structure.md) |
+
+<figure markdown>
+  ![Свой цвет и значок у каждой позиции](../assets/images/process/mistake-tree-colors.svg)
+  <figcaption markdown="span">У каждой позиции свой Color, у точечных ещё и свой CountSymbol. Одним цветом легенду и PDF не прочитать.</figcaption>
+</figure>
 
 ## Сдача {#delivery}
 

@@ -11,6 +11,11 @@ We count only the trim material and only when trim is in the job.
     Canonical page: [EIFS / Stucco / Veneer](../siding/eifs-stucco-veneer.md); the rule
     for the trim scope and J-channel: [Exclusions and J-Channel](exclusions.md).
 
+<figure markdown>
+  ![Facade with the exterior trim groups](../../assets/images/trims/ext-trims-facade.svg)
+  <figcaption markdown="span">Trim groups on a facade and their DFL rows: casing, crowns, sills, corner boards, watertable, frieze, soffit, fascia, shutters, columns. Running trim in LFT, a soffit wider than one board in SQ FT, items by the piece and in pairs.</figcaption>
+</figure>
+
 ## What is included and in what order
 
 <div class="grid cards" markdown>

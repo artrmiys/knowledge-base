@@ -1,59 +1,102 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" role="img" aria-labelledby="t d">
-  <title id="t">Stud spacing, extra studs and double studs</title>
-  <desc id="d">Wall elevation: field studs at 16 inch on center, extra studs at corner and around an opening (king, jack, cripple), and double studs at bearing or demising.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500" role="img" aria-labelledby="t d">
+  <title id="t">Field studs, extra studs and double studs in one wall</title>
+  <desc id="d">Elevation of a wall: light field studs at 16 inches on center, green extra studs at the corner and around the opening (king, jack, cripples), and orange second plies of doubled studs on the bearing part of the wall.</desc>
   <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L7,3 z" fill="#2e7d32"/></marker>
-    <pattern id="w" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="9" stroke="#c89b5a" stroke-width="0.9"/></pattern>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
     <style>
-      .ttl{font:700 21px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.sub{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}
-      .lab{font:600 13px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.note{font:400 12px "Segoe UI",Arial,sans-serif;fill:#566}
-      .grn{font:700 12px "Segoe UI",Arial,sans-serif;fill:#2e7d32}
-      .dim{stroke:#2e7d32;stroke-width:1;fill:none}
-      .st{fill:url(#w);stroke:#3a3a3a;stroke-width:1.2}
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
     </style>
   </defs>
-  <rect width="760" height="360" fill="#fff"/>
-  <text class="ttl" x="32" y="40">Studs: field spacing , extra , double</text>
-  <text class="sub" x="32" y="62">Field - 16" o.c.; extra - corners/openings (king/jack/cripple); dbl - bearing/demising.</text>
-
-  <!-- plates -->
-  <rect x="60" y="110" width="640" height="16" fill="url(#w)" stroke="#3a3a3a" stroke-width="1.3"/>
-  <rect x="60" y="300" width="640" height="16" fill="url(#w)" stroke="#3a3a3a" stroke-width="1.3"/>
-
-  <!-- corner cluster (3 studs) -->
-  <rect class="st" x="60" y="126" width="14" height="174"/>
-  <rect class="st" x="76" y="126" width="14" height="174"/>
-  <rect class="st" x="60" y="126" width="30" height="14"/>
-
-  <!-- field studs -->
-  <rect class="st" x="150" y="126" width="12" height="174"/>
-  <rect class="st" x="210" y="126" width="12" height="174"/>
-
-  <!-- opening with king/jack/cripple -->
-  <rect class="st" x="290" y="126" width="14" height="174"/> <!-- king L -->
-  <rect class="st" x="304" y="170" width="11" height="130"/> <!-- jack L -->
-  <rect class="st" x="470" y="126" width="14" height="174"/> <!-- king R -->
-  <rect class="st" x="459" y="170" width="11" height="130"/> <!-- jack R -->
-  <rect x="304" y="156" width="166" height="14" fill="#caa27b" stroke="#6c4b2a" stroke-width="1.4"/> <!-- header -->
-  <rect class="st" x="350" y="126" width="10" height="30"/> <!-- cripple -->
-  <rect class="st" x="410" y="126" width="10" height="30"/> <!-- cripple -->
-  <rect x="315" y="170" width="144" height="130" fill="#f4f7fa" stroke="#9bb0c2" stroke-width="1" stroke-dasharray="5 4"/>
-  <text class="note" x="360" y="245">opening</text>
-
-  <!-- field studs after opening -->
-  <rect class="st" x="540" y="126" width="12" height="174"/>
-
-  <!-- double studs (dbl) -->
-  <rect class="st" x="610" y="126" width="13" height="174"/>
-  <rect class="st" x="623" y="126" width="13" height="174"/>
-
-  <!-- 16 o.c. dimension -->
-  <line class="dim" x1="156" y1="335" x2="216" y2="335"/>
-  <line class="dim" x1="156" y1="330" x2="156" y2="340"/><line class="dim" x1="216" y1="330" x2="216" y2="340"/>
-  <text class="grn" x="162" y="352">16" o.c.</text>
-
-  <!-- callouts -->
-  <line class="dim" x1="75" y1="100" x2="75" y2="80" marker-end="url(#arrow)"/><text class="grn" x="40" y="76">Corner (extra)</text>
-  <line class="dim" x1="385" y1="150" x2="385" y2="86" marker-end="url(#arrow)"/><text class="grn" x="330" y="82">King , Jack , Cripple (extra)</text>
-  <line class="dim" x1="623" y1="100" x2="623" y2="80" marker-end="url(#arrow)"/><text class="grn" x="560" y="76">Dbl studs (bearing/demising)</text>
+<rect x="0.5" y="0.5" width="879" height="499" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="side" x="50" y="56">СТЕНА, СТОЙКИ 16" O.C.</text>
+<rect x="50" y="368" width="442" height="12" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3"/>
+<rect x="50" y="86" width="442" height="12" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3"/>
+<rect x="50" y="98" width="442" height="12" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3"/>
+<rect x="50" y="110" width="10" height="258" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="86" y="110" width="10" height="258" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="122" y="110" width="10" height="258" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="158" y="110" width="10" height="258" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="194" y="110" width="10" height="40" fill="url(#hatchGreen)" stroke="#2e7d32" stroke-width="1.6"/>
+<rect x="194" y="300" width="10" height="68" fill="url(#hatchGreen)" stroke="#2e7d32" stroke-width="1.6"/>
+<rect x="230" y="110" width="10" height="40" fill="url(#hatchGreen)" stroke="#2e7d32" stroke-width="1.6"/>
+<rect x="230" y="300" width="10" height="68" fill="url(#hatchGreen)" stroke="#2e7d32" stroke-width="1.6"/>
+<rect x="266" y="110" width="10" height="258" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="302" y="110" width="10" height="258" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="338" y="110" width="10" height="258" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="349" y="110" width="10" height="258" fill="url(#rigid)" stroke="#c98a1e" stroke-width="1.6"/>
+<rect x="374" y="110" width="10" height="258" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="385" y="110" width="10" height="258" fill="url(#rigid)" stroke="#c98a1e" stroke-width="1.6"/>
+<rect x="410" y="110" width="10" height="258" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="421" y="110" width="10" height="258" fill="url(#rigid)" stroke="#c98a1e" stroke-width="1.6"/>
+<rect x="446" y="110" width="10" height="258" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="457" y="110" width="10" height="258" fill="url(#rigid)" stroke="#c98a1e" stroke-width="1.6"/>
+<rect x="482" y="110" width="10" height="258" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="61" y="110" width="10" height="258" fill="url(#hatchGreen)" stroke="#2e7d32" stroke-width="1.6"/>
+<rect x="72" y="110" width="10" height="258" fill="url(#hatchGreen)" stroke="#2e7d32" stroke-width="1.6"/>
+<rect x="140" y="110" width="10" height="258" fill="url(#hatchGreen)" stroke="#2e7d32" stroke-width="1.6"/>
+<rect x="284" y="110" width="10" height="258" fill="url(#hatchGreen)" stroke="#2e7d32" stroke-width="1.6"/>
+<rect x="151" y="184" width="10" height="184" fill="url(#hatchGreen)" stroke="#2e7d32" stroke-width="1.6"/>
+<rect x="273" y="184" width="10" height="184" fill="url(#hatchGreen)" stroke="#2e7d32" stroke-width="1.6"/>
+<rect x="151" y="150" width="132" height="34" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.4"/>
+<rect x="162" y="290" width="110" height="10" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3"/>
+<text class="note" x="217.0" y="244" text-anchor="middle">opening</text>
+<line x1="307.0" y1="400" x2="343.0" y2="400" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="dimt" x="306" y="424">16" o.c.</text>
+<path d="M334,74 h158" stroke="#c98a1e" stroke-width="2.4" fill="none"/>
+<text class="inkb" x="415.0" y="66" text-anchor="middle">bearing wall: dbl studs</text>
+<text class="green" x="50" y="424">corner</text>
+<line x1="70" y1="410" x2="70" y2="360" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<text class="green" x="158" y="450">king, jack, cripples</text>
+<line x1="182" y1="434" x2="156" y2="360" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<text class="h" x="572" y="60">Три группы стоек</text>
+<circle cx="583" cy="98" r="11" fill="#8a98a5" stroke="#fff" stroke-width="1.5"/><text class="numt" x="583" y="102.5">1</text>
+<rect x="602" y="90" width="22" height="16" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.4"/>
+<text class="lab2" x="634" y="103">Field studs</text>
+<text class="note" x="602" y="128">по полю стены, по шагу</text>
+<text class="note" x="602" y="147">16" o.c.: LFT x 1.1</text>
+<text class="note" x="602" y="166">24" o.c.: LFT x 0.625</text>
+<circle cx="583" cy="206" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="583" y="210.5">2</text>
+<rect x="602" y="198" width="22" height="16" fill="url(#hatchGreen)" stroke="#2e7d32" stroke-width="1.4"/>
+<text class="lab2" x="634" y="211">Extra studs</text>
+<text class="note" x="602" y="236">углы, T, king / jack / cripple</text>
+<text class="note" x="602" y="255">частично закрыты фактором</text>
+<text class="note" x="602" y="274">1.1; corners на stick отдельно</text>
+<circle cx="583" cy="314" r="11" fill="#c98a1e" stroke="#fff" stroke-width="1.5"/><text class="numt" x="583" y="318.5">3</text>
+<rect x="602" y="306" width="22" height="16" fill="url(#rigid)" stroke="#c98a1e" stroke-width="1.4"/>
+<text class="lab2" x="634" y="319">Dbl / extra</text>
+<text class="note" x="602" y="344">bearing и demising по</text>
+<text class="note" x="602" y="363">stud schedule этажа</text>
+<text class="note" x="602" y="382">отдельная строка Extra:</text>
+<text class="note" x="602" y="401">16": 0.75, 24": 0.5</text>
+<text class="note" x="50" y="474">Plies и шаг берутся из stud schedule каждого этажа: на нижних этажах стойки чаще двойные.</text>
 </svg>

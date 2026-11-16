@@ -2,7 +2,7 @@
 
 <figure markdown>
   ![Blocking between joists](../../../../assets/images/framing/blocking.svg)
-  <figcaption markdown="span">Blocking - короткие доски между joists или фермами. Сплошной ряд считается в LFT по длине ряда; ряды с шагом 48" o.c. считаются по формуле со страницы Blocking o.c.</figcaption>
+  <figcaption markdown="span">Blocking - короткие доски между joists или фермами. Сплошной ряд меряется Line по длине ряда и в DFL идёт досками по 16'; ряды с шагом 48" o.c. считаются по формуле со страницы Blocking o.c.</figcaption>
 </figure>
 
 <figure markdown>

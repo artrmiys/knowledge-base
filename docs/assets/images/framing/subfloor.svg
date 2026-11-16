@@ -1,26 +1,143 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
-  <title id="t">Subfloor T and G on joists with adhesive</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500" role="img" aria-labelledby="t d">
+  <title id="t">Subfloor sheets and the FRT strip in plan</title>
+  <desc id="d">Floor plan from above: 4x8 subfloor sheets laid across the joists, a 4 ft wide FRT strip along the exterior walls, blocking under the inner edge of the strip, adhesive on the joists.</desc>
   <defs>
-    <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
-    <pattern id="tg" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#f6ead0"/><circle cx="4" cy="4" r="0.9" fill="#c89b5a"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
+    <style>
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
+    </style>
   </defs>
-  <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Subfloor - 3/4" T&amp;G + panel adhesive</text>
-  <text class="s" x="32" y="62">По умолчанию 3/4" T&amp;G; не забывай строку клея (29OZ) и FRT-периметр.</text>
-  <!-- joists (ends) -->
-  <g fill="url(#w)" stroke="#3a3a3a" stroke-width="1.4">
-    <rect x="150" y="170" width="22" height="90"/><rect x="250" y="170" width="22" height="90"/>
-    <rect x="350" y="170" width="22" height="90"/><rect x="450" y="170" width="22" height="90"/>
-  </g>
-  <!-- subfloor panel -->
-  <rect x="130" y="140" width="380" height="30" fill="url(#tg)" stroke="#3a3a3a" stroke-width="1.6"/>
-  <!-- adhesive beads -->
-  <g fill="#2e7d32"><circle cx="161" cy="168" r="3"/><circle cx="261" cy="168" r="3"/><circle cx="361" cy="168" r="3"/><circle cx="461" cy="168" r="3"/></g>
-  <line x1="320" y1="150" x2="560" y2="140" stroke="#2e7d32" stroke-width="1.4"/>
-  <text class="l" x="568" y="143">3/4" T&amp;G subfloor</text>
-  <line x1="361" y1="168" x2="560" y2="180" stroke="#2e7d32" stroke-width="1.4"/>
-  <text class="l" x="568" y="183">Panel adhesive (29OZ)</text>
-  <line x1="261" y1="215" x2="560" y2="225" stroke="#2e7d32" stroke-width="1.4"/>
-  <text class="l" x="568" y="228">Joists</text>
+<rect x="0.5" y="0.5" width="879" height="499" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="side" x="50" y="52">ПЛАН ПЕРЕКРЫТИЯ, вид сверху</text>
+<rect x="50" y="70" width="480" height="320" fill="#eedec3" stroke="none" stroke-width="0"/>
+<path fill-rule="evenodd" d="M50,70 h480 v320 h-480 z M90,110 v240 h400 v-240 z" fill="url(#rigid)" stroke="none"/>
+<line x1="76.7" y1="70" x2="76.7" y2="390" stroke="#8a98a5" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="103.3" y1="70" x2="103.3" y2="390" stroke="#8a98a5" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="130.0" y1="70" x2="130.0" y2="390" stroke="#8a98a5" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="156.7" y1="70" x2="156.7" y2="390" stroke="#8a98a5" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="183.4" y1="70" x2="183.4" y2="390" stroke="#8a98a5" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="210.0" y1="70" x2="210.0" y2="390" stroke="#8a98a5" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="236.7" y1="70" x2="236.7" y2="390" stroke="#8a98a5" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="263.4" y1="70" x2="263.4" y2="390" stroke="#8a98a5" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="290.0" y1="70" x2="290.0" y2="390" stroke="#8a98a5" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="316.7" y1="70" x2="316.7" y2="390" stroke="#8a98a5" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="343.4" y1="70" x2="343.4" y2="390" stroke="#8a98a5" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="370.0" y1="70" x2="370.0" y2="390" stroke="#8a98a5" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="396.7" y1="70" x2="396.7" y2="390" stroke="#8a98a5" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="423.4" y1="70" x2="423.4" y2="390" stroke="#8a98a5" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="450.1" y1="70" x2="450.1" y2="390" stroke="#8a98a5" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="476.7" y1="70" x2="476.7" y2="390" stroke="#8a98a5" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="503.4" y1="70" x2="503.4" y2="390" stroke="#8a98a5" stroke-width="1.1" stroke-dasharray="5 4"/>
+<line x1="50" y1="110" x2="530" y2="110" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="50" y1="150" x2="530" y2="150" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="50" y1="190" x2="530" y2="190" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="50" y1="230" x2="530" y2="230" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="50" y1="270" x2="530" y2="270" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="50" y1="310" x2="530" y2="310" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="50" y1="350" x2="530" y2="350" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="130" y1="70" x2="130" y2="110" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="210" y1="70" x2="210" y2="110" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="290" y1="70" x2="290" y2="110" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="370" y1="70" x2="370" y2="110" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="450" y1="70" x2="450" y2="110" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="90" y1="110" x2="90" y2="150" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="170" y1="110" x2="170" y2="150" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="250" y1="110" x2="250" y2="150" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="330" y1="110" x2="330" y2="150" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="410" y1="110" x2="410" y2="150" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="490" y1="110" x2="490" y2="150" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="130" y1="150" x2="130" y2="190" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="210" y1="150" x2="210" y2="190" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="290" y1="150" x2="290" y2="190" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="370" y1="150" x2="370" y2="190" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="450" y1="150" x2="450" y2="190" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="90" y1="190" x2="90" y2="230" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="170" y1="190" x2="170" y2="230" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="250" y1="190" x2="250" y2="230" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="330" y1="190" x2="330" y2="230" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="410" y1="190" x2="410" y2="230" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="490" y1="190" x2="490" y2="230" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="130" y1="230" x2="130" y2="270" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="210" y1="230" x2="210" y2="270" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="290" y1="230" x2="290" y2="270" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="370" y1="230" x2="370" y2="270" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="450" y1="230" x2="450" y2="270" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="90" y1="270" x2="90" y2="310" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="170" y1="270" x2="170" y2="310" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="250" y1="270" x2="250" y2="310" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="330" y1="270" x2="330" y2="310" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="410" y1="270" x2="410" y2="310" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="490" y1="270" x2="490" y2="310" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="130" y1="310" x2="130" y2="350" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="210" y1="310" x2="210" y2="350" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="290" y1="310" x2="290" y2="350" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="370" y1="310" x2="370" y2="350" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="450" y1="310" x2="450" y2="350" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="90" y1="350" x2="90" y2="390" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="170" y1="350" x2="170" y2="390" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="250" y1="350" x2="250" y2="390" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="330" y1="350" x2="330" y2="390" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="410" y1="350" x2="410" y2="390" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="490" y1="350" x2="490" y2="390" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="90" y="110" width="400" height="240" fill="none" stroke="#2e7d32" stroke-width="2.4" stroke-dasharray="9 6"/>
+<rect x="50" y="70" width="480" height="320" fill="none" stroke="#3a3f44" stroke-width="4"/>
+<line x1="50" y1="412" x2="90" y2="412" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="dimt" x="100" y="417">4'</text>
+<text class="note" x="130" y="417">ширина FRT-полосы: 2' или 4' по ноте</text>
+<rect x="250" y="190" width="80" height="40" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+<text class="mono" x="290" y="215" text-anchor="middle">4x8</text>
+<circle cx="370" cy="250" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="370" y="254.5">1</text>
+<circle cx="190" cy="90" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="190" y="94.5">2</text>
+<circle cx="183.4" cy="290" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="183.4" y="294.5">3</text>
+<circle cx="450" cy="350" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="450" y="354.5">4</text>
+<circle cx="436.7" cy="170" r="11" fill="#8a98a5" stroke="#fff" stroke-width="1.5"/><text class="numt" x="436.7" y="174.5">5</text>
+<circle cx="572" cy="66" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="572" y="70.5">1</text>
+<text class="lab2" x="592" y="71">Subfloor</text>
+<text class="mono2" x="592" y="89">Subfloor | 3/4" T&amp;G OSB | 4x8</text>
+<text class="mono2" x="592" y="106">SQ FT / 32 x 1.1</text>
+<circle cx="572" cy="142" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="572" y="146.5">2</text>
+<text class="lab2" x="592" y="147">FRT-полоса у наружных стен</text>
+<text class="mono2" x="592" y="165">Subfloor FRT 4' |</text>
+<text class="mono2" x="592" y="182">3/4" T&amp;G FRT | 4x8</text>
+<circle cx="572" cy="218" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="572" y="222.5">3</text>
+<text class="lab2" x="592" y="223">Adhesive по joists</text>
+<text class="mono2" x="592" y="241">Panel Adheasive | 29OZ | tubes</text>
+<text class="mono2" x="592" y="258">1 туба на 3 листа</text>
+<circle cx="572" cy="294" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="572" y="298.5">4</text>
+<text class="lab2" x="592" y="299">Blocking под кромкой FRT</text>
+<text class="mono2" x="592" y="317">Blocking | 2x | D 16</text>
+<circle cx="572" cy="370" r="11" fill="#8a98a5" stroke="#fff" stroke-width="1.5"/><text class="numt" x="572" y="374.5">5</text>
+<text class="lab2" x="592" y="375">Joists</text>
+<text class="note" x="592" y="393">страница Joist</text>
+<text class="note" x="50" y="462">FRT-полоса: периметр своего этажа x ширину полосы / 32 x 1.1. Листы всегда вверх до целого.</text>
 </svg>

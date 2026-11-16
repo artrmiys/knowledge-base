@@ -99,7 +99,7 @@ joists only with J Area, beams only with Beam, openings only with Openings. Name
 ## 5. Excel DFL and notes
 
 <figure markdown>
-  ![XL strip for export to Excel](../assets/images/ourplancore/v3/excel-strip.png)
+  ![XL strip buttons: which tree branch goes to which part of the workbook](../assets/images/ourplancore/v3/excel-strip.svg)
   <figcaption markdown="span">The XL strip buttons send tree branches into the open TemplateCom workbook section by section; `ALL` does everything in order. In Lite the strip appears after checking `Excel Strip (XL)` in `Settings > Modules`.</figcaption>
 </figure>
 

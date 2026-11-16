@@ -5,8 +5,8 @@ I-joists, LVL / PSL / LSL / GL beams and engineered rim. There are two opposite
 job types: "EWP only" (Capital-type) and "everything except EWP" (`Frame. EWP by others`).
 
 <figure markdown>
-  ![EWP materials: I-joist, LVL beam, hanger](../assets/images/work-types/ewp-capital.svg)
-  <figcaption markdown="span">EWP only: we count I-joists, LVL/PSL/GL, engineered rim and hangers for them. Not 2x, trusses, nails.</figcaption>
+  ![Floor section: what is counted on an EWP only job](../assets/images/work-types/ewp-capital.svg)
+  <figcaption markdown="span">EWP only on a floor section: we count I-joists, the LVL/PSL/GL beam, engineered rim and hangers for them (green numbers). Not the 2x walls, subfloor, trusses, ties and nails (red).</figcaption>
 </figure>
 
 <figure markdown>

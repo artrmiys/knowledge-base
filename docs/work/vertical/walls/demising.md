@@ -1,8 +1,8 @@
 # Demising Walls (межквартирные стены)
 
 <figure markdown>
-  ![Двойная demising стена в разрезе с draft stop и gypsum](../../../assets/images/walls/demising-double-wall.svg)
-  <figcaption markdown="span">Двойная demising стена: два каркаса с зазором, gypsum с обеих сторон, draft stop 1/2" OSB в перекрытии. Каждый каркас - своя линия и свои строки DFL.</figcaption>
+  ![Двойная demising стена в разрезе с draft stop и gypsum, в плане одна линия](../../../assets/images/walls/demising-double-wall.svg)
+  <figcaption markdown="span">Двойная demising стена: два каркаса с зазором, gypsum с обеих сторон, draft stop в перекрытии. Одинаковые каркасы меряются одной линией `dem (2) 2x4 9.09` по оси стены.</figcaption>
 </figure>
 
 ## Что это

@@ -7,7 +7,7 @@
 
 <figure markdown>
   ![Deck framing plan](../../assets/images/framing/deck-frame-plan.svg)
-  <figcaption markdown="span">Framing plan: ledger to the building, joists and hangers, beam on posts, rim and blocking. Units: posts pcs, beam and joists LFT, hangers pcs.</figcaption>
+  <figcaption markdown="span">Framing plan: ledger to the building, joists and hangers, beam on posts, rim and blocking. Lumber rows carry the stock length in D and pieces in C; hangers and ledger screws are pcs.</figcaption>
 </figure>
 
 ## What it is

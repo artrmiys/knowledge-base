@@ -1,16 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280" role="img" aria-labelledby="t">
-  <title id="t">Floor area to subfloor sheets</title>
-  <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}.big{font:700 18px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
-  <rect width="760" height="280" fill="#fff"/>
-  <text class="t" x="32" y="40">Floor SQFT - площадь по уровням</text>
-  <text class="s" x="32" y="62">Тянет subfloor, underlayment, sound mat, gypcrete. Этажи держим отдельно.</text>
-  <rect x="120" y="100" width="300" height="140" fill="#eef3f7" stroke="#3a3a3a" stroke-width="1.6"/>
-  <g stroke="#9bb0c2" stroke-width="1" stroke-dasharray="4 4">
-    <line x1="120" y1="135" x2="420" y2="135"/><line x1="120" y1="170" x2="420" y2="170"/><line x1="120" y1="205" x2="420" y2="205"/>
-    <line x1="195" y1="100" x2="195" y2="240"/><line x1="270" y1="100" x2="270" y2="240"/><line x1="345" y1="100" x2="345" y2="240"/>
-  </g>
-  <text class="s" x="210" y="175">Floor area (SQFT)</text>
-  <text class="big" x="470" y="150">sheets = SQFT / 32</text>
-  <text class="s" x="470" y="178">или area × 1.1 по материалу</text>
-  <text class="l" x="470" y="206">3/4" T&amp;G subfloor + adhesive</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500" role="img" aria-labelledby="t d">
+  <title id="t">Floor area polygon and what it feeds</title>
+  <desc id="d">Floor plan with the Area polygon along the outer contour, holes for a shaft and an open to below, a porch as a separate area, and the rows the floor area feeds: Front Page, Subfloor in 4x8 sheets, panel adhesive.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
+    <style>
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
+    </style>
+  </defs>
+<rect x="0.5" y="0.5" width="879" height="499" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="side" x="40" y="46">ПЛАН ЭТАЖА, лист с точкой W</text>
+<polygon points="60,80 420,80 420,200 530,200 530,380 60,380" fill="url(#hatchGreen)" stroke="none" stroke-width="0" stroke-linejoin="round"/>
+<rect x="110" y="120" width="60" height="60" fill="#ffffff" stroke="#2e7d32" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="300" y="250" width="130" height="80" fill="#ffffff" stroke="#2e7d32" stroke-width="2" stroke-dasharray="7 5"/>
+<line x1="300" y1="250" x2="430" y2="330" stroke="#9aa4ad" stroke-width="1.1"/>
+<line x1="300" y1="330" x2="430" y2="250" stroke="#9aa4ad" stroke-width="1.1"/>
+<line x1="110" y1="120" x2="170" y2="180" stroke="#9aa4ad" stroke-width="1.1"/>
+<line x1="110" y1="180" x2="170" y2="120" stroke="#9aa4ad" stroke-width="1.1"/>
+<polygon points="60,80 420,80 420,200 530,200 530,380 60,380" fill="none" stroke="#3a3f44" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="60,80 420,80 420,200 530,200 530,380 60,380" fill="none" stroke="#2e7d32" stroke-width="2.4" stroke-dasharray="10 6"/>
+<circle cx="60" cy="80" r="4.5" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/>
+<circle cx="420" cy="80" r="4.5" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/>
+<circle cx="420" cy="200" r="4.5" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/>
+<circle cx="530" cy="200" r="4.5" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/>
+<circle cx="530" cy="380" r="4.5" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/>
+<circle cx="60" cy="380" r="4.5" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/>
+<rect x="420" y="110" width="110" height="90" fill="url(#hatchGrey)" stroke="#8a98a5" stroke-width="1.6" stroke-dasharray="6 5"/>
+<text class="mono2" x="475" y="160" text-anchor="middle">porch</text>
+<text class="note" x="140" y="205" text-anchor="middle">shaft</text>
+<text class="note" x="365" y="352" text-anchor="middle">open to below</text>
+<rect x="196" y="208" width="64" height="30" fill="#ffffff" stroke="#2e7d32" stroke-width="1.6" rx="4"/>
+<text class="mono" x="228" y="229" text-anchor="middle">1st</text>
+<circle cx="86" cy="106" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="86" y="110.5">1</text>
+<circle cx="140" cy="150" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="140" y="154.5">2</text>
+<circle cx="365" cy="290" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="365" y="294.5">2</text>
+<circle cx="450" cy="128" r="11" fill="#8a98a5" stroke="#fff" stroke-width="1.5"/><text class="numt" x="450" y="132.5">5</text>
+<circle cx="240" cy="300" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="240" y="304.5">3</text>
+<circle cx="490" cy="350" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="490" y="354.5">4</text>
+<circle cx="576" cy="60" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="576" y="64.5">1</text>
+<text class="lab2" x="596" y="65">Area по наружному контуру</text>
+<text class="mono2" x="596" y="83">sqfts/1st | Front Page,</text>
+<text class="mono2" x="596" y="100">1st Floor | SQ FT</text>
+<circle cx="576" cy="134" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="576" y="138.5">2</text>
+<text class="lab2" x="596" y="139">Shaft, open to below</text>
+<text class="note" x="596" y="157">отверстие в полигоне или</text>
+<text class="note" x="596" y="174">вычет open to below, не оба</text>
+<circle cx="576" cy="208" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="576" y="212.5">3</text>
+<text class="lab2" x="596" y="213">Subfloor</text>
+<text class="mono2" x="596" y="231">Subfloor | 3/4" T&amp;G | 4x8</text>
+<text class="mono2" x="596" y="248">SQ FT / 32 x 1.1, вверх</text>
+<circle cx="576" cy="282" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="576" y="286.5">4</text>
+<text class="lab2" x="596" y="287">Adhesive</text>
+<text class="mono2" x="596" y="305">Panel Adheasive | 29OZ | tubes</text>
+<text class="mono2" x="596" y="322">1 туба на 3 листа</text>
+<circle cx="576" cy="356" r="11" fill="#8a98a5" stroke="#fff" stroke-width="1.5"/><text class="numt" x="576" y="360.5">5</text>
+<text class="lab2" x="596" y="361">Porch, balcony, deck</text>
+<text class="note" x="596" y="379">свои Area: porch, blcny, deck</text>
+<rect x="40" y="410" width="500" height="62" fill="#f6f8f6" stroke="#cfd8cf" stroke-width="1.2" rx="8"/>
+<text class="inkb" x="56" y="436">Пример: 1st = 1741 SQ FT</text>
+<text class="ink" x="56" y="458">1741 / 32 x 1.1 = 59.8, в книгу 60 листов 4x8. Этажи отдельно.</text>
 </svg>

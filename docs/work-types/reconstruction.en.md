@@ -5,8 +5,8 @@ difficulty: do not count the whole building as new, and do not lose the places w
 framing connects to existing.
 
 <figure markdown>
-  ![Existing, demo and new legend](../assets/images/work-types/reconstruction.svg)
-  <figcaption markdown="span">Existing - do not count, Demo - only if in scope, New and connections - count.</figcaption>
+  ![Reconstruction plan: existing, demo, new and connections](../assets/images/work-types/reconstruction.svg)
+  <figcaption markdown="span">Mini plan: existing in grey is not counted, demo dashed only if in scope, new in green is counted. Separately the new-to-existing connections: ledger and hangers on the existing wall, header at the enlarged opening.</figcaption>
 </figure>
 
 ## What it is

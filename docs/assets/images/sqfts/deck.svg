@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1090 580" role="img" aria-labelledby="t d">
   <title id="t">Deck section: ledger, joist in hanger, beam on post, decking, railing</title>
   <desc id="d">Section through a deck: house wall with bolted ledger and flashing, joist in a hanger, drop beam on a post with cap and base on a footing, rim joist, decking boards, railing post with cap. Callouts give the takeoff lines the deck SQFT drives.</desc>
   <defs>
@@ -23,26 +23,26 @@
       .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
       .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
       .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
-      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
-      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
-      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .lab2{font:600 18px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 17px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 16px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
       .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
-      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
-      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .mono2{font:500 17px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
       .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
       .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
       .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
       .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
       .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
       .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
-      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .numt{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
       .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
       .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
       .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
       .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
     </style>
   </defs>
-  <rect x="0.5" y="0.5" width="999" height="579" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+  <rect x="0.5" y="0.5" width="1089" height="579" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
 <rect x="80" y="60" width="40" height="440" fill="url(#batt)" stroke="#caa64a" stroke-width="1" />
 <rect x="80" y="60" width="40" height="440" fill="none" stroke="#3a3f44" stroke-width="1.4" />
 <rect x="120" y="60" width="10" height="440" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.2" />
@@ -82,30 +82,30 @@
 <circle class="numc" cx="104" cy="232" r="11"/><text class="numt" x="104" y="236.5">9</text>
 <circle class="numc" cx="793" cy="57" r="11"/><text class="numt" x="793" y="61.5">1</text>
 <text class="lab2" x="812" y="62" >Ledger + flashing</text>
-<text class="mono2" x="812" y="79" >Ledger | 2x10 P.T. | LFT</text>
+<text class="mono2" x="812" y="83" >Ledger | 2x10 P.T. | D 16</text>
 <circle class="numc" cx="793" cy="109" r="11"/><text class="numt" x="793" y="113.5">2</text>
 <text class="lab2" x="812" y="114" >Hanger у ledger</text>
-<text class="mono2" x="812" y="131" >Hangers | LUS28 | pcs</text>
+<text class="mono2" x="812" y="135" >Hangers | LUS210 Zmax</text>
 <circle class="numc" cx="793" cy="161" r="11"/><text class="numt" x="793" y="165.5">3</text>
 <text class="lab2" x="812" y="166" >Joists @ 16" o.c.</text>
-<text class="mono2" x="812" y="183" >Joists | 2x10 P.T. | LFT</text>
+<text class="mono2" x="812" y="187" >Joists | 2x10 P.T. | D 12</text>
 <circle class="numc" cx="793" cy="213" r="11"/><text class="numt" x="793" y="217.5">4</text>
 <text class="lab2" x="812" y="218" >Decking</text>
-<text class="mono2" x="812" y="235" >Decking | SQ FT -&gt; pcs</text>
+<text class="mono2" x="812" y="239" >Decking | SQ FT, x 1.1</text>
 <circle class="numc" cx="793" cy="265" r="11"/><text class="numt" x="793" y="269.5">5</text>
 <text class="lab2" x="812" y="270" >Beam (2) ply</text>
-<text class="mono2" x="812" y="287" >Beam | (2)2x10 P.T. | LFT</text>
+<text class="mono2" x="812" y="291" >Beam (2) | 2x10 | D 16</text>
 <circle class="numc" cx="793" cy="317" r="11"/><text class="numt" x="793" y="321.5">6</text>
 <text class="lab2" x="812" y="322" >Post + cap + base</text>
-<text class="mono2" x="812" y="339" >Posts | 6x6 P.T. | pcs</text>
+<text class="mono2" x="812" y="343" >Posts | 6x6 P.T. | D 10</text>
 <circle class="numc" cx="793" cy="369" r="11"/><text class="numt" x="793" y="373.5">7</text>
 <text class="lab2" x="812" y="374" >Rim joist</text>
-<text class="mono2" x="812" y="391" >Rim | 2x10 P.T. | LFT</text>
+<text class="mono2" x="812" y="395" >Rim | 2x10 P.T. | D 16</text>
 <circle class="numc" cx="793" cy="421" r="11"/><text class="numt" x="793" y="425.5">8</text>
 <text class="lab2" x="812" y="426" >Railing post + cap</text>
-<text class="mono2" x="812" y="443" >Railing | LFT (стр. Rails)</text>
+<text class="mono2" x="812" y="447" >Posts at Rails | pcs</text>
 <circle class="numc" cx="793" cy="473" r="11"/><text class="numt" x="793" y="477.5">9</text>
-<text class="lab2" x="812" y="478" >Ledger bolts</text>
-<text class="mono2" x="812" y="495" >Titen HD | pcs</text>
-<text class="note" x="80" y="566" >Deck SQFT = площадь настила: тянет decking (area x 1.1), framing (страница Deck frame), railing, attachment.</text>
+<text class="lab2" x="812" y="478" >Ledger screws</text>
+<text class="mono2" x="812" y="499" >Screws | SDWS22400DB</text>
+<text class="note" x="80" y="566" >Deck SQFT = площадь настила: decking = area x 1.1. У досок в D длина доски (ft), в C штуки; крепёж в pcs.</text>
 </svg>

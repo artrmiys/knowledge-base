@@ -11,6 +11,11 @@ crowns, soffit и fascia, frieze, columns, отделка porch, deck и balcony
     Канон: [EIFS / Stucco / Veneer](../siding/eifs-stucco-veneer.md), правило
     для trim-scope и J-channel: [Exclusions и J-Channel](exclusions.md).
 
+<figure markdown>
+  ![Фасад с группами наружной отделки](../../assets/images/trims/ext-trims-facade.svg)
+  <figcaption markdown="span">Группы отделки на фасаде и их строки DFL: casing, crowns, sills, corner boards, watertable, frieze, soffit, fascia, shutters, columns. Погонаж в LFT, soffit шире одной доски в SQ FT, изделия штуками и парами.</figcaption>
+</figure>
+
 ## Что входит и в каком порядке
 
 <div class="grid cards" markdown>

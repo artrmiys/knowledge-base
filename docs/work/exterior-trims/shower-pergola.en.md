@@ -11,6 +11,11 @@ Open garden structures in the exterior scope: privacy and shower screens,
 pergolas and trellises, a canopy over the entry. There are usually few details, and many rows
 go in as `assumed` per the elevation.
 
+<figure markdown>
+  ![Pergola: beams, trellis, ledger, brackets, posts](../../assets/images/trims/pergola.svg)
+  <figcaption markdown="span">Pergola from the side: `1E Shape` beams and `Trellis` pieces by the piece with the length in the row, `Ledger` in LFT, `Brackets` and `Posts` by the piece. A pergola is never one row.</figcaption>
+</figure>
+
 ## Where to find it on the plans
 
 | Sheet | What to take |

@@ -1,19 +1,147 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
-  <title id="t">Room finish schedule columns</title>
-  <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.h{font:700 13px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.c{font:400 13px "Segoe UI",Arial,sans-serif;fill:#374237}.ok{fill:#2e7d32}.no{fill:#c0392b}</style>
-  <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Room schedule - что считать в trim</text>
-  <text class="s" x="32" y="62">Wood base только при `Wd`; tile base исключай. Common areas - отдельно.</text>
-  <!-- table -->
-  <g stroke="#9bb0c2" stroke-width="1.2">
-    <rect x="60" y="90" width="640" height="36" fill="#eef3f7"/>
-    <rect x="60" y="126" width="640" height="34" fill="#fff"/>
-    <rect x="60" y="160" width="640" height="34" fill="#fafbfc"/>
-    <rect x="60" y="194" width="640" height="34" fill="#fff"/>
-    <line x1="240" y1="90" x2="240" y2="228"/><line x1="400" y1="90" x2="400" y2="228"/><line x1="540" y1="90" x2="540" y2="228"/>
-  </g>
-  <text class="h" x="76" y="113">Room</text><text class="h" x="256" y="113">Base</text><text class="h" x="416" y="113">Crown</text><text class="h" x="556" y="113">Считать?</text>
-  <text class="c" x="76" y="148">Living</text><text class="c" x="256" y="148">Wd</text><text class="c" x="416" y="148">yes</text><text class="c ok" x="556" y="148">✓ wood base</text>
-  <text class="c" x="76" y="182">Bath</text><text class="c" x="256" y="182">Tile</text><text class="c" x="416" y="182">-</text><text class="c no" x="556" y="182">✗ tile исключить</text>
-  <text class="c" x="76" y="216">Garage</text><text class="c" x="256" y="216">-</text><text class="c" x="416" y="216">no</text><text class="c no" x="556" y="216">✗ нет base/crown</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" role="img" aria-labelledby="t d">
+  <title id="t">How to read a room finish schedule for base and crown</title>
+  <desc id="d">Mock room finish schedule with columns Room, Floor, Base, Walls, Ceiling, Remarks. Base cells are coloured: wood base is counted, tile and rubber are not, TBD needs a note. Remarks with crown drive the Crown row. Notes on the right say what to do with each room.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
+    <style>
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
+    </style>
+  </defs>
+<rect x="0.5" y="0.5" width="879" height="469" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="side" x="40" y="44">ROOM FINISH SCHEDULE (лист fin)</text>
+<rect x="40" y="96" width="140" height="22" fill="#f2f3f5" stroke="#3a3f44" stroke-width="0.6"/>
+<text class="xlh" x="110.0" y="112" text-anchor="middle">Room</text>
+<rect x="180" y="96" width="70" height="22" fill="#f2f3f5" stroke="#3a3f44" stroke-width="0.6"/>
+<text class="xlh" x="215.0" y="112" text-anchor="middle">Floor</text>
+<rect x="250" y="96" width="70" height="22" fill="#f2f3f5" stroke="#3a3f44" stroke-width="0.6"/>
+<text class="xlh" x="285.0" y="112" text-anchor="middle">Base</text>
+<rect x="320" y="96" width="90" height="22" fill="#f2f3f5" stroke="#3a3f44" stroke-width="0.6"/>
+<text class="xlh" x="365.0" y="112" text-anchor="middle">Walls</text>
+<rect x="410" y="96" width="100" height="22" fill="#f2f3f5" stroke="#3a3f44" stroke-width="0.6"/>
+<text class="xlh" x="460.0" y="112" text-anchor="middle">Ceiling</text>
+<rect x="510" y="96" width="130" height="22" fill="#f2f3f5" stroke="#3a3f44" stroke-width="0.6"/>
+<text class="xlh" x="575.0" y="112" text-anchor="middle">Remarks</text>
+<rect x="40" y="118" width="140" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="180" y="118" width="70" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="250" y="118" width="70" height="30" fill="#d7efd9" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="320" y="118" width="90" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="410" y="118" width="100" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="510" y="118" width="130" height="30" fill="#d7efd9" stroke="#3a3f44" stroke-width="0.7"/>
+<text class="xl" x="46" y="138.0">101 Living</text>
+<text class="xl" x="215.0" y="138.0" text-anchor="middle">LVT</text>
+<text class="xl" x="285.0" y="138.0" text-anchor="middle">Wd</text>
+<text class="xl" x="365.0" y="138.0" text-anchor="middle">Gyp</text>
+<text class="xl" x="460.0" y="138.0" text-anchor="middle">Gyp</text>
+<text class="xl" x="516" y="138.0">Crown molding</text>
+<rect x="40" y="148" width="140" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="180" y="148" width="70" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="250" y="148" width="70" height="30" fill="#d7efd9" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="320" y="148" width="90" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="410" y="148" width="100" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="510" y="148" width="130" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<text class="xl" x="46" y="168.0">102 Kitchen</text>
+<text class="xl" x="215.0" y="168.0" text-anchor="middle">LVT</text>
+<text class="xl" x="285.0" y="168.0" text-anchor="middle">Wd</text>
+<text class="xl" x="365.0" y="168.0" text-anchor="middle">Gyp</text>
+<text class="xl" x="460.0" y="168.0" text-anchor="middle">Gyp</text>
+<rect x="40" y="178" width="140" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="180" y="178" width="70" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="250" y="178" width="70" height="30" fill="#f8d7d7" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="320" y="178" width="90" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="410" y="178" width="100" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="510" y="178" width="130" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<text class="xl" x="46" y="198.0">103 Bath</text>
+<text class="xl" x="215.0" y="198.0" text-anchor="middle">Tile</text>
+<text class="xl" x="285.0" y="198.0" text-anchor="middle">Tile</text>
+<text class="xl" x="365.0" y="198.0" text-anchor="middle">Tile</text>
+<text class="xl" x="460.0" y="198.0" text-anchor="middle">Gyp</text>
+<rect x="40" y="208" width="140" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="180" y="208" width="70" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="250" y="208" width="70" height="30" fill="#d7efd9" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="320" y="208" width="90" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="410" y="208" width="100" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="510" y="208" width="130" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<text class="xl" x="46" y="228.0">104 Bedroom</text>
+<text class="xl" x="215.0" y="228.0" text-anchor="middle">Carpet</text>
+<text class="xl" x="285.0" y="228.0" text-anchor="middle">Wd</text>
+<text class="xl" x="365.0" y="228.0" text-anchor="middle">Gyp</text>
+<text class="xl" x="460.0" y="228.0" text-anchor="middle">Gyp</text>
+<text class="xl" x="516" y="228.0">Sloped ceiling</text>
+<rect x="40" y="238" width="140" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="180" y="238" width="70" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="250" y="238" width="70" height="30" fill="#f8d7d7" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="320" y="238" width="90" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="410" y="238" width="100" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="510" y="238" width="130" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<text class="xl" x="46" y="258.0">105 Garage</text>
+<text class="xl" x="215.0" y="258.0" text-anchor="middle">Conc</text>
+<text class="xl" x="365.0" y="258.0" text-anchor="middle">Gyp</text>
+<text class="xl" x="460.0" y="258.0" text-anchor="middle">Gyp</text>
+<text class="xl" x="516" y="258.0">No finish</text>
+<rect x="40" y="268" width="140" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="180" y="268" width="70" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="250" y="268" width="70" height="30" fill="#f8d7d7" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="320" y="268" width="90" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="410" y="268" width="100" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="510" y="268" width="130" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<text class="xl" x="46" y="288.0">106 Mech</text>
+<text class="xl" x="215.0" y="288.0" text-anchor="middle">Conc</text>
+<text class="xl" x="285.0" y="288.0" text-anchor="middle">Rubber</text>
+<rect x="40" y="298" width="140" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="180" y="298" width="70" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="250" y="298" width="70" height="30" fill="#FABF8F" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="320" y="298" width="90" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="410" y="298" width="100" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<rect x="510" y="298" width="130" height="30" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
+<text class="xl" x="46" y="318.0">107 Corridor</text>
+<text class="xl" x="215.0" y="318.0" text-anchor="middle">Carpet</text>
+<text class="xl" x="285.0" y="318.0" text-anchor="middle">TBD</text>
+<text class="xl" x="365.0" y="318.0" text-anchor="middle">Gyp</text>
+<text class="xl" x="460.0" y="318.0" text-anchor="middle">ACT</text>
+<circle cx="285" cy="80" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="285" y="84.5">1</text>
+<circle cx="575" cy="80" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="575" y="84.5">2</text>
+<text class="green" x="656" y="138.0">Base и Crown считаем</text>
+<text class="green" x="656" y="168.0">Base считаем</text>
+<text class="red" x="656" y="198.0">tile base: не считаем</text>
+<text class="green" x="656" y="228.0">Base считаем</text>
+<text class="red" x="656" y="258.0">без base и crown</text>
+<text class="red" x="656" y="288.0">rubber: не считаем</text>
+<text class="ink" x="656" y="318.0">нота, продукт не выбирать</text>
+<circle cx="52" cy="362" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="52" y="366.5">1</text>
+<text class="ink" x="72" y="367">Колонка Base решает, не название комнаты: Wd = строка Base в LFT.</text>
+<circle cx="52" cy="392" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="52" y="396.5">2</text>
+<text class="ink" x="72" y="397">Remarks и ceiling notes: crown, sloped, tray ceiling = строка Crown.</text>
+<rect x="41" y="416" width="22" height="16" fill="#FABF8F" stroke="#3a3f44" stroke-width="0.8"/>
+<text class="ink" x="72" y="429">TBD или пусто:</text>
+<text class="mono" x="180" y="429">Note: Base not specified in room schedule</text>
 </svg>

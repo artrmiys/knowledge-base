@@ -3,7 +3,7 @@
 Здесь: какие VBA-макросы встроены в книгу `TemplateCom.xlsm`, что делает каждый, когда его жать и в каком порядке. Это не стандартные клавиши Excel: макросы работают только в книге с включёнными макросами.
 
 <figure markdown>
-  ![Полоса XL в OurPlanCore](../assets/images/ourplancore/v3/excel-strip.png)
+  ![Кнопки полосы XL в OurPlanCore с подписями](../assets/images/ourplancore/v3/excel-strip.svg)
   <figcaption markdown="span">Полоса XL в OurPlanCore пишет замеры в книгу и сама запускает расчётные макросы. Остальные макросы запускаются в Excel клавишей или через Alt+F8.</figcaption>
 </figure>
 

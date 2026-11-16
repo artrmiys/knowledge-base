@@ -1,8 +1,8 @@
 # Balcony build-up
 
 <figure markdown>
-  ![Balcony build-up assembly stack](../../assets/images/trims/balcony-buildup.svg)
-  <figcaption markdown="span">Bottom to top: frame, sleepers, EPDM, decking. Rows 1-6 are counted on the frame page, rows 7-12 here. Pavers and membrane are often by others.</figcaption>
+  ![Balcony section: frame and finish layers with row numbers](../../assets/images/trims/balcony-buildup.svg)
+  <figcaption markdown="span">Balcony section at the wall: frame, subfloor, EPDM on the subfloor turned up the wall, sleepers over the membrane, decking on the sleepers. Numbers match the table below: rows 1-6 are counted on the frame page, rows 7-12 here.</figcaption>
 </figure>
 
 ## What it is

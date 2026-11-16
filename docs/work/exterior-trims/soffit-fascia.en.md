@@ -58,6 +58,16 @@ Material not specified: `Note: Soffits assumed Vinyl; Fascias assumed PVC or
 1x Alum wrapped; verify`. Do not substitute wood if vinyl or alum is possible.
 
 <figure markdown>
+  ![Eave section with DFL rows](../../assets/images/roof/eave-parts-takeoff.svg)
+  <figcaption markdown="span">Eave section: soffit, fascia, sub fascia, frieze, trim over fascia and the soffit frame, each part with its own row and unit.</figcaption>
+</figure>
+
+<figure markdown>
+  ![Rake: elevation, plan and overhang section](../../assets/images/roof/rake.svg)
+  <figcaption markdown="span">Rake at the gable: where to draw the line and which rows it gives, rake moulding included.</figcaption>
+</figure>
+
+<figure markdown>
   ![Pork-chop eave return](../../assets/images/trims/ext-pork-chop.png)
   <figcaption markdown="span">Pork-chop return: a simple triangular stub. Trim is minimal, but the fascia and a small soffit are counted.</figcaption>
 </figure>

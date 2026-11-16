@@ -1,8 +1,8 @@
 # Exterior Walls
 
 <figure markdown>
-  ![Exterior wall section with check points](../../../assets/images/walls/exterior-wall-section.svg)
-  <figcaption markdown="span">Exterior wall in section: plates, studs, sheathing, WRB, insulation. Before counting, split the wall into layers and decide which of them are in scope.</figcaption>
+  ![Exterior wall section: layers and the wall height for the name](../../../assets/images/walls/exterior-wall-section.svg)
+  <figcaption markdown="span">Exterior wall in section between two floors. The height in the name = floor-to-floor minus subfloor minus floor depth; plates are not deducted. Numbered layers: studs, plates, sheathing, WRB are ours; gypsum and batt are by others.</figcaption>
 </figure>
 
 ## What it is

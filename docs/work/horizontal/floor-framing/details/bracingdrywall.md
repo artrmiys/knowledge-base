@@ -1,8 +1,8 @@
 # Bracing for Drywall (опора гипса, bracing стен)
 
 <figure markdown>
-  ![2x4 drywall bracing and ledger](../../../../assets/images/framing/drywall-bracing.svg)
-  <figcaption markdown="span">Стена идёт параллельно joists: над top plate нет joist, на который опереть гипс потолка. Опору даёт 2x4 bracing или ledger по верху стены. Длина доски зависит от высоты стены.</figcaption>
+  ![Bracing стен и опора гипса: две разные строки](../../../../assets/images/framing/drywall-bracing.svg)
+  <figcaption markdown="span">Две разные строки. (a) Bracing стен: 2x4 штуками, одна доска на 8 LFT стены, длина доски по высоте стены. (b) Опора гипса потолка у стены, параллельной joists: доска по верху стены, строка `Blocking for Drywall`.</figcaption>
 </figure>
 
 <!-- TODO-PHOTO: 2x4 drywall backing / ledger on top plate of a wall parallel to joists, EN query "drywall backing blocking top plate parallel joists" -->

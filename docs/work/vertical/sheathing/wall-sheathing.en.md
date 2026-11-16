@@ -1,6 +1,11 @@
 # Wall Sheathing
 
 <figure markdown>
+  ![Elevation: sheathing area by floor, strips and deductions](../../../assets/images/sheathing/wall-sheathing-facade.svg)
+  <figcaption markdown="span">Sheathing on an elevation: a floor wall = length x height, the floor band = Box Sheathing, the triangle = gable, the band at the roof = truss heel. An opening wider than 4' is deducted once, a window narrower than 4' is not deducted.</figcaption>
+</figure>
+
+<figure markdown>
   ![Installing OSB sheathing on a framed wall](../../../assets/images/confluence/confluence-094.jpg)
   <figcaption markdown="span">Structural sheathing on an exterior wall: OSB sheets over the studs. Area = wall length x wall height, minus openings wider than 4'. Archive photo.</figcaption>
 </figure>

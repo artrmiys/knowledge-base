@@ -41,7 +41,7 @@
   <text class="c" x="21" y="130" fill="#1f2328">Decking</text>
   <text class="c" x="257.0" y="130" fill="#1f2328" text-anchor="middle">1x6 PVC</text>
   <text class="c" x="340.0" y="130" fill="#1f2328" text-anchor="middle">20</text>
-  <text class="c" x="382.0" y="130" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <text class="c" x="382.0" y="130" fill="#1f2328" text-anchor="middle">SQ FT</text>
   <path d="M532,102.5 L526,102.5 L526,102.5 L518,102.5" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
   <path d="M514,102.5 L522,98.5 L522,106.5 z" fill="#2e7d32"/>
   <text class="n" x="538" y="98.5" fill="#2e7d32">Программа читает всё под заголовком</text>
@@ -100,7 +100,7 @@
   <text class="c" x="21" y="303" fill="#1f2328">Decking</text>
   <text class="c" x="257.0" y="303" fill="#1f2328" text-anchor="middle">1x6 PVC</text>
   <text class="c" x="340.0" y="303" fill="#1f2328" text-anchor="middle">20</text>
-  <text class="c" x="382.0" y="303" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <text class="c" x="382.0" y="303" fill="#1f2328" text-anchor="middle">SQ FT</text>
   <path d="M532,252.5 L526,252.5 L526,252.5 L518,252.5" fill="none" stroke="#c62828" stroke-width="1.2"/>
   <path d="M514,252.5 L522,248.5 L522,256.5 z" fill="#c62828"/>
   <text class="n" x="538" y="248.5" fill="#c62828">Эта заметка уйдёт в предыдущий</text>

@@ -11,6 +11,11 @@
 pergola и trellis, canopy над входом. Деталей обычно мало, много строк
 идёт с `assumed` по elevation.
 
+<figure markdown>
+  ![Pergola: балки, trellis, ledger, brackets, posts](../../assets/images/trims/pergola.svg)
+  <figcaption markdown="span">Pergola сбоку: балки `1E Shape` и рейки `Trellis` штуками с длиной в строке, `Ledger` в LFT, `Brackets` и `Posts` штуками. Одной строкой pergola не пишем.</figcaption>
+</figure>
+
 ## Где искать на чертежах
 
 | Лист | Что взять |

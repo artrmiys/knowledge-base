@@ -1,76 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="title desc">
-  <title id="title">Hanger selection flow</title>
-  <desc id="desc">Decision flow for choosing common I-joist and beam hangers by mount condition, depth, skew and firewall: ITS, HIT/WP, SUR, HUC, DHU.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 664" role="img" aria-labelledby="t d">
+  <title id="t">Hanger selection flow</title>
+  <desc id="d">Four questions in order: what member is carried (sawn 2x joist, I-joist, beam), how it is mounted (face mount or top flange), is there a skew (45 degrees, another angle, top flange skew), and special conditions (concealed flange, firewall, exposed or pressure treated).</desc>
   <defs>
-    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L8,3 z" fill="#7c8a96"/>
-    </marker>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
     <style>
-      .ttl{font:700 21px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
-      .sub{font:400 14px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}
-      .q{font:700 15px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
-      .qs{font:400 12.5px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}
-      .code{font:700 17px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}
-      .cs{font:400 12.5px "Segoe UI",Arial,sans-serif;fill:#566}
-      .flow{stroke:#7c8a96;stroke-width:1.6;fill:none;marker-end:url(#arrow)}
-      .start{fill:#d9f2d8;stroke:#2e7d32;stroke-width:2}
-      .qbox{fill:#ffffff;stroke:#9bb0c2;stroke-width:1.6}
-      .ok{fill:#eaf6ea;stroke:#2e7d32;stroke-width:2}
-      .warn{fill:#fff6dd;stroke:#c78b00;stroke-width:2}
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
     </style>
   </defs>
-
-  <rect width="920" height="520" fill="#ffffff"/>
-  <text class="ttl" x="40" y="50">Hanger - выбор по condition</text>
-  <text class="sub" x="40" y="74">Глубина - mount - skew - firewall. Финал всегда сверяй со schedule/detail.</text>
-
-  <!-- start -->
-  <rect class="start" x="40" y="210" width="150" height="70" rx="12"/>
-  <text class="q" x="64" y="240">Что несём?</text>
-  <text class="qs" x="64" y="262">joist / beam</text>
-
-  <!-- questions column -->
-  <rect class="qbox" x="290" y="108" width="200" height="68" rx="10"/>
-  <text class="q" x="310" y="138">I-joist, top flange?</text>
-  <text class="qs" x="310" y="160">глубина + skew</text>
-
-  <rect class="qbox" x="290" y="226" width="200" height="68" rx="10"/>
-  <text class="q" x="310" y="256">Beam, face mount?</text>
-  <text class="qs" x="310" y="278">ширина built-up</text>
-
-  <rect class="qbox" x="290" y="344" width="200" height="68" rx="10"/>
-  <text class="q" x="310" y="374">Concealed / firewall?</text>
-  <text class="qs" x="310" y="396">flange скрыт / 2x gypsum</text>
-
-  <!-- results column -->
-  <rect class="ok" x="610" y="70" width="270" height="62" rx="10"/>
-  <text class="code" x="632" y="98">ITS</text>
-  <text class="cs" x="632" y="120">≤ 16&quot;, без skew (top flange I-joist)</text>
-
-  <rect class="warn" x="610" y="146" width="270" height="62" rx="10"/>
-  <text class="code" x="632" y="174">HIT / WP / LBV</text>
-  <text class="cs" x="632" y="196">&gt; 16&quot; или skew/slope top mount</text>
-
-  <rect class="ok" x="610" y="232" width="270" height="62" rx="10"/>
-  <text class="code" x="632" y="260">HU / HHUS / HGUS</text>
-  <text class="cs" x="632" y="282">beam face mount по ширине ply</text>
-
-  <rect class="ok" x="610" y="318" width="270" height="62" rx="10"/>
-  <text class="code" x="632" y="346">SUL / SUR , HUC</text>
-  <text class="cs" x="632" y="368">skew face mount , concealed flange</text>
-
-  <rect class="warn" x="610" y="404" width="270" height="62" rx="10"/>
-  <text class="code" x="632" y="432">DHU / DGU</text>
-  <text class="cs" x="632" y="454">только firewall / double gypsum</text>
-
-  <!-- flow lines -->
-  <path class="flow" d="M190,235 C240,200 250,160 288,150"/>
-  <path class="flow" d="M190,248 L288,260"/>
-  <path class="flow" d="M190,262 C240,300 250,350 288,378"/>
-
-  <path class="flow" d="M490,128 C560,110 560,101 608,101"/>
-  <path class="flow" d="M490,150 C560,170 560,177 608,177"/>
-  <path class="flow" d="M490,260 L608,263"/>
-  <path class="flow" d="M490,378 C560,360 560,352 608,349"/>
-  <path class="flow" d="M490,392 C560,420 560,430 608,435"/>
+<rect x="0.5" y="0.5" width="879" height="663" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<rect x="30" y="28" width="820" height="122" fill="#f6f8f6" stroke="#cfd8cf" stroke-width="1.2" rx="10"/>
+<circle cx="54" cy="58" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="54" y="62.5">1</text>
+<text class="lab" x="74" y="64">Что несём?</text>
+<text class="note" x="74" y="88">member по плану</text>
+<text class="note" x="74" y="106">и schedule</text>
+<rect x="236.0" y="40" width="194.66666666666666" height="98" fill="#ffffff" stroke="#b9c6b9" stroke-width="1.2" rx="8"/>
+<text class="inkb" x="248.0" y="64">Пилёный 2x joist</text>
+<text class="mono" x="248.0" y="88">LUS26 / 28 / 210 / 212</text>
+<text class="note" x="248.0" y="110">двойной: -2, тяжёлый: HU</text>
+<rect x="440.66666666666663" y="40" width="194.66666666666666" height="98" fill="#ffffff" stroke="#b9c6b9" stroke-width="1.2" rx="8"/>
+<text class="inkb" x="452.66666666666663" y="64">I-joist: TJI, LPI</text>
+<text class="mono" x="452.66666666666663" y="88">по mount, шаг 2</text>
+<text class="note" x="452.66666666666663" y="110">семейство и сечение точно</text>
+<rect x="645.3333333333333" y="40" width="194.66666666666666" height="98" fill="#ffffff" stroke="#b9c6b9" stroke-width="1.2" rx="8"/>
+<text class="inkb" x="657.3333333333333" y="64">Beam, LVL, PSL, GL</text>
+<text class="mono" x="657.3333333333333" y="88">по mount, шаг 2</text>
+<text class="note" x="657.3333333333333" y="110">ширина по числу ply</text>
+<line x1="440" y1="152" x2="440" y2="173" stroke="#2e7d32" stroke-width="2.2" marker-end="url(#arr)"/>
+<rect x="30" y="176" width="820" height="122" fill="#f6f8f6" stroke="#cfd8cf" stroke-width="1.2" rx="10"/>
+<circle cx="54" cy="206" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="54" y="210.5">2</text>
+<text class="lab" x="74" y="212">Mount?</text>
+<text class="note" x="74" y="236">куда садится</text>
+<text class="note" x="74" y="254">hanger</text>
+<rect x="236.0" y="188" width="297.0" height="98" fill="#ffffff" stroke="#b9c6b9" stroke-width="1.2" rx="8"/>
+<text class="inkb" x="248.0" y="212">Face mount: на боковой грани</text>
+<text class="mono" x="248.0" y="236">I-joist: IUS / MIU</text>
+<text class="mono" x="248.0" y="256">Beam: HU / HHUS / HGUS</text>
+<rect x="543.0" y="188" width="297.0" height="98" fill="#ffffff" stroke="#b9c6b9" stroke-width="1.2" rx="8"/>
+<text class="inkb" x="555.0" y="212">Top flange: сверху на опоре</text>
+<text class="mono" x="555.0" y="236">I-joist: ITS до 16", глубже HIT</text>
+<text class="mono" x="555.0" y="256">Beam: WP / GLT / LBV</text>
+<line x1="440" y1="300" x2="440" y2="321" stroke="#2e7d32" stroke-width="2.2" marker-end="url(#arr)"/>
+<rect x="30" y="324" width="820" height="122" fill="#f6f8f6" stroke="#cfd8cf" stroke-width="1.2" rx="10"/>
+<circle cx="54" cy="354" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="54" y="358.5">3</text>
+<text class="lab" x="74" y="360">Skew?</text>
+<text class="note" x="74" y="384">угол в плане;</text>
+<text class="note" x="74" y="402">до 5° прямой</text>
+<rect x="236.0" y="336" width="194.66666666666666" height="98" fill="#ffffff" stroke="#b9c6b9" stroke-width="1.2" rx="8"/>
+<text class="inkb" x="248.0" y="360">Ровно 45°</text>
+<text class="mono" x="248.0" y="384">SUL / SUR</text>
+<text class="note" x="248.0" y="406">2-ply LVL: HSUL / HSUR</text>
+<rect x="440.66666666666663" y="336" width="194.66666666666666" height="98" fill="#ffffff" stroke="#b9c6b9" stroke-width="1.2" rx="8"/>
+<text class="inkb" x="452.66666666666663" y="360">Другой угол</text>
+<text class="mono" x="452.66666666666663" y="384">HU... SK&lt;угол&gt; L / R</text>
+<text class="note" x="452.66666666666663" y="406">SUL / SUR тут не бывает</text>
+<rect x="645.3333333333333" y="336" width="194.66666666666666" height="98" fill="#ffffff" stroke="#b9c6b9" stroke-width="1.2" rx="8"/>
+<text class="inkb" x="657.3333333333333" y="360">Top flange со skew</text>
+<text class="mono" x="657.3333333333333" y="384">LBV ... XL45 / XR45</text>
+<text class="note" x="657.3333333333333" y="406">ITS не skewable</text>
+<line x1="440" y1="448" x2="440" y2="469" stroke="#2e7d32" stroke-width="2.2" marker-end="url(#arr)"/>
+<rect x="30" y="472" width="820" height="122" fill="#f6f8f6" stroke="#cfd8cf" stroke-width="1.2" rx="10"/>
+<circle cx="54" cy="502" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="54" y="506.5">4</text>
+<text class="lab" x="74" y="508">Особое условие?</text>
+<text class="note" x="74" y="532">проверь все три,</text>
+<text class="note" x="74" y="550">они не про skew</text>
+<rect x="236.0" y="484" width="194.66666666666666" height="98" fill="#ffffff" stroke="#b9c6b9" stroke-width="1.2" rx="8"/>
+<text class="inkb" x="248.0" y="508">Concealed flange</text>
+<text class="mono" x="248.0" y="532">HUC / HUCQ / LUC</text>
+<text class="note" x="248.0" y="554">только по детали</text>
+<rect x="440.66666666666663" y="484" width="194.66666666666666" height="98" fill="#ffffff" stroke="#b9c6b9" stroke-width="1.2" rx="8"/>
+<text class="inkb" x="452.66666666666663" y="508">Firewall, 2 слоя gypsum</text>
+<text class="mono" x="452.66666666666663" y="532">DHU / DGU</text>
+<text class="note" x="452.66666666666663" y="554">лестницы, лифты, шахты</text>
+<rect x="645.3333333333333" y="484" width="194.66666666666666" height="98" fill="#ffffff" stroke="#b9c6b9" stroke-width="1.2" rx="8"/>
+<text class="inkb" x="657.3333333333333" y="508">Снаружи или P.T.</text>
+<text class="mono" x="657.3333333333333" y="532">LUS210 Zmax</text>
+<text class="note" x="657.3333333333333" y="554">Zmax отдельным словом</text>
+<text class="note" x="30" y="622">Схема даёт семейство. Модель и размер всегда по hanger schedule и детали проекта;</text>
+<text class="note" x="30" y="642">условия нет в таблицах страницы: TBD с нотой и углом по плану.</text>
 </svg>

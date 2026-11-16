@@ -36,6 +36,11 @@ Valley - наклонное внутреннее ребро, где два ск�
   <figcaption markdown="span">Инструмент Beam: две точки по элементу, длина округляется программой и попадает в имя позиции.</figcaption>
 </figure>
 
+<figure markdown>
+  ![Valley rafter на плане крыши](../../../assets/images/roof/valley.svg)
+  <figcaption markdown="span">Valley на плане: два ребра от внутренних углов к концу конька пристройки, jack rafters упираются с обоих скатов. Длина доски = длина на плане x коэффициент hip и valley.</figcaption>
+</figure>
+
 ## Как назвать в дереве и строка DFL
 
 Путь: `framing/roof framing/beams/valley <сечение> <длина>`. Общая строка шаблона `Ridge / Valley / Hip` в LFT, когда проект не делит их.

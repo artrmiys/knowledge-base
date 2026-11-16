@@ -4,8 +4,8 @@
 деревянные стены по всей высоте и обычный стик-каркас.
 
 <figure markdown>
-  ![Residential scope overview](../assets/images/work-types/residential.svg)
-  <figcaption markdown="span">Walls + openings, floor/roof framing, sheathing, SQFT, roof/deck/porch. Порядок тот же, что в меню "Работа".</figcaption>
+  ![Дом, гараж и porch: какие ветки дерева они дают](../assets/images/work-types/residential.svg)
+  <figcaption markdown="span">Дом, гараж и porch на фасаде и ветки дерева, в которые ложатся их замеры: стены, проёмы, площади, кровля по уклону, свесы. У гаража свой корпус `Grge` и свой уклон, у porch своя площадь и свой свес.</figcaption>
 </figure>
 
 <figure markdown>

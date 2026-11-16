@@ -58,6 +58,16 @@ Area по реальному нижнему контуру в `trims` или в 
 1x Alum wrapped; verify`. Не подставляй wood, если возможен vinyl или alum.
 
 <figure markdown>
+  ![Разрез свеса eave со строками DFL](../../assets/images/roof/eave-parts-takeoff.svg)
+  <figcaption markdown="span">Разрез eave: soffit, fascia, sub fascia, frieze, trim over fascia и каркас свеса, у каждой детали своя строка и единица.</figcaption>
+</figure>
+
+<figure markdown>
+  ![Rake: фасад, план и разрез свеса](../../assets/images/roof/rake.svg)
+  <figcaption markdown="span">Rake на фронтоне: где вести линию и какие строки она даёт, включая rake moulding.</figcaption>
+</figure>
+
+<figure markdown>
   ![Pork-chop eave return](../../assets/images/trims/ext-pork-chop.png)
   <figcaption markdown="span">Pork-chop return: простой треугольный обрубок. Trim минимальный, но fascia и маленький soffit считаем.</figcaption>
 </figure>

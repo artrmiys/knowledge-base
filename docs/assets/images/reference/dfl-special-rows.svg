@@ -59,27 +59,27 @@
   <rect x="360" y="178.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="404" y="178.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="462" y="178.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
-  <text class="c" x="21" y="194.5" fill="#1f2328">Rigid insulation wall</text>
-  <text class="c" x="257.0" y="194.5" fill="#1f2328" text-anchor="middle">R8 Insulation</text>
+  <text class="c" x="21" y="194.5" fill="#1f2328">Wall Insulation</text>
+  <text class="c" x="257.0" y="194.5" fill="#1f2328" text-anchor="middle">2" XPS Insulation</text>
   <text class="c" x="340.0" y="194.5" fill="#1f2328" text-anchor="middle">1700</text>
-  <text class="c" x="382.0" y="194.5" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <text class="c" x="382.0" y="194.5" fill="#1f2328" text-anchor="middle">SQ FT</text>
   <rect x="16" y="201.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="194" y="201.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="320" y="201.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="360" y="201.5" width="44" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="404" y="201.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="462" y="201.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
-  <text class="c" x="21" y="217.5" fill="#1f2328">Insulation</text>
-  <text class="c" x="257.0" y="217.5" fill="#1f2328" text-anchor="middle">Batt R-21</text>
+  <text class="c" x="21" y="217.5" fill="#1f2328">Wall Insulation</text>
+  <text class="c" x="257.0" y="217.5" fill="#1f2328" text-anchor="middle">2" XPS</text>
   <text class="c" x="340.0" y="217.5" fill="#1f2328" text-anchor="middle">900</text>
-  <text class="c" x="382.0" y="217.5" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <text class="c" x="382.0" y="217.5" fill="#1f2328" text-anchor="middle">SQ FT</text>
   <path d="M532,199.5 L526,199.5 L526,190.0 L518,190.0" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
   <path d="M514,190.0 L522,186.0 L522,194.0 z" fill="#2e7d32"/>
-  <text class="n" x="538" y="195.5" fill="#2e7d32">Верно: Batt Insulation R-21, 1-1/2</text>
+  <text class="n" x="538" y="195.5" fill="#2e7d32">Верно: 2" XPS Insulation, 1-1/2</text>
   <text class="n" x="538" y="211.5" fill="#2e7d32">Rigid Insulation.</text>
   <path d="M532,246.5 L526,246.5 L526,213.0 L518,213.0" fill="none" stroke="#c62828" stroke-width="1.2"/>
   <path d="M514,213.0 L522,209.0 L522,217.0 z" fill="#c62828"/>
-  <text class="n" x="538" y="234.5" fill="#c62828">Неверно: Batt R-21, 1-1/2 Rigid,</text>
+  <text class="n" x="538" y="234.5" fill="#c62828">Неверно: 2" XPS, 1-1/2 Rigid,</text>
   <text class="n" x="538" y="250.5" fill="#c62828">Insul. Материал уйдёт не в свою</text>
   <text class="n" x="538" y="266.5" fill="#c62828">группу.</text>
   <text class="h" x="16" y="302.5">Деталь с картинкой: ссылка в столбце B, картинка подписана</text>
@@ -186,7 +186,7 @@
   <text class="c" x="21" y="588.5" fill="#1f2328">Int. Doors</text>
   <text class="c" x="257.0" y="588.5" fill="#1f2328" text-anchor="middle">3080 Elev</text>
   <text class="c" x="340.0" y="588.5" fill="#1f2328" text-anchor="middle">1</text>
-  <text class="c" x="382.0" y="588.5" fill="#1f2328" text-anchor="middle">Unit</text>
+  <text class="c" x="382.0" y="588.5" fill="#1f2328" text-anchor="middle">unit</text>
   <text class="c" x="467" y="588.5" fill="#1f2328">Type A</text>
   <rect x="16" y="595.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="194" y="595.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
@@ -197,7 +197,7 @@
   <text class="c" x="21" y="611.5" fill="#1f2328">Int. Doors</text>
   <text class="c" x="257.0" y="611.5" fill="#1f2328" text-anchor="middle">2880</text>
   <text class="c" x="340.0" y="611.5" fill="#1f2328" text-anchor="middle">3</text>
-  <text class="c" x="382.0" y="611.5" fill="#1f2328" text-anchor="middle">Unit</text>
+  <text class="c" x="382.0" y="611.5" fill="#1f2328" text-anchor="middle">unit</text>
   <rect x="16" y="618.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="194" y="618.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="320" y="618.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
@@ -207,7 +207,7 @@
   <text class="c" x="21" y="634.5" fill="#1f2328">Int. Doors</text>
   <text class="c" x="257.0" y="634.5" fill="#1f2328" text-anchor="middle">21080 pocket</text>
   <text class="c" x="340.0" y="634.5" fill="#1f2328" text-anchor="middle">1</text>
-  <text class="c" x="382.0" y="634.5" fill="#1f2328" text-anchor="middle">Unit</text>
+  <text class="c" x="382.0" y="634.5" fill="#1f2328" text-anchor="middle">unit</text>
   <text class="c" x="467" y="634.5" fill="#1f2328">Type B</text>
   <rect x="16" y="641.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="194" y="641.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
@@ -224,7 +224,7 @@
   <text class="c" x="21" y="680.5" fill="#1f2328">Cased Openings</text>
   <text class="c" x="257.0" y="680.5" fill="#1f2328" text-anchor="middle">21080 CO</text>
   <text class="c" x="340.0" y="680.5" fill="#1f2328" text-anchor="middle">1</text>
-  <text class="c" x="382.0" y="680.5" fill="#1f2328" text-anchor="middle">Unit</text>
+  <text class="c" x="382.0" y="680.5" fill="#1f2328" text-anchor="middle">unit</text>
   <text class="c" x="467" y="680.5" fill="#1f2328">Type A</text>
   <rect x="16" y="687.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="194" y="687.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
@@ -241,7 +241,7 @@
   <text class="c" x="21" y="726.5" fill="#1f2328">Crowns (all rooms)</text>
   <text class="c" x="257.0" y="726.5" fill="#1f2328" text-anchor="middle">3"</text>
   <text class="c" x="340.0" y="726.5" fill="#1f2328" text-anchor="middle">240</text>
-  <text class="c" x="382.0" y="726.5" fill="#1f2328" text-anchor="middle">LF</text>
+  <text class="c" x="382.0" y="726.5" fill="#1f2328" text-anchor="middle">LFT</text>
   <text class="c" x="467" y="726.5" fill="#1f2328">IL326</text>
   <path d="M532,570.5 L526,570.5 L526,561.0 L518,561.0" fill="none" stroke="#5a6168" stroke-width="1.2"/>
   <path d="M514,561.0 L522,557.0 L522,565.0 z" fill="#5a6168"/>

@@ -3,7 +3,7 @@
 Here: which VBA macros are built into the `TemplateCom.xlsm` workbook, what each one does, when to run it and in what order. These are not standard Excel shortcuts: the macros work only in a workbook with macros enabled.
 
 <figure markdown>
-  ![XL strip in OurPlanCore](../assets/images/ourplancore/v3/excel-strip.png)
+  ![XL strip buttons in OurPlanCore, labelled](../assets/images/ourplancore/v3/excel-strip.svg)
   <figcaption markdown="span">The XL strip in OurPlanCore writes takeoffs into the workbook and runs the calculation macros itself. The other macros are run in Excel with a hotkey or through Alt+F8.</figcaption>
 </figure>
 

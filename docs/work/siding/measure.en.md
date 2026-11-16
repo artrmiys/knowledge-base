@@ -2,7 +2,7 @@
 
 <figure markdown>
   ![Siding take-off by elevation area](../../assets/images/siding/measure.svg)
-  <figcaption markdown="span">SQ FT by elevation: the wall field is an Area, gable and accent as separate areas, large openings deducted once.</figcaption>
+  <figcaption markdown="span">SQ FT by elevation: the wall field is an Area, a gable with another material is a separate area, an opening wider than 4' is cut out once, windows narrower than 4' are not deducted, trim is counted separately.</figcaption>
 </figure>
 
 <!-- TODO-SCREEN: measure-area-siding.png (Area on an elevation in OurPlanCore with an opening deducted, item siding/6" vertical) -->
