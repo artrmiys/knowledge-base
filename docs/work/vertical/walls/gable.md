@@ -1,9 +1,9 @@
 # Gable Walls (фронтоны)
 
 <div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-083.png">
-    <img src="../../../../assets/images/confluence/confluence-083.png" alt="Gable truss на площадке" loading="lazy">
-    <div class="kb-gallery__caption">Gable truss: ферма с вертикальными стойками. Каркас by others, считаем только sheathing и слои.</div>
+  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-083.jpg">
+    <img src="../../../../assets/images/confluence/confluence-083.jpg" alt="Обычная W-ферма на площадке" loading="lazy">
+    <div class="kb-gallery__caption">Обычная W-ферма на площадке, для сравнения: у gable-end truss вместо раскосов вертикальные стойки под обшивку. Каркас by others, считаем только sheathing и слои.</div>
   </a>
   <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-084.png">
     <img src="../../../../assets/images/confluence/confluence-084.png" alt="Stick gable: стойки стены продолжены до конька" loading="lazy">

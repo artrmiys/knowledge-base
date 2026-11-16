@@ -77,7 +77,7 @@ takeoff spec; if not, add a note and check against the structural sheets.
     track on top, extra studs at the sides. A box header bears on the doubled jamb studs.
 
 <figure markdown>
-  ![Deflection head detail at a steel beam](../../../assets/images/walls/metal-deflection-head.png)
+  ![Deflection head detail at a steel beam](../../../assets/images/walls/metal-deflection-head.png){ width="600" }
   <figcaption markdown="span">Deflection head where the wall meets a steel beam: fireproofing, fire sealant, two layers of 5/8" Type X. The deflection track is a separate row from the bottom track.</figcaption>
 </figure>
 

@@ -1,9 +1,9 @@
 # Gable Walls
 
 <div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-083.png">
-    <img src="../../../../assets/images/confluence/confluence-083.png" alt="Gable truss on site" loading="lazy">
-    <div class="kb-gallery__caption">Gable truss: a truss with vertical studs. Framing is by others, we count only the sheathing and the layers.</div>
+  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-083.jpg">
+    <img src="../../../../assets/images/confluence/confluence-083.jpg" alt="A common W truss on site" loading="lazy">
+    <div class="kb-gallery__caption">A common W truss on site, for comparison: a gable-end truss has vertical studs for the sheathing instead of diagonals. Framing is by others, we count only the sheathing and the layers.</div>
   </a>
   <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-084.png">
     <img src="../../../../assets/images/confluence/confluence-084.png" alt="Stick gable: wall studs carried up to the ridge" loading="lazy">

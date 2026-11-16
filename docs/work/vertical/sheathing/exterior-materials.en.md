@@ -26,8 +26,6 @@ ours. Interior drywall, interior insulation and sound batts are not counted.
 
 ## Exterior gypsum sheathing
 
-<div class="kb-split" markdown>
-
 - `5/8" Type X` exterior grade is the standard exterior gypsum. `19/32"` is not used
   for gypsum: that is a plywood/OSB designation.
 - **(2) layers**: when the wall type or UL assembly calls for two layers.
@@ -40,8 +38,6 @@ ours. Interior drywall, interior insulation and sound batts are not counted.
   ![WD stud wall, two layers of exterior gypsum](../../../assets/images/sheathing/ext-gypsum-wd-stud-2layer.png)
   <figcaption markdown="span">Wall type with a UL assembly: (2) layers of 5/8" exterior gypsum on the outside face. Two layers = two rows or one "(2) layers" row.</figcaption>
 </figure>
-
-</div>
 
 <figure markdown>
   ![WD stud brick wall: Type X gypsum over FRT sheathing](../../../assets/images/sheathing/wd-stud-brick-gypsum-frt.png)

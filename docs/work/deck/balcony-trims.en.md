@@ -1,7 +1,7 @@
 # Balcony Trims
 
 <figure markdown>
-  ![Balcony trim, archive](../../assets/images/confluence/confluence-152.png)
+  ![Balcony trim, archive](../../assets/images/confluence/confluence-152.jpg)
   <figcaption markdown="span">Fascia and edge trim along the open sides of the balcony, soffit underneath, flashing at the wall. Counted only when trim is in scope.</figcaption>
 </figure>
 

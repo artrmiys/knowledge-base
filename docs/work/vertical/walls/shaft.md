@@ -75,8 +75,8 @@ metal RC под перекрытием обычно by others.
     <img src="../../../../assets/images/walls/shaft-c-runner.png" alt="2 inch C-runner" loading="lazy">
     <div class="kb-gallery__caption">Type 2: 2" C-runner по периметру: top, bottom, end cap.</div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-131.png">
-    <img src="../../../../assets/images/confluence/confluence-131.png" alt="1 inch gypsum shaftliner" loading="lazy">
+  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-131.jpg">
+    <img src="../../../../assets/images/confluence/confluence-131.jpg" alt="1 inch gypsum shaftliner" loading="lazy">
     <div class="kb-gallery__caption">1" shaftliner: один слой в Type 1, два слоя в Type 2. Отдельная строка.</div>
   </a>
 </div>

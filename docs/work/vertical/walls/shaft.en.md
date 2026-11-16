@@ -75,8 +75,8 @@ metal RC under the floor framing is usually by others.
     <img src="../../../../assets/images/walls/shaft-c-runner.png" alt="2 inch C-runner" loading="lazy">
     <div class="kb-gallery__caption">Type 2: 2" C-runner around the perimeter: top, bottom, end cap.</div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-131.png">
-    <img src="../../../../assets/images/confluence/confluence-131.png" alt="1 inch gypsum shaftliner" loading="lazy">
+  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-131.jpg">
+    <img src="../../../../assets/images/confluence/confluence-131.jpg" alt="1 inch gypsum shaftliner" loading="lazy">
     <div class="kb-gallery__caption">1" shaftliner: one layer in Type 1, two layers in Type 2. A separate row.</div>
   </a>
 </div>

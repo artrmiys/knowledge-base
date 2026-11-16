@@ -67,7 +67,7 @@ Underlayment        1/2" Ply            128   4x8    A6-01 floor type F2
 ```
 
 <figure markdown>
-  ![Монтаж subfloor на joists](../../../assets/images/confluence/confluence-172.png)
+  ![Монтаж subfloor на joists](../../../assets/images/confluence/confluence-172.jpg)
   <figcaption markdown="span">Subfloor T&G на joists. Листы = SQFT / 32 x 1.1, вверх до целого. Архивное фото.</figcaption>
 </figure>
 

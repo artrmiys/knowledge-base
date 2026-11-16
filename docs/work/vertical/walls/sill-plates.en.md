@@ -15,7 +15,7 @@ typically `2x6 P.T.`, but take the size only from the detail.
 
 <figure markdown>
   ![Labeled detail: bottom plate, sill plate, anchor bolt, foundation wall](../../../assets/images/confluence/confluence-155.png)
-  <figcaption markdown="span">Wall bottom plate on top, sill plate (red) on concrete, anchor bolt through it, foundation wall.</figcaption>
+  <figcaption markdown="span">A connection without a floor (the wall straight on the foundation, as at a garage): wall bottom plate on top, sill plate (red) on concrete, anchor bolt through it, foundation wall. With a floor, the rim and joists sit between them, see the text above.</figcaption>
 </figure>
 
 ## Where to find it on the plans
@@ -43,16 +43,16 @@ or the 1st floor plan. The F dot on `s101 f` puts the Line into
 4. Subtract openings (garage doors) once, on their own floor.
 
 <div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-160.png">
-    <img src="../../../../assets/images/confluence/confluence-160.png" alt="Sill plate on sill sealer with an anchor bolt" loading="lazy">
+  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-160.jpg">
+    <img src="../../../../assets/images/confluence/confluence-160.jpg" alt="Sill plate on sill sealer with an anchor bolt" loading="lazy">
     <div class="kb-gallery__caption">P.T. sill plate on pink sill sealer, the anchor bolt comes up out of the slab. This is how it looks on site.</div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-156.png">
-    <img src="../../../../assets/images/confluence/confluence-156.png" alt="Termite shield with lap and anchor" loading="lazy">
+  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-156.jpg">
+    <img src="../../../../assets/images/confluence/confluence-156.jpg" alt="Termite shield with lap and anchor" loading="lazy">
     <div class="kb-gallery__caption">Termite shield: 1 ft lap at joints, bead of caulk along the edge, anchor through the sheet.</div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-170.png">
-    <img src="../../../../assets/images/confluence/confluence-170.png" alt="Sill plate gasket under the sill plate" loading="lazy">
+  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-170.jpg">
+    <img src="../../../../assets/images/confluence/confluence-170.jpg" alt="Sill plate gasket under the sill plate" loading="lazy">
     <div class="kb-gallery__caption">Sill sealer (gasket) between the concrete and the sill plate, anchor bolts, joists and subfloor on top.</div>
   </a>
 </div>
