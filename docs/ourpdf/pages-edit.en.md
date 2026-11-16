@@ -4,7 +4,7 @@ Here: how to reorder, rotate, delete and extract pages, edit sheet content, turn
 
 <figure markdown>
   ![Pages tab](../assets/images/ourpdf/pages-tab.png)
-  <figcaption markdown="span">The "Pages" tab: thumbnails and buttons to rotate, delete, insert, extract, duplicate, crop and move. The hint above the thumbnails: Ctrl or Shift selects several pages, dragging changes the order.</figcaption>
+  <figcaption markdown="span">The "Pages" tab: thumbnails and buttons to rotate, delete, insert, extract, duplicate, crop and move. The hint above the thumbnails: Ctrl or Shift selects several pages, dragging changes the order, edits go to a copy and Ctrl+S writes them into the source PDF (the interface on the picture is in Russian).</figcaption>
 </figure>
 
 ## Modified copy: the general rule { #working-copy }
@@ -38,6 +38,11 @@ Narrow thumbnails and buttons above them:
 
 Like "Organize Pages" in Acrobat: a grid of pages instead of the sheet.
 
+<figure markdown>
+  ![Organize Pages grid](../assets/images/ourpdf/organize-grid.png)
+  <figcaption markdown="span">The page grid: on top Left, Right, Delete, Insert, Extract, Duplicate, undo and redo, the size slider, Close. Page 3 is selected. The hint under the grid: selecting, dragging, a PDF to the desktop or from a folder, double-click opens the page.</figcaption>
+</figure>
+
 1. Open the pink **"Organize Pages"** icon on the right strip or `Edit > Organize Pages`.
 2. It has its own toolbar at the top: left, right, delete, insert, extract, duplicate, undo, redo, a size slider (or ++ctrl++ and the wheel).
 3. Select pages: click, ++ctrl++, ++shift++, a mouse frame, ++ctrl+a++. On hover a page shows rotate and delete buttons.
@@ -53,6 +58,11 @@ Exchanging pages with folders:
 ## Edit PDF: sheet content { #edit-pdf }
 
 Edits the drawing itself: text, lines, images. Turned on with the orange **"Edit PDF"** icon on the right strip or `Edit > Edit PDF content`. A strip appears above the sheet: Select, Text, Image, Delete in frame, White-out, Select all, Delete, Close. Its right side says what is selected.
+
+<figure markdown>
+  ![Edit PDF strip](../assets/images/ourpdf/edit-pdf-strip.png)
+  <figcaption markdown="span">The strip above the sheet: Select, Text, Image, Delete in frame, White-out, Select all, Delete, Close; on the right "338 objects on the sheet" (Russian interface on the picture).</figcaption>
+</figure>
 
 ### Select and move
 
@@ -93,6 +103,11 @@ Settings, section "Edit PDF": arrow steps and the pause between presses, fonts, 
 ## PDF layers { #layers }
 
 Like "Layers" in Acrobat. The stack-of-sheets icon on the left strip or the "PDF layers" command.
+
+<figure markdown>
+  ![Layers tab and a lit layer](../assets/images/ourpdf/layers-panel.png)
+  <figcaption markdown="span">The "Layers" tab on a test PDF with two layers: on top show all, hide all, back to the file, "Whose layer is this" (crosshair) and the two "Trace layer" buttons. Layer Walls is selected: everything it draws is lit crimson on the sheet; the status line says which layer is lit.</figcaption>
+</figure>
 
 - The list mirrors the PDF's own layer tree; in merged plan sets the layers are grouped by source file.
 - The **eye** on a row shows and hides the layer, the eye on a group all its layers. Layers locked in the PDF (padlock) cannot be toggled; in a radio group, turning a layer on turns its neighbors off.

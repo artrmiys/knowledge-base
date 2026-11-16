@@ -15,7 +15,7 @@ Sill plate - самая нижняя деревянная доска, лежит
 
 <figure markdown>
   ![Подписанный узел: bottom plate, sill plate, anchor bolt, foundation wall](../../../assets/images/confluence/confluence-155.png)
-  <figcaption markdown="span">Bottom plate стены сверху, sill plate (красным) на бетоне, anchor bolt сквозь неё, foundation wall.</figcaption>
+  <figcaption markdown="span">Узел без перекрытия (стена прямо на фундаменте, как у garage): bottom plate стены сверху, sill plate (красным) на бетоне, anchor bolt сквозь неё, foundation wall. С перекрытием между ними rim и joists, см. текст выше.</figcaption>
 </figure>
 
 ## Где искать на чертежах
@@ -43,16 +43,16 @@ Sill plate - самая нижняя деревянная доска, лежит
 4. Проёмы (гаражные ворота) вычитай один раз, по своему этажу.
 
 <div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-160.png">
-    <img src="../../../../assets/images/confluence/confluence-160.png" alt="Sill plate на sill sealer с анкерным болтом" loading="lazy">
+  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-160.jpg">
+    <img src="../../../../assets/images/confluence/confluence-160.jpg" alt="Sill plate на sill sealer с анкерным болтом" loading="lazy">
     <div class="kb-gallery__caption">P.T. sill plate на розовом sill sealer, анкерный болт выходит из плиты. Так это выглядит на объекте.</div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-156.png">
-    <img src="../../../../assets/images/confluence/confluence-156.png" alt="Termite shield с нахлёстом и анкером" loading="lazy">
+  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-156.jpg">
+    <img src="../../../../assets/images/confluence/confluence-156.jpg" alt="Termite shield с нахлёстом и анкером" loading="lazy">
     <div class="kb-gallery__caption">Termite shield: нахлёст 1 ft на стыках, bead of caulk по краю, анкер сквозь лист.</div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-170.png">
-    <img src="../../../../assets/images/confluence/confluence-170.png" alt="Sill plate gasket под sill plate" loading="lazy">
+  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-170.jpg">
+    <img src="../../../../assets/images/confluence/confluence-170.jpg" alt="Sill plate gasket под sill plate" loading="lazy">
     <div class="kb-gallery__caption">Sill sealer (gasket) между бетоном и sill plate, anchor bolts, joists и subfloor сверху.</div>
   </a>
 </div>

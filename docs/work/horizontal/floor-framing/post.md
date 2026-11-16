@@ -34,8 +34,8 @@ Post - отдельная стойка под балкой, не stud стены
 4. Cap и base - по узлу: отдельная Count-позиция `CCQ66 S2.1` в `details` или модель в Notes поста. На каждый пост один cap и одна base.
 
 <figure markdown>
-  ![Count: точки постов на плане](../../../assets/images/ourplancore/v3/measure-count.png)
-  <figcaption markdown="span">Count-позиция поста: одна точка в центре каждого поста, имя с маркой, сечением и высотой.</figcaption>
+  ![Count: точки постов на плане](../../../assets/images/ourplancore/v3/measure-count-posts.png)
+  <figcaption markdown="span">Count-позиция поста в демо-проекте: точка-ромб в центре поста на конце балки FB1, имя `6x6 9.09` (сечение и высота), в легенде Posts 2 ea. На работе в имя добавляется марка поста.</figcaption>
 </figure>
 
 <figure markdown>

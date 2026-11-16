@@ -7,7 +7,7 @@
 
 <figure markdown>
   ![Cross bridging between floor joists](../../../../assets/images/photos/framing/joist-cross-bridging.jpg){ width="480" }
-  <figcaption markdown="span">2x2 cross bridging between two joists under the subfloor. It is the same takeoff as blocking: one row across the span is counted in LFT by the row length; take the material and row spacing from the framing plan or details. Photo: gotknowhow.com, [source](http://gotknowhow.com/articles/how-to-cut-herringbone-joist-struts-for-14-half-spaced-2x10-joists), found via Pinterest.</figcaption>
+  <figcaption markdown="span">Wood 2x2 cross bridging between joists under the subfloor: a row across the span is marked with a line, like blocking; take the material and row spacing from the framing plan or details. Metal cross bridging `TB27` at I-joists is counted in pieces (row below). Photo: gotknowhow.com, [source](http://gotknowhow.com/articles/how-to-cut-herringbone-joist-struts-for-14-half-spaced-2x10-joists), found via Pinterest.</figcaption>
 </figure>
 
 ## What it is

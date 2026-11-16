@@ -77,7 +77,7 @@ CH/H-профилей - отдельная тема: [Shaft Walls](shaft.md).
     track, по краям extra studs. Box header опирается на сдвоенные jamb-студы.
 
 <figure markdown>
-  ![Деталь deflection head у стальной балки](../../../assets/images/walls/metal-deflection-head.png)
+  ![Деталь deflection head у стальной балки](../../../assets/images/walls/metal-deflection-head.png){ width="600" }
   <figcaption markdown="span">Deflection head на стыке стены со стальной балкой: fireproofing, fire sealant, два слоя 5/8" Type X. Deflection track - отдельная строка от bottom track.</figcaption>
 </figure>
 

@@ -39,7 +39,7 @@ Different pitches on the two sides of a hip: only from the section. The app roun
 
 <figure markdown>
   ![Beam tool](../../../assets/images/ourplancore/v3/measure-beam.png)
-  <figcaption markdown="span">Beam tool: two points along the member, the app rounds the length and puts it into the takeoff name.</figcaption>
+  <figcaption markdown="span">Beam tool (example on a floor beam of the demo project): two points along the member, the ruler shows the length 49,11 ft, the app rounds it to the order length and creates a Count takeoff with the length in the name, here `FB1 50`.</figcaption>
 </figure>
 
 <figure markdown>

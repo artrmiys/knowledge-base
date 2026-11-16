@@ -7,7 +7,7 @@ frame-scope внутренняя отделка не считается.
 
 <figure markdown>
   ![Baseboard and crown perimeter example](../../assets/images/trims/int-trims-02.png)
-  <figcaption markdown="span">Baseboard и crown это LFT по периметру комнат. Разрывы (шкафы кухни, garage, лестница) должны быть намеренными и видимыми в формуле.</figcaption>
+  <figcaption markdown="span">Старый кадр замера: периметр комнат линией по стенам (`Периметр`, 98,64 ft), отдельная линия на каждую комнату. Baseboard и crown это LFT по такому периметру; разрывы (шкафы кухни, garage, лестница) должны быть намеренными и видимыми в формуле.</figcaption>
 </figure>
 
 ## Что входит и в каком порядке

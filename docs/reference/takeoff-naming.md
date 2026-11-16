@@ -24,7 +24,7 @@
 
 <figure markdown>
   ![Точки W/F/S/U под заголовком Scale](../assets/images/ourplancore/v3/sheet-dots.png)
-  <figcaption markdown="span">Выбранная точка подписана в статусе: `Route: W 2nd`, `Route: F 1st`, `Route: U all floors`.</figcaption>
+  <figcaption markdown="span">Выбранная точка подписана в статусе: на кадре `Route: W 1st floor`, на других листах `Route: W 2nd floor`, `Route: F 1st floor`, `Route: U all floors`.</figcaption>
 </figure>
 
 Куда идёт новая позиция с листа 2-го этажа, пути от корня корпуса:

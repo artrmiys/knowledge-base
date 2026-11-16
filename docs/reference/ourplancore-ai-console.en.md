@@ -109,7 +109,7 @@ With Workspace on, sessions started from the panel are archived automatically. `
 
 <figure markdown>
   ![Settings, Terminals section](../assets/images/ourplancore/v3/settings-terminals.png)
-  <figcaption markdown="span">Shortcuts, profile, width, effort, four context checkboxes and the connection message text.</figcaption>
+  <figcaption markdown="span">Shortcuts, profile, width, effort, four context checkboxes and the connection message text. The shortcut paths are blanked on the picture.</figcaption>
 </figure>
 
 | Field | What it sets |

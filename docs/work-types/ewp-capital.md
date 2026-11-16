@@ -11,7 +11,7 @@ I-joists, LVL / PSL / LSL / GL балки и engineered rim. Есть два п�
 
 <figure markdown>
   ![I-joists перекрытия опираются на балку над стойкой](../assets/images/photos/work-types/ijoists-on-beam-post.jpg){ width="520" }
-  <figcaption markdown="span">EWP на стройке: I-joists лежат на клеёной балке, балка на стойке с металлическим post cap. В заказе "только EWP" считаем I-joists, балку и hangers к ним; стойку 2x и фермы на заднем плане - нет. Фото: redbuilt.com, [источник](http://www.redbuilt.com/commercial-systems/i-joists), найдено через Pinterest.</figcaption>
+  <figcaption markdown="span">EWP на стройке: I-joists лежат на клеёной балке, балка на клеёной стойке с металлическим post cap, на заднем плане стальные open web joists. В заказе "только EWP" считаем I-joists, балку и hangers к ним; стальные joists - нет, стойку - по чертежу. Фото: redbuilt.com, [источник](http://www.redbuilt.com/commercial-systems/i-joists), найдено через Pinterest.</figcaption>
 </figure>
 
 ## Что это за материалы

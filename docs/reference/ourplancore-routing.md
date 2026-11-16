@@ -23,13 +23,13 @@
 
 <figure markdown>
   ![Точки W/F/S/U под заголовком Scale](../assets/images/ourplancore/v3/sheet-dots.png)
-  <figcaption markdown="span">Матрица точек под надписью масштаба: строки W, F, S, U; столбцы B, 1-5, L, R. Выбрана W/1, в статусе `Route: W 1st`.</figcaption>
+  <figcaption markdown="span">Матрица точек под надписью масштаба: строки W, F, S, U; столбцы B, 1-5, L, R. Выбрана W/1, в статусе `Route: W 1st floor`.</figcaption>
 </figure>
 
 | Элемент | Где | Что делает |
 | --- | --- | --- |
 | Матрица точек | под заголовком Scale на листе | один щелчок ставит точку, повторный снимает; одна точка на лист |
-| `Route: W 2nd` | строка состояния, после `Takeoff:` | показывает строку и этаж; для U - `Route: U all floors` |
+| `Route: W 2nd floor` | строка состояния, после `Takeoff:` | показывает строку и этаж; для U - `Route: U all floors` |
 | Галка `Sheet routing` | лента Viewport | показать или скрыть матрицу |
 | `Routing settings` | лента Viewport | открывает `Settings > Sheet Takeoff Routing` |
 | Предпросмотр назначения | диалог New Item | путь, куда лягет takeoff, виден до создания |
@@ -147,7 +147,7 @@
 
 Зачем: убедиться до рисования, что позиция ляжет в нужную папку.
 
-1. Откройте лист и прочитайте строку состояния: `Route: F 2nd` значит F-строка, 2-й этаж. Нет `Route:` - на листе нет точки.
+1. Откройте лист и прочитайте строку состояния: `Route: F 2nd floor` значит F-строка, 2-й этаж. Нет `Route:` - на листе нет точки.
 2. Нажмите инструмент и прочитайте в диалоге New Item путь назначения до нажатия OK.
 3. После рисования найдите takeoff в дереве Takeoffs: путь должен совпасть с таблицей выше.
 4. Для всего листа нажмите **Settings > Sheet Takeoff Routing > Preview current sheet destinations**.

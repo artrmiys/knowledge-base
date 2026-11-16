@@ -1,8 +1,8 @@
 # Windows and Doors (проёмы)
 
 <figure markdown>
-  ![Инструмент Openings: рамка на окне и точка с именем 3.0x5.0](../../../assets/images/ourplancore/v3/measure-openings.png)
-  <figcaption markdown="span">Инструмент Openings на фасаде: рамка по проёму, программа сама пишет имя-размер `3.0x5.0` и ставит точку в центре. Одна точка - один физический проём.</figcaption>
+  ![Позиция окон 3.0x4.0: точка на каждом окне](../../../assets/images/ourplancore/v3/measure-openings.png)
+  <figcaption markdown="span">Count-позиция окон `3.0x4.0` на плане демо-проекта: одна точка на окно, итог 4 ea. Инструмент Openings ставит такую позицию по рамке проёма на фасаде: имя-размер (ширина x высота) пишет сам, точка в центре. Одна точка - один физический проём.</figcaption>
 </figure>
 
 ## Что это

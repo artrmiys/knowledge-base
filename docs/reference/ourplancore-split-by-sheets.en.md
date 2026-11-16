@@ -96,12 +96,12 @@ You need: the structural plan `s201 2nd` named and scaled; a `Struct/Shear` fold
 
 1. In Pages, right-click `s201 2nd` > `Duplicate Page` (`Ctrl+D`). The copy appears next to it with the same name and inherits the original's dot (F 2).
 2. `F2`, name `s201 2nd sw`; right-click `Move to Folder...` into `Struct/Shear`. The `sw` tag is on the auto-dot skip list, so renaming will not move the dot; the app never replaces a dot set by hand.
-3. Open the copy, click the S dot in column 2 under the Scale header. Status: `Route: S 2nd`.
+3. Open the copy, click the S dot in column 2 under the Scale header. Status: `Route: S 2nd floor`.
 4. `L`, name `SW1-1`, trace the shear wall run, `C`. In the New Item dialog the destination line shows `shear walls/2nd floor/shear`; after creation the takeoff is there.
 5. `P`, name `HDU11 SB1x30 S2.2`, a point at the end of the wall: the takeoff went to `shear walls/2nd floor/holdowns`.
 6. The next run of the same mark: select the takeoff, `Space` (Record), keep drawing; Record continues the takeoff and ignores the dot.
 
-Result: in Pages the copy `s201 2nd sw` in `Struct/Shear` with the status `Route: S 2nd`; in Takeoffs `shear walls/2nd floor/shear/SW1-1` and `shear walls/2nd floor/holdowns/HDU11 SB1x30 S2.2`; the copy's legend shows only those.
+Result: in Pages the copy `s201 2nd sw` in `Struct/Shear` with the status `Route: S 2nd floor`; in Takeoffs `shear walls/2nd floor/shear/SW1-1` and `shear walls/2nd floor/holdowns/HDU11 SB1x30 S2.2`; the copy's legend shows only those.
 
 !!! tip "Tips"
     - A plan copy for a second building on a shared sheet is made the same way (rename, check the dot, green dot on the building): [Multiple buildings](ourplancore-buildings.md).

@@ -26,8 +26,6 @@ continuous insulation, WRB, flashing проёмов, bracing, window jambs и fu
 
 ## Exterior gypsum sheathing
 
-<div class="kb-split" markdown>
-
 - `5/8" Type X` exterior grade - стандартный наружный gypsum. Для гипса
   `19/32"` не используется: это обозначение plywood/OSB.
 - **(2) layers** - когда wall type или UL-assembly требует два слоя.
@@ -40,8 +38,6 @@ continuous insulation, WRB, flashing проёмов, bracing, window jambs и fu
   ![WD stud wall, два слоя наружного gypsum](../../../assets/images/sheathing/ext-gypsum-wd-stud-2layer.png)
   <figcaption markdown="span">Wall type с UL-сборкой: (2) layers 5/8" exterior gypsum на наружной грани. Два слоя = две строки или строка "(2) layers".</figcaption>
 </figure>
-
-</div>
 
 <figure markdown>
   ![WD stud brick wall: Type X gypsum over FRT sheathing](../../../assets/images/sheathing/wd-stud-brick-gypsum-frt.png)

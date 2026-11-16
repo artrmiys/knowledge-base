@@ -1,7 +1,7 @@
 # Roof Header
 
 <figure markdown>
-  ![Roof header between reinforced rafters](../../../assets/images/confluence/confluence-138.png)
+  ![Roof header between reinforced rafters](../../../assets/images/confluence/confluence-139.png)
   <figcaption markdown="span">Archive 3D view: the roof opening header is highlighted in yellow, the reinforced rafters at the sides it bears on in green. The header length runs between those rafters.</figcaption>
 </figure>
 
@@ -28,7 +28,7 @@ Beam tool (B) between the reinforced rafters on the roof framing sheet with the 
 
 <figure markdown>
   ![Beam tool](../../../assets/images/ourplancore/v3/measure-beam.png)
-  <figcaption markdown="span">Beam tool: two points along the member, the app rounds the length and puts it into the takeoff name.</figcaption>
+  <figcaption markdown="span">Beam tool (example on a floor beam of the demo project): two points along the member, the ruler shows the length 49,11 ft, the app rounds it to the order length and creates a Count takeoff with the length in the name, here `FB1 50`.</figcaption>
 </figure>
 
 ## Takeoff name and DFL row
@@ -60,7 +60,7 @@ Path: `framing/roof framing/beams/<header size length>`. Do not put them in `hea
 | `Hangers` | `LSSR210Z` | 6 | pcs | `rafters to header` |
 
 <figure markdown>
-  ![Second view of the roof header](../../../assets/images/confluence/confluence-139.png)
+  ![Second view of the roof header](../../../assets/images/confluence/confluence-138.png)
   <figcaption markdown="span">The same connection up close: the header sits between two reinforced rafters, the cut rafters frame into the header on hangers.</figcaption>
 </figure>
 

@@ -113,8 +113,8 @@ FRT with `verify`. FRT and FRTW are different designations, write them as in the
 Table: [Tips: FRT](../reference/boss-feedback-rules.md#frt).
 
 <figure markdown>
-  ![Detail of an attic draft stop over a demising wall](../assets/images/confluence/confluence-057.png)
-  <figcaption markdown="span">1/2" OSB draft stop over a demising wall in the attic: a separate row in Gable Walls, area from the attic profile in the section. The most common miss in COM.</figcaption>
+  ![Draft stop detail over a wall in a truss floor](../assets/images/confluence/confluence-057.png)
+  <figcaption markdown="span">The detail shows a 1/2" OSB draft stop over a wall in a truss floor (floor/ceiling assembly UL L546). An attic draft stop over a demising wall is a separate row in Gable Walls, area from the attic profile in the section. The most common miss in COM.</figcaption>
 </figure>
 
 ## What to look for in the specs

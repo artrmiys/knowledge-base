@@ -58,7 +58,7 @@ There are usually no takeoffs in `framing`: the rows take the area from the SQFT
 | `Panel Adheasive` | `29OZ` | 84 | pcs | |
 
 <figure markdown>
-  ![AdvanTech subfloor nailing](../../../assets/images/confluence/confluence-154.png)
+  ![AdvanTech subfloor nailing](../../../assets/images/confluence/confluence-154.jpg)
   <figcaption markdown="span">Archived photo: an AdvanTech sheet being nailed to the joists. Write the product as in the spec (`AdvanTech`, `3/4" T&G OSB`), not generically.</figcaption>
 </figure>
 

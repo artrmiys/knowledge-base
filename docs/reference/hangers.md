@@ -140,7 +140,7 @@
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">CBH for Glulam</div>
       <div class="kb-figure-row__rule"><code>CBH2.37X9.75C-KT</code> - специальное соединение для glulam.</div>
-      <div class="kb-figure-row__note">Только когда деталь или schedule показывает glulam или Cedar-style соединение.</div>
+      <div class="kb-figure-row__note">Только когда деталь или schedule показывает glulam или Cedar-style соединение. Картинка: каталог Simpson Strong-Tie, <a href="https://www.strongtie.com/">strongtie.com</a>.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../assets/images/confluence/confluence-030.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-030.png" alt="CBH hanger for glulam condition" loading="lazy"></a>
   </figure>
@@ -148,7 +148,7 @@
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">CJTZ for Cedar</div>
       <div class="kb-figure-row__rule"><code>CJTZ</code> - отдельная позиция для Cedar beams и posts.</div>
-      <div class="kb-figure-row__note">Не смешивать с обычными beam hangers; это отдельная строка в книге.</div>
+      <div class="kb-figure-row__note">Не смешивать с обычными beam hangers; это отдельная строка в книге. Картинка: инструкция по монтажу CJTZ, Simpson Strong-Tie, <a href="https://www.strongtie.com/">strongtie.com</a>.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../assets/images/confluence/confluence-031.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-031.png" alt="CJTZ installation for Cedar beam and post" loading="lazy"></a>
   </figure>

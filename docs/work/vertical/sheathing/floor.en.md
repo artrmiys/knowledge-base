@@ -67,7 +67,7 @@ Underlayment        1/2" Ply            128   4x8    A6-01 floor type F2
 ```
 
 <figure markdown>
-  ![Installing subfloor on joists](../../../assets/images/confluence/confluence-172.png)
+  ![Installing subfloor on joists](../../../assets/images/confluence/confluence-172.jpg)
   <figcaption markdown="span">T&G subfloor on joists. Sheets = SQFT / 32 x 1.1, rounded up to a whole number. Archive photo.</figcaption>
 </figure>
 

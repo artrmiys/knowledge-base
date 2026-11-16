@@ -7,7 +7,7 @@ frame scope interior trim is not counted.
 
 <figure markdown>
   ![Baseboard and crown perimeter example](../../assets/images/trims/int-trims-02.png)
-  <figcaption markdown="span">Baseboard and crown are LFT along the room perimeter. Breaks (kitchen cabinets, garage, stair) must be intentional and visible in the formula.</figcaption>
+  <figcaption markdown="span">An old measuring frame: the room perimeter as a line along the walls (`Perimeter`, 98,64 ft), one line per room. Baseboard and crown are LFT along such a perimeter; breaks (kitchen cabinets, garage, stair) must be intentional and visible in the formula.</figcaption>
 </figure>
 
 ## What is included and in what order

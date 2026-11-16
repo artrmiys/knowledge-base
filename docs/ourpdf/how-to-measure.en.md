@@ -71,13 +71,47 @@ If the elevation hatch sits on its own PDF layer, the areas can be taken with on
 4. Extra joists (doubled under walls, at openings): select the area, ++d++, click inside; ++shift++ and click removes one, ++d++ or ++esc++ exits.
 5. Right-click the area: "Copy joists note" gives the label and a list of lengths with counts for Excel.
 
-## 6. Check a dimension on the drawing { #check-size }
+## 6. Pieces, beams, openings: Count, Beam, Openings { #count-beam-openings }
+
+<figure markdown>
+  ![Measure block with Beam and Openings](../assets/images/ourpdf/block-measure.png)
+  <figcaption markdown="span">The "Measure" block: after joists the Beam (++b++) and Openings (++o++) buttons, on the right Count (++p++), P Line, Break, Ends.</figcaption>
+</figure>
+
+**Posts, holdowns, anchors (Count).**
+
+1. ++p++ or Count in the "Measure" block.
+2. Click every symbol on the sheet: one point per physical item. No scale needed.
+3. ++esc++ finishes. Points at both ends of lines already drawn come from Ends: select the lines and press Ends.
+
+<figure markdown>
+  ![Count and Ends on a corridor line](../assets/images/ourpdf/count-ends.png)
+  <figcaption markdown="span">The corridor line is selected, two Posts count points at its ends (the Ends button). The legend in the corner of the sheet: row Posts, 2 ea.</figcaption>
+</figure>
+
+**Beam.**
+
+1. ++b++, two clicks at the beam ends, support to support.
+2. In the window the beginning of the name is selected: type the mark (`FB1`). The order length is already in the name: 10'-3" gives `12`.
+3. The tool switches to Count of this takeoff by itself: click the other identical beams, ++esc++ finishes.
+
+The beam dimension on the sheet is for reference: the Count goes to the legend, totals and Excel.
+
+**Openings.**
+
+1. ++o++, two opposite corners of the opening on an elevation.
+2. The width goes as a dimension on top, the height on the left, the Count takeoff is named by the size (`3.0x6.8`), the mark sits in the middle of the opening.
+3. Click the other identical openings, ++esc++ finishes.
+
+Details and settings: [Beam and Openings](measure.md#beam-openings), [Count, P Line, Break, Ends](measure.md#count).
+
+## 7. Check a dimension on the drawing { #check-size }
 
 ++r++ and two clicks: you get a dimension line with ticks at the ends, and the dimension is always labeled on the sheet. Handy for checking the scale, a span or an opening width. Delete it afterwards if not needed: select it and ++delete++.
 
 Both room dimensions at once: ++r++, ++f9++, two opposite corners. You get two separate distances from the first corner, horizontal and vertical ([Box](measure.md#box)).
 
-## 7. Fix a measurement { #fix }
+## 8. Fix a measurement { #fix }
 
 <figure markdown>
   ![Selected point of an area](../assets/images/ourpdf/delete-points.png)
@@ -94,11 +128,11 @@ Both room dimensions at once: ++r++, ++f9++, two opposite corners. You get two s
 | select many | ++e++ and a frame: left to right takes what is wholly inside, right to left everything touched |
 | undo | ++ctrl+z++ |
 
-## 8. Mark a question on the sheet { #question }
+## 9. Mark a question on the sheet { #question }
 
 Callout (the button next to "Text" on the toolbar): click where the arrow points, a second click where the text goes, then the text. Handy for questions to the client and notes to yourself; it goes into the PDF together with the measurements.
 
-## 9. Save and export { #save }
+## 10. Save and export { #save }
 
 1. Measurements are saved automatically in the app profile while the PDF is open.
 2. ++ctrl+s++ writes them into the PDF itself (a copy of the previous file goes into backups); they are visible in Acrobat and Bluebeam.
@@ -106,7 +140,7 @@ Callout (the button next to "Text" on the toolbar): click where the arrow points
 4. Into an open Excel workbook: select a cell, go back to OurPDF, the Excel button in the "Scale" block, ++ctrl+e++ or ++ctrl+t++ ([Excel](measure.md#excel)). To make the cell update by itself: [Excel link](excel-link.md).
 5. As a separate `.xlsx` file: the "Measurements to Excel" button in the "Comments" list.
 
-## 10. Compare two sheets { #compare }
+## 11. Compare two sheets { #compare }
 
 1. Open the new sheet, the "Overlay" icon on the left strip.
 2. `Add...`, pick the old sheet of this PDF or a page of another file.
@@ -115,7 +149,7 @@ Callout (the button next to "Text" on the toolbar): click where the arrow points
 
 Details: [Sheet overlay](overlay.md). The overlay is not written on ++ctrl+s++ and is not printed.
 
-## 11. Gather details on one sheet { #details }
+## 12. Gather details on one sheet { #details }
 
 1. The "Crop" icon on the left strip, "Target sheet": a new blank sheet, `Start Cropping`.
 2. On the sheets you need, drag frames around the details: they land on the new sheet at 100 %.

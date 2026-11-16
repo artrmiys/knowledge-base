@@ -3,8 +3,8 @@
 Here: the Pages panel, sheet folders, sorting sheets and takeoffs, names and scale across the whole set, W/F/S/U dots, visibility, tabs and separate sheet windows, sheet rotation (Page ribbon). Needed at the start of every job and when a new measurement landed on the wrong floor. Which sheet is for which kind of work: [Split by sheets and routing](ourplancore-split-by-sheets.md).
 
 <figure markdown>
-  ![Pages panel](../assets/images/ourplancore/v3/pages-panel.png)
-  <figcaption markdown="span">Tree of folders and sheets. Under a sheet are the takeoffs measured on it. The dot to the left of a sheet hides all its measurements.</figcaption>
+  ![Pages panel](../assets/images/ourplancore/v3/pages-tree.png)
+  <figcaption markdown="span">Tree of folders and sheets of the demo project. Under a sheet are the takeoffs measured on it. The dot to the right of a sheet name hides all its measurements.</figcaption>
 </figure>
 
 ## Pages panel: reference
@@ -99,7 +99,7 @@ You need: sheets in `00. imported`; for scans without text, a raster at import (
 3. Press **Apply**.
 4. Name by hand whatever was not recognized: `F2` on the sheet, **Page > Batch Rename** for a series, or **Setup > Name / Scale...**.
 
-Result: names in the `<number> <tag>` format, lowercase: `a101 1st`, `s201 2nd`, `a105 rf`, `a8.01 1st rcp`, `ad101 demo`, `a3011 u`; plans have a dot under the Scale header; the status shows `Route: W 1st`.
+Result: names in the `<number> <tag>` format, lowercase: `a101 1st`, `s201 2nd`, `a105 rf`, `a8.01 1st rcp`, `ad101 demo`, `a3011 u`; plans have a dot under the Scale header; the status shows `Route: W 1st floor`.
 
 What the app reads: the sheet number based on the profile of the whole set (title block location, the `SHEET NO.` label, the sheet index); text repeated on every sheet (firm, phone) is not taken as a number. In Lite the number comes only from the PDF text: name a scan without a text layer by hand (`F2`). In the full version such scans are read by the built-in OCR, and a sheet that the text did not name can be read by an AI model from an image of the title block: the `Read title blocks the PDF text cannot name with AI` checkbox in `Settings > Auto Rename / Scale` (needs the AI module and a key, works online). Names you kept when opening the job are remembered by the app as final: in the suffix rules table this is the `Kept` column. For a set with an unreadable title block the full version has `Crop Hints` ([Managers, Sheet Manager](ourplancore-managers.md#sheet-manager)).
 
@@ -136,7 +136,7 @@ The app reads the scale from the label on the sheet by itself: the **Scale** but
 
 <figure markdown>
   ![W/F/S/U dots under the Scale header and the Route status](../assets/images/ourplancore/v3/sheet-dots.png)
-  <figcaption markdown="span">Rows W, F, S by floor B, 1-5, L, R and one U dot. The selected dot is named in the status bar: `Route: W 1st`.</figcaption>
+  <figcaption markdown="span">Rows W, F, S by floor B, 1-5, L, R and one U dot. The selected dot is named in the status bar: `Route: W 1st floor`.</figcaption>
 </figure>
 
 Under the Scale header each sheet has a grid of dots. One selected dot decides which building folder every **new** measurement from this sheet goes into, with any tool.
@@ -157,7 +157,7 @@ You need: the sheet open; the dot grid is visible with the **Viewport > Sheet ro
 2. If the dot did not appear or you need a different one, click the right dot by hand; clicking again clears it. A plan copy for shear walls gets S by hand. A dot set by hand is not replaced.
 3. For the whole job open **Settings > Sheet Takeoff Routing** and press **Route sheets without a dot now**.
 
-Result: the status shows `Route: W 1st` (or `F 2nd`, `S 1st`, `U all floors`); in the New Item dialog the destination line shows the folder.
+Result: the status shows `Route: W 1st floor` (or `F 2nd`, `S 1st`, `U all floors`); in the New Item dialog the destination line shows the folder.
 
 !!! tip "Tips"
     - A blank sheet from **Blank Sheet** with a name like `a3011 u` is left without a dot: press `F2` and `Enter` with the same text, or click the dot.

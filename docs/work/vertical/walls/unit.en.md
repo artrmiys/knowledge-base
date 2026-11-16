@@ -1,8 +1,8 @@
 # Unit Walls
 
 <figure markdown>
-  ![Unit sheet with the U dot and lines A 2x4 and A 2x6](../../../assets/images/ourplancore/v3/sheet-unit.png)
-  <figcaption markdown="span">Unit type sheet with the U dot: every new takeoff from it goes into `units`. Lines only on the interior partitions of the unit, one takeoff per size.</figcaption>
+  ![Unit sheet a3011 u with the U dot and A 2x4 lines](../../../assets/images/ourplancore/v3/sheet-unit.png)
+  <figcaption markdown="span">Unit type sheet `a3011 u` in the demo project: the U dot is lit, the status reads `Route: U all floors`, every new takeoff from the sheet goes into `units`. The `A 2x4` lines run only on the interior partitions of the unit, one takeoff per size; the `Units` legend gives 101,56 ft.</figcaption>
 </figure>
 
 ## What it is

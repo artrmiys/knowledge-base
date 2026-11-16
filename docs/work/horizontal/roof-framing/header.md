@@ -1,7 +1,7 @@
 # Roof Header (балка проёма в крыше)
 
 <figure markdown>
-  ![Roof header между усиленными rafters](../../../assets/images/confluence/confluence-138.png)
+  ![Roof header между усиленными rafters](../../../assets/images/confluence/confluence-139.png)
   <figcaption markdown="span">Архивный 3D-вид: жёлтым выделен header проёма крыши, зелёным усиленные rafters по бокам, на которые он опирается. Длина header - между этими rafters.</figcaption>
 </figure>
 
@@ -28,7 +28,7 @@ Roof header - горизонтальная балка в скатной крыш
 
 <figure markdown>
   ![Инструмент Beam](../../../assets/images/ourplancore/v3/measure-beam.png)
-  <figcaption markdown="span">Инструмент Beam: две точки по элементу, длина округляется программой и попадает в имя позиции.</figcaption>
+  <figcaption markdown="span">Инструмент Beam (пример на балке перекрытия демо-проекта): две точки по элементу, линейка показывает длину 49,11 ft, программа округляет её до заказной и создаёт Count-позицию с длиной в имени, здесь `FB1 50`.</figcaption>
 </figure>
 
 ## Как назвать в дереве и строка DFL
@@ -60,7 +60,7 @@ Roof header - горизонтальная балка в скатной крыш
 | `Hangers` | `LSSR210Z` | 6 | pcs | `rafters to header` |
 
 <figure markdown>
-  ![Второй вид roof header](../../../assets/images/confluence/confluence-139.png)
+  ![Второй вид roof header](../../../assets/images/confluence/confluence-138.png)
   <figcaption markdown="span">Тот же узел ближе: header лежит между двумя усиленными rafters, обрезанные rafters упираются в header через hangers.</figcaption>
 </figure>
 

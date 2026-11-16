@@ -23,13 +23,13 @@ Checked from top to bottom, the first rule that fires wins:
 
 <figure markdown>
   ![W/F/S/U dots under the Scale label](../assets/images/ourplancore/v3/sheet-dots.png)
-  <figcaption markdown="span">The dot matrix under the scale label: rows W, F, S, U; columns B, 1-5, L, R. W/1 is selected, the status bar shows `Route: W 1st`.</figcaption>
+  <figcaption markdown="span">The dot matrix under the scale label: rows W, F, S, U; columns B, 1-5, L, R. W/1 is selected, the status bar shows `Route: W 1st floor`.</figcaption>
 </figure>
 
 | Element | Where | What it does |
 | --- | --- | --- |
 | Dot matrix | under the Scale label on the sheet | one click sets a dot, a second click removes it; one dot per sheet |
-| `Route: W 2nd` | status bar, after `Takeoff:` | shows the row and floor; for U it is `Route: U all floors` |
+| `Route: W 2nd floor` | status bar, after `Takeoff:` | shows the row and floor; for U it is `Route: U all floors` |
 | `Sheet routing` checkbox | Viewport ribbon | shows or hides the matrix |
 | `Routing settings` | Viewport ribbon | opens `Settings > Sheet Takeoff Routing` |
 | Destination preview | New Item dialog | the path where the takeoff will go is visible before it is created |
@@ -147,7 +147,7 @@ Why: bracing for trusses (`bft`) is always gray and is not confused with walls. 
 
 Why: make sure before drawing that the takeoff will land in the right folder.
 
-1. Open the sheet and read the status bar: `Route: F 2nd` means the F row, 2nd floor. No `Route:` means the sheet has no dot.
+1. Open the sheet and read the status bar: `Route: F 2nd floor` means the F row, 2nd floor. No `Route:` means the sheet has no dot.
 2. Click the tool and read the destination path in the New Item dialog before clicking OK.
 3. After drawing, find the takeoff in the Takeoffs tree: the path must match the table above.
 4. For the whole sheet click **Settings > Sheet Takeoff Routing > Preview current sheet destinations**.

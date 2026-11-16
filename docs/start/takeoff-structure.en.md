@@ -24,7 +24,7 @@ format matters down to the letter.
 - Move a takeoff only with the move operation: it keeps the measurements, color, icon and legend order.
 
 <figure markdown>
-  ![Green and red dots on the building root](../assets/images/ourplancore/v3/takeoffs-root.png)
+  ![Buildings in the Takeoffs tree, green dot at the active one](../assets/images/ourplancore/v3/buildings-tree.png)
   <figcaption markdown="span">Green dot = active building: new takeoffs go into its folders. To switch, click the dot next to another building.</figcaption>
 </figure>
 
@@ -94,7 +94,7 @@ from a U sheet into `units` with any tool. Names with `eve`, `rake`, `gable`, `p
 
 <figure markdown>
   ![W/F/S/U points under the Scale header](../assets/images/ourplancore/v3/sheet-dots.png)
-  <figcaption markdown="span">The point is set automatically from the sheet name. The status `Route: W 2nd` shows where a new takeoff will go.</figcaption>
+  <figcaption markdown="span">The point is set automatically from the sheet name: `a101 1st` lights W/1. The status `Route: W 1st floor` shows where a new takeoff will go.</figcaption>
 </figure>
 
 How points work, name rules and settings:

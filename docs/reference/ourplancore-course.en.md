@@ -33,7 +33,7 @@ Details: [Getting started](ourplancore-start.md), [window map](ourplanecore.md#w
 
 Goal: understand that a sheet has a canonical name, a scale and a W/F/S/U dot, and learn to set them by hand.
 
-1. Select a floor plan in Pages and read `Scale: 1/8" = 1'0"` (or `1:96`) and `Route: W 1st` in the status bar.
+1. Select a floor plan in Pages and read `Scale: 1/8" = 1'0"` (or `1:96`) and `Route: W 1st floor` in the status bar.
 2. Press `R` (Ruler) and click both ends of a dimension string on the sheet: the tape length matches the labeled dimension, so the scale is right.
 3. Press `F2` on the sheet, type the same name (`a101 1st`), `Enter`: the name in lowercase, the floor tag last; the W dot under the Scale header stays.
 4. Press `Ctrl+D`: a copy of the sheet with the same name appears next to it.
@@ -47,7 +47,7 @@ Goal: understand that a sheet has a canonical name, a scale and a W/F/S/U dot, a
 
 If the sheet has no scale: press `S`, click both ends of a known dimension, type the length (`20'` or `1/8" = 1'0"`), `Enter`; for several sheets, select them in Pages and press `F4`.
 
-Check yourself: on the copy the status shows `Route: S 1st`, on the original `Route: W 1st`; both sheets have a scale.
+Check yourself: on the copy the status shows `Route: S 1st floor`, on the original `Route: W 1st floor`; both sheets have a scale.
 
 Details: [Sheets (Pages)](ourplancore-pages.md), [split by sheets](ourplancore-split-by-sheets.md), [sheet names](../start/takeoff-structure.md).
 
@@ -63,7 +63,7 @@ Goal: see how the sheet dot and the takeoff name pick the folder in the tree by 
 1. Open a plan with the W dot (`a101 1st`) and press `L`.
 2. In the **New Takeoff Item** dialog type the name `ext 2x6 9.09` and read the destination line at the bottom of the dialog: `walls/1st floor walls`.
 3. Press **OK**, click two corners on the sheet and press `C`.
-4. Find the takeoff in Takeoffs: it is in `walls/1st floor walls`; the status shows `Takeoff: ext 2x6 9.09 (Route: W 1st)`.
+4. Find the takeoff in Takeoffs: it is in `walls/1st floor walls`; the status shows `Takeoff: ext 2x6 9.09` and `Route: W 1st floor`.
 5. Press `L` again and type `eve 24 main`: the destination line shows `eves rakes/eves`, even though the sheet is the same. The word `eve` in the name beats the sheet dot. Press **Cancel**.
 6. Open the copy with the S dot, press `L`, type `SW1-1`: destination `shear walls/1st floor/shear`. Press **Cancel**.
 
@@ -139,7 +139,7 @@ Details: [Tools, Area](ourplancore-tools.md), [SQFT](../work/sqfts/1st2nd.md), [
 
 Goal: count joists by area and a beam with an order length on a structural plan.
 
-1. Open a structural plan with the F dot (`s101 1st`); status `Route: F 1st`.
+1. Open a structural plan with the F dot (`s101 1st`); status `Route: F 1st floor`.
 2. Press `J`, name `2x10 16"` (size and spacing), **OK**, trace the joist area, `C`.
 3. Draw the direction line along the joists when the app asks; `Shift` keeps the direction on the axes.
 4. Read `Total`: pieces and linear feet, the takeoff is in `framing/1st floor framing/joists`.

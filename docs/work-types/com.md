@@ -113,8 +113,8 @@ FRT с `verify`. FRT и FRTW - разные обозначения, писать
 Таблица - [Советы: FRT](../reference/boss-feedback-rules.md#frt).
 
 <figure markdown>
-  ![Деталь draft stop на чердаке над demising стеной](../assets/images/confluence/confluence-057.png)
-  <figcaption markdown="span">1/2" OSB draft stop над demising стеной на чердаке: отдельная строка в Gable Walls, площадь по профилю чердака с разреза. Самый частый пропуск в COM.</figcaption>
+  ![Деталь draft stop над стеной в перекрытии из ферм](../assets/images/confluence/confluence-057.png)
+  <figcaption markdown="span">На детали 1/2" OSB draft stop над стеной в межэтажном перекрытии из ферм (floor/ceiling assembly UL L546). Чердачный draft stop над demising стеной - отдельная строка в Gable Walls, площадь по профилю чердака с разреза. Самый частый пропуск в COM.</figcaption>
 </figure>
 
 ## На что смотреть в спеках

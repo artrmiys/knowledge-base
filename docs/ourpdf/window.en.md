@@ -74,7 +74,7 @@ The floating measurement card is gone. Everything that belonged to it now sits i
 
 <figure markdown>
   ![The whole top toolbar](../assets/images/ourpdf/top-panel.png)
-  <figcaption markdown="span">The layout as designed, a window about 1900 pixels wide. The first row holds the regular buttons and the "Measure" block; the second row has "Snap" and measurement style on the left, and "Scale" with the "Link to Excel" and Excel buttons on the right. If the window is not wide enough, the "Measure" block moves to the second row, "Snap" to the row below, and they come back when there is room.</figcaption>
+  <figcaption markdown="span">The layout as designed (a window about 1900 pixels wide), cut into pieces here so it reads. The first row in two pieces: the regular buttons; the "Measure" block and the buttons on the right with the lock. The second row by blocks: "Snap" and measurement style on the left, "Scale" with the Auto Link, "Link to Excel" and Excel buttons on the right. If the window is not wide enough, the "Measure" block moves to the second row, "Snap" to the row below, and they come back when there is room.</figcaption>
 </figure>
 
 <figure markdown>
@@ -86,7 +86,7 @@ The floating measurement card is gone. Everything that belonged to it now sits i
 
 <figure markdown>
   ![Measure block](../assets/images/ourpdf/block-measure.png)
-  <figcaption markdown="span">**Measure**: distance (++r++), Pitch, perimeter or line (++l++), area (++a++), joists (++j++), cut (++x++), Ortho (++f8++), Box (++f9++), joists gear; then Count (++p++), P Line, Break, Ends.</figcaption>
+  <figcaption markdown="span">**Measure**: distance (++r++), Pitch, perimeter or line (++l++), area (++a++), joists (++j++), Beam (++b++), Openings (++o++), cut (++x++), Ortho (++f8++), Box (++f9++), joists gear; then Count (++p++), P Line, Break, Ends.</figcaption>
 </figure>
 
 <figure markdown>
@@ -161,7 +161,7 @@ While the ruler is on, the document type is replaced by **measurement info**: to
 
 <figure markdown>
   ![Measurement info in the bottom bar](../assets/images/ourpdf/info-line.png)
-  <figcaption markdown="span">Measurement info while a line is being drawn.</figcaption>
+  <figcaption markdown="span">Measurement info while a line is being drawn, in two pieces: first the file, page, hint, view zoom, tool and sheet scale; in the second piece the value, ΔX, ΔY, angle and snap.</figcaption>
 </figure>
 
 - The hint changes with the tool: while measuring "click the points, snapping to PDF lines, Shift or Ortho keeps it straight. Right-click for the menu. Esc resets", while selecting "click to pick, empty space pans. E selects with a frame".

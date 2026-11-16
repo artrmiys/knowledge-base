@@ -4,7 +4,7 @@ Here: how to view a sheet (scroll modes, zoom, rotation, full screen) and what i
 
 <figure markdown>
   ![OurPDF Settings window](../assets/images/ourpdf/settings.png){ width="600" }
-  <figcaption markdown="span">The Settings window, measurement section: line lengths, Excel, numbers in the legend, legend on the sheet, rotation and resize handles, value box, guide lines, both sides of rectangles, AI agent bridge. At the bottom, "Reset to defaults", "Save", "Cancel".</figcaption>
+  <figcaption markdown="span">The OurPDF 1.0.1 Settings window, from "Memory and rendering" to the end of the measurement section: snaps, line lengths, Excel, numbers in the legend, legend on the sheet, rotation and resize handles, value box, guide lines, both sides of rectangles, mouse wheel, the "Trace layer" gap, AI agent bridge. At the bottom, "Reset to defaults", "Save", "Cancel". The interface on the picture is in Russian.</figcaption>
 </figure>
 
 ## View modes { #view-modes }
@@ -46,7 +46,7 @@ Open it: ++ctrl+comma++, the gear button on the right of the toolbar or `Edit > 
 | Язык интерфейса / Interface language | Русский (Russian) or English; the new language takes effect after a restart, OurPDF offers to restart right away and reopens the same files |
 | Appearance | as in Windows, light or dark; applied after a restart |
 | Memory and rendering | rendered page cache (MB), thumbnail cache, thumbnail width, page overview (long side in px), detailed render of the visible area (MP), neighboring pages in advance, open PDFium pages per document |
-| General | wheel zoom step (as in OurPlanCore: 2), number of recent files, show PDF annotations (comments, stamps), live measurements of OurPlanCore snapshots by default, offer at start-up to make OurPDF the default app |
+| General | wheel zoom step (as in OurPlanCore: 2), number of recent files, show PDF annotations (comments, stamps), colors as in Acrobat (sheet RGB as Adobe RGB 1998: saturated colors brighter), live measurements of OurPlanCore snapshots by default, offer at start-up to make OurPDF the default app |
 | Measure and comments | see the table below |
 | Markups in the PDF itself (Ctrl+S) | accept markups from the PDF on open (Acrobat and Bluebeam measurements, pencil, text become editable), Ctrl+S after editing pages or content: save the original PDF under the same name, backups per file before Ctrl+S (1-50), the backup folder path and how much is there now, the "Open backup folder" button |
 | Link to Excel behaviour | open workbook at once, closed one on ++ctrl+s++, backups, delay, time limit, small-number threshold for Auto Link ([Excel link](excel-link.md#settings)) |
@@ -63,6 +63,8 @@ Open it: ++ctrl+comma++, the gear button on the right of the toolbar or `Edit > 
 | Precision for ft-in: inch denominator | 16 | 1, 2, 4, 8, 16, 32 or 64 |
 | Decimal places | 2 | from 0 to 6 |
 | Snap radius, px | 10 | from 2 to 40 |
+| Snap to OurPDF objects and measurements | on | same as ++f3++ |
+| Snap to PDF lines | on | same as ++ctrl+f3++ |
 | Measurements stay on the sheet as markup | on | off: only the last measurement on the sheet, and it is not saved |
 | Ortho by default | off | ++shift++ inverts |
 | Box: area, line, cut and size by two corners | off | same as ++f9++ |
@@ -79,6 +81,7 @@ Open it: ++ctrl+comma++, the gear button on the right of the toolbar or `Edit > 
 | Guide lines through the pointer while measuring | on | lines as in OurPlanCore |
 | Rectangular measurements: show both sides | on | width x height under the value |
 | Mouse wheel in single-page view | turns pages | "turns pages (Ctrl zooms)" or "zoom" |
+| Trace layer: join hatching with a gap up to, pt | 6 | from 0 to 60 ([Trace a layer](pages-edit.md#layer-trace)) |
 | AI agent bridge | on | Claude and Codex agents drive the open OurPDF; takes effect after a restart ([AI agent control](ai.md)) |
 | Measurement color | `#D9480F` | palette square next to it |
 | Comment color | `#E5262B` | |

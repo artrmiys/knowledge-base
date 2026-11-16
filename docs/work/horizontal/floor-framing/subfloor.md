@@ -58,7 +58,7 @@ Subfloor - листовой настил по joists: `3/4" T&G OSB` или `Adv
 | `Panel Adheasive` | `29OZ` | 84 | pcs | |
 
 <figure markdown>
-  ![AdvanTech subfloor nailing](../../../assets/images/confluence/confluence-154.png)
+  ![AdvanTech subfloor nailing](../../../assets/images/confluence/confluence-154.jpg)
   <figcaption markdown="span">Архивное фото: лист AdvanTech прибивают к joists. Продукт пишется как в спецификации (`AdvanTech`, `3/4" T&G OSB`), не обобщённо.</figcaption>
 </figure>
 

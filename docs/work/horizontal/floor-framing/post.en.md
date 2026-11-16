@@ -34,8 +34,8 @@ Count tool (P), one point at the center of the post, on the framing sheet with t
 4. Cap and base per the detail: a separate Count takeoff `CCQ66 S2.1` in `details`, or the model in the post Notes. One cap and one base per post.
 
 <figure markdown>
-  ![Count: post points on the plan](../../../assets/images/ourplancore/v3/measure-count.png)
-  <figcaption markdown="span">Post Count takeoff: one point at the center of each post, the name has the mark, size and height.</figcaption>
+  ![Count: post points on the plan](../../../assets/images/ourplancore/v3/measure-count-posts.png)
+  <figcaption markdown="span">Post Count takeoff in the demo project: a diamond point at the center of the post at the end of beam FB1, name `6x6 9.09` (size and height), Posts 2 ea in the legend. On a real job the post mark goes into the name too.</figcaption>
 </figure>
 
 <figure markdown>

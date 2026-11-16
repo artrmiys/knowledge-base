@@ -1,7 +1,7 @@
 # Balcony Trims (отделка балкона в блоке)
 
 <figure markdown>
-  ![Balcony trim, archive](../../assets/images/confluence/confluence-152.png)
+  ![Balcony trim, archive](../../assets/images/confluence/confluence-152.jpg)
   <figcaption markdown="span">Fascia и edge trim по открытым сторонам балкона, soffit снизу, flashing у стены. Считаем только когда отделка в scope.</figcaption>
 </figure>
 

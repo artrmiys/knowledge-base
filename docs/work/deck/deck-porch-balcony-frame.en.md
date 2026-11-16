@@ -55,11 +55,6 @@ of the wood one.
    [Framing details](../horizontal/floor-framing/details/rim.md).
 
 <figure markdown>
-  ![Count points for balcony blocks](../../assets/images/ourplancore/v3/measure-count.png)
-  <figcaption markdown="span">Count with points: one point for every balcony instance; the item name carries the type, size and number of instances.</figcaption>
-</figure>
-
-<figure markdown>
   ![Balcony section at the wall](../../assets/images/framing/balcony-block-section.svg)
   <figcaption markdown="span">Balcony at the wall: ledger with screws, P.T. joists on Zmax hangers, end joist, beam on a post with a cap, decking and railing. Every callout is a block row in the DFL.</figcaption>
 </figure>

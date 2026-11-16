@@ -11,7 +11,7 @@ Here: the bottom strip tools in order of how often they are used, their keys, st
 
 - A tool button (`L`, `A`, `P`, `J`, `B`, `O`) creates a **new** takeoff: the `New Takeoff Item` dialog opens with the name, color and a preview of the destination folder. To continue an **existing** takeoff: select it and press `Space` (Record).
 - Drawing: a click places a point, `C` finishes, `Esc` cancels an unfinished shape, `Ctrl+Z` or `Backspace` removes the last point. Snaps to the drawing and to the axes (`F3`, `Ctrl+F3`, `F8`, `F9`) are off in a regular measurement: [Editing and snaps](ourplancore-editing.md).
-- The status bar shows `Mode: Record <takeoff>` and `Takeoff: <takeoff> (Route: W 1st)`: what you are drawing and where it will go.
+- The status bar shows `Mode: Record <takeoff>` and `Takeoff: <takeoff>` and `Route: W 1st floor`: what you are drawing and where it will go.
 - Without a sheet scale, Line and Area are not created ([scale](ourplancore-pages.md#scale)).
 - The right mouse button always pans the sheet, the wheel zooms, `F` fits the sheet to the window.
 
@@ -157,7 +157,7 @@ Rules: [Joist](../work/horizontal/floor-framing/joist.md).
 
 <figure markdown>
   ![Beam with the length in the name](../assets/images/ourplancore/v3/measure-beam.png)
-  <figcaption markdown="span">Drawn from support to support, mark entered: the length was added to the name, already rounded.</figcaption>
+  <figcaption markdown="span">Drawn from post to post, mark `FB1` typed over `Beam`: the 49,11 ft from the ruler went into the name already rounded, Count takeoff `FB1 50`, the first mark above the beam.</figcaption>
 </figure>
 
 Why: beams and headers with the order length in the name, which Excel reads.
@@ -180,7 +180,7 @@ Rules: [Beam](../work/horizontal/floor-framing/beam.md), [Headers](../work/verti
 
 <figure markdown>
   ![Openings](../assets/images/ourplancore/v3/measure-openings.png)
-  <figcaption markdown="span">A box around an opening on an elevation, a point in the center, the size name `4.3x7.8`.</figcaption>
+  <figcaption markdown="span">Takeoff `3.0x4.0` on the demo plan: a point on every window, 4 ea. Openings makes such a takeoff from a box around the opening on an elevation: the size name, a point in the center.</figcaption>
 </figure>
 
 Why: windows, doors, garage doors with the size in the name, one point per opening.
