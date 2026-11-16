@@ -48,12 +48,13 @@ base can be traced as a separate item to check the exclusion.
 
 | Tree name | DFL row | Unit | Formula |
 | --- | --- | --- | --- |
-| `trims/baseboard 1st` | `Baseboard` | LFT | `=42+38+27+...` all measured runs visible |
-| `trims/baseboard corridor` | `Baseboard corridor` | LFT | separate from units |
-| | `Base` material `TBD` | LFT | note, if the schedule does not set it |
+| `trims/baseboard 1st` | `Baseboard` | LFT | `=CEILING(G*1.1,10)`; G holds the sum of the runs `=42+38+27+...`, every addend visible |
+| `trims/baseboard corridor` | `Baseboard Corridor` | LFT | same formula, separate from units |
+| | `Baseboard`, `TBD Base` in B | LFT | when the schedule gives no profile: a note, do not pick a product |
 
-Every measured value goes into the formula: the checker must see
-where the number came from, not just the total.
+The 1.1 waste and the round-up to 10 are in the template formula; do not add them
+by hand a second time. Every measured value goes into G as a sum: the checker must
+see where the number came from, not just the total.
 
 ## Common mistakes
 
@@ -68,8 +69,10 @@ where the number came from, not just the total.
 ```text
 Takeoffs/Main/trims/baseboard 1st   Line   412 LFT (7 rooms)
 
-Baseboard   Wd 1x6 (per schedule)   412  LFT   =58+44+71+39+66+52+82   A701
-Baseboard   TBD                     0    LFT   Note: Base not specified in room schedule
+Baseboard   Wd 1x6 Base   460  LFT   =CEILING(G*1.1,10)   G =58+44+71+39+66+52+82   A701
+Baseboard   TBD Base      0    LFT   Note: Base not specified in room schedule
+
+G = 412; 412 x 1.1 = 453.2, rounded up to 10 = 460 LFT
 ```
 
 <details class="kb-figures kb-figures--rows">

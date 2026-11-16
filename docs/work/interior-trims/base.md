@@ -48,12 +48,13 @@ base можно обвести отдельным итемом, чтобы пр�
 
 | Имя в дереве | Строка DFL | Unit | Формула |
 | --- | --- | --- | --- |
-| `trims/baseboard 1st` | `Baseboard` | LFT | `=42+38+27+...` все измеренные участки видны |
-| `trims/baseboard corridor` | `Baseboard corridor` | LFT | отдельно от units |
-| | `Base` материал `TBD` | LFT | нота, если schedule не задаёт |
+| `trims/baseboard 1st` | `Baseboard` | LFT | `=CEILING(G*1.1,10)`; в G сумма участков `=42+38+27+...`, все слагаемые видны |
+| `trims/baseboard corridor` | `Baseboard Corridor` | LFT | та же формула, отдельно от units |
+| | `Baseboard`, в B `TBD Base` | LFT | когда schedule не задаёт профиль: нота, продукт не выбирать |
 
-Все измеренные значения вписываются в формулу: проверяющий должен видеть,
-откуда взялось число, а не только итог.
+Waste 1.1 и округление вверх до 10 стоят в формуле шаблона, руками их второй
+раз не добавляют. Все измеренные значения вписываются в G суммой:
+проверяющий должен видеть, откуда взялось число, а не только итог.
 
 ## Частые ошибки
 
@@ -68,8 +69,10 @@ base можно обвести отдельным итемом, чтобы пр�
 ```text
 Takeoffs/Main/trims/baseboard 1st   Line   412 LFT (7 rooms)
 
-Baseboard   Wd 1x6 (per schedule)   412  LFT   =58+44+71+39+66+52+82   A701
-Baseboard   TBD                     0    LFT   Note: Base not specified in room schedule
+Baseboard   Wd 1x6 Base   460  LFT   =CEILING(G*1.1,10)   G =58+44+71+39+66+52+82   A701
+Baseboard   TBD Base      0    LFT   Note: Base not specified in room schedule
+
+G = 412; 412 x 1.1 = 453.2, вверх до 10 = 460 LFT
 ```
 
 <details class="kb-figures kb-figures--rows">

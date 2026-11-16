@@ -61,7 +61,7 @@ elevation: three rows, see the photo on the [overview page](overview.md).
 
 | Material | What it changes in the takeoff |
 | --- | --- |
-| Vinyl | starter, J-channel, corners, undersill are accessories; `Vinyl J-channel` can be the casing |
+| Vinyl | starter, J-channel, corners, undersill are accessories; `J-Channel` can be the casing |
 | Fiber cement (Hardi) | plank, panel or shingle; note `verify if Trims are Hardi or PVC` |
 | Cedar | clapboard, shingle, vertical; `verify grade`; Cedar Breather under shingle |
 | Composite (Boral TruExt, LP SmartSide) | product in the row |
@@ -70,9 +70,11 @@ elevation: three rows, see the photo on the [overview page](overview.md).
 
 ## Orientation and neighboring rows
 
-Keep `Siding Horizontal` (lap) and `Siding Vertical` (board and batten, `1x6 Vert.
-Cedar`) separate if the template splits them. Next to the siding field there are often
-`Post Wrap` (`1x10` / `1x12`) and `Fascia` (`1x8` / `1x12`); that is trim:
+`Siding Horizontal` (lap) and `Siding Vertical` (board and batten, `1x6 Vert.
+Cedar`) are always separate rows: two orientations of one product never go into
+one row. Shingles and panels without an orientation go as `Siding` and `Panels`.
+Next to the siding field there are often `Post Wrap` (`1x10` / `1x12`) and `Fascia`
+(`1x8` / `1x12`); that is trim:
 [Exterior Trims](../exterior-trims/casing-corner-band.md).
 
 ## Common mistakes

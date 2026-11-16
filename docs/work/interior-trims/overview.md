@@ -53,7 +53,7 @@ frame-scope внутренняя отделка не считается.
 
     ---
 
-    Наличники дверей и окон изнутри: формула от списка проёмов, jamb.
+    Наличники дверей и окон изнутри: формула от списка проёмов, две стороны и waste.
 
     [Casing](casing.md)
 
@@ -70,7 +70,8 @@ frame-scope внутренняя отделка не считается.
    двери, с намеренными разрывами. Unit base отдельно от corridors и lobby.
 4. Составь список дверей и cased openings по этажам, потом casing
    формулой от списка.
-5. Trim не указан: пиши `not specified`, а не угадывай продукт.
+5. Trim не указан: в B `TBD Base`, `TBD Casing`, `TBD Crowns` и нота, а не
+   угаданный продукт.
 
 ## Основные правила
 
@@ -86,10 +87,10 @@ frame-scope внутренняя отделка не считается.
 
 | Имя в дереве | Строка DFL | Unit | Правило |
 | --- | --- | --- | --- |
-| `trims/baseboard 1st` | `Baseboard` | LFT | периметр комнат с отделкой, формула с видимыми слагаемыми |
-| `trims/crown 1st` | `Crowns` | LFT | только комнаты с crown по schedule |
-| `openings`-список | `Int. Doors`, `Cased Openings` | pcs | по этажам, с обозначением размера |
-| | `Casing for Int. Doors` | LFT | формула от списка дверей |
+| `trims/baseboard 1st` | `Baseboard` | LFT | периметр комнат с отделкой: в G сумма с видимыми слагаемыми, `=CEILING(G*1.1,10)` |
+| `trims/crown 1st` | `Crowns` | LFT | только комнаты с crown по schedule, `=CEILING(G*1.1,10)` |
+| `openings`-список | `Int. Doors`, `Cased Openings` | unit | по этажам, код размера в B |
+| | `Casing for Int. Doors` | LFT | `=CEILING(2*SUM(perimeters)/12*1.1,10)`: периметры дверей, две стороны, waste 1.1 |
 
 ## Частые ошибки
 

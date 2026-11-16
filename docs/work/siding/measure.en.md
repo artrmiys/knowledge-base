@@ -2,7 +2,7 @@
 
 <figure markdown>
   ![Siding take-off by elevation area](../../assets/images/siding/measure.svg)
-  <figcaption markdown="span">SQ FT by elevation: the wall field is an Area, gable and accent as separate areas, large openings deducted once.</figcaption>
+  <figcaption markdown="span">SQ FT by elevation: the wall field is an Area, gable and accent as separate areas, openings cut out at the frame once.</figcaption>
 </figure>
 
 <!-- TODO-SCREEN: measure-area-siding.png (Area on an elevation in OurPlanCore with an opening deducted, item siding/6" vertical) -->
@@ -19,7 +19,7 @@ siding area.
 | --- | --- |
 | Elevations (`el`) | Area of each elevation, material by zone, gables, bays, dormers |
 | Wall sections | Wall height up to the soffit, flare, furring |
-| Plans and opening layout | Large openings to deduct (overhead doors, storefronts) |
+| Plans and opening layout | Openings to deduct: windows, doors, overhead doors, storefronts; walls that no elevation shows |
 | Notes | `by others`, `TBD`, product |
 
 ## How to measure in OurPlanCore
@@ -31,33 +31,41 @@ siding area.
    several elevations can be collected as several polygons in one item.
 3. Gables, dormers, bays, return walls as separate polygons or items,
    especially with a different material.
-4. Cut large openings out as holes in the Area; windows under 4' are not deducted,
-   they go to waste. Do not deduct the same opening twice (siding and
-   WRB each take the deduction from their own area).
-5. Check the elevation scale against a known dimension (floor height, overhead door
+4. Cut every window and every door out as a hole in the Area at the frame (inside
+   the casing): siding runs under the casing, corner boards and bands and continues
+   behind posts and columns. The wall sheathing rule "windows narrower than 4' are not
+   deducted" does not apply to siding: in siding every opening is cut out, and the DFL
+   gets the net area. Do not deduct the same opening twice.
+5. A blank spot on an elevation that is really a section cut or an open balcony
+   bay gets no siding. Walls that no elevation shows (courtyard, wall above a
+   roof, dormer cheeks, sides of recesses) are counted from the plan: length
+   x height, `assumed` in the name, material as on the adjacent wall.
+6. Check the elevation scale against a known dimension (floor height, overhead door
    width): elevations are often at a different scale than the plans.
-6. Move the area to the DFL with a formula with visible addends and update it after
-   the takeoff is edited.
+7. Move the net area into G of the DFL row as a sum with visible addends and
+   update it after the takeoff is edited; the formula in C adds the waste.
 
 ## Tree name and DFL row
 
 | Tree name | DFL row | Unit | Formula |
 | --- | --- | --- | --- |
-| `siding/6" vertical` | `Siding Vertical 1x6 Cedar` | SQ FT | `=Front+Rear+Left+Right` |
-| `siding/panel grey` | `Siding Fiber Cement Panel grey` | SQ FT | separately by color |
-| `siding/shingle gable` | `Siding Gable front Vinyl Shingles` | SQ FT | accent separately |
+| `siding/6" vertical` | `Siding Vertical`, `1x6 Cedar` in B | SQ FT | `=CEILING(G*1.1,10)`; G holds the net area `=Front+Rear+Left+Right`; exposure in E |
+| `siding/panel grey` | `Panels`, `Fiber Cement Panels` in B | SQ FT | same formula; separately by color, color or tag in E |
+| `siding/shingle gable` | `Siding`, `Vinyl Shingles` in B | SQ FT | same formula; accent separately |
 | | `Siding` (correction) | SQ FT | `-140` as a visible row, if a deduction is needed |
-| | `Siding Per customer TBD` | SQ FT | `0` plus a note |
+| | `Siding`, `TBD Siding` in B | SQ FT | G `0` plus the note `Note: Siding is not specified; verify` |
 
-Waste: lap is moderate, shingle and shake higher, diagonal and small gables
-give more offcuts. Keep the factor as a visible multiplier per
-[Formulas and factors](../../reference/formulas.md).
+Siding has one waste factor for every type: 1.1. It is in the template formula
+`=CEILING(G*1.1,10)` (a total under 50 rounds to 2), so G takes the net
+area with no allowance. The exposure (`6" Exp.`) goes into E next to the sheet
+or keynote; it does not change the quantity. Do not merge horizontal and vertical
+siding of one product into one row.
 
 ## By others and TBD
 
 - Siding by others: a row with `0` and the note `by others` or `by customer`.
-- Material not specified: `Per customer TBD` or `verify material`, do not
-  substitute a product.
+- Material not specified: `TBD Siding` in B, G `0` and the note `Note: Siding is not
+  specified; verify`; do not substitute a product.
 - EIFS, stucco, stone, brick: not counted, but check the WRB, sheathing, furring and
   trim next to them: [EIFS / Stucco / Veneer](eifs-stucco-veneer.md).
 
@@ -66,6 +74,8 @@ give more offcuts. Keep the factor as a visible multiplier per
 - Area from the plan (perimeter x height) without deducting gables and without the different
   wall heights per elevation.
 - An opening deducted twice or not at all (garage doors).
+- Small windows not cut out by habit from wall sheathing: in siding every opening is cut out.
+- G holds an area that already includes the allowance: the waste is counted twice.
 - Elevation scale not checked.
 - Area measured but not moved to Excel or not updated.
 - All area and sheathing mistakes: [SQFT areas](../../start/common-mistakes.md#sqft), [Sheathing](../../start/common-mistakes.md#sheathing).
@@ -73,11 +83,14 @@ give more offcuts. Keep the factor as a visible multiplier per
 ## Example
 
 ```text
-Takeoffs/Main/siding/6" vertical     Area   4 polygons   3 180 SF
-Takeoffs/Main/siding/shingle gable   Area   2 polygons     420 SF
+Takeoffs/Main/siding/6" vertical     Area   4 polygons   3180 SQ FT
+Takeoffs/Main/siding/shingle gable   Area   2 polygons    420 SQ FT
 
-Siding Vertical      1x6 Cedar              3 180  SQ FT   =1120+940+560+560   A201 A202
-Siding Gable front   Cedar Shingles 5-1/2"    420  SQ FT   =210+210            A201
+Siding Vertical   1x6 Cedar        3500  SQ FT   =CEILING(G*1.1,10)   G =1120+940+560+560   6" Exp. A201 A202
+Siding            Cedar Shingles    470  SQ FT   =CEILING(G*1.1,10)   G =210+210            5-1/2" Exp. A201
+
+Vertical: G = 3180; 3180 x 1.1 = 3498, rounded up to 10 = 3500
+Shingles: G = 420; 420 x 1.1 = 462, rounded up to 10 = 470
 ```
 
 ## See also

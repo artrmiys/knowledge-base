@@ -69,7 +69,9 @@ brick veneer are cladding by others.
 2. Open the wall sections: WRB per spec, furring, Cedar Breather.
 3. Trace the areas by elevation, wall by wall; gables, dormers, bays and
    accents as separate items.
-4. Deductions by the rule: large openings once, windows under 4' are not deducted.
+4. Deductions: every window and door is cut out at the frame once; the DFL gets
+   the net area. The rule "windows narrower than 4' are not deducted" belongs to wall
+   sheathing, not to siding.
 
 ## How to measure in OurPlanCore
 
@@ -82,17 +84,18 @@ point, so check that the item landed in `siding`. Details:
 
 | A Description | B Size | C Qty | D Unit | E |
 | --- | --- | --- | --- | --- |
-| `Siding` | `Hardi plank 6" exp` | `=L+R+Front+Rear` | SQ FT | `A201` |
-| `Siding Gable front` | `Vinyl Shingles` | `=...` | SQ FT | `A201` |
-| `Siding 2` | `Boral TruExt 1x10 Shiplap` | `=...` | SQ FT | `A202` |
-| `Siding` | `Per customer TBD` | `0` | SQ FT | note |
+| `Siding Horizontal` | `Hardi plank` | `=CEILING(G*1.1,10)` | SQ FT | `6" Exp. A201` |
+| `Siding` | `Vinyl Shingles` | `=CEILING(G*1.1,10)` | SQ FT | `gable front A201` |
+| `Siding Vertical` | `Boral TruExt 1x10 Shiplap` | `=CEILING(G*1.1,10)` | SQ FT | `A202` |
+| `Siding` | `TBD Siding` | `0` | SQ FT | note `Note: Siding is not specified; verify` |
 
-Material and exposure always in the row; gable and accent separately; the unit is
-`SQ FT`, not `LFT`.
+G holds the net area as a sum `=L+R+Front+Rear`; the 1.1 waste is in the C formula.
+Material always in B, exposure in E; gable and accent separately, horizontal
+and vertical separately; the unit is `SQ FT`, not `LFT`.
 
 ## Common mistakes
 
-- WRB called `Vapor Barrier`, or Tyvek when the spec calls for fluid-applied.
+- B of the exterior barrier row says `Vapor Barrier` or Tyvek instead of the WRB per spec.
 - Stone or EIFS counted as siding.
 - The gable accent merged with the field of another material.
 - The measured area not moved to Excel or not updated after edits.

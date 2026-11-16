@@ -61,7 +61,7 @@ Board and batten по полю, shingle во фронтоне и stone вниз�
 
 | Материал | Что это меняет в takeoff |
 | --- | --- |
-| Vinyl | starter, J-channel, corners, undersill это accessories; `Vinyl J-channel` может быть casing |
+| Vinyl | starter, J-channel, corners, undersill это accessories; `J-Channel` может быть casing |
 | Fiber cement (Hardi) | plank, panel или shingle; нота `verify if Trims are Hardi or PVC` |
 | Cedar | clapboard, shingle, vertical; `verify grade`; Cedar Breather под shingle |
 | Composite (Boral TruExt, LP SmartSide) | продукт в строке |
@@ -71,8 +71,10 @@ Board and batten по полю, shingle во фронтоне и stone вниз�
 ## Ориентация и соседние строки
 
 `Siding Horizontal` (lap) и `Siding Vertical` (board and batten, `1x6 Vert.
-Cedar`) держи раздельно, если шаблон их делит. Рядом с полем siding часто
-стоят `Post Wrap` (`1x10` / `1x12`) и `Fascia` (`1x8` / `1x12`), это trim:
+Cedar`) всегда разными строками: две ориентации одного продукта в одну строку
+не сводят. Shingles и panels без ориентации идут как `Siding` и `Panels`.
+Рядом с полем siding часто стоят `Post Wrap` (`1x10` / `1x12`) и `Fascia`
+(`1x8` / `1x12`), это trim:
 [Exterior Trims](../exterior-trims/casing-corner-band.md).
 
 ## Частые ошибки

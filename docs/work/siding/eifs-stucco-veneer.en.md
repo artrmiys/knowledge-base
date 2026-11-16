@@ -59,15 +59,16 @@ furring, wood/PVC trim, soffit, fascia.
 
 | Element | Count it? |
 | --- | --- |
-| WRB under the cladding (per spec) | yes, check the scope |
+| WRB under the cladding (per spec) | yes, check the scope; on Zip walls there is no WRB row, only `Tape` |
 | Sheathing (CDX, OSB, Zip) | yes, its own scope |
 | Furring and framing for the cladding | yes, if shown |
 | Wood / PVC trim, corner, band, soffit, fascia | yes |
 | The EIFS, stucco, stone, brick itself | no |
 | Lath, base coat, brick ties, shelf angle, casing bead | no, by others |
 
-- A note is required: `Note: Stone Veneer by others`, `Note: Stucco by
-  others`, `Note: EIFS by others`.
+- A note is required, first under the Siding header: `Note: Stone Veneer
+  materials are by others`, `Note: EIFS, Stone and Brick Veneer materials
+  are by others` (list what the elevations show).
 - The whole elevation is EIFS, stucco or stone: siding `0 SQ FT` plus a note, trim
   close to zero. Do not pad the quantity.
 - EIFS and stucco accessories (casing bead, stop bead, track, expansion joint)
@@ -84,6 +85,7 @@ elevation. Trim around the cladding is counted as usual in `trims`.
 
 - Stone or brick veneer counted as siding or as our masonry.
 - WRB and sheathing under EIFS missed because "the wall is by others".
+- A WRB row added on Zip walls under the cladding: Zip has the barrier in the sheet, only `Tape` is counted.
 - EIFS casing bead written as our J-channel.
 - The by-others note not added.
 - All sheathing and WRB mistakes: [Sheathing](../../start/common-mistakes.md#sheathing).
@@ -91,11 +93,16 @@ elevation. Trim around the cladding is counted as usual in `trims`.
 ## Example
 
 ```text
-Note: Stone Veneer and EIFS are by others; WRB and sheathing counted
+Note: EIFS and Stone Veneer materials are by others
 Siding          Per plans: EIFS by others     0      SQ FT
-WRB             fluid-applied per spec        6 420  SQ FT   A3.0
-Wall Sheathing  7/16" Zip                     215    4x8     8/S3.0
-CornerBoards    5/4x6 PVC                     112    LFT     A201
+Wall Sheathing  7/16" Zip                     215    4x8     =CEILING(6250/32*1.1,1)           8/S3.0
+Tape            Zip Tape                      3460   LFT     =CEILING((6250*0.4+640)*1.1,10)
+Corner Boards   5/4x6 PVC                     124    LFT     =EVEN(56*2*1.1)                   A201
+
+Zip walls: no Vapor Barrier (WRB) row, the barrier is built into the sheet
+Sheathing: 6250 / 32 = 195.3, x 1.1 = 214.8, rounded up to a whole sheet = 215 sheets
+Tape: 6250 x 0.4 = 2500, + 640 LFT of opening perimeter = 3140, x 1.1 = 3454, rounded up to 10 = 3460
+Corner Boards: 2 corners x 28' = 56, two boards per corner: 56 x 2 x 1.1 = 123.2, up to even = 124
 ```
 
 ## See also

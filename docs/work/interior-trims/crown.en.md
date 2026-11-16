@@ -43,9 +43,9 @@ Do not confuse crown with exterior cornice, fascia, frieze and rake trim.
 
 | Tree name | DFL row | Unit | Formula |
 | --- | --- | --- | --- |
-| `trims/crown 1st` | `Crowns` | LFT | `=58+44+71+...` all runs visible |
-| `trims/crown 2nd` | `Crowns 2nd floor` | LFT | as a separate row |
-| | `Crowns TBD` | LFT | note, if the material is not set |
+| `trims/crown 1st` | `Crowns` | LFT | `=CEILING(G*1.1,10)`; G holds the sum of the runs `=58+44+71+...`, every addend visible |
+| `trims/crown 2nd` | `Crowns` under the 2nd floor header | LFT | each floor in its own row |
+| | `Crowns`, `TBD Crowns` in B | LFT | material not given: a note; unclear which rooms get crown: `verify if apply` in E |
 
 ## Common mistakes
 
@@ -59,8 +59,10 @@ Do not confuse crown with exterior cornice, fascia, frieze and rake trim.
 ```text
 Takeoffs/Main/trims/crown 1st   Line   286 LFT (living, dining, foyer, hall)
 
-Crowns   3-1/2" crown (per schedule)   286  LFT   =92+68+44+82   A701
-Crowns   TBD                           0    LFT   Note: Crown material not specified; verify
+Crowns   3-1/2" Crown   320  LFT   =CEILING(G*1.1,10)   G =92+68+44+82   A701
+Crowns   TBD Crowns     0    LFT   Note: Crown material not specified; verify
+
+G = 286; 286 x 1.1 = 314.6, rounded up to 10 = 320 LFT
 ```
 
 <details class="kb-figures kb-figures--rows">

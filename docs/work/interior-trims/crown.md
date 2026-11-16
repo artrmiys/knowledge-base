@@ -43,9 +43,9 @@ Line по периметру комнат с crown на плане с точко
 
 | Имя в дереве | Строка DFL | Unit | Формула |
 | --- | --- | --- | --- |
-| `trims/crown 1st` | `Crowns` | LFT | `=58+44+71+...` все участки видны |
-| `trims/crown 2nd` | `Crowns 2nd floor` | LFT | отдельной строкой |
-| | `Crowns TBD` | LFT | нота, если материал не задан |
+| `trims/crown 1st` | `Crowns` | LFT | `=CEILING(G*1.1,10)`; в G сумма участков `=58+44+71+...`, все слагаемые видны |
+| `trims/crown 2nd` | `Crowns` под заголовком 2nd floor | LFT | свой этаж своей строкой |
+| | `Crowns`, в B `TBD Crowns` | LFT | материал не задан: нота; не ясно, в каких комнатах crown: в E `verify if apply` |
 
 ## Частые ошибки
 
@@ -59,8 +59,10 @@ Line по периметру комнат с crown на плане с точко
 ```text
 Takeoffs/Main/trims/crown 1st   Line   286 LFT (living, dining, foyer, hall)
 
-Crowns   3-1/2" crown (per schedule)   286  LFT   =92+68+44+82   A701
-Crowns   TBD                           0    LFT   Note: Crown material not specified; verify
+Crowns   3-1/2" Crown   320  LFT   =CEILING(G*1.1,10)   G =92+68+44+82   A701
+Crowns   TBD Crowns     0    LFT   Note: Crown material not specified; verify
+
+G = 286; 286 x 1.1 = 314.6, вверх до 10 = 320 LFT
 ```
 
 <details class="kb-figures kb-figures--rows">

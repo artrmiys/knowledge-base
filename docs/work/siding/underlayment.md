@@ -37,20 +37,27 @@ types, не только elevations. Sheathing считается в
 
 ## WRB, не Vapor Barrier
 
-| Строка DFL | Материал | Unit | Правило |
+| Строка DFL | Материал в B | Unit | Правило |
 | --- | --- | --- | --- |
-| `WRB` | `Tyvek` или другой housewrap | SQ FT | только если спецификация называет housewrap |
-| `WRB` | `fluid-applied` (продукт по spec) | SQ FT | Tyvek не писать |
-| Zip system | `7/16" Zip` + `Zip Tape` | 4x8, rolls | отдельный WRB не нужен, не дублировать |
+| `Vapor Barrier` (подпись шаблона) | `Tyvek` или другой housewrap | SQ FT | только если спецификация называет housewrap; `=CEILING(G*1.1,10)`, G = площадь обшивки этой стены |
+| `Vapor Barrier` | `fluid-applied` (продукт по spec) | SQ FT | Tyvek не писать |
+| `Wall Sheathing` + `Tape` (Zip system) | `7/16" Zip` + `Zip Tape` | 4x8, LFT | строки `Vapor Barrier` нет: барьер встроен в лист, не дублировать |
 
-- Наружный барьер называется WRB, weather barrier или air barrier.
-  `Vapor Barrier` это другой слой и другое место в стене; так строку не
-  называть.
-- Площадь WRB равна площади стен с вычетом проёмов один раз; окна меньше
-  4' не вычитаются. Soffit porch и canopy из exterior gypsum тоже идут в
-  WRB.
-- Спек-ячейка WRB в шапке DFL (O4) заполняется при создании job, ссылка на
-  лист без слова `per` (`A3.0`).
+- Наружный барьер называется WRB, weather barrier или air barrier. Строка
+  в шаблоне подписана `Vapor Barrier`, и эту подпись в колонке A не меняют;
+  настоящий продукт пишется в B. Ошибка это написать `Vapor Barrier` как
+  продукт или поставить Tyvek, когда спецификация называет другое.
+- `Zip Tape` считается в `LFT`, не в rolls. Под `Wall Sheathing`:
+  `=CEILING((G*0.4+P)*1.1,10)`, где G это SQ FT Zip этого этажа, P это
+  периметр окон и дверей этого этажа из таблицы проёмов. Под Box, Gable и
+  Truss Heel: `=CEILING(G*0.4*1.1,10)`. Zip на кровле:
+  (листы x 32 x 0.4 + ridge + valleys) x 1.1.
+- Площадь WRB равна площади обшивки стены: проёмы вычитаются по своему этажу
+  и один раз, окна уже 4' не вычитаем, ворота гаража вычитаем (то же
+  правило, что на [Wall Sheathing](../vertical/sheathing/wall-sheathing.md)).
+  Soffit porch и canopy из exterior gypsum тоже идут в WRB.
+- Спек-ячейки в шапке DFL заполняются при создании job: O4 WRB, O5 Zip, O6
+  Zip Tape; ссылка на лист без слова `per` (`A3.0`).
 
 ## Furring / Rainscreen
 
@@ -73,7 +80,7 @@ cedar shingle на solid sheathing.
 | `Corner posts` (outside, inside) | углы | LFT |
 | `Undersill / finish trim` | под окном, у верха стены | LFT |
 
-При vinyl `Ext. Casing` нередко и есть `Vinyl J-channel`: не дублировать с
+При vinyl `Ext Casing` нередко и есть `J-Channel`: не дублировать с
 `5/4` wood casing. Канон: [Exclusions и J-Channel](../exterior-trims/exclusions.md).
 
 ## Flashing в siding
@@ -91,8 +98,9 @@ Flashing видимой строкой, не растворять в siding SQ F
 
 ## Частые ошибки
 
-- `Vapor Barrier` вместо WRB; Tyvek при fluid-applied.
+- `Vapor Barrier` записан как продукт в B вместо WRB по спецификации; Tyvek при fluid-applied.
 - Zip и отдельный housewrap посчитаны вместе.
+- `Zip Tape` в rolls вместо LFT, или без периметра проёмов этажа.
 - Furring пропущен, потому что нет на фасаде.
 - Проёмы не вычтены из WRB или вычтены дважды.
 - Все ошибки по обшивке: [Обшивка](../../start/common-mistakes.md#sheathing).
@@ -100,9 +108,18 @@ Flashing видимой строкой, не растворять в siding SQ F
 ## Пример
 
 ```text
-WRB            fluid-applied (per spec 07 27 26)   8 420  SQ FT   =C<walls SF>-C<openings>   A3.0
-Furring        1x4 P.T. @ 16" o.c.                 6 950  LFT     =CEILING(8420*12/16*1.1,10) 7/A401
-Cedar Breather                                     1 240  SQ FT   gable shingle areas          A201
+Vapor Barrier   fluid-applied (spec 07 27 26)   9270  SQ FT   =CEILING(8420*1.1,10)         A3.0
+Furring         1x4 P.T. @ 16" o.c.             6950  LFT     =CEILING(8420*12/16*1.1,10)   7/A401
+Cedar Breather                                  1240  SQ FT   gable shingle areas           A201
+
+Те же стены на Zip: строки Vapor Barrier нет, вместо неё Tape
+Wall Sheathing  7/16" Zip                       290   4x8     =CEILING(8420/32*1.1,1)
+Tape            Zip Tape                        4410  LFT     =CEILING((8420*0.4+640)*1.1,10)
+
+WRB: 8420 x 1.1 = 9262, вверх до 10 = 9270
+Furring: 8420 x 12 / 16 = 6315, x 1.1 = 6946.5, вверх до 10 = 6950
+Zip: 8420 / 32 = 263.1, x 1.1 = 289.4, вверх до целого = 290 листов
+Tape: 8420 x 0.4 = 3368, + 640 LFT периметра проёмов = 4008, x 1.1 = 4408.8, вверх до 10 = 4410
 ```
 
 ## См. также
