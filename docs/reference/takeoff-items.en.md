@@ -59,7 +59,7 @@ Formatting: bold, colored fill, columns B-F empty. Group subsections: `Rear Grou
 
 | Label | When |
 | --- | --- |
-| `Beam`, `Beam (2) Flush`, `Beam (3) Dropped`, `Beam Rim`, `Beam Stairs`, `Beam balcony`, `Ext Beam`, `Platform Beam (2)`, `Nailer Plates for Steel Beam` | plies and Flush/Dropped in the label, beam code in E |
+| `Beam`, `Beam (2) Flush`, `Beam (3)`, `Beam Rim`, `Beam Stairs`, `Beam balcony`, `Ext Beam`, `Platform Beam (2)`, `Nailer Plates for Steel Beam` | plies in the label, `Flush` only when the schedule marks the beam flush (Dropped is not written in the label), beam code in E |
 | `Joists 16" o.c.`, `Joist J1`, `Dbl Joists 16" o.c.`, `Extra joists`, `End Joists`, `Ceiling Joists 16" o.c.`, `Rafters 24" o.c.`, `Dbl Rafters`, `Collar ties 16" o.c.` | I-joist series in B (`11-7/8" TJI 210`) |
 | `Rim Board`, `Rim Board (2)`, `Ribbon Board`, `Ledger`, `Ledger (2)`, `Ledger and Box`, `Box`, `Bracing for Trusses` | 16' boards (D `16`); rim without `LVL` in B if the product is not named |
 | `Cross Bridging`, `Cross Bridging for I Joists` | wood `1x3` in 16' boards; `TB27` for I-joists in `pcs` |

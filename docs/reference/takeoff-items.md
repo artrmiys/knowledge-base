@@ -59,7 +59,7 @@
 
 | Подпись | Когда |
 | --- | --- |
-| `Beam`, `Beam (2) Flush`, `Beam (3) Dropped`, `Beam Rim`, `Beam Stairs`, `Beam balcony`, `Ext Beam`, `Platform Beam (2)`, `Nailer Plates for Steel Beam` | plies и Flush/Dropped в подписи, код балки в E |
+| `Beam`, `Beam (2) Flush`, `Beam (3)`, `Beam Rim`, `Beam Stairs`, `Beam balcony`, `Ext Beam`, `Platform Beam (2)`, `Nailer Plates for Steel Beam` | plies в подписи, `Flush` только когда schedule помечает балку flush (Dropped в подписи не пишут), код балки в E |
 | `Joists 16" o.c.`, `Joist J1`, `Dbl Joists 16" o.c.`, `Extra joists`, `End Joists`, `Ceiling Joists 16" o.c.`, `Rafters 24" o.c.`, `Dbl Rafters`, `Collar ties 16" o.c.` | серия I-joist в B (`11-7/8" TJI 210`) |
 | `Rim Board`, `Rim Board (2)`, `Ribbon Board`, `Ledger`, `Ledger (2)`, `Ledger and Box`, `Box`, `Bracing for Trusses` | доски по 16' (D `16`); rim без `LVL` в B, если продукт не назван |
 | `Cross Bridging`, `Cross Bridging for I Joists` | деревянный `1x3` досками по 16'; `TB27` у I-joists в `pcs` |

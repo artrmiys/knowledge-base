@@ -414,7 +414,7 @@ No separate header is needed. Add a picture for a complex assembly (column, pane
 | --- | --- | --- | --- |
 | Hardware | a specific name in A; the location, if critical, after the name | `Hangers`, `Bolts`, `Washers`, `Ties`, `Post Caps`, `Anchor Bolts` | `Beam-to-Post`, `Opening`, `Stud`, `Hardware`, `Metal`, `Misc.` |
 | Insulation | the full word in column B, otherwise it lands in another group. The row is needed only when insulation is in scope: for us that is continuous insulation outside the sheathing, on concrete or masonry, and rigid insulation above a roof deck. Insulation between studs, in floors and in roofs is by others, no row | `2" XPS Insulation`, `1-1/2 Rigid Insulation` | `2" XPS`, `1-1/2 Rigid`, `Insul.`; `Batt Insulation R-21` in a Frame workbook |
-| Flitch beam | the steel plate as a separate row right after the wood beam (in the reference file also under Ridge) | `Beam (4) Dropped` + `Steel plate (1)`, B `1/4x14` | the plate at the end of the list |
+| Flitch beam | the steel plate as a separate row right after the wood beam (in the reference file also under Ridge) | `Beam (3) Flush` + `Steel Plate (2)`, B `1/2 x 14` | the plate at the end of the list |
 | Detail with a picture | pictures in order (`Detail 1` or `Det. 1`), the material row has the reference in B | `22x42x6, det. 2`, `3" Crown, det.1` | a picture without a number, reference only in E |
 | Doors, cased openings | different types: a tag in F starting with the word `Type`; the physical kind and rating stay in B | F `Type A`; B `21080 pocket`, `2880 FR s/cl` | `A` without the word Type |
 | Trim with a material type | different material types in F | B `3"`, F `IL326`, `MD-01` | type lost, everything merged into one `3" crown` |

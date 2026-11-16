@@ -76,7 +76,7 @@ Blocking по шагу - короткие куски между joists или ф
 
 ```excel
 Blocking 48" o.c., flat       = CEILING(G * 12 / H * 2 / D, 1)
-Blocking 48" o.c., diagonal   = CEILING(G * 12 / H * 2.5 / D, 1)
+Diagonal Blocking 48" o.c.    = CEILING(G * 12 / H * 3 / D, 1)
 Blocking btw trusses (n)      = CEILING(G / D, 1)        G = длина линии x число рядов n
 T blocking at gables          = EVEN(G / D)
 ```
@@ -90,7 +90,7 @@ T blocking at gables          = EVEN(G / D)
 | Тип | Футов на точку |
 | --- | ---: |
 | Flat | `2` |
-| Diagonal | `2.5` |
+| Diagonal (строка `Diagonal Blocking 48" o.c.`) | `3` |
 | Vertical | `1.5` ... `2` |
 
 Число из детали главнее: если деталь показывает другое число кусков в точке, множитель берётся по детали.

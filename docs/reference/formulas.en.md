@@ -76,7 +76,7 @@ Blocking at a spacing means short pieces between joists or trusses set at equal 
 
 ```excel
 Blocking 48" o.c., flat       = CEILING(G * 12 / H * 2 / D, 1)
-Blocking 48" o.c., diagonal   = CEILING(G * 12 / H * 2.5 / D, 1)
+Diagonal Blocking 48" o.c.    = CEILING(G * 12 / H * 3 / D, 1)
 Blocking btw trusses (n)      = CEILING(G / D, 1)        G = line length x number of rows n
 T blocking at gables          = EVEN(G / D)
 ```
@@ -90,7 +90,7 @@ Feet of board per point:
 | Type | Feet per point |
 | --- | ---: |
 | Flat | `2` |
-| Diagonal | `2.5` |
+| Diagonal (row `Diagonal Blocking 48" o.c.`) | `3` |
 | Vertical | `1.5` ... `2` |
 
 The detail governs: if it shows a different number of pieces at a point, take the multiplier from the detail.
