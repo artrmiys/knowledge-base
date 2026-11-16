@@ -18,7 +18,7 @@
     <g fill="none" stroke="#6b7378" stroke-width="2" stroke-linecap="round">
       <path d="M236 112L246 102M240 96L246 90A7 7 0 0 1 256 100L250 106M242 118L236 124A7 7 0 0 1 226 114L232 108"/>
     </g>
-    <text x="264" y="112" font-size="13" fill="#4b5563">значок</text>
+    <text x="262" y="112" font-size="14" fill="#4b5563">значок</text>
 
     <text x="588" y="90" font-size="19" font-weight="600">Книга Excel</text>
     <text x="588" y="118" font-size="16">лист, ячейка G12</text>

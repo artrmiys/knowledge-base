@@ -7,11 +7,11 @@
 
     <rect x="20" y="58" width="860" height="320" rx="10" fill="#ffffff" stroke="#8a98a5" stroke-width="1.5"/>
     <text x="40" y="86" font-size="17" font-weight="700" fill="#3a3f44">Полная версия</text>
-    <text x="40" y="106" font-size="13" fill="#4b5563">всё из Lite и то, что справа</text>
+    <text x="40" y="107" font-size="14" fill="#4b5563">всё из Lite и то, что справа</text>
 
     <rect x="40" y="122" width="430" height="238" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
     <text x="60" y="152" font-size="18" font-weight="700" fill="#2e7d32">Lite</text>
-    <text x="108" y="152" font-size="13" fill="#4b5563">стоит у эстиматоров, её описывает база</text>
+    <text x="108" y="152" font-size="14" fill="#4b5563">стоит у эстиматоров, её описывает база</text>
     <g font-size="14.5" fill="#1f2a1f">
       <text x="60" y="186">Листы, масштаб, точки W/F/S/U</text>
       <text x="60" y="212">Инструменты замера и дерево Takeoffs</text>
@@ -33,7 +33,7 @@
     </g>
     <line x1="484" y1="130" x2="484" y2="356" stroke="#c9d1cb" stroke-width="1.2"/>
 
-    <text x="24" y="412" font-size="13" fill="#4b5563">Размер файла ourplancore.exe, сборки ноября 2026</text>
+    <text x="24" y="412" font-size="14" fill="#4b5563">Размер файла ourplancore.exe, сборки ноября 2026</text>
     <rect x="20" y="424" width="294" height="20" rx="4" fill="#2e7d32"/>
     <text x="326" y="439" font-size="14" font-weight="600" fill="#2e7d32">Lite, около 92 MB</text>
     <rect x="20" y="452" width="813" height="20" rx="4" fill="#8a98a5"/>
