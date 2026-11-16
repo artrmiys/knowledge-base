@@ -1,89 +1,18 @@
 # Export to Excel
 
-This page covers the XL strip to the right of the sheet, what each button takes from the tree and where it writes in the `TemplateCom.xlsm` workbook, the LG legend, the "comments" dot, the `Value` and `Excel` buttons, a permanent link from a takeoff to a cell with `Link to Excel`, `Auto Link` for the whole DFL and resetting links, setting up the buttons in `Settings > Excel Actions`, the workflow and errors. You need it after measuring, before working in the DFL.
+This page covers how to move numbers from the Takeoffs tree into the DFL workbook. In Lite these are the `Excel` and `Value` buttons at the bottom left, a permanent link from a takeoff to a cell with `Link to Excel`, `Auto Link` for the whole DFL, resetting links, and `Export > Export Excel` to a file. The XL strip to the right of the sheet, which writes sections into `TemplateCom.xlsm` and runs the workbook macros by itself, exists only in the full version: it is described at the end of the page ([XL strip](#xl)). You need it after measuring, before working in the DFL.
 
-<!-- DEMO: d-excel-xl -->
+## Excel in Lite { #lite }
 
-<figure markdown>
-  ![XL strip](../assets/images/ourplancore/v3/excel-strip.png)
-  <figcaption markdown="span">Top of the strip: `ALL` and `LG`, below them the wall and area buttons, then framing starts (`FR`). In a short window the strip scrolls with the mouse wheel down to the lower framing buttons. Each button's tooltip says what it does.</figcaption>
-</figure>
-
-<figure markdown>
-  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-xl-scroll.png"><source src="../../assets/images/ourplancore/demo/d-xl-scroll.mp4" type="video/mp4"></video>
-  <figcaption markdown="span">Demo: the AI Inbox is open and the XL strip got short; the mouse wheel over the strip scrolls it down to `FR`, `PS`, `BM`, `HD` and back.</figcaption>
-</figure>
-
-## What you need before pressing
-
-- [ ] Excel has the building workbook open, made from `TemplateCom.xlsm` (a copy of the template from the app update folder), macros enabled. The app looks for an open `TemplateCom.xlsm` workbook; if there is none, it takes the active macro-enabled workbook (`.xlsm`) that has a `Detailed Frame List` worksheet.
-- [ ] The `Excel Integration` module is on (`Settings > Modules`, on by default).
-- [ ] **One** building (a folder with roots) or one export folder (`walls`, `sqfts`...) is selected in the Takeoffs tree. For `ALL` a selection from two buildings is not accepted ([multiple buildings](ourplancore-buildings.md#excel)).
-- [ ] The `LG` legend is filled with the job's beam, post and header codes (otherwise the workbook keeps codes instead of sizes).
-- [ ] The job is saved, `Total` checked on the large takeoffs.
-
-## How to export a building with one button: ALL { #steps }
-
-Why: the whole building workbook in one run, steps in the right order.
-You need: the list above.
-
-1. Open the building workbook in Excel and activate the `Detailed Frame List` worksheet.
-2. In OurPlanCore select the building folder in Takeoffs (or the root for a single building).
-3. Press `LG`, type rows like `H5 - (2) 1 3/4 x 11 7/8 LVL`, `C4 - 6x6`; the **Add missing codes** button adds empty rows for all job codes without a size; press **Save for job**.
-4. Press `ALL`. Read what the app will skip (takeoffs without a number, names not in the format) and press **Continue**.
-5. Watch the step label `Excel ALL 3/12: Walls...` and wait for the summary `Completed: ...` with the list of what was skipped. A step that could not run is listed and does not stop the rest (except the A-series macros: they stop the chain).
-6. Check the workbook: the wall matrix, Front Page, framing lists.
-7. Save the workbook in Excel yourself: the app does not save it.
-
-Result: the building workbook is filled; if you fix a measurement in the app, repeat the relevant button, not the whole `ALL`.
-
-`ALL` in order: `UN`, `SF`, `WL` (right after it `SH` and `SW`), `GB`, `TH`, `PP`, `E/R`, `OP`, `SHF`, then all of framing (`FR`), and at the end `BL` (off in `ALL` by default). What goes into `ALL` is set in `Settings > Excel Actions`.
-
-## XL strip buttons: reference { #buttons }
-
-The general scheme: the branch takeoffs are written to the `J:L` work zone of the worksheet (name, number, unit; first free spot from row 10), the app selects what it wrote and runs the workbook macro, and the macro lays the rows out into the delivered columns `A:H`. How the workbook works: [DFL: how the workbook works](dfl-overview.md); what each macro does: [Excel macros and hotkeys](excel-hotkeys.md).
-
-| Button | Takes from the tree | Writes in the workbook |
+| What | Where | What it does |
 | --- | --- | --- |
-| `ALL` | the whole selected building | all steps in the order above |
-| `LG` | - | opens the job legend for `PS`, `BM`, `HD`; the row `wall sheathing = 7/16" Zip no insulation` is needed by `SH`. The cross in the panel header (`Hide the Excel legend panel`) or pressing `LG` again closes it without saving: first **Save for job**, otherwise the edit is lost; **Clear** empties and saves an empty legend |
-| `SF` | `sqfts` (`sqft`) | `J:L`, macro `A2_SQFT_calc`: floor areas, Front Page, roof by pitch |
-| `WL` | `walls` | `J:L` with floor headers, strict order, macro `A3_Walls_Calc_AllGroup`: the `O:AB` wall matrix and the Floor Walls rows; then zero rows are deleted in `A:H` of the wall block (the template rows Flashing, Headers, Wall Sheathing, Insulation, Box Sheathing, Tape, Shear Walls, Holdowns stay) |
-| `GB` | `gables` | `J:L`, `A2_SQFT_calc` |
-| `TH` | `trussheel` | `J:L`, `A2_SQFT_calc` |
-| `PP` | `parapets` | `J:L`, `A4_Parapet`: three numbers from the tail of the name `prpt 6.4 5.3 0.5` |
-| `E/R` | `eves rakes` | `J:L`: eaves by descending LF, then rakes; `A6_Eve_Rakes` |
-| `OP` | `openings/<floor>` | the zone from `Z158` by floor; for each floor `C_SumNearWindowValues`, then `A5_Openings`: headers by width buckets and flashing. The name must start with the size `WxH`, otherwise the takeoff is skipped with a warning |
-| `SH` | the sheathing text from column J or the `wall sheathing = ...` row from `LG` | `A7_walls_sheathing`: keeps one sheathing system (Zip, Ply, OSB), removes the extra rows; in `ALL` it runs right after `WL` |
-| `SW` | `shear walls/<floor>/shear` and `.../holdowns` | `J:L`; a Shear Walls row (interior; exterior ones take wall sheathing) and one Holdowns row for each holdown in the floor's wall block |
-| `SHF` | walls whose name starts with `shaft` | the Shaft walls block above the first framing list: panels, CH and J channels from LF times wall height |
-| `UN` | `units/<mark size>` (Line) and `units/<floor>/<mark>` (Count) | units table from cell `AM3` (Settings): mark on `2x4` / `2x6` / half, count by floor, SUMPRODUCT totals |
-| `BL` | `sqfts` areas named `blcny`, `balcony`, `terrace`, `porch` | blocks `#n Upper Balcony/Terrace List W' x L' N units` and `#n Porch Framing List` for each size, as a copy of the template's `#1` block |
+| `Excel` | bottom left | rows of the selected folder or takeoff (name, number, unit) from the active cell of the open workbook ([below](#value)) |
+| `Value` | next to `Excel` | only the numbers of the same selection in one column ([below](#value)) |
+| `Link to Excel` | next to `Value` | the number of one takeoff into a cell; after that the cell updates by itself ([below](#link)) |
+| `Auto Link` | next to `Link to Excel` | link takeoffs to the `J:L` list of a DFL workbook in one click ([below](#auto-link)) |
+| `Export > Export Excel` | the `Export` menu of the Takeoffs panel | export of the tree to an `.xlsx` file, columns J/K/L from row 10 |
 
-??? note "BL separate from ALL"
-    The balcony block macro writes formulas in localized notation and is built for the Russian-language Excel interface; that is why it is off in `ALL` and is run with the `BL` button. It is turned on in `Settings > Excel Actions`. What the blocks look like: [Balcony, porch and holdown blocks](dfl-blocks.md).
-
-## Framing { #framing }
-
-| Button | Takes | Writes |
-| --- | --- | --- |
-| `FR` | all of the building's `framing` | all the steps below for each floor; a missing framing list (`6th Floor Framing List`, `Balcony Framing List`) is added from the nearest one |
-| `PS` | `framing/<floor> framing/posts` | Posts rows in the floor's framing list; size by code from `LG` (`C_PostsSort`) |
-| `BM` | `.../beams` | Beam rows; size by code from `LG` |
-| `HD` | `.../headers/ext`, `.../headers/int` | header rows in the wall block **one floor down** (the 2nd floor framing sits on the 1st floor walls); Wall Sheathing and the rows after it are not touched |
-| `JS` | `.../joists` | Joists rows; Extra joists of the same length are added into the row; joists up to 7' go on doubled stock (`45 x 12'` with the note `90 pcs 6'`) |
-| `DT` | `.../details` | detail rows in `J:L` under a label row, once; a flag in M by name (`bft`, `bd`, ledger gives `l`, ribbon `rb`, rim `r`, or `name = flags` from `LG`), then `C_RimBoardBlockingHangers` |
-| `ST` | `.../stairs` | stair rows before Subfloor; a repeat export replaces them |
-
-| Tree folder | Framing list in the workbook | Headers go to the block |
-| --- | --- | --- |
-| `framing/1st floor framing` | `1st Floor Framing List` | `Basement Floor Walls` |
-| `framing/2nd floor framing` | `2nd Floor Framing List` | `1st Floor Walls` |
-| `framing/3rd floor framing` ... `8th` | `3rd ... 8th Floor Framing List` | the floor below |
-| `framing/roof framing`, `loft framing` | `Roof Frame list` | - |
-| `framing/balcony`, `porch`, `canopy` | `Balcony / Porch / Canopy Framing List` | - |
-
-Posts, beams and joists **replace** their rows in the list; the other template rows (Blocking, Rim, Hangers, Subfloor) stay; a second run does not break the worksheet. Flag codes and material overrides: [Takeoff tree, detail codes](../start/takeoff-structure.md).
+Lite does not run the workbook macros: it has no XL strip. Run the calculation on the exported `J:L` list (areas, walls, openings, eaves) in Excel with the E-Wood tab buttons ([Calculation from takeoffs](ewood-tab.md#calculate)). Make the building workbook from the template in the `templates` folder of the shared Dropbox folder ([TemplateCom template](#template)).
 
 ## How to put one takeoff into a cell: Value and Excel { #value }
 
@@ -155,7 +84,7 @@ The feature is new. On the first workbook, compare the cell with `Total` in the 
 | the takeoff was renamed or moved to another folder | the link follows it. A copy of the takeoff has no link |
 | the takeoff was deleted | the link is `Broken`, the cell stays as it is; ++ctrl+z++ in the app restores the link |
 
-Link and Unlink themselves cannot be undone with ++ctrl+z++. The workbook copies are in the app profile, `%LOCALAPPDATA%\OurPlanCore\excel-link-backups` (Lite has its own profile folder, `%LOCALAPPDATA%\OurPlanCore Lite`); there are none next to the workbook.
+Link and Unlink themselves cannot be undone with ++ctrl+z++. The workbook copies are in the app profile: for Lite in `%LOCALAPPDATA%\OurPlanCore Lite\local\excel-link-backups`, for the full version in `%LOCALAPPDATA%\OurPlanCore\excel-link-backups`; there are none next to the workbook.
 
 ### States: the icon on the takeoff { #link-states }
 
@@ -280,9 +209,99 @@ OurPlanCore Lite has the same button, menu, window and Settings section. Lite ha
 
 ## TemplateCom template { #template }
 
-`TemplateCom.xlsm` sits in the app update folder next to `ourplancore.exe`. Each building gets a copy (`Bldng#A.xlsm`); the workbook name equals the Job Name on the Front Page. Worksheets: `Front Page` (areas, Total SQFT), `Detailed Frame List` (the delivered columns `A:H` and work zones to the right: `J:N` export, `O:AB` wall matrix, spec cells `O:S`, height calculator), `Standarts` (notes library), `Mat List`. The A-series macros are run by the XL strip; the B, C, X, Y series by hotkeys in Excel. Details: [DFL: how the workbook works](dfl-overview.md), [Excel macros and hotkeys](excel-hotkeys.md), [Standard notes](standard-notes.md).
+`TemplateCom.xlsm` for Lite is in the shared Dropbox folder `Office Folder\programs\templates`; for the full version it is also in the update folder next to `ourplancore.exe`. Each building gets a copy (`Bldng#A.xlsm`); the workbook name equals the Job Name on the Front Page. Worksheets: `Front Page` (areas, Total SQFT), `Detailed Frame List` (the delivered columns `A:H` and work zones to the right: `J:N` export, `O:AB` wall matrix, spec cells `O:S`, height calculator), `Standarts` (notes library), `Mat List`. The A-series macros are run by the XL strip in the full version and by the E-Wood tab buttons in Lite ([Calculation from takeoffs](ewood-tab.md#calculate)); the B, C, X, Y series by hotkeys in Excel. Details: [DFL: how the workbook works](dfl-overview.md), [Excel macros and hotkeys](excel-hotkeys.md), [Standard notes](standard-notes.md).
 
-## Repeat export { #rerun }
+## XL strip: full version only { #xl }
+
+!!! info "Full version only"
+    OurPlanCore Lite has no XL strip, nor the `Settings > Excel Actions` and `Excel Rules` sections or the `Create Project Excel Workbook` command. In Lite numbers go through the buttons [above](#lite), and the workbook macros are run in Excel. How the versions differ: [Lite vs full version](ourplancore-lite.md).
+
+The XL strip is a vertical strip of buttons to the right of the sheet. In the full version it is turned on and off in the settings: `Settings > Modules`, the `Excel Integration` module (on by default). The same module shows the `Excel`, `Value`, `Link to Excel` and `Auto Link` buttons; if the strip is not visible, check this checkbox first. In Lite the `Excel Integration` checkbox controls only these buttons; it does not bring back the XL strip.
+
+<!-- DEMO: d-excel-xl -->
+
+<figure markdown>
+  ![XL strip](../assets/images/ourplancore/v3/excel-strip.png)
+  <figcaption markdown="span">Top of the strip: `ALL` and `LG`, below them the wall and area buttons, then framing starts (`FR`). In a short window the strip scrolls with the mouse wheel down to the lower framing buttons. Each button's tooltip says what it does.</figcaption>
+</figure>
+
+<figure markdown>
+  <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-xl-scroll.png"><source src="../../assets/images/ourplancore/demo/d-xl-scroll.mp4" type="video/mp4"></video>
+  <figcaption markdown="span">Demo: the AI Inbox is open and the XL strip got short; the mouse wheel over the strip scrolls it down to `FR`, `PS`, `BM`, `HD` and back.</figcaption>
+</figure>
+
+### What you need before pressing
+
+- [ ] Excel has the building workbook open, made from `TemplateCom.xlsm` (a copy of the template from the app update folder), macros enabled. The app looks for an open `TemplateCom.xlsm` workbook; if there is none, it takes the active macro-enabled workbook (`.xlsm`) that has a `Detailed Frame List` worksheet.
+- [ ] The `Excel Integration` module is on (`Settings > Modules`, on by default).
+- [ ] **One** building (a folder with roots) or one export folder (`walls`, `sqfts`...) is selected in the Takeoffs tree. For `ALL` a selection from two buildings is not accepted ([multiple buildings](ourplancore-buildings.md#excel)).
+- [ ] The `LG` legend is filled with the job's beam, post and header codes (otherwise the workbook keeps codes instead of sizes).
+- [ ] The job is saved, `Total` checked on the large takeoffs.
+
+### How to export a building with one button: ALL { #steps }
+
+Why: the whole building workbook in one run, steps in the right order.
+You need: the list above.
+
+1. Open the building workbook in Excel and activate the `Detailed Frame List` worksheet.
+2. In OurPlanCore select the building folder in Takeoffs (or the root for a single building).
+3. Press `LG`, type rows like `H5 - (2) 1 3/4 x 11 7/8 LVL`, `C4 - 6x6`; the **Add missing codes** button adds empty rows for all job codes without a size; press **Save for job**.
+4. Press `ALL`. Read what the app will skip (takeoffs without a number, names not in the format) and press **Continue**.
+5. Watch the step label `Excel ALL 3/12: Walls...` and wait for the summary `Completed: ...` with the list of what was skipped. A step that could not run is listed and does not stop the rest (except the A-series macros: they stop the chain).
+6. Check the workbook: the wall matrix, Front Page, framing lists.
+7. Save the workbook in Excel yourself: the app does not save it.
+
+Result: the building workbook is filled; if you fix a measurement in the app, repeat the relevant button, not the whole `ALL`.
+
+`ALL` in order: `UN`, `SF`, `WL` (right after it `SH` and `SW`), `GB`, `TH`, `PP`, `E/R`, `OP`, `SHF`, then all of framing (`FR`), and at the end `BL` (off in `ALL` by default). What goes into `ALL` is set in `Settings > Excel Actions`.
+
+### XL strip buttons: reference { #buttons }
+
+The general scheme: the branch takeoffs are written to the `J:L` work zone of the worksheet (name, number, unit; first free spot from row 10), the app selects what it wrote and runs the workbook macro, and the macro lays the rows out into the delivered columns `A:H`. How the workbook works: [DFL: how the workbook works](dfl-overview.md); what each macro does: [Excel macros and hotkeys](excel-hotkeys.md).
+
+| Button | Takes from the tree | Writes in the workbook |
+| --- | --- | --- |
+| `ALL` | the whole selected building | all steps in the order above |
+| `LG` | - | opens the job legend for `PS`, `BM`, `HD`; the row `wall sheathing = 7/16" Zip no insulation` is needed by `SH`. The cross in the panel header (`Hide the Excel legend panel`) or pressing `LG` again closes it without saving: first **Save for job**, otherwise the edit is lost; **Clear** empties and saves an empty legend |
+| `SF` | `sqfts` (`sqft`) | `J:L`, macro `A2_SQFT_calc`: floor areas, Front Page, roof by pitch |
+| `WL` | `walls` | `J:L` with floor headers, strict order, macro `A3_Walls_Calc_AllGroup`: the `O:AB` wall matrix and the Floor Walls rows; then zero rows are deleted in `A:H` of the wall block (the template rows Flashing, Headers, Wall Sheathing, Insulation, Box Sheathing, Tape, Shear Walls, Holdowns stay) |
+| `GB` | `gables` | `J:L`, `A2_SQFT_calc` |
+| `TH` | `trussheel` | `J:L`, `A2_SQFT_calc` |
+| `PP` | `parapets` | `J:L`, `A4_Parapet`: three numbers from the tail of the name `prpt 6.4 5.3 0.5` |
+| `E/R` | `eves rakes` | `J:L`: eaves by descending LF, then rakes; `A6_Eve_Rakes` |
+| `OP` | `openings/<floor>` | the zone from `Z158` by floor; for each floor `C_SumNearWindowValues`, then `A5_Openings`: headers by width buckets and flashing. The name must start with the size `WxH`, otherwise the takeoff is skipped with a warning |
+| `SH` | the sheathing text from column J or the `wall sheathing = ...` row from `LG` | `A7_walls_sheathing`: keeps one sheathing system (Zip, Ply, OSB), removes the extra rows; in `ALL` it runs right after `WL` |
+| `SW` | `shear walls/<floor>/shear` and `.../holdowns` | `J:L`; a Shear Walls row (interior; exterior ones take wall sheathing) and one Holdowns row for each holdown in the floor's wall block |
+| `SHF` | walls whose name starts with `shaft` | the Shaft walls block above the first framing list: panels, CH and J channels from LF times wall height |
+| `UN` | `units/<mark size>` (Line) and `units/<floor>/<mark>` (Count) | units table from cell `AM3` (Settings): mark on `2x4` / `2x6` / half, count by floor, SUMPRODUCT totals |
+| `BL` | `sqfts` areas named `blcny`, `balcony`, `terrace`, `porch` | blocks `#n Upper Balcony/Terrace List W' x L' N units` and `#n Porch Framing List` for each size, as a copy of the template's `#1` block |
+
+??? note "BL separate from ALL"
+    The balcony block macro writes formulas in localized notation and is built for the Russian-language Excel interface; that is why it is off in `ALL` and is run with the `BL` button. It is turned on in `Settings > Excel Actions`. What the blocks look like: [Balcony, porch and holdown blocks](dfl-blocks.md).
+
+### Framing { #framing }
+
+| Button | Takes | Writes |
+| --- | --- | --- |
+| `FR` | all of the building's `framing` | all the steps below for each floor; a missing framing list (`6th Floor Framing List`, `Balcony Framing List`) is added from the nearest one |
+| `PS` | `framing/<floor> framing/posts` | Posts rows in the floor's framing list; size by code from `LG` (`C_PostsSort`) |
+| `BM` | `.../beams` | Beam rows; size by code from `LG` |
+| `HD` | `.../headers/ext`, `.../headers/int` | header rows in the wall block **one floor down** (the 2nd floor framing sits on the 1st floor walls); Wall Sheathing and the rows after it are not touched |
+| `JS` | `.../joists` | Joists rows; Extra joists of the same length are added into the row; joists up to 7' go on doubled stock (`45 x 12'` with the note `90 pcs 6'`) |
+| `DT` | `.../details` | detail rows in `J:L` under a label row, once; a flag in M by name (`bft`, `bd`, ledger gives `l`, ribbon `rb`, rim `r`, or `name = flags` from `LG`), then `C_RimBoardBlockingHangers` |
+| `ST` | `.../stairs` | stair rows before Subfloor; a repeat export replaces them |
+
+| Tree folder | Framing list in the workbook | Headers go to the block |
+| --- | --- | --- |
+| `framing/1st floor framing` | `1st Floor Framing List` | `Basement Floor Walls` |
+| `framing/2nd floor framing` | `2nd Floor Framing List` | `1st Floor Walls` |
+| `framing/3rd floor framing` ... `8th` | `3rd ... 8th Floor Framing List` | the floor below |
+| `framing/roof framing`, `loft framing` | `Roof Frame list` | - |
+| `framing/balcony`, `porch`, `canopy` | `Balcony / Porch / Canopy Framing List` | - |
+
+Posts, beams and joists **replace** their rows in the list; the other template rows (Blocking, Rim, Hangers, Subfloor) stay; a second run does not break the worksheet. Flag codes and material overrides: [Takeoff tree, detail codes](../start/takeoff-structure.md).
+
+### Repeat export { #rerun }
 
 - Framing (`FR`, `PS`, `BM`, `HD`, `JS`, `ST`) replaces its rows: repeat as often as needed. `DT` writes a group once; a group that is already exported is not touched.
 - The A series (`SF`, `WL`, `GB`, `TH`, `PP`, `E/R`, `OP`) appends a new block in `J:L` at the first free spot and runs the macro on it. The old block stays in the work zone; the `A:H` rows with a formula like `=K37` point to their own block.
@@ -290,7 +309,7 @@ OurPlanCore Lite has the same button, menu, window and Settings section. Lite ha
 !!! warning "To be confirmed"
     How to cleanly remove the previous `J:L` block before repeating `WL` or `SF` (by hand or with a macro) will be checked on the next delivery.
 
-## How to change what an XL button does: Settings > Excel Actions { #settings }
+### How to change what an XL button does: Settings > Excel Actions { #settings }
 
 <figure markdown>
   ![Settings, Excel Actions section](../assets/images/ourplancore/v3/settings-excel-actions.png)
@@ -319,6 +338,8 @@ The section has four blocks: `Excel macro actions`, `Floor folder matching`, `Fr
 Overview of all Settings sections: [Settings](ourplancore-settings.md).
 
 ## Common mistakes { #errors }
+
+The first rows of the table are XL strip messages (full version), then come the `Link to Excel` and `Auto Link` messages, which Lite has too.
 
 | Message or symptom | Cause and what to do |
 | --- | --- |

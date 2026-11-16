@@ -19,11 +19,11 @@ This page covers the Takeoffs panel, a new takeoff and Record, copying between s
 | `Total` | total of the active takeoff in its units |
 | `New Folder`, `New Item` (`T`) | folder and takeoff under the selected folder |
 | `Delete Empty` | delete takeoffs with no measurements; `Ctrl+Z` brings them back as a batch |
-| `More` | `Roof Base from area`, `Auto Tree` (COM template roots), `From Pages` (folders by sheet structure) |
+| `More` | `Roof Base from area` (3D module, full version only), `Auto Tree` (COM template roots), `From Pages` (folders by sheet structure) |
 | `Export` | `Save`, `Save As...`, `Export CSV`, `Export TXT`, `Export Excel`, `Export to Current Excel` |
 | Icons in the panel header | `Refresh Takeoffs tree` - reread the tree from the job folder, status `Takeoffs tree refreshed.`; `Collapse all Takeoffs nodes` and `Expand all Takeoffs nodes` - collapse or expand all folders. The same commands are on the right icon strip: `Collapse Takeoffs Tree`, `Expand Takeoffs Tree` |
 | Search | left field by folder name, right field by takeoff or measurement name; the button in the left field `Match takeoff folder case exactly` (on) tells `A` from `a`, off searches case-insensitive |
-| Tabs on the right | `Takeoffs`, `Estimating`, `3D` (module), `Templates` |
+| Tabs on the right | `Takeoffs`, `Estimating`, `3D` (module, full version only), `Templates` |
 
 Under each takeoff in the tree you see sections: measurements by sheet; `Ctrl+Enter` selects the section's measurements on the sheet.
 
@@ -224,7 +224,7 @@ Items marked "module" are visible while Advanced Takeoff Tools (or the named mod
     | `Create Count Points Along Lines...`, `Break Lines Into Segments`, `Count Points At Line Ends...` | on a Line, module ([editing](ourplancore-edit-takeoffs.md)) |
     | `Find Similar...` | on a Count, module: find the same symbols on the sheet |
     | `Count Display` | Count point symbol |
-    | `3D` > `Wall`, `Roof Base from Area` | 3D module ([3D](ourplancore-3d.md)) |
+    | `3D` > `Wall`, `Roof Base from Area` | 3D module, full version only ([3D](ourplancore-3d.md)) |
     | `Merge Selected Takeoffs...`, `Split Selected Takeoffs...`, `Undo Takeoff Merge / Split` | module ([Merge and Split](ourplancore-edit-takeoffs.md)) |
     | `Rename...`, `Delete item + measurements`, `Duplicate Item` | rename, delete with measurements (`Ctrl+Z` brings it back), a copy next to it with the same name |
     | `Properties...`, `Bulk Properties...`, `Set Unit Price` | properties of one takeoff, of several at once ([above](#bulk)), price (Estimating module) |
@@ -239,7 +239,7 @@ Items marked "module" are visible while Advanced Takeoff Tools (or the named mod
     | `Rename Folder...`, `Delete folder + children` | rename; delete with all contents (`Ctrl+Z` brings it back) |
     | `Folder Properties...` | the `Takeoff Folder Properties` window ([above](#folder-props)) |
     | `Bulk Item Properties...`, `Random Colors for Items` | properties or different colors for all takeoffs of the folder and subfolders |
-    | `Count Display`, `3D` | Count symbol and 3D for the folder's takeoffs |
+    | `Count Display`, `3D` | Count symbol and 3D for the folder's takeoffs (3D in the full version only) |
     | `Clipboard` > `Copy Folder`, `Cut Folder`, `Paste Into Folder`, `Duplicate Folder` | copying and moving a branch |
     | `Organize` > `Auto Create Tree`, `Create Folders From Pages` | Takeoff Automation module: template roots and folders by sheets ([tree](#tree)) |
     | `Organize` > `Move Up`, `Move Down`, `Sort Children A-Z`, `Sort Children Z-A` | folder order and sorting its contents |

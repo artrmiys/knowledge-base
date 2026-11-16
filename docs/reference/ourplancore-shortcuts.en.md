@@ -88,18 +88,18 @@ The app has no redo of an undone action (Redo, ++ctrl+y++): ++ctrl+z++ undoes a 
 | ++t++ | | New takeoff item (in the work window) |
 | ++ctrl+shift+v++ | | Break H/V (not Paste) |
 
-Bookmarks and AI Inbox: ++enter++ opens, ++delete++ deletes.
+Bookmarks and AI Inbox (AI Inbox is full version only): ++enter++ opens, ++delete++ deletes.
 
 ## Roof guide and Sheet Overlay
 
 | Context | Keys |
 | --- | --- |
-| Roof guide (3D) | ++r++ Ridge, ++h++ Hip, ++v++ Valley, ++e++ Eave, ++k++ Rake, ++p++ Pitch; ++backspace++ / ++ctrl+z++ back, ++esc++ cancels the line or exits |
+| Roof guide (3D, full version only) | ++r++ Ridge, ++h++ Hip, ++v++ Valley, ++e++ Eave, ++k++ Rake, ++p++ Pitch; ++backspace++ / ++ctrl+z++ back, ++esc++ cancels the line or exits |
 | Sheet Overlay | ++ctrl+alt+left++ / ++right++ / ++up++ / ++down++ shift; ++ctrl+alt+plus++ / ++ctrl+alt+minus++ scale; `Ctrl+Alt+[` / `Ctrl+Alt+]` rotate; ++ctrl+alt+0++ reset; with ++shift++ a fine step |
 
 ## No key by default
 
-Assigned in the editor: Mirror selected objects horizontally / vertically, Hide / Show All Takeoffs, Pitch, Similar, P Line, Ends, Repeat Line, Repeat Beam, Combine Areas (five operations), Undo Last Page Sort, Undo Last Page Operation, Toggle Dark Theme, Codex / Claude Terminal and all menu and ribbon items (the catalog has more than 600 commands).
+Assigned in the editor: Mirror selected objects horizontally / vertically, Hide / Show All Takeoffs, Pitch, Similar, P Line, Ends, Repeat Line, Repeat Beam, Combine Areas (five operations), Undo Last Page Sort, Undo Last Page Operation, Toggle Dark Theme, Codex / Claude Terminal (full version only) and all menu and ribbon items (the catalog has more than 600 commands).
 
 ## Russian keyboard layout
 
