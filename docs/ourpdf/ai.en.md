@@ -3,8 +3,8 @@
 Here: how Claude or Codex work in an open OurPDF, what they can do, how to turn it on and off. You do not need to know the whole protocol: the agent reads it by itself.
 
 <figure markdown>
-  ![AI agent bridge checkbox in Settings](../assets/images/ourpdf/settings.png){ width="600" }
-  <figcaption markdown="span">Settings, section "Measure and comments": the checkbox "AI agent bridge (Claude, Codex agents drive the open OurPDF; description: Help)". On by default.</figcaption>
+  ![AI agent bridge checkbox in Settings](../assets/images/ourpdf/settings-ai-bridge.png){ width="600" }
+  <figcaption markdown="span">Settings, the bottom of the "Measure and comments" section, the checkbox in a red frame: "AI agent bridge (Claude, Codex agents drive the open OurPDF; description: Help)". On by default.</figcaption>
 </figure>
 
 ## What it is { #what }

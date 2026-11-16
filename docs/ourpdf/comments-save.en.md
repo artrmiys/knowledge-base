@@ -11,6 +11,11 @@ Here: the comment tools (note, text, highlight, drawing, shapes), how to edit ma
 
 Buttons on the top toolbar or the "Comment" icon on the right strip.
 
+<figure markdown>
+  ![Comment buttons and the Comments list](../assets/images/ourpdf/comments-tools.png){ width="320" }
+  <figcaption markdown="span">On top the toolbar buttons: note, text, callout, freehand, polyline, shapes with the choice arrow. Below, the "Comments" tab after a check on the demo sheet: measurements and markups of each kind (note, text, rectangle, oval, cloud, arrow, line) with author and time. The interface on the picture is in Russian.</figcaption>
+</figure>
+
 | Tool | How | Tip |
 | --- | --- | --- |
 | Note (++ctrl+6++) | click on the sheet and type the text | the note icon lands at the click point |
