@@ -1,8 +1,8 @@
 # Exterior Walls (наружные стены)
 
 <figure markdown>
-  ![Разрез наружной стены с точками проверки](../../../assets/images/walls/exterior-wall-section.svg)
-  <figcaption markdown="span">Наружная стена в разрезе: plates, studs, sheathing, WRB, insulation. Перед счётом раздели стену на слои и реши, какие из них в scope.</figcaption>
+  ![Разрез наружной стены: слои и высота стены для имени](../../../assets/images/walls/exterior-wall-section.svg)
+  <figcaption markdown="span">Наружная стена в разрезе между двумя перекрытиями. Высота в имени = floor-to-floor минус subfloor минус глубина перекрытия, plates не вычитаются. Слои с номерами: studs, plates, sheathing, WRB наши; gypsum и batt by others.</figcaption>
 </figure>
 
 ## Что это

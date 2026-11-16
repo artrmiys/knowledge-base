@@ -2,7 +2,7 @@
 
 <figure markdown>
   ![Furring on CMU and under siding](../../../assets/images/framing/furring.svg)
-  <figcaption markdown="span">Left: CMU, rigid insulation, Z-metal furring. Right: framing, sheathing, WRB, 1x4 P.T. strip, siding. Different products, both called furring.</figcaption>
+  <figcaption markdown="span">Top: CMU, rigid insulation, Z-metal furring. Bottom: framing, sheathing, WRB, 1x4 P.T. strip, siding. Different products, both called furring.</figcaption>
 </figure>
 
 ## What it is

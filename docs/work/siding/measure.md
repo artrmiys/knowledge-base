@@ -2,7 +2,7 @@
 
 <figure markdown>
   ![Siding take-off by elevation area](../../assets/images/siding/measure.svg)
-  <figcaption markdown="span">SQ FT по фасаду: поле стены Area, gable и accent отдельными площадями, крупные проёмы вычтены один раз.</figcaption>
+  <figcaption markdown="span">SQ FT по фасаду: поле стены Area, gable с другим материалом отдельной площадью, проём шире 4' вырезан один раз, окна уже 4' не вычитаются, trim считается отдельно.</figcaption>
 </figure>
 
 <!-- TODO-SCREEN: measure-area-siding.png (Area по фасаду в OurPlanCore с вычетом проёма, итем siding/6" vertical) -->

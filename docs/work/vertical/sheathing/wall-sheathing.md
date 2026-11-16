@@ -1,6 +1,11 @@
 # Wall Sheathing (обшивка стен)
 
 <figure markdown>
+  ![Фасад: площадь обшивки по этажам, полосы и вычеты](../../../assets/images/sheathing/wall-sheathing-facade.svg)
+  <figcaption markdown="span">Обшивка на фасаде: стена этажа = длина x высота, полоса перекрытия = Box Sheathing, треугольник = gable, полоса у кровли = truss heel. Проём шире 4' вычитается один раз, окно уже 4' не вычитается.</figcaption>
+</figure>
+
+<figure markdown>
   ![Монтаж OSB-обшивки на каркасную стену](../../../assets/images/confluence/confluence-094.jpg)
   <figcaption markdown="span">Структурная обшивка наружной стены: лист OSB по стойкам. Площадь = длина стены x высота стены, минус проёмы шире 4'. Архивное фото.</figcaption>
 </figure>

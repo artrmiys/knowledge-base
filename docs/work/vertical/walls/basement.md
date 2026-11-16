@@ -1,8 +1,8 @@
 # Basement Walls (стены подвала)
 
 <figure markdown>
-  ![Цокольная стена на бетонной плите](../../../assets/images/walls/basement-wall-section.svg)
-  <figcaption markdown="span">Деревянная стена подвала на плите: btm plate P.T., studs, box sheathing и WRB по верху. Бетонная стена подвала каркаса не даёт.</figcaption>
+  ![Деревянная стена подвала на бетонной плите, разрез](../../../assets/images/walls/basement-wall-section.svg)
+  <figcaption markdown="span">Деревянная стена подвала на плите: btm plate P.T. с анкером, studs, double top plate, обшивка стены, box sheathing на уровне перекрытия и WRB. Бетонная стена подвала каркаса не даёт.</figcaption>
 </figure>
 
 ## Что это

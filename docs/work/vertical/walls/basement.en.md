@@ -1,8 +1,8 @@
 # Basement Walls
 
 <figure markdown>
-  ![Basement wall on a concrete slab](../../../assets/images/walls/basement-wall-section.svg)
-  <figcaption markdown="span">Wood basement wall on a slab: P.T. btm plate, studs, box sheathing and WRB over it. A concrete basement wall gives no framing.</figcaption>
+  ![Wood basement wall on a concrete slab, section](../../../assets/images/walls/basement-wall-section.svg)
+  <figcaption markdown="span">Wood basement wall on a slab: P.T. btm plate with an anchor bolt, studs, double top plate, wall sheathing, box sheathing at the floor band and WRB. A concrete basement wall gives no framing.</figcaption>
 </figure>
 
 ## What it is
