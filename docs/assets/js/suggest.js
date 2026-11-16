@@ -1,13 +1,50 @@
-/* The corrections form on start/suggest-change: sends to the server, no account needed.
-   The page address comes from the link "Предложить поправку" under any page.
+/* The corrections form on start/suggest-change (and its English copy): sends to the server, no account needed.
+   The page address comes from the link "Предложить поправку" / "Suggest a correction" under any page.
    Up to 3 screenshots: the button, drag and drop, or Ctrl+V anywhere on the page.
-   Big pictures are shrunk in the browser to JPEG before sending. */
+   Big pictures are shrunk in the browser to JPEG before sending. Messages follow the page language. */
 (function () {
   var ENDPOINT = "https://kb-fix.185.81.165.121.sslip.io/submit";
   var MAX_SHOTS = 3;
   var MAX_SIDE = 2400;
   var KEEP_BYTES = 1.2 * 1024 * 1024; // a PNG or JPEG this small and not too large goes as is
   var MAX_DATA = 2.6 * 1024 * 1024; // data URL length that still fits the server limit of 2 MB
+
+  var EN = (document.documentElement.lang || "").toLowerCase().indexOf("en") === 0;
+  var T = EN ? {
+    page: "Page: ",
+    shot: "Screenshot ",
+    remove: "Remove screenshot ",
+    max: "You can attach up to " + MAX_SHOTS + " screenshots.",
+    tookFirst: function (n) { return "Took the first " + n + ", no more than " + MAX_SHOTS + " allowed."; },
+    big: "The picture is too large, take a smaller screenshot.",
+    bad: "Could not open this picture. PNG, JPG and WebP work.",
+    sendingShots: "Sending with screenshots...",
+    sending: "Sending...",
+    rate: "Too many corrections in a row. Try again in an hour.",
+    images: "The screenshots were not accepted. Remove them or use smaller ones and send again.",
+    what: "Write at least a few words in \"What is wrong\".",
+    full: "The corrections storage is full. Please contact the site owner directly.",
+    failed: "Not sent. Your text is still in the form, try again later.",
+    thanks: "Thank you, the correction has been sent.",
+    offline: "No connection to the server. Your text is still in the form, try again later."
+  } : {
+    page: "Страница: ",
+    shot: "Скриншот ",
+    remove: "Убрать скриншот ",
+    max: "Можно приложить не больше " + MAX_SHOTS + " скриншотов.",
+    tookFirst: function (n) { return "Взял первые " + n + ", больше " + MAX_SHOTS + " нельзя."; },
+    big: "Картинка слишком большая, сделайте скриншот поменьше.",
+    bad: "Эту картинку не получилось открыть. Подойдут PNG, JPG, WebP.",
+    sendingShots: "Отправляю вместе со скриншотами...",
+    sending: "Отправляю...",
+    rate: "Слишком много поправок подряд. Попробуйте через час.",
+    images: "Скриншоты не приняты. Уберите их или замените на поменьше и отправьте ещё раз.",
+    what: "Напишите в поле \"Что не так\" хотя бы пару слов.",
+    full: "Хранилище поправок переполнено. Напишите владельцу сайта напрямую.",
+    failed: "Не отправилось. Текст остался в форме, попробуйте ещё раз позже.",
+    thanks: "Спасибо, поправка отправлена.",
+    offline: "Нет связи с сервером. Текст остался в форме, попробуйте ещё раз позже."
+  };
 
   function readAsDataUrl(blob) {
     return new Promise(function (resolve, reject) {
@@ -62,16 +99,16 @@
     var previews = document.getElementById("kb-fix-previews");
     var drop = document.getElementById("kb-fix-drop");
     var page = new URLSearchParams(location.search).get("page") || "";
-    var shots = []; // { data: "data:image/...", url: preview src }
+    var shots = []; // { data: "data:image/..." }
     var busy = 0;
 
     if (page.indexOf("https://artrmiys.github.io/knowledge-base/") === 0) {
       form.elements.page.value = page;
       var label = document.getElementById("kb-fix-page");
       try {
-        label.textContent = "Страница: " + decodeURI(new URL(page).pathname.replace("/knowledge-base/", ""));
+        label.textContent = T.page + decodeURI(new URL(page).pathname.replace("/knowledge-base/", ""));
       } catch (e) {
-        label.textContent = "Страница: " + page;
+        label.textContent = T.page + page;
       }
       label.hidden = false;
     }
@@ -88,11 +125,11 @@
         item.className = "kb-form__shot";
         var img = document.createElement("img");
         img.src = shot.data;
-        img.alt = "Скриншот " + (i + 1);
+        img.alt = T.shot + (i + 1);
         var remove = document.createElement("button");
         remove.type = "button";
         remove.className = "kb-form__shot-remove";
-        remove.setAttribute("aria-label", "Убрать скриншот " + (i + 1));
+        remove.setAttribute("aria-label", T.remove + (i + 1));
         remove.textContent = "×";
         remove.addEventListener("click", function () {
           shots.splice(i, 1);
@@ -112,10 +149,10 @@
       if (!images.length) return;
       var room = MAX_SHOTS - shots.length - busy;
       if (room <= 0) {
-        say("Можно приложить не больше " + MAX_SHOTS + " скриншотов.", true);
+        say(T.max, true);
         return;
       }
-      if (images.length > room) say("Взял первые " + room + ", больше " + MAX_SHOTS + " нельзя.", true);
+      if (images.length > room) say(T.tookFirst(room), true);
       images.slice(0, room).forEach(function (file) {
         busy += 1;
         button.disabled = true;
@@ -125,9 +162,7 @@
             render();
           })
           .catch(function (err) {
-            say(err && err.message === "big"
-              ? "Картинка слишком большая, сделайте скриншот поменьше."
-              : "Эту картинку не получилось открыть. Подойдут PNG, JPG, WebP.", true);
+            say(err && err.message === "big" ? T.big : T.bad, true);
           })
           .finally(function () {
             busy -= 1;
@@ -173,7 +208,7 @@
       event.preventDefault();
       if (busy) return;
       button.disabled = true;
-      say(shots.length ? "Отправляю вместе со скриншотами..." : "Отправляю...", false);
+      say(shots.length ? T.sendingShots : T.sending, false);
       fetch(ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -190,13 +225,11 @@
           if (response.ok) return response;
           return response.json().catch(function () { return {}; }).then(function (body) {
             var code = body && body.error;
-            if (response.status === 429) throw new Error("Слишком много поправок подряд. Попробуйте через час.");
-            if (response.status === 413 || code === "image") {
-              throw new Error("Скриншоты не приняты. Уберите их или замените на поменьше и отправьте ещё раз.");
-            }
-            if (code === "what") throw new Error("Напишите в поле \"Что не так\" хотя бы пару слов.");
-            if (response.status === 507) throw new Error("Хранилище поправок переполнено. Напишите владельцу сайта напрямую.");
-            throw new Error("Не отправилось. Текст остался в форме, попробуйте ещё раз позже.");
+            if (response.status === 429) throw new Error(T.rate);
+            if (response.status === 413 || code === "image") throw new Error(T.images);
+            if (code === "what") throw new Error(T.what);
+            if (response.status === 507) throw new Error(T.full);
+            throw new Error(T.failed);
           });
         })
         .then(function () {
@@ -204,11 +237,11 @@
           form.elements.how.value = "";
           shots = [];
           render();
-          say("Спасибо, поправка отправлена.", false);
+          say(T.thanks, false);
         })
         .catch(function (err) {
-          var known = err && /[а-я]/i.test(err.message);
-          say(known ? err.message : "Нет связи с сервером. Текст остался в форме, попробуйте ещё раз позже.", true);
+          var known = err && err.message && err.message !== "Failed to fetch" && err.name !== "TypeError";
+          say(known ? err.message : T.offline, true);
         })
         .finally(function () {
           button.disabled = false;
