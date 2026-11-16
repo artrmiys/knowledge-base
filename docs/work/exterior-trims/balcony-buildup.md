@@ -1,8 +1,8 @@
 # Balcony build-up (слои балкона: от каркаса до отделки)
 
 <figure markdown>
-  ![Balcony build-up assembly stack](../../assets/images/trims/balcony-buildup.svg)
-  <figcaption markdown="span">Снизу вверх: каркас, sleepers, EPDM, decking. Строки 1-6 считает страница каркаса, строки 7-12 здесь. Pavers и membrane часто by others.</figcaption>
+  ![Разрез балкона: каркас и слои отделки с номерами строк](../../assets/images/trims/balcony-buildup.svg)
+  <figcaption markdown="span">Разрез балкона у стены: каркас, subfloor, EPDM по subfloor с заводом на стену, sleepers поверх мембраны, decking по sleepers. Номера как в таблице ниже: строки 1-6 считает страница каркаса, строки 7-12 здесь.</figcaption>
 </figure>
 
 ## Что это

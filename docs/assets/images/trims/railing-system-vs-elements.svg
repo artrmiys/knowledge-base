@@ -68,11 +68,11 @@
 <rect x="105" y="158" width="294" height="220" fill="none" stroke="#2e7d32" stroke-width="2" stroke-dasharray="8 5"/><line class="dim" x1="104" y1="392" x2="400" y2="392"/>
 <text class="dimt" x="252" y="406" text-anchor="middle" >section 6'</text>
 <text class="mono" x="60" y="450" >Posts at Rails | 4x4 P.T. | pcs</text>
-<text class="mono" x="60" y="470" >Post Sleeve | pcs,  Post Cap | pcs</text>
-<text class="mono" x="60" y="490" >Rail sections 6' | unit (pcs)</text>
+<text class="mono" x="60" y="470" >Post Sleeve | pcs, Post Cap | pcs</text>
+<text class="mono" x="60" y="490" >Rail sections | 6' Rail section | unit</text>
 <text class="small" x="60" y="514" >sleeve и cap на каждый post; секции по длине между постами</text>
 <text class="lab" x="560" y="46" >Wood painted: поэлементно</text>
-<text class="note" x="560" y="66" >каждый элемент своя строка в LFT</text>
+<text class="note" x="560" y="66" >каждый элемент своя строка</text>
 <rect x="540" y="400" width="420" height="16" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2" />
 <rect x="580" y="150" width="24" height="250" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.4" />
 <rect x="900" y="150" width="24" height="250" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.4" />
@@ -99,11 +99,11 @@
 <circle class="numc" cx="571" cy="445" r="11"/><text class="numt" x="571" y="449.5">1</text>
 <text class="mono" x="590" y="450" >Cap Rail | 2x6 | LFT</text>
 <circle class="numc" cx="571" cy="465" r="11"/><text class="numt" x="571" y="469.5">2</text>
-<text class="mono" x="590" y="470" >Rails top + btm | 2x4 | LFT</text>
+<text class="mono" x="590" y="470" >Rails (top &amp; bottom) | 2x4 | LFT</text>
 <circle class="numc" cx="571" cy="485" r="11"/><text class="numt" x="571" y="489.5">3</text>
-<text class="mono" x="590" y="490" >Balustrades | 2x2 | LFT</text>
+<text class="mono" x="590" y="490" >Balustrades | 2x2 | pcs</text>
 <circle class="numc" cx="571" cy="505" r="11"/><text class="numt" x="571" y="509.5">4</text>
-<text class="mono" x="590" y="510" >Posts | 4x4 P.T. | pcs</text>
-<text class="small" x="810" y="510" >balusters: шаг 4"</text>
+<text class="mono" x="590" y="510" >Posts at Rails | 4x4 P.T. | pcs</text>
+<text class="small" x="810" y="490" >balusters: шаг 4"</text>
 <text class="note" x="60" y="544" >2 поста на балкон (по углам); способы не смешивать: либо система, либо поэлементно. Railing posts structural: страница Railing.</text>
 </svg>

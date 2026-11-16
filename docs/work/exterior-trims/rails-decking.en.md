@@ -1,8 +1,8 @@
 # Rails & Decking
 
 <figure markdown>
-  ![Railing components and decking](../../assets/images/trims/rails-decking.svg)
-  <figcaption markdown="span">Posts, cap rail, balusters, decking: each has its own row. Composite railing is counted as a system, painted wood railing by components.</figcaption>
+  ![Balcony plan: decking, railing posts and sections, fascia](../../assets/images/trims/rails-decking.svg)
+  <figcaption markdown="span">Balcony plan: decking by the area W x D, two railing posts at the outer corners, rail sections along the front and the open sides, fascia along the open perimeter. Composite railing is counted as a system, painted wood railing by components.</figcaption>
 </figure>
 
 <figure markdown>

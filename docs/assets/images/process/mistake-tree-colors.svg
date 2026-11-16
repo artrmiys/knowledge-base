@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" role="img" aria-labelledby="t d">
+  <title id="t">Every takeoff item has its own colour and count symbol</title>
+  <desc id="d">Two copies of a small plan with a takeoff legend. Right: each wall type and each count item has its own colour and symbol. Wrong: everything is red with the same dot, so the legend and the PDF cannot be read.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
+    <style>
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
+    </style>
+  </defs>
+<rect x="0.5" y="0.5" width="879" height="469" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<line x1="52" y1="100" x2="76" y2="100" stroke="#2e7d32" stroke-width="4" stroke-linecap="round"/>
+<text class="mono2" x="88" y="105">ext 2x6 9.09</text>
+<line x1="52" y1="128" x2="76" y2="128" stroke="#1565c0" stroke-width="4" stroke-linecap="round"/>
+<text class="mono2" x="88" y="133">2x4 9.09</text>
+<line x1="52" y1="156" x2="76" y2="156" stroke="#ef6c00" stroke-width="4" stroke-linecap="round"/>
+<text class="mono2" x="88" y="161">corr 2x6 9.09</text>
+<polygon points="64,176 72,190 56,190" fill="#6a1b9a" stroke="#6a1b9a" stroke-width="1" stroke-linejoin="round"/>
+<text class="mono2" x="88" y="189">6x6 P.T. 8.2</text>
+<rect x="57" y="205" width="14" height="14" fill="#00838f" stroke="#00838f" stroke-width="1"/>
+<text class="mono2" x="88" y="217">HDU11 SB1x30</text>
+<rect x="238" y="90" width="180" height="130" fill="#fafafa" stroke="#dfe3e8" stroke-width="1"/>
+<rect x="248" y="100" width="160" height="110" fill="none" stroke="#2e7d32" stroke-width="4"/>
+<line x1="248" y1="150" x2="408" y2="150" stroke="#ef6c00" stroke-width="4"/>
+<line x1="248" y1="166" x2="408" y2="166" stroke="#ef6c00" stroke-width="4"/>
+<line x1="298" y1="100" x2="298" y2="150" stroke="#1565c0" stroke-width="4"/>
+<line x1="298" y1="166" x2="298" y2="210" stroke="#1565c0" stroke-width="4"/>
+<line x1="353" y1="100" x2="353" y2="150" stroke="#1565c0" stroke-width="4"/>
+<line x1="353" y1="166" x2="353" y2="210" stroke="#1565c0" stroke-width="4"/>
+<polygon points="273,117 281,131 265,131" fill="#6a1b9a" stroke="#6a1b9a" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="378,182 386,196 370,196" fill="#6a1b9a" stroke="#6a1b9a" stroke-width="1" stroke-linejoin="round"/>
+<rect x="319" y="105" width="14" height="14" fill="#00838f" stroke="#00838f" stroke-width="1"/>
+<rect x="253" y="187" width="14" height="14" fill="#00838f" stroke="#00838f" stroke-width="1"/>
+<rect x="389" y="105" width="14" height="14" fill="#00838f" stroke="#00838f" stroke-width="1"/>
+<line x1="472" y1="100" x2="496" y2="100" stroke="#c62828" stroke-width="4" stroke-linecap="round"/>
+<text class="mono2" x="508" y="105">ext 2x6 9.09</text>
+<line x1="472" y1="128" x2="496" y2="128" stroke="#c62828" stroke-width="4" stroke-linecap="round"/>
+<text class="mono2" x="508" y="133">2x4 9.09</text>
+<line x1="472" y1="156" x2="496" y2="156" stroke="#c62828" stroke-width="4" stroke-linecap="round"/>
+<text class="mono2" x="508" y="161">corr 2x6 9.09</text>
+<circle cx="484" cy="184" r="7" fill="#c62828" stroke="#c62828" stroke-width="1"/>
+<text class="mono2" x="508" y="189">6x6 P.T. 8.2</text>
+<circle cx="484" cy="212" r="7" fill="#c62828" stroke="#c62828" stroke-width="1"/>
+<text class="mono2" x="508" y="217">HDU11 SB1x30</text>
+<rect x="658" y="90" width="180" height="130" fill="#fafafa" stroke="#dfe3e8" stroke-width="1"/>
+<rect x="668" y="100" width="160" height="110" fill="none" stroke="#c62828" stroke-width="4"/>
+<line x1="668" y1="150" x2="828" y2="150" stroke="#c62828" stroke-width="4"/>
+<line x1="668" y1="166" x2="828" y2="166" stroke="#c62828" stroke-width="4"/>
+<line x1="718" y1="100" x2="718" y2="150" stroke="#c62828" stroke-width="4"/>
+<line x1="718" y1="166" x2="718" y2="210" stroke="#c62828" stroke-width="4"/>
+<line x1="773" y1="100" x2="773" y2="150" stroke="#c62828" stroke-width="4"/>
+<line x1="773" y1="166" x2="773" y2="210" stroke="#c62828" stroke-width="4"/>
+<circle cx="693" cy="125" r="7" fill="#c62828" stroke="#c62828" stroke-width="1"/>
+<circle cx="798" cy="190" r="7" fill="#c62828" stroke="#c62828" stroke-width="1"/>
+<circle cx="746" cy="112" r="7" fill="#c62828" stroke="#c62828" stroke-width="1"/>
+<circle cx="680" cy="194" r="7" fill="#c62828" stroke="#c62828" stroke-width="1"/>
+<circle cx="816" cy="112" r="7" fill="#c62828" stroke="#c62828" stroke-width="1"/>
+<circle cx="52" cy="50" r="10" fill="#2e7d32"/><path d="M47.5,50 L51,53.5 L57,46" fill="none" stroke="#fff" stroke-width="2.2"/>
+<text class="green" x="70" y="55">Так: свой Color и CountSymbol</text>
+<text class="ink" x="48" y="276">Легенда и PDF читаются: видно, где какая</text>
+<text class="ink" x="48" y="295">стена, где посты, где holdowns.</text>
+<text class="note" x="48" y="330">Новая позиция: сразу свой цвет, у Count</text>
+<text class="note" x="48" y="349">ещё и свой значок. Split даёт цвет сам.</text>
+<text class="note" x="48" y="368">Серый занят под bft.</text>
+<circle cx="472" cy="50" r="10" fill="#c62828"/><path d="M468,46 L476,54 M476,46 L468,54" fill="none" stroke="#fff" stroke-width="2.2"/>
+<text class="red" x="490" y="55">Не так: всё одним цветом и значком</text>
+<text class="ink" x="468" y="276">Стены не отличить, посты и holdowns</text>
+<text class="ink" x="468" y="295">выглядят одинаково: проверить нельзя.</text>
+<line x1="440" y1="40" x2="440" y2="450" stroke="#dfe3e8" stroke-width="1.2"/>
+</svg>

@@ -15,6 +15,11 @@ go through the [checklist](quality-checklist.md): it follows the same sections.
 | Metal studs not counted and no note. | The client cannot see that metal walls were excluded on purpose. | If metal is by others, there is no row, but the `Metal Studs by others` note is required. If we count them, write the gauge (`6" 18ga mtl`). [Client rules](client-rules.md#metal-studs), [Metal Tracks](../work/vertical/walls/metal-tracks.md) |
 | Shaft walls dropped as "panels by others"; a CMU elevator shaft recorded as shaftliner; trash chute missed. | Shafts are almost never part of the panels, and shaft materials vary. | Capture every shaft in the takeoff and determine the material from the plan and the wall type. [Shaft](../work/vertical/walls/shaft.md), [Wall Panels](../work/vertical/walls/wall-panels.md) |
 
+<figure markdown>
+  ![Wall height: right and wrong](../assets/images/process/mistake-stud-height.svg)
+  <figcaption markdown="span">Height in the wall name: floor to floor minus the subfloor and the floor depth, plates stay inside the height. Floor to floor as is overstates the studs of the whole floor.</figcaption>
+</figure>
+
 ## Openings {#openings}
 
 | What it looks like | Why it is bad | The right way |
@@ -22,6 +27,16 @@ go through the [checklist](quality-checklist.md): it follows the same sections.
 | Openings not deducted from sheathing, WRB, insulation and the anchor line; or deducted twice (from the plan and from the elevation). | Sheathing and WRB overstated by dozens of sheets, or understated. | Deduct once, on its own floor, from every row that needs it. Windows under 4' are not deducted. [Windows and Doors](../work/vertical/openings/windows-doors.md), [Wall Sheathing](../work/vertical/sheathing/wall-sheathing.md) |
 | Window height taken as the head height, not the product height. | The opening size in the name (`5.8x5.9`) and the deductions are wrong. | Height = product size from the schedule; the head elevation on the elevation is not a size. Check whether it is the R.O. or the unit size. [Windows and Doors](../work/vertical/openings/windows-doors.md) |
 | A full storefront counted, and its door counted again as a separate opening. | Double count. | Storefront once; a door inside a composite opening is not a second opening. [Windows and Doors](../work/vertical/openings/windows-doors.md) |
+
+<figure markdown>
+  ![Window height: unit size, not head height](../assets/images/process/mistake-window-height.svg)
+  <figcaption markdown="span">The opening height in the name is the size of the window itself from the schedule, not the head height mark from the floor.</figcaption>
+</figure>
+
+<figure markdown>
+  ![Opening deducted once and twice](../assets/images/process/mistake-double-deduction.svg)
+  <figcaption markdown="span">An opening wider than 4' is deducted once on its own floor; a window narrower than 4' is not deducted. Deducting from both the plan and the elevation understates the sheathing.</figcaption>
+</figure>
 
 ## Floor framing and beams {#floor}
 
@@ -85,6 +100,11 @@ go through the [checklist](quality-checklist.md): it follows the same sections.
 | An area measured in OurPlanCore did not make it to Excel or was not updated after an edit. | The DFL does not match the takeoff. | After every takeoff change, update the number in the DFL; before delivery, check the key G values against the tree. [Checklist](quality-checklist.md) |
 | Unit `FT` instead of `LFT`; the label does not match the calculation (`Plate (2)` for a single plate, `Posts (3)` for two). | Format not per template, the client reads it wrong. | In D: `LFT` for lumber, `pcs` for hardware, SF for panels; the label = what the formula calculates. [Takeoff item labels](../reference/takeoff-items.md) |
 
+<figure markdown>
+  ![Note under its own section header](../assets/images/reference/dfl-note-placement.svg)
+  <figcaption markdown="span">A note sits under its own section header, with a prefix and a yellow fill. A note above the header falls into the previous block.</figcaption>
+</figure>
+
 ## Sheets and tree in OurPlanCore {#pages}
 
 | What it looks like | Why it is bad | The right way |
@@ -92,6 +112,11 @@ go through the [checklist](quality-checklist.md): it follows the same sections.
 | Scale taken from the sheet label (1/8") while the sheet is printed at 3/16"; a sheet with several scales left with one. | All lengths and areas on the sheet are wrong. | Check the scale against a known dimension and grid lines; calibrate a sheet with several scales by zone. [Takeoff tree](takeoff-structure.md), [OurPlanCore: getting started](../reference/ourplancore-start.md) |
 | Joists drawn as a plain Area named `2x8 16"`; a beam or an opening entered as a plain Count. | The export cannot see direction, spacing and lengths. | Joists only with J Area, beams with Beam, openings with Openings. [Joist](../work/horizontal/floor-framing/joist.md), [Beam](../work/horizontal/floor-framing/beam.md) |
 | All takeoffs in one color and one icon; the `f` tag added to a takeoff plan; the sheet tag not last (`1st overall`). | The legend is unreadable, the W/F/S/U point is not set. | Each new takeoff gets its own Color, point takeoffs their own CountSymbol. Sheet name `a101 1st`, tag at the end, `f` only for the foundation. [Takeoff tree](takeoff-structure.md) |
+
+<figure markdown>
+  ![Own colour and symbol for every item](../assets/images/process/mistake-tree-colors.svg)
+  <figcaption markdown="span">Every item has its own Color, count items also their own CountSymbol. With one colour the legend and the PDF cannot be read.</figcaption>
+</figure>
 
 ## Delivery {#delivery}
 

@@ -1,8 +1,8 @@
 # Rails & Decking (перила и настил: канон по типам)
 
 <figure markdown>
-  ![Railing components and decking](../../assets/images/trims/rails-decking.svg)
-  <figcaption markdown="span">Posts, cap rail, balusters, decking: у каждого своя строка. Composite перила считаем системой, деревянные крашеные поэлементно.</figcaption>
+  ![План балкона: decking, посты и секции перил, fascia](../../assets/images/trims/rails-decking.svg)
+  <figcaption markdown="span">План балкона: decking по площади W x D, два поста перил по внешним углам, секции перил по фронту и открытым бокам, fascia по открытому периметру. Composite перила считаем системой, деревянные крашеные поэлементно.</figcaption>
 </figure>
 
 <figure markdown>

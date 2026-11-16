@@ -5,8 +5,8 @@
 каркас подключается к существующему.
 
 <figure markdown>
-  ![Existing, demo and new legend](../assets/images/work-types/reconstruction.svg)
-  <figcaption markdown="span">Existing - не считать, Demo - только если в scope, New и connections - считаем.</figcaption>
+  ![План реконструкции: existing, demo, new и стыки](../assets/images/work-types/reconstruction.svg)
+  <figcaption markdown="span">Мини-план: existing серым не считаем, demo пунктиром только если в scope, new зелёным считаем. Отдельно стыки нового со старым: ledger и hangers на существующей стене, header в расширенном проёме.</figcaption>
 </figure>
 
 ## Что это
