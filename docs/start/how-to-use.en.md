@@ -15,8 +15,12 @@ organized and how to read its pages.
 | --- | --- | --- |
 | **Start** | Workflow, takeoff tree and sheet names, pre-delivery check, client rules, common mistakes | On day one and before every delivery |
 | **OurPlanCore** | The app: getting started, interface and tools, takeoff names and sheet dots, shortcuts, troubleshooting, what's new | When you are not sure which button or key does something |
+| **OurPDF** | A separate app for PDFs: step-by-step measuring, measurements, the Excel link, comments, pages and layers, sheet overlay, shortcuts | When you view, measure or check a sheet in OurPDF |
 | **Work** | Topic pages for each framing element, in the order you take them off: job types, walls, openings, floor framing, roof, sheathing, areas, deck, trim | During takeoff: open the element, check how to count it and how to name it |
-| **Reference** | Tips and key rules, hangers, hardware, formulas and factors, standard notes, DFL row names | When filling the Excel workbook and when you are unsure about a rule |
+| **Excel and DFL** | How the DFL workbook works, row labels, notes, balcony and holdown blocks, the E-Wood tab, Excel macros and hotkeys, formulas and factors | When filling the Excel workbook and before delivering it |
+| **Reference** | Tips and key rules, hangers, hardware and material catalogs, terms and specifications, quantity benchmarks | When you are unsure about a rule, a model or the size of a number |
+
+There are seven tabs: the first one, "Home", is a front page with entries to the other six.
 
 The "Work" menu follows the takeoff order: go down the list top to bottom and you
 skip nothing. It is a checklist, not a classification.

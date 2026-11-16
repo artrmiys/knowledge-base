@@ -1,6 +1,11 @@
 # Maintaining the knowledge base
 
-This page describes how the KB site is maintained. Checked October 17, 2026 (OurPlanCore 3.0.0).
+This page describes how the KB site is maintained. What was checked and when:
+
+- the texts of the OurPlanCore section were rewritten for Lite on November 16, 2026 (Lite 3.0.36-lite, full version 3.0.35);
+- the screenshots in `ourplancore/v3/` were added on October 17, 2026 on OurPlanCore 3.0 and have hardly been retaken since: at the next check compare every frame with the current window;
+- the rules on which pages disagreed with each other (units, factors, formulas of DFL rows) were checked against the DFL template and its macros on November 16, 2026.
+
 The order of checking and delivering a project is in the [QA checklist](quality-checklist.md).
 
 ## Corrections from readers

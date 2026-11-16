@@ -2,7 +2,7 @@
 
 The path of a project from the client folder to delivery. This is the general route;
 how to measure each element is on the topic pages of the "Work" section, how to fill
-Excel is in the [Reference](../reference/takeoff-items.md).
+Excel is in the "Excel and DFL" tab: [DFL row labels](../reference/takeoff-items.md).
 
 <figure markdown>
   ![Process diagram: from Dropbox to .Finished](../assets/images/process/work-process.svg)
@@ -38,7 +38,9 @@ Excel is in the [Reference](../reference/takeoff-items.md).
    sheets are takeoff sheets (floor plans, roof plan, framing plans).
 2. Wall sheathing and insulation come from the wall types sheet; roofing from the structural
    roof framing and the section; subfloor from the section. A conflict between arch and S is resolved
-   right away: structural wins, the discrepancy is recorded with a note `... per <sheet>; verify`.
+   right away: the sheathing and barrier product comes from the wall types on Arch, while thickness,
+   framing and which walls are sheathed come from Structural; the discrepancy is recorded with a
+   note `... per <sheet>; verify` naming both sheets.
 3. Scales: plans are usually 1/8", unit plans 1/4", sections 3/8", details NTS.
    The scale label on the sheet is not proof; check the scale against a dimension on the sheet.
 4. Raster set (scan): auto-names and auto-scale will not work, sheets are
@@ -110,8 +112,9 @@ joists only with J Area, beams only with Beam, openings only with Openings. Name
    runs the macros itself; it is on from the start in the full version, and in Lite the
    `Excel Strip (XL)` checkbox in `Settings > Modules` turns it on. Details: [Export to Excel](../reference/ourplancore-excel.md),
    [Lite vs full version](../reference/ourplancore-lite.md).
-2. Wall height lives in column E of the stud row (to 1/8"), units in D: `LFT` for lumber,
-   `pcs` for hardware, SF for panels. Row names: [DFL row names](../reference/takeoff-items.md).
+2. Wall height lives in column E of the stud row (to 1/8"), units in D: `LFT` for linear items,
+   `pcs` for hardware, `4x8` for panels, `SQ FT` for areas; lumber ordered by the piece has the
+   board length in feet in D. Row names: [DFL row names](../reference/takeoff-items.md).
 3. Formulas only from the block's own inputs; check a new formula on the first
    row right away. Do not multiply by 1.1 a second time: [Formulas](../reference/formulas.md).
 4. Notes: prefix `Important:`, `Note:` or `Comment:`, yellow fill, always under

@@ -6,7 +6,7 @@ hide:
 
 <div class="kb-hero" markdown>
 <h1 class="kb-hero__title">База знаний эстиматора</h1>
-<p class="kb-hero__lede">Как мерить, Что мерить и как заполнять DFL</p>
+<p class="kb-hero__lede">Как мерить, что мерить и как заполнять DFL</p>
 <p class="kb-hero__lede">
 Процесс работы, дерево takeoff, правила по каждому элементу каркаса, Excel DFL и ноты,
 правила клиентов и частые ошибки. Поиск Ctrl+K ищет по английскому термину: "rim", "truss heel", "holdown".
@@ -35,7 +35,8 @@ hide:
     3. [Дерево takeoff и имена листов](start/takeoff-structure.md)
     4. [OurPlanCore 3.0: начало работы](reference/ourplancore-start.md)
     5. [Типы работ](work-types/com.md) и [правила клиентов](start/client-rules.md)
-    6. [Проверка перед сдачей](start/quality-checklist.md)
+    6. [DFL: как устроена книга](reference/dfl-overview.md)
+    7. [Проверка перед сдачей](start/quality-checklist.md)
 
 -   :material-ruler:{ .lg .middle .kb-mk--green } **Мне надо померить ...**
 
@@ -134,7 +135,9 @@ hide:
 
     ---
 
-    [Ridge / Hip / Valley](work/horizontal/roof-framing/ridge.md),
+    [Ridge](work/horizontal/roof-framing/ridge.md),
+    [Hip](work/horizontal/roof-framing/hip.md),
+    [Valley](work/horizontal/roof-framing/valley.md),
     [Overframes](work/horizontal/roof-framing/overframes.md),
     [Dormer](work/horizontal/roof-framing/dormer.md),
     [Canopy](work/horizontal/roof-framing/canopy.md),
