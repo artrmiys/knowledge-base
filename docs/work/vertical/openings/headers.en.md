@@ -67,7 +67,7 @@ up to the next whole foot; longer, to an even number).
 
 ## Takeoff name and DFL row
 
-The `HD` button on the XL ribbon puts headers into the wall block of the floor **below**; the side
+The `HD` button on the XL strip puts headers into the wall block of the floor **below**; the side
 `ext` / `int` is taken from the name. In the `LG` legend the row `HP2 - (2) 2x10`
 gives the size by code, otherwise the code itself lands in B.
 

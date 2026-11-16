@@ -48,7 +48,7 @@ are counted separately from wall parapets.
 
 ## Takeoff name and DFL row
 
-The `PP` button on the XL ribbon moves parapets into the `Parapet Walls` block.
+The `PP` button on the XL strip moves parapets into the `Parapet Walls` block.
 
 | Takeoff name | DFL row | Unit | Formula / factor |
 | --- | --- | --- | --- |

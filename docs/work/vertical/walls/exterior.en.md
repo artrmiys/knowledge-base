@@ -96,7 +96,7 @@ Along with the wall the DFL gets `Bracing Ext Walls 2x4`, `Blocking`, `Wall Shea
 default), `Insulation`, `Holdowns` and
 `Ext. Headers`. Stud factors (16" = 1.1, 24" = 0.625) have one canon in
 [Formulas](../../../reference/formulas.md#stud-spacing-factors). The `WL` button
-on the XL ribbon moves the walls into the floor block; a suffix after the height (`ext 2x6 10.09
+on the XL strip moves the walls into the floor block; a suffix after the height (`ext 2x6 10.09
 5/S400`) is split off automatically.
 
 Layer rules are on separate pages: [Wall Sheathing](../sheathing/wall-sheathing.md),

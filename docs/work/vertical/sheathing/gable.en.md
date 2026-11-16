@@ -48,7 +48,7 @@ an interior attic partition, not exterior sheathing.
 | `gables/gable stick/gable stick` (Area) + `btm`, `top` (Line) | `Studs for Gables`, `Plates Ext (3)`, `Blocking` | per [Gable Wall](../walls/gable.md) | | |
 | `gables/gable trusses/draft stop` (Area) | `Draft Stop` | `1/2" Ply` or `5/8" Type X` per detail | `4x8` | `=CEILING(SQFT/32*1.1,1)` |
 
-The GB button on the XL ribbon moves the `gables` branch into the Gable Walls block.
+The GB button on the XL strip moves the `gables` branch into the Gable Walls block.
 
 ## Common mistakes
 

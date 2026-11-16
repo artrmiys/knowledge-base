@@ -33,7 +33,7 @@ Beam tool (B) between the reinforced rafters on the roof framing sheet with the 
 
 ## Takeoff name and DFL row
 
-Path: `framing/roof framing/beams/<header size length>`. Do not put them in `headers`: the HD button on the XL ribbon would move them into the wall block of the floor below.
+Path: `framing/roof framing/beams/<header size length>`. Do not put them in `headers`: the HD button on the XL strip would move them into the wall block of the floor below.
 
 | Takeoff name | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- | --- |

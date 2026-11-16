@@ -27,7 +27,7 @@ roof) or with full wall sheathing ([Wall Sheathing](wall-sheathing.md)).
 
 There is no separate takeoff: length = the floor's exterior perimeter from the `walls/<floor>
 floor walls/ext ...` lines, strip height = floor framing depth with subfloor per the section of
-this building. Area = perimeter x height. The Excel export (XL ribbon) puts
+this building. Area = perimeter x height. The Excel export (XL strip) puts
 Box Sheathing at the end of each floor's wall section with its own Tape row.
 
 - Each floor has its own strip: 1st, 2nd, 3rd. For the top floor under a

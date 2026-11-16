@@ -52,7 +52,7 @@ material). Anchorage is a separate page: [Holdowns](holdowns.md).
 | separately | `Draft Stop` | per detail | `4x8` | not from the SW total, see [Gable Sheathing](gable.md) |
 
 Name = mark plus confirmed differences (material, thickness, fasteners).
-The SW button on the XL ribbon puts the areas into the floor's wall block.
+The SW button on the XL strip puts the areas into the floor's wall block.
 
 ## Common mistakes
 

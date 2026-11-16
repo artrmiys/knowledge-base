@@ -48,7 +48,7 @@ The floor is the one whose floor framing the canopy attaches to. The canopy has 
 
 ## Takeoff name and DFL row
 
-Export: the FR and JS buttons on the XL ribbon put the canopy takeoffs into `Canopy Framing List`; if the worksheet does not exist, it is created as a copy of the nearest floor. Block contents per detail:
+Export: the FR and JS buttons on the XL strip put the canopy takeoffs into `Canopy Framing List`; if the worksheet does not exist, it is created as a copy of the nearest floor. Block contents per detail:
 
 | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- |

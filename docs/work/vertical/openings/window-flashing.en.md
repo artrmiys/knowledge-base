@@ -29,7 +29,7 @@ wall and deck flashing are on another page: [Flashing](../../sheathing-and-misc/
 ## How to measure in OurPlanCore
 
 Flashing is not drawn separately. It is figured from [Openings](windows-doors.md):
-the `OP` button on the XL ribbon moves the openings into the workbook, and the `F_Openings` macro outputs
+the `OP` button on the XL strip moves the openings into the workbook, and the `F_Openings` macro outputs
 `Window Flashing` and `Sill Flashing` per the rules below. Your job on the sheet:
 the right type (window with no suffix, door ` d`, garage door ` gd`) and the size from the
 schedule. Do not type lengths in by hand.

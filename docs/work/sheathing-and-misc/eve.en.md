@@ -52,7 +52,7 @@ framing.
 | same line | `Blocking at Eves`, `Simpson Ties at Eves` | `2x6`, `H2.5A` | `LFT`, `pcs` | [Roof Sheathing](../horizontal/roof-framing/roof-sheathing.md) |
 | `eves rakes/eves/eve 12 porch` | the same rows in the porch block | per porch detail | | separate from main |
 
-Excel export: XL ribbon, E/R button; the macro reads the overhang number in the name
+Excel export: XL strip, E/R button; the macro reads the overhang number in the name
 as the width in inches. Vinyl soffit is entered as a material in SQ FT, not
 as a framing row. If 30% or more of the soffit is beadboard, count the whole soffit as
 beadboard and write a Note that this is a local rule.

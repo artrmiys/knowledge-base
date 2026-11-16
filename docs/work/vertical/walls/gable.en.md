@@ -57,7 +57,7 @@ Branch `gables/gable trusses/...` or `gables/gable stick/...`. A name with
 
 ## Takeoff name and DFL row
 
-The `GB` button on the XL ribbon puts gables into the `Gable Walls` block; the
+The `GB` button on the XL strip puts gables into the `Gable Walls` block; the
 `a2_sqft_gable_trussheel` macro reads the areas and lengths.
 
 | Takeoff name | DFL row | Unit | Formula / factor |

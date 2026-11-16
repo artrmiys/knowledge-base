@@ -42,7 +42,7 @@ deck. Its height is set by the truss heel (heel height), typically 0.66 to
    directly under the building; a name with `trussheel` goes there by itself.
 3. Do not mix up the numbers: in `eve 24` the number is in inches (overhang), in `prpt 3.4 3 2` they
    are parapet heights, in `trussheel 1.25` it is the strip height in feet.
-4. Area = length x height; the export figures it (XL ribbon, TH button).
+4. Area = length x height; the export figures it (XL strip, TH button).
    The boundary with gable and wall sheathing must be explicit, with no double layer.
 
 ## Takeoff name and DFL row

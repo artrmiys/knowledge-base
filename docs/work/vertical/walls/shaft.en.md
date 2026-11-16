@@ -29,7 +29,7 @@ or liner framing.
 **Line** tool, LFT unit, around the shaft perimeter on the plan of each floor.
 One takeoff per assembly type and height; branch `walls/<floor> floor walls`,
 the takeoff is named `shaft`, then the wall type and height (for example `shaft 7A 10.5`).
-The `SHF` button on the XL ribbon builds the Shaft walls block above the first framing sheet.
+The `SHF` button on the XL strip builds the Shaft walls block above the first framing sheet.
 
 1. A typical detail is not a quantity by itself: find every shaft on the plan.
 2. Always record the material: CMU elevator, metal shaftliner, wood. Do not

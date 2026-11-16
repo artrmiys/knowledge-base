@@ -34,7 +34,7 @@ Beam tool (B) along the ridge line on the roof framing sheet with the F dot. Len
 
 ## Takeoff name and DFL row
 
-Path: `framing/roof framing/beams/<mark or size> <length>`. The ridge goes in `beams`, not in `headers`: the HD button on the XL ribbon moves `headers` into the wall block.
+Path: `framing/roof framing/beams/<mark or size> <length>`. The ridge goes in `beams`, not in `headers`: the HD button on the XL strip moves `headers` into the wall block.
 
 | Takeoff name | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- | --- |

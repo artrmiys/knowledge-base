@@ -56,7 +56,7 @@ are still marked up, but the DFL gets `0` and a scope note
 | same | `Blocking`, `Bracing` | LFT | by wall type |
 | `B1` (Count on the floor plan) | repeat multiplier | ea | number of units of that type on the floor |
 
-The `UN` button on the XL ribbon puts the unit table into the workbook (AM3) with totals by
+The `UN` button on the XL strip puts the unit table into the workbook (AM3) with totals by
 floor; the `C_UnitTable` macro multiplies the unit lengths by the number of repeats.
 Per unit there is also kitchen blocking (`2x6`, 4 at 14') and bath blocking (`2x6`,
 1 at 14'), jamb blocking for interior doors and dropped soffit from the RCP. Interior

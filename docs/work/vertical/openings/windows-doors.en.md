@@ -46,7 +46,7 @@ page, [Headers](headers.md).
 7. Storefront, multi-slide, garage doors, HM doors with no type: separately, each from its own
    size source. A full storefront once; its door is not a second hole.
 
-The size name is needed by the `OP` button on the XL ribbon: it reads `WxH` from the name and
+The size name is needed by the `OP` button on the XL strip: it reads `WxH` from the name and
 moves the openings into the workbook, where the `F_Openings` macro figures the flashing.
 
 ## Takeoff name and DFL row
