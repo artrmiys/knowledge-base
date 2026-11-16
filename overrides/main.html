@@ -2,7 +2,8 @@
 
 {% block extrahead %}
   {{ super() }}
-  {% set social_title = "Knowledge Base" if page.is_homepage else page.title ~ " | Knowledge Base" %}
+  {% set kb_home = page and page.url in ("", "en/") %}
+  {% set social_title = "Knowledge Base" if kb_home else page.title ~ " | Knowledge Base" %}
   {% set social_description = "Estimating guides, construction details and quality checklists in one place." %}
   {% set social_root = "https://artrmiys.github.io/knowledge-base/" %}
   {% set social_image = social_root ~ "assets/images/brand/knowledge-base-social-v2.png" %}
@@ -24,8 +25,11 @@
 
 {% block content %}
   {{ super() }}
-  {% if page and not page.is_homepage and page.url != "start/suggest-change/" %}
+  {#- English pages (mkdocs-static-i18n) live under en/ and link to the English form page -#}
+  {% set kb_en = i18n_page_locale is defined and i18n_page_locale == "en" %}
+  {% set kb_form = "en/start/suggest-change/" if kb_en else "start/suggest-change/" %}
+  {% if page and page.url not in ("", "en/", "start/suggest-change/", "en/start/suggest-change/") %}
     {% set kb_page_url = "https://artrmiys.github.io/knowledge-base/" ~ page.url %}
-    <p class="kb-suggest"><a href="{{ 'start/suggest-change/' | url }}?page={{ kb_page_url | urlencode }}">Предложить поправку к этой странице</a></p>
+    <p class="kb-suggest"><a href="{{ kb_form | url }}?page={{ kb_page_url | urlencode }}">{{ "Suggest a correction to this page" if kb_en else "Предложить поправку к этой странице" }}</a></p>
   {% endif %}
 {% endblock %}

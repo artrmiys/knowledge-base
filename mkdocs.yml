@@ -246,6 +246,119 @@ plugins:
       lang:
         - en
         - ru
+  # RU/EN switch in the header. Suffix layout: page.md = Russian (default, URLs
+  # unchanged), page.en.md = English, served under /en/. A page without .en.md
+  # falls back to the Russian text on /en/. fixed_link keeps the home links
+  # relative, because site_url is not set (project page lives under a subpath).
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: ru
+          name: Русский
+          default: true
+          build: true
+          fixed_link: "."
+        - locale: en
+          name: English
+          build: true
+          fixed_link: en/
+          site_description: "Estimating wiki for wood framing: takeoff workflow, COM/EWP rules, QA checklists"
+          theme:
+            palette:
+              - toggle:
+                  name: Switch to dark mode
+              - toggle:
+                  name: Switch to light mode
+          nav_translations:
+            Главная: Home
+            Старт: Start
+            Как пользоваться: How to use the KB
+            Процесс работы: Workflow
+            Дерево takeoff и имена листов: Takeoff tree and sheet names
+            Проверка перед сдачей: Pre-delivery check
+            Частые ошибки: Common mistakes
+            Правила клиентов и типов заказов: Client and job type rules
+            Приёмная поправок: Suggest a correction
+            Первые шаги, 10 уроков: First steps, 10 lessons
+            Каждый день: Every day
+            Начало работы: Getting started
+            Проекты и сохранение: Jobs and saving
+            Листы (Pages): Sheets (Pages)
+            Раскладка по листам и роутинг: Split by sheets and routing
+            Инструменты замера: Measuring tools
+            Дерево Takeoffs: Takeoffs tree
+            Несколько зданий: Multiple buildings
+            Имена и автомаршрут: Names and auto-routing
+            Экспорт в Excel: Export to Excel
+            PDF и сдача: PDF and delivery
+            Продвинутое: Advanced
+            Правка и привязки: Editing and snaps
+            Merge, Split, Break пошагово: Merge, Split, Break step by step
+            Маршрутизация и правила: Routing and rules
+            Кропы, маска, наложения, легенда: Crops, mask, overlays, legend
+            Settings и модули: Settings and modules
+            Консоль ИИ: AI console
+            ИИ в программе: AI in the app
+            Workspace и CLI: Workspace and CLI
+            3D-крыша: 3D roof
+            Дополнительные возможности: Extra features
+            Что сюда вошло: What is included
+            Snap и трассировка: Snap and tracing
+            Менеджеры: Managers
+            3D и Massing: 3D and Massing
+            Прочее: Other
+            Идеи и планы: Ideas and plans
+            Справка: Help
+            Горячие клавиши: Keyboard shortcuts
+            Решение проблем: Troubleshooting
+            Что нового: What's new
+            Все функции программы: All app functions
+            Что такое OurPDF: What is OurPDF
+            Как мерить по шагам: How to measure, step by step
+            Окно программы: Program window
+            Измерения: Measurements
+            Связь с Excel: Excel link
+            Комментарии и сохранение: Comments and saving
+            Страницы, правка, слои: Pages, editing, layers
+            Наложение листов: Sheet overlay
+            Кроп и новые листы: Crop and new sheets
+            Вид и настройки: View and settings
+            Управление нейросетями: AI control
+            Работа: Work
+            Типы работ: Job types
+            Reconstruction / Реконструкция: Reconstruction / Remodel
+            Вертикальные работы: Vertical work
+            Горизонтальные работы: Horizontal work
+            Details / мелкие элементы: Details / small items
+            Header (крыша): Header (roof)
+            Roof Misc / прочее: Roof Misc / other
+            Обзор: Overview
+            Exclusions и J-Channel: Exclusions and J-Channel
+            Типы siding: Siding types
+            Измерение: Measuring
+            Excel и DFL: Excel and DFL
+            "DFL: как устроена книга": How the DFL workbook works
+            Подписи строк и формат: Row labels and format
+            Ноты в DFL: Notes in the DFL
+            Блоки балконов, porch и holdowns: Balcony, porch and holdown blocks
+            Вкладка E-Wood в Excel: E-Wood tab in Excel
+            Макросы и клавиши Excel: Excel macros and hotkeys
+            Формулы и факторы: Formulas and factors
+            Справочник: Reference
+            Советы и важные вещи: Tips and key rules
+            Термины и спецификации: Terms and specs
+            Ориентиры количеств: Quantity benchmarks
+            ИИ-помощь эстиматору: AI help for the estimator
+            Редактору KB: For KB editors
+            Обновление базы: Updating the KB
+            Картинки и схемы: Images and diagrams
+            Проверка оформления: Layout check
+
+hooks:
+  - hooks/i18n_en.py
 
 markdown_extensions:
   - abbr

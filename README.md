@@ -31,7 +31,7 @@
 ```
 
 Для нового окружения используй `python -m venv .venv`, затем установи через
-его `python -m pip install mkdocs mkdocs-material mkdocs-material-extensions` —
+его `python -m pip install mkdocs mkdocs-material mkdocs-material-extensions mkdocs-static-i18n` —
 тот же набор пакетов указан в workflow публикации.
 Проверь страницы в браузере, поиск на русском и английском, узкий экран,
 светлую и тёмную темы. Для ссылок важен собранный HTML: raw HTML изображений
