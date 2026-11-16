@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" role="img" aria-labelledby="t d">
-  <title id="t">Returns: the boxed corner where the eave meets the rake, two variants</title>
-  <desc id="d">Top left: isometric house key with eave, rake and return colours. Below: gable end elevation of the corner for a cornice (boxed) return and for a pork chop return, with what is counted in each.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 566" role="img" aria-labelledby="t d">
+  <title id="t">Eave return at a gable corner</title>
+  <desc id="d">Top: gable end elevation showing where the eave, the rake and the return are. Bottom: two kinds of return in close-up, a boxed cornice return with soffit, fascia and crown, and a pork chop return closed with a board. Legend with DFL rows and units.</desc>
   <defs>
     <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
     <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
     <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
-    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
     <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
     <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
     <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
@@ -14,71 +14,95 @@
     <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
     <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
     <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
-    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
     <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
     <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
     <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
-    
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
     <style>
-      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
-      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
       .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
       .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
       .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
-      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
       .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
-      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
-      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
-      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
-      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
-      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
-      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
-      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
-      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
-      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
-      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
       .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
       .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
-      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
     </style>
   </defs>
-  <rect x="0.5" y="0.5" width="999" height="649" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
-<polygon points="40.0,250.0 150.0,250.0 150.0,178.5 95.0,151.0 40.0,178.5" fill="#f4f6f8" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
-<polygon points="150.0,250.0 241.5,197.2 241.5,125.7 150.0,178.5" fill="#e3e8ec" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
-<polygon points="22.2,180.0 90.4,145.9 191.1,87.9 122.9,122.0" fill="#dfe3e8" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
-<polygon points="90.4,145.9 158.6,180.0 259.3,122.0 191.1,87.9" fill="#d7dde3" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
-<polygon points="158.6,180.0 259.3,122.0 259.3,126.4 158.6,184.4" fill="#c3cad1" stroke="#3a3f44" stroke-width="1" stroke-linejoin="round" />
-<line x1="158.6" y1="180.0" x2="259.3" y2="122.0" stroke="#1e88e5" stroke-width="2.8" stroke-linecap="round"/>
-<polyline points="22.2,180.0 90.4,145.9 158.6,180.0" fill="none" stroke="#e65100" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
-<polygon points="158.6,186.6 164.2,183.4 164.2,176.8 158.6,180.0" fill="#beaec6" stroke="#8e24aa" stroke-width="1.6" stroke-linejoin="round" />
-<polygon points="139.9,180.0 158.6,180.0 164.2,176.8 145.5,176.8" fill="#eddff5" stroke="#8e24aa" stroke-width="1.6" stroke-linejoin="round" />
-<polygon points="139.9,186.6 158.6,186.6 158.6,180.0 139.9,180.0" fill="#e8d5f2" stroke="#8e24aa" stroke-width="1.6" stroke-linejoin="round" />
-<text class="lab" x="40" y="50" >Где это на доме</text>
-<rect x="40" y="66" width="22" height="14" fill="#1e88e5" stroke="#1e88e5" stroke-width="1.2"/><text class="cap" x="70" y="78" >Eave</text>
-<rect x="122.8" y="66" width="22" height="14" fill="#e65100" stroke="#e65100" stroke-width="1.2"/><text class="cap" x="152.8" y="78" >Rake</text>
-<rect x="205.6" y="66" width="22" height="14" fill="#e8d5f2" stroke="#8e24aa" stroke-width="1.2"/><text class="cap" x="235.6" y="78" >Return</text>
-<line class="lead" x1="292" y1="110" x2="155.274" y2="179.34"/>
-<text class="lab2" x="300" y="108" >Return: угол, где</text>
-<text class="note" x="300" y="126" >eave встречает rake</text>
-<text class="lab" x="60" y="318" >Cornice (boxed) return</text>
-<text class="note" x="60" y="338" >фасад фронтона, угол крупно</text>
-<polygon points="150.0,410.0 410.0,280.0 410.0,550.0 150.0,550.0" fill="#f4f6f8" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
-<line x1="150" y1="450" x2="410" y2="450" stroke="#c5ccd3" stroke-width="1"/><line x1="150" y1="468" x2="410" y2="468" stroke="#c5ccd3" stroke-width="1"/><line x1="150" y1="486" x2="410" y2="486" stroke="#c5ccd3" stroke-width="1"/><line x1="150" y1="504" x2="410" y2="504" stroke="#c5ccd3" stroke-width="1"/><line x1="150" y1="522" x2="410" y2="522" stroke="#c5ccd3" stroke-width="1"/><line x1="150" y1="540" x2="410" y2="540" stroke="#c5ccd3" stroke-width="1"/><rect x="90" y="410" width="60" height="30" fill="#e3e8ec" stroke="#3a3f44" stroke-width="1.4" />
-<line x1="90" y1="410" x2="90" y2="440" stroke="#1e88e5" stroke-width="6"/><rect x="150" y="410" width="70" height="30" fill="#e8d5f2" stroke="#8e24aa" stroke-width="2.2" />
-<line x1="150" y1="417" x2="220" y2="417" stroke="#8e24aa" stroke-width="1"/><line x1="150" y1="433" x2="220" y2="433" stroke="#8e24aa" stroke-width="1"/><polygon points="220.0,410.0 410.0,315.0 410.0,329.0 220.0,424.0" fill="#fbe3d3" stroke="#e65100" stroke-width="2" stroke-linejoin="round" />
-<text class="lab" x="540" y="318" >Pork chop return</text>
-<text class="note" x="540" y="338" >rake идёт до низа,</text>
-<text class="note" x="540" y="356" >торец закрыт доской</text>
-<polygon points="660.0,410.0 920.0,280.0 920.0,550.0 660.0,550.0" fill="#f4f6f8" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round" />
-<line x1="660" y1="450" x2="920" y2="450" stroke="#c5ccd3" stroke-width="1"/><line x1="660" y1="468" x2="920" y2="468" stroke="#c5ccd3" stroke-width="1"/><line x1="660" y1="486" x2="920" y2="486" stroke="#c5ccd3" stroke-width="1"/><line x1="660" y1="504" x2="920" y2="504" stroke="#c5ccd3" stroke-width="1"/><line x1="660" y1="522" x2="920" y2="522" stroke="#c5ccd3" stroke-width="1"/><line x1="660" y1="540" x2="920" y2="540" stroke="#c5ccd3" stroke-width="1"/><rect x="600" y="410" width="60" height="30" fill="none" stroke="#3a3f44" stroke-width="1.2" stroke-dasharray="4 3"/>
-<polygon points="600.0,410.0 920.0,250.0 920.0,264.0 600.0,424.0" fill="#fbe3d3" stroke="#e65100" stroke-width="2" stroke-linejoin="round" />
-<polygon points="600.0,440.0 660.0,440.0 660.0,394.0 600.0,424.0" fill="#e8d5f2" stroke="#8e24aa" stroke-width="2.2" stroke-linejoin="round" />
-<line x1="600" y1="424" x2="600" y2="440" stroke="#1e88e5" stroke-width="6"/><line class="lead" x1="150" y1="578" x2="185" y2="444"/>
-<text class="lab2" x="60" y="592" >return box: soffit + fascia + crown</text>
-<text class="mono" x="60" y="611" >Returns | 12" | LFT или pcs</text>
-<text class="small" x="60" y="630" >rake кончается на return; eave до угла</text>
-<line class="lead" x1="660" y1="578" x2="630" y2="436"/>
-<text class="lab2" x="540" y="592" >pork chop: одна доска-заглушка</text>
-<text class="mono" x="540" y="611" >pcs; eave и rake считаются до угла</text>
-<text class="small" x="540" y="630" >rake идёт до самого низа</text>
+<rect x="0.5" y="0.5" width="879" height="565" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="h" x="40" y="44">Где return: угол фронтона</text>
+<rect x="90" y="170" width="250" height="80" fill="#f4f1ea" stroke="#3a3f44" stroke-width="1.4"/>
+<polygon points="90,170 215,82 340,170" fill="#f4f1ea" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round"/>
+<line x1="50" y1="250" x2="380" y2="250" stroke="#3a3f44" stroke-width="1.2"/>
+<polygon points="215,70 58,182 58,194 215,82" fill="#ffe0cc" stroke="#e65100" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="215,70 372,182 372,194 215,82" fill="#ffe0cc" stroke="#e65100" stroke-width="2" stroke-linejoin="round"/>
+<rect x="58" y="194" width="62" height="12" fill="#ead7f2" stroke="#8e24aa" stroke-width="2"/>
+<rect x="310" y="194" width="62" height="12" fill="#ead7f2" stroke="#8e24aa" stroke-width="2"/>
+<text style="fill:#e65100" class="lab2" x="108" y="108">rake</text>
+<text style="fill:#8e24aa" class="lab2" x="40" y="232">return</text>
+<line x1="74" y1="220" x2="80" y2="208" stroke="#8e24aa" stroke-width="1.4"/>
+<text class="note" x="215" y="222" text-anchor="middle">gable wall</text>
+<text class="note" x="396" y="196">eave уходит</text>
+<text class="note" x="396" y="214">за угол</text>
+<text class="lab" x="40" y="300">Cornice (boxed) return</text>
+<rect x="120" y="400" width="240" height="140" fill="#f4f1ea" stroke="#3a3f44" stroke-width="1.4"/>
+<line x1="120" y1="418" x2="360" y2="418" stroke="#d8d2c4" stroke-width="1"/>
+<line x1="120" y1="436" x2="360" y2="436" stroke="#d8d2c4" stroke-width="1"/>
+<line x1="120" y1="454" x2="360" y2="454" stroke="#d8d2c4" stroke-width="1"/>
+<line x1="120" y1="472" x2="360" y2="472" stroke="#d8d2c4" stroke-width="1"/>
+<line x1="120" y1="490" x2="360" y2="490" stroke="#d8d2c4" stroke-width="1"/>
+<line x1="120" y1="508" x2="360" y2="508" stroke="#d8d2c4" stroke-width="1"/>
+<line x1="120" y1="526" x2="360" y2="526" stroke="#d8d2c4" stroke-width="1"/>
+<polygon points="120,400 360,290 360,400" fill="#f4f1ea" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="150,368 372,266 372,284 150,386" fill="#ffe0cc" stroke="#e65100" stroke-width="2" stroke-linejoin="round"/>
+<rect x="60" y="386" width="150" height="22" fill="#ead7f2" stroke="#8e24aa" stroke-width="2"/>
+<rect x="60" y="386" width="150" height="7" fill="#d9bfe6" stroke="#8e24aa" stroke-width="1"/>
+<circle cx="96" cy="430" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="96" y="434.5">1</text>
+<line x1="96" y1="419" x2="96" y2="408" stroke="#2e7d32" stroke-width="1.5"/>
+<circle cx="180" cy="430" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="180" y="434.5">2</text>
+<line x1="180" y1="419" x2="180" y2="404" stroke="#2e7d32" stroke-width="1.5"/>
+<circle cx="40" cy="372" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="40" y="376.5">3</text>
+<line x1="50" y1="378" x2="62" y2="388" stroke="#2e7d32" stroke-width="1.5"/>
+<rect x="116" y="448" width="190" height="44" fill="#ffffff" stroke="none" stroke-width="0"/>
+<line x1="120" y1="460" x2="210" y2="460" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="ink" x="120" y="484">длина return = Line</text>
+<text class="lab" x="470" y="300">Pork chop return</text>
+<rect x="540" y="400" width="240" height="140" fill="#f4f1ea" stroke="#3a3f44" stroke-width="1.4"/>
+<line x1="540" y1="418" x2="780" y2="418" stroke="#d8d2c4" stroke-width="1"/>
+<line x1="540" y1="436" x2="780" y2="436" stroke="#d8d2c4" stroke-width="1"/>
+<line x1="540" y1="454" x2="780" y2="454" stroke="#d8d2c4" stroke-width="1"/>
+<line x1="540" y1="472" x2="780" y2="472" stroke="#d8d2c4" stroke-width="1"/>
+<line x1="540" y1="490" x2="780" y2="490" stroke="#d8d2c4" stroke-width="1"/>
+<line x1="540" y1="508" x2="780" y2="508" stroke="#d8d2c4" stroke-width="1"/>
+<line x1="540" y1="526" x2="780" y2="526" stroke="#d8d2c4" stroke-width="1"/>
+<polygon points="540,400 780,290 780,400" fill="#f4f1ea" stroke="#3a3f44" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="486,396 792,256 792,274 486,414" fill="#ffe0cc" stroke="#e65100" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="486,414 540,389 540,414" fill="#ead7f2" stroke="#8e24aa" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="516" cy="440" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="516" y="444.5">4</text>
+<line x1="516" y1="429" x2="520" y2="412" stroke="#2e7d32" stroke-width="1.5"/>
+<text class="note" x="560" y="446">rake идёт до низа,</text>
+<text class="note" x="560" y="465">торец закрыт доской</text>
+<circle cx="540" cy="54" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="540" y="58.5">1</text>
+<text class="lab2" x="560" y="59">Soffit return</text>
+<text class="mono2" x="560" y="77">в Soffits at Eves | SQ FT</text>
+<circle cx="540" cy="98" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="540" y="102.5">2</text>
+<text class="lab2" x="560" y="103">Fascia return</text>
+<text class="mono2" x="560" y="121">в Fascia at Eves | LFT</text>
+<circle cx="540" cy="142" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="540" y="146.5">3</text>
+<text class="lab2" x="560" y="147">Crown (только cornice)</text>
+<text class="mono2" x="560" y="165">Crowns | по детали | LFT</text>
+<circle cx="540" cy="186" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="540" y="190.5">4</text>
+<text class="lab2" x="560" y="191">Pork chop: fascia + малый soffit</text>
+<text class="mono2" x="560" y="209">те же строки, без crown</text>
+<rect x="526" y="222" width="338" height="52" fill="#f6f8f6" stroke="#cfd8cf" stroke-width="1.2" rx="8"/>
+<text class="mono2" x="540" y="243">eves/returns 12: Line, LFT</text>
+<text class="note" x="540" y="263">длина идёт в строки eave, своей строки нет</text>
 </svg>

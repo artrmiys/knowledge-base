@@ -29,6 +29,11 @@ Hangers are needed only when the rafters bear on a bearing ridge beam or the det
   <figcaption markdown="span">Beam tool: two points along the member, the app rounds the length and puts it into the takeoff name.</figcaption>
 </figure>
 
+<figure markdown>
+  ![Dbl and Trpl Rafters at a roof opening](../../../assets/images/roof/dbl-trpl-rafters.svg)
+  <figcaption markdown="span">One slope in plan: doubled rafters on both sides of a skylight carry the headers, a tripled pack under a load, hangers at the ridge beam. One pack = one point in the tree.</figcaption>
+</figure>
+
 ## Takeoff name and DFL row
 
 Path: `framing/roof framing/beams/dbl rafters <size> <length>`.

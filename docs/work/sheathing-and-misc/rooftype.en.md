@@ -1,8 +1,8 @@
 # Roof Types
 
 <figure markdown>
-  ![Flat roof layers](../../assets/images/roof/roof-type.svg)
-  <figcaption markdown="span">Flat roof: membrane, cover board, rigid insulation, deck. All layers over the same area, each on its own row.</figcaption>
+  ![Roof types and their DFL rows](../../assets/images/roof/roof-type.svg)
+  <figcaption markdown="span">Four roof types: the tree name of the area and the rows each type pulls. On a flat roof every layer takes the same area and gets its own row.</figcaption>
 </figure>
 
 ## What it is

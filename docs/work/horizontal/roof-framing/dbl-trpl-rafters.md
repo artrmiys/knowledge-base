@@ -29,6 +29,11 @@ Hangers нужны только когда rafters опираются на не�
   <figcaption markdown="span">Инструмент Beam: две точки по элементу, длина округляется программой и попадает в имя позиции.</figcaption>
 </figure>
 
+<figure markdown>
+  ![Dbl и Trpl Rafters у проёма крыши](../../../assets/images/roof/dbl-trpl-rafters.svg)
+  <figcaption markdown="span">Скат в плане: сдвоенные rafters по бокам skylight держат headers, строенный пакет под нагрузкой, hangers у ridge beam. Один пакет = одна точка в дереве.</figcaption>
+</figure>
+
 ## Как назвать в дереве и строка DFL
 
 Путь: `framing/roof framing/beams/dbl rafters <сечение> <длина>`.

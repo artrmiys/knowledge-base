@@ -36,6 +36,11 @@ Beam tool (B) along the valley line on the roof framing sheet with the F dot. Th
   <figcaption markdown="span">Beam tool: two points along the member, the app rounds the length and puts it into the takeoff name.</figcaption>
 </figure>
 
+<figure markdown>
+  ![Valley rafter on the roof plan](../../../assets/images/roof/valley.svg)
+  <figcaption markdown="span">Valley on the plan: two valleys run from the inside corners to the end of the addition ridge, jack rafters of both slopes butt into them. Board length = plan length x the hip and valley factor.</figcaption>
+</figure>
+
 ## Takeoff name and DFL row
 
 Path: `framing/roof framing/beams/valley <size> <length>`. The template's combined row `Ridge / Valley / Hip` in LFT when the job does not split them.
