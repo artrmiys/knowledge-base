@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 590" role="img" aria-labelledby="t d">
   <title id="t">Railing: composite counted as a system versus wood painted counted by element</title>
   <desc id="d">Left: composite railing between two posts with post sleeves and caps and 6 foot rail sections, counted as units. Right: painted wood railing with 4x4 posts, 2x2 balusters, 2x4 top and bottom rails and a 2x6 cap rail, counted in LFT per element.</desc>
   <defs>
@@ -22,27 +22,27 @@
     <style>
       .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
       .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
-      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab{font:600 18px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
       .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
-      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
-      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
-      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .note{font:400 16px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 15px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .mono{font:500 16px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
       .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
       .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
       .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
       .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
       .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
       .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
-      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .dimt{font:500 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
       .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
-      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .numt{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
       .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
       .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
       .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
       .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
     </style>
   </defs>
-  <rect x="0.5" y="0.5" width="999" height="559" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+  <rect x="0.5" y="0.5" width="999" height="589" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
 <text class="lab" x="60" y="46" >Composite: считается системой</text>
 <text class="note" x="60" y="66" >post + sleeve + cap, rail sections по 6'</text>
 <rect x="40" y="400" width="420" height="16" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2" />
@@ -67,10 +67,10 @@
 <rect x="386" y="176" width="6" height="184" fill="#e8ecef" stroke="#4d5861" stroke-width="1" />
 <rect x="105" y="158" width="294" height="220" fill="none" stroke="#2e7d32" stroke-width="2" stroke-dasharray="8 5"/><line class="dim" x1="104" y1="392" x2="400" y2="392"/>
 <text class="dimt" x="252" y="406" text-anchor="middle" >section 6'</text>
-<text class="mono" x="60" y="450" >Posts at Rails | 4x4 P.T. | pcs</text>
-<text class="mono" x="60" y="470" >Post Sleeve | pcs, Post Cap | pcs</text>
-<text class="mono" x="60" y="490" >Rail sections | 6' Rail section | unit</text>
-<text class="small" x="60" y="514" >sleeve и cap на каждый post; секции по длине между постами</text>
+<text class="mono" x="60" y="452" >Posts at Rails | 4x4 P.T. | pcs</text>
+<text class="mono" x="60" y="475" >Post Sleeve | pcs, Post Cap | pcs</text>
+<text class="mono" x="60" y="498" >Rail sections | 6' Rail section | unit</text>
+<text class="small" x="60" y="523" >sleeve и cap на каждый post; секции по длине между постами</text>
 <text class="lab" x="560" y="46" >Wood painted: поэлементно</text>
 <text class="note" x="560" y="66" >каждый элемент своя строка</text>
 <rect x="540" y="400" width="420" height="16" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2" />
@@ -96,14 +96,15 @@
 <circle class="numc" cx="720" cy="272" r="11"/><text class="numt" x="720" y="276.5">3</text>
 <circle class="numc" cx="592" cy="330" r="11"/><text class="numt" x="592" y="334.5">4</text>
 <circle class="numc" cx="760" cy="371" r="11"/><text class="numt" x="760" y="375.5">2</text>
-<circle class="numc" cx="571" cy="445" r="11"/><text class="numt" x="571" y="449.5">1</text>
-<text class="mono" x="590" y="450" >Cap Rail | 2x6 | LFT</text>
-<circle class="numc" cx="571" cy="465" r="11"/><text class="numt" x="571" y="469.5">2</text>
-<text class="mono" x="590" y="470" >Rails (top &amp; bottom) | 2x4 | LFT</text>
-<circle class="numc" cx="571" cy="485" r="11"/><text class="numt" x="571" y="489.5">3</text>
-<text class="mono" x="590" y="490" >Balustrades | 2x2 | pcs</text>
-<circle class="numc" cx="571" cy="505" r="11"/><text class="numt" x="571" y="509.5">4</text>
-<text class="mono" x="590" y="510" >Posts at Rails | 4x4 P.T. | pcs</text>
-<text class="small" x="810" y="490" >balusters: шаг 4"</text>
-<text class="note" x="60" y="544" >2 поста на балкон (по углам); способы не смешивать: либо система, либо поэлементно. Railing posts structural: страница Railing.</text>
+<circle class="numc" cx="571" cy="447" r="11"/><text class="numt" x="571" y="452">1</text>
+<text class="mono" x="590" y="452" >Cap Rail | 2x6 | LFT</text>
+<circle class="numc" cx="571" cy="472" r="11"/><text class="numt" x="571" y="477">2</text>
+<text class="mono" x="590" y="477" >Rails (top &amp; bottom) | 2x4 | LFT</text>
+<circle class="numc" cx="571" cy="497" r="11"/><text class="numt" x="571" y="502">3</text>
+<text class="mono" x="590" y="502" >Balustrades | 2x2 | pcs</text>
+<circle class="numc" cx="571" cy="522" r="11"/><text class="numt" x="571" y="527">4</text>
+<text class="mono" x="590" y="527" >Posts at Rails | 4x4 P.T. | pcs</text>
+<text class="small" x="836" y="502" >balusters: шаг 4"</text>
+<text class="note" x="60" y="556" >2 поста на балкон (по углам); способы не смешивать: либо система, либо поэлементно.</text>
+<text class="note" x="60" y="578" >Railing posts structural: страница Railing.</text>
 </svg>
