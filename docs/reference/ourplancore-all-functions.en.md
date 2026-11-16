@@ -4,7 +4,7 @@ This page is generated from the app source code by tools/opc_inventory.py; do no
 
 It lists every button, menu item, key, Settings category and window of OurPlanCore 3.0, by where it sits in the interface. The "Details" column links to the section page that describes the function; an empty cell means the KB has no detailed description yet (check: `python tools/opc_coverage.py`). The same function is often available from several places (ribbon, menu, palette, key), so repeats here are normal.
 
-Total entries: 1136. With a detail page: 995. No page yet: 26. Internal entries and repeats excluded from the check: 115.
+Total entries: 1136. With a detail page: 997. No page yet: 24. Internal entries and repeats excluded from the check: 115.
 
 ## Bottom tool strip (42)
 
@@ -1322,7 +1322,7 @@ Total entries: 1136. With a detail page: 995. No page yet: 26. Internal entries 
     | `Save observation here` |  | menu: viewport menu > AI Assist (sheet point) | Saves a manual observation tied to this point of the sheet. | [AI and terminals](ourplancore-ai.md) |
     | `Add as pending check` |  | menu: viewport menu > AI Assist (sheet point) | Adds this spot to `AI Inbox` as a check before the final measurement. | [AI and terminals](ourplancore-ai.md) |
     | `Suggest takeoff item here` |  | menu: viewport menu > AI Assist (sheet point) | Suggests a takeoff for this spot of the sheet. | [AI and terminals](ourplancore-ai.md) |
-    | `Trace wall from this point` |  | menu: viewport menu > AI Assist (sheet point) | Creates a request to trace a wall from this point, with a preview. | [Snap and tracing](ourplancore-snap-trace.md) |
+    | `Trace wall from this point` |  | menu: viewport menu > AI Assist (sheet point) | Creates a request to trace a wall from this point, with a preview. | [AI and terminals](ourplancore-ai.md) |
     | `Trace closed area` |  | menu: viewport menu > AI Assist (sheet point) | Creates a request to trace a closed area from this point, with a preview. | [AI and terminals](ourplancore-ai.md) |
     | `Check missed takeoffs on this page` |  | menu: viewport menu > AI Assist (sheet point) | Creates an AI request to check that nothing is missed on the sheet. | [AI and terminals](ourplancore-ai.md) |
 
@@ -1473,7 +1473,7 @@ Total entries: 1136. With a detail page: 995. No page yet: 26. Internal entries 
     | `Export CSV` |  | command palette: File | Exports the measurement rows to a CSV file. | [Takeoffs tree](ourplancore-takeoffs.md) |
     | `Export TXT` |  | command palette: File | Exports the selected or all measurements to the PlanSwift text format. | [Takeoffs tree](ourplancore-takeoffs.md) |
     | `Export Excel` |  | command palette: File | Exports the selected or all measurements to `.xlsx`, columns J, K, L starting at J10. | [Export to Excel](ourplancore-excel.md) |
-    | `Create Project Excel Workbook` |  | command palette: File | Copy the bundled TemplateCom.xlsm into a chosen project location. |  |
+    | `Create Project Excel Workbook` |  | command palette: File | Copy the bundled TemplateCom.xlsm into a chosen project location. | [Export to Excel](ourplancore-excel.md) |
     | `Export to Current Excel` |  | command palette: File | Writes the selected folder or takeoff into the active cell of the open Excel workbook. | [Export to Excel](ourplancore-excel.md) |
     | `Export Values to Current Excel` |  | command palette: File | Writes only the `Value` column for the same selection into the open Excel workbook. | [Export to Excel](ourplancore-excel.md) |
     | `Link to Excel` |  | command palette: File | Writes the selected takeoff's number into the active cell of the open workbook and keeps it there. | [Export to Excel](ourplancore-excel.md) |
@@ -2032,7 +2032,7 @@ Total entries: 1136. With a detail page: 995. No page yet: 26. Internal entries 
 
     | Function | Key | Where in the interface | What it does | Details |
     | --- | --- | --- | --- | --- |
-    | `Voice Input` |  | Settings: Settings > Voice Input | Section of the settings panel. |  |
+    | `Voice Input` |  | Settings: Settings > Voice Input | Section of the settings panel. | [Settings and modules](ourplancore-settings.md) |
 
 ??? note "Settings > Workspace (3)"
 

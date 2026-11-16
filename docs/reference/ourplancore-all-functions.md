@@ -4,7 +4,7 @@
 
 Здесь перечислена каждая кнопка, пункт меню, клавиша, категория Settings и окно OurPlanCore 3.0, по месту в интерфейсе. Колонка "Подробно" ведёт на страницу раздела, где функция описана; пустая ячейка значит, что подробного описания в базе пока нет (проверка: `python tools/opc_coverage.py`). Одна и та же функция часто доступна с нескольких поверхностей (лента, меню, палитра, клавиша), поэтому повторы здесь нормальны.
 
-Всего записей: 1136. С подробной страницей: 995. Пока без страницы: 26. Служебных и повторов, исключённых из проверки: 115.
+Всего записей: 1136. С подробной страницей: 997. Пока без страницы: 24. Служебных и повторов, исключённых из проверки: 115.
 
 ## Нижняя полоса инструментов (42)
 
@@ -1322,7 +1322,7 @@
     | `Save observation here` |  | меню: меню вьюпорта > AI Assist (точка листа) | Сохраняет ручное наблюдение, привязанное к этой точке листа. | [ИИ и терминалы](ourplancore-ai.md) |
     | `Add as pending check` |  | меню: меню вьюпорта > AI Assist (точка листа) | Добавляет это место в `AI Inbox` как проверку до финального замера. | [ИИ и терминалы](ourplancore-ai.md) |
     | `Suggest takeoff item here` |  | меню: меню вьюпорта > AI Assist (точка листа) | Предлагает позицию takeoff для этого места листа. | [ИИ и терминалы](ourplancore-ai.md) |
-    | `Trace wall from this point` |  | меню: меню вьюпорта > AI Assist (точка листа) | Создаёт запрос обвести стену от этой точки с предпросмотром. | [Привязки и трассировка](ourplancore-snap-trace.md) |
+    | `Trace wall from this point` |  | меню: меню вьюпорта > AI Assist (точка листа) | Создаёт запрос обвести стену от этой точки с предпросмотром. | [ИИ и терминалы](ourplancore-ai.md) |
     | `Trace closed area` |  | меню: меню вьюпорта > AI Assist (точка листа) | Создаёт запрос обвести замкнутую площадь от этой точки с предпросмотром. | [ИИ и терминалы](ourplancore-ai.md) |
     | `Check missed takeoffs on this page` |  | меню: меню вьюпорта > AI Assist (точка листа) | Создаёт запрос ИИ проверить, что на листе ничего не пропущено. | [ИИ и терминалы](ourplancore-ai.md) |
 
@@ -1473,7 +1473,7 @@
     | `Export CSV` |  | палитра команд: File | Выгружает строки замеров в файл CSV. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
     | `Export TXT` |  | палитра команд: File | Выгружает выбранные или все замеры в текстовый формат PlanSwift. | [Дерево Takeoffs](ourplancore-takeoffs.md) |
     | `Export Excel` |  | палитра команд: File | Выгружает выбранные или все замеры в `.xlsx`, колонки J, K, L начиная с J10. | [Экспорт в Excel](ourplancore-excel.md) |
-    | `Create Project Excel Workbook` |  | палитра команд: File | Copy the bundled TemplateCom.xlsm into a chosen project location. |  |
+    | `Create Project Excel Workbook` |  | палитра команд: File | Copy the bundled TemplateCom.xlsm into a chosen project location. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Export to Current Excel` |  | палитра команд: File | Пишет выбранную папку или позицию в активную ячейку открытой книги Excel. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Export Values to Current Excel` |  | палитра команд: File | Пишет в открытую книгу Excel только колонку `Value` для той же выборки. | [Экспорт в Excel](ourplancore-excel.md) |
     | `Link to Excel` |  | палитра команд: File | Пишет число выбранной позиции в активную ячейку открытой книги и держит его там. | [Экспорт в Excel](ourplancore-excel.md) |
@@ -2032,7 +2032,7 @@
 
     | Функция | Клавиша | Где в интерфейсе | Что делает | Подробно |
     | --- | --- | --- | --- | --- |
-    | `Voice Input` |  | Settings: Settings > Voice Input | Section of the settings panel. |  |
+    | `Voice Input` |  | Settings: Settings > Voice Input | Section of the settings panel. | [Settings и модули](ourplancore-settings.md) |
 
 ??? note "Settings > Workspace (3)"
 

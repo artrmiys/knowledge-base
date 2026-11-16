@@ -1453,7 +1453,7 @@ PAGE_LABELS = {
     "ourplancore-buildings.md": "Корпуса", "ourplancore-extras.md": "Дополнительно", "ourplancore-extras-other.md": "Прочее",
     "ourplancore-managers.md": "Менеджеры", "ourplancore-snap-trace.md": "Привязки и трассировка",
     "ourplancore-split-by-sheets.md": "Разбивка по листам", "ourplancore-editing.md": "Правка и привязки",
-    "ourplancore-ideas.md": "Идеи и планы",
+    "ourplancore-ideas.md": "Идеи и планы", "ourplancore-lite.md": "Lite и полная версия",
 }
 
 
@@ -1471,7 +1471,7 @@ PAGE_LABELS_EN = {
     "ourplancore-buildings.md": "Buildings", "ourplancore-extras.md": "Extras", "ourplancore-extras-other.md": "Other",
     "ourplancore-managers.md": "Managers", "ourplancore-snap-trace.md": "Snap and tracing",
     "ourplancore-split-by-sheets.md": "Split by sheets", "ourplancore-editing.md": "Editing and snaps",
-    "ourplancore-ideas.md": "Ideas and plans",
+    "ourplancore-ideas.md": "Ideas and plans", "ourplancore-lite.md": "Lite vs full version",
 }
 
 

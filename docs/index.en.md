@@ -51,6 +51,7 @@ client rules and common mistakes. Search (Ctrl+K) works best with the framing te
     ---
 
     - [Interface and tools](reference/ourplanecore.md)
+    - [Lite vs full version](reference/ourplancore-lite.md)
     - [Getting started: your first job](reference/ourplancore-start.md)
     - [Keyboard shortcuts](reference/ourplancore-shortcuts.md)
     - [Takeoff names and sheet dots](reference/takeoff-naming.md)
