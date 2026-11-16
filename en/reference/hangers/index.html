@@ -7338,7 +7338,7 @@
 <figure>
 <p><img alt="Hanger selection flow for common estimating decisions" src="../../../assets/images/hangers/hanger-selection-flow.svg" />
   </p>
-<figcaption>Selection flow: mount condition first, then depth, skew and special conditions.</figcaption>
+<figcaption>Selection flow: what is carried, mount, skew, then special conditions (concealed flange, firewall, Zmax).</figcaption>
 </figure>
 </div>
 <h2 id="quick-pick">Quick pick<a class="headerlink" href="#quick-pick" title="Link to this section">&para;</a></h2>
@@ -7365,8 +7365,9 @@ swap this hanger for a regular face mount: check the detail and fasteners.</p>
 <li>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19H4.09L14.18 4.43l1.64 1.14-4.54 6.56c1.61.83 2.72 2.49 2.72 4.41 0 .16 0 .31-.03.46H20zM7.91 17h4.05c.04-.15.04-.3.04-.46 0-1.26-.76-2.32-1.86-2.76z"/></svg></span> <strong>Skew / Slope</strong></p>
 <hr />
-<p>There is an angle - do not use <code>ITS</code>. Face mount: <code>SUL / SUR</code> (45 degrees), other angle
-<code>LSSR</code>; top flange: <code>LBV ... XL45 / XR45</code>; LPI slope and skew: <code>LSSU / LSSUH / LSSUI</code>.</p>
+<p>There is an angle - do not use <code>ITS</code>. Face mount: <code>SUL / SUR</code> are made at 45 degrees only;
+any other angle is <code>HU</code> with the suffix <code>SK&lt;angle&gt; L</code> or <code>R</code>; under 5 degrees treat it as straight.
+A sloped rafter takes <code>LSSR</code> or <code>LRU</code>; top flange: <code>LBV ... XL45 / XR45</code>; LPI slope and skew: <code>LSSU / LSSUH / LSSUI</code>.</p>
 </li>
 <li>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.27 3 3 8.27v7.46L8.27 21h7.46C17.5 19.24 21 15.73 21 15.73V8.27L15.73 3M9.1 5h5.8L19 9.1v5.8L14.9 19H9.1L5 14.9V9.1m6 5.9h2v2h-2zm0-8h2v6h-2z"/></svg></span> <strong>Deep Joist</strong></p>
@@ -7386,11 +7387,11 @@ the floor framing, gets <code>ITS</code>.</p>
 <h2 id="critical-rules">Critical rules<a class="headerlink" href="#critical-rules" title="Link to this section">&para;</a></h2>
 <ul>
 <li><code>ITS</code> - top flange for I-joist only and only up to 16" deep; there is no skewed <code>ITS</code>.</li>
-<li>Skewed top mount: <code>WP / HUTF / LBV</code> per detail; skewed face mount: <code>SUL / SUR / HSUR</code>.</li>
+<li>Skewed top mount: <code>WP / HUTF / LBV</code> per detail; skewed face mount at 45 degrees: <code>SUL / SUR</code>, for 2-ply LVL <code>HSUL410 / HSUR410</code>; any other angle: <code>HU ... SK&lt;angle&gt; L/R</code>.</li>
 <li>EWP (<code>LVL</code>, <code>PSL</code>, <code>GL</code>, <code>TJI</code>, <code>LPI</code>): keep the exact family and section, do not turn it into a generic hanger.</li>
 <li>Model per the detail: the detail says <code>U210-2</code> - write <code>U210-2</code>, not <code>LUS210-2</code>.</li>
 <li>Hangers on both ends of every joist, counted by assemblies on the plan, not by purchase boards after the cut list; whole pieces only.</li>
-<li>Exterior and on P.T. - <code>Zmax</code>. <code>H2.5A</code> ties to trusses under the sheathing - no <code>Zmax</code> unless the detail says otherwise.</li>
+<li>Exterior and on P.T. - <code>Zmax</code>. Hardware inside a floor and in the roof (rafters, ridge) - no <code>Zmax</code>. <code>H2.5A</code> ties to trusses under the sheathing - no <code>Zmax</code> unless the detail says otherwise.</li>
 <li>Repeated area (units x N): check that the hanger count repeats as many times as the framing.</li>
 <li>The project schedule wins over the tables below; the tables are a hint, not a replacement for the engineer's detail.</li>
 </ul>
@@ -7406,9 +7407,19 @@ the floor framing, gets <code>ITS</code>.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>Zmax</code> as a separate word after the model</td>
-<td><code>ABU66 Zmax</code>, <code>LUS210 Zmax</code>, <code>HHUS410 Zmax SK30 R</code></td>
-<td><code>ABU66Z</code>, <code>LSSR28Z</code>, <code>LUS210Z</code></td>
+<td><code>Zmax</code> as a separate word after the model, only outdoors and on P.T.</td>
+<td><code>ABU66 Zmax</code>, <code>ABA66 Zmax</code>, <code>LUS210 Zmax</code>, <code>HHUS410 Zmax SK30 R</code></td>
+<td><code>ABU66Z</code>, <code>LUS210Z</code>, <code>zmax</code></td>
+</tr>
+<tr>
+<td>A model whose catalog name includes <code>Z</code> is written as the catalog prints it, without the word <code>Zmax</code></td>
+<td><code>DTT2Z</code>, <code>LRU210Z</code>, <code>LRU212Z</code></td>
+<td><code>DTT2 Zmax</code>, <code>LRU212Z Zmax</code></td>
+</tr>
+<tr>
+<td>In the roof (rafters, ridge) hangers carry no <code>Z</code> and no <code>Zmax</code>; the one exception is <code>LRU...Z</code></td>
+<td><code>LSSR210</code>, <code>LSSR2.56</code>, <code>LRU212Z</code></td>
+<td><code>LSSR28Z</code>, <code>LSSR210 Zmax</code></td>
 </tr>
 <tr>
 <td>Angle and hand as the suffix <code>SK&lt;angle&gt; &lt;L or R&gt;</code></td>
@@ -7416,14 +7427,14 @@ the floor framing, gets <code>ITS</code>.</p>
 <td><code>skew 30 deg</code>, <code>special order</code>, <code>HDG</code> in B</td>
 </tr>
 <tr>
-<td>Skewed on sawn 2x: <code>SUL</code> left hand, <code>SUR</code> right hand, a separate row for each hand and each angle</td>
-<td><code>SUL28 Zmax</code> 12 pcs, <code>SUR28 Zmax</code> 16 pcs; angle in E <code>skewed 30°</code></td>
-<td>one row "all skewed as one SKU"</td>
+<td>Skewed at 45 degrees on sawn 2x: <code>SUL</code> left hand, <code>SUR</code> right hand, a separate row for each hand</td>
+<td><code>SUL210 Zmax</code> 12 pcs, <code>SUR210 Zmax</code> 16 pcs; E <code>skewed 45°</code></td>
+<td>one row "all skewed as one SKU"; <code>SUL</code> or <code>SUR</code> at 30 or 60 degrees (they are made at 45 only)</td>
 </tr>
 <tr>
-<td><code>LSSR</code> only for an angle outside the <code>SUL / SUR</code> range</td>
-<td><code>LSSR28 Zmax</code>, E <code>skewed 60°</code></td>
-<td><code>LSSR</code> on all skewed</td>
+<td>Skewed at any other angle: <code>HU</code> by section with the suffix <code>SK&lt;angle&gt; &lt;L or R&gt;</code>, a row per angle and hand</td>
+<td><code>HU210 SK30 R</code>, <code>HU210 SK60 L</code></td>
+<td><code>SUL28</code> marked <code>skewed 30°</code>; <code>LSSR</code> on all skewed</td>
 </tr>
 <tr>
 <td>Fire hangers only over stair, elevator, shaft walls</td>
@@ -7509,7 +7520,7 @@ the floor framing, gets <code>ITS</code>.</p>
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">CBH for Glulam</div>
       <div class="kb-figure-row__rule"><code>CBH2.37X9.75C-KT</code> - a special connection for glulam.</div>
-      <div class="kb-figure-row__note">Only when a detail or schedule shows a glulam or Cedar-style connection.</div>
+      <div class="kb-figure-row__note">Only when a detail or schedule shows a glulam or Cedar-style connection. Picture: Simpson Strong-Tie catalog, <a href="https://www.strongtie.com/">strongtie.com</a>.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../assets/images/confluence/confluence-030.png" target="_blank" rel="noopener"><img src="../../../assets/images/confluence/confluence-030.png" alt="CBH hanger for glulam condition" loading="lazy"></a>
   </figure>
@@ -7517,7 +7528,7 @@ the floor framing, gets <code>ITS</code>.</p>
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">CJTZ for Cedar</div>
       <div class="kb-figure-row__rule"><code>CJTZ</code> - a separate item for Cedar beams and posts.</div>
-      <div class="kb-figure-row__note">Do not mix with regular beam hangers; it is a separate row in the workbook.</div>
+      <div class="kb-figure-row__note">Do not mix with regular beam hangers; it is a separate row in the workbook. Picture: CJTZ installation guide, Simpson Strong-Tie, <a href="https://www.strongtie.com/">strongtie.com</a>.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../assets/images/confluence/confluence-031.png" target="_blank" rel="noopener"><img src="../../../assets/images/confluence/confluence-031.png" alt="CJTZ installation for Cedar beam and post" loading="lazy"></a>
   </figure>
@@ -7576,8 +7587,66 @@ the floor framing, gets <code>ITS</code>.</p>
 </tbody>
 </table>
 <h2 id="tables">Hanger quick table<a class="headerlink" href="#tables" title="Link to this section">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Beam Face Mount</label><label for="__tabbed_1_2">Beam Concealed</label><label for="__tabbed_1_3">Beam Top Flange</label><label for="__tabbed_1_4">TJI</label><label for="__tabbed_1_5">LPI</label><label for="__tabbed_1_6">Skew / Slope</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:7"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Sawn 2x</label><label for="__tabbed_1_2">Beam Face Mount</label><label for="__tabbed_1_3">Beam Concealed</label><label for="__tabbed_1_4">Beam Top Flange</label><label for="__tabbed_1_5">TJI</label><label for="__tabbed_1_6">LPI</label><label for="__tabbed_1_7">Skew / Slope</label></div>
 <div class="tabbed-content">
+<div class="tabbed-block">
+<p>The most common case: a joist or rafter of regular lumber on a face mount.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Hanger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2x4</td>
+<td><code>LUS24</code></td>
+</tr>
+<tr>
+<td>2x6</td>
+<td><code>LUS26</code></td>
+</tr>
+<tr>
+<td>2x8</td>
+<td><code>LUS28</code></td>
+</tr>
+<tr>
+<td>2x10</td>
+<td><code>LUS210</code></td>
+</tr>
+<tr>
+<td>2x12</td>
+<td><code>LUS210</code> (there is no <code>LUS212</code> model)</td>
+</tr>
+<tr>
+<td>(2) 2x8</td>
+<td><code>LUS28-2</code></td>
+</tr>
+<tr>
+<td>(2) 2x10, (2) 2x12</td>
+<td><code>LUS210-2</code></td>
+</tr>
+<tr>
+<td>beam (2) 2x8, (2) 2x10, (3) 2x10</td>
+<td><code>HU28-2</code>, <code>HU210-2</code>, <code>HU210-3</code>; concealed flange <code>HUC28-2</code>, <code>HUC210-2</code></td>
+</tr>
+<tr>
+<td>sloped rafter to a ledger or ridge</td>
+<td><code>LRU26Z</code>, <code>LRU28Z</code>, <code>LRU210Z</code>, <code>LRU212Z</code></td>
+</tr>
+<tr>
+<td>skewed 2x at 45 degrees</td>
+<td><code>SUL210</code> left, <code>SUR210</code> right; double <code>SUL210-2</code>, <code>SUR210-2</code></td>
+</tr>
+<tr>
+<td>skewed 2x at another angle</td>
+<td><code>HU210 SK30 R</code>: <code>HU</code> by section, angle and hand as a suffix</td>
+</tr>
+</tbody>
+</table>
+<p>Outdoors and on P.T. add the word <code>Zmax</code> to the model: <code>LUS210 Zmax</code>.</p>
+</div>
 <div class="tabbed-block">
 <table>
 <thead>

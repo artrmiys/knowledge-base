@@ -7277,7 +7277,7 @@
 <figcaption>Dropped soffit with the gypsum removed: a 2x box hung under the floor joists along the wall, with pipes and a duct running inside. On the RCP such a box shows as a line with a height mark; we count plates around the perimeter and frame by area. Photo: themakerista.com, <a href="http://www.themakerista.com/the-kitchen-gut-job-and-hiccups/">source</a>, found via Pinterest.</figcaption>
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
-<p>Interior ceiling and box framing: dropped soffits over kitchens and in corridors, ceiling boxes for ducts, the mechanical room ceiling (<code>Ceiling Mech</code>), the kitchen ceiling per unit. This is framing scope, not finish and not the exterior soffit. Ceiling finish (crown, gypsum) is <a href="../../interior-trims/overview/">Interior Trims</a>; the roof soffit under the overhang is <a href="../../sheathing-and-misc/eve/">Eve / Eave</a>; soffit plywood under roof trusses is <a href="../roof-framing/roof-sheathing/">Roof Sheathing</a>; gypsum backing on a wall parallel to the joists is <a href="../floor-framing/details/bracingdrywall/">Bracing for Drywall</a>.</p>
+<p>Interior ceiling and box framing: dropped soffits over kitchens and in corridors, ceiling boxes for ducts, the mechanical room ceiling (<code>Ceiling Mech</code>), the kitchen ceiling per unit. This is framing scope, not finish and not the exterior soffit. Ceiling finish (crown, gypsum) is <a href="../../interior-trims/overview/">Interior Trims</a>; the roof soffit under the overhang is <a href="../../sheathing-and-misc/eve/">Eve / Eave</a>; soffit plywood under roof trusses is <a href="../roof-framing/roof-sheathing/">Roof Sheathing</a>; gypsum backing on a wall parallel to the joists is the <code>Blocking for Drywall</code> row, page <a href="../floor-framing/details/bracingdrywall/">Wall Bracing and Blocking for Drywall</a>.</p>
 <h2 id="where-to-find-it-on-the-plans">Where to find it on the plans<a class="headerlink" href="#where-to-find-it-on-the-plans" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
@@ -7306,80 +7306,119 @@
 </tbody>
 </table>
 <h2 id="how-to-measure-in-ourplancore">How to measure in OurPlanCore<a class="headerlink" href="#how-to-measure-in-ourplancore" title="Link to this section">&para;</a></h2>
-<p>On the RCP sheet (sheet dot by floor): Line (L) around the perimeter of each box for plates, Area (A) over the ceiling area for frame at a spacing. Area and perimeter are measured by hand from the A sheets, not taken from the floor's overall sqft. There is no fixed branch for these takeoffs in the tree.</p>
-<div class="admonition warning">
-<p class="admonition-title">To be confirmed</p>
-<p>Where to put soffit takeoffs in the tree (<code>framing/&lt;floor&gt; framing/details/soffit</code> or <code>roof misc</code>) is not confirmed by delivered jobs.</p>
+<p>On the RCP sheet (sheet dot by floor):</p>
+<ul>
+<li>Line (L) along the length of each box (soffit, bulkhead). Put the drop height in feet in the line name (<code>soffit 1.5</code>): the vertical frame is counted from length x height.</li>
+<li>Area (A) over the dropped ceiling area for the horizontal frame at a spacing; the perimeter of that area is needed for the plates.</li>
+</ul>
+<p>Area and perimeter are measured by hand from the A sheets, not taken from the floor's overall sqft. Anything already counted as floor or roof framing is not repeated here.</p>
+<div class="admonition note">
+<p class="admonition-title">Tree branch</p>
+<p>There is no single branch for soffit takeoffs across all jobs. Put them in the branch the current job already uses (<code>framing/&lt;floor&gt; framing/details/soffit</code> or <code>roof misc</code>), the same way in every building. If the job has no such branch yet, pick one of the two and keep it in every building.</p>
 </div>
 <h2 id="takeoff-name-and-dfl-row">Takeoff name and DFL row<a class="headerlink" href="#takeoff-name-and-dfl-row" title="Link to this section">&para;</a></h2>
-<p>Sections are organized per floor or per area (1st, 2nd, Loft), like interior trims.</p>
+<p>The rows go in the <code>Ceiling Materials</code> DFL section, by floor or by area (1st, 2nd, Loft), like interior trims. <code>G</code> and <code>H</code> mean something different in every row, so they are spelled out row by row:</p>
 <table>
 <thead>
 <tr>
-<th>Section</th>
+<th>Group</th>
 <th>A (Label)</th>
 <th>B</th>
 <th>C</th>
 <th>D</th>
-<th>E</th>
+<th>G</th>
+<th>H</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Interior Soffit Framing</td>
-<td><code>Plate (2)</code> + <code>Frame 16" o.c.</code></td>
+<td>Boxes and dropped ceiling</td>
+<td><code>Vertical Frame 24" o.c.</code></td>
 <td><code>2x4</code></td>
-<td>perimeter x 2 x 1.1; area x 12 / spacing</td>
+<td><code>=CEILING(G*0.5*1.1,10)</code></td>
 <td><code>LFT</code></td>
-<td>RCP</td>
+<td>sum of (box length x drop height), SQ FT</td>
+<td>empty</td>
 </tr>
 <tr>
-<td>Ceiling Mech</td>
+<td>Boxes and dropped ceiling</td>
+<td><code>Vertical Frame Plate (2)</code></td>
+<td><code>2x4</code></td>
+<td><code>=CEILING(G*H*1.1,10)</code></td>
+<td><code>LFT</code></td>
+<td>sum of the box lengths, LFT</td>
+<td>number of plates: 2 = top and bottom</td>
+</tr>
+<tr>
+<td>Boxes and dropped ceiling</td>
+<td><code>Horizontal Frame 24" o.c.</code></td>
+<td><code>2x4</code></td>
+<td><code>=CEILING(G*0.5*1.1,10)</code></td>
+<td><code>LFT</code></td>
+<td>dropped ceiling area, SQ FT</td>
+<td>empty</td>
+</tr>
+<tr>
+<td>Boxes and dropped ceiling</td>
+<td><code>Horizontal Frame Plate (1)</code></td>
+<td><code>2x4</code></td>
+<td><code>=CEILING(G*H*1.1,10)</code></td>
+<td><code>LFT</code></td>
+<td>dropped ceiling perimeter, LFT</td>
+<td>number of plates</td>
+</tr>
+<tr>
+<td>Mech room</td>
 <td><code>Plate (1) Ceiling Mech</code></td>
 <td><code>2x6</code></td>
 <td><code>=CEILING(G*H*1.1,10)</code></td>
 <td><code>LFT</code></td>
-<td>details</td>
+<td>plate length along the mech room walls, LFT</td>
+<td>number of plates</td>
 </tr>
 <tr>
-<td>Ceiling Mech</td>
+<td>Mech room</td>
 <td><code>Frame 24" o.c. Ceiling Mech</code></td>
 <td><code>2x6</code></td>
 <td><code>=CEILING(G*12/H/D,10)</code></td>
 <td><code>12</code></td>
-<td><code>A454</code></td>
+<td>ceiling area, SQ FT</td>
+<td>spacing in inches</td>
 </tr>
 <tr>
-<td>Ceiling Mech</td>
+<td>Mech room</td>
 <td><code>Screws 16" o.c. (2)</code></td>
 <td><code>Screws 0.22 x 4"</code></td>
 <td><code>=CEILING(G*12*1.1/H*2,10)</code></td>
 <td><code>pcs</code></td>
-<td><code>10/19/S500</code></td>
+<td>plate length, LFT</td>
+<td>spacing in inches</td>
 </tr>
 <tr>
-<td>Kitchen Ceiling</td>
+<td>Kitchen ceiling</td>
 <td>kitchen ceiling materials</td>
 <td>per spec</td>
 <td>per unit x number of units</td>
 <td><code>LFT</code> / <code>SQ FT</code></td>
-<td>unit plan</td>
-</tr>
-<tr>
-<td>Ceiling per floor (multifamily)</td>
-<td><code>Plate (1) Ceiling</code>, <code>Plate (2) Vertical Frame</code>, <code>Frame 24" o.c. Ceiling</code>, <code>Vertical Frame 24" o.c. Ceiling</code></td>
-<td><code>2x4</code></td>
-<td><code>=CEILING(G*H*1.1,10)</code>, <code>=CEILING(G*12/H,10)</code></td>
-<td><code>LFT</code></td>
-<td><code>A454</code></td>
+<td>from the unit plan</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p>Ceiling Mech is typical for single-story jobs with a mech room; on a multifamily building it is replaced by a ceiling per floor in the truss heel zone: <a href="../../vertical/sheathing/truss-heel/">Truss Heel</a>. <code>G</code> is the perimeter or area from the A plans, <code>H</code> the number of plates or the spacing, <code>D</code> the board length.</p>
+<ul>
+<li>The <code>0.5</code> multiplier in the box frame rows is 24" o.c. spacing (<code>0.75</code> at 16" o.c.); it must match the spacing in the Label. The <code>1.1</code> allowance in these rows is on both the frame and the plate.</li>
+<li><code>(n)</code> in the plate Label = the number in H.</li>
+<li><code>Frame 24" o.c. Ceiling Mech</code>: <code>G*12/H</code> is the LFT of frame boards at spacing H, and <code>/D</code> turns them into 12' boards, which is why D holds <code>12</code>, not <code>LFT</code>. This formula has no <code>1.1</code> multiplier: rounding up to 10 boards gives the allowance.</li>
+<li><code>Screws 16" o.c. (2)</code>: <code>G*12/H</code> is the number of points along the plate, <code>2</code> is the screws per point.</li>
+<li>Plain ceiling joists (no box) go in the <code>Ceiling Joists 16" o.c.</code> row of the Floor Framing List, not here.</li>
+</ul>
+<p>Ceiling Mech is typical for single-story jobs with a mech room. On a multifamily building the boxes and dropped ceilings by floor are counted with the vertical and horizontal frame rows from the table above.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Dropped soffits from the RCP not counted: they are not on the structural plan.</li>
 <li>Ceiling Mech missing one of its three rows (plate, frame, screws).</li>
+<li>The perimeter put into G of the frame row, or the area into G of the plate row: check in the table what G means in each row.</li>
+<li>The spacing multiplier does not match the Label: <code>0.5</code> at <code>16" o.c.</code>.</li>
 <li>Kitchen ceiling counted as one area when it should be per unit.</li>
 <li>Dropped soffit written as bracing or as a deflection-track wall.</li>
 <li>Detail callout on Frame copied from the previous building, not checked against the sheet.</li>
@@ -7429,10 +7468,11 @@
 </tr>
 </tbody>
 </table>
+<p>Check: plate 1395 LFT x 1 x 1.1 = 1534.5, so 1540 LFT. Frame: area 3896 SQ FT x 12 / 24 = 1948 LFT, / 12 = 162.3, so 170 boards of 12'. Screws: 1395 x 12 / 16 = 1046.25 points, x 2 x 1.1 = 2301.75, so 2310 pcs.</p>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>
 <li><a href="../../interior-trims/overview/">Interior Trims, overview</a>, <a href="../../sheathing-and-misc/eve/">Eve / Eave</a>, <a href="../roof-framing/roof-sheathing/">Roof Sheathing</a></li>
-<li><a href="../../vertical/sheathing/truss-heel/">Truss Heel</a>, <a href="../floor-framing/details/bracingdrywall/">Bracing for Drywall</a>, <a href="../../../reference/quantity-benchmarks/">Quantity benchmarks</a></li>
+<li><a href="../../vertical/sheathing/truss-heel/">Truss Heel</a>, <a href="../floor-framing/details/bracingdrywall/">Wall Bracing and Blocking for Drywall</a>, <a href="../../../reference/quantity-benchmarks/">Quantity benchmarks</a></li>
 </ul>
 
 

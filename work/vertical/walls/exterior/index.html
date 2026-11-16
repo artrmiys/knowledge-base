@@ -3133,7 +3133,7 @@
   <a href="#stud-height" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Высота стойки
+        Высота стены и стойки
       
     </span>
   </a>
@@ -7238,7 +7238,7 @@
   <a href="#stud-height" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Высота стойки
+        Высота стены и стойки
       
     </span>
   </a>
@@ -7325,9 +7325,9 @@
 
 <h1 id="exterior-walls">Exterior Walls (наружные стены)<a class="headerlink" href="#exterior-walls" title="Прямая ссылка на раздел">&para;</a></h1>
 <figure>
-<p><img alt="Разрез наружной стены с точками проверки" src="../../../../assets/images/walls/exterior-wall-section.svg" />
+<p><img alt="Разрез наружной стены: слои и высота стены для имени" src="../../../../assets/images/walls/exterior-wall-section.svg" />
   </p>
-<figcaption>Наружная стена в разрезе: plates, studs, sheathing, WRB, insulation. Перед счётом раздели стену на слои и реши, какие из них в scope.</figcaption>
+<figcaption>Наружная стена в разрезе между двумя перекрытиями. Высота в имени = floor-to-floor минус subfloor минус глубина перекрытия, plates не вычитаются. Слои с номерами: studs, plates, sheathing, WRB наши; gypsum и batt by others.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Exterior wall - стена по контуру здания с обшивкой снаружи. От внутренних
@@ -7354,7 +7354,7 @@
 </tr>
 <tr>
 <td>Разрезы <code>a3.01 sec</code></td>
-<td>Высота стойки, состав перекрытия, где кончается стена и начинается gable</td>
+<td>Высота стены, состав перекрытия, где кончается стена и начинается gable</td>
 </tr>
 <tr>
 <td>Фасады <code>el</code>, energy sheets</td>
@@ -7380,8 +7380,11 @@
 <li>Тип стены определяй по участкам, не группой: кусок demising между двумя
    наружными не становится <code>ext</code>.</li>
 <li>Двойная стена - два каркаса только если на плане два каркаса.</li>
-<li>BW и shear walls в <code>walls</code> не рисуются: у них свои ветки
-   <a href="../bearing-walls/">BW</a> и <a href="../../sheathing/shear-wall/">Shear Wall</a>.</li>
+<li>Саму стену меряй в <code>walls</code> один раз как обычную (<code>ext</code>, <code>corr</code>, <code>dem</code>), даже
+   если она несущая или shear. Марки BW и SW в <code>walls</code> отдельными линиями не
+   рисуются: полоса несущей стены и участок SW обводятся ещё раз в своих ветках
+   <a href="../bearing-walls/">BW</a> и <a href="../../sheathing/shear-wall/">Shear Wall</a>. Длины
+   трёх веток не складываются.</li>
 <li>Каждой позиции свой Color.</li>
 </ol>
 <figure>
@@ -7389,17 +7392,30 @@
   </p>
 <figcaption>Line по стенам 1-го этажа. Имя несёт категорию, сечение и высоту: <code>ext 2x6 9.09</code>.</figcaption>
 </figure>
-<h3 id="stud-height">Высота стойки<a class="headerlink" href="#stud-height" title="Прямая ссылка на раздел">&para;</a></h3>
-<p>Высота в имени - высота стены с plates в десятичных футах. Это <strong>не</strong>
-floor-to-floor и не отметка потолка. Читай разрез каждого дома: из
-floor-to-floor вычти subfloor и глубину перекрытия, потом проверь, льётся ли
-gypcrete поверх каркаса или внутрь. Пример: 9'-6" floor-to-floor минус TJI
-11 7/8" минус 3/4" subfloor = 8.45'. В DFL высота живёт в колонке E строки
-студов (до 1/8"), в имени стены - десятичные футы.</p>
+<h3 id="stud-height">Высота стены и стойки<a class="headerlink" href="#stud-height" title="Прямая ссылка на раздел">&para;</a></h3>
+<p>Высота в имени - высота стены <strong>в сборе, с plates</strong>: стойка + 1 нижняя + 2
+верхние доски, в десятичных футах. Это <strong>не</strong> floor-to-floor и не отметка
+потолка.</p>
+<ul>
+<li>Формула: floor-to-floor минус subfloor <code>3/4"</code> минус глубина перекрытия.
+  Читай разрез каждого дома и проверь, льётся ли gypcrete поверх каркаса или
+  внутрь.</li>
+<li>Plates <strong>не вычитаются</strong>: три стандартные доски (1 btm + 2 top) уже сидят
+  в этой высоте.</li>
+<li>Вычитаются только доски сверх стандартных трёх, когда разрез их
+  показывает: вторая btm plate, truss blocking поверх top plates.</li>
+<li>Голая стойка = высота стены минус <code>4 1/2"</code> (три доски по 1 1/2"). Отдельно
+  её считать не нужно: таблица ниже и шаблон DFL работают от высоты стены.</li>
+<li>Пример: 9'-6" floor-to-floor минус TJI 11 7/8" минус 3/4" subfloor =
+  8'-5 3/8" = 8.45'. Это высота стены и число в имени (<code>ext 2x6 8.45</code>); сама
+  стойка 8'-0 7/8", по таблице ниже это 9' precut.</li>
+</ul>
+<p>В DFL та же высота стены стоит в H и E строки студов (E в футах и дюймах до
+1/8"), в имени стены - десятичные футы.</p>
 <figure>
 <p><img alt="Разрез: высота 9'-0&quot;, TJI 11 7/8&quot;, subfloor 3/4&quot;" src="../../../../assets/images/confluence/confluence-110.png" />
   </p>
-<figcaption>Разрез кухни: высота стойки 9'-0" стоит между subfloor и низом перекрытия выше. Красные линии - границы стены, а не отметки этажей.</figcaption>
+<figcaption>Разрез кухни: высота стены 9'-0" стоит между subfloor и низом перекрытия выше. Красные линии - границы стены, а не отметки этажей.</figcaption>
 </figure>
 <h3 id="precut">Какая стойка по высоте стены<a class="headerlink" href="#precut" title="Прямая ссылка на раздел">&para;</a></h3>
 <p>Высота стены (с plates, как в имени) определяет, какую стойку заказывать:</p>
@@ -7460,25 +7476,25 @@ gypcrete поверх каркаса или внутрь. Пример: 9'-6" fl
 <td><code>ext 2x6 9.09</code></td>
 <td>Наружная 2x6 высотой 9.09'</td>
 <td><code>Studs Ext</code>, <code>Plates Ext (1) btm</code> P.T., <code>Plates Ext (2) dbl top</code></td>
-<td>pcs, LFT</td>
+<td>studs: штуки (в D длина стойки), plates: LFT</td>
 </tr>
 <tr>
 <td><code>corr 2x6 11.7</code></td>
 <td>Коридорная, см. <a href="../corridor/">Corridor</a></td>
-<td><code>Studs Corr</code>, <code>Plates Corr</code></td>
-<td>pcs, LFT</td>
+<td><code>Studs Corridor</code>, <code>Plates Corr</code></td>
+<td>то же</td>
 </tr>
 <tr>
 <td><code>dem 2x6 9.09</code></td>
 <td>Межквартирная, см. <a href="../demising/">Demising</a></td>
 <td><code>Studs Demising</code>, <code>Plates Demising</code></td>
-<td>pcs, LFT</td>
+<td>то же</td>
 </tr>
 <tr>
 <td><code>dem (2) 2x6 9.09</code></td>
 <td>Двойная demising, два одинаковых каркаса</td>
-<td>две группы строк</td>
-<td>pcs, LFT</td>
+<td>те же строки <code>Demising</code>, длина линии удваивается</td>
+<td>то же</td>
 </tr>
 <tr>
 <td><code>furr 2x4 9.09</code></td>
@@ -7490,20 +7506,30 @@ gypcrete поверх каркаса или внутрь. Пример: 9'-6" fl
 <td><code>2x4 9.09</code></td>
 <td>Обычная перегородка без префикса</td>
 <td><code>Studs Interior</code>, <code>Plates Interior</code></td>
-<td>pcs, LFT</td>
+<td>то же</td>
 </tr>
 <tr>
 <td><code>2x6 half</code></td>
 <td>Половинная стена</td>
-<td>по высоте из имени</td>
-<td>pcs, LFT</td>
+<td><code>Studs Interior half</code>, plates как у перегородки</td>
+<td>то же</td>
 </tr>
 </tbody>
 </table>
-<p>Со стеной в DFL идут <code>Bracing Ext Walls 2x4</code>, <code>Blocking</code>, <code>Wall Sheathing</code>,
-<code>Vapor Barrier</code> (подпись шаблона; материал - WRB из спецификации, не Tyvek по
-умолчанию), <code>Insulation</code>, <code>Holdowns</code> и
-<code>Ext. Headers</code>. Факторы стоек (16" = 1.1, 24" = 0.625) - один канон в
+<p>Со стеной в DFL идут:</p>
+<ul>
+<li><code>Bracing Ext Walls</code> <code>2x4</code> - в <strong>штуках</strong>: одна доска на каждые 8 LFT стены
+  (<code>=G/8*1.1</code>), в D длина доски по самой высокой стене группы (до 10' = 14, до 12' = 16,
+  до 16' = 18, выше = 20). Только для стен от 7' и выше.</li>
+<li><code>Blocking</code> в LFT, <code>Wall Sheathing</code> в листах <code>4x8</code>.</li>
+<li><code>Vapor Barrier</code> в SQ FT - подпись шаблона; в B пишется WRB из спецификации,
+  не Tyvek по умолчанию. При Zip этой строки нет: барьер уже в листе,
+  остаётся только <code>Tape</code>.</li>
+<li><code>Insulation</code> в SQ FT - только continuous insulation снаружи обшивки.
+  Утеплитель между стойками by others, строки нет.</li>
+<li><code>Holdowns</code> и <code>Ext. Headers</code>.</li>
+</ul>
+<p>Факторы стоек (16" = 1.1, 24" = 0.625) - один канон в
 <a href="../../../../reference/formulas/#stud-spacing-factors">Формулах</a>. Кнопка <code>WL</code>
 полосы XL переносит стены в блок этажа; суффикс после высоты (<code>ext 2x6 10.09
 5/S400</code>) отделяется сам.</p>
@@ -7515,7 +7541,7 @@ Metal stud и CMU стены: каркас by others, но exterior gypsum, insu
 flashing и window jambs остаются нашими (<a href="../metal-tracks/">Metal Tracks</a>).</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li>Высота стойки взята как floor-to-floor или отметка потолка.</li>
+<li>Высота стены взята как floor-to-floor или отметка потолка, или из неё ещё раз вычтены plates.</li>
 <li>Тип стены задан группой: corridor и demising перепутаны, кусок demising попал в exterior.</li>
 <li>P.T. plate на деревянном перекрытии: P.T. только на бетоне и кладке.</li>
 <li>Двойная нижняя plate везде, хотя деталь показывает её только на части этажей.</li>

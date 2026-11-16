@@ -3133,7 +3133,7 @@
   <a href="#stud-height" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Stud height
+        Wall height and stud height
       
     </span>
   </a>
@@ -7238,7 +7238,7 @@
   <a href="#stud-height" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Stud height
+        Wall height and stud height
       
     </span>
   </a>
@@ -7325,9 +7325,9 @@
 
 <h1 id="exterior-walls">Exterior Walls<a class="headerlink" href="#exterior-walls" title="Link to this section">&para;</a></h1>
 <figure>
-<p><img alt="Exterior wall section with check points" src="../../../../../assets/images/walls/exterior-wall-section.svg" />
+<p><img alt="Exterior wall section: layers and the wall height for the name" src="../../../../../assets/images/walls/exterior-wall-section.svg" />
   </p>
-<figcaption>Exterior wall in section: plates, studs, sheathing, WRB, insulation. Before counting, split the wall into layers and decide which of them are in scope.</figcaption>
+<figcaption>Exterior wall in section between two floors. The height in the name = floor-to-floor minus subfloor minus floor depth; plates are not deducted. Numbered layers: studs, plates, sheathing, WRB are ours; gypsum and batt are by others.</figcaption>
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
 <p>An exterior wall runs along the building perimeter and has sheathing on the outside. It differs from interior
@@ -7354,7 +7354,7 @@ that all facade openings are cut out of it. A wall on concrete brings along
 </tr>
 <tr>
 <td>Sections <code>a3.01 sec</code></td>
-<td>Stud height, floor framing makeup, where the wall ends and the gable starts</td>
+<td>Wall height, floor framing makeup, where the wall ends and the gable starts</td>
 </tr>
 <tr>
 <td>Elevations <code>el</code>, energy sheets</td>
@@ -7380,8 +7380,11 @@ a new line into <code>walls/&lt;floor&gt; floor walls</code>.</p>
 <li>Decide the wall type run by run, not as a group: a piece of demising between two
    exterior walls does not become <code>ext</code>.</li>
 <li>A double wall is two frames only if the plan shows two frames.</li>
-<li>BW and shear walls are not drawn in <code>walls</code>: they have their own branches,
-   <a href="../bearing-walls/">BW</a> and <a href="../../sheathing/shear-wall/">Shear Wall</a>.</li>
+<li>Measure the wall itself in <code>walls</code> once, as a regular wall (<code>ext</code>, <code>corr</code>, <code>dem</code>),
+   even if it is bearing or a shear wall. BW and SW marks are not drawn in <code>walls</code> as
+   separate lines: the bearing wall strip and the SW segment are traced again in their
+   own branches, <a href="../bearing-walls/">BW</a> and <a href="../../sheathing/shear-wall/">Shear Wall</a>.
+   The lengths of the three branches are never added together.</li>
 <li>Give each takeoff its own Color.</li>
 </ol>
 <figure>
@@ -7389,17 +7392,30 @@ a new line into <code>walls/&lt;floor&gt; floor walls</code>.</p>
   </p>
 <figcaption>Line on the 1st floor walls. The name carries the category, size and height: <code>ext 2x6 9.09</code>.</figcaption>
 </figure>
-<h3 id="stud-height">Stud height<a class="headerlink" href="#stud-height" title="Link to this section">&para;</a></h3>
-<p>The height in the name is the wall height including plates, in decimal feet. It is <strong>not</strong>
-floor-to-floor and not the ceiling elevation. Read the section of each building: from
-the floor-to-floor subtract the subfloor and the floor framing depth, then check whether the
-gypcrete is poured over the framing or between it. Example: 9'-6" floor-to-floor minus 11 7/8" TJI
-minus 3/4" subfloor = 8.45'. In the DFL the height lives in column E of the
-stud row (to 1/8"), in the wall name it is decimal feet.</p>
+<h3 id="stud-height">Wall height and stud height<a class="headerlink" href="#stud-height" title="Link to this section">&para;</a></h3>
+<p>The height in the name is the height of the <strong>assembled wall, plates included</strong>: the stud
+plus 1 bottom and 2 top plates, in decimal feet. It is <strong>not</strong> floor-to-floor and not the
+ceiling elevation.</p>
+<ul>
+<li>Formula: floor-to-floor minus the <code>3/4"</code> subfloor minus the floor framing depth.
+  Read the section of each building and check whether the gypcrete is poured over the
+  framing or between it.</li>
+<li>Plates are <strong>not deducted</strong>: the three standard plates (1 btm + 2 top) are already
+  inside this height.</li>
+<li>Deduct only boards beyond the standard three, when the section shows them: a second
+  btm plate, truss blocking on top of the top plates.</li>
+<li>Bare stud = wall height minus <code>4 1/2"</code> (three plates at 1 1/2" each). You do not need
+  to work it out separately: the table below and the DFL template run off the wall height.</li>
+<li>Example: 9'-6" floor-to-floor minus 11 7/8" TJI minus 3/4" subfloor =
+  8'-5 3/8" = 8.45'. That is the wall height and the number in the name (<code>ext 2x6 8.45</code>);
+  the stud itself is 8'-0 7/8", which the table below reads as a 9' precut.</li>
+</ul>
+<p>In the DFL the same wall height sits in H and E of the stud row (E in feet and inches to
+1/8"), in the wall name it is decimal feet.</p>
 <figure>
 <p><img alt="Section: height 9'-0&quot;, TJI 11 7/8&quot;, subfloor 3/4&quot;" src="../../../../../assets/images/confluence/confluence-110.png" />
   </p>
-<figcaption>Kitchen section: the 9'-0" stud height sits between the subfloor and the underside of the floor framing above. Red lines are the wall limits, not floor elevations.</figcaption>
+<figcaption>Kitchen section: the 9'-0" wall height sits between the subfloor and the underside of the floor framing above. Red lines are the wall limits, not floor elevations.</figcaption>
 </figure>
 <h3 id="precut">Which stud for the wall height<a class="headerlink" href="#precut" title="Link to this section">&para;</a></h3>
 <p>The wall height (with plates, as in the name) decides which stud to order:</p>
@@ -7460,25 +7476,25 @@ stud row (to 1/8"), in the wall name it is decimal feet.</p>
 <td><code>ext 2x6 9.09</code></td>
 <td>Exterior 2x6, 9.09' high</td>
 <td><code>Studs Ext</code>, <code>Plates Ext (1) btm</code> P.T., <code>Plates Ext (2) dbl top</code></td>
-<td>pcs, LFT</td>
+<td>studs: pieces (D holds the stud length), plates: LFT</td>
 </tr>
 <tr>
 <td><code>corr 2x6 11.7</code></td>
 <td>Corridor wall, see <a href="../corridor/">Corridor</a></td>
-<td><code>Studs Corr</code>, <code>Plates Corr</code></td>
-<td>pcs, LFT</td>
+<td><code>Studs Corridor</code>, <code>Plates Corr</code></td>
+<td>same</td>
 </tr>
 <tr>
 <td><code>dem 2x6 9.09</code></td>
 <td>Unit separation wall, see <a href="../demising/">Demising</a></td>
 <td><code>Studs Demising</code>, <code>Plates Demising</code></td>
-<td>pcs, LFT</td>
+<td>same</td>
 </tr>
 <tr>
 <td><code>dem (2) 2x6 9.09</code></td>
 <td>Double demising, two identical frames</td>
-<td>two groups of rows</td>
-<td>pcs, LFT</td>
+<td>the same <code>Demising</code> rows, the line length is doubled</td>
+<td>same</td>
 </tr>
 <tr>
 <td><code>furr 2x4 9.09</code></td>
@@ -7490,20 +7506,30 @@ stud row (to 1/8"), in the wall name it is decimal feet.</p>
 <td><code>2x4 9.09</code></td>
 <td>Regular partition, no prefix</td>
 <td><code>Studs Interior</code>, <code>Plates Interior</code></td>
-<td>pcs, LFT</td>
+<td>same</td>
 </tr>
 <tr>
 <td><code>2x6 half</code></td>
 <td>Half wall</td>
-<td>height from the name</td>
-<td>pcs, LFT</td>
+<td><code>Studs Interior half</code>, plates as for a partition</td>
+<td>same</td>
 </tr>
 </tbody>
 </table>
-<p>Along with the wall the DFL gets <code>Bracing Ext Walls 2x4</code>, <code>Blocking</code>, <code>Wall Sheathing</code>,
-<code>Vapor Barrier</code> (the template label; the material is the WRB from the spec, not Tyvek by
-default), <code>Insulation</code>, <code>Holdowns</code> and
-<code>Ext. Headers</code>. Stud factors (16" = 1.1, 24" = 0.625) have one canon in
+<p>Along with the wall the DFL gets:</p>
+<ul>
+<li><code>Bracing Ext Walls</code> <code>2x4</code> in <strong>pieces</strong>: one board per 8 LFT of wall
+  (<code>=G/8*1.1</code>), D holds the board length by the tallest wall of the group (up to 10' = 14, up to 12' = 16,
+  up to 16' = 18, above = 20). Only for walls 7' and taller.</li>
+<li><code>Blocking</code> in LFT, <code>Wall Sheathing</code> in <code>4x8</code> sheets.</li>
+<li><code>Vapor Barrier</code> in SQ FT is the template label; B gets the WRB from the spec,
+  not Tyvek by default. With Zip there is no such row: the barrier is built into the
+  sheet, only <code>Tape</code> remains.</li>
+<li><code>Insulation</code> in SQ FT: only continuous insulation outside the sheathing.
+  Insulation between studs is by others, no row.</li>
+<li><code>Holdowns</code> and <code>Ext. Headers</code>.</li>
+</ul>
+<p>Stud factors (16" = 1.1, 24" = 0.625) have one canon in
 <a href="../../../../reference/formulas/#stud-spacing-factors">Formulas</a>. The <code>WL</code> button
 on the XL strip moves the walls into the floor block; a suffix after the height (<code>ext 2x6 10.09
 5/S400</code>) is split off automatically.</p>
@@ -7515,7 +7541,7 @@ Metal stud and CMU walls: framing is by others, but exterior gypsum, insulation,
 flashing and window jambs stay ours (<a href="../metal-tracks/">Metal Tracks</a>).</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
-<li>Stud height taken as floor-to-floor or the ceiling elevation.</li>
+<li>Wall height taken as floor-to-floor or the ceiling elevation, or the plates deducted from it once more.</li>
 <li>Wall type assigned as a group: corridor and demising mixed up, a piece of demising ended up in exterior.</li>
 <li>P.T. plate on wood floor framing: P.T. only on concrete and masonry.</li>
 <li>Double bottom plate everywhere although the detail shows it only on some floors.</li>

@@ -7213,10 +7213,11 @@
 
 
 <h1 id="page-preview">Page preview<a class="headerlink" href="#page-preview" title="Link to this section">&para;</a></h1>
-<p>This page is a quick visual check: open it locally and look at
+<p>This page is a quick visual check for the editor: open it locally and look at
 readability, image cards, tables and links between rules. It does not
-replace the working sections of the wiki; it shows what a good
-topic page should look like.</p>
+replace the working sections; it shows what a good topic page should look like.
+The template is the same for the reader and the editor: it is also described in
+<a href="../how-to-use/">How to use the KB</a>.</p>
 <h2 id="quick-route">Quick route<a class="headerlink" href="#quick-route" title="Link to this section">&para;</a></h2>
 <div class="grid cards">
 <ul>
@@ -7251,6 +7252,7 @@ client-specific rules.</p>
 </ul>
 </div>
 <h2 id="how-a-topic-page-should-read">How a topic page should read<a class="headerlink" href="#how-a-topic-page-should-read" title="Link to this section">&para;</a></h2>
+<p>A topic page of the "Work" section goes in this order:</p>
 <table>
 <thead>
 <tr>
@@ -7261,32 +7263,48 @@ client-specific rules.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>What to count</code></td>
-<td>Specific takeoff items</td>
-<td>So there is no argument over whether an item is in scope</td>
+<td>Picture at the top</td>
+<td>A section or plan of the element itself; every part has a number, and the number is a DFL row with its unit</td>
+<td>So the worker recognizes the element on the drawing and sees at once which row it goes to</td>
 </tr>
 <tr>
-<td><code>Rules</code></td>
-<td>Short estimating rules</td>
-<td>To apply the rule quickly in PlanSwift/Excel</td>
+<td><code>What it is</code></td>
+<td>How the element differs from its neighbor</td>
+<td>So a Sill Plate is not mixed up with a Btm Plate</td>
 </tr>
 <tr>
-<td><code>Where to look</code></td>
-<td>Plan, schedule, notes, details</td>
-<td>So the estimator does not search for the source at random</td>
+<td><code>Where to find it in the drawings</code></td>
+<td>Sheet, schedule, notes, details</td>
+<td>So nobody searches for the source at random</td>
 </tr>
 <tr>
-<td><code>Visual check</code></td>
-<td>Image + rule + action note</td>
-<td>So the image is not a separate gallery with no purpose</td>
+<td><code>How to measure in OurPlanCore</code></td>
+<td>Tool (Line, Area, Count, J Area, Beam, Openings), what to trace, on a sheet with which point W/F/S/U; a screenshot of measuring this very element</td>
+<td>So everybody measures the same way</td>
 </tr>
 <tr>
-<td><code>Check</code></td>
-<td>Final QA list</td>
-<td>To catch mistakes before output</td>
+<td><code>How to name it in the tree and the DFL row</code></td>
+<td>Takeoff name, row label, column D, formula and factor</td>
+<td>So the macros can read the name and the number adds up</td>
+</tr>
+<tr>
+<td><code>Common mistakes</code></td>
+<td>What was found in reviews, with real numbers</td>
+<td>To catch the mistake before delivery</td>
+</tr>
+<tr>
+<td><code>Example</code></td>
+<td>3-6 rows of the tree or the DFL; the arithmetic adds up and matches the neighboring pages</td>
+<td>So there is something to check your own workbook against</td>
+</tr>
+<tr>
+<td><code>See also</code></td>
+<td>Related pages</td>
+<td>So a rule is not duplicated</td>
 </tr>
 </tbody>
 </table>
+<p>One rule lives on one page. If a number or a unit is needed elsewhere, put a short version and a link there, not a second wording: two wordings drift apart sooner or later.</p>
 <div class="admonition note">
 <p class="admonition-title">Main rule</p>
 <p>An image must be tied to an action: what to check on the drawings and how
@@ -7355,7 +7373,9 @@ copy of the table does not show up in search as a current instruction.</p>
 
 <h2 id="mini-checklist-before-delivery">Mini checklist before delivery<a class="headerlink" href="#mini-checklist-before-delivery" title="Link to this section">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> The rule is short and usable.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> The rule is short and usable; the unit is as in column D (<code>LFT</code>, <code>SQ FT</code>, <code>4x8</code>, <code>pcs</code>).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> The formula and the example are recalculated by hand; the number matches the neighboring pages and <a href="../../reference/formulas/">Formulas</a>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> The caption under a picture describes what the picture actually shows.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Technical terms kept in English: <code>Joist</code>, <code>Rim Board</code>, <code>FRT</code>,
   <code>Sheathing</code>, <code>Hangers</code>.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Explanations in the page language (Russian on Russian pages).</li>

@@ -7328,6 +7328,8 @@ deck. Its height is set by the truss heel (heel height), typically 0.66 to
    The boundary with gable and wall sheathing must be explicit, with no double layer.</li>
 </ol>
 <h2 id="takeoff-name-and-dfl-row">Takeoff name and DFL row<a class="headerlink" href="#takeoff-name-and-dfl-row" title="Link to this section">&para;</a></h2>
+<p>The strip has its own section in the DFL template: <strong>Truss Heel</strong>. G is the strip area in
+SQ FT: the sum of <code>length x heel height</code> over all <code>trussheel</code> takeoffs of the building.</p>
 <table>
 <thead>
 <tr>
@@ -7341,38 +7343,61 @@ deck. Its height is set by the truss heel (heel height), typically 0.66 to
 <tbody>
 <tr>
 <td><code>trussheel/trussheel 1.25</code></td>
-<td><code>Truss Heel Sheathing</code> (in the Gable Walls block or the template's roof block)</td>
+<td><code>Truss Heel Sheathing</code></td>
 <td>same as the wall, for example <code>7/16" Zip</code></td>
 <td><code>4x8</code></td>
-<td><code>=CEILING(LFT*1.25/32*1.1,1)</code></td>
+<td><code>=CEILING(G/32*1.1,1)</code></td>
+</tr>
+<tr>
+<td>same area, Zip</td>
+<td><code>Tape</code></td>
+<td><code>Zip Tape</code></td>
+<td><code>LFT</code></td>
+<td><code>=CEILING(G*0.4*1.1,10)</code></td>
+</tr>
+<tr>
+<td>same area, no Zip</td>
+<td><code>Vapor Barrier</code></td>
+<td>WRB per spec</td>
+<td><code>SQ FT</code></td>
+<td><code>G x 1.1</code>; under 50 to 2, otherwise to 10</td>
 </tr>
 <tr>
 <td>same area</td>
-<td><code>Vapor Barrier</code> (WRB)</td>
-<td>per spec</td>
+<td><code>Insulation</code></td>
+<td>product from the wall type</td>
 <td><code>SQ FT</code></td>
-<td><code>=CEILING(SQFT*1.1,10)</code></td>
+<td><code>G x 1.1</code>; a row only with continuous insulation outside the sheathing</td>
 </tr>
 <tr>
-<td>same length</td>
-<td><code>Blocking at Eves</code></td>
-<td><code>2x6</code></td>
-<td><code>LFT</code></td>
-<td>per detail, see <a href="../../../horizontal/roof-framing/roof-sheathing/">Roof Sheathing</a></td>
+<td>eave length <code>eves rakes/eve ...</code></td>
+<td><code>Blocking at Eves</code> (roof section, only with trusses by others)</td>
+<td><code>2x6</code> or per the eave detail</td>
+<td>pieces, D = <code>16</code></td>
+<td><code>=CEILING(G/D*1.1,1)</code>, see <a href="../../../horizontal/roof-framing/roof-sheathing/">Roof Sheathing</a></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">To be confirmed</p>
-<p>Check the exact Label of the heel row in the current TemplateCom (block and name) against a
-delivered workbook; a descriptive name is given here.</p>
-</div>
+<ul>
+<li>Zip or a plain sheet follows the exterior wall. With Zip the pair is
+  <code>Truss Heel Sheathing</code> + <code>Tape</code>, with no <code>Vapor Barrier</code> and no <code>Insulation</code> row:
+  the barrier is built into the sheet. Without Zip there is a <code>Vapor Barrier</code> and no <code>Tape</code>.</li>
+<li><code>Insulation</code> is written only if the exterior wall type carries continuous
+  insulation outside the sheathing. Insulation between studs and in the attic is by
+  others, no row.</li>
+<li>The box strip of the top floor under trusses is counted here, not as a
+  <code>Box Sheathing</code> row in the top floor walls. The walls keep the note
+  <code>Note: Box sheathing is included in Truss Heel section</code>.</li>
+<li>Stick roof (rafters): there is no heel, the Truss Heel section is deleted. Flat roof
+  with a parapet: the strip moves to Parapet Walls (<a href="../../walls/parapet/">Parapet</a>).</li>
+</ul>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>The strip on the eave sides not counted at all (gable sides are there, eave sides are not).</li>
 <li>The same strip counted both in gable and in trussheel.</li>
 <li>Height taken from another building or read as an overhang in inches.</li>
-<li>"Vapor Barrier / Tyvek" written although the spec calls for a different barrier.</li>
+<li>B of the <code>Vapor Barrier</code> row says Tyvek although the spec calls for a different barrier; or <code>Vapor Barrier</code> left in with Zip.</li>
+<li>The <code>Tape</code> row forgotten with Zip.</li>
 <li>With top chord bearing, blocking between the trusses forgotten instead of a ribbon.</li>
 </ul>
 <p>All mistakes: <a href="../../../../start/common-mistakes/#sheathing">common-mistakes</a>.</p>
@@ -7381,6 +7406,10 @@ delivered workbook; a descriptive name is given here.</p>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  trussheel 1.25     Line  236 LFT   (eave sides of main)
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Takeoffs/Grge/trussheel/
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  trussheel 0.66     Line   84 LFT
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Truss Heel (Main, Zip walls): G = 236 x 1.25 = 295 SQ FT
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Truss Heel Sheathing   7/16&quot; Zip     11   4x8    295 / 32 x 1.1 = 10.1
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Tape                   Zip Tape     130   LFT    295 x 0.4 x 1.1 = 129.8
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

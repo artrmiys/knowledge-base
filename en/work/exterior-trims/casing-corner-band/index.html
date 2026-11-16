@@ -7274,7 +7274,7 @@
 <figure>
 <p><img alt="Corner board over siding" src="../../../../assets/images/trims/ext-cornerboard-vinyl.png" />
   </p>
-<figcaption>A corner board covers the cut edge of the siding at the corner. Counted in LFT by the corner height times the number of corners of that type.</figcaption>
+<figcaption>A corner board covers the cut edge of the siding at the corner. Counted in LFT: the sum of the corner heights, x2 for a corner made of two boards, plus 1.1 waste.</figcaption>
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
 <p>Trim around openings and across the face of the elevation: ext. casing (sides, heads, apron,
@@ -7313,7 +7313,9 @@ linear stock; siding and cladding are not part of it.</p>
 <code>2" casing</code>, <code>8" horizontal trim</code>, <code>corner 5/4x6</code>. Elevations have no sheet dot,
 so check that the item landed in <code>trims</code>. Casing is easier to count
 with a formula from the opening list (perimeter of one window x quantity); use a Line
-only where the profile follows a complex outline. Shutters, louvers and
+only where the profile follows a complex outline. Corners: one line per
+outside corner along its height; G takes the sum of the heights, and the x2 for two
+boards is in the formula, not in the takeoff. Shutters, louvers and
 brackets are Count points, with their own color and symbol for each takeoff.</p>
 <h2 id="tree-name-and-dfl-row">Tree name and DFL row<a class="headerlink" href="#tree-name-and-dfl-row" title="Link to this section">&para;</a></h2>
 <table>
@@ -7329,80 +7331,87 @@ brackets are Count points, with their own color and symbol for each takeoff.</p>
 <tbody>
 <tr>
 <td><code>trims/casing sides</code></td>
-<td><code>Ext. Casing sides</code></td>
+<td><code>Ext Casing</code></td>
 <td><code>5/4x4</code></td>
 <td>LFT</td>
-<td>vertical sides of openings</td>
+<td><code>=CEILING(G*1.1,10)</code>; one row per profile; sides and heads together while the head is the same size</td>
 </tr>
 <tr>
 <td><code>trims/casing heads</code></td>
-<td><code>Ext. Casing heads</code></td>
-<td><code>5/4x4</code> / <code>5/4x6</code></td>
+<td><code>Ext Casing Head</code></td>
+<td><code>5/4x6</code> / <code>5/4x8</code></td>
 <td>LFT</td>
-<td>head, often wider; <code>(at crowns)</code> as a separate row</td>
+<td>only when the head is wider than the sides or has a crown over it; this LFT is not inside <code>Ext Casing</code></td>
 </tr>
 <tr>
 <td></td>
-<td><code>Ext. Casing (apron &amp; sides)</code></td>
+<td><code>Ext Casing</code> as a second row</td>
 <td><code>5/4x3</code></td>
 <td>LFT</td>
-<td>sides plus apron under the window</td>
+<td>sides and apron under the window in another profile</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Mull trims</code></td>
-<td><code>5/4x6</code></td>
+<td><code>Mullion trims</code></td>
+<td><code>5/4x4</code> / <code>5/4x6</code></td>
 <td>LFT</td>
-<td>between ganged windows</td>
+<td>between ganged windows: height x count</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Casing garage doors (sides)</code>, <code>Head casing garage dr</code></td>
+<td><code>Ext Casing</code>, <code>Ext Casing Head</code> for overhead doors</td>
 <td><code>5/4x8</code>, <code>5/4x12</code></td>
 <td>LFT</td>
-<td>overhead doors separately</td>
+<td>overhead doors in their own rows when the board is wider</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Ext. Casing</code></td>
-<td><code>Vinyl J-channel</code> / <code>3-1/2" Vinyl casing</code></td>
+<td><code>Ext Casing</code></td>
+<td><code>J-Channel</code> / <code>3-1/2" Vinyl casing</code></td>
 <td>LFT</td>
 <td>with vinyl siding, do not duplicate with <code>5/4</code></td>
 </tr>
 <tr>
 <td></td>
-<td><code>Head crowns</code>, <code>Crown cap</code>, <code>Head flashing</code></td>
-<td><code>3-1/2" crown</code>, <code>1x4</code>, <code>Drip edge</code></td>
+<td><code>Crowns</code>, <code>Crown Cap</code>, <code>Head Trim Flashing</code></td>
+<td><code>3-1/2" crown</code>, <code>1x4</code>, <code>Drip Edge</code></td>
 <td>LFT</td>
-<td>stack over the head: crown, cap, flashing</td>
+<td>stack over the head: crown, cap, flashing; same length as the head</td>
 </tr>
 <tr>
 <td></td>
 <td><code>Window Sills</code></td>
-<td><code>1" Sill</code> / <code>2" Sill</code></td>
+<td><code>2" Sill</code>, not specified: <code>TBD Sill</code></td>
 <td>LFT</td>
-<td>when a sill is shown</td>
+<td>when a sill is shown; not inside the casing length</td>
 </tr>
 <tr>
 <td><code>trims/corner 5/4x6</code></td>
-<td><code>CornerBoards</code></td>
+<td><code>Corner Boards</code></td>
 <td><code>5/4x6</code> / <code>5/4x8</code></td>
 <td>LFT</td>
-<td>corner height x number of corners; bays as a separate row</td>
+<td>G = sum of the outside corner heights; two boards per corner: <code>=EVEN(G*2*1.1)</code>; bays as a separate row</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Corner Boards</code></td>
+<td><code>5/4x6x6</code> (L profile per the detail)</td>
+<td>LFT</td>
+<td>one L piece per corner: <code>=EVEN(G*1.1)</code>, no x2</td>
 </tr>
 <tr>
 <td><code>trims/band 5/4x10</code></td>
-<td><code>Band Trims</code>, <code>Watertable Trim</code></td>
+<td><code>Watertable Trim</code></td>
 <td><code>5/4x10</code> / <code>5/4x12</code></td>
 <td>LFT</td>
-<td>plus <code>Flashing at band</code> drip edge on top</td>
+<td>band and watertable under one label; right below it a <code>Head Trim Flashing</code> <code>Drip Edge</code> row of the same length</td>
 </tr>
 <tr>
 <td><code>trims/shutters</code></td>
-<td><code>Shutters - paneled</code></td>
-<td><code>20"x60"</code></td>
+<td><code>Shutters</code></td>
+<td><code>20"x60" paneled</code></td>
 <td>pairs</td>
-<td>a pair per window, size in the row</td>
+<td>a pair per window, size and style in B</td>
 </tr>
 <tr>
 <td></td>
@@ -7414,31 +7423,46 @@ brackets are Count points, with their own color and symbol for each takeoff.</p>
 </tbody>
 </table>
 <ul>
+<li>Linear trim has one formula: <code>=CEILING(G*1.1,10)</code>, where G is the measured length;
+  when the total is under 50 it rounds to 2. <code>Corner Boards</code> has its own formula with
+  <code>EVEN</code>.</li>
+<li>A corner made of two <code>5/4</code> boards is two boards for the full corner height, hence
+  the x2. No corner detail: count two boards. A vinyl corner (<code>4" Vinyl corner</code>) and a
+  solid corner are one piece per corner: no x2, and it is a different product, not
+  <code>5/4</code>. Inside corners get no row unless the detail shows a board.</li>
+<li>Write exterior board casing as <code>5/4x</code>, not <code>1x</code>, even when the legend
+  calls it <code>1x</code>.</li>
 <li><code>4-sides</code> casing runs around the whole perimeter, <code>3-sides</code> has no bottom (sill or
   siding). Write this in the row; it changes the LFT.</li>
-<li>Vinyl corner (<code>4" Vinyl corner</code>) is a different product, not <code>5/4</code>.</li>
 <li>Size not specified: <code>TBD</code> in size, <code>scaled</code> or <code>assumed</code> in E, the note
   <code>Note: All trims to be verified. Scaled per elevations</code>.</li>
 </ul>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
-<li>Casing in one row without splitting sides, heads, mulls, garage.</li>
+<li>A head of another size, mull trims and overhead doors merged into one <code>Ext Casing</code> row.</li>
 <li>With vinyl siding both J-channel and wood casing counted.</li>
 <li>Head crown without cap and drip edge, though the detail shows them.</li>
-<li>Band and watertable without flashing on top.</li>
+<li><code>Watertable Trim</code> without a <code>Head Trim Flashing</code> on top.</li>
+<li><code>Corner Boards</code> without x2 on a two-board corner; or x2 already in G and again in the formula.</li>
+<li>A label that differs from the template (<code>CornerBoards</code>, <code>Ext. Casing sides</code>): the macro will not collect the rows.</li>
 <li>Shutters in pcs instead of pairs; shutter size lost.</li>
 <li>Trim around stone or EIFS missed (see <a href="../exclusions/">Exclusions</a>).</li>
 <li>All Excel and row mistakes: <a href="../../../start/common-mistakes/#excel">Excel DFL and notes</a>.</li>
 </ul>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/trims/2&quot; casing          Line   412 LFT
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Takeoffs/Main/trims/corner 5/4x6       Line   8 x 28&#39; = 224 LFT
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Ext. Casing sides    5/4x4   380  LFT   =2*5.5*34 windows     A601
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Ext. Casing heads    5/4x6   112  LFT   =3.3*34               A601
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Head flashing        Drip edge 112 LFT  =C&lt;heads&gt;
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>CornerBoards         5/4x6   224  LFT   8 corners x 28&#39;       A201
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Shutters - paneled   20&quot;x60&quot; 12   pairs                       A201
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/trims/casing sides       Line   374 LFT   (2 x 5.5&#39; x 34 windows)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Takeoffs/Main/trims/casing heads       Line   112.2 LFT (3.3&#39; x 34 windows)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Takeoffs/Main/trims/corner 5/4x6       Line   8 x 28&#39; = 224 LFT
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Ext Casing           5/4x4       420  LFT   =CEILING(374*1.1,10)     A601
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Ext Casing Head      5/4x6       130  LFT   =CEILING(112.2*1.1,10)   A601
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Head Trim Flashing   Drip Edge   130  LFT   =CEILING(112.2*1.1,10)
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Corner Boards        5/4x6       494  LFT   =EVEN(224*2*1.1)         A201
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Shutters             20&quot;x60&quot; paneled   12   pairs                    A201
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Casing: 374 x 1.1 = 411.4, rounded up to 10 = 420
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Heads: 112.2 x 1.1 = 123.4, rounded up to 10 = 130
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Corners: 224 x 2 x 1.1 = 492.8, rounded up to even = 494
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

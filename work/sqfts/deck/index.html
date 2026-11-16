@@ -7336,8 +7336,8 @@ joists, beams, posts) считается на странице
 <td><code>sqfts/deck</code></td>
 <td><code>Decking</code></td>
 <td>composite / <code>5/4x6 P.T.</code> по spec</td>
-<td><code>SQ FT</code> или <code>LFT</code></td>
-<td><code>SQFT x 1.1</code></td>
+<td><code>SQ FT</code></td>
+<td><code>=ОКРВВЕРХ(W*D*units*1.1;10)</code>: площадь одной деки x units x 1.1; меньше 50 - вверх до 2</td>
 </tr>
 <tr>
 <td><code>sqfts/deck</code></td>
@@ -7348,9 +7348,16 @@ joists, beams, posts) считается на странице
 </tr>
 <tr>
 <td>Line по краю</td>
-<td><code>Railing</code>, <code>Posts at Rails 4x4 P.T.</code></td>
+<td><code>Posts at Rails</code></td>
+<td><code>4x4 P.T.</code>, посты 4'</td>
+<td><code>4</code> (длина поста)</td>
+<td>длинные перила: <code>=ОКРВВЕРХ(LFT/6;1)+1</code></td>
+</tr>
+<tr>
+<td>та же линия</td>
+<td>строки перил по типу</td>
 <td>по детали</td>
-<td><code>LFT</code>, <code>pcs</code></td>
+<td><code>LFT</code>, <code>pcs</code>, <code>unit</code></td>
 <td><a href="../../deck/railing/">Railing</a></td>
 </tr>
 </tbody>
@@ -7361,14 +7368,15 @@ joists, beams, posts) считается на странице
 <li>LVL rim поставлен по умолчанию: только когда к нему крепится deck.</li>
 <li>Railing и stairs забыты; guards отдельной строкой.</li>
 <li>Площадь deck приписана к этажу дома.</li>
+<li>Decking без запаса 1.1 или в <code>LFT</code> вместо <code>SQ FT</code>.</li>
 </ul>
 <p>Все ошибки по площадям: <a href="../../../start/common-mistakes/#sqft">common-mistakes</a>.</p>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/sqfts/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  deck       Area   240 SF
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  deck       Area   240 SF   (20&#39; x 12&#39;, перила по трём сторонам 44 LFT)
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Ground Decks Framing List
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Decking         5/4x6 P.T.      264   SQ FT
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Posts at Rails  4x4 P.T.          8   pcs
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Decking         5/4x6 P.T.      270   SQ FT   240 x 1.1 = 264, вверх до 10
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Posts at Rails  4x4 P.T.          9   4       44 / 6 = 7.3, вверх 8, плюс 1
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

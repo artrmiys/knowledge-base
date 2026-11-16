@@ -7245,16 +7245,17 @@
 
 <h1 id="balcony-trims">Balcony Trims (отделка балкона в блоке)<a class="headerlink" href="#balcony-trims" title="Прямая ссылка на раздел">&para;</a></h1>
 <figure>
-<p><img alt="Balcony trim, archive" src="../../../assets/images/confluence/confluence-152.png" />
+<p><img alt="Balcony trim, archive" src="../../../assets/images/confluence/confluence-152.jpg" />
   </p>
 <figcaption>Fascia и edge trim по открытым сторонам балкона, soffit снизу, flashing у стены. Считаем только когда отделка в scope.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Finish-строки балконного блока: fascia и edge trim по периметру, soffit
-снизу, post wrap, flashing у стены. Полная карта слоёв от каркаса до
-отделки на канонической странице
-<a href="../../exterior-trims/balcony-buildup/">Balcony build-up</a>; каркас на
-<a href="../deck-porch-balcony-frame/">Deck / Porch / Balcony Frame</a>.</p>
+<p>Короткий указатель. Finish-строки балконного блока (post wrap, EPDM, decking,
+soffit снизу, fascia и edge trim, flashing у стены) со всеми формулами и
+примером описаны на одной странице:
+<a href="../../exterior-trims/balcony-buildup/">Balcony build-up</a>. Каркас блока - на
+<a href="../deck-porch-balcony-frame/">Deck / Porch / Balcony Frame</a>, перила - на
+<a href="../railing/">Railing</a>. Здесь только то, чего там нет.</p>
 <h2 id="_2">Где искать на чертежах<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7270,7 +7271,7 @@
 </tr>
 <tr>
 <td>Elevations</td>
-<td>Видимые trims, цвет и профиль, что закрыто перилами</td>
+<td>Видимые trims, цвет и профиль, что закрыто перилами, обшит ли пост</td>
 </tr>
 <tr>
 <td>Scope задания</td>
@@ -7279,48 +7280,24 @@
 </tbody>
 </table>
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Длины и площади берутся из размеров блока W x D и множителя G, как у
-перил. Soffit снизу балкона это Area по реальному контуру только когда
-контур не прямоугольник; обычно хватает W x D.</p>
+<p>Отдельных замеров отделке балкона обычно не нужно: длины и площади берутся из
+размеров блока W x D и множителя G, как у перил. Soffit снизу обводят Area
+только когда контур балкона не прямоугольник.</p>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Строка DFL</th>
-<th>Материал</th>
-<th>Unit</th>
-<th>Правило</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Balcony Trims</code> / <code>Fascia</code></td>
-<td><code>1x10</code>, <code>5/4x8</code></td>
-<td>LFT</td>
-<td>открытые стороны: <code>=(W+2*D)*G</code></td>
-</tr>
-<tr>
-<td><code>Soffits at Balcony</code></td>
-<td><code>Beadboard</code></td>
-<td>SQ FT</td>
-<td><code>=W*D*G</code></td>
-</tr>
-<tr>
-<td><code>Post Wrap</code></td>
-<td><code>1x8</code></td>
-<td>LFT</td>
-<td>по высоте поста x 4 стороны</td>
-</tr>
-<tr>
-<td><code>Flashings at Wall</code></td>
-<td><code>Copper</code> / drip edge</td>
-<td>LFT</td>
-<td>по стене, <code>=W*G</code></td>
-</tr>
-</tbody>
-</table>
-<p>Размер не указан: <code>TBD</code> в материале и нота <code>Note: All trims to be verified.
-Scaled per elevations</code>.</p>
+<p>Таблица строк, единиц и формул: <a href="../../exterior-trims/balcony-buildup/">Balcony build-up</a>.
+Дополнения к ней:</p>
+<ul>
+<li>Отделка стоит за каркасом блока под своим заголовком и только когда trims в
+  scope; при Frame only блок заканчивается каркасом.</li>
+<li><code>Post Wrap</code> пишем только когда фасад или деталь показывают обшитый пост.
+  Четыре доски на пост: G = высота поста x 4 стороны x число постов. Ширина
+  доски = грань поста плюс две толщины доски: пост 6x6 это <code>1x8</code>, пост 4x4
+  это <code>1x6</code>. Обшивка не детализирована: в E <code>assumed</code>.</li>
+<li>Soffit снизу из гипса или металла by others: строки <code>Soffits at Balcony</code>
+  нет, остаётся нота.</li>
+<li>Размер не указан: <code>TBD</code> в материале и нота <code>Note: All trims to be verified.
+  Scaled per elevations</code>.</li>
+</ul>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Balcony trims растворены в общем <code>Exterior Trims</code> без своей строки.</li>

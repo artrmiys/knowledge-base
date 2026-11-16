@@ -7286,80 +7286,127 @@ the whole eave, including units and soffit, is on the <a href="../eve/">Eve / Ea
 </thead>
 <tbody>
 <tr>
-<td>Roof plan (<code>a105 rf</code>)</td>
-<td>Sloped edges at the gables, overhang</td>
+<td>Elevations (<code>el</code>)</td>
+<td>True length of the rake (measure here), rake fascia, barge board, trim, FRT on exposed wood</td>
 </tr>
 <tr>
-<td>Elevations (<code>el</code>)</td>
-<td>Rake fascia, barge board, trim, FRT on exposed wood</td>
+<td>Roof plan (<code>a105 rf</code>)</td>
+<td>Where the rakes are, the overhang</td>
 </tr>
 <tr>
 <td>Details (<code>d</code>)</td>
-<td>Lookouts <code>2x4</code>/<code>2x6</code>, frame for rakes, sub fascia</td>
+<td>Lookouts or outlookers (size and spacing), frame for rakes, sub fascia, blocking</td>
 </tr>
 </tbody>
 </table>
 <h2 id="how-to-measure-in-ourplancore">How to measure in OurPlanCore<a class="headerlink" href="#how-to-measure-in-ourplancore" title="Link to this section">&para;</a></h2>
 <ol>
-<li>Line tool along the sloped edge on the roof plan. LFT unit.</li>
+<li>Line tool along the sloped edge on the elevation, where the slope is shown at
+   true length. LFT unit. Do not measure the rake on the roof plan: the plan
+   line is shorter than the real edge because the pitch is lost.</li>
 <li>Name <code>rake &lt;overhang in inches&gt; &lt;zone&gt;</code>: <code>rake 12 main</code>, <code>rake 24 main</code>.
+   The number is the overhang from a section or detail, not the pitch and not the length.
    The <code>eves rakes/rakes</code> folder is created from the name automatically.</li>
-<li>The length on the plan is the plan length. Decide once whether you need the true sloped
-   length (via the pitch); do not apply the pitch a second time.</li>
-<li>Canopy and porch are not part of the rake. Returns are their own takeoff (<a href="../returns/">Returns</a>).</li>
+<li>The elevation length is already sloped: no pitch factor is applied, neither in the
+   takeoff nor in the formula. Only when no elevation shows that gable, multiply the plan
+   length once by the common rafter factor (4:12 = 1.054, 6:12 = 1.118,
+   8:12 = 1.202, 12:12 = 1.414; the table is on the
+   <a href="../../horizontal/roof-framing/hip/">Hip</a> page).</li>
+<li>If gable areas are already traced on the elevation, run the rake along the top
+   edge of those areas: faster and nothing gets missed.</li>
+<li>Porch and canopy rakes are their own takeoffs (<code>rake 8 porch</code>); they are not part
+   of <code>main</code>. Returns are their own takeoff too (<a href="../returns/">Returns</a>).</li>
 <li>A roof of <code>AJS Rafters</code> with an open overhang: count the rafters by hand as
    framing, not as a simple <code>rake</code>.</li>
 </ol>
 <h2 id="takeoff-name-and-dfl-row">Takeoff name and DFL row<a class="headerlink" href="#takeoff-name-and-dfl-row" title="Link to this section">&para;</a></h2>
+<p>Below, LFT is the length of the rake line and the overhang is the number from its name in inches.</p>
 <table>
 <thead>
 <tr>
 <th>Takeoff name</th>
 <th>DFL row</th>
 <th>Material</th>
-<th>Unit</th>
+<th>Unit (D)</th>
+<th>Formula C</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>eves rakes/rakes/rake 12 main</code></td>
 <td><code>Soffits at Rakes</code></td>
-<td><code>9" Vinyl</code> / beadboard</td>
-<td><code>LFT</code> or <code>SQ FT</code></td>
+<td><code>12" Vinyl</code> / <code>T&amp;G beadboard</code></td>
+<td><code>SQ FT</code></td>
+<td><code>=EVEN(LFT*overhang/12*1.1)</code></td>
+</tr>
+<tr>
+<td>same line, soffit made of one board across the full width</td>
+<td><code>Soffits at Rakes</code></td>
+<td><code>1x12</code></td>
+<td><code>LFT</code></td>
+<td><code>=EVEN(LFT*1.1)</code></td>
 </tr>
 <tr>
 <td>same line</td>
 <td><code>Fascia at Rakes</code></td>
-<td><code>1x8</code> / alum wrapped</td>
+<td><code>1x8</code>, <code>1x6</code> per detail</td>
 <td><code>LFT</code></td>
+<td><code>=EVEN(LFT*1.1)</code></td>
 </tr>
 <tr>
 <td>same line</td>
 <td><code>Frame for Rakes 24" o.c.</code></td>
-<td><code>2x4</code> per detail</td>
-<td><code>LFT</code></td>
+<td><code>2x6</code>, <code>2x4</code> or <code>2x8</code> per detail</td>
+<td><code>16</code></td>
+<td><code>=CEILING(G/D,1)</code>, G = LFT x overhang / spacing + LFT</td>
 </tr>
 <tr>
 <td>same line</td>
 <td><code>Sub Fascia</code></td>
-<td><code>2x8</code></td>
-<td><code>LFT</code></td>
+<td><code>2x6</code> per detail</td>
+<td><code>16</code></td>
+<td><code>=CEILING(G/D,1)</code>, G = LFT</td>
+</tr>
+<tr>
+<td>same line, only when the detail draws blocking</td>
+<td><code>Blocking for Rakes 48" o.c.</code></td>
+<td><code>2x6</code></td>
+<td><code>16</code></td>
+<td><code>=CEILING(G*12/H*2/D,1)</code>, H = spacing</td>
 </tr>
 </tbody>
 </table>
+<ul>
+<li><code>Frame for Rakes</code>, <code>Sub Fascia</code> and <code>Blocking for Rakes</code> are framing: D holds the
+  16' board length, C the number of boards, and there is no 1.1 waste (rounding up to a
+  whole board). G of <code>Frame for Rakes</code> holds the lookouts (LFT x overhang / spacing) and
+  the ledger along the wall (LFT). Spacing is 24" by default, 16" when the detail says so.</li>
+<li><code>Soffits at Rakes</code> and <code>Fascia at Rakes</code> are finish: only when trims are in scope.
+  Soffit is in <code>LFT</code> only when it is one board or one strip across the full
+  width; the rule and the default material: <a href="../eve/">Eve / Eave</a>.</li>
+<li>Aluminum or prefab rake by others: no framing or finish rows, a note stays.</li>
+</ul>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Rake merged with the eave into one line.</li>
-<li>Pitch applied both in the takeoff and in the formula.</li>
-<li>Canopy or porch counted again in the rake.</li>
+<li>Rake traced on the roof plan instead of the elevation: the length comes out short.</li>
+<li>A pitch factor applied again to a length taken from the elevation.</li>
+<li>The name carries the pitch or the length instead of the overhang (<code>rake 12</code> is a 12" overhang).</li>
+<li>Sub Fascia and Frame for Rakes written in <code>LFT</code> with 1.1 waste instead of 16' boards.</li>
 <li>FRT on an exposed rake not checked against the exterior wall rules.</li>
 </ul>
 <p>All roof mistakes: <a href="../../../start/common-mistakes/#roof">common-mistakes</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/eves rakes/rakes/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  rake 12 main     Line  96 LFT
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  rake 12 main     Line  96 LFT   (on the elevations)
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Takeoffs/Grge/eves rakes/rakes/
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  rake 24 main     Line  44 LFT
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Main, 12&quot; overhang:
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Soffits at Rakes           12&quot; Vinyl    106   SQ FT   96 x 12/12 x 1.1 = 105.6
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Fascia at Rakes            1x8          106   LFT     96 x 1.1 = 105.6
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Frame for Rakes 24&quot; o.c.   2x6            9   16      G = 96 x 12/24 + 96 = 144; 144 / 16 = 9
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Sub Fascia                 2x6            6   16      G = 96; 96 / 16 = 6
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

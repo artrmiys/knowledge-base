@@ -7267,14 +7267,14 @@
 
 <h1 id="rails-decking">Rails &amp; Decking (перила и настил: канон по типам)<a class="headerlink" href="#rails-decking" title="Прямая ссылка на раздел">&para;</a></h1>
 <figure>
-<p><img alt="Railing components and decking" src="../../../assets/images/trims/rails-decking.svg" />
+<p><img alt="План балкона: decking, посты и секции перил, fascia" src="../../../assets/images/trims/rails-decking.svg" />
   </p>
-<figcaption>Posts, cap rail, balusters, decking: у каждого своя строка. Composite перила считаем системой, деревянные крашеные поэлементно.</figcaption>
+<figcaption>План балкона: decking по площади W x D, два поста перил по внешним углам, секции перил по фронту и открытым бокам, fascia по открытому периметру. Composite перила считаем системой, деревянные крашеные поэлементно.</figcaption>
 </figure>
 <figure>
 <p><img alt="Composite перила deck: пост в sleeve с cap, top rail, balusters" src="../../../assets/images/photos/deck/composite-railing-post-cap.jpg" width="360" />
   </p>
-<figcaption>Composite railing на deck: пост закрыт белым sleeve с cap, сверху cap rail под дерево, balusters между top и bottom rail, настил composite. Такую систему считаем LFT перил плюс посты штуками; decking отдельно SQ FT. Фото: timbertech.com, <a href="https://www.timbertech.com/products/railing/">источник</a>, найдено через Pinterest.</figcaption>
+<figcaption>Composite railing на deck: пост закрыт белым sleeve с cap, сверху cap rail под дерево, balusters между top и bottom rail, настил composite. Такую систему считаем секциями (<code>Rail sections</code>, unit) по сторонам плюс посты штуками; decking отдельно SQ FT. Фото: timbertech.com, <a href="https://www.timbertech.com/products/railing/">источник</a>, найдено через Pinterest.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Перила и настил балконов, porch и deck: railing-системы (composite, Azek,
@@ -7312,7 +7312,7 @@ fascia, skirt, risers, lattice. Это не trim и не каркас: карк�
 </table>
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Decking и перила берутся из размеров блока: площадь <code>W x D</code>, перила фронт
-<code>W</code> плюс открытые бока <code>D</code>, умноженные на число экземпляров G. Площадь
+<code>W</code> плюс открытые бока <code>D</code>, умноженные на число экземпляров (units). Площадь
 балконов и порчей как Area лежит в <code>sqfts/blcny</code> и <code>sqfts/porch</code>; deck у
 земли со сложным контуром обводят Area в <code>sqfts</code> с понятным именем, перила
 по изломанному контуру Line. Продукт и высоту в имя не писать, они живут в DFL.</p>
@@ -7337,19 +7337,19 @@ painted. Не смешивать.</p>
 <tbody>
 <tr>
 <td>Composite / Azek (система)</td>
-<td><code>Note: Railing called composite; Decking assumed Composite</code>, <code>Posts at Rails 4x4 P.T.</code>, <code>Post Sleeve</code> <code>Sleeve for 4x4</code>, <code>Post Cap</code> <code>Cap for 4x4</code>, <code>Rail sections</code> <code>6' Rail section</code></td>
-<td>pcs, unit</td>
-<td>посты <code>=2*G</code> на балкон; секции фронт и бока отдельными строками</td>
+<td><code>Note: Railing called composite per A501; decking assumed; verify</code>, <code>Posts at Rails</code> <code>4x4 P.T.</code>, <code>Post Sleeve</code> <code>Sleeve for 4x4</code>, <code>Post Cap</code> <code>Cap for 4x4</code>, <code>Rail sections</code> <code>8' Rail section</code></td>
+<td>pcs, unit; у постов в D длина <code>4</code></td>
+<td>посты <code>=2*units</code>; <code>Rail sections</code>: строка на каждую длину секции, C = число секций этой длины на балкон x units</td>
 </tr>
 <tr>
 <td>Wood painted (поэлементно)</td>
-<td><code>Posts at Rails 4x4 P.T.</code>, <code>Balustrades 2x2</code>, <code>Rails (top &amp; bottom) 2x4</code>, <code>Cap Rail 2x6</code></td>
+<td><code>Posts at Rails</code> <code>4x4 P.T.</code>, <code>Balustrades</code> <code>2x2 balusters</code>, <code>Rails (top &amp; bottom)</code> <code>2x4 rails</code>, <code>Cap Rail</code> <code>2x6 cap rail</code></td>
 <td>pcs, LFT</td>
-<td><code>Balustrades =EVEN(G*2.2)</code>, <code>Rails =EVEN(G*2.2)</code>, <code>Cap Rail =EVEN(G*1.1)</code>, G = LFT перил x units</td>
+<td><code>Balustrades =EVEN(G*2.2)*units</code>, <code>Rails (top &amp; bottom) =EVEN(G*2.2)*units</code>, <code>Cap Rail =EVEN(G*1.1)*units</code>, G = LFT перил одного балкона</td>
 </tr>
 <tr>
 <td>Cable</td>
-<td><code>Posts at Rails 4x4 P.T.</code> или <code>Mtl post</code>, sleeve/cap, <code>Cables SS</code>, <code>Cap Rail 2x6</code></td>
+<td><code>Posts at Rails</code> <code>4x4 P.T.</code> или <code>Mtl post</code>, sleeve/cap, <code>Cables SS</code>, <code>Cap Rail</code> <code>2x6 cap rail</code></td>
 <td>pcs, LFT</td>
 <td>cables = прогон x число тросов (<code>assumed 7 runs</code>), нота <code>verify product</code></td>
 </tr>
@@ -7361,6 +7361,15 @@ painted. Не смешивать.</p>
 </tr>
 </tbody>
 </table>
+<p>Секции composite покупают готовой длиной, поэтому <code>Rail sections</code> это не
+одна строка на балкон, а строка на каждую длину:</p>
+<ul>
+<li>одна секция на пролёт между постами (или между постом и стеной);</li>
+<li>в B ближайшая стандартная длина выше стороны: фронт <code>7'-4"</code> это
+  <code>8' Rail section</code>, бок <code>6'</code> это <code>6' Rail section</code>;</li>
+<li>в E сторона и реальная длина: <code>front 7'-4"</code>, <code>sides 6'</code>;</li>
+<li>cap у composite входит в секцию, строки <code>Cap Rail</code> нет.</li>
+</ul>
 <p>Decking и периметр:</p>
 <table>
 <thead>
@@ -7374,15 +7383,15 @@ painted. Не смешивать.</p>
 <tbody>
 <tr>
 <td><code>Decking</code> балкона</td>
-<td><code>2x6 DuxxBak</code></td>
+<td>по детали: <code>2x6 DuxxBak</code>, <code>Composite Decking</code>, <code>5/4" Decking</code></td>
 <td>SQ FT</td>
-<td><code>=W*D*G</code>; в Terrace над гаражом <code>5/4x6</code> поверх <code>3/4" Ply</code> и <code>Sleepers 2x4 P.T.</code></td>
+<td><code>=CEILING(W*D*units*1.1,10)</code>: площадь одного балкона x units x waste 1.1; в Terrace над гаражом <code>5/4x6</code> на <code>Sleepers 2x4 P.T.</code></td>
 </tr>
 <tr>
 <td><code>Decking</code> deck / porch</td>
 <td><code>5/4x6</code> Composite, Azek, Wd, <code>5/4x4 T&amp;G Mahogany</code></td>
 <td>SQ FT</td>
-<td>продукт по spec, иначе <code>TBD</code> и нота</td>
+<td>та же формула; продукт по spec, иначе <code>TBD Decking</code> и нота</td>
 </tr>
 <tr>
 <td><code>Treads</code></td>
@@ -7410,7 +7419,8 @@ painted. Не смешивать.</p>
 </tr>
 </tbody>
 </table>
-<p>Посты на улице всегда <code>P.T.</code>; под крышей (закрытый porch) обычные.
+<p>Посты на улице всегда <code>P.T.</code>, и под крышей porch тоже; без P.T. только пост
+внутри отапливаемого объёма, как его даёт schedule.
 Post base и anchor (<code>ABU66 Zmax</code>, <code>DTT2Z</code>) только когда деталь их показывает,
 строки каркаса с деталью в E, формат по <a href="../../../reference/hangers/#dfl-format">Hangers</a>.
 Полный состав блока: <a href="../../../reference/dfl-blocks/">Блоки DFL</a>.</p>
@@ -7418,6 +7428,8 @@ Post base и anchor (<code>ABU66 Zmax</code>, <code>DTT2Z</code>) только �
 <ul>
 <li>Три поста на балкон вместо двух; угловой балкон у двух стен несёт один.</li>
 <li>Система и поэлементный счёт смешаны: <code>Rail sections</code> вместе с <code>Balustrades</code>.</li>
+<li><code>Rail sections</code> одной строкой на весь балкон без длины секции и стороны в E.</li>
+<li>Decking без waste: <code>=W*D*units</code> вместо <code>=CEILING(W*D*units*1.1,10)</code>.</li>
 <li>Aluminum перила посчитаны как материал.</li>
 <li><code>Rails (top &amp; bottom)</code> взяты одной ниткой вместо двух.</li>
 <li>Decking балкона <code>5/4x6</code> вместо <code>2x6 DuxxBak</code> по детали.</li>
@@ -7425,13 +7437,17 @@ Post base и anchor (<code>ABU66 Zmax</code>, <code>DTT2Z</code>) только �
 <li>Все ошибки раздела: <a href="../../../start/common-mistakes/#deck">Deck, porch, балконы</a>.</li>
 </ul>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Note: Railing called composite; Decking assumed Composite
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Posts at Rails   4x4 P.T.          12  pcs    =2*G       4&#39;
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Post Sleeve      Sleeve for 4x4    12  pcs    =C&lt;posts&gt;
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Post Cap         Cap for 4x4       12  pcs    =C&lt;posts&gt;
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Rail sections    6&#39; Rail section   12  unit   front 12&#39;
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Rail sections    6&#39; Rail section   16  unit   sides 2 x 8&#39;
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Decking          2x6 DuxxBak       576 SQ FT  =12*8*G    5/A550
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Балкон 7&#39;-4&quot; x 6&#39;, 6 units, composite railing
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Note: Railing called composite per A501; decking assumed; verify
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Posts at Rails   4x4 P.T.          12   4      =2*6       assumed
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Post Sleeve      Sleeve for 4x4    12   pcs    =C&lt;posts&gt;
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Post Cap         Cap for 4x4       12   pcs    =C&lt;posts&gt;
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Rail sections    8&#39; Rail section   6    unit   =1*6       front 7&#39;-4&quot;
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Rail sections    6&#39; Rail section   12   unit   =2*6       sides 6&#39;
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Decking          2x6 DuxxBak       300  SQ FT  =CEILING(7.33*6*6*1.1,10)   5/A550
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Decking: 7.33 x 6 = 44 SQ FT на балкон, x 6 = 264, x 1.1 = 290.4, вверх до 10 = 300
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

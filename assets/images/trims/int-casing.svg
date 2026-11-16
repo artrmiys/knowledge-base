@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" role="img" aria-labelledby="t d">
-  <title id="t">Interior casing: window (head, sides, stool, apron) and door (head, sides)</title>
-  <desc id="d">Left: a window seen from inside with head casing, two side casings, stool and apron. Middle: a door with head casing and two side casings down to the floor. Right: LFT formulas and the casing / 2 rule for interior door jambs.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" role="img" aria-labelledby="t d">
+  <title id="t">Interior casing of a window and a door</title>
+  <desc id="d">Interior elevation of a window with head casing, two side casings, stool and apron, and of a door with casing on three sides and the jamb. A numbered list names the parts and the DFL rows; the formula below counts both faces of the wall.</desc>
   <defs>
     <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
     <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
     <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
-    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
     <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
     <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
     <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
@@ -14,75 +14,86 @@
     <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
     <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
     <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
-    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
     <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
     <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
     <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
-    
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
     <style>
-      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
-      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
       .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
       .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
       .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
-      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
       .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
-      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
-      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
-      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
-      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
-      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
-      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
-      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
-      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
-      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
-      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
       .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
       .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
-      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
     </style>
   </defs>
-  <rect x="0.5" y="0.5" width="999" height="519" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
-<text class="lab" x="60" y="50" >Окно изнутри</text>
-<rect x="90" y="90" width="240" height="200" fill="#dbeafe" stroke="#5b7fa6" stroke-width="1.2" />
-<line x1="210" y1="90" x2="210" y2="290" stroke="#5b7fa6" stroke-width="1"/><line x1="90" y1="190" x2="330" y2="190" stroke="#5b7fa6" stroke-width="1"/><rect x="70" y="70" width="280" height="20" fill="#efe3cc" stroke="#8a6a3f" stroke-width="1.5" />
-<rect x="70" y="90" width="20" height="200" fill="#efe3cc" stroke="#8a6a3f" stroke-width="1.5" />
-<rect x="330" y="90" width="20" height="200" fill="#efe3cc" stroke="#8a6a3f" stroke-width="1.5" />
-<rect x="58" y="290" width="304" height="14" fill="#efe3cc" stroke="#8a6a3f" stroke-width="1.5" />
-<rect x="70" y="304" width="280" height="20" fill="#efe3cc" stroke="#8a6a3f" stroke-width="1.5" />
-<text class="mono2" x="200" y="350" text-anchor="middle" >Window casing LFT = 2 x H + W</text>
-<text class="small" x="200" y="370" text-anchor="middle" >+ Stool, + Apron отдельными LFT</text>
-<line class="lead" x1="392" y1="82" x2="352" y2="80"/>
-<text class="lab2" x="400" y="86" >Head casing</text>
-<line class="lead" x1="392" y1="180" x2="352" y2="180"/>
-<text class="lab2" x="400" y="184" >Side casing x2</text>
-<line class="lead" x1="392" y1="296" x2="364" y2="296"/>
-<text class="lab2" x="400" y="300" >Stool (подоконник)</text>
-<line class="lead" x1="392" y1="322" x2="352" y2="316"/>
-<text class="lab2" x="400" y="326" >Apron</text>
-<line class="dim" x1="70" y1="420" x2="350" y2="420"/>
-<text class="dimt" x="210" y="434" text-anchor="middle" >W (по casing)</text>
-<line class="dim" x1="40" y1="70" x2="40" y2="324"/>
-<text class="dimt" x="52" y="197" text-anchor="middle" >H</text>
-<text class="lab" x="525" y="50" >Дверь изнутри</text>
-<rect x="555" y="90" width="150" height="300" fill="#f6f1e8" stroke="#3a3f44" stroke-width="1.2" />
-<circle cx="683" cy="240" r="4" fill="#3a3f44"/><rect x="535" y="70" width="190" height="20" fill="#efe3cc" stroke="#8a6a3f" stroke-width="1.5" />
-<rect x="535" y="90" width="20" height="300" fill="#efe3cc" stroke="#8a6a3f" stroke-width="1.5" />
-<rect x="705" y="90" width="20" height="300" fill="#efe3cc" stroke="#8a6a3f" stroke-width="1.5" />
-<line x1="495" y1="390" x2="785" y2="390" stroke="#3a3f44" stroke-width="2"/><text class="small" x="735" y="398" >floor</text>
-<text class="small" x="630" y="420" text-anchor="middle" >casing 3 стороны, низа нет</text>
-<text class="mono2" x="630" y="440" text-anchor="middle" >Door casing LFT = 2 x H + W</text>
-<text class="small" x="630" y="460" text-anchor="middle" >с каждой стороны двери</text>
-<text class="lab" x="765" y="50" >Правило jamb</text>
-<text class="mono" x="765" y="76" >door jamb = casing / 2</text>
-<text class="note" x="765" y="98" >casing с двух сторон двери,</text>
-<text class="note" x="765" y="116" >jamb один раз:</text>
-<text class="small" x="765" y="142" >дверь 3070 (3' x 7'):</text>
-<text class="mono2" x="765" y="162" >casing (2x7 + 3) x 2 = 34</text>
-<text class="mono2" x="765" y="182" >jamb = 34 / 2 = 17 LFT</text>
-<text class="note" x="765" y="214" >Casing группируй по месту:</text>
-<text class="note" x="765" y="232" >units и common отдельно.</text>
-<text class="note" x="765" y="264" >Door schedule: size, rating;</text>
-<text class="note" x="765" y="282" >тип trim в finish schedule.</text>
-<text class="note" x="60" y="495" >Interior casing отдельно от exterior trims и flashing. Hardware не считать как trim.</text>
+<rect x="0.5" y="0.5" width="879" height="559" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="side" x="40" y="46">WINDOW, вид изнутри</text>
+<rect x="80" y="100" width="200" height="170" fill="#dbeafe" stroke="#5b7fa6" stroke-width="1.2"/>
+<line x1="180" y1="100" x2="180" y2="270" stroke="#5b7fa6" stroke-width="1"/>
+<line x1="80" y1="185" x2="280" y2="185" stroke="#5b7fa6" stroke-width="1"/>
+<rect x="60" y="80" width="240" height="20" fill="#efe3cc" stroke="#8a6a3f" stroke-width="1.5"/>
+<rect x="60" y="100" width="20" height="170" fill="#efe3cc" stroke="#8a6a3f" stroke-width="1.5"/>
+<rect x="280" y="100" width="20" height="170" fill="#efe3cc" stroke="#8a6a3f" stroke-width="1.5"/>
+<rect x="48" y="270" width="264" height="13" fill="#efe3cc" stroke="#8a6a3f" stroke-width="1.5"/>
+<rect x="60" y="283" width="240" height="20" fill="#efe3cc" stroke="#8a6a3f" stroke-width="1.5"/>
+<line x1="60" y1="340" x2="300" y2="340" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="dimt" x="180.0" y="333.0" text-anchor="middle">W</text>
+<line x1="34" y1="80" x2="34" y2="303" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="dimt" x="22" y="196" text-anchor="middle">H</text>
+<circle cx="180" cy="90" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="180" y="94.5">1</text>
+<circle cx="70" cy="185" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="70" y="189.5">2</text>
+<circle cx="290" cy="185" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="290" y="189.5">2</text>
+<circle cx="110" cy="276.5" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="110" y="281.0">3</text>
+<circle cx="250" cy="293" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="250" y="297.5">4</text>
+<text class="side" x="350" y="46">DOOR</text>
+<rect x="380" y="100" width="110" height="260" fill="#f6f1e8" stroke="#3a3f44" stroke-width="1.2"/>
+<circle cx="474" cy="235" r="4" fill="#3a3f44"/>
+<rect x="374" y="94" width="122" height="6" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.1"/>
+<rect x="374" y="100" width="6" height="260" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.1"/>
+<rect x="490" y="100" width="6" height="260" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.1"/>
+<rect x="354" y="74" width="162" height="20" fill="#efe3cc" stroke="#8a6a3f" stroke-width="1.5"/>
+<rect x="354" y="94" width="20" height="266" fill="#efe3cc" stroke="#8a6a3f" stroke-width="1.5"/>
+<rect x="496" y="94" width="20" height="266" fill="#efe3cc" stroke="#8a6a3f" stroke-width="1.5"/>
+<line x1="330" y1="360" x2="540" y2="360" stroke="#3a3f44" stroke-width="2"/>
+<text class="note" x="350" y="380">floor: низа у casing нет</text>
+<circle cx="435" cy="84" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="435" y="88.5">5</text>
+<circle cx="364" cy="220" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="364" y="224.5">5</text>
+<circle cx="506" cy="220" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="506" y="224.5">5</text>
+<circle cx="493" cy="300" r="11" fill="#7d8791" stroke="#fff" stroke-width="1.5"/><text class="numt" x="493" y="304.5">6</text>
+<circle cx="585" cy="62" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="585" y="66.5">1</text>
+<text class="lab2" x="605" y="67">Head casing</text>
+<text class="note" x="605" y="85">W проёма</text>
+<circle cx="585" cy="118" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="585" y="122.5">2</text>
+<text class="lab2" x="605" y="123">Side casing x 2</text>
+<text class="note" x="605" y="141">2 x H</text>
+<circle cx="585" cy="174" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="585" y="178.5">3</text>
+<text class="lab2" x="605" y="179">Stool (подоконник)</text>
+<text class="note" x="605" y="197">4-я сторона окна, если показан</text>
+<circle cx="585" cy="230" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="585" y="234.5">4</text>
+<text class="lab2" x="605" y="235">Apron</text>
+<text class="note" x="605" y="253">под stool, длина как head</text>
+<circle cx="585" cy="286" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="585" y="290.5">5</text>
+<text class="lab2" x="605" y="291">Door: 3 стороны, 2 лица стены</text>
+<text class="mono2" x="605" y="309">Casing for Int. Doors | LFT</text>
+<circle cx="585" cy="342" r="11" fill="#7d8791" stroke="#fff" stroke-width="1.5"/><text class="numt" x="585" y="346.5">6</text>
+<text class="lab2" x="605" y="347">Jamb двери</text>
+<text class="note" x="605" y="365">не LFT-строка: двери точками,</text>
+<text class="note" x="605" y="382">группа по сечению стены</text>
+<rect x="40" y="410" width="800" height="124" fill="#f6f8f6" stroke="#cfd8cf" stroke-width="1.2" rx="8"/>
+<text class="lab2" x="56" y="436">Строки и формула</text>
+<text class="mono2" x="56" y="460">Casing for Int. Doors | LFT</text>
+<text class="mono2" x="330" y="460">Casing for Ext. Doors&amp;Wind | LFT</text>
+<text class="mono" x="56" y="486">LFT = (W + 2H) x 2 лица стены x qty x 1.1, округлить до 10</text>
+<text class="ink" x="56" y="512">24 двери 2668: периметр 30 + 2 x 80 = 190";  2 x 24 x 190 / 12 x 1.1 = 836, пишем 840 LFT</text>
 </svg>

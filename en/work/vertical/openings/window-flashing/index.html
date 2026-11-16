@@ -7281,7 +7281,9 @@
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
 <p>Flashing around windows and doors is our scope, even when the wall framing is by
 others. Two different rows: <strong>Window Flashing</strong> (tape on the head and both jambs)
-and <strong>Sill Flashing</strong> (the pan under the window). Doors have no sill flashing. Roof,
+and <strong>Sill Flashing</strong> (the pan under the window). Doors and garage doors go into the same
+<code>Window Flashing</code> row with three sides and have no sill flashing; there is no separate
+<code>Door Flashing</code> row in the DFL. Roof,
 wall and deck flashing are on another page: <a href="../../../sheathing-and-misc/flashing/">Flashing</a>.</p>
 <h2 id="where-to-find-it-on-the-plans">Where to find it on the plans<a class="headerlink" href="#where-to-find-it-on-the-plans" title="Link to this section">&para;</a></h2>
 <table>
@@ -7331,19 +7333,13 @@ schedule. Do not type lengths in by hand.</p>
 <td><code>Window Flashing</code></td>
 <td><code>Flashing Tape</code></td>
 <td>LFT</td>
-<td><code>(2 x H + W) x qty</code></td>
+<td><code>(2 x H + W) x qty x 1.1</code>; windows, <code>d</code> doors and <code>gd</code> garage doors together, three sides each</td>
 </tr>
 <tr>
 <td><code>Sill Flashing</code></td>
 <td><code>Sill Flashing</code></td>
 <td>LFT</td>
-<td><code>W x qty</code></td>
-</tr>
-<tr>
-<td><code>Door Flashing</code> (3 sides)</td>
-<td><code>Flashing Tape</code></td>
-<td>LFT</td>
-<td><code>(2 x H + W) x qty</code>; no sill</td>
+<td><code>W x qty x 1.1</code>; windows only, doors and garage doors have no sill</td>
 </tr>
 <tr>
 <td><code>Window Flashing at Mtl Walls</code>, <code>Sill Flashing at Mtl Walls</code></td>
@@ -7366,6 +7362,8 @@ schedule. Do not type lengths in by hand.</p>
 </tbody>
 </table>
 <ul>
+<li>The <code>x 1.1</code> waste is always there. Rounding: a result under 50 goes to 2, otherwise
+  to 10.</li>
 <li>Wood walls: the base row is always there. Mtl and CMU walls are added on separate
   rows, even if the detail geometry is the same: for the client these are different
   subcontractors and different WRBs.</li>
@@ -7377,6 +7375,7 @@ schedule. Do not type lengths in by hand.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>A door got <code>Sill Flashing</code>: the <code>d</code> or <code>gd</code> tag is missing.</li>
+<li>Doors put on a made-up <code>Door Flashing</code> row, or flashing figured without <code>x 1.1</code>.</li>
 <li>Wood, Mtl and CMU walls merged into one row.</li>
 <li>Size taken from the elevation instead of the schedule.</li>
 <li>P.T. wood jamb on CMU not checked.</li>
@@ -7384,11 +7383,19 @@ schedule. Do not type lengths in by hand.</p>
 </ul>
 <p>Walkthrough with examples: <a href="../../../../start/common-mistakes/#openings">all opening mistakes</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Window Flashing            Flashing Tape     LFT   =(2*5.0+3.0)*12
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Sill Flashing              Sill Flashing     LFT   =3.0*12
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Window Flashing at Mtl Walls   Flashing Tape   LFT   =(2*7.8+4.3)*6
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Window Jamb at CMU         2x4 P.T.          LFT   =(2*4.0+2.9)*4
+<p>12 windows <code>3.0x5.0</code> and 2 doors <code>3.3x6.5 d</code> in wood walls, 6 windows <code>4.3x7.8</code>
+in metal walls, 4 windows <code>2.9x4.0</code> in CMU:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Window Flashing                Flashing Tape    210   LFT   =CEILING(((2*5.0+3.0)*12+(2*6.5+3.3)*2)*1.1,10)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Sill Flashing                  Sill Flashing     40   LFT   =CEILING(3.0*12*1.1,2)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Window Flashing at Mtl Walls   Flashing Tape    140   LFT   =CEILING((2*7.8+4.3)*6*1.1,10)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Sill Flashing at Mtl Walls     Sill Flashing     30   LFT   =CEILING(4.3*6*1.1,2)
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Window Flashing at CMU Walls   Flashing Tape     48   LFT   =CEILING((2*4.0+2.9)*4*1.1,2)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Sill Flashing at CMU Walls     Sill Flashing     14   LFT   =CEILING(2.9*4*1.1,2)
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Window Jamb at CMU/Concrete    2x4 P.T.          per detail  LFT   G = (2*4.0+2.9)*4 = 43.6
 </span></code></pre></div>
+<p>Check of the first row: windows <code>13 x 12 = 156</code>, doors <code>16.3 x 2 = 32.6</code>, together
+<code>188.6 x 1.1 = 207.5</code>, to 10 = 210. Doors do not go into <code>Sill Flashing</code>:
+<code>3.0 x 12 x 1.1 = 39.6</code>, to 2 = 40.</p>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>
 <li><a href="../windows-doors/">Windows and Doors</a>: types, <code>d</code> / <code>gd</code> suffixes, the OP button</li>

@@ -7286,80 +7286,127 @@
 </thead>
 <tbody>
 <tr>
-<td>Roof plan (<code>a105 rf</code>)</td>
-<td>Наклонные кромки на фронтонах, вынос</td>
+<td>Elevations (<code>el</code>)</td>
+<td>Длина rake в истинную величину (мерим здесь), rake fascia, barge board, trim, FRT на открытом дереве</td>
 </tr>
 <tr>
-<td>Elevations (<code>el</code>)</td>
-<td>Rake fascia, barge board, trim, FRT на открытом дереве</td>
+<td>Roof plan (<code>a105 rf</code>)</td>
+<td>Где есть rakes, вынос свеса</td>
 </tr>
 <tr>
 <td>Details (<code>d</code>)</td>
-<td>Lookouts <code>2x4</code>/<code>2x6</code>, frame for rakes, sub fascia</td>
+<td>Lookouts или outlookers (сечение и шаг), frame for rakes, sub fascia, blocking</td>
 </tr>
 </tbody>
 </table>
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
 <ol>
-<li>Инструмент Line по наклонной кромке на плане кровли. Единица LFT.</li>
+<li>Инструмент Line по наклонной кромке на фасаде (elevation), где скат виден
+   в истинную величину. Единица LFT. На плане кровли rake не мерим: плановая
+   линия короче настоящей кромки, уклон теряется.</li>
 <li>Имя <code>rake &lt;вынос в дюймах&gt; &lt;зона&gt;</code>: <code>rake 12 main</code>, <code>rake 24 main</code>.
-   Папка <code>eves rakes/rakes</code> создаётся по имени сама.</li>
-<li>Длина на плане - плановая. Решай один раз, нужна ли истинная наклонная
-   длина (через уклон); второй раз уклон не применяй.</li>
-<li>Canopy и porch не входят в rake. Returns - своя позиция (<a href="../returns/">Returns</a>).</li>
+   Число - вынос свеса с section или detail, не уклон и не длина. Папка
+   <code>eves rakes/rakes</code> создаётся по имени сама.</li>
+<li>Длина с фасада уже наклонная: коэффициент уклона не применяется ни в
+   замере, ни в формуле. Только если фасада с этим фронтоном нет, плановую
+   длину один раз умножают на коэффициент common rafter (4:12 = 1.054,
+   6:12 = 1.118, 8:12 = 1.202, 12:12 = 1.414; таблица на странице
+   <a href="../../horizontal/roof-framing/hip/">Hip</a>).</li>
+<li>Если на фасаде уже обведены площади gable, веди rake по верхней грани
+   этих площадей: быстрее и без пропусков.</li>
+<li>Rake у porch и canopy - свои позиции (<code>rake 8 porch</code>), в <code>main</code> они не
+   входят. Returns - тоже своя позиция (<a href="../returns/">Returns</a>).</li>
 <li>Кровля из <code>AJS Rafters</code> с открытым свесом: rafters считаем вручную как
    каркас, а не простой <code>rake</code>.</li>
 </ol>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>LFT ниже - длина линии rake, вынос - число из её имени в дюймах.</p>
 <table>
 <thead>
 <tr>
 <th>Имя в дереве</th>
 <th>Строка DFL</th>
 <th>Материал</th>
-<th>Unit</th>
+<th>Unit (D)</th>
+<th>Формула C</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>eves rakes/rakes/rake 12 main</code></td>
 <td><code>Soffits at Rakes</code></td>
-<td><code>9" Vinyl</code> / beadboard</td>
-<td><code>LFT</code> или <code>SQ FT</code></td>
+<td><code>12" Vinyl</code> / <code>T&amp;G beadboard</code></td>
+<td><code>SQ FT</code></td>
+<td><code>=ЧЁТН(LFT*вынос/12*1.1)</code></td>
+</tr>
+<tr>
+<td>та же линия, soffit из одной доски на всю ширину</td>
+<td><code>Soffits at Rakes</code></td>
+<td><code>1x12</code></td>
+<td><code>LFT</code></td>
+<td><code>=ЧЁТН(LFT*1.1)</code></td>
 </tr>
 <tr>
 <td>та же линия</td>
 <td><code>Fascia at Rakes</code></td>
-<td><code>1x8</code> / alum wrapped</td>
+<td><code>1x8</code>, по детали <code>1x6</code></td>
 <td><code>LFT</code></td>
+<td><code>=ЧЁТН(LFT*1.1)</code></td>
 </tr>
 <tr>
 <td>та же линия</td>
 <td><code>Frame for Rakes 24" o.c.</code></td>
-<td><code>2x4</code> по детали</td>
-<td><code>LFT</code></td>
+<td><code>2x6</code>, по детали <code>2x4</code> или <code>2x8</code></td>
+<td><code>16</code></td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code>, G = LFT x вынос / шаг + LFT</td>
 </tr>
 <tr>
 <td>та же линия</td>
 <td><code>Sub Fascia</code></td>
-<td><code>2x8</code></td>
-<td><code>LFT</code></td>
+<td><code>2x6</code> по детали</td>
+<td><code>16</code></td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code>, G = LFT</td>
+</tr>
+<tr>
+<td>та же линия, только когда деталь рисует blocking</td>
+<td><code>Blocking for Rakes 48" o.c.</code></td>
+<td><code>2x6</code></td>
+<td><code>16</code></td>
+<td><code>=ОКРВВЕРХ(G*12/H*2/D;1)</code>, H = шаг</td>
 </tr>
 </tbody>
 </table>
+<ul>
+<li><code>Frame for Rakes</code>, <code>Sub Fascia</code> и <code>Blocking for Rakes</code> - каркас: в D длина
+  доски 16', в C число досок, запаса 1.1 нет (округление вверх до целой
+  доски). В G у <code>Frame for Rakes</code> сидят lookouts (LFT x вынос / шаг) и ledger
+  вдоль стены (LFT). Шаг 24" по умолчанию, 16" когда так в детали.</li>
+<li><code>Soffits at Rakes</code> и <code>Fascia at Rakes</code> - отделка: только когда trims в scope.
+  Soffit в <code>LFT</code> только когда он из одной доски или одной полосы на всю
+  ширину; правило и дефолт материала: <a href="../eve/">Eve / Eave</a>.</li>
+<li>Aluminum или prefab rake by others: строк каркаса и отделки нет, остаётся нота.</li>
+</ul>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Rake слит с eave в одну линию.</li>
-<li>Уклон применён и в замере, и в формуле.</li>
-<li>Canopy или porch посчитаны в rake повторно.</li>
+<li>Rake обведён на плане кровли вместо фасада: длина короче настоящей.</li>
+<li>К длине с фасада ещё раз применён коэффициент уклона.</li>
+<li>В имени стоит уклон или длина вместо выноса (<code>rake 12</code> это вынос 12").</li>
+<li>Sub Fascia и Frame for Rakes записаны в <code>LFT</code> с запасом 1.1 вместо досок по 16'.</li>
 <li>FRT на открытом rake не проверен по правилам наружной стены.</li>
 </ul>
 <p>Все ошибки по кровле: <a href="../../../start/common-mistakes/#roof">common-mistakes</a>.</p>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/eves rakes/rakes/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  rake 12 main     Line  96 LFT
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  rake 12 main     Line  96 LFT   (по фасадам)
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Takeoffs/Grge/eves rakes/rakes/
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  rake 24 main     Line  44 LFT
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Main, вынос 12&quot;:
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Soffits at Rakes           12&quot; Vinyl    106   SQ FT   96 x 12/12 x 1.1 = 105.6
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Fascia at Rakes            1x8          106   LFT     96 x 1.1 = 105.6
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Frame for Rakes 24&quot; o.c.   2x6            9   16      G = 96 x 12/24 + 96 = 144; 144 / 16 = 9
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Sub Fascia                 2x6            6   16      G = 96; 96 / 16 = 6
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

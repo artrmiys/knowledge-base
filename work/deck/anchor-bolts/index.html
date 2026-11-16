@@ -7296,12 +7296,14 @@
 <figure>
 <p><img alt="Anchor bolt through sill plate" src="../../../assets/images/framing/anchor-bolt.svg" />
   </p>
-<figcaption>Anchor bolt с washer и nut крепит P.T. plate к бетону. Размер, заглубление и шаг берутся из anchorage schedule и SW schedule; если там пусто, ставится дефолт шаблона (ниже).</figcaption>
+<figcaption>Anchor bolt с washer и nut крепит P.T. plate к бетону. Размер, заглубление и шаг берутся из anchorage schedule и SW schedule; если на чертежах нет ничего, ставится дефолт <code>1/2" Ø</code> на 36" o.c. (ниже).</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Анкеры нижней plate на бетоне или кладке, крепёж ledger балкона и porch к
-дому, through bolts узлов балка-пост. Каждая группа своей строкой: <code>Anchor
-Bolts</code>, <code>Washers</code>, <code>Nuts</code>. Общие правила по болтам и screws на странице
+<p>Страница стоит в разделе Deck, но почти вся она про анкеры sill plate к
+фундаменту: строки <code>Anchor Bolts</code> и <code>Washer</code> блока Foundation Walls, которые
+крепят нижнюю plate к бетону или кладке. Крепёж ledger балкона и porch и
+through bolts узлов балка-пост - последние строки таблицы, со ссылками. Общие
+правила по болтам и screws на странице
 <a href="../../horizontal/floor-framing/details/bolts/">Bolts</a>; анкеры holdowns на
 <a href="../../vertical/sheathing/shear-wall/">Shear Wall</a>.</p>
 <h2 id="_2">Где искать на чертежах<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
@@ -7314,8 +7316,8 @@ Bolts</code>, <code>Washers</code>, <code>Nuts</code>. Общие правила
 </thead>
 <tbody>
 <tr>
-<td>Sill and sole plate anchorage schedule (S0.x, S5xx)</td>
-<td>Диаметр, длина, заглубление (<code>emb</code>), шаг, продукт (Titen HD, wedge anchor, cast-in J-bolt) по типу стены</td>
+<td>Sill and sole plate anchorage schedule (S0.x, S5xx), S general notes</td>
+<td>Диаметр, длина, заглубление (<code>emb</code>), шаг, продукт (Titen HD, wedge anchor, cast-in J-bolt) по типу стены; plate washer</td>
 </tr>
 <tr>
 <td>Shear Wall Schedule</td>
@@ -7331,22 +7333,25 @@ Bolts</code>, <code>Washers</code>, <code>Nuts</code>. Общие правила
 </tr>
 </tbody>
 </table>
-<p>Размер, заглубление и шаг берутся из anchorage schedule. Schedule не
-найден: ставь <a href="#default">дефолт шаблона</a> (<code>1/2" Ø emb.</code>, 36" o.c.), в E
-<code>assumed</code> и ноту <code>Note: Anchor Bolts 1/2" Ø @ 36" o.c. assumed; verify</code>.</p>
+<p>Размер, заглубление и шаг на каждом job заново читаются из S notes или
+anchorage schedule. Только когда на чертежах нет ничего: <a href="#default">дефолт</a>
+(<code>1/2" Ø emb.</code>, 36" o.c.), в E <code>assumed</code> и нота
+<code>Note: Anchor Bolts 1/2" Ø @ 36" o.c. assumed; verify</code>.</p>
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Длина линии анкеров равна LFT стен на бетоне с того же этажа
 (<code>walls/&lt;этаж&gt;</code>, точка F для фундамента). Проёмы в этой линии (ворота,
 двери) вычитаются один раз. Ledger: длина ledger из блока балкона или
 porch. Шаг и тип анкера в имени не нужны, они живут в DFL.</p>
 <h2 id="default">Дефолт, если на чертежах нет anchorage schedule<a class="headerlink" href="#default" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Строка шаблона DFL (блок Foundation walls):</p>
+<p>Дефолт ставится только когда ни anchorage schedule, ни S notes не дают
+анкер:</p>
 <table>
 <thead>
 <tr>
 <th>Строка DFL</th>
 <th>B (spec)</th>
 <th>H (шаг)</th>
+<th>E</th>
 <th>Формула C</th>
 </tr>
 </thead>
@@ -7355,19 +7360,24 @@ porch. Шаг и тип анкера в имени не нужны, они жи�
 <td><code>Anchor Bolts 36" o.c.</code></td>
 <td><code>1/2" Ø emb.</code></td>
 <td><code>36</code></td>
-<td><code>=CEILING((G*12/36)*1.1, 2)</code></td>
+<td><code>assumed</code></td>
+<td><code>=CEILING(G*12/H*1.1,2)</code></td>
 </tr>
 <tr>
 <td><code>Washer 36" o.c.</code></td>
-<td>по детали, обычно <code>3x3 Square</code></td>
-<td><code>36</code></td>
-<td>та же формула, одна шайба на болт</td>
+<td><code>3x3 Square</code></td>
+<td></td>
+<td></td>
+<td>та же формула: одна шайба на болт</td>
 </tr>
 </tbody>
 </table>
-<p>G - длина стен на бетоне. Shear walls получают свои строки со своим шагом из
-SW schedule, дефолт на них не распространяется. Если на листах есть
-anchorage schedule или notes с размером, они важнее дефолта.</p>
+<p>Под заголовком блока нота <code>Note: Anchor Bolts 1/2" Ø @ 36" o.c. assumed;
+verify</code>. G - длина стен на бетоне. В шаблоне DFL в этих строках стоит
+<code>5/8" Ø x 6" emb. Titen HD</code> на 48" o.c.: это заглушка шаблона, не дефолт.
+Её всегда заменяют данными job или дефолтом из таблицы выше. Shear walls
+получают свои строки со своим шагом из SW schedule, дефолт на них не
+распространяется.</p>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7375,64 +7385,91 @@ anchorage schedule или notes с размером, они важнее деф�
 <th>Строка DFL</th>
 <th>B (spec)</th>
 <th>Unit</th>
-<th>Формула</th>
+<th>Формула и правило</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Anchor Bolts 48" o.c.</code></td>
-<td><code>1/2" Ø x 4" emb Titen HD</code></td>
+<td>как в S notes или schedule: <code>5/8" Ø Titen HD 4" emb.</code></td>
 <td>pcs</td>
-<td><code>=CEILING(G*12/48,2)</code>, E = <code>for Ext Walls</code></td>
+<td><code>=CEILING(G*12/H*1.1,2)</code>; H = шаг, он печатается в подписи; G = наружные стены на бетоне; E = лист и <code>for Ext Walls</code></td>
 </tr>
 <tr>
-<td><code>Anchor Bolts 32" o.c.</code></td>
-<td>по SW schedule, тот же формат</td>
+<td><code>Anchor Bolts 48" o.c.</code> (вторая строка)</td>
+<td>тот же анкер</td>
 <td>pcs</td>
-<td>отдельная строка на каждый шаг</td>
+<td>та же формула; G = corridor и demising 1-го этажа; E <code>for Corr and Demising</code></td>
+</tr>
+<tr>
+<td><code>SW Anchor Bolts 16" o.c.</code></td>
+<td>по SW schedule</td>
+<td>pcs</td>
+<td>та же формула; G = LFT этой марки SW на бетоне, E = марка; эта длина вычитается из G общей строки</td>
+</tr>
+<tr>
+<td><code>Washer 48" o.c.</code></td>
+<td><code>3x3 Square</code>; schedule называет plate washer - его модель (<code>BP 5/8-3</code>, <code>BPS 1/2-3</code>)</td>
+<td>pcs</td>
+<td>то же число, что у анкеров над ней (с 1.1); при одном шаге на здание</td>
 </tr>
 <tr>
 <td><code>Washers</code></td>
-<td><code>3x3</code> или plain по детали</td>
+<td>то же</td>
 <td>pcs</td>
-<td>равно анкерам</td>
+<td>когда есть строки SW: одна строка на группу, <code>=SUM(C всех анкеров группы)</code></td>
 </tr>
 <tr>
 <td><code>Nuts</code></td>
-<td></td>
+<td>по диаметру анкера</td>
 <td>pcs</td>
-<td>равно анкерам</td>
+<td>только у анкеров с гайкой (cast-in J-bolt, wedge anchor), равно анкерам; у Titen HD гайки нет и строки нет</td>
 </tr>
 <tr>
-<td><code>Through Bolts</code> (ledger, балка-пост)</td>
-<td><code>1/2" Ø</code> по детали</td>
+<td><code>Through Bolts (4)</code> (балка-пост, ledger в блоке балкона)</td>
+<td><code>1/2" Ø x 10" Bolt</code> по детали</td>
 <td>pcs</td>
-<td>шаг по детали, washers и nuts своими строками</td>
+<td>болтов на узел x узлов x units; <code>Washers</code> 2 на болт, <code>Nuts</code> 1 на болт своими строками</td>
 </tr>
 </tbody>
 </table>
-<p>Формат B: диаметр, длина или заглубление, продукт, в таком порядке
-(<code>5/8" Ø x 7" emb</code>, <code>1/2" Ø x 4" emb Titen HD</code>); общие правила записи
-крепежа в <a href="../../../reference/hangers/#dfl-format">Hangers: как записывать крепёж в DFL</a>.
-Блок из четырёх строк (Blocking, Anchor Bolts, Washers, Nuts) вставляет
-макрос <code>B_BoltsAdd</code>, см. <a href="../../../reference/excel-hotkeys/">Excel macro hotkeys</a>.
-Мелкий крепёж до 50 штук округляется вверх до чётного. Анкеры holdowns
-считаются в блоке holdowns: <a href="../../../reference/dfl-blocks/#holdowns">Блоки DFL</a>.</p>
+<ul>
+<li>Запас 1.1 стоит в формуле анкеров и шайб всегда, без исключений. Округление
+  вверх до чётного.</li>
+<li>Шаг, размер и продукт в каждой строке - с чертежей этого job; шайбы - по
+  schedule, <code>3x3 Square</code> только когда schedule не называет plate washer.</li>
+<li>Titen HD - screw anchor: гайки у него нет. Блок из четырёх строк (Blocking,
+  Anchor Bolts, Washers, Nuts) вставляет макрос <code>B_BoltsAdd</code>, см.
+  <a href="../../../reference/excel-hotkeys/">Excel macro hotkeys</a>; при Titen HD строку
+  <code>Nuts</code> удали.</li>
+<li>Формат B: диаметр, длина или заглубление, продукт, как напечатано на листе
+  (<code>5/8" Ø x 7" emb</code>, <code>1/2" Ø x 4" emb Titen HD</code>); общие правила записи
+  крепежа в <a href="../../../reference/hangers/#dfl-format">Hangers: как записывать крепёж в DFL</a>.</li>
+<li>Анкеры holdowns считаются в блоке holdowns:
+  <a href="../../../reference/dfl-blocks/#holdowns">Блоки DFL</a>.</li>
+</ul>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Один шаг анкеров на всё здание без SW schedule.</li>
+<li>Формула без 1.1, или шайб меньше, чем анкеров.</li>
+<li>В B осталась заглушка шаблона <code>5/8" Titen HD</code> на 48", хотя чертежи дают
+  другой анкер или не дают ничего (тогда <code>1/2" Ø</code> на 36" и <code>assumed</code>).</li>
+<li>Строка <code>Nuts</code> у Titen HD.</li>
 <li>Wedge anchor заменён на Titen HD без основания в детали.</li>
 <li>Проёмы не вычтены из линии анкеров, или вычтены дважды.</li>
-<li>Washers скопированы со старым шагом и не пересчитаны.</li>
+<li>Washers скопированы со старым шагом и не пересчитаны; <code>3x3</code> поставлены при
+  plate washer в schedule.</li>
 <li>Hilti by others посчитаны как наши; нота обязана остаться.</li>
 <li>Все ошибки раздела: <a href="../../../start/common-mistakes/#deck">Deck, porch, балконы</a>, <a href="../../../start/common-mistakes/#holdowns">Shear walls и holdowns</a>.</li>
 </ul>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Anchor Bolts 48&quot; o.c.   1/2&quot; Ø x 4&quot; emb Titen HD   42  pcs   =CEILING(G*12/48,2)   for Ext Walls  S0.2
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Anchor Bolts 32&quot; o.c.   1/2&quot; Ø x 4&quot; emb Titen HD   18  pcs   SW1 per schedule       S502
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Washers                 3x3                60  pcs   =C&lt;bolts&gt;
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Nuts                                        60  pcs   =C&lt;bolts&gt;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Наружные стены на бетоне 194 LFT, из них SW1 24 LFT. Анкер и шаг по S0.2 и SW schedule.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Anchor Bolts 48&quot; o.c.      5/8&quot; Ø Titen HD 4&quot; emb.   48  pcs   S0.2; for Ext Walls   G = 194 - 24 = 170; 170 x 12/48 x 1.1 = 46.8
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>SW Anchor Bolts 16&quot; o.c.   5/8&quot; Ø Titen HD 4&quot; emb.   20  pcs   SW1                   G = 24; 24 x 12/16 x 1.1 = 19.8
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Washers                    3x3 Square                68  pcs   =SUM(C анкеров)       48 + 20
 </span></code></pre></div>
+<p>Titen HD: строки <code>Nuts</code> нет.</p>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li><a href="../../horizontal/floor-framing/details/bolts/">Bolts</a>, <a href="../../vertical/walls/sill-plates/">Sill Plates</a>, <a href="../../vertical/sheathing/shear-wall/">Shear Wall</a></li>

@@ -7255,6 +7255,11 @@ We count only the trim material and only when trim is in the job.</p>
 Canonical page: <a href="../../siding/eifs-stucco-veneer/">EIFS / Stucco / Veneer</a>; the rule
 for the trim scope and J-channel: <a href="../exclusions/">Exclusions and J-Channel</a>.</p>
 </div>
+<figure>
+<p><img alt="Facade with the exterior trim groups" src="../../../../assets/images/trims/ext-trims-facade.svg" />
+  </p>
+<figcaption>Trim groups on a facade and their DFL rows: casing, crowns, sills, corner boards, watertable, frieze, soffit, fascia, shutters, columns. Running trim in LFT, a soffit wider than one board in SQ FT, items by the piece and in pairs.</figcaption>
+</figure>
 <h2 id="what-is-included-and-in-what-order">What is included and in what order<a class="headerlink" href="#what-is-included-and-in-what-order" title="Link to this section">&para;</a></h2>
 <div class="grid cards">
 <ul>
@@ -7352,43 +7357,43 @@ from <code>siding</code>.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>Ext. Casing sides</code></td>
+<td><code>Ext Casing</code></td>
 <td><code>5/4x4</code></td>
-<td><code>=2*5.5*34</code></td>
+<td><code>=CEILING(G*1.1,10)</code></td>
 <td>LFT</td>
 <td><code>A601</code></td>
 </tr>
 <tr>
-<td><code>Head crowns</code></td>
+<td><code>Crowns</code></td>
 <td><code>3-1/2" crown</code></td>
-<td><code>=3.3*34</code></td>
+<td><code>=CEILING(G*1.1,10)</code></td>
 <td>LFT</td>
 <td><code>scaled</code></td>
 </tr>
 <tr>
-<td><code>CornerBoards</code></td>
+<td><code>Corner Boards</code></td>
 <td><code>5/4x6</code></td>
-<td><code>=8*28</code></td>
+<td><code>=EVEN(G*2*1.1)</code></td>
 <td>LFT</td>
 <td><code>A201</code></td>
 </tr>
 <tr>
 <td><code>Soffits at Porch</code></td>
 <td><code>Beadboard</code></td>
-<td><code>=12*8*G</code></td>
+<td><code>=CEILING(G*1.1,10)*units</code></td>
 <td>SQ FT</td>
 <td><code>6/A550</code></td>
 </tr>
 <tr>
 <td><code>Columns</code></td>
-<td><code>12" Dia Fbg Non-taper w/c&amp;b</code></td>
+<td><code>12" Dia Fbg Non-taper</code></td>
 <td><code>4</code></td>
-<td>pcs</td>
 <td><code>8'</code></td>
+<td><code>w/ cap &amp; base</code></td>
 </tr>
 <tr>
-<td><code>Shutters - paneled</code></td>
-<td><code>20"x60"</code></td>
+<td><code>Shutters</code></td>
+<td><code>20"x60" paneled</code></td>
 <td><code>12</code></td>
 <td>pairs</td>
 <td><code>A201</code></td>
@@ -7396,8 +7401,18 @@ from <code>siding</code>.</p>
 </tbody>
 </table>
 <ul>
+<li>G is the measured length or area from the tree. The 1.1 waste and the round-up
+  are in the C formula: to 10, or to 2 when the total is under 50.</li>
+<li><code>Corner Boards</code>: G is the sum of the outside corner heights. A corner made of two
+  boards: <code>=EVEN(G*2*1.1)</code>, so 8 corners at 28' = 224 LFT of corners give 494 LFT of
+  boards. A one-piece L profile per the detail: <code>=EVEN(G*1.1)</code>.</li>
+<li>Write the labels as the DFL template does: <code>Ext Casing</code>, <code>Corner Boards</code>, <code>Crowns</code>,
+  <code>Frieze Board</code>, <code>Over Fascia Trims</code>, <code>Fascia at Eves</code>, <code>Soffits at Eves</code>,
+  <code>Watertable Trim</code>, <code>Window Sills</code>. The macros sum rows by the label text:
+  <code>CornerBoards</code> and <code>Corner Boards</code> are two different rows to them.</li>
 <li><code>LFT</code> for linear stock, <code>SQ FT</code> for panels and beadboard, <code>pcs</code> and <code>pairs</code>
-  for products. Column and post height separately, not inside the description.</li>
+  for products. For <code>Columns</code> D holds the column height (<code>8'</code>) and C the count;
+  the height is not written inside the description.</li>
 <li>Size and profile always visible (<code>5/4x4</code>, <code>3-1/2" crown</code>, <code>4" Vinyl
   corner</code>); never write a generic <code>trim</code>.</li>
 <li>In the trims workbook for macros a row is three columns: Label, Value,

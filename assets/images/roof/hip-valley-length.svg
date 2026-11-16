@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-labelledby="t d">
-  <title id="t">Hip and valley length: plan length times a factor</title>
-  <desc id="d">Left: roof plan of a hip roof with hips at 45 degrees from the corners to the ridge, one hip highlighted with its plan length. Right: the triangle explaining the factor and a table by pitch.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520" role="img" aria-labelledby="t d">
+  <title id="t">Hip and valley board length from the plan length</title>
+  <desc id="d">Left: roof plan with one hip highlighted and its plan length L. Right: the true length is L times a factor; table of factors by pitch for hips and valleys at 45 degrees in plan and for common rafters; worked example.</desc>
   <defs>
     <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
     <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
     <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
-    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
     <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
     <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
     <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
@@ -14,65 +14,79 @@
     <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
     <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
     <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
-    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
     <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
     <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
     <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
-    
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
     <style>
-      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
-      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
       .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
       .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
       .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
-      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
       .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
-      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
-      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
-      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
-      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
-      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
-      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
-      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
-      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
-      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
-      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
       .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
       .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
-      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
     </style>
   </defs>
-  <rect x="0.5" y="0.5" width="999" height="559" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
-<text class="lab" x="60" y="50" >Roof plan: hip roof</text>
-<rect x="60" y="90" width="440" height="300" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.6" />
-<line x1="210.0" y1="240.0" x2="350.0" y2="240.0" stroke="#3a3f44" stroke-width="2.2"/><line x1="60" y1="90" x2="210.0" y2="240.0" stroke="#3a3f44" stroke-width="1.6"/><line x1="60" y1="390" x2="210.0" y2="240.0" stroke="#3a3f44" stroke-width="1.6"/><line x1="500" y1="90" x2="350.0" y2="240.0" stroke="#3a3f44" stroke-width="1.6"/><line x1="500" y1="390" x2="350.0" y2="240.0" stroke="#3a3f44" stroke-width="1.6"/><line x1="60" y1="90" x2="210.0" y2="240.0" stroke="#e65100" stroke-width="5"/><text class="lab2" x="90" y="180" >hip (45 в плане)</text>
-<text class="small" x="90" y="198" >плановая длина L</text>
-<text class="small" x="260" y="232" >ridge</text>
-<rect x="340" y="390" width="120" height="90" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.4" />
-<line x1="340" y1="390" x2="400" y2="435" stroke="#1e88e5" stroke-width="5"/><line x1="400" y1="435" x2="460" y2="390" stroke="#3a3f44" stroke-width="1.6"/><line x1="400" y1="435" x2="400" y2="480" stroke="#3a3f44" stroke-width="1.6"/><text class="small" x="350" y="466" fill="#1e88e5" font-weight="600">valley</text>
-<text class="note" x="60" y="520" >Ridge и обычные rafters: длина в плане x фактор уклона (как у ската). Hip и valley лежат по диагонали, поэтому фактор меньше.</text>
-<text class="lab" x="580" y="50" >Длина доски = L (план) x фактор</text>
-<text class="note" x="580" y="74" >hip / valley при 45 в плане и равных уклонах:</text>
-<text class="mono2" x="580" y="94" >factor = sqrt(1 + (rise / 16.97)^2)</text>
-<text class="lab2" x="580" y="130" >Pitch</text>
-<text class="lab2" x="660" y="130" >Hip / valley</text>
-<text class="lab2" x="800" y="130" >Скат</text>
-<text class="mono2" x="580" y="154" >4/12</text>
-<text class="mono2" x="660" y="154" >1.027</text>
-<text class="mono2" x="800" y="154" >1.054</text>
-<text class="mono2" x="580" y="178" >6/12</text>
-<text class="mono2" x="660" y="178" >1.061</text>
-<text class="mono2" x="800" y="178" >1.118</text>
-<text class="mono2" x="580" y="202" >8/12</text>
-<text class="mono2" x="660" y="202" >1.106</text>
-<text class="mono2" x="800" y="202" >1.202</text>
-<text class="mono2" x="580" y="226" >12/12</text>
-<text class="mono2" x="660" y="226" >1.225</text>
-<text class="mono2" x="800" y="226" >1.414</text>
-<line x1="580" y1="136" x2="880" y2="136" stroke="#3a3f44" stroke-width="1"/><polygon points="600.0,375.0 840.0,375.0 840.0,290.0" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.6" stroke-linejoin="round" />
-<line x1="600" y1="375" x2="840" y2="290" stroke="#e65100" stroke-width="4"/><text class="dimt" x="720" y="395" text-anchor="middle" >L в плане (диагональ, 16.97 на 12 rise)</text>
-<text class="dimt" x="848" y="337.5" >rise</text>
-<text class="dimt" x="620" y="312" >реальная длина hip</text>
-<text class="mono2" x="580" y="440" >Пример: hip 18' в плане, 6/12: 18 x 1.061 = 19.1' -&gt; заказ 20'</text>
-<text class="small" x="580" y="466" >Длина заказа: вверх до чётного фута (как у Beam).</text>
+<rect x="0.5" y="0.5" width="879" height="519" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="h" x="40" y="44">Roof plan: линия hip короче доски</text>
+<polygon points="40.0,70.0 418.4,70.0 418.4,293.6 289.4,293.6 289.4,371.0 169.0,371.0 169.0,293.6 40.0,293.6" fill="#eef1f4" stroke="#3a3f44" stroke-width="1.6" stroke-linejoin="round"/>
+<polygon points="169.0,293.6 229.2,233.4 289.4,293.6 289.4,371.0 169.0,371.0" fill="#e3e8ee" stroke="none" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="40.0,70.0 418.4,70.0 418.4,293.6 289.4,293.6 289.4,371.0 169.0,371.0 169.0,293.6 40.0,293.6" fill="none" stroke="#3a3f44" stroke-width="1.6" stroke-linejoin="round"/>
+<line x1="40.0" y1="70.0" x2="151.8" y2="181.8" stroke="#e65100" stroke-width="4.5" stroke-linecap="round"/>
+<line x1="418.4" y1="70.0" x2="306.6" y2="181.8" stroke="#e65100" stroke-width="4.5" stroke-linecap="round"/>
+<line x1="40.0" y1="293.6" x2="151.8" y2="181.8" stroke="#e65100" stroke-width="4.5" stroke-linecap="round"/>
+<line x1="418.4" y1="293.6" x2="306.6" y2="181.8" stroke="#e65100" stroke-width="4.5" stroke-linecap="round"/>
+<line x1="151.8" y1="181.8" x2="306.6" y2="181.8" stroke="#3a3f44" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="229.2" y1="233.4" x2="229.2" y2="371.0" stroke="#3a3f44" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="169.0" y1="293.6" x2="229.2" y2="233.4" stroke="#1565c0" stroke-width="4.5" stroke-linecap="round"/>
+<line x1="289.4" y1="293.6" x2="229.2" y2="233.4" stroke="#1565c0" stroke-width="4.5" stroke-linecap="round"/>
+<line x1="66.0" y1="289.6" x2="166.8" y2="196.8" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="lab" x="124.0" y="259.8">L</text>
+<text class="note" x="190.5" y="171.5">ridge</text>
+<text style="fill:#e65100" class="lab2" x="104.5" y="108.7">hip</text>
+<text style="fill:#1565c0" class="lab2" x="291.1" y="274.7">valley</text>
+<text class="note" x="40" y="420">L - длина линии на плане (горизонтальная проекция).</text>
+<text class="note" x="40" y="439">Разные уклоны по сторонам hip: длину брать с разреза.</text>
+<text class="h" x="470" y="44">Длина доски = L x коэффициент</text>
+<text class="note" x="470" y="70">hip и valley под 45 градусов в плане:</text>
+<text class="mono2" x="470" y="92">sqrt(1 + (pitch/12)^2 / 2)</text>
+<text class="inkb" x="470" y="128">Pitch</text>
+<text class="inkb" x="580" y="128">Hip / valley</text>
+<text class="inkb" x="720" y="128">Common rafter</text>
+<line x1="470" y1="136" x2="840" y2="136" stroke="#3a3f44" stroke-width="1.1"/>
+<text class="mono2" x="470" y="158">4:12</text>
+<text class="mono" x="580" y="158">1.027</text>
+<text class="mono2" x="720" y="158">1.054</text>
+<text class="mono2" x="470" y="181">6:12</text>
+<text class="mono" x="580" y="181">1.061</text>
+<text class="mono2" x="720" y="181">1.118</text>
+<text class="mono2" x="470" y="204">8:12</text>
+<text class="mono" x="580" y="204">1.106</text>
+<text class="mono2" x="720" y="204">1.202</text>
+<text class="mono2" x="470" y="227">10:12</text>
+<text class="mono" x="580" y="227">1.161</text>
+<text class="mono2" x="720" y="227">1.302</text>
+<text class="mono2" x="470" y="250">12:12</text>
+<text class="mono" x="580" y="250">1.225</text>
+<text class="mono2" x="720" y="250">1.414</text>
+<polygon points="470,350 720,350 720,270" fill="#f3f4f6" stroke="#3a3f44" stroke-width="1.2" stroke-linejoin="round"/>
+<line x1="470" y1="350" x2="720" y2="270" stroke="#e65100" stroke-width="4.5" stroke-linecap="round"/>
+<text style="fill:#e65100" class="lab2" x="490" y="288">длина доски</text>
+<text class="note" x="730" y="316">rise</text>
+<text class="note" x="560" y="370">L в плане</text>
+<rect x="456" y="392" width="398" height="104" fill="#f6f8f6" stroke="#cfd8cf" stroke-width="1.2" rx="8"/>
+<text class="lab2" x="470" y="416">Пример: hip 18' в плане, 6:12</text>
+<text class="mono2" x="470" y="440">18 x 1.061 = 19.1'</text>
+<text class="mono" x="470" y="462">заказ 20' (вверх до чётного фута)</text>
+<text class="note" x="470" y="484">По коэффициенту ската было бы 20.1': неверно.</text>
 </svg>

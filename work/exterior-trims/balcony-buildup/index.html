@@ -7289,9 +7289,9 @@
 
 <h1 id="balcony-build-up">Balcony build-up (слои балкона: от каркаса до отделки)<a class="headerlink" href="#balcony-build-up" title="Прямая ссылка на раздел">&para;</a></h1>
 <figure>
-<p><img alt="Balcony build-up assembly stack" src="../../../assets/images/trims/balcony-buildup.svg" />
+<p><img alt="Разрез балкона: каркас и слои отделки с номерами строк" src="../../../assets/images/trims/balcony-buildup.svg" />
   </p>
-<figcaption>Снизу вверх: каркас, sleepers, EPDM, decking. Строки 1-6 считает страница каркаса, строки 7-12 здесь. Pavers и membrane часто by others.</figcaption>
+<figcaption>Разрез балкона у стены: каркас, subfloor, EPDM по subfloor с заводом на стену, sleepers поверх мембраны, decking по sleepers. Номера как в таблице ниже: строки 1-6 считает страница каркаса, строки 7-12 здесь. Pavers и membrane часто by others.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Карта всех слоёв балкона и канон по finish-слоям: post wrap, EPDM, decking
@@ -7311,7 +7311,7 @@ pavers. Каркас (posts, beam, ledger, joists, hangers, sleepers, subfloor)
 <tbody>
 <tr>
 <td>Разрез балкона A4xx</td>
-<td>Порядок слоёв: subfloor, sleepers, membrane, decking или pavers</td>
+<td>Порядок слоёв: subfloor, membrane, sleepers, decking или pavers</td>
 </tr>
 <tr>
 <td>Детали A5xx (balcony edge, wall flashing)</td>
@@ -7323,15 +7323,22 @@ pavers. Каркас (posts, beam, ledger, joists, hangers, sleepers, subfloor)
 </tr>
 <tr>
 <td>Scope задания</td>
-<td>Frame only: строки 7-12 не вставлять</td>
+<td>Frame only: строки 7, 10 и 11 не вставлять</td>
 </tr>
 </tbody>
 </table>
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Площади и длины берутся из размеров блока W x D и множителя G
+<p>Площади и длины берутся из размеров блока W x D и числа экземпляров (units)
 (см. <a href="../../deck/deck-porch-balcony-frame/">каркас</a>). Soffit снизу и decking
 равны площади балкона, trims и flashing идут по периметру: фронт и бока
 открыты, сторона у стены даёт flashing.</p>
+<p>Порядок сборки снизу вверх, как это строят:</p>
+<ul>
+<li>Обычный открытый балкон: posts и beam, joists, decking прямо по joists.</li>
+<li>Terrace (над гаражом или помещением): joists, <code>Subfloor</code>, <code>EPDM</code> по
+  subfloor, <code>Sleepers</code> поверх мембраны, decking по sleepers. Мембрана
+  всегда под sleepers: decking на мембрану не кладут.</li>
+</ul>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7348,36 +7355,36 @@ pavers. Каркас (posts, beam, ledger, joists, hangers, sleepers, subfloor)
 <td>1</td>
 <td><code>Posts</code> + <code>Post Bases</code> + <code>Post Caps</code></td>
 <td><code>6x6 P.T.</code>, по schedule</td>
-<td>pcs</td>
+<td>посты: длина в D; bases и caps pcs</td>
 <td>каркас</td>
 </tr>
 <tr>
 <td>2</td>
 <td><code>Beam (3)</code> фронт, <code>Beam (2)</code> бока</td>
 <td><code>2x12 P.T.</code></td>
-<td>LFT</td>
+<td>доски, длина в D</td>
 <td>каркас</td>
 </tr>
 <tr>
 <td>3</td>
 <td><code>Ledger</code> + screws, <code>Box</code> если балка не flush</td>
 <td><code>2x12 P.T.</code></td>
-<td>LFT</td>
+<td>доски, длина в D; screws pcs</td>
 <td>каркас</td>
 </tr>
 <tr>
 <td>4</td>
 <td><code>Joists</code> + <code>Hangers Zmax</code> + <code>End Joists</code></td>
 <td><code>2x12 P.T.</code> 16" o.c.</td>
-<td>LFT, pcs</td>
+<td>доски, длина в D; hangers pcs</td>
 <td>каркас</td>
 </tr>
 <tr>
 <td>5</td>
-<td><code>Sleepers</code> (Terrace, часто 2 слоя)</td>
+<td><code>Sleepers</code> (Terrace)</td>
 <td><code>2x4 P.T.</code></td>
-<td>LFT</td>
-<td>каркас</td>
+<td>доски, длина в D</td>
+<td>каркас, штук на балкон <code>=CEILING(W*12/16,1)+1</code></td>
 </tr>
 <tr>
 <td>6</td>
@@ -7389,48 +7396,68 @@ pavers. Каркас (posts, beam, ledger, joists, hangers, sleepers, subfloor)
 <tr>
 <td>7</td>
 <td><code>Post Wrap</code></td>
-<td><code>1x8</code> / <code>5/4x</code></td>
+<td><code>1x8</code> (пост 6x6), <code>1x6</code> (пост 4x4)</td>
 <td>LFT</td>
-<td><strong>здесь</strong></td>
+<td><strong>здесь</strong>, G = высота x 4 стороны x постов на балкон; C = G x 1.1 вверх до 10 (меньше 50 - до 2), x units</td>
 </tr>
 <tr>
 <td>8</td>
-<td><code>EPDM</code></td>
-<td>membrane</td>
+<td><code>EPDM</code> (Terrace)</td>
+<td><code>EPDM</code>, <code>60 EPDM</code></td>
 <td>SQ FT</td>
-<td><strong>здесь</strong>, если наш по spec</td>
+<td><strong>здесь</strong>, <code>=CEILING(W*D*units*1.1,10)</code>, площадь как у subfloor</td>
 </tr>
 <tr>
 <td>9</td>
 <td><code>Decking</code></td>
-<td><code>2x6 DuxxBak</code> (балкон), <code>5/4x6</code> (Terrace)</td>
+<td>по детали: <code>2x6 DuxxBak</code> (балкон), <code>5/4x6</code> (Terrace)</td>
 <td>SQ FT</td>
-<td><strong>здесь</strong>, <code>=W*D*G</code></td>
+<td><strong>здесь</strong>, <code>=CEILING(W*D*units*1.1,10)</code></td>
 </tr>
 <tr>
 <td>10</td>
 <td><code>Soffits at Balcony</code></td>
 <td><code>Beadboard</code></td>
 <td>SQ FT</td>
-<td><strong>здесь</strong>, <code>=W*D*G</code></td>
+<td><strong>здесь</strong>, <code>=CEILING(W*D*1.1,10)*units</code></td>
 </tr>
 <tr>
 <td>11</td>
-<td><code>Balcony Trims</code> / <code>Fascia</code></td>
-<td><code>1x10</code>, <code>5/4x8</code></td>
+<td><code>Fascia Trim at Hdr outside</code></td>
+<td><code>1x12</code>, при header ниже 10" <code>1x10</code></td>
 <td>LFT</td>
-<td><strong>здесь</strong>, <code>=(W+2*D)*G</code></td>
+<td><strong>здесь</strong>, G = фронт W одного балкона (длина header); C = G x 1.1 вверх до 2 (от 50 до 10), x units</td>
 </tr>
 <tr>
 <td>12</td>
-<td><code>Flashings at Wall</code></td>
-<td><code>Copper</code> / drip edge</td>
+<td><code>Flashings at Wall</code> (Terrace)</td>
+<td><code>Copper</code></td>
 <td>LFT</td>
-<td><strong>здесь</strong>, <code>=W*G</code></td>
+<td><strong>здесь</strong>, <code>=W*units</code>, длина стороны у стены, без waste</td>
 </tr>
 </tbody>
 </table>
-<p>Строки 7-12 вставляются только когда отделка в scope. Размер не указан:
+<ul>
+<li>Decking наш: каждый блок балкона заканчивается строкой <code>Decking</code>. Не
+  считаем его только когда чертежи прямо пишут by others (pavers deck
+  system, prefab балкон); тогда нота вместо строки.</li>
+<li>Продукт decking не назван нигде: <code>TBD Decking</code>; на panel-job без spec
+  <code>5/4x6</code> и <code>assumed</code> в E.</li>
+<li><code>Sleepers</code> это один ряд реек <code>2x4 P.T.</code> с шагом 16" под decking Terrace:
+  на один балкон <code>=CEILING(W*12/16,1)+1</code> штук, длина доски в D = ближайшая
+  чётная длина выше глубины D балкона. Сечение <code>2x6</code> или второй слой только
+  когда разрез их показывает.</li>
+<li><code>EPDM</code> и <code>Flashings at Wall</code> есть только у Terrace с мембраной; у
+  открытого деревянного балкона этих строк нет.</li>
+<li><code>Post Wrap</code> только когда фасад или деталь показывает обшитый пост; голый
+  <code>P.T.</code> пост без строки.</li>
+</ul>
+<p><code>Post Wrap</code>, <code>Soffits at Balcony</code> и <code>Fascia Trim at Hdr outside</code> (строки 7, 10,
+11) вставляются только когда отделка в scope, своей секцией <code>Balcony Trims</code>
+за блоком, не внутрь блока. Боковые балки получают fascia trim только когда
+деталь его на них показывает: тогда G = W + 2 x D. <code>Decking</code> (9), а у Terrace
+<code>EPDM</code> (8) и <code>Flashings at Wall</code> (12) - строки самого блока: они пишутся и при
+Frame only, когда чертёж их показывает. Размер не указан:
 <code>TBD</code> и нота <code>Note: All trims to be verified. Scaled per elevations</code>.</p>
 <h2 id="composition-pavers">Composition с pavers<a class="headerlink" href="#composition-pavers" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Балкон на плите или над гаражом вместо decking на sleepers:</p>
@@ -7457,22 +7484,31 @@ pavers. Каркас (posts, beam, ledger, joists, hangers, sleepers, subfloor)
 </tbody>
 </table>
 <p>Над гаражом с фермами и LW concrete блок считается как Terrace:
-<code>3/4" Ply</code> subfloor, <code>2x4 P.T.</code> sleepers, <code>5/4x6</code> decking.</p>
+<code>3/4" Ply</code> subfloor, EPDM, <code>2x4 P.T.</code> sleepers поверх мембраны, <code>5/4x6</code>
+decking.</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Строки каркаса продублированы в блоке отделки (sleepers дважды).</li>
 <li>Decking <code>5/4x6</code> на обычном балконе вместо <code>2x6 DuxxBak</code> по детали.</li>
 <li>Pavers и membrane by others посчитаны как материал.</li>
 <li>Отделка вставлена при scope Frame only.</li>
-<li>Площадь decking без множителя units.</li>
+<li>Площадь decking без множителя units или без waste 1.1.</li>
+<li>Decking пропущен как "by others", хотя чертежи этого не пишут.</li>
+<li>В тексте или ноте decking положен на мембрану, sleepers под мембрану.</li>
 <li>Все ошибки раздела: <a href="../../../start/common-mistakes/#deck">Deck, porch, балконы</a>.</li>
 </ul>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Post Wrap            1x8          96  LFT    4 sides x 4&#39; x 6 posts
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Decking              2x6 DuxxBak  576 SQ FT  =12*8*G          5/A550
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Soffits at Balcony   Beadboard    576 SQ FT  =12*8*G          6/A550
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Balcony Trims        1x10         168 LFT    =(12+2*8)*G      6/A550
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Flashings at Wall    Copper       72  LFT    =12*G            7/A550
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Блок: балкон 12&#39; x 8&#39;, 6 units, по 2 поста на балкон = 12 постов 6x6, высота поста 9&#39;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Post Wrap                    1x8          480  LFT    =CEILING(9*4*2*1.1,10)*6      assumed
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Decking                      2x6 DuxxBak  640  SQ FT  =CEILING(12*8*6*1.1,10)       5/A550
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Soffits at Balcony           Beadboard    660  SQ FT  =CEILING(12*8*1.1,10)*6       6/A550
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Fascia Trim at Hdr outside   1x12          84  LFT    =CEILING(12*1.1,2)*6          6/A550
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Post Wrap: 9&#39; x 4 стороны x 2 поста = 72, x 1.1 = 79.2, вверх до 10 = 80, x 6 = 480
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Decking: 12 x 8 x 6 = 576, x 1.1 = 633.6, вверх до 10 = 640
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Soffit: 96 x 1.1 = 105.6, вверх до 10 = 110, x 6 = 660
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Fascia: фронт 12 x 1.1 = 13.2, вверх до 2 = 14, x 6 = 84
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

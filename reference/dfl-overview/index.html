@@ -7704,7 +7704,7 @@
 <figure>
 <p><img alt="Зоны листа Detailed Frame List" src="../../assets/images/reference/dfl-layout.svg" />
   </p>
-<figcaption>Лист Detailed Frame List: слева сдаваемая таблица A:H, справа рабочие зоны (экспорт из программы, матрица стен, спек-ячейки, калькулятор высот, справочники). Строки вставляются только в A:H.</figcaption>
+<figcaption>Лист Detailed Frame List: сдаваемая таблица A:H и рабочие зоны правее H (экспорт из программы, матрица стен, спек-ячейки, калькулятор высот, справочники). G берёт число из K экспорта или из матрицы. Строки вставляются только в A:H.</figcaption>
 </figure>
 <h2 id="map">Что где на этой странице<a class="headerlink" href="#map" title="Прямая ссылка на раздел">&para;</a></h2>
 <div class="grid cards">
@@ -7802,8 +7802,8 @@
 </tr>
 <tr>
 <td><strong>D</strong></td>
-<td>Единица: <code>LFT</code>, <code>SQ FT</code>, <code>4x8</code>, <code>pcs</code>, <code>50' rolls</code>. Пиши <code>LFT</code>, не <code>FT</code></td>
-<td><code>LFT</code></td>
+<td>Единица: <code>LFT</code>, <code>SQ FT</code>, <code>4x8</code>, <code>pcs</code>, <code>unit</code>, <code>tubes</code>, <code>50' rolls</code>. Пиши <code>LFT</code>, не <code>FT</code>, и <code>SQ FT</code>, не <code>SF</code>. У леса, который заказывают штуками (studs, joists, beams, posts, headers, rim, ribbon, blocking в framing list, ledger, bracing), в D стоит длина доски в футах, а C - число досок; формула тогда делит на D</td>
+<td><code>LFT</code>; <code>16</code> у <code>Rim Board</code>, <code>14</code> у <code>Bracing Ext Walls</code></td>
 </tr>
 <tr>
 <td><strong>E</strong></td>
@@ -7822,7 +7822,7 @@
 </tr>
 <tr>
 <td><strong>H</strong></td>
-<td>Параметр формулы: шаг в дюймах, число plies, высота</td>
+<td>Параметр формулы: шаг в дюймах, число plies, высота. Что именно стоит в H у каждой строки: <a href="../formulas/#legend">Формулы</a></td>
 <td><code>16</code>, <code>2</code></td>
 </tr>
 </tbody>
@@ -7921,12 +7921,12 @@
 </tr>
 <tr>
 <td>Заметка внутри секции</td>
-<td>над строками, к которым относится, жирная без заливки, над ней пустая строка</td>
+<td>над строками, к которым относится, жирная на жёлтом A:F, над ней пустая строка</td>
 <td><code>Note: Optional garage headers added; verify</code></td>
 </tr>
 <tr>
 <td>Счёт лестниц</td>
-<td>жирная строка без заливки, число в G, окончание в H</td>
+<td>жирная строка на жёлтом A:F, число в G, окончание в H</td>
 <td><code>Note: 2 Stairs</code>, G <code>2</code>, H <code>s</code></td>
 </tr>
 </tbody>
@@ -8065,45 +8065,27 @@
 <figcaption>Два этажа в готовом файле: перекрытие, блок своего этажа, стены, перекрытие следующего этажа. Данные условные.</figcaption>
 </figure>
 <h3 id="section-template">Шаблон и готовый файл<a class="headerlink" href="#section-template" title="Прямая ссылка на раздел">&para;</a></h3>
-<p>В шаблоне всё лежит по видам работ: сначала все стены, потом все перекрытия, блоки в самом конце. В готовом файле то же самое лежит по этажам.</p>
-<table>
-<thead>
-<tr>
-<th>Шаблон, где вы заполняете</th>
-<th>Готовый файл после Process Excels</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Foundation Walls</code>, <code>Basement Floor Walls</code></td>
-<td>то же</td>
-</tr>
-<tr>
-<td><code>1st</code>, <code>2nd</code>, <code>3rd Floor Walls</code> подряд</td>
-<td><code>1st Floor Framing List</code>, группы 1-го этажа, <code>1st Floor Walls</code></td>
-</tr>
-<tr>
-<td><code>Gable Walls</code>, <code>Truss Heel</code>, <code>Parapet Walls</code>, <code>Shaft walls</code>, <code>Wall Materials</code></td>
-<td><code>2nd Floor Framing List</code>, группы 2-го этажа, <code>2nd Floor Walls</code></td>
-</tr>
-<tr>
-<td><code>1st</code>, <code>2nd</code>, <code>3rd Floor Framing List</code> подряд, <code>Loft Framing List</code></td>
-<td><code>3rd Floor Framing List</code>, группы, <code>3rd Floor Walls</code>, <code>Loft Framing List</code></td>
-</tr>
-<tr>
-<td><code>Roof Frame list</code>, <code>Roof System Misc</code></td>
-<td><code>Gable Walls</code>, <code>Truss Heel</code>, <code>Parapet Walls</code>, <code>Shaft walls</code>, <code>Wall Materials</code></td>
-</tr>
-<tr>
-<td>блоки балконов, порчей, деков, навесов</td>
-<td><code>Roof Frame list</code>, <code>Roof System Misc</code></td>
-</tr>
-<tr>
-<td><code>Roof Products</code> и отделка</td>
-<td>то же</td>
-</tr>
-</tbody>
-</table>
+<p>В шаблоне всё лежит по видам работ: сначала все стены, потом все перекрытия, блоки в самом конце. В готовом файле то же самое лежит по этажам. Ниже два независимых списка сверху вниз: строки одного списка не соответствуют строкам другого по номеру.</p>
+<p><strong>Шаблон, где вы заполняете:</strong></p>
+<ol>
+<li><code>Foundation Walls</code>, <code>Basement Floor Walls</code></li>
+<li><code>1st</code>, <code>2nd</code>, <code>3rd Floor Walls</code> подряд</li>
+<li><code>Gable Walls</code>, <code>Truss Heel</code>, <code>Parapet Walls</code>, <code>Shaft walls</code>, <code>Wall Materials</code></li>
+<li><code>1st</code>, <code>2nd</code>, <code>3rd Floor Framing List</code> подряд, <code>Loft Framing List</code></li>
+<li><code>Roof Frame list</code>, <code>Roof System Misc</code></li>
+<li>блоки балконов, порчей, деков, навесов</li>
+<li><code>Roof Products</code> и отделка</li>
+</ol>
+<p><strong>Готовый файл после Process Excels:</strong></p>
+<ol>
+<li><code>Foundation Walls</code>, <code>Basement Floor Walls</code></li>
+<li><code>1st Floor Framing List</code>, группы 1-го этажа, <code>1st Floor Walls</code></li>
+<li><code>2nd Floor Framing List</code>, группы 2-го этажа, <code>2nd Floor Walls</code></li>
+<li><code>3rd Floor Framing List</code>, группы, <code>3rd Floor Walls</code>, <code>Loft Framing List</code></li>
+<li><code>Gable Walls</code>, <code>Truss Heel</code>, <code>Parapet Walls</code>, <code>Shaft walls</code>, <code>Wall Materials</code></li>
+<li><code>Roof Frame list</code>, <code>Roof System Misc</code></li>
+<li><code>Roof Products</code> и отделка</li>
+</ol>
 <div class="admonition warning">
 <p class="admonition-title">Руками секции не переставляйте</p>
 <p>Формулы и зоны справа привязаны к строкам шаблона. Process Excels переносит только столбцы A:H и только в готовой копии, рабочая книга остаётся как есть.</p>
@@ -8276,31 +8258,9 @@
 <figure>
 <p><img alt="Заголовок секции: правильно и неправильно" src="../../assets/images/reference/dfl-headers.svg" />
   </p>
-<figcaption>Заголовок правильный, с текстом в B и без цвета.</figcaption>
+<figcaption>Верно: жирный текст в A и фон, B-F пустые. Неверно: текст в B. Неверно: нет цвета.</figcaption>
 </figure>
-<p>Цвета в эталонах (конкретный цвет руководство не задаёт, обязателен сам фон):</p>
-<table>
-<thead>
-<tr>
-<th>Цвет</th>
-<th>Где в эталонах</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Жёлтый <code>FFFF00</code>, только A</td>
-<td><code>Foundation Walls</code>, <code>Shaft Walls</code>, <code>1st Floor Walls</code>, <code>Interior Doors&amp;Trims</code></td>
-</tr>
-<tr>
-<td>Зелёный <code>99CC00</code>, A или A:B</td>
-<td>framing lists, каркас групп (<code>Porch Framing List 4pcs</code>, <code>Ground Deck Framing List (left)</code>, <code>Pergola 4 pcs</code>), <code>Roof Frame list</code>, <code>Roof System Misc</code></td>
-</tr>
-<tr>
-<td>Светло-зелёный <code>CCFFCC</code>, только A</td>
-<td><code>Decking</code>, <code>Decking and Railing</code>, <code>Porch Trims</code>, <code>Pergola Trims</code>, <code>Soffits and Fascias</code>, <code>Exterior Trims</code>, <code>Siding</code></td>
-</tr>
-</tbody>
-</table>
+<p>Конкретный цвет руководство не задаёт, обязателен сам фон. Наши три цвета и какие секции каким красятся: <a href="#section-anatomy">таблица цветов заголовка</a>. В эталонах так же: каркас групп (<code>Porch Framing List 4pcs</code>, <code>Ground Deck Framing List (left)</code>, <code>Pergola 4 pcs</code>) зелёный <code>99CC00</code>, их <code>Decking</code>, <code>Decking and Railing</code>, <code>Porch Trims</code>, <code>Pergola Trims</code> светло-зелёные <code>CCFFCC</code>.</p>
 <h3 id="groups">Группы: deck, porch, балконы, canopy<a class="headerlink" href="#groups" title="Прямая ссылка на раздел">&para;</a></h3>
 <p>Каркас, trims, decking и railing этих конструкций лежат <strong>внутри секции Framing как подсекции, сразу после Framing List своего этажа</strong>: балкон второго этажа за <code>2nd Floor Framing List</code>, порч и ground deck за <code>1st Floor Framing List</code>, roof deck перед кровлей. Вынесенные в самый конец листа группы неверно складываются с остальным материалом, их приходится разбирать вручную.</p>
 <ul>
@@ -8329,7 +8289,7 @@
 <ul>
 <li><strong>В шапке листа</strong> (выше <code>Description</code>): <code>Important:</code> красный жирный на жёлтом, обычная <code>Note:</code> красная жирная без заливки.</li>
 <li><strong>Сразу под заголовком секции:</strong> жёлтый фон на A:F.</li>
-<li><strong>Внутри секции над своими строками</strong> и строка счёта <code>Note: 2 Stairs</code>: жирная без заливки, как раньше.</li>
+<li><strong>Внутри секции над своими строками</strong> и строка счёта <code>Note: 2 Stairs</code>: жирная на жёлтом A:F, над ней одна пустая строка. <code>Important:</code> красный, <code>Note:</code> и <code>Comment:</code> чёрные.</li>
 </ul>
 <table>
 <thead>
@@ -8475,14 +8435,14 @@
 </tr>
 <tr>
 <td>Insulation</td>
-<td>слово целиком в столбце B, иначе чужая группа</td>
-<td><code>Batt Insulation R-21</code>, <code>1-1/2 Rigid Insulation</code></td>
-<td><code>Batt R-21</code>, <code>1-1/2 Rigid</code>, <code>Insul.</code></td>
+<td>слово целиком в столбце B, иначе чужая группа. Строка нужна, только если insulation в scope: у нас это continuous insulation снаружи обшивки, на бетоне или кладке и жёсткий утеплитель над настилом кровли. Утеплитель между стойками, в перекрытии и в кровле by others, строки нет</td>
+<td><code>2" XPS Insulation</code>, <code>1-1/2 Rigid Insulation</code></td>
+<td><code>2" XPS</code>, <code>1-1/2 Rigid</code>, <code>Insul.</code>; <code>Batt Insulation R-21</code> в книге Frame</td>
 </tr>
 <tr>
 <td>Flitch beam</td>
 <td>стальная пластина отдельной строкой сразу после деревянной балки (в эталоне также под Ridge)</td>
-<td><code>Beam (4) Dropped</code> + <code>Steel plate (1)</code>, B <code>1/4x14</code></td>
+<td><code>Beam (3) Flush</code> + <code>Steel Plate (2)</code>, B <code>1/2 x 14</code></td>
 <td>пластина в конце списка</td>
 </tr>
 <tr>

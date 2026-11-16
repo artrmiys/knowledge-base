@@ -7248,14 +7248,14 @@
 I-joists, LVL / PSL / LSL / GL beams and engineered rim. There are two opposite
 job types: "EWP only" (Capital-type) and "everything except EWP" (<code>Frame. EWP by others</code>).</p>
 <figure>
-<p><img alt="EWP materials: I-joist, LVL beam, hanger" src="../../../assets/images/work-types/ewp-capital.svg" />
+<p><img alt="Floor section: what is counted on an EWP only job" src="../../../assets/images/work-types/ewp-capital.svg" />
   </p>
-<figcaption>EWP only: we count I-joists, LVL/PSL/GL, engineered rim and hangers for them. Not 2x, trusses, nails.</figcaption>
+<figcaption>EWP only on a floor section: we count I-joists, the LVL/PSL/GL beam, engineered rim and hangers for them (green numbers). Not the 2x walls, subfloor, trusses, ties and nails (red).</figcaption>
 </figure>
 <figure>
 <p><img alt="Floor I-joists bearing on a beam over a post" src="../../../assets/images/photos/work-types/ijoists-on-beam-post.jpg" width="520" />
   </p>
-<figcaption>EWP on site: I-joists sit on a glued beam, the beam sits on a post with a metal post cap. In an "EWP only" job we count the I-joists, the beam and the hangers for them; not the 2x post or the trusses in the background. Photo: redbuilt.com, <a href="http://www.redbuilt.com/commercial-systems/i-joists">source</a>, found via Pinterest.</figcaption>
+<figcaption>EWP on site: I-joists sit on a glued beam, the beam sits on an engineered post with a metal post cap, steel open web joists in the background. In an "EWP only" job we count the I-joists, the beam and the hangers for them; not the steel joists, the post as the drawings say. Photo: redbuilt.com, <a href="http://www.redbuilt.com/commercial-systems/i-joists">source</a>, found via Pinterest.</figcaption>
 </figure>
 <h2 id="what-these-materials-are">What these materials are<a class="headerlink" href="#what-these-materials-are" title="Link to this section">&para;</a></h2>
 <table>
@@ -7297,7 +7297,7 @@ job types: "EWP only" (Capital-type) and "everything except EWP" (<code>Frame. E
 <p>Product details: <a href="../../work/horizontal/floor-framing/joist/">Joist</a>
 and <a href="../../work/horizontal/floor-framing/beam/">Beam</a>.</p>
 <h2 id="ewp-only-capital-type">EWP only (Capital-type)<a class="headerlink" href="#ewp-only-capital-type" title="Link to this section">&para;</a></h2>
-<p><strong>Count:</strong> I-joists, LVL / PSL / GL beams, engineered rim and blocking in LF,
+<p><strong>Count:</strong> I-joists, LVL / PSL / GL beams, engineered rim and blocking in LFT,
 hangers for them; possibly columns and stair stringers.</p>
 <p><strong>Do not count:</strong> regular 2x, trusses, ties (CS, MST and similar), nails,
 stair connectors, unless the scope explicitly asks for them.</p>
@@ -7310,7 +7310,12 @@ stair connectors, unless the scope explicitly asks for them.</p>
 <li>Rim: if LVL is not specified anywhere, do not assume <code>1-3/4 LVL Rim</code>; by default use
   <code>Rim</code> or the product marked assumed. Rim thicknesses: 1-1/8" OSB, 1-1/2" LSL,
   1-3/4" LVL - <a href="../../work/horizontal/floor-framing/details/rim/">Rim Board</a>.</li>
-<li>Rim factor 1.05; blocking continuous in LF, factor per <a href="../../reference/formulas/">Formulas</a>.</li>
+<li>Rim and continuous blocking stay in <code>LFT</code> on this kind of job: rim <code>x 1.05</code>,
+  blocking with no factor; rim is not cut into 16' boards. The <code>1.05</code> factor is
+  <strong>for EWP-only jobs</strong>. In a regular framing book (Frame, COM, residential)
+  <code>Rim Board</code> is 16' boards through <code>=CEILING(G/D,1)</code> with no separate
+  waste factor: <a href="../../work/horizontal/floor-framing/details/rim/">Rim Board</a>,
+  <a href="../../reference/formulas/">Formulas</a>.</li>
 <li>Identical floor: note <code>4th floor frame is identical to 3rd floor</code>, but
   still list the materials.</li>
 </ul>
@@ -7321,6 +7326,15 @@ we count all the other framing.</p>
 EWP beams), 2x headers, roofing, eaves, truss heel, hardware.</p>
 <p><strong>Do not count:</strong> I-joists, LVL / PSL / LSL beams and headers, engineered rim.
 Remove the EWP rows, do not leave them at zero.</p>
+<p><strong>Exceptions (checklist):</strong></p>
+<ul>
+<li><strong>Assumed LVL is always included.</strong> If we assigned the LVL ourselves because the
+  drawings give no mark (a long window header with no mark, a ridge), it stays in the
+  book with <code>assumed</code>: the client's EWP package does not have it.</li>
+<li><strong><code>EWP Floors by others</code></strong> is narrower than <code>EWP by others</code>: by others is only what
+  is drawn on the floor framing layouts (I-joists, beams and rim of those
+  floors). Attic, roof and stick porch with their LVL stay ours.</li>
+</ul>
 <p>Rules:</p>
 <ul>
 <li>Header note <code>All EWP products are by others</code>. The template note
@@ -7333,6 +7347,8 @@ Remove the EWP rows, do not leave them at zero.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>EWP counted with <code>EWP by others</code>, or not counted with EWP only.</li>
+<li>With <code>EWP Floors by others</code> the roof, attic and porch LVL thrown out, or an assumed LVL removed.</li>
+<li>Rim <code>x 1.05</code> in LFT carried over into a regular framing book.</li>
 <li>Rim recorded as LVL with no callout.</li>
 <li>Hangers counted from the purchased boards, not by assembly.</li>
 <li>All floor framing mistakes: <a href="../../start/common-mistakes/#floor">Common mistakes</a>.</li>

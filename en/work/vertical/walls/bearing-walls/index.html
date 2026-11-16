@@ -7276,8 +7276,9 @@
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
 <p>BW (bearing wall) is a wall that carries floor framing or the roof.
 The engineer beefs it up: more plies per stud, different spacing, sometimes MSR. For the
-takeoff, BW is a <strong>separate branch</strong> of the tree: <code>walls</code> keeps only regular
-walls, <code>shear walls</code> keeps SW. One physical wall can be in <code>walls</code>,
+takeoff, BW is a <strong>separate branch</strong> of the tree. You measure the wall itself in <code>walls</code>
+once, as a regular wall (<code>ext</code>, <code>corr</code>, <code>dem</code>, partition), then trace the bearing wall
+band again in <code>BW</code> and the SW segment in <code>shear walls</code>. One physical wall can be in <code>walls</code>,
 in <code>BW</code> and in <code>shear walls</code> at once: these are three different purposes, their lengths are not
 added together.</p>
 <h2 id="where-to-find-it-on-the-plans">Where to find it on the plans<a class="headerlink" href="#where-to-find-it-on-the-plans" title="Link to this section">&para;</a></h2>
@@ -7349,7 +7350,7 @@ Excel applies the plies and spacing from the schedule.</p>
 </tr>
 <tr>
 <td>same</td>
-<td><code>Extra Dbl Studs Interior</code></td>
+<td><code>Extra Studs Interior 24" o.c.</code></td>
 <td>pcs</td>
 <td><code>LFT x 0.5 x (plies - 1)</code></td>
 </tr>
@@ -7381,7 +7382,7 @@ Excel applies the plies and spacing from the schedule.</p>
 extra and dbl studs on COM: <a href="../../../../work-types/com/#studs-spacing-extra-studs-dbl-extra">COM Commercial</a>.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
-<li>BW drawn in <code>walls</code> and added to the regular walls: the length is counted twice.</li>
+<li>The BW band drawn in <code>walls</code> as a second line over the regular wall and added to it: the length is counted twice.</li>
 <li>Floor taken from the sheet number although the plan shows the walls below the floor.</li>
 <li>Plies and spacing made up: with no mark, write <code>typical - per stud schedule</code> and the source.</li>
 <li>Extra24 factor set to 0.625 instead of 0.5.</li>

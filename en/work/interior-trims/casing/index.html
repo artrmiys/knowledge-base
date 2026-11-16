@@ -7272,10 +7272,11 @@
 <figcaption>Window from the inside: head casing, side casing, stool, apron; door: head and two sides. Casing is counted in LFT with a formula from the opening list.</figcaption>
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
-<p>The trim around a door or window on the inside. Counted in LFT: the perimeter of one
-opening multiplied by the number of such openings. The list of doors and cased openings,
-size designations and Excel entry are on the
-<a href="../door-window-trim/">Door and Window Trim</a> page; this page has the casing and jamb formula.</p>
+<p>The trim around a door or window on the inside. Counted in LFT with a formula from
+the opening list: the perimeter of each door (width plus two heights), both faces of
+the wall and 1.1 waste. The list of doors and cased openings, size designations and
+Excel entry are on the <a href="../door-window-trim/">Door and Window Trim</a> page; this page has
+the casing formula.</p>
 <h2 id="where-to-find-it-on-the-plans">Where to find it on the plans<a class="headerlink" href="#where-to-find-it-on-the-plans" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
@@ -7317,42 +7318,56 @@ opening across the whole wall) can be traced with a Line.</p>
 <tr>
 <td><code>Casing for Int. Doors</code></td>
 <td>LFT</td>
-<td><code>=(2*H+W)*qty</code> for each door size, both sides of the opening</td>
+<td><code>=CEILING(2*SUM(perimeters)/12*1.1,10)</code>: door perimeter = W + 2H in inches from the door code, <code>2</code> = both faces of the wall, <code>/12</code> = to feet, <code>1.1</code> = waste</td>
 </tr>
 <tr>
 <td><code>Casing for Ext. Doors&amp;Wind</code></td>
 <td>LFT</td>
-<td>perimeter of 3 or 4 sides (with stool and apron) x quantity</td>
+<td><code>=CEILING(perimeter*1.1,10)</code>: perimeter of the exterior doors and windows of that floor from the openings table, <code>4-sides</code> in E</td>
 </tr>
 <tr>
-<td><code>Int. Door jambs</code></td>
+<td><code>Window Stool</code></td>
 <td>LFT</td>
-<td><code>= casing / 2</code>, if the template counts jambs through casing</td>
+<td><code>=CEILING(sill*1.1,10)</code>: sill length of the windows of the floor; no stool on the detail means no row</td>
 </tr>
 <tr>
-<td><code>Cased Openings</code> casing</td>
-<td>LFT</td>
-<td>separate from doors</td>
+<td><code>Cased Openings</code></td>
+<td>unit</td>
+<td>an opening without a door, its own quantity row; its perimeter goes into the same <code>Casing for Int. Doors</code> sum</td>
 </tr>
 </tbody>
 </table>
 <ul>
+<li>In the DFL template the door row itself computes the perimeter: column G reads
+  the size code (<code>2680</code> = 30" + 2 x 96" = 222") and multiplies it by the quantity;
+  pairs <code>(2)</code> are doubled. The <code>SUM</code> in the casing formula must cover every door
+  and cased opening row of that floor and nothing else.</li>
+<li>There is no separate <code>Int. Door jambs</code> row in LFT. Interior doors are counted
+  with points per unit and grouped by the size of the wall they stand in: a point
+  at a <code>2x6</code> wall is a door with a jamb for <code>2x6</code>.</li>
 <li>Group casing by location and type when common areas differ from
   units.</li>
-<li>Keep the profile from the notes in the row or a note (<code>Note: All door trim to be 1"
-  x 3-1/2" Polyurethane casing</code>); hardware numbers are not part of trim.</li>
+<li>Keep the profile from the notes in column B or a note (<code>Note: All door trim to be 1"
+  x 3-1/2" Polyurethane casing</code>); no profile given: <code>TBD Casing</code>. Hardware
+  numbers are not part of trim.</li>
 </ul>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
-<li>Casing counted on one side of the door instead of two.</li>
+<li>Casing counted on one side of the door instead of two (no <code>2*</code> in the formula).</li>
+<li>The 1.1 waste and the round-up to 10 are lost: the formula was replaced by a number.</li>
+<li>A jambs row in LFT (<code>casing / 2</code>) was added: there is no such row.</li>
 <li>Interior casing mixed with exterior casing and flashing.</li>
-<li>A made-up profile instead of <code>not specified</code>.</li>
+<li>A made-up profile instead of <code>TBD Casing</code>.</li>
 <li>All Excel mistakes: <a href="../../../start/common-mistakes/#excel">Excel DFL and notes</a>.</li>
 </ul>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Int. Doors 2680                     24  pcs
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Casing for Int. Doors   1x3-1/2     1008 LFT   =(2*8+2.5)*2*24
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Int. Door jambs                     504  LFT   =C&lt;casing&gt;/2
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Int. Doors              2680      24   unit   A601
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Casing for Int. Doors   1x3-1/2   980  LFT    =CEILING(2*SUM(G)/12*1.1,10)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>One 2680 door: 30&quot; + 2 x 96&quot; = 222&quot; (18.5&#39;)
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>24 doors: 222 x 24 = 5328&quot;
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Both faces: 2 x 5328 / 12 = 888 LFT, the same as (2 x 8 + 2.5) x 2 x 24
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Waste: 888 x 1.1 = 976.8, rounded up to 10 = 980 LFT
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

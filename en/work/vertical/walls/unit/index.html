@@ -7269,9 +7269,9 @@
 
 <h1 id="unit-walls">Unit Walls<a class="headerlink" href="#unit-walls" title="Link to this section">&para;</a></h1>
 <figure>
-<p><img alt="Unit sheet with the U dot and lines A 2x4 and A 2x6" src="../../../../../assets/images/ourplancore/v3/sheet-unit.png" />
+<p><img alt="Unit sheet a3011 u with the U dot and A 2x4 lines" src="../../../../../assets/images/ourplancore/v3/sheet-unit.png" />
   </p>
-<figcaption>Unit type sheet with the U dot: every new takeoff from it goes into <code>units</code>. Lines only on the interior partitions of the unit, one takeoff per size.</figcaption>
+<figcaption>Unit type sheet <code>a3011 u</code> in the demo project: the U dot is lit, the status reads <code>Route: U all floors</code>, every new takeoff from the sheet goes into <code>units</code>. The <code>A 2x4</code> lines run only on the interior partitions of the unit, one takeoff per size; the <code>Units</code> legend gives 101,56 ft.</figcaption>
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
 <p>Unit walls are the interior partitions of <strong>one typical unit</strong>. Units
@@ -7344,27 +7344,27 @@ are still marked up, but the DFL gets <code>0</code> and a scope note
 <tbody>
 <tr>
 <td><code>units/A 2x4</code></td>
-<td><code>Studs Interior 2x4</code></td>
-<td>pcs</td>
+<td><code>Studs Interior</code> <code>2x4</code></td>
+<td>pieces, D = stud length</td>
 <td><code>LFT x repeats x 1.1</code> (16")</td>
 </tr>
 <tr>
 <td><code>units/A 2x6</code></td>
-<td><code>Studs Interior 2x6</code></td>
-<td>pcs</td>
+<td><code>Studs Interior</code> <code>2x6</code></td>
+<td>pieces, D = stud length</td>
 <td>the same, 24" = 0.625</td>
 </tr>
 <tr>
 <td>same</td>
 <td><code>Plates Interior (1) btm</code>, <code>(2) dbl top</code></td>
 <td>LFT</td>
-<td><code>LFT x repeats x 1.1</code>; btm P.T. only on concrete</td>
+<td><code>LFT x repeats x 1.1</code>, dbl top also <code>x 2</code>; btm P.T. only on concrete</td>
 </tr>
 <tr>
 <td>same</td>
-<td><code>Blocking</code>, <code>Bracing</code></td>
+<td><code>Blocking</code></td>
 <td>LFT</td>
-<td>by wall type</td>
+<td>from the template matrix, rounded to even</td>
 </tr>
 <tr>
 <td><code>B1</code> (Count on the floor plan)</td>
@@ -7374,6 +7374,8 @@ are still marked up, but the DFL gets <code>0</code> and a scope note
 </tr>
 </tbody>
 </table>
+<p>Unit partitions get no bracing row: the template has <code>Bracing</code> only for
+ext, corridor and demising walls (in pieces, see <a href="../corridor/">Corridor</a>).</p>
 <p>The <code>UN</code> button on the XL strip puts the unit table into the workbook (AM3) with totals by
 floor; the <code>C_UnitTable</code> macro multiplies the unit lengths by the number of repeats.
 Per unit there is also kitchen blocking (<code>2x6</code>, 4 at 14') and bath blocking (<code>2x6</code>,

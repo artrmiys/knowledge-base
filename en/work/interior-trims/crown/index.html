@@ -7376,19 +7376,19 @@ in the hall, foyer and large bedrooms.</p>
 <td><code>trims/crown 1st</code></td>
 <td><code>Crowns</code></td>
 <td>LFT</td>
-<td><code>=58+44+71+...</code> all runs visible</td>
+<td><code>=CEILING(G*1.1,10)</code>; G holds the sum of the runs <code>=58+44+71+...</code>, every addend visible</td>
 </tr>
 <tr>
 <td><code>trims/crown 2nd</code></td>
-<td><code>Crowns 2nd floor</code></td>
+<td><code>Crowns</code> under the 2nd floor header</td>
 <td>LFT</td>
-<td>as a separate row</td>
+<td>each floor in its own row</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Crowns TBD</code></td>
+<td><code>Crowns</code>, <code>TBD Crowns</code> in B</td>
 <td>LFT</td>
-<td>note, if the material is not set</td>
+<td>material not given: a note; unclear which rooms get crown: <code>verify if apply</code> in E</td>
 </tr>
 </tbody>
 </table>
@@ -7402,8 +7402,10 @@ in the hall, foyer and large bedrooms.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/trims/crown 1st   Line   286 LFT (living, dining, foyer, hall)
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Crowns   3-1/2&quot; crown (per schedule)   286  LFT   =92+68+44+82   A701
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Crowns   TBD                           0    LFT   Note: Crown material not specified; verify
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Crowns   3-1/2&quot; Crown   320  LFT   =CEILING(G*1.1,10)   G =92+68+44+82   A701
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Crowns   TBD Crowns     0    LFT   Note: Crown material not specified; verify
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>G = 286; 286 x 1.1 = 314.6, rounded up to 10 = 320 LFT
 </span></code></pre></div>
 <details class="kb-figures kb-figures--rows">
   <summary>Show 3 archived cards with illustrations</summary>

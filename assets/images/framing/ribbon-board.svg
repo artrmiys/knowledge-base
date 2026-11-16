@@ -22,11 +22,11 @@
     <style>
       .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
       .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
-      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
-      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
-      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
-      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
-      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .lab{font:600 18px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 16px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .small{font:400 15px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .mono{font:500 16px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
       .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
       .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
       .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
@@ -57,43 +57,46 @@
 <path d="M308,260 l-8,4 M308,290 l-8,4" stroke="#3a3f44" stroke-width="1.2"/><rect x="406" y="237" width="14" height="83" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.4" />
 <path d="M408,260 l-8,4 M408,290 l-8,4" stroke="#3a3f44" stroke-width="1.2"/><rect x="506" y="237" width="14" height="83" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.4" />
 <path d="M508,260 l-8,4 M508,290 l-8,4" stroke="#3a3f44" stroke-width="1.2"/><line class="lead" x1="300" y1="162" x2="300" y2="200"/>
-<rect x="232" y="142" width="303.8" height="22" rx="4" fill="#fff" fill-opacity="0.92" stroke="none"/>
+<rect x="232" y="140" width="318" height="22" rx="4" fill="#fff" fill-opacity="0.92" stroke="none"/>
 <text class="lab2" x="236" y="156" text-anchor="start" >Studs: непрерывные через два этажа</text>
 <line class="lead" x1="320" y1="232" x2="320" y2="262"/>
-<rect x="232" y="212" width="303.8" height="22" rx="4" fill="#fff" fill-opacity="0.92" stroke="none"/>
+<rect x="232" y="210" width="318" height="22" rx="4" fill="#fff" fill-opacity="0.92" stroke="none"/>
 <text class="lab2" x="236" y="226" text-anchor="start" >Joists на ribbon, прибиты к стойке</text>
 <line class="lead" x1="300" y1="420" x2="300" y2="372"/>
-<rect x="232" y="426" width="382.1" height="22" rx="4" fill="#fff" fill-opacity="0.92" stroke="none"/>
-<text class="lab2" x="236" y="440" text-anchor="start" >Ribbon 1x4 / 1x6: врезана (let-in) в стойки</text>
-<rect x="232" y="446" width="154.16" height="21" rx="4" fill="#fff" fill-opacity="0.92" stroke="none"/>
-<text class="mono" x="236" y="459" text-anchor="start" >Ribbon | 1x6 | LFT</text>
-<rect x="232" y="466.5" width="167.5" height="19.5" rx="4" fill="#fff" fill-opacity="0.92" stroke="none"/>
-<text class="small" x="236" y="478" text-anchor="start" >пунктир = паз в стойке</text>
+<rect x="232" y="424" width="356" height="22" rx="4" fill="#fff" fill-opacity="0.92" stroke="none"/>
+<text class="lab2" x="236" y="440" text-anchor="start" >Ribbon Board: врезана (let-in) в стойки</text>
+<rect x="232" y="446" width="250" height="21" rx="4" fill="#fff" fill-opacity="0.92" stroke="none"/>
+<text class="mono" x="236" y="461" text-anchor="start" >Ribbon Board | 2x4 | D 16</text>
+<rect x="232" y="467" width="180" height="20" rx="4" fill="#fff" fill-opacity="0.92" stroke="none"/>
+<text class="small" x="236" y="482" text-anchor="start" >пунктир = паз в стойке</text>
 <text class="lab" x="615" y="48" >Сечение поперёк стены</text>
 <rect x="615" y="100" width="32" height="150" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.5" />
 <rect x="640" y="160" width="7" height="50" fill="#fff" stroke="#3a3f44" stroke-width="1.0" />
 <rect x="640" y="160" width="7" height="50" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.5" />
 <rect x="647" y="77" width="110" height="83" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.5" />
 <path d="M655,110 l-6,3 M655,140 l-6,3" stroke="#3a3f44" stroke-width="1.2"/><text class="lab2" x="770" y="120" >Ribbon: let-in</text>
-<text class="note" x="770" y="140" >паз в стойке, ribbon заподлицо</text>
-<text class="note" x="770" y="158" >joist стоит на ribbon</text>
-<line class="lead" x1="765" y1="190" x2="649" y2="188"/>
-<text class="small" x="770" y="194" >паз</text>
+<text class="note" x="770" y="142" >паз в стойке,</text>
+<text class="note" x="770" y="162" >ribbon заподлицо;</text>
+<text class="note" x="770" y="182" >joist стоит на ribbon</text>
+<line class="lead" x1="765" y1="203" x2="649" y2="196"/>
+<text class="small" x="770" y="208" >паз</text>
 <rect x="615" y="385" width="142" height="13" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.4" />
 <rect x="615" y="398" width="142" height="13" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.4" />
 <rect x="615" y="302" width="14" height="83" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.5" />
 <rect x="629" y="302" width="128" height="83" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.5" />
 <text class="lab2" x="770" y="325" >Rim: по торцам joists</text>
-<text class="note" x="770" y="345" >на top plate, закрывает торец</text>
-<text class="note" x="770" y="363" >строка Rim Board</text>
-<line class="lead" x1="765" y1="387" x2="625" y2="375"/>
+<text class="note" x="770" y="347" >на top plate,</text>
+<text class="note" x="770" y="367" >закрывает торец;</text>
+<text class="note" x="770" y="387" >строка Rim Board</text>
+<line class="lead" x1="764" y1="382" x2="625" y2="375"/>
 <rect x="615" y="452" width="14" height="83" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.5" />
 <rect x="701" y="452" width="14" height="83" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.5" />
 <rect x="629" y="452" width="72" height="83" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.5" />
 <rect x="743" y="452" width="14" height="83" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.5" />
 <text class="lab2" x="770" y="477" >Blocking: между joists</text>
-<text class="note" x="770" y="497" >короткие куски в пролёте;</text>
-<text class="note" x="770" y="515" >строка Blocking, LFT</text>
-<line class="lead" x1="765" y1="537" x2="675" y2="527"/>
+<text class="note" x="770" y="499" >короткие куски в пролёте;</text>
+<text class="note" x="770" y="519" >строка Blocking,</text>
+<text class="note" x="770" y="539" >доски по 16'</text>
+<line class="lead" x1="764" y1="534" x2="675" y2="527"/>
 <text class="note" x="70" y="578" >Top chord bearing trusses ribbon не требуют: там blocking между trusses, часто (2) 2x6 над 2x6 bearing wall.</text>
 </svg>

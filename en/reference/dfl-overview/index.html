@@ -7704,7 +7704,7 @@
 <figure>
 <p><img alt="Zones of the Detailed Frame List worksheet" src="../../../assets/images/reference/dfl-layout.svg" />
   </p>
-<figcaption>The Detailed Frame List worksheet: on the left the delivered table A:H, on the right the work areas (export from the app, wall matrix, spec cells, height calculator, lookup tables). Rows are inserted only in A:H.</figcaption>
+<figcaption>The Detailed Frame List worksheet: the delivered table A:H and the work areas right of H (export from the app, wall matrix, spec cells, height calculator, lookup tables). G takes its number from K of the export or from the matrix. Rows are inserted only in A:H.</figcaption>
 </figure>
 <h2 id="map">What is where on this page<a class="headerlink" href="#map" title="Link to this section">&para;</a></h2>
 <div class="grid cards">
@@ -7802,8 +7802,8 @@
 </tr>
 <tr>
 <td><strong>D</strong></td>
-<td>Unit: <code>LFT</code>, <code>SQ FT</code>, <code>4x8</code>, <code>pcs</code>, <code>50' rolls</code>. Write <code>LFT</code>, not <code>FT</code></td>
-<td><code>LFT</code></td>
+<td>Unit: <code>LFT</code>, <code>SQ FT</code>, <code>4x8</code>, <code>pcs</code>, <code>unit</code>, <code>tubes</code>, <code>50' rolls</code>. Write <code>LFT</code>, not <code>FT</code>, and <code>SQ FT</code>, not <code>SF</code>. For lumber ordered by the piece (studs, joists, beams, posts, headers, rim, ribbon, blocking in a framing list, ledger, bracing) D holds the board length in feet and C the number of boards; the formula then divides by D</td>
+<td><code>LFT</code>; <code>16</code> for <code>Rim Board</code>, <code>14</code> for <code>Bracing Ext Walls</code></td>
 </tr>
 <tr>
 <td><strong>E</strong></td>
@@ -7822,7 +7822,7 @@
 </tr>
 <tr>
 <td><strong>H</strong></td>
-<td>Formula parameter: spacing in inches, number of plies, height</td>
+<td>Formula parameter: spacing in inches, number of plies, height. What H holds for each row: <a href="../formulas/#legend">Formulas</a></td>
 <td><code>16</code>, <code>2</code></td>
 </tr>
 </tbody>
@@ -7921,12 +7921,12 @@
 </tr>
 <tr>
 <td>Note inside a section</td>
-<td>above the rows it refers to, bold without fill, a blank row above it</td>
+<td>above the rows it refers to, bold on yellow A:F, a blank row above it</td>
 <td><code>Note: Optional garage headers added; verify</code></td>
 </tr>
 <tr>
 <td>Stair count</td>
-<td>bold row without fill, number in G, ending in H</td>
+<td>bold row on yellow A:F, number in G, ending in H</td>
 <td><code>Note: 2 Stairs</code>, G <code>2</code>, H <code>s</code></td>
 </tr>
 </tbody>
@@ -8065,45 +8065,27 @@
 <figcaption>Two floors in the finished file: framing, the floor's own block, walls, the next floor's framing. Sample data.</figcaption>
 </figure>
 <h3 id="section-template">Template and finished file<a class="headerlink" href="#section-template" title="Link to this section">&para;</a></h3>
-<p>In the template everything is arranged by type of work: all walls first, then all framing, blocks at the very end. In the finished file the same content is arranged by floor.</p>
-<table>
-<thead>
-<tr>
-<th>Template, where you fill in</th>
-<th>Finished file after Process Excels</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Foundation Walls</code>, <code>Basement Floor Walls</code></td>
-<td>the same</td>
-</tr>
-<tr>
-<td><code>1st</code>, <code>2nd</code>, <code>3rd Floor Walls</code> in a row</td>
-<td><code>1st Floor Framing List</code>, 1st floor groups, <code>1st Floor Walls</code></td>
-</tr>
-<tr>
-<td><code>Gable Walls</code>, <code>Truss Heel</code>, <code>Parapet Walls</code>, <code>Shaft walls</code>, <code>Wall Materials</code></td>
-<td><code>2nd Floor Framing List</code>, 2nd floor groups, <code>2nd Floor Walls</code></td>
-</tr>
-<tr>
-<td><code>1st</code>, <code>2nd</code>, <code>3rd Floor Framing List</code> in a row, <code>Loft Framing List</code></td>
-<td><code>3rd Floor Framing List</code>, groups, <code>3rd Floor Walls</code>, <code>Loft Framing List</code></td>
-</tr>
-<tr>
-<td><code>Roof Frame list</code>, <code>Roof System Misc</code></td>
-<td><code>Gable Walls</code>, <code>Truss Heel</code>, <code>Parapet Walls</code>, <code>Shaft walls</code>, <code>Wall Materials</code></td>
-</tr>
-<tr>
-<td>balcony, porch, deck, canopy blocks</td>
-<td><code>Roof Frame list</code>, <code>Roof System Misc</code></td>
-</tr>
-<tr>
-<td><code>Roof Products</code> and trim</td>
-<td>the same</td>
-</tr>
-</tbody>
-</table>
+<p>In the template everything is arranged by type of work: all walls first, then all framing, blocks at the very end. In the finished file the same content is arranged by floor. Below are two independent lists, top to bottom: a line of one list does not correspond to the line with the same number in the other.</p>
+<p><strong>Template, where you fill in:</strong></p>
+<ol>
+<li><code>Foundation Walls</code>, <code>Basement Floor Walls</code></li>
+<li><code>1st</code>, <code>2nd</code>, <code>3rd Floor Walls</code> in a row</li>
+<li><code>Gable Walls</code>, <code>Truss Heel</code>, <code>Parapet Walls</code>, <code>Shaft walls</code>, <code>Wall Materials</code></li>
+<li><code>1st</code>, <code>2nd</code>, <code>3rd Floor Framing List</code> in a row, <code>Loft Framing List</code></li>
+<li><code>Roof Frame list</code>, <code>Roof System Misc</code></li>
+<li>balcony, porch, deck, canopy blocks</li>
+<li><code>Roof Products</code> and trim</li>
+</ol>
+<p><strong>Finished file after Process Excels:</strong></p>
+<ol>
+<li><code>Foundation Walls</code>, <code>Basement Floor Walls</code></li>
+<li><code>1st Floor Framing List</code>, 1st floor groups, <code>1st Floor Walls</code></li>
+<li><code>2nd Floor Framing List</code>, 2nd floor groups, <code>2nd Floor Walls</code></li>
+<li><code>3rd Floor Framing List</code>, groups, <code>3rd Floor Walls</code>, <code>Loft Framing List</code></li>
+<li><code>Gable Walls</code>, <code>Truss Heel</code>, <code>Parapet Walls</code>, <code>Shaft walls</code>, <code>Wall Materials</code></li>
+<li><code>Roof Frame list</code>, <code>Roof System Misc</code></li>
+<li><code>Roof Products</code> and trim</li>
+</ol>
 <div class="admonition warning">
 <p class="admonition-title">Do not rearrange sections by hand</p>
 <p>Formulas and the right-hand areas are tied to the template rows. Process Excels moves only columns A:H and only in the finished copy; the working workbook stays as it is.</p>
@@ -8276,31 +8258,9 @@
 <figure>
 <p><img alt="Section header: right and wrong" src="../../../assets/images/reference/dfl-headers.svg" />
   </p>
-<figcaption>A correct header, one with text in B, and one without color.</figcaption>
+<figcaption>Right: bold text in A and a fill, B-F empty. Wrong: text in B. Wrong: no color.</figcaption>
 </figure>
-<p>Colors in the reference files (the guide does not set a specific color, the fill itself is required):</p>
-<table>
-<thead>
-<tr>
-<th>Color</th>
-<th>Where in the reference files</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Yellow <code>FFFF00</code>, A only</td>
-<td><code>Foundation Walls</code>, <code>Shaft Walls</code>, <code>1st Floor Walls</code>, <code>Interior Doors&amp;Trims</code></td>
-</tr>
-<tr>
-<td>Green <code>99CC00</code>, A or A:B</td>
-<td>framing lists, group framing (<code>Porch Framing List 4pcs</code>, <code>Ground Deck Framing List (left)</code>, <code>Pergola 4 pcs</code>), <code>Roof Frame list</code>, <code>Roof System Misc</code></td>
-</tr>
-<tr>
-<td>Light green <code>CCFFCC</code>, A only</td>
-<td><code>Decking</code>, <code>Decking and Railing</code>, <code>Porch Trims</code>, <code>Pergola Trims</code>, <code>Soffits and Fascias</code>, <code>Exterior Trims</code>, <code>Siding</code></td>
-</tr>
-</tbody>
-</table>
+<p>The guide does not set a specific color; the fill itself is required. Our three colors and which sections take which: <a href="#section-anatomy">header color table</a>. The reference files match: group framing (<code>Porch Framing List 4pcs</code>, <code>Ground Deck Framing List (left)</code>, <code>Pergola 4 pcs</code>) is green <code>99CC00</code>, their <code>Decking</code>, <code>Decking and Railing</code>, <code>Porch Trims</code>, <code>Pergola Trims</code> are light green <code>CCFFCC</code>.</p>
 <h3 id="groups">Groups: deck, porch, balconies, canopy<a class="headerlink" href="#groups" title="Link to this section">&para;</a></h3>
 <p>The framing, trims, decking and railing of these structures sit <strong>inside the Framing section as subsections, right after the Framing List of their floor</strong>: a 2nd floor balcony after <code>2nd Floor Framing List</code>, a porch and a ground deck after <code>1st Floor Framing List</code>, a roof deck before the roof. Groups moved to the very end of the worksheet get added up wrongly with the other material and have to be sorted out by hand.</p>
 <ul>
@@ -8329,7 +8289,7 @@
 <ul>
 <li><strong>In the worksheet header</strong> (above <code>Description</code>): <code>Important:</code> red bold on yellow, a regular <code>Note:</code> red bold without fill.</li>
 <li><strong>Right under a section header:</strong> yellow fill on A:F.</li>
-<li><strong>Inside a section above its rows</strong>, and the count row <code>Note: 2 Stairs</code>: bold without fill, as before.</li>
+<li><strong>Inside a section above its rows</strong>, and the count row <code>Note: 2 Stairs</code>: bold on yellow A:F, one blank row above. <code>Important:</code> is red, <code>Note:</code> and <code>Comment:</code> are black.</li>
 </ul>
 <table>
 <thead>
@@ -8475,14 +8435,14 @@
 </tr>
 <tr>
 <td>Insulation</td>
-<td>the full word in column B, otherwise it lands in another group</td>
-<td><code>Batt Insulation R-21</code>, <code>1-1/2 Rigid Insulation</code></td>
-<td><code>Batt R-21</code>, <code>1-1/2 Rigid</code>, <code>Insul.</code></td>
+<td>the full word in column B, otherwise it lands in another group. The row is needed only when insulation is in scope: for us that is continuous insulation outside the sheathing, on concrete or masonry, and rigid insulation above a roof deck. Insulation between studs, in floors and in roofs is by others, no row</td>
+<td><code>2" XPS Insulation</code>, <code>1-1/2 Rigid Insulation</code></td>
+<td><code>2" XPS</code>, <code>1-1/2 Rigid</code>, <code>Insul.</code>; <code>Batt Insulation R-21</code> in a Frame workbook</td>
 </tr>
 <tr>
 <td>Flitch beam</td>
 <td>the steel plate as a separate row right after the wood beam (in the reference file also under Ridge)</td>
-<td><code>Beam (4) Dropped</code> + <code>Steel plate (1)</code>, B <code>1/4x14</code></td>
+<td><code>Beam (3) Flush</code> + <code>Steel Plate (2)</code>, B <code>1/2 x 14</code></td>
 <td>the plate at the end of the list</td>
 </tr>
 <tr>

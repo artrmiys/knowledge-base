@@ -7294,6 +7294,14 @@ cantilevered) follow the same rules with the specifics of their type.</p>
 <li>The area must reach Excel and update when the takeoff is edited: compare
    the number in the workbook with the app before delivery.</li>
 <li>Linear exclusions (<code>cat walk 4'</code>) are a length with a known width, not an Area.</li>
+<li>Overhangs and projections. The floor outline follows the outside face of the
+   exterior walls of that floor (the framing, not the sheathing or the siding). Roof
+   overhangs (eaves, rakes), canopies, open porches, decks and balconies are not part
+   of the floor area: they have their own takeoffs. A floor that projects past the floor
+   below (bay, bump-out, cantilever) is floor, so it stays inside the outline of its own
+   floor; in addition the same projection is traced as a separate <code>cant</code> Area, and it is
+   not deducted from the floor (<a href="../cantilevered/">Cantilevered</a>). The roof area, on the
+   contrary, follows the roof edge with the overhangs included (<a href="../roof/">Roof</a>).</li>
 </ol>
 <h2 id="where-to-find-it-on-the-plans">Where to find it on the plans<a class="headerlink" href="#where-to-find-it-on-the-plans" title="Link to this section">&para;</a></h2>
 <table>
@@ -7352,8 +7360,8 @@ cantilevered) follow the same rules with the specifics of their type.</p>
 <td><code>sqfts/1st</code></td>
 <td><code>Panel Adheasive</code></td>
 <td><code>29OZ</code></td>
-<td><code>pcs</code></td>
-<td>per template</td>
+<td><code>tubes</code></td>
+<td><code>=CEILING(Subfloor sheets/3,1)</code>: one tube per 3 sheets</td>
 </tr>
 <tr>
 <td><code>sqfts/1st</code></td>
@@ -7378,6 +7386,7 @@ the template spec cells.</p>
 <li>Floors merged into one area, or one floor copied to another with someone else's formulas.</li>
 <li>A shaft deducted twice (hole plus separate deduction).</li>
 <li>A rectangle "to hit the number" instead of the plan outline.</li>
+<li>Floor outline traced along the roof edge or together with the porch and balcony: overhangs and open platforms are not part of the floor.</li>
 <li>Area fixed in the app, the old one left in Excel.</li>
 <li>Porch and balcony empty on the Front Page (they are counted separately, see <a href="../porch/">Porch</a>, <a href="../balcony/">Balcony</a>).</li>
 </ul>

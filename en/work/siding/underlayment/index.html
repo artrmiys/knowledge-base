@@ -7355,9 +7355,9 @@
 
 <h1 id="underlayment">Underlayment<a class="headerlink" href="#underlayment" title="Link to this section">&para;</a></h1>
 <figure>
-<p><img alt="Wall corner: furring strips over the sheathing before siding" src="../../../../assets/images/photos/siding/furring-strips-over-sheathing-corner.jpg" />
+<p><img alt="Wall corner: furring strips over rigid foam before siding" src="../../../../assets/images/photos/siding/furring-strips-over-sheathing-corner.jpg" />
   </p>
-<figcaption>House corner before siding: vertical furring strips (rainscreen) nailed over sheathing that doubles as the WRB, tape at the joint with the foundation at the bottom. Furring is counted in LFT by spacing over the wall area, WRB in SQ FT by the wall area. Photo: greenbuildingadvisor.com, <a href="http://www.greenbuildingadvisor.com/blogs/dept/musings/all-about-rainscreens">source</a>, found via Pinterest.</figcaption>
+<figcaption>House corner before siding: vertical furring strips (rainscreen) nailed over rigid foam insulation with taped seams, tape at the joint with the foundation at the bottom. Furring is counted in LFT by spacing over the wall area, WRB in SQ FT by the wall area. Photo: greenbuildingadvisor.com, <a href="http://www.greenbuildingadvisor.com/blogs/dept/musings/all-about-rainscreens">source</a>, found via Pinterest.</figcaption>
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
 <p>The layers between the siding and the frame that are not visible on the elevation: WRB (weather
@@ -7410,41 +7410,48 @@ types, not only the elevations. Sheathing is counted in
 <thead>
 <tr>
 <th>DFL row</th>
-<th>Material</th>
+<th>Material in B</th>
 <th>Unit</th>
 <th>Rule</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>WRB</code></td>
+<td><code>Vapor Barrier</code> (template label)</td>
 <td><code>Tyvek</code> or another housewrap</td>
 <td>SQ FT</td>
-<td>only if the spec names a housewrap</td>
+<td>only if the spec names a housewrap; <code>=CEILING(G*1.1,10)</code>, G = sheathing area of that wall</td>
 </tr>
 <tr>
-<td><code>WRB</code></td>
+<td><code>Vapor Barrier</code></td>
 <td><code>fluid-applied</code> (product per spec)</td>
 <td>SQ FT</td>
 <td>do not write Tyvek</td>
 </tr>
 <tr>
-<td>Zip system</td>
+<td><code>Wall Sheathing</code> + <code>Tape</code> (Zip system)</td>
 <td><code>7/16" Zip</code> + <code>Zip Tape</code></td>
-<td>4x8, rolls</td>
-<td>no separate WRB needed, do not duplicate</td>
+<td>4x8, LFT</td>
+<td>no <code>Vapor Barrier</code> row: the barrier is built into the sheet, do not duplicate</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>The exterior barrier is called WRB, weather barrier or air barrier.
-  <code>Vapor Barrier</code> is a different layer in a different place in the wall; do not name
-  the row that way.</li>
-<li>WRB area equals the wall area with openings deducted once; windows under
-  4' are not deducted. Exterior gypsum porch and canopy soffits also go into the
-  WRB.</li>
-<li>The WRB spec cell in the DFL header (O4) is filled in when the job is created; the sheet
-  reference goes without the word <code>per</code> (<code>A3.0</code>).</li>
+<li>The exterior barrier is called WRB, weather barrier or air barrier. The template
+  row is labeled <code>Vapor Barrier</code>, and that label in column A is not changed;
+  the real product goes into B. The mistake is to write <code>Vapor Barrier</code> as the
+  product, or to put Tyvek when the spec names something else.</li>
+<li><code>Zip Tape</code> is counted in <code>LFT</code>, not in rolls. Under <code>Wall Sheathing</code>:
+  <code>=CEILING((G*0.4+P)*1.1,10)</code>, where G is the SQ FT of Zip on that floor and P is the
+  perimeter of the windows and doors of that floor from the openings table. Under Box,
+  Gable and Truss Heel: <code>=CEILING(G*0.4*1.1,10)</code>. Zip on the roof:
+  (sheets x 32 x 0.4 + ridge + valleys) x 1.1.</li>
+<li>WRB area equals the wall sheathing area: openings are deducted on their own floor
+  and once, windows narrower than 4' are not deducted, garage doors are (the same
+  rule as on <a href="../../vertical/sheathing/wall-sheathing/">Wall Sheathing</a>).
+  Exterior gypsum porch and canopy soffits also go into the WRB.</li>
+<li>The spec cells in the DFL header are filled in when the job is created: O4 WRB, O5
+  Zip, O6 Zip Tape; the sheet reference goes without the word <code>per</code> (<code>A3.0</code>).</li>
 </ul>
 <h2 id="furring-rainscreen">Furring / Rainscreen<a class="headerlink" href="#furring-rainscreen" title="Link to this section">&para;</a></h2>
 <p>The strip between the WRB and the siding, often missed. <code>1x4</code> or <code>2x4</code>, P.T. or
@@ -7486,7 +7493,7 @@ cedar shingle on solid sheathing.</p>
 </tr>
 </tbody>
 </table>
-<p>With vinyl, <code>Ext. Casing</code> is often the <code>Vinyl J-channel</code> itself: do not duplicate it with
+<p>With vinyl, <code>Ext Casing</code> is often the <code>J-Channel</code> itself: do not duplicate it with
 <code>5/4</code> wood casing. Canonical page: <a href="../../exterior-trims/exclusions/">Exclusions and J-Channel</a>.</p>
 <h2 id="flashing-in-siding">Flashing in siding<a class="headerlink" href="#flashing-in-siding" title="Link to this section">&para;</a></h2>
 <table>
@@ -7529,16 +7536,26 @@ cedar shingle on solid sheathing.</p>
 in detail: <a href="../../vertical/openings/window-flashing/">Window flashing</a>.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
-<li><code>Vapor Barrier</code> instead of WRB; Tyvek when the spec calls for fluid-applied.</li>
+<li><code>Vapor Barrier</code> written as the product in B instead of the WRB per spec; Tyvek when the spec calls for fluid-applied.</li>
 <li>Zip and a separate housewrap counted together.</li>
+<li><code>Zip Tape</code> in rolls instead of LFT, or without the opening perimeter of the floor.</li>
 <li>Furring missed because it is not on the elevation.</li>
 <li>Openings not deducted from the WRB, or deducted twice.</li>
 <li>All sheathing mistakes: <a href="../../../start/common-mistakes/#sheathing">Sheathing</a>.</li>
 </ul>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>WRB            fluid-applied (per spec 07 27 26)   8 420  SQ FT   =C&lt;walls SF&gt;-C&lt;openings&gt;   A3.0
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Furring        1x4 P.T. @ 16&quot; o.c.                 6 950  LFT     =CEILING(8420*12/16*1.1,10) 7/A401
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Cedar Breather                                     1 240  SQ FT   gable shingle areas          A201
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Vapor Barrier   fluid-applied (spec 07 27 26)   9270  SQ FT   =CEILING(8420*1.1,10)         A3.0
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Furring         1x4 P.T. @ 16&quot; o.c.             6950  LFT     =CEILING(8420*12/16*1.1,10)   7/A401
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Cedar Breather                                  1240  SQ FT   gable shingle areas           A201
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>The same walls on Zip: no Vapor Barrier row, Tape instead
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Wall Sheathing  7/16&quot; Zip                       290   4x8     =CEILING(8420/32*1.1,1)
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Tape            Zip Tape                        4410  LFT     =CEILING((8420*0.4+640)*1.1,10)
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>WRB: 8420 x 1.1 = 9262, rounded up to 10 = 9270
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Furring: 8420 x 12 / 16 = 6315, x 1.1 = 6946.5, rounded up to 10 = 6950
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Zip: 8420 / 32 = 263.1, x 1.1 = 289.4, rounded up to a whole sheet = 290 sheets
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Tape: 8420 x 0.4 = 3368, + 640 LFT of opening perimeter = 4008, x 1.1 = 4408.8, rounded up to 10 = 4410
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

@@ -1,21 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
-  <title id="t">Loft mezzanine level with guard</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" role="img" aria-labelledby="t d">
+  <title id="t">Loft: floor area inside the storey volume and a guard at the open edge</title>
+  <desc id="d">Building section: a loft floor covers part of the plan under the roof, the rest is open to below. The loft area is its own polygon, with subfloor and joists, and a guard along the open edge.</desc>
   <defs>
-    <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
+    <style>
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
+    </style>
   </defs>
-  <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Loft - антресольный уровень внутри объёма</text>
-  <text class="s" x="32" y="62">Floor area + guard по открытому краю. Уточни: floor- или roof-framing.</text>
-  <!-- outer room -->
-  <polygon points="120,90 420,90 420,260 120,260" fill="#f7f9fb" stroke="#9bb0c2" stroke-width="1.4"/>
-  <!-- loft floor -->
-  <rect x="120" y="170" width="190" height="16" fill="url(#w)" stroke="#3a3a3a" stroke-width="1.5"/>
-  <!-- loft joists -->
-  <g fill="url(#w)" stroke="#3a3a3a" stroke-width="1.1"><rect x="130" y="186" width="10" height="40"/><rect x="180" y="186" width="10" height="40"/><rect x="230" y="186" width="10" height="40"/></g>
-  <!-- guard rail -->
-  <line x1="305" y1="170" x2="305" y2="120" stroke="#6c4b2a" stroke-width="4"/>
-  <line x1="260" y1="120" x2="330" y2="120" stroke="#6c4b2a" stroke-width="4"/>
-  <line x1="285" y1="170" x2="540" y2="150" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="153">Loft floor (SQFT)</text>
-  <line x1="305" y1="135" x2="540" y2="120" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="548" y="123">Guard / railing по краю</text>
+<rect x="0.5" y="0.5" width="879" height="559" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<rect x="60" y="120" width="16" height="370" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.4"/>
+<rect x="470" y="120" width="16" height="370" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.4"/>
+<polygon points="40,124 273,44 506,124 506,138 273,58 40,138" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.4" stroke-linejoin="round"/>
+<rect x="50" y="490" width="446" height="24" fill="url(#conc)" stroke="#6b7378" stroke-width="1.3"/>
+<rect x="76" y="290" width="230" height="7" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.2"/>
+<rect x="76" y="297" width="230" height="30" fill="#f6ead3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="90" y="297" width="7" height="30" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1"/>
+<rect x="118" y="297" width="7" height="30" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1"/>
+<rect x="146" y="297" width="7" height="30" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1"/>
+<rect x="174" y="297" width="7" height="30" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1"/>
+<rect x="202" y="297" width="7" height="30" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1"/>
+<rect x="230" y="297" width="7" height="30" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1"/>
+<rect x="258" y="297" width="7" height="30" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1"/>
+<rect x="286" y="297" width="7" height="30" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1"/>
+<rect x="292" y="327" width="14" height="163" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.4"/>
+<rect x="296" y="232" width="6" height="58" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.4"/>
+<rect x="288" y="226" width="22" height="6" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.3"/>
+<line x1="76" y1="282" x2="306" y2="282" stroke="#2e7d32" stroke-width="3" stroke-dasharray="10 6"/>
+<rect x="318" y="150" width="142" height="330" fill="none" stroke="#8a98a5" stroke-width="1.2" stroke-dasharray="6 5"/>
+<text class="note" x="389" y="300" text-anchor="middle">open to below</text>
+<text class="red" x="389" y="320" text-anchor="middle">не входит</text>
+<text class="red" x="389" y="338" text-anchor="middle">в площадь loft</text>
+<text class="note" x="100" y="420">этаж ниже</text>
+<circle cx="190" cy="262" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="190" y="266.5">1</text>
+<circle cx="140" cy="312" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="140" y="316.5">2</text>
+<circle cx="240" cy="312" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="240" y="316.5">3</text>
+<circle cx="340" cy="240" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="340" y="244.5">4</text>
+<line x1="328" y1="242" x2="312" y2="250" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="548" cy="60" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="548" y="64.5">1</text>
+<text class="lab2" x="568" y="65">Площадь пола loft</text>
+<text class="mono2" x="568" y="83">sqfts/loft</text>
+<text class="note" x="568" y="100">Area; Front Page: уровень Loft,</text>
+<text class="note" x="568" y="117">не следующий номер этажа</text>
+<circle cx="548" cy="149" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="548" y="153.5">2</text>
+<text class="lab2" x="568" y="154">Subfloor</text>
+<text class="mono2" x="568" y="172">Subfloor | 3/4" T&amp;G | 4x8</text>
+<text class="mono2" x="568" y="189">=ОКРВВЕРХ(SQFT/32*1.1;1)</text>
+<text class="note" x="568" y="206">блок Loft Framing List</text>
+<circle cx="548" cy="238" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="548" y="242.5">3</text>
+<text class="lab2" x="568" y="243">Joists loft</text>
+<text class="note" x="568" y="261">страница Joist; уточни каркас:</text>
+<text class="note" x="568" y="278">floor joists, roof-type, by others</text>
+<circle cx="548" cy="310" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="548" y="314.5">4</text>
+<text class="lab2" x="568" y="315">Guard по открытому краю</text>
+<text class="mono2" x="568" y="333">Railing | по детали | LFT</text>
+<text class="note" x="568" y="350">Line по краю над комнатой</text>
+<text class="note" x="60" y="540">Loft считается отдельно от этажа под ним.</text>
 </svg>

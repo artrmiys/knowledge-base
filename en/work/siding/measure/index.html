@@ -7291,7 +7291,7 @@
 <figure>
 <p><img alt="Siding take-off by elevation area" src="../../../../assets/images/siding/measure.svg" />
   </p>
-<figcaption>SQ FT by elevation: the wall field is an Area, gable and accent as separate areas, large openings deducted once.</figcaption>
+<figcaption>SQ FT by elevation: the wall field is an Area, a gable with another material is a separate area, an opening wider than 4' is cut out once, windows narrower than 4' are not deducted, trim is counted separately.</figcaption>
 </figure>
 <!-- TODO-SCREEN: measure-area-siding.png (Area on an elevation in OurPlanCore with an opening deducted, item siding/6" vertical) -->
 
@@ -7318,7 +7318,7 @@ siding area.</p>
 </tr>
 <tr>
 <td>Plans and opening layout</td>
-<td>Large openings to deduct (overhead doors, storefronts)</td>
+<td>Openings to deduct: windows, doors, overhead doors, storefronts; walls that no elevation shows</td>
 </tr>
 <tr>
 <td>Notes</td>
@@ -7335,13 +7335,19 @@ siding area.</p>
    several elevations can be collected as several polygons in one item.</li>
 <li>Gables, dormers, bays, return walls as separate polygons or items,
    especially with a different material.</li>
-<li>Cut large openings out as holes in the Area; windows under 4' are not deducted,
-   they go to waste. Do not deduct the same opening twice (siding and
-   WRB each take the deduction from their own area).</li>
+<li>Cut every window and every door out as a hole in the Area at the frame (inside
+   the casing): siding runs under the casing, corner boards and bands and continues
+   behind posts and columns. The wall sheathing rule "windows narrower than 4' are not
+   deducted" does not apply to siding: in siding every opening is cut out, and the DFL
+   gets the net area. Do not deduct the same opening twice.</li>
+<li>A blank spot on an elevation that is really a section cut or an open balcony
+   bay gets no siding. Walls that no elevation shows (courtyard, wall above a
+   roof, dormer cheeks, sides of recesses) are counted from the plan: length
+   x height, <code>assumed</code> in the name, material as on the adjacent wall.</li>
 <li>Check the elevation scale against a known dimension (floor height, overhead door
    width): elevations are often at a different scale than the plans.</li>
-<li>Move the area to the DFL with a formula with visible addends and update it after
-   the takeoff is edited.</li>
+<li>Move the net area into G of the DFL row as a sum with visible addends and
+   update it after the takeoff is edited; the formula in C adds the waste.</li>
 </ol>
 <h2 id="tree-name-and-dfl-row">Tree name and DFL row<a class="headerlink" href="#tree-name-and-dfl-row" title="Link to this section">&para;</a></h2>
 <table>
@@ -7356,21 +7362,21 @@ siding area.</p>
 <tbody>
 <tr>
 <td><code>siding/6" vertical</code></td>
-<td><code>Siding Vertical 1x6 Cedar</code></td>
+<td><code>Siding Vertical</code>, <code>1x6 Cedar</code> in B</td>
 <td>SQ FT</td>
-<td><code>=Front+Rear+Left+Right</code></td>
+<td><code>=CEILING(G*1.1,10)</code>; G holds the net area <code>=Front+Rear+Left+Right</code>; exposure in E</td>
 </tr>
 <tr>
 <td><code>siding/panel grey</code></td>
-<td><code>Siding Fiber Cement Panel grey</code></td>
+<td><code>Panels</code>, <code>Fiber Cement Panels</code> in B</td>
 <td>SQ FT</td>
-<td>separately by color</td>
+<td>same formula; separately by color, color or tag in E</td>
 </tr>
 <tr>
 <td><code>siding/shingle gable</code></td>
-<td><code>Siding Gable front Vinyl Shingles</code></td>
+<td><code>Siding</code>, <code>Vinyl Shingles</code> in B</td>
 <td>SQ FT</td>
-<td>accent separately</td>
+<td>same formula; accent separately</td>
 </tr>
 <tr>
 <td></td>
@@ -7380,20 +7386,22 @@ siding area.</p>
 </tr>
 <tr>
 <td></td>
-<td><code>Siding Per customer TBD</code></td>
+<td><code>Siding</code>, <code>TBD Siding</code> in B</td>
 <td>SQ FT</td>
-<td><code>0</code> plus a note</td>
+<td>G <code>0</code> plus the note <code>Note: Siding is not specified; verify</code></td>
 </tr>
 </tbody>
 </table>
-<p>Waste: lap is moderate, shingle and shake higher, diagonal and small gables
-give more offcuts. Keep the factor as a visible multiplier per
-<a href="../../../reference/formulas/">Formulas and factors</a>.</p>
+<p>Siding has one waste factor for every type: 1.1. It is in the template formula
+<code>=CEILING(G*1.1,10)</code> (a total under 50 rounds to 2), so G takes the net
+area with no allowance. The exposure (<code>6" Exp.</code>) goes into E next to the sheet
+or keynote; it does not change the quantity. Do not merge horizontal and vertical
+siding of one product into one row.</p>
 <h2 id="by-others-and-tbd">By others and TBD<a class="headerlink" href="#by-others-and-tbd" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Siding by others: a row with <code>0</code> and the note <code>by others</code> or <code>by customer</code>.</li>
-<li>Material not specified: <code>Per customer TBD</code> or <code>verify material</code>, do not
-  substitute a product.</li>
+<li>Material not specified: <code>TBD Siding</code> in B, G <code>0</code> and the note <code>Note: Siding is not
+  specified; verify</code>; do not substitute a product.</li>
 <li>EIFS, stucco, stone, brick: not counted, but check the WRB, sheathing, furring and
   trim next to them: <a href="../eifs-stucco-veneer/">EIFS / Stucco / Veneer</a>.</li>
 </ul>
@@ -7402,16 +7410,21 @@ give more offcuts. Keep the factor as a visible multiplier per
 <li>Area from the plan (perimeter x height) without deducting gables and without the different
   wall heights per elevation.</li>
 <li>An opening deducted twice or not at all (garage doors).</li>
+<li>Small windows not cut out by habit from wall sheathing: in siding every opening is cut out.</li>
+<li>G holds an area that already includes the allowance: the waste is counted twice.</li>
 <li>Elevation scale not checked.</li>
 <li>Area measured but not moved to Excel or not updated.</li>
 <li>All area and sheathing mistakes: <a href="../../../start/common-mistakes/#sqft">SQFT areas</a>, <a href="../../../start/common-mistakes/#sheathing">Sheathing</a>.</li>
 </ul>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/siding/6&quot; vertical     Area   4 polygons   3 180 SF
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Takeoffs/Main/siding/shingle gable   Area   2 polygons     420 SF
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/siding/6&quot; vertical     Area   4 polygons   3180 SQ FT
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Takeoffs/Main/siding/shingle gable   Area   2 polygons    420 SQ FT
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Siding Vertical      1x6 Cedar              3 180  SQ FT   =1120+940+560+560   A201 A202
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Siding Gable front   Cedar Shingles 5-1/2&quot;    420  SQ FT   =210+210            A201
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Siding Vertical   1x6 Cedar        3500  SQ FT   =CEILING(G*1.1,10)   G =1120+940+560+560   6&quot; Exp. A201 A202
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Siding            Cedar Shingles    470  SQ FT   =CEILING(G*1.1,10)   G =210+210            5-1/2&quot; Exp. A201
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Vertical: G = 3180; 3180 x 1.1 = 3498, rounded up to 10 = 3500
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Shingles: G = 420; 420 x 1.1 = 462, rounded up to 10 = 470
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

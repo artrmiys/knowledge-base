@@ -7248,14 +7248,14 @@
 I-joists, LVL / PSL / LSL / GL балки и engineered rim. Есть два противоположных
 заказа: "только EWP" (Capital-тип) и "всё, кроме EWP" (<code>Frame. EWP by others</code>).</p>
 <figure>
-<p><img alt="EWP materials: I-joist, LVL beam, hanger" src="../../assets/images/work-types/ewp-capital.svg" />
+<p><img alt="Разрез перекрытия: что считаем в заказе EWP only" src="../../assets/images/work-types/ewp-capital.svg" />
   </p>
-<figcaption>EWP only: считаем I-joists, LVL/PSL/GL, engineered rim и hangers к ним. 2x, фермы, гвозди - нет.</figcaption>
+<figcaption>EWP only на разрезе перекрытия: считаем I-joists, балку LVL/PSL/GL, engineered rim и hangers к ним (зелёные номера). Стены 2x, subfloor, фермы, ties и гвозди - нет (красные).</figcaption>
 </figure>
 <figure>
 <p><img alt="I-joists перекрытия опираются на балку над стойкой" src="../../assets/images/photos/work-types/ijoists-on-beam-post.jpg" width="520" />
   </p>
-<figcaption>EWP на стройке: I-joists лежат на клеёной балке, балка на стойке с металлическим post cap. В заказе "только EWP" считаем I-joists, балку и hangers к ним; стойку 2x и фермы на заднем плане - нет. Фото: redbuilt.com, <a href="http://www.redbuilt.com/commercial-systems/i-joists">источник</a>, найдено через Pinterest.</figcaption>
+<figcaption>EWP на стройке: I-joists лежат на клеёной балке, балка на клеёной стойке с металлическим post cap, на заднем плане стальные open web joists. В заказе "только EWP" считаем I-joists, балку и hangers к ним; стальные joists - нет, стойку - по чертежу. Фото: redbuilt.com, <a href="http://www.redbuilt.com/commercial-systems/i-joists">источник</a>, найдено через Pinterest.</figcaption>
 </figure>
 <h2 id="_1">Что это за материалы<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
@@ -7310,7 +7310,12 @@ hangers к ним; возможно колонны и stringers лестниц.<
 <li>Rim: если LVL нигде не указан, не предполагать <code>1-3/4 LVL Rim</code>; по умолчанию
   <code>Rim</code> или продукт с пометкой assumed. Толщины rim 1-1/8" OSB, 1-1/2" LSL,
   1-3/4" LVL - <a href="../../work/horizontal/floor-framing/details/rim/">Rim Board</a>.</li>
-<li>Rim factor 1.05; blocking continuous в LFT, фактор по <a href="../../reference/formulas/">Формулам</a>.</li>
+<li>Rim и continuous blocking в этом заказе остаются в <code>LFT</code>: rim <code>x 1.05</code>,
+  blocking без фактора; rim не режется на доски по 16'. Фактор <code>1.05</code> -
+  <strong>только для EWP-only</strong>. В обычной framing-книге (Frame, COM, residential)
+  <code>Rim Board</code> - это доски по 16' через <code>=CEILING(G/D,1)</code> без отдельного
+  запаса: <a href="../../work/horizontal/floor-framing/details/rim/">Rim Board</a>,
+  <a href="../../reference/formulas/">Формулы</a>.</li>
 <li>Одинаковый этаж: нота <code>4th floor frame is identical to 3rd floor</code>, но
   материалы перечислить.</li>
 </ul>
@@ -7321,6 +7326,15 @@ hangers к ним; возможно колонны и stringers лестниц.<
 EWP-балками), headers из 2x, кровля, eaves, truss heel, крепёж.</p>
 <p><strong>Не считать:</strong> I-joists, LVL / PSL / LSL балки и headers, engineered rim.
 Строки с EWP убрать, не оставлять нулевыми.</p>
+<p><strong>Исключения (чек-лист):</strong></p>
+<ul>
+<li><strong>Assumed LVL включаем всегда.</strong> Если LVL назначили мы сами, потому что на
+  чертежах нет марки (header длинного окна без марки, ridge), он остаётся в
+  книге с <code>assumed</code>: в поставке EWP клиента его нет.</li>
+<li><strong><code>EWP Floors by others</code></strong> уже, чем <code>EWP by others</code>: by others только то,
+  что нарисовано на layout перекрытий (I-joists, балки и rim этих
+  перекрытий). Attic, roof и stick porch вместе с их LVL остаются нашими.</li>
+</ul>
 <p>Правила:</p>
 <ul>
 <li>Нота в шапке <code>All EWP products are by others</code>. Шаблонная нота
@@ -7333,6 +7347,8 @@ EWP-балками), headers из 2x, кровля, eaves, truss heel, креп�
 <h2 id="_2">Частые ошибки<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>EWP посчитан при <code>EWP by others</code> или не посчитан при EWP only.</li>
+<li>При <code>EWP Floors by others</code> выброшены LVL кровли, attic и porch, или убран assumed LVL.</li>
+<li>Rim <code>x 1.05</code> в LFT перенесён в обычную framing-книгу.</li>
 <li>Rim записан как LVL без указания.</li>
 <li>Hangers по закупочным доскам, а не по сборкам.</li>
 <li>Все ошибки по перекрытиям - <a href="../../start/common-mistakes/#floor">Частые ошибки</a>.</li>

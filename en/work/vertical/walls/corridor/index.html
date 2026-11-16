@@ -7269,16 +7269,16 @@
 
 <h1 id="corridor-walls">Corridor Walls<a class="headerlink" href="#corridor-walls" title="Link to this section">&para;</a></h1>
 <figure>
-<p><img alt="Staggered stud wall: two rows of 2x4 studs on 2x6 plates" src="../../../../../assets/images/confluence/confluence-062.png" />
+<p><img alt="Corridor wall section: staggered 2x4 studs on 2x6 plates, ledger and corridor joists" src="../../../../../assets/images/walls/corridor-wall-section.svg" />
   </p>
-<figcaption>Staggered stud wall: 2x4 studs in two staggered rows on one 2x6 plate, insulation woven between them. In the DFL these are 2x6 plates and two rows of 2x4 studs.</figcaption>
+<figcaption>Corridor wall section: 2x6 plates, two staggered rows of 2x4 studs at 16" o.c., temporary bracing, a ledger and corridor joists on hangers. Numbers match the DFL rows on the right. In plan the wall is one Line along its axis, <code>corr 2x6 9.09</code>.</figcaption>
 </figure>
 <!-- TODO-PHOTO: staggered stud wall framing photo, EN query "staggered stud wall framing" -->
 
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
 <p>A corridor wall separates a unit from a common area: corridor, stair,
 garage, lobby. It is fire-rated, often on 2x6 plates with staggered 2x4
-studs, and it carries a ledger or drywall bracing on top where the floor framing runs
+studs, and it carries a ledger or <code>Blocking for Drywall</code> on top where the floor framing runs
 parallel. A wall between two units is a <a href="../demising/">Demising</a> wall,
 and a shaft wall is a <a href="../shaft/">Shaft</a> wall.</p>
 <h2 id="where-to-find-it-on-the-plans">Where to find it on the plans<a class="headerlink" href="#where-to-find-it-on-the-plans" title="Link to this section">&para;</a></h2>
@@ -7322,7 +7322,7 @@ and a shaft wall is a <a href="../shaft/">Shaft</a> wall.</p>
 <li>A staggered wall is one line: plates by the name <code>2x6</code>, the two stud rows
    are handled in the DFL.</li>
 <li>Start a new takeoff when the height or size changes. Height comes from the section of your
-   building, not floor-to-floor (<a href="../exterior/#stud-height">Exterior: stud height</a>).</li>
+   building, not floor-to-floor (<a href="../exterior/#stud-height">Exterior: wall height</a>).</li>
 <li>If the wall type is bearing, trace the same wall again in <code>BW/&lt;floor&gt;</code>.</li>
 </ol>
 <h2 id="takeoff-name-and-dfl-row">Takeoff name and DFL row<a class="headerlink" href="#takeoff-name-and-dfl-row" title="Link to this section">&para;</a></h2>
@@ -7350,36 +7350,37 @@ and a shaft wall is a <a href="../shaft/">Shaft</a> wall.</p>
 </tr>
 <tr>
 <td>same</td>
-<td><code>Studs Corr</code> 2x4 staggered</td>
-<td>pcs</td>
+<td><code>Studs Corridor</code> 2x4 staggered</td>
+<td>pieces, D = stud length</td>
 <td><code>LFT x 1.1 x 2</code> (two rows at 16")</td>
 </tr>
 <tr>
 <td>same</td>
 <td><code>Bracing Corridor</code> 2x4</td>
-<td>LFT</td>
-<td>by wall height</td>
+<td>pieces, D = board length: up to 10' = 14, up to 12' = 16, up to 16' = 18, above = 20</td>
+<td><code>LFT / 8 x 1.1</code>: one board per 8 LFT of wall; only walls 7' and taller</td>
 </tr>
 <tr>
 <td>same</td>
 <td><code>Blocking</code></td>
 <td>LFT</td>
-<td>by wall type</td>
-</tr>
-<tr>
-<td>same</td>
-<td><code>Bracing for Drywall</code> 2x4</td>
-<td>LFT</td>
-<td>where the floor framing runs parallel to the wall</td>
+<td>from the template matrix, rounded to even</td>
 </tr>
 <tr>
 <td><code>corr (2) 2x6 11.7</code></td>
 <td>the same rows for two frames</td>
 <td></td>
-<td><code>x 2</code></td>
+<td>line length <code>x 2</code></td>
 </tr>
 </tbody>
 </table>
+<p><code>Bracing Corridor</code> is temporary wall bracing, counted in <strong>pieces</strong>, not LFT:
+a 161 LFT wall 9.09' high gives <code>161 / 8 x 1.1 = 22.1</code> (the template formula does not
+round), which orders as 23 boards of 14': the wall is under 10'.</p>
+<p>Drywall backing where the floor framing runs parallel to the wall is a different row in a
+different block: <code>Blocking for Drywall</code>, <code>2x4</code>, <code>=CEILING(G/D,1)</code>, D <code>16</code>, in the Floor
+Framing List of that floor. There is no <code>Bracing for Drywall</code> row in the DFL. Details:
+<a href="../../../horizontal/floor-framing/details/bracingdrywall/">Wall bracing and Blocking for Drywall</a>.</p>
 <p>Hangers over a corridor wall are regular <code>ITS</code> when the gypsum stops
 below the floor framing. <code>DHU</code> / <code>DGU</code> only where the joists bear over a true
 fire wall per detail (stair, elevator, shaft): <a href="../../../../reference/hangers/">Hangers</a>.
@@ -7387,12 +7388,13 @@ Corridor joists at the roof without a detail get a note with the reason, not <co
 explanation (<a href="../../../../reference/standard-notes/">Standard notes</a>).</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
-<li>Corridor and demising mixed up as a group: on one check 241 LF of corridor became 161, and demising grew from 577 to 648.</li>
+<li>Corridor and demising mixed up as a group: on one check 241 LFT of corridor became 161, and demising grew from 577 to 648.</li>
 <li>A piece of corridor wall at a stair written as <code>ext</code>.</li>
 <li><code>DHU</code> used only because the wall is a corridor wall.</li>
 <li>A staggered wall counted with one row of studs.</li>
 <li>2x6 plates forgotten: studs are 2x4, and the plates were written as 2x4.</li>
 <li>Ledger and corridor joist hardware not listed on separate rows per detail.</li>
+<li><code>Bracing Corridor</code> written in LFT, or drywall backing written as a <code>Bracing for Drywall</code> row.</li>
 </ul>
 <p>Walkthrough with examples: <a href="../../../../start/common-mistakes/#walls">all wall mistakes</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
@@ -7405,7 +7407,7 @@ explanation (<a href="../../../../reference/standard-notes/">Standard notes</a>)
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>
 <li><a href="../demising/">Demising Walls</a>, <a href="../unit/">Unit Walls</a>, <a href="../shaft/">Shaft Walls</a></li>
-<li><a href="../../../horizontal/floor-framing/details/bracingdrywall/">Bracing for Drywall</a></li>
+<li><a href="../../../horizontal/floor-framing/details/bracingdrywall/">Wall bracing and Blocking for Drywall</a></li>
 <li><a href="../../../../reference/hangers/">Hangers</a>: ITS vs DHU</li>
 <li><a href="../../../../reference/boss-feedback-rules/#dhu-dgu-vs-its">Tips and key rules</a></li>
 </ul>

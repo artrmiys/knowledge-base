@@ -7381,21 +7381,21 @@
 <tr>
 <td><code>Studs 16" o.c.</code></td>
 <td><code>2x6</code></td>
-<td>LFT x 1.1</td>
+<td>per the wall rule: <a href="../../../vertical/walls/exterior/">Exterior Walls</a></td>
 <td>by height</td>
 <td><code>dormer walls per A301</code></td>
 </tr>
 <tr>
-<td><code>Header (2)</code></td>
+<td><code>Beam (2)</code> (roof header)</td>
 <td><code>2x12</code></td>
-<td>points</td>
+<td>points x 2</td>
 <td><code>8</code></td>
 <td><code>dormer opening per S201</code></td>
 </tr>
 <tr>
 <td><code>Dbl Rafters</code></td>
 <td><code>2x12</code></td>
-<td>points</td>
+<td>points x 2</td>
 <td><code>18</code></td>
 <td></td>
 </tr>
@@ -7407,21 +7407,22 @@
 <td><code>dormer</code></td>
 </tr>
 <tr>
-<td><code>Valley Rafters</code></td>
+<td><code>Valley plates</code></td>
 <td><code>2x12</code></td>
 <td>points</td>
 <td><code>12</code></td>
 <td></td>
 </tr>
 <tr>
-<td><code>Fascia at Eves (dormer)</code></td>
-<td><code>1x8</code></td>
-<td>LFT</td>
+<td><code>Fascia at Eves</code></td>
+<td><code>1x6</code></td>
+<td><code>G x 1.1</code>, rounded up to even</td>
 <td><code>LFT</code></td>
-<td></td>
+<td><code>dormer</code></td>
 </tr>
 </tbody>
 </table>
+<p><code>(n)</code> in the Label is the number of plies; C = points x plies. <code>Dbl Rafters</code> has no brackets, but the rule is the same: places x 2.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Dormer not counted: on the roof plan it shows as a small rectangle.</li>
@@ -7437,9 +7438,46 @@
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>gables/gable stick/dormer                     Area, 2 triangles
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>sqfts/rf 8 dormer                             Area
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>framing/roof framing/beams/rf header (2) 2x12 8     2 points
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>framing/roof framing/beams/valley 2x12 12           4 points
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>eves rakes/rakes/rake 12 dormer               Line
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>framing/roof framing/beams/dbl rafters 2x12 18      4 points
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>framing/roof framing/beams/valley 2x12 12           4 points
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>eves rakes/rakes/rake 12 dormer               Line
 </span></code></pre></div>
+<p>Roof framing rows for these two dormers:</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Beam (2)</code></td>
+<td><code>2x12</code></td>
+<td>4</td>
+<td>8</td>
+<td><code>dormer opening per S201</code></td>
+</tr>
+<tr>
+<td><code>Dbl Rafters</code></td>
+<td><code>2x12</code></td>
+<td>8</td>
+<td>18</td>
+<td><code>S201</code></td>
+</tr>
+<tr>
+<td><code>Valley plates</code></td>
+<td><code>2x12</code></td>
+<td>4</td>
+<td>12</td>
+<td><code>dormer</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>Beam (2)</code> (roof header): 2 points x 2 = 4. <code>Dbl Rafters</code>: 4 places (two per dormer) x 2 = 8. <code>Valley plates</code>: 4 points, one board each.</p>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>
 <li><a href="../header/">Roof Header</a>, <a href="../dbl-trpl-rafters/">Dbl / Trpl Rafters</a>, <a href="../valley/">Valley</a>, <a href="../overframes/">Overframes</a></li>

@@ -7273,10 +7273,10 @@
 <figure>
 <p><img alt="Blocking at 48 inch on center" src="../../../../../assets/images/framing/blocking-oc.svg" />
   </p>
-<figcaption>Ряды blocking с шагом 48" поперёк joists: количество кусков считается по длине зоны и шагу, не как сплошной ряд.</figcaption>
+<figcaption>Blocking с шагом 48": Line вдоль зоны, кусок на каждой точке линии; количество считается по длине линии и шагу, не как сплошной ряд.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Blocking o.c. - раскладка блокинга поперёк пролёта с фиксированным шагом, обычно <code>48" o.c.</code>: flat (плашмя между joists), diagonal (крест-накрест, bridging) или vertical (между studs). Считается через длину зоны и шаг, не в LFT сплошного ряда. Сплошной blocking и все его виды - <a href="../blocking/">Blocking</a>.</p>
+<p>Blocking o.c. - отдельные куски blocking, которые стоят не сплошным рядом, а через шаг вдоль одной линии: по верху перегородки под фермами (кусок между фермами каждые <code>48" o.c.</code>), вдоль несущей линии, между studs стены. Типы: flat (плашмя между двумя joists или фермами), diagonal (наискось), vertical (между studs). Считается по длине линии и шагу, а не как сплошной ряд. Сплошной blocking и все его виды - <a href="../blocking/">Blocking</a>.</p>
 <h2 id="_2">Где искать на чертежах<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7288,11 +7288,11 @@
 <tbody>
 <tr>
 <td>Framing notes, typical details</td>
-<td>шаг рядов (<code>48" o.c.</code>), тип: flat, diagonal, vertical</td>
+<td>шаг (<code>48" o.c.</code>), тип (flat, diagonal, vertical), сечение, длина куска</td>
 </tr>
 <tr>
 <td>Framing plan</td>
-<td>длина зоны вдоль joists, где ряды нужны</td>
+<td>линия, вдоль которой стоят куски: перегородка под фермами, несущая линия</td>
 </tr>
 <tr>
 <td>Wall details (shear, fire)</td>
@@ -7301,8 +7301,14 @@
 </tbody>
 </table>
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Line (L) вдоль joists через зону (длина зоны поперёк рядов) на листе framing с точкой F. Позиция <code>framing/&lt;этаж&gt; framing/details/blocking 48</code> или с номером детали. В G строки уходит LFT линии.</p>
+<p>Line (L) вдоль линии, по которой стоят куски blocking, на листе framing с точкой F: по перегородке, по несущей линии, по ряду. Правила:</p>
+<ol>
+<li>Одна Line на каждый ряд blocking. Два параллельных ряда - две линии.</li>
+<li>Линия идёт вдоль ряда, не поперёк и не через всю зону: формула считает точки вдоль линии.</li>
+<li>Позиция <code>framing/&lt;этаж&gt; framing/details/blocking 48</code> или с номером детали; шаг в имени. В G строки уходит длина линии в LFT, без waste.</li>
+</ol>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Шаг стоит в колонке H и печатается в Label.</p>
 <table>
 <thead>
 <tr>
@@ -7315,55 +7321,65 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Blocking Flat 48" o.c.</code></td>
-<td>сечение joists</td>
-<td><code>=ОКРВВЕРХ(G*12/H*2*1.1/D;1)</code></td>
+<td><code>Blocking 48" o.c.</code></td>
+<td>по детали: <code>2x4</code> плашмя или сечение joists</td>
+<td><code>=ОКРВВЕРХ(G*12/H*2/D;1)</code></td>
 <td><code>16</code></td>
 <td><code>48</code></td>
 </tr>
 <tr>
-<td><code>Blocking Diagonal 48" o.c.</code></td>
-<td><code>2x</code></td>
-<td><code>=ОКРВВЕРХ(G*12/H*2.5*1.1/D;1)</code></td>
-<td><code>16</code></td>
-<td><code>48</code></td>
-</tr>
-<tr>
-<td><code>Vertical Blocking 16" o.c.</code></td>
+<td><code>Diagonal Blocking 48" o.c.</code></td>
 <td><code>2x4</code></td>
-<td><code>=ОКРВВЕРХ(G*12/H*1.5/D;1)</code></td>
+<td><code>=ОКРВВЕРХ(G*12/H*3/D;1)</code></td>
 <td><code>16</code></td>
+<td><code>48</code></td>
+</tr>
+<tr>
+<td><code>Vertical Blocking 48" o.c.</code></td>
+<td><code>2x4</code></td>
+<td><code>=ОКРВВЕРХ(G*12/H*2/D;1)</code></td>
 <td><code>16</code></td>
+<td><code>48</code></td>
 </tr>
 </tbody>
 </table>
-<p>Что значат буквы: <code>G</code> - LFT зоны (длина линии), <code>H</code> - шаг в дюймах, <code>D</code> - длина доски в футах (16), <code>1.1</code> - waste, множитель - тип блокинга.</p>
+<p>Что значат буквы:</p>
+<ul>
+<li><code>G</code> - длина линии в футах (LFT из OurPlanCore). Waste в ней нет.</li>
+<li><code>H</code> - шаг в дюймах.</li>
+<li><code>G*12/H</code> - число точек blocking вдоль линии.</li>
+<li>множитель (<code>2</code>, <code>3</code>) - сколько футов доски уходит на одну точку.</li>
+<li><code>D</code> - длина доски в футах (16).</li>
+</ul>
+<p>Точки x футы на точку = LFT доски; LFT / 16 = доски. Отдельного waste в формуле нет: запас даёт округление вверх до целой доски.</p>
 <table>
 <thead>
 <tr>
 <th>Тип</th>
-<th>Множитель</th>
+<th>Футов доски на точку</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Flat</td>
+<td>Flat (кусок плашмя между двумя элементами)</td>
 <td><code>2</code></td>
 </tr>
 <tr>
 <td>Diagonal</td>
-<td><code>2.5</code></td>
+<td><code>3</code></td>
 </tr>
 <tr>
-<td>Vertical</td>
-<td><code>1.5</code></td>
+<td>Vertical (между studs)</td>
+<td><code>2</code></td>
 </tr>
 </tbody>
 </table>
-<p>Канон таблицы множителей: <a href="../../../../../reference/formulas/#blocking-formulas">Формулы, Blocking formulas</a>.</p>
+<p>Если деталь даёт другую длину куска или несколько кусков в одной точке, множитель берётся по детали: футы доски на одну точку. Сводка формул: <a href="../../../../../reference/formulas/#blocking-formulas">Формулы, Blocking formulas</a>.</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li><code>1.1</code> поставлен второй раз, хотя G уже содержит waste.</li>
+<li>Линия проведена поперёк рядов или через всю зону. <code>G</code> должна быть длиной линии, вдоль которой стоят куски.</li>
+<li>В формулу добавлен <code>1.1</code>. <code>G</code> - это длина линии, waste в ней нет; в формуле шаблона его тоже нет.</li>
+<li>Blocking с шагом посчитан как сплошной ряд: при 48" это вдвое больше досок.</li>
 <li>Шаг взят из шаблона, а не из ноты проекта.</li>
 <li>Формула применена к in-panel blocking на panel-job.</li>
 <li>Plates и wall blocking переведены в pcs, хотя шаблон ждёт LFT.</li>
@@ -7384,9 +7400,9 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Blocking Flat 48" o.c.</code></td>
-<td><code>2x10</code></td>
-<td><code>=ОКРВВЕРХ(G*12/H*2*1.1/D;1)</code></td>
+<td><code>Blocking 48" o.c.</code></td>
+<td><code>2x4</code></td>
+<td><code>=ОКРВВЕРХ(G*12/H*2/D;1)</code></td>
 <td>16</td>
 <td><code>note 7 per S001</code></td>
 <td>240</td>
@@ -7394,7 +7410,7 @@
 </tr>
 </tbody>
 </table>
-<p>При G = 240 LFT: 240 x 12 / 48 = 60 рядов, x 2 = 120 кусков, x 1.1 = 132, / 16 = 9 досок по 16'.</p>
+<p>Линия по перегородке 240 LFT, шаг 48": 240 x 12 / 48 = 60 точек; 60 x 2' = 120 LFT доски; 120 / 16 = 7.5, значит 8 досок по 16'.</p>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li><a href="../blocking/">Blocking</a>, <a href="../ribbon/">Ribbon Board</a>, <a href="../../../../../reference/formulas/">Формулы</a></li>

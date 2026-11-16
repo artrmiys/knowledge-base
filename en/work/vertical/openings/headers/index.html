@@ -7440,46 +7440,47 @@ up to the next whole foot; longer, to an even number).</p>
 <h2 id="takeoff-name-and-dfl-row">Takeoff name and DFL row<a class="headerlink" href="#takeoff-name-and-dfl-row" title="Link to this section">&para;</a></h2>
 <p>The <code>HD</code> button on the XL strip puts headers into the wall block of the floor <strong>below</strong>; the side
 <code>ext</code> / <code>int</code> is taken from the name. In the <code>LG</code> legend the row <code>HP2 - (2) 2x10</code>
-gives the size by code, otherwise the code itself lands in B.</p>
+gives the size by code, otherwise the code itself lands in B. The number of plies sits at
+the end of the label in parentheses: <code>(2)</code>, <code>(3)</code>; C counts every board.</p>
 <table>
 <thead>
 <tr>
 <th>Takeoff name</th>
 <th>DFL row</th>
-<th>Unit</th>
+<th>Unit (column D)</th>
 <th>Formula / factor</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>ext H228 4</code></td>
-<td><code>Ext. Headers (2) up to 48"</code> <code>2x8</code></td>
-<td>pcs</td>
-<td>count x plies, length from the name</td>
+<td><code>Ext. Headers up to 48" (2)</code> <code>2x8</code></td>
+<td>pieces, D = <code>8</code></td>
+<td><code>points x plies / 2</code>: two headers are cut from one board</td>
 </tr>
 <tr>
 <td><code>ext H228 7</code></td>
-<td><code>Ext. Headers (2) up to 72"</code></td>
-<td>pcs</td>
-<td></td>
+<td><code>Ext. Headers up to 72" (2)</code></td>
+<td>pieces, D = <code>14</code> (up to 60": D = <code>12</code>)</td>
+<td><code>points x plies / 2</code></td>
 </tr>
 <tr>
 <td><code>ext (3) 2x10 8</code></td>
-<td><code>Ext. Headers (3) over 72"</code> <code>2x10</code></td>
-<td>pcs</td>
-<td>three boards per header</td>
+<td><code>Ext. Headers over 72" (3)</code> <code>2x10</code></td>
+<td>pieces, D = opening width + 1', rounded to even</td>
+<td><code>points x plies</code>: one header per board</td>
 </tr>
 <tr>
 <td><code>int H228 4</code></td>
 <td><code>Int. Headers (2)</code></td>
-<td>pcs</td>
-<td></td>
+<td>pieces, D = <code>8</code></td>
+<td><code>points x plies / 2</code>; span over 4': <code>points x plies</code>, D by length</td>
 </tr>
 <tr>
 <td><code>9.0x6.8 gd</code> garage door</td>
-<td><code>Garage headers (3)</code></td>
-<td>pcs</td>
-<td>per schedule</td>
+<td><code>Ext. Grge Headers (3)</code></td>
+<td>pieces, D = door width + 1', rounded to even</td>
+<td><code>doors x plies</code>, size per schedule</td>
 </tr>
 <tr>
 <td>not on the plan</td>
@@ -7509,6 +7510,11 @@ in the plane of the exterior wall on Type III. Note samples:
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    ext (3) 2x10 8    Count, 2 ea     Notes: 4/S501, FRT per A001
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  int/
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    int H228 4        Count, 9 ea
+</span></code></pre></div>
+<p>DFL rows in the 1st floor wall block (<code>H228</code> = <code>(2) 2x8</code>):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Ext. Headers up to 48&quot; (2)    2x8     14   8    14 x 2 / 2
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Ext. Headers over 72&quot; (3)     2x10     6   8    2 x 3
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Int. Headers (2)              2x8      9   8    9 x 2 / 2
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

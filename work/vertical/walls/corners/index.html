@@ -7271,15 +7271,17 @@
 <figure>
 <p><img alt="Три варианта угла в плане: 2-stud, 3-stud, California corner" src="../../../../assets/images/framing/corners.svg" />
   </p>
-<figcaption>Угол стены в плане: 2-stud L, 3-stud, California corner с backing под gypsum. Stick: отдельная строка по этажам. Panels: не считаем.</figcaption>
+<figcaption>Угол стены в плане: 2-stud L, 3-stud, California corner с backing под gypsum. Stick: точки <code>corners</code> по этажам, шаблон добавляет стойки углов в <code>Studs Ext</code>. Panels: не считаем.</figcaption>
 </figure>
 <!-- TODO-PHOTO: three stud corner wood framing photo, EN query "three stud corner framing" -->
 
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Corner - пакет стоек на стыке двух стен: 2, 3 стойки или California corner.
 Фактор студов <code>1.1</code> (одна стойка на фут плюс waste) закрывает обрезь и стойки
-у проёмов, но углы и T-пересечения на stick-каркасе считаются отдельной
-строкой. На panel-job углы уже внутри панели.</p>
+у проёмов, а углы и T-пересечения на stick-каркасе считаются точками
+<code>corners</code>: шаблон DFL сам добавляет по 2 LFT стоек на каждую точку в первую
+строку <code>Studs Ext</code> этажа. Отдельной строки <code>Corners</code> в DFL нет. На panel-job
+углы уже внутри панели.</p>
 <h2 id="_2">Где искать на чертежах<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7325,25 +7327,26 @@ T-пересечение на плане этажа. Позиция <code>corner
 <tbody>
 <tr>
 <td><code>corners</code> (Count, 1-й этаж)</td>
-<td><code>Corners</code> 2x6 (сечение стены)</td>
-<td>pcs</td>
-<td><code>углы x стоек в углу</code> (2 или 3 по детали), длина = высота стойки</td>
+<td>своей строки нет: точки идут в G первой строки <code>Studs Ext</code> 1-го этажа</td>
+<td>G в LFT</td>
+<td>G = LFT наружных стен + 2 x число точек (формула шаблона <code>=P40+Q38*2</code>, руками не менять)</td>
 </tr>
 <tr>
 <td><code>corners</code> (Count, 2-й этаж)</td>
-<td><code>Corners</code> отдельной строкой</td>
-<td>pcs</td>
-<td>по этажам, не одной суммой</td>
+<td>так же, в <code>Studs Ext</code> 2-го этажа</td>
+<td>G в LFT</td>
+<td>по этажам, каждый этаж в своей папке</td>
 </tr>
 </tbody>
 </table>
-<p>Если деталь угла не показана, пиши видимую ноту: <code>Corners assumed 3 studs; verify</code>.</p>
+<p>Своя строка <code>Corners</code> посчитает углы второй раз: они уже сидят в G строки
+<code>Studs Ext</code>, а C этой строки (<code>G x 1.1</code>) превращает их в стойки.</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Углы посчитаны на panel-job: они уже в панели.</li>
-<li>Все этажи сложены в одну строку.</li>
+<li>Точки <code>corners</code> разных этажей в одной позиции: углы уходят не в тот этаж.</li>
 <li>T-пересечения и backing забыты, хотя деталь их показывает.</li>
-<li>Угол посчитан 2 стойки при детали с 3.</li>
+<li>Добавлена своя строка <code>Corners</code>: углы посчитаны дважды.</li>
 </ul>
 <p>Разбор с примерами: <a href="../../../../start/common-mistakes/#walls">все ошибки по стенам</a>.</p>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>

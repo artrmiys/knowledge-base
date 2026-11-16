@@ -7275,8 +7275,10 @@
 <p>A return (eave return, cornice return) is the box at the gable corner where the
 horizontal eave turns into the sloped rake. Two kinds: a proper
 cornice return (soffit + fascia + crown) and a pork-chop (a simple triangular
-stub, but it still has fascia and a small soffit). A return is part of neither
-the eave nor the rake: different framing and a different set of rows.</p>
+stub, but it still has fascia and a small soffit). In the tree a return is its
+own line, part of neither <code>eve</code> nor <code>rake</code>. In the DFL it has one framing row of
+its own (<code>Rafter Frame for returns</code>), while soffit, fascia and crown get no rows of
+their own: the return length is added to the eave rows.</p>
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../../../assets/images/trims/ext-pork-chop.png">
     <img src="../../../../assets/images/trims/ext-pork-chop.png" alt="Pork-chop return">
@@ -7284,7 +7286,7 @@ the eave nor the rake: different framing and a different set of rows.</p>
   </a>
   <a class="kb-gallery__item" href="../../../../assets/images/trims/ext-eave-return.png">
     <img src="../../../../assets/images/trims/ext-eave-return.png" alt="Cornice return">
-    <div class="kb-gallery__caption">Cornice return: soffit, fascia, crown as a separate set</div>
+    <div class="kb-gallery__caption">Cornice return: soffit, fascia and crown, the length goes into the eave rows</div>
   </a>
 </div>
 
@@ -7315,53 +7317,83 @@ the eave nor the rake: different framing and a different set of rows.</p>
 <h2 id="how-to-measure-in-ourplancore">How to measure in OurPlanCore<a class="headerlink" href="#how-to-measure-in-ourplancore" title="Link to this section">&para;</a></h2>
 <ol>
 <li>Line tool along the short return piece along the gable wall, on the
-   roof plan or elevation. LFT unit.</li>
-<li>Name <code>returns &lt;overhang in inches&gt;</code>: <code>returns 12</code>. Folder <code>eves rakes/rakes</code>
-   or <code>eves</code> per the job's agreed tree; a name with <code>returns</code> is routed
-   like a rake.</li>
-<li>One return = one segment; the number of corners shows in the number of takeoffs.</li>
+   roof plan or elevation. LFT unit, not pieces.</li>
+<li>Name <code>returns &lt;overhang in inches&gt;</code>: <code>returns 12</code>. The number is the overhang of the
+   eave that turns the corner (for <code>eve 12 main</code> it is <code>returns 12</code>), not the return length.
+   The name starts with exactly the word <code>returns</code>.</li>
+<li>Folder <code>eves rakes/eves</code>, next to the line of its eave: in the DFL returns are
+   added to the eave, not to the rake.</li>
+<li>One return = one segment; the number of corners shows in the number of segments.</li>
 </ol>
 <h2 id="takeoff-name-and-dfl-row">Takeoff name and DFL row<a class="headerlink" href="#takeoff-name-and-dfl-row" title="Link to this section">&para;</a></h2>
+<p>Below, eave LFT and returns LFT are the line lengths and the overhang is the number from the name in inches.</p>
 <table>
 <thead>
 <tr>
 <th>Takeoff name</th>
 <th>DFL row</th>
 <th>Material</th>
-<th>Unit</th>
+<th>Unit (D)</th>
+<th>Formula C</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>eves rakes/rakes/returns 12</code></td>
+<td><code>eves rakes/eves/returns 12</code></td>
 <td><code>Rafter Frame for returns</code></td>
-<td><code>2x4</code> per detail</td>
-<td><code>LFT</code></td>
+<td><code>2x6</code>, E <code>assumed</code> or the detail</td>
+<td><code>16</code></td>
+<td><code>=CEILING(G/12*1.4*0.75/D,1)</code>, G = returns LFT x overhang</td>
 </tr>
 <tr>
 <td>same line</td>
-<td><code>Soffits at Eves</code> (part) / <code>Fascia</code></td>
-<td>per detail</td>
-<td><code>SQ FT</code> / <code>LFT</code></td>
+<td>goes into <code>Soffits at Eves</code></td>
+<td>eave material</td>
+<td><code>SQ FT</code></td>
+<td><code>=EVEN((eave LFT + returns LFT)*overhang/12*1.1)</code></td>
 </tr>
 <tr>
-<td>cornice</td>
-<td><code>Crown</code> at returns</td>
+<td>same line</td>
+<td>goes into <code>Fascia at Eves</code></td>
+<td><code>1x8</code></td>
+<td><code>LFT</code></td>
+<td><code>=EVEN((eave LFT + returns LFT)*1.1)</code></td>
+</tr>
+<tr>
+<td>cornice return, when the detail shows a crown</td>
+<td>goes into <code>Crowns</code></td>
 <td>per detail</td>
 <td><code>LFT</code></td>
+<td><code>=EVEN((eave LFT + returns LFT)*1.1)</code></td>
 </tr>
 </tbody>
 </table>
+<ul>
+<li>Returns have no soffit, fascia or crown rows of their own, and they are never
+  counted in pieces (<code>pcs</code>).</li>
+<li><code>Rafter Frame for returns</code> is framing: the short rafters of the return, 16' boards
+  in D, the number of boards in C. No returns takeoff: no row.</li>
+<li>Soffit is in <code>LFT</code> instead of <code>SQ FT</code> only when it is one board across the full width:
+  <a href="../eve/">Eve / Eave</a>.</li>
+<li>Pork-chop: fascia and the small soffit are counted the same way, there is no crown.</li>
+</ul>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
-<li>Returns dissolved into the overall eave line.</li>
-<li>Type not determined (pork-chop vs cornice): different trim and SQ FT.</li>
+<li>Returns dissolved into the overall eave line or filed in the <code>rakes</code> folder.</li>
+<li>The name carries the return length instead of the eave overhang.</li>
+<li>Returns counted in pieces or as separate soffit and fascia rows.</li>
+<li>Type not determined (pork-chop vs cornice): crown added or lost.</li>
 <li>FRT for exposed wood not checked.</li>
 </ul>
 <p>All roof mistakes: <a href="../../../start/common-mistakes/#roof">common-mistakes</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/eves rakes/rakes/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  returns 12      Line  8 LFT   (4 corners at 2&#39;)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/eves rakes/eves/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  eve 12 main     Line  180 LFT
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  returns 12      Line    8 LFT   (4 corners at 2&#39;)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Rafter Frame for returns   2x6                  1   16      G = 8 x 12 = 96; 96/12 x 1.4 x 0.75 = 8.4; 8.4 / 16, round up
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Soffits at Eves            12&quot; Vinyl vented   208   SQ FT   (180 + 8) x 12/12 x 1.1 = 206.8
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Fascia at Eves             1x8                208   LFT     (180 + 8) x 1.1 = 206.8
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

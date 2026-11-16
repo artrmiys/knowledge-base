@@ -7306,7 +7306,14 @@ rim, extra blocking, FRT по правилам наружной стены и so
 </table>
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
 <ol>
-<li>Area по контуру выноса на плане перекрытия (точка W). Имя <code>cant</code>.</li>
+<li>Area по контуру выноса на плане перекрытия (точка W). Имя <code>cant</code>.
+   Обводится только вынос: наружная грань верхнего этажа минус наружная
+   грань нижнего, один полигон на каждый вынос. <code>cant</code> нужен каждому этажу,
+   который выступает за нижний.</li>
+<li>Вынос остаётся и внутри площади своего этажа (<code>2nd</code> обведён по наружной
+   грани стен 2-го этажа вместе с bay): <code>cant</code> - дополнительная площадь, из
+   этажа она не вычитается. Общее правило:
+   <a href="../1st2nd/#rules">Floor SQFT, правило 8</a>.</li>
 <li>Joists выноса рисуются J Area как часть зоны joists; площадь <code>cant</code>
    нужна для soffit, rim и blocking, не для второго счёта joists.</li>
 <li>Soffit под выносом - <code>Soffits at Floor Overhangs</code> по длине или площади
@@ -7335,22 +7342,36 @@ rim, extra blocking, FRT по правилам наружной стены и so
 <td>периметр выноса</td>
 <td><code>Rim Board</code></td>
 <td>по детали, FRT если наружная стена FRT</td>
-<td><code>LFT</code></td>
-<td><code>x 1.1</code></td>
+<td><code>16</code></td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code>: доски по 16', G = LFT</td>
 </tr>
 <tr>
 <td>линия опоры</td>
 <td><code>Blocking</code></td>
 <td><code>2x</code> между joists над стеной</td>
-<td><code>LFT</code></td>
-<td>по детали</td>
+<td><code>16</code></td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code>, G = LFT линии опоры</td>
 </tr>
 <tr>
-<td>снизу</td>
+<td>снизу, trims в scope</td>
 <td><code>Soffits at Floor Overhangs</code></td>
-<td><code>1x12</code> / Vinyl / <code>5/8" Ext Gyp</code></td>
-<td><code>LFT</code> / <code>SQ FT</code></td>
-<td></td>
+<td>Vinyl / T&amp;G по разрезу</td>
+<td><code>SQ FT</code></td>
+<td><code>=ОКРВВЕРХ(SQFT cant*1.1;10)</code></td>
+</tr>
+<tr>
+<td>снизу, узкий вынос под одну доску</td>
+<td><code>Soffits at Floor Overhangs</code></td>
+<td><code>1x12</code></td>
+<td><code>LFT</code></td>
+<td>длина кромки x 1.1</td>
+</tr>
+<tr>
+<td>снизу, scope Frame</td>
+<td><code>Soffit Sheathing</code> в конце framing list этого этажа</td>
+<td>обшивка стен</td>
+<td><code>4x8</code></td>
+<td><code>=ОКРВВЕРХ(SQFT cant/32*1.1;1)</code></td>
 </tr>
 <tr>
 <td>детали</td>
@@ -7363,7 +7384,8 @@ rim, extra blocking, FRT по правилам наружной стены и so
 </table>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li>Вынос растворён в площади этажа, rim и blocking на нём не поменяны.</li>
+<li>Отдельной Area <code>cant</code> нет: rim и blocking на выносе не поменяны, soffit потерян.</li>
+<li><code>cant</code> вычтен из площади этажа: этаж стал меньше настоящего.</li>
 <li>Soffit снизу забыт.</li>
 <li>Holdowns или straps добавлены без детали (или пропущены при детали).</li>
 <li>Joists выноса посчитаны второй раз через площадь.</li>
@@ -7371,10 +7393,12 @@ rim, extra blocking, FRT по правилам наружной стены и so
 <p>Все ошибки по площадям: <a href="../../../start/common-mistakes/#sqft">common-mistakes</a>.</p>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/sqfts/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  cant       Area   48 SF   (bay 2nd floor, 2&#39; вынос)
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2nd Floor Framing List
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Rim Board (Cantilevered)   11-7/8&quot; LSL Rim   26   LFT   3/S401
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Blocking                   2x12              22   LFT   over wall
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  2nd        Area   1690 SF   (вместе с bay)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  cant       Area     48 SF   (bay 2nd floor, вынос 2&#39; x 24&#39;)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2nd Floor Framing List
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Rim Board (Cantilevered)     11-7/8&quot; LSL Rim    2   16      3/S401      2 + 24 + 2 = 28 LFT; 28 / 16 = 1.75
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Blocking                     2x12               2   16      over wall   24 LFT; 24 / 16 = 1.5
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Soffits at Floor Overhangs   Vinyl             60   SQ FT               48 x 1.1 = 52.8, вверх до 10
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

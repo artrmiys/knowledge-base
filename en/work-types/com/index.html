@@ -7438,7 +7438,7 @@ loose headers are counted separately - <a href="../../work/vertical/openings/hea
 <tr>
 <td>Extra studs</td>
 <td>Corners, T-intersections, king/jack/cripple at openings</td>
-<td>The 1.1 factor partly covers them; corners as a separate row on stick</td>
+<td>The 1.1 factor partly covers them; on stick the corners are <code>corners</code> points, and the template adds their studs to <code>Studs Ext</code> (<a href="../../work/vertical/walls/corners/">Corners</a>)</td>
 </tr>
 <tr>
 <td>Dbl / extra on bearing walls</td>
@@ -7459,8 +7459,10 @@ and go to Excel as Extra after the regular studs.</p>
   (<a href="../../work/vertical/walls/corridor/">detail</a>).</li>
 <li>Shafts always: elevator, stair, trash chute; material per the wall type
   (<a href="../../work/vertical/walls/shaft/">Shaft</a>).</li>
-<li>Bracing for drywall by wall height: table on the
-  <a href="../../work/horizontal/floor-framing/details/bracingdrywall/">Bracing for Drywall</a> page.
+<li>Wall bracing (<code>Bracing Ext Walls</code>, <code>Bracing Corridor</code>, <code>Bracing Demising</code>)
+  is counted in pieces, board length by wall height: see the table on the
+  <a href="../../work/horizontal/floor-framing/details/bracingdrywall/">Wall bracing and Blocking for Drywall</a> page.
+  Drywall backing is a different row, <code>Blocking for Drywall</code> in the Floor Framing List.
   Blocking flat and diagonal 48" o.c.: formulas in <a href="../../reference/formulas/#blocking-formulas">Formulas</a>.</li>
 </ul>
 <figure>
@@ -7504,12 +7506,13 @@ a conditional note.</p>
 </tbody>
 </table>
 <p>The note <code>all wood materials at exterior to be FRT</code> means all loose plywood is
-FRT with <code>verify</code>. FRT and FRTW are different designations, write them as in the project.
+FRT with <code>verify</code>. FRT and FRTW are one requirement (fire-retardant-treated wood);
+in the DFL use the designation the project uses.
 Table: <a href="../../reference/boss-feedback-rules/#frt">Tips: FRT</a>.</p>
 <figure>
-<p><img alt="Detail of an attic draft stop over a demising wall" src="../../../assets/images/confluence/confluence-057.png" />
+<p><img alt="Draft stop detail over a wall in a truss floor" src="../../../assets/images/confluence/confluence-057.png" />
   </p>
-<figcaption>1/2" OSB draft stop over a demising wall in the attic: a separate row in Gable Walls, area from the attic profile in the section. The most common miss in COM.</figcaption>
+<figcaption>The detail shows a 1/2" OSB draft stop over a wall in a truss floor (floor/ceiling assembly UL L546). An attic draft stop over a demising wall is a separate row in Gable Walls, area from the attic profile in the section. The most common miss in COM.</figcaption>
 </figure>
 <h2 id="what-to-look-for-in-the-specs">What to look for in the specs<a class="headerlink" href="#what-to-look-for-in-the-specs" title="Link to this section">&para;</a></h2>
 <p>Full checklist before delivery: <a href="../../start/quality-checklist/">Pre-delivery check</a>.
@@ -7528,7 +7531,7 @@ Here only what you read in a COM specification:</p>
 </ul>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
-<li>Wall type assigned as a group, stud height = floor-to-floor.</li>
+<li>Wall type assigned as a group, wall height taken as floor-to-floor.</li>
 <li>Shaft walls dropped as "panels by others".</li>
 <li>Draft stop missed or copied from the shear total.</li>
 <li>Headers inside panels counted separately.</li>

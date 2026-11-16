@@ -7267,14 +7267,14 @@
 
 <h1 id="rails-decking">Rails &amp; Decking<a class="headerlink" href="#rails-decking" title="Link to this section">&para;</a></h1>
 <figure>
-<p><img alt="Railing components and decking" src="../../../../assets/images/trims/rails-decking.svg" />
+<p><img alt="Balcony plan: decking, railing posts and sections, fascia" src="../../../../assets/images/trims/rails-decking.svg" />
   </p>
-<figcaption>Posts, cap rail, balusters, decking: each has its own row. Composite railing is counted as a system, painted wood railing by components.</figcaption>
+<figcaption>Balcony plan: decking by the area W x D, two railing posts at the outer corners, rail sections along the front and the open sides, fascia along the open perimeter. Composite railing is counted as a system, painted wood railing by components.</figcaption>
 </figure>
 <figure>
 <p><img alt="Composite deck railing: post in a sleeve with cap, top rail, balusters" src="../../../../assets/images/photos/deck/composite-railing-post-cap.jpg" width="360" />
   </p>
-<figcaption>Composite railing on a deck: the post is covered with a white sleeve and cap, a wood-look cap rail on top, balusters between the top and bottom rail, composite decking. Such a system is counted as railing LFT plus posts in pieces; decking separately in SQ FT. Photo: timbertech.com, <a href="https://www.timbertech.com/products/railing/">source</a>, found via Pinterest.</figcaption>
+<figcaption>Composite railing on a deck: the post is covered with a white sleeve and cap, a wood-look cap rail on top, balusters between the top and bottom rail, composite decking. Such a system is counted in sections (<code>Rail sections</code>, unit) per side plus posts in pieces; decking separately in SQ FT. Photo: timbertech.com, <a href="https://www.timbertech.com/products/railing/">source</a>, found via Pinterest.</figcaption>
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
 <p>Railing and decking of balconies, porches and decks: railing systems (composite, Azek,
@@ -7312,7 +7312,7 @@ railing types; the short version for the balcony block is on <a href="../../deck
 </table>
 <h2 id="how-to-measure-in-ourplancore">How to measure in OurPlanCore<a class="headerlink" href="#how-to-measure-in-ourplancore" title="Link to this section">&para;</a></h2>
 <p>Decking and railing come from the block size: area <code>W x D</code>, railing front
-<code>W</code> plus open sides <code>D</code>, multiplied by the number of instances G. The area
+<code>W</code> plus open sides <code>D</code>, multiplied by the number of instances (units). The area
 of balconies and porches as an Area sits in <code>sqfts/blcny</code> and <code>sqfts/porch</code>; a deck near
 grade with a complex outline is traced as an Area in <code>sqfts</code> with a clear name, railing
 along a broken outline as a Line. Do not put the product and height in the name; they live in the DFL.</p>
@@ -7337,19 +7337,19 @@ wood. Do not mix.</p>
 <tbody>
 <tr>
 <td>Composite / Azek (system)</td>
-<td><code>Note: Railing called composite; Decking assumed Composite</code>, <code>Posts at Rails 4x4 P.T.</code>, <code>Post Sleeve</code> <code>Sleeve for 4x4</code>, <code>Post Cap</code> <code>Cap for 4x4</code>, <code>Rail sections</code> <code>6' Rail section</code></td>
-<td>pcs, unit</td>
-<td>posts <code>=2*G</code> per balcony; front and side sections as separate rows</td>
+<td><code>Note: Railing called composite per A501; decking assumed; verify</code>, <code>Posts at Rails</code> <code>4x4 P.T.</code>, <code>Post Sleeve</code> <code>Sleeve for 4x4</code>, <code>Post Cap</code> <code>Cap for 4x4</code>, <code>Rail sections</code> <code>8' Rail section</code></td>
+<td>pcs, unit; posts carry the length <code>4</code> in D</td>
+<td>posts <code>=2*units</code>; <code>Rail sections</code>: one row per section length, C = sections of that length per balcony x units</td>
 </tr>
 <tr>
 <td>Wood painted (by components)</td>
-<td><code>Posts at Rails 4x4 P.T.</code>, <code>Balustrades 2x2</code>, <code>Rails (top &amp; bottom) 2x4</code>, <code>Cap Rail 2x6</code></td>
+<td><code>Posts at Rails</code> <code>4x4 P.T.</code>, <code>Balustrades</code> <code>2x2 balusters</code>, <code>Rails (top &amp; bottom)</code> <code>2x4 rails</code>, <code>Cap Rail</code> <code>2x6 cap rail</code></td>
 <td>pcs, LFT</td>
-<td><code>Balustrades =EVEN(G*2.2)</code>, <code>Rails =EVEN(G*2.2)</code>, <code>Cap Rail =EVEN(G*1.1)</code>, G = railing LFT x units</td>
+<td><code>Balustrades =EVEN(G*2.2)*units</code>, <code>Rails (top &amp; bottom) =EVEN(G*2.2)*units</code>, <code>Cap Rail =EVEN(G*1.1)*units</code>, G = railing LFT of one balcony</td>
 </tr>
 <tr>
 <td>Cable</td>
-<td><code>Posts at Rails 4x4 P.T.</code> or <code>Mtl post</code>, sleeve/cap, <code>Cables SS</code>, <code>Cap Rail 2x6</code></td>
+<td><code>Posts at Rails</code> <code>4x4 P.T.</code> or <code>Mtl post</code>, sleeve/cap, <code>Cables SS</code>, <code>Cap Rail</code> <code>2x6 cap rail</code></td>
 <td>pcs, LFT</td>
 <td>cables = run x number of cables (<code>assumed 7 runs</code>), note <code>verify product</code></td>
 </tr>
@@ -7361,6 +7361,15 @@ wood. Do not mix.</p>
 </tr>
 </tbody>
 </table>
+<p>Composite sections are bought in stock lengths, so <code>Rail sections</code> is not
+one row per balcony but one row per length:</p>
+<ul>
+<li>one section per span between posts (or between a post and the wall);</li>
+<li>B holds the next stock length above the side: a <code>7'-4"</code> front is an
+  <code>8' Rail section</code>, a <code>6'</code> side is a <code>6' Rail section</code>;</li>
+<li>E holds the side and the real length: <code>front 7'-4"</code>, <code>sides 6'</code>;</li>
+<li>the cap of a composite system is part of the section; there is no <code>Cap Rail</code> row.</li>
+</ul>
 <p>Decking and perimeter:</p>
 <table>
 <thead>
@@ -7374,15 +7383,15 @@ wood. Do not mix.</p>
 <tbody>
 <tr>
 <td>Balcony <code>Decking</code></td>
-<td><code>2x6 DuxxBak</code></td>
+<td>per the detail: <code>2x6 DuxxBak</code>, <code>Composite Decking</code>, <code>5/4" Decking</code></td>
 <td>SQ FT</td>
-<td><code>=W*D*G</code>; on a terrace over the garage <code>5/4x6</code> over <code>3/4" Ply</code> and <code>Sleepers 2x4 P.T.</code></td>
+<td><code>=CEILING(W*D*units*1.1,10)</code>: area of one balcony x units x 1.1 waste; on a terrace over the garage <code>5/4x6</code> on <code>Sleepers 2x4 P.T.</code></td>
 </tr>
 <tr>
 <td>Deck / porch <code>Decking</code></td>
 <td><code>5/4x6</code> Composite, Azek, Wd, <code>5/4x4 T&amp;G Mahogany</code></td>
 <td>SQ FT</td>
-<td>product per spec, otherwise <code>TBD</code> and a note</td>
+<td>same formula; product per spec, otherwise <code>TBD Decking</code> and a note</td>
 </tr>
 <tr>
 <td><code>Treads</code></td>
@@ -7410,7 +7419,8 @@ wood. Do not mix.</p>
 </tr>
 </tbody>
 </table>
-<p>Outdoor posts are always <code>P.T.</code>; under a roof (enclosed porch) regular.
+<p>Outdoor posts are always <code>P.T.</code>, under a porch roof too; only a post inside the
+heated building stays untreated, as the schedule prints it.
 Post base and anchor (<code>ABU66 Zmax</code>, <code>DTT2Z</code>) only when the detail shows them,
 as frame rows with the detail in E, format per <a href="../../../reference/hangers/#dfl-format">Hangers</a>.
 Full block content: <a href="../../../reference/dfl-blocks/">DFL blocks</a>.</p>
@@ -7418,6 +7428,8 @@ Full block content: <a href="../../../reference/dfl-blocks/">DFL blocks</a>.</p>
 <ul>
 <li>Three posts per balcony instead of two; a corner balcony against two walls carries one.</li>
 <li>System and component counting mixed: <code>Rail sections</code> together with <code>Balustrades</code>.</li>
+<li><code>Rail sections</code> as one row for the whole balcony, without the section length and the side in E.</li>
+<li>Decking without waste: <code>=W*D*units</code> instead of <code>=CEILING(W*D*units*1.1,10)</code>.</li>
 <li>Aluminum railing counted as material.</li>
 <li><code>Rails (top &amp; bottom)</code> taken as one run instead of two.</li>
 <li>Balcony decking <code>5/4x6</code> instead of <code>2x6 DuxxBak</code> per the detail.</li>
@@ -7425,13 +7437,17 @@ Full block content: <a href="../../../reference/dfl-blocks/">DFL blocks</a>.</p>
 <li>All mistakes for the section: <a href="../../../start/common-mistakes/#deck">Deck, porch, balconies</a>.</li>
 </ul>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Note: Railing called composite; Decking assumed Composite
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Posts at Rails   4x4 P.T.          12  pcs    =2*G       4&#39;
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Post Sleeve      Sleeve for 4x4    12  pcs    =C&lt;posts&gt;
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Post Cap         Cap for 4x4       12  pcs    =C&lt;posts&gt;
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Rail sections    6&#39; Rail section   12  unit   front 12&#39;
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Rail sections    6&#39; Rail section   16  unit   sides 2 x 8&#39;
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Decking          2x6 DuxxBak       576 SQ FT  =12*8*G    5/A550
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Balcony 7&#39;-4&quot; x 6&#39;, 6 units, composite railing
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Note: Railing called composite per A501; decking assumed; verify
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Posts at Rails   4x4 P.T.          12   4      =2*6       assumed
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Post Sleeve      Sleeve for 4x4    12   pcs    =C&lt;posts&gt;
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Post Cap         Cap for 4x4       12   pcs    =C&lt;posts&gt;
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Rail sections    8&#39; Rail section   6    unit   =1*6       front 7&#39;-4&quot;
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Rail sections    6&#39; Rail section   12   unit   =2*6       sides 6&#39;
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Decking          2x6 DuxxBak       300  SQ FT  =CEILING(7.33*6*6*1.1,10)   5/A550
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Decking: 7.33 x 6 = 44 SQ FT per balcony, x 6 = 264, x 1.1 = 290.4, rounded up to 10 = 300
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

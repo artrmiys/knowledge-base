@@ -7306,6 +7306,10 @@ rules: <a href="../1st2nd/#rules">Floor SQFT, rules section</a>.</p>
 <h2 id="how-to-measure-in-ourplancore">How to measure in OurPlanCore<a class="headerlink" href="#how-to-measure-in-ourplancore" title="Link to this section">&para;</a></h2>
 <ol>
 <li>Area along the plan projection of every roof plane on the roof plan (W point).
+   The outline follows the roof edge (the fascia line) with the eave and rake
+   overhangs included: the sheathing covers the overhang too. Do not trace the roof to
+   the outside face of the walls. The overhang rule for all areas:
+   <a href="../1st2nd/#rules">Floor SQFT, rule 8</a>.
    One pitch and one material = one takeoff; planes of the same pitch can be
    collected as polygons in one takeoff.</li>
 <li>Name <code>rf &lt;pitch&gt;</code>: <code>rf 6</code> = 6:12, <code>rf mtl 4</code> (under metal), <code>overframe 4</code>,
@@ -7353,10 +7357,24 @@ rules: <a href="../1st2nd/#rules">Floor SQFT, rules section</a>.</p>
 </tr>
 <tr>
 <td><code>sqfts/flat</code></td>
-<td><code>Rigid Insulation</code>, <code>Densdeck</code>, <code>EPDM</code></td>
+<td><code>Roof Sheathing at Flat Roofs</code>, <code>Cover Board</code></td>
+<td>per assembly</td>
+<td><code>4x8</code></td>
+<td><code>=CEILING(SQFT/32*1.1,1)</code></td>
+</tr>
+<tr>
+<td><code>sqfts/flat</code></td>
+<td><code>Insulation</code> (rigid, tapered)</td>
 <td>per assembly</td>
 <td><code>SQ FT</code></td>
-<td>same area</td>
+<td>SQFT x layers x 1.1</td>
+</tr>
+<tr>
+<td><code>sqfts/flat</code>, only when roofing products are in scope</td>
+<td><code>EPDM at flat roofs</code> in Roof Products</td>
+<td><code>EPDM</code></td>
+<td><code>SQ FT</code></td>
+<td><code>=CEILING(SQFT*1.1,10)</code></td>
 </tr>
 <tr>
 <td><code>sqfts/rf mtl 4</code></td>
@@ -7367,6 +7385,11 @@ rules: <a href="../1st2nd/#rules">Floor SQFT, rules section</a>.</p>
 </tr>
 </tbody>
 </table>
+<p>The flat roof membrane (EPDM, TPO) is a roofing product. The
+<code>EPDM at flat roofs</code> row exists only when roofing products are in scope
+(<code>+ roof</code>). On a regular job the membrane is by others: no row; the layers we
+count and the membrane by others go into a header Note:
+<code>Note: Roof R1 per A501: 5/8" gypsum, tapered polyiso; EPDM by others</code>.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Pitch not from the sheet (6:12 instead of 4:12 on the garage: 53 sheets instead of 50, 212 clips instead of 200).</li>
@@ -7374,6 +7397,7 @@ rules: <a href="../1st2nd/#rules">Floor SQFT, rules section</a>.</p>
 <li>All roof planes in one polygon with no split by pitch and material.</li>
 <li>Flat roof layers (Densdeck, XPS) missed, piggy sleepers forgotten.</li>
 <li>The soffit underneath taken as the sheathing area.</li>
+<li>Roof plane traced to the walls without the overhangs: not enough sheathing for the eaves.</li>
 </ul>
 <p>All area mistakes: <a href="../../../start/common-mistakes/#sqft">common-mistakes</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>

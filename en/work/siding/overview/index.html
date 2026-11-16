@@ -7348,7 +7348,9 @@ waste, by others.</p>
 <li>Open the wall sections: WRB per spec, furring, Cedar Breather.</li>
 <li>Trace the areas by elevation, wall by wall; gables, dormers, bays and
    accents as separate items.</li>
-<li>Deductions by the rule: large openings once, windows under 4' are not deducted.</li>
+<li>Deductions: every window and door is cut out at the frame once; the DFL gets
+   the net area. The rule "windows narrower than 4' are not deducted" belongs to wall
+   sheathing, not to siding.</li>
 </ol>
 <h2 id="how-to-measure-in-ourplancore">How to measure in OurPlanCore<a class="headerlink" href="#how-to-measure-in-ourplancore" title="Link to this section">&para;</a></h2>
 <p>The <code>siding</code> root in the building tree, an Area per item for each material and color:
@@ -7368,40 +7370,41 @@ point, so check that the item landed in <code>siding</code>. Details:
 </thead>
 <tbody>
 <tr>
+<td><code>Siding Horizontal</code></td>
+<td><code>Hardi plank</code></td>
+<td><code>=CEILING(G*1.1,10)</code></td>
+<td>SQ FT</td>
+<td><code>6" Exp. A201</code></td>
+</tr>
+<tr>
 <td><code>Siding</code></td>
-<td><code>Hardi plank 6" exp</code></td>
-<td><code>=L+R+Front+Rear</code></td>
-<td>SQ FT</td>
-<td><code>A201</code></td>
-</tr>
-<tr>
-<td><code>Siding Gable front</code></td>
 <td><code>Vinyl Shingles</code></td>
-<td><code>=...</code></td>
+<td><code>=CEILING(G*1.1,10)</code></td>
 <td>SQ FT</td>
-<td><code>A201</code></td>
+<td><code>gable front A201</code></td>
 </tr>
 <tr>
-<td><code>Siding 2</code></td>
+<td><code>Siding Vertical</code></td>
 <td><code>Boral TruExt 1x10 Shiplap</code></td>
-<td><code>=...</code></td>
+<td><code>=CEILING(G*1.1,10)</code></td>
 <td>SQ FT</td>
 <td><code>A202</code></td>
 </tr>
 <tr>
 <td><code>Siding</code></td>
-<td><code>Per customer TBD</code></td>
+<td><code>TBD Siding</code></td>
 <td><code>0</code></td>
 <td>SQ FT</td>
-<td>note</td>
+<td>note <code>Note: Siding is not specified; verify</code></td>
 </tr>
 </tbody>
 </table>
-<p>Material and exposure always in the row; gable and accent separately; the unit is
-<code>SQ FT</code>, not <code>LFT</code>.</p>
+<p>G holds the net area as a sum <code>=L+R+Front+Rear</code>; the 1.1 waste is in the C formula.
+Material always in B, exposure in E; gable and accent separately, horizontal
+and vertical separately; the unit is <code>SQ FT</code>, not <code>LFT</code>.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
-<li>WRB called <code>Vapor Barrier</code>, or Tyvek when the spec calls for fluid-applied.</li>
+<li>B of the exterior barrier row says <code>Vapor Barrier</code> or Tyvek instead of the WRB per spec.</li>
 <li>Stone or EIFS counted as siding.</li>
 <li>The gable accent merged with the field of another material.</li>
 <li>The measured area not moved to Excel or not updated after edits.</li>

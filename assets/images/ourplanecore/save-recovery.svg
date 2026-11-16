@@ -18,7 +18,7 @@
     <text x="672" y="149" font-size="16">Передача / бекап</text>
     <g stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow)"><path d="M268 138H344"/><path d="M571 138H647"/></g>
     <text x="287" y="119" font-size="16">Save</text>
-    <text x="579" y="119" font-size="14">Copy</text>
+    <text x="576" y="119" font-size="16">Copy</text>
     <rect x="30" y="220" width="840" height="83" rx="8" fill="#fff4dc" stroke="#d6ae5c"/>
     <text x="50" y="252" font-size="18" font-weight="600">Если Save не завершился - сохрани local recovery</text>
     <text x="50" y="281" font-size="16">В ней могут быть изменения, которых ещё нет в файле .ourplan.</text>

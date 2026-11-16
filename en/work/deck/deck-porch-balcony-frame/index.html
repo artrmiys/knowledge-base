@@ -7296,7 +7296,7 @@
 <figure>
 <p><img alt="Deck framing plan" src="../../../../assets/images/framing/deck-frame-plan.svg" />
   </p>
-<figcaption>Framing plan: ledger to the building, joists and hangers, beam on posts, rim and blocking. Units: posts pcs, beam and joists LFT, hangers pcs.</figcaption>
+<figcaption>Framing plan: ledger to the building, joists and hangers, beam on posts, rim and blocking. Lumber rows carry the stock length in D and pieces in C; hangers and ledger screws are pcs.</figcaption>
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
 <p>The structural frame of open platforms: posts with base and cap, beams, ledger,
@@ -7361,11 +7361,6 @@ of the wood one.</p>
    <a href="../../horizontal/floor-framing/details/rim/">Framing details</a>.</li>
 </ol>
 <figure>
-<p><img alt="Count points for balcony blocks" src="../../../../assets/images/ourplancore/v3/measure-count.png" />
-  </p>
-<figcaption>Count with points: one point for every balcony instance; the item name carries the type, size and number of instances.</figcaption>
-</figure>
-<figure>
 <p><img alt="Balcony section at the wall" src="../../../../assets/images/framing/balcony-block-section.svg" />
   </p>
 <figcaption>Balcony at the wall: ledger with screws, P.T. joists on Zmax hangers, end joist, beam on a post with a cap, decking and railing. Every callout is a block row in the DFL.</figcaption>
@@ -7378,106 +7373,119 @@ decking, railing and trims follow the frame under their own headers, notes go un
 header: <a href="../../../reference/dfl-overview/#groups">File format, groups</a>. Zero rows
 and empty template rows are deleted. Full block content with formulas:
 <a href="../../../reference/dfl-blocks/">DFL blocks</a>.</p>
+<p>In the formulas W and D are the width and depth of one balcony in feet, G is the number
+of instances from the block header. For boards (posts, beam, ledger, box, joists)
+column D holds the stock board length in feet and C the number of boards; they are
+never written in <code>LFT</code>.</p>
 <table>
 <thead>
 <tr>
 <th>Tree name</th>
 <th>DFL row</th>
-<th>Unit</th>
+<th>Unit (D)</th>
 <th>Formula or rule</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Balcony blocks/#1 Balcony 12x8 (x6)</code></td>
-<td><code>Posts 6x6 P.T.</code></td>
-<td>pcs</td>
+<td><code>Posts</code> <code>6x6 P.T.</code></td>
+<td>post length (10, 12)</td>
 <td>2 per balcony, <code>=2*G</code>; a corner balcony against two walls may carry 1</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Post Bases ABA66Z</code></td>
+<td><code>Post Bases</code></td>
 <td>pcs</td>
-<td>model from the schedule, not a default</td>
+<td><code>=C&lt;posts&gt;</code>; on concrete <code>ABU66 Zmax</code>, on wood <code>ABA66 Zmax</code>; the schedule model wins</td>
 </tr>
 <tr>
 <td></td>
 <td><code>Post Caps</code></td>
 <td>pcs</td>
-<td>by number of beam plies: 3-ply <code>BCS2-3/6 Zmax</code>, 2-ply <code>BC46 Zmax</code>; read the schedule</td>
+<td><code>=C&lt;posts&gt;</code>; by number of beam plies: 3-ply <code>BCS2-3/6 Zmax</code>, 2-ply <code>BC46 Zmax</code>; read the schedule</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Beam (3) 2x12 P.T. B4</code> front, <code>(2) 2x12 P.T. B3</code> sides</td>
-<td>LFT</td>
-<td>plies as the leading multiplier: <code>=3*W*G</code></td>
+<td><code>Beam (3)</code> <code>2x12 P.T.</code> front (B4), <code>Beam (2)</code> <code>2x12 P.T.</code> sides (B3)</td>
+<td>board length</td>
+<td>C = plies x number of beams x G: <code>=3*G</code>; D is the even length not shorter than the beam; mark in E</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Ledger 2x12 P.T.</code> + <code>Screws SDWS22400DB</code></td>
-<td>LFT, pcs</td>
-<td>screws <code>=CEILING(...,3)</code>, 3 per point</td>
+<td><code>Ledger</code> <code>2x12 P.T.</code></td>
+<td>board length</td>
+<td><code>=1*G</code>, D not shorter than the balcony width</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Box</code> or <code>Rim</code> of the same size</td>
-<td>LFT</td>
-<td>only if the beam is not flush</td>
-</tr>
-<tr>
-<td></td>
-<td><code>Joists 2x12 P.T. 16" o.c.</code></td>
-<td>LFT</td>
-<td>count <code>W*12/16+1</code>; long 14' board and <code>/2</code> in the formula</td>
-</tr>
-<tr>
-<td></td>
-<td><code>Hangers LUS210 Zmax</code>, <code>End Joists</code> + <code>LUC210 Zmax</code>, <code>HUC212-2 Zmax</code></td>
+<td><code>Screws (8) at Ledger</code> or <code>Screws at Ledger</code>, <code>SDWS22400DB</code></td>
 <td>pcs</td>
-<td>hangers on both ends; outdoors always Zmax</td>
+<td>the detail gives a count: <code>=8*G</code>; the detail gives a spacing (two rows at 16"): <code>=CEILING(W*12/16*2*G,3)</code></td>
 </tr>
 <tr>
 <td></td>
-<td><code>Decking 2x6 DuxxBak</code></td>
+<td><code>Box</code> of the same size as the joists</td>
+<td>board length</td>
+<td><code>=1*G</code>; only when the beam runs under the joists, a flush beam has no such row</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Joists 16" o.c.</code> <code>2x12 P.T.</code></td>
+<td>board length</td>
+<td>per balcony <code>CEILING(W*12/16,1)+1</code>, C = that count x G, D not shorter than the depth; short joists: one long board cut in two, <code>=CEILING(n*G/2,1)</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>Hangers</code> <code>LUS210 Zmax</code>, <code>End Joists</code> + <code>LUC210 Zmax</code>, <code>HUC212-2 Zmax</code></td>
+<td>pcs</td>
+<td>2 per joist when both ends hang (ledger and flush beam); beam under the joists: 1 per joist, at the ledger; outdoors always Zmax</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Decking</code> <code>2x6 DuxxBak</code></td>
 <td>SQ FT</td>
-<td><code>W*D*G</code>; <code>5/4x6</code> only on a terrace over the garage</td>
+<td><code>=CEILING(W*D*G*1.1,10)</code>: the 1.1 waste always, under 50 round up to 2; <code>5/4x6</code> only on a terrace over the garage</td>
 </tr>
 <tr>
 <td><code>Porch blocks/#1 Porch 12x7 (x5)</code></td>
-<td><code>Ceiling Joists 2x8 16" o.c.</code> + <code>Ledger</code> + <code>Hangers</code></td>
-<td>LFT, pcs</td>
-<td>separate from rafters, required</td>
+<td><code>Ceiling Joists 16" o.c.</code> + <code>Ledger</code> + <code>Hangers</code></td>
+<td>board length, pcs</td>
+<td>number of joists <code>CEILING(W*12/16,1)+1</code> x G; separate from rafters, required</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Beam (2) 2x10 B1</code> / <code>(3) 2x10 B2</code></td>
-<td>LFT</td>
-<td>porch codes differ from balcony codes</td>
+<td><code>Beam (2)</code> <code>2x10</code> (B1), <code>Beam (3)</code> <code>2x10</code> (B2)</td>
+<td>board length</td>
+<td>plies x number of beams x G; porch codes differ from balcony codes</td>
 </tr>
 <tr>
 <td></td>
-<td><code>5/8" Gyp</code> ceiling</td>
+<td><code>Soffit Gypsum (2)</code>, <code>5/8" Type X</code> or the board per the assembly</td>
 <td>SQ FT</td>
-<td>two layers inside the formula: <code>=CEILING(G*2*1.1,10)*G</code></td>
+<td>two layers are one row: <code>(2)</code> in the label and x 2 in the formula once, <code>=CEILING(W*D*2*1.1,2)*G</code></td>
 </tr>
 </tbody>
 </table>
 <p>Terrace over the garage (trusses and LW concrete): <code>Subfloor 3/4" Ply</code> in
-4x8 sheets, <code>Sleepers 2x4 P.T.</code>, <code>Decking 5/4x6</code>; bases on such stacks are 0.</p>
+4x8 sheets, <code>Sleepers 2x4 P.T.</code> (<code>CEILING(W*12/16,1)+1</code> pieces per terrace, D holds a
+board length not shorter than the depth), <code>Decking 5/4x6</code>; bases on such stacks are 0.</p>
 <h2 id="rules-that-break-the-block">Rules that break the block<a class="headerlink" href="#rules-that-break-the-block" title="Link to this section">&para;</a></h2>
 <ul>
-<li>Outdoor posts (porch, balcony, railing) are always <code>P.T.</code>. An enclosed porch or
-  a balcony under a roof gets regular framing, not P.T.</li>
+<li>Outdoor posts (porch, balcony, railing) are always <code>P.T.</code>, under the porch roof
+  too. The rest of the framing under a roof (rafters, ceiling joists): P.T. or not
+  is decided by the plans.</li>
 <li>Porch framing not shown: right under the block header
   <code>Note: Porch framing is not specified; all framing assumed; verify</code>.</li>
 <li>Every connection from the S sheet gets its own row with the detail in E: beam to post
-  (<code>ML210Z</code>, <code>HL33Z</code>, through bolts with washers and nuts, SDS), beam to beam
+  (<code>ML210 Zmax</code>, <code>HL33 Zmax</code>, through bolts with washers and nuts, SDS), beam to beam
   (<code>HUC...-2</code>), end joists of a different size (<code>End Joists</code>). Hardware format:
   <a href="../../../reference/hangers/#dfl-format">Hangers: how to write hardware in the DFL</a>.</li>
 <li>Railing: 2 posts per balcony, as a system or by components depending on the type, see
   <a href="../../exterior-trims/rails-decking/">Rails &amp; Decking</a> and <a href="../railing/">Railing</a>.</li>
 <li>Flashings, Trims, Soffits, Post Wrap only when they are in scope; with
-  Frame only do not insert them.</li>
+  Frame only do not insert them. The exception is <code>Flashings at Wall</code> on a terrace
+  with a membrane: it is a row of the block itself.</li>
 <li>Porch and balcony stacked: the Porches row on the Front Page is filled separately;
   the balcony does not replace it.</li>
 </ul>
@@ -7486,8 +7494,9 @@ and empty template rows are deleted. Full block content with formulas:
 <li>A balcony block without its own units multiplier (900 SF instead of 60).</li>
 <li>Porches mirrored from balconies instead of counted separately from the plans.</li>
 <li>Post cap <code>BCS2-3/6 Zmax</code> by default instead of the model by plies from the schedule.</li>
-<li>Hangers on one end only, or without Zmax outdoors.</li>
-<li>Posts not P.T. outdoors, or P.T. under a roof.</li>
+<li>Hangers on one end only with a flush beam, or without Zmax outdoors.</li>
+<li>Posts not P.T. outdoors (posts under the porch roof are P.T. too).</li>
+<li>Beam and joists written in <code>LFT</code>, decking without 1.1, two gypsum layers multiplied twice.</li>
 <li>Porch SQFT empty on the Front Page; canopy and porch counted again in eve and rake.</li>
 <li>All mistakes for the section: <a href="../../../start/common-mistakes/#deck">Deck, porch, balconies</a>.</li>
 </ul>
@@ -7497,12 +7506,13 @@ and empty template rows are deleted. Full block content with formulas:
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Takeoffs/Main/Porch blocks/#1 Porch 12.8x7.3 (x5)        Count 5 pts
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>#1 Upper Balcony List 12&#39; x 8&#39; 6 unit
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Posts            6x6 P.T.          12  pcs    =2*G       S611
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Post Caps        BCS2-3/6 Zmax     12  pcs    3-ply      S611
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Beam front       (3) 2x12 P.T. B4  216 LFT   =3*12*G    S130
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Joists           2x12 P.T.         ... LFT   16&quot; o.c.   S130
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Hangers          LUS210 Zmax       ... pcs   joists x 2 8/S311
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Decking          2x6 DuxxBak       576 SQ FT =12*8*G    5/A550
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Posts             6x6 P.T.          12   12      =2*G                      S611
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Post Bases        ABU66 Zmax        12   pcs     =C&lt;posts&gt;                 S611
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Post Caps         BCS2-3/6 Zmax     12   pcs     =C&lt;posts&gt;, 3-ply          S611
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Beam (3)          2x12 P.T.         18   12      =3*G                      B4
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Joists 16&quot; o.c.   2x12 P.T.         60   8       =10*G                     S130     12 x 12/16 = 9, plus 1
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Hangers           LUS210 Zmax      120   pcs     =2*10*G                   8/S311
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Decking           2x6 DuxxBak      640   SQ FT   =CEILING(12*8*G*1.1,10)   5/A550   633.6, round up to 10
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

@@ -7293,15 +7293,20 @@
 <figure>
 <p><img alt="Beam tool: beam length in the name" src="../../../../../assets/images/ourplancore/v3/measure-beam.png" />
   </p>
-<figcaption>Beam tool: two points along the beam from bearing to bearing; the app rounds the length and creates a Count takeoff <code>FB1 8</code> with the first mark. A second beam of the same mark and length goes into the same takeoff as a second point.</figcaption>
+<figcaption>Beam tool in the demo project: two points along the beam from post to post, the ruler shows 49,11 ft, the app rounds the length to the order length and creates a Count takeoff with the first mark; the mark was typed over <code>Beam</code> in the window, giving <code>FB1 50</code>. A second beam of the same mark and length goes into the same takeoff as a second point.</figcaption>
 </figure>
 <figure>
 <p><img alt="Flush LVL beam with joists on hangers" src="../../../../../assets/images/photos/framing/lvl-flush-beam-joist-hangers.jpg" width="520" />
   </p>
 <figcaption>Flush LVL beam at joist depth: joists on both sides hang on face-mount hangers. The beam is one Count takeoff with the length in the name; hangers are counted by the number of joist ends on it. Photo: plasticinehouse.com, <a href="https://plasticinehouse.com/how-far-can-a-lvl-beam-span-without-support/">source</a>, found via Pinterest.</figcaption>
 </figure>
+<figure>
+<p><img alt="Flush and dropped beam in section" src="../../../../../assets/images/framing/beam-flush-dropped.svg" />
+  </p>
+<figcaption>Flush and dropped beam, section across the beam. A flush beam sits level with the joists: the joists hang on hangers, the ceiling stays flat, rows <code>Beam (3) Flush</code> and Hangers. A dropped beam sits under the joists: no hangers at the beam, it shows below the ceiling, a plain <code>Beam (3)</code> row. C = points x plies.</figcaption>
+</figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
-<p>A beam is a floor or roof beam that carries joists, rafters or posts: <code>(2) 2x10</code>, <code>(3) 1 3/4 x 11 7/8 LVL</code>, <code>5 1/4 x 11 7/8 PSL</code>, <code>5 1/2 x 14 GL</code>. A steel beam is by others, but the wood nailer on it is ours: <a href="../details/steelbeams/">Steel Beam Web Fillers</a>. A header over an opening is <a href="../../../vertical/openings/headers/">Headers</a>; a beam between doubled rafters in the roof is <a href="../../roof-framing/header/">Roof Header</a>. Flush (at joist depth, on hangers) and Dropped (below the joists) go into the Label.</p>
+<p>A beam is a floor or roof beam that carries joists, rafters or posts: <code>(2) 2x10</code>, <code>(3) 1 3/4 x 11 7/8 LVL</code>, <code>5 1/4 x 11 7/8 PSL</code>, <code>5 1/2 x 14 GL</code>. A steel beam is by others, but the wood nailer on it is ours: <a href="../details/steelbeams/">Steel Beam Web Fillers</a>. A header over an opening is <a href="../../../vertical/openings/headers/">Headers</a>; a beam between doubled rafters in the roof is <a href="../../roof-framing/header/">Roof Header</a>. Only <code>Flush</code> goes into the Label, and only when the schedule marks the beam as flush (at joist depth, on hangers): <code>Beam (2) Flush</code>. A dropped beam (below the joists) is a plain <code>Beam (n)</code>; the word <code>Dropped</code> is not written in the Label.</p>
 <h2 id="where-to-find-it-on-the-plans">Where to find it on the plans<a class="headerlink" href="#where-to-find-it-on-the-plans" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
@@ -7390,7 +7395,7 @@
 <p>Beam tool (B), framing sheet with the F point. Draw a line along the beam centerline from bearing face to bearing face; the length appears in the name by itself.</p>
 <ul>
 <li>The app does the rounding: up to 8' inclusive it rounds up to the whole foot, longer rounds up to the next even foot (9.2' gives 10, 12.1' gives 14). Do not add feet yourself.</li>
-<li>One built-up beam = one point with <code>(n)</code> in the name. Do not place n points and <code>(n)</code> at the same time.</li>
+<li>One built-up beam = one point with <code>(n)</code> in the name. Do not place n points and <code>(n)</code> at the same time. The multiplication by plies is done in the DFL, not in the tree.</li>
 <li>Draw every beam that is not part of the wall panels. Every mark on every floor where it is shown.</li>
 <li>A mark with the letter H (<code>H5</code>) can be a beam by its role; do not move it to <code>headers</code> just because of the letter.</li>
 <li>Ledger, rim, blocking, nailer are separate Lines in <code>details</code>, not beam points.</li>
@@ -7414,7 +7419,7 @@
 <td><code>beams/FB1 8</code></td>
 <td><code>Beam (2) Flush</code></td>
 <td><code>2x10</code></td>
-<td>points</td>
+<td>points x 2</td>
 <td><code>8</code></td>
 <td><code>FB1 per S601</code></td>
 </tr>
@@ -7422,15 +7427,15 @@
 <td><code>beams/(3) 1 3/4 x 11 7/8 LVL 14</code></td>
 <td><code>Beam (3)</code></td>
 <td><code>1 3/4 x 11 7/8 LVL</code></td>
-<td>points</td>
+<td>points x 3</td>
 <td><code>14</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>beams/B2 14</code> + LG <code>B2 - (3) 2x10</code></td>
-<td><code>Beam (3) Dropped</code></td>
+<td><code>Beam (3)</code></td>
 <td><code>2x10</code></td>
-<td>points</td>
+<td>points x 3</td>
 <td><code>14</code></td>
 <td><code>B2</code></td>
 </tr>
@@ -7446,12 +7451,13 @@
 <td><code>beams/H5 8</code></td>
 <td><code>Beam (2)</code></td>
 <td>per schedule</td>
-<td>points</td>
+<td>points x 2</td>
 <td><code>8</code></td>
 <td><code>H5</code></td>
 </tr>
 </tbody>
 </table>
+<p><code>(n)</code> at the end of the Label is the number of plies in one beam. Column C counts every board: C = points x n. Two <code>(3)</code> beams give C = 6, not 2. The same rule applies to <a href="../post/">Post</a> and to doubled and tripled rafters.</p>
 <p>Hangers for beams: by the built-up width and condition (face, top, concealed, skew), for every end that hangs on another beam or wall. Selection: <a href="../../../../reference/hangers/">Hangers</a>; how to write it in B: <a href="../../../../reference/hangers/#dfl-format">hardware format in the DFL</a>. Exterior and on P.T.: <code>Zmax</code> as a separate word.</p>
 <p>Export: the BM button on the XL strip replaces only the beam rows on the floor worksheet; template rows stay. The <code>C_BeamsSort</code> macro sorts by mark and length.</p>
 <details class="note">
@@ -7485,6 +7491,7 @@
 <li>A mark missed on one of the floors: the same <code>FB7</code> is on both S102 and S103.</li>
 <li>Feet "for bearing" added to the tool length - the rounding is already done.</li>
 <li>A pack of three LVLs written as three points plus <code>(3)</code> in the name: triple count.</li>
+<li>C of a <code>Beam (3)</code> row holds the number of beams without x 3: a third of the boards is ordered.</li>
 <li>PSL or squash blocks under the beam ends per schedule not counted (2 became 4).</li>
 <li>Hangers not on both ends, or counted by purchase boards after cutting; the model does not match the detail (<code>U210-2</code>, not <code>LUS210-2</code>).</li>
 <li>A beam inside a wall panel drawn on a panel job.</li>
@@ -7513,33 +7520,34 @@
 <tr>
 <td><code>Beam (2) Flush</code></td>
 <td><code>2x10</code></td>
-<td>6</td>
+<td>12</td>
 <td>8</td>
 <td><code>FB1 per S601</code></td>
 </tr>
 <tr>
 <td><code>Beam (2) Flush</code></td>
 <td><code>2x10</code></td>
-<td>2</td>
+<td>4</td>
 <td>10</td>
 <td><code>FB1</code></td>
 </tr>
 <tr>
 <td><code>Beam (3)</code></td>
 <td><code>1 3/4 x 11 7/8 LVL</code></td>
-<td>3</td>
+<td>9</td>
 <td>14</td>
 <td><code>S102</code></td>
 </tr>
 <tr>
 <td><code>Hangers</code></td>
-<td><code>HU412</code></td>
+<td><code>HHUS5.50/12</code></td>
 <td>6</td>
 <td>pcs</td>
 <td><code>9/S501</code></td>
 </tr>
 </tbody>
 </table>
+<p>C = points x plies: 6 x 2 = 12, 2 x 2 = 4, 3 x 3 = 9. The hangers in the example are for the three <code>(3) 1 3/4 x 11 7/8 LVL</code> beams (a 5 1/4 x 11 7/8 pack), both ends hang: 3 x 2 = 6. The model follows the pack width from the <a href="../../../../reference/hangers/#tables">Hangers</a> table; <code>HU412</code> would fit only a <code>(2)</code> pack 3 1/2" wide.</p>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>
 <li><a href="../post/">Post</a>, <a href="../joist/">Joist</a>, <a href="../details/steelbeams/">Steel Beam Web Fillers</a></li>

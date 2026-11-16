@@ -7277,7 +7277,7 @@
 <figcaption>Dropped soffit со снятым гипсом: короб из 2x подвешен под joists перекрытия вдоль стены, внутри проходят трубы и воздуховод. На RCP такой короб виден линией с отметкой высоты; считаем plates по периметру и frame по площади. Фото: themakerista.com, <a href="http://www.themakerista.com/the-kitchen-gut-job-and-hiccups/">источник</a>, найдено через Pinterest.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Внутренний каркас потолков и коробов: dropped soffits над кухней и в коридорах, потолочные короба под воздуховоды, потолок мех-комнаты (<code>Ceiling Mech</code>), потолок кухни per unit. Это framing-scope, не отделка и не наружный soffit. Отделка потолка (crown, гипс) - <a href="../../interior-trims/overview/">Interior Trims</a>; roof soffit под свесом - <a href="../../sheathing-and-misc/eve/">Eve / Eave</a>; soffit plywood под roof trusses - <a href="../roof-framing/roof-sheathing/">Roof Sheathing</a>; опора гипса на стене параллельно joists - <a href="../floor-framing/details/bracingdrywall/">Bracing for Drywall</a>.</p>
+<p>Внутренний каркас потолков и коробов: dropped soffits над кухней и в коридорах, потолочные короба под воздуховоды, потолок мех-комнаты (<code>Ceiling Mech</code>), потолок кухни per unit. Это framing-scope, не отделка и не наружный soffit. Отделка потолка (crown, гипс) - <a href="../../interior-trims/overview/">Interior Trims</a>; roof soffit под свесом - <a href="../../sheathing-and-misc/eve/">Eve / Eave</a>; soffit plywood под roof trusses - <a href="../roof-framing/roof-sheathing/">Roof Sheathing</a>; опора гипса на стене параллельно joists - строка <code>Blocking for Drywall</code>, страница <a href="../floor-framing/details/bracingdrywall/">Wall Bracing и Blocking for Drywall</a>.</p>
 <h2 id="_2">Где искать на чертежах<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7306,80 +7306,119 @@
 </tbody>
 </table>
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>На листе RCP (точка листа по этажу): Line (L) по периметру каждого короба для plates, Area (A) по площади потолка для frame с шагом. Площадь и периметр меряются вручную с A-листов, не берутся из общего sqft этажа. Ветка для таких позиций в дереве не закреплена.</p>
-<div class="admonition warning">
-<p class="admonition-title">Уточняется</p>
-<p>Куда класть soffit-позиции в дереве (<code>framing/&lt;этаж&gt; framing/details/soffit</code> или <code>roof misc</code>) - не подтверждено сданными работами.</p>
+<p>На листе RCP (точка листа по этажу):</p>
+<ul>
+<li>Line (L) по длине каждого короба (soffit, bulkhead). В имени линии высота опуска в футах (<code>soffit 1.5</code>): вертикальный каркас считается от длины x высоту.</li>
+<li>Area (A) по площади опущенного потолка для горизонтального каркаса с шагом; периметр этой площади нужен для plates.</li>
+</ul>
+<p>Площадь и периметр меряются вручную с A-листов, не берутся из общего sqft этажа. То, что уже посчитано как каркас перекрытия или крыши, сюда не повторяется.</p>
+<div class="admonition note">
+<p class="admonition-title">Ветка в дереве</p>
+<p>Одной ветки для soffit-позиций на все работы нет. Клади их в ветку, которую уже использует текущий job (<code>framing/&lt;этаж&gt; framing/details/soffit</code> или <code>roof misc</code>), одинаково во всех корпусах. Если в job такой ветки ещё нет, выбери одну из двух и держи её во всех корпусах.</p>
 </div>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Секции организуются per floor или per area (1st, 2nd, Loft), как interior trims.</p>
+<p>Строки идут в секцию DFL <code>Ceiling Materials</code>, по этажам или зонам (1st, 2nd, Loft), как interior trims. <code>G</code> и <code>H</code> в каждой строке значат своё, поэтому они расписаны по строкам:</p>
 <table>
 <thead>
 <tr>
-<th>Секция</th>
+<th>Группа</th>
 <th>A (Label)</th>
 <th>B</th>
 <th>C</th>
 <th>D</th>
-<th>E</th>
+<th>G</th>
+<th>H</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Interior Soffit Framing</td>
-<td><code>Plate (2)</code> + <code>Frame 16" o.c.</code></td>
+<td>Короба и опущенный потолок</td>
+<td><code>Vertical Frame 24" o.c.</code></td>
 <td><code>2x4</code></td>
-<td>периметр x 2 x 1.1; площадь x 12 / шаг</td>
+<td><code>=ОКРВВЕРХ(G*0.5*1.1;10)</code></td>
 <td><code>LFT</code></td>
-<td>RCP</td>
+<td>сумма (длина короба x высота опуска), SQ FT</td>
+<td>пусто</td>
 </tr>
 <tr>
-<td>Ceiling Mech</td>
+<td>Короба и опущенный потолок</td>
+<td><code>Vertical Frame Plate (2)</code></td>
+<td><code>2x4</code></td>
+<td><code>=ОКРВВЕРХ(G*H*1.1;10)</code></td>
+<td><code>LFT</code></td>
+<td>сумма длин коробов, LFT</td>
+<td>число plates: 2 = верх и низ</td>
+</tr>
+<tr>
+<td>Короба и опущенный потолок</td>
+<td><code>Horizontal Frame 24" o.c.</code></td>
+<td><code>2x4</code></td>
+<td><code>=ОКРВВЕРХ(G*0.5*1.1;10)</code></td>
+<td><code>LFT</code></td>
+<td>площадь опущенного потолка, SQ FT</td>
+<td>пусто</td>
+</tr>
+<tr>
+<td>Короба и опущенный потолок</td>
+<td><code>Horizontal Frame Plate (1)</code></td>
+<td><code>2x4</code></td>
+<td><code>=ОКРВВЕРХ(G*H*1.1;10)</code></td>
+<td><code>LFT</code></td>
+<td>периметр опущенного потолка, LFT</td>
+<td>число plates</td>
+</tr>
+<tr>
+<td>Мех-комната</td>
 <td><code>Plate (1) Ceiling Mech</code></td>
 <td><code>2x6</code></td>
 <td><code>=ОКРВВЕРХ(G*H*1.1;10)</code></td>
 <td><code>LFT</code></td>
-<td>детали</td>
+<td>длина plate по стенам мех-комнаты, LFT</td>
+<td>число plates</td>
 </tr>
 <tr>
-<td>Ceiling Mech</td>
+<td>Мех-комната</td>
 <td><code>Frame 24" o.c. Ceiling Mech</code></td>
 <td><code>2x6</code></td>
 <td><code>=ОКРВВЕРХ(G*12/H/D;10)</code></td>
 <td><code>12</code></td>
-<td><code>A454</code></td>
+<td>площадь потолка, SQ FT</td>
+<td>шаг в дюймах</td>
 </tr>
 <tr>
-<td>Ceiling Mech</td>
+<td>Мех-комната</td>
 <td><code>Screws 16" o.c. (2)</code></td>
 <td><code>Screws 0.22 x 4"</code></td>
 <td><code>=ОКРВВЕРХ(G*12*1.1/H*2;10)</code></td>
 <td><code>pcs</code></td>
-<td><code>10/19/S500</code></td>
+<td>длина plate, LFT</td>
+<td>шаг в дюймах</td>
 </tr>
 <tr>
-<td>Kitchen Ceiling</td>
+<td>Потолок кухни</td>
 <td>материалы потолка кухни</td>
 <td>по спецификации</td>
 <td>per unit x число units</td>
 <td><code>LFT</code> / <code>SQ FT</code></td>
-<td>unit plan</td>
-</tr>
-<tr>
-<td>Ceiling per floor (многоэтажка)</td>
-<td><code>Plate (1) Ceiling</code>, <code>Plate (2) Vertical Frame</code>, <code>Frame 24" o.c. Ceiling</code>, <code>Vertical Frame 24" o.c. Ceiling</code></td>
-<td><code>2x4</code></td>
-<td><code>=ОКРВВЕРХ(G*H*1.1;10)</code>, <code>=ОКРВВЕРХ(G*12/H;10)</code></td>
-<td><code>LFT</code></td>
-<td><code>A454</code></td>
+<td>с unit plan</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p>Ceiling Mech характерен для одноэтажных проектов с мех-комнатой; в многоэтажке вместо него ceiling per floor в зоне truss heel: <a href="../../vertical/sheathing/truss-heel/">Truss Heel</a>. <code>G</code> - периметр или площадь с A-планов, <code>H</code> - число plates или шаг, <code>D</code> - длина доски.</p>
+<ul>
+<li>Множитель <code>0.5</code> в строках frame коробов - это шаг 24" o.c. (при 16" o.c. <code>0.75</code>); он должен совпадать с шагом в Label. Запас <code>1.1</code> в этих строках есть и у frame, и у plate.</li>
+<li><code>(n)</code> в Label plate = число в H.</li>
+<li><code>Frame 24" o.c. Ceiling Mech</code>: <code>G*12/H</code> - LFT досок каркаса при шаге H, <code>/D</code> переводит их в доски по 12', поэтому в D стоит <code>12</code>, а не <code>LFT</code>. Множителя <code>1.1</code> в этой формуле нет: запас даёт округление вверх до 10 досок.</li>
+<li><code>Screws 16" o.c. (2)</code>: <code>G*12/H</code> - число точек вдоль plate, <code>2</code> - screws в точке.</li>
+<li>Простые ceiling joists (без короба) идут строкой <code>Ceiling Joists 16" o.c.</code> в Floor Framing List, не сюда.</li>
+</ul>
+<p>Ceiling Mech характерен для одноэтажных проектов с мех-комнатой. В многоэтажке короба и опущенные потолки по этажам считаются строками vertical и horizontal frame из таблицы выше.</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Dropped soffits с RCP не посчитаны: на structural плане их нет.</li>
 <li>Ceiling Mech без одной из трёх строк (plate, frame, screws).</li>
+<li>В G строки frame попал периметр, а в G строки plate площадь: проверь по таблице, что значит G в каждой строке.</li>
+<li>Множитель шага не совпадает с Label: <code>0.5</code> при <code>16" o.c.</code>.</li>
 <li>Kitchen ceiling посчитан одной площадью, а нужно per unit.</li>
 <li>Dropped soffit записан как bracing или как deflection-track стена.</li>
 <li>Callout детали у Frame скопирован из прошлого дома, не сверен с листом.</li>
@@ -7429,10 +7468,11 @@
 </tr>
 </tbody>
 </table>
+<p>Проверка: plate 1395 LFT x 1 x 1.1 = 1534.5, значит 1540 LFT. Frame: площадь 3896 SQ FT x 12 / 24 = 1948 LFT, / 12 = 162.3, значит 170 досок по 12'. Screws: 1395 x 12 / 16 = 1046.25 точки, x 2 x 1.1 = 2301.75, значит 2310 pcs.</p>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li><a href="../../interior-trims/overview/">Interior Trims, обзор</a>, <a href="../../sheathing-and-misc/eve/">Eve / Eave</a>, <a href="../roof-framing/roof-sheathing/">Roof Sheathing</a></li>
-<li><a href="../../vertical/sheathing/truss-heel/">Truss Heel</a>, <a href="../floor-framing/details/bracingdrywall/">Bracing for Drywall</a>, <a href="../../../reference/quantity-benchmarks/">Quantity benchmarks</a></li>
+<li><a href="../../vertical/sheathing/truss-heel/">Truss Heel</a>, <a href="../floor-framing/details/bracingdrywall/">Wall Bracing и Blocking for Drywall</a>, <a href="../../../reference/quantity-benchmarks/">Quantity benchmarks</a></li>
 </ul>
 
 

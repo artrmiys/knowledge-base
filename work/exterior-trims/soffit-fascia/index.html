@@ -6034,6 +6034,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Как назвать в дереве и строка DFL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#soffit-lft-sq-ft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soffit: LFT или SQ FT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -7212,6 +7229,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Как назвать в дереве и строка DFL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#soffit-lft-sq-ft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soffit: LFT или SQ FT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -7274,7 +7308,7 @@
 <figure>
 <p><img alt="Cornice eave return" src="../../../assets/images/trims/ext-eave-return.png" />
   </p>
-<figcaption>Угол фронтона: eave с soffit и fascia уходит вдоль стены, rake по скату, в углу return. Proper cornice return это отдельный набор строк.</figcaption>
+<figcaption>Угол фронтона: eave с soffit и fascia уходит вдоль стены, rake по скату, в углу return. Длина return меряется отдельной линией и прибавляется к длине eave в строках soffit и fascia.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Soffit (подшивка свеса), fascia (торцевая доска), frieze (доска по стене
@@ -7282,7 +7316,9 @@
 <code>Soffits and Fascias</code>. Длины eves и rakes приходят из
 <a href="../../sheathing-and-misc/eve/">Eve</a> и <a href="../../sheathing-and-misc/rake/">Rake</a>;
 обшивка soffit (5/8" exterior gypsum, plywood) это
-<a href="../../vertical/sheathing/wall-sheathing/">Sheathing</a>, не trim.</p>
+<a href="../../vertical/sheathing/wall-sheathing/">Sheathing</a>, не trim. Plywood как
+сама видимая отделка soffit - другое дело: это <code>AC Ply</code> в <code>Soffits at Eves</code>,
+SQ FT (таблица дефолтов ниже).</p>
 <h2 id="_2">Где искать на чертежах<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7312,7 +7348,7 @@
 </table>
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Длины свесов это Line в <code>eves rakes/eves</code> и <code>eves rakes/rakes</code> с выносом в
-дюймах в имени (<code>eve 24 main</code>, <code>rake 12 main</code>, <code>returns 12</code>): одна линия
+дюймах в имени (<code>eve 24 main</code>, <code>rake 12 main</code>, <code>returns 24</code>): одна линия
 питает и trim, и обшивку свеса. Soffit как площадь (beadboard, panel) это
 Area по реальному нижнему контуру в <code>trims</code> или в принятой ветке проекта
 (<code>rcp 1.6</code>), контур не равен roof deck. Не корми одну площадь дважды:
@@ -7333,55 +7369,62 @@ Area по реальному нижнему контуру в <code>trims</code>
 <tr>
 <td><code>eves rakes/eves/eve 24 main</code></td>
 <td><code>Soffits at Eves</code></td>
-<td><code>12" Vinyl vented</code>, <code>1x12</code>, <code>T&amp;G beadboard</code></td>
-<td>LFT или SQ FT</td>
-<td>доска постоянной ширины LFT; panel и beadboard SQ FT = длина x вынос</td>
+<td><code>12" Vinyl vented</code>, <code>T&amp;G beadboard</code>, <code>Soffit panel</code></td>
+<td>SQ FT</td>
+<td><code>=EVEN((eve + returns)*G/12*1.1)</code>, G = ширина soffit в дюймах</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Soffits at Eves</code></td>
+<td><code>1x12</code>, <code>1x4</code>, одна узкая vinyl-полоса</td>
+<td>LFT</td>
+<td>soffit шириной в ОДНУ доску или полосу: <code>=EVEN((eve + returns)*1.1)</code>, без ширины</td>
 </tr>
 <tr>
 <td></td>
 <td><code>Fascia at Eves</code></td>
-<td><code>1x8</code>, <code>2x8</code>, <code>5/4x10</code></td>
+<td><code>1x8</code>, <code>1x10</code>, <code>1x6</code>, <code>2x8</code></td>
 <td>LFT</td>
-<td></td>
+<td><code>=EVEN((eve + returns)*1.1)</code></td>
 </tr>
 <tr>
 <td></td>
-<td><code>Frieze</code></td>
-<td><code>5/4x6</code> / <code>5/4x8</code></td>
+<td><code>Frieze Board</code></td>
+<td><code>5/4x6</code> / <code>5/4x10</code></td>
 <td>LFT</td>
-<td>по стене под soffit</td>
+<td>по стене под soffit, только где есть на разрезе; та же длина</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Trim over fascia</code></td>
+<td><code>Crowns</code></td>
+<td><code>3" crown</code></td>
+<td>LFT</td>
+<td>crown или moulding под fascia или у frieze, только где есть на разрезе</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Over Fascia Trims</code></td>
 <td><code>1x3</code> / <code>1x4</code></td>
 <td>LFT</td>
-<td>доп. полоса</td>
+<td>вторая доска поверх fascia; длина как у fascia</td>
 </tr>
 <tr>
 <td><code>eves rakes/rakes/rake 12 main</code></td>
 <td><code>Soffits at Rakes</code>, <code>Fascia at Rakes</code></td>
-<td><code>1x8</code>, <code>9" Vinyl</code></td>
-<td>LFT / SQ FT</td>
-<td>отдельно от eves: другой размер и материал</td>
+<td><code>9" Vinyl</code>, <code>1x12</code>; <code>1x8</code>, <code>1x6</code></td>
+<td>SQ FT или LFT; LFT</td>
+<td>отдельно от eves: <code>=EVEN(rake*G/12*1.1)</code> и <code>=EVEN(rake*1.1)</code>; то же правило одной доски</td>
 </tr>
 <tr>
+<td><code>eves rakes/eves/returns 24</code></td>
+<td>своей строки нет</td>
 <td></td>
-<td><code>Rake Moulding</code>, <code>Crown at Frieze</code></td>
-<td><code>3" crown</code></td>
 <td>LFT</td>
-<td></td>
-</tr>
-<tr>
-<td><code>eves rakes/eves/returns 12</code></td>
-<td><code>Soffit / Fascia / Crown at Returns</code></td>
-<td>по детали</td>
-<td>LFT</td>
-<td>cornice return как мини-набор; pork-chop только fascia и малый soffit</td>
+<td>число в имени - вынос того eave, который заворачивает; длина returns прибавляется к eave в <code>Soffits at Eves</code> и <code>Fascia at Eves</code></td>
 </tr>
 <tr>
 <td><code>trims/soffit porch</code></td>
-<td><code>Soffits at Porch</code>, <code>at Canopy</code>, <code>at Floor Overhangs</code></td>
+<td><code>Soffits at Porch</code>, <code>Soffits at Canopy</code>, <code>Soffits at Floor Overhangs</code></td>
 <td><code>Beadboard</code>, <code>Azek Beadboard</code></td>
 <td>SQ FT</td>
 <td>свои строки, не в main eves</td>
@@ -7389,28 +7432,93 @@ Area по реальному нижнему контуру в <code>trims</code>
 <tr>
 <td><code>trims/columns</code></td>
 <td><code>Columns</code></td>
-<td><code>12" Dia Fbg Non-taper w/c&amp;b</code></td>
-<td>pcs + высота</td>
-<td><code>w/c&amp;b</code>, taper, round/square в строке; высота отдельно</td>
+<td><code>12" Dia Fbg Non-taper</code></td>
+<td>высота колонны (<code>8'</code>)</td>
+<td>C = число колонн; taper, round или square в B; в E <code>w/ cap &amp; base</code></td>
 </tr>
 <tr>
 <td></td>
-<td><code>Column wrap</code></td>
+<td><code>Post Wrap</code></td>
 <td><code>1x8</code></td>
 <td>LFT</td>
-<td>обшивка стойки, не column</td>
+<td>обшивка стойки досками, не column: G = высота x 4 стороны x число стоек; C = G x 1.1, до 50 вверх до 2, от 50 вверх до 10</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Posts at Rails</code>, <code>Post Sleeve</code>, <code>Post cap</code></td>
+<td><code>Posts at Rails</code>, <code>Post Sleeve</code>, <code>Post Cap</code></td>
 <td><code>4x4 P.T.</code>, <code>Sleeve for 4x4</code></td>
-<td>pcs</td>
+<td><code>4</code> у постов (длина поста), pcs у sleeve и cap</td>
 <td>набор, см. <a href="../rails-decking/">Rails &amp; Decking</a></td>
 </tr>
 </tbody>
 </table>
-<p>Материал не указан: <code>Note: Soffits assumed Vinyl; Fascias assumed PVC or
-1x Alum wrapped; verify</code>. Не подставляй wood, если возможен vinyl или alum.</p>
+<p>В формулах <code>eve</code>, <code>returns</code> и <code>rake</code> это длины из дерева в LFT; в шаблоне
+DFL они приходят из таблицы свесов сами, руками вписывается только ширина
+в G. <code>EVEN</code> округляет вверх до чётного.</p>
+<h3 id="soffit-lft-sq-ft">Soffit: LFT или SQ FT<a class="headerlink" href="#soffit-lft-sq-ft" title="Прямая ссылка на раздел">&para;</a></h3>
+<ul>
+<li>Soffit считается в <code>SQ FT</code>: (eave + returns) x ширина / 12 x 1.1.</li>
+<li><code>LFT</code> только когда свес закрыт ОДНОЙ доской или одной полосой по ширине
+  (<code>1x12</code>, <code>1x4</code>, одна узкая vinyl-полоса): (eave + returns) x 1.1, ширина в
+  формулу не входит.</li>
+<li>Проверка вопросом: сколько кусков материала лежит поперёк свеса? Один
+  кусок = LFT. Панели, beadboard, несколько досок = SQ FT.</li>
+<li>Так <code>12" Vinyl vented</code> панели это SQ FT при любом выносе. Свес 9" это LFT,
+  только если он закрыт одной <code>1x10</code> или одной полосой; тот же свес 9" из
+  vinyl-панелей это SQ FT.</li>
+<li>Aluminum и metal soffit, fascia с alum wrap по разрезу: by others, без
+  строки, с нотой.</li>
+</ul>
+<p>Soffit на чертежах не назван: бери по типу siding (тренинг).</p>
+<table>
+<thead>
+<tr>
+<th>Siding</th>
+<th>Soffit по умолчанию</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vinyl</td>
+<td>vinyl soffit</td>
+<td>SQ FT</td>
+</tr>
+<tr>
+<td>Wood или composite clapboard</td>
+<td><code>1x</code> Azek доска; если много свесов шире 12", soffit panel на всё</td>
+<td>LFT; panel SQ FT</td>
+</tr>
+<tr>
+<td>Cedar shingles</td>
+<td>beadboard</td>
+<td>SQ FT</td>
+</tr>
+<tr>
+<td>Hardie, board and batten, panels</td>
+<td>soffit panel</td>
+<td>SQ FT</td>
+</tr>
+<tr>
+<td>Plywood soffit по детали</td>
+<td><code>AC Ply</code></td>
+<td>SQ FT, не листы <code>4x8</code></td>
+</tr>
+</tbody>
+</table>
+<p>Материал принят, а не прочитан: <code>Note: Soffits assumed Vinyl; Fascias
+assumed PVC or 1x Alum wrapped; verify</code>. Не подставляй wood, если возможен
+vinyl или alum.</p>
+<figure>
+<p><img alt="Разрез свеса eave со строками DFL" src="../../../assets/images/roof/eave-parts-takeoff.svg" />
+  </p>
+<figcaption>Разрез eave: soffit, fascia, sub fascia, frieze, trim over fascia и каркас свеса, у каждой детали своя строка и единица.</figcaption>
+</figure>
+<figure>
+<p><img alt="Rake: фасад, план и разрез свеса" src="../../../assets/images/roof/rake.svg" />
+  </p>
+<figcaption>Rake на фронтоне: где вести линию и какие строки она даёт, включая rake moulding.</figcaption>
+</figure>
 <figure>
 <p><img alt="Pork-chop eave return" src="../../../assets/images/trims/ext-pork-chop.png" />
   </p>
@@ -7420,22 +7528,29 @@ Area по реальному нижнему контуру в <code>trims</code>
 <ul>
 <li>Canopy и porch посчитаны повторно в eve и rake.</li>
 <li>Soffit panel посчитан и как LFT x ширина, и как Area.</li>
+<li>Soffit из панелей записан в LFT, или soffit из одной доски в SQ FT.</li>
 <li>Eves и rakes одной строкой при разных размерах.</li>
-<li>Returns не определены (cornice или pork-chop), trim по returns пропущен.</li>
-<li>Columns без типа, taper и высоты; column wrap перепутан с column.</li>
+<li>Returns не измерены линией <code>returns</code>: soffit и fascia по ним пропущены.</li>
+<li>Подпись не как в шаблоне: <code>Frieze</code> вместо <code>Frieze Board</code>, <code>Trim over fascia</code> вместо <code>Over Fascia Trims</code>.</li>
+<li>Columns без типа, taper и высоты; <code>Post Wrap</code> перепутан с column.</li>
 <li>5/8" exterior gypsum soffit записан в trim вместо обшивки и WRB.</li>
 <li>Все ошибки по крыше: <a href="../../../start/common-mistakes/#roof">Крыша</a>.</li>
 </ul>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/eves rakes/eves/eve 24 main     Line   310 LFT
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Takeoffs/Main/eves rakes/rakes/rake 12 main   Line   96 LFT
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Soffits at Eves     12&quot; Vinyl vented   620  SQ FT  =310*2
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Fascia at Eves      1x8                310  LFT
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Frieze              5/4x6              310  LFT
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Soffits at Rakes    9&quot; Vinyl           96   LFT
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Fascia at Rakes     1x6                96   LFT
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Columns             12&quot; Dia Fbg Non-taper w/c&amp;b   4  pcs   8&#39;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Takeoffs/Main/eves rakes/eves/returns 24      Line   8 LFT
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Takeoffs/Main/eves rakes/rakes/rake 12 main   Line   96 LFT
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Soffits at Eves     12&quot; Vinyl vented   700  SQ FT  =EVEN((310+8)*24/12*1.1)   24&quot; Projection
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Fascia at Eves      1x8                350  LFT    =EVEN((310+8)*1.1)
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Frieze Board        5/4x6              350  LFT    =EVEN((310+8)*1.1)
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Soffits at Rakes    1x12               106  LFT    =EVEN(96*1.1)              12&quot; Projection
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Fascia at Rakes     1x6                106  LFT    =EVEN(96*1.1)
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Columns             12&quot; Dia Fbg Non-taper   4  8&#39;     w/ cap &amp; base
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Eave soffit: панели 12&quot; на свесе 24&quot; = SQ FT: 318 x 24 / 12 x 1.1 = 699.6, чётное вверх = 700
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Rake soffit: свес 12&quot; закрыт одной доской 1x12 = LFT: 96 x 1.1 = 105.6, чётное вверх = 106
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>Fascia и frieze: 318 x 1.1 = 349.8, чётное вверх = 350
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

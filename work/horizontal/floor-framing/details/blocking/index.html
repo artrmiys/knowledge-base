@@ -7273,15 +7273,15 @@
 <figure>
 <p><img alt="Blocking between joists" src="../../../../../assets/images/framing/blocking.svg" />
   </p>
-<figcaption>Blocking - короткие доски между joists или фермами. Сплошной ряд считается в LFT по длине ряда; ряды с шагом 48" o.c. считаются по формуле со страницы Blocking o.c.</figcaption>
+<figcaption>Blocking - короткие доски между joists или фермами. Сплошной ряд меряется одной Line по длине ряда, в DFL это доски по 16'; blocking с шагом 48" o.c. считается по формуле со страницы Blocking o.c.</figcaption>
 </figure>
 <figure>
 <p><img alt="Крестовые распорки bridging между joists перекрытия" src="../../../../../assets/images/photos/framing/joist-cross-bridging.jpg" width="480" />
   </p>
-<figcaption>Bridging из 2x2 крестом между двумя joists под subfloor. Это та же позиция, что и blocking: один ряд поперёк пролёта считается LFT по длине ряда, материал и шаг рядов берём с framing plan или деталей. Фото: gotknowhow.com, <a href="http://gotknowhow.com/articles/how-to-cut-herringbone-joist-struts-for-14-half-spaced-2x10-joists">источник</a>, найдено через Pinterest.</figcaption>
+<figcaption>Bridging из 2x2 крестом между двумя joists под subfloor. Меряется Line по длине ряда bridging; в DFL это своя строка <code>Cross Bridging</code> (деревянный 1x3, доски по 16') или <code>Cross Bridging for I Joists</code> (<code>TB27</code>, pcs). Материал и шаг рядов берём с framing plan или деталей. Фото: gotknowhow.com, <a href="http://gotknowhow.com/articles/how-to-cut-herringbone-joist-struts-for-14-half-spaced-2x10-joists">источник</a>, найдено через Pinterest.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Blocking - короткие доски между joists, фермами или studs: жёсткость, опора кромок листов, опора гипса, противопожарный разрыв. Виды: joist blocking, blocking for drywall, bracing for trusses, blocking at eves, parapet blocking, blocking под FRT-полосой subfloor, kitchen и bath blocking. Blocking внутри панелей стен на panel-job не считается. Ряды с фиксированным шагом - <a href="../blockingoc/">Blocking o.c.</a>; опора гипса на стене параллельно joists - <a href="../bracingdrywall/">Bracing for Drywall</a>.</p>
+<p>Blocking - короткие доски между joists, фермами или studs: жёсткость, опора кромок листов, опора гипса, противопожарный разрыв. Виды: joist blocking, blocking for drywall, bracing for trusses, blocking at eves, parapet blocking, blocking под FRT-полосой subfloor, kitchen и bath blocking. Blocking внутри панелей стен на panel-job не считается. Куски с фиксированным шагом - <a href="../blockingoc/">Blocking o.c.</a>; опора гипса на стене параллельно joists и bracing стен - <a href="../bracingdrywall/">Wall Bracing и Blocking for Drywall</a>.</p>
 <h2 id="_2">Где искать на чертежах<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7314,14 +7314,15 @@
 </tbody>
 </table>
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Line (L) по ряду blocking на листе framing с точкой F; длина линии = длина ряда. Позиция <code>framing/&lt;этаж&gt; framing/details/&lt;имя&gt;</code>: <code>blocking for trusses</code>, <code>bd</code> (drywall), <code>bft</code>, <code>blocking 48</code>, номер детали <code>12/S401</code>. Деталь, вызванная на нескольких планах, обводится на каждом.</p>
+<p>Line (L) по ряду blocking на листе framing с точкой F; длина линии = длина ряда. Позиция <code>framing/&lt;этаж&gt; framing/details/&lt;имя&gt;</code>: <code>blocking for trusses</code>, <code>bd</code> (drywall), <code>bft</code>, <code>blocking 48</code>, номер детали <code>12/S401</code>. Деталь, вызванная на нескольких планах, обводится на каждом. Одна Line на ряд: на куски по 16' её не режем, доски считает формула.</p>
+<p><code>bft</code> (bracing for trusses) - линии поперёк floor trusses, одна линия примерно каждые 10'. Над несущими стенами линию не ведём. Только там, где floor trusses by others: на перекрытии из stick joists или TJI строки нет.</p>
 <figure>
 <p><img alt="Line по узлу на плане" src="../../../../../assets/images/ourplancore/v3/measure-line-detail.png" />
   </p>
 <figcaption>Line по линии применения детали: длина линии уходит в G строки DFL, имя детали даёт флаг M при экспорте.</figcaption>
 </figure>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Экспорт: кнопка DT ставит детали в J:L этажа; имена <code>bft</code> и <code>bd</code> дают флаги в M (<code>bd bd</code> при двойном), макрос <code>C_RimBoardBlockingHangers</code> раскладывает строки. Все строки в LFT, D = длина доски 16.</p>
+<p>Экспорт: кнопка DT ставит детали в J:L этажа; имена <code>bft</code> и <code>bd</code> дают флаги в M (<code>bd bd</code> при двойном), макрос <code>C_RimBoardBlockingHangers</code> раскладывает строки. Line даёт в G длину в LFT, формула делит её на D = 16: в C стоят доски по 16', не LFT.</p>
 <table>
 <thead>
 <tr>
@@ -7337,8 +7338,8 @@
 <tr>
 <td><code>details/blocking</code></td>
 <td><code>Blocking</code></td>
-<td>сечение joists (<code>2x10</code>), <code>11 7/8 TJI</code></td>
-<td><code>=ОКРВВЕРХ(G*1.1/D;1)</code></td>
+<td>по детали: сечение joists (<code>2x10</code>), <code>2x6</code>; <code>11 7/8 TJI</code> только если деталь показывает I-joist blocking</td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code></td>
 <td><code>16</code></td>
 <td>деталь</td>
 </tr>
@@ -7346,25 +7347,41 @@
 <td><code>details/bd</code></td>
 <td><code>Blocking for Drywall</code></td>
 <td><code>2x4</code></td>
-<td><code>=ОКРВВЕРХ(G*1.1/D;1)</code></td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code></td>
 <td><code>16</code></td>
 <td>детали</td>
 </tr>
 <tr>
 <td><code>details/bft</code></td>
 <td><code>Bracing for Trusses</code></td>
-<td>по умолчанию <code>2x6</code>; другое только если так в truss detail</td>
-<td>по умолчанию 1 ряд на каждые 10' по площади под фермами</td>
+<td><code>2x6</code></td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code></td>
 <td><code>16</code></td>
-<td>truss detail или <code>assumed</code></td>
+<td><code>assumed</code> или truss detail</td>
 </tr>
 <tr>
 <td><code>details/blocking eves</code></td>
 <td><code>Blocking at Eves</code></td>
 <td><code>2x6</code></td>
-<td><code>=ОКРВВЕРХ(G*1.1/D;1)</code></td>
+<td><code>=ОКРВВЕРХ(G/D*1.1;1)</code></td>
 <td><code>16</code></td>
 <td></td>
+</tr>
+<tr>
+<td><code>details/bridging</code></td>
+<td><code>Cross Bridging</code></td>
+<td><code>1x3</code></td>
+<td><code>=ОКРВВЕРХ(G*2.5/D;1)</code></td>
+<td><code>16</code></td>
+<td>нота S-листа</td>
+</tr>
+<tr>
+<td><code>details/bridging</code></td>
+<td><code>Cross Bridging for I Joists</code></td>
+<td><code>TB27</code></td>
+<td><code>=ОКРВВЕРХ(G*2*12/16;1)</code></td>
+<td><code>pcs</code></td>
+<td>деталь; <code>or solid blocking; verify</code></td>
 </tr>
 <tr>
 <td><code>details/2x6 kitchen</code></td>
@@ -7376,18 +7393,24 @@
 </tr>
 </tbody>
 </table>
+<p><code>G</code> - длина линии в LFT из OurPlanCore, <code>D</code> - длина доски (16).</p>
 <ul>
-<li>Фактор один на все строки: blocking, ribbon, ledger, drywall blocking = LFT x 1.1 один раз в формуле; rim 1.05 только на EWP, иначе 1.1. Канон цифр: <a href="../../../../../reference/formulas/#rim-ribbon-blocking-ledger">Формулы</a>.</li>
-<li>Bracing for trusses: по умолчанию <code>2x6</code> каждые 10' на всю площадь под крышей, включая гараж. Если truss detail текущего дома даёт другое сечение или шаг, пиши по детали и ставь ссылку на лист.</li>
+<li>В framing-книге blocking, drywall blocking, ribbon, ledger и bracing for trusses - доски по 16': C = <code>G / D</code> с округлением вверх, отдельного waste нет. На EWP-only заказе сплошной blocking остаётся в LFT без фактора. Сводка: <a href="../../../../../reference/formulas/#rim-ribbon-blocking-ledger">Формулы</a>.</li>
+<li>В LFT остаётся blocking внутри стен (строка <code>Blocking</code> в секции стен этажа и в Wall Materials) и parapet blocking: это не строки framing list.</li>
+<li><code>Bracing for Trusses</code> - строка перекрытия: <code>2x6</code>, G = сумма линий <code>bft</code> поперёк floor trusses (одна примерно каждые 10', не над несущими стенами). Только где floor trusses by others; на stick joists или TJI строки нет. Если truss detail даёт другое сечение или шаг, пиши по детали и ставь ссылку на лист.</li>
+<li>Bracing ферм крыши - другая строка, <code>Truss Bracing</code> на странице <a href="../../../roof-framing/roof-sheathing/">Roof Sheathing</a>: <code>2x4</code>, от площади под фермами. Для одних и тех же ферм пишется одна из двух строк, не обе.</li>
 <li>Стены 10' и выше - два ряда blocking.</li>
 <li>Наружный blocking FRT, когда наружная стена FRT. Parapet blocking FRT или P.T. по детали.</li>
 <li>Kickers и braces считаются только когда они есть на детали: firewall <code>(2) 2x6 @ 48</code>, gable kickers @ 5'.</li>
-<li>Cross bridging I-joists <code>TB27</code>: <code>длина x 2 x 12 / 16</code> pcs.</li>
+<li>Cross bridging деревянных joists: <code>1x3</code>, 2.5 фута доски на фут ряда bridging, доски по 16'. Только когда S-ноты его требуют; в E лист ноты.</li>
+<li>Cross bridging I-joists: <code>TB27</code> в pcs, 2 штуки на каждый пролёт между joists при шаге 16" (<code>G x 2 x 12 / 16</code>). В E после детали пишем <code>or solid blocking; verify</code>: вместо металлических TB27 на объекте могут поставить сплошной blocking.</li>
 <li><code>EWP by others</code>, но blocking у стальных балок указан: строка <code>LVL</code>/<code>LSL</code> blocking с note и замером.</li>
 </ul>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li>Bracing for trusses посчитан не на всю площадь под крышей (гараж забыт).</li>
+<li><code>Bracing for Trusses</code> (перекрытие, линии <code>bft</code>) и <code>Truss Bracing</code> (крыша, по площади) перепутаны или записаны оба для одних ферм.</li>
+<li>Линии <code>bft</code> проведены над несущими стенами или на перекрытии из stick joists или TJI.</li>
+<li>Cross bridging <code>TB27</code> записан в LFT или досками: это pcs.</li>
 <li>Blocking панели стены посчитан отдельно на panel-job.</li>
 <li>Blocking под кромкой FRT-полосы subfloor пропущен.</li>
 <li>Шаг 48" o.c. посчитан как сплошной ряд или наоборот.</li>
@@ -7404,35 +7427,40 @@
 <th>C</th>
 <th>D</th>
 <th>E</th>
+<th>G</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Blocking</code></td>
-<td><code>11 7/8 TJI 230</code></td>
-<td><code>=ОКРВВЕРХ(G*1.1/D;1)</code></td>
+<td><code>2x6</code></td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code></td>
 <td>16</td>
 <td><code>12/S401</code></td>
+<td>96</td>
 </tr>
 <tr>
 <td><code>Blocking for Drywall</code></td>
 <td><code>2x4</code></td>
-<td><code>=ОКРВВЕРХ(G*1.1/D;1)</code></td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code></td>
 <td>16</td>
 <td><code>6/8/9/S400</code></td>
+<td>310</td>
 </tr>
 <tr>
 <td><code>Bracing for Trusses</code></td>
 <td><code>2x6</code></td>
-<td><code>=ОКРВВЕРХ(G*1.1/D;1)</code></td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code></td>
 <td>16</td>
-<td><code>1/S5.00, template default, verify</code></td>
+<td><code>assumed</code></td>
+<td>252</td>
 </tr>
 </tbody>
 </table>
+<p>96 / 16 = 6 досок; 310 / 16 = 19.4, значит 20; 252 / 16 = 15.75, значит 16.</p>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li><a href="../blockingoc/">Blocking o.c.</a>, <a href="../bracingdrywall/">Bracing for Drywall</a>, <a href="../ribbon/">Ribbon Board</a>, <a href="../rim/">Rim Board</a></li>
+<li><a href="../blockingoc/">Blocking o.c.</a>, <a href="../bracingdrywall/">Wall Bracing и Blocking for Drywall</a>, <a href="../ribbon/">Ribbon Board</a>, <a href="../rim/">Rim Board</a></li>
 <li><a href="../../../../../reference/formulas/#blocking-formulas">Формулы: Blocking</a>, <a href="../../../../../work-types/com/">COM: Blocking в panelized</a></li>
 </ul>
 

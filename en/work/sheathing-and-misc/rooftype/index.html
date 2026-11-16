@@ -7245,9 +7245,9 @@
 
 <h1 id="roof-types">Roof Types<a class="headerlink" href="#roof-types" title="Link to this section">&para;</a></h1>
 <figure>
-<p><img alt="Flat roof layers" src="../../../../assets/images/roof/roof-type.svg" />
+<p><img alt="Roof types and their DFL rows" src="../../../../assets/images/roof/roof-type.svg" />
   </p>
-<figcaption>Flat roof: membrane, cover board, rigid insulation, deck. All layers over the same area, each on its own row.</figcaption>
+<figcaption>Four roof types: the tree name of the area and the rows each type pulls. On a flat roof every layer takes the same area and gets its own row.</figcaption>
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
 <p>The roof type sets which area materials go into the DFL on top of the framing:
@@ -7270,7 +7270,7 @@ This page is about not losing a layer that only this type has.</p>
 </tr>
 <tr>
 <td>Roof assemblies (<code>ft</code>), specs</td>
-<td>Flat roof layers: cover board, rigid, tapered, XPS, EPDM; alternates</td>
+<td>Flat roof layers: cover board, insulation (rigid, tapered, XPS), EPDM; alternates</td>
 </tr>
 <tr>
 <td>Sections (<code>sec</code>)</td>
@@ -7296,8 +7296,8 @@ This page is about not losing a layer that only this type has.</p>
 <tr>
 <td>Pitched under shingles</td>
 <td><code>sqfts/rf 6</code></td>
-<td><code>Roof Sheathing</code>, <code>Clips</code>, <code>Felt for Roof</code>, <code>Ice and Water (eves&amp;valleys)</code> if in scope</td>
-<td><code>4x8</code>, <code>pcs</code>, <code>SQ FT</code></td>
+<td><code>Roof Sheathing</code>, <code>Clips</code>; <code>Felt for Roof</code> and <code>Ice and Water (eves&amp;valleys)</code> only when roofing products are in scope</td>
+<td><code>4x8</code>, <code>pcs</code>, <code>SQ FT</code>, <code>rolls</code></td>
 </tr>
 <tr>
 <td>Pitched under metal</td>
@@ -7308,19 +7308,19 @@ This page is about not losing a layer that only this type has.</p>
 <tr>
 <td>Overframe</td>
 <td><code>sqfts/overframe 4</code></td>
-<td><code>Roof Sheathing (overframes)</code>, sleepers per detail</td>
-<td><code>4x8</code>, <code>LFT</code></td>
+<td><code>Roof Sheathing (overframes)</code>, sleepers per detail (<a href="../../horizontal/roof-framing/overframes/">Overframes</a>)</td>
+<td><code>4x8</code>, sleepers per their own page</td>
 </tr>
 <tr>
 <td>Flat</td>
 <td><code>sqfts/flat</code>, <code>sqfts/ply flat</code></td>
-<td><code>Roof Sheathing at Flat Roofs</code> <code>3/4"</code>, <code>Densdeck</code> / cover board, <code>Rigid Insulation</code>, XPS, <code>EPDM at flat roofs</code></td>
+<td><code>Roof Sheathing at Flat Roofs</code> <code>3/4"</code> and <code>Cover Board</code> in sheets; <code>Insulation</code> (rigid, tapered, XPS: area x number of layers x 1.1) by area; <code>EPDM at flat roofs</code> only when roofing products are in scope, otherwise the membrane is by others with a Note</td>
 <td><code>4x8</code>, <code>SQ FT</code></td>
 </tr>
 <tr>
 <td>Canopy, upper porch</td>
 <td><code>sqfts/flat canopy</code> or per the canopy block</td>
-<td><code>3/4" T&amp;G</code>, tapered insulation, <code>5/8" Ext Gyp</code> or DensGlass underneath (two soffit rows)</td>
+<td><code>3/4" T&amp;G</code>, tapered insulation, <code>Soffit Gypsum</code> underneath (<code>5/8" Ext Gyp</code>, DensGlass); two layers = one row <code>Soffit Gypsum (2)</code> with x 2 in the formula</td>
 <td><code>4x8</code>, <code>SQ FT</code></td>
 </tr>
 <tr>
@@ -7336,8 +7336,8 @@ Alternates (shingles and standing seam on the same plan): state in a Note what
 was counted, or count both as alternates.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
-<li>On a flat roof, Densdeck / cover board and the second XPS layer over the same area missed.</li>
-<li>Canopy counted as a piece of the main roof, without tapered insulation and without the gypsum underneath.</li>
+<li>On a flat roof, <code>Cover Board</code> (Densdeck) and the second XPS layer over the same area missed.</li>
+<li>Canopy counted as a piece of the main roof, without tapered insulation and without the gypsum underneath, or two gypsum layers written as two rows.</li>
 <li>Piggyback trusses without sleepers.</li>
 <li>Metal by others, but the ply under it not counted.</li>
 <li>Shingles and metal on the same plan, one chosen without a Note.</li>

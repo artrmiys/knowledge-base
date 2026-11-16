@@ -7341,14 +7341,19 @@ hotkeys and all the workbook macros: <a href="../../../reference/excel-hotkeys/"
 </thead>
 <tbody>
 <tr>
-<td><code>Ext. Casing sides</code></td>
-<td><code>380</code></td>
-<td><code>LFT</code></td>
+<td><code>Ext Casing</code></td>
+<td><code>11</code></td>
+<td><code>FT</code></td>
 </tr>
 <tr>
-<td><code>Head casing</code></td>
-<td><code>204</code></td>
-<td><code>LFT</code></td>
+<td><code>Ext Casing Head</code></td>
+<td><code>3.3</code></td>
+<td><code>FT</code></td>
+</tr>
+<tr>
+<td>(quantity row)</td>
+<td><code>34</code></td>
+<td><code>EA</code></td>
 </tr>
 <tr>
 <td><code>Soffits at Porch</code></td>
@@ -7362,7 +7367,13 @@ hotkeys and all the workbook macros: <a href="../../../reference/excel-hotkeys/"
 </tr>
 </tbody>
 </table>
-<p>If the selection is not three columns, the macro shows an error and exits.</p>
+<p>If the selection is not three columns, the macro shows an error and exits. Unit must
+be exactly <code>FT</code>, <code>SQ FT</code> or <code>EA</code>: the macro silently skips a row with <code>LFT</code> or <code>LF</code>.
+There are two blocks here: the trim of one window (sides 2 x 5.5 = 11 FT, head
+3.3 FT) for 34 windows, and the ceiling of one porch for 2 porches. <code>C_TrimsCalc</code> gives
+<code>Ext Casing</code> 11 x 34 = 374, <code>Ext Casing Head</code> 3.3 x 34 = 112.2,
+<code>Soffits at Porch</code> 120 x 2 = 240. These are lengths before waste: the 1.1 allowance and
+the rounding come from the DFL row formula, not from Value.</p>
 <h2 id="c_trimscalc-block-x-quantity">C_TrimsCalc: block x quantity<a class="headerlink" href="#c_trimscalc-block-x-quantity" title="Link to this section">&para;</a></h2>
 <p>Calculates the trim for one element multiplied by the number of such elements
 (trim of one window x number of windows, trim of one balcony x number of balconies).</p>
@@ -7377,8 +7388,9 @@ hotkeys and all the workbook macros: <a href="../../../reference/excel-hotkeys/"
 <p>The macro writes formulas, not numbers: the checker sees what the quantity
 is made of. Do not replace the formula with a number.</p>
 <h2 id="c_sumthesamevalues-collapse-identical-rows">C_SumTheSameValues: collapse identical rows<a class="headerlink" href="#c_sumthesamevalues-collapse-identical-rows" title="Link to this section">&para;</a></h2>
-<p>Key <code>Label + Unit</code>, values are summed. Useful when <code>CornerBoards
-5/4x6 | LFT</code> appears on every elevation and floor. Select the three columns,
+<p>Key <code>Label + Unit</code>, values are summed. Useful when <code>Corner Boards
+5/4x6 | LFT</code> appears on every elevation and floor. The labels must match letter for
+letter: <code>CornerBoards</code> and <code>Corner Boards</code> will not be summed. Select the three columns,
 run it (default <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f">F</kbd></span>). The selection is cleared and replaced with
 unique rows with sums: work on a copy if you need the source rows.</p>
 <h2 id="y_multiplyselectedcells-multiply-everything">Y_MultiplySelectedCells: multiply everything<a class="headerlink" href="#y_multiplyselectedcells-multiply-everything" title="Link to this section">&para;</a></h2>

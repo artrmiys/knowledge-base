@@ -7271,9 +7271,9 @@
 
 <h1 id="bolts">Bolts<a class="headerlink" href="#bolts" title="Link to this section">&para;</a></h1>
 <figure>
-<p><img alt="Anchor bolt through sill plate" src="../../../../../../assets/images/framing/anchor-bolt.svg" />
+<p><img alt="Through bolts beam to post and nailer bolts on a steel beam" src="../../../../../../assets/images/framing/through-bolt.svg" />
   </p>
-<figcaption>Bolt with washer and nut: three rows in the DFL. Spacing and diameter per the detail; one washer per bolt, two when there is wood on both sides.</figcaption>
+<figcaption>Top: through bolt beam to post, rows <code>Bolts</code>, <code>Washers</code> (two per bolt, wood on both sides) and <code>Nuts</code>. Bottom: nailer bolts on a steel beam staggered at 24" o.c.: three template rows with one formula.</figcaption>
 </figure>
 <!-- TODO-PHOTO: Simpson Titen HD anchor with plate washer in sill plate, EN query "Titen HD anchor washer sill plate" -->
 
@@ -7309,7 +7309,9 @@
 <h2 id="how-to-measure-in-ourplancore">How to measure in OurPlanCore<a class="headerlink" href="#how-to-measure-in-ourplancore" title="Link to this section">&para;</a></h2>
 <p>A separate measurement is rarely needed: the length comes from the detail Line (<code>details/2x10 ledger + screws</code>, <code>details/nailer</code>), the number of connections from the Count of posts or beams. Point bolts per details: Count (P) with the detail name.</p>
 <h2 id="tree-name-and-dfl-row">Tree name and DFL row<a class="headerlink" href="#tree-name-and-dfl-row" title="Link to this section">&para;</a></h2>
-<p>The <code>blt</code> macro (insert bolts) gives three rows at once. Formulas in pcs; a result under 50 is rounded up to an even number (significance 2).</p>
+<p>The <code>blt</code> macro (insert bolts) gives three rows at once. Formulas in pcs, rounded up to an even number (significance 2).</p>
+<p>How to read the label <code>Anchor Bolts 24" o.c. (2)</code>: it is the template label, built by the macro. <code>24" o.c.</code> is the spacing from column H of the bolts row, <code>(2)</code> is the number of bolts at one point (in the book it sits in H of the <code>Washers</code> row). The word <code>Anchor</code> here does not mean an anchor into concrete: through bolts of a nailer or ledger carry the same label.</p>
+<p>In the formula <code>G</code> is the length of the connection line in LFT (steel beam, ledger), <code>H</code> is the spacing in inches, <code>G*12/H</code> is the number of points, <code>2</code> is the bolts per point.</p>
 <table>
 <thead>
 <tr>
@@ -7324,14 +7326,14 @@
 <tr>
 <td><code>Anchor Bolts 24" o.c. (2)</code></td>
 <td><code>3/8" Ø x 6"</code></td>
-<td><code>=CEILING(G*12/H*2*1.1,2)</code></td>
+<td><code>=CEILING(G*12/H*2,2)</code></td>
 <td><code>pcs</code></td>
 <td>detail</td>
 </tr>
 <tr>
 <td><code>Washers 24" o.c. (2)</code></td>
 <td><code>3/8" Washers</code></td>
-<td>same formula</td>
+<td>same formula; x 2 when there are washers on both sides</td>
 <td><code>pcs</code></td>
 <td></td>
 </tr>
@@ -7384,7 +7386,7 @@
 <tr>
 <td><code>Anchor Bolts 24" o.c. (2)</code></td>
 <td><code>3/8" Ø x 6"</code></td>
-<td><code>=CEILING(G*12/H*2*1.1,2)</code></td>
+<td><code>=CEILING(G*12/H*2,2)</code></td>
 <td>pcs</td>
 <td><code>note II.B per S101</code></td>
 <td>86</td>
@@ -7393,23 +7395,24 @@
 <tr>
 <td><code>Washers 24" o.c. (2)</code></td>
 <td><code>3/8" Washers</code></td>
-<td><code>=CEILING(G*12/H*2*1.1,2)</code></td>
+<td><code>=CEILING(G*12/H*2,2)</code></td>
 <td>pcs</td>
 <td></td>
-<td>86</td>
-<td>24</td>
+<td></td>
+<td>2</td>
 </tr>
 <tr>
 <td><code>Nuts 24" o.c. (2)</code></td>
 <td><code>Nuts for 3/8" Ø</code></td>
-<td><code>=CEILING(G*12/H*2*1.1,2)</code></td>
+<td><code>=CEILING(G*12/H*2,2)</code></td>
 <td>pcs</td>
 <td></td>
-<td>86</td>
-<td>24</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<p>A nailer on an 86 LFT steel beam, 2 bolts per point at 24" o.c.: 86 x 12 / 24 = 43 points, x 2 = 86 bolts; the same number of washers and nuts. In the book G and the spacing sit only in the bolt row, and the <code>Washers</code> and <code>Nuts</code> formulas take them from there; H of the <code>Washers</code> row holds 2 (bolts per point), and that number prints in the <code>(2)</code> of the labels.</p>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>
 <li><a href="../../../../deck/anchor-bolts/">Anchor Bolts</a> - anchors to concrete, SW schedule</li>

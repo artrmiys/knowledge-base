@@ -7289,6 +7289,11 @@
 
 <h1 id="wall-sheathing">Wall Sheathing<a class="headerlink" href="#wall-sheathing" title="Link to this section">&para;</a></h1>
 <figure>
+<p><img alt="Elevation: sheathing area by floor, strips and deductions" src="../../../../../assets/images/sheathing/wall-sheathing-facade.svg" />
+  </p>
+<figcaption>Sheathing on an elevation: a floor wall = length x height, the floor band = Box Sheathing, the triangle = gable, the band at the roof = truss heel. An opening wider than 4' is deducted once, a window narrower than 4' is not deducted.</figcaption>
+</figure>
+<figure>
 <p><img alt="Installing OSB sheathing on a framed wall" src="../../../../../assets/images/confluence/confluence-094.jpg" />
   </p>
 <figcaption>Structural sheathing on an exterior wall: OSB sheets over the studs. Area = wall length x wall height, minus openings wider than 4'. Archive photo.</figcaption>
@@ -7364,8 +7369,9 @@ interior insulation and sound batts are not counted in the frame scope. Narrow s
 </table>
 <p>Take the product name from this plan set: <code>LP FlameBlock 2-sided</code> is not
 <code>7/16" OSB FRT</code>, do not turn <code>5/8" EXT. SHEATHING</code> into Ply without a reason,
-write <code>CDX</code> only if the set says so. Call the exterior barrier WRB / Weather
-Barrier per the spec (fluid-applied is not Tyvek), not "Vapor Barrier".</p>
+write <code>CDX</code> only if the set says so. The exterior barrier row in the DFL is always
+labeled <code>Vapor Barrier</code> (the template label), and B gets the product from the
+spec: a fluid-applied WRB stays fluid-applied, not Tyvek out of habit.</p>
 <h2 id="how-to-measure-in-ourplancore">How to measure in OurPlanCore<a class="headerlink" href="#how-to-measure-in-ourplancore" title="Link to this section">&para;</a></h2>
 <p>There is no separate <code>sheathing</code> branch in the tree. The wall area is collected from the wall
 lines: the wall name carries the height (<code>ext 2x6 9.09</code>), and the Excel export multiplies the length
@@ -7400,28 +7406,28 @@ by the height.</p>
 <td><code>Wall Sheathing</code></td>
 <td><code>7/16" Zip</code> or <code>1/2" OSB</code></td>
 <td><code>4x8</code></td>
-<td><code>=CEILING(SQFT/32*1.1,1)</code></td>
+<td><code>=CEILING(G/32*1.1,1)</code></td>
 </tr>
 <tr>
-<td>same takeoff</td>
+<td>same takeoff, Zip only</td>
 <td><code>Tape</code></td>
-<td><code>Zip Tape</code> (only with Zip)</td>
+<td><code>Zip Tape</code></td>
 <td><code>LFT</code></td>
-<td><code>=CEILING(SQFT*0.4*1.1,10)</code></td>
+<td><code>=CEILING((G*0.4+window perimeter of the floor)*1.1,10)</code></td>
 </tr>
 <tr>
-<td>same takeoff</td>
-<td><code>Vapor Barrier</code> (in the template)</td>
+<td>same takeoff, no Zip only</td>
+<td><code>Vapor Barrier</code></td>
 <td>WRB per spec</td>
 <td><code>SQ FT</code></td>
-<td><code>=CEILING(SQFT*1.1,10)</code></td>
+<td><code>=CEILING(G*1.1,10)</code></td>
 </tr>
 <tr>
 <td>same takeoff</td>
 <td><code>Insulation</code></td>
-<td>exterior <code>1" Insulation</code> or Zip R</td>
+<td>continuous insulation outside the sheathing, for example <code>2" XPS Insulation</code></td>
 <td><code>SQ FT</code></td>
-<td>as WRB</td>
+<td><code>=CEILING(G*1.1,10)</code></td>
 </tr>
 <tr>
 <td><code>walls/1st floor walls/ext ...</code></td>
@@ -7432,6 +7438,22 @@ by the height.</p>
 </tr>
 </tbody>
 </table>
+<p>G is the exterior wall area of the floor less openings, in SQ FT. What matters in
+these rows:</p>
+<ul>
+<li><strong>One system per section.</strong> Zip: <code>Wall Sheathing</code> + <code>Tape</code>. A plain sheet
+  (OSB, Ply): <code>Wall Sheathing</code> + <code>Vapor Barrier</code>. Zip has the barrier built into the sheet,
+  so Zip walls get no <code>Vapor Barrier</code> (WRB) row: only <code>Tape</code> and the
+  opening flashing.</li>
+<li><strong>Tape</strong> is counted in <code>LFT</code>, not rolls: <code>0.4</code> LFT of tape per SQ FT of
+  sheathing plus the window perimeter of the floor (the casing line of the openings table),
+  all <code>x 1.1</code>. Box, Gable and Truss Heel have no window perimeter: <code>G x 0.4 x 1.1</code>.</li>
+<li><strong>Insulation</strong> is only continuous insulation outside the sheathing or on CMU and
+  concrete. Insulation between studs (batt, mineral wool, spray foam, sound) is
+  by others: no row. Zip R carries the insulation in the sheet itself: the product
+  goes into <code>Wall Sheathing</code>, with no separate <code>Insulation</code> row.</li>
+<li>Rounding of SQ FT and LFT rows: a result under 50 goes to 2, otherwise to 10.</li>
+</ul>
 <p>The spec lives in the template cells: O3 sheathing, O4 WRB, O5 Zip, O6 Zip Tape,
 and P holds a bare sheet reference (<code>S3.0</code>, <code>8/S3.0</code>, without the word "per"). It is filled in when
 the job is created. The Box Sheathing and Holdowns rows sit at the end of the floor's wall section.</p>
@@ -7439,7 +7461,9 @@ the job is created. The Box Sheathing and Holdowns rows sit at the end of the fl
 <ul>
 <li>Openings not subtracted (garage doors) or subtracted twice (doors on two floors).</li>
 <li>Thickness and product inherited from the previous building instead of read from this set.</li>
-<li><code>Vapor Barrier</code> and <code>Tyvek</code> with a fluid-applied barrier in the spec.</li>
+<li>B of the <code>Vapor Barrier</code> row says Tyvek with a fluid-applied barrier in the spec.</li>
+<li>A <code>Vapor Barrier</code> row left on Zip walls, or <code>Tape</code> counted in rolls and without the window perimeter.</li>
+<li>An <code>Insulation</code> row created for insulation between studs or for Zip R.</li>
 <li>Arch vs structural conflict resolved silently, without a Note citing both sheets.</li>
 <li>Interior gypsum, interior insulation or sound batts counted.</li>
 <li>Area measured in the app, but the old number stayed in Excel.</li>
@@ -7447,14 +7471,19 @@ the job is created. The Box Sheathing and Holdowns rows sit at the end of the fl
 </ul>
 <p>All sheathing mistakes: <a href="../../../../start/common-mistakes/#sheathing">common-mistakes</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
+<p>Wall area of the floor 6220 SQ FT, window perimeter of the floor 310 LFT, box area
+600 SQ FT:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1st Floor Walls
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Wall Sheathing      7/16&quot; Zip        214   4x8     8/S3.0
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Tape                Zip Tape        2740   LFT
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Insulation          Zip R-3         6850   SQ FT   A2-00
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Note: Wall Sheathing 7/16&quot; Zip R3 per 8/S3.0 A2-00.
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Box Sheathing       7/16&quot; Zip         21   4x8
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Tape                Zip Tape         270   LFT
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Wall Sheathing      Zip R-3          214   4x8     8/S3.0 A2-00
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Tape                Zip Tape        3080   LFT
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Note: Wall Sheathing 7/16&quot; Zip R3 per 8/S3.0 A2-00.
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Box Sheathing       7/16&quot; Zip         21   4x8
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Tape                Zip Tape         270   LFT
 </span></code></pre></div>
+<p>Check: sheets <code>6220 / 32 x 1.1 = 213.8</code>, the book gets 214. Wall Tape
+<code>(6220 x 0.4 + 310) x 1.1 = 3077.8</code>, to 10 = 3080. Box <code>600 / 32 x 1.1 = 20.6</code>,
+the book gets 21; its Tape <code>600 x 0.4 x 1.1 = 264</code>, to 10 = 270. There are no <code>Vapor Barrier</code>
+and <code>Insulation</code> rows: the walls are Zip R.</p>
 <figure>
 <p><img alt="House sheathed with Zip System" src="../../../../../assets/images/confluence/confluence-093.jpg" />
   </p>

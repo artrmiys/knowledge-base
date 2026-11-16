@@ -7281,7 +7281,7 @@
 <figcaption>Архивная деталь: "ribbon per standards" у нижнего пояса ферм и "2x flat ribbon" у верхнего. Из такой детали берётся сечение и место ribbon; без неё строка не нужна.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Ribbon (ribband, let-in ledger) - горизонтальная доска, врезанная в стойки, на которую опираются joists или фермы при balloon framing и у top chord bearing. Не путать с <a href="../rim/">Rim</a> (торцы joists) и <a href="../blocking/">Blocking</a> (между joists). Drywall ledger на стене параллельно joists - страница <a href="../bracingdrywall/">Bracing for Drywall</a>.</p>
+<p>Ribbon (ribband, let-in ledger) - горизонтальная доска, врезанная в стойки, на которую опираются joists или фермы при balloon framing и у top chord bearing. Не путать с <a href="../rim/">Rim</a> (торцы joists) и <a href="../blocking/">Blocking</a> (между joists). Drywall ledger на стене параллельно joists - строка <code>Blocking for Drywall</code>, страница <a href="../bracingdrywall/">Wall Bracing и Blocking for Drywall</a>.</p>
 <h2 id="_2">Где искать на чертежах<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7306,7 +7306,7 @@
 </tbody>
 </table>
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Line (L) по стене, где деталь показывает ribbon, на листе framing с точкой F. Позиция <code>framing/&lt;этаж&gt; framing/details/ribbon</code> или <code>details/rb</code>. Длина = длина применения детали, не длина выноски.</p>
+<p>Line (L) по стене, где деталь показывает ribbon, на листе framing с точкой F. Позиция <code>framing/&lt;этаж&gt; framing/details/ribbon</code> или <code>details/rb</code>. Длина = длина применения детали, не длина выноски. Одна Line на весь участок: на куски по 16' её не режем, доски считает формула.</p>
 <figure>
 <p><img alt="Line по узлу на плане" src="../../../../../assets/images/ourplancore/v3/measure-line-detail.png" />
   </p>
@@ -7329,30 +7329,30 @@
 <tr>
 <td><code>details/ribbon</code></td>
 <td><code>Ribbon Board</code></td>
-<td>по детали: <code>2x4</code> у ферм, сечение joists (<code>2x10</code>) под joists</td>
-<td><code>=ОКРВВЕРХ(G*1.1/D;1)</code></td>
+<td>по детали: <code>2x4</code> или <code>2x6</code> у ферм, сечение joists (<code>2x10</code>) под joists</td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code></td>
 <td><code>16</code></td>
 <td>деталь</td>
 </tr>
 <tr>
 <td><code>details/ribbon int</code></td>
-<td><code>Ribbon Board interior</code></td>
-<td></td>
-<td></td>
+<td><code>Ribbon Board</code></td>
+<td>по детали</td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code></td>
 <td><code>16</code></td>
-<td></td>
+<td>деталь внутренних стен</td>
 </tr>
 <tr>
 <td><code>details/ribbon + bd</code></td>
-<td><code>Ribbon Board interior + drywall</code></td>
-<td><code>2x4</code></td>
-<td></td>
+<td>две строки: <code>Ribbon Board</code> и <code>Blocking for Drywall</code></td>
+<td>по детали; <code>2x4</code></td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code> в каждой</td>
 <td><code>16</code></td>
 <td>деталь + drywall ledger</td>
 </tr>
 </tbody>
 </table>
-<p>Фактор 1.1 один раз в формуле, как у blocking и ledger: <a href="../../../../../reference/formulas/#rim-ribbon-blocking-ledger">Формулы</a>. Правило: top chord bearing trusses не требуют <code>2x4 ribbon</code>. Там считается blocking между фермами, часто <code>(2) 2x6</code> над стеной 2x6. Ribbon снаружи FRT, если наружная стена FRT.</p>
+<p><code>G</code> - длина линии в LFT, <code>D</code> - длина доски (16). Ribbon в framing-книге - доски по 16': отдельного waste в формуле нет, запас даёт округление до целой доски. Одна строка на сечение, детали перечислены в E. Сводка: <a href="../../../../../reference/formulas/#rim-ribbon-blocking-ledger">Формулы</a>. Правило: top chord bearing trusses не требуют <code>2x4 ribbon</code>. Там считается blocking между фермами, часто <code>(2) 2x6</code> над стеной 2x6. Ribbon снаружи FRT, если наружная стена FRT.</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Ribbon добавлена по привычке у top chord bearing ферм: нужен blocking.</li>
@@ -7370,28 +7370,32 @@
 <th>C</th>
 <th>D</th>
 <th>E</th>
+<th>G</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Ribbon Board</code></td>
 <td><code>2x4</code></td>
-<td><code>=ОКРВВЕРХ(G*1.1/D;1)</code></td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code></td>
 <td>16</td>
 <td><code>11/S400</code></td>
+<td>186</td>
 </tr>
 <tr>
-<td><code>Blocking</code></td>
-<td><code>(2) 2x6</code></td>
-<td><code>=ОКРВВЕРХ(G*2*1.1/D;1)</code></td>
+<td><code>Blocking (2)</code></td>
+<td><code>2x6</code></td>
+<td><code>=ОКРВВЕРХ(G*2/D;1)</code></td>
 <td>16</td>
 <td><code>top chord bearing per 13/S400</code></td>
+<td>120</td>
 </tr>
 </tbody>
 </table>
+<p>186 / 16 = 11.6, значит 12 досок; 120 x 2 / 16 = 15 досок.</p>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li><a href="../rim/">Rim Board</a>, <a href="../blocking/">Blocking</a>, <a href="../bracingdrywall/">Bracing for Drywall</a>, <a href="../../joist/">Joist</a></li>
+<li><a href="../rim/">Rim Board</a>, <a href="../blocking/">Blocking</a>, <a href="../bracingdrywall/">Wall Bracing и Blocking for Drywall</a>, <a href="../../joist/">Joist</a></li>
 <li><a href="../../../../../reference/boss-feedback-rules/#rim-board">Советы: Blocking</a></li>
 </ul>
 

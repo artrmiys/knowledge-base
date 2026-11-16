@@ -7278,7 +7278,9 @@
 mechanical. It is almost always fire-rated and almost always built from metal
 studs with a gypsum liner, so it is neither a regular partition nor
 <a href="../metal-tracks/">Metal Tracks</a>. Two working types: <code>2-1/2" CH + J-channel</code>
-(one liner layer) and <code>2" H + C-channel</code> (two layers). A CMU elevator gives no wood
+(a shaft, liner on one side) and <code>2" H + C-channel</code> (an area separation wall
+between units, liner on both sides). Take the system from the UL detail; the two are
+never mixed in one wall. A CMU elevator gives no wood
 or liner framing.</p>
 <h2 id="where-to-find-it-on-the-plans">Where to find it on the plans<a class="headerlink" href="#where-to-find-it-on-the-plans" title="Link to this section">&para;</a></h2>
 <table>
@@ -7315,6 +7317,8 @@ or liner framing.</p>
 <p><strong>Line</strong> tool, LFT unit, around the shaft perimeter on the plan of each floor.
 One takeoff per assembly type and height; branch <code>walls/&lt;floor&gt; floor walls</code>,
 the takeoff is named <code>shaft</code>, then the wall type and height (for example <code>shaft 7A 10.5</code>).
+The height in the name is required: panels and vertical channels are figured from the
+wall <strong>area</strong> (length x height), not from the length.
 The <code>SHF</code> button on the XL strip builds the Shaft walls block above the first framing sheet.</p>
 <ol>
 <li>A typical detail is not a quantity by itself: find every shaft on the plan.</li>
@@ -7325,74 +7329,100 @@ The <code>SHF</code> button on the XL strip builds the Shaft walls block above t
    count the resilient channel separately, not a full shaft.</li>
 </ol>
 <h2 id="takeoff-name-and-dfl-row">Takeoff name and DFL row<a class="headerlink" href="#takeoff-name-and-dfl-row" title="Link to this section">&para;</a></h2>
-<p>Type 1, <code>2-1/2" CH + J-channel</code>, one liner layer:</p>
+<p>What goes into G:</p>
+<ul>
+<li><strong>Area</strong> = length of the shaft walls (LFT) x height, summed over all floors, in SQ FT.
+  This is G of the panel rows and the vertical channel rows.</li>
+<li><strong>Length</strong> = LFT of the shaft walls, summed over the floors. Only the horizontal and
+  perimeter channels are figured from it.</li>
+<li>The <code>24</code> in the panel formula is the area of one 2' x 12' panel (24 SQ FT), so only an
+  area can be divided by 24. If a length lands in G, the panel count comes out short by a
+  factor equal to the wall height.</li>
+</ul>
+<p>Type 1, <code>2-1/2" CH + J-channel</code>, liner on one side:</p>
 <table>
 <thead>
 <tr>
 <th>DFL row</th>
-<th>Material</th>
-<th>Unit</th>
-<th>Formula</th>
+<th>Material (B)</th>
+<th>D</th>
+<th>Formula C</th>
+<th>G</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Linear Panels</code></td>
 <td><code>1" Shaft Panels</code></td>
-<td>2x12 panels</td>
-<td><code>LFT x 1.1 / 24</code>, to 2</td>
+<td><code>12</code>, E = <code>2x12 Panels</code></td>
+<td><code>=CEILING(G*1.1/24,2)</code></td>
+<td>area</td>
 </tr>
 <tr>
 <td><code>CH Channels Vertical</code></td>
-<td><code>2-1/2" CH-channels</code></td>
-<td>12'</td>
-<td><code>LFT x 0.5 x 1.1 / 12</code>, to 2</td>
+<td><code>2 1/2" CH-channels</code></td>
+<td><code>12</code></td>
+<td><code>=CEILING(G*0.5*1.1/D,2)</code></td>
+<td>the same area; <code>0.5</code> = a stud every 24"</td>
 </tr>
 <tr>
 <td><code>J Channels Horizontal</code></td>
-<td><code>2-1/2" J-channels</code></td>
-<td>12'</td>
-<td><code>horizontal LFT x 1.1 / 12</code>, to 2</td>
+<td><code>2 1/2" J-channels</code></td>
+<td><code>12</code></td>
+<td><code>=CEILING(G*1.1/D,2)</code></td>
+<td>length x 2 (top and bottom)</td>
 </tr>
 </tbody>
 </table>
-<p>Type 2, <code>2" H + C-channel</code>, two liner layers (<code>x 2</code> multiplier on the panels):</p>
+<p>Type 2, <code>2" H + C-channel</code> (area separation wall), liner on both sides:</p>
 <table>
 <thead>
 <tr>
 <th>DFL row</th>
-<th>Material</th>
-<th>Unit</th>
-<th>Formula</th>
+<th>Material (B)</th>
+<th>D</th>
+<th>Formula C</th>
+<th>G</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Linear Panels</code></td>
 <td><code>1" Shaft Panels</code></td>
-<td>2x12 panels</td>
-<td><code>LFT x 2 x 1.1 / 24</code>, to 2</td>
+<td><code>12</code>, E = <code>2x12 Panels</code></td>
+<td><code>=CEILING(G*2*1.1/24,2)</code></td>
+<td>area of one face; <code>x 2</code> = both faces</td>
 </tr>
 <tr>
 <td><code>Channels Vertical</code></td>
 <td><code>2" H-channels</code></td>
-<td>12'</td>
-<td><code>LFT x 0.5 x 1.1 / 12</code>, to 2</td>
+<td><code>12</code></td>
+<td><code>=CEILING(G*0.5*1.1/D,2)</code></td>
+<td>area of one face</td>
 </tr>
 <tr>
 <td><code>Channels Horizontal</code></td>
 <td><code>2" H-channels</code></td>
-<td>12'</td>
-<td><code>horizontal LFT x 2 x 1.1 / 12</code>, to 2</td>
+<td><code>12</code></td>
+<td><code>=CEILING(G*2*1.1/D,2)</code></td>
+<td>length; <code>x 2</code> = top and bottom</td>
 </tr>
 <tr>
 <td><code>Channels Perimeter</code></td>
 <td><code>2" C-channels</code></td>
-<td>12'</td>
-<td><code>perimeter LFT x 1.1 / 12</code>, to 2</td>
+<td><code>12</code></td>
+<td><code>=CEILING(G*1.1/D,2)</code></td>
+<td>wall perimeter in LFT per the detail</td>
 </tr>
 </tbody>
 </table>
+<ul>
+<li>D is the stock length in feet (usually 12), C is the number of pieces, rounded to 2.</li>
+<li>Studs at 16" o.c.: factor <code>0.75</code> instead of <code>0.5</code> and the label <code>CH Channels Vertical 16" o.c.</code>.</li>
+<li>10' panels per the detail: divisor <code>20</code>, D <code>10</code>, E = <code>2x10 Panels</code>.</li>
+<li>Stud size (<code>2 1/2"</code>, <code>3"</code>, <code>4"</code>) comes from the wall type. The <code>x 2</code> on the panels is
+  for Type 2 only: a one-sided shaft never gets it.</li>
+</ul>
 <p>Full breakdown of the formulas: <a href="../../../../reference/formulas/#shaft-walls">Formulas: Shaft Walls</a>.
 Without a detail, write the assembly with <code>assumed; verify</code>. Resilient channels:
 <code>CEILING(area x 12 / spacing x 1.1, 10)</code> only where shown in the wall type;
@@ -7410,8 +7440,8 @@ metal RC under the floor framing is usually by others.</p>
     <img src="../../../../../assets/images/walls/shaft-c-runner.png" alt="2 inch C-runner" loading="lazy">
     <div class="kb-gallery__caption">Type 2: 2" C-runner around the perimeter: top, bottom, end cap.</div>
   </a>
-  <a class="kb-gallery__item" href="../../../../../assets/images/confluence/confluence-131.png">
-    <img src="../../../../../assets/images/confluence/confluence-131.png" alt="1 inch gypsum shaftliner" loading="lazy">
+  <a class="kb-gallery__item" href="../../../../../assets/images/confluence/confluence-131.jpg">
+    <img src="../../../../../assets/images/confluence/confluence-131.jpg" alt="1 inch gypsum shaftliner" loading="lazy">
     <div class="kb-gallery__caption">1" shaftliner: one layer in Type 1, two layers in Type 2. A separate row.</div>
   </a>
 </div>
@@ -7424,12 +7454,18 @@ metal RC under the floor framing is usually by others.</p>
 <li>A wood-to-shaft transition multiplied by the full floor height.</li>
 <li>Hangers over the shaft taken as <code>ITS</code> instead of <code>DHU</code> per detail.</li>
 <li>Resilient channel counted as a full shaft.</li>
+<li>G of the panel row holds a length instead of an area: a 64 LFT x 10.5' shaft gives 4 panels instead of 32.</li>
 </ul>
 <p>Walkthrough with examples: <a href="../../../../start/common-mistakes/#walls">all wall mistakes</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>walls/2nd floor walls/
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  shaft 7A 10.5        Line, 64.0 LFT     Notes: A806 det 3, 2-1/2&quot; CH + 1&quot; liner
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  shaft elev 10.5      Line, 48.0 LFT     Notes: CMU per S201, framing by others
+</span></code></pre></div>
+<p>DFL rows for <code>shaft 7A 10.5</code>. Area = 64 x 10.5 = 672 SQ FT, length = 64 LFT:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Linear Panels           1&quot; Shaft Panels       32   12   2x12 Panels   672 x 1.1 / 24 = 30.8
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>CH Channels Vertical    2 1/2&quot; CH-channels    32   12                 672 x 0.5 x 1.1 / 12 = 30.8
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>J Channels Horizontal   2 1/2&quot; J-channels     12   12                 64 x 2 x 1.1 / 12 = 11.7
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

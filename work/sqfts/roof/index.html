@@ -7306,6 +7306,10 @@
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
 <ol>
 <li>Area по плановой проекции каждого ската на плане кровли (точка W).
+   Контур идёт по кромке крыши (линия fascia) вместе со свесами eave и rake:
+   настил лежит и на свесе. По наружной грани стен кровлю не обводим. Общее
+   правило свесов для всех площадей:
+   <a href="../1st2nd/#rules">Floor SQFT, правило 8</a>.
    Один уклон и один материал = одна позиция; скаты одного уклона можно
    собрать полигонами в одной позиции.</li>
 <li>Имя <code>rf &lt;уклон&gt;</code>: <code>rf 6</code> = 6:12, <code>rf mtl 4</code> (под металл), <code>overframe 4</code>,
@@ -7353,10 +7357,24 @@
 </tr>
 <tr>
 <td><code>sqfts/flat</code></td>
-<td><code>Rigid Insulation</code>, <code>Densdeck</code>, <code>EPDM</code></td>
+<td><code>Roof Sheathing at Flat Roofs</code>, <code>Cover Board</code></td>
+<td>по assembly</td>
+<td><code>4x8</code></td>
+<td><code>=ОКРВВЕРХ(SQFT/32*1.1;1)</code></td>
+</tr>
+<tr>
+<td><code>sqfts/flat</code></td>
+<td><code>Insulation</code> (rigid, tapered)</td>
 <td>по assembly</td>
 <td><code>SQ FT</code></td>
-<td>та же площадь</td>
+<td>SQFT x слои x 1.1</td>
+</tr>
+<tr>
+<td><code>sqfts/flat</code>, только когда кровельные материалы в scope</td>
+<td><code>EPDM at flat roofs</code> в Roof Products</td>
+<td><code>EPDM</code></td>
+<td><code>SQ FT</code></td>
+<td><code>=ОКРВВЕРХ(SQFT*1.1;10)</code></td>
 </tr>
 <tr>
 <td><code>sqfts/rf mtl 4</code></td>
@@ -7367,6 +7385,11 @@
 </tr>
 </tbody>
 </table>
+<p>Мембрана flat roof (EPDM, TPO) - кровельный материал. Строка
+<code>EPDM at flat roofs</code> есть только когда кровельные материалы в scope
+(<code>+ roof</code>). В обычном заказе мембрана by others: строки нет, слои, которые
+считаем мы, и мембрана by others записаны в Note шапки:
+<code>Note: Roof R1 per A501: 5/8" gypsum, tapered polyiso; EPDM by others</code>.</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Уклон не с листа (6:12 вместо 4:12 на гараже: 53 листа вместо 50, 212 clips вместо 200).</li>
@@ -7374,6 +7397,7 @@
 <li>Все скаты одним полигоном без разделения по уклону и материалу.</li>
 <li>Flat roof слои (Densdeck, XPS) пропущены, piggy sleepers забыты.</li>
 <li>Soffit снизу принят за площадь настила.</li>
+<li>Скат обведён по стенам без свесов: настила не хватит на карнизы.</li>
 </ul>
 <p>Все ошибки по площадям: <a href="../../../start/common-mistakes/#sqft">common-mistakes</a>.</p>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>

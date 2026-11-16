@@ -7378,7 +7378,19 @@ Post caps, bases и hangers сюда не относятся: они в <code>fr
 </tr>
 </tbody>
 </table>
-<p>Страпы (<code>MSTC40</code>, <code>CS16</code>) считаем отдельными позициями, не смешиваем с анкерами.</p>
+<p>Страпы (<code>MSTC40</code>, <code>CS16</code>) считаем отдельными позициями, не смешиваем с
+анкерами. В DFL это строка <code>Ties</code>: штучный страп (<code>MSTC40</code>) в <code>pcs</code>, рулонный
+(<code>CS16</code>) в <code>LFT</code>.</p>
+<p>Два разных <code>(2)</code>, которые нельзя путать:</p>
+<ul>
+<li><code>(2)</code> в подписи строки <code>Holdowns (2) btm top</code> - два <strong>уровня</strong>: изделие
+  снизу и сверху перекрытия. C = точки x 2.</li>
+<li><code>(2)</code> в марке на плане (<code>HD1 (2) DTT2Z</code>) - два <strong>изделия в одном узле</strong>. В
+  дереве одна точка на узел, в DFL строка <code>Holdowns (2)</code> (число изделий в
+  одном месте стоит в скобках, как у <code>Beam (2)</code>), C = точки x 2, в E марка
+  <code>HD1</code>.</li>
+</ul>
+<p>Каждое удвоение делается один раз и только в C.</p>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7399,9 +7411,16 @@ Post caps, bases и hangers сюда не относятся: они в <code>fr
 <td><code>SW-2</code></td>
 </tr>
 <tr>
-<td><code>shear walls/2nd floor/holdowns/HD1 (2) DTT2Z</code></td>
-<td><code>Holdowns (2) btm top</code></td>
+<td><code>shear walls/1st floor/holdowns/HD1 (2) DTT2Z</code></td>
+<td><code>Holdowns (2)</code>, C = точки x 2 (два изделия в узле)</td>
 <td><code>DTT2Z</code></td>
+<td><code>pcs</code></td>
+<td><code>HD1</code></td>
+</tr>
+<tr>
+<td><code>shear walls/2nd floor/holdowns/HDU5 S2.2</code></td>
+<td><code>Holdowns (2) btm top</code>, C = точки x 2 (снизу и сверху перекрытия)</td>
+<td><code>HDU5</code></td>
 <td><code>pcs</code></td>
 <td>марка SW</td>
 </tr>
@@ -7414,7 +7433,7 @@ Post caps, bases и hangers сюда не относятся: они в <code>fr
 </tr>
 <tr>
 <td><code>shear walls/2nd floor/holdowns/MSTC40 type C S2.3</code></td>
-<td><code>Straps</code></td>
+<td><code>Ties</code></td>
 <td><code>MSTC40</code></td>
 <td><code>pcs</code></td>
 <td><code>S2.3</code></td>
@@ -7443,9 +7462,9 @@ OurPlanCore, строка на каждую модель.</p>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>1st Floor Walls ... Tape
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Holdowns (1) btm        HDU11     14    pcs   SW-2
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Holdowns (1) btm        DTT2Z     12    pcs   HD1
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Holdowns (2)            DTT2Z     12    pcs   HD1     (6 точек x 2 изделия в узле)
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2nd Floor Walls ... Tape
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Holdowns (2) btm top    HDU5      20    pcs   SW-3
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Holdowns (2) btm top    HDU5      20    pcs   SW-3    (10 точек x 2 уровня)
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

@@ -7305,15 +7305,15 @@
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Инструмент Beam (B) по линии конька на листе roof framing с точкой F. Длина - от наружной грани наружной стены (не от внутренней грани каркаса) до конца участка. Программа округляет длину: до 8' вверх до фута, длиннее - до чётного.</p>
 <ol>
-<li>Один участок конька = одна точка; built-up ridge beam - одна точка с <code>(2)</code> в имени.</li>
+<li>Один участок конька = одна точка; built-up ridge beam - одна точка с <code>(2)</code> в имени. В DFL колонка C считает все доски: точки x plies.</li>
 <li>Ridge beam требует посты или стены под концами: посты считаются в <code>roof framing/posts</code>.</li>
-<li>Rafters к ridge beam висят на hangers (<code>LSSR</code>, <code>LRU</code>) по детали; к ridge board hangers не нужны.</li>
+<li>Rafters к ridge beam висят на hangers (<code>LSSR</code>, <code>LRU</code>) по детали; к ridge board hangers не нужны. Hangers кровли пишутся без <code>Z</code> и без <code>Zmax</code> (<code>LSSR210</code>); исключение - модели <code>LRU...Z</code>, у них Z часть названия.</li>
 <li>Sub fascia и ridge beam по детали - отдельные строки, даже когда rafters by others.</li>
 </ol>
 <figure>
 <p><img alt="Инструмент Beam" src="../../../../assets/images/ourplancore/v3/measure-beam.png" />
   </p>
-<figcaption>Инструмент Beam: две точки по элементу, длина округляется программой и попадает в имя позиции.</figcaption>
+<figcaption>Инструмент Beam (пример на балке перекрытия демо-проекта): две точки по элементу, линейка показывает длину 49,11 ft, программа округляет её до заказной и создаёт Count-позицию с длиной в имени, здесь <code>FB1 50</code>.</figcaption>
 </figure>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Путь: <code>framing/roof framing/beams/&lt;марка или сечение&gt; &lt;длина&gt;</code>. Ridge лежит в <code>beams</code>, не в <code>headers</code>: кнопка HD полосы XL уносит <code>headers</code> в блок стен.</p>
@@ -7341,14 +7341,14 @@
 <td><code>beams/RB1 (2) 1 3/4 x 11 7/8 LVL 20</code></td>
 <td><code>Ridge (2)</code></td>
 <td><code>1 3/4 x 11 7/8 LVL</code></td>
-<td>точки</td>
+<td>точки x 2</td>
 <td><code>20</code></td>
 <td><code>RB1 per S601</code></td>
 </tr>
 <tr>
 <td><code>details/LSSR</code></td>
 <td><code>Hangers</code></td>
-<td><code>LSSR2.1Z</code></td>
+<td><code>LSSR210</code></td>
 <td>по rafters</td>
 <td><code>pcs</code></td>
 <td>деталь</td>
@@ -7361,6 +7361,8 @@
 <li>Ridge посчитан у truss-крыши: он внутри ферм by others.</li>
 <li>Длина от внутренней грани стены или по короткой линии на плане, а не до наружной грани.</li>
 <li>Ridge beam без постов и hangers rafters по детали.</li>
+<li>Hanger кровли записан с <code>Z</code> или <code>Zmax</code> (<code>LSSR210Z</code>): внутри кровли пишем <code>LSSR210</code>.</li>
+<li>У <code>Ridge (2)</code> в C стоит число участков без умножения на 2.</li>
 <li>Несколько коньков разной высоты записаны одной длиной.</li>
 <li>Rim и blocking у roof TJI забыты: крыша из TJI считается как перекрытие.</li>
 <li><a href="../../../../start/common-mistakes/#roof">Все ошибки по крыше</a></li>
@@ -7395,7 +7397,7 @@
 <tr>
 <td><code>Ridge (2)</code></td>
 <td><code>1 3/4 x 11 7/8 LVL</code></td>
-<td>1</td>
+<td>2</td>
 <td>20</td>
 <td><code>RB1</code></td>
 </tr>
@@ -7408,6 +7410,7 @@
 </tr>
 </tbody>
 </table>
+<p><code>Ridge (2)</code>: 1 точка x 2 plies = 2 доски LVL по 20'.</p>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li><a href="../hip/">Hip</a>, <a href="../valley/">Valley</a>, <a href="../header/">Roof Header</a>, <a href="../dbl-trpl-rafters/">Dbl / Trpl Rafters</a>, <a href="../../floor-framing/post/">Post</a></li>

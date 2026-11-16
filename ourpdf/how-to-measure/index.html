@@ -2316,10 +2316,21 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#count-beam-openings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Штуки, балки, проёмы: Count, Beam, Openings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#check-size" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Проверить размер на чертеже
+        7. Проверить размер на чертеже
       
     </span>
   </a>
@@ -2330,7 +2341,7 @@
   <a href="#fix" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Поправить замер
+        8. Поправить замер
       
     </span>
   </a>
@@ -2341,7 +2352,7 @@
   <a href="#question" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8. Отметить вопрос на листе
+        9. Отметить вопрос на листе
       
     </span>
   </a>
@@ -2352,7 +2363,7 @@
   <a href="#save" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9. Сохранить и выгрузить
+        10. Сохранить и выгрузить
       
     </span>
   </a>
@@ -2363,7 +2374,7 @@
   <a href="#compare" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10. Сравнить два листа
+        11. Сравнить два листа
       
     </span>
   </a>
@@ -2374,7 +2385,7 @@
   <a href="#details" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11. Собрать детали на один лист
+        12. Собрать детали на один лист
       
     </span>
   </a>
@@ -7258,10 +7269,21 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#count-beam-openings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Штуки, балки, проёмы: Count, Beam, Openings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#check-size" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Проверить размер на чертеже
+        7. Проверить размер на чертеже
       
     </span>
   </a>
@@ -7272,7 +7294,7 @@
   <a href="#fix" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Поправить замер
+        8. Поправить замер
       
     </span>
   </a>
@@ -7283,7 +7305,7 @@
   <a href="#question" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8. Отметить вопрос на листе
+        9. Отметить вопрос на листе
       
     </span>
   </a>
@@ -7294,7 +7316,7 @@
   <a href="#save" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9. Сохранить и выгрузить
+        10. Сохранить и выгрузить
       
     </span>
   </a>
@@ -7305,7 +7327,7 @@
   <a href="#compare" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10. Сравнить два листа
+        11. Сравнить два листа
       
     </span>
   </a>
@@ -7316,7 +7338,7 @@
   <a href="#details" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11. Собрать детали на один лист
+        12. Собрать детали на один лист
       
     </span>
   </a>
@@ -7452,10 +7474,41 @@
 <li>Лишние балки (двойные под стенами, у проёмов): выделите зону, <span class="keys"><kbd class="key-d">D</kbd></span>, щелчки внутри; <span class="keys"><kbd class="key-shift">Shift</kbd></span> и щелчок убирает, <span class="keys"><kbd class="key-d">D</kbd></span> или <span class="keys"><kbd class="key-escape">Esc</kbd></span> выход.</li>
 <li>Правая кнопка по зоне: "Копировать ноту joists" даёт подпись и список длин со штуками для Excel.</li>
 </ol>
-<h2 id="check-size">6. Проверить размер на чертеже<a class="headerlink" href="#check-size" title="Прямая ссылка на раздел">&para;</a></h2>
+<h2 id="count-beam-openings">6. Штуки, балки, проёмы: Count, Beam, Openings<a class="headerlink" href="#count-beam-openings" title="Прямая ссылка на раздел">&para;</a></h2>
+<figure>
+<p><img alt="Блок Замер с Beam и Openings" src="../../assets/images/ourpdf/block-measure.png" />
+  </p>
+<figcaption>Блок "Замер": после joists кнопки Beam (<span class="keys"><kbd class="key-b">B</kbd></span>) и Openings (<span class="keys"><kbd class="key-o">O</kbd></span>), справа Count (<span class="keys"><kbd class="key-p">P</kbd></span>), P Line, Break, Ends.</figcaption>
+</figure>
+<p><strong>Посты, holdowns, анкеры (Count).</strong></p>
+<ol>
+<li><span class="keys"><kbd class="key-p">P</kbd></span> или Count в блоке "Замер".</li>
+<li>Щёлкните по каждому символу на листе: одна точка на один физический элемент. Масштаб не нужен.</li>
+<li><span class="keys"><kbd class="key-escape">Esc</kbd></span> заканчивает. Точки на обоих концах уже нарисованных линий ставит Ends: выделите линии и нажмите Ends.</li>
+</ol>
+<figure>
+<p><img alt="Count и Ends на линии коридора" src="../../assets/images/ourpdf/count-ends.png" />
+  </p>
+<figcaption>Выбрана линия коридора, на её концах две счётные точки Posts (кнопка Ends). В углу листа легенда: строка Posts, 2 ea.</figcaption>
+</figure>
+<p><strong>Балка (Beam).</strong></p>
+<ol>
+<li><span class="keys"><kbd class="key-b">B</kbd></span>, два щелчка по концам балки, от опоры до опоры.</li>
+<li>В окне начало имени выделено: впишите марку (<code>FB1</code>). Длина под заказ уже в имени: 10'-3" даёт <code>12</code>.</li>
+<li>Инструмент сам переходит в Count этого тейкофа: щёлкните остальные такие же балки, <span class="keys"><kbd class="key-escape">Esc</kbd></span> заканчивает.</li>
+</ol>
+<p>Размер балки на листе справочный: в легенду, итоги и Excel идёт Count.</p>
+<p><strong>Проём (Openings).</strong></p>
+<ol>
+<li><span class="keys"><kbd class="key-o">O</kbd></span>, два противоположных угла проёма на фасаде.</li>
+<li>Ширина ложится размером сверху, высота слева, тейкоф Count называется размером (<code>3.0x6.8</code>), метка в середине проёма.</li>
+<li>Остальные такие же проёмы щелчками, <span class="keys"><kbd class="key-escape">Esc</kbd></span> заканчивает.</li>
+</ol>
+<p>Подробности и настройки: <a href="../measure/#beam-openings">Beam и Openings</a>, <a href="../measure/#count">Count, P Line, Break, Ends</a>.</p>
+<h2 id="check-size">7. Проверить размер на чертеже<a class="headerlink" href="#check-size" title="Прямая ссылка на раздел">&para;</a></h2>
 <p><span class="keys"><kbd class="key-r">R</kbd></span> и два щелчка: получится размерная линия с засечками на концах, размер подписан на листе всегда. Так удобно сверить масштаб, проверить пролёт или ширину проёма. Ненужную потом удалите: выделите и <span class="keys"><kbd class="key-delete">Del</kbd></span>.</p>
 <p>Оба размера комнаты сразу: <span class="keys"><kbd class="key-r">R</kbd></span>, <span class="keys"><kbd class="key-f9">F9</kbd></span>, два противоположных угла. Получатся два отдельных расстояния от первого угла, горизонтальное и вертикальное (<a href="../measure/#box">Box</a>).</p>
-<h2 id="fix">7. Поправить замер<a class="headerlink" href="#fix" title="Прямая ссылка на раздел">&para;</a></h2>
+<h2 id="fix">8. Поправить замер<a class="headerlink" href="#fix" title="Прямая ссылка на раздел">&para;</a></h2>
 <figure>
 <p><img alt="Выбранная точка площади" src="../../assets/images/ourpdf/delete-points.png" />
   </p>
@@ -7499,9 +7552,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="question">8. Отметить вопрос на листе<a class="headerlink" href="#question" title="Прямая ссылка на раздел">&para;</a></h2>
+<h2 id="question">9. Отметить вопрос на листе<a class="headerlink" href="#question" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Выноска (кнопка рядом с "Текстом" на панели инструментов): щелчок туда, куда указывает стрелка, второй щелчок туда, где будет текст, затем текст. Удобно для вопросов клиенту и пометок для себя; уходит в PDF вместе с замерами.</p>
-<h2 id="save">9. Сохранить и выгрузить<a class="headerlink" href="#save" title="Прямая ссылка на раздел">&para;</a></h2>
+<h2 id="save">10. Сохранить и выгрузить<a class="headerlink" href="#save" title="Прямая ссылка на раздел">&para;</a></h2>
 <ol>
 <li>Замеры сохраняются сами в профиле программы, пока PDF открыт.</li>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> записывает их в сам PDF (копия прежнего файла кладётся в резервные копии); их видно в Acrobat и Bluebeam.</li>
@@ -7509,7 +7562,7 @@
 <li>В открытую книгу Excel: выберите ячейку, вернитесь в OurPDF, кнопка Excel в блоке "Масштаб", <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-e">E</kbd></span> или <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-t">T</kbd></span> (<a href="../measure/#excel">Excel</a>). Чтобы ячейка обновлялась сама: <a href="../excel-link/">Связь с Excel</a>.</li>
 <li>Отдельным файлом <code>.xlsx</code>: кнопка "Замеры в Excel" в списке "Комментарии".</li>
 </ol>
-<h2 id="compare">10. Сравнить два листа<a class="headerlink" href="#compare" title="Прямая ссылка на раздел">&para;</a></h2>
+<h2 id="compare">11. Сравнить два листа<a class="headerlink" href="#compare" title="Прямая ссылка на раздел">&para;</a></h2>
 <ol>
 <li>Откройте новый лист, значок "Наложение" на левой полосе.</li>
 <li><code>Добавить...</code>, выберите старый лист этого PDF или страницу другого файла.</li>
@@ -7517,7 +7570,7 @@
 <li>Цветные линии без чёрных под ними и есть отличия.</li>
 </ol>
 <p>Подробно: <a href="../overlay/">Наложение листов</a>. Наложение не пишется по <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> и не печатается.</p>
-<h2 id="details">11. Собрать детали на один лист<a class="headerlink" href="#details" title="Прямая ссылка на раздел">&para;</a></h2>
+<h2 id="details">12. Собрать детали на один лист<a class="headerlink" href="#details" title="Прямая ссылка на раздел">&para;</a></h2>
 <ol>
 <li>Значок "Кроп" на левой полосе, "Лист назначения": новый чистый лист, <code>Начать кроп</code>.</li>
 <li>На нужных листах протяните рамки вокруг деталей: они ложатся на новый лист в 100 %.</li>

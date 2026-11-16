@@ -7359,10 +7359,17 @@ sub fascia, blocking at eves, truss bracing, ties.</p>
 </tr>
 <tr>
 <td><code>sqfts/flat</code></td>
-<td><code>Rigid Insulation</code>, <code>Densdeck</code> / cover board</td>
-<td>per assembly</td>
+<td><code>Cover Board</code></td>
+<td><code>1/2" Cover Board</code> or Densdeck per assembly</td>
+<td><code>4x8</code></td>
+<td><code>=CEILING(G/32*1.1,1)</code></td>
+</tr>
+<tr>
+<td><code>sqfts/flat</code></td>
+<td><code>Roof Insulation</code></td>
+<td><code>Tapered Polyiso Insulation</code>, XPS per assembly</td>
 <td><code>SQ FT</code></td>
-<td>the same area</td>
+<td>the same area x 1.1</td>
 </tr>
 <tr>
 <td><code>sqfts/rf 6</code></td>
@@ -7379,37 +7386,51 @@ sub fascia, blocking at eves, truss bracing, ties.</p>
 <tr>
 <th>Row</th>
 <th>Typical</th>
-<th>Unit</th>
+<th>C</th>
+<th>D</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Sub Fascia</code></td>
 <td><code>2x6</code> / <code>2x8</code></td>
-<td><code>LFT</code> along eave and rake</td>
+<td><code>=CEILING(G/D,1)</code>, G - eave or rake LFT</td>
+<td><code>16</code></td>
 </tr>
 <tr>
 <td><code>Blocking at Eves</code></td>
 <td><code>2x6</code></td>
-<td><code>LFT</code></td>
+<td><code>=CEILING(G/D*1.1,1)</code>, G - eave LFT</td>
+<td><code>16</code></td>
 </tr>
 <tr>
-<td><code>Bracing for Trusses</code></td>
-<td>default <code>2x6</code> every 10', otherwise per truss detail; over the full area under the roof, garage included</td>
-<td><code>LFT</code></td>
+<td><code>Truss Bracing</code></td>
+<td><code>2x4</code></td>
+<td><code>=CEILING(G/4/D,1)</code>, G - area under the roof trusses in SQ FT</td>
+<td><code>16</code></td>
 </tr>
 <tr>
-<td><code>Simpson Ties at Eves</code></td>
+<td><code>Simpson Ties at Eves 24" o.c.</code></td>
 <td><code>H2.5A</code> without Zmax (under the sheathing), spacing = truss spacing, along all bearing lines</td>
+<td><code>=CEILING(G*12/H,10)</code>, G - eave LFT, H - spacing</td>
 <td><code>pcs</code></td>
 </tr>
 <tr>
-<td><code>Frame for Soffits</code> / <code>Frame for Rakes</code></td>
-<td><code>2x4 24" o.c.</code></td>
-<td><code>LFT</code></td>
+<td><code>Frame for Soffits 24" o.c.</code> / <code>Frame for Rakes 24" o.c.</code></td>
+<td><code>2x4</code> / <code>2x6</code> per detail</td>
+<td>16' boards from the eaves and rakes table</td>
+<td><code>16</code></td>
 </tr>
 </tbody>
 </table>
+<p><code>Truss Bracing</code> is the bracing of the roof trusses:</p>
+<ul>
+<li><code>G</code> is the area under the trusses: the first floor SQ FT plus the garage and lower roofs when the roof covers more than the first floor. Not the sloped roof area.</li>
+<li><code>G/4</code> is one run of bracing for every 4' of truss length, that is LFT; <code>/D</code> turns it into 16' boards.</li>
+<li>Only with roof trusses by others. An area where the rafters are stick or TJI is left out of <code>G</code>; a stick roof has no row.</li>
+<li>Measured bracing lines (<code>framing/roof framing/details/bft</code>, only under flat-roof trusses, not over bearing walls) go in the <code>Bracing for Trusses</code> row of the Roof Frame list: <code>2x6</code>, <code>=CEILING(G/D,1)</code>, D <code>16</code>. For the same trusses write one of the two rows, never both.</li>
+<li>Floor truss bracing is the <code>Bracing for Trusses</code> row on the <a href="../../floor-framing/details/blocking/">Blocking</a> page.</li>
+</ul>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Pitch not taken from the sheet, or applied twice (6:12 instead of 4:12 gave +3 sheets and +12 clips on a garage).</li>
@@ -7418,18 +7439,23 @@ sub fascia, blocking at eves, truss bracing, ties.</p>
 <li>On a flat roof, Densdeck / cover board and the second XPS layer missed.</li>
 <li>Piggyback sleepers and 1x3 strapping under the trusses missed.</li>
 <li>Ties not along all bearing lines; tie spacing not equal to truss spacing.</li>
+<li><code>Truss Bracing</code> counted from the sloped roof area, written on a stick roof, or written together with <code>Bracing for Trusses</code> for the same trusses.</li>
+<li>Sub Fascia and Blocking at Eves written in LFT: they are 16' boards.</li>
+<li>Cover board counted in SQ FT: it is <code>4x8</code> sheets.</li>
 <li>Soffit underneath counted as deck area.</li>
 </ul>
 <p>All roof mistakes: <a href="../../../../start/common-mistakes/#roof">common-mistakes</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Roof Frame list
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Roof System Misc
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Note: Roof uses 19/32&quot; exterior-rated plywood per S203; PSCL size matches.
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Roof Sheathing      19/32&quot; Ply or OSB (40/20)   206   4x8    2/S500
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Clips               PSCL 19/32                  1240  pcs
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Sub Fascia          2x8                          310  LFT
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Blocking at Eves    2x6                          236  LFT
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Simpson Ties at Eves H2.5A                       236  pcs    S203
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Sub Fascia          2x8                           20  16
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Blocking at Eves    2x6                           17  16
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Truss Bracing       2x4                           79  16
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Simpson Ties at Eves 24&quot; o.c.  H2.5A             120  pcs    S203
 </span></code></pre></div>
+<p>Check: Sub Fascia 310 LFT / 16 = 19.4, so 20 boards. Blocking at Eves 236 LFT / 16 x 1.1 = 16.2, so 17. Truss Bracing: area under the trusses 5000 SQ FT / 4 / 16 = 78.1, so 79. Ties: 236 x 12 / 24 = 118, up to 10 = 120.</p>
 <figure>
 <p><img alt="3D: roof planes over the truss framing" src="../../../../../assets/images/confluence/confluence-150.png" />
   </p>

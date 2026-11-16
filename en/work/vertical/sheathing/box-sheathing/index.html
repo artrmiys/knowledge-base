@@ -7289,7 +7289,7 @@ roof) or with full wall sheathing (<a href="../wall-sheathing/">Wall Sheathing</
 <tbody>
 <tr>
 <td>Wall section (<code>sec</code>), floor framing detail</td>
-<td>Strip height: joist depth + subfloor + plates per section; material</td>
+<td>Strip height: joist depth + subfloor per section (the plates are already in the wall height); material</td>
 </tr>
 <tr>
 <td>Floor type schedule (<code>ft</code>)</td>
@@ -7311,8 +7311,12 @@ floor walls/ext ...</code> lines, strip height = floor framing depth with subflo
 this building. Area = perimeter x height. The Excel export (XL strip) puts
 Box Sheathing at the end of each floor's wall section with its own Tape row.</p>
 <ul>
-<li>Each floor has its own strip: 1st, 2nd, 3rd. For the top floor under a
-  parapet the box is written into the parapet block with a Note.</li>
+<li>Each floor has its own strip: 1st, 2nd, 3rd.</li>
+<li>Top floor under trusses: there is no <code>Box Sheathing</code> row, the strip is counted in
+  the Truss Heel section, and the walls get the note
+  <code>Note: Box sheathing is included in Truss Heel section</code>.</li>
+<li>Top floor under a flat roof with a parapet: the strip is written into the parapet block,
+  note <code>Note: Roof box included in Parapet Walls.</code></li>
 <li>The material is the same as the wall's (<code>$O$3</code> OSB or <code>$O$5</code> Zip) unless the detail
   calls for something else.</li>
 <li>Openings are not subtracted from the strip.</li>
@@ -7334,24 +7338,30 @@ Box Sheathing at the end of each floor's wall section with its own Tape row.</p>
 <td><code>Box Sheathing</code></td>
 <td><code>7/16" Zip</code> / <code>1/2" OSB</code></td>
 <td><code>4x8</code></td>
-<td><code>=CEILING(SQFT/32*1.1,1)</code></td>
+<td><code>=CEILING(G/32*1.1,1)</code></td>
 </tr>
 <tr>
-<td>same area</td>
+<td>same area, Zip only</td>
 <td><code>Tape</code></td>
-<td><code>Zip Tape</code> (only with Zip)</td>
+<td><code>Zip Tape</code></td>
 <td><code>LFT</code></td>
-<td><code>=CEILING(SQFT*0.4*1.1,10)</code></td>
+<td><code>=CEILING(G*0.4*1.1,10)</code></td>
 </tr>
 <tr>
-<td>same area</td>
-<td><code>Vapor Barrier</code> (WRB)</td>
-<td>per spec</td>
+<td>same area, no Zip only</td>
+<td><code>Vapor Barrier</code></td>
+<td>WRB per spec</td>
 <td><code>SQ FT</code></td>
-<td>as part of the wall</td>
+<td><code>=CEILING(G*1.1,10)</code></td>
 </tr>
 </tbody>
 </table>
+<p>G is the strip area in SQ FT (perimeter x height). <code>Box Sheathing</code> has its own
+barrier row with the same area right under it: <code>Tape</code> with Zip or <code>Vapor Barrier</code> with a
+plain sheet, never both. Zip has the barrier built in, so there is no WRB row.
+The strip Tape is counted in LFT (<code>G x 0.4 x 1.1</code>); the window perimeter is not
+added to it: it is already in the <code>Tape</code> of the floor walls. An <code>Insulation</code> row under the
+box appears only with continuous insulation outside the sheathing.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Box called truss heel or the other way around; they have different geometry and different rows.</li>
@@ -7359,6 +7369,7 @@ Box Sheathing at the end of each floor's wall section with its own Tape row.</p>
 <li>Box forgotten on the top floor under the parapet, or counted twice there.</li>
 <li>On a panel job the box thrown out together with the panels, although it stayed loose.</li>
 <li>Copied detail labels not corrected for this floor.</li>
+<li>Plates added to the strip height once more although they are already in the wall height.</li>
 </ul>
 <p>All mistakes: <a href="../../../../start/common-mistakes/#sheathing">common-mistakes</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>

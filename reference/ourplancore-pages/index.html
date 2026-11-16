@@ -7395,9 +7395,9 @@
 <h1 id="pages">Листы (Pages)<a class="headerlink" href="#pages" title="Прямая ссылка на раздел">&para;</a></h1>
 <p>Здесь: панель Pages, папки листов, сортировка листов и позиций, имена и масштаб по всему комплекту, точки W/F/S/U, видимость, вкладки и отдельные окна листов, поворот листа (лента Page). Нужно в начале каждой работы и когда новый замер лёг не в тот этаж. Какой лист под какой вид работ - <a href="../ourplancore-split-by-sheets/">Раскладка по листам и роутинг</a>.</p>
 <figure>
-<p><img alt="Панель Pages" src="../../assets/images/ourplancore/v3/pages-panel.png" />
+<p><img alt="Панель Pages" src="../../assets/images/ourplancore/v3/pages-tree.png" />
   </p>
-<figcaption>Дерево папок и листов. Под листом показаны позиции, измеренные на нём. Точка слева от листа прячет все его замеры.</figcaption>
+<figcaption>Дерево папок и листов демо-проекта. Под листом показаны позиции, измеренные на нём. Точка справа от имени листа прячет все его замеры.</figcaption>
 </figure>
 <h2 id="pages_1">Панель Pages: справка<a class="headerlink" href="#pages_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
@@ -7620,7 +7620,7 @@
 <li>Нажмите <strong>Apply</strong>.</li>
 <li>Назовите руками то, что не распозналось: <code>F2</code> на листе, <strong>Page &gt; Batch Rename</strong> для серии или <strong>Setup &gt; Name / Scale...</strong>.</li>
 </ol>
-<p>Результат: имена в формате <code>&lt;номер&gt; &lt;тег&gt;</code> строчными: <code>a101 1st</code>, <code>s201 2nd</code>, <code>a105 rf</code>, <code>a8.01 1st rcp</code>, <code>ad101 demo</code>, <code>a3011 u</code>; под заголовком Scale у планов стоит точка; в статусе <code>Route: W 1st</code>.</p>
+<p>Результат: имена в формате <code>&lt;номер&gt; &lt;тег&gt;</code> строчными: <code>a101 1st</code>, <code>s201 2nd</code>, <code>a105 rf</code>, <code>a8.01 1st rcp</code>, <code>ad101 demo</code>, <code>a3011 u</code>; под заголовком Scale у планов стоит точка; в статусе <code>Route: W 1st floor</code>.</p>
 <p>Что читает программа: номер листа по профилю всего комплекта (место штампа, подпись <code>SHEET NO.</code>, индекс листов); текст, повторяющийся на всех листах (фирма, телефон), номером не считается. В Lite номер берётся только из текста PDF: скан без текстового слоя назовите руками (<code>F2</code>). В полной версии такие сканы читает встроенный OCR, а лист, который текст не назвал, может прочитать модель по картинке штампа: галка <code>Read title blocks the PDF text cannot name with AI</code> в <code>Settings &gt; Auto Rename / Scale</code> (нужен модуль AI и ключ, операция онлайн). Имена, которые вы оставили при открытии проекта, программа запоминает как финальные: в таблице правил суффиксов это колонка <code>Kept</code>. Для комплекта с нечитаемым штампом в полной версии есть <code>Crop Hints</code> (<a href="../ourplancore-managers/#sheet-manager">Менеджеры, Sheet Manager</a>).</p>
 <div class="admonition tip">
 <p class="admonition-title">Советы</p>
@@ -7675,7 +7675,7 @@
 <figure>
 <p><img alt="Точки W/F/S/U под заголовком Scale и статус Route" src="../../assets/images/ourplancore/v3/sheet-dots.png" />
   </p>
-<figcaption>Строки W, F, S по этажам B, 1-5, L, R и одна точка U. Выбранная точка подписана в статусе: <code>Route: W 1st</code>.</figcaption>
+<figcaption>Строки W, F, S по этажам B, 1-5, L, R и одна точка U. Выбранная точка подписана в статусе: <code>Route: W 1st floor</code>.</figcaption>
 </figure>
 <p>Под заголовком Scale на листе стоит сетка точек. Одна выбранная точка решает, в какую папку корпуса ляжет каждый <strong>новый</strong> замер с этого листа, любым инструментом.</p>
 <table>
@@ -7717,7 +7717,7 @@
 <li>Если точка не появилась или нужна другая, щёлкните нужную точку руками; повторный щелчок снимает. Копия плана под shear walls получает S руками. Точка, поставленная руками, не заменяется.</li>
 <li>Для всего проекта откройте <strong>Settings &gt; Sheet Takeoff Routing</strong> и нажмите <strong>Route sheets without a dot now</strong>.</li>
 </ol>
-<p>Результат: в статусе <code>Route: W 1st</code> (или <code>F 2nd</code>, <code>S 1st</code>, <code>U all floors</code>); в диалоге New Item строка назначения показывает папку.</p>
+<p>Результат: в статусе <code>Route: W 1st floor</code> (или <code>F 2nd</code>, <code>S 1st</code>, <code>U all floors</code>); в диалоге New Item строка назначения показывает папку.</p>
 <div class="admonition tip">
 <p class="admonition-title">Советы</p>
 <ul>

@@ -7336,8 +7336,8 @@ measuring rules: <a href="../1st2nd/#rules">Floor SQFT, rules section</a>.</p>
 <td><code>sqfts/deck</code></td>
 <td><code>Decking</code></td>
 <td>composite / <code>5/4x6 P.T.</code> per spec</td>
-<td><code>SQ FT</code> or <code>LFT</code></td>
-<td><code>SQFT x 1.1</code></td>
+<td><code>SQ FT</code></td>
+<td><code>=CEILING(W*D*units*1.1,10)</code>: area of one deck x units x 1.1; under 50 round up to 2</td>
 </tr>
 <tr>
 <td><code>sqfts/deck</code></td>
@@ -7348,9 +7348,16 @@ measuring rules: <a href="../1st2nd/#rules">Floor SQFT, rules section</a>.</p>
 </tr>
 <tr>
 <td>Line along the edge</td>
-<td><code>Railing</code>, <code>Posts at Rails 4x4 P.T.</code></td>
+<td><code>Posts at Rails</code></td>
+<td><code>4x4 P.T.</code>, 4' posts</td>
+<td><code>4</code> (post length)</td>
+<td>long rails: <code>=CEILING(LFT/6,1)+1</code></td>
+</tr>
+<tr>
+<td>same line</td>
+<td>railing rows by type</td>
 <td>per detail</td>
-<td><code>LFT</code>, <code>pcs</code></td>
+<td><code>LFT</code>, <code>pcs</code>, <code>unit</code></td>
 <td><a href="../../deck/railing/">Railing</a></td>
 </tr>
 </tbody>
@@ -7361,14 +7368,15 @@ measuring rules: <a href="../1st2nd/#rules">Floor SQFT, rules section</a>.</p>
 <li>LVL rim used by default: only when a deck attaches to it.</li>
 <li>Railing and stairs forgotten; guards as a separate row.</li>
 <li>Deck area assigned to a house floor.</li>
+<li>Decking without the 1.1 waste or in <code>LFT</code> instead of <code>SQ FT</code>.</li>
 </ul>
 <p>All area mistakes: <a href="../../../start/common-mistakes/#sqft">common-mistakes</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/sqfts/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  deck       Area   240 SF
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  deck       Area   240 SF   (20&#39; x 12&#39;, railing on three sides 44 LFT)
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Ground Decks Framing List
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Decking         5/4x6 P.T.      264   SQ FT
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Posts at Rails  4x4 P.T.          8   pcs
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Decking         5/4x6 P.T.      270   SQ FT   240 x 1.1 = 264, round up to 10
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Posts at Rails  4x4 P.T.          9   4       44 / 6 = 7.3, up to 8, plus 1
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

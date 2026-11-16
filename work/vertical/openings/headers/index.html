@@ -7440,46 +7440,47 @@ plies - из header schedule, не из ширины окна. На panel-job he
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Кнопка <code>HD</code> полосы XL кладёт headers в блок стен этажа <strong>ниже</strong>; сторона
 <code>ext</code> / <code>int</code> берётся из имени. В легенде <code>LG</code> строка <code>HP2 - (2) 2x10</code>
-даёт размер по коду, иначе в B попадёт код.</p>
+даёт размер по коду, иначе в B попадёт код. Число plies стоит в конце подписи
+в скобках: <code>(2)</code>, <code>(3)</code>; C считает каждую доску.</p>
 <table>
 <thead>
 <tr>
 <th>Имя в дереве</th>
 <th>Строка DFL</th>
-<th>Unit</th>
+<th>Unit (колонка D)</th>
 <th>Формула / фактор</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>ext H228 4</code></td>
-<td><code>Ext. Headers (2) up to 48"</code> <code>2x8</code></td>
-<td>pcs</td>
-<td>штук x plies, длина из имени</td>
+<td><code>Ext. Headers up to 48" (2)</code> <code>2x8</code></td>
+<td>штуки, D = <code>8</code></td>
+<td><code>точки x plies / 2</code>: два header режутся из одной доски</td>
 </tr>
 <tr>
 <td><code>ext H228 7</code></td>
-<td><code>Ext. Headers (2) up to 72"</code></td>
-<td>pcs</td>
-<td></td>
+<td><code>Ext. Headers up to 72" (2)</code></td>
+<td>штуки, D = <code>14</code> (до 60" D = <code>12</code>)</td>
+<td><code>точки x plies / 2</code></td>
 </tr>
 <tr>
 <td><code>ext (3) 2x10 8</code></td>
-<td><code>Ext. Headers (3) over 72"</code> <code>2x10</code></td>
-<td>pcs</td>
-<td>три доски на header</td>
+<td><code>Ext. Headers over 72" (3)</code> <code>2x10</code></td>
+<td>штуки, D = ширина проёма + 1', до чётного</td>
+<td><code>точки x plies</code>: один header из одной доски</td>
 </tr>
 <tr>
 <td><code>int H228 4</code></td>
 <td><code>Int. Headers (2)</code></td>
-<td>pcs</td>
-<td></td>
+<td>штуки, D = <code>8</code></td>
+<td><code>точки x plies / 2</code>; пролёт больше 4' - <code>точки x plies</code>, D по длине</td>
 </tr>
 <tr>
 <td><code>9.0x6.8 gd</code> ворота</td>
-<td><code>Garage headers (3)</code></td>
-<td>pcs</td>
-<td>по schedule</td>
+<td><code>Ext. Grge Headers (3)</code></td>
+<td>штуки, D = ширина ворот + 1', до чётного</td>
+<td><code>ворота x plies</code>, размер по schedule</td>
 </tr>
 <tr>
 <td>нет на плане</td>
@@ -7509,6 +7510,11 @@ plies - из header schedule, не из ширины окна. На panel-job he
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    ext (3) 2x10 8    Count, 2 ea     Notes: 4/S501, FRT per A001
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  int/
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    int H228 4        Count, 9 ea
+</span></code></pre></div>
+<p>Строки DFL в блоке стен 1-го этажа (<code>H228</code> = <code>(2) 2x8</code>):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Ext. Headers up to 48&quot; (2)    2x8     14   8    14 x 2 / 2
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Ext. Headers over 72&quot; (3)     2x10     6   8    2 x 3
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Int. Headers (2)              2x8      9   8    9 x 2 / 2
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

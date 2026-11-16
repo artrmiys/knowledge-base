@@ -7274,7 +7274,7 @@
 <figure>
 <p><img alt="Corner board over siding" src="../../../assets/images/trims/ext-cornerboard-vinyl.png" />
   </p>
-<figcaption>Corner board закрывает обрезанный край siding на углу. Считается LFT по высоте угла, умноженной на число углов этого типа.</figcaption>
+<figcaption>Corner board закрывает обрезанный край siding на углу. Считается LFT: сумма высот углов, для угла из двух досок x2, плюс waste 1.1.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Trim вокруг проёмов и по полю фасада: ext. casing (sides, heads, apron,
@@ -7313,8 +7313,10 @@ window sills, shutters, louvers, brackets. Всё это wood, PVC или compos
 <code>2" casing</code>, <code>8" horizontal trim</code>, <code>corner 5/4x6</code>. Фасады без точки листа,
 поэтому проверяй, что итем попал в <code>trims</code>. Casing удобнее считать
 формулой от списка проёмов (периметр одного окна x количество), Line
-только там, где профиль идёт по сложному контуру. Shutters, louvers и
-brackets это Count точками, свой цвет и символ у каждой позиции.</p>
+только там, где профиль идёт по сложному контуру. Corner: одна линия на
+каждый наружный угол по его высоте; в G идёт сумма высот, x2 на две доски
+стоит в формуле, не в замере. Shutters, louvers и brackets это Count
+точками, свой цвет и символ у каждой позиции.</p>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7329,80 +7331,87 @@ brackets это Count точками, свой цвет и символ у ка�
 <tbody>
 <tr>
 <td><code>trims/casing sides</code></td>
-<td><code>Ext. Casing sides</code></td>
+<td><code>Ext Casing</code></td>
 <td><code>5/4x4</code></td>
 <td>LFT</td>
-<td>вертикальные стороны openings</td>
+<td><code>=CEILING(G*1.1,10)</code>; строка на каждый профиль; sides и heads вместе, пока head того же размера</td>
 </tr>
 <tr>
 <td><code>trims/casing heads</code></td>
-<td><code>Ext. Casing heads</code></td>
-<td><code>5/4x4</code> / <code>5/4x6</code></td>
+<td><code>Ext Casing Head</code></td>
+<td><code>5/4x6</code> / <code>5/4x8</code></td>
 <td>LFT</td>
-<td>верх, часто шире; <code>(at crowns)</code> отдельной строкой</td>
+<td>только когда head шире sides или над ним crown; эти LFT в <code>Ext Casing</code> не входят</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Ext. Casing (apron &amp; sides)</code></td>
+<td><code>Ext Casing</code> второй строкой</td>
 <td><code>5/4x3</code></td>
 <td>LFT</td>
-<td>sides плюс apron под окном</td>
+<td>sides и apron под окном другим профилем</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Mull trims</code></td>
-<td><code>5/4x6</code></td>
+<td><code>Mullion trims</code></td>
+<td><code>5/4x4</code> / <code>5/4x6</code></td>
 <td>LFT</td>
-<td>между спаренными окнами</td>
+<td>между спаренными окнами: высота x число</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Casing garage doors (sides)</code>, <code>Head casing garage dr</code></td>
+<td><code>Ext Casing</code>, <code>Ext Casing Head</code> для ворот</td>
 <td><code>5/4x8</code>, <code>5/4x12</code></td>
 <td>LFT</td>
-<td>ворота отдельно</td>
+<td>ворота своими строками, когда доска шире</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Ext. Casing</code></td>
-<td><code>Vinyl J-channel</code> / <code>3-1/2" Vinyl casing</code></td>
+<td><code>Ext Casing</code></td>
+<td><code>J-Channel</code> / <code>3-1/2" Vinyl casing</code></td>
 <td>LFT</td>
 <td>при vinyl siding, не дублировать с <code>5/4</code></td>
 </tr>
 <tr>
 <td></td>
-<td><code>Head crowns</code>, <code>Crown cap</code>, <code>Head flashing</code></td>
-<td><code>3-1/2" crown</code>, <code>1x4</code>, <code>Drip edge</code></td>
+<td><code>Crowns</code>, <code>Crown Cap</code>, <code>Head Trim Flashing</code></td>
+<td><code>3-1/2" crown</code>, <code>1x4</code>, <code>Drip Edge</code></td>
 <td>LFT</td>
-<td>слойка над head: crown, cap, flashing</td>
+<td>слойка над head: crown, cap, flashing; длина равна head</td>
 </tr>
 <tr>
 <td></td>
 <td><code>Window Sills</code></td>
-<td><code>1" Sill</code> / <code>2" Sill</code></td>
+<td><code>2" Sill</code>, не указан: <code>TBD Sill</code></td>
 <td>LFT</td>
-<td>когда показан sill</td>
+<td>когда показан sill; в длину casing не входит</td>
 </tr>
 <tr>
 <td><code>trims/corner 5/4x6</code></td>
-<td><code>CornerBoards</code></td>
+<td><code>Corner Boards</code></td>
 <td><code>5/4x6</code> / <code>5/4x8</code></td>
 <td>LFT</td>
-<td>высота угла x число углов; bays отдельной строкой</td>
+<td>G = сумма высот наружных углов; две доски на угол: <code>=EVEN(G*2*1.1)</code>; bays отдельной строкой</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Corner Boards</code></td>
+<td><code>5/4x6x6</code> (L-профиль по детали)</td>
+<td>LFT</td>
+<td>один цельный L-элемент на угол: <code>=EVEN(G*1.1)</code>, без x2</td>
 </tr>
 <tr>
 <td><code>trims/band 5/4x10</code></td>
-<td><code>Band Trims</code>, <code>Watertable Trim</code></td>
+<td><code>Watertable Trim</code></td>
 <td><code>5/4x10</code> / <code>5/4x12</code></td>
 <td>LFT</td>
-<td>плюс <code>Flashing at band</code> drip edge сверху</td>
+<td>band и watertable под одной подписью; сразу под ней строка <code>Head Trim Flashing</code> <code>Drip Edge</code> той же длины</td>
 </tr>
 <tr>
 <td><code>trims/shutters</code></td>
-<td><code>Shutters - paneled</code></td>
-<td><code>20"x60"</code></td>
+<td><code>Shutters</code></td>
+<td><code>20"x60" paneled</code></td>
 <td>pairs</td>
-<td>пара на окно, размер в строке</td>
+<td>пара на окно, размер и тип в B</td>
 </tr>
 <tr>
 <td></td>
@@ -7414,31 +7423,46 @@ brackets это Count точками, свой цвет и символ у ка�
 </tbody>
 </table>
 <ul>
+<li>Формула погонажа одна: <code>=CEILING(G*1.1,10)</code>, где G это измеренная длина;
+  когда итог меньше 50, округление до 2. У <code>Corner Boards</code> своя формула с
+  <code>EVEN</code>.</li>
+<li>Угол из двух досок <code>5/4</code> это две доски на всю высоту угла, поэтому x2.
+  Нет детали угла: считай две доски. Vinyl corner (<code>4" Vinyl corner</code>) и
+  solid corner это один элемент на угол: без x2, и это другой продукт, не
+  <code>5/4</code>. Внутренние углы без строки, пока деталь не показывает доску.</li>
+<li>Наружный casing из доски пиши <code>5/4x</code>, а не <code>1x</code>, даже когда легенда
+  называет <code>1x</code>.</li>
 <li><code>4-sides</code> casing идёт по всему периметру, <code>3-sides</code> без низа (sill или
   siding). Пиши это в строке, это меняет LFT.</li>
-<li>Vinyl corner (<code>4" Vinyl corner</code>) это другой продукт, не <code>5/4</code>.</li>
 <li>Размер не указан: <code>TBD</code> в size, <code>scaled</code> или <code>assumed</code> в E, нота
   <code>Note: All trims to be verified. Scaled per elevations</code>.</li>
 </ul>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li>Casing одной строкой без разделения sides, heads, mulls, garage.</li>
+<li>Head другого размера, mull trims и ворота слиты в одну строку <code>Ext Casing</code>.</li>
 <li>При vinyl siding посчитаны и J-channel, и wood casing.</li>
 <li>Над head crown без cap и drip edge, хотя деталь их показывает.</li>
-<li>Band и watertable без flashing сверху.</li>
+<li><code>Watertable Trim</code> без <code>Head Trim Flashing</code> сверху.</li>
+<li><code>Corner Boards</code> без x2 при угле из двух досок; или x2 уже в G и ещё раз в формуле.</li>
+<li>Подпись не как в шаблоне (<code>CornerBoards</code>, <code>Ext. Casing sides</code>): макрос не соберёт строки.</li>
 <li>Shutters в pcs вместо pairs; размер shutter потерян.</li>
 <li>Trim вокруг stone или EIFS пропущен (см. <a href="../exclusions/">Exclusions</a>).</li>
 <li>Все ошибки по Excel и строкам: <a href="../../../start/common-mistakes/#excel">Excel DFL и ноты</a>.</li>
 </ul>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/trims/2&quot; casing          Line   412 LFT
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Takeoffs/Main/trims/corner 5/4x6       Line   8 x 28&#39; = 224 LFT
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Ext. Casing sides    5/4x4   380  LFT   =2*5.5*34 windows     A601
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Ext. Casing heads    5/4x6   112  LFT   =3.3*34               A601
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Head flashing        Drip edge 112 LFT  =C&lt;heads&gt;
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>CornerBoards         5/4x6   224  LFT   8 corners x 28&#39;       A201
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Shutters - paneled   20&quot;x60&quot; 12   pairs                       A201
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/trims/casing sides       Line   374 LFT   (2 x 5.5&#39; x 34 windows)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Takeoffs/Main/trims/casing heads       Line   112.2 LFT (3.3&#39; x 34 windows)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Takeoffs/Main/trims/corner 5/4x6       Line   8 x 28&#39; = 224 LFT
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Ext Casing           5/4x4       420  LFT   =CEILING(374*1.1,10)     A601
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Ext Casing Head      5/4x6       130  LFT   =CEILING(112.2*1.1,10)   A601
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Head Trim Flashing   Drip Edge   130  LFT   =CEILING(112.2*1.1,10)
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Corner Boards        5/4x6       494  LFT   =EVEN(224*2*1.1)         A201
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Shutters             20&quot;x60&quot; paneled   12   pairs                    A201
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Casing: 374 x 1.1 = 411.4, вверх до 10 = 420
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Heads: 112.2 x 1.1 = 123.4, вверх до 10 = 130
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Corners: 224 x 2 x 1.1 = 492.8, вверх до чётного = 494
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

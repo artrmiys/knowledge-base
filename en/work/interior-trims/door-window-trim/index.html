@@ -7296,7 +7296,7 @@
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
 <p>The list of interior doors and cased openings per floor, with size and
 type designation, from which the casing is calculated with a formula. The door schedule wins over the plan:
-if there is one, fill from it. The casing and jamb formula is on the
+if there is one, fill from it. The casing formula is on the
 <a href="../casing/">Casing</a> page; interior window trim (casing, stool, apron) only when it
 is in the finish schedule or details.</p>
 <h2 id="where-to-find-it-on-the-plans">Where to find it on the plans<a class="headerlink" href="#where-to-find-it-on-the-plans" title="Link to this section">&para;</a></h2>
@@ -7332,6 +7332,10 @@ size and type (<code>2680</code>, <code>(2)2680</code>, <code>4080 C.O.</code>),
 Shower glass doors are not included. Mark unit entry doors with a fire rating in the
 name (<code>2680 F.R.</code>); hardware numbers are not needed.</p>
 <h2 id="size-designations">Size designations<a class="headerlink" href="#size-designations" title="Link to this section">&para;</a></h2>
+<p>The size code reads like this: the first digits are the width (feet and inches), the
+last two are the height (foot and inches). <code>2680</code> = 2'-6" x 8'-0", <code>3068</code> = 3'-0" x 6'-8",
+<code>9068</code> = 9'-0" x 6'-8". A door wider than 3'-6" is written as a pair: <code>5070</code> in the
+schedule is <code>(2)2670</code>, <code>4070</code> is <code>(2)2070</code>.</p>
 <table>
 <thead>
 <tr>
@@ -7362,14 +7366,14 @@ name (<code>2680 F.R.</code>); hardware numbers are not needed.</p>
 <td>quantity and <code>Slider</code> stay</td>
 </tr>
 <tr>
-<td><code>(2)2680 Bi-Fold</code></td>
-<td>closet bi-fold</td>
+<td><code>(2)2668 Bi-Fold</code></td>
+<td>closet bi-fold, two leaves 2'-6" x 6'-8"</td>
 <td><code>Bi-Fold</code>, do not reduce it to slider</td>
 </tr>
 <tr>
-<td><code>9068 Bi-Fold</code></td>
-<td>wide bi-fold 9'-0" x 8'-0"</td>
-<td>one opening, panels are not counted separately</td>
+<td><code>9068</code> bi-fold in the schedule</td>
+<td>wide bi-fold 9'-0" x 6'-8"</td>
+<td>wider than 3'-6", so a pair: <code>(2)4668 Bi-Fold</code>; the folding panels inside a leaf are not counted separately</td>
 </tr>
 <tr>
 <td><code>2680 Metal F.R. S.C.</code></td>
@@ -7383,6 +7387,9 @@ name (<code>2680 F.R.</code>); hardware numbers are not needed.</p>
 </tr>
 </tbody>
 </table>
+<p>The code comes first in column B, the type words after it: the template formula reads
+the code and doubles pairs, and the casing depends on it. Door heights not given:
+assume 6'-8" and write a header note.</p>
 <p><code>F.R.</code> on a door means fire-rated (door, frame and hardware as an assembly).
 Do not confuse it with <code>FRT</code>: that is fire-retardant-treated framing lumber.</p>
 <h2 id="tree-name-and-dfl-row">Tree name and DFL row<a class="headerlink" href="#tree-name-and-dfl-row" title="Link to this section">&para;</a></h2>
@@ -7398,27 +7405,27 @@ Do not confuse it with <code>FRT</code>: that is fire-retardant-treated framing 
 <tbody>
 <tr>
 <td><code>openings/1/2680</code></td>
-<td><code>Int. Doors 2680</code></td>
-<td>pcs</td>
+<td><code>Int. Doors</code>, <code>2680</code> in B</td>
+<td>unit</td>
 <td>per floor, from the schedule</td>
 </tr>
 <tr>
 <td><code>openings/1/(2)2680</code></td>
-<td><code>Int. Doors (2)2680</code></td>
-<td>pcs</td>
+<td><code>Int. Doors</code>, <code>(2)2680</code> in B</td>
+<td>unit</td>
 <td>double as a pair</td>
 </tr>
 <tr>
 <td><code>openings/1/4080 C.O.</code></td>
-<td><code>Cased Openings 4080</code></td>
-<td>pcs</td>
-<td>separate from doors</td>
+<td><code>Cased Openings</code>, <code>4080 C.O.</code> in B</td>
+<td>unit</td>
+<td>separate from doors, after a blank row</td>
 </tr>
 <tr>
 <td></td>
 <td><code>Casing for Int. Doors</code></td>
 <td>LFT</td>
-<td>formula from the list, see <a href="../casing/">Casing</a></td>
+<td><code>=CEILING(2*SUM(perimeters)/12*1.1,10)</code>, see <a href="../casing/">Casing</a></td>
 </tr>
 <tr>
 <td></td>
@@ -7431,17 +7438,20 @@ Do not confuse it with <code>FRT</code>: that is fire-retardant-treated framing 
 <p>Excel entry:</p>
 <ol>
 <li>All doors and cased openings are entered per floor before the casing formulas.</li>
-<li>Sizes are rewritten in inches in a helper table: <code>2'-0" x
-   6'-8"</code> becomes <code>24 x 80</code>.</li>
-<li>Mark and quantity are copied to the helper table on the right; the casing formulas
-   come from it; repeated doors are counted with a formula, not typed by hand.</li>
+<li>The size code comes first in column B (<code>2680</code>, <code>(2)2680 Bi-Fold</code>). The template
+   converts it to a perimeter in inches in column G by itself: <code>2680</code> is 30" + 2 x
+   96" = 222", multiplied by the quantity; a <code>(2)</code> pair is doubled.</li>
+<li>Do not touch the G formula or replace it with a number: the casing is computed
+   from the sum of G. Identical doors are one row with a quantity, not several rows.</li>
 <li>Before output, select the quantity cells and compare the sum in the status
    bar with the number of doors on the plans.</li>
 </ol>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Doors counted by the wall or by a nearby note, not by the door symbol.</li>
-<li>Bi-fold panels counted as separate doors.</li>
+<li>Folding bi-fold panels counted as separate doors.</li>
+<li>A door wider than 3'-6" written as one door, not as a <code>(2)</code> pair.</li>
+<li><code>9068</code> read as 9'-0" x 8'-0": the last two digits are the height 6'-8".</li>
 <li>Shower glass doors entered as interior doors.</li>
 <li><code>Pocket</code>, <code>Slider</code>, <code>F.R. S.C.</code> lost on the way to Excel.</li>
 <li>A cased opening entered as a door.</li>
@@ -7451,12 +7461,19 @@ Do not confuse it with <code>FRT</code>: that is fire-retardant-treated framing 
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/openings/1/2680          Count   18
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Takeoffs/Main/openings/1/(2)2680       Count   3
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Takeoffs/Main/openings/1/4080 C.O.     Count   2
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Int. Doors 2680              18  pcs   A601
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Int. Doors (2)2680           3   pcs   A601
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Int. Doors 2680 Pocket       2   pcs   A601
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Cased Openings 4080          2   pcs   A601
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Casing for Int. Doors        1x3-1/2   ...  LFT   =(2*8+2.5)*2*18+...
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Takeoffs/Main/openings/1/2680 Pocket   Count   2
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Int. Doors       2680           18   unit   A601
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Int. Doors       (2)2680        3    unit   A601
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Int. Doors       2680 Pocket    2    unit   A601
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Cased Openings   4080 C.O.      2    unit   A601
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Casing for Int. Doors   1x3-1/2   1150  LFT   =CEILING(2*SUM(G)/12*1.1,10)
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>Perimeters: 2680 = 222&quot;, pair (2)2680 = 444&quot;, 4080 C.O. = 240&quot;
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>SUM = 222 x 18 + 444 x 3 + 222 x 2 + 240 x 2 = 6252&quot;
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2 x 6252 / 12 = 1042 LFT, x 1.1 = 1146.2, rounded up to 10 = 1150 LFT
 </span></code></pre></div>
 <details class="kb-figures kb-figures--rows">
   <summary>Show 8 archived cards with illustrations</summary>

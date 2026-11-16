@@ -7312,11 +7312,14 @@ is called <code>Loft</code>, not the next floor number. General measuring rules:
 <li>Confirm the framing type: floor joists, roof-type or by others; that decides
    where the joists go (<a href="../../horizontal/floor-framing/joist/">Joist</a>).</li>
 </ol>
-<div class="admonition warning">
-<p class="admonition-title">To be confirmed</p>
-<p>The <code>loft</code> token in the name auto-routing is not confirmed: check that the takeoff
-landed in <code>sqfts</code>; otherwise move it, or add a rule in
-Settings &gt; Takeoff Name Routing.</p>
+<div class="admonition note">
+<p class="admonition-title">The name <code>loft</code> and the <code>sqfts</code> folder</p>
+<p>The word <code>loft</code> is not among the names the app sends to <code>sqfts</code> by itself
+(the floors <code>1st</code>...<code>8th</code>, <code>base</code>, <code>porch</code>, <code>deck</code>, <code>blcny</code>, <code>cant</code>,
+<code>flat</code>, <code>rf</code> go there). After creating the takeoff, check that it sits in <code>sqfts</code>; if
+not, move it there or add a rule in Settings &gt; Takeoff Name
+Routing. The SF export understands the name <code>loft</code> and puts the area in the fifth
+floor cell: the loft <code>Subfloor</code> row must point at it.</p>
 </div>
 <h2 id="tree-name-and-dfl-row">Tree name and DFL row<a class="headerlink" href="#tree-name-and-dfl-row" title="Link to this section">&para;</a></h2>
 <table>
@@ -7345,11 +7348,18 @@ Settings &gt; Takeoff Name Routing.</p>
 <td><code>=CEILING(SQFT/32*1.1,1)</code></td>
 </tr>
 <tr>
+<td>J Area of the loft joist zone</td>
+<td><code>Joists 16" o.c.</code> in <code>Loft Framing List</code></td>
+<td>per the S plan</td>
+<td>board length in feet</td>
+<td>C = number of joists: <a href="../../horizontal/floor-framing/joist/">Joist</a></td>
+</tr>
+<tr>
 <td>Line along the open edge</td>
 <td><code>Railing</code> / guard</td>
 <td>per detail</td>
 <td><code>LFT</code></td>
-<td></td>
+<td><a href="../../deck/railing/">Railing</a></td>
 </tr>
 </tbody>
 </table>
@@ -7358,14 +7368,15 @@ Settings &gt; Takeoff Name Routing.</p>
 <li>Loft not found: it is on the architectural sheets, the framing is on the structural ones.</li>
 <li>Guard along the open perimeter forgotten.</li>
 <li>Loft written as <code>5th</code> instead of <code>Loft</code> on the Front Page.</li>
+<li>Joists written in <code>LFT</code>: C holds the number of boards, D the board length.</li>
 </ul>
 <p>All area mistakes: <a href="../../../start/common-mistakes/#sqft">common-mistakes</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/sqfts/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  loft      Area   340 SF
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  loft      Area   340 SF   (20&#39; x 17&#39;)
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Loft Framing List
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Joists 16&quot; o.c.    2x10     ...   LFT   S203
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Subfloor           3/4&quot; T&amp;G  12   4x8
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Joists 16&quot; o.c.    2x10       16   18    S203   20 x 12/16 = 15, plus 1; 17&#39; span = 18&#39; board
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Subfloor           3/4&quot; T&amp;G   12   4x8          340 / 32 x 1.1 = 11.7
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

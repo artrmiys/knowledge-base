@@ -7278,7 +7278,7 @@
 <h1 id="_1">Процесс работы<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h1>
 <p>Путь проекта от папки клиента до сдачи. Это общий маршрут; как мерить каждый
 элемент, написано на предметных страницах раздела "Работа", как заполнять
-Excel - в <a href="../../reference/takeoff-items/">Справочнике</a>.</p>
+Excel - во вкладке "Excel и DFL": <a href="../../reference/takeoff-items/">Подписи строк DFL</a>.</p>
 <figure>
 <p><img alt="Схема процесса: от Dropbox до .Finished" src="../../assets/images/process/work-process.svg" />
   </p>
@@ -7314,7 +7314,9 @@ Excel - в <a href="../../reference/takeoff-items/">Справочнике</a>.<
    листы мерные (планы этажей, roof plan, framing plans).</li>
 <li>Обшивка и утеплитель стен - с листа wall types; кровля - со structural
    roof framing и разреза; subfloor - с разреза. Противоречие арх и S решается
-   сразу: structural главнее, расхождение записывается нотой <code>... per &lt;лист&gt;; verify</code>.</li>
+   сразу: продукт обшивки и барьера берётся из типов стен на Arch, а толщина, каркас и
+   то, какие стены обшиваются, со Structural; расхождение записывается нотой
+   <code>... per &lt;лист&gt;; verify</code> с обоими листами.</li>
 <li>Масштабы: планы обычно 1/8", unit-планы 1/4", разрезы 3/8", детали NTS.
    Подпись листа не доказательство, масштаб проверяется по размеру на листе.</li>
 <li>Растровый комплект (скан): автоимена и автомасштаб не сработают, листы
@@ -7322,9 +7324,9 @@ Excel - в <a href="../../reference/takeoff-items/">Справочнике</a>.<
 </ol>
 <h2 id="3-ourplancore">3. Проект в OurPlanCore<a class="headerlink" href="#3-ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
 <figure>
-<p><img alt="Панель Pages с папками листов" src="../../assets/images/ourplancore/v3/pages-panel.png" />
+<p><img alt="Панель Pages с папками листов" src="../../assets/images/ourplancore/v3/pages-tree.png" />
   </p>
-<figcaption>Листы разложены по папкам <code>00. imported/Arch</code>, <code>Struct</code>, <code>sections</code>, <code>details ...</code>; ненужное в <code>--------others</code>. Имя листа <code>a101 1st</code>.</figcaption>
+<figcaption>Демо-проект в Lite: листы разложены по папкам <code>00. imported/Arch</code>, <code>Struct</code>, <code>units</code>, ненужное идёт в <code>--------others</code>; на работе к ним добавляются <code>sections</code>, <code>details ...</code>. Под листом <code>a101 1st</code> его позиции.</figcaption>
 </figure>
 <ol>
 <li><strong>Листы.</strong> Имя <code>&lt;номер листа&gt; &lt;тег&gt;</code> строчными: <code>a101 1st</code>, <code>s201 2nd</code>, <code>s101 f</code>,
@@ -7425,7 +7427,7 @@ joists только J Area, балки только Beam, проёмы толь�
 <a href="../takeoff-structure/">Дерево takeoff</a>.</p>
 <h2 id="5-excel-dfl">5. Excel DFL и ноты<a class="headerlink" href="#5-excel-dfl" title="Прямая ссылка на раздел">&para;</a></h2>
 <figure>
-<p><img alt="Полоса XL экспорта в Excel" src="../../assets/images/ourplancore/v3/excel-strip.png" />
+<p><img alt="Кнопки полосы XL: какая ветка дерева идёт в какую часть книги" src="../../assets/images/ourplancore/v3/excel-strip.svg" />
   </p>
 <figcaption>Кнопки полосы XL переносят ветки дерева в открытую книгу TemplateCom по секциям; <code>ALL</code> делает всё по порядку. В Lite полоса появляется после галки <code>Excel Strip (XL)</code> в <code>Settings &gt; Modules</code>.</figcaption>
 </figure>
@@ -7438,8 +7440,9 @@ joists только J Area, балки только Beam, проёмы толь�
    галка <code>Excel Strip (XL)</code> в <code>Settings &gt; Modules</code>. Подробно -
    <a href="../../reference/ourplancore-excel/">Экспорт в Excel</a>,
    <a href="../../reference/ourplancore-lite/">Lite и полная версия</a>.</li>
-<li>Высота стены живёт в E строки студов (до 1/8"), единицы в D: <code>LFT</code> для досок,
-   <code>pcs</code> для крепежа, SF для листов. Имена строк - <a href="../../reference/takeoff-items/">Имена строк DFL</a>.</li>
+<li>Высота стены живёт в E строки студов (до 1/8"), единицы в D: <code>LFT</code> для погонажа,
+   <code>pcs</code> для крепежа, <code>4x8</code> для листов, <code>SQ FT</code> для площадей; у досок, которые заказывают
+   штуками, в D длина доски в футах. Имена строк - <a href="../../reference/takeoff-items/">Имена строк DFL</a>.</li>
 <li>Формулы только от собственных входов блока; новую формулу проверяй на первой
    строке сразу. Не множить на 1.1 второй раз - <a href="../../reference/formulas/">Формулы</a>.</li>
 <li>Ноты: префикс <code>Important:</code>, <code>Note:</code> или <code>Comment:</code>, жёлтый фон, всегда под
@@ -7458,9 +7461,9 @@ joists только J Area, балки только Beam, проёмы толь�
 В OurPlanCore: Estimating, <code>Total</code>, легенда листа (<code>Organize &gt; Sort Sheet Legend by Key</code>).</p>
 <h2 id="7">7. Экспорт<a class="headerlink" href="#7" title="Прямая ссылка на раздел">&para;</a></h2>
 <figure>
-<p><img alt="Диалог экспорта PDF" src="../../assets/images/ourplancore/v3/export-pdf.png" />
+<p><img alt="Окно Export PDF: галки замеров и легенды" src="../../assets/images/ourplancore/v3/export-pdf-options.png" />
   </p>
-<figcaption>PDF Output: Preview, потом Export. В файл идут только листы, на которых есть видимые замеры.</figcaption>
+<figcaption>PDF Output: Preview, потом Export. В окне Export PDF галки Measurements и Legend включены, Markups выключена, ниже листы галками. В файл идут только листы, на которых есть видимые замеры.</figcaption>
 </figure>
 <ol>
 <li><strong>PDF.</strong> Сохранить проект (Ctrl+S). Лишнее спрятать (H), узлы собрать

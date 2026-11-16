@@ -59,7 +59,7 @@
   <text class="c" x="21" y="176" fill="#1f2328">Insulation</text>
   <text class="c" x="257.0" y="176" fill="#1f2328" text-anchor="middle">Rigid Insulation</text>
   <text class="c" x="340.0" y="176" fill="#1f2328" text-anchor="middle">50</text>
-  <text class="c" x="382.0" y="176" fill="#1f2328" text-anchor="middle">SF</text>
+  <text class="c" x="382.0" y="176" fill="#1f2328" text-anchor="middle">SQ FT</text>
   <rect x="16" y="183" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="194" y="183" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="320" y="183" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
@@ -149,7 +149,7 @@
   <text class="c" x="21" y="436.5" fill="#1f2328">Rigid Insulation (hdrs)</text>
   <text class="c" x="257.0" y="436.5" fill="#1f2328" text-anchor="middle">Rigid Insulation</text>
   <text class="c" x="340.0" y="436.5" fill="#1f2328" text-anchor="middle">100</text>
-  <text class="c" x="382.0" y="436.5" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <text class="c" x="382.0" y="436.5" fill="#1f2328" text-anchor="middle">SQ FT</text>
   <rect x="16" y="443.5" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="194" y="443.5" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="320" y="443.5" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
@@ -252,22 +252,22 @@
   <rect x="404" y="708.5" width="58" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="462" y="708.5" width="52" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <text class="c" x="21" y="724.5" fill="#1f2328">Option Panel</text>
-  <rect x="16" y="731.5" width="178" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
-  <rect x="194" y="731.5" width="126" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
-  <rect x="320" y="731.5" width="40" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
-  <rect x="360" y="731.5" width="44" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
-  <rect x="404" y="731.5" width="58" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
-  <rect x="462" y="731.5" width="52" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="16" y="731.5" width="178" height="23" fill="#E4DFEC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="731.5" width="126" height="23" fill="#E4DFEC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="731.5" width="40" height="23" fill="#E4DFEC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="731.5" width="44" height="23" fill="#E4DFEC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="731.5" width="58" height="23" fill="#E4DFEC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="731.5" width="52" height="23" fill="#E4DFEC" stroke="#3a3f44" stroke-width="0.7"/>
   <text class="c" x="21" y="747.5" fill="#1f2328">Panel</text>
   <text class="c" x="257.0" y="747.5" fill="#1f2328" text-anchor="middle">1x6 vert gap T&amp;G</text>
   <text class="c" x="340.0" y="747.5" fill="#1f2328" text-anchor="middle">190</text>
-  <text class="c" x="382.0" y="747.5" fill="#1f2328" text-anchor="middle">SQFT</text>
-  <rect x="16" y="754.5" width="178" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
-  <rect x="194" y="754.5" width="126" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
-  <rect x="320" y="754.5" width="40" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
-  <rect x="360" y="754.5" width="44" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
-  <rect x="404" y="754.5" width="58" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
-  <rect x="462" y="754.5" width="52" height="23" fill="#FCE5D7" stroke="#3a3f44" stroke-width="0.7"/>
+  <text class="c" x="382.0" y="747.5" fill="#1f2328" text-anchor="middle">SQ FT</text>
+  <rect x="16" y="754.5" width="178" height="23" fill="#E4DFEC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="754.5" width="126" height="23" fill="#E4DFEC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="754.5" width="40" height="23" fill="#E4DFEC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="754.5" width="44" height="23" fill="#E4DFEC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="754.5" width="58" height="23" fill="#E4DFEC" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="754.5" width="52" height="23" fill="#E4DFEC" stroke="#3a3f44" stroke-width="0.7"/>
   <text class="c" x="21" y="770.5" fill="#1f2328">Over Panel</text>
   <text class="c" x="257.0" y="770.5" fill="#1f2328" text-anchor="middle">1x10</text>
   <text class="c" x="340.0" y="770.5" fill="#1f2328" text-anchor="middle">18</text>
@@ -281,12 +281,12 @@
   <circle cx="25" cy="802.5" r="9" fill="#c62828"/>
   <path d="M21,798.5 L29,806.5 M29,798.5 L21,806.5" fill="none" stroke="#fff" stroke-width="2.2"/>
   <text class="h" x="42" y="807.5" fill="#c62828">Оранжевый: это не опция</text>
-  <rect x="16" y="817.5" width="178" height="23" fill="#FFC000" stroke="#3a3f44" stroke-width="0.7"/>
-  <rect x="194" y="817.5" width="126" height="23" fill="#FFC000" stroke="#3a3f44" stroke-width="0.7"/>
-  <rect x="320" y="817.5" width="40" height="23" fill="#FFC000" stroke="#3a3f44" stroke-width="0.7"/>
-  <rect x="360" y="817.5" width="44" height="23" fill="#FFC000" stroke="#3a3f44" stroke-width="0.7"/>
-  <rect x="404" y="817.5" width="58" height="23" fill="#FFC000" stroke="#3a3f44" stroke-width="0.7"/>
-  <rect x="462" y="817.5" width="52" height="23" fill="#FFC000" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="16" y="817.5" width="178" height="23" fill="#FABF8F" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="194" y="817.5" width="126" height="23" fill="#FABF8F" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="320" y="817.5" width="40" height="23" fill="#FABF8F" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="360" y="817.5" width="44" height="23" fill="#FABF8F" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="404" y="817.5" width="58" height="23" fill="#FABF8F" stroke="#3a3f44" stroke-width="0.7"/>
+  <rect x="462" y="817.5" width="52" height="23" fill="#FABF8F" stroke="#3a3f44" stroke-width="0.7"/>
   <text class="c" x="21" y="833.5" fill="#1f2328">Blocking</text>
   <text class="c" x="257.0" y="833.5" fill="#1f2328" text-anchor="middle">2x6</text>
   <text class="c" x="340.0" y="833.5" fill="#1f2328" text-anchor="middle">192</text>

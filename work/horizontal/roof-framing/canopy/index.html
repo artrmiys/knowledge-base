@@ -7295,7 +7295,7 @@
 </tr>
 <tr>
 <td>Canopy details (A5xx, S5xx)</td>
-<td>balки, rafters или joists, шаг, крепление к стене, посты</td>
+<td>балки, rafters или joists, шаг, крепление к стене, посты</td>
 </tr>
 <tr>
 <td>RCP</td>
@@ -7360,7 +7360,7 @@
 <figcaption>Canopy у стены: ledger или стальная пластина с анкерами, joists, балка по краю, настил и soffit. Canopy не входит в eve/rake.</figcaption>
 </figure>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Экспорт: кнопки FR и JS полосы XL кладут позиции canopy в <code>Canopy Framing List</code>; если листа нет, он создаётся копией ближайшего этажа. Состав блока по детали:</p>
+<p>Экспорт: кнопки FR и JS полосы XL кладут позиции canopy в <code>Canopy Framing List</code>; если листа нет, он создаётся копией ближайшего этажа. Шапка блока: <code>&lt;Location&gt; Canopy Framing List &lt;L&gt;' x &lt;W&gt;' &lt;G&gt; unit&lt;H&gt;</code>, G - число одинаковых canopies. Состав блока по детали:</p>
 <table>
 <thead>
 <tr>
@@ -7373,29 +7373,29 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Beams (3)</code></td>
-<td><code>2x10</code></td>
-<td>точки</td>
+<td><code>Beam (3)</code></td>
+<td><code>2x10 P.T.</code></td>
+<td>точки x 3</td>
 <td><code>12</code></td>
 <td><code>FB30</code></td>
 </tr>
 <tr>
 <td><code>Plates (2) with steel plate</code></td>
-<td><code>2x10</code></td>
-<td>LFT / 16</td>
+<td><code>2x10 P.T.</code></td>
+<td><code>=ОКРВВЕРХ(G*2/D;1)</code></td>
 <td><code>16</code></td>
 <td>деталь крепления</td>
 </tr>
 <tr>
 <td><code>Rafters 16" o.c.</code> или <code>Joists 24" o.c.</code></td>
-<td><code>2x10</code>, <code>2x6</code></td>
+<td><code>2x10 P.T.</code>, <code>2x6 P.T.</code></td>
 <td>по J Area</td>
 <td>длины</td>
 <td></td>
 </tr>
 <tr>
 <td><code>Hangers</code></td>
-<td><code>LUS210</code>, <code>HUC210-2</code></td>
+<td><code>LUS210 Zmax</code>, <code>HUC210-2 Zmax</code></td>
 <td>по узлам</td>
 <td><code>pcs</code></td>
 <td></td>
@@ -7407,53 +7407,85 @@
 <td><code>pcs</code></td>
 <td>стальная пластина к стене</td>
 </tr>
+</tbody>
+</table>
+<ul>
+<li><code>(n)</code> в Label - число plies, C считает все доски: <code>Beam (3)</code> с тремя точками даёт C = 9.</li>
+<li>Canopy стоит на улице: балки, rafters, joists, plates и ledger блока - <code>P.T.</code>, под крышей или нет; hangers с <code>Zmax</code> отдельным словом после модели.</li>
+</ul>
+<p>Строки canopy в других секциях:</p>
+<table>
+<thead>
 <tr>
-<td><code>Roof Sheathing at Canopy</code></td>
+<th>Секция</th>
+<th>A (Label)</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Roof System Misc</td>
+<td><code>Roof Sheathing at Canopy Roofs</code></td>
 <td><code>3/4" T&amp;G OSB</code></td>
-<td>SQ FT / 32 x 1.1</td>
+<td><code>=ОКРВВЕРХ(G/32*1.1;1)</code></td>
 <td><code>4x8</code></td>
-<td></td>
+<td>лист детали canopy</td>
 </tr>
 <tr>
-<td><code>Tapered Insulation</code></td>
-<td>по спецификации</td>
-<td>SQ FT</td>
+<td>Roof System Misc</td>
+<td><code>Roof Insulation</code></td>
+<td><code>Tapered Polyiso Insulation</code>, по спецификации</td>
+<td>SQ FT x 1.1</td>
 <td><code>SQ FT</code></td>
-<td></td>
+<td>лист assembly</td>
 </tr>
 <tr>
-<td><code>Soffits at Canopy (2)</code></td>
-<td><code>5/8" Glassmat</code> или <code>5/8" Ext Gyp</code></td>
-<td>SQ FT x слои</td>
+<td>Canopy Trims</td>
+<td><code>Soffit Gypsum (2)</code></td>
+<td><code>5/8" Glassmat Gyp</code> или <code>5/8" Ext Gyp</code></td>
+<td><code>=ОКРВВЕРХ(G*2*1.1;2)</code> x число canopies</td>
 <td><code>SQ FT</code></td>
 <td>RCP</td>
 </tr>
 <tr>
+<td>Canopy Trims</td>
 <td><code>Frame 16" o.c.</code> + <code>Plate (2)</code></td>
-<td><code>2x4</code></td>
+<td><code>2x4</code>, без P.T.</td>
 <td>каркас soffit</td>
 <td><code>LFT</code></td>
 <td>RCP</td>
 </tr>
 </tbody>
 </table>
+<ul>
+<li>Настил canopy со своей площадью (не входит в линии <code>rf</code> основной крыши) - строка <code>Roof Sheathing at Canopy Roofs</code> в Roof System Misc, под ней <code>Roof Insulation</code>, если assembly canopy показывает утеплитель. В блоке canopy настил второй раз не пишем. Если крыша canopy уже входит в линии <code>rf</code>, отдельной строки нет.</li>
+<li>Отделка canopy (soffit gypsum, каркас soffit, fascia) - группа <code>Canopy Trims</code> сразу после блока, а не строки в общих секциях. Каркас soffit - <code>2x4</code> без P.T., как у frame for soffits.</li>
+<li>Два слоя гипса на потолке canopy - одна строка <code>Soffit Gypsum (2)</code>: <code>G</code> - площадь одного canopy, слои стоят в Label и один раз как <code>x 2</code> в формуле, запас <code>1.1</code> всегда.</li>
+</ul>
 <p>Каркас не показан - note сразу под заголовком блока: <code>Note: Canopy framing is not specified; all framing assumed; verify</code>.</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Canopy посчитан в <code>eve</code> и <code>rake</code> основной крыши второй раз.</li>
-<li>Soffit canopy посчитан обычным гипсом, а нужен exterior-grade (<code>5/8" Glassmat</code>, DensGlass), по детали два слоя.</li>
+<li>Soffit canopy посчитан обычным гипсом, а нужен exterior-grade (<code>5/8" Glassmat Gyp</code>, DensGlass), по детали два слоя.</li>
+<li>Два слоя гипса записаны двумя строками, без <code>x 2</code> или без запаса <code>1.1</code>.</li>
 <li>Площадь soffit не попала в обшивку и WRB, если деталь так требует.</li>
 <li>Настил canopy по основной спецификации кровли, а деталь даёт <code>3/4" T&amp;G</code> + tapered insulation.</li>
+<li>Настил canopy записан и в блоке, и в Roof System Misc: считается один раз.</li>
+<li>Балки, rafters или joists canopy без <code>P.T.</code>, hangers без <code>Zmax</code>.</li>
 <li>Крепление к стене (стальная пластина, anchor bolts, washers, nuts) пропущено.</li>
 <li>Metal stud joists canopy посчитаны деревом или не посчитаны: по детали.</li>
 <li><a href="../../../../start/common-mistakes/#roof">Все ошибки по крыше</a></li>
 </ul>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sqfts/flat canopy                              Area, 96 SF
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sqfts/flat canopy                              Area, 96 SQ FT
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>framing/1st floor framing/joists/flat canopy 2x6 24&quot;    J Area
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>framing/1st floor framing/beams/FB30 12        3 точки
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>framing/1st floor framing/details/canopy ledger   Line, 24 LF
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>framing/1st floor framing/details/canopy ledger   Line, 24 LFT
 </span></code></pre></div>
+<p>Блок canopy:</p>
 <table>
 <thead>
 <tr>
@@ -7466,28 +7498,43 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Beams (3)</code></td>
-<td><code>2x10</code></td>
-<td>3</td>
+<td><code>Beam (3)</code></td>
+<td><code>2x10 P.T.</code></td>
+<td>9</td>
 <td>12</td>
 <td><code>FB30 per S601</code></td>
 </tr>
 <tr>
 <td><code>Joists 24" o.c.</code></td>
-<td><code>2x6</code></td>
+<td><code>2x6 P.T.</code></td>
 <td>7</td>
 <td>8</td>
 <td><code>11/A506</code></td>
 </tr>
+</tbody>
+</table>
+<p>Группа <code>Canopy Trims</code> после блока:</p>
+<table>
+<thead>
 <tr>
-<td><code>Soffits at Canopy (2)</code></td>
-<td><code>5/8" Glassmat</code></td>
-<td>192</td>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Soffit Gypsum (2)</code></td>
+<td><code>5/8" Glassmat Gyp</code></td>
+<td>212</td>
 <td>SQ FT</td>
 <td><code>11/A506</code></td>
 </tr>
 </tbody>
 </table>
+<p><code>Beam (3)</code>: 3 точки x 3 plies = 9 досок. <code>Soffit Gypsum (2)</code>: 96 SQ FT x 2 слоя x 1.1 = 211.2, вверх до чётного = 212, один canopy.</p>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li><a href="../../../sqfts/porch/">Porch SQFT</a>, <a href="../../../deck/deck-porch-balcony-frame/">Deck / Porch / Balcony Frame</a></li>

@@ -7332,7 +7332,6 @@ continuous insulation, WRB, flashing проёмов, bracing, window jambs и fu
 </tbody>
 </table>
 <h2 id="exterior-gypsum-sheathing">Exterior gypsum sheathing<a class="headerlink" href="#exterior-gypsum-sheathing" title="Прямая ссылка на раздел">&para;</a></h2>
-<div class="kb-split">
 <ul>
 <li><code>5/8" Type X</code> exterior grade - стандартный наружный gypsum. Для гипса
   <code>19/32"</code> не используется: это обозначение plywood/OSB.</li>
@@ -7347,7 +7346,6 @@ continuous insulation, WRB, flashing проёмов, bracing, window jambs и fu
   </p>
 <figcaption>Wall type с UL-сборкой: (2) layers 5/8" exterior gypsum на наружной грани. Два слоя = две строки или строка "(2) layers".</figcaption>
 </figure>
-</div>
 <figure>
 <p><img alt="WD stud brick wall: Type X gypsum over FRT sheathing" src="../../../../assets/images/sheathing/wd-stud-brick-gypsum-frt.png" />
   </p>
@@ -7360,7 +7358,12 @@ continuous insulation, WRB, flashing проёмов, bracing, window jambs и fu
   только снаружи после обшивки.</li>
 <li><code>Insulation at CMU</code> - continuous insulation на CMU стенах: отдельная
   строка, площадь обычно больше. Под ней Z metal furring.</li>
-<li>Zip R пишется вместе с insulation (<code>Zip R-3</code> = обшивка плюс утеплитель).</li>
+<li>Zip R несёт утеплитель в самом листе: продукт пишется в <code>Wall Sheathing</code>
+  (<code>Zip R-3</code>), отдельной строки <code>Insulation</code> нет.</li>
+<li>Утеплитель между стойками (batt, mineral wool, spray foam, sound) by others:
+  строки нет. Rigid insulation над кровельным настилом - тоже continuous,
+  своя строка в кровле.</li>
+<li>В B слово <code>Insulation</code> пишется полностью: <code>2" XPS Insulation</code>.</li>
 <li>Единица <code>SQ FT</code>, вычеты проёмов те же, что у обшивки.</li>
 </ul>
 <figure>
@@ -7389,8 +7392,8 @@ continuous insulation, WRB, flashing проёмов, bracing, window jambs и fu
 <tr>
 <td><code>Bracing Ext Walls</code> / <code>Bracing Corridor</code> / <code>Bracing Demising</code></td>
 <td><code>2x4</code></td>
-<td><code>LFT</code></td>
-<td>Bracing на metal стенах</td>
+<td>штуки, в D длина доски (до 10' = 14, до 12' = 16, до 16' = 18, выше = 20)</td>
+<td>Bracing на metal стенах: <code>=G/8*1.1</code>, одна доска на 8 LFT стены; только стены от 7'</td>
 </tr>
 <tr>
 <td><code>Window Flashing at Mtl Walls</code>, <code>Sill Flashing at Mtl Walls</code></td>
@@ -7432,7 +7435,9 @@ continuous insulation, WRB, flashing проёмов, bracing, window jambs и fu
 <li>Слои gypsum не разделены: 1 слой, (2) layers, over FRT.</li>
 <li><code>Insulation</code> и <code>Insulation at CMU</code> слиты в одну строку.</li>
 <li>Посчитан внутренний гипс, утеплитель между стойками или sound batt.</li>
-<li>Написано "Vapor Barrier / Tyvek", хотя в спецификации fluid-applied WRB.</li>
+<li>В B строки <code>Vapor Barrier</code> записан Tyvek, хотя в спецификации fluid-applied WRB.</li>
+<li>При Zip добавлена строка <code>Vapor Barrier</code>: у Zip барьер встроен, нужны только <code>Tape</code> и flashing проёмов.</li>
+<li><code>Bracing</code> записан в LFT: это штуки досок.</li>
 <li>Сборка дочитана не до конца: пропущен третий слой <code>5/8"</code>, Z-girt, overbuild.</li>
 </ul>
 <p>Все ошибки по обшивке: <a href="../../../../start/common-mistakes/#sheathing">common-mistakes</a>.</p>
@@ -7444,7 +7449,7 @@ continuous insulation, WRB, flashing проёмов, bracing, window jambs и fu
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Box Sheathing                1/2&quot; Ply FRT             75   4x8
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Insulation                   1.5&quot; Cont. Insulation  6670   SQ FT
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Insulation at CMU            1.5&quot; Cont. Insulation 13350   SQ FT
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Bracing Ext Walls            2x4                     ...   LFT
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Bracing Ext Walls            2x4                      57   16      412 LFT / 8 x 1.1 = 56.7
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Window Flashing at Mtl Walls Flashing Tape          1650   LFT
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Sill Flashing at Mtl Walls   Sill Flashing           670   LFT
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Note: Assumed window jambs 2x4 are not used per A8.53; verify.

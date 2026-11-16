@@ -7345,6 +7345,11 @@
 </tbody>
 </table>
 <h2 id="balcony-block">Balcony block<a class="headerlink" href="#balcony-block" title="Link to this section">&para;</a></h2>
+<figure>
+<p><img alt="A filled balcony block in Excel" src="../../../assets/images/reference/dfl-balcony-block.svg" />
+  </p>
+<figcaption>A filled block: framing header with size and units, the note under it, framing rows, then <code>Decking and Railing</code> under its own header. On the right the column C formula, G = units from the header. Callouts on the picture are in Russian.</figcaption>
+</figure>
 <table>
 <thead>
 <tr>
@@ -7361,7 +7366,7 @@
 </tr>
 <tr>
 <td><code>Post Bases</code></td>
-<td>model per detail (<code>ABA66Z</code>, <code>ABU66 Zmax</code>)</td>
+<td>model per detail (<code>ABA66 Zmax</code>, <code>ABU66 Zmax</code>)</td>
 <td>S detail</td>
 </tr>
 <tr>
@@ -7406,7 +7411,7 @@
 </tr>
 <tr>
 <td><code>Decking</code></td>
-<td>under its own header; <code>2x6 DuxxBak</code>, SQ FT, E = detail; <code>5/4x6</code> only on a terrace over a garage (there: subfloor <code>3/4" Ply</code> + sleepers <code>2x4 P.T.</code> + <code>5/4x6</code>)</td>
+<td>under its own header; <code>2x6 DuxxBak</code>, SQ FT: area of one balcony x units x 1.1 (<code>=CEILING(W*D*G*1.1,10)</code>, under 50 round to an even number), E = detail; <code>5/4x6</code> only on a terrace over a garage (there: subfloor <code>3/4" Ply</code> + sleepers <code>2x4 P.T.</code> + <code>5/4x6</code>)</td>
 <td>A detail</td>
 </tr>
 <tr>
@@ -7429,11 +7434,11 @@
 <tbody>
 <tr>
 <td>Composite, Azek, system</td>
-<td>note about the system + <code>Posts at Rails 4x4 P.T.</code> (<code>=2*G</code>, two per balcony) + <code>Post Sleeve</code> + <code>Post Cap</code> + <code>Rail sections 6'</code> (front and sides as separate rows)</td>
+<td>note about the system + <code>Posts at Rails 4x4 P.T.</code> (<code>=2*G</code>, two per balcony) + <code>Post Sleeve</code> + <code>Post Cap</code> + <code>Rail sections</code>: one row per section length, B <code>8' Rail section</code>, D <code>unit</code>, E the side and its real length (<code>front 7'-4"</code>). One section per span between posts; the section length is the next stock length above the side</td>
 </tr>
 <tr>
 <td>Wood painted, by component</td>
-<td><code>Posts at Rails 4x4 P.T.</code> (<code>=2*G</code>) + <code>Balustrades =EVEN(G*2.2)</code> + <code>Rails (top &amp; bottom) =EVEN(G*2.2)</code> + <code>Cap Rail =EVEN(G*1.1)</code>, where G = railing LF x units</td>
+<td><code>Posts at Rails 4x4 P.T.</code> (<code>=2*G</code>) + <code>Balustrades =EVEN(G*2.2)*units</code> (<code>pcs</code>) + <code>Rails (top &amp; bottom) =EVEN(G*2.2)*units</code> (<code>LFT</code>) + <code>Cap Rail =EVEN(G*1.1)*units</code> (<code>LFT</code>), where G = railing length of one balcony in LFT (the perimeter less the wall side), units = G of the block header</td>
 </tr>
 <tr>
 <td>Aluminum, metal</td>
@@ -7447,9 +7452,9 @@
 <li><code>Ceiling Joists 16" o.c.</code> + ledger + hangers are required and go separately from the rafters.</li>
 <li>Porch framing not shown on the drawings: a note right under the header: <code>Note: Porch framing is not specified; all framing assumed; verify.</code></li>
 <li>A porch over a balcony with a truss roof: only <code>Posts</code> + <code>Beams</code> (+ caps), units = stacks, remove the template's rafters and ridge.</li>
-<li>Porch ceiling as one row <code>5/8" Gyp</code>, the two layers built into the formula (<code>*2</code>), not two rows.</li>
+<li>Porch ceiling with a rated assembly (the section names a UL or GA assembly): one row <code>Soffit Gypsum (2)</code>, B <code>5/8" Type X</code>, C <code>=CEILING(G*2*1.1,2)*units</code>, D <code>SQ FT</code>, where G = area of one porch. The two layers are in the label and as <code>*2</code> once; never two gypsum rows. An open porch with no ceiling shown gets no row.</li>
 <li>Rafter block of a real porch roof: box + ledger + sub fascia, ridge beam per detail.</li>
-<li>Exterior posts of a porch, balcony and railing are always <code>P.T.</code>; a porch or balcony under a roof (enclosed) is regular framing, not P.T. Exterior hardware <code>Zmax</code> (<a href="../hangers/#dfl-format">Hangers</a>).</li>
+<li>Outdoor lumber of a porch, balcony, deck and canopy is always <code>P.T.</code>: posts, beams, joists, ledger, rafters, railing posts, roofed or not. Plain lumber only inside the building envelope (a bay floor, interior posts). Hardware outdoors and on P.T. takes <code>Zmax</code> (<a href="../hangers/#dfl-format">Hangers</a>).</li>
 </ul>
 <h2 id="holdowns">Holdown block<a class="headerlink" href="#holdowns" title="Link to this section">&para;</a></h2>
 <p>Location: in the wall section of the floor whose shear walls the holdown serves (<code>1st Floor Walls</code>, <code>2nd Floor Walls</code>), not in the Framing List. The block goes at the end of the section: after the last <code>Tape</code> row (under Box Sheathing), with a blank row before and after.</p>
@@ -7496,19 +7501,29 @@
 </ul>
 <p>All mistakes: <a href="../../start/common-mistakes/#deck">Deck, porch, balconies</a>, <a href="../../start/common-mistakes/#holdowns">Shear walls and holdowns</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#2 Upper Balcony List 12&#39; x 7&#39;   4 unit            (header G = 4)
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Posts                      6x6 P.T.           =2*G       pcs   10&#39;     S4.1
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Post Caps                  BC46 Zmax          =2*G       pcs           3/S4.1
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Beam (2)                   2x12 P.T.          =2*CEILING(12/14,1)*G    LFT   B3 S4.1
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Joists 16&quot; o.c.            2x12 P.T.          =CEILING((7*12/16+1)/2,1)*G   LFT  S4.1
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Hangers                    LUS210 Zmax        =CEILING(10*G,2)         pcs   7/S4.1
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Balcony Decking and Railing                        (its own header)
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Note: Railing is composite per A6.2; posts, sleeves, caps and rail sections counted.
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Decking                    2x6 DuxxBak        =CEILING(12*7*1.1,10)*G  SQ FT 5/A5.5
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Posts at Rails 4x4 P.T.    4x4 P.T.           =2*G       pcs   4&#39;
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Rail sections 6&#39;           6&#39; Rail section    =EVEN(19/6*G)  pcs
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>A                          B                  C                              D      E
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>#2 Upper Balcony List 8&#39; x 6&#39;   4 unit                                             (header G = 4)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Posts                      6x6 P.T.           =2*G                           10     S4.1
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Post Caps                  BC46 Zmax          =2*G                           pcs    3/S4.1
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Beam (2)                   2x12 P.T.          =1*2*G                         8      B3
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Joists 16&quot; o.c.            2x12 P.T.          =CEILING((8*12/16+1)/2,1)*G    12     28 pcs 6&#39;
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Hangers                    LUS210 Zmax        =7*G                           pcs    7/S4.1
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Balcony Decking and Railing                                                        (its own header)
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Note: Railing is composite per A6.2; posts, sleeves, caps and rail sections counted.
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Decking                    2x6 DuxxBak        =CEILING(8*6*G*1.1,10)         SQ FT  5/A5.5
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Posts at Rails             4x4 P.T.           =2*G                           4      assumed
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Rail sections              8&#39; Rail section    =1*G                           unit   front 7&#39;-4&quot;
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>Rail sections              6&#39; Rail section    =2*G                           unit   sides 6&#39;
 </span></code></pre></div>
+<p>What this gives for 4 balconies:</p>
+<ul>
+<li><code>Posts</code>: 2 x 4 = 8 posts, D holds the post length 10'. <code>Beam (2)</code>: one two-ply beam per balcony, 1 x 2 x 4 = 8 boards of 8'.</li>
+<li><code>Joists</code>: an 8' width at 16" o.c. takes 8 x 12 / 16 + 1 = 7 joists of 6'. Two 6' pieces are cut from a 12' board, so 4 boards per balcony, 16 in all; D holds the board length 12, the piece count goes to E.</li>
+<li><code>Hangers</code>: a joist hangs on a hanger at the ledger, its other end sits on the beam: 7 x 4 = 28.</li>
+<li><code>Decking</code>: 8 x 6 x 4 x 1.1 = 211.2, rounded up to 10 = 220 SQ FT.</li>
+<li><code>Rail sections</code>: one section per span between posts, the section length is the next stock length above the side. The 7'-4" front takes one 8' section, the two 6' sides take two 6' sections. For 4 balconies: 4 and 8.</li>
+</ul>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>
 <li><a href="../../work/deck/deck-porch-balcony-frame/">Frame (deck/porch/balcony)</a>, <a href="../../work/deck/railing/">Railing</a>, <a href="../../work/exterior-trims/rails-decking/">Rails &amp; Decking</a></li>

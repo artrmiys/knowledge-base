@@ -7296,7 +7296,7 @@
 <figure>
 <p><img alt="Deck framing plan" src="../../../assets/images/framing/deck-frame-plan.svg" />
   </p>
-<figcaption>План каркаса: ledger к зданию, joists и hangers, beam на posts, rim и blocking. Единицы: posts pcs, beam и joists LFT, hangers pcs.</figcaption>
+<figcaption>План каркаса: ledger к зданию, joists и hangers, beam на posts, rim и blocking. У досок в D длина доски, в C штуки; hangers и screws ledger в pcs.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Структурный каркас открытых площадок: posts с base и cap, beams, ledger,
@@ -7361,11 +7361,6 @@ stringers. <strong>Balcony</strong> стоит у стены верхнего э
    <a href="../../horizontal/floor-framing/details/rim/">Framing details</a>.</li>
 </ol>
 <figure>
-<p><img alt="Count points for balcony blocks" src="../../../assets/images/ourplancore/v3/measure-count.png" />
-  </p>
-<figcaption>Count точками: одна точка на каждый экземпляр балкона, имя итема несёт тип, размер и число экземпляров.</figcaption>
-</figure>
-<figure>
 <p><img alt="Разрез балкона у стены" src="../../../assets/images/framing/balcony-block-section.svg" />
   </p>
 <figcaption>Балкон у стены: ledger со screws, joists P.T. на hangers Zmax, end joist, beam на посту с cap, decking и перила. Каждая выноска это строка блока в DFL.</figcaption>
@@ -7378,106 +7373,119 @@ decking, railing и trims идут за каркасом под своими з�
 заголовком: <a href="../../../reference/dfl-overview/#groups">Формат файла, группы</a>. Строки с
 нулём и пустые строки шаблона удаляются. Подробный состав блока с формулами:
 <a href="../../../reference/dfl-blocks/">Блоки DFL</a>.</p>
+<p>В формулах W и D - ширина и глубина одного балкона в футах, G - число
+экземпляров из заголовка блока. У досок (posts, beam, ledger, box, joists) в
+колонке D стоит заказная длина доски в футах, в C число досок; <code>LFT</code> у них не
+пишется.</p>
 <table>
 <thead>
 <tr>
 <th>Имя в дереве</th>
 <th>Строка DFL</th>
-<th>Unit</th>
+<th>Unit (D)</th>
 <th>Формула или правило</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Balcony blocks/#1 Balcony 12x8 (x6)</code></td>
-<td><code>Posts 6x6 P.T.</code></td>
-<td>pcs</td>
+<td><code>Posts</code> <code>6x6 P.T.</code></td>
+<td>длина поста (10, 12)</td>
 <td>2 на балкон, <code>=2*G</code>; угловой балкон у двух стен может нести 1</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Post Bases ABA66Z</code></td>
+<td><code>Post Bases</code></td>
 <td>pcs</td>
-<td>модель со schedule, не дефолт</td>
+<td><code>=C&lt;posts&gt;</code>; на бетоне <code>ABU66 Zmax</code>, на дереве <code>ABA66 Zmax</code>; модель со schedule важнее</td>
 </tr>
 <tr>
 <td></td>
 <td><code>Post Caps</code></td>
 <td>pcs</td>
-<td>по числу plies балки: 3-ply <code>BCS2-3/6 Zmax</code>, 2-ply <code>BC46 Zmax</code>; читать schedule</td>
+<td><code>=C&lt;posts&gt;</code>; по числу plies балки: 3-ply <code>BCS2-3/6 Zmax</code>, 2-ply <code>BC46 Zmax</code>; читать schedule</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Beam (3) 2x12 P.T. B4</code> фронт, <code>(2) 2x12 P.T. B3</code> бока</td>
-<td>LFT</td>
-<td>plies ведущим множителем: <code>=3*W*G</code></td>
+<td><code>Beam (3)</code> <code>2x12 P.T.</code> фронт (B4), <code>Beam (2)</code> <code>2x12 P.T.</code> бока (B3)</td>
+<td>длина доски</td>
+<td>C = plies x число балок x G: <code>=3*G</code>; D - чётная длина не короче балки; марка в E</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Ledger 2x12 P.T.</code> + <code>Screws SDWS22400DB</code></td>
-<td>LFT, pcs</td>
-<td>screws <code>=CEILING(...,3)</code>, по 3 на точку</td>
+<td><code>Ledger</code> <code>2x12 P.T.</code></td>
+<td>длина доски</td>
+<td><code>=1*G</code>, D не короче ширины балкона</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Box</code> или <code>Rim</code> тем же сечением</td>
-<td>LFT</td>
-<td>только если балка не flush</td>
-</tr>
-<tr>
-<td></td>
-<td><code>Joists 2x12 P.T. 16" o.c.</code></td>
-<td>LFT</td>
-<td>счёт <code>W*12/16+1</code>; длинная доска 14' и <code>/2</code> в формуле</td>
-</tr>
-<tr>
-<td></td>
-<td><code>Hangers LUS210 Zmax</code>, <code>End Joists</code> + <code>LUC210 Zmax</code>, <code>HUC212-2 Zmax</code></td>
+<td><code>Screws (8) at Ledger</code> или <code>Screws at Ledger</code>, <code>SDWS22400DB</code></td>
 <td>pcs</td>
-<td>hangers на оба конца; снаружи всегда Zmax</td>
+<td>деталь даёт число: <code>=8*G</code>; деталь даёт шаг (два ряда на 16"): <code>=CEILING(W*12/16*2*G,3)</code></td>
 </tr>
 <tr>
 <td></td>
-<td><code>Decking 2x6 DuxxBak</code></td>
+<td><code>Box</code> тем же сечением, что joists</td>
+<td>длина доски</td>
+<td><code>=1*G</code>; только когда балка идёт под joists, у flush beam строки нет</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Joists 16" o.c.</code> <code>2x12 P.T.</code></td>
+<td>длина доски</td>
+<td>на балкон <code>CEILING(W*12/16,1)+1</code>, C = это число x G, D не короче глубины; короткие joists: одна длинная доска на два куска, <code>=CEILING(n*G/2,1)</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>Hangers</code> <code>LUS210 Zmax</code>, <code>End Joists</code> + <code>LUC210 Zmax</code>, <code>HUC212-2 Zmax</code></td>
+<td>pcs</td>
+<td>2 на joist, когда оба конца висят (ledger и flush beam); балка под joists: 1 на joist, у ledger; снаружи всегда Zmax</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Decking</code> <code>2x6 DuxxBak</code></td>
 <td>SQ FT</td>
-<td><code>W*D*G</code>; <code>5/4x6</code> только на Terrace над гаражом</td>
+<td><code>=CEILING(W*D*G*1.1,10)</code>: запас 1.1 всегда, меньше 50 - вверх до 2; <code>5/4x6</code> только на Terrace над гаражом</td>
 </tr>
 <tr>
 <td><code>Porch blocks/#1 Porch 12x7 (x5)</code></td>
-<td><code>Ceiling Joists 2x8 16" o.c.</code> + <code>Ledger</code> + <code>Hangers</code></td>
-<td>LFT, pcs</td>
-<td>отдельно от rafters, обязательно</td>
+<td><code>Ceiling Joists 16" o.c.</code> + <code>Ledger</code> + <code>Hangers</code></td>
+<td>длина доски, pcs</td>
+<td>число joists <code>CEILING(W*12/16,1)+1</code> x G; отдельно от rafters, обязательно</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Beam (2) 2x10 B1</code> / <code>(3) 2x10 B2</code></td>
-<td>LFT</td>
-<td>коды porch отличаются от балконных</td>
+<td><code>Beam (2)</code> <code>2x10</code> (B1), <code>Beam (3)</code> <code>2x10</code> (B2)</td>
+<td>длина доски</td>
+<td>plies x число балок x G; коды porch отличаются от балконных</td>
 </tr>
 <tr>
 <td></td>
-<td><code>5/8" Gyp</code> потолок</td>
+<td><code>Soffit Gypsum (2)</code>, <code>5/8" Type X</code> или плита по assembly</td>
 <td>SQ FT</td>
-<td>два слоя внутри формулы: <code>=CEILING(G*2*1.1,10)*G</code></td>
+<td>два слоя - одна строка: <code>(2)</code> в подписи и x 2 в формуле один раз, <code>=CEILING(W*D*2*1.1,2)*G</code></td>
 </tr>
 </tbody>
 </table>
 <p>Terrace над гаражом (фермы и LW concrete): <code>Subfloor 3/4" Ply</code> в листах
-4x8, <code>Sleepers 2x4 P.T.</code>, <code>Decking 5/4x6</code>; bases у таких стеков 0.</p>
+4x8, <code>Sleepers 2x4 P.T.</code> (на террасу <code>CEILING(W*12/16,1)+1</code> штук, в D длина
+доски не короче глубины), <code>Decking 5/4x6</code>; bases у таких стеков 0.</p>
 <h2 id="_3">Правила, которые ломают блок<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li>Посты на улице (porch, балкон, перила) всегда <code>P.T.</code>. Закрытый porch или
-  балкон под крышей каркас обычный, не P.T.</li>
+<li>Посты на улице (porch, балкон, перила) всегда <code>P.T.</code>, и под крышей porch
+  тоже. Остальной каркас под крышей (rafters, ceiling joists): P.T. или нет,
+  решает чертёж.</li>
 <li>Каркас porch не показан: сразу под заголовком блока
   <code>Note: Porch framing is not specified; all framing assumed; verify</code>.</li>
 <li>Все узлы соединений с S-листа своей строкой с деталью в E: балка к посту
-  (<code>ML210Z</code>, <code>HL33Z</code>, through bolts с washers и nuts, SDS), балка в балку
+  (<code>ML210 Zmax</code>, <code>HL33 Zmax</code>, through bolts с washers и nuts, SDS), балка в балку
   (<code>HUC...-2</code>), крайние joists другим сечением (<code>End Joists</code>). Формат записи
   крепежа: <a href="../../../reference/hangers/#dfl-format">Hangers: как записывать крепёж в DFL</a>.</li>
 <li>Перила: 2 поста на балкон, система или поэлементно по типу, см.
   <a href="../../exterior-trims/rails-decking/">Rails &amp; Decking</a> и <a href="../railing/">Railing</a>.</li>
 <li>Flashings, Trims, Soffits, Post Wrap только когда они в scope; при
-  Frame only их не вставлять.</li>
+  Frame only их не вставлять. Исключение - <code>Flashings at Wall</code> у Terrace с
+  мембраной: это строка самого блока.</li>
 <li>Порч и балкон стопкой: в Front Page строка Porches заполняется отдельно,
   балкон её не заменяет.</li>
 </ul>
@@ -7486,8 +7494,9 @@ decking, railing и trims идут за каркасом под своими з�
 <li>Балконный блок без своего множителя units (900 SF вместо 60).</li>
 <li>Порчи зеркалены с балконов вместо отдельного счёта по планам.</li>
 <li>Post cap по умолчанию <code>BCS2-3/6 Zmax</code> вместо модели по plies со schedule.</li>
-<li>Hangers только на один конец, или без Zmax на улице.</li>
-<li>Posts не P.T. на улице, или P.T. под крышей.</li>
+<li>Hangers только на один конец при flush beam, или без Zmax на улице.</li>
+<li>Posts не P.T. на улице (под крышей porch посты тоже P.T.).</li>
+<li>Beam и joists записаны в <code>LFT</code>, decking без 1.1, два слоя гипса умножены дважды.</li>
 <li>Porch SQFT на Front Page пустой; canopy и porch повторно в eve и rake.</li>
 <li>Все ошибки раздела: <a href="../../../start/common-mistakes/#deck">Deck, porch, балконы</a>.</li>
 </ul>
@@ -7497,12 +7506,13 @@ decking, railing и trims идут за каркасом под своими з�
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Takeoffs/Main/Porch blocks/#1 Porch 12.8x7.3 (x5)        Count 5 pts
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>#1 Upper Balcony List 12&#39; x 8&#39; 6 unit
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Posts            6x6 P.T.          12  pcs    =2*G       S611
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Post Caps        BCS2-3/6 Zmax     12  pcs    3-ply      S611
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Beam front       (3) 2x12 P.T. B4  216 LFT   =3*12*G    S130
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Joists           2x12 P.T.         ... LFT   16&quot; o.c.   S130
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Hangers          LUS210 Zmax       ... pcs   joists x 2 8/S311
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Decking          2x6 DuxxBak       576 SQ FT =12*8*G    5/A550
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Posts             6x6 P.T.          12   12      =2*G                      S611
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Post Bases        ABU66 Zmax        12   pcs     =C&lt;posts&gt;                 S611
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Post Caps         BCS2-3/6 Zmax     12   pcs     =C&lt;posts&gt;, 3-ply          S611
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Beam (3)          2x12 P.T.         18   12      =3*G                      B4
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Joists 16&quot; o.c.   2x12 P.T.         60   8       =10*G                     S130     12 x 12/16 = 9, плюс 1
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Hangers           LUS210 Zmax      120   pcs     =2*10*G                   8/S311
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Decking           2x6 DuxxBak      640   SQ FT   =CEILING(12*8*G*1.1,10)   5/A550   633.6, вверх до 10
 </span></code></pre></div>
 <h2 id="_6">См. также<a class="headerlink" href="#_6" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

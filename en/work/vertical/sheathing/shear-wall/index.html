@@ -7318,9 +7318,11 @@ material). Anchorage is a separate page: <a href="../holdowns/">Holdowns</a>.</p
    the S dot sends new takeoffs into <code>shear walls/&lt;floor below&gt;</code>.</li>
 <li>One takeoff per schedule row: do not merge <code>SW4-1</code> and <code>SW4-2</code> because
    their lengths match. One takeoff can contain several runs.</li>
-<li>Read the side: the outside face of an ext SW is already counted in ext walls,
-   only the inside face is needed. Label a two-sided SW "both sides"; its G =
-   the sum of the two faces, with no extra x2. <code>P</code> on the mark = perforated.</li>
+<li>Read the side: the outside face of an ext SW is already counted in the <code>Wall Sheathing</code>
+   of the exterior walls, only the inside face is needed (an ext SW sheathed on one side
+   gives no row). An interior SW sheathed on both sides is one line along the wall length;
+   the doubling sits in the DFL row (<code>(2 sides)</code> and <code>*2</code> in the formula), do not double
+   the length a second time. <code>P</code> on the mark = perforated.</li>
 <li>On a panel job one sheathed side is already in the panel; count only the required
    second side.</li>
 </ol>
@@ -7338,39 +7340,56 @@ material). Anchorage is a separate page: <a href="../holdowns/">Holdowns</a>.</p
 <tbody>
 <tr>
 <td><code>shear walls/1st floor/shear/SW1-1</code></td>
-<td><code>Wall Sheathing</code> in the floor's wall block, E = <code>SW1-1</code></td>
+<td><code>Shear Walls SW1-1</code> in the floor's wall block, one row per mark</td>
 <td>per schedule, for example <code>15/32" Ply</code></td>
 <td><code>4x8</code></td>
-<td><code>=CEILING(LFT*H/32*1.1,1)</code></td>
+<td><code>=CEILING(G*H/32*1.1,1)</code></td>
 </tr>
 <tr>
 <td><code>shear walls/1st floor/shear/WSW-C 7-16 OSB DTT2Z</code></td>
-<td>same, E = mark</td>
+<td><code>Shear Walls WSW-C</code></td>
 <td><code>7/16" OSB</code></td>
 <td><code>4x8</code></td>
 <td>same</td>
 </tr>
 <tr>
-<td><code>shear walls/2nd floor/shear/ext W4B</code></td>
-<td>same</td>
+<td>interior SW sheathed on both sides</td>
+<td><code>Shear Walls SW-F (2 sides)</code></td>
 <td>per schedule</td>
 <td><code>4x8</code></td>
-<td>same</td>
+<td><code>=CEILING(G*H*2/32*1.1,1)</code></td>
+</tr>
+<tr>
+<td><code>shear walls/2nd floor/shear/ext W4B</code></td>
+<td><code>Shear Walls W4B</code>, inside face only</td>
+<td>per schedule</td>
+<td><code>4x8</code></td>
+<td>as for a one-sided wall</td>
 </tr>
 <tr>
 <td>separately</td>
 <td><code>Draft Stop</code></td>
-<td>per detail</td>
-<td><code>4x8</code></td>
+<td>from the roof plan legend</td>
+<td><code>SQ FT</code></td>
 <td>not from the SW total, see <a href="../gable/">Gable Sheathing</a></td>
 </tr>
 </tbody>
 </table>
+<p>What the formula holds:</p>
+<ul>
+<li><strong>G</strong> is the SW length in LFT (it stays a length, no area goes into G).</li>
+<li><strong>H</strong> is the wall height of that floor in feet, the same one as in the wall name
+  (<code>ext 2x6 9.09</code> gives H = 9.09). A wall running floor to floor: H =
+  floor-to-floor.</li>
+<li><code>G x H</code> is the area of one face, <code>/32</code> turns it into <code>4x8</code> sheets, <code>x 1.1</code> is waste.</li>
+<li>E holds the side and the sheet: <code>int S5.01</code>, <code>int one side</code>.</li>
+</ul>
 <p>Name = mark plus confirmed differences (material, thickness, fasteners).
 The SW button on the XL strip puts the areas into the floor's wall block.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
-<li>Two sides counted as x2 on top of the sum of two faces, or <code>P</code> read as two sides.</li>
+<li>Two sides doubled twice (in the length and with <code>*2</code> in the formula), or <code>P</code> read as two sides.</li>
+<li>H holds the height of another floor, or floor-to-floor instead of the wall height.</li>
 <li>Schedule rows with different specs merged by length.</li>
 <li>SW floor taken from the sheet instead of the "walls below" notes: the SW ended up one floor too high.</li>
 <li>Attic draft stop copied from the shear wall total.</li>
@@ -7385,6 +7404,11 @@ The SW button on the XL strip puts the areas into the floor's wall block.</p>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  ext W4B                    Line  118 LFT
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Takeoffs/Main/shear walls/1st floor/holdowns/
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  HDU11 SB1x30 S2.2          Count  14
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>1st Floor Walls (wall height 9.09&#39;)
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Shear Walls SW1-1     15/32&quot; Ply    27   4x8   int S5.01    86 x 9.09 / 32 x 1.1 = 26.9
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Shear Walls WSW-C     7/16&quot; OSB     14   4x8   int S5.01    42 x 9.09 / 32 x 1.1 = 13.1
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Shear Walls W4B       15/32&quot; Ply    37   4x8   int one side 118 x 9.09 / 32 x 1.1 = 36.9
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

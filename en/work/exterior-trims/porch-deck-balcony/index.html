@@ -7305,7 +7305,7 @@ Insert trim only when it is in scope; with Frame only do not insert it.</p>
 <td><code>Soffits at Porch</code></td>
 <td><code>Beadboard</code> / <code>Beadboard Vinyl</code></td>
 <td>SQ FT</td>
-<td>porch ceiling, <code>=W*D*G</code></td>
+<td>porch ceiling, <code>=CEILING(W*D*1.1,10)*units</code></td>
 </tr>
 <tr>
 <td><code>Frieze inside</code></td>
@@ -7314,39 +7314,44 @@ Insert trim only when it is in scope; with Frame only do not insert it.</p>
 <td></td>
 </tr>
 <tr>
-<td><code>Crowns outside</code> / <code>Crowns inside</code></td>
+<td><code>Crowns</code></td>
 <td><code>3-1/2" crown</code></td>
 <td>LFT</td>
-<td>often <code>scaled</code></td>
+<td>outside and inside as separate rows; often <code>scaled</code></td>
 </tr>
 <tr>
 <td><code>Columns</code></td>
 <td><code>10"-12" Dia Fbg</code>, <code>SQ Fluted</code></td>
-<td>pcs + height</td>
-<td>see <a href="../soffit-fascia/">Soffit &amp; Fascia</a></td>
+<td>column height (<code>8'</code>), C = count</td>
+<td>round and decorative columns, see <a href="../soffit-fascia/">Soffit &amp; Fascia</a></td>
 </tr>
 <tr>
-<td><code>Column wrap</code></td>
-<td><code>1x8</code></td>
+<td><code>Post Wrap</code></td>
+<td><code>1x8</code> (6x6 post), <code>1x6</code> (4x4 post)</td>
 <td>LFT</td>
-<td>post wrap</td>
+<td>boards around a post: G = height x 4 sides x number of posts, C = G x 1.1 rounded up to 10 (under 50 to 2)</td>
 </tr>
 <tr>
 <td><code>Posts at Rails</code></td>
 <td><code>4x4 P.T.</code></td>
-<td>pcs + 4'</td>
+<td><code>4</code> (post length), C = count</td>
 <td>plus sleeve and cap, see <a href="../rails-decking/">Rails &amp; Decking</a></td>
 </tr>
 <tr>
-<td><code>Porch deck Fascia</code></td>
-<td><code>1x10</code></td>
+<td><code>Deck Fascia</code></td>
+<td><code>1x8</code>, <code>1x12 Azek</code> per detail</td>
 <td>LFT</td>
-<td></td>
+<td>exposed deck edges of one block x units</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>The porch ceiling in the framing scope: <code>5/8" Gyp</code> as one row with two layers in
+<li><code>Post Wrap</code> is counted in LFT of boards, not in pieces: four boards per post for
+  its full height. An 8' post gives 8 x 4 = 32 LFT, four such posts 128 LFT,
+  with waste 128 x 1.1 = 140.8, rounded up to 10 = 150 LFT. In a porch block G is taken for one
+  porch and the formula is multiplied by units.</li>
+<li>The porch ceiling in the framing scope: one row <code>Soffit Gypsum (2)</code>, SQ FT,
+  <code>=CEILING(area*2*1.1,2)*units</code>: the two layers are in the label and once in
   the formula, see <a href="../../deck/deck-porch-balcony-frame/">frame</a>. Beadboard
   is the finish on top.</li>
 <li>No details: <code>Note: No Details provided; all trims are assumed per
@@ -7394,8 +7399,8 @@ Insert trim only when it is in scope; with Frame only do not insert it.</p>
 <td>4x8</td>
 </tr>
 <tr>
-<td><code>WRB</code></td>
-<td>per the wall spec</td>
+<td><code>Vapor Barrier</code> (template label)</td>
+<td>WRB per the wall spec</td>
 <td>SQ FT</td>
 </tr>
 </tbody>
@@ -7405,7 +7410,7 @@ Insert trim only when it is in scope; with Frame only do not insert it.</p>
 <li>Porch SQFT on the Front Page not filled when the porch is stacked with a balcony.</li>
 <li>Canopy and porch counted again in eave and rake.</li>
 <li>Trim inserted when the scope is Frame only.</li>
-<li>Columns without type and height; column wrap confused with column.</li>
+<li>Columns without type and height; <code>Post Wrap</code> confused with a column or counted in pieces.</li>
 <li>All mistakes for the section: <a href="../../../start/common-mistakes/#deck">Deck, porch, balconies</a>.</li>
 </ul>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>

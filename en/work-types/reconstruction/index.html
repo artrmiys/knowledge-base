@@ -2802,6 +2802,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-to-measure-and-name-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to measure and name it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#common-items" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2828,6 +2839,17 @@
     <span class="md-ellipsis">
       
         Notes in the DFL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
       
     </span>
   </a>
@@ -7248,6 +7270,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-to-measure-and-name-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to measure and name it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#common-items" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7274,6 +7307,17 @@
     <span class="md-ellipsis">
       
         Notes in the DFL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
       
     </span>
   </a>
@@ -7314,9 +7358,9 @@
 difficulty: do not count the whole building as new, and do not lose the places where new
 framing connects to existing.</p>
 <figure>
-<p><img alt="Existing, demo and new legend" src="../../../assets/images/work-types/reconstruction.svg" />
+<p><img alt="Reconstruction plan: existing, demo, new and connections" src="../../../assets/images/work-types/reconstruction.svg" />
   </p>
-<figcaption>Existing - do not count, Demo - only if in scope, New and connections - count.</figcaption>
+<figcaption>Mini plan: existing in grey is not counted, demo dashed only if in scope, new in green is counted. Separately the new-to-existing connections: ledger and hangers on the existing wall, header at the enlarged opening.</figcaption>
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
 <p>A job on an existing building: an addition on top, a re-layout, floor framing replacement,
@@ -7455,6 +7499,68 @@ existing walls and openings shown for context; old joists and rafters with the n
 <li>Old member sizes are not the same as new ones: do not assume <code>2x10</code> if the detail shows the actual existing member.</li>
 <li>If the drawings show only the repair area, do not multiply it over the whole floor.</li>
 </ul>
+<h2 id="how-to-measure-and-name-it">How to measure and name it<a class="headerlink" href="#how-to-measure-and-name-it" title="Link to this section">&para;</a></h2>
+<p>New work is measured with the same tools and in the same branches as in a new
+building. There is one difference: existing must not get into the book.</p>
+<ol>
+<li>Legend and new work plans first. Measure only what is shown as <code>New</code>,
+   <code>Replace</code>, <code>Patch</code>.</li>
+<li><strong>New walls</strong> go in the regular branch <code>walls/&lt;floor&gt; floor walls</code> with regular names
+   (<code>ext 2x6 9.09</code>, <code>2x4 9.09</code>). Inside an existing frame they are always stick.</li>
+<li><strong>Existing walls</strong>, if you need to trace them for reference, go into a separate
+   folder <code>existing not in repair/&lt;floor&gt; exst/</code>. Nothing from it goes into the DFL.</li>
+<li><strong>Framing that is replaced or added inside the existing area</strong> (joists,
+   beams, hangers) stays in its regular <code>framing</code> branch, and the name gets
+   <code>in exist area</code> added: <code>joists/2x10 12" in exist area</code>,
+   <code>beams/(2) 2x10 8 in exist area</code>, <code>details/LUS210 in exist area</code>. These
+   takeoffs do go into the DFL.</li>
+<li><strong>Openings</strong> are counted only in walls that have a new wall line.
+   An existing opening in an existing wall (and a window replaced in it) is skipped entirely: no flashing,
+   no deduction; count a header only if the drawing shows it being replaced.
+   A new opening cut into an existing wall (shown as new on the new work plan) stays out
+   of the regular opening count of the floor and goes on its own row,
+   <code>Window Flashing in Exist Walls</code>: <code>(2H + W) x count x 1.1</code> from the schedule sizes.</li>
+<li><strong>Existing items</strong> (doors, storefronts, a roof marked existing) do not go into the
+   book: one note in the header, and their takeoffs are removed from the tree.</li>
+<li>An existing gable, if it is needed for sheathing, is a separate takeoff
+   <code>existing gable</code>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>What the drawings show</th>
+<th>What goes into the DFL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New walls, new openings in them</td>
+<td>regular wall rows; <code>Window Flashing</code>, <code>Sill Flashing</code> in LFT</td>
+</tr>
+<tr>
+<td>New opening in an existing wall</td>
+<td><code>Window Flashing in Exist Walls</code>, <code>Flashing Tape</code>, LFT, figured like <code>Window Flashing</code></td>
+</tr>
+<tr>
+<td>Opening in an existing wall with no new wall line</td>
+<td>no rows</td>
+</tr>
+<tr>
+<td>Framing in the existing area (<code>... in exist area</code>)</td>
+<td>the same labels as the new framing, as a separate group after it under the bold note <code>Note: In existing area per &lt;sheet&gt;</code></td>
+</tr>
+<tr>
+<td>Existing part clearly out of scope</td>
+<td>no rows, one note <code>Important: Existing ... not included per &lt;sheet&gt;</code></td>
+</tr>
+<tr>
+<td>Existing part in doubt</td>
+<td>separate blocks as an option: note <code>Note: Optional for existing, verify if apply</code> and an option color from the palette, never gray</td>
+</tr>
+</tbody>
+</table>
+<p>The order in a framing list: first all rows of the new framing, then the group for the
+existing area. The totals do not change, only the order does.</p>
 <h2 id="common-items">Common items<a class="headerlink" href="#common-items" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
@@ -7513,10 +7619,15 @@ existing walls and openings shown for context; old joists and rafters with the n
 <li>A patch area stretched over the whole floor.</li>
 <li>A new subfloor over the old floor missed ("it is already there").</li>
 <li>Steel partitions counted with <code>NO metal</code>, or not marked with a note.</li>
+<li>Existing walls traced in <code>walls</code> and sent to the DFL, or openings in existing walls produced flashing and a sheathing deduction.</li>
+<li>Framing in the existing area written without the <code>in exist area</code> suffix and mixed with the new framing.</li>
 <li>All wall mistakes: <a href="../../start/common-mistakes/#walls">Common mistakes</a>.</li>
 </ul>
 <h2 id="notes-in-the-dfl">Notes in the DFL<a class="headerlink" href="#notes-in-the-dfl" title="Link to this section">&para;</a></h2>
 <ul>
+<li><code>Important: Existing ... not included per &lt;sheet&gt;</code> - existing items, one note in the header.</li>
+<li><code>Note: In existing area per &lt;sheet&gt;</code> - bold note before the group of rows for the existing area.</li>
+<li><code>Note: Optional for existing, verify if apply</code> - option block for an existing part in doubt.</li>
 <li><code>Existing framing to remain - not counted.</code></li>
 <li><code>Counted new work only per shaded/keyed repair area.</code></li>
 <li><code>Header counted only at enlarged opening.</code></li>
@@ -7524,6 +7635,37 @@ existing walls and openings shown for context; old joists and rafters with the n
 <li><code>Demo shown for context only - no demo material counted.</code></li>
 <li><code>Metal Studs by others.</code></li>
 </ul>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
+<p>An addition over part of the 2nd floor, beams replaced in the existing area and two new <code>3.0x5.0</code> windows cut into an existing wall:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  walls/2nd floor walls/
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    ext 2x6 9.09                      Line, 86.0 LFT     (new walls)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  existing not in repair/2nd exst/
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    ext 2x6 9.09                      Line, 210.0 LFT    (reference only, not in the DFL)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  openings/2/
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    3.0x5.0                           Count, 6 ea        (in new walls)
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  framing/2nd floor framing/beams/
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    (2) 2x10 8 in exist area          Count, 3 ea
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  framing/2nd floor framing/details/
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    LUS210                            Count, 24 ea
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    LUS210 in exist area              Count, 12 ea
+</span></code></pre></div>
+<p>The two new windows in the existing wall are not placed in <code>openings/2</code>: that wall has no
+new wall line. Their size and count go from the schedule straight into the
+<code>Window Flashing in Exist Walls</code> row.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Important: Existing structure to remain; products listed for new construction only.
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2nd Floor Walls
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Window Flashing                  Flashing Tape    90   LFT   (2 x 5.0 + 3.0) x 6 x 1.1 = 85.8
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Sill Flashing                    Sill Flashing    20   LFT   3.0 x 6 x 1.1 = 19.8
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Window Flashing in Exist Walls   Flashing Tape    30   LFT   (2 x 5.0 + 3.0) x 2 x 1.1 = 28.6
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2nd Floor Framing List
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Hangers                          LUS210           24   pcs
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>Note: In existing area per S201
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>Beam (2)                         2x10              6   8     3 points x 2 plies
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>Hangers                          LUS210           12   pcs
+</span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>
 <li><a href="../../work/vertical/walls/wall-panels/">Wall Panels</a>, <a href="../../work/vertical/walls/exterior/">Exterior Walls</a></li>

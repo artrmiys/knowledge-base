@@ -7282,7 +7282,7 @@ typically <code>2x6 P.T.</code>, but take the size only from the detail.</p>
 <figure>
 <p><img alt="Labeled detail: bottom plate, sill plate, anchor bolt, foundation wall" src="../../../../../assets/images/confluence/confluence-155.png" />
   </p>
-<figcaption>Wall bottom plate on top, sill plate (red) on concrete, anchor bolt through it, foundation wall.</figcaption>
+<figcaption>A connection without a floor (the wall straight on the foundation, as at a garage): wall bottom plate on top, sill plate (red) on concrete, anchor bolt through it, foundation wall. With a floor, the rim and joists sit between them, see the text above.</figcaption>
 </figure>
 <h2 id="where-to-find-it-on-the-plans">Where to find it on the plans<a class="headerlink" href="#where-to-find-it-on-the-plans" title="Link to this section">&para;</a></h2>
 <table>
@@ -7302,8 +7302,8 @@ typically <code>2x6 P.T.</code>, but take the size only from the detail.</p>
 <td>Size and number of plies, P.T., sill sealer, termite shield</td>
 </tr>
 <tr>
-<td>Anchor bolt schedule, SW schedule, general notes</td>
-<td>Anchor diameter, embed and spacing, washer size</td>
+<td>Sill anchorage schedule, SW schedule, S general notes</td>
+<td>Anchor diameter, embed and spacing, washer model</td>
 </tr>
 <tr>
 <td>1st floor plans</td>
@@ -7325,20 +7325,20 @@ or the 1st floor plan. The F dot on <code>s101 f</code> puts the Line into
    different sizes.</li>
 <li>Line length = the length the detail applies to, not the length of the leader on the detail.</li>
 <li>Sill sealer, termite shield, anchor bolts and washers are figured from the same length:
-   these three items are <strong>not shown</strong> on the plan and are easy to forget.</li>
+   these items are <strong>not shown</strong> on the plan and are easy to forget.</li>
 <li>Subtract openings (garage doors) once, on their own floor.</li>
 </ol>
 <div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../../assets/images/confluence/confluence-160.png">
-    <img src="../../../../../assets/images/confluence/confluence-160.png" alt="Sill plate on sill sealer with an anchor bolt" loading="lazy">
+  <a class="kb-gallery__item" href="../../../../../assets/images/confluence/confluence-160.jpg">
+    <img src="../../../../../assets/images/confluence/confluence-160.jpg" alt="Sill plate on sill sealer with an anchor bolt" loading="lazy">
     <div class="kb-gallery__caption">P.T. sill plate on pink sill sealer, the anchor bolt comes up out of the slab. This is how it looks on site.</div>
   </a>
-  <a class="kb-gallery__item" href="../../../../../assets/images/confluence/confluence-156.png">
-    <img src="../../../../../assets/images/confluence/confluence-156.png" alt="Termite shield with lap and anchor" loading="lazy">
+  <a class="kb-gallery__item" href="../../../../../assets/images/confluence/confluence-156.jpg">
+    <img src="../../../../../assets/images/confluence/confluence-156.jpg" alt="Termite shield with lap and anchor" loading="lazy">
     <div class="kb-gallery__caption">Termite shield: 1 ft lap at joints, bead of caulk along the edge, anchor through the sheet.</div>
   </a>
-  <a class="kb-gallery__item" href="../../../../../assets/images/confluence/confluence-170.png">
-    <img src="../../../../../assets/images/confluence/confluence-170.png" alt="Sill plate gasket under the sill plate" loading="lazy">
+  <a class="kb-gallery__item" href="../../../../../assets/images/confluence/confluence-170.jpg">
+    <img src="../../../../../assets/images/confluence/confluence-170.jpg" alt="Sill plate gasket under the sill plate" loading="lazy">
     <div class="kb-gallery__caption">Sill sealer (gasket) between the concrete and the sill plate, anchor bolts, joists and subfloor on top.</div>
   </a>
 </div>
@@ -7364,31 +7364,31 @@ or the 1st floor plan. The F dot on <code>s101 f</code> puts the Line into
 </tr>
 <tr>
 <td>same</td>
-<td><code>Sill Sealer</code></td>
-<td><code>6"</code> (less often 4", 8")</td>
+<td><code>Sill Sealer at ext. found</code></td>
+<td><code>6"</code> to match the sill width (2x4 = <code>4"</code>, wider than 2x6 = <code>10"</code>)</td>
+<td><code>50' rolls</code></td>
+<td><code>=CEILING(LFT/50,1)</code></td>
+</tr>
+<tr>
+<td>same</td>
+<td><code>Termite shield</code></td>
+<td><code>Copper</code>, E = <code>optional</code></td>
 <td>LFT</td>
-<td><code>LFT</code></td>
+<td><code>=CEILING(LFT,50)</code></td>
 </tr>
 <tr>
 <td>same</td>
-<td><code>Termite Shield</code></td>
-<td><code>Copper</code></td>
-<td>LFT</td>
-<td><code>LFT x 1.1</code> (1 ft lap)</td>
-</tr>
-<tr>
-<td>same</td>
-<td><code>Anchor Bolts 48" o.c.</code></td>
-<td>per detail / SW schedule</td>
+<td><code>Anchor Bolts 48" o.c.</code> (the spacing prints from H)</td>
+<td>size and embed from the S notes or the anchorage schedule</td>
 <td>pcs</td>
-<td><code>LFT / spacing</code>, to an even number</td>
+<td><code>=CEILING(LFT*12/H*1.1,2)</code></td>
 </tr>
 <tr>
 <td>same</td>
-<td><code>Washers</code>, <code>Nuts</code></td>
-<td>size per detail</td>
+<td><code>Washer 48" o.c.</code></td>
+<td><code>3x3 Square</code> or the schedule model (<code>BP 5/8-3</code>, <code>BPS 1/2-3</code>)</td>
 <td>pcs</td>
-<td>one per bolt</td>
+<td>same count as the anchors</td>
 </tr>
 <tr>
 <td><code>4x10 P.T. Sill grge</code></td>
@@ -7399,24 +7399,48 @@ or the 1st floor plan. The F dot on <code>s101 f</code> puts the Line into
 </tr>
 </tbody>
 </table>
-<p>Anchor size, embed and washers come from your detail, not from the template:
-<a href="../../../deck/anchor-bolts/">Anchor Bolts</a>. Anchor spacing is split by
-run (1st floor SW to concrete have their own spacing), not one spacing for the whole
-building. Sill plate species unclear: a visible note, not a silent choice of SPF.</p>
+<p>Anchors:</p>
+<ul>
+<li><strong>Spacing, size and embed come from the S notes or the sill anchorage schedule
+  of each job.</strong> The spacing sits in H and prints in the row label by itself:
+  H = 48 gives <code>Anchor Bolts 48" o.c.</code>, H = 32 gives <code>Anchor Bolts 32" o.c.</code>.
+  The <code>48"</code> in the table above is an example, not a rule.</li>
+<li><strong>Nothing on the drawings:</strong> B <code>1/2" Ø emb.</code>, spacing <code>36" o.c.</code>, E = <code>assumed</code>
+  and the note <code>Note: Anchor Bolts 1/2" Ø @ 36" o.c. assumed; verify</code>. The template
+  row <code>5/8" Ø x 6" emb. Titen HD</code> at 48" is a placeholder, not a default:
+  do not leave it unchecked.</li>
+<li>The formula always carries <code>x 1.1</code>: 318 LFT at 48" = <code>318 x 12 / 48 x 1.1 = 87.5</code>,
+  the book gets 88.</li>
+<li>Usually two rows: <code>for Ext Walls</code> and <code>for Corr and Demising</code> (the word goes in E).</li>
+<li>Shear walls with a tighter spacing get their own rows
+  <code>SW Anchor Bolts 16" o.c.</code> per the SW schedule; their length is subtracted from the
+  general row, and the washers go on one <code>Washers</code> row as the sum of the group.</li>
+<li>A Titen HD is a screw anchor and has no nut; the Foundation Walls block has no
+  <code>Nuts</code> row.</li>
+</ul>
+<p>Details and the default: <a href="../../../deck/anchor-bolts/">Anchor Bolts</a>. Sill plate
+species unclear: a visible note, not a silent choice of SPF.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Sill sealer and termite shield missing from the DFL: they are not visible on the plan, but on concrete they are almost always there.</li>
 <li>P.T. plate on wood floor framing: P.T. only on concrete and masonry.</li>
 <li>Double sill or double btm plate everywhere although the detail shows it only on some floors.</li>
 <li>One anchor spacing for the whole building; wedge anchor swapped for Titen HD with no reason.</li>
+<li>The 48" spacing left from the template although the S notes give another one, or the drawings give none (then 36" and <code>assumed</code>).</li>
 <li>Garage doors not subtracted from the sill, sill sealer and anchors, or subtracted twice.</li>
-<li>Washers written as generic 3x3 without checking the table.</li>
+<li>Washers written as <code>3x3 Square</code> although the schedule names a plate washer model.</li>
 </ul>
 <p>Walkthrough with examples: <a href="../../../../start/common-mistakes/#walls">all wall mistakes</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>framing/1st floor framing/details/
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  2x6 P.T. sill          Line, 318.0 LFT    Notes: 2/S501, dbl sill at stair
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  4x10 P.T. Sill grge    Line, 64.5 LFT     Notes: 5/S501
+</span></code></pre></div>
+<p>DFL rows for 318 LFT; the S notes call for <code>5/8" Ø Titen HD 4" emb.</code> anchors at 48":</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Sill Sealer at ext. found   6&quot;                           7   50&#39; rolls   318 / 50 = 6.4
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Termite shield              Copper                     350   LFT         optional
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Anchor Bolts 48&quot; o.c.       5/8&quot; Ø Titen HD 4&quot; emb.     88   pcs         318 x 12 / 48 x 1.1 = 87.5
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Washer 48&quot; o.c.             3x3 Square                  88   pcs
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

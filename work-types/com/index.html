@@ -7438,7 +7438,7 @@ loose - <a href="../../work/vertical/openings/headers/">Headers</a>.</p>
 <tr>
 <td>Extra studs</td>
 <td>Углы, T-пересечения, king/jack/cripple у проёмов</td>
-<td>Фактор 1.1 частично закрывает; corners отдельной строкой на stick</td>
+<td>Фактор 1.1 частично закрывает; на stick углы точками <code>corners</code>, шаблон добавляет их стойки в <code>Studs Ext</code> (<a href="../../work/vertical/walls/corners/">Corners</a>)</td>
 </tr>
 <tr>
 <td>Dbl / extra на bearing walls</td>
@@ -7459,8 +7459,10 @@ loose - <a href="../../work/vertical/openings/headers/">Headers</a>.</p>
   (<a href="../../work/vertical/walls/corridor/">деталь</a>).</li>
 <li>Шахты всегда: лифт, лестница, мусоропровод; материал по wall type
   (<a href="../../work/vertical/walls/shaft/">Shaft</a>).</li>
-<li>Bracing for drywall по высоте стены - таблица на странице
-  <a href="../../work/horizontal/floor-framing/details/bracingdrywall/">Bracing for Drywall</a>.
+<li>Bracing стен (<code>Bracing Ext Walls</code>, <code>Bracing Corridor</code>, <code>Bracing Demising</code>)
+  считается в штуках, длина доски по высоте стены: таблица на странице
+  <a href="../../work/horizontal/floor-framing/details/bracingdrywall/">Bracing стен и Blocking for Drywall</a>.
+  Опора гипса - другая строка, <code>Blocking for Drywall</code> в Floor Framing List.
   Blocking flat и diagonal 48" o.c. - формулы в <a href="../../reference/formulas/#blocking-formulas">Формулы</a>.</li>
 </ul>
 <figure>
@@ -7504,12 +7506,13 @@ loose - <a href="../../work/vertical/openings/headers/">Headers</a>.</p>
 </tbody>
 </table>
 <p>Нота <code>all wood materials at exterior to be FRT</code> означает весь loose plywood
-FRT с <code>verify</code>. FRT и FRTW - разные обозначения, писать как в проекте.
+FRT с <code>verify</code>. FRT и FRTW - одно требование (fire-retardant-treated wood);
+в DFL пиши то обозначение, которое стоит в проекте.
 Таблица - <a href="../../reference/boss-feedback-rules/#frt">Советы: FRT</a>.</p>
 <figure>
-<p><img alt="Деталь draft stop на чердаке над demising стеной" src="../../assets/images/confluence/confluence-057.png" />
+<p><img alt="Деталь draft stop над стеной в перекрытии из ферм" src="../../assets/images/confluence/confluence-057.png" />
   </p>
-<figcaption>1/2" OSB draft stop над demising стеной на чердаке: отдельная строка в Gable Walls, площадь по профилю чердака с разреза. Самый частый пропуск в COM.</figcaption>
+<figcaption>На детали 1/2" OSB draft stop над стеной в межэтажном перекрытии из ферм (floor/ceiling assembly UL L546). Чердачный draft stop над demising стеной - отдельная строка в Gable Walls, площадь по профилю чердака с разреза. Самый частый пропуск в COM.</figcaption>
 </figure>
 <h2 id="_3">На что смотреть в спеках<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Полный чек-лист перед сдачей - <a href="../../start/quality-checklist/">Проверка перед сдачей</a>.
@@ -7528,7 +7531,7 @@ FRT с <code>verify</code>. FRT и FRTW - разные обозначения, �
 </ul>
 <h2 id="_4">Частые ошибки<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li>Тип стены назначен группой, высота стойки = floor-to-floor.</li>
+<li>Тип стены назначен группой, высота стены взята как floor-to-floor.</li>
 <li>Shaft walls выброшены как "panels by others".</li>
 <li>Draft stop пропущен или скопирован из суммы shear.</li>
 <li>Headers внутри панелей посчитаны отдельно.</li>

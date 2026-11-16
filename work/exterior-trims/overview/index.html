@@ -7255,6 +7255,11 @@ crowns, soffit и fascia, frieze, columns, отделка porch, deck и balcony
 Канон: <a href="../../siding/eifs-stucco-veneer/">EIFS / Stucco / Veneer</a>, правило
 для trim-scope и J-channel: <a href="../exclusions/">Exclusions и J-Channel</a>.</p>
 </div>
+<figure>
+<p><img alt="Фасад с группами наружной отделки" src="../../../assets/images/trims/ext-trims-facade.svg" />
+  </p>
+<figcaption>Группы отделки на фасаде и их строки DFL: casing, crowns, sills, corner boards, watertable, frieze, soffit, fascia, shutters, columns. Погонаж в LFT, soffit шире одной доски в SQ FT, изделия штуками и парами.</figcaption>
+</figure>
 <h2 id="_1">Что входит и в каком порядке<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <div class="grid cards">
 <ul>
@@ -7352,43 +7357,43 @@ casing, band, corner и fascia это Line по итему на профиль (
 </thead>
 <tbody>
 <tr>
-<td><code>Ext. Casing sides</code></td>
+<td><code>Ext Casing</code></td>
 <td><code>5/4x4</code></td>
-<td><code>=2*5.5*34</code></td>
+<td><code>=CEILING(G*1.1,10)</code></td>
 <td>LFT</td>
 <td><code>A601</code></td>
 </tr>
 <tr>
-<td><code>Head crowns</code></td>
+<td><code>Crowns</code></td>
 <td><code>3-1/2" crown</code></td>
-<td><code>=3.3*34</code></td>
+<td><code>=CEILING(G*1.1,10)</code></td>
 <td>LFT</td>
 <td><code>scaled</code></td>
 </tr>
 <tr>
-<td><code>CornerBoards</code></td>
+<td><code>Corner Boards</code></td>
 <td><code>5/4x6</code></td>
-<td><code>=8*28</code></td>
+<td><code>=EVEN(G*2*1.1)</code></td>
 <td>LFT</td>
 <td><code>A201</code></td>
 </tr>
 <tr>
 <td><code>Soffits at Porch</code></td>
 <td><code>Beadboard</code></td>
-<td><code>=12*8*G</code></td>
+<td><code>=CEILING(G*1.1,10)*units</code></td>
 <td>SQ FT</td>
 <td><code>6/A550</code></td>
 </tr>
 <tr>
 <td><code>Columns</code></td>
-<td><code>12" Dia Fbg Non-taper w/c&amp;b</code></td>
+<td><code>12" Dia Fbg Non-taper</code></td>
 <td><code>4</code></td>
-<td>pcs</td>
 <td><code>8'</code></td>
+<td><code>w/ cap &amp; base</code></td>
 </tr>
 <tr>
-<td><code>Shutters - paneled</code></td>
-<td><code>20"x60"</code></td>
+<td><code>Shutters</code></td>
+<td><code>20"x60" paneled</code></td>
 <td><code>12</code></td>
 <td>pairs</td>
 <td><code>A201</code></td>
@@ -7396,8 +7401,18 @@ casing, band, corner и fascia это Line по итему на профиль (
 </tbody>
 </table>
 <ul>
+<li>G это измеренная длина или площадь из дерева. Waste 1.1 и округление вверх
+  стоят в формуле C: до 10, а когда итог меньше 50, до 2.</li>
+<li><code>Corner Boards</code>: в G сумма высот наружных углов. Угол из двух досок:
+  <code>=EVEN(G*2*1.1)</code>, то есть 8 углов по 28' = 224 LFT углов дают 494 LFT досок.
+  Цельный L-профиль по детали: <code>=EVEN(G*1.1)</code>.</li>
+<li>Подписи пиши как в шаблоне DFL: <code>Ext Casing</code>, <code>Corner Boards</code>, <code>Crowns</code>,
+  <code>Frieze Board</code>, <code>Over Fascia Trims</code>, <code>Fascia at Eves</code>, <code>Soffits at Eves</code>,
+  <code>Watertable Trim</code>, <code>Window Sills</code>. Макросы суммируют строки по тексту
+  подписи: <code>CornerBoards</code> и <code>Corner Boards</code> для них две разные строки.</li>
 <li><code>LFT</code> для погонажа, <code>SQ FT</code> для панелей и beadboard, <code>pcs</code> и <code>pairs</code>
-  для изделий. Высота columns и posts отдельно, не внутри описания.</li>
+  для изделий. У <code>Columns</code> в D высота колонны (<code>8'</code>), в C число штук;
+  высота не пишется внутри описания.</li>
 <li>Размер и профиль всегда видны (<code>5/4x4</code>, <code>3-1/2" crown</code>, <code>4" Vinyl
   corner</code>); generic <code>trim</code> не пишем.</li>
 <li>В trims workbook для макросов строка это три колонки Label, Value,

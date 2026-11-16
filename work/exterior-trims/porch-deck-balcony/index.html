@@ -7305,7 +7305,7 @@ porch, deck и balcony проходи отдельно по своим разр�
 <td><code>Soffits at Porch</code></td>
 <td><code>Beadboard</code> / <code>Beadboard Vinyl</code></td>
 <td>SQ FT</td>
-<td>потолок крыльца, <code>=W*D*G</code></td>
+<td>потолок крыльца, <code>=CEILING(W*D*1.1,10)*units</code></td>
 </tr>
 <tr>
 <td><code>Frieze inside</code></td>
@@ -7314,39 +7314,44 @@ porch, deck и balcony проходи отдельно по своим разр�
 <td></td>
 </tr>
 <tr>
-<td><code>Crowns outside</code> / <code>Crowns inside</code></td>
+<td><code>Crowns</code></td>
 <td><code>3-1/2" crown</code></td>
 <td>LFT</td>
-<td>часто <code>scaled</code></td>
+<td>снаружи и изнутри отдельными строками; часто <code>scaled</code></td>
 </tr>
 <tr>
 <td><code>Columns</code></td>
 <td><code>10"-12" Dia Fbg</code>, <code>SQ Fluted</code></td>
-<td>pcs + высота</td>
-<td>см. <a href="../soffit-fascia/">Soffit &amp; Fascia</a></td>
+<td>высота колонны (<code>8'</code>), C = штуки</td>
+<td>круглые и декоративные колонны, см. <a href="../soffit-fascia/">Soffit &amp; Fascia</a></td>
 </tr>
 <tr>
-<td><code>Column wrap</code></td>
-<td><code>1x8</code></td>
+<td><code>Post Wrap</code></td>
+<td><code>1x8</code> (пост 6x6), <code>1x6</code> (пост 4x4)</td>
 <td>LFT</td>
-<td>обшивка стойки</td>
+<td>обшивка стойки досками: G = высота x 4 стороны x число стоек, C = G x 1.1 вверх до 10 (меньше 50 - до 2)</td>
 </tr>
 <tr>
 <td><code>Posts at Rails</code></td>
 <td><code>4x4 P.T.</code></td>
-<td>pcs + 4'</td>
+<td><code>4</code> (длина поста), C = штуки</td>
 <td>плюс sleeve и cap, см. <a href="../rails-decking/">Rails &amp; Decking</a></td>
 </tr>
 <tr>
-<td><code>Porch deck Fascia</code></td>
-<td><code>1x10</code></td>
+<td><code>Deck Fascia</code></td>
+<td><code>1x8</code>, по детали <code>1x12 Azek</code></td>
 <td>LFT</td>
-<td></td>
+<td>открытые кромки настила одного блока x units</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Потолок porch в scope каркаса: <code>5/8" Gyp</code> одной строкой с двумя слоями в
+<li><code>Post Wrap</code> считается в LFT досок, не штуками: четыре доски на стойку на
+  всю её высоту. Стойка 8' даёт 8 x 4 = 32 LFT, четыре такие стойки 128 LFT,
+  с waste 128 x 1.1 = 140.8, вверх до 10 = 150 LFT. В блоке porch G берётся на один
+  porch и формула умножается на units.</li>
+<li>Потолок porch в scope каркаса: одна строка <code>Soffit Gypsum (2)</code>, SQ FT,
+  <code>=CEILING(area*2*1.1,2)*units</code>: два слоя стоят в подписи и один раз в
   формуле, см. <a href="../../deck/deck-porch-balcony-frame/">каркас</a>. Beadboard
   это отделка поверх.</li>
 <li>Нет деталей: <code>Note: No Details provided; all trims are assumed per
@@ -7394,8 +7399,8 @@ porch, deck и balcony проходи отдельно по своим разр�
 <td>4x8</td>
 </tr>
 <tr>
-<td><code>WRB</code></td>
-<td>по спецификации стены</td>
+<td><code>Vapor Barrier</code> (подпись шаблона)</td>
+<td>WRB по спецификации стены</td>
 <td>SQ FT</td>
 </tr>
 </tbody>
@@ -7405,7 +7410,7 @@ porch, deck и balcony проходи отдельно по своим разр�
 <li>Porch SQFT на Front Page не заполнен, когда porch стоит стопкой с балконом.</li>
 <li>Canopy и porch посчитаны повторно в eve и rake.</li>
 <li>Отделка вставлена при scope Frame only.</li>
-<li>Columns без типа и высоты; column wrap перепутан с column.</li>
+<li>Columns без типа и высоты; <code>Post Wrap</code> перепутан с column или посчитан штуками.</li>
 <li>Все ошибки раздела: <a href="../../../start/common-mistakes/#deck">Deck, porch, балконы</a>.</li>
 </ul>
 <h2 id="_3">См. также<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>

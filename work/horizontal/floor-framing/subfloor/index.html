@@ -7274,7 +7274,7 @@
 <figcaption>Subfloor по умолчанию 3/4" T&amp;G на клею по joists. FRT-полоса у наружной стены, underlayment и настил поверх существующего пола - отдельные строки.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Subfloor - листовой настил по joists: <code>3/4" T&amp;G OSB</code> или <code>AdvanTech</code>, на panel adhesive. Отдельно считаются FRT-полоса по периметру, underlayment под отделку, настил под ваннами и настил поверх существующего пола. Вертикальная полоса обшивки на уровне перекрытия - страница <a href="../../../vertical/sheathing/floor/">Floor-height Sheathing</a>, не subfloor.</p>
+<p>Subfloor - листовой настил по joists: <code>3/4" T&amp;G OSB</code> или <code>AdvanTech</code>, на panel adhesive. Отдельно считаются FRT-полоса по периметру, underlayment под отделку, настил под ваннами и настил поверх существующего пола. Вертикальная полоса обшивки стены на уровне перекрытия - это <a href="../../../vertical/sheathing/box-sheathing/">Box Sheathing</a>, не subfloor.</p>
 <h2 id="_2">Где искать на чертежах<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7311,7 +7311,8 @@
 <ul>
 <li>Листы = SQ FT / 32 x 1.1, округление вверх до листа (<code>4x8</code>).</li>
 <li>FRT-полоса: периметр этажа x ширину полосы (2' или 4'), своим этажом. Полоса 4' на 10 листов вместо 54 - типичный недосчёт.</li>
-<li>Panel adhesive: строка <code>Panel Adheasive</code> <code>29OZ</code> по норме шаблона; строка часто забывается.</li>
+<li>Основная строка <code>Subfloor</code> считается от полной площади этажа, как в шаблоне DFL: площадь FRT-полосы из неё не вычитаем.</li>
+<li>Panel adhesive: строка <code>Panel Adheasive</code> <code>29OZ</code>, одна туба на 3 листа строки <code>Subfloor</code>. Эта строка уже покрывает всю площадь этажа вместе с полосой, поэтому листы FRT-полосы в клей второй раз не идут. Строка часто забывается. <code>Adheasive</code> - написание шаблона, не исправляй.</li>
 </ul>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Замеров в <code>framing</code> обычно нет: строки берут площадь из листа SQFT. Кнопка SF полосы XL переносит площади в <code>A2_SQFT_calc</code>, субфлор считается в каждом <code>Floor Framing List</code>.</p>
@@ -7336,15 +7337,15 @@
 <tr>
 <td><code>Subfloor FRT 4'</code></td>
 <td><code>3/4" T&amp;G FRT</code></td>
-<td>периметр x 4 / 32 x 1.1</td>
+<td><code>=ОКРВВЕРХ(G*4/32*1.1;1)</code>, G - периметр этажа в LFT</td>
 <td><code>4x8</code></td>
 <td>нота FRT</td>
 </tr>
 <tr>
 <td><code>Panel Adheasive</code></td>
 <td><code>29OZ</code></td>
-<td>по норме шаблона</td>
-<td><code>pcs</code></td>
+<td><code>=ОКРВВЕРХ(C&lt;subfloor&gt;/3;1)</code></td>
+<td><code>tubes</code></td>
 <td></td>
 </tr>
 <tr>
@@ -7364,18 +7365,19 @@
 <tr>
 <td><code>Blocking</code></td>
 <td><code>2x</code></td>
-<td>периметр FRT-полосы</td>
-<td><code>LFT</code></td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code>, G - длина кромки FRT-полосы в LFT</td>
+<td><code>16</code></td>
 <td>под кромкой FRT</td>
 </tr>
 </tbody>
 </table>
+<p><code>C&lt;subfloor&gt;</code> - ячейка C строки <code>Subfloor</code> (только она, без строки FRT-полосы).</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>FRT-полоса посчитана не по периметру своего этажа или вовсе пропущена.</li>
 <li>Underlayment по всей площади, хотя деталь даёт 3/4" ply только под ваннами, а не под душевыми.</li>
 <li>Новый subfloor поверх существующего пола не включён, хотя деталь реконструкции его требует.</li>
-<li>Panel adhesive нет в строках.</li>
+<li>Panel adhesive нет в строках или посчитан по одной тубе на лист: норма одна туба на 3 листа.</li>
 <li>Настил балкона и terrace посчитан как subfloor дома: там свой материал по разрезу.</li>
 <li><a href="../../../../start/common-mistakes/#floor">Все ошибки по перекрытиям</a></li>
 </ul>
@@ -7388,6 +7390,7 @@
 <th>C</th>
 <th>D</th>
 <th>E</th>
+<th>G</th>
 </tr>
 </thead>
 <tbody>
@@ -7397,6 +7400,7 @@
 <td>60</td>
 <td>4x8</td>
 <td><code>A501</code></td>
+<td>1740</td>
 </tr>
 <tr>
 <td><code>Subfloor FRT 4'</code></td>
@@ -7404,24 +7408,27 @@
 <td>24</td>
 <td>4x8</td>
 <td><code>S001 note 12</code></td>
+<td>174</td>
 </tr>
 <tr>
 <td><code>Panel Adheasive</code></td>
 <td><code>29OZ</code></td>
-<td>84</td>
-<td>pcs</td>
+<td>20</td>
+<td>tubes</td>
+<td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
+<p>Проверка: 1740 SQ FT / 32 x 1.1 = 59.8, значит 60 листов. Периметр 174 LFT x 4' / 32 x 1.1 = 23.9, значит 24 листа FRT. Клей: 60 / 3 = 20 туб, по строке <code>Subfloor</code>.</p>
 <figure>
-<p><img alt="AdvanTech subfloor nailing" src="../../../../assets/images/confluence/confluence-154.png" />
+<p><img alt="AdvanTech subfloor nailing" src="../../../../assets/images/confluence/confluence-154.jpg" />
   </p>
 <figcaption>Архивное фото: лист AdvanTech прибивают к joists. Продукт пишется как в спецификации (<code>AdvanTech</code>, <code>3/4" T&amp;G OSB</code>), не обобщённо.</figcaption>
 </figure>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li><a href="../joist/">Joist</a>, <a href="../../../sqfts/1st2nd/">Floor SQFT</a>, <a href="../../../vertical/sheathing/floor/">Floor-height Sheathing</a></li>
+<li><a href="../joist/">Joist</a>, <a href="../../../sqfts/1st2nd/">Floor SQFT</a>, <a href="../../../vertical/sheathing/floor/">Floor Sheathing</a>, <a href="../../../vertical/sheathing/box-sheathing/">Box Sheathing</a></li>
 <li><a href="../details/blocking/">Blocking</a>, <a href="../../../../work-types/reconstruction/">Reconstruction</a></li>
 </ul>
 

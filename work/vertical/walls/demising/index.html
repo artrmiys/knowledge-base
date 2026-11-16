@@ -7269,9 +7269,9 @@
 
 <h1 id="demising-walls">Demising Walls (межквартирные стены)<a class="headerlink" href="#demising-walls" title="Прямая ссылка на раздел">&para;</a></h1>
 <figure>
-<p><img alt="Двойная demising стена в разрезе с draft stop и gypsum" src="../../../../assets/images/walls/demising-double-wall.svg" />
+<p><img alt="Двойная demising стена в разрезе с draft stop и gypsum, в плане одна линия" src="../../../../assets/images/walls/demising-double-wall.svg" />
   </p>
-<figcaption>Двойная demising стена: два каркаса с зазором, gypsum с обеих сторон, draft stop 1/2" OSB в перекрытии. Каждый каркас - своя линия и свои строки DFL.</figcaption>
+<figcaption>Двойная demising стена: два каркаса с зазором, gypsum с обеих сторон, draft stop в перекрытии. Одинаковые каркасы меряются одной линией <code>dem (2) 2x4 9.09</code> по оси стены, длина в DFL удваивается сама.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Demising (party) wall - стена между двумя квартирами. Бывает одинарной и
@@ -7322,9 +7322,13 @@
 <p>Инструмент <strong>Line</strong>, единица LFT, на плане этажа (точка W).</p>
 <ol>
 <li>Имя <code>dem 2x6 9.09</code>: категория, сечение, высота.</li>
-<li>Двойная стена с одинаковыми каркасами - одна линия <code>dem (2) 2x6 9.09</code>.</li>
-<li>Двойная стена с разными каркасами (2x4 и 2x6, разные высоты) - <strong>две
-   линии</strong>, по одной на каждый каркас: <code>dem 2x4 9.09</code> и <code>dem 2x6 10.5</code>.</li>
+<li>Двойная стена с одинаковыми каркасами - <strong>одна линия</strong> по оси стены:
+   <code>dem (2) 2x4 9.09</code>. <code>(2)</code> в имени удваивает длину при переносе в DFL, вторую
+   линию не рисуй.</li>
+<li>Двойная стена с разными каркасами бок о бок - тоже одна линия, в имени оба
+   сечения и обе высоты в одном порядке: <code>dem 2x4 2x6 9.09 11.16</code>.</li>
+<li>Staggered studs на одной plate (стойки 2x4 вразбежку на plate 2x6) - это
+   один каркас: <code>dem 2x6 stag 9.09</code>, не <code>(2)</code>.</li>
 <li>Двойной каркас только если на плане два каркаса: не делай стену двойной по названию.</li>
 <li>Draft stop в перекрытии не рисуется отдельно: его длина равна длине
    demising стены, площадь считается в DFL. Draft stop чердака - треугольник
@@ -7351,41 +7355,45 @@
 <tr>
 <td>то же</td>
 <td><code>Studs Demising</code> 2x6</td>
-<td>pcs</td>
+<td>штуки, в D длина стойки</td>
 <td><code>LFT x 1.1</code> (16") или <code>x 0.625</code> (24")</td>
 </tr>
 <tr>
 <td>то же</td>
-<td><code>Bracing Demising</code> 2x4, <code>Blocking</code></td>
-<td>LFT</td>
-<td>по высоте и типу стены</td>
+<td><code>Bracing Demising</code> 2x4</td>
+<td>штуки, в D длина доски: до 10' = 14, до 12' = 16, до 16' = 18, выше = 20</td>
+<td><code>LFT / 8 x 1.1</code>: одна доска на 8 LFT стены; только стены от 7'</td>
 </tr>
 <tr>
 <td>то же</td>
-<td><code>Bracing for Drywall</code> 2x4 с обеих сторон</td>
+<td><code>Blocking</code></td>
 <td>LFT</td>
-<td>где joists параллельны стене</td>
+<td>по матрице шаблона, до чётного</td>
 </tr>
 <tr>
 <td>то же</td>
-<td><code>Draft Stop</code> <code>1/2" OSB</code></td>
+<td><code>Draft Stop</code> <code>1/2" OSB</code> (материал по детали)</td>
 <td>SQ FT</td>
-<td><code>LFT x глубина перекрытия</code>, обычный материал, не P.T.</td>
+<td><code>LFT x глубина перекрытия x 1.1</code>, обычный материал, не P.T.; строка стоит в секции Gable Walls, отдельно от чердачного Draft Stop</td>
 </tr>
 <tr>
 <td><code>dem (2) 2x6 9.09</code></td>
-<td>те же строки на два каркаса</td>
+<td>те же строки, одна группа на оба каркаса</td>
 <td></td>
-<td><code>x 2</code></td>
+<td>длина линии <code>x 2</code> (удваивает макрос)</td>
 </tr>
 <tr>
 <td>марка BW на demising</td>
-<td><code>Extra Dbl Studs Demising</code></td>
-<td>pcs</td>
+<td><code>Extra Studs Demising 16" o.c.</code> (шаг по stud schedule)</td>
+<td>штуки</td>
 <td><a href="../bearing-walls/">Bearing Walls</a></td>
 </tr>
 </tbody>
 </table>
+<p>Опора гипса там, где joists параллельны стене (у demising с обеих сторон), -
+строка <code>Blocking for Drywall</code> (<code>2x4</code>, <code>=ОКРВВЕРХ(G/D;1)</code>, D <code>16</code>) в Floor Framing
+List этажа, а не в стенах. Строки <code>Bracing for Drywall</code> в DFL нет:
+<a href="../../../horizontal/floor-framing/details/bracingdrywall/">Bracing стен и Blocking for Drywall</a>.</p>
 <p>Shear sheathing на demising может быть с одной стороны или на части длины:
 по SW schedule, страница <a href="../../sheathing/shear-wall/">Shear Wall</a>. Hangers над
 demising с gypsum под перекрытием - <code>ITS</code>; <code>DHU</code> только над настоящей fire
@@ -7395,7 +7403,9 @@ wall по детали.</p>
 <li>Draft stop пропущен или скопирован из суммы shear walls.</li>
 <li>Draft stop записан P.T. или его толщина не сверена с деталью (7/16" против 1/2").</li>
 <li>Стена сделана двойной по слову "demising", хотя на плане один каркас.</li>
-<li>Тип задан группой: 10 LF demising попали в exterior, коридорная стена названа <code>dem</code>.</li>
+<li>Двойная стена обведена двумя линиями и названа <code>dem (2)</code>: длина удвоилась дважды.</li>
+<li>Staggered стена названа <code>dem (2) 2x4</code> вместо <code>dem 2x6 stag</code>.</li>
+<li>Тип задан группой: 10 LFT demising попали в exterior, коридорная стена названа <code>dem</code>.</li>
 <li>Double studs нижних этажей из stud schedule не выписаны.</li>
 <li>Межэтажный draft stop и чердачный draft stop смешаны в одну строку.</li>
 </ul>
@@ -7403,7 +7413,7 @@ wall по детали.</p>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>walls/
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  3rd floor walls/
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    dem (2) 2x6 9.09    Line, 282.4 LFT     (двойная стена, одинаковые каркасы)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    dem (2) 2x6 9.09    Line, 282.4 LFT     (двойная стена, одинаковые каркасы: одна линия)
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    dem 2x4 9.09        Line, 36.0 LFT      (одинарная у лестницы)
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>gables/
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  gable trusses/
@@ -7412,7 +7422,7 @@ wall по детали.</p>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li><a href="../corridor/">Corridor Walls</a>, <a href="../bearing-walls/">Bearing Walls</a>, <a href="../gable/">Gable</a></li>
-<li><a href="../../sheathing/shear-wall/">Shear Wall</a>, <a href="../../../horizontal/floor-framing/details/bracingdrywall/">Bracing for Drywall</a></li>
+<li><a href="../../sheathing/shear-wall/">Shear Wall</a>, <a href="../../../horizontal/floor-framing/details/bracingdrywall/">Bracing стен и Blocking for Drywall</a></li>
 <li><a href="../../../../reference/hangers/">Hangers</a></li>
 </ul>
 

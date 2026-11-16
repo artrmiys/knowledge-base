@@ -7378,7 +7378,19 @@ Post caps, bases and hangers do not belong here: they go in <code>framing/.../de
 </tr>
 </tbody>
 </table>
-<p>Count straps (<code>MSTC40</code>, <code>CS16</code>) as separate takeoffs, do not mix them with anchors.</p>
+<p>Count straps (<code>MSTC40</code>, <code>CS16</code>) as separate takeoffs, do not mix them with
+anchors. In the DFL this is the <code>Ties</code> row: a strap sold by the piece (<code>MSTC40</code>) in <code>pcs</code>,
+coil strap (<code>CS16</code>) in <code>LFT</code>.</p>
+<p>Two different <code>(2)</code> that must not be mixed up:</p>
+<ul>
+<li><code>(2)</code> in the row label <code>Holdowns (2) btm top</code> means two <strong>levels</strong>: a piece
+  below and a piece above the floor framing. C = points x 2.</li>
+<li><code>(2)</code> in the mark on the plan (<code>HD1 (2) DTT2Z</code>) means two <strong>pieces at one connection</strong>. In
+  the tree it is one point per connection, in the DFL the row is <code>Holdowns (2)</code> (the number of
+  pieces in one place goes in brackets, as in <code>Beam (2)</code>), C = points x 2, E holds the mark
+  <code>HD1</code>.</li>
+</ul>
+<p>Each doubling is applied once and only in C.</p>
 <h2 id="takeoff-name-and-dfl-row">Takeoff name and DFL row<a class="headerlink" href="#takeoff-name-and-dfl-row" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
@@ -7399,9 +7411,16 @@ Post caps, bases and hangers do not belong here: they go in <code>framing/.../de
 <td><code>SW-2</code></td>
 </tr>
 <tr>
-<td><code>shear walls/2nd floor/holdowns/HD1 (2) DTT2Z</code></td>
-<td><code>Holdowns (2) btm top</code></td>
+<td><code>shear walls/1st floor/holdowns/HD1 (2) DTT2Z</code></td>
+<td><code>Holdowns (2)</code>, C = points x 2 (two pieces per connection)</td>
 <td><code>DTT2Z</code></td>
+<td><code>pcs</code></td>
+<td><code>HD1</code></td>
+</tr>
+<tr>
+<td><code>shear walls/2nd floor/holdowns/HDU5 S2.2</code></td>
+<td><code>Holdowns (2) btm top</code>, C = points x 2 (below and above the floor framing)</td>
+<td><code>HDU5</code></td>
 <td><code>pcs</code></td>
 <td>SW mark</td>
 </tr>
@@ -7414,7 +7433,7 @@ Post caps, bases and hangers do not belong here: they go in <code>framing/.../de
 </tr>
 <tr>
 <td><code>shear walls/2nd floor/holdowns/MSTC40 type C S2.3</code></td>
-<td><code>Straps</code></td>
+<td><code>Ties</code></td>
 <td><code>MSTC40</code></td>
 <td><code>pcs</code></td>
 <td><code>S2.3</code></td>
@@ -7443,9 +7462,9 @@ OurPlanCore, one row per model.</p>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>1st Floor Walls ... Tape
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Holdowns (1) btm        HDU11     14    pcs   SW-2
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Holdowns (1) btm        DTT2Z     12    pcs   HD1
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Holdowns (2)            DTT2Z     12    pcs   HD1     (6 points x 2 pieces per connection)
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2nd Floor Walls ... Tape
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Holdowns (2) btm top    HDU5      20    pcs   SW-3
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Holdowns (2) btm top    HDU5      20    pcs   SW-3    (10 points x 2 levels)
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

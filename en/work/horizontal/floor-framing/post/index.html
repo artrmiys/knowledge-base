@@ -7317,12 +7317,13 @@
 <li>A continuous post is counted once: on the top floor it supports. Remove duplicates on the lower floors. Height = sum of the floors it runs through.</li>
 <li>Do not merge separate story posts on one axis into one without a continuity detail. A doubtful splice goes into the takeoff Notes as "verify".</li>
 <li>Height is from the actual base to the bottom of the supported beam, by the section datums. Floor-to-floor is not the post height: under an 11 7/8" beam the post is taller than under an 18" beam.</li>
-<li>Cap and base per the detail: a separate Count takeoff <code>CCQ66 S2.1</code> in <code>details</code>, or the model in the post Notes. One cap and one base per post.</li>
+<li>Cap and base per the detail: a separate Count takeoff <code>CCQ66 S2.1</code> in <code>details</code>, or the model in the post Notes. A post on concrete always gets a base; a cap goes in when the post-to-beam detail shows it. The quantity equals the number of posts at that connection.</li>
+<li>A built-up post <code>(3) 2x6</code> is one point with <code>(3)</code> in the name, not three points. In the DFL column C counts every board: points x 3.</li>
 </ol>
 <figure>
-<p><img alt="Count: post points on the plan" src="../../../../../assets/images/ourplancore/v3/measure-count.png" />
+<p><img alt="Count: post points on the plan" src="../../../../../assets/images/ourplancore/v3/measure-count-posts.png" />
   </p>
-<figcaption>Post Count takeoff: one point at the center of each post, the name has the mark, size and height.</figcaption>
+<figcaption>Post Count takeoff in the demo project: a diamond point at the center of the post at the end of beam FB1, name <code>6x6 9.09</code> (size and height), Posts 2 ea in the legend. On a real job the post mark goes into the name too.</figcaption>
 </figure>
 <figure>
 <p><img alt="Post height" src="../../../../../assets/images/framing/post-height.svg" />
@@ -7354,7 +7355,7 @@
 <tr>
 <td><code>posts/6x6 SYP#1 P.T. 8.2</code></td>
 <td><code>Posts</code></td>
-<td><code>6x6 SYP#1 P.T.</code></td>
+<td><code>6x6 P.T.</code> (the lumber grade is not written in B)</td>
 <td>points</td>
 <td><code>10</code></td>
 <td>detail</td>
@@ -7393,14 +7394,15 @@
 </tr>
 </tbody>
 </table>
-<p>Export to Excel: the PS button on the XL strip puts the posts into the worksheet of their floor. The size for a code (<code>C4 - 6x6</code>) comes from the LG legend: without a legend row, B gets the code instead of the size. The <code>C_PostsSort</code> macro lays out the rows. The order length in D is a standard board (8, 10, 12, 14, 16...).</p>
+<p>Export to Excel: the PS button on the XL strip puts the posts into the worksheet of their floor. The size for a code (<code>C4 - 6x6</code>) comes from the LG legend: without a legend row, B gets the code instead of the size. The <code>C_PostsSort</code> macro lays out the rows. The order length in D is a standard board (8, 10, 12, 14, 16...). <code>(n)</code> at the end of the Label is the number of boards in one built-up member, and C = points x n: two <code>(3) 2x6</code> posts give <code>Posts (3)</code> with C = 6. Same as for <a href="../beam/">Beam</a>.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>A post drawn on every floor it runs through and counted twice.</li>
 <li>Height taken as floor-to-floor, without the beam depth.</li>
-<li>Cap and base not on every post: 8 posts give 8 caps and 8 bases; 4 P1 posts are 4 sets, not 3.</li>
+<li>Cap and base not on every post of the connection: 8 posts with a cap and base per the detail give 8 caps and 8 bases; 4 P1 posts are 4 sets, not 3.</li>
+<li><code>Posts (3)</code> with C holding the points without x 3, or three points placed for one built-up post.</li>
 <li>Posts and Post Caps created under every built-up beam. End studs are part of the wall; a post is counted when an explicit material is named: <code>4x4</code>, <code>6x6</code>, PSL, steel.</li>
-<li>Exterior posts (porch, balcony, railing) without P.T. Under a porch roof P.T. is not needed.</li>
+<li>Exterior posts (porch, balcony, deck, canopy, railing) without P.T. Under a porch roof P.T. is still needed: outdoor lumber is always P.T.</li>
 <li>An exterior base without <code>Zmax</code>. It is written as a separate word after the model: <code>ABU66 Zmax</code>, not <code>ABU66Z</code> (<a href="../../../../reference/hangers/#dfl-format">hardware format in the DFL</a>).</li>
 <li>The post is not specified on the plan and the DFL has a made-up size. A note is needed: "post size not specified, assumed 6x6; verify".</li>
 <li><a href="../../../../start/common-mistakes/#floor">All floor framing mistakes</a></li>

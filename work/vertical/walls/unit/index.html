@@ -7269,9 +7269,9 @@
 
 <h1 id="unit-walls">Unit Walls (стены типовых квартир)<a class="headerlink" href="#unit-walls" title="Прямая ссылка на раздел">&para;</a></h1>
 <figure>
-<p><img alt="Лист юнита с точкой U и линиями A 2x4 и A 2x6" src="../../../../assets/images/ourplancore/v3/sheet-unit.png" />
+<p><img alt="Лист юнита a3011 u с точкой U и линиями A 2x4" src="../../../../assets/images/ourplancore/v3/sheet-unit.png" />
   </p>
-<figcaption>Лист типа юнита с точкой U: все новые takeoff с него ложатся в <code>units</code>. Линии только по внутренним перегородкам квартиры, по одной позиции на сечение.</figcaption>
+<figcaption>Лист типа юнита <code>a3011 u</code> в демо-проекте: горит точка U, в статусе <code>Route: U all floors</code>, все новые takeoff с листа ложатся в <code>units</code>. Линии <code>A 2x4</code> только по внутренним перегородкам квартиры, одна позиция на сечение; легенда <code>Units</code> даёт 101,56 ft.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Unit walls - внутренние перегородки <strong>одной типовой квартиры</strong>. Квартиры
@@ -7344,27 +7344,27 @@ demising стены в юнит не входят: они считаются н�
 <tbody>
 <tr>
 <td><code>units/A 2x4</code></td>
-<td><code>Studs Interior 2x4</code></td>
-<td>pcs</td>
+<td><code>Studs Interior</code> <code>2x4</code></td>
+<td>штуки, в D длина стойки</td>
 <td><code>LFT x повторы x 1.1</code> (16")</td>
 </tr>
 <tr>
 <td><code>units/A 2x6</code></td>
-<td><code>Studs Interior 2x6</code></td>
-<td>pcs</td>
+<td><code>Studs Interior</code> <code>2x6</code></td>
+<td>штуки, в D длина стойки</td>
 <td>то же, 24" = 0.625</td>
 </tr>
 <tr>
 <td>то же</td>
 <td><code>Plates Interior (1) btm</code>, <code>(2) dbl top</code></td>
 <td>LFT</td>
-<td><code>LFT x повторы x 1.1</code>; btm P.T. только на бетоне</td>
+<td><code>LFT x повторы x 1.1</code>, dbl top ещё <code>x 2</code>; btm P.T. только на бетоне</td>
 </tr>
 <tr>
 <td>то же</td>
-<td><code>Blocking</code>, <code>Bracing</code></td>
+<td><code>Blocking</code></td>
 <td>LFT</td>
-<td>по типу стены</td>
+<td>по матрице шаблона, до чётного</td>
 </tr>
 <tr>
 <td><code>B1</code> (Count на плане этажа)</td>
@@ -7374,6 +7374,8 @@ demising стены в юнит не входят: они считаются н�
 </tr>
 </tbody>
 </table>
+<p>Строки bracing у перегородок юнита нет: <code>Bracing</code> в шаблоне есть только для
+ext, corridor и demising стен (в штуках, см. <a href="../corridor/">Corridor</a>).</p>
 <p>Кнопка <code>UN</code> полосы XL ставит таблицу юнитов в книгу (AM3) с итогами по
 этажам; макрос <code>C_UnitTable</code> умножает длины юнита на число повторов.
 Отдельно по юниту идут blocking кухни (<code>2x6</code>, 4 по 14') и ванной (<code>2x6</code>,

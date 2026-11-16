@@ -7269,9 +7269,9 @@
 
 <h1 id="basement-walls">Basement Walls<a class="headerlink" href="#basement-walls" title="Link to this section">&para;</a></h1>
 <figure>
-<p><img alt="Basement wall on a concrete slab" src="../../../../../assets/images/walls/basement-wall-section.svg" />
+<p><img alt="Wood basement wall on a concrete slab, section" src="../../../../../assets/images/walls/basement-wall-section.svg" />
   </p>
-<figcaption>Wood basement wall on a slab: P.T. btm plate, studs, box sheathing and WRB over it. A concrete basement wall gives no framing.</figcaption>
+<figcaption>Wood basement wall on a slab: P.T. btm plate with an anchor bolt, studs, double top plate, wall sheathing, box sheathing at the floor band and WRB. A concrete basement wall gives no framing.</figcaption>
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
 <p>Basement walls are the wood walls on the <code>base</code> level: exterior walls on the slab, walls
@@ -7298,7 +7298,7 @@ this page covers only the framing.</p>
 </tr>
 <tr>
 <td>Wall section at the slab</td>
-<td>Stud height: the basement often has three different heights</td>
+<td>Wall height: the basement often has three different heights</td>
 </tr>
 <tr>
 <td>Wall type schedule</td>
@@ -7354,29 +7354,64 @@ Branch <code>walls/base floor walls</code>, names as for regular walls:
 <td>same</td>
 <td><code>Studs Ext</code></td>
 <td>size by height</td>
-<td>pcs</td>
+<td>pieces, D = stud length</td>
 <td><code>LFT x 1.1</code> (16")</td>
 </tr>
 <tr>
 <td>same</td>
-<td><code>Blocking</code> <code>2x</code>, <code>Bracing</code> <code>2x4</code></td>
-<td></td>
+<td><code>Blocking</code></td>
+<td><code>2x6</code> (by wall size)</td>
 <td>LFT</td>
-<td>by wall type</td>
+<td>from the template matrix, rounded to even</td>
 </tr>
 <tr>
 <td>same</td>
-<td><code>Box Sheathing</code> OSB, <code>Vapor Barrier</code> (WRB per spec)</td>
-<td></td>
-<td>4x8, SQ FT</td>
+<td><code>Bracing Ext Walls</code></td>
+<td><code>2x4</code></td>
+<td>pieces, D = board length: up to 10' = 14, up to 12' = 16, up to 16' = 18, above = 20</td>
+<td><code>LFT / 8 x 1.1</code>: one board per 8 LFT of wall; only walls 7' and taller</td>
+</tr>
+<tr>
+<td>same</td>
+<td><code>Wall Sheathing</code></td>
+<td>as on the building walls (<code>7/16" Zip</code>, <code>1/2" OSB</code>)</td>
+<td>4x8</td>
+<td><code>wall area x 1.1 / 32</code>, <a href="../../sheathing/wall-sheathing/">Wall Sheathing</a></td>
+</tr>
+<tr>
+<td>same</td>
+<td><code>Vapor Barrier</code></td>
+<td>WRB per spec; with Zip there is no row, only <code>Tape</code></td>
+<td>SQ FT</td>
+<td><code>area x 1.1</code></td>
+</tr>
+<tr>
+<td>same</td>
+<td><code>Insulation</code></td>
+<td>only continuous insulation outside the sheathing or on concrete</td>
+<td>SQ FT</td>
+<td><code>area x 1.1</code>; insulation between studs is not counted</td>
+</tr>
+<tr>
+<td>same</td>
+<td><code>Box Sheathing</code></td>
+<td>as on the wall</td>
+<td>4x8</td>
 <td><a href="../../sheathing/box-sheathing/">Box Sheathing</a></td>
 </tr>
 <tr>
 <td><code>corr 2x6 9.24</code></td>
-<td><code>Plates Corr btm</code> <code>2x6 P.T.</code> or <code>LSL P.T.</code></td>
-<td></td>
+<td><code>Plates Corr (1) btm</code></td>
+<td><code>2x6 P.T.</code> or <code>LSL P.T.</code> per detail</td>
 <td>LFT</td>
-<td>per detail</td>
+<td><code>LFT x 1.1</code></td>
+</tr>
+<tr>
+<td>same</td>
+<td><code>Bracing Corridor</code></td>
+<td><code>2x4</code></td>
+<td>pieces, D as for <code>Bracing Ext Walls</code></td>
+<td><code>LFT / 8 x 1.1</code></td>
 </tr>
 <tr>
 <td>basement openings</td>
@@ -7389,18 +7424,19 @@ Branch <code>walls/base floor walls</code>, names as for regular walls:
 <td><code>2x4 9.24</code> (under podium)</td>
 <td><code>Studs Interior</code> FRT on Type III</td>
 <td></td>
-<td>pcs</td>
+<td>pieces, D = stud length</td>
 <td>note with the source</td>
 </tr>
 </tbody>
 </table>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
-<li>One stud height for the whole basement when the section shows three different heights.</li>
+<li>One wall height for the whole basement when the section shows three different heights.</li>
 <li>Height taken as floor-to-floor without subtracting the subfloor and floor framing.</li>
 <li>Walls below the podium thrown out as "panels by others".</li>
 <li>A concrete wall traced as a wood wall.</li>
 <li>Treated basement furring not split out as a separate P.T. assembly.</li>
+<li><code>Bracing</code> written in LFT: it is a count of boards, the board length sits in D.</li>
 <li>The <code>Vapor Barrier</code> row says Tyvek although the spec calls for a different WRB.</li>
 </ul>
 <p>Walkthrough with examples: <a href="../../../../start/common-mistakes/#walls">all wall mistakes</a>.</p>

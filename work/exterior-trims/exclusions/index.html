@@ -7290,7 +7290,7 @@ stucco, stone и brick veneer, как их узнать на чертеже и �
 watertable, soffit, fascia, frieze, columns, porch и balcony trim, WRB и
 sheathing под облицовкой, furring. Если весь фасад EIFS или stone, trim
 может быть почти нулевым: не добивай количество, ставь ноту
-<code>Note: Stone Veneer by others</code>.</p>
+<code>Note: Stone Veneer materials are by others</code>.</p>
 <h2 id="j-channel">J-Channel<a class="headerlink" href="#j-channel" title="Прямая ссылка на раздел">&para;</a></h2>
 <p><code>J-Channel</code> это профиль буквой J, в который заводится обрезанный край
 siding. Он закрывает торец и даёт чистую линию примыкания.</p>
@@ -7309,21 +7309,24 @@ siding. Он закрывает торец и даёт чистую линию �
 <td><strong>наш</strong>, LFT</td>
 </tr>
 <tr>
-<td>Siding примыкает к другому материалу</td>
+<td>Vinyl siding примыкает к другому материалу</td>
 <td>стык со stone, brick, EIFS, decking, потолком porch</td>
-<td>наш, если siding наш</td>
+<td>наш, когда vinyl siding в нашем scope: это профиль siding, а не облицовки</td>
 </tr>
 <tr>
 <td>EIFS / stucco</td>
 <td>casing bead, stop bead, track по низу, у dissimilar material</td>
-<td>обычно by others с системой</td>
+<td>by others, идёт с системой</td>
 </tr>
 </tbody>
 </table>
-<p>При vinyl siding <code>Ext. Casing</code> часто и есть <code>Vinyl J-channel</code>: строка
-<code>Ext. Casing | Vinyl J-channel | LFT</code>. Тогда не дублируй <code>5/4</code> wood casing.
-Количество: периметр всех openings плюс terminations. Слово <code>J-channel</code>
+<p>При vinyl siding <code>Ext Casing</code> часто и есть J-channel: строка
+<code>Ext Casing | J-Channel | LFT</code>. Тогда не дублируй <code>5/4</code> wood casing.
+Количество: периметр всех openings плюс terminations. Слово <code>J-Channel</code>
 остаётся в строке, не сводить к generic <code>casing</code>.</p>
+<p>J-channel наш только как часть vinyl siding. Профили по краю EIFS и stucco
+(casing bead, stop bead, track) похожи на J-channel, но это accessory чужой
+системы: в наш DFL они не идут, даже когда siding рядом наш.</p>
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>J-channel при vinyl siding: Line по периметру openings на фасаде или
 формулой от списка проёмов (периметр x количество), плюс Line по rake и по
@@ -7333,7 +7336,7 @@ others; площадь siding <code>0</code> и нота.</p>
 <ul>
 <li>Stone или brick veneer посчитаны как siding.</li>
 <li>При vinyl siding посчитаны и <code>J-channel</code>, и <code>5/4</code> casing на одни проёмы.</li>
-<li>J-channel с EIFS записан как наш.</li>
+<li>Casing bead или track системы EIFS записан как наш J-channel.</li>
 <li>Trim вокруг veneer пропущен, потому что "стена by others".</li>
 <li>Все ошибки по обшивке и WRB: <a href="../../../start/common-mistakes/#sheathing">Обшивка</a>.</li>
 </ul>

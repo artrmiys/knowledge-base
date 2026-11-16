@@ -7269,9 +7269,9 @@
 
 <h1 id="gable-walls">Gable Walls (фронтоны)<a class="headerlink" href="#gable-walls" title="Прямая ссылка на раздел">&para;</a></h1>
 <div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-083.png">
-    <img src="../../../../assets/images/confluence/confluence-083.png" alt="Gable truss на площадке" loading="lazy">
-    <div class="kb-gallery__caption">Gable truss: ферма с вертикальными стойками. Каркас by others, считаем только sheathing и слои.</div>
+  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-083.jpg">
+    <img src="../../../../assets/images/confluence/confluence-083.jpg" alt="Обычная W-ферма на площадке" loading="lazy">
+    <div class="kb-gallery__caption">Обычная W-ферма на площадке, для сравнения: у gable-end truss вместо раскосов вертикальные стойки под обшивку. Каркас by others, считаем только sheathing и слои.</div>
   </a>
   <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-084.png">
     <img src="../../../../assets/images/confluence/confluence-084.png" alt="Stick gable: стойки стены продолжены до конька" loading="lazy">
@@ -7305,7 +7305,7 @@ trusses</strong> (ферма, by others, наш только sheathing-паке�
 </tr>
 <tr>
 <td>Разрезы <code>sec</code></td>
-<td>Где кончается стена и начинается gable; высота стойки стены</td>
+<td>Где кончается стена и начинается gable; высота стены</td>
 </tr>
 <tr>
 <td>Draftstops plan (<code>a1-00</code> и подобные)</td>
@@ -7316,8 +7316,8 @@ trusses</strong> (ферма, by others, наш только sheathing-паке�
 <td>Пролёт и подъём для треугольника draft stop</td>
 </tr>
 <tr>
-<td>Wall notes</td>
-<td>Сечение 2x4 или 2x6, FRT, материал обшивки</td>
+<td>Wall notes, roof plan legend</td>
+<td>Сечение 2x4 или 2x6, FRT, материал обшивки; материал draft stop</td>
 </tr>
 </tbody>
 </table>
@@ -7347,12 +7347,14 @@ trusses</strong> (ферма, by others, наш только sheathing-паке�
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Кнопка <code>GB</code> полосы XL кладёт фронтоны в блок <code>Gable Walls</code>; макрос
 <code>a2_sqft_gable_trussheel</code> читает площади и длины.</p>
+<p><code>BTM</code> и <code>TOP</code> - длины линий <code>btm</code> и <code>top</code> в LFT, <code>площадь</code> - Area фронтона
+в SQ FT.</p>
 <table>
 <thead>
 <tr>
 <th>Имя в дереве</th>
 <th>Строка DFL</th>
-<th>Unit</th>
+<th>Unit (колонка D)</th>
 <th>Формула / фактор</th>
 </tr>
 </thead>
@@ -7366,55 +7368,68 @@ trusses</strong> (ферма, by others, наш только sheathing-паке�
 <tr>
 <td>то же</td>
 <td><code>Studs for Gables</code> 2x6</td>
-<td>pcs</td>
-<td><code>SQFT / высота стойки</code>, до чётного</td>
+<td>штуки, D = <code>12</code></td>
+<td><code>=EVEN(G/D)</code>: площадь gable stick / 12, до чётного</td>
 </tr>
 <tr>
 <td>то же</td>
 <td><code>Blocking</code> 2x6</td>
 <td>LFT</td>
-<td><code>BTM / 2</code></td>
+<td><code>BTM / 2</code>, до чётного</td>
 </tr>
 <tr>
 <td>то же</td>
-<td><code>Bracing Ext Walls</code> 2x4 (14')</td>
-<td>pcs</td>
-<td><code>BTM / 8 x 1.1</code></td>
+<td><code>Bracing Ext Walls</code> 2x4</td>
+<td>штуки, D = <code>14</code></td>
+<td><code>BTM / 8 x 1.1</code>; фронтон ниже 7' в коньке строки не получает</td>
 </tr>
 <tr>
 <td>оба типа</td>
 <td><code>Wall Sheathing</code> <code>7/16" Zip</code> или <code>1/2" Ply</code></td>
 <td>4x8</td>
-<td><code>SQFT x 1.1 / 32</code>, вверх</td>
+<td><code>площадь x 1.1 / 32</code>, вверх</td>
 </tr>
 <tr>
-<td>оба типа</td>
-<td><code>Vapor Barrier</code> (материал WRB по спецификации)</td>
+<td>оба типа, без Zip</td>
+<td><code>Vapor Barrier</code> (в B - WRB по спецификации)</td>
 <td>SQ FT</td>
-<td><code>SQFT x 1.1</code>, до 10</td>
+<td><code>площадь x 1.1</code></td>
 </tr>
 <tr>
-<td>оба типа</td>
+<td>оба типа, без Zip</td>
 <td><code>Insulation</code></td>
 <td>SQ FT</td>
-<td><code>SQFT x 1.1</code>, до 10</td>
+<td><code>площадь x 1.1</code>; только continuous insulation снаружи обшивки</td>
 </tr>
 <tr>
-<td>оба типа</td>
+<td>оба типа, Zip</td>
 <td><code>Tape</code> <code>Zip Tape</code></td>
 <td>LFT</td>
-<td><code>SQFT x 0.4 x 1.1</code>, до 10</td>
+<td><code>площадь x 0.4 x 1.1</code>, до 10</td>
 </tr>
 <tr>
 <td><code>gable trusses/draft stop</code></td>
-<td><code>Draft Stop</code> <code>1/2" OSB</code></td>
+<td><code>Draft Stop</code></td>
 <td>SQ FT</td>
-<td>сумма треугольников, толщина по детали</td>
+<td><code>сумма треугольников x 1.1</code></td>
 </tr>
 </tbody>
 </table>
-<p>У gable trusses строк plates и studs нет. Материал обшивки и FRT - по notes
-наружной стены (<a href="../../sheathing/wall-sheathing/">Wall Sheathing</a>).</p>
+<p>Округление строк в SQ FT и LFT: результат меньше 50 - до 2, иначе до 10.</p>
+<p><strong>Studs for Gables.</strong> Стойки фронтона не считаются по шагу: у треугольника
+каждая стойка своей длины. Шаблон берёт площадь: G = площадь gable stick в
+SQ FT, D = <code>12</code> (заказная стойка 12', из неё режут короткие), C = <code>=EVEN(G/D)</code>,
+то есть одна 12' стойка на каждые 12 SQ FT фронтона, до чётного. Фронтон
+556 SQ FT: <code>556 / 12 = 46.3</code>, в книге 48 стоек по 12'.</p>
+<p><strong>Draft Stop.</strong> Единица <code>SQ FT</code>, не листы <code>4x8</code>. Материал в B - из легенды
+roof plan или из разреза: по умолчанию <code>1/2" WR Gyp</code>; <code>7/16" OSB</code>, <code>1/2" Gyp</code>
+или <code>5/8" Type X</code>, когда так написано на чертеже; листа с draft stop нет -
+<code>TBD</code>. Обшивка с двух сторон: подпись <code>Draft Stop 2 sides</code>, G x 2. Строка
+стоит в блоке Gable Walls после пустой строки.</p>
+<p>При Zip строк <code>Vapor Barrier</code> и <code>Insulation</code> нет: барьер уже в листе, нужен
+только <code>Tape</code>. Утеплитель между стойками by others в любом случае. У gable
+trusses строк plates и studs нет. Материал обшивки и FRT - по notes наружной
+стены (<a href="../../sheathing/wall-sheathing/">Wall Sheathing</a>).</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Draft stop чердака пропущен или скопирован из суммы shear walls: самый частый пропуск.</li>
@@ -7423,6 +7438,7 @@ trusses</strong> (ферма, by others, наш только sheathing-паке�
 <li>У gable trusses выписаны plates и studs.</li>
 <li>Gable перепутан с truss heel или box sheathing: это разная геометрия.</li>
 <li>Площадь измерена, но в Excel осталась старая цифра.</li>
+<li><code>Draft Stop</code> записан в листах <code>4x8</code> или с материалом по привычке, а не из легенды roof plan.</li>
 </ul>
 <p>Разбор с примерами: <a href="../../../../start/common-mistakes/#walls">все ошибки по стенам</a>.</p>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
@@ -7435,6 +7451,21 @@ trusses</strong> (ферма, by others, наш только sheathing-паке�
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    gable stick    Area, 556 SQ FT
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    btm            Line, 52.4 LFT
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    top            Line, 70.3 LFT
+</span></code></pre></div>
+<p>Строки DFL из этих замеров (стена с Zip):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Gable trusses
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Wall Sheathing                  7/16&quot; Zip      28   4x8     812 x 1.1 / 32 = 27.9
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Tape                            Zip Tape      360   LFT     812 x 0.4 x 1.1 = 357.3
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Draft Stop                      1/2&quot; WR Gyp   430   SQ FT   390 x 1.1 = 429
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Gable stick (Grge)
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Plates Ext (3) btm and dbl top  2x6           214   LFT     (52.4 + 2 x 70.3) x 1.1 = 212.3
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Studs for Gables                2x6            48   12      556 / 12 = 46.3
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>Blocking                        2x6            28   LFT     52.4 / 2 = 26.2
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>Bracing Ext Walls               2x4           7.2   14      52.4 / 8 x 1.1
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>Wall Sheathing                  7/16&quot; Zip      20   4x8     556 x 1.1 / 32 = 19.1
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>Tape                            Zip Tape      250   LFT     556 x 0.4 x 1.1 = 244.6
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

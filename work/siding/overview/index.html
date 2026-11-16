@@ -7348,7 +7348,9 @@ waste, by others.</p>
 <li>Открой wall sections: WRB по спецификации, furring, Cedar Breather.</li>
 <li>Обведи площади по фасадам, стена за стеной; gables, dormers, bays и
    accent отдельными итемами.</li>
-<li>Вычеты по правилу: крупные проёмы один раз, окна меньше 4' не вычитаем.</li>
+<li>Вычеты: каждое окно и дверь вырезаются по раме один раз; в DFL идёт
+   чистая площадь. Правило "окна уже 4' не вычитаем" относится к обшивке
+   стен, не к siding.</li>
 </ol>
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Корень <code>siding</code> в дереве корпуса, Area по итему на материал и цвет:
@@ -7368,40 +7370,41 @@ waste, by others.</p>
 </thead>
 <tbody>
 <tr>
+<td><code>Siding Horizontal</code></td>
+<td><code>Hardi plank</code></td>
+<td><code>=CEILING(G*1.1,10)</code></td>
+<td>SQ FT</td>
+<td><code>6" Exp. A201</code></td>
+</tr>
+<tr>
 <td><code>Siding</code></td>
-<td><code>Hardi plank 6" exp</code></td>
-<td><code>=L+R+Front+Rear</code></td>
-<td>SQ FT</td>
-<td><code>A201</code></td>
-</tr>
-<tr>
-<td><code>Siding Gable front</code></td>
 <td><code>Vinyl Shingles</code></td>
-<td><code>=...</code></td>
+<td><code>=CEILING(G*1.1,10)</code></td>
 <td>SQ FT</td>
-<td><code>A201</code></td>
+<td><code>gable front A201</code></td>
 </tr>
 <tr>
-<td><code>Siding 2</code></td>
+<td><code>Siding Vertical</code></td>
 <td><code>Boral TruExt 1x10 Shiplap</code></td>
-<td><code>=...</code></td>
+<td><code>=CEILING(G*1.1,10)</code></td>
 <td>SQ FT</td>
 <td><code>A202</code></td>
 </tr>
 <tr>
 <td><code>Siding</code></td>
-<td><code>Per customer TBD</code></td>
+<td><code>TBD Siding</code></td>
 <td><code>0</code></td>
 <td>SQ FT</td>
-<td>нота</td>
+<td>нота <code>Note: Siding is not specified; verify</code></td>
 </tr>
 </tbody>
 </table>
-<p>Материал и exposure всегда в строке; gable и accent отдельно; единица
-<code>SQ FT</code>, не <code>LFT</code>.</p>
+<p>В G чистая площадь суммой <code>=L+R+Front+Rear</code>, waste 1.1 стоит в формуле C.
+Материал всегда в B, exposure в E; gable и accent отдельно, горизонтальный
+и вертикальный отдельно; единица <code>SQ FT</code>, не <code>LFT</code>.</p>
 <h2 id="_4">Частые ошибки<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li>WRB назван <code>Vapor Barrier</code>, или Tyvek при fluid-applied по спецификации.</li>
+<li>В B наружного барьера написано <code>Vapor Barrier</code> или Tyvek вместо WRB по спецификации.</li>
 <li>Stone или EIFS посчитаны как siding.</li>
 <li>Accent во фронтоне слит с полем другого материала.</li>
 <li>Измеренная площадь не перенесена в Excel или не обновлена после правок.</li>

@@ -6593,6 +6593,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legend
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#stud-spacing-factors" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6661,6 +6672,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Column C formulas by row type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truss-bracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Truss bracing: where the numbers come from
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7187,6 +7215,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legend
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#stud-spacing-factors" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7255,6 +7294,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Column C formulas by row type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truss-bracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Truss bracing: where the numbers come from
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7333,6 +7389,50 @@
 
 <h1 id="formulas-and-factors">Formulas and factors<a class="headerlink" href="#formulas-and-factors" title="Link to this section">&para;</a></h1>
 <p>Here: the multipliers and column C formulas used in the workbook, and how studs differ from joists. Formulas are given in the English locale (<code>CEILING</code>, <code>EVEN</code>); in other locales Excel shows localized function names with <code>;</code> between arguments, the meaning is the same.</p>
+<h2 id="legend">Legend<a class="headerlink" href="#legend" title="Link to this section">&para;</a></h2>
+<p>The letters in the formulas are the columns of one DFL row. One row = one material item.</p>
+<table>
+<thead>
+<tr>
+<th>Letter</th>
+<th>What it is</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>G</code></td>
+<td>The measurement from OurPlanCore: a line length in feet, an area in square feet, or a number of points. A grey column to the right of the table; it does not go into the order. <code>G</code> carries no waste: it is the bare measurement.</td>
+<td><code>G</code> = 186 (length of the exterior walls)</td>
+</tr>
+<tr>
+<td><code>H</code></td>
+<td>The second number of the row, also grey. Its meaning depends on the row: spacing in inches (hardware and blocking at a spacing), the number of plies for a label with <code>(n)</code> (plates, headers, rim), the wall height in feet (studs, shear walls). Each formula below says what <code>H</code> holds.</td>
+<td><code>H</code> = 48 (anchors at 48" o.c.)</td>
+</tr>
+<tr>
+<td><code>C</code></td>
+<td>The quantity to order. A formula of <code>G</code> (and <code>H</code>, <code>D</code>); the number is never typed by hand.</td>
+<td><code>=CEILING(G/D,1)</code></td>
+</tr>
+<tr>
+<td><code>D</code></td>
+<td>The unit: <code>LFT</code>, <code>SQ FT</code>, <code>4x8</code>, <code>pcs</code>, <code>unit</code>, <code>tubes</code>. For lumber ordered by the piece (studs, joists, beams, posts, headers, rim, ribbon, blocking, ledger, bracing) <code>D</code> holds the board length in feet: 8, 10, 12, 14, 16. Then <code>C</code> is the number of boards and the formula divides by <code>D</code>.</td>
+<td><code>D</code> = 16</td>
+</tr>
+<tr>
+<td><code>Stock LF</code></td>
+<td>The length of one ordered piece in feet, the same number as in <code>D</code>. Shaft channels usually come in 12.</td>
+<td>12</td>
+</tr>
+<tr>
+<td><code>LFT</code>, <code>SQ FT</code></td>
+<td>Linear and square feet. Written exactly this way in <code>D</code>; <code>LF</code>, <code>SF</code>, <code>SQFT</code> are not used in <code>D</code>.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>How a row is built and what the other columns hold: <a href="../dfl-overview/">How the DFL workbook works</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Studs and joists use different tables</p>
 <p>Studs and joists share the same <code>o.c.</code>, but the multipliers differ: studs follow the owner's rule (a stud per foot plus waste), joists follow geometry (<code>12 / spacing</code>). Do not mix up the tables.</p>
@@ -7365,9 +7465,15 @@
 </tr>
 </tbody>
 </table>
+<figure>
+<p><img alt="Why studs at 16 o.c. are counted as 1.1 per foot" src="../../../assets/images/reference/studs-16oc.svg" />
+  </p>
+<figcaption>Light studs are the regular ones at the spacing, 0.75 per foot by geometry. Green ones are added by corners, T-intersections, king, jack and cripples at openings: that is why we count one stud per foot plus 10%.</figcaption>
+</figure>
 <ul>
-<li><code>pcs = wall LFT x factor</code>; stud height in column E of the row, to 1/8" (floor-to-floor minus subfloor, minus floor framing, minus plates).</li>
-<li>Bearing walls as Extra: the main line with the regular factor, extra plies on a separate <code>double extra</code> row, subtract the base from the regular studs. Extra factors: <code>16" o.c.</code> 0.75, <code>24" o.c.</code> 0.5 (without the base row's waste).</li>
+<li><code>pcs = wall LFT x factor</code>, in the workbook <code>=G*factor</code>.</li>
+<li>The height in the stud row (E, to 1/8") and in the wall name is the height of the assembled wall, plates included: floor-to-floor minus the <code>3/4"</code> subfloor, minus the floor depth. The one bottom and two top plates are <strong>not deducted</strong>: the template picks the stud, precut or full height, from this height. Deduct only extra boards beyond those three when the section shows them (a second bottom plate, blocking under trusses). The bare stud is <code>4 1/2"</code> shorter than the wall height. Stud selection table: <a href="../../work/vertical/walls/exterior/#precut">Exterior Walls</a>.</li>
+<li>Bearing walls as Extra: the main line with the regular factor, extra plies on a separate <code>double extra</code> row, subtract the base from the regular studs. Extra factors: <code>12" o.c.</code> 1, <code>16" o.c.</code> 0.75, <code>24" o.c.</code> 0.5 (without the base row's waste).</li>
 <li>A double wall = two frames only if the plan shows two frames; staggered corridor 2x4 = two rows at 16" o.c., 2x6 plates.</li>
 </ul>
 <h2 id="joist-spacing-factors">Joist spacing factors<a class="headerlink" href="#joist-spacing-factors" title="Link to this section">&para;</a></h2>
@@ -7404,49 +7510,78 @@
 <li>Hangers for joists: at both ends of each joist, by assembly; piece hardware under 50 rounds to an even number.</li>
 </ul>
 <h2 id="rim-ribbon-blocking-ledger">Rim, ribbon, blocking, ledger<a class="headerlink" href="#rim-ribbon-blocking-ledger" title="Link to this section">&para;</a></h2>
+<p>In the tree each of these details is one Line along the place where it applies; its length in feet goes to <code>G</code>. How the length becomes an order depends on the row and the job type.</p>
 <table>
 <thead>
 <tr>
-<th>Item</th>
-<th>Unit</th>
-<th>Factor</th>
+<th>Row</th>
+<th>Where</th>
+<th>C</th>
+<th>D</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Rim Board, EWP jobs</td>
-<td>LFT</td>
-<td><code>1.05</code></td>
+<td><code>Rim Board</code>, <code>Ribbon Board</code>, <code>Blocking</code>, <code>Blocking for Drywall</code>, <code>Ledger</code></td>
+<td>Floor and Roof Framing List of a regular workbook (Frame, COM, residential)</td>
+<td><code>=CEILING(G/D,1)</code></td>
+<td><code>16</code></td>
 </tr>
 <tr>
-<td>Rim Board, other jobs (residential, COM)</td>
-<td>LFT</td>
-<td><code>1.1</code></td>
+<td><code>Rim Board (2)</code></td>
+<td>same, double rim</td>
+<td><code>=CEILING(G*H/D,1)</code>, H = 2</td>
+<td><code>16</code></td>
 </tr>
 <tr>
-<td>Blocking, Ribbon, Ledger, Blocking for Drywall, bracing along walls</td>
-<td>LFT</td>
-<td><code>1.1</code> once in the formula</td>
+<td><code>Rim Board</code></td>
+<td>EWP-only job (only engineered wood is counted)</td>
+<td><code>=CEILING(G*1.05,1)</code></td>
+<td><code>LFT</code></td>
+</tr>
+<tr>
+<td>Continuous <code>Blocking</code></td>
+<td>EWP-only job</td>
+<td><code>G</code> with no factor</td>
+<td><code>LFT</code></td>
+</tr>
+<tr>
+<td><code>Blocking</code> in walls</td>
+<td>Floor Walls</td>
+<td><code>=EVEN(G)</code></td>
+<td><code>LFT</code></td>
+</tr>
+<tr>
+<td><code>Bracing Ext Walls</code>, <code>Bracing Corridor</code>, <code>Bracing Demising</code></td>
+<td>Floor Walls</td>
+<td><code>=G/8*1.1</code>: one board per 8 LFT of wall</td>
+<td>board length by wall height</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Rim and blocking stay in LFT and are not divided into 16' pieces, unless the output explicitly requires pcs.</li>
+<li>In a regular workbook the rim, ribbon, blocking and ledger rows are written by the <code>C_RimBoardBlockingHangers</code> macro: the quantity is in 16' boards. There is no separate factor; rounding up to a whole board is the waste.</li>
+<li><code>1.05</code> is the rim factor on EWP-only jobs only: there rim stays in LFT and is not cut into pieces. If a client asks for rim in LFT on a regular job, the factor is <code>1.1</code>.</li>
+<li>Do not cut the line in the tree into 16' pieces: measure the whole length of the detail, the formula splits it into boards.</li>
+<li>Board length for wall bracing: wall up to 10' - <code>14</code>, up to 12' - <code>16</code>, up to 16' - <code>18</code>, taller - <code>20</code>. The formula in <code>D</code> of the template sets it from the tallest wall of the group. Walls under 7' get no bracing.</li>
 <li>Top chord bearing trusses: instead of a ribbon board, blocking between trusses, often <code>(2) 2x6</code>.</li>
-<li>Blocking at spacing is counted in pieces: formulas below.</li>
+<li>Blocking at a spacing is counted in pieces: formulas below.</li>
 </ul>
 <h2 id="blocking-formulas">Blocking formulas<a class="headerlink" href="#blocking-formulas" title="Link to this section">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Flat 48&quot; o.c.          = CEILING(LFT * 12 / 48 * 2 * 1.1 / Stock LF, 1)
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Diagonal 48&quot; o.c.      = CEILING(LFT * 12 / 48 * 2.5 * 1.1 / Stock LF, 1)
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Blocking btw trusses   = CEILING(G * 12 / 48 * 2 / D * 1.1, 1)
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>T blocking at gables   = EVEN(G / D)
+<p>Blocking at a spacing means short pieces between joists or trusses set at equal intervals along a line. <code>G</code> is the length of that line in feet, <code>H</code> the spacing in inches, <code>D</code> the board length (16).</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Blocking 48&quot; o.c., flat       = CEILING(G * 12 / H * 2 / D, 1)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Diagonal Blocking 48&quot; o.c.    = CEILING(G * 12 / H * 3 / D, 1)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Blocking btw trusses (n)      = CEILING(G / D, 1)        G = line length x number of rows n
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>T blocking at gables          = EVEN(G / D)
 </span></code></pre></div>
+<p>How to read the first formula: <code>G * 12 / H</code> is how many blocking points fit on the line; <code>2</code> is how many feet of board one point takes; that gives linear feet; <code>/ D</code> turns them into 16' boards. Example: a 96' line at 48": 96 x 12 / 48 = 24 points, 24 x 2' = 48 LFT, 48 / 16 = 3 boards.</p>
 <h3 id="blocking-factor">Blocking factor by type<a class="headerlink" href="#blocking-factor" title="Link to this section">&para;</a></h3>
+<p>Feet of board per point:</p>
 <table>
 <thead>
 <tr>
 <th>Type</th>
-<th style="text-align: right;">Pieces per bay factor</th>
+<th style="text-align: right;">Feet per point</th>
 </tr>
 </thead>
 <tbody>
@@ -7455,8 +7590,8 @@
 <td style="text-align: right;"><code>2</code></td>
 </tr>
 <tr>
-<td>Diagonal</td>
-<td style="text-align: right;"><code>2.5</code></td>
+<td>Diagonal (row <code>Diagonal Blocking 48" o.c.</code>)</td>
+<td style="text-align: right;"><code>3</code></td>
 </tr>
 <tr>
 <td>Vertical</td>
@@ -7464,6 +7599,12 @@
 </tr>
 </tbody>
 </table>
+<figure>
+<p><img alt="Blocking at a spacing: flat, diagonal, vertical and the piece formula" src="../../../assets/images/reference/blocking-pieces.svg" />
+  </p>
+<figcaption>One blocking piece between two members takes 2, 2.5 or 1.5-2 ft of board. The tree holds one line: the formula counts the points at the spacing and turns them into 16 ft boards.</figcaption>
+</figure>
+<p>The detail governs: if it shows a different number of pieces at a point, take the multiplier from the detail.</p>
 <p>Walls 10' and taller get two rows of blocking. Kitchen: <code>2x6</code>, 4 pieces at 14' per kitchen; bath: 1 piece at 14' per bathroom. Kickers only where the detail shows them.</p>
 <h2 id="column-c-formulas-by-row-type">Column C formulas by row type<a class="headerlink" href="#column-c-formulas-by-row-type" title="Link to this section">&para;</a></h2>
 <table>
@@ -7481,23 +7622,28 @@
 <td><code>4x8</code></td>
 </tr>
 <tr>
-<td>Linear stock by stock length</td>
-<td><code>=CEILING(G/D,1)</code> (D = 14 or 16)</td>
+<td>Lumber by the piece at a board length (rim, ribbon, blocking, ledger, sub fascia)</td>
+<td><code>=CEILING(G/D,1)</code>: the length in feet divided by the board length</td>
+<td>board length, usually <code>16</code></td>
+</tr>
+<tr>
+<td>Linear items not split into boards (flashing, tape, jambs, blocking in Wall Materials)</td>
+<td><code>=CEILING(G*1.1,10)</code>; under 50 - <code>=CEILING(G*1.1,2)</code></td>
 <td><code>LFT</code></td>
 </tr>
 <tr>
 <td>Plates</td>
-<td><code>=EVEN(G*H*1.1)</code> (H = number of plates)</td>
+<td><code>=EVEN(G*H*1.1)</code> (H = number of plates from the label: <code>(1) btm</code>, <code>(2) dbl top</code>)</td>
 <td><code>LFT</code></td>
 </tr>
 <tr>
 <td>Studs</td>
-<td><code>=CEILING(G*1.1,1)</code> at 16" o.c.</td>
-<td><code>pcs</code></td>
+<td><code>=G*1.1</code> at 16" o.c. (factor from the table above)</td>
+<td>stud length: <code>8</code>, <code>9</code>, <code>10</code>, <code>12</code></td>
 </tr>
 <tr>
-<td>Hardware at spacing (anchors, ties, hangers)</td>
-<td><code>=CEILING(G*12/H*1.1,2)</code>; at 50 and more the template's own significance <code>,10</code> or <code>,1</code></td>
+<td>Hardware at a spacing (anchors, ties, hangers)</td>
+<td><code>=CEILING(G*12/H*1.1,2)</code> (H = spacing in inches); at 50 and more the template's own significance <code>,10</code> or <code>,1</code></td>
 <td><code>pcs</code></td>
 </tr>
 <tr>
@@ -7516,13 +7662,18 @@
 <td><code>pcs</code></td>
 </tr>
 <tr>
-<td>Truss bracing</td>
-<td><code>2x6</code> by default, a row every 10'; <code>=CEILING(G/4/D,1)</code> over the whole area under the roof, including the garage</td>
-<td><code>pcs</code></td>
+<td><code>Bracing for Trusses</code> (floor trusses)</td>
+<td><code>2x6</code>; <code>=CEILING(G/D,1)</code>, <code>G</code> = length of the bracing lines in feet: one line across the trusses about every 10'; not over bearing walls and not where joists or rafters are stick or TJI (trusses only)</td>
+<td><code>16</code></td>
+</tr>
+<tr>
+<td><code>Truss Bracing</code> (roof trusses)</td>
+<td><code>2x4</code>; <code>=CEILING(G/4/D,1)</code>, <code>G</code> = plan area under the roof trusses, garage included; a stick roof gets no row</td>
+<td><code>16</code></td>
 </tr>
 <tr>
 <td>Panel adhesive</td>
-<td><code>=C&lt;subfloor&gt;/3</code></td>
+<td><code>=CEILING(C&lt;subfloor&gt;/3,1)</code>: one tube per 3 subfloor sheets</td>
 <td><code>tubes</code></td>
 </tr>
 <tr>
@@ -7538,10 +7689,17 @@
 <tr>
 <td>Double-sided shear wall</td>
 <td>G = sum of the two faces, no extra x2</td>
-<td><code>SQ FT</code></td>
+<td><code>4x8</code></td>
 </tr>
 </tbody>
 </table>
+<h3 id="truss-bracing">Truss bracing: where the numbers come from<a class="headerlink" href="#truss-bracing" title="Link to this section">&para;</a></h3>
+<p>These are two different rows, counted in different ways.</p>
+<ul>
+<li><strong>Floor, <code>Bracing for Trusses</code>.</strong> In the tree you draw the bracing lines themselves (strongbacks): <code>framing/&lt;floor&gt; framing/details/bft</code>, one line across the trusses about every 10' of span. Do not run a line over bearing walls. Where the floor is stick joists or TJI there is no bracing at all: only trusses need it. Example: truss span 28', two lines of 48' = 96 LFT; <code>=CEILING(96/16,1)</code> = 6 boards of <code>2x6</code> at 16'.</li>
+<li><strong>Roof, <code>Truss Bracing</code>.</strong> No lines are drawn; take the plan area under the trusses: the 1st floor plus the garage and lower roofs when trusses sit over them too. <code>G/4</code> is the linear feet of bracing: one run for every 4' of truss length, so each square foot of plan takes 1/4 foot of board. <code>/D</code> turns it into 16' boards. Example: house 1,800 SQ FT and garage 440 SQ FT: 2,240 / 4 = 560 LFT, 560 / 16 = 35 boards of <code>2x4</code>.</li>
+<li>If bracing lines of the trusses under a flat roof are drawn and measured (<code>framing/roof framing/details/bft</code>), they go as a <code>Bracing for Trusses</code> row in the Roof Frame list, and the area row is not needed for those trusses. Never count the same thing twice.</li>
+</ul>
 <p>Formulas look at their own block: their own header, their own unit multiplier, their own floor. A copied floor with references into another block is the most common workbook mistake.</p>
 <h2 id="roofing">Roofing<a class="headerlink" href="#roofing" title="Link to this section">&para;</a></h2>
 <p>The pitch is applied once: plan area x <code>sqrt(1 + (rise/12)^2)</code>.</p>
@@ -7590,29 +7748,46 @@
 <td>template significance: <code>,10</code> for large ties and screws, <code>,1</code> for panels and strips</td>
 </tr>
 <tr>
+<td>Rows in <code>LFT</code> and <code>SQ FT</code></td>
+<td><code>G*1.1</code> rounded up: under 50 to an even number, 50 and more to 10</td>
+</tr>
+<tr>
 <td>Lumber, panels, pipes</td>
 <td>whole numbers, rounded up; <code>2.75</code> and <code>9.6</code> never appear in C</td>
 </tr>
 <tr>
 <td>Waste</td>
-<td>once: if G already includes 1.1, C has no second 1.1</td>
+<td>once, in the <code>C</code> formula. <code>G</code> carries no waste</td>
 </tr>
 </tbody>
 </table>
 <h2 id="shaft-walls">Shaft Walls<a class="headerlink" href="#shaft-walls" title="Link to this section">&para;</a></h2>
-<p>Shaft walls go in a separate block, even when the building walls are panels by others. Material from the wall type and the detail: it can be <code>2-1/2"</code> CH + J-channel or <code>2"</code> H + C-channel. <code>Stock LF</code> is usually 12; panels in the worksheet as <code>2x12 Panels</code>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2-1/2&quot; CH + J:
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>1&quot; Shaft Panels        = CEILING(LFT * 1.1 / 24, 2)
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>CH-channels vertical   = CEILING(LFT * 0.5 * 1.1 / Stock LF, 2)
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>J-channels horizontal  = CEILING(Horizontal LFT * 1.1 / Stock LF, 2)
+<p>Shaft walls go in a separate block, even when the building walls are panels by others. Material from the wall type and the detail: it can be <code>2-1/2"</code> CH + J-channel or <code>2"</code> H + C-channel. The two systems are never mixed in one wall.</p>
+<p>Panels and vertical channels are counted from the wall <strong>area</strong>, horizontal channels from the length:</p>
+<ul>
+<li><code>Area</code> (the <code>G</code> of the panel and vertical channel rows) = length of the shaft walls x height, summed over the floors, in SQ FT;</li>
+<li><code>24</code> = the area of one <code>2' x 12'</code> panel; E of the row says <code>2x12 Panels</code>;</li>
+<li><code>0.5</code> = a vertical channel every 24": one per 2' of wall, as tall as the wall;</li>
+<li><code>Run LFT</code> = length of the shaft walls; <code>x 2</code> is the channel at the top and the bottom on every floor;</li>
+<li><code>Stock LF</code> = length of one piece, usually 12 (it sits in <code>D</code>).</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2-1/2&quot; CH + J (shaft, panels on one side):
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Linear Panels, 1&quot; Shaft Panels   = CEILING(Area * 1.1 / 24, 2)
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>CH Channels Vertical             = CEILING(Area * 0.5 * 1.1 / Stock LF, 2)
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>J Channels Horizontal            = CEILING(Run LFT * 2 * 1.1 / Stock LF, 2)
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2&quot; H + C:
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>1&quot; Shaft Panels, 2 layers = CEILING(LFT * 2 * 1.1 / 24, 2)
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>H-channels vertical       = CEILING(LFT * 0.5 * 1.1 / Stock LF, 2)
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>H-channels horizontal     = CEILING(Horizontal LFT * 2 * 1.1 / Stock LF, 2)
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>C-channels perimeter      = CEILING(Perimeter LFT * 1.1 / Stock LF, 2)
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2&quot; H + C (area separation wall, panels on both sides):
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Linear Panels, 2 layers          = CEILING(Area * 2 * 1.1 / 24, 2)
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Channels Vertical (H)            = CEILING(Area * 0.5 * 1.1 / Stock LF, 2)
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Channels Horizontal (H)          = CEILING(Run LFT * 2 * 1.1 / Stock LF, 2)
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>Channels Perimeter (C)           = CEILING(Perimeter LFT * 1.1 / Stock LF, 2)
 </span></code></pre></div>
-<p>Dropped ceiling metal joists: <code>12" C-type = Area * 0.75 * 1.1 LF</code>.</p>
+<p>Example: a 64 LFT shaft, 10.5' high. Area 64 x 10.5 = 672 SQ FT. Panels: 672 x 1.1 / 24 = 30.8, so 32 panels. CH: 672 x 0.5 x 1.1 / 12 = 30.8, so 32 pieces of 12'. J: 64 x 2 x 1.1 / 12 = 11.7, so 12 pieces.</p>
+<div class="admonition danger">
+<p class="admonition-title">Do not divide the wall length by 24</p>
+<p>If you put the length (64 LFT) into the panel formula instead of the area, you get 4 panels instead of 32: the shortfall equals the wall height in feet.</p>
+</div>
+<p>Dropped ceiling metal joists: <code>12" C-type = Area * 0.75 * 1.1</code>, in LFT.</p>
 <h2 id="order-of-magnitude-check">Order-of-magnitude check<a class="headerlink" href="#order-of-magnitude-check" title="Link to this section">&para;</a></h2>
 <p>If a number looks odd, compare it with what is typical for a similar building: <a href="../quantity-benchmarks/">Quantity benchmarks</a>. This is a sanity check, not a norm; a discrepancy means "open the detail and the units", not "fix it to the average".</p>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>

@@ -7496,11 +7496,15 @@
 <p><code>Sort Blocks</code> and <code>Notes + Look</code> first save the workbook and put a copy in <code>_ewood_backups</code>, and leave the result unsaved. Don't like it: close the workbook without saving. Ctrl+Z does not undo regular macros, that is how Excel works.</p>
 </div>
 <h2 id="install">Installation<a class="headerlink" href="#install" title="Link to this section">&para;</a></h2>
-<figure>
-<p><img alt="One file installs the tab, the tools, the rules and the instructions. Only Excel 2010 or newer is needed, no admin rights and no Python." src="../../../assets/images/reference/ewood-tab/install-steps.svg" />
-  </p>
-<figcaption>One file installs the tab, the tools, the rules and the instructions. Only Excel 2010 or newer is needed, no admin rights and no Python.</figcaption>
-</figure>
+<p>How to install:</p>
+<ol>
+<li>Copy <code>EWoodTools-Setup.exe</code> to the computer: one file, everything is inside.</li>
+<li>Close Excel: the installer does not run while any Excel is open.</li>
+<li>Run the file and press <code>Install</code>. Windows may ask: "More info", then "Run anyway".</li>
+<li>Open a DFL workbook: the E-Wood tab is on the ribbon, with the workbook template on its left.</li>
+<li>The DeepSeek key is entered separately and is needed only for the English check and <code>Improve Note</code>.</li>
+</ol>
+<p>One file installs the tab, the tools, the rules and the instructions. Only Excel 2010 or newer is needed, no admin rights and no Python.</p>
 <ul>
 <li><strong>Update:</strong> the same steps with the new file. <strong>Remove:</strong> the same file, <code>Uninstall</code> button.</li>
 <li><strong>The DeepSeek key</strong> is stored for the Windows user and does not go into the installer. Without it everything works except the English check in <code>Fix</code> and <code>Improve Note</code>.</li>
@@ -7877,11 +7881,16 @@
 </tr>
 </tbody>
 </table>
-<figure>
-<p><img alt="Six steps. At the end, Check shows anything that still uses someone else's units." src="../../../assets/images/reference/ewood-tab/duplicate-steps.svg" />
-  </p>
-<figcaption>Six steps. At the end, Check shows anything that still uses someone else's units.</figcaption>
-</figure>
+<p>How to copy a block:</p>
+<ol>
+<li>Put the cursor in the block: on the header or any row under it.</li>
+<li>Press <code>Duplicate Block</code>: the copy lands right under the block, the cursor is on its header.</li>
+<li>Fix the header: the size in the text and the units in G.</li>
+<li>Link the cleared G cells to your own takeoffs.</li>
+<li>Remove extra rows, fix the counts in the C formulas.</li>
+<li>Press <code>Delete Zeros</code>: rows with C = 0 go away.</li>
+</ol>
+<p>At the end, <code>Check</code> shows anything that still uses someone else's units.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Before: block #1</label><label for="__tabbed_1_2">After: copy #2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -8172,7 +8181,7 @@
 <li>blocks go right after the framing list of their floor, trims after their block, <code>Roof Deck</code> and <code>Side Roof</code> before the roof;</li>
 <li>construction order: 1st Floor Framing List, 1st Floor Walls, 2nd Floor Framing List and so on;</li>
 <li><code>Decking</code> and <code>Railing</code> get their own header, deck framing gets the <code>Ground</code> level; no location: that goes into the report;</li>
-<li>washers in <code>Foundation Walls</code> go under their anchors, microgroups start after a blank row, one blank row at a time, none under a header.</li>
+<li>washers in <code>Foundation Walls</code> go under their anchors, <a href="../dfl-overview/#microgroups">microgroups</a> start after a blank row, one blank row at a time, none under a header.</li>
 </ul>
 <p><strong>Notes + Look</strong>, formatting:</p>
 <ul>
@@ -8187,11 +8196,14 @@
 </div>
 <h2 id="check">Check<a class="headerlink" href="#check" title="Link to this section">&para;</a></h2>
 <p>Changes nothing. Each line of the report: worksheet row number, code, and what is wrong. These are candidates: a person decides, from the drawing. A row you checked and kept will keep showing up: an empty list is not required.</p>
-<figure>
-<p><img alt="First what changes numbers, then the rest." src="../../../assets/images/reference/ewood-tab/check-steps.svg" />
-  </p>
-<figcaption>First what changes numbers, then the rest.</figcaption>
-</figure>
+<p>How to work through the list: first what changes numbers, then the rest.</p>
+<ol>
+<li>Press <code>Check</code>: the list opens by itself, the file is in <code>_ewood_backups</code>.</li>
+<li>Go top to bottom: <code>ERR-CELL</code> and <code>BLOCK-REF</code> first, they change numbers.</li>
+<li>Compare the row with the drawing: the list only shows, you decide.</li>
+<li>Fix it; <code>Notes + Look</code> and <code>Delete Zeros</code> clear some codes by themselves.</li>
+<li>Press <code>Check</code> again: what is left is what you kept on purpose.</li>
+</ol>
 <p>This is what report lines look like (example):</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>r129 BLOCK-REF: C counts the units of r110 &#39;#1 Upper Balcony/Terrace List 10.5&#39; x 5.5&#39; 4 units&#39;, this block starts at r128 (Beams (2) and 10 more rows)
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>r332 POST-COUNT: 14 post bases against 28 posts in this block (#1 Upper Balcony/Terrace List 17&#39; x 6&#39; 14 units)
@@ -8520,7 +8532,7 @@
 </tbody>
 </table>
 <h2 id="keys">Hotkeys<a class="headerlink" href="#keys" title="Link to this section">&para;</a></h2>
-<p>They work only in DFL workbooks. In old templates only the hotkeys of suitable macros; in other workbooks the hotkeys belong to Excel.</p>
+<p>They work only in DFL workbooks. In old templates only the hotkeys of suitable macros; in other workbooks the hotkeys belong to Excel. This table lists the keys by tab button; the full table with macro names and what each one does: <a href="../excel-hotkeys/">Excel macros and hotkeys</a>.</p>
 <table>
 <thead>
 <tr>

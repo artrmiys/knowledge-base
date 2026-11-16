@@ -7376,20 +7376,21 @@
 <tr>
 <td><code>Hangers</code></td>
 <td><code>ITS2.37/11.88</code></td>
-<td><code>=EVEN(G*12/16)</code></td>
+<td>number of joist ends that hang</td>
 <td><code>pcs</code></td>
-<td></td>
+<td>detail</td>
 </tr>
 <tr>
 <td><code>Rim Board</code></td>
 <td><code>11-7/8" LSL Rim</code></td>
-<td>LFT x 1.05</td>
-<td><code>LFT</code></td>
-<td></td>
+<td><code>=CEILING(G/D,1)</code></td>
+<td><code>16</code></td>
+<td>detail</td>
 </tr>
 </tbody>
 </table>
-<p>Hangers: on both ends of every joist that hangs; count by assemblies, not by purchase boards after cutting. Model per the detail (<code>U210-2</code>, not <code>LUS210-2</code>). <code>ITS</code> is top-flange only up to 16" depth and with no skew; deeper - <code>HIT</code>. Exterior and on P.T.: <code>Zmax</code> as a separate word; <code>H2.5A</code> ties to trusses under the sheathing go without Zmax. Selection: <a href="../../../../reference/hangers/">Hangers</a>; how to write it in B: <a href="../../../../reference/hangers/#dfl-format">hardware format in the DFL</a>.</p>
+<p>In a framing book the rim is 16' boards; LFT x 1.05 stays only on an EWP-only job: <a href="../details/rim/">Rim Board</a>.</p>
+<p>Hangers: on every joist end that hangs (both ends if the joist hangs on both sides); count by assemblies, not by purchase boards after cutting. If the joists are not listed by the piece but hang along a line, count by the line: <code>=EVEN(G*12/16)</code>, where <code>G</code> is the length of that line (ledger or beam) in LFT and <code>12/16</code> is the number of joists per foot at 16" o.c. Joists on both sides of the line: <code>G</code> x 2. Model per the detail (<code>U210-2</code>, not <code>LUS210-2</code>). <code>ITS</code> is top-flange only up to 16" depth and with no skew; deeper - <code>HIT</code>. Exterior and on P.T.: <code>Zmax</code> as a separate word; <code>H2.5A</code> ties to trusses under the sheathing go without Zmax. Selection: <a href="../../../../reference/hangers/">Hangers</a>; how to write it in B: <a href="../../../../reference/hangers/#dfl-format">hardware format in the DFL</a>.</p>
 <figure>
 <p><img alt="Face-mount joist hanger on a beam" src="../../../../../assets/images/photos/framing/joist-hanger-on-joist.jpg" />
   </p>
@@ -7401,9 +7402,9 @@
 <li>A plain Area named <code>2x8 16"</code>: there is no count, the area goes to Excel.</li>
 <li>Spacing restarted from an interior beam, or a joist removed though it does not land on the beam (tolerance about 2").</li>
 <li>Hangers not on both ends; <code>ITS</code> on joists 18" and deeper; DHU where the drywall stops under the floor (ITS is needed).</li>
-<li>Rim split into 16' and called <code>1-3/4 LVL</code> though not specified: <a href="../details/rim/">Rim Board</a>.</li>
+<li>The rim line in the tree cut into 16' pieces (measure one Line, the formula counts the boards), or the rim called <code>1-3/4 LVL</code> though not specified: <a href="../details/rim/">Rim Board</a>.</li>
 <li>Rim at roof TJI forgotten.</li>
-<li>Series lost: <code>TJI</code> instead of <code>11 7/8 TJI 230</code>; RED rewritten as TJI; there is no <code>TJI 9 1/2</code> in the 360/560 series.</li>
+<li>Series lost: <code>TJI</code> instead of <code>11 7/8 TJI 230</code>; RED rewritten as TJI; <code>TJI 9 1/2</code> comes only in series 110, 210, 230 (series 360 and 560 start at the 11 7/8 depth).</li>
 <li>Top chord bearing missed: there it is blocking instead of a ribbon, see <a href="../details/ribbon/">Ribbon Board</a>.</li>
 <li>Long 2x ceiling joists spliced over a support counted as one board.</li>
 <li><a href="../../../../start/common-mistakes/#floor">All floor framing mistakes</a></li>
@@ -7450,6 +7451,7 @@
 </tr>
 </tbody>
 </table>
+<p>Hangers in the example: 36 joists of 20' hang on a flush beam at one end and bear on a wall at the other - 36 pcs; 3 short joists of 12' hang at both ends - 6 pcs. Total 42.</p>
 <h2 id="i-joist-profiles-manufacturer-reference">I-joist profiles (manufacturer reference)<a class="headerlink" href="#i-joist-profiles-manufacturer-reference" title="Link to this section">&para;</a></h2>
 <p>Write the series and depth as in the schedule. The images are archived, for checking the family name.</p>
 <details class="kb-figures kb-figures--rows">
@@ -7457,7 +7459,7 @@
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">TJI</div>
-      <div class="kb-figure-row__rule">Series 110, 210, 230, 360, 560. In the row <code>11 7/8 TJI 230</code>, not a generic <code>TJI</code>.</div>
+      <div class="kb-figure-row__rule">Series 110, 210, 230, 360, 560; the 9 1/2 depth exists only in 110, 210, 230. In the row <code>11 7/8 TJI 230</code>, not a generic <code>TJI</code>.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../../../assets/images/confluence/confluence-007.png" target="_blank" rel="noopener"><img src="../../../../../assets/images/confluence/confluence-007.png" alt="TJI joist series" loading="lazy"></a>
   </figure>

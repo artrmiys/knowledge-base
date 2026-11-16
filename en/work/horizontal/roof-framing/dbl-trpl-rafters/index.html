@@ -7269,7 +7269,7 @@
 
 <h1 id="dbl-trpl-rafters">Dbl / Trpl Rafters<a class="headerlink" href="#dbl-trpl-rafters" title="Link to this section">&para;</a></h1>
 <figure>
-<p><img alt="Double rafters highlighted in green" src="../../../../../assets/images/confluence/confluence-140.png" />
+<p><img alt="Double rafters highlighted in green" src="../../../../../assets/images/confluence/confluence-141.png" />
   </p>
 <figcaption>Archive 3D view: doubled rafters at the sides of an opening and under a load are highlighted in green. They run parallel to the regular rafters from the ridge to the wall and are counted like a beam with plies.</figcaption>
 </figure>
@@ -7303,12 +7303,17 @@
 </tbody>
 </table>
 <h2 id="how-to-measure-in-ourplancore">How to measure in OurPlanCore<a class="headerlink" href="#how-to-measure-in-ourplancore" title="Link to this section">&para;</a></h2>
-<p>Beam tool (B) along the rafter on the roof framing sheet with the F dot. One pack = one point with <code>(n)</code> in the name. The plan length is multiplied by the slope factor (6:12 gives 1.118, 8:12 gives 1.202; table on the <a href="../hip/">Hip</a> page) or taken from the section. The app rounds the order length (up to 8' to the foot, longer to an even number).</p>
-<p>Hangers are needed only when the rafters bear on a bearing ridge beam or the detail shows them directly: <code>LSSR</code>, <code>LRU</code> by pack width. No hangers at a ridge board.</p>
+<p>Beam tool (B) along the rafter on the roof framing sheet with the F dot. One pack = one point with <code>(n)</code> in the name. In the DFL column C counts every board: places x plies. The plan length is multiplied by the slope factor (6:12 gives 1.118, 8:12 gives 1.202; table on the <a href="../hip/">Hip</a> page) or taken from the section. The app rounds the order length (up to 8' to the foot, longer to an even number).</p>
+<p>Hangers are needed only when the rafters bear on a bearing ridge beam or the detail shows them directly: <code>LSSR</code>, <code>LRU</code> by pack width. No hangers at a ridge board. Roof hangers are written with no <code>Z</code> and no <code>Zmax</code> (<code>LSSR210</code>, <code>LSSR2.56</code>); the exception is the <code>LRU...Z</code> models (<code>LRU212Z</code>), where Z is part of the name.</p>
 <figure>
 <p><img alt="Beam tool" src="../../../../../assets/images/ourplancore/v3/measure-beam.png" />
   </p>
-<figcaption>Beam tool: two points along the member, the app rounds the length and puts it into the takeoff name.</figcaption>
+<figcaption>Beam tool (example on a floor beam of the demo project): two points along the member, the ruler shows the length 49,11 ft, the app rounds it to the order length and creates a Count takeoff with the length in the name, here <code>FB1 50</code>.</figcaption>
+</figure>
+<figure>
+<p><img alt="Dbl and Trpl Rafters at a roof opening" src="../../../../../assets/images/roof/dbl-trpl-rafters.svg" />
+  </p>
+<figcaption>One slope in plan: doubled rafters on both sides of a skylight carry the headers, a tripled pack under a load, hangers at the ridge beam. One pack = one point in the tree.</figcaption>
 </figure>
 <h2 id="takeoff-name-and-dfl-row">Takeoff name and DFL row<a class="headerlink" href="#takeoff-name-and-dfl-row" title="Link to this section">&para;</a></h2>
 <p>Path: <code>framing/roof framing/beams/dbl rafters &lt;size&gt; &lt;length&gt;</code>.</p>
@@ -7334,7 +7339,7 @@
 </tr>
 <tr>
 <td><code>beams/trpl rafters (3) 1 3/4 x 11 7/8 LVL 28</code></td>
-<td><code>Trpl Rafters</code></td>
+<td><code>Trpl Rafters (3)</code></td>
 <td><code>1 3/4 x 11 7/8 LVL</code></td>
 <td>points x 3</td>
 <td><code>28</code></td>
@@ -7343,19 +7348,22 @@
 <tr>
 <td><code>details/LSSR</code></td>
 <td><code>Hangers</code></td>
-<td><code>LSSR2.56Z</code>, <code>LRU212Z</code></td>
+<td><code>LSSR2.56</code>, <code>LRU212Z</code></td>
 <td>per connection</td>
 <td><code>pcs</code></td>
 <td>detail</td>
 </tr>
 </tbody>
 </table>
+<p>One rule for every built-up member (beams, posts, headers, rafters): C = places x plies. One skylight with reinforced rafters on both sides is 2 places and C = 4 for <code>Dbl Rafters</code>.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Length taken from the plan without the slope.</li>
 <li>Pack written as one board: <code>(3)</code> lost, or the other way around, three points and <code>(3)</code> together.</li>
 <li>Hangers placed at a ridge board where there are none, or missed at a ridge beam.</li>
-<li>Hanger not matched to the pack width: <code>LSSR2.56</code> for one 2x instead of <code>LSSR410</code> for two.</li>
+<li>Hanger not matched to the pack width: <code>LSSR210</code> for one 2x instead of <code>LSSR210-2</code> for two.</li>
+<li>A roof hanger written with <code>Z</code> or <code>Zmax</code> (<code>LSSR2.56Z</code>): write <code>LSSR2.56</code>. <code>LRU212Z</code> stays as it is.</li>
+<li>C holds the points without multiplying by plies.</li>
 <li>Reinforced rafters from an "every other rafter doubled" detail averaged into regular rafters.</li>
 <li><a href="../../../../start/common-mistakes/#roof">All roof mistakes</a></li>
 </ul>
@@ -7379,7 +7387,7 @@
 <td><code>S201, skylight</code></td>
 </tr>
 <tr>
-<td><code>Trpl Rafters</code></td>
+<td><code>Trpl Rafters (3)</code></td>
 <td><code>1 3/4 x 11 7/8 LVL</code></td>
 <td>3</td>
 <td>28</td>
@@ -7387,15 +7395,16 @@
 </tr>
 <tr>
 <td><code>Hangers</code></td>
-<td><code>LSSR2.56Z</code></td>
+<td><code>LSSR210-2</code></td>
 <td>2</td>
 <td>pcs</td>
 <td><code>rafters to ridge beam 7/S501</code></td>
 </tr>
 </tbody>
 </table>
+<p><code>Dbl Rafters</code>: 2 places at the skylight x 2 = 4. <code>Trpl Rafters (3)</code>: 1 place x 3 = 3. Hangers: the two <code>Dbl Rafters</code> packs hang on the ridge beam at the top end, one hanger per pack.</p>
 <figure>
-<p><img alt="Second view of dbl rafters" src="../../../../../assets/images/confluence/confluence-141.png" />
+<p><img alt="Second view of dbl rafters" src="../../../../../assets/images/confluence/confluence-140.png" />
   </p>
 <figcaption>Doubled rafters up close: a two-board pack at the edge of the opening, the regular rafters between them are cut to the header.</figcaption>
 </figure>

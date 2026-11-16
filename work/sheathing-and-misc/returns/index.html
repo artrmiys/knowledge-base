@@ -7275,8 +7275,10 @@
 <p>Return (eave return, cornice return) - коробка в углу фронтона, где
 горизонтальный карниз заворачивает к наклонному rake. Два вида: proper
 cornice return (soffit + fascia + crown) и pork-chop (простой треугольный
-обрубок, но fascia и маленький soffit у него тоже есть). Return не входит ни
-в eave, ни в rake: другой каркас и другой набор строк.</p>
+обрубок, но fascia и маленький soffit у него тоже есть). В дереве return -
+своя линия, не часть <code>eve</code> и не часть <code>rake</code>. В DFL у него одна своя строка
+каркаса (<code>Rafter Frame for returns</code>), а soffit, fascia и crown своих строк не
+имеют: длина returns прибавляется к строкам карниза.</p>
 <div class="kb-gallery">
   <a class="kb-gallery__item" href="../../../assets/images/trims/ext-pork-chop.png">
     <img src="../../../assets/images/trims/ext-pork-chop.png" alt="Pork-chop return">
@@ -7284,7 +7286,7 @@ cornice return (soffit + fascia + crown) и pork-chop (простой треуг
   </a>
   <a class="kb-gallery__item" href="../../../assets/images/trims/ext-eave-return.png">
     <img src="../../../assets/images/trims/ext-eave-return.png" alt="Cornice return">
-    <div class="kb-gallery__caption">Cornice return: soffit, fascia, crown отдельным набором</div>
+    <div class="kb-gallery__caption">Cornice return: soffit, fascia и crown, длина идёт в строки карниза</div>
   </a>
 </div>
 
@@ -7315,53 +7317,83 @@ cornice return (soffit + fascia + crown) и pork-chop (простой треуг
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
 <ol>
 <li>Инструмент Line по короткому отрезку возврата вдоль стены фронтона, на
-   плане кровли или фасаде. Единица LFT.</li>
-<li>Имя <code>returns &lt;вынос в дюймах&gt;</code>: <code>returns 12</code>. Папка <code>eves rakes/rakes</code>
-   или <code>eves</code> по принятому дереву job; имя с <code>returns</code> маршрутизируется
-   как rake.</li>
-<li>Один return = один отрезок; число углов видно по количеству замеров.</li>
+   плане кровли или фасаде. Единица LFT, не штуки.</li>
+<li>Имя <code>returns &lt;вынос в дюймах&gt;</code>: <code>returns 12</code>. Число - вынос того карниза,
+   который заворачивает (у <code>eve 12 main</code> это <code>returns 12</code>), не длина возврата.
+   Имя начинается ровно со слова <code>returns</code>.</li>
+<li>Папка <code>eves rakes/eves</code>, рядом с линией своего карниза: в DFL returns
+   прибавляются к eave, не к rake.</li>
+<li>Один return = один отрезок; число углов видно по количеству отрезков.</li>
 </ol>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>LFT eave и LFT returns ниже - длины линий, вынос - число из имени в дюймах.</p>
 <table>
 <thead>
 <tr>
 <th>Имя в дереве</th>
 <th>Строка DFL</th>
 <th>Материал</th>
-<th>Unit</th>
+<th>Unit (D)</th>
+<th>Формула C</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>eves rakes/rakes/returns 12</code></td>
+<td><code>eves rakes/eves/returns 12</code></td>
 <td><code>Rafter Frame for returns</code></td>
-<td><code>2x4</code> по детали</td>
-<td><code>LFT</code></td>
+<td><code>2x6</code>, в E <code>assumed</code> или деталь</td>
+<td><code>16</code></td>
+<td><code>=ОКРВВЕРХ(G/12*1.4*0.75/D;1)</code>, G = LFT returns x вынос</td>
 </tr>
 <tr>
 <td>та же линия</td>
-<td><code>Soffits at Eves</code> (часть) / <code>Fascia</code></td>
-<td>по детали</td>
-<td><code>SQ FT</code> / <code>LFT</code></td>
+<td>входит в <code>Soffits at Eves</code></td>
+<td>материал карниза</td>
+<td><code>SQ FT</code></td>
+<td><code>=ЧЁТН((LFT eave + LFT returns)*вынос/12*1.1)</code></td>
 </tr>
 <tr>
-<td>cornice</td>
-<td><code>Crown</code> по returns</td>
+<td>та же линия</td>
+<td>входит в <code>Fascia at Eves</code></td>
+<td><code>1x8</code></td>
+<td><code>LFT</code></td>
+<td><code>=ЧЁТН((LFT eave + LFT returns)*1.1)</code></td>
+</tr>
+<tr>
+<td>cornice return, когда деталь показывает crown</td>
+<td>входит в <code>Crowns</code></td>
 <td>по детали</td>
 <td><code>LFT</code></td>
+<td><code>=ЧЁТН((LFT eave + LFT returns)*1.1)</code></td>
 </tr>
 </tbody>
 </table>
+<ul>
+<li>Своих строк soffit, fascia и crown у returns нет, штуками (<code>pcs</code>) returns не
+  считаются.</li>
+<li><code>Rafter Frame for returns</code> - каркас: короткие rafters возврата, доски по 16'
+  в D, число досок в C. Нет замера returns: строки нет.</li>
+<li>Soffit в <code>LFT</code> вместо <code>SQ FT</code> только когда он из одной доски на всю ширину:
+  <a href="../eve/">Eve / Eave</a>.</li>
+<li>Pork-chop: fascia и малый soffit считаются так же, crown нет.</li>
+</ul>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li>Returns растворены в общей линии eave.</li>
-<li>Тип не определён (pork-chop против cornice): разный trim и SQ FT.</li>
+<li>Returns растворены в общей линии eave или лежат в папке <code>rakes</code>.</li>
+<li>В имени стоит длина возврата вместо выноса карниза.</li>
+<li>Returns посчитаны штуками или отдельными строками soffit и fascia.</li>
+<li>Тип не определён (pork-chop против cornice): crown добавлен или потерян.</li>
 <li>FRT для открытого дерева не проверен.</li>
 </ul>
 <p>Все ошибки по кровле: <a href="../../../start/common-mistakes/#roof">common-mistakes</a>.</p>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/eves rakes/rakes/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  returns 12      Line  8 LFT   (4 угла по 2&#39;)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/eves rakes/eves/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  eve 12 main     Line  180 LFT
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  returns 12      Line    8 LFT   (4 угла по 2&#39;)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Rafter Frame for returns   2x6                  1   16      G = 8 x 12 = 96; 96/12 x 1.4 x 0.75 = 8.4; 8.4 / 16, вверх
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Soffits at Eves            12&quot; Vinyl vented   208   SQ FT   (180 + 8) x 12/12 x 1.1 = 206.8
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Fascia at Eves             1x8                208   LFT     (180 + 8) x 1.1 = 206.8
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

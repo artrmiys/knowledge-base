@@ -7339,7 +7339,8 @@
 <figcaption>Line along where the detail applies: the line length goes to G of the DFL row, the detail name gives the M flag on export.</figcaption>
 </figure>
 <h2 id="tree-name-and-dfl-row">Tree name and DFL row<a class="headerlink" href="#tree-name-and-dfl-row" title="Link to this section">&para;</a></h2>
-<p>A block of four rows next to the beams of this floor. The nailer is double by default (note <code>double 2x plate</code>); single only if the detail clearly shows one layer. The bottom nailer under the flange and the filler are separate rows per the detail.</p>
+<p>A block of rows next to the beams of this floor. The nailer is double by default (note <code>double 2x plate</code>); single only if the detail clearly shows one layer. The bottom nailer under the flange and the filler are separate rows per the detail.</p>
+<p>Web fillers are counted only where the joists hang on the beam web (a flush steel beam, the detail shows wood in the web). At a dropped steel beam, where the beam is below the joists and they bear on top of the nailer, there are no web fillers: count only the nailer and the bolts.</p>
 <table>
 <thead>
 <tr>
@@ -7361,7 +7362,7 @@
 <tr>
 <td><code>Anchor Bolts 24" o.c. (2)</code></td>
 <td><code>3/8" Ø</code></td>
-<td><code>=CEILING(G*12/H*2*1.1,2)</code></td>
+<td><code>=CEILING(G*12/H*2,2)</code></td>
 <td><code>pcs</code></td>
 <td><code>note II.B</code></td>
 </tr>
@@ -7380,11 +7381,11 @@
 <td></td>
 </tr>
 <tr>
-<td><code>Web Filler</code></td>
-<td><code>2x6</code></td>
-<td><code>=CEILING(G*2/D,1)</code></td>
+<td><code>Steel Beam Web Fillers 4x</code></td>
+<td>per detail: <code>2x10</code>, <code>2x12</code></td>
+<td><code>=CEILING(G*H/D,1)</code>, H = 4</td>
 <td><code>16</code></td>
-<td>detail</td>
+<td>W profile, detail</td>
 </tr>
 <tr>
 <td><code>Hangers</code></td>
@@ -7395,6 +7396,7 @@
 </tr>
 </tbody>
 </table>
+<p><code>G</code> is the steel beam length in LFT. In the nailer row the multiplier <code>2</code> is the number of layers. In the fillers row <code>H</code> is the number of packing layers for both sides of the web together (table below), and it prints in the Label: <code>4x</code>. In the bolt rows <code>H</code> is the spacing in inches and <code>2</code> is the bolts per point: for how to read the label see <a href="../bolts/">Bolts</a>.</p>
 <p>The washer for a nailer bolt is a regular washer; <code>3x3</code> only if the detail calls for it.</p>
 <h2 id="w-table">Nailer and packing by W profile<a class="headerlink" href="#w-table" title="Link to this section">&para;</a></h2>
 <p>When the detail does not give the nailer size or the number of layers in the web, take them by the beam profile (<code>W12x26</code>: W12 series, weight 26 lb/ft). Packing (web filler) is the boards in the beam web, the number of layers for both sides together. The detail on the S sheet always wins over the table.</p>
@@ -7591,6 +7593,7 @@
 <li>Bolts taken from the beams of another floor.</li>
 <li>Face-mount hanger picked while the detail shows bearing on top of the nailer (top-mount), or the other way around.</li>
 <li>Filler steel anchors with a 3x3 washer that is not specified.</li>
+<li>Web fillers counted at a dropped steel beam: there the joists bear on the nailer, no fillers are needed.</li>
 <li><code>EWP by others</code>, and the LVL/LSL blocking at the steel beam per the detail not written.</li>
 <li><a href="../../../../../start/common-mistakes/#floor">All floor framing mistakes</a></li>
 </ul>
@@ -7620,7 +7623,7 @@
 <tr>
 <td><code>Anchor Bolts 24" o.c. (2)</code></td>
 <td><code>3/8" Ø</code></td>
-<td><code>=CEILING(G*12/H*2*1.1,2)</code></td>
+<td><code>=CEILING(G*12/H*2,2)</code></td>
 <td>pcs</td>
 <td><code>note II.B</code></td>
 <td>86</td>
@@ -7629,23 +7632,24 @@
 <tr>
 <td><code>Washers 24" o.c. (2)</code></td>
 <td><code>3/8" Washers</code></td>
-<td><code>=CEILING(G*12/H*2*1.1,2)</code></td>
+<td><code>=CEILING(G*12/H*2,2)</code></td>
 <td>pcs</td>
 <td></td>
-<td>86</td>
-<td>24</td>
+<td></td>
+<td>2</td>
 </tr>
 <tr>
 <td><code>Nuts 24" o.c. (2)</code></td>
 <td><code>Nuts for 3/8" Ø</code></td>
-<td><code>=CEILING(G*12/H*2*1.1,2)</code></td>
+<td><code>=CEILING(G*12/H*2,2)</code></td>
 <td>pcs</td>
 <td></td>
-<td>86</td>
-<td>24</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<p>A dropped beam of 86 LFT, no fillers. Nailer: 86 x 2 / 16 = 10.75, so 11 boards of 16'. Bolts: 86 x 12 / 24 = 43 points, x 2 = 86; the same number of washers and nuts (their formulas take G and the spacing from the bolt row).</p>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>
 <li><a href="../../beam/">Beam</a>, <a href="../bolts/">Bolts</a>, <a href="../../../../../reference/hangers/">Hangers</a></li>

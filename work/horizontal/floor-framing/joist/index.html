@@ -7376,20 +7376,21 @@
 <tr>
 <td><code>Hangers</code></td>
 <td><code>ITS2.37/11.88</code></td>
-<td><code>=ЧЁТН(G*12/16)</code></td>
+<td>число концов joists, которые висят</td>
 <td><code>pcs</code></td>
-<td></td>
+<td>деталь</td>
 </tr>
 <tr>
 <td><code>Rim Board</code></td>
 <td><code>11-7/8" LSL Rim</code></td>
-<td>LFT x 1.05</td>
-<td><code>LFT</code></td>
-<td></td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code></td>
+<td><code>16</code></td>
+<td>деталь</td>
 </tr>
 </tbody>
 </table>
-<p>Hangers: на оба конца каждого joist, который висит; считать по сборкам, не по закупочным доскам после раскроя. Модель по детали (<code>U210-2</code>, не <code>LUS210-2</code>). <code>ITS</code> только top-flange до 16" глубины и без skew; глубже - <code>HIT</code>. Снаружи и на P.T. - <code>Zmax</code> отдельным словом; ties <code>H2.5A</code> к фермам под обшивкой без Zmax. Подбор: <a href="../../../../reference/hangers/">Hangers</a>, запись в B: <a href="../../../../reference/hangers/#dfl-format">формат крепежа в DFL</a>.</p>
+<p>Rim в framing-книге - доски по 16'; LFT x 1.05 остаётся только на EWP-only заказе: <a href="../details/rim/">Rim Board</a>.</p>
+<p>Hangers: на каждый конец joist, который висит (оба конца, если joist висит с двух сторон); считать по сборкам, не по закупочным доскам после раскроя. Если joists не перечислены штуками, а висят вдоль линии, считай по линии: <code>=ЧЁТН(G*12/16)</code>, где <code>G</code> - длина этой линии (ledger или балка) в LFT, а <code>12/16</code> - число joists на фут при шаге 16". Joists с обеих сторон линии - <code>G</code> x 2. Модель по детали (<code>U210-2</code>, не <code>LUS210-2</code>). <code>ITS</code> только top-flange до 16" глубины и без skew; глубже - <code>HIT</code>. Снаружи и на P.T. - <code>Zmax</code> отдельным словом; ties <code>H2.5A</code> к фермам под обшивкой без Zmax. Подбор: <a href="../../../../reference/hangers/">Hangers</a>, запись в B: <a href="../../../../reference/hangers/#dfl-format">формат крепежа в DFL</a>.</p>
 <figure>
 <p><img alt="Face-mount joist hanger на балке" src="../../../../assets/images/photos/framing/joist-hanger-on-joist.jpg" />
   </p>
@@ -7401,9 +7402,9 @@
 <li>Обычная Area названа <code>2x8 16"</code>: количества нет, в Excel уходит площадь.</li>
 <li>Шаг продолжен от внутренней балки заново или joist убран, хотя он не попадает на балку (допуск около 2").</li>
 <li>Hangers не на оба конца; <code>ITS</code> на joists 18" и глубже; DHU там, где гипс кончается под перекрытием (нужен ITS).</li>
-<li>Rim разбит на 16' и назван <code>1-3/4 LVL</code> без указания: <a href="../details/rim/">Rim Board</a>.</li>
+<li>Линия rim в дереве порезана на куски по 16' (мерь одной Line, доски считает формула) или rim назван <code>1-3/4 LVL</code> без указания: <a href="../details/rim/">Rim Board</a>.</li>
 <li>Rim у roof TJI забыт.</li>
-<li>Серия потеряна: <code>TJI</code> вместо <code>11 7/8 TJI 230</code>; RED переписан в TJI; <code>TJI 9 1/2</code> не бывает серии 360/560.</li>
+<li>Серия потеряна: <code>TJI</code> вместо <code>11 7/8 TJI 230</code>; RED переписан в TJI; <code>TJI 9 1/2</code> бывает только серий 110, 210, 230 (серии 360 и 560 начинаются с глубины 11 7/8).</li>
 <li>Top chord bearing не замечен: там blocking вместо ribbon, см. <a href="../details/ribbon/">Ribbon Board</a>.</li>
 <li>Длинные 2x ceiling joists со стыком на опоре посчитаны одной доской.</li>
 <li><a href="../../../../start/common-mistakes/#floor">Все ошибки по перекрытиям</a></li>
@@ -7450,6 +7451,7 @@
 </tr>
 </tbody>
 </table>
+<p>Hangers в примере: 36 joists по 20' висят одним концом на flush-балке, другой конец лежит на стене - 36 штук; 3 коротких joists по 12' висят обоими концами - 6 штук. Итого 42.</p>
 <h2 id="i-joist">Профили I-joist (справка по производителям)<a class="headerlink" href="#i-joist" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Серию и глубину пиши как в schedule. Картинки архивные, для проверки названия семейства.</p>
 <details class="kb-figures kb-figures--rows">
@@ -7457,7 +7459,7 @@
   <figure class="kb-figure-row">
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">TJI</div>
-      <div class="kb-figure-row__rule">Серии 110, 210, 230, 360, 560. В строке <code>11 7/8 TJI 230</code>, не общий <code>TJI</code>.</div>
+      <div class="kb-figure-row__rule">Серии 110, 210, 230, 360, 560; глубина 9 1/2 есть только у 110, 210, 230. В строке <code>11 7/8 TJI 230</code>, не общий <code>TJI</code>.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../../../assets/images/confluence/confluence-007.png" target="_blank" rel="noopener"><img src="../../../../assets/images/confluence/confluence-007.png" alt="TJI joist series" loading="lazy"></a>
   </figure>

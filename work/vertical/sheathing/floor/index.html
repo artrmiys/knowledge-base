@@ -7272,12 +7272,15 @@
 <figcaption>Сборка перекрытия по стрелкам: subfloor 3/4" T&amp;G, underlay, второй слой 3/4" T&amp;G, клей. Каждый лист своя строка. Утеплитель между joists и гипс потолка во frame-scope не считаем. Архивная иллюстрация.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Floor sheathing - всё, что лежит на joists по площади этажа: subfloor,
-underlayment, второй слой под плитку или ванны, FRT-полосы по периметру,
-sound mat. Базовый subfloor <code>3/4" T&amp;G</code> описан в <a href="../../../horizontal/floor-framing/subfloor/">Subfloor</a>;
-здесь - дополнительные слои по floor assembly, которые чаще всего теряют.
-Наружная полоса на высоте перекрытия - это <a href="../box-sheathing/">Box Sheathing</a>,
-не эта страница.</p>
+<p>Floor sheathing - <strong>горизонтальные</strong> листы, которые лежат на joists по площади
+этажа: subfloor, underlayment, второй слой под плитку или ванны, FRT-полосы
+по периметру, sound mat. Как делится материал между страницами:</p>
+<ul>
+<li>базовый subfloor <code>3/4" T&amp;G</code> и клей - <a href="../../../horizontal/floor-framing/subfloor/">Subfloor</a>;</li>
+<li>здесь - дополнительные слои по floor assembly, которые чаще всего теряют;</li>
+<li>вертикальная полоса обшивки на высоте перекрытия (по торцу rim) - это
+  <a href="../box-sheathing/">Box Sheathing</a>, не эта страница.</li>
+</ul>
 <h2 id="_2">Где искать на чертежах<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7337,11 +7340,11 @@ sound mat. Базовый subfloor <code>3/4" T&amp;G</code> описан в <a 
 <td><code>=ОКРВВЕРХ(SQFT/32*1.1;1)</code></td>
 </tr>
 <tr>
-<td>та же площадь</td>
+<td>строка <code>Subfloor</code></td>
 <td><code>Panel Adheasive</code></td>
 <td><code>29OZ</code></td>
-<td><code>pcs</code></td>
-<td>по шаблону</td>
+<td><code>tubes</code></td>
+<td><code>=ОКРВВЕРХ(C&lt;subfloor&gt;/3;1)</code>: одна туба на 3 листа subfloor</td>
 </tr>
 <tr>
 <td>та же площадь</td>
@@ -7355,7 +7358,7 @@ sound mat. Базовый subfloor <code>3/4" T&amp;G</code> описан в <a 
 <td><code>Subfloor FRT</code></td>
 <td><code>3/4" T&amp;G FRT</code></td>
 <td><code>4x8</code></td>
-<td><code>=ОКРВВЕРХ(LFT*4/32*1.1;1)</code></td>
+<td><code>=ОКРВВЕРХ(LFT*4/32*1.1;1)</code> для полосы 4' (для 2' множитель <code>2</code>)</td>
 </tr>
 <tr>
 <td><code>sqfts/tubs</code></td>
@@ -7378,12 +7381,14 @@ sound mat. Базовый subfloor <code>3/4" T&amp;G</code> описан в <a 
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2nd Floor Framing List
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Subfloor            3/4&quot; T&amp;G            128   4x8    S201
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Subfloor FRT        3/4&quot; T&amp;G FRT         54   4x8    4&#39; perimeter per S001
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Panel Adheasive     29OZ                 16   pcs
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Panel Adheasive     29OZ                 43   tubes
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Subfloor FRT        3/4&quot; T&amp;G FRT         54   4x8    4&#39; perimeter per S001
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Underlayment        1/2&quot; Ply            128   4x8    A6-01 floor type F2
 </span></code></pre></div>
+<p><code>Panel Adheasive</code> стоит сразу под <code>Subfloor</code> и считается от его листов:
+<code>128 / 3 = 42.7</code>, в книге 43 тубы.</p>
 <figure>
-<p><img alt="Монтаж subfloor на joists" src="../../../../assets/images/confluence/confluence-172.png" />
+<p><img alt="Монтаж subfloor на joists" src="../../../../assets/images/confluence/confluence-172.jpg" />
   </p>
 <figcaption>Subfloor T&amp;G на joists. Листы = SQFT / 32 x 1.1, вверх до целого. Архивное фото.</figcaption>
 </figure>

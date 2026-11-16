@@ -7275,7 +7275,7 @@
 </table>
 <ul>
 <li>Нижняя plate P.T. только на бетоне и кладке; на деревянном перекрытии обычная.</li>
-<li>Посты на улице (porch, балкон, перила) всегда P.T.; под крышей - обычные.</li>
+<li>Лес на улице (porch, балкон, deck, навес, перила: посты, балки, joists, ledger) всегда P.T., под крышей он или нет; обычный только внутри тёплого контура.</li>
 </ul>
 <h2 id="engineered-lumber-ewp">Engineered lumber (EWP)<a class="headerlink" href="#engineered-lumber-ewp" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
@@ -7319,6 +7319,11 @@
 <li>С I-joists только engineered rim; LVL rim - только когда к нему крепится deck или corridor.</li>
 <li>Type III: LVL, PSL, LSL в плоскости наружной стены запрещены, <code>LVL FRT</code> не пишется.</li>
 </ul>
+<figure>
+<p><img alt="Семейства EWP в разрезе: LVL, PSL, LSL, I-joist, rim board" src="../../assets/images/reference/ewp-families.svg" />
+  </p>
+<figcaption>Сечения EWP в одном масштабе и запись в колонке B. LVL узнаётся по слоям шпона и числу ply, PSL по массивному сечению, I-joist по полкам и тонкой стенке, rim по тонкой доске.</figcaption>
+</figure>
 <h2 id="_2">Обшивка, настил, барьеры<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7376,6 +7381,11 @@
 </tr>
 </tbody>
 </table>
+<figure>
+<p><img alt="Листы 4x8: Plywood, OSB, Zip, DensGlass, T&amp;G subfloor" src="../../assets/images/reference/sheet-types.svg" />
+  </p>
+<figcaption>Пять листовых материалов, которые путают на чертеже: как выглядят, как пишутся в B и где стоят. Все в D идут как <code>4x8</code>; у Zip барьер встроен, поэтому только Tape.</figcaption>
+</figure>
 <p>Расхождение арх и S по обшивке решается нотой: <a href="../standard-notes/#spec-cells">Ноты в DFL</a>.</p>
 <h2 id="accessories">Accessories<a class="headerlink" href="#accessories" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
@@ -7396,7 +7406,7 @@
 </tr>
 <tr>
 <td>Panel adhesive</td>
-<td><code>29 oz</code> тубы: <code>=C&lt;subfloor&gt;/3</code></td>
+<td><code>29 oz</code> тубы: <code>=CEILING(C&lt;subfloor&gt;/3,1)</code>, одна туба на 3 листа</td>
 </tr>
 <tr>
 <td>H-clips</td>

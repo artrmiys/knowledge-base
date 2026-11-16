@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" role="img" aria-labelledby="t d">
+  <title id="t">Doubled and tripled rafters around a roof opening</title>
+  <desc id="d">Plan of one roof slope between the ridge beam and the wall: common rafters at 16 inches on centre, a skylight opening with a doubled rafter on each side and headers above and below, cut rafters on the headers, and a tripled rafter under a load. Legend gives the tool, tree name and DFL row for each part.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
+    <style>
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
+    </style>
+  </defs>
+<rect x="0.5" y="0.5" width="879" height="559" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="h" x="40" y="44">Roof framing plan: один скат</text>
+<rect x="40" y="86" width="460" height="384" fill="#eef1f4" stroke="none" stroke-width="0"/>
+<rect x="40" y="74" width="460" height="14" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.4"/>
+<rect x="40" y="470" width="460" height="14" fill="url(#hatchGrey)" stroke="#3a3f44" stroke-width="1.2"/>
+<line x1="52" y1="88" x2="52" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="75" y1="88" x2="75" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="98" y1="88" x2="98" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="121" y1="88" x2="121" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="144" y1="88" x2="144" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="167" y1="88" x2="167" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="305" y1="88" x2="305" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="328" y1="88" x2="328" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="351" y1="88" x2="351" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="374" y1="88" x2="374" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="397" y1="88" x2="397" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="420" y1="88" x2="420" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="443" y1="88" x2="443" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="466" y1="88" x2="466" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="489" y1="88" x2="489" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="213" y1="88" x2="213" y2="194" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="213" y1="336" x2="213" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="236" y1="88" x2="236" y2="194" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="236" y1="336" x2="236" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="259" y1="88" x2="259" y2="194" stroke="#a9b3bd" stroke-width="2.2"/>
+<line x1="259" y1="336" x2="259" y2="470" stroke="#a9b3bd" stroke-width="2.2"/>
+<rect x="183" y="88" width="6" height="382" fill="#d9b87a" stroke="#6c4b2a" stroke-width="1.1"/>
+<rect x="177" y="88" width="6" height="382" fill="#d9b87a" stroke="#6c4b2a" stroke-width="1.1"/>
+<rect x="283" y="88" width="6" height="382" fill="#d9b87a" stroke="#6c4b2a" stroke-width="1.1"/>
+<rect x="289" y="88" width="6" height="382" fill="#d9b87a" stroke="#6c4b2a" stroke-width="1.1"/>
+<rect x="190" y="188" width="92" height="6" fill="#c9955a" stroke="#6c4b2a" stroke-width="1.1"/>
+<rect x="190" y="194" width="92" height="6" fill="#c9955a" stroke="#6c4b2a" stroke-width="1.1"/>
+<rect x="190" y="330" width="92" height="6" fill="#c9955a" stroke="#6c4b2a" stroke-width="1.1"/>
+<rect x="190" y="336" width="92" height="6" fill="#c9955a" stroke="#6c4b2a" stroke-width="1.1"/>
+<rect x="190" y="200" width="92" height="130" fill="#ffffff" stroke="#3a3f44" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text class="note" x="236.0" y="270.0" text-anchor="middle">skylight</text>
+<rect x="397" y="88" width="6" height="382" fill="#d9b87a" stroke="#6c4b2a" stroke-width="1.1"/>
+<rect x="403" y="88" width="6" height="382" fill="#d9b87a" stroke="#6c4b2a" stroke-width="1.1"/>
+<rect x="409" y="88" width="6" height="382" fill="#d9b87a" stroke="#6c4b2a" stroke-width="1.1"/>
+<path d="M174,88 v14 h18 v-14" fill="none" stroke="#4d5861" stroke-width="2.6" stroke-linejoin="round"/>
+<path d="M280,88 v14 h18 v-14" fill="none" stroke="#4d5861" stroke-width="2.6" stroke-linejoin="round"/>
+<path d="M394,88 v14 h24 v-14" fill="none" stroke="#4d5861" stroke-width="2.6" stroke-linejoin="round"/>
+<text class="note" x="44" y="68">ridge beam</text>
+<text class="note" x="44" y="504">bearing wall</text>
+<circle cx="182" cy="400" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="182" y="404.5">1</text>
+<circle cx="290" cy="400" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="290" y="404.5">1</text>
+<circle cx="406" cy="290" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="406" y="294.5">2</text>
+<circle cx="236.0" cy="194" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="236.0" y="198.5">3</text>
+<circle cx="236.0" cy="336" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="236.0" y="340.5">3</text>
+<circle cx="290" cy="116" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="290" y="120.5">4</text>
+<circle cx="406" cy="116" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="406" y="120.5">4</text>
+<circle cx="110" cy="290" r="11" fill="#6b7680" stroke="#fff" stroke-width="1.5"/><text class="numt" x="110" y="294.5">5</text>
+<line x1="305" y1="499" x2="328" y2="499" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="dimt" x="338" y="504">16" o.c.</text>
+<circle cx="548" cy="62" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="548" y="66.5">1</text>
+<text class="lab2" x="568" y="67">Dbl Rafters: пакет из 2</text>
+<text class="mono2" x="568" y="85">beams/dbl rafters 2x12 18</text>
+<text class="mono2" x="568" y="102">Dbl Rafters | 2x12 | точки x 2 | 18</text>
+<circle cx="548" cy="140" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="548" y="144.5">2</text>
+<text class="lab2" x="568" y="145">Trpl Rafters: пакет из 3</text>
+<text class="mono2" x="568" y="163">beams/trpl rafters (3) LVL 28</text>
+<text class="mono2" x="568" y="180">Trpl Rafters | LVL | точки x 3 | 28</text>
+<circle cx="548" cy="218" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="548" y="222.5">3</text>
+<text class="lab2" x="568" y="223">Roof Header</text>
+<text class="mono2" x="568" y="241">beams/rf header (2) 2x12 10</text>
+<text class="mono2" x="568" y="258">Header (2) | 2x12 | точки x 2 | 10</text>
+<circle cx="548" cy="296" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="548" y="300.5">4</text>
+<text class="lab2" x="568" y="301">Hangers у ridge beam</text>
+<text class="mono2" x="568" y="319">details/LSSR</text>
+<text class="mono2" x="568" y="336">Hangers | LSSR2.56 | pcs</text>
+<circle cx="548" cy="374" r="11" fill="#6b7680" stroke="#fff" stroke-width="1.5"/><text class="numt" x="548" y="378.5">5</text>
+<text class="lab2" x="568" y="379">Common rafters</text>
+<text class="mono2" x="568" y="397">J Area (J), обрезаны на header</text>
+<text class="mono2" x="568" y="414">Rafters 16" o.c. | 2x10</text>
+<rect x="534" y="446" width="332" height="92" fill="#f6f8f6" stroke="#cfd8cf" stroke-width="1.2" rx="8"/>
+<text class="ink" x="548" y="470">Один пакет = одна точка в дереве;</text>
+<text class="ink" x="548" y="489">в C точки x число досок (n).</text>
+<text class="ink" x="548" y="508">Длина: разрез или план x уклон.</text>
+<text class="note" x="40" y="540">К ridge board hangers не ставятся: только к несущему ridge beam или по детали.</text>
+</svg>

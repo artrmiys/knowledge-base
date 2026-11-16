@@ -7277,8 +7277,8 @@ soffit снизу и fascia по торцу. Rake - наклонная кром�
 (<a href="../rake/">Rake</a>), return - коробка в углу, где eave заворачивает к rake
 (<a href="../returns/">Returns</a>). Вертикальная полоса у пятки фермы над стеной - это
 <a href="../../vertical/sheathing/truss-heel/">Truss Heel</a>, не часть карниза. Из одной
-линии eave экспорт получает soffit (SQ FT), fascia и sub fascia (LFT) и каркас
-свеса.</p>
+линии eave экспорт получает soffit (SQ FT), fascia (LFT), sub fascia и каркас
+свеса (доски по 16').</p>
 <h2 id="_2">Где искать на чертежах<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7341,37 +7341,51 @@ soffit снизу и fascia по торцу. Rake - наклонная кром�
 <tr>
 <td><code>eves rakes/eves/eve 24 main</code></td>
 <td><code>Soffits at Eves</code></td>
-<td><code>12" Vinyl vented</code> / beadboard / <code>5/8" Ext Gyp</code></td>
-<td><code>SQ FT</code> или <code>LFT</code></td>
-<td><code>LFT x 24/12</code></td>
+<td><code>12" Vinyl vented</code> / <code>T&amp;G beadboard</code> / <code>Soffit panel</code></td>
+<td><code>SQ FT</code></td>
+<td><code>=ЧЁТН((LFT eave + LFT returns)*вынос/12*1.1)</code></td>
+</tr>
+<tr>
+<td>та же линия, soffit из одной доски или одной полосы на всю ширину</td>
+<td><code>Soffits at Eves</code></td>
+<td><code>1x12</code>, <code>1x4</code></td>
+<td><code>LFT</code></td>
+<td><code>=ЧЁТН((LFT eave + LFT returns)*1.1)</code></td>
 </tr>
 <tr>
 <td>та же линия</td>
 <td><code>Fascia at Eves</code></td>
-<td><code>1x8</code> / alum wrapped</td>
+<td><code>1x8</code>, по детали <code>1x10</code> или <code>1x6</code></td>
 <td><code>LFT</code></td>
-<td><code>LFT x 1.1</code></td>
+<td><code>=ЧЁТН((LFT eave + LFT returns)*1.1)</code></td>
 </tr>
 <tr>
 <td>та же линия</td>
 <td><code>Sub Fascia</code></td>
-<td><code>2x8</code></td>
-<td><code>LFT</code></td>
-<td>в блоке кровли</td>
+<td><code>2x6</code>, по детали <code>2x8</code></td>
+<td><code>16</code></td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code>, G = LFT eaves и returns, без 1.1</td>
 </tr>
 <tr>
 <td>та же линия</td>
 <td><code>Frame for Soffits 24" o.c.</code></td>
-<td><code>2x4</code> или <code>2x6</code> по детали</td>
-<td><code>LFT</code></td>
-<td>по детали</td>
+<td><code>2x4</code>, по детали <code>2x6</code></td>
+<td><code>16</code></td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code>, G = LFT x вынос / шаг + LFT</td>
 </tr>
 <tr>
 <td>та же линия</td>
-<td><code>Blocking at Eves</code>, <code>Simpson Ties at Eves</code></td>
-<td><code>2x6</code>, <code>H2.5A</code></td>
-<td><code>LFT</code>, <code>pcs</code></td>
-<td><a href="../../horizontal/roof-framing/roof-sheathing/">Roof Sheathing</a></td>
+<td><code>Blocking at Eves</code></td>
+<td><code>2x6</code>, по детали <code>2x4</code> или <code>2x8</code></td>
+<td><code>16</code></td>
+<td><code>=ОКРВВЕРХ(G/D*1.1;1)</code>, G = LFT eaves без returns</td>
+</tr>
+<tr>
+<td>та же линия</td>
+<td><code>Simpson Ties at Eves 24" o.c.</code></td>
+<td><code>H2.5</code>, по S notes <code>H2.5A</code> (без Zmax)</td>
+<td><code>pcs</code></td>
+<td><code>=ОКРВВЕРХ(G*12/H;10)</code>, H = шаг ферм; <a href="../../horizontal/roof-framing/roof-sheathing/">Roof Sheathing</a></td>
 </tr>
 <tr>
 <td><code>eves rakes/eves/eve 12 porch</code></td>
@@ -7382,10 +7396,25 @@ soffit снизу и fascia по торцу. Rake - наклонная кром�
 </tr>
 </tbody>
 </table>
-<p>Экспорт в Excel: полоса XL, кнопка E/R; число выноса в имени читается
-макросом как ширина в дюймах. Vinyl soffit вводится как материал в SQ FT, не
-как строка каркаса. Если 30% и больше soffit = beadboard, весь soffit считаем
-beadboard и пишем Note, что это local rule.</p>
+<p>LFT - длина линии, вынос - число из её имени в дюймах. Экспорт в Excel: полоса
+XL, кнопка E/R; число выноса в имени читается макросом как ширина в дюймах.</p>
+<p>Soffit считаем в <code>SQ FT</code>: (LFT eave + LFT returns) x вынос / 12 x 1.1. В <code>LFT</code>
+только когда soffit закрыт одной доской или одной полосой на всю ширину
+(<code>1x12</code>, <code>1x4</code>, одна узкая vinyl-полоса): тогда ширина в формулу не входит.
+Примеры: панели 12" vinyl на свесе 24" = <code>SQ FT</code>; свес 9", закрытый одной
+<code>1x10</code> = <code>LFT</code>. Plywood soffit пишем <code>AC Ply</code> в <code>SQ FT</code>, не листами. Vinyl
+soffit - строка материала, не каркаса. Aluminum soffit и fascia в aluminum
+wrap - by others: строк soffit и fascia нет, только Note; sub fascia и каркас
+свеса под ними всё равно считаем.</p>
+<p>Soffit на чертежах не назван - дефолт по siding: vinyl siding = vinyl soffit
+в <code>SQ FT</code>; wood или composite clapboard = <code>1x</code> Azek в <code>LFT</code> (если много свесов
+шире 12", soffit panel в <code>SQ FT</code> на все); cedar shingles = beadboard в
+<code>SQ FT</code>; Hardie, board and batten и panels = soffit panel в <code>SQ FT</code>. Если 30%
+и больше soffit = beadboard, весь soffit считаем beadboard и пишем Note, что
+это local rule.</p>
+<p><code>Sub Fascia</code>, <code>Frame for Soffits</code> и <code>Blocking at Eves</code> - каркас: в D длина
+доски 16', в C число досок. Aluminum-каркас soffit или короткий свес только с
+sub fascia и blocking: строки <code>Frame for Soffits</code> нет.</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Canopy и porch посчитаны ещё раз внутри eave или rake.</li>
@@ -7393,6 +7422,7 @@ beadboard и пишем Note, что это local rule.</p>
 <li>Rake и returns слиты в eave, хотя строки разные.</li>
 <li>Truss heel спрятан в soffit SQ FT.</li>
 <li><code>Soffit Eve Vinyl</code> введён как каркас, а не как SQ FT материала.</li>
+<li>Soffit из панелей записан в <code>LFT</code>, или returns не прибавлены к soffit и fascia.</li>
 <li>Frame for soffit <code>2x4</code> подставлен автоматически, хотя деталь даёт <code>2x6</code>.</li>
 <li>Для кровли из <code>AJS Rafters</code> с открытым свесом посчитан простой rake вместо rafters вручную.</li>
 </ul>
@@ -7401,12 +7431,15 @@ beadboard и пишем Note, что это local rule.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/eves rakes/eves/
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  eve 24 main          Line  310 LFT
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  eve 12 porch         Line   38 LFT
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Takeoffs/Main/eves rakes/rakes/
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  rake 12 main         Line   96 LFT
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  returns 12           Line    8 LFT
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  returns 24           Line    8 LFT
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Takeoffs/Main/eves rakes/rakes/
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  rake 12 main         Line   96 LFT
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Soffits at Eves      12&quot; Vinyl vented    620   SQ FT   310 x 2&#39;
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Fascia at Eves       1x8 alum wrapped    341   LFT
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Main, вынос 24&quot; (porch в своём блоке):
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Soffits at Eves              12&quot; Vinyl vented    700   SQ FT   (310 + 8) x 24/12 x 1.1 = 699.6
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Fascia at Eves               1x8                 350   LFT     (310 + 8) x 1.1 = 349.8
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Sub Fascia                   2x8                  20   16      G = 310 + 8 = 318; 318 / 16 = 19.9
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Frame for Soffits 24&quot; o.c.   2x4                  40   16      G = 318 x 24/24 + 318 = 636; 636 / 16 = 39.8
 </span></code></pre></div>
 <figure>
 <p><img alt="Части карниза в takeoff" src="../../../assets/images/roof/eave-parts-takeoff.svg" />

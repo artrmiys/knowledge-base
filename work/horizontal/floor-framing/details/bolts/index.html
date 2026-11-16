@@ -7271,9 +7271,9 @@
 
 <h1 id="bolts">Bolts (болты, шайбы, гайки)<a class="headerlink" href="#bolts" title="Прямая ссылка на раздел">&para;</a></h1>
 <figure>
-<p><img alt="Anchor bolt through sill plate" src="../../../../../assets/images/framing/anchor-bolt.svg" />
+<p><img alt="Through bolts балка-пост и болты nailer на стальной балке" src="../../../../../assets/images/framing/through-bolt.svg" />
   </p>
-<figcaption>Болт с шайбой и гайкой: три строки в DFL. Шаг и диаметр по детали, одна шайба на болт, две - когда дерево с обеих сторон.</figcaption>
+<figcaption>Сверху through bolt балки к посту: строки <code>Bolts</code>, <code>Washers</code> (две на болт, дерево с двух сторон) и <code>Nuts</code>. Снизу болты nailer на стальной балке с шагом 24" вразбежку: три строки шаблона с одной формулой.</figcaption>
 </figure>
 <!-- TODO-PHOTO: Simpson Titen HD anchor with plate washer in sill plate, EN query "Titen HD anchor washer sill plate" -->
 
@@ -7309,7 +7309,9 @@
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Отдельный замер нужен редко: длина берётся из Line детали (<code>details/2x10 ledger + screws</code>, <code>details/nailer</code>), количество узлов - из Count постов или балок. Точечные болты по деталям - Count (P) с именем детали.</p>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Макрос <code>blt</code> (вставка болтов) даёт сразу три строки. Формулы в pcs; результат меньше 50 округляется до чётного (значимость 2).</p>
+<p>Макрос <code>blt</code> (вставка болтов) даёт сразу три строки. Формулы в pcs, округление вверх до чётного (значимость 2).</p>
+<p>Как читать подпись <code>Anchor Bolts 24" o.c. (2)</code>: это подпись шаблона, её собирает макрос. <code>24" o.c.</code> - шаг из колонки H строки болтов, <code>(2)</code> - число болтов в одной точке (в книге оно стоит в H строки <code>Washers</code>). Слово <code>Anchor</code> здесь не значит анкер в бетон: так подписаны и through bolts nailer или ledger.</p>
+<p>В формуле <code>G</code> - длина линии соединения в LFT (стальная балка, ledger), <code>H</code> - шаг в дюймах, <code>G*12/H</code> - число точек, <code>2</code> - болтов в точке.</p>
 <table>
 <thead>
 <tr>
@@ -7324,14 +7326,14 @@
 <tr>
 <td><code>Anchor Bolts 24" o.c. (2)</code></td>
 <td><code>3/8" Ø x 6"</code></td>
-<td><code>=ОКРВВЕРХ(G*12/H*2*1.1;2)</code></td>
+<td><code>=ОКРВВЕРХ(G*12/H*2;2)</code></td>
 <td><code>pcs</code></td>
 <td>деталь</td>
 </tr>
 <tr>
 <td><code>Washers 24" o.c. (2)</code></td>
 <td><code>3/8" Washers</code></td>
-<td>та же формула</td>
+<td>та же формула; x 2, когда шайбы с двух сторон</td>
 <td><code>pcs</code></td>
 <td></td>
 </tr>
@@ -7384,7 +7386,7 @@
 <tr>
 <td><code>Anchor Bolts 24" o.c. (2)</code></td>
 <td><code>3/8" Ø x 6"</code></td>
-<td><code>=ОКРВВЕРХ(G*12/H*2*1.1;2)</code></td>
+<td><code>=ОКРВВЕРХ(G*12/H*2;2)</code></td>
 <td>pcs</td>
 <td><code>note II.B per S101</code></td>
 <td>86</td>
@@ -7393,23 +7395,24 @@
 <tr>
 <td><code>Washers 24" o.c. (2)</code></td>
 <td><code>3/8" Washers</code></td>
-<td><code>=ОКРВВЕРХ(G*12/H*2*1.1;2)</code></td>
+<td><code>=ОКРВВЕРХ(G*12/H*2;2)</code></td>
 <td>pcs</td>
 <td></td>
-<td>86</td>
-<td>24</td>
+<td></td>
+<td>2</td>
 </tr>
 <tr>
 <td><code>Nuts 24" o.c. (2)</code></td>
 <td><code>Nuts for 3/8" Ø</code></td>
-<td><code>=ОКРВВЕРХ(G*12/H*2*1.1;2)</code></td>
+<td><code>=ОКРВВЕРХ(G*12/H*2;2)</code></td>
 <td>pcs</td>
 <td></td>
-<td>86</td>
-<td>24</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<p>Nailer на стальной балке 86 LFT, болты по 2 в точке через 24": 86 x 12 / 24 = 43 точки, x 2 = 86 болтов; столько же шайб и гаек. В книге G и шаг стоят только в строке болтов, формулы <code>Washers</code> и <code>Nuts</code> берут их оттуда; в H строки <code>Washers</code> стоит 2 (болтов в точке), это число и печатается в подписях <code>(2)</code>.</p>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li><a href="../../../../deck/anchor-bolts/">Anchor Bolts</a> - анкеры к бетону, SW schedule</li>

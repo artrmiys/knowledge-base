@@ -7289,9 +7289,9 @@
 
 <h1 id="balcony-build-up">Balcony build-up<a class="headerlink" href="#balcony-build-up" title="Link to this section">&para;</a></h1>
 <figure>
-<p><img alt="Balcony build-up assembly stack" src="../../../../assets/images/trims/balcony-buildup.svg" />
+<p><img alt="Balcony section: frame and finish layers with row numbers" src="../../../../assets/images/trims/balcony-buildup.svg" />
   </p>
-<figcaption>Bottom to top: frame, sleepers, EPDM, decking. Rows 1-6 are counted on the frame page, rows 7-12 here. Pavers and membrane are often by others.</figcaption>
+<figcaption>Balcony section at the wall: frame, subfloor, EPDM on the subfloor turned up the wall, sleepers over the membrane, decking on the sleepers. Numbers match the table below: rows 1-6 are counted on the frame page, rows 7-12 here. Pavers and membrane are often by others.</figcaption>
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
 <p>The map of all balcony layers and the canonical page for the finish layers: post wrap, EPDM, decking
@@ -7311,7 +7311,7 @@ the railing on <a href="../rails-decking/">Rails &amp; Decking</a>. The
 <tbody>
 <tr>
 <td>Balcony section A4xx</td>
-<td>Layer order: subfloor, sleepers, membrane, decking or pavers</td>
+<td>Layer order: subfloor, membrane, sleepers, decking or pavers</td>
 </tr>
 <tr>
 <td>Details A5xx (balcony edge, wall flashing)</td>
@@ -7323,15 +7323,22 @@ the railing on <a href="../rails-decking/">Rails &amp; Decking</a>. The
 </tr>
 <tr>
 <td>Job scope</td>
-<td>Frame only: do not insert rows 7-12</td>
+<td>Frame only: do not insert rows 7, 10 and 11</td>
 </tr>
 </tbody>
 </table>
 <h2 id="how-to-measure-in-ourplancore">How to measure in OurPlanCore<a class="headerlink" href="#how-to-measure-in-ourplancore" title="Link to this section">&para;</a></h2>
-<p>Areas and lengths come from the block size W x D and the multiplier G
+<p>Areas and lengths come from the block size W x D and the number of instances (units)
 (see <a href="../../deck/deck-porch-balcony-frame/">frame</a>). The soffit underneath and the decking
 equal the balcony area; trims and flashing go along the perimeter: the front and sides
 are open, the wall side gives flashing.</p>
+<p>Build order, bottom to top, the way it is built:</p>
+<ul>
+<li>Regular open balcony: posts and beam, joists, decking right on the joists.</li>
+<li>Terrace (over a garage or a room): joists, <code>Subfloor</code>, <code>EPDM</code> over the
+  subfloor, <code>Sleepers</code> on top of the membrane, decking on the sleepers. The membrane
+  is always under the sleepers: decking is never laid on the membrane.</li>
+</ul>
 <h2 id="tree-name-and-dfl-row">Tree name and DFL row<a class="headerlink" href="#tree-name-and-dfl-row" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
@@ -7348,36 +7355,36 @@ are open, the wall side gives flashing.</p>
 <td>1</td>
 <td><code>Posts</code> + <code>Post Bases</code> + <code>Post Caps</code></td>
 <td><code>6x6 P.T.</code>, per schedule</td>
-<td>pcs</td>
+<td>posts: length in D; bases and caps pcs</td>
 <td>frame</td>
 </tr>
 <tr>
 <td>2</td>
 <td><code>Beam (3)</code> front, <code>Beam (2)</code> sides</td>
 <td><code>2x12 P.T.</code></td>
-<td>LFT</td>
+<td>boards, length in D</td>
 <td>frame</td>
 </tr>
 <tr>
 <td>3</td>
 <td><code>Ledger</code> + screws, <code>Box</code> if the beam is not flush</td>
 <td><code>2x12 P.T.</code></td>
-<td>LFT</td>
+<td>boards, length in D; screws pcs</td>
 <td>frame</td>
 </tr>
 <tr>
 <td>4</td>
 <td><code>Joists</code> + <code>Hangers Zmax</code> + <code>End Joists</code></td>
 <td><code>2x12 P.T.</code> 16" o.c.</td>
-<td>LFT, pcs</td>
+<td>boards, length in D; hangers pcs</td>
 <td>frame</td>
 </tr>
 <tr>
 <td>5</td>
-<td><code>Sleepers</code> (Terrace, often 2 layers)</td>
+<td><code>Sleepers</code> (Terrace)</td>
 <td><code>2x4 P.T.</code></td>
-<td>LFT</td>
-<td>frame</td>
+<td>boards, length in D</td>
+<td>frame, pieces per balcony <code>=CEILING(W*12/16,1)+1</code></td>
 </tr>
 <tr>
 <td>6</td>
@@ -7389,48 +7396,68 @@ are open, the wall side gives flashing.</p>
 <tr>
 <td>7</td>
 <td><code>Post Wrap</code></td>
-<td><code>1x8</code> / <code>5/4x</code></td>
+<td><code>1x8</code> (6x6 post), <code>1x6</code> (4x4 post)</td>
 <td>LFT</td>
-<td><strong>here</strong></td>
+<td><strong>here</strong>, G = height x 4 sides x posts per balcony; C = G x 1.1 rounded up to 10 (under 50 to 2), x units</td>
 </tr>
 <tr>
 <td>8</td>
-<td><code>EPDM</code></td>
-<td>membrane</td>
+<td><code>EPDM</code> (Terrace)</td>
+<td><code>EPDM</code>, <code>60 EPDM</code></td>
 <td>SQ FT</td>
-<td><strong>here</strong>, if ours per spec</td>
+<td><strong>here</strong>, <code>=CEILING(W*D*units*1.1,10)</code>, same area as the subfloor</td>
 </tr>
 <tr>
 <td>9</td>
 <td><code>Decking</code></td>
-<td><code>2x6 DuxxBak</code> (balcony), <code>5/4x6</code> (Terrace)</td>
+<td>per the detail: <code>2x6 DuxxBak</code> (balcony), <code>5/4x6</code> (Terrace)</td>
 <td>SQ FT</td>
-<td><strong>here</strong>, <code>=W*D*G</code></td>
+<td><strong>here</strong>, <code>=CEILING(W*D*units*1.1,10)</code></td>
 </tr>
 <tr>
 <td>10</td>
 <td><code>Soffits at Balcony</code></td>
 <td><code>Beadboard</code></td>
 <td>SQ FT</td>
-<td><strong>here</strong>, <code>=W*D*G</code></td>
+<td><strong>here</strong>, <code>=CEILING(W*D*1.1,10)*units</code></td>
 </tr>
 <tr>
 <td>11</td>
-<td><code>Balcony Trims</code> / <code>Fascia</code></td>
-<td><code>1x10</code>, <code>5/4x8</code></td>
+<td><code>Fascia Trim at Hdr outside</code></td>
+<td><code>1x12</code>, <code>1x10</code> for a header under 10"</td>
 <td>LFT</td>
-<td><strong>here</strong>, <code>=(W+2*D)*G</code></td>
+<td><strong>here</strong>, G = front W of one balcony (header length); C = G x 1.1 rounded up to 2 (from 50 to 10), x units</td>
 </tr>
 <tr>
 <td>12</td>
-<td><code>Flashings at Wall</code></td>
-<td><code>Copper</code> / drip edge</td>
+<td><code>Flashings at Wall</code> (Terrace)</td>
+<td><code>Copper</code></td>
 <td>LFT</td>
-<td><strong>here</strong>, <code>=W*G</code></td>
+<td><strong>here</strong>, <code>=W*units</code>, length of the wall side, no waste</td>
 </tr>
 </tbody>
 </table>
-<p>Rows 7-12 are inserted only when trim is in scope. Size not specified:
+<ul>
+<li>Decking is ours: every balcony block ends with a <code>Decking</code> row. Leave it
+  out only when the drawings say by others in so many words (pavers deck
+  system, prefab balcony); then a note instead of the row.</li>
+<li>Decking product not named anywhere: <code>TBD Decking</code>; on a panel job with no spec
+  <code>5/4x6</code> and <code>assumed</code> in E.</li>
+<li><code>Sleepers</code> are one run of <code>2x4 P.T.</code> strips at 16" o.c. under the terrace decking:
+  per balcony <code>=CEILING(W*12/16,1)+1</code> pieces, board length in D = the next even
+  length above the balcony depth D. A <code>2x6</code> size or a second layer only
+  when the section shows them.</li>
+<li><code>EPDM</code> and <code>Flashings at Wall</code> exist only on a terrace with a membrane; an
+  open wood balcony has neither row.</li>
+<li><code>Post Wrap</code> only when the elevation or the detail shows a wrapped post; a bare
+  <code>P.T.</code> post gets no row.</li>
+</ul>
+<p><code>Post Wrap</code>, <code>Soffits at Balcony</code> and <code>Fascia Trim at Hdr outside</code> (rows 7, 10,
+11) are inserted only when trim is in scope, in their own <code>Balcony Trims</code> section
+after the block, never inside the block. Side beams get fascia trim only when the
+detail shows it on them: then G = W + 2 x D. <code>Decking</code> (9) and, on a terrace,
+<code>EPDM</code> (8) and <code>Flashings at Wall</code> (12) are rows of the block itself: they are written
+on Frame only jobs too when the drawings show them. Size not specified:
 <code>TBD</code> and the note <code>Note: All trims to be verified. Scaled per elevations</code>.</p>
 <h2 id="assembly-with-pavers">Assembly with pavers<a class="headerlink" href="#assembly-with-pavers" title="Link to this section">&para;</a></h2>
 <p>A balcony on a slab or over a garage instead of decking on sleepers:</p>
@@ -7457,22 +7484,31 @@ are open, the wall side gives flashing.</p>
 </tbody>
 </table>
 <p>Over a garage with trusses and LW concrete the block is counted as a Terrace:
-<code>3/4" Ply</code> subfloor, <code>2x4 P.T.</code> sleepers, <code>5/4x6</code> decking.</p>
+<code>3/4" Ply</code> subfloor, EPDM, <code>2x4 P.T.</code> sleepers on top of the membrane, <code>5/4x6</code>
+decking.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Frame rows duplicated in the finish block (sleepers twice).</li>
 <li><code>5/4x6</code> decking on a regular balcony instead of <code>2x6 DuxxBak</code> per the detail.</li>
 <li>Pavers and membrane by others counted as material.</li>
 <li>Trim inserted when the scope is Frame only.</li>
-<li>Decking area without the units multiplier.</li>
+<li>Decking area without the units multiplier or without the 1.1 waste.</li>
+<li>Decking left out as "by others" though the drawings do not say so.</li>
+<li>A note or text puts decking on the membrane and sleepers under the membrane.</li>
 <li>All mistakes for the section: <a href="../../../start/common-mistakes/#deck">Deck, porch, balconies</a>.</li>
 </ul>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Post Wrap            1x8          96  LFT    4 sides x 4&#39; x 6 posts
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Decking              2x6 DuxxBak  576 SQ FT  =12*8*G          5/A550
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Soffits at Balcony   Beadboard    576 SQ FT  =12*8*G          6/A550
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Balcony Trims        1x10         168 LFT    =(12+2*8)*G      6/A550
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Flashings at Wall    Copper       72  LFT    =12*G            7/A550
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Block: balcony 12&#39; x 8&#39;, 6 units, 2 posts per balcony = 12 posts 6x6, post height 9&#39;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Post Wrap                    1x8          480  LFT    =CEILING(9*4*2*1.1,10)*6      assumed
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Decking                      2x6 DuxxBak  640  SQ FT  =CEILING(12*8*6*1.1,10)       5/A550
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Soffits at Balcony           Beadboard    660  SQ FT  =CEILING(12*8*1.1,10)*6       6/A550
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Fascia Trim at Hdr outside   1x12          84  LFT    =CEILING(12*1.1,2)*6          6/A550
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Post Wrap: 9&#39; x 4 sides x 2 posts = 72, x 1.1 = 79.2, rounded up to 10 = 80, x 6 = 480
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Decking: 12 x 8 x 6 = 576, x 1.1 = 633.6, rounded up to 10 = 640
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Soffit: 96 x 1.1 = 105.6, rounded up to 10 = 110, x 6 = 660
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Fascia: front 12 x 1.1 = 13.2, rounded up to 2 = 14, x 6 = 84
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

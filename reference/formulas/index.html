@@ -6593,6 +6593,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Обозначения
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#stud-spacing-factors" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6661,6 +6672,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Формулы колонки C по типу строки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truss-bracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Truss bracing: откуда числа
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7187,6 +7215,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Обозначения
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#stud-spacing-factors" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7255,6 +7294,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Формулы колонки C по типу строки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truss-bracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Truss bracing: откуда числа
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7333,6 +7389,50 @@
 
 <h1 id="_1">Формулы и факторы<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h1>
 <p>Здесь: множители и формулы колонки C, которые стоят в книге, и чем studs отличаются от joists. Формулы даны в английской локали (<code>CEILING</code>, <code>EVEN</code>); в русской Excel показывает их как <code>ОКРВВЕРХ</code>, <code>ЧЁТН</code> с <code>;</code> между аргументами, смысл тот же.</p>
+<h2 id="legend">Обозначения<a class="headerlink" href="#legend" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Буквы в формулах - это колонки одной строки DFL. Одна строка = одна позиция материала.</p>
+<table>
+<thead>
+<tr>
+<th>Буква</th>
+<th>Что это</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>G</code></td>
+<td>Замер из OurPlanCore: длина линии в футах, площадь в квадратных футах или число точек. Серая колонка справа от таблицы, в заказ не идёт. Запаса в <code>G</code> нет: это чистый замер.</td>
+<td><code>G</code> = 186 (длина наружных стен)</td>
+</tr>
+<tr>
+<td><code>H</code></td>
+<td>Второе число строки, тоже серое. Смысл зависит от строки: шаг в дюймах (крепёж и blocking по шагу), число слоёв у подписи с <code>(n)</code> (plates, headers, rim), высота стены в футах (studs, shear walls). У каждой формулы ниже сказано, что стоит в <code>H</code>.</td>
+<td><code>H</code> = 48 (анкеры на 48" o.c.)</td>
+</tr>
+<tr>
+<td><code>C</code></td>
+<td>Количество в заказ. Формула от <code>G</code> (и <code>H</code>, <code>D</code>), руками число не пишут.</td>
+<td><code>=CEILING(G/D,1)</code></td>
+</tr>
+<tr>
+<td><code>D</code></td>
+<td>Единица: <code>LFT</code>, <code>SQ FT</code>, <code>4x8</code>, <code>pcs</code>, <code>unit</code>, <code>tubes</code>. У леса, который заказывают штуками (studs, joists, beams, posts, headers, rim, ribbon, blocking, ledger, bracing), в <code>D</code> стоит длина доски в футах: 8, 10, 12, 14, 16. Тогда <code>C</code> - число досок, и формула делит на <code>D</code>.</td>
+<td><code>D</code> = 16</td>
+</tr>
+<tr>
+<td><code>Stock LF</code></td>
+<td>Длина заказной штуки в футах, то же число, что в <code>D</code>. У профилей shaft обычно 12.</td>
+<td>12</td>
+</tr>
+<tr>
+<td><code>LFT</code>, <code>SQ FT</code></td>
+<td>Погонные и квадратные футы. Так и пишутся в <code>D</code>; <code>LF</code>, <code>SF</code>, <code>SQFT</code> в <code>D</code> не пишут.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Как устроена строка и остальные колонки: <a href="../dfl-overview/">DFL: как устроена книга</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Stud и Joist считаются по разным таблицам</p>
 <p>У studs и joists один и тот же <code>o.c.</code>, но разные множители: studs по правилу владельца (стойка на фут плюс waste), joists по геометрии (<code>12 / spacing</code>). Не путать таблицы.</p>
@@ -7365,9 +7465,15 @@
 </tr>
 </tbody>
 </table>
+<figure>
+<p><img alt="Почему на 16 o.c. считается 1.1 стойки на фут" src="../../assets/images/reference/studs-16oc.svg" />
+  </p>
+<figcaption>Светлые стойки - рядовые по шагу, геометрически 0.75 на фут. Зелёные добавляют углы, T-пересечения, king, jack и cripples у проёмов: поэтому считаем стойку на фут плюс 10%.</figcaption>
+</figure>
 <ul>
-<li><code>pcs = wall LFT x фактор</code>; высота стойки в E строки, до 1/8" (floor-to-floor минус subfloor, минус перекрытие, минус plates).</li>
-<li>Bearing walls как Extra: основная линия с обычным фактором, лишние plies отдельной строкой <code>double extra</code>, базу вычесть из обычных studs. Факторы Extra: <code>16" o.c.</code> 0.75, <code>24" o.c.</code> 0.5 (без waste базовой строки).</li>
+<li><code>pcs = wall LFT x фактор</code>, в книге <code>=G*фактор</code>.</li>
+<li>Высота в строке студов (E, до 1/8") и в имени стены - это высота стены в сборе, вместе с plates: floor-to-floor минус subfloor <code>3/4"</code>, минус глубина перекрытия. Одна нижняя и две верхние plates <strong>не вычитаются</strong>: по этой высоте шаблон сам выбирает стойку, precut или full height. Вычитаются только лишние доски сверх этих трёх, если их показывает разрез (вторая нижняя plate, blocking под фермами). Чистая стойка короче высоты стены на <code>4 1/2"</code>. Таблица выбора стойки: <a href="../../work/vertical/walls/exterior/#precut">Exterior Walls</a>.</li>
+<li>Bearing walls как Extra: основная линия с обычным фактором, лишние plies отдельной строкой <code>double extra</code>, базу вычесть из обычных studs. Факторы Extra: <code>12" o.c.</code> 1, <code>16" o.c.</code> 0.75, <code>24" o.c.</code> 0.5 (без waste базовой строки).</li>
 <li>Double стена = два каркаса только если на плане два каркаса; staggered corridor 2x4 = два ряда на 16" o.c., plates 2x6.</li>
 </ul>
 <h2 id="joist-spacing-factors">Joist spacing factors<a class="headerlink" href="#joist-spacing-factors" title="Прямая ссылка на раздел">&para;</a></h2>
@@ -7404,49 +7510,78 @@
 <li>Hangers по joists: на оба конца каждого joist, по сборкам; штучный крепёж меньше 50 - до чётного.</li>
 </ul>
 <h2 id="rim-ribbon-blocking-ledger">Rim, ribbon, blocking, ledger<a class="headerlink" href="#rim-ribbon-blocking-ledger" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>В дереве каждая такая деталь - одна линия (Line) по месту применения, её длина в футах уходит в <code>G</code>. Как длина превращается в заказ, зависит от строки и типа работы.</p>
 <table>
 <thead>
 <tr>
-<th>Item</th>
-<th>Unit</th>
-<th>Фактор</th>
+<th>Строка</th>
+<th>Где</th>
+<th>C</th>
+<th>D</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Rim Board, EWP-jobs</td>
-<td>LFT</td>
-<td><code>1.05</code></td>
+<td><code>Rim Board</code>, <code>Ribbon Board</code>, <code>Blocking</code>, <code>Blocking for Drywall</code>, <code>Ledger</code></td>
+<td>Floor и Roof Framing List обычной книги (Frame, COM, residential)</td>
+<td><code>=CEILING(G/D,1)</code></td>
+<td><code>16</code></td>
 </tr>
 <tr>
-<td>Rim Board, остальные (residential, COM)</td>
-<td>LFT</td>
-<td><code>1.1</code></td>
+<td><code>Rim Board (2)</code></td>
+<td>то же, двойной rim</td>
+<td><code>=CEILING(G*H/D,1)</code>, H = 2</td>
+<td><code>16</code></td>
 </tr>
 <tr>
-<td>Blocking, Ribbon, Ledger, Blocking for Drywall, bracing по стенам</td>
-<td>LFT</td>
-<td><code>1.1</code> один раз в формуле</td>
+<td><code>Rim Board</code></td>
+<td>EWP-only заказ (считаем только engineered)</td>
+<td><code>=CEILING(G*1.05,1)</code></td>
+<td><code>LFT</code></td>
+</tr>
+<tr>
+<td><code>Blocking</code> непрерывный</td>
+<td>EWP-only заказ</td>
+<td><code>G</code> без фактора</td>
+<td><code>LFT</code></td>
+</tr>
+<tr>
+<td><code>Blocking</code> в стенах</td>
+<td>Floor Walls</td>
+<td><code>=EVEN(G)</code></td>
+<td><code>LFT</code></td>
+</tr>
+<tr>
+<td><code>Bracing Ext Walls</code>, <code>Bracing Corridor</code>, <code>Bracing Demising</code></td>
+<td>Floor Walls</td>
+<td><code>=G/8*1.1</code>: одна доска на 8 LFT стены</td>
+<td>длина доски по высоте стены</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Rim и blocking остаются в LFT и не делятся на куски по 16', если output прямо не требует pcs.</li>
+<li>В обычной книге строки rim, ribbon, blocking и ledger пишет макрос <code>C_RimBoardBlockingHangers</code>: количество в досках по 16'. Отдельного фактора нет, запас даёт округление вверх до целой доски.</li>
+<li><code>1.05</code> - фактор rim только на EWP-only заказах: там rim остаётся в LFT и на куски не делится. Если клиент просит rim в LFT на обычном заказе, фактор <code>1.1</code>.</li>
+<li>Линию в дереве на куски по 16' не режь: меряется вся длина узла, на доски делит формула.</li>
+<li>Длина доски bracing стен: стена до 10' - <code>14</code>, до 12' - <code>16</code>, до 16' - <code>18</code>, выше - <code>20</code>. Формула в <code>D</code> шаблона ставит её сама по самой высокой стене группы. Стены ниже 7' bracing не получают.</li>
 <li>Top chord bearing trusses: вместо ribbon board blocking между фермами, часто <code>(2) 2x6</code>.</li>
 <li>Blocking по шагу считается кусками: формулы ниже.</li>
 </ul>
 <h2 id="blocking-formulas">Blocking formulas<a class="headerlink" href="#blocking-formulas" title="Прямая ссылка на раздел">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Flat 48&quot; o.c.          = CEILING(LFT * 12 / 48 * 2 * 1.1 / Stock LF, 1)
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Diagonal 48&quot; o.c.      = CEILING(LFT * 12 / 48 * 2.5 * 1.1 / Stock LF, 1)
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Blocking btw trusses   = CEILING(G * 12 / 48 * 2 / D * 1.1, 1)
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>T blocking at gables   = EVEN(G / D)
+<p>Blocking по шагу - короткие куски между joists или фермами, которые стоят через равные промежутки вдоль линии. <code>G</code> - длина этой линии в футах, <code>H</code> - шаг в дюймах, <code>D</code> - длина доски (16).</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Blocking 48&quot; o.c., flat       = CEILING(G * 12 / H * 2 / D, 1)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Diagonal Blocking 48&quot; o.c.    = CEILING(G * 12 / H * 3 / D, 1)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Blocking btw trusses (n)      = CEILING(G / D, 1)        G = длина линии x число рядов n
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>T blocking at gables          = EVEN(G / D)
 </span></code></pre></div>
+<p>Как читать первую формулу: <code>G * 12 / H</code> - сколько точек с blocking помещается на линии; <code>2</code> - сколько футов доски уходит на одну точку; получились погонные футы; <code>/ D</code> - доски по 16'. Пример: линия 96', шаг 48": 96 x 12 / 48 = 24 точки, 24 x 2' = 48 LFT, 48 / 16 = 3 доски.</p>
 <h3 id="blocking-factor">Blocking factor по типу<a class="headerlink" href="#blocking-factor" title="Прямая ссылка на раздел">&para;</a></h3>
+<p>Сколько футов доски уходит на одну точку:</p>
 <table>
 <thead>
 <tr>
 <th>Тип</th>
-<th style="text-align: right;">Фактор кусков на пролёт</th>
+<th style="text-align: right;">Футов на точку</th>
 </tr>
 </thead>
 <tbody>
@@ -7455,8 +7590,8 @@
 <td style="text-align: right;"><code>2</code></td>
 </tr>
 <tr>
-<td>Diagonal</td>
-<td style="text-align: right;"><code>2.5</code></td>
+<td>Diagonal (строка <code>Diagonal Blocking 48" o.c.</code>)</td>
+<td style="text-align: right;"><code>3</code></td>
 </tr>
 <tr>
 <td>Vertical</td>
@@ -7464,6 +7599,12 @@
 </tr>
 </tbody>
 </table>
+<figure>
+<p><img alt="Blocking по шагу: flat, diagonal, vertical и формула кусков" src="../../assets/images/reference/blocking-pieces.svg" />
+  </p>
+<figcaption>Кусок blocking между двумя элементами берёт 2, 2.5 или 1.5-2 ft доски. Линия в дереве одна: формула считает точки по шагу и переводит их в доски по 16'.</figcaption>
+</figure>
+<p>Число из детали главнее: если деталь показывает другое число кусков в точке, множитель берётся по детали.</p>
 <p>Стены 10' и выше - два ряда blocking. Kitchen: <code>2x6</code>, 4 штуки по 14' на кухню; bath: 1 штука по 14' на ванную. Kickers только там, где они есть на детали.</p>
 <h2 id="c">Формулы колонки C по типу строки<a class="headerlink" href="#c" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
@@ -7481,23 +7622,28 @@
 <td><code>4x8</code></td>
 </tr>
 <tr>
-<td>Погонаж по длине стока</td>
-<td><code>=CEILING(G/D,1)</code> (D = 14 или 16)</td>
+<td>Лес штуками по длине доски (rim, ribbon, blocking, ledger, sub fascia)</td>
+<td><code>=CEILING(G/D,1)</code>: длина в футах делится на длину доски</td>
+<td>длина доски, обычно <code>16</code></td>
+</tr>
+<tr>
+<td>Погонаж без деления на доски (flashing, tape, jambs, blocking в Wall Materials)</td>
+<td><code>=CEILING(G*1.1,10)</code>; меньше 50 - <code>=CEILING(G*1.1,2)</code></td>
 <td><code>LFT</code></td>
 </tr>
 <tr>
 <td>Plates</td>
-<td><code>=EVEN(G*H*1.1)</code> (H = число plates)</td>
+<td><code>=EVEN(G*H*1.1)</code> (H = число plates из подписи: <code>(1) btm</code>, <code>(2) dbl top</code>)</td>
 <td><code>LFT</code></td>
 </tr>
 <tr>
 <td>Studs</td>
-<td><code>=CEILING(G*1.1,1)</code> на 16" o.c.</td>
-<td><code>pcs</code></td>
+<td><code>=G*1.1</code> на 16" o.c. (фактор из таблицы выше)</td>
+<td>длина стойки: <code>8</code>, <code>9</code>, <code>10</code>, <code>12</code></td>
 </tr>
 <tr>
 <td>Крепёж по шагу (anchors, ties, hangers)</td>
-<td><code>=CEILING(G*12/H*1.1,2)</code>; при 50 и больше родная значимость <code>,10</code> или <code>,1</code></td>
+<td><code>=CEILING(G*12/H*1.1,2)</code> (H = шаг в дюймах); при 50 и больше родная значимость <code>,10</code> или <code>,1</code></td>
 <td><code>pcs</code></td>
 </tr>
 <tr>
@@ -7516,13 +7662,18 @@
 <td><code>pcs</code></td>
 </tr>
 <tr>
-<td>Truss bracing</td>
-<td>по умолчанию <code>2x6</code>, ряд каждые 10'; <code>=CEILING(G/4/D,1)</code> на всю площадь под крышей, включая гараж</td>
-<td><code>pcs</code></td>
+<td><code>Bracing for Trusses</code> (фермы перекрытия)</td>
+<td><code>2x6</code>; <code>=CEILING(G/D,1)</code>, <code>G</code> = длина линий bracing в футах: одна линия поперёк ферм примерно каждые 10'; не над несущими стенами и не там, где joists/rafters stick или TJI (только фермы)</td>
+<td><code>16</code></td>
+</tr>
+<tr>
+<td><code>Truss Bracing</code> (фермы крыши)</td>
+<td><code>2x4</code>; <code>=CEILING(G/4/D,1)</code>, <code>G</code> = площадь в плане под фермами крыши, включая гараж; stick-кровля строку не получает</td>
+<td><code>16</code></td>
 </tr>
 <tr>
 <td>Panel adhesive</td>
-<td><code>=C&lt;subfloor&gt;/3</code></td>
+<td><code>=CEILING(C&lt;subfloor&gt;/3,1)</code>: одна туба на 3 листа subfloor</td>
 <td><code>tubes</code></td>
 </tr>
 <tr>
@@ -7538,10 +7689,17 @@
 <tr>
 <td>Двусторонний shear wall</td>
 <td>G = сумма двух лиц, без ещё одного x2</td>
-<td><code>SQ FT</code></td>
+<td><code>4x8</code></td>
 </tr>
 </tbody>
 </table>
+<h3 id="truss-bracing">Truss bracing: откуда числа<a class="headerlink" href="#truss-bracing" title="Прямая ссылка на раздел">&para;</a></h3>
+<p>Это две разные строки, и считаются они по-разному.</p>
+<ul>
+<li><strong>Перекрытие, <code>Bracing for Trusses</code>.</strong> В дереве рисуются сами линии bracing (strongbacks): <code>framing/&lt;этаж&gt; framing/details/bft</code>, одна линия поперёк ферм примерно каждые 10' пролёта. Над несущими стенами линию не ведут. Там, где перекрытие из stick joists или TJI, bracing нет вообще: он нужен только фермам. Пример: пролёт ферм 28', две линии по 48' = 96 LFT; <code>=CEILING(96/16,1)</code> = 6 досок <code>2x6</code> по 16'.</li>
+<li><strong>Кровля, <code>Truss Bracing</code>.</strong> Линии не рисуются, берётся площадь в плане под фермами: 1-й этаж плюс гараж и нижние крыши, если фермы стоят и над ними. <code>G/4</code> - это погонные футы bracing: один ряд на каждые 4' длины фермы, то есть на квадратный фут плана уходит 1/4 фута доски. <code>/D</code> - доски по 16'. Пример: дом 1 800 SQ FT и гараж 440 SQ FT: 2 240 / 4 = 560 LFT, 560 / 16 = 35 досок <code>2x4</code>.</li>
+<li>Если на плоской кровле линии bracing ферм нарисованы и замерены (<code>framing/roof framing/details/bft</code>), они идут строкой <code>Bracing for Trusses</code> в Roof Frame list, и строка по площади для этих ферм не нужна. Одно и то же дважды не считают.</li>
+</ul>
 <p>Формулы смотрят на свой блок: свой header, свой множитель units, свой этаж. Скопированный этаж со ссылками в чужой блок - самая частая ошибка книги.</p>
 <h2 id="_2">Кровля<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Уклон применяется один раз: площадь в плане x <code>sqrt(1 + (rise/12)^2)</code>.</p>
@@ -7590,29 +7748,46 @@
 <td>значимость шаблона: <code>,10</code> большие ties и screws, <code>,1</code> листы и рейки</td>
 </tr>
 <tr>
+<td>Строки в <code>LFT</code> и <code>SQ FT</code></td>
+<td><code>G*1.1</code> вверх: меньше 50 - до чётного, 50 и больше - до 10</td>
+</tr>
+<tr>
 <td>Доски, листы, трубы</td>
 <td>целыми вверх; <code>2.75</code> и <code>9.6</code> в C не бывает</td>
 </tr>
 <tr>
 <td>Waste</td>
-<td>один раз: если G уже с 1.1, в C второго 1.1 нет</td>
+<td>один раз, в формуле <code>C</code>. В <code>G</code> запаса нет</td>
 </tr>
 </tbody>
 </table>
 <h2 id="shaft-walls">Shaft Walls<a class="headerlink" href="#shaft-walls" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Shaft walls отдельным блоком, даже когда стены дома идут панелями by others. Материал из wall type и детали: бывают <code>2-1/2"</code> CH + J-channel и <code>2"</code> H + C-channel. <code>Stock LF</code> обычно 12; panels в лист как <code>2x12 Panels</code>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2-1/2&quot; CH + J:
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>1&quot; Shaft Panels        = CEILING(LFT * 1.1 / 24, 2)
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>CH-channels vertical   = CEILING(LFT * 0.5 * 1.1 / Stock LF, 2)
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>J-channels horizontal  = CEILING(Horizontal LFT * 1.1 / Stock LF, 2)
+<p>Shaft walls отдельным блоком, даже когда стены дома идут панелями by others. Материал из wall type и детали: бывают <code>2-1/2"</code> CH + J-channel и <code>2"</code> H + C-channel. Две системы в одной стене не смешивают.</p>
+<p>Панели и вертикальные профили считаются от <strong>площади</strong> стены, горизонтальные - от длины:</p>
+<ul>
+<li><code>Area</code> (это <code>G</code> строк панелей и вертикальных профилей) = длина shaft-стен x высота, сумма по этажам, в SQ FT;</li>
+<li><code>24</code> = площадь одной панели <code>2' x 12'</code>; в E строки пишется <code>2x12 Panels</code>;</li>
+<li><code>0.5</code> = вертикальный профиль каждые 24": один на 2' стены, высотой во всю стену;</li>
+<li><code>Run LFT</code> = длина shaft-стен; <code>x 2</code> - профиль сверху и снизу на каждом этаже;</li>
+<li><code>Stock LF</code> = длина штуки, обычно 12 (стоит в <code>D</code>).</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2-1/2&quot; CH + J (shaft, панели с одной стороны):
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Linear Panels, 1&quot; Shaft Panels   = CEILING(Area * 1.1 / 24, 2)
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>CH Channels Vertical             = CEILING(Area * 0.5 * 1.1 / Stock LF, 2)
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>J Channels Horizontal            = CEILING(Run LFT * 2 * 1.1 / Stock LF, 2)
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2&quot; H + C:
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>1&quot; Shaft Panels, 2 слоя = CEILING(LFT * 2 * 1.1 / 24, 2)
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>H-channels vertical     = CEILING(LFT * 0.5 * 1.1 / Stock LF, 2)
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>H-channels horizontal   = CEILING(Horizontal LFT * 2 * 1.1 / Stock LF, 2)
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>C-channels perimeter    = CEILING(Perimeter LFT * 1.1 / Stock LF, 2)
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2&quot; H + C (area separation wall, панели с двух сторон):
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Linear Panels, 2 слоя            = CEILING(Area * 2 * 1.1 / 24, 2)
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Channels Vertical (H)            = CEILING(Area * 0.5 * 1.1 / Stock LF, 2)
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Channels Horizontal (H)          = CEILING(Run LFT * 2 * 1.1 / Stock LF, 2)
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>Channels Perimeter (C)           = CEILING(Perimeter LFT * 1.1 / Stock LF, 2)
 </span></code></pre></div>
-<p>Dropped ceiling metal joists: <code>12" C-type = Area * 0.75 * 1.1 LF</code>.</p>
+<p>Пример: shaft 64 LFT, высота 10.5'. Площадь 64 x 10.5 = 672 SQ FT. Панели: 672 x 1.1 / 24 = 30.8, это 32 панели. CH: 672 x 0.5 x 1.1 / 12 = 30.8, это 32 штуки по 12'. J: 64 x 2 x 1.1 / 12 = 11.7, это 12 штук.</p>
+<div class="admonition danger">
+<p class="admonition-title">Не дели на 24 длину стены</p>
+<p>Если в формулу панелей подставить длину (64 LFT) вместо площади, выйдет 4 панели вместо 32: недосчёт во столько раз, сколько футов в высоте стены.</p>
+</div>
+<p>Dropped ceiling metal joists: <code>12" C-type = Area * 0.75 * 1.1</code>, в LFT.</p>
 <h2 id="_4">Проверка порядка величин<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Число выглядит странно - сравнить с типичным для похожего дома: <a href="../quantity-benchmarks/">Ориентиры количеств</a>. Это проверка разумности, не норма; расхождение значит "открой деталь и единицы", а не "исправь на среднее".</p>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>

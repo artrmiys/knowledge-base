@@ -7273,10 +7273,10 @@
 <figure>
 <p><img alt="Blocking at 48 inch on center" src="../../../../../../assets/images/framing/blocking-oc.svg" />
   </p>
-<figcaption>Blocking rows at 48" across the joists: the number of pieces is counted from the zone length and the spacing, not as a solid row.</figcaption>
+<figcaption>Blocking at 48" o.c.: a Line along the zone, one piece at every point of the line; the count comes from the line length and the spacing, not as a solid row.</figcaption>
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
-<p>Blocking o.c. is blocking laid out across the span at a fixed spacing, usually <code>48" o.c.</code>: flat (laid flat between joists), diagonal (crossed, bridging) or vertical (between studs). It is counted from the zone length and the spacing, not in LFT of a solid row. Solid blocking and all its kinds: <a href="../blocking/">Blocking</a>.</p>
+<p>Blocking o.c. is separate blocking pieces that do not form a solid row but sit at a spacing along one line: on top of a partition under the trusses (a piece between the trusses every <code>48" o.c.</code>), along a bearing line, between the studs of a wall. Types: flat (laid flat between two joists or trusses), diagonal, vertical (between studs). It is counted from the line length and the spacing, not as a solid row. Solid blocking and all its kinds: <a href="../blocking/">Blocking</a>.</p>
 <h2 id="where-to-find-it-on-the-plans">Where to find it on the plans<a class="headerlink" href="#where-to-find-it-on-the-plans" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
@@ -7288,11 +7288,11 @@
 <tbody>
 <tr>
 <td>Framing notes, typical details</td>
-<td>row spacing (<code>48" o.c.</code>), type: flat, diagonal, vertical</td>
+<td>spacing (<code>48" o.c.</code>), type (flat, diagonal, vertical), size, piece length</td>
 </tr>
 <tr>
 <td>Framing plan</td>
-<td>zone length along the joists where the rows are needed</td>
+<td>the line the pieces follow: a partition under the trusses, a bearing line</td>
 </tr>
 <tr>
 <td>Wall details (shear, fire)</td>
@@ -7301,8 +7301,14 @@
 </tbody>
 </table>
 <h2 id="how-to-measure-in-ourplancore">How to measure in OurPlanCore<a class="headerlink" href="#how-to-measure-in-ourplancore" title="Link to this section">&para;</a></h2>
-<p>Line (L) along the joists through the zone (zone length across the rows) on the framing sheet with the F point. Takeoff <code>framing/&lt;floor&gt; framing/details/blocking 48</code> or with the detail number. The LFT of the line goes to G of the row.</p>
+<p>Line (L) along the line the blocking pieces follow, on the framing sheet with the F point: along the partition, the bearing line, the row. Rules:</p>
+<ol>
+<li>One Line for every row of blocking. Two parallel rows are two lines.</li>
+<li>The line runs along the row, not across it and not through the whole zone: the formula counts points along the line.</li>
+<li>Takeoff <code>framing/&lt;floor&gt; framing/details/blocking 48</code> or with the detail number; the spacing goes in the name. The line length in LFT goes to G of the row, with no waste in it.</li>
+</ol>
 <h2 id="tree-name-and-dfl-row">Tree name and DFL row<a class="headerlink" href="#tree-name-and-dfl-row" title="Link to this section">&para;</a></h2>
+<p>The spacing sits in column H and prints in the Label.</p>
 <table>
 <thead>
 <tr>
@@ -7315,55 +7321,65 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Blocking Flat 48" o.c.</code></td>
-<td>joist size</td>
-<td><code>=CEILING(G*12/H*2*1.1/D,1)</code></td>
+<td><code>Blocking 48" o.c.</code></td>
+<td>per detail: <code>2x4</code> flat or the joist size</td>
+<td><code>=CEILING(G*12/H*2/D,1)</code></td>
 <td><code>16</code></td>
 <td><code>48</code></td>
 </tr>
 <tr>
-<td><code>Blocking Diagonal 48" o.c.</code></td>
-<td><code>2x</code></td>
-<td><code>=CEILING(G*12/H*2.5*1.1/D,1)</code></td>
-<td><code>16</code></td>
-<td><code>48</code></td>
-</tr>
-<tr>
-<td><code>Vertical Blocking 16" o.c.</code></td>
+<td><code>Diagonal Blocking 48" o.c.</code></td>
 <td><code>2x4</code></td>
-<td><code>=CEILING(G*12/H*1.5/D,1)</code></td>
+<td><code>=CEILING(G*12/H*3/D,1)</code></td>
 <td><code>16</code></td>
+<td><code>48</code></td>
+</tr>
+<tr>
+<td><code>Vertical Blocking 48" o.c.</code></td>
+<td><code>2x4</code></td>
+<td><code>=CEILING(G*12/H*2/D,1)</code></td>
 <td><code>16</code></td>
+<td><code>48</code></td>
 </tr>
 </tbody>
 </table>
-<p>What the letters mean: <code>G</code> - zone LFT (line length), <code>H</code> - spacing in inches, <code>D</code> - board length in feet (16), <code>1.1</code> - waste, the multiplier - blocking type.</p>
+<p>What the letters mean:</p>
+<ul>
+<li><code>G</code> - the line length in feet (LFT from OurPlanCore). There is no waste in it.</li>
+<li><code>H</code> - the spacing in inches.</li>
+<li><code>G*12/H</code> - the number of blocking points along the line.</li>
+<li>the multiplier (<code>2</code>, <code>3</code>) - feet of board used per point.</li>
+<li><code>D</code> - the board length in feet (16).</li>
+</ul>
+<p>Points x feet per point = LFT of board; LFT / 16 = boards. There is no separate waste factor in the formula: rounding up to a whole board is the allowance.</p>
 <table>
 <thead>
 <tr>
 <th>Type</th>
-<th>Multiplier</th>
+<th>Feet of board per point</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Flat</td>
+<td>Flat (a piece laid flat between two members)</td>
 <td><code>2</code></td>
 </tr>
 <tr>
 <td>Diagonal</td>
-<td><code>2.5</code></td>
+<td><code>3</code></td>
 </tr>
 <tr>
-<td>Vertical</td>
-<td><code>1.5</code></td>
+<td>Vertical (between studs)</td>
+<td><code>2</code></td>
 </tr>
 </tbody>
 </table>
-<p>The canonical multiplier table: <a href="../../../../../reference/formulas/#blocking-formulas">Formulas, Blocking formulas</a>.</p>
+<p>If the detail gives another piece length or several pieces at one point, take the multiplier from the detail: feet of board per point. Formula summary: <a href="../../../../../reference/formulas/#blocking-formulas">Formulas, Blocking formulas</a>.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
-<li><code>1.1</code> added a second time though G already includes waste.</li>
+<li>The line drawn across the rows or through the whole zone. <code>G</code> must be the length of the line the pieces follow.</li>
+<li><code>1.1</code> added to the formula. <code>G</code> is a line length with no waste in it, and the template formula has none either.</li>
+<li>Blocking at a spacing counted as a solid row: at 48" that is twice the boards.</li>
 <li>Spacing taken from the template, not from the job note.</li>
 <li>The formula applied to in-panel blocking on a panel job.</li>
 <li>Plates and wall blocking converted to pcs though the template expects LFT.</li>
@@ -7384,9 +7400,9 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Blocking Flat 48" o.c.</code></td>
-<td><code>2x10</code></td>
-<td><code>=CEILING(G*12/H*2*1.1/D,1)</code></td>
+<td><code>Blocking 48" o.c.</code></td>
+<td><code>2x4</code></td>
+<td><code>=CEILING(G*12/H*2/D,1)</code></td>
 <td>16</td>
 <td><code>note 7 per S001</code></td>
 <td>240</td>
@@ -7394,7 +7410,7 @@
 </tr>
 </tbody>
 </table>
-<p>With G = 240 LFT: 240 x 12 / 48 = 60 rows, x 2 = 120 pieces, x 1.1 = 132, / 16 = 9 boards of 16'.</p>
+<p>A line of 240 LFT along the partition at 48" o.c.: 240 x 12 / 48 = 60 points; 60 x 2' = 120 LFT of board; 120 / 16 = 7.5, so 8 boards of 16'.</p>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>
 <li><a href="../blocking/">Blocking</a>, <a href="../ribbon/">Ribbon Board</a>, <a href="../../../../../reference/formulas/">Formulas</a></li>

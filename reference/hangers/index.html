@@ -7338,7 +7338,7 @@
 <figure>
 <p><img alt="Hanger selection flow for common estimating decisions" src="../../assets/images/hangers/hanger-selection-flow.svg" />
   </p>
-<figcaption>Схема выбора: сначала mount condition, потом depth, skew и special conditions.</figcaption>
+<figcaption>Схема выбора: что несём, mount, skew, потом особые условия (concealed flange, firewall, Zmax).</figcaption>
 </figure>
 </div>
 <h2 id="_1">Быстрый выбор<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
@@ -7365,8 +7365,9 @@
 <li>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19H4.09L14.18 4.43l1.64 1.14-4.54 6.56c1.61.83 2.72 2.49 2.72 4.41 0 .16 0 .31-.03.46H20zM7.91 17h4.05c.04-.15.04-.3.04-.46 0-1.26-.76-2.32-1.86-2.76z"/></svg></span> <strong>Skew / Slope</strong></p>
 <hr />
-<p>Есть угол - не ставь <code>ITS</code>. Face mount: <code>SUL / SUR</code> (45 градусов), другой угол
-<code>LSSR</code>; top flange: <code>LBV ... XL45 / XR45</code>; LPI slope и skew: <code>LSSU / LSSUH / LSSUI</code>.</p>
+<p>Есть угол - не ставь <code>ITS</code>. Face mount: <code>SUL / SUR</code> бывают только на 45 градусов;
+другой угол - <code>HU</code> с суффиксом <code>SK&lt;угол&gt; L</code> или <code>R</code>; меньше 5 градусов считай прямым.
+Наклонный rafter - <code>LSSR</code> или <code>LRU</code>; top flange: <code>LBV ... XL45 / XR45</code>; LPI slope и skew: <code>LSSU / LSSUH / LSSUI</code>.</p>
 </li>
 <li>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.27 3 3 8.27v7.46L8.27 21h7.46C17.5 19.24 21 15.73 21 15.73V8.27L15.73 3M9.1 5h5.8L19 9.1v5.8L14.9 19H9.1L5 14.9V9.1m6 5.9h2v2h-2zm0-8h2v6h-2z"/></svg></span> <strong>Deep Joist</strong></p>
@@ -7386,11 +7387,11 @@
 <h2 id="_2">Критические правила<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li><code>ITS</code> - только top flange для I-joist и только до 16" глубины; для skewed <code>ITS</code> не бывает.</li>
-<li>Skewed top mount: <code>WP / HUTF / LBV</code> по детали; skewed face mount: <code>SUL / SUR / HSUR</code>.</li>
+<li>Skewed top mount: <code>WP / HUTF / LBV</code> по детали; skewed face mount на 45 градусов: <code>SUL / SUR</code>, под 2-ply LVL <code>HSUL410 / HSUR410</code>; любой другой угол: <code>HU ... SK&lt;угол&gt; L/R</code>.</li>
 <li>EWP (<code>LVL</code>, <code>PSL</code>, <code>GL</code>, <code>TJI</code>, <code>LPI</code>): держи точное семейство и сечение, не превращай в generic hanger.</li>
 <li>Модель по детали: деталь даёт <code>U210-2</code> - пишем <code>U210-2</code>, а не <code>LUS210-2</code>.</li>
 <li>Hangers на оба конца каждого joist, считаются по сборкам на плане, а не по закупочным доскам после раскроя; только целые штуки.</li>
-<li>Снаружи и на P.T. - <code>Zmax</code>. Ties <code>H2.5A</code> к фермам под обшивкой - без <code>Zmax</code>, если деталь не говорит иначе.</li>
+<li>Снаружи и на P.T. - <code>Zmax</code>. Крепёж внутри перекрытия и в кровле (rafters, ridge) - без <code>Zmax</code>. Ties <code>H2.5A</code> к фермам под обшивкой - без <code>Zmax</code>, если деталь не говорит иначе.</li>
 <li>Повторяющаяся зона (units x N): проверь, что число hangers повторилось столько же раз, сколько каркас.</li>
 <li>Schedule проекта важнее таблиц ниже; таблицы - подсказка, не замена детали инженера.</li>
 </ul>
@@ -7406,9 +7407,19 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Zmax</code> отдельным словом после модели</td>
-<td><code>ABU66 Zmax</code>, <code>LUS210 Zmax</code>, <code>HHUS410 Zmax SK30 R</code></td>
-<td><code>ABU66Z</code>, <code>LSSR28Z</code>, <code>LUS210Z</code></td>
+<td><code>Zmax</code> отдельным словом после модели, только снаружи и на P.T.</td>
+<td><code>ABU66 Zmax</code>, <code>ABA66 Zmax</code>, <code>LUS210 Zmax</code>, <code>HHUS410 Zmax SK30 R</code></td>
+<td><code>ABU66Z</code>, <code>LUS210Z</code>, <code>zmax</code></td>
+</tr>
+<tr>
+<td>Модель, у которой <code>Z</code> входит в каталожное имя, пишется как в каталоге, без слова <code>Zmax</code></td>
+<td><code>DTT2Z</code>, <code>LRU210Z</code>, <code>LRU212Z</code></td>
+<td><code>DTT2 Zmax</code>, <code>LRU212Z Zmax</code></td>
+</tr>
+<tr>
+<td>В кровле (rafters, ridge) hangers без <code>Z</code> и без <code>Zmax</code>; исключение одно - <code>LRU...Z</code></td>
+<td><code>LSSR210</code>, <code>LSSR2.56</code>, <code>LRU212Z</code></td>
+<td><code>LSSR28Z</code>, <code>LSSR210 Zmax</code></td>
 </tr>
 <tr>
 <td>Угол и рука суффиксом <code>SK&lt;угол&gt; &lt;L или R&gt;</code></td>
@@ -7416,14 +7427,14 @@
 <td><code>skew 30 deg</code>, <code>special order</code>, <code>HDG</code> в B</td>
 </tr>
 <tr>
-<td>Skewed на пилёном 2x: <code>SUL</code> левая, <code>SUR</code> правая рука, отдельная строка на каждую руку и каждый угол</td>
-<td><code>SUL28 Zmax</code> 12 pcs, <code>SUR28 Zmax</code> 16 pcs; угол в E <code>skewed 30°</code></td>
-<td>одна строка "все skewed одним SKU"</td>
+<td>Skewed на 45 градусов на пилёном 2x: <code>SUL</code> левая, <code>SUR</code> правая рука, отдельная строка на каждую руку</td>
+<td><code>SUL210 Zmax</code> 12 pcs, <code>SUR210 Zmax</code> 16 pcs; в E <code>skewed 45°</code></td>
+<td>одна строка "все skewed одним SKU"; <code>SUL</code> или <code>SUR</code> на 30 или 60 градусов (их делают только на 45)</td>
 </tr>
 <tr>
-<td><code>LSSR</code> только для угла вне диапазона <code>SUL / SUR</code></td>
-<td><code>LSSR28 Zmax</code>, E <code>skewed 60°</code></td>
-<td><code>LSSR</code> на все skewed</td>
+<td>Skewed на любой другой угол: <code>HU</code> по сечению с суффиксом <code>SK&lt;угол&gt; &lt;L или R&gt;</code>, строка на каждый угол и руку</td>
+<td><code>HU210 SK30 R</code>, <code>HU210 SK60 L</code></td>
+<td><code>SUL28</code> с пометкой <code>skewed 30°</code>; <code>LSSR</code> на все skewed</td>
 </tr>
 <tr>
 <td>Fire hangers только над стенами лестниц, лифтов, шахт</td>
@@ -7509,7 +7520,7 @@
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">CBH for Glulam</div>
       <div class="kb-figure-row__rule"><code>CBH2.37X9.75C-KT</code> - специальное соединение для glulam.</div>
-      <div class="kb-figure-row__note">Только когда деталь или schedule показывает glulam или Cedar-style соединение.</div>
+      <div class="kb-figure-row__note">Только когда деталь или schedule показывает glulam или Cedar-style соединение. Картинка: каталог Simpson Strong-Tie, <a href="https://www.strongtie.com/">strongtie.com</a>.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../assets/images/confluence/confluence-030.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-030.png" alt="CBH hanger for glulam condition" loading="lazy"></a>
   </figure>
@@ -7517,7 +7528,7 @@
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">CJTZ for Cedar</div>
       <div class="kb-figure-row__rule"><code>CJTZ</code> - отдельная позиция для Cedar beams и posts.</div>
-      <div class="kb-figure-row__note">Не смешивать с обычными beam hangers; это отдельная строка в книге.</div>
+      <div class="kb-figure-row__note">Не смешивать с обычными beam hangers; это отдельная строка в книге. Картинка: инструкция по монтажу CJTZ, Simpson Strong-Tie, <a href="https://www.strongtie.com/">strongtie.com</a>.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../assets/images/confluence/confluence-031.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-031.png" alt="CJTZ installation for Cedar beam and post" loading="lazy"></a>
   </figure>
@@ -7576,8 +7587,66 @@
 </tbody>
 </table>
 <h2 id="tables">Быстрая таблица Hangers<a class="headerlink" href="#tables" title="Прямая ссылка на раздел">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Beam Face Mount</label><label for="__tabbed_1_2">Beam Concealed</label><label for="__tabbed_1_3">Beam Top Flange</label><label for="__tabbed_1_4">TJI</label><label for="__tabbed_1_5">LPI</label><label for="__tabbed_1_6">Skew / Slope</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:7"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Пилёный 2x</label><label for="__tabbed_1_2">Beam Face Mount</label><label for="__tabbed_1_3">Beam Concealed</label><label for="__tabbed_1_4">Beam Top Flange</label><label for="__tabbed_1_5">TJI</label><label for="__tabbed_1_6">LPI</label><label for="__tabbed_1_7">Skew / Slope</label></div>
 <div class="tabbed-content">
+<div class="tabbed-block">
+<p>Самый частый случай: joist или rafter из обычной доски на face mount.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Hanger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2x4</td>
+<td><code>LUS24</code></td>
+</tr>
+<tr>
+<td>2x6</td>
+<td><code>LUS26</code></td>
+</tr>
+<tr>
+<td>2x8</td>
+<td><code>LUS28</code></td>
+</tr>
+<tr>
+<td>2x10</td>
+<td><code>LUS210</code></td>
+</tr>
+<tr>
+<td>2x12</td>
+<td><code>LUS210</code> (модели <code>LUS212</code> нет)</td>
+</tr>
+<tr>
+<td>(2) 2x8</td>
+<td><code>LUS28-2</code></td>
+</tr>
+<tr>
+<td>(2) 2x10, (2) 2x12</td>
+<td><code>LUS210-2</code></td>
+</tr>
+<tr>
+<td>балка (2) 2x8, (2) 2x10, (3) 2x10</td>
+<td><code>HU28-2</code>, <code>HU210-2</code>, <code>HU210-3</code>; скрытая полка <code>HUC28-2</code>, <code>HUC210-2</code></td>
+</tr>
+<tr>
+<td>наклонный rafter к ledger или ridge</td>
+<td><code>LRU26Z</code>, <code>LRU28Z</code>, <code>LRU210Z</code>, <code>LRU212Z</code></td>
+</tr>
+<tr>
+<td>косой 2x на 45 градусов</td>
+<td><code>SUL210</code> левая, <code>SUR210</code> правая; двойной <code>SUL210-2</code>, <code>SUR210-2</code></td>
+</tr>
+<tr>
+<td>косой 2x на другой угол</td>
+<td><code>HU210 SK30 R</code>: <code>HU</code> по сечению, угол и рука суффиксом</td>
+</tr>
+</tbody>
+</table>
+<p>Снаружи и на P.T. к модели добавляется слово <code>Zmax</code>: <code>LUS210 Zmax</code>.</p>
+</div>
 <div class="tabbed-block">
 <table>
 <thead>

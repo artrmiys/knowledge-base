@@ -7269,9 +7269,9 @@
 
 <h1 id="basement-walls">Basement Walls (стены подвала)<a class="headerlink" href="#basement-walls" title="Прямая ссылка на раздел">&para;</a></h1>
 <figure>
-<p><img alt="Цокольная стена на бетонной плите" src="../../../../assets/images/walls/basement-wall-section.svg" />
+<p><img alt="Деревянная стена подвала на бетонной плите, разрез" src="../../../../assets/images/walls/basement-wall-section.svg" />
   </p>
-<figcaption>Деревянная стена подвала на плите: btm plate P.T., studs, box sheathing и WRB по верху. Бетонная стена подвала каркаса не даёт.</figcaption>
+<figcaption>Деревянная стена подвала на плите: btm plate P.T. с анкером, studs, double top plate, обшивка стены, box sheathing на уровне перекрытия и WRB. Бетонная стена подвала каркаса не даёт.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Basement walls - деревянные стены уровня <code>base</code>: наружные на плите, стены
@@ -7298,7 +7298,7 @@
 </tr>
 <tr>
 <td>Wall section у плиты</td>
-<td>Высота стойки: на подвале часто три разные высоты</td>
+<td>Высота стены: на подвале часто три разные высоты</td>
 </tr>
 <tr>
 <td>Wall type schedule</td>
@@ -7354,29 +7354,64 @@
 <td>то же</td>
 <td><code>Studs Ext</code></td>
 <td>размер по высоте</td>
-<td>pcs</td>
+<td>штуки, в D длина стойки</td>
 <td><code>LFT x 1.1</code> (16")</td>
 </tr>
 <tr>
 <td>то же</td>
-<td><code>Blocking</code> <code>2x</code>, <code>Bracing</code> <code>2x4</code></td>
-<td></td>
+<td><code>Blocking</code></td>
+<td><code>2x6</code> (по сечению стены)</td>
 <td>LFT</td>
-<td>по типу стены</td>
+<td>по матрице шаблона, до чётного</td>
 </tr>
 <tr>
 <td>то же</td>
-<td><code>Box Sheathing</code> OSB, <code>Vapor Barrier</code> (WRB по спецификации)</td>
-<td></td>
-<td>4x8, SQ FT</td>
+<td><code>Bracing Ext Walls</code></td>
+<td><code>2x4</code></td>
+<td>штуки, в D длина доски: до 10' = 14, до 12' = 16, до 16' = 18, выше = 20</td>
+<td><code>LFT / 8 x 1.1</code>: одна доска на 8 LFT стены; только стены от 7'</td>
+</tr>
+<tr>
+<td>то же</td>
+<td><code>Wall Sheathing</code></td>
+<td>как у стен дома (<code>7/16" Zip</code>, <code>1/2" OSB</code>)</td>
+<td>4x8</td>
+<td><code>площадь стены x 1.1 / 32</code>, <a href="../../sheathing/wall-sheathing/">Wall Sheathing</a></td>
+</tr>
+<tr>
+<td>то же</td>
+<td><code>Vapor Barrier</code></td>
+<td>WRB по спецификации; при Zip строки нет, только <code>Tape</code></td>
+<td>SQ FT</td>
+<td><code>площадь x 1.1</code></td>
+</tr>
+<tr>
+<td>то же</td>
+<td><code>Insulation</code></td>
+<td>только continuous insulation снаружи обшивки или на бетоне</td>
+<td>SQ FT</td>
+<td><code>площадь x 1.1</code>; утеплитель между стойками не считаем</td>
+</tr>
+<tr>
+<td>то же</td>
+<td><code>Box Sheathing</code></td>
+<td>как у стены</td>
+<td>4x8</td>
 <td><a href="../../sheathing/box-sheathing/">Box Sheathing</a></td>
 </tr>
 <tr>
 <td><code>corr 2x6 9.24</code></td>
-<td><code>Plates Corr btm</code> <code>2x6 P.T.</code> или <code>LSL P.T.</code></td>
-<td></td>
+<td><code>Plates Corr (1) btm</code></td>
+<td><code>2x6 P.T.</code> или <code>LSL P.T.</code> по детали</td>
 <td>LFT</td>
-<td>по детали</td>
+<td><code>LFT x 1.1</code></td>
+</tr>
+<tr>
+<td>то же</td>
+<td><code>Bracing Corridor</code></td>
+<td><code>2x4</code></td>
+<td>штуки, D как у <code>Bracing Ext Walls</code></td>
+<td><code>LFT / 8 x 1.1</code></td>
 </tr>
 <tr>
 <td>проёмы подвала</td>
@@ -7389,18 +7424,19 @@
 <td><code>2x4 9.24</code> (под podium)</td>
 <td><code>Studs Interior</code> FRT при Type III</td>
 <td></td>
-<td>pcs</td>
+<td>штуки, в D длина стойки</td>
 <td>нота с источником</td>
 </tr>
 </tbody>
 </table>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li>Одна высота стойки на весь подвал при трёх разных высотах по разрезу.</li>
+<li>Одна высота стены на весь подвал при трёх разных высотах по разрезу.</li>
 <li>Высота взята как floor-to-floor без вычета subfloor и перекрытия.</li>
 <li>Стены ниже podium выброшены как "panels by others".</li>
 <li>Бетонная стена обведена как деревянная.</li>
 <li>Treated furring подвала не выделен в отдельную P.T.-сборку.</li>
+<li><code>Bracing</code> записан в LFT: это штуки досок, длина доски стоит в D.</li>
 <li>В строке <code>Vapor Barrier</code> записан Tyvek, хотя спецификация даёт другой WRB.</li>
 </ul>
 <p>Разбор с примерами: <a href="../../../../start/common-mistakes/#walls">все ошибки по стенам</a>.</p>

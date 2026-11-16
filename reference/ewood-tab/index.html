@@ -7496,11 +7496,15 @@
 <p><code>Sort Blocks</code> и <code>Notes + Look</code> сначала сохраняют книгу и кладут копию в <code>_ewood_backups</code>, а результат оставляют несохранённым. Не понравилось: закройте книгу без сохранения. Обычные макросы Ctrl+Z не отменяет, это свойство Excel.</p>
 </div>
 <h2 id="install">Установка<a class="headerlink" href="#install" title="Прямая ссылка на раздел">&para;</a></h2>
-<figure>
-<p><img alt="Один файл ставит вкладку, инструменты, правила и инструкцию. Нужен только Excel 2010 или новее, без прав администратора и Python." src="../../assets/images/reference/ewood-tab/install-steps.svg" />
-  </p>
-<figcaption>Один файл ставит вкладку, инструменты, правила и инструкцию. Нужен только Excel 2010 или новее, без прав администратора и Python.</figcaption>
-</figure>
+<p>Как поставить:</p>
+<ol>
+<li>Скопируйте <code>EWoodTools-Setup.exe</code> на компьютер: один файл, внутри всё.</li>
+<li>Закройте Excel: установщик не пойдёт, пока запущен любой Excel.</li>
+<li>Запустите файл и нажмите <code>Install</code>. Windows может спросить: "Подробнее", потом "Выполнить в любом случае".</li>
+<li>Откройте книгу DFL: на ленте появилась вкладка E-Wood, слева на ней шаблон книги.</li>
+<li>Ключ DeepSeek вводится отдельно и нужен только для проверки английского и <code>Improve Note</code>.</li>
+</ol>
+<p>Один файл ставит вкладку, инструменты, правила и инструкцию. Нужен только Excel 2010 или новее, без прав администратора и Python.</p>
 <ul>
 <li><strong>Обновить:</strong> тот же порядок с новым файлом. <strong>Удалить:</strong> тот же файл, кнопка <code>Uninstall</code>.</li>
 <li><strong>Ключ DeepSeek</strong> хранится у пользователя Windows и в установщик не попадает. Без него всё работает, кроме проверки английского в <code>Fix</code> и <code>Improve Note</code>.</li>
@@ -7877,11 +7881,16 @@
 </tr>
 </tbody>
 </table>
-<figure>
-<p><img alt="Шесть шагов. В конце Check покажет, если что-то всё ещё считает чужие единицы." src="../../assets/images/reference/ewood-tab/duplicate-steps.svg" />
-  </p>
-<figcaption>Шесть шагов. В конце Check покажет, если что-то всё ещё считает чужие единицы.</figcaption>
-</figure>
+<p>Как скопировать блок:</p>
+<ol>
+<li>Поставьте курсор в блок: на заголовок или любую строку под ним.</li>
+<li>Нажмите <code>Duplicate Block</code>: копия встаёт прямо под блоком, курсор на её заголовке.</li>
+<li>Поправьте заголовок: размер в тексте и units в G.</li>
+<li>Свяжите очищенные G со своими замерами.</li>
+<li>Уберите лишние строки, поправьте счёт в формулах C.</li>
+<li>Нажмите <code>Delete Zeros</code>: строки с C = 0 уйдут.</li>
+</ol>
+<p>В конце <code>Check</code> покажет, если что-то всё ещё считает чужие единицы.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">До: блок #1</label><label for="__tabbed_1_2">После: копия #2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -8172,7 +8181,7 @@
 <li>блоки встают сразу за framing list своего этажа, trims за своим блоком, <code>Roof Deck</code> и <code>Side Roof</code> перед кровлей;</li>
 <li>порядок строительства: 1st Floor Framing List, 1st Floor Walls, 2nd Floor Framing List и так далее;</li>
 <li><code>Decking</code> и <code>Railing</code> получают свой заголовок, каркас deck получает уровень <code>Ground</code>; нет расположения: это попадёт в отчёт;</li>
-<li>шайбы в <code>Foundation Walls</code> встают под свои анкеры, микрогруппы начинаются после пустой строки, пустых строк по одной, под заголовком ни одной.</li>
+<li>шайбы в <code>Foundation Walls</code> встают под свои анкеры, <a href="../dfl-overview/#microgroups">микрогруппы</a> начинаются после пустой строки, пустых строк по одной, под заголовком ни одной.</li>
 </ul>
 <p><strong>Notes + Look</strong>, оформление:</p>
 <ul>
@@ -8187,11 +8196,14 @@
 </div>
 <h2 id="check">Check<a class="headerlink" href="#check" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Ничего не меняет. Каждая строка отчёта: номер строки листа, код и что не так. Это кандидаты: решает человек, по чертежу. Строка, которую вы проверили и оставили, будет показываться и дальше: пустой список не обязателен.</p>
-<figure>
-<p><img alt="Сначала то, что меняет числа, потом остальное." src="../../assets/images/reference/ewood-tab/check-steps.svg" />
-  </p>
-<figcaption>Сначала то, что меняет числа, потом остальное.</figcaption>
-</figure>
+<p>Как работать со списком: сначала то, что меняет числа, потом остальное.</p>
+<ol>
+<li>Нажмите <code>Check</code>: список откроется сам, файл лежит в <code>_ewood_backups</code>.</li>
+<li>Идите сверху вниз: сначала <code>ERR-CELL</code> и <code>BLOCK-REF</code>, они меняют числа.</li>
+<li>Сверьте строку с чертежом: список только показывает, решаете вы.</li>
+<li>Поправьте; часть кодов убирают сами <code>Notes + Look</code> и <code>Delete Zeros</code>.</li>
+<li>Нажмите <code>Check</code> ещё раз: осталось то, что вы оставили намеренно.</li>
+</ol>
 <p>Так выглядят строки отчёта (пример):</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>r129 BLOCK-REF: C counts the units of r110 &#39;#1 Upper Balcony/Terrace List 10.5&#39; x 5.5&#39; 4 units&#39;, this block starts at r128 (Beams (2) and 10 more rows)
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>r332 POST-COUNT: 14 post bases against 28 posts in this block (#1 Upper Balcony/Terrace List 17&#39; x 6&#39; 14 units)
@@ -8520,7 +8532,7 @@
 </tbody>
 </table>
 <h2 id="keys">Горячие клавиши<a class="headerlink" href="#keys" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Работают только в книгах DFL. В старых шаблонах только клавиши подходящих макросов, в остальных книгах клавиши принадлежат Excel.</p>
+<p>Работают только в книгах DFL. В старых шаблонах только клавиши подходящих макросов, в остальных книгах клавиши принадлежат Excel. Здесь клавиши по кнопкам вкладки; полная таблица с именами макросов и тем, что каждый делает: <a href="../excel-hotkeys/">Макросы и клавиши Excel</a>.</p>
 <table>
 <thead>
 <tr>

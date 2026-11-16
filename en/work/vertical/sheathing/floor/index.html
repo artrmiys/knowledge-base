@@ -7272,12 +7272,15 @@
 <figcaption>Floor assembly by the arrows: 3/4" T&amp;G subfloor, underlay, second 3/4" T&amp;G layer, adhesive. Each sheet is its own row. Insulation between the joists and the ceiling gypsum are not counted in the frame scope. Archive illustration.</figcaption>
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
-<p>Floor sheathing is everything that lies on the joists over the floor area: subfloor,
-underlayment, a second layer under tile or tubs, FRT strips around the perimeter,
-sound mat. The base <code>3/4" T&amp;G</code> subfloor is covered in <a href="../../../horizontal/floor-framing/subfloor/">Subfloor</a>;
-this page covers the extra layers from the floor assembly that get lost most often.
-The exterior strip at the floor framing level is <a href="../box-sheathing/">Box Sheathing</a>,
-not this page.</p>
+<p>Floor sheathing is the <strong>horizontal</strong> sheets that lie on the joists over the floor
+area: subfloor, underlayment, a second layer under tile or tubs, FRT strips around
+the perimeter, sound mat. How the material is split between pages:</p>
+<ul>
+<li>the base <code>3/4" T&amp;G</code> subfloor and the adhesive are in <a href="../../../horizontal/floor-framing/subfloor/">Subfloor</a>;</li>
+<li>this page covers the extra layers from the floor assembly that get lost most often;</li>
+<li>the vertical strip of sheathing at the floor framing level (over the rim) is
+  <a href="../box-sheathing/">Box Sheathing</a>, not this page.</li>
+</ul>
 <h2 id="where-to-find-it-on-the-plans">Where to find it on the plans<a class="headerlink" href="#where-to-find-it-on-the-plans" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
@@ -7337,11 +7340,11 @@ clear name (<code>tubs</code>, <code>tile</code>).</p>
 <td><code>=CEILING(SQFT/32*1.1,1)</code></td>
 </tr>
 <tr>
-<td>same area</td>
+<td>the <code>Subfloor</code> row</td>
 <td><code>Panel Adheasive</code></td>
 <td><code>29OZ</code></td>
-<td><code>pcs</code></td>
-<td>per template</td>
+<td><code>tubes</code></td>
+<td><code>=CEILING(C&lt;subfloor&gt;/3,1)</code>: one tube per 3 subfloor sheets</td>
 </tr>
 <tr>
 <td>same area</td>
@@ -7355,7 +7358,7 @@ clear name (<code>tubs</code>, <code>tile</code>).</p>
 <td><code>Subfloor FRT</code></td>
 <td><code>3/4" T&amp;G FRT</code></td>
 <td><code>4x8</code></td>
-<td><code>=CEILING(LFT*4/32*1.1,1)</code></td>
+<td><code>=CEILING(LFT*4/32*1.1,1)</code> for a 4' strip (multiplier <code>2</code> for a 2' strip)</td>
 </tr>
 <tr>
 <td><code>sqfts/tubs</code></td>
@@ -7378,12 +7381,14 @@ clear name (<code>tubs</code>, <code>tile</code>).</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2nd Floor Framing List
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Subfloor            3/4&quot; T&amp;G            128   4x8    S201
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Subfloor FRT        3/4&quot; T&amp;G FRT         54   4x8    4&#39; perimeter per S001
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Panel Adheasive     29OZ                 16   pcs
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Panel Adheasive     29OZ                 43   tubes
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Subfloor FRT        3/4&quot; T&amp;G FRT         54   4x8    4&#39; perimeter per S001
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Underlayment        1/2&quot; Ply            128   4x8    A6-01 floor type F2
 </span></code></pre></div>
+<p><code>Panel Adheasive</code> sits right under <code>Subfloor</code> and is figured from its sheets:
+<code>128 / 3 = 42.7</code>, the book gets 43 tubes.</p>
 <figure>
-<p><img alt="Installing subfloor on joists" src="../../../../../assets/images/confluence/confluence-172.png" />
+<p><img alt="Installing subfloor on joists" src="../../../../../assets/images/confluence/confluence-172.jpg" />
   </p>
 <figcaption>T&amp;G subfloor on joists. Sheets = SQFT / 32 x 1.1, rounded up to a whole number. Archive photo.</figcaption>
 </figure>

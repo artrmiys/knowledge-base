@@ -7371,7 +7371,7 @@
 <p><a id="walls"></a></p>
 <h2 id="studs">Walls and studs<a class="headerlink" href="#studs" title="Link to this section">&para;</a></h2>
 <ul>
-<li>Stud height = floor-to-floor minus subfloor, minus floor system depth, minus plates. Floor-to-floor and ceiling height are not the stud height; check against the section of each building. Example: <code>11'1" wall - 22" truss - 3/4" subfloor = 9'2" stud</code>. On COM, the exact height to 1/8" goes in E of the stud row.</li>
+<li>The wall height in the name and in the stud row = floor-to-floor minus subfloor, minus floor system depth. The plates (one bottom and two top) are <strong>not deducted</strong>: this is the height of the assembled wall, and the template picks the stud from it. Deduct only extra boards beyond those three when the section shows them. Floor-to-floor and ceiling height are not this height; check against the section of each building. Example: <code>11'-1" floor-to-floor - 22" truss - 3/4" subfloor = 9'-2 1/4"</code>. On COM, the exact height to 1/8" goes in E of the stud row. <a href="../../work/vertical/walls/exterior/#stud-height">Exterior Walls, height</a>.</li>
 <li>Wall type (ext, corr, dem, party) is set by the wall schedule segments, not by the group: a piece of demising inside the exterior line stays demising.</li>
 <li>P.T. bottom plate only on concrete and masonry. Double bottom plate only where the detail shows it.</li>
 <li>Stud factors: <a href="../formulas/#stud-spacing-factors">Stud spacing factors</a>, <code>12 / 16 / 24 = 1.4667 / 1.1 / 0.625</code>. Joists use a different table (<code>12 / spacing</code>). The numbers are not repeated here.</li>
@@ -7413,7 +7413,7 @@
 <h2 id="sheathing">Sheathing and WRB<a class="headerlink" href="#sheathing" title="Link to this section">&para;</a></h2>
 <ul>
 <li><code>19/32" = 5/8"</code>, not <code>1/2"</code>. Applies to plywood and OSB.</li>
-<li>The structural sheet wins on thickness; Zip on the arch sheets overrides the structural note, but with a note. <code>7/16" Zip</code> on S and <code>Zip R-3</code> on A are one product, not a conflict.</li>
+<li>Which sheet governs. The product of the exterior sheathing and barrier (Zip, OSB, Ply, Densglass, WRB) comes from the wall types on Arch. Thickness, panel grade, which walls are sheathed and on which sides come from Structural (general notes, shear wall schedule). A structural thickness wins over an arch one; Zip on the arch sheets overrides the structural note, but with a note. Any conflict = a header note naming both sheets. <code>7/16" Zip</code> on S and <code>Zip R-3</code> on A are one product, not a conflict.</li>
 <li>The sheathing name comes from the project: <code>LP FlameBlock 2-sided</code> is not <code>7/16 OSB FRT</code>; do not turn <code>5/8 EXT. SHEATHING</code> into Ply without a reason; <code>CDX</code> only if the spec says so.</li>
 <li>The exterior barrier is called WRB or Air Barrier, not Vapor Barrier; the product per spec (fluid-applied is not Tyvek).</li>
 <li>Read spec tables to the end: WS-1 (walls) and WRS-1 (roof) are different tables.</li>
@@ -7446,8 +7446,8 @@
 <td><code>11-7/8" Rim</code>; LSL named - <code>11-7/8" LSL Rim</code></td>
 </tr>
 <tr>
-<td>Rim split into 16' pieces</td>
-<td>rim in LFT with factor <code>1.05</code> (EWP) or <code>1.1</code></td>
+<td>Rim line in the tree split into 16' pieces</td>
+<td>one line for the whole detail. In the workbook <code>Rim Board</code> is in 16' boards (<code>=CEILING(G/D,1)</code>, D <code>16</code>): the formula does the splitting. On an EWP-only job rim stays in LFT with factor <code>1.05</code></td>
 </tr>
 <tr>
 <td>Ribbon board with top chord bearing trusses</td>
@@ -7457,7 +7457,7 @@
 </table>
 <ul>
 <li><code>1-3/4 LVL Rim</code> only when a deck or corridor frame attaches to the rim. With I-joists, engineered rim only. Roof TJI also need rim.</li>
-<li>Walls 10' and taller get two rows of blocking. Blocking, drywall blocking, ribbon, ledger are in LFT with 10% waste, once (<a href="../formulas/#blocking-formulas">Rim, ribbon, blocking</a>).</li>
+<li>Walls 10' and taller get two rows of blocking. Blocking, drywall blocking, ribbon, ledger in a framing list are in 16' boards (<code>=CEILING(G/D,1)</code>); blocking in walls is in LFT. Waste goes into the formula once (<a href="../formulas/#rim-ribbon-blocking-ledger">Rim, ribbon, blocking</a>).</li>
 <li>Ledger and its fasteners on separate rows per detail (3 SDWS per truss end at 16"), entered on their own floor.</li>
 <li>Piggyback trusses: <code>2x6</code> sleepers between the truss tops.</li>
 </ul>
@@ -7474,7 +7474,7 @@
 <li>Roof-to-wall ties along all bearing lines, spacing = truss spacing, <code>H3</code> on both sides of the truss and base ties at every stud, if the detail says so.</li>
 <li>Holdowns: to concrete one, through wood floor framing two; over a beam, no transfer holdown is needed (client instruction); do not delete hardware the engineer explicitly shows. The block goes at the end of the floor's wall section: <a href="../dfl-blocks/#holdowns">Blocks</a>.</li>
 <li><code>A35 / LTP4</code> on shear walls per the SW schedule and details: if the schedule names them, count by spacing.</li>
-<li>Spread shear wall anchors by spacing, SW mark in E, type and size from the anchorage schedule in B; do not swap a wedge anchor for Titen HD without a reason; plate washers per the table, not generic 3x3.</li>
+<li>Spread shear wall anchors by spacing, SW mark in E, type and size from the anchorage schedule in B; do not swap a wedge anchor for Titen HD without a reason; plate washers per the table: when the schedule names a model (<code>BP 5/8-3</code>, <code>BPS 1/2-3</code>), write it; <code>3x3 Square</code> only when no model is named.</li>
 </ul>
 <figure>
 <p><img alt="Holdown detail at foundation" src="../../../assets/images/confluence/confluence-028.png" />
@@ -7485,7 +7485,7 @@
 <ul>
 <li>Pitch from the sheet, applied once; each building has its own. Do not add overframe automatically.</li>
 <li>Eaves: all segments; canopy is not part of eave and rake. Frame for Eave per the section: an aluminum fascia is not counted.</li>
-<li>Truss bracing over the whole area under the roof, including the garage.</li>
+<li><code>Truss Bracing</code> for roof trusses: over the whole plan area under the trusses, garage included; a stick roof gets no row. <code>Bracing for Trusses</code> for floor trusses: by lines about every 10', not over bearing walls and not where joists are stick or TJI. Formulas: <a href="../formulas/#truss-bracing">Truss bracing</a>.</li>
 <li>Kickers only where they are on a detail; firewall and gable kickers per the detail spacing.</li>
 <li>Soffit: count wood framing, not aluminum soffit; 5/8" exterior gypsum on canopies and porch; both soffit areas go into sheathing and WRB.</li>
 <li>Attic draft stop separate from fireblock, by roof plan zones, row in <code>Gable Walls</code>; do not copy it from the shear total.</li>
@@ -7503,14 +7503,14 @@
 </ul>
 <h2 id="deck">Balconies and porch<a class="headerlink" href="#deck" title="Link to this section">&para;</a></h2>
 <ul>
-<li>Posts outdoors are always P.T.; under a roof, regular. Composite railing as a system, painted wood railing by component; two posts per balcony.</li>
+<li>Outdoor lumber of a porch, balcony and deck is always P.T., roofed or not; plain lumber only inside the building envelope. Composite railing as a system, painted wood railing by component; two posts per balcony.</li>
 <li>Porch is counted separately from balconies; fill porch SQFT on the Front Page even when the porch is under a balcony.</li>
 <li>Porch ceiling joists + ledger + hangers are required; framing not shown - a note. Full list: <a href="../dfl-blocks/">Balcony, porch and holdown blocks</a>.</li>
 </ul>
 <h2 id="doors">Doors<a class="headerlink" href="#doors" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Unit entry doors from the corridor are usually fire rated: <code>3070 Entry</code>, <code>2670 FCW</code>, <code>3070 HM C-lbl</code>; row format <code>3070 1 unit MARK FIRE LABEL</code>.</li>
-<li>Doors wider than 4' as double: <code>5070</code> = <code>(2)2670</code>. Hardware numbers do not go into the takeoff.</li>
+<li>Doors wider than 3'-6" as double: <code>5070</code> = <code>(2)2670</code>, <code>4070</code> = <code>(2)2070</code>. Hardware numbers do not go into the takeoff.</li>
 <li>Casing in LFT on three sides of the door; interior door jambs are counted as points by unit, grouped by the adjacent wall section (a point at <code>2x6</code> = 2x6 jamb).</li>
 </ul>
 <h2 id="trims">Interior trims<a class="headerlink" href="#trims" title="Link to this section">&para;</a></h2>

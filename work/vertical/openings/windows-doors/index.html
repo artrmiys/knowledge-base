@@ -7269,9 +7269,9 @@
 
 <h1 id="windows-and-doors">Windows and Doors (проёмы)<a class="headerlink" href="#windows-and-doors" title="Прямая ссылка на раздел">&para;</a></h1>
 <figure>
-<p><img alt="Инструмент Openings: рамка на окне и точка с именем 3.0x5.0" src="../../../../assets/images/ourplancore/v3/measure-openings.png" />
+<p><img alt="Позиция окон 3.0x4.0: точка на каждом окне" src="../../../../assets/images/ourplancore/v3/measure-openings.png" />
   </p>
-<figcaption>Инструмент Openings на фасаде: рамка по проёму, программа сама пишет имя-размер <code>3.0x5.0</code> и ставит точку в центре. Одна точка - один физический проём.</figcaption>
+<figcaption>Count-позиция окон <code>3.0x4.0</code> на плане демо-проекта: одна точка на окно, итог 4 ea. Инструмент Openings ставит такую позицию по рамке проёма на фасаде: имя-размер (ширина x высота) пишет сам, точка в центре. Одна точка - один физический проём.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Openings - все дыры в наружной стене: окна, наружные и patio двери,
@@ -7349,37 +7349,42 @@ scope (двери, jambs, casing), а не openings. Перемычки счит
 <td><code>openings/1/3.0x5.0</code></td>
 <td><code>Window Flashing</code> + <code>Sill Flashing</code></td>
 <td>LFT</td>
-<td><code>(2H + W) x qty</code>, <code>W x qty</code></td>
+<td><code>(2H + W) x qty x 1.1</code>, <code>W x qty x 1.1</code></td>
 </tr>
 <tr>
 <td><code>openings/1/3.3x6.5 d</code></td>
-<td><code>Ext. Doors</code> <code>3070 1 unit MARK FIRE LABEL</code>; flashing 3 стороны</td>
-<td>ea, LFT</td>
-<td>без sill flashing</td>
+<td><code>Ext. Doors</code> <code>3070 1 unit MARK FIRE LABEL</code>; flashing трёх сторон в строке <code>Window Flashing</code></td>
+<td>unit, LFT</td>
+<td>без sill flashing; строки <code>Door Flashing</code> нет</td>
 </tr>
 <tr>
 <td><code>openings/1/9.0x6.8 gd</code></td>
-<td><code>Garage headers (3)</code>, flashing 3 стороны</td>
-<td>ea, LFT</td>
+<td><code>Ext. Grge Headers (3)</code>; flashing трёх сторон в строке <code>Window Flashing</code></td>
+<td>штуки, LFT</td>
 <td>без sill</td>
 </tr>
 <tr>
 <td><code>openings/1/2.0x2.0 lv</code></td>
 <td>решётка, вычет из обшивки</td>
-<td>ea</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
 <td>межкомнатные двери</td>
-<td><code>Int. Doors</code> <code>2670 ...</code>, jambs по сечению соседней стены</td>
-<td>ea</td>
-<td>дверь шире 4' = двойная <code>(2)2670</code></td>
+<td><code>Int. Doors</code> <code>2670 ...</code>, группа по сечению стены, в которой стоит дверь</td>
+<td>unit</td>
+<td>дверь шире 3'-6" пишется парой: <code>5070</code> = <code>(2)2670</code>, <code>4070</code> = <code>(2)2070</code></td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Casing у двери по 3 сторонам в LFT; jambs межкомнатных дверей считаются
-  точками по юнитам и группируются по сечению стены (точка у <code>2x6</code> = jamb 2x6).</li>
+<li><strong>Jambs межкомнатных дверей</strong> отдельной LFT-строкой не считаются. Двери
+  ставятся точками по юнитам и группируются по сечению стены, в которой
+  стоят: точка у стены <code>2x6</code> = дверь с jamb 2x6, точка у <code>2x4</code> = jamb 2x4.
+  Так у каждой двери сразу известен и размер, и глубина коробки.</li>
+<li>Casing межкомнатной двери - в LFT по трём сторонам:
+  <code>=ОКРВВЕРХ(2*сумма периметров/12*1.1;10)</code>, периметр двери = W + 2H в дюймах,
+  <code>2</code> = обе стороны стены. Подробно: <a href="../../../interior-trims/casing/">Casing</a>.</li>
 <li>Номера фурнитуры в DFL не нужны; материал и fire rating - нужны.</li>
 <li>Из обшивки, WRB, insulation и линии фундамента проёмы вычитаются <strong>один раз</strong>
   и по своему этажу. Окна меньше 4' из обшивки не вычитаются:
@@ -7391,7 +7396,8 @@ scope (двери, jambs, casing), а не openings. Перемычки счит
 <li>Проём посчитан дважды: на плане и фасаде, с двух видов, дверь storefront отдельно.</li>
 <li>Пометка <code>d</code> не поставлена: у двери появился Sill Flashing.</li>
 <li>Проёмы не вычтены из обшивки и WRB (ворота гаража) или вычтены дважды.</li>
-<li>Дверь шире 4' записана одной створкой.</li>
+<li>Дверь шире 3'-6" записана одной створкой, а не парой (<code>4070</code> вместо <code>(2)2070</code>).</li>
+<li>Jambs межкомнатных дверей записаны LFT-строкой, а двери не разнесены по сечению стены.</li>
 <li>Размер взят с фасада "на глаз", а не из schedule; R.O. перепутан с размером блока.</li>
 </ul>
 <p>Разбор с примерами: <a href="../../../../start/common-mistakes/#openings">все ошибки по проёмам</a>.</p>

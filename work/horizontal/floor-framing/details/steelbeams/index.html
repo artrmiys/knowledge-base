@@ -7339,7 +7339,8 @@
 <figcaption>Line по линии применения детали: длина линии уходит в G строки DFL, имя детали даёт флаг M при экспорте.</figcaption>
 </figure>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Блок из четырёх строк рядом с балками своего этажа. Nailer по умолчанию двойной (нота <code>double 2x plate</code>); одинарный только если деталь прямо показывает один слой. Нижний nailer под полкой и filler - отдельные строки по детали.</p>
+<p>Блок строк рядом с балками своего этажа. Nailer по умолчанию двойной (нота <code>double 2x plate</code>); одинарный только если деталь прямо показывает один слой. Нижний nailer под полкой и filler - отдельные строки по детали.</p>
+<p>Web fillers считаются только там, где joists висят на стенке балки (flush steel beam, деталь показывает дерево в стенке). У dropped steel beam, когда балка ниже joists и они лежат сверху на nailer, web fillers нет: считаем только nailer и болты.</p>
 <table>
 <thead>
 <tr>
@@ -7361,7 +7362,7 @@
 <tr>
 <td><code>Anchor Bolts 24" o.c. (2)</code></td>
 <td><code>3/8" Ø</code></td>
-<td><code>=ОКРВВЕРХ(G*12/H*2*1.1;2)</code></td>
+<td><code>=ОКРВВЕРХ(G*12/H*2;2)</code></td>
 <td><code>pcs</code></td>
 <td><code>note II.B</code></td>
 </tr>
@@ -7380,11 +7381,11 @@
 <td></td>
 </tr>
 <tr>
-<td><code>Web Filler</code></td>
-<td><code>2x6</code></td>
-<td><code>=ОКРВВЕРХ(G*2/D;1)</code></td>
+<td><code>Steel Beam Web Fillers 4x</code></td>
+<td>по детали: <code>2x10</code>, <code>2x12</code></td>
+<td><code>=ОКРВВЕРХ(G*H/D;1)</code>, H = 4</td>
 <td><code>16</code></td>
-<td>деталь</td>
+<td>W-профиль, деталь</td>
 </tr>
 <tr>
 <td><code>Hangers</code></td>
@@ -7395,6 +7396,7 @@
 </tr>
 </tbody>
 </table>
+<p><code>G</code> - длина стальной балки в LFT. В строке nailer множитель <code>2</code> - число слоёв. В строке fillers <code>H</code> - число слоёв packing на обе стороны стенки вместе (таблица ниже), оно же печатается в Label: <code>4x</code>. В строках болтов <code>H</code> - шаг в дюймах, <code>2</code> - болтов в точке: как читать подпись, см. <a href="../bolts/">Bolts</a>.</p>
 <p>Шайба под болт nailer - обычная washer, <code>3x3</code> только если деталь требует.</p>
 <h2 id="w-table">Nailer и packing по профилю W<a class="headerlink" href="#w-table" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Когда деталь не даёт размер nailer или число слоёв в стенке, бери их по профилю балки (<code>W12x26</code>: серия W12, вес 26 lb/ft). Packing (web filler) - доски в стенке балки, число слоёв на обе стороны вместе. Деталь со S-листа всегда главнее таблицы.</p>
@@ -7591,6 +7593,7 @@
 <li>Болты взяты по балкам другого этажа.</li>
 <li>Hanger выбран face-mount, а деталь даёт опору сверху на nailer (top-mount), или наоборот.</li>
 <li>Filler steel anchors с шайбой 3x3 без указания.</li>
+<li>Web fillers посчитаны у dropped steel beam: там joists лежат на nailer, fillers не нужны.</li>
 <li><code>EWP by others</code>, а LVL/LSL blocking у стальной балки по детали не записан.</li>
 <li><a href="../../../../../start/common-mistakes/#floor">Все ошибки по перекрытиям</a></li>
 </ul>
@@ -7620,7 +7623,7 @@
 <tr>
 <td><code>Anchor Bolts 24" o.c. (2)</code></td>
 <td><code>3/8" Ø</code></td>
-<td><code>=ОКРВВЕРХ(G*12/H*2*1.1;2)</code></td>
+<td><code>=ОКРВВЕРХ(G*12/H*2;2)</code></td>
 <td>pcs</td>
 <td><code>note II.B</code></td>
 <td>86</td>
@@ -7629,23 +7632,24 @@
 <tr>
 <td><code>Washers 24" o.c. (2)</code></td>
 <td><code>3/8" Washers</code></td>
-<td><code>=ОКРВВЕРХ(G*12/H*2*1.1;2)</code></td>
+<td><code>=ОКРВВЕРХ(G*12/H*2;2)</code></td>
 <td>pcs</td>
 <td></td>
-<td>86</td>
-<td>24</td>
+<td></td>
+<td>2</td>
 </tr>
 <tr>
 <td><code>Nuts 24" o.c. (2)</code></td>
 <td><code>Nuts for 3/8" Ø</code></td>
-<td><code>=ОКРВВЕРХ(G*12/H*2*1.1;2)</code></td>
+<td><code>=ОКРВВЕРХ(G*12/H*2;2)</code></td>
 <td>pcs</td>
 <td></td>
-<td>86</td>
-<td>24</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<p>Dropped балка 86 LFT, fillers нет. Nailer: 86 x 2 / 16 = 10.75, значит 11 досок по 16'. Болты: 86 x 12 / 24 = 43 точки, x 2 = 86; столько же шайб и гаек (их формулы берут G и шаг из строки болтов).</p>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li><a href="../../beam/">Beam</a>, <a href="../bolts/">Bolts</a>, <a href="../../../../../reference/hangers/">Hangers</a></li>

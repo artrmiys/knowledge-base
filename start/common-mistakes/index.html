@@ -7385,8 +7385,8 @@
 </tr>
 <tr>
 <td>Высота стойки взята как floor-to-floor или отметка потолка.</td>
-<td>Studs длиннее реальных на глубину перекрытия и plates; весь этаж завышен.</td>
-<td>Высота стойки = floor-to-floor минус subfloor минус глубина перекрытия минус plates; проверять по разрезу каждого дома. В имени стены высота в десятичных футах (<code>ext 2x6 9.09</code>). <a href="../../work/vertical/walls/exterior/">Exterior, раздел Wall Sizing</a>, <a href="../../reference/boss-feedback-rules/#studs">Советы: Studs</a></td>
+<td>Studs длиннее реальных на глубину перекрытия; шаблон выбирает не ту стойку, весь этаж завышен.</td>
+<td>Высота стены = floor-to-floor минус subfloor минус глубина перекрытия; проверять по разрезу каждого дома. Plates не вычитаются: в имя и в строку студов идёт высота стены в сборе (стойка плюс одна нижняя и две верхние plates), по ней шаблон выбирает precut или full height. В имени стены высота в десятичных футах (<code>ext 2x6 9.09</code>). <a href="../../work/vertical/walls/exterior/#stud-height">Exterior, высота стены</a>, <a href="../../reference/boss-feedback-rules/#studs">Советы: Studs</a></td>
 </tr>
 <tr>
 <td>P.T. bottom plate на деревянном перекрытии.</td>
@@ -7405,6 +7405,11 @@
 </tr>
 </tbody>
 </table>
+<figure>
+<p><img alt="Высота стены: так и не так" src="../../assets/images/process/mistake-stud-height.svg" />
+  </p>
+<figcaption>Высота в имени стены: floor-to-floor минус subfloor и глубина перекрытия, plates остаются внутри высоты. Floor-to-floor целиком завышает studs всего этажа.</figcaption>
+</figure>
 <h2 id="openings">Проёмы<a class="headerlink" href="#openings" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7432,6 +7437,16 @@
 </tr>
 </tbody>
 </table>
+<figure>
+<p><img alt="Высота окна: размер изделия, не отметка верха" src="../../assets/images/process/mistake-window-height.svg" />
+  </p>
+<figcaption>Высота проёма в имени - размер самого окна из schedule, а не отметка head height от пола.</figcaption>
+</figure>
+<figure>
+<p><img alt="Проём вычтен один раз и дважды" src="../../assets/images/process/mistake-double-deduction.svg" />
+  </p>
+<figcaption>Проём шире 4' вычитается один раз по своему этажу; окно уже 4' не вычитается. Вычет и с плана, и с фасада занижает обшивку.</figcaption>
+</figure>
 <h2 id="floor">Перекрытия и балки<a class="headerlink" href="#floor" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7453,9 +7468,9 @@
 <td>Hangers по сборкам, оба конца каждого joist, модель по детали, только целые штуки. Снаружи и на P.T. Zmax; ties к фермам под обшивкой без Zmax. <a href="../../reference/hangers/">Hangers</a></td>
 </tr>
 <tr>
-<td>Rim записан как <code>1-3/4 LVL Rim</code> без указания на чертеже; rim разбит на куски 16'.</td>
+<td>Rim записан как <code>1-3/4 LVL Rim</code> без указания на чертеже; линия rim в дереве разбита на куски 16'.</td>
 <td>Продукт выдуман, длина неверна.</td>
-<td>По умолчанию <code>11-7/8" Rim</code> или <code>LSL Rim</code> по спецификации, в LFT с фактором. LVL rim только когда к нему крепится deck или corridor. <a href="../../work/horizontal/floor-framing/details/rim/">Rim Board</a>, <a href="../../reference/boss-feedback-rules/#rim-board">Советы: Rim</a></td>
+<td>По умолчанию <code>11-7/8" Rim</code> или <code>LSL Rim</code> по спецификации. В дереве одна линия на весь узел; в книге <code>Rim Board</code> досками по 16' (<code>=CEILING(G/D,1)</code>), а в LFT с фактором <code>1.05</code> только на EWP-only заказе. LVL rim только когда к нему крепится deck или corridor. <a href="../../work/horizontal/floor-framing/details/rim/">Rim Board</a>, <a href="../../reference/boss-feedback-rules/#rim-board">Советы: Rim</a></td>
 </tr>
 <tr>
 <td>Лестница посчитана один раз при восьми лестницах; stringers из шаблона <code>(4) LVL</code> при двух маршах 2x12.</td>
@@ -7647,10 +7662,15 @@
 <tr>
 <td>Единица <code>FT</code> вместо <code>LFT</code>; подпись не совпадает с расчётом (<code>Plate (2)</code> при одинарной, <code>Posts (3)</code> при двух).</td>
 <td>Формат не по шаблону, клиент читает неверно.</td>
-<td>В D <code>LFT</code> для досок, <code>pcs</code> для крепежа, SF для листов; подпись = то, что считает формула. <a href="../../reference/takeoff-items/">Takeoff item labels</a></td>
+<td>В D <code>LFT</code> для погонажа, <code>pcs</code> для крепежа, <code>4x8</code> для листов, <code>SQ FT</code> для площадей; у досок штуками в D длина доски в футах. Подпись = то, что считает формула. <a href="../../reference/takeoff-items/">Takeoff item labels</a></td>
 </tr>
 </tbody>
 </table>
+<figure>
+<p><img alt="Заметка под заголовком своей секции" src="../../assets/images/reference/dfl-note-placement.svg" />
+  </p>
+<figcaption>Нота стоит под заголовком своей секции, с префиксом и жёлтым фоном. Нота над заголовком уходит в предыдущий блок.</figcaption>
+</figure>
 <h2 id="pages">Листы и дерево в OurPlanCore<a class="headerlink" href="#pages" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7678,6 +7698,11 @@
 </tr>
 </tbody>
 </table>
+<figure>
+<p><img alt="Свой цвет и значок у каждой позиции" src="../../assets/images/process/mistake-tree-colors.svg" />
+  </p>
+<figcaption>У каждой позиции свой Color, у точечных ещё и свой CountSymbol. Одним цветом легенду и PDF не прочитать.</figcaption>
+</figure>
 <h2 id="delivery">Сдача<a class="headerlink" href="#delivery" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>

@@ -7317,10 +7317,15 @@
 <figure>
 <p><img alt="Beam tool" src="../../../../../assets/images/ourplancore/v3/measure-beam.png" />
   </p>
-<figcaption>Beam tool: two points along the member, the app rounds the length and puts it into the takeoff name.</figcaption>
+<figcaption>Beam tool (example on a floor beam of the demo project): two points along the member, the ruler shows the length 49,11 ft, the app rounds it to the order length and creates a Count takeoff with the length in the name, here <code>FB1 50</code>.</figcaption>
+</figure>
+<figure>
+<p><img alt="Valley rafter on the roof plan" src="../../../../../assets/images/roof/valley.svg" />
+  </p>
+<figcaption>Valley on the plan: two valleys run from the inside corners to the end of the addition ridge, jack rafters of both slopes butt into them. Board length = plan length x the hip and valley factor.</figcaption>
 </figure>
 <h2 id="takeoff-name-and-dfl-row">Takeoff name and DFL row<a class="headerlink" href="#takeoff-name-and-dfl-row" title="Link to this section">&para;</a></h2>
-<p>Path: <code>framing/roof framing/beams/valley &lt;size&gt; &lt;length&gt;</code>. The template's combined row <code>Ridge / Valley / Hip</code> in LFT when the job does not split them.</p>
+<p>Path: <code>framing/roof framing/beams/valley &lt;size&gt; &lt;length&gt;</code>. In the DFL the valley is the <code>Valley plates</code> row: C is the number of boards, D is the even order length. A valley that the plan marks with a beam mark (<code>RB1</code>) is written <code>Valley Beam (n)</code>.</p>
 <table>
 <thead>
 <tr>
@@ -7335,7 +7340,7 @@
 <tbody>
 <tr>
 <td><code>beams/valley 2x12 16</code></td>
-<td><code>Valley Rafters</code></td>
+<td><code>Valley plates</code></td>
 <td><code>2x12</code></td>
 <td>points</td>
 <td><code>16</code></td>
@@ -7343,17 +7348,25 @@
 </tr>
 <tr>
 <td><code>beams/valley (2) 2x12 14</code></td>
-<td><code>Valley Rafters (2)</code></td>
+<td><code>Valley plates (2)</code></td>
 <td><code>2x12</code></td>
-<td>points</td>
+<td>points x 2</td>
 <td><code>14</code></td>
 <td>dormer</td>
+</tr>
+<tr>
+<td><code>beams/RB1 (2) 1 3/4 x 16 LVL 20</code></td>
+<td><code>Valley Beam (2)</code></td>
+<td><code>1 3/4 x 16 LVL</code></td>
+<td>points x 2</td>
+<td><code>20</code></td>
+<td><code>RB1</code></td>
 </tr>
 <tr>
 <td><code>details/sleepers</code></td>
 <td><code>Sleepers</code></td>
 <td><code>2x6</code></td>
-<td>LFT / 16</td>
+<td><code>=CEILING(G/D,1)</code></td>
 <td><code>16</code></td>
 <td>overframe</td>
 </tr>
@@ -7381,7 +7394,7 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Valley Rafters</code></td>
+<td><code>Valley plates</code></td>
 <td><code>2x12</code></td>
 <td>2</td>
 <td>16</td>

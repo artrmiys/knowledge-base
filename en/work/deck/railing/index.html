@@ -7333,45 +7333,45 @@ is always a system; by components only for painted wood. Do not mix.</p>
 <tbody>
 <tr>
 <td>Any</td>
-<td><code>Note: Railing is composite; verify product</code></td>
+<td><code>Note: Railing called composite per A501; decking assumed; verify</code></td>
 <td></td>
-<td>a note about the system right under the railing rows</td>
+<td>one yellow note about the railing and decking right under the block header; drawings silent - <code>assumed</code> and <code>verify</code></td>
 </tr>
 <tr>
 <td>Any</td>
-<td><code>Posts at Rails 4x4 P.T.</code></td>
-<td>pcs</td>
-<td>2 per balcony, <code>=2*G</code>; height 4' in E</td>
+<td><code>Posts at Rails</code> <code>4x4 P.T.</code></td>
+<td><code>4</code> (4' post length)</td>
+<td>2 per balcony, <code>=2*G</code>, E <code>assumed</code>; long deck rails: <code>=CEILING(LFT/6,1)+1</code></td>
 </tr>
 <tr>
 <td>Composite (system)</td>
 <td><code>Post Sleeve</code> <code>Sleeve for 4x4</code>, <code>Post Cap</code> <code>Cap for 4x4</code></td>
 <td>pcs</td>
-<td>by posts</td>
+<td>by posts: <code>=C&lt;posts&gt;</code></td>
 </tr>
 <tr>
 <td>Composite (system)</td>
-<td><code>Rail sections</code> <code>6' Rail section</code></td>
+<td><code>Rail sections</code> <code>8' Rail section</code></td>
 <td>unit</td>
-<td>front and sides as separate rows</td>
+<td>one row per section length, rule below</td>
 </tr>
 <tr>
 <td>Wood painted (by components)</td>
-<td><code>Balustrades 2x2</code></td>
+<td><code>Balustrades</code> <code>2x2 balusters</code></td>
 <td>pcs</td>
-<td><code>=EVEN(G*2.2)</code>, G = railing LFT x units</td>
+<td><code>=EVEN(L*2.2)*G</code></td>
 </tr>
 <tr>
 <td>Wood painted (by components)</td>
-<td><code>Rails (top &amp; bottom) 2x4</code></td>
+<td><code>Rails (top &amp; bottom)</code> <code>2x4 rails</code></td>
 <td>LFT</td>
-<td><code>=EVEN(G*2.2)</code> (two runs)</td>
+<td><code>=EVEN(L*2.2)*G</code> (two runs x 1.1)</td>
 </tr>
 <tr>
 <td>Wood painted (by components)</td>
-<td><code>Cap Rail 2x6</code></td>
+<td><code>Cap Rail</code> <code>2x6 cap rail</code></td>
 <td>LFT</td>
-<td><code>=EVEN(G*1.1)</code></td>
+<td><code>=EVEN(L*1.1)*G</code></td>
 </tr>
 <tr>
 <td>Aluminum / metal</td>
@@ -7381,6 +7381,20 @@ is always a system; by components only for painted wood. Do not mix.</p>
 </tr>
 </tbody>
 </table>
+<p>In the formulas L is the railing LFT of one balcony (front plus open sides) and G is
+the number of instances. <code>Balustrades</code> are counted in pieces (<code>pcs</code>), not <code>LFT</code>: one
+every 5.5" with waste.</p>
+<p>Composite system sections (<code>Rail sections</code>):</p>
+<ul>
+<li>The system is bought in sections: one section per span between posts.</li>
+<li>B is the nearest factory length not shorter than the side: a 7'-4" front is an
+  <code>8' Rail section</code>, a 6' side is a <code>6' Rail section</code>.</li>
+<li>One row per length. C = sections of that length on one balcony x G, D
+  <code>unit</code>, E holds the side and its real length (<code>front 7'-4"</code>, <code>sides 6'</code>).</li>
+<li>A side longer than the longest section of the system: add an intermediate post,
+  count as many sections as there are spans, and add the post to <code>Posts at Rails</code>.</li>
+<li>The cap rail is part of the section: a composite railing has no <code>Cap Rail</code> row.</li>
+</ul>
 <p>Outdoor railing posts are always <code>P.T.</code>. Blocking and bolts for the posts, if the detail
 shows them, go in the frame rows with the detail in E.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
@@ -7389,15 +7403,18 @@ shows them, go in the frame rows with the detail in E.</p>
 <li>System and component counting mixed on one run.</li>
 <li>Aluminum or vinyl railing counted as material instead of a note.</li>
 <li>Posts at Rails without <code>P.T.</code>.</li>
+<li>Sections counted in one row from the total length (<code>LFT / 6</code>) instead of side by side.</li>
+<li>Balustrades written in <code>LFT</code>.</li>
 <li>All mistakes for the section: <a href="../../../start/common-mistakes/#deck">Deck, porch, balconies</a>.</li>
 </ul>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Note: Railing called composite; Decking assumed Composite
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Posts at Rails   4x4 P.T.          12  pcs    =2*G      4&#39;
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Post Sleeve      Sleeve for 4x4    12  pcs    =C&lt;posts&gt;
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Post Cap         Cap for 4x4       12  pcs    =C&lt;posts&gt;
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Rail sections    6&#39; Rail section   12  unit   front 12&#39;
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Rail sections    6&#39; Rail section   16  unit   sides 2x8&#39;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Note: Railing called composite per A501; decking assumed; verify
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Balcony 7&#39;-4&quot; x 6&#39;, 6 unit (G = 6)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Posts at Rails   4x4 P.T.          12  4      =2*G        assumed
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Post Sleeve      Sleeve for 4x4    12  pcs    =C&lt;posts&gt;
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Post Cap         Cap for 4x4       12  pcs    =C&lt;posts&gt;
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Rail sections    8&#39; Rail section    6  unit   =1*G        front 7&#39;-4&quot;
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Rail sections    6&#39; Rail section   12  unit   =2*G        sides 6&#39;
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

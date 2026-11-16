@@ -7278,7 +7278,7 @@
 <h1 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Link to this section">&para;</a></h1>
 <p>The path of a project from the client folder to delivery. This is the general route;
 how to measure each element is on the topic pages of the "Work" section, how to fill
-Excel is in the <a href="../../reference/takeoff-items/">Reference</a>.</p>
+Excel is in the "Excel and DFL" tab: <a href="../../reference/takeoff-items/">DFL row labels</a>.</p>
 <figure>
 <p><img alt="Process diagram: from Dropbox to .Finished" src="../../../assets/images/process/work-process.svg" />
   </p>
@@ -7314,7 +7314,9 @@ That way you do not lose corners, dead-end areas and small wall pieces at stairs
    sheets are takeoff sheets (floor plans, roof plan, framing plans).</li>
 <li>Wall sheathing and insulation come from the wall types sheet; roofing from the structural
    roof framing and the section; subfloor from the section. A conflict between arch and S is resolved
-   right away: structural wins, the discrepancy is recorded with a note <code>... per &lt;sheet&gt;; verify</code>.</li>
+   right away: the sheathing and barrier product comes from the wall types on Arch, while thickness,
+   framing and which walls are sheathed come from Structural; the discrepancy is recorded with a
+   note <code>... per &lt;sheet&gt;; verify</code> naming both sheets.</li>
 <li>Scales: plans are usually 1/8", unit plans 1/4", sections 3/8", details NTS.
    The scale label on the sheet is not proof; check the scale against a dimension on the sheet.</li>
 <li>Raster set (scan): auto-names and auto-scale will not work, sheets are
@@ -7322,9 +7324,9 @@ That way you do not lose corners, dead-end areas and small wall pieces at stairs
 </ol>
 <h2 id="3-the-job-in-ourplancore">3. The job in OurPlanCore<a class="headerlink" href="#3-the-job-in-ourplancore" title="Link to this section">&para;</a></h2>
 <figure>
-<p><img alt="Pages panel with sheet folders" src="../../../assets/images/ourplancore/v3/pages-panel.png" />
+<p><img alt="Pages panel with sheet folders" src="../../../assets/images/ourplancore/v3/pages-tree.png" />
   </p>
-<figcaption>Sheets are sorted into folders <code>00. imported/Arch</code>, <code>Struct</code>, <code>sections</code>, <code>details ...</code>; unused ones go to <code>--------others</code>. Sheet name <code>a101 1st</code>.</figcaption>
+<figcaption>The demo project in Lite: sheets sorted into folders <code>00. imported/Arch</code>, <code>Struct</code>, <code>units</code>, unused ones go to <code>--------others</code>; on a real job <code>sections</code>, <code>details ...</code> are added. Under sheet <code>a101 1st</code> are its takeoffs.</figcaption>
 </figure>
 <ol>
 <li><strong>Sheets.</strong> Name is <code>&lt;sheet number&gt; &lt;tag&gt;</code> in lowercase: <code>a101 1st</code>, <code>s201 2nd</code>, <code>s101 f</code>,
@@ -7425,7 +7427,7 @@ joists only with J Area, beams only with Beam, openings only with Openings. Name
 <a href="../takeoff-structure/">Takeoff tree</a>.</p>
 <h2 id="5-excel-dfl-and-notes">5. Excel DFL and notes<a class="headerlink" href="#5-excel-dfl-and-notes" title="Link to this section">&para;</a></h2>
 <figure>
-<p><img alt="XL strip for export to Excel" src="../../../assets/images/ourplancore/v3/excel-strip.png" />
+<p><img alt="XL strip buttons: which tree branch goes to which part of the workbook" src="../../../assets/images/ourplancore/v3/excel-strip.svg" />
   </p>
 <figcaption>The XL strip buttons send tree branches into the open TemplateCom workbook section by section; <code>ALL</code> does everything in order. In Lite the strip appears after checking <code>Excel Strip (XL)</code> in <code>Settings &gt; Modules</code>.</figcaption>
 </figure>
@@ -7437,8 +7439,9 @@ joists only with J Area, beams only with Beam, openings only with Openings. Name
    runs the macros itself; it is on from the start in the full version, and in Lite the
    <code>Excel Strip (XL)</code> checkbox in <code>Settings &gt; Modules</code> turns it on. Details: <a href="../../reference/ourplancore-excel/">Export to Excel</a>,
    <a href="../../reference/ourplancore-lite/">Lite vs full version</a>.</li>
-<li>Wall height lives in column E of the stud row (to 1/8"), units in D: <code>LFT</code> for lumber,
-   <code>pcs</code> for hardware, SF for panels. Row names: <a href="../../reference/takeoff-items/">DFL row names</a>.</li>
+<li>Wall height lives in column E of the stud row (to 1/8"), units in D: <code>LFT</code> for linear items,
+   <code>pcs</code> for hardware, <code>4x8</code> for panels, <code>SQ FT</code> for areas; lumber ordered by the piece has the
+   board length in feet in D. Row names: <a href="../../reference/takeoff-items/">DFL row names</a>.</li>
 <li>Formulas only from the block's own inputs; check a new formula on the first
    row right away. Do not multiply by 1.1 a second time: <a href="../../reference/formulas/">Formulas</a>.</li>
 <li>Notes: prefix <code>Important:</code>, <code>Note:</code> or <code>Comment:</code>, yellow fill, always under
@@ -7457,9 +7460,9 @@ list of known mistakes: <a href="../common-mistakes/">Common mistakes</a>.
 In OurPlanCore: Estimating, <code>Total</code>, sheet legend (<code>Organize &gt; Sort Sheet Legend by Key</code>).</p>
 <h2 id="7-export">7. Export<a class="headerlink" href="#7-export" title="Link to this section">&para;</a></h2>
 <figure>
-<p><img alt="PDF export dialog" src="../../../assets/images/ourplancore/v3/export-pdf.png" />
+<p><img alt="Export PDF window: measurement and legend checkboxes" src="../../../assets/images/ourplancore/v3/export-pdf-options.png" />
   </p>
-<figcaption>PDF Output: Preview, then Export. Only sheets with visible takeoffs go into the file.</figcaption>
+<figcaption>PDF Output: Preview, then Export. In the Export PDF window Measurements and Legend are ticked, Markups is not, the sheets are ticked below. Only sheets with visible takeoffs go into the file.</figcaption>
 </figure>
 <ol>
 <li><strong>PDF.</strong> Save the job (Ctrl+S). Hide what is not needed (H), collect details

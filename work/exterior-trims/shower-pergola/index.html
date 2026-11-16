@@ -7275,6 +7275,11 @@
 <p>Открытые садовые конструкции из exterior-scope: privacy и shower screen,
 pergola и trellis, canopy над входом. Деталей обычно мало, много строк
 идёт с <code>assumed</code> по elevation.</p>
+<figure>
+<p><img alt="Pergola: балки, trellis, ledger, brackets, posts" src="../../../assets/images/trims/pergola.svg" />
+  </p>
+<figcaption>Pergola сбоку: балки <code>1E Shape</code> и рейки <code>Trellis</code> штуками с длиной в строке, <code>Ledger</code> в LFT, <code>Brackets</code> и <code>Posts</code> штуками. Одной строкой pergola не пишем.</figcaption>
+</figure>
 <h2 id="_2">Где искать на чертежах<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7318,7 +7323,7 @@ Area по soffit, в своём итеме, не в <code>eves rakes</code>. К�
 <td>Shower screen</td>
 <td><code>Posts</code></td>
 <td><code>4x4 P.T.</code>, <code>4x4 IPE</code></td>
-<td>pcs + высота (<code>7'</code>, <code>10'</code>, <code>14'</code>)</td>
+<td>высота поста в D (<code>7</code>, <code>10</code>, <code>14</code>), C = штуки</td>
 </tr>
 <tr>
 <td></td>
@@ -7342,19 +7347,19 @@ Area по soffit, в своём итеме, не в <code>eves rakes</code>. К�
 <td>Pergola / trellis</td>
 <td><code>1E Shape</code></td>
 <td><code>4x10 Cedar 1E Shape</code></td>
-<td>pcs + длина</td>
+<td>длина доски в D, C = штуки</td>
 </tr>
 <tr>
 <td></td>
 <td><code>Trellis</code></td>
 <td><code>3x3</code></td>
-<td>pcs + длина</td>
+<td>длина рейки в D, C = штуки</td>
 </tr>
 <tr>
 <td></td>
 <td><code>Ledger</code>, <code>Brackets</code>, <code>Posts</code></td>
 <td><code>2x4</code>, по детали, <code>4x4</code> / <code>6x6</code></td>
-<td>pcs, LFT</td>
+<td>ledger и posts: длина в D; brackets pcs</td>
 </tr>
 <tr>
 <td>Canopy</td>
@@ -7371,8 +7376,8 @@ Area по soffit, в своём итеме, не в <code>eves rakes</code>. К�
 <tr>
 <td></td>
 <td><code>Frame for Soffits</code></td>
-<td>по детали, 24" o.c.</td>
-<td>LFT</td>
+<td><code>2x4</code> по детали, 24" o.c.</td>
+<td><code>16</code> (доски по 16', как на <a href="../../sheathing-and-misc/eve/">Eve</a>)</td>
 </tr>
 </tbody>
 </table>
@@ -7389,7 +7394,7 @@ Area по soffit, в своём итеме, не в <code>eves rakes</code>. К�
 <li>Все ошибки раздела: <a href="../../../start/common-mistakes/#deck">Deck, porch, балконы</a>.</li>
 </ul>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Posts   4x4 IPE                       6   pcs    10&#39;    assumed  A502
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Posts   4x4 IPE                       6   10            assumed  A502
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Slats   1x6 + 1x4 IPE alternating     180 SQ FT  gap 1/4&quot;        A502
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Cap     5/4 IPE Cap                   24  LFT                    A502
 </span></code></pre></div>

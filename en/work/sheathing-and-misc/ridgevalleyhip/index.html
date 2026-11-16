@@ -7255,11 +7255,47 @@
 <li><strong>Hip</strong>: the sloped outside edge, the slopes meet at a convex corner.</li>
 <li><strong>Valley</strong>: the sloped inside edge, the slopes meet at a concave corner.</li>
 </ul>
-<p>On a truss roof all three lines are part of the trusses by others; we count only
-what is shown loose: ridge board between gable trusses, overframe valley sleepers,
-flashing. On a stick roof the ridge beam, hip and valley rafters are
-our framing. Details for each element: <a href="../../horizontal/roof-framing/ridge/">Ridge</a>,
-<a href="../../horizontal/roof-framing/hip/">Hip</a>, <a href="../../horizontal/roof-framing/valley/">Valley</a>.</p>
+<p>This is an overview: it helps you pick the right page. How to measure and how to
+write each element is on its own page; the rules are not repeated here.</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Page</th>
+<th>When it is ours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ridge board, ridge beam</td>
+<td><a href="../../horizontal/roof-framing/ridge/">Ridge</a></td>
+<td>stick roof; ridge beam per the mark on the plan</td>
+</tr>
+<tr>
+<td>Hip rafter</td>
+<td><a href="../../horizontal/roof-framing/hip/">Hip</a></td>
+<td>stick roof with a hip</td>
+</tr>
+<tr>
+<td>Valley rafter, valley beam</td>
+<td><a href="../../horizontal/roof-framing/valley/">Valley</a></td>
+<td>stick roof; an overframe has sleepers instead</td>
+</tr>
+<tr>
+<td>Sleepers under an overframe</td>
+<td><a href="../../horizontal/roof-framing/overframes/">Overframes</a></td>
+<td>when the addition is framed on top of the lower roof</td>
+</tr>
+<tr>
+<td>Metal valley flashing</td>
+<td><a href="../flashing/">Flashing</a></td>
+<td>only when roofing products are in scope</td>
+</tr>
+</tbody>
+</table>
+<p>On a truss roof the ridge, hip and valley are part of the trusses by others: there are
+no <code>Ridge</code>, <code>Hip plates</code> or <code>Valley plates</code> rows, and we count only what the plans show
+apart from the trusses (overframe sleepers, flashing if in scope).</p>
 <h2 id="where-to-find-it-on-the-plans">Where to find it on the plans<a class="headerlink" href="#where-to-find-it-on-the-plans" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
@@ -7271,11 +7307,15 @@ our framing. Details for each element: <a href="../../horizontal/roof-framing/ri
 <tbody>
 <tr>
 <td>Roof framing plan (S)</td>
-<td>Trusses or rafters; size of the ridge beam, hip and valley rafters, LVL/PSL</td>
+<td>Trusses or rafters; size and mark of the ridge beam, hip and valley rafters, LVL/PSL</td>
 </tr>
 <tr>
 <td>Arch roof plan (<code>a105 rf</code>)</td>
-<td>Ridge, hip, valley lines; lengths; overframes</td>
+<td>Ridge, hip, valley lines; slope pitches; overframes</td>
+</tr>
+<tr>
+<td>Sections, elevations</td>
+<td>True sloped length of the hip and valley</td>
 </tr>
 <tr>
 <td>Details (<code>d</code>)</td>
@@ -7284,57 +7324,69 @@ our framing. Details for each element: <a href="../../horizontal/roof-framing/ri
 </tbody>
 </table>
 <h2 id="how-to-measure-in-ourplancore">How to measure in OurPlanCore<a class="headerlink" href="#how-to-measure-in-ourplancore" title="Link to this section">&para;</a></h2>
+<p>All three elements are measured the same way: the Beam tool on the roof framing
+sheet, takeoff in <code>framing/roof framing/beams/</code>, one point = one member, the
+length in the name. Not a Line, not the <code>details</code> folder, and not <code>sqfts</code>.</p>
 <ol>
-<li>Ridge beam: Beam tool along the span between supports, takeoff in
-   <code>framing/roof framing/beams/&lt;size&gt; &lt;length&gt;</code> (for example <code>(2) 1 3/4 x 11 7/8 LVL 22</code>);
-   the tool rounds the length itself.</li>
-<li>Hip and valley rafters: Line along the edge line on the plan, in
-   <code>framing/roof framing/details/&lt;size&gt; hip</code> or the job's agreed branch;
-   plan length, pitch applied once in the formula.</li>
-<li>Ridge board between trusses and overframe sleepers: Line in <code>details</code>.</li>
-<li>Metal valley flashing: <a href="../flashing/">Flashing</a>, if in scope.</li>
+<li>Ridge: the length is horizontal, no pitch factor is needed. Length and
+   support rules: <a href="../../horizontal/roof-framing/ridge/">Ridge</a>.</li>
+<li>Hip and valley: the line on the plan is shorter than the real board. Take the length
+   from a section or multiply the plan length by the hip and valley factor. Factor table
+   and steps: <a href="../../horizontal/roof-framing/hip/">Hip</a>,
+   <a href="../../horizontal/roof-framing/valley/">Valley</a>.</li>
+<li>The pitch is applied once: either the length from a section, or plan x factor.</li>
 </ol>
-<div class="admonition warning">
-<p class="admonition-title">To be confirmed</p>
-<p>There is no fixed single branch for hip and valley rafters in the tree; on
-each job keep them in one roof framing folder, not in <code>sqfts</code>.</p>
-</div>
 <h2 id="takeoff-name-and-dfl-row">Takeoff name and DFL row<a class="headerlink" href="#takeoff-name-and-dfl-row" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
 <tr>
 <th>Takeoff name</th>
 <th>DFL row</th>
-<th>Material</th>
-<th>Unit</th>
+<th>C</th>
+<th>D</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>framing/roof framing/beams/(2) 1 3/4 x 11 7/8 LVL 22</code></td>
+<td><code>framing/roof framing/beams/ridge 2x12 12</code></td>
+<td><code>Ridge</code></td>
+<td>number of boards</td>
+<td>stock length in feet</td>
+</tr>
+<tr>
+<td><code>framing/roof framing/beams/RB1 (2) 1 3/4 x 11 7/8 LVL 20</code></td>
 <td><code>Ridge (2)</code></td>
-<td>LVL</td>
-<td><code>pcs</code> + length</td>
+<td>points x 2</td>
+<td>stock length</td>
 </tr>
 <tr>
-<td><code>framing/roof framing/details/2x12 hip</code></td>
-<td><code>Hip plates</code> / rafter per template</td>
-<td><code>2x12</code></td>
-<td><code>LFT</code></td>
+<td><code>framing/roof framing/beams/hip 2x12 18</code></td>
+<td><code>Hip plates</code></td>
+<td>number of boards</td>
+<td>even stock length</td>
 </tr>
 <tr>
-<td><code>framing/roof framing/details/2x12 valley</code></td>
-<td><code>Ridge / Valley / Hip</code></td>
-<td><code>2x12</code></td>
-<td><code>LFT</code></td>
+<td><code>framing/roof framing/beams/valley 2x12 16</code></td>
+<td><code>Valley plates</code></td>
+<td>number of boards</td>
+<td>even stock length</td>
+</tr>
+<tr>
+<td>valley beam with a mark on the plan</td>
+<td><code>Valley Beam (2)</code></td>
+<td>points x 2</td>
+<td>even stock length</td>
 </tr>
 </tbody>
 </table>
+<p><code>(2)</code> at the end of the label is the number of plies in one place: one point in the
+tree, points x 2 in C. The material in B and the sheet or mark in E follow the element pages.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Hip and valley rafters taken as common rafters: they are longer and bigger.</li>
-<li>Ridge beam on a truss roof counted as ours although the trusses are by others.</li>
-<li>Pitch applied twice (in the takeoff and in the formula).</li>
+<li>Ridge, hip or valley counted on a truss roof although the trusses are by others.</li>
+<li>Hip or valley traced as a Line in <code>details</code> instead of a Beam in <code>beams</code>.</li>
+<li>Pitch applied twice (length from a section plus the factor) or not applied at all.</li>
 <li>Framing and roof trim along the same lines merged into one row.</li>
 </ul>
 <p>All roof mistakes: <a href="../../../start/common-mistakes/#roof">common-mistakes</a>.</p>

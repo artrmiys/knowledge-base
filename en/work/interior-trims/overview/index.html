@@ -7251,7 +7251,7 @@ frame scope interior trim is not counted.</p>
 <figure>
 <p><img alt="Baseboard and crown perimeter example" src="../../../../assets/images/trims/int-trims-02.png" />
   </p>
-<figcaption>Baseboard and crown are LFT along the room perimeter. Breaks (kitchen cabinets, garage, stair) must be intentional and visible in the formula.</figcaption>
+<figcaption>An old measuring frame: the room perimeter as a line along the walls (<code>Perimeter</code>, 98,64 ft), one line per room. Baseboard and crown are LFT along such a perimeter; breaks (kitchen cabinets, garage, stair) must be intentional and visible in the formula.</figcaption>
 </figure>
 <h2 id="what-is-included-and-in-what-order">What is included and in what order<a class="headerlink" href="#what-is-included-and-in-what-order" title="Link to this section">&para;</a></h2>
 <div class="grid cards">
@@ -7286,7 +7286,7 @@ garage, tile base).</p>
 <li>
 <p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6zm14 11H6V8h12z"/></svg></span> <strong>Casing</strong></p>
 <hr />
-<p>Interior door and window casing: formula from the opening list, jamb.</p>
+<p>Interior door and window casing: formula from the opening list, both faces and waste.</p>
 <p><a href="../casing/">Casing</a></p>
 </li>
 </ul>
@@ -7302,7 +7302,8 @@ garage, tile base).</p>
    door, with intentional breaks. Unit base separately from corridors and lobby.</li>
 <li>Make the list of doors and cased openings per floor, then the casing
    with a formula from the list.</li>
-<li>Trim not specified: write <code>not specified</code>, do not guess the product.</li>
+<li>Trim not specified: <code>TBD Base</code>, <code>TBD Casing</code>, <code>TBD Crowns</code> in B and a note, not
+   a guessed product.</li>
 </ol>
 <h2 id="key-rules">Key rules<a class="headerlink" href="#key-rules" title="Link to this section">&para;</a></h2>
 <ul>
@@ -7329,25 +7330,25 @@ garage, tile base).</p>
 <td><code>trims/baseboard 1st</code></td>
 <td><code>Baseboard</code></td>
 <td>LFT</td>
-<td>perimeter of finished rooms, formula with visible addends</td>
+<td>perimeter of finished rooms: a sum with visible addends in G, <code>=CEILING(G*1.1,10)</code></td>
 </tr>
 <tr>
 <td><code>trims/crown 1st</code></td>
 <td><code>Crowns</code></td>
 <td>LFT</td>
-<td>only rooms with crown per the schedule</td>
+<td>only rooms with crown per the schedule, <code>=CEILING(G*1.1,10)</code></td>
 </tr>
 <tr>
 <td><code>openings</code> list</td>
 <td><code>Int. Doors</code>, <code>Cased Openings</code></td>
-<td>pcs</td>
-<td>per floor, with the size designation</td>
+<td>unit</td>
+<td>per floor, size code in B</td>
 </tr>
 <tr>
 <td></td>
 <td><code>Casing for Int. Doors</code></td>
 <td>LFT</td>
-<td>formula from the door list</td>
+<td><code>=CEILING(2*SUM(perimeters)/12*1.1,10)</code>: door perimeters, both faces, 1.1 waste</td>
 </tr>
 </tbody>
 </table>

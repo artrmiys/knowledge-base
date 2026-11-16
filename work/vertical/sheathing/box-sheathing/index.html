@@ -7289,7 +7289,7 @@
 <tbody>
 <tr>
 <td>Wall section (<code>sec</code>), деталь перекрытия</td>
-<td>Высота полосы: глубина joist + subfloor + plates по разрезу; материал</td>
+<td>Высота полосы: глубина joist + subfloor по разрезу (plates уже входят в высоту стены); материал</td>
 </tr>
 <tr>
 <td>Floor type schedule (<code>ft</code>)</td>
@@ -7311,8 +7311,12 @@ floor walls/ext ...</code>, высота полосы = глубина пере�
 этого дома. Площадь = периметр x высота. Экспорт в Excel (полоса XL) ставит
 Box Sheathing в конец секции стен каждого этажа со своей строкой Tape.</p>
 <ul>
-<li>На каждом этаже своя полоса: 1st, 2nd, 3rd. Для верхнего этажа под
-  парапетом box пишется в блок парапета с Note.</li>
+<li>На каждом этаже своя полоса: 1st, 2nd, 3rd.</li>
+<li>Верхний этаж под фермами: строки <code>Box Sheathing</code> нет, полоса считается в
+  секции Truss Heel, в стенах нота
+  <code>Note: Box sheathing is included in Truss Heel section</code>.</li>
+<li>Верхний этаж под плоской кровлей с парапетом: полоса пишется в блок парапета,
+  нота <code>Note: Roof box included in Parapet Walls.</code></li>
 <li>Материал тот же, что у стены (<code>$O$3</code> OSB или <code>$O$5</code> Zip), если деталь не
   даёт другого.</li>
 <li>Проёмы из полосы не вычитаются.</li>
@@ -7334,24 +7338,30 @@ Box Sheathing в конец секции стен каждого этажа со
 <td><code>Box Sheathing</code></td>
 <td><code>7/16" Zip</code> / <code>1/2" OSB</code></td>
 <td><code>4x8</code></td>
-<td><code>=ОКРВВЕРХ(SQFT/32*1.1;1)</code></td>
+<td><code>=ОКРВВЕРХ(G/32*1.1;1)</code></td>
 </tr>
 <tr>
-<td>та же площадь</td>
+<td>та же площадь, только Zip</td>
 <td><code>Tape</code></td>
-<td><code>Zip Tape</code> (только с Zip)</td>
+<td><code>Zip Tape</code></td>
 <td><code>LFT</code></td>
-<td><code>=ОКРВВЕРХ(SQFT*0.4*1.1;10)</code></td>
+<td><code>=ОКРВВЕРХ(G*0.4*1.1;10)</code></td>
 </tr>
 <tr>
-<td>та же площадь</td>
-<td><code>Vapor Barrier</code> (WRB)</td>
-<td>по спецификации</td>
+<td>та же площадь, только без Zip</td>
+<td><code>Vapor Barrier</code></td>
+<td>WRB по спецификации</td>
 <td><code>SQ FT</code></td>
-<td>в составе стены</td>
+<td><code>=ОКРВВЕРХ(G*1.1;10)</code></td>
 </tr>
 </tbody>
 </table>
+<p>G - площадь полосы в SQ FT (периметр x высота). Под <code>Box Sheathing</code> стоит
+своя строка барьера с той же площадью: <code>Tape</code> при Zip или <code>Vapor Barrier</code> при
+обычном листе, обе сразу не пишутся. У Zip барьер встроен, строки WRB нет.
+Tape полосы считается в LFT (<code>G x 0.4 x 1.1</code>), периметр окон к ней не
+добавляется: он уже в <code>Tape</code> стен этажа. Строка <code>Insulation</code> под box -
+только при continuous insulation снаружи обшивки.</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Box назван truss heel или наоборот; у них разная геометрия и разная строка.</li>
@@ -7359,6 +7369,7 @@ Box Sheathing в конец секции стен каждого этажа со
 <li>Box забыт на верхнем этаже под парапетом или посчитан там дважды.</li>
 <li>На panel-job box выброшен вместе с панелями, хотя остался loose.</li>
 <li>Скопированные подписи деталей не поправлены под этот этаж.</li>
+<li>В высоту полосы ещё раз добавлены plates, хотя они уже в высоте стены.</li>
 </ul>
 <p>Все ошибки: <a href="../../../../start/common-mistakes/#sheathing">common-mistakes</a>.</p>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>

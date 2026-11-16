@@ -7275,7 +7275,7 @@
 </table>
 <ul>
 <li>P.T. bottom plate only on concrete and masonry; on wood floor framing, regular.</li>
-<li>Outdoor posts (porch, balcony, railings) are always P.T.; under a roof, regular.</li>
+<li>Outdoor lumber (porch, balcony, deck, canopy, railings: posts, beams, joists, ledger) is always P.T., roofed or not; plain lumber only inside the building envelope.</li>
 </ul>
 <h2 id="engineered-lumber-ewp">Engineered lumber (EWP)<a class="headerlink" href="#engineered-lumber-ewp" title="Link to this section">&para;</a></h2>
 <table>
@@ -7319,6 +7319,11 @@
 <li>With I-joists, engineered rim only; LVL rim only when a deck or corridor attaches to it.</li>
 <li>Type III: LVL, PSL, LSL are not allowed in the exterior wall plane, do not write <code>LVL FRT</code>.</li>
 </ul>
+<figure>
+<p><img alt="EWP families in section: LVL, PSL, LSL, I-joist, rim board" src="../../../assets/images/reference/ewp-families.svg" />
+  </p>
+<figcaption>EWP sections at one scale and how each is written in column B. LVL shows veneer layers and a ply count, PSL a massive section, an I-joist flanges and a thin web, rim a thin board.</figcaption>
+</figure>
 <h2 id="sheathing-decking-barriers">Sheathing, decking, barriers<a class="headerlink" href="#sheathing-decking-barriers" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
@@ -7376,6 +7381,11 @@
 </tr>
 </tbody>
 </table>
+<figure>
+<p><img alt="4x8 sheets: Plywood, OSB, Zip, DensGlass, T&amp;G subfloor" src="../../../assets/images/reference/sheet-types.svg" />
+  </p>
+<figcaption>Five sheet goods that get mixed up on drawings: how they look, how they are written in B and where they go. All of them are <code>4x8</code> in D; Zip has the barrier built in, so only Tape is added.</figcaption>
+</figure>
 <p>A conflict between arch and S on sheathing is resolved with a note: <a href="../standard-notes/#spec-cells">Notes in DFL</a>.</p>
 <h2 id="accessories">Accessories<a class="headerlink" href="#accessories" title="Link to this section">&para;</a></h2>
 <table>
@@ -7396,7 +7406,7 @@
 </tr>
 <tr>
 <td>Panel adhesive</td>
-<td><code>29 oz</code> tubes: <code>=C&lt;subfloor&gt;/3</code></td>
+<td><code>29 oz</code> tubes: <code>=CEILING(C&lt;subfloor&gt;/3,1)</code>, one tube per 3 sheets</td>
 </tr>
 <tr>
 <td>H-clips</td>

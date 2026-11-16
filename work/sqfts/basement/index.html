@@ -7334,10 +7334,10 @@ underlayment, rigid) только когда assembly их показывает.
 </tr>
 <tr>
 <td><code>sqfts/base</code></td>
-<td><code>Sleepers</code></td>
+<td><code>Sleepers 16" o.c.</code></td>
 <td><code>2x4 P.T.</code> по детали</td>
 <td><code>LFT</code></td>
-<td>по шагу</td>
+<td><code>=ОКРВВЕРХ(SQFT*12/16*1.1;10)</code>: на 1 SQ FT при шаге 16" идёт 12/16 = 0.75 LFT; шаг 24": 12/24 = 0.5</td>
 </tr>
 <tr>
 <td><code>sqfts/base</code></td>
@@ -7348,16 +7348,17 @@ underlayment, rigid) только когда assembly их показывает.
 </tr>
 <tr>
 <td><code>sqfts/base</code></td>
-<td><code>Rigid Insulation</code> over slab</td>
-<td>по assembly</td>
+<td><code>Insulation</code> over slab</td>
+<td><code>2" XPS Insulation</code> по assembly</td>
 <td><code>SQ FT</code></td>
-<td>как измерено</td>
+<td>SQFT x 1.1: до 50 вверх до 2, от 50 вверх до 10</td>
 </tr>
 </tbody>
 </table>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Plywood и sleepers на плите пропущены, потому что "там бетон".</li>
+<li>Sleepers посчитаны по периметру или "на глаз": длина идёт от площади и шага.</li>
 <li>Имя <code>bsmt</code> вместо <code>base</code>: площадь не ушла в <code>sqfts</code>.</li>
 <li>Подвал посчитан по контуру 1st floor, а не по плите.</li>
 </ul>
@@ -7366,8 +7367,8 @@ underlayment, rigid) только когда assembly их показывает.
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/sqfts/
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  base      Area   1620 SF   (a100 base)
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Basement
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Sleepers        2x4 P.T. 16&quot; o.c.    1340   LFT   8/A500
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Plywood         3/4&quot; T&amp;G              56   4x8   over sleepers
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Sleepers 16&quot; o.c.   2x4 P.T.    1340   LFT   8/A500          1620 x 12/16 x 1.1 = 1336.5, вверх до 10
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Plywood             3/4&quot; T&amp;G      56   4x8   over sleepers   1620 / 32 x 1.1 = 55.7
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

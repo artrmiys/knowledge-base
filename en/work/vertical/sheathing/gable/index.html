@@ -7304,8 +7304,8 @@ an interior attic partition, not exterior sheathing.</p>
 <td>Draft stop lines and the attic profile (span x rise)</td>
 </tr>
 <tr>
-<td>Wall notes / fire rating</td>
-<td>Draft stop thickness (<code>1/2" Ply</code>, <code>5/8" Type X</code>), gable material</td>
+<td>Roof plan legend, wall sections, fire rating</td>
+<td>Draft stop material (<code>1/2" WR Gyp</code>, <code>7/16" OSB</code>, <code>5/8" Type X</code>), gable material</td>
 </tr>
 </tbody>
 </table>
@@ -7325,6 +7325,7 @@ an interior attic partition, not exterior sheathing.</p>
    (<code>existing gable</code>).</li>
 </ol>
 <h2 id="takeoff-name-and-dfl-row">Takeoff name and DFL row<a class="headerlink" href="#takeoff-name-and-dfl-row" title="Link to this section">&para;</a></h2>
+<p>G is the area from the tree in SQ FT.</p>
 <table>
 <thead>
 <tr>
@@ -7341,18 +7342,25 @@ an interior attic partition, not exterior sheathing.</p>
 <td><code>Wall Sheathing</code></td>
 <td><code>7/16" Zip</code> / <code>1/2" OSB</code></td>
 <td><code>4x8</code></td>
-<td><code>=CEILING(SQFT/32*1.1,1)</code></td>
+<td><code>=CEILING(G/32*1.1,1)</code></td>
 </tr>
 <tr>
-<td>same area</td>
-<td><code>Vapor Barrier</code> (WRB), <code>Tape</code> with Zip</td>
-<td>per spec</td>
-<td><code>SQ FT</code> / <code>LFT</code></td>
-<td>as for the wall</td>
+<td>same area, no Zip</td>
+<td><code>Vapor Barrier</code></td>
+<td>WRB per spec</td>
+<td><code>SQ FT</code></td>
+<td><code>G x 1.1</code></td>
+</tr>
+<tr>
+<td>same area, Zip</td>
+<td><code>Tape</code></td>
+<td><code>Zip Tape</code></td>
+<td><code>LFT</code></td>
+<td><code>=CEILING(G*0.4*1.1,10)</code></td>
 </tr>
 <tr>
 <td><code>gables/gable stick/gable stick</code> (Area) + <code>btm</code>, <code>top</code> (Line)</td>
-<td><code>Studs for Gables</code>, <code>Plates Ext (3)</code>, <code>Blocking</code></td>
+<td><code>Plates Ext (3) btm and dbl top</code>, <code>Studs for Gables</code>, <code>Blocking</code>, <code>Bracing Ext Walls</code></td>
 <td>per <a href="../../walls/gable/">Gable Wall</a></td>
 <td></td>
 <td></td>
@@ -7360,12 +7368,21 @@ an interior attic partition, not exterior sheathing.</p>
 <tr>
 <td><code>gables/gable trusses/draft stop</code> (Area)</td>
 <td><code>Draft Stop</code></td>
-<td><code>1/2" Ply</code> or <code>5/8" Type X</code> per detail</td>
-<td><code>4x8</code></td>
-<td><code>=CEILING(SQFT/32*1.1,1)</code></td>
+<td>from the roof plan legend or the section; default <code>1/2" WR Gyp</code></td>
+<td><code>SQ FT</code></td>
+<td><code>G x 1.1</code></td>
 </tr>
 </tbody>
 </table>
+<ul>
+<li>Rounding of SQ FT rows: a result under 50 goes to 2, otherwise to 10.</li>
+<li>With Zip there is no <code>Vapor Barrier</code> row: the barrier is built into the sheet, only <code>Tape</code> is needed.
+  <code>Insulation</code> appears only with continuous insulation outside the sheathing.</li>
+<li><code>Draft Stop</code> is counted in <code>SQ FT</code>, not in <code>4x8</code> sheets. Material: <code>1/2" WR Gyp</code>
+  by default; <code>7/16" OSB</code>, <code>1/2" Gyp</code>, <code>5/8" Type X</code> when the drawing says so;
+  no sheet means <code>TBD</code>. Both sides: <code>Draft Stop 2 sides</code>, G x 2. The full
+  rule is on <a href="../../walls/gable/">Gable Wall</a>.</li>
+</ul>
 <p>The GB button on the XL strip moves the <code>gables</code> branch into the Gable Walls block.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
@@ -7373,18 +7390,24 @@ an interior attic partition, not exterior sheathing.</p>
 <li>Area measured, but the old number stayed in Excel.</li>
 <li>Gable counted twice (two elevations, or gable plus wall).</li>
 <li>Truss heel included both in gable and in trussheel.</li>
-<li>Draft stop thickness not checked (<code>7/16"</code> vs <code>1/2"</code>).</li>
+<li>Draft stop material and thickness not checked against the legend (<code>7/16" OSB</code> vs <code>1/2" WR Gyp</code>), or the row written in <code>4x8</code> sheets.</li>
 <li>Plates and studs counted for gable trusses although they are already in the truss.</li>
 </ul>
 <p>All mistakes: <a href="../../../../start/common-mistakes/#sheathing">common-mistakes</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/gables/gable trusses/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  gable            Area   412 SF   (4 polygons, north and south elevations)
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  draft stop       Area   318 SF   (3 lines from A1-00, profile from A4-01)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  gable            Area   412 SQ FT   (4 polygons, north and south elevations)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  draft stop       Area   318 SQ FT   (3 lines from A1-00, profile from A4-01)
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Takeoffs/Main/gables/gable stick/
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  gable stick      Area   96 SF
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  gable stick      Area   96 SQ FT
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  btm              Line   24 LFT
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  top              Line   27 LFT
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Gable Walls
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Wall Sheathing      1/2&quot; OSB          15   4x8     412 / 32 x 1.1 = 14.2
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Vapor Barrier       WRB per spec     460   SQ FT   412 x 1.1 = 453.2
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Draft Stop          1/2&quot; WR Gyp      350   SQ FT   318 x 1.1 = 349.8
 </span></code></pre></div>
 <figure>
 <p><img alt="Gable triangle diagram" src="../../../../../assets/images/sheathing/gable-sheathing.svg" />

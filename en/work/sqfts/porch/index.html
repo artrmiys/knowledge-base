@@ -7273,8 +7273,8 @@
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
 <p>A porch is a covered platform at an entry, on its own frame. Its area gives the floor
-(decking or subfloor) and the ceiling (<code>5/8" Gyp</code> exterior, two surfaces in
-one row with x2). The roof over the porch is a separate area per
+(decking or subfloor) and the ceiling (exterior gypsum; two layers are one row,
+<code>Soffit Gypsum (2)</code>, with x 2 in the formula). The roof over the porch is a separate area per
 <a href="../roof/">Roof SQFT</a>; the porch eave is a separate takeoff <code>eve 12 porch</code>.
 A porch is counted on its own, separately from balconies, even if it looks similar. General
 measuring rules: <a href="../1st2nd/#rules">Floor SQFT, rules section</a>.</p>
@@ -7338,28 +7338,28 @@ measuring rules: <a href="../1st2nd/#rules">Floor SQFT, rules section</a>.</p>
 <td><code>Decking</code> or <code>Subfloor</code></td>
 <td>per detail</td>
 <td><code>SQ FT</code> / <code>4x8</code></td>
-<td><code>SQFT x 1.1</code> or <code>/32</code></td>
+<td><code>=CEILING(W*D*units*1.1,10)</code> or <code>=CEILING(SQFT/32*1.1,1)</code></td>
 </tr>
 <tr>
 <td><code>sqfts/porch</code></td>
-<td><code>Ceiling</code></td>
-<td><code>5/8" Gyp</code> exterior</td>
+<td><code>Soffit Gypsum (2)</code></td>
+<td><code>5/8" Ext Gyp</code> or the board type per the assembly</td>
 <td><code>SQ FT</code></td>
-<td><code>SQFT x 2 x 1.1</code></td>
+<td><code>=CEILING(W*D*2*1.1,2)*units</code>; one layer: <code>Soffit Gypsum</code> without x 2</td>
 </tr>
 <tr>
 <td>same area</td>
 <td><code>Ceiling Joists 16" o.c.</code> + <code>Ledger</code> + <code>Hangers</code></td>
-<td>per detail</td>
-<td><code>LFT</code>, <code>pcs</code></td>
-<td>separate from rafters</td>
+<td>per detail, <code>2x4 P.T.</code>; not shown: <code>2x6 P.T.</code>, <code>assumed</code></td>
+<td>board length; hangers <code>pcs</code></td>
+<td>number of joists = <code>CEILING(W*12/16,1)+1</code> per porch x units; separate from rafters</td>
 </tr>
 <tr>
 <td>posts</td>
 <td><code>Posts</code></td>
-<td>P.T. outdoors; under the roof no P.T.</td>
-<td><code>pcs</code></td>
-<td></td>
+<td>always <code>P.T.</code>, under the porch roof too</td>
+<td>post length in feet</td>
+<td>posts of one porch x units</td>
 </tr>
 </tbody>
 </table>
@@ -7370,18 +7370,19 @@ assumed; verify</code> right under the block header.</p>
 <li>Porch SQFT empty on the Front Page (the house total did not add up).</li>
 <li>Porch mirrored from the balconies instead of counted separately.</li>
 <li>Porch ceiling counted as regular interior gypsum, not exterior.</li>
+<li>Two gypsum layers written as two rows, or x 2 in the label and once more in the area.</li>
 <li>Porch roof ended up in the main <code>rf 6</code> with the wrong pitch.</li>
 <li>Porch eave counted again inside <code>eve 24 main</code>.</li>
 </ul>
 <p>All area mistakes: <a href="../../../start/common-mistakes/#sqft">common-mistakes</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/sqfts/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  porch       Area   96 SF
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  porch       Area   96 SF   (12&#39; x 8&#39;)
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  rf 4        Area  118 SF   (porch roof)
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Covered Front Porch Framing List
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Note: Porch framing is not specified; all framing assumed; verify.
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Ceiling Joists 16&quot; o.c.   2x8          ...   LFT
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Ceiling                   5/8&quot; Gyp     212   SQ FT   x2
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Ceiling Joists 16&quot; o.c.   2x6 P.T.        10   8       assumed   12 x 12/16 = 9, plus 1; depth 8&#39;
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Soffit Gypsum (2)         5/8&quot; Ext Gyp   212   SQ FT             96 x 2 x 1.1 = 211.2, round up to 2
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

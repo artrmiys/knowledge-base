@@ -7342,7 +7342,7 @@
 <li>Identical stairs - one block with a multiplier; different ones - separate blocks.</li>
 </ol>
 <h2 id="tree-name-and-dfl-row">Tree name and DFL row<a class="headerlink" href="#tree-name-and-dfl-row" title="Link to this section">&para;</a></h2>
-<p>Export: the ST button on the XL strip puts the stair takeoffs before Subfloor. The block in the DFL starts with a <code>Note: 2 Stairs</code> row, where G = number of stairs, and all quantities are multiplied by G.</p>
+<p>Export: the ST button on the XL strip puts the stair takeoffs before Subfloor. The block in the DFL starts with a <code>Note: 2 Stairs</code> row, where G = number of stairs, and all quantities are multiplied by G. It is a note row: bold on yellow A:F, B:F blank, G and H stay; the stair details go in E of the material rows.</p>
 <table>
 <thead>
 <tr>
@@ -7357,9 +7357,9 @@
 <tr>
 <td><code>Stringers (4)</code></td>
 <td><code>2x12</code>, per table <code>1 3/4 x 11 7/8 LVL</code>, <code>1 3/4 x 14 LVL</code></td>
-<td><code>=4*G</code> per flight</td>
+<td><code>=4*G</code> per flight; two identical flights <code>=4*2*G</code></td>
 <td><code>10</code>, <code>12</code>, <code>14</code></td>
-<td>4 stringers per flight; 2x12 by default, LVL per the detail table</td>
+<td><code>(4)</code> is the stringers of one flight; 2x12 by default, LVL per the detail table</td>
 </tr>
 <tr>
 <td><code>Treads</code></td>
@@ -7401,7 +7401,7 @@
 <td><code>LSC</code>, <code>LUS210</code>, <code>HUCQ210-3</code></td>
 <td>by connections x G</td>
 <td><code>pcs</code></td>
-<td>one LSC per stringer top end</td>
+<td>one LSC on the top end of every stringer: stringers per flight x number of flights x G</td>
 </tr>
 <tr>
 <td><code>Screws</code></td>
@@ -7426,8 +7426,8 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>framing/
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  2nd floor framing/
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    stairs/
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      box str            Line, 24 LF
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      ledger str         Line, 12 LF
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      box str            Line, 24 LFT
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      ledger str         Line, 12 LFT
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      Stair 2x10 16&quot;     landing J Area
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>      Str FB5 10         2 points
 </span></code></pre></div>
@@ -7447,12 +7447,12 @@
 <td></td>
 <td></td>
 <td></td>
-<td><code>2/S603</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>Stringers (4)</code></td>
 <td><code>2x12</code></td>
-<td><code>=4*G</code></td>
+<td><code>=4*2*G</code></td>
 <td>12</td>
 <td><code>2/S603</code></td>
 </tr>
@@ -7466,7 +7466,7 @@
 <tr>
 <td><code>Risers</code></td>
 <td><code>1x8 Risers</code></td>
-<td><code>=6*G</code></td>
+<td><code>=7*G</code></td>
 <td>12</td>
 <td></td>
 </tr>
@@ -7486,6 +7486,7 @@
 </tr>
 </tbody>
 </table>
+<p>Each stair has two flights of 10 risers. Stringers: 4 per flight x 2 flights = 8 per stair, and the same number of LSC (one on the top end of every stringer). Treads: 20 risers minus 2 flights = 18, 3 per 12' board = 6 boards. Risers: 20 / 3 = 6.7, so 7 boards. Everything is multiplied by G = 2 stairs.</p>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>
 <li><a href="../beam/">Beam</a>, <a href="../joist/">Joist</a>, <a href="../post/">Post</a></li>

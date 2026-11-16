@@ -7255,11 +7255,47 @@
 <li><strong>Hip</strong> - наклонное наружное ребро, скаты сходятся выпуклым углом.</li>
 <li><strong>Valley</strong> - наклонная внутренняя ендова, скаты сходятся вогнутым углом.</li>
 </ul>
-<p>Для кровли из ферм все три линии - часть ферм by others, считаем только
-то, что показано loose: ridge board между gable trusses, valley sleepers
-overframe, flashing. Для stick-кровли ridge beam, hip и valley rafters -
-наш каркас. Подробно по каждому элементу: <a href="../../horizontal/roof-framing/ridge/">Ridge</a>,
-<a href="../../horizontal/roof-framing/hip/">Hip</a>, <a href="../../horizontal/roof-framing/valley/">Valley</a>.</p>
+<p>Это обзор: он помогает выбрать страницу. Как мерить и как записывать каждый
+элемент, написано на его странице, здесь правила не повторяются.</p>
+<table>
+<thead>
+<tr>
+<th>Элемент</th>
+<th>Страница</th>
+<th>Когда наш</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ridge board, ridge beam</td>
+<td><a href="../../horizontal/roof-framing/ridge/">Ridge</a></td>
+<td>stick-кровля; ridge beam по марке на плане</td>
+</tr>
+<tr>
+<td>Hip rafter</td>
+<td><a href="../../horizontal/roof-framing/hip/">Hip</a></td>
+<td>stick-кровля с вальмой</td>
+</tr>
+<tr>
+<td>Valley rafter, valley beam</td>
+<td><a href="../../horizontal/roof-framing/valley/">Valley</a></td>
+<td>stick-кровля; у overframe вместо него sleepers</td>
+</tr>
+<tr>
+<td>Sleepers под overframe</td>
+<td><a href="../../horizontal/roof-framing/overframes/">Overframes</a></td>
+<td>когда пристройка собрана поверх нижней крыши</td>
+</tr>
+<tr>
+<td>Metal valley flashing</td>
+<td><a href="../flashing/">Flashing</a></td>
+<td>только когда кровельные материалы в scope</td>
+</tr>
+</tbody>
+</table>
+<p>У кровли из ферм ridge, hip и valley - часть ферм by others: строк <code>Ridge</code>,
+<code>Hip plates</code> и <code>Valley plates</code> нет, считаем только то, что чертёж показывает
+отдельно от ферм (sleepers overframe, flashing в scope).</p>
 <h2 id="_2">Где искать на чертежах<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7271,70 +7307,86 @@ overframe, flashing. Для stick-кровли ridge beam, hip и valley rafters
 <tbody>
 <tr>
 <td>Roof framing plan (S)</td>
-<td>Trusses или rafters; сечение ridge beam, hip и valley rafters, LVL/PSL</td>
+<td>Trusses или rafters; сечение и марка ridge beam, hip и valley rafters, LVL/PSL</td>
 </tr>
 <tr>
 <td>Arch roof plan (<code>a105 rf</code>)</td>
-<td>Линии ridge, hip, valley; длины; overframe</td>
+<td>Линии ridge, hip, valley; уклоны скатов; overframe</td>
+</tr>
+<tr>
+<td>Sections, elevations</td>
+<td>Наклонная длина hip и valley в истинную величину</td>
 </tr>
 <tr>
 <td>Details (<code>d</code>)</td>
-<td>Ridge beam опирание, posts под ridge, valley sleepers, metal valley</td>
+<td>Опирание ridge beam, posts под ridge, valley sleepers, metal valley</td>
 </tr>
 </tbody>
 </table>
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Все три элемента меряются одним способом: инструмент Beam на листе roof
+framing, позиция в <code>framing/roof framing/beams/</code>, одна точка = один элемент,
+длина в имени. Не Line, не папка <code>details</code> и не <code>sqfts</code>.</p>
 <ol>
-<li>Ridge beam: инструмент Beam по пролёту между опорами, позиция в
-   <code>framing/roof framing/beams/&lt;сечение&gt; &lt;длина&gt;</code> (например <code>(2) 1 3/4 x 11 7/8 LVL 22</code>);
-   инструмент сам округляет длину.</li>
-<li>Hip и valley rafters: Line по линии ребра на плане, в
-   <code>framing/roof framing/details/&lt;сечение&gt; hip</code> или по принятой ветке job;
-   длина по плану, уклон один раз в формуле.</li>
-<li>Ridge board между фермами и sleepers overframe: Line в <code>details</code>.</li>
-<li>Metal valley flashing: <a href="../flashing/">Flashing</a>, если в scope.</li>
+<li>Ridge: длина горизонтальная, коэффициент уклона не нужен. Правила длины и
+   опор: <a href="../../horizontal/roof-framing/ridge/">Ridge</a>.</li>
+<li>Hip и valley: линия на плане короче настоящей доски. Длину берут с разреза
+   или умножают плановую на коэффициент hip и valley. Таблица коэффициентов и
+   порядок: <a href="../../horizontal/roof-framing/hip/">Hip</a>,
+   <a href="../../horizontal/roof-framing/valley/">Valley</a>.</li>
+<li>Уклон учитывается один раз: либо длина с разреза, либо план x коэффициент.</li>
 </ol>
-<div class="admonition warning">
-<p class="admonition-title">Уточняется</p>
-<p>Единая ветка для hip и valley rafters в дереве не зафиксирована; на
-каждом job держи их в одной папке roof framing, не в <code>sqfts</code>.</p>
-</div>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
 <tr>
 <th>Имя в дереве</th>
 <th>Строка DFL</th>
-<th>Материал</th>
-<th>Unit</th>
+<th>C</th>
+<th>D</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>framing/roof framing/beams/(2) 1 3/4 x 11 7/8 LVL 22</code></td>
+<td><code>framing/roof framing/beams/ridge 2x12 12</code></td>
+<td><code>Ridge</code></td>
+<td>число досок</td>
+<td>заказная длина в футах</td>
+</tr>
+<tr>
+<td><code>framing/roof framing/beams/RB1 (2) 1 3/4 x 11 7/8 LVL 20</code></td>
 <td><code>Ridge (2)</code></td>
-<td>LVL</td>
-<td><code>pcs</code> + длина</td>
+<td>точки x 2</td>
+<td>заказная длина</td>
 </tr>
 <tr>
-<td><code>framing/roof framing/details/2x12 hip</code></td>
-<td><code>Hip plates</code> / rafter по шаблону</td>
-<td><code>2x12</code></td>
-<td><code>LFT</code></td>
+<td><code>framing/roof framing/beams/hip 2x12 18</code></td>
+<td><code>Hip plates</code></td>
+<td>число досок</td>
+<td>чётная заказная длина</td>
 </tr>
 <tr>
-<td><code>framing/roof framing/details/2x12 valley</code></td>
-<td><code>Ridge / Valley / Hip</code></td>
-<td><code>2x12</code></td>
-<td><code>LFT</code></td>
+<td><code>framing/roof framing/beams/valley 2x12 16</code></td>
+<td><code>Valley plates</code></td>
+<td>число досок</td>
+<td>чётная заказная длина</td>
+</tr>
+<tr>
+<td>valley beam с маркой на плане</td>
+<td><code>Valley Beam (2)</code></td>
+<td>точки x 2</td>
+<td>чётная заказная длина</td>
 </tr>
 </tbody>
 </table>
+<p><code>(2)</code> в конце подписи - число слоёв в одном месте: одна точка в дереве, в C
+точки x 2. Материал в B и лист или марка в E - по страницам элементов.</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Hip и valley rafters взяты как common rafters: они длиннее и крупнее.</li>
-<li>Ridge beam из труss-кровли посчитан как наш, хотя фермы by others.</li>
-<li>Уклон применён дважды (в замере и в формуле).</li>
+<li>Ridge, hip или valley посчитаны у truss-кровли, хотя фермы by others.</li>
+<li>Hip или valley обведены Line в <code>details</code> вместо Beam в <code>beams</code>.</li>
+<li>Уклон применён дважды (длина с разреза и ещё коэффициент) или не применён.</li>
 <li>Каркас и кровельный trim по тем же линиям слиты в одну строку.</li>
 </ul>
 <p>Все ошибки по кровле: <a href="../../../start/common-mistakes/#roof">common-mistakes</a>.</p>

@@ -7269,9 +7269,9 @@
 
 <h1 id="windows-and-doors">Windows and Doors<a class="headerlink" href="#windows-and-doors" title="Link to this section">&para;</a></h1>
 <figure>
-<p><img alt="Openings tool: a box on a window and a point named 3.0x5.0" src="../../../../../assets/images/ourplancore/v3/measure-openings.png" />
+<p><img alt="Window takeoff 3.0x4.0: a point on every window" src="../../../../../assets/images/ourplancore/v3/measure-openings.png" />
   </p>
-<figcaption>The Openings tool on an elevation: a box around the opening, the app writes the size name <code>3.0x5.0</code> itself and places a point in the center. One point is one physical opening.</figcaption>
+<figcaption>Window Count takeoff <code>3.0x4.0</code> on the demo plan: one point per window, total 4 ea. The Openings tool makes such a takeoff from a box around the opening on an elevation: it writes the size name (width x height) itself and puts the point in the center. One point is one physical opening.</figcaption>
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
 <p>Openings are all the holes in the exterior wall: windows, exterior and patio doors,
@@ -7349,37 +7349,42 @@ moves the openings into the workbook, where the <code>F_Openings</code> macro fi
 <td><code>openings/1/3.0x5.0</code></td>
 <td><code>Window Flashing</code> + <code>Sill Flashing</code></td>
 <td>LFT</td>
-<td><code>(2H + W) x qty</code>, <code>W x qty</code></td>
+<td><code>(2H + W) x qty x 1.1</code>, <code>W x qty x 1.1</code></td>
 </tr>
 <tr>
 <td><code>openings/1/3.3x6.5 d</code></td>
-<td><code>Ext. Doors</code> <code>3070 1 unit MARK FIRE LABEL</code>; flashing on 3 sides</td>
-<td>ea, LFT</td>
-<td>no sill flashing</td>
+<td><code>Ext. Doors</code> <code>3070 1 unit MARK FIRE LABEL</code>; three-side flashing goes into the <code>Window Flashing</code> row</td>
+<td>unit, LFT</td>
+<td>no sill flashing; there is no <code>Door Flashing</code> row</td>
 </tr>
 <tr>
 <td><code>openings/1/9.0x6.8 gd</code></td>
-<td><code>Garage headers (3)</code>, flashing on 3 sides</td>
-<td>ea, LFT</td>
+<td><code>Ext. Grge Headers (3)</code>; three-side flashing goes into the <code>Window Flashing</code> row</td>
+<td>pieces, LFT</td>
 <td>no sill</td>
 </tr>
 <tr>
 <td><code>openings/1/2.0x2.0 lv</code></td>
 <td>louver, deduction from the sheathing</td>
-<td>ea</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
 <td>interior doors</td>
-<td><code>Int. Doors</code> <code>2670 ...</code>, jambs by the size of the adjacent wall</td>
-<td>ea</td>
-<td>a door wider than 4' is a double <code>(2)2670</code></td>
+<td><code>Int. Doors</code> <code>2670 ...</code>, grouped by the size of the wall the door stands in</td>
+<td>unit</td>
+<td>a door wider than 3'-6" is written as a pair: <code>5070</code> = <code>(2)2670</code>, <code>4070</code> = <code>(2)2070</code></td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Door casing on 3 sides in LFT; interior door jambs are counted
-  as points per unit and grouped by wall size (a point at <code>2x6</code> = 2x6 jamb).</li>
+<li><strong>Interior door jambs</strong> are not counted on a separate LFT row. Doors are placed as
+  points per unit and grouped by the size of the wall they stand in: a point at a
+  <code>2x6</code> wall = a door with a 2x6 jamb, a point at <code>2x4</code> = a 2x4 jamb.
+  That way every door carries both its size and its jamb depth.</li>
+<li>Interior door casing is in LFT on three sides:
+  <code>=CEILING(2*SUM(perimeters)/12*1.1,10)</code>, door perimeter = W + 2H in inches,
+  <code>2</code> = both faces of the wall. Details: <a href="../../../interior-trims/casing/">Casing</a>.</li>
 <li>Hardware numbers are not needed in the DFL; material and fire rating are.</li>
 <li>Openings are subtracted from the sheathing, WRB, insulation and foundation line <strong>once</strong>
   and on their own floor. Windows smaller than 4' are not subtracted from the sheathing:
@@ -7391,7 +7396,8 @@ moves the openings into the workbook, where the <code>F_Openings</code> macro fi
 <li>Opening counted twice: on the plan and the elevation, from two views, the storefront door separately.</li>
 <li>The <code>d</code> tag missing: the door got Sill Flashing.</li>
 <li>Openings not subtracted from the sheathing and WRB (garage doors) or subtracted twice.</li>
-<li>A door wider than 4' written as a single leaf.</li>
+<li>A door wider than 3'-6" written as a single leaf instead of a pair (<code>4070</code> instead of <code>(2)2070</code>).</li>
+<li>Interior door jambs written on an LFT row instead of sorting the doors by wall size.</li>
 <li>Size eyeballed from the elevation instead of taken from the schedule; R.O. confused with the unit size.</li>
 </ul>
 <p>Walkthrough with examples: <a href="../../../../start/common-mistakes/#openings">all opening mistakes</a>.</p>

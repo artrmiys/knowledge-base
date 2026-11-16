@@ -7289,6 +7289,11 @@
 
 <h1 id="wall-sheathing">Wall Sheathing (обшивка стен)<a class="headerlink" href="#wall-sheathing" title="Прямая ссылка на раздел">&para;</a></h1>
 <figure>
+<p><img alt="Фасад: площадь обшивки по этажам, полосы и вычеты" src="../../../../assets/images/sheathing/wall-sheathing-facade.svg" />
+  </p>
+<figcaption>Обшивка на фасаде: стена этажа = длина x высота, полоса перекрытия = Box Sheathing, треугольник = gable, полоса у кровли = truss heel. Проём шире 4' вычитается один раз, окно уже 4' не вычитается.</figcaption>
+</figure>
+<figure>
 <p><img alt="Монтаж OSB-обшивки на каркасную стену" src="../../../../assets/images/confluence/confluence-094.jpg" />
   </p>
 <figcaption>Структурная обшивка наружной стены: лист OSB по стойкам. Площадь = длина стены x высота стены, минус проёмы шире 4'. Архивное фото.</figcaption>
@@ -7364,8 +7369,9 @@ plywood или Zip. Это не то же самое, что Exterior Gypsum (<c
 </table>
 <p>Название продукта берём из этого комплекта: <code>LP FlameBlock 2-sided</code> не равно
 <code>7/16" OSB FRT</code>, <code>5/8" EXT. SHEATHING</code> не превращаем в Ply без основания,
-<code>CDX</code> пишем только если так в сете. Наружный барьер называем WRB / Weather
-Barrier по спецификации (fluid-applied не Tyvek), не "Vapor Barrier".</p>
+<code>CDX</code> пишем только если так в сете. Строка наружного барьера в DFL всегда
+подписана <code>Vapor Barrier</code> (подпись шаблона), а в B пишется продукт из
+спецификации: fluid-applied WRB остаётся fluid-applied, не Tyvek по привычке.</p>
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Отдельной ветки <code>sheathing</code> в дереве нет. Площадь стен собирается из линий
 стен: имя стены несёт высоту (<code>ext 2x6 9.09</code>), экспорт в Excel умножает длину
@@ -7400,28 +7406,28 @@ Barrier по спецификации (fluid-applied не Tyvek), не "Vapor Ba
 <td><code>Wall Sheathing</code></td>
 <td><code>7/16" Zip</code> или <code>1/2" OSB</code></td>
 <td><code>4x8</code></td>
-<td><code>=ОКРВВЕРХ(SQFT/32*1.1;1)</code></td>
+<td><code>=ОКРВВЕРХ(G/32*1.1;1)</code></td>
 </tr>
 <tr>
-<td>тот же замер</td>
+<td>тот же замер, только Zip</td>
 <td><code>Tape</code></td>
-<td><code>Zip Tape</code> (только с Zip)</td>
+<td><code>Zip Tape</code></td>
 <td><code>LFT</code></td>
-<td><code>=ОКРВВЕРХ(SQFT*0.4*1.1;10)</code></td>
+<td><code>=ОКРВВЕРХ((G*0.4+периметр окон этажа)*1.1;10)</code></td>
 </tr>
 <tr>
-<td>тот же замер</td>
-<td><code>Vapor Barrier</code> (в шаблоне)</td>
+<td>тот же замер, только без Zip</td>
+<td><code>Vapor Barrier</code></td>
 <td>WRB по спецификации</td>
 <td><code>SQ FT</code></td>
-<td><code>=ОКРВВЕРХ(SQFT*1.1;10)</code></td>
+<td><code>=ОКРВВЕРХ(G*1.1;10)</code></td>
 </tr>
 <tr>
 <td>тот же замер</td>
 <td><code>Insulation</code></td>
-<td>наружный <code>1" Insulation</code> или Zip R</td>
+<td>continuous insulation снаружи обшивки, например <code>2" XPS Insulation</code></td>
 <td><code>SQ FT</code></td>
-<td>как WRB</td>
+<td><code>=ОКРВВЕРХ(G*1.1;10)</code></td>
 </tr>
 <tr>
 <td><code>walls/1st floor walls/ext ...</code></td>
@@ -7432,6 +7438,22 @@ Barrier по спецификации (fluid-applied не Tyvek), не "Vapor Ba
 </tr>
 </tbody>
 </table>
+<p>G - площадь наружных стен этажа за вычетом проёмов, в SQ FT. Что важно в
+этих строках:</p>
+<ul>
+<li><strong>Одна система на секцию.</strong> Zip: <code>Wall Sheathing</code> + <code>Tape</code>. Обычный лист
+  (OSB, Ply): <code>Wall Sheathing</code> + <code>Vapor Barrier</code>. У Zip барьер встроен в лист,
+  поэтому строки <code>Vapor Barrier</code> (WRB) на Zip-стенах нет: только <code>Tape</code> и
+  flashing проёмов.</li>
+<li><strong>Tape</strong> считается в <code>LFT</code>, не в рулонах: <code>0.4</code> LFT ленты на каждый SQ FT
+  листа плюс периметр окон этажа (линия casing из таблицы проёмов), всё
+  <code>x 1.1</code>. У Box, Gable и Truss Heel периметра окон нет: <code>G x 0.4 x 1.1</code>.</li>
+<li><strong>Insulation</strong> - только continuous insulation снаружи обшивки или на CMU и
+  бетоне. Утеплитель между стойками (batt, mineral wool, spray foam, sound)
+  by others: строки нет. Zip R несёт утеплитель в самом листе: продукт
+  пишется в <code>Wall Sheathing</code>, отдельной строки <code>Insulation</code> нет.</li>
+<li>Округление строк в SQ FT и LFT: результат меньше 50 - до 2, иначе до 10.</li>
+</ul>
 <p>Спека живёт в ячейках шаблона: O3 обшивка, O4 WRB, O5 Zip, O6 Zip Tape,
 в P голая ссылка на лист (<code>S3.0</code>, <code>8/S3.0</code>, без слова "per"). Заполняется при
 создании job. Строки Box Sheathing и Holdowns стоят в конце секции стен этажа.</p>
@@ -7439,7 +7461,9 @@ Barrier по спецификации (fluid-applied не Tyvek), не "Vapor Ba
 <ul>
 <li>Проёмы не вычтены (ворота гаража) или вычтены дважды (двери на двух этажах).</li>
 <li>Толщина и продукт унаследованы от прошлого дома, а не прочитаны в этом сете.</li>
-<li><code>Vapor Barrier</code> и <code>Tyvek</code> при fluid-applied барьере в спецификации.</li>
+<li>В B строки <code>Vapor Barrier</code> записан Tyvek при fluid-applied барьере в спецификации.</li>
+<li>На Zip-стенах оставлена строка <code>Vapor Barrier</code>, или <code>Tape</code> посчитан в рулонах и без периметра окон.</li>
+<li>Строка <code>Insulation</code> заведена под утеплитель между стойками или под Zip R.</li>
 <li>Конфликт арх и структуры решён молча, без Note с двумя листами.</li>
 <li>Посчитан внутренний гипс, внутренний утеплитель или sound batt.</li>
 <li>Площадь измерена в программе, но в Excel осталось старое число.</li>
@@ -7447,14 +7471,19 @@ Barrier по спецификации (fluid-applied не Tyvek), не "Vapor Ba
 </ul>
 <p>Все ошибки по обшивке: <a href="../../../../start/common-mistakes/#sheathing">common-mistakes</a>.</p>
 <h2 id="_5">Пример<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Площадь стен этажа 6220 SQ FT, периметр окон этажа 310 LFT, площадь box
+600 SQ FT:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1st Floor Walls
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Wall Sheathing      7/16&quot; Zip        214   4x8     8/S3.0
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Tape                Zip Tape        2740   LFT
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Insulation          Zip R-3         6850   SQ FT   A2-00
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Note: Wall Sheathing 7/16&quot; Zip R3 per 8/S3.0 A2-00.
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Box Sheathing       7/16&quot; Zip         21   4x8
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Tape                Zip Tape         270   LFT
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Wall Sheathing      Zip R-3          214   4x8     8/S3.0 A2-00
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Tape                Zip Tape        3080   LFT
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Note: Wall Sheathing 7/16&quot; Zip R3 per 8/S3.0 A2-00.
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Box Sheathing       7/16&quot; Zip         21   4x8
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Tape                Zip Tape         270   LFT
 </span></code></pre></div>
+<p>Проверка: листы <code>6220 / 32 x 1.1 = 213.8</code>, в книге 214. Tape стен
+<code>(6220 x 0.4 + 310) x 1.1 = 3077.8</code>, до 10 = 3080. Box <code>600 / 32 x 1.1 = 20.6</code>,
+в книге 21; его Tape <code>600 x 0.4 x 1.1 = 264</code>, до 10 = 270. Строк <code>Vapor Barrier</code>
+и <code>Insulation</code> нет: стены на Zip R.</p>
 <figure>
 <p><img alt="Дом в обшивке Zip System" src="../../../../assets/images/confluence/confluence-093.jpg" />
   </p>

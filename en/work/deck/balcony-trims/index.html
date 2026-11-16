@@ -7245,16 +7245,17 @@
 
 <h1 id="balcony-trims">Balcony Trims<a class="headerlink" href="#balcony-trims" title="Link to this section">&para;</a></h1>
 <figure>
-<p><img alt="Balcony trim, archive" src="../../../../assets/images/confluence/confluence-152.png" />
+<p><img alt="Balcony trim, archive" src="../../../../assets/images/confluence/confluence-152.jpg" />
   </p>
 <figcaption>Fascia and edge trim along the open sides of the balcony, soffit underneath, flashing at the wall. Counted only when trim is in scope.</figcaption>
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
-<p>The finish rows of a balcony block: fascia and edge trim around the perimeter, soffit
-underneath, post wrap, flashing at the wall. The full map of layers from frame to
-finish is on the canonical page
-<a href="../../exterior-trims/balcony-buildup/">Balcony build-up</a>; the frame is on
-<a href="../deck-porch-balcony-frame/">Deck / Porch / Balcony Frame</a>.</p>
+<p>A short pointer page. The finish rows of a balcony block (post wrap, EPDM, decking,
+soffit underneath, fascia and edge trim, flashing at the wall), with all formulas and
+an example, are covered on one page:
+<a href="../../exterior-trims/balcony-buildup/">Balcony build-up</a>. The block frame is on
+<a href="../deck-porch-balcony-frame/">Deck / Porch / Balcony Frame</a>, the railing on
+<a href="../railing/">Railing</a>. This page holds only what is not there.</p>
 <h2 id="where-to-find-it-on-the-plans">Where to find it on the plans<a class="headerlink" href="#where-to-find-it-on-the-plans" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
@@ -7270,7 +7271,7 @@ finish is on the canonical page
 </tr>
 <tr>
 <td>Elevations</td>
-<td>Visible trims, color and profile, what is hidden by the railing</td>
+<td>Visible trims, color and profile, what is hidden by the railing, whether the post is wrapped</td>
 </tr>
 <tr>
 <td>Job scope</td>
@@ -7279,48 +7280,24 @@ finish is on the canonical page
 </tbody>
 </table>
 <h2 id="how-to-measure-in-ourplancore">How to measure in OurPlanCore<a class="headerlink" href="#how-to-measure-in-ourplancore" title="Link to this section">&para;</a></h2>
-<p>Lengths and areas come from the block size W x D and the multiplier G, as for
-railing. The soffit under the balcony is an Area along the real outline only when
-the outline is not a rectangle; W x D is usually enough.</p>
+<p>Balcony trim usually needs no takeoffs of its own: lengths and areas come from
+the block size W x D and the multiplier G, as for railing. The soffit underneath is traced
+as an Area only when the balcony outline is not a rectangle.</p>
 <h2 id="tree-name-and-dfl-row">Tree name and DFL row<a class="headerlink" href="#tree-name-and-dfl-row" title="Link to this section">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>DFL row</th>
-<th>Material</th>
-<th>Unit</th>
-<th>Rule</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Balcony Trims</code> / <code>Fascia</code></td>
-<td><code>1x10</code>, <code>5/4x8</code></td>
-<td>LFT</td>
-<td>open sides: <code>=(W+2*D)*G</code></td>
-</tr>
-<tr>
-<td><code>Soffits at Balcony</code></td>
-<td><code>Beadboard</code></td>
-<td>SQ FT</td>
-<td><code>=W*D*G</code></td>
-</tr>
-<tr>
-<td><code>Post Wrap</code></td>
-<td><code>1x8</code></td>
-<td>LFT</td>
-<td>by post height x 4 sides</td>
-</tr>
-<tr>
-<td><code>Flashings at Wall</code></td>
-<td><code>Copper</code> / drip edge</td>
-<td>LFT</td>
-<td>along the wall, <code>=W*G</code></td>
-</tr>
-</tbody>
-</table>
-<p>Size not specified: <code>TBD</code> in the material and the note <code>Note: All trims to be verified.
-Scaled per elevations</code>.</p>
+<p>The table of rows, units and formulas: <a href="../../exterior-trims/balcony-buildup/">Balcony build-up</a>.
+Additions to it:</p>
+<ul>
+<li>Trim follows the block frame under its own header and only when trims are in
+  scope; with Frame only the block ends with the frame.</li>
+<li>Write <code>Post Wrap</code> only when the elevation or a detail shows a wrapped post.
+  Four boards per post: G = post height x 4 sides x number of posts. Board
+  width = post face plus two board thicknesses: a 6x6 post takes <code>1x8</code>, a 4x4 post
+  takes <code>1x6</code>. Wrap not detailed: <code>assumed</code> in E.</li>
+<li>Gypsum or metal soffit underneath by others: no <code>Soffits at Balcony</code>
+  row, a note stays.</li>
+<li>Size not specified: <code>TBD</code> in the material and the note <code>Note: All trims to be verified.
+  Scaled per elevations</code>.</li>
+</ul>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Balcony trims dissolved into the general <code>Exterior Trims</code> without their own row.</li>

@@ -7356,6 +7356,11 @@
 <h1 id="dfl-row-labels-labels-and-format">DFL row labels (Labels) and format<a class="headerlink" href="#dfl-row-labels-labels-and-format" title="Link to this section">&para;</a></h1>
 <p>Here: what a row is called in column A, what goes in the other columns, and which labels are canonical. The label comes from the template (the <code>Standarts</code> worksheet), because macros sort and sum rows by their text, and the reviewer looks for an item by a familiar name.</p>
 <h2 id="row-format">Row format<a class="headerlink" href="#row-format" title="Link to this section">&para;</a></h2>
+<figure>
+<p><img alt="Anatomy of a DFL row: columns A-H" src="../../../assets/images/reference/dfl-row-anatomy.svg" />
+  </p>
+<figcaption>One row column by column: A label, B size, C formula, D stock length or unit, E sheet, F type, G takeoff, H parameter. Callouts on the picture are in Russian.</figcaption>
+</figure>
 <table>
 <thead>
 <tr>
@@ -7382,8 +7387,8 @@
 </tr>
 <tr>
 <td>D</td>
-<td><code>LFT</code> (not <code>FT</code>), <code>SQ FT</code>, <code>4x8</code>, <code>pcs</code>, <code>50' rolls</code></td>
-<td><code>LFT</code></td>
+<td>unit: <code>LFT</code> (not <code>FT</code>), <code>SQ FT</code> (not <code>SF</code>), <code>4x8</code>, <code>pcs</code>, <code>unit</code>, <code>tubes</code>, <code>50' rolls</code>. For lumber by the piece (studs, joists, beams, posts, headers, rim, ribbon, blocking in a framing list, ledger, bracing) the board length in feet; C is then the number of boards</td>
+<td><code>LFT</code>, <code>16</code></td>
 </tr>
 <tr>
 <td>E</td>
@@ -7392,20 +7397,21 @@
 </tr>
 <tr>
 <td>G</td>
-<td>takeoff: SF for panels, LF for lumber, number of points for hardware</td>
+<td>the measurement from OurPlanCore with no waste: area for panels, length for lumber and linear items, number of points for piece items</td>
 <td><code>3760</code></td>
 </tr>
 <tr>
 <td>H</td>
-<td>spacing in inches, plies, height</td>
+<td>spacing in inches, plies, height; which one depends on the row: <a href="../formulas/#legend">Formulas</a></td>
 <td><code>16</code>, <code>2</code></td>
 </tr>
 </tbody>
 </table>
 <ul>
+<li><code>(n)</code> at the end of a label is the number of plies in one place. C counts every board: places x n. <code>Beam (3)</code> with two beams on the plan = 6 in C; <code>Dbl Rafters</code> = places x 2. In the tree one built-up beam is one point, not n points.</li>
 <li>The label matches the calculation: <code>Plates (2)</code> with H = 1, and <code>Posts (3)</code> when the detail has one post, are mistakes.</li>
 <li>A different grade or material goes on a separate row: if six of 18 2x12 boards are MSR 1650f-1.5E, they get their own row.</li>
-<li>Caps, bases, hangers, ties, bolts in <code>pcs</code>; rim, ribbon, blocking, ledger in <code>LFT</code>, do not divide by 16' without a reason.</li>
+<li>Caps, bases, hangers, ties, bolts in <code>pcs</code>. Rim, ribbon, blocking, ledger in the framing list of a regular workbook are 16' boards: C <code>=CEILING(G/D,1)</code>, D <code>16</code>. They stay in <code>LFT</code> only on an EWP-only job; blocking in walls and in <code>Wall Materials</code> is always <code>LFT</code>. In the tree the detail line is never cut into pieces.</li>
 <li>Floors: <code>1st</code>, <code>2nd</code>, <code>3rd</code>, <code>4th</code>; the floor above the last full floor is <code>Loft</code>. <code>Schedule</code>, not <code>Shedule</code>; models without typos (<code>SDWS</code>, <code>PC6Z</code>, <code>MPB66</code>).</li>
 <li>A copied block: labels, E and references in C corrected for the new floor.</li>
 </ul>
@@ -7502,16 +7508,20 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Beam</code>, <code>Beam (2) Flush</code>, <code>Beam (3) Dropped</code>, <code>Beam Rim</code>, <code>Beam Stairs</code>, <code>Beam balcony</code>, <code>Ext Beam</code>, <code>Platform Beam (2)</code>, <code>Nailer Plates for Steel Beam</code></td>
-<td>plies and Flush/Dropped in the label, beam code in E</td>
+<td><code>Beam</code>, <code>Beam (2) Flush</code>, <code>Beam (3)</code>, <code>Beam Rim</code>, <code>Beam Stairs</code>, <code>Beam balcony</code>, <code>Ext Beam</code>, <code>Platform Beam (2)</code>, <code>Nailer Plates for Steel Beam</code></td>
+<td>plies in the label, <code>Flush</code> only when the schedule marks the beam flush (Dropped is not written in the label), beam code in E</td>
 </tr>
 <tr>
 <td><code>Joists 16" o.c.</code>, <code>Joist J1</code>, <code>Dbl Joists 16" o.c.</code>, <code>Extra joists</code>, <code>End Joists</code>, <code>Ceiling Joists 16" o.c.</code>, <code>Rafters 24" o.c.</code>, <code>Dbl Rafters</code>, <code>Collar ties 16" o.c.</code></td>
 <td>I-joist series in B (<code>11-7/8" TJI 210</code>)</td>
 </tr>
 <tr>
-<td><code>Rim Board</code>, <code>Rim board dbl</code>, <code>Ribbon Board</code>, <code>Ledger</code>, <code>Ledger (2)</code>, <code>Ledger and Box</code>, <code>Box</code>, <code>Cross Bridging for I Joists</code></td>
-<td>LFT; rim without <code>LVL</code> in B if the product is not named</td>
+<td><code>Rim Board</code>, <code>Rim Board (2)</code>, <code>Ribbon Board</code>, <code>Ledger</code>, <code>Ledger (2)</code>, <code>Ledger and Box</code>, <code>Box</code>, <code>Bracing for Trusses</code></td>
+<td>16' boards (D <code>16</code>); rim without <code>LVL</code> in B if the product is not named</td>
+</tr>
+<tr>
+<td><code>Cross Bridging</code>, <code>Cross Bridging for I Joists</code></td>
+<td>wood <code>1x3</code> in 16' boards; <code>TB27</code> for I-joists in <code>pcs</code></td>
 </tr>
 <tr>
 <td><code>Hangers</code>, <code>Hangers 16" o.c.</code>, <code>Hangers on demising</code>, <code>Clips</code>, <code>Ties</code>, <code>Simpson Ties at Eves</code></td>
@@ -7536,10 +7546,11 @@
 <h3 id="deck-porch-balcony-railing">Deck, porch, balcony, railing<a class="headerlink" href="#deck-porch-balcony-railing" title="Link to this section">&para;</a></h3>
 <p><code>Decking</code>, <code>Deck Fascia</code>, <code>Deck Risers</code>, <code>Sleepers</code>, <code>Posts at Rails 4x4</code>, <code>Post Sleeve</code>, <code>Post Cap</code>, <code>Rail sections 6'</code>, <code>Balustrades</code>, <code>Rails (top &amp; bottom)</code>, <code>Cap Rail</code>, <code>Cables</code>, <code>Brackets</code>, <code>Railing</code>. Block makeup: <a href="../dfl-blocks/">Balcony, porch and holdown blocks</a>.</p>
 <h3 id="trim-and-other">Trim and other<a class="headerlink" href="#trim-and-other" title="Link to this section">&para;</a></h3>
-<p><code>Ext Casing</code>, <code>Casing for Int. Doors</code>, <code>Corner Boards</code>, <code>Crown</code>, <code>Frieze Board</code>, <code>Fascia at Eves</code>, <code>Fascia at Rakes</code>, <code>Over Fascia Trim</code>, <code>Furring</code>, <code>Baseboard</code>, <code>Head Trim Flashing</code>, <code>Flashings at Wall</code>, <code>Int. Doors</code> (<code>3070 1 unit MARK FIRE LABEL</code>, doors wider than 4' as double <code>(2)2670</code>), <code>Cased Openings</code>, <code>Drywall at Walls</code>, <code>Drywall at Ceiling</code>, <code>Insulation at 6" Ext. Walls</code>, <code>Lath Horiz 4" o.c.</code>, <code>Lath Vert 16" o.c.</code>.</p>
+<p><code>Ext Casing</code>, <code>Casing for Int. Doors</code>, <code>Corner Boards</code>, <code>Crowns</code>, <code>Frieze Board</code>, <code>Fascia at Eves</code>, <code>Fascia at Rakes</code>, <code>Over Fascia Trims</code>, <code>Furring</code>, <code>Baseboard</code>, <code>Head Trim Flashing</code>, <code>Flashings at Wall</code>, <code>Int. Doors</code> (<code>3070 1 unit MARK FIRE LABEL</code>, doors wider than 3'-6" as double <code>(2)2670</code>), <code>Cased Openings</code>, <code>Drywall at Walls</code>, <code>Drywall at Ceiling</code>, <code>Insulation at 6" Ext. Walls</code> (drywall and insulation between studs only when they are explicitly in scope; usually by others), <code>Lath Horiz 4" o.c.</code>, <code>Lath Vert 16" o.c.</code>.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
-<li><code>FT</code> in D; hardware in <code>LFT</code>; rim broken into 16' pieces.</li>
+<li><code>FT</code> or <code>SF</code> in D; hardware in <code>LFT</code>; a unit instead of the board length in D of a lumber row, so the formula divides by text.</li>
+<li>A detail line (rim, blocking) cut into 16' pieces in the tree: measure the whole length, the formula splits it into boards.</li>
 <li>The label does not match the calculation (<code>Plates (2)</code> when the detail shows one plate).</li>
 <li><code>1-3/4 LVL Rim</code> when LVL is not named on the drawing: write <code>11-7/8" Rim</code> or <code>11-7/8" LSL Rim</code>.</li>
 <li>A hardware model with a typo or in a made-up format (<code>ABU66Z</code> instead of <code>ABU66 Zmax</code>): <a href="../hangers/#dfl-format">Hangers, how to write them</a>.</li>
@@ -7547,15 +7558,25 @@
 </ul>
 <p>All workbook mistakes: <a href="../../start/common-mistakes/#excel">Common mistakes, Excel DFL and notes</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>A                           B                    C                          D      E           G     H
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>A                           B                      C                        D      E            G     H
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2nd Floor Framing List
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Note: Floor trusses are by others; verify.
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Beam (3) Flush              1 3/4 x 11 7/8 LVL   =3*CEILING(G140/D140,1)    LFT    FB2 S201    14
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Joists 16&quot; o.c.             11-7/8&quot; TJI 210      =CEILING(G142/D142,1)      LFT    S201        1240
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Rim Board                   11-7/8&quot; LSL Rim      =CEILING(G144*1.05,1)      LFT    S201        310
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Hangers                     ITS2.06/11.88        =CEILING(G146*1.1,2)       pcs    4/S501      96
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Blocking for Drywall        2x4                  =CEILING(G148*1.1,1)       LFT    A301        420
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Note: Floor Trusses are by others
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Beam (3) Flush              1 3/4 x 11 7/8 LVL     =2*3                     14     FB2
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Corridor Joists             2x10                   43                       14     86 pcs 7&#39;
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Rim Board                   1 1/8 x 24 Rim Board   =CEILING(G144/D144,1)    16     5/S401       310
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Blocking for Drywall        2x4                    =CEILING(G145/D145,1)    16     6/S401       420
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Bracing for Trusses         2x6                    =CEILING(G147/D147,1)    16     assumed      288
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Hangers                     LUS210                 =2*86                    pcs    7/S401
 </span></code></pre></div>
+<p>How to read the example:</p>
+<ul>
+<li><code>Beam (3) Flush</code>: two beams of three plies each, C = 2 x 3 = 6 boards of 14'. <code>(3)</code> in the label is the number of plies in one place; C counts every board.</li>
+<li><code>Corridor Joists</code>: 86 pieces of 7' are cut two from each 14' board, so C = 43 and the piece count is noted in E.</li>
+<li><code>Rim Board</code>: 310 / 16 = 19.4, so 20 boards of 16'. D holds the board length, which is why the formula divides by D. Put <code>LFT</code> in D and the formula divides by text.</li>
+<li><code>Blocking for Drywall</code>: 420 / 16 = 26.3, so 27 boards. <code>Bracing for Trusses</code>: 288 / 16 = 18 boards.</li>
+<li><code>Hangers</code>: two per joist piece, 2 x 86 = 172.</li>
+<li>Rim in <code>LFT</code> with the <code>1.05</code> factor happens only on an EWP-only job: <a href="../formulas/#rim-ribbon-blocking-ledger">Formulas</a>.</li>
+</ul>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>
 <li><a href="../dfl-overview/">How the DFL workbook works</a>, <a href="../standard-notes/">Notes in the DFL</a>, <a href="../dfl-blocks/">Balcony, porch and holdown blocks</a></li>

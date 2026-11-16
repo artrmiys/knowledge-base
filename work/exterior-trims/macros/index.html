@@ -7341,14 +7341,19 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Ext. Casing sides</code></td>
-<td><code>380</code></td>
-<td><code>LFT</code></td>
+<td><code>Ext Casing</code></td>
+<td><code>11</code></td>
+<td><code>FT</code></td>
 </tr>
 <tr>
-<td><code>Head casing</code></td>
-<td><code>204</code></td>
-<td><code>LFT</code></td>
+<td><code>Ext Casing Head</code></td>
+<td><code>3.3</code></td>
+<td><code>FT</code></td>
+</tr>
+<tr>
+<td>(строка количества)</td>
+<td><code>34</code></td>
+<td><code>EA</code></td>
 </tr>
 <tr>
 <td><code>Soffits at Porch</code></td>
@@ -7362,7 +7367,13 @@
 </tr>
 </tbody>
 </table>
-<p>Выделено не три столбца: макрос покажет ошибку и выйдет.</p>
+<p>Выделено не три столбца: макрос покажет ошибку и выйдет. Unit пишется
+ровно <code>FT</code>, <code>SQ FT</code> или <code>EA</code>: строку с <code>LFT</code> или <code>LF</code> макрос молча
+пропустит. Здесь два блока: trim одного окна (sides 2 x 5.5 = 11 FT, head
+3.3 FT) на 34 окна и потолок одного porch на 2 porch. <code>C_TrimsCalc</code> даст
+<code>Ext Casing</code> 11 x 34 = 374, <code>Ext Casing Head</code> 3.3 x 34 = 112.2,
+<code>Soffits at Porch</code> 120 x 2 = 240. Это длины до waste: запас 1.1 и
+округление добавляет формула строки DFL, а не Value.</p>
 <h2 id="c_trimscalc-x">C_TrimsCalc: блок x количество<a class="headerlink" href="#c_trimscalc-x" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Считает отделку на один элемент, умноженную на число таких элементов
 (trim одного окна x число окон, trim одного балкона x число балконов).</p>
@@ -7377,8 +7388,9 @@
 <p>Макрос пишет формулы, не числа: проверяющий видит, из чего получилось
 количество. Не заменяй формулу числом.</p>
 <h2 id="c_sumthesamevalues">C_SumTheSameValues: свернуть одинаковые<a class="headerlink" href="#c_sumthesamevalues" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Ключ <code>Label + Unit</code>, значения суммируются. Полезно, когда <code>CornerBoards
-5/4x6 | LFT</code> встречается по всем фасадам и этажам. Выдели три колонки,
+<p>Ключ <code>Label + Unit</code>, значения суммируются. Полезно, когда <code>Corner Boards
+5/4x6 | LFT</code> встречается по всем фасадам и этажам. Подписи должны совпадать
+буква в букву: <code>CornerBoards</code> и <code>Corner Boards</code> не сложатся. Выдели три колонки,
 запусти (по умолчанию <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f">F</kbd></span>). Выделение очищается, на его месте
 уникальные строки с суммами: делай на копии, если исходные строки нужны.</p>
 <h2 id="y_multiplyselectedcells">Y_MultiplySelectedCells: умножить всё<a class="headerlink" href="#y_multiplyselectedcells" title="Прямая ссылка на раздел">&para;</a></h2>

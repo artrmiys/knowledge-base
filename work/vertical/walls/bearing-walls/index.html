@@ -7276,10 +7276,11 @@
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>BW (bearing wall) - стена, на которую опирается перекрытие или крыша.
 Инженер усиливает её: больше plies в стойке, другой шаг, иногда MSR. Для
-takeoff BW - <strong>отдельная ветка</strong> дерева: в <code>walls</code> остаются только обычные
-стены, в <code>shear walls</code> - SW. Одна физическая стена может быть и в <code>walls</code>,
-и в <code>BW</code>, и в <code>shear walls</code>: это три разных назначения, их длины не
-складываются.</p>
+takeoff BW - <strong>отдельная ветка</strong> дерева. Саму стену в <code>walls</code> меряешь один
+раз как обычную (<code>ext</code>, <code>corr</code>, <code>dem</code>, перегородка), а полосу несущей стены
+обводишь ещё раз в <code>BW</code>, участок SW - в <code>shear walls</code>. Одна физическая стена
+может быть и в <code>walls</code>, и в <code>BW</code>, и в <code>shear walls</code>: это три разных
+назначения, их длины не складываются.</p>
 <h2 id="_2">Где искать на чертежах<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7349,7 +7350,7 @@ takeoff BW - <strong>отдельная ветка</strong> дерева: в <co
 </tr>
 <tr>
 <td>то же</td>
-<td><code>Extra Dbl Studs Interior</code></td>
+<td><code>Extra Studs Interior 24" o.c.</code></td>
 <td>pcs</td>
 <td><code>LFT x 0.5 x (plies - 1)</code></td>
 </tr>
@@ -7381,7 +7382,7 @@ takeoff BW - <strong>отдельная ветка</strong> дерева: в <co
 про extra и dbl studs на COM - <a href="../../../../work-types/com/#studs-spacing-extra-studs-dbl-extra">COM Commercial</a>.</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li>BW нарисованы в <code>walls</code> и сложены с обычными стенами: длина посчитана дважды.</li>
+<li>Полоса BW нарисована в <code>walls</code> второй линией поверх обычной стены и сложена с ней: длина посчитана дважды.</li>
 <li>Этаж взят по номеру листа, хотя план показывает стены ниже перекрытия.</li>
 <li>Plies и spacing придуманы: без марки пиши <code>typical - per stud schedule</code> и источник.</li>
 <li>Фактор Extra24 поставлен 0.625 вместо 0.5.</li>

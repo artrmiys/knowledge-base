@@ -7333,45 +7333,45 @@ wood, cable, metal), decking и hardware постов полностью раз�
 <tbody>
 <tr>
 <td>Любой</td>
-<td><code>Note: Railing is composite; verify product</code></td>
+<td><code>Note: Railing called composite per A501; decking assumed; verify</code></td>
 <td></td>
-<td>нота о системе сразу под строками перил</td>
+<td>одна жёлтая нота о перилах и decking сразу под заголовком блока; чертёж молчит - <code>assumed</code> и <code>verify</code></td>
 </tr>
 <tr>
 <td>Любой</td>
-<td><code>Posts at Rails 4x4 P.T.</code></td>
-<td>pcs</td>
-<td>2 на балкон, <code>=2*G</code>; высота 4' в E</td>
+<td><code>Posts at Rails</code> <code>4x4 P.T.</code></td>
+<td><code>4</code> (длина поста 4')</td>
+<td>2 на балкон, <code>=2*G</code>, в E <code>assumed</code>; длинные перила deck: <code>=CEILING(LFT/6,1)+1</code></td>
 </tr>
 <tr>
 <td>Composite (система)</td>
 <td><code>Post Sleeve</code> <code>Sleeve for 4x4</code>, <code>Post Cap</code> <code>Cap for 4x4</code></td>
 <td>pcs</td>
-<td>по постам</td>
+<td>по постам: <code>=C&lt;posts&gt;</code></td>
 </tr>
 <tr>
 <td>Composite (система)</td>
-<td><code>Rail sections</code> <code>6' Rail section</code></td>
+<td><code>Rail sections</code> <code>8' Rail section</code></td>
 <td>unit</td>
-<td>фронт и бока отдельными строками</td>
+<td>одна строка на каждую длину секции, правило ниже</td>
 </tr>
 <tr>
 <td>Wood painted (поэлементно)</td>
-<td><code>Balustrades 2x2</code></td>
+<td><code>Balustrades</code> <code>2x2 balusters</code></td>
 <td>pcs</td>
-<td><code>=EVEN(G*2.2)</code>, G = LFT перил x units</td>
+<td><code>=EVEN(L*2.2)*G</code></td>
 </tr>
 <tr>
 <td>Wood painted (поэлементно)</td>
-<td><code>Rails (top &amp; bottom) 2x4</code></td>
+<td><code>Rails (top &amp; bottom)</code> <code>2x4 rails</code></td>
 <td>LFT</td>
-<td><code>=EVEN(G*2.2)</code> (две нитки)</td>
+<td><code>=EVEN(L*2.2)*G</code> (две нитки x 1.1)</td>
 </tr>
 <tr>
 <td>Wood painted (поэлементно)</td>
-<td><code>Cap Rail 2x6</code></td>
+<td><code>Cap Rail</code> <code>2x6 cap rail</code></td>
 <td>LFT</td>
-<td><code>=EVEN(G*1.1)</code></td>
+<td><code>=EVEN(L*1.1)*G</code></td>
 </tr>
 <tr>
 <td>Aluminum / metal</td>
@@ -7381,6 +7381,20 @@ wood, cable, metal), decking и hardware постов полностью раз�
 </tr>
 </tbody>
 </table>
+<p>В формулах L - LFT перил одного балкона (фронт плюс открытые бока), G -
+число экземпляров. <code>Balustrades</code> считаются штуками (<code>pcs</code>), не <code>LFT</code>: одна на
+каждые 5.5" с запасом.</p>
+<p>Секции composite-системы (<code>Rail sections</code>):</p>
+<ul>
+<li>Систему покупают секциями: одна секция на пролёт между постами.</li>
+<li>B - ближайшая заводская длина не короче стороны: фронт 7'-4" это
+  <code>8' Rail section</code>, бок 6' это <code>6' Rail section</code>.</li>
+<li>Одна строка на каждую длину. C = секций этой длины на один балкон x G, D
+  <code>unit</code>, в E сторона и её настоящая длина (<code>front 7'-4"</code>, <code>sides 6'</code>).</li>
+<li>Сторона длиннее самой длинной секции системы: добавь промежуточный пост,
+  секций столько, сколько пролётов, а пост допиши в <code>Posts at Rails</code>.</li>
+<li>Cap rail входит в секцию: строки <code>Cap Rail</code> у composite нет.</li>
+</ul>
 <p>Посты перил на улице всегда <code>P.T.</code>. Blocking и bolts под посты, если деталь
 их показывает, идут строками каркаса с деталью в E.</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
@@ -7389,15 +7403,18 @@ wood, cable, metal), decking и hardware постов полностью раз�
 <li>Система и поэлементный счёт смешаны на одном участке.</li>
 <li>Aluminum или vinyl перила посчитаны как материал, а не нотой.</li>
 <li>Posts at Rails без <code>P.T.</code>.</li>
+<li>Секции посчитаны одной строкой по общей длине (<code>LFT / 6</code>), а не по сторонам.</li>
+<li>Balustrades записаны в <code>LFT</code>.</li>
 <li>Все ошибки раздела: <a href="../../../start/common-mistakes/#deck">Deck, porch, балконы</a>.</li>
 </ul>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Note: Railing called composite; Decking assumed Composite
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Posts at Rails   4x4 P.T.          12  pcs    =2*G      4&#39;
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Post Sleeve      Sleeve for 4x4    12  pcs    =C&lt;posts&gt;
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Post Cap         Cap for 4x4       12  pcs    =C&lt;posts&gt;
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Rail sections    6&#39; Rail section   12  unit   front 12&#39;
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Rail sections    6&#39; Rail section   16  unit   sides 2x8&#39;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Note: Railing called composite per A501; decking assumed; verify
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Balcony 7&#39;-4&quot; x 6&#39;, 6 unit (G = 6)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Posts at Rails   4x4 P.T.          12  4      =2*G        assumed
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Post Sleeve      Sleeve for 4x4    12  pcs    =C&lt;posts&gt;
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Post Cap         Cap for 4x4       12  pcs    =C&lt;posts&gt;
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Rail sections    8&#39; Rail section    6  unit   =1*G        front 7&#39;-4&quot;
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Rail sections    6&#39; Rail section   12  unit   =2*G        sides 6&#39;
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

@@ -7278,9 +7278,10 @@
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Flashing - металл или лента на стыках, где вода может зайти под материал:
-примыкание ската к стене (step, kick-out), парапет (cap, coping, drip edge),
-горизонтальные швы стены (band, water table), примыкание deck или балкона к
-стене. Flashing вокруг окон и дверей - отдельная страница
+кромки крыши (drip edge, rake edge), ендовы (valley), примыкание ската к
+стене (step, kick-out), парапет (cap, coping, drip edge), горизонтальные швы
+стены (band, water table), примыкание террасы или балкона к стене. Flashing
+вокруг окон и дверей - отдельная страница
 <a href="../../vertical/openings/window-flashing/">Window Flashing</a>: там другие строки
 и разделение по типу стены.</p>
 <h2 id="_2">Где искать на чертежах<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
@@ -7302,83 +7303,148 @@
 </tr>
 <tr>
 <td>Roof plan (<code>a105 rf</code>)</td>
-<td>Примыкания к стенам, дымоходы, valleys под metal</td>
+<td>Примыкания к стенам, дымоходы, valleys</td>
 </tr>
 <tr>
 <td>Deck / balcony details</td>
-<td>Flashing по ledger и под decking</td>
+<td>Flashing у стены террасы, у membrane и sleepers</td>
 </tr>
 <tr>
 <td>Parapet details</td>
 <td>Coping или drip edge по верху</td>
 </tr>
+<tr>
+<td>Scope задания</td>
+<td>Входят ли кровельные материалы (<code>+ roof</code>)</td>
+</tr>
 </tbody>
 </table>
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
 <ol>
-<li>Инструмент Line по длине стыка: примыкание ската к стене, верх парапета,
-   ledger балкона. Единица LFT. Kick-out - Count по точкам.</li>
-<li>Имя = продукт и место: <code>step flashing</code>, <code>drip edge prpt</code>, <code>ledger flashing
-   blcny</code>. Папка по принятому дереву job (<code>roof misc</code> или <code>trims</code>).</li>
-<li>Парапет: длина верха парапета из <code>parapets/prpt ...</code>; coping отдельной
-   строкой или в Drip Edge по детали.</li>
+<li>Своя линия нужна не всем строкам. Drip Edge по карнизу берёт длину линий
+   <code>eve</code>, Rake Edge - длину линий <code>rake</code>, Drip Edge парапета - длину
+   <code>parapets/prpt ...</code>, flashing у стены террасы - размер блока. Второй раз
+   эти длины не меряем.</li>
+<li>Valleys и примыкание ската к стене (roof-to-wall, step flashing): инструмент
+   Line по длине стыка, папка <code>roof misc</code> (там же лежит <code>ridge</code>). Имя = место:
+   <code>valley</code>, <code>roof to wall</code>. Единица LFT.</li>
+<li>Kick-out - Count по точкам: одна точка на каждый нижний конец примыкания
+   ската к стене.</li>
+<li>Парапет: coping входит в строку Drip Edge парапета, отдельной строки
+   coping нет.</li>
 <li>Roof, wall и deck flashing считаются независимо от flashing проёмов: это
    разные строки.</li>
 </ol>
-<div class="admonition warning">
-<p class="admonition-title">Уточняется</p>
-<p>Единой ветки для flashing в дереве нет; подтверждённые имена позиций
-есть только для окон (Window Flashing). Держи flashing в одной папке job.</p>
-</div>
+<p>Кровельные строки <code>Flashing</code> (Drip Edge, Rake Edge, Valley Flashing,
+Roof-to-Wall) пишем только когда кровельные материалы в scope. Drip Edge
+парапета и <code>Flashings at Wall</code> террасы живут в своих блоках и от этого scope
+не зависят.</p>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Подпись строки одна - <code>Flashing</code>, вид пишется в B. Единица везде <code>LFT</code>:
+длина x 1.1, вверх до 10.</p>
 <table>
 <thead>
 <tr>
-<th>Имя в дереве</th>
+<th>Откуда длина</th>
 <th>Строка DFL</th>
-<th>Материал</th>
+<th>B</th>
 <th>Unit</th>
+<th>Формула C</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>roof misc/step flashing</code></td>
-<td><code>Flashings at Wall</code></td>
-<td>step flashing, kick-out <code>pcs</code></td>
-<td><code>LFT</code>, <code>pcs</code></td>
+<td>линии <code>eves rakes/eves/eve ...</code></td>
+<td><code>Flashing</code></td>
+<td><code>Drip Edge</code></td>
+<td><code>LFT</code></td>
+<td><code>=ОКРВВЕРХ(LFT eaves*1.1;10)</code></td>
+</tr>
+<tr>
+<td>линии <code>eves rakes/rakes/rake ...</code></td>
+<td><code>Flashing</code></td>
+<td><code>Rake Edge</code></td>
+<td><code>LFT</code></td>
+<td><code>=ОКРВВЕРХ(LFT rakes*1.1;10)</code></td>
+</tr>
+<tr>
+<td><code>roof misc/valley</code></td>
+<td><code>Flashing</code></td>
+<td><code>Valley Flashing</code></td>
+<td><code>LFT</code></td>
+<td><code>=ОКРВВЕРХ(LFT valleys*1.1;10)</code></td>
+</tr>
+<tr>
+<td><code>roof misc/roof to wall</code></td>
+<td><code>Flashing</code></td>
+<td><code>Roof-to-Wall</code></td>
+<td><code>LFT</code></td>
+<td><code>=ОКРВВЕРХ(G*1.1;10)</code></td>
+</tr>
+<tr>
+<td>Count по нижним концам примыканий</td>
+<td><code>Flashing</code></td>
+<td><code>Kick-out</code></td>
+<td><code>pcs</code></td>
+<td>число точек</td>
+</tr>
+<tr>
+<td>eaves и valleys</td>
+<td><code>Ice and Water (eves&amp;valleys)</code></td>
+<td><code>3x50' rolls</code></td>
+<td><code>rolls</code></td>
+<td><code>=ОКРВВЕРХ((LFT eaves + LFT valleys)/50;1)</code></td>
 </tr>
 <tr>
 <td><code>parapets/prpt 3.4 3 2 par</code></td>
-<td><code>Flashing</code></td>
-<td><code>Drip Edge</code> / coping</td>
+<td><code>Flashing</code> в блоке Parapet Walls</td>
+<td><code>Drip Edge</code></td>
 <td><code>LFT</code></td>
+<td>G x 1.1: до 50 вверх до 2, от 50 вверх до 10</td>
 </tr>
 <tr>
-<td><code>sqfts/rf mtl 4</code> (valleys)</td>
-<td><code>Ice and Water (eves&amp;valleys)</code></td>
-<td>по spec</td>
-<td><code>SQ FT</code> / <code>LFT</code></td>
+<td>размер блока террасы</td>
+<td><code>Flashings at Wall</code></td>
+<td><code>Copper</code></td>
+<td><code>LFT</code></td>
+<td>длина стороны у стены x units, без запаса</td>
 </tr>
 <tr>
-<td><code>framing/blcny/details/ledger flashing</code></td>
-<td><code>Head Trim Flashing</code> / <code>Flashing(s)</code></td>
-<td>по детали</td>
+<td>heads окон, bands, watertable</td>
+<td><code>Head Trim Flashing</code> в блоке Exterior Trims</td>
+<td><code>Drip Edge</code></td>
 <td><code>LFT</code></td>
+<td>G x 1.1, то же округление</td>
 </tr>
 </tbody>
 </table>
+<p><code>Flashings at Wall</code> - только у террасы с membrane; у открытого деревянного
+балкона в scope Frame строки flashing нет.</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li>Kick-out и step flashing на примыканиях roof-to-wall забыты.</li>
-<li>Flashing парапета и coping посчитаны дважды (строка Flashing и Drip Edge).</li>
+<li>Kick-out и flashing на примыканиях roof-to-wall забыты.</li>
+<li>Длина записана без 1.1 или материал записан в <code>pcs</code> вместо <code>LFT</code>.</li>
+<li>Coping парапета записан отдельной строкой рядом с Drip Edge, или drip edge
+  парапета повторён в кровельных строках карниза.</li>
 <li>Flashing искали только на structural листах.</li>
 <li>Roof flashing смешан со строками Window Flashing.</li>
+<li>Кровельные строки <code>Flashing</code> вставлены, хотя кровельные материалы не в scope.</li>
 </ul>
 <p>Все ошибки по кровле: <a href="../../../start/common-mistakes/#roof">common-mistakes</a>.</p>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Flashing             Drip Edge            186   LFT   parapet top, 5/A501
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Flashings at Wall    Step flashing         64   LFT   roof to wall, 7/A502
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Kick-out             pcs                    4   pcs
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/eves rakes/      eves 318 LFT, rakes 96 LFT
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Takeoffs/Main/roof misc/       valley 42 LFT, roof to wall 64 LFT
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Takeoffs/Main/parapets/        prpt 186 LFT
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Flashing                       Drip Edge         350   LFT   318 x 1.1 = 349.8
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Flashing                       Rake Edge         110   LFT    96 x 1.1 = 105.6
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Flashing                       Valley Flashing    50   LFT    42 x 1.1 = 46.2
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Flashing                       Roof-to-Wall       80   LFT    64 x 1.1 = 70.4    7/A502
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Flashing                       Kick-out            4   pcs    4 нижних конца
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Ice and Water (eves&amp;valleys)   3x50&#39; rolls         8   rolls  (318 + 42) / 50 = 7.2
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Parapet Walls:
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Flashing                       Drip Edge         210   LFT   186 x 1.1 = 204.6   5/A501
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

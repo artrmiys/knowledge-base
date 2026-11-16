@@ -7306,7 +7306,14 @@ area is separated. General measuring rules: <a href="../1st2nd/#rules">Floor SQF
 </table>
 <h2 id="how-to-measure-in-ourplancore">How to measure in OurPlanCore<a class="headerlink" href="#how-to-measure-in-ourplancore" title="Link to this section">&para;</a></h2>
 <ol>
-<li>Area along the cantilever outline on the floor framing plan (W point). Name <code>cant</code>.</li>
+<li>Area along the cantilever outline on the floor framing plan (W point). Name <code>cant</code>.
+   Trace only the projection: the outside face of the upper floor minus the outside
+   face of the lower floor, one polygon per projection. Every floor that projects
+   past the floor below needs a <code>cant</code>.</li>
+<li>The projection also stays inside the area of its own floor (<code>2nd</code> is traced to the
+   outside face of the 2nd floor walls, bay included): <code>cant</code> is an additional area and
+   it is not deducted from the floor. The general rule:
+   <a href="../1st2nd/#rules">Floor SQFT, rule 8</a>.</li>
 <li>The cantilever joists are drawn with the J Area as part of the joist zone; the <code>cant</code> area
    is needed for the soffit, rim and blocking, not for counting the joists a second time.</li>
 <li>The soffit under the cantilever is <code>Soffits at Floor Overhangs</code> by length or area
@@ -7335,22 +7342,36 @@ area is separated. General measuring rules: <a href="../1st2nd/#rules">Floor SQF
 <td>cantilever perimeter</td>
 <td><code>Rim Board</code></td>
 <td>per detail, FRT if the exterior wall is FRT</td>
-<td><code>LFT</code></td>
-<td><code>x 1.1</code></td>
+<td><code>16</code></td>
+<td><code>=CEILING(G/D,1)</code>: 16' boards, G = LFT</td>
 </tr>
 <tr>
 <td>bearing line</td>
 <td><code>Blocking</code></td>
 <td><code>2x</code> between joists over the wall</td>
-<td><code>LFT</code></td>
-<td>per detail</td>
+<td><code>16</code></td>
+<td><code>=CEILING(G/D,1)</code>, G = LFT of the bearing line</td>
 </tr>
 <tr>
-<td>underneath</td>
+<td>underneath, trims in scope</td>
 <td><code>Soffits at Floor Overhangs</code></td>
-<td><code>1x12</code> / Vinyl / <code>5/8" Ext Gyp</code></td>
-<td><code>LFT</code> / <code>SQ FT</code></td>
-<td></td>
+<td>Vinyl / T&amp;G per the section</td>
+<td><code>SQ FT</code></td>
+<td><code>=CEILING(cant SQFT*1.1,10)</code></td>
+</tr>
+<tr>
+<td>underneath, a narrow projection closed by one board</td>
+<td><code>Soffits at Floor Overhangs</code></td>
+<td><code>1x12</code></td>
+<td><code>LFT</code></td>
+<td>edge length x 1.1</td>
+</tr>
+<tr>
+<td>underneath, Frame scope</td>
+<td><code>Soffit Sheathing</code> at the end of that floor's framing list</td>
+<td>wall sheathing</td>
+<td><code>4x8</code></td>
+<td><code>=CEILING(cant SQFT/32*1.1,1)</code></td>
 </tr>
 <tr>
 <td>details</td>
@@ -7363,7 +7384,8 @@ area is separated. General measuring rules: <a href="../1st2nd/#rules">Floor SQF
 </table>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
-<li>The cantilever dissolved into the floor area, the rim and blocking on it not changed.</li>
+<li>No separate <code>cant</code> Area: rim and blocking on the cantilever not changed, soffit lost.</li>
+<li><code>cant</code> deducted from the floor area: the floor comes out smaller than it is.</li>
 <li>The soffit underneath forgotten.</li>
 <li>Holdowns or straps added without a detail (or missed when there is one).</li>
 <li>Cantilever joists counted a second time through the area.</li>
@@ -7371,10 +7393,12 @@ area is separated. General measuring rules: <a href="../1st2nd/#rules">Floor SQF
 <p>All area mistakes: <a href="../../../start/common-mistakes/#sqft">common-mistakes</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/sqfts/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  cant       Area   48 SF   (bay 2nd floor, 2&#39; cantilever)
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2nd Floor Framing List
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Rim Board (Cantilevered)   11-7/8&quot; LSL Rim   26   LFT   3/S401
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Blocking                   2x12              22   LFT   over wall
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  2nd        Area   1690 SF   (bay included)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  cant       Area     48 SF   (bay 2nd floor, 2&#39; x 24&#39; projection)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2nd Floor Framing List
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Rim Board (Cantilevered)     11-7/8&quot; LSL Rim    2   16      3/S401      2 + 24 + 2 = 28 LFT; 28 / 16 = 1.75
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Blocking                     2x12               2   16      over wall   24 LFT; 24 / 16 = 1.5
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Soffits at Floor Overhangs   Vinyl             60   SQ FT               48 x 1.1 = 52.8, round up to 10
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

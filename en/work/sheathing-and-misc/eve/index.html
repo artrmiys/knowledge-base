@@ -7277,8 +7277,8 @@ soffit underneath and fascia on the end. The rake is the sloped edge on the gabl
 (<a href="../rake/">Rake</a>), a return is the box at the corner where the eave turns into the rake
 (<a href="../returns/">Returns</a>). The vertical strip at the truss heel above the wall is
 <a href="../../vertical/sheathing/truss-heel/">Truss Heel</a>, not part of the eave. From one
-eave line the export gets the soffit (SQ FT), fascia and sub fascia (LFT) and the overhang
-framing.</p>
+eave line the export gets the soffit (SQ FT), fascia (LFT), sub fascia and the overhang
+framing (16' boards).</p>
 <h2 id="where-to-find-it-on-the-plans">Where to find it on the plans<a class="headerlink" href="#where-to-find-it-on-the-plans" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
@@ -7341,37 +7341,51 @@ framing.</p>
 <tr>
 <td><code>eves rakes/eves/eve 24 main</code></td>
 <td><code>Soffits at Eves</code></td>
-<td><code>12" Vinyl vented</code> / beadboard / <code>5/8" Ext Gyp</code></td>
-<td><code>SQ FT</code> or <code>LFT</code></td>
-<td><code>LFT x 24/12</code></td>
+<td><code>12" Vinyl vented</code> / <code>T&amp;G beadboard</code> / <code>Soffit panel</code></td>
+<td><code>SQ FT</code></td>
+<td><code>=EVEN((eave LFT + returns LFT)*overhang/12*1.1)</code></td>
+</tr>
+<tr>
+<td>same line, soffit made of one board or one strip across the full width</td>
+<td><code>Soffits at Eves</code></td>
+<td><code>1x12</code>, <code>1x4</code></td>
+<td><code>LFT</code></td>
+<td><code>=EVEN((eave LFT + returns LFT)*1.1)</code></td>
 </tr>
 <tr>
 <td>same line</td>
 <td><code>Fascia at Eves</code></td>
-<td><code>1x8</code> / alum wrapped</td>
+<td><code>1x8</code>, <code>1x10</code> or <code>1x6</code> per detail</td>
 <td><code>LFT</code></td>
-<td><code>LFT x 1.1</code></td>
+<td><code>=EVEN((eave LFT + returns LFT)*1.1)</code></td>
 </tr>
 <tr>
 <td>same line</td>
 <td><code>Sub Fascia</code></td>
-<td><code>2x8</code></td>
-<td><code>LFT</code></td>
-<td>in the roof block</td>
+<td><code>2x6</code>, <code>2x8</code> per detail</td>
+<td><code>16</code></td>
+<td><code>=CEILING(G/D,1)</code>, G = LFT of eaves and returns, no 1.1</td>
 </tr>
 <tr>
 <td>same line</td>
 <td><code>Frame for Soffits 24" o.c.</code></td>
-<td><code>2x4</code> or <code>2x6</code> per detail</td>
-<td><code>LFT</code></td>
-<td>per detail</td>
+<td><code>2x4</code>, <code>2x6</code> per detail</td>
+<td><code>16</code></td>
+<td><code>=CEILING(G/D,1)</code>, G = LFT x overhang / spacing + LFT</td>
 </tr>
 <tr>
 <td>same line</td>
-<td><code>Blocking at Eves</code>, <code>Simpson Ties at Eves</code></td>
-<td><code>2x6</code>, <code>H2.5A</code></td>
-<td><code>LFT</code>, <code>pcs</code></td>
-<td><a href="../../horizontal/roof-framing/roof-sheathing/">Roof Sheathing</a></td>
+<td><code>Blocking at Eves</code></td>
+<td><code>2x6</code>, <code>2x4</code> or <code>2x8</code> per detail</td>
+<td><code>16</code></td>
+<td><code>=CEILING(G/D*1.1,1)</code>, G = eave LFT without returns</td>
+</tr>
+<tr>
+<td>same line</td>
+<td><code>Simpson Ties at Eves 24" o.c.</code></td>
+<td><code>H2.5</code>, <code>H2.5A</code> per the S notes (no Zmax)</td>
+<td><code>pcs</code></td>
+<td><code>=CEILING(G*12/H,10)</code>, H = truss spacing; <a href="../../horizontal/roof-framing/roof-sheathing/">Roof Sheathing</a></td>
 </tr>
 <tr>
 <td><code>eves rakes/eves/eve 12 porch</code></td>
@@ -7382,10 +7396,25 @@ framing.</p>
 </tr>
 </tbody>
 </table>
-<p>Excel export: XL strip, E/R button; the macro reads the overhang number in the name
-as the width in inches. Vinyl soffit is entered as a material in SQ FT, not
-as a framing row. If 30% or more of the soffit is beadboard, count the whole soffit as
-beadboard and write a Note that this is a local rule.</p>
+<p>LFT is the line length and the overhang is the number from its name in inches. Excel export:
+XL strip, E/R button; the macro reads the overhang number in the name as the width in inches.</p>
+<p>Soffit is counted in <code>SQ FT</code>: (eave LFT + returns LFT) x overhang / 12 x 1.1. It is in <code>LFT</code>
+only when the soffit is closed by one board or one strip across the full width
+(<code>1x12</code>, <code>1x4</code>, a single narrow vinyl strip): then the width is not in the formula.
+Examples: 12" vinyl panels on a 24" overhang = <code>SQ FT</code>; a 9" overhang closed by one
+<code>1x10</code> = <code>LFT</code>. Plywood soffit is written as <code>AC Ply</code> in <code>SQ FT</code>, not in sheets. Vinyl
+soffit is a material row, not a framing row. Aluminum soffit and aluminum-wrapped
+fascia are by others: no soffit or fascia rows, only a Note; the sub fascia and the
+overhang framing behind them are still counted.</p>
+<p>Soffit not named on the plans: default by siding. Vinyl siding = vinyl soffit
+in <code>SQ FT</code>; wood or composite clapboard = <code>1x</code> Azek in <code>LFT</code> (if many overhangs
+are wider than 12", soffit panel in <code>SQ FT</code> for all); cedar shingles = beadboard in
+<code>SQ FT</code>; Hardie, board and batten and panels = soffit panel in <code>SQ FT</code>. If 30%
+or more of the soffit is beadboard, count the whole soffit as beadboard and write a Note
+that this is a local rule.</p>
+<p><code>Sub Fascia</code>, <code>Frame for Soffits</code> and <code>Blocking at Eves</code> are framing: D holds the 16'
+board length, C the number of boards. An aluminum soffit frame, or a short overhang with only
+sub fascia and blocking: no <code>Frame for Soffits</code> row.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Canopy and porch counted again inside the eave or rake.</li>
@@ -7393,6 +7422,7 @@ beadboard and write a Note that this is a local rule.</p>
 <li>Rake and returns merged into the eave although the rows are different.</li>
 <li>Truss heel hidden in the soffit SQ FT.</li>
 <li><code>Soffit Eve Vinyl</code> entered as framing instead of as material SQ FT.</li>
+<li>Panel soffit written in <code>LFT</code>, or returns not added to the soffit and fascia.</li>
 <li><code>2x4</code> frame for soffit filled in automatically although the detail calls for <code>2x6</code>.</li>
 <li>For a roof of <code>AJS Rafters</code> with an open overhang, a simple rake counted instead of rafters by hand.</li>
 </ul>
@@ -7401,12 +7431,15 @@ beadboard and write a Note that this is a local rule.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/eves rakes/eves/
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  eve 24 main          Line  310 LFT
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  eve 12 porch         Line   38 LFT
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Takeoffs/Main/eves rakes/rakes/
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  rake 12 main         Line   96 LFT
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  returns 12           Line    8 LFT
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  returns 24           Line    8 LFT
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Takeoffs/Main/eves rakes/rakes/
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  rake 12 main         Line   96 LFT
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Soffits at Eves      12&quot; Vinyl vented    620   SQ FT   310 x 2&#39;
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Fascia at Eves       1x8 alum wrapped    341   LFT
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Main, 24&quot; overhang (porch is in its own block):
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Soffits at Eves              12&quot; Vinyl vented    700   SQ FT   (310 + 8) x 24/12 x 1.1 = 699.6
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Fascia at Eves               1x8                 350   LFT     (310 + 8) x 1.1 = 349.8
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Sub Fascia                   2x8                  20   16      G = 310 + 8 = 318; 318 / 16 = 19.9
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Frame for Soffits 24&quot; o.c.   2x4                  40   16      G = 318 x 24/24 + 318 = 636; 636 / 16 = 39.8
 </span></code></pre></div>
 <figure>
 <p><img alt="Eave parts in the takeoff" src="../../../../assets/images/roof/eave-parts-takeoff.svg" />

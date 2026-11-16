@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520" role="img" aria-labelledby="t d">
+  <title id="t">EWP families in cross-section</title>
+  <desc id="d">Cross-sections of engineered wood products side by side: two-ply LVL made of thin veneers, PSL made of long strands, LSL made of short strands, an I-joist with flanges and a thin web, and a thin rim board, with the way each is written in column B.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
+    <style>
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
+    </style>
+  </defs>
+<rect x="0.5" y="0.5" width="879" height="519" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="side" x="34" y="46">СЕЧЕНИЯ EWP, один масштаб</text>
+<text class="h" x="112.0" y="82" text-anchor="middle">LVL</text>
+<rect x="93.0" y="102" width="19" height="132" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.4"/>
+<line x1="96.2" y1="103" x2="96.2" y2="233" stroke="#8a6a3f" stroke-width="0.6"/>
+<line x1="99.4" y1="103" x2="99.4" y2="233" stroke="#8a6a3f" stroke-width="0.6"/>
+<line x1="102.6" y1="103" x2="102.6" y2="233" stroke="#8a6a3f" stroke-width="0.6"/>
+<line x1="105.8" y1="103" x2="105.8" y2="233" stroke="#8a6a3f" stroke-width="0.6"/>
+<line x1="109.0" y1="103" x2="109.0" y2="233" stroke="#8a6a3f" stroke-width="0.6"/>
+<rect x="112.0" y="102" width="19" height="132" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.4"/>
+<line x1="115.2" y1="103" x2="115.2" y2="233" stroke="#8a6a3f" stroke-width="0.6"/>
+<line x1="118.4" y1="103" x2="118.4" y2="233" stroke="#8a6a3f" stroke-width="0.6"/>
+<line x1="121.6" y1="103" x2="121.6" y2="233" stroke="#8a6a3f" stroke-width="0.6"/>
+<line x1="124.8" y1="103" x2="124.8" y2="233" stroke="#8a6a3f" stroke-width="0.6"/>
+<line x1="128.0" y1="103" x2="128.0" y2="233" stroke="#8a6a3f" stroke-width="0.6"/>
+<text class="mono" x="112.0" y="264" text-anchor="middle">(2) 1 3/4 x 11 7/8</text>
+<text class="mono" x="112.0" y="283" text-anchor="middle">LVL</text>
+<text class="note" x="112.0" y="316" text-anchor="middle">тонкий шпон слоями,</text>
+<text class="note" x="112.0" y="335" text-anchor="middle">ply 1 3/4"; число ply</text>
+<text class="note" x="112.0" y="354" text-anchor="middle">явно: (2), (3)</text>
+<text class="note" x="112.0" y="373" text-anchor="middle">beams, headers</text>
+<line x1="194" y1="70" x2="194" y2="420" stroke="#e3e7e3" stroke-width="1.2"/>
+<text class="h" x="276.0" y="82" text-anchor="middle">PSL</text>
+<rect x="246.0" y="102" width="60" height="132" fill="#e9d3b0" stroke="#8a6a3f" stroke-width="1.4"/>
+<path d="M266.1,122.0 v7.4 M252.1,167.8 v6.1 M251.2,164.4 v4.7 M272.3,112.3 v4.9 M271.8,202.4 v5.1 M260.5,178.7 v8.8 M280.3,151.2 v8.9 M250.6,206.2 v5.8 M256.1,118.0 v5.9 M293.7,125.5 v7.1 M283.8,148.3 v7.0 M251.5,111.1 v5.4 M286.1,154.9 v5.9 M280.8,157.9 v5.8 M292.5,187.2 v5.6 M280.2,166.5 v8.4 M288.8,138.3 v8.9 M254.6,153.8 v7.9 M256.5,162.2 v4.7 M285.4,195.0 v7.1 M297.0,141.3 v7.6 M281.3,173.0 v6.6 M295.0,216.4 v6.6 M285.2,111.2 v7.7 M284.2,222.2 v8.2 M263.9,149.9 v7.5 M249.3,158.9 v5.3 M254.6,111.0 v8.0 M255.2,133.5 v6.3 M296.8,113.6 v6.5 M278.8,209.1 v8.2 M296.4,137.1 v6.4 M268.1,209.2 v8.8 M256.5,125.0 v5.5 M261.1,161.7 v7.2 M262.7,104.5 v6.4 M268.7,171.4 v8.8 M286.7,165.3 v7.3 M285.9,110.4 v8.5 M291.7,208.1 v8.1 M270.0,151.5 v5.0 M283.5,111.4 v4.8 M259.7,123.3 v6.0 M250.9,104.0 v5.2 M253.7,147.3 v4.6 M297.0,177.1 v5.2 M262.1,145.3 v6.1 M254.9,205.0 v9.0 M274.1,161.6 v4.9 M253.7,144.8 v5.7 M294.4,123.2 v4.6 M301.3,166.9 v5.2 M278.4,107.2 v6.9 M302.8,206.7 v7.6 M262.6,147.6 v5.3 M291.2,167.4 v8.0 M266.5,130.5 v8.2 M303.2,205.5 v8.1 M293.8,192.0 v5.5 M277.0,146.3 v4.6 M249.6,137.3 v5.7 M286.8,217.8 v6.5 M300.5,221.6 v8.8 M268.4,130.2 v5.5 M259.0,128.3 v7.3 M298.4,204.0 v6.7 M284.6,199.2 v4.9 M285.0,212.3 v8.0 M290.0,160.9 v5.3 M292.2,143.6 v8.1 M302.4,151.1 v6.3 M301.0,190.3 v5.3 M255.1,122.0 v8.6 M293.2,121.4 v8.2 M302.9,182.2 v6.1 M278.7,119.6 v4.6 M302.4,181.3 v6.9 M300.3,155.6 v8.4 M294.3,129.1 v5.6 M264.4,132.6 v7.1 M262.5,153.9 v5.1 M299.0,146.1 v6.6 M280.7,211.6 v6.4 M299.4,163.7 v6.9 M277.3,106.2 v6.5 M258.3,104.5 v8.1 M257.7,160.3 v7.8 M279.2,142.8 v6.8 M279.1,197.3 v5.0 M279.4,133.6 v5.7 M291.2,164.4 v7.0 M290.6,212.6 v6.5 M282.3,164.2 v6.8 M286.8,157.8 v6.9 M274.8,216.0 v7.6 M297.1,216.1 v5.7 M279.3,216.2 v8.3 M255.7,118.5 v6.5 M252.1,132.6 v4.8 M285.5,197.3 v8.5 M256.6,189.2 v7.5 M256.0,209.1 v8.9 M260.3,217.3 v6.3 M275.3,221.8 v8.2 M257.0,155.4 v6.8 M267.0,127.3 v5.9 M288.4,106.3 v7.0 M272.7,106.2 v6.0 M282.9,165.0 v4.8 M303.2,197.8 v8.9 M253.9,135.6 v4.7 M291.6,136.2 v5.1 M271.6,212.5 v8.2 M262.5,121.8 v8.6 M280.0,187.3 v4.9 M251.2,185.9 v6.4 M252.1,215.7 v7.4 M292.9,114.0 v8.4 M251.7,206.7 v6.5 M267.0,169.8 v8.7 M263.0,119.4 v6.9 M261.4,117.0 v5.2 M250.8,128.0 v5.9 M265.1,194.4 v5.8 M276.0,125.2 v6.1 M249.0,133.8 v4.6 M289.1,169.6 v5.4 M274.6,215.2 v5.0 M293.9,155.4 v6.7 M294.7,150.8 v6.8 M286.5,220.9 v6.0 M294.6,188.1 v7.4 M270.7,145.4 v4.7 M255.3,112.4 v7.8 M262.3,123.4 v4.9 M295.1,207.6 v7.5 M263.8,132.8 v5.8 M273.7,122.7 v6.5 M262.7,218.5 v8.9 M278.6,133.1 v8.8 M265.3,146.4 v4.5 M269.4,160.5 v6.8 M259.3,164.1 v4.5 M262.8,114.7 v6.3 M250.3,106.7 v5.9 M261.0,173.7 v6.9 M290.0,182.2 v7.7 M297.2,150.4 v6.0 M303.1,121.8 v7.8 M284.0,109.2 v8.3" fill="none" stroke="#8a6a3f" stroke-width="0.9" stroke-linejoin="round"/>
+<text class="mono" x="276.0" y="264" text-anchor="middle">5 1/2 x 11 7/8</text>
+<text class="mono" x="276.0" y="283" text-anchor="middle">PSL</text>
+<text class="note" x="276.0" y="316" text-anchor="middle">длинные пряди,</text>
+<text class="note" x="276.0" y="335" text-anchor="middle">массивное сечение</text>
+<text class="note" x="276.0" y="354" text-anchor="middle">тяжёлые балки</text>
+<text class="note" x="276.0" y="373" text-anchor="middle">и стойки</text>
+<line x1="358" y1="70" x2="358" y2="420" stroke="#e3e7e3" stroke-width="1.2"/>
+<text class="h" x="440.0" y="82" text-anchor="middle">LSL</text>
+<rect x="430.0" y="102" width="19" height="132" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.4"/>
+<path d="M445.4,183.5 l-2.0,2.2 M444.2,124.0 l-0.2,3.0 M439.6,208.9 l-2.5,1.7 M444.4,178.3 l-2.8,1.0 M442.2,191.6 l2.3,2.0 M432.5,123.2 l1.3,2.7 M433.6,209.0 l-0.5,2.9 M441.4,183.4 l-1.6,2.5 M439.3,107.4 l-2.4,1.8 M443.2,168.4 l-0.3,3.0 M441.9,115.1 l-2.0,2.2 M435.8,116.1 l2.0,2.2 M442.9,132.0 l-2.0,2.2 M446.6,167.3 l1.1,2.8 M439.2,190.4 l-2.2,2.0 M441.3,185.4 l2.9,0.7 M434.2,138.0 l-2.1,2.2 M436.6,176.3 l3.0,0.1 M432.9,139.8 l-1.5,2.6 M442.4,189.4 l1.8,2.4 M439.7,163.7 l0.3,3.0 M433.8,216.0 l2.4,1.8 M446.7,221.2 l3.0,0.2 M438.9,207.0 l-3.0,0.3 M438.7,139.8 l2.4,1.8 M446.2,132.7 l-0.8,2.9 M434.1,170.9 l-3.0,0.4 M434.0,207.1 l-0.1,3.0 M445.3,192.8 l2.2,2.0 M445.5,166.3 l3.0,0.2 M432.1,167.0 l0.5,3.0 M436.5,124.2 l1.4,2.6 M436.7,209.5 l3.0,0.0 M443.3,209.4 l2.8,1.1 M445.9,194.0 l-2.9,0.9 M436.3,152.4 l1.0,2.8 M447.0,178.9 l1.3,2.7 M438.4,140.6 l3.0,0.5 M433.5,208.8 l1.9,2.3 M446.0,137.4 l2.0,2.2 M439.7,130.2 l1.2,2.8 M446.3,214.9 l-2.5,1.7 M441.5,218.4 l-2.9,0.6 M440.2,194.8 l3.0,0.5 M443.0,162.0 l-2.1,2.1 M441.7,141.9 l3.0,0.5 M445.9,122.5 l0.3,3.0 M437.2,143.3 l-2.0,2.2 M446.6,138.7 l-1.4,2.6 M436.5,175.0 l1.0,2.8 M434.5,126.7 l2.4,1.8 M445.6,167.6 l2.3,1.9 M445.6,228.6 l0.5,3.0 M434.1,130.5 l2.9,0.8 M437.1,118.1 l2.2,2.0 M435.9,176.5 l-2.8,1.0 M443.2,157.4 l0.8,2.9 M439.9,153.0 l1.5,2.6 M432.9,140.9 l-3.0,0.3 M433.9,168.4 l-1.2,2.8" fill="none" stroke="#8a6a3f" stroke-width="0.9" stroke-linejoin="round"/>
+<text class="mono" x="440.0" y="264" text-anchor="middle">1 3/4 x 11 7/8</text>
+<text class="mono" x="440.0" y="283" text-anchor="middle">LSL</text>
+<text class="note" x="440.0" y="316" text-anchor="middle">короткая стружка,</text>
+<text class="note" x="440.0" y="335" text-anchor="middle">Timberstrand 1.55E</text>
+<text class="note" x="440.0" y="354" text-anchor="middle">прямые studs,</text>
+<text class="note" x="440.0" y="373" text-anchor="middle">rim, beams</text>
+<line x1="522" y1="70" x2="522" y2="420" stroke="#e3e7e3" stroke-width="1.2"/>
+<text class="h" x="604.0" y="82" text-anchor="middle">I-joist</text>
+<rect x="601.5" y="116" width="5" height="104" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.2"/>
+<rect x="589.0" y="102" width="30" height="16" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.4"/>
+<rect x="589.0" y="218" width="30" height="16" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.4"/>
+<text class="mono" x="604.0" y="264" text-anchor="middle">11 7/8" TJI 210</text>
+<text class="note" x="604.0" y="316" text-anchor="middle">полки + тонкая стенка</text>
+<text class="note" x="604.0" y="335" text-anchor="middle">TJI, LPI, BCI, RED-I</text>
+<text class="note" x="604.0" y="354" text-anchor="middle">серия остаётся в B:</text>
+<text class="note" x="604.0" y="373" text-anchor="middle">от неё зависит hanger</text>
+<line x1="686" y1="70" x2="686" y2="420" stroke="#e3e7e3" stroke-width="1.2"/>
+<text class="h" x="768.0" y="82" text-anchor="middle">Rim Board</text>
+<rect x="761.0" y="102" width="14" height="132" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.4"/>
+<path d="M771.6,133.1 l1.6,1.9 M765.5,155.7 l0.4,2.5 M772.5,210.9 l-2.3,1.0 M763.2,110.5 l-1.5,2.0 M772.0,164.7 l-0.7,2.4 M763.0,154.7 l-2.4,0.6 M771.3,211.7 l-2.5,0.2 M765.5,119.9 l2.2,1.2 M768.2,190.4 l-2.5,0.5 M770.2,186.1 l-1.8,1.7 M767.6,174.3 l2.5,0.3 M770.8,135.1 l-2.4,0.6 M769.5,143.9 l2.3,1.0 M765.5,184.8 l-1.5,2.0 M764.1,115.2 l-0.2,2.5 M768.8,154.2 l1.9,1.6 M769.0,107.8 l1.5,2.0 M767.6,224.4 l-1.1,2.2 M771.8,165.0 l1.9,1.7 M765.5,224.7 l-1.5,2.0 M766.1,109.2 l0.0,2.5 M769.7,158.2 l1.7,1.8 M769.7,220.3 l1.9,1.6 M763.3,148.1 l0.6,2.4 M769.8,130.9 l-2.0,1.5 M770.4,168.6 l2.0,1.5 M772.7,144.8 l-2.1,1.3 M765.3,133.7 l-1.8,1.7 M765.9,223.6 l0.0,2.5 M764.9,134.0 l0.6,2.4 M769.7,223.2 l2.2,1.1 M766.9,132.7 l-2.5,0.2 M764.4,112.9 l2.5,0.5 M766.9,217.0 l-2.3,0.9 M770.3,229.2 l-2.4,0.5 M766.3,129.3 l-2.4,0.5 M770.5,110.4 l-1.2,2.2 M766.8,152.5 l1.3,2.2 M764.7,106.9 l1.6,1.9 M766.5,224.0 l2.3,0.9" fill="none" stroke="#8a6a3f" stroke-width="0.9" stroke-linejoin="round"/>
+<text class="mono" x="768.0" y="264" text-anchor="middle">11-7/8" LSL Rim</text>
+<text class="note" x="768.0" y="316" text-anchor="middle">тонкая доска 1 1/4"</text>
+<text class="note" x="768.0" y="335" text-anchor="middle">по торцам joists</text>
+<text class="note" x="768.0" y="354" text-anchor="middle">без продукта:</text>
+<text class="note" x="768.0" y="373" text-anchor="middle">11-7/8" Rim</text>
+<line x1="46" y1="102" x2="46" y2="234" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="dimt" transform="translate(41,198.0) rotate(-90)">11 7/8"</text>
+<rect x="30" y="420" width="820" height="78" fill="#f6f8f6" stroke="#cfd8cf" stroke-width="1.2" rx="8"/>
+<text class="ink" x="46" y="446">EWP by others: LVL, LSL, PSL, I-joists и rim не считаем, нота о них стоит в шапке.</text>
+<text class="ink" x="46" y="466">С I-joists rim только engineered; LVL rim там, где к нему крепится deck или corridor.</text>
+<text class="ink" x="46" y="486">Type III: LVL, PSL, LSL в плоскости наружной стены запрещены.</text>
+</svg>

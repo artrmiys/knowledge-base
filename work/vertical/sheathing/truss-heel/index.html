@@ -7328,6 +7328,8 @@
    Граница с gable и wall sheathing должна быть явной, без двойного слоя.</li>
 </ol>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>У полосы своя секция шаблона DFL: <strong>Truss Heel</strong>. G - площадь полосы в SQ FT:
+сумма <code>длина x высота пятки</code> по всем позициям <code>trussheel</code> корпуса.</p>
 <table>
 <thead>
 <tr>
@@ -7341,38 +7343,61 @@
 <tbody>
 <tr>
 <td><code>trussheel/trussheel 1.25</code></td>
-<td><code>Truss Heel Sheathing</code> (в блоке Gable Walls или кровли шаблона)</td>
+<td><code>Truss Heel Sheathing</code></td>
 <td>как у стены, например <code>7/16" Zip</code></td>
 <td><code>4x8</code></td>
-<td><code>=ОКРВВЕРХ(LFT*1.25/32*1.1;1)</code></td>
+<td><code>=ОКРВВЕРХ(G/32*1.1;1)</code></td>
+</tr>
+<tr>
+<td>та же площадь, Zip</td>
+<td><code>Tape</code></td>
+<td><code>Zip Tape</code></td>
+<td><code>LFT</code></td>
+<td><code>=ОКРВВЕРХ(G*0.4*1.1;10)</code></td>
+</tr>
+<tr>
+<td>та же площадь, без Zip</td>
+<td><code>Vapor Barrier</code></td>
+<td>WRB по спецификации</td>
+<td><code>SQ FT</code></td>
+<td><code>G x 1.1</code>; меньше 50 - до 2, иначе до 10</td>
 </tr>
 <tr>
 <td>та же площадь</td>
-<td><code>Vapor Barrier</code> (WRB)</td>
-<td>по спецификации</td>
+<td><code>Insulation</code></td>
+<td>продукт из wall type</td>
 <td><code>SQ FT</code></td>
-<td><code>=ОКРВВЕРХ(SQFT*1.1;10)</code></td>
+<td><code>G x 1.1</code>; строка только при continuous insulation снаружи обшивки</td>
 </tr>
 <tr>
-<td>та же длина</td>
-<td><code>Blocking at Eves</code></td>
-<td><code>2x6</code></td>
-<td><code>LFT</code></td>
-<td>по детали, см. <a href="../../../horizontal/roof-framing/roof-sheathing/">Roof Sheathing</a></td>
+<td>длина карнизов <code>eves rakes/eve ...</code></td>
+<td><code>Blocking at Eves</code> (секция кровли, только при фермах by others)</td>
+<td><code>2x6</code> или по детали карниза</td>
+<td>штуки, D = <code>16</code></td>
+<td><code>=ОКРВВЕРХ(G/D*1.1;1)</code>, см. <a href="../../../horizontal/roof-framing/roof-sheathing/">Roof Sheathing</a></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Уточняется</p>
-<p>Точный Label строки пятки в текущем TemplateCom (блок и имя) проверить по
-сданной книге; здесь дано описательное имя.</p>
-</div>
+<ul>
+<li>Zip или обычный лист - как у наружной стены. При Zip идёт пара
+  <code>Truss Heel Sheathing</code> + <code>Tape</code>, строк <code>Vapor Barrier</code> и <code>Insulation</code> нет:
+  барьер уже в листе. Без Zip идёт <code>Vapor Barrier</code>, а <code>Tape</code> нет.</li>
+<li><code>Insulation</code> пишется, только если wall type наружной стены несёт continuous
+  insulation снаружи обшивки. Утеплитель между стойками и на чердаке by
+  others, строки нет.</li>
+<li>Полоса box верхнего этажа под фермами считается здесь, а не строкой
+  <code>Box Sheathing</code> в стенах верхнего этажа. В стенах остаётся нота
+  <code>Note: Box sheathing is included in Truss Heel section</code>.</li>
+<li>Stick roof (rafters): пятки нет, секция Truss Heel удаляется. Плоская кровля
+  с парапетом: полоса уходит в Parapet Walls (<a href="../../walls/parapet/">Parapet</a>).</li>
+</ul>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Полоса на eave-сторонах не посчитана вовсе (gable-стороны есть, eave нет).</li>
 <li>Та же полоса посчитана и в gable, и в trussheel.</li>
 <li>Высота взята из другого дома или прочитана как вынос в дюймах.</li>
-<li>Написано "Vapor Barrier / Tyvek", хотя барьер в спецификации другой.</li>
+<li>В B строки <code>Vapor Barrier</code> записан Tyvek, хотя барьер в спецификации другой; или <code>Vapor Barrier</code> оставлен при Zip.</li>
+<li>При Zip забыта строка <code>Tape</code>.</li>
 <li>При top chord bearing забыто blocking между фермами вместо ribbon.</li>
 </ul>
 <p>Все ошибки: <a href="../../../../start/common-mistakes/#sheathing">common-mistakes</a>.</p>
@@ -7381,6 +7406,10 @@
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  trussheel 1.25     Line  236 LFT   (eave-стороны main)
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Takeoffs/Grge/trussheel/
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  trussheel 0.66     Line   84 LFT
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Truss Heel (Main, стены с Zip): G = 236 x 1.25 = 295 SQ FT
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Truss Heel Sheathing   7/16&quot; Zip     11   4x8    295 / 32 x 1.1 = 10.1
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Tape                   Zip Tape     130   LFT    295 x 0.4 x 1.1 = 129.8
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

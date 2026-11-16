@@ -7382,12 +7382,18 @@ CH/H studs are a separate topic: <a href="../shaft/">Shaft Walls</a>.</p>
 <td>same</td>
 <td><code>Deflection Tracks (1) top</code></td>
 <td>LFT</td>
-<td><code>LFT x 1.1</code>; only on walls that go up to the floor framing</td>
+<td><code>LFT x 1.1</code>; on walls that run up to the structure above</td>
+</tr>
+<tr>
+<td>same</td>
+<td><code>Tracks (1) top</code></td>
+<td>LFT</td>
+<td><code>LFT x 1.1</code>; plain top track on walls that stop short of the structure (under a dropped soffit, partial height)</td>
 </tr>
 <tr>
 <td>same</td>
 <td><code>Mtl Studs 16" o.c.</code> <code>6" 18ga mtl</code></td>
-<td>pcs</td>
+<td>pieces, D = stud height</td>
 <td><code>LFT x 1.1</code> (16") or <code>x 0.625</code> (24")</td>
 </tr>
 <tr>
@@ -7398,18 +7404,21 @@ CH/H studs are a separate topic: <a href="../shaft/">Shaft Walls</a>.</p>
 </tr>
 <tr>
 <td>same</td>
-<td><code>Wall Sheathing</code>, <code>Air / Water Barrier</code>, <code>Insulation</code>, <code>Gypsum 5/8" Type X</code>, <code>Bracing</code>, <code>Blocking</code></td>
+<td><code>Wall Sheathing</code> (including <code>5/8" Type X</code> gypsum), <code>Vapor Barrier</code> (B = the barrier product), <code>Insulation</code> (continuous only), <code>Bracing Ext Walls</code> (pieces), <code>Blocking</code></td>
 <td></td>
 <td>as for wood</td>
 </tr>
 <tr>
 <td><code>2x4</code> jamb in a metal wall</td>
-<td><code>Window Jamb</code> <code>2x4</code></td>
+<td><code>Jambs (2)</code> <code>2x4</code> (the number in brackets = boards per side per the detail)</td>
 <td>LFT</td>
-<td>wood in a metal wall is normal</td>
+<td><code>(W + 2H) x number of doors x 2 x 1.1</code>; wood in a metal wall is normal. Window and storefront jambs go on a <code>Jambs</code> row in Wall Materials</td>
 </tr>
 </tbody>
 </table>
+<p>Every wall has one top track: either <code>Deflection Tracks (1) top</code> or
+<code>Tracks (1) top</code>. Check: top track LFT = bottom track LFT. Row order in the
+block: <code>Tracks (1) btm</code>, the top track, <code>Mtl Studs</code>.</p>
 <p>For a CFS building the fasteners are metal. Group by stud size, floor and
 wall type (ext, int, dem, corr). If the gauge is given on the plans, it goes into the
 takeoff spec; if not, add a note and check against the structural sheets.</p>
@@ -7427,7 +7436,7 @@ doubled on wide openings (<code>(2)2x4</code> or a doubled stud); a head
 track on top, extra studs at the sides. A box header bears on the doubled jamb studs.</p>
 </details>
 <figure>
-<p><img alt="Deflection head detail at a steel beam" src="../../../../../assets/images/walls/metal-deflection-head.png" />
+<p><img alt="Deflection head detail at a steel beam" src="../../../../../assets/images/walls/metal-deflection-head.png" width="600" />
   </p>
 <figcaption>Deflection head where the wall meets a steel beam: fireproofing, fire sealant, two layers of 5/8" Type X. The deflection track is a separate row from the bottom track.</figcaption>
 </figure>
@@ -7435,7 +7444,8 @@ track on top, extra studs at the sides. A box header bears on the doubled jamb s
 <ul>
 <li>Only tracks and studs counted for a metal wall, without sheathing, WRB, insulation, gypsum.</li>
 <li>Metal by others, but no <code>Metal Studs by others</code> note: neither a row nor a note.</li>
-<li>Deflection track used on a wall that does not reach the floor framing.</li>
+<li>Deflection track used on a wall that does not reach the floor framing: that wall gets a plain <code>Tracks (1) top</code>.</li>
+<li>No top track written at all: only <code>Tracks (1) btm</code> is there.</li>
 <li>Gauge made up, or <code>24" o.c.</code> copied when the spec says <code>16"</code>.</li>
 <li>Height under a steel beam not split into 6" and 3 1/2" pieces.</li>
 <li>Wood jamb in a metal wall missed.</li>

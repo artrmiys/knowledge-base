@@ -7282,7 +7282,7 @@
 <figure>
 <p><img alt="Подписанный узел: bottom plate, sill plate, anchor bolt, foundation wall" src="../../../../assets/images/confluence/confluence-155.png" />
   </p>
-<figcaption>Bottom plate стены сверху, sill plate (красным) на бетоне, anchor bolt сквозь неё, foundation wall.</figcaption>
+<figcaption>Узел без перекрытия (стена прямо на фундаменте, как у garage): bottom plate стены сверху, sill plate (красным) на бетоне, anchor bolt сквозь неё, foundation wall. С перекрытием между ними rim и joists, см. текст выше.</figcaption>
 </figure>
 <h2 id="_2">Где искать на чертежах<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
@@ -7302,8 +7302,8 @@
 <td>Сечение и число досок, P.T., sill sealer, termite shield</td>
 </tr>
 <tr>
-<td>Anchor bolt schedule, SW schedule, general notes</td>
-<td>Диаметр, embed и шаг анкеров, размер washers</td>
+<td>Sill anchorage schedule, SW schedule, S general notes</td>
+<td>Диаметр, embed и шаг анкеров, модель washers</td>
 </tr>
 <tr>
 <td>Планы 1-го этажа</td>
@@ -7325,20 +7325,20 @@
    разных сечений.</li>
 <li>Длина линии = длина применения узла, не длина лидера на детали.</li>
 <li>Из той же длины считаются sill sealer, termite shield, anchor bolts и
-   washers: эти три позиции на плане <strong>не показаны</strong>, их легко забыть.</li>
+   washers: эти позиции на плане <strong>не показаны</strong>, их легко забыть.</li>
 <li>Проёмы (гаражные ворота) вычитай один раз, по своему этажу.</li>
 </ol>
 <div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-160.png">
-    <img src="../../../../assets/images/confluence/confluence-160.png" alt="Sill plate на sill sealer с анкерным болтом" loading="lazy">
+  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-160.jpg">
+    <img src="../../../../assets/images/confluence/confluence-160.jpg" alt="Sill plate на sill sealer с анкерным болтом" loading="lazy">
     <div class="kb-gallery__caption">P.T. sill plate на розовом sill sealer, анкерный болт выходит из плиты. Так это выглядит на объекте.</div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-156.png">
-    <img src="../../../../assets/images/confluence/confluence-156.png" alt="Termite shield с нахлёстом и анкером" loading="lazy">
+  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-156.jpg">
+    <img src="../../../../assets/images/confluence/confluence-156.jpg" alt="Termite shield с нахлёстом и анкером" loading="lazy">
     <div class="kb-gallery__caption">Termite shield: нахлёст 1 ft на стыках, bead of caulk по краю, анкер сквозь лист.</div>
   </a>
-  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-170.png">
-    <img src="../../../../assets/images/confluence/confluence-170.png" alt="Sill plate gasket под sill plate" loading="lazy">
+  <a class="kb-gallery__item" href="../../../../assets/images/confluence/confluence-170.jpg">
+    <img src="../../../../assets/images/confluence/confluence-170.jpg" alt="Sill plate gasket под sill plate" loading="lazy">
     <div class="kb-gallery__caption">Sill sealer (gasket) между бетоном и sill plate, anchor bolts, joists и subfloor сверху.</div>
   </a>
 </div>
@@ -7364,31 +7364,31 @@
 </tr>
 <tr>
 <td>то же</td>
-<td><code>Sill Sealer</code></td>
-<td><code>6"</code> (реже 4", 8")</td>
+<td><code>Sill Sealer at ext. found</code></td>
+<td><code>6"</code> по ширине sill (2x4 = <code>4"</code>, шире 2x6 = <code>10"</code>)</td>
+<td><code>50' rolls</code></td>
+<td><code>=ОКРВВЕРХ(LFT/50;1)</code></td>
+</tr>
+<tr>
+<td>то же</td>
+<td><code>Termite shield</code></td>
+<td><code>Copper</code>, в E <code>optional</code></td>
 <td>LFT</td>
-<td><code>LFT</code></td>
+<td><code>=ОКРВВЕРХ(LFT;50)</code></td>
 </tr>
 <tr>
 <td>то же</td>
-<td><code>Termite Shield</code></td>
-<td><code>Copper</code></td>
-<td>LFT</td>
-<td><code>LFT x 1.1</code> (нахлёст 1 ft)</td>
-</tr>
-<tr>
-<td>то же</td>
-<td><code>Anchor Bolts 48" o.c.</code></td>
-<td>по detail / SW schedule</td>
+<td><code>Anchor Bolts 48" o.c.</code> (шаг печатается из H)</td>
+<td>размер и embed из S notes или anchorage schedule</td>
 <td>pcs</td>
-<td><code>LFT / шаг</code>, до чётного</td>
+<td><code>=ОКРВВЕРХ(LFT*12/H*1.1;2)</code></td>
 </tr>
 <tr>
 <td>то же</td>
-<td><code>Washers</code>, <code>Nuts</code></td>
-<td>размер по detail</td>
+<td><code>Washer 48" o.c.</code></td>
+<td><code>3x3 Square</code> или модель из schedule (<code>BP 5/8-3</code>, <code>BPS 1/2-3</code>)</td>
 <td>pcs</td>
-<td>одна на болт</td>
+<td>то же число, что у анкеров</td>
 </tr>
 <tr>
 <td><code>4x10 P.T. Sill grge</code></td>
@@ -7399,24 +7399,48 @@
 </tr>
 </tbody>
 </table>
-<p>Размер анкера, embed и washers - по своей детали, а не по шаблону:
-<a href="../../../deck/anchor-bolts/">Anchor Bolts</a>. Шаг анкеров разносится по
-участкам (SW 1-го этажа к бетону имеют свой шаг), а не одним шагом на всё
-здание. Species sill plate неясен - видимая нота, а не тихий выбор SPF.</p>
+<p>Анкеры:</p>
+<ul>
+<li><strong>Шаг, размер и embed берутся из S notes или sill anchorage schedule
+  каждого проекта.</strong> Шаг стоит в H и сам печатается в подписи строки:
+  H = 48 даёт <code>Anchor Bolts 48" o.c.</code>, H = 32 даёт <code>Anchor Bolts 32" o.c.</code>.
+  <code>48"</code> в таблице выше - пример, не правило.</li>
+<li><strong>На чертежах ничего нет:</strong> B <code>1/2" Ø emb.</code>, шаг <code>36" o.c.</code>, в E <code>assumed</code>
+  и нота <code>Note: Anchor Bolts 1/2" Ø @ 36" o.c. assumed; verify</code>. Строка
+  шаблона <code>5/8" Ø x 6" emb. Titen HD</code> с шагом 48" - заготовка, а не дефолт:
+  не оставляй её без проверки.</li>
+<li>Формула всегда с <code>x 1.1</code>: 318 LFT при шаге 48" = <code>318 x 12 / 48 x 1.1 = 87.5</code>,
+  в книге 88.</li>
+<li>Обычно две строки: <code>for Ext Walls</code> и <code>for Corr and Demising</code> (слово в E).</li>
+<li>Shear walls с более частым шагом получают свои строки
+  <code>SW Anchor Bolts 16" o.c.</code> по SW schedule; их длина вычитается из общей
+  строки, а шайбы идут одной строкой <code>Washers</code> суммой по группе.</li>
+<li>Titen HD - винтовой анкер, гайки у него нет; строки <code>Nuts</code> в блоке
+  Foundation Walls нет.</li>
+</ul>
+<p>Подробности и дефолт: <a href="../../../deck/anchor-bolts/">Anchor Bolts</a>. Species sill
+plate неясен - видимая нота, а не тихий выбор SPF.</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Sill sealer и termite shield нет в DFL: на плане их не видно, но на бетоне они почти всегда.</li>
 <li>P.T. plate на деревянном перекрытии: P.T. только на бетоне и кладке.</li>
 <li>Двойная sill или двойная btm plate везде, хотя деталь даёт её на части этажей.</li>
 <li>Один шаг анкеров на всё здание; wedge anchor заменён на Titen HD без основания.</li>
+<li>Шаг 48" оставлен из шаблона, хотя S notes дают другой, или шага на чертежах нет (тогда 36" и <code>assumed</code>).</li>
 <li>Ворота гаража не вычтены из sill, sill sealer и анкеров, или вычтены дважды.</li>
-<li>Washers записаны универсальными 3x3 без проверки таблицы.</li>
+<li>Washers записаны <code>3x3 Square</code>, хотя schedule называет модель plate washer.</li>
 </ul>
 <p>Разбор с примерами: <a href="../../../../start/common-mistakes/#walls">все ошибки по стенам</a>.</p>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>framing/1st floor framing/details/
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  2x6 P.T. sill          Line, 318.0 LFT    Notes: 2/S501, dbl sill at stair
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  4x10 P.T. Sill grge    Line, 64.5 LFT     Notes: 5/S501
+</span></code></pre></div>
+<p>Строки DFL для 318 LFT, по S notes анкеры <code>5/8" Ø Titen HD 4" emb.</code> через 48":</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Sill Sealer at ext. found   6&quot;                           7   50&#39; rolls   318 / 50 = 6.4
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Termite shield              Copper                     350   LFT         optional
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Anchor Bolts 48&quot; o.c.       5/8&quot; Ø Titen HD 4&quot; emb.     88   pcs         318 x 12 / 48 x 1.1 = 87.5
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Washer 48&quot; o.c.             3x3 Square                  88   pcs
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

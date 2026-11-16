@@ -7267,9 +7267,9 @@
 
 <h1 id="balcony-sqft">Balcony SQFT (площадь балкона)<a class="headerlink" href="#balcony-sqft" title="Прямая ссылка на раздел">&para;</a></h1>
 <figure>
-<p><img alt="Слои балкона: каркас, sleepers, мембрана, настил" src="../../../assets/images/sqfts/balcony.svg" />
+<p><img alt="План: каждый балкон свой полигон и своя точка" src="../../../assets/images/sqfts/balcony.svg" />
   </p>
-<figcaption>Балкон: каркас, sleepers, membrane, decking. Площадь - Area <code>blcny</code>; типовые балконы размечаются блоками с точкой на каждый экземпляр.</figcaption>
+<figcaption>Каждый балкон обводится своим полигоном, перемычкой их не соединяют. Площадь - Area <code>blcny</code>; типовые балконы размечаются блоками с точкой на каждый экземпляр.</figcaption>
 </figure>
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Balcony - приподнятая наружная площадка на консоли или на своём каркасе,
@@ -7338,20 +7338,20 @@
 <td><code>Decking</code></td>
 <td><code>2x6 DuxxBak</code> по spec</td>
 <td><code>SQ FT</code></td>
-<td><code>SQFT x 1.1 x units</code></td>
+<td><code>=ОКРВВЕРХ(W*D*units*1.1;10)</code>: площадь одного балкона x units x 1.1; меньше 50 - вверх до 2</td>
 </tr>
 <tr>
-<td>Line по краю</td>
-<td><code>Posts at Rails 4x4 P.T.</code></td>
-<td>2 на балкон</td>
-<td><code>pcs</code></td>
-<td><code>=2*G</code></td>
+<td><code>Balcony blocks/#4 Balcony ...</code>, точка на балкон</td>
+<td><code>Posts at Rails</code></td>
+<td><code>4x4 P.T.</code>, 2 на балкон</td>
+<td><code>4</code> (длина поста)</td>
+<td><code>=2*units</code></td>
 </tr>
 <tr>
-<td>та же линия</td>
-<td><code>Rails (top &amp; bottom)</code>, <code>Balustrades</code>, <code>Cap Rail</code> или composite система</td>
+<td>Line по краю балкона</td>
+<td><code>Rails (top &amp; bottom)</code>, <code>Balustrades</code>, <code>Cap Rail</code> или composite система (<code>Rail sections</code>)</td>
 <td>по детали</td>
-<td><code>LFT</code>, <code>pcs</code></td>
+<td><code>LFT</code>, <code>pcs</code>, <code>unit</code></td>
 <td><a href="../../deck/railing/">Railing</a></td>
 </tr>
 </tbody>
@@ -7359,6 +7359,7 @@
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Блок балкона без своего множителя units (900 SF вместо 60).</li>
+<li>Decking без запаса 1.1 (<code>W*D*G</code>).</li>
 <li>Балконы соединены перемычкой в один полигон.</li>
 <li>Sheathing добавлен там, где деталь даёт decking без листа.</li>
 <li>Railing по элементам и как система одновременно.</li>
@@ -7367,12 +7368,12 @@
 <p>Все ошибки по площадям: <a href="../../../start/common-mistakes/#sqft">common-mistakes</a>.</p>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/sqfts/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  blcny               Area   58 SF
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  blcny               Area   707 SF   (7 полигонов по 101 SF)
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Takeoffs/Main/Balcony blocks/
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  #4 Balcony 12.9x7.83 (2GZO x7)   Count 7
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Balcony #4
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Decking        2x6 DuxxBak     447   SQ FT   58 x 7 x 1.1
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Posts at Rails 4x4 P.T.         14   pcs
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Decking        2x6 DuxxBak     780   SQ FT   12.9 x 7.83 x 7 x 1.1 = 777.8, вверх до 10
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Posts at Rails 4x4 P.T.         14   4       2 x 7 = 14
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

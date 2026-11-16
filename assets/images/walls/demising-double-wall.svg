@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-labelledby="t d">
-  <title id="t">Double demising wall in section: two stud frames with a gap, gypsum both sides, draft stop above</title>
-  <desc id="d">Vertical section: two 2x4 stud walls with a 1 inch gap, two layers of gypsum on each outer face, sound batt in cavities, floor joists of each unit bearing on their own wall with solid blocking over the plates, a 1/2 inch OSB draft stop in the floor cavity over the gap, subfloor and the upper walls continuing.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 656" role="img" aria-labelledby="t d">
+  <title id="t">Double demising wall: section and how it is measured</title>
+  <desc id="d">Section through a double demising wall at a floor: two 2x4 frames with a gap, gypsum both sides, draft stop in the floor depth, solid blocking, joists of each unit. Plan inset: one Line along the wall axis named dem (2) 2x4 9.09.</desc>
   <defs>
     <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
     <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
     <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
-    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" markerUnits="userSpaceOnUse"><circle cx="4" cy="4" r="3" fill="#2e7d32"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
     <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
     <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
     <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
@@ -14,89 +14,106 @@
     <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
     <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
     <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
-    <pattern id="gyp" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#eef0f2"/></pattern>
     <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
     <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
     <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
-    
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
     <style>
-      .ln{fill:none;stroke:#3a3f44;stroke-width:1.6;stroke-linejoin:round}
-      .thin{fill:none;stroke:#3a3f44;stroke-width:1.1}
       .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
       .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
       .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
-      .small{font:400 12.5px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
       .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
-      .mono2{font:500 13px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
-      .side{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
-      .lead{stroke:#2e7d32;stroke-width:1.5;fill:none;marker-end:url(#arr)}
-      .leadInk{stroke:#3a3f44;stroke-width:1.3;fill:none;marker-end:url(#arrInk)}
-      .leadRed{stroke:#c62828;stroke-width:1.5;fill:none;marker-end:url(#arrRed)}
-      .dim{stroke:#3a3f44;stroke-width:1.1;fill:none;marker-start:url(#tick);marker-end:url(#tick)}
-      .dimt{font:500 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
-      .numc{fill:#2e7d32;stroke:#fff;stroke-width:1.5}
-      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
-      .h{font:700 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
       .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
       .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
-      .cap{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
     </style>
   </defs>
-  <rect x="0.5" y="0.5" width="999" height="639" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
-<rect x="380" y="344" width="28" height="250" fill="url(#batt)" stroke="#caa64a" stroke-width="1" />
-<rect x="380" y="344" width="28" height="250" fill="none" stroke="#8a6a3f" stroke-width="1.1" stroke-dasharray="4 3"/>
-<rect x="380" y="320" width="28" height="12" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3" />
-<rect x="380" y="332" width="28" height="12" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3" />
-<rect x="416" y="344" width="28" height="250" fill="url(#batt)" stroke="#caa64a" stroke-width="1" />
-<rect x="416" y="344" width="28" height="250" fill="none" stroke="#8a6a3f" stroke-width="1.1" stroke-dasharray="4 3"/>
-<rect x="416" y="320" width="28" height="12" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3" />
-<rect x="416" y="332" width="28" height="12" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3" />
-<rect x="380" y="90" width="28" height="132" fill="url(#batt)" stroke="#caa64a" stroke-width="1" />
-<rect x="380" y="90" width="28" height="132" fill="none" stroke="#8a6a3f" stroke-width="1.1" stroke-dasharray="4 3"/>
-<rect x="380" y="222" width="28" height="12" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3" />
-<rect x="416" y="90" width="28" height="132" fill="url(#batt)" stroke="#caa64a" stroke-width="1" />
-<rect x="416" y="90" width="28" height="132" fill="none" stroke="#8a6a3f" stroke-width="1.1" stroke-dasharray="4 3"/>
-<rect x="416" y="222" width="28" height="12" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3" />
-<rect x="200" y="246" width="208" height="74" fill="#f4e9d7" stroke="#8a6a3f" stroke-width="1.0" stroke-dasharray="4 3"/>
-<rect x="416" y="246" width="184" height="74" fill="#f4e9d7" stroke="#8a6a3f" stroke-width="1.0" stroke-dasharray="4 3"/>
-<rect x="380" y="246" width="28" height="74" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.4" />
-<rect x="416" y="246" width="28" height="74" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.4" />
-<rect x="409" y="234" width="6" height="86" fill="url(#sheath)" stroke="#2e7d32" stroke-width="1.8" />
-<rect x="200" y="234" width="208" height="12" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.2" />
-<rect x="416" y="234" width="184" height="12" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.2" />
-<path d="M196,232 l6,8 l-6,8 l6,8 l-6,8 l6,8 l-6,8 l6,8 l-6,8 l6,8 l-6,8 l6,8" fill="#fff" stroke="#3a3f44" stroke-width="1"/><path d="M596,232 l6,8 l-6,8 l6,8 l-6,8 l6,8 l-6,8 l6,8 l-6,8 l6,8 l-6,8 l6,8" fill="#fff" stroke="#3a3f44" stroke-width="1"/><rect x="368" y="320" width="6" height="274" fill="#eef0f2" stroke="#9aa4ad" stroke-width="1.0" />
-<rect x="374" y="320" width="6" height="274" fill="#eef0f2" stroke="#9aa4ad" stroke-width="1.0" />
-<rect x="368" y="90" width="6" height="144" fill="#eef0f2" stroke="#9aa4ad" stroke-width="1.0" />
-<rect x="374" y="90" width="6" height="144" fill="#eef0f2" stroke="#9aa4ad" stroke-width="1.0" />
-<rect x="444" y="320" width="6" height="274" fill="#eef0f2" stroke="#9aa4ad" stroke-width="1.0" />
-<rect x="450" y="320" width="6" height="274" fill="#eef0f2" stroke="#9aa4ad" stroke-width="1.0" />
-<rect x="444" y="90" width="6" height="144" fill="#eef0f2" stroke="#9aa4ad" stroke-width="1.0" />
-<rect x="450" y="90" width="6" height="144" fill="#eef0f2" stroke="#9aa4ad" stroke-width="1.0" />
-<path d="M364,90 l8,-6 l8,6 l8,-6 l8,6 l8,-6 l8,6 l8,-6 l8,6 l8,-6 l8,6 l8,-6 l8,6" fill="none" stroke="#3a3f44" stroke-width="1"/><path d="M364,574 l8,-6 l8,6 l8,-6 l8,6 l8,-6 l8,6 l8,-6 l8,6 l8,-6 l8,6 l8,-6 l8,6" fill="none" stroke="#3a3f44" stroke-width="1"/><text class="side" x="300" y="600" >UNIT A</text>
-<text class="side" x="470" y="600" >UNIT B</text>
-<line class="lead" x1="628" y1="140" x2="458" y2="150"/>
-<text class="lab2" x="640" y="136" >Верхний этаж: те же два каркаса</text>
-<text class="small" x="640" y="154" >своя линия на каждом этаже</text>
-<line class="lead" x1="628" y1="208" x2="560" y2="240"/>
-<text class="note" x="640" y="204" >Subfloor юнита</text>
-<line class="lead" x1="628" y1="262" x2="416" y2="262"/>
-<text class="lab" x="640" y="258" >Draft stop 1/2" OSB</text>
-<text class="mono" x="640" y="277" >Draft Stop | 1/2" OSB | SQ FT</text>
-<text class="small" x="640" y="295" >в перекрытии над стеной, по всей длине</text>
-<line class="lead" x1="628" y1="340" x2="446" y2="300"/>
-<text class="lab2" x="640" y="336" >Solid blocking у концов joists</text>
-<text class="mono" x="640" y="355" >Blocking | 2x10 | LFT (на каждой стене)</text>
-<line class="lead" x1="628" y1="410" x2="560" y2="300"/>
-<text class="note" x="640" y="406" >Joists каждого юнита на своей стене</text>
-<line class="lead" x1="330" y1="400" x2="378" y2="400"/>
-<text class="lab" x="60" y="396" >Два каркаса 2x4, зазор 1"</text>
-<text class="mono" x="60" y="415" >dem 2x4 9.09 (x2) | Line на каждый</text>
-<line class="lead" x1="330" y1="470" x2="372" y2="470"/>
-<text class="lab2" x="60" y="466" >Gypsum 2 слоя с каждой стороны</text>
-<text class="red" x="60" y="485" >by others, не считаем</text>
-<line class="lead" x1="330" y1="530" x2="394" y2="530"/>
-<text class="lab2" x="60" y="526" >Sound batt в полости</text>
-<text class="red" x="60" y="545" >не считаем во frame-scope</text>
-<text class="note" x="60" y="56" >Каждый каркас - своя линия в дереве и свои строки DFL: studs, plates, blocking.</text>
-<text class="note" x="60" y="76" >Двойная стена = два каркаса только если на плане два каркаса.</text>
+<rect x="0.5" y="0.5" width="879" height="655" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<rect x="210" y="50" width="40" height="120" fill="url(#batt)" stroke="#caa64a" stroke-width="1"/>
+<rect x="210" y="50" width="40" height="120" fill="none" stroke="#3a3f44" stroke-width="1.4"/>
+<rect x="210" y="170" width="40" height="10" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3"/>
+<rect x="264" y="50" width="40" height="120" fill="url(#batt)" stroke="#caa64a" stroke-width="1"/>
+<rect x="264" y="50" width="40" height="120" fill="none" stroke="#3a3f44" stroke-width="1.4"/>
+<rect x="264" y="170" width="40" height="10" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3"/>
+<rect x="196" y="50" width="7" height="130" fill="#eef0f2" stroke="#8a98a5" stroke-width="1"/>
+<rect x="203" y="50" width="7" height="130" fill="#eef0f2" stroke="#8a98a5" stroke-width="1"/>
+<rect x="304" y="50" width="7" height="130" fill="#eef0f2" stroke="#8a98a5" stroke-width="1"/>
+<rect x="311" y="50" width="7" height="130" fill="#eef0f2" stroke="#8a98a5" stroke-width="1"/>
+<rect x="70" y="180" width="180" height="10" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.2"/>
+<rect x="264" y="180" width="186" height="10" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.2"/>
+<rect x="70" y="190" width="140" height="80" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.3"/>
+<rect x="304" y="190" width="146" height="80" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.3"/>
+<rect x="210" y="190" width="40" height="80" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.4"/>
+<rect x="264" y="190" width="40" height="80" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.4"/>
+<rect x="254.5" y="180" width="5" height="90" fill="#2e7d32" stroke="#1b5e20" stroke-width="1"/>
+<rect x="210" y="270" width="40" height="10" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3"/>
+<rect x="210" y="280" width="40" height="10" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3"/>
+<rect x="210" y="290" width="40" height="170" fill="url(#batt)" stroke="#caa64a" stroke-width="1"/>
+<rect x="210" y="290" width="40" height="170" fill="none" stroke="#3a3f44" stroke-width="1.4"/>
+<rect x="264" y="270" width="40" height="10" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3"/>
+<rect x="264" y="280" width="40" height="10" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.3"/>
+<rect x="264" y="290" width="40" height="170" fill="url(#batt)" stroke="#caa64a" stroke-width="1"/>
+<rect x="264" y="290" width="40" height="170" fill="none" stroke="#3a3f44" stroke-width="1.4"/>
+<rect x="196" y="290" width="7" height="170" fill="#eef0f2" stroke="#8a98a5" stroke-width="1"/>
+<rect x="203" y="290" width="7" height="170" fill="#eef0f2" stroke="#8a98a5" stroke-width="1"/>
+<rect x="304" y="290" width="7" height="170" fill="#eef0f2" stroke="#8a98a5" stroke-width="1"/>
+<rect x="311" y="290" width="7" height="170" fill="#eef0f2" stroke="#8a98a5" stroke-width="1"/>
+<path d="M190,460 l12,-5 l12,10 l12,-10 l12,10 l12,-10 l12,10 l12,-10 l12,10 l12,-10 l12,10 l12,-5" fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="round"/>
+<path d="M190,460 l12,-5 l12,10 l12,-10 l12,10 l12,-10 l12,10 l12,-10 l12,10 l12,-10 l12,10 l12,-5" fill="none" stroke="#3a3f44" stroke-width="1.1" stroke-linejoin="round"/>
+<text class="side" x="150" y="400" text-anchor="middle">UNIT A</text>
+<text class="side" x="366" y="400" text-anchor="middle">UNIT B</text>
+<line x1="250" y1="30" x2="264" y2="30" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="dimt" x="257" y="22" text-anchor="middle">gap 1"</text>
+<circle cx="230" cy="370" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="230" y="374.5">1</text>
+<circle cx="284" cy="370" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="284" y="374.5">1</text>
+<circle cx="257" cy="214" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="257" y="218.5">2</text>
+<circle cx="230" cy="250" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="230" y="254.5">3</text>
+<circle cx="284" cy="250" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="284" y="254.5">3</text>
+<circle cx="400" cy="185" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="400" y="189.5">4</text>
+<circle cx="120" cy="230" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="120" y="234.5">5</text>
+<circle cx="199" cy="330" r="11" fill="#c62828" stroke="#fff" stroke-width="1.5"/><text class="numt" x="199" y="334.5">6</text>
+<circle cx="284" cy="110" r="11" fill="#c62828" stroke="#fff" stroke-width="1.5"/><text class="numt" x="284" y="114.5">7</text>
+<circle cx="520" cy="52" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="520" y="56.5">1</text>
+<text class="lab2" x="540" y="57">Два каркаса 2x4, зазор 1"</text>
+<text class="mono2" x="540" y="75">dem (2) 2x4 9.09 | Line</text>
+<text class="mono2" x="540" y="92">Studs / Plates Demising, x 2</text>
+<circle cx="520" cy="114" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="520" y="118.5">2</text>
+<text class="lab2" x="540" y="119">Draft stop в перекрытии</text>
+<text class="mono2" x="540" y="137">Draft Stop | SQ FT</text>
+<text class="mono2" x="540" y="154">LFT стены x глубина перекрытия</text>
+<circle cx="520" cy="176" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="520" y="180.5">3</text>
+<text class="lab2" x="540" y="181">Solid blocking у концов joists</text>
+<text class="note" x="540" y="199">Blocking, на каждой стене</text>
+<circle cx="520" cy="238" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="520" y="242.5">4</text>
+<text class="lab2" x="540" y="243">Subfloor юнита</text>
+<text class="note" x="540" y="261">страница Subfloor</text>
+<circle cx="520" cy="300" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="520" y="304.5">5</text>
+<text class="lab2" x="540" y="305">Joists каждого юнита на своей стене</text>
+<text class="note" x="540" y="323">страница Joist</text>
+<circle cx="520" cy="362" r="11" fill="#c62828" stroke="#fff" stroke-width="1.5"/><text class="numt" x="520" y="366.5">6</text>
+<text class="lab2" x="540" y="367">Gypsum 2 слоя с каждой стороны</text>
+<text class="red" x="540" y="385">by others, не считаем</text>
+<circle cx="520" cy="424" r="11" fill="#c62828" stroke="#fff" stroke-width="1.5"/><text class="numt" x="520" y="428.5">7</text>
+<text class="lab2" x="540" y="429">Sound batt в полости</text>
+<text class="red" x="540" y="447">by others, не считаем</text>
+<line x1="40" y1="496" x2="840" y2="496" stroke="#dfe3e8" stroke-width="1.2"/>
+<text class="h" x="40" y="526">В плане: одна Line по оси двойной стены</text>
+<rect x="40" y="548" width="360" height="14" fill="url(#hatchGrey)" stroke="#3a3f44" stroke-width="1.2"/>
+<rect x="40" y="568" width="360" height="14" fill="url(#hatchGrey)" stroke="#3a3f44" stroke-width="1.2"/>
+<line x1="40" y1="565" x2="400" y2="565" stroke="#2e7d32" stroke-width="3" stroke-dasharray="10 6"/>
+<circle cx="220" cy="565" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="220" y="569.5">1</text>
+<text class="mono" x="430" y="556">dem (2) 2x4 9.09</text>
+<text class="note" x="580" y="556">одинаковые каркасы: одна линия,</text>
+<text class="note" x="430" y="575">экспорт удваивает длину. Не две линии и не две позиции.</text>
+<text class="note" x="40" y="612">Каркасы разные: тоже одна линия, в имени оба размера и обе высоты:</text>
+<text class="mono" x="40" y="632">dem 2x4 2x6 9.09 11.16</text>
 </svg>

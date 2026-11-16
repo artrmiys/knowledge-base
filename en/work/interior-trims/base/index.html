@@ -7382,24 +7382,25 @@ base can be traced as a separate item to check the exclusion.</p>
 <td><code>trims/baseboard 1st</code></td>
 <td><code>Baseboard</code></td>
 <td>LFT</td>
-<td><code>=42+38+27+...</code> all measured runs visible</td>
+<td><code>=CEILING(G*1.1,10)</code>; G holds the sum of the runs <code>=42+38+27+...</code>, every addend visible</td>
 </tr>
 <tr>
 <td><code>trims/baseboard corridor</code></td>
-<td><code>Baseboard corridor</code></td>
+<td><code>Baseboard Corridor</code></td>
 <td>LFT</td>
-<td>separate from units</td>
+<td>same formula, separate from units</td>
 </tr>
 <tr>
 <td></td>
-<td><code>Base</code> material <code>TBD</code></td>
+<td><code>Baseboard</code>, <code>TBD Base</code> in B</td>
 <td>LFT</td>
-<td>note, if the schedule does not set it</td>
+<td>when the schedule gives no profile: a note, do not pick a product</td>
 </tr>
 </tbody>
 </table>
-<p>Every measured value goes into the formula: the checker must see
-where the number came from, not just the total.</p>
+<p>The 1.1 waste and the round-up to 10 are in the template formula; do not add them
+by hand a second time. Every measured value goes into G as a sum: the checker must
+see where the number came from, not just the total.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Perimeter run through the kitchen cabinets and garage.</li>
@@ -7411,8 +7412,10 @@ where the number came from, not just the total.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/trims/baseboard 1st   Line   412 LFT (7 rooms)
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Baseboard   Wd 1x6 (per schedule)   412  LFT   =58+44+71+39+66+52+82   A701
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Baseboard   TBD                     0    LFT   Note: Base not specified in room schedule
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Baseboard   Wd 1x6 Base   460  LFT   =CEILING(G*1.1,10)   G =58+44+71+39+66+52+82   A701
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Baseboard   TBD Base      0    LFT   Note: Base not specified in room schedule
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>G = 412; 412 x 1.1 = 453.2, rounded up to 10 = 460 LFT
 </span></code></pre></div>
 <details class="kb-figures kb-figures--rows">
   <summary>Show 5 archived cards with illustrations</summary>

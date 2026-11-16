@@ -7251,7 +7251,7 @@ frame-scope внутренняя отделка не считается.</p>
 <figure>
 <p><img alt="Baseboard and crown perimeter example" src="../../../assets/images/trims/int-trims-02.png" />
   </p>
-<figcaption>Baseboard и crown это LFT по периметру комнат. Разрывы (шкафы кухни, garage, лестница) должны быть намеренными и видимыми в формуле.</figcaption>
+<figcaption>Старый кадр замера: периметр комнат линией по стенам (<code>Периметр</code>, 98,64 ft), отдельная линия на каждую комнату. Baseboard и crown это LFT по такому периметру; разрывы (шкафы кухни, garage, лестница) должны быть намеренными и видимыми в формуле.</figcaption>
 </figure>
 <h2 id="_1">Что входит и в каком порядке<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <div class="grid cards">
@@ -7286,7 +7286,7 @@ garage, tile base).</p>
 <li>
 <p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6zm14 11H6V8h12z"/></svg></span> <strong>Casing</strong></p>
 <hr />
-<p>Наличники дверей и окон изнутри: формула от списка проёмов, jamb.</p>
+<p>Наличники дверей и окон изнутри: формула от списка проёмов, две стороны и waste.</p>
 <p><a href="../casing/">Casing</a></p>
 </li>
 </ul>
@@ -7302,7 +7302,8 @@ garage, tile base).</p>
    двери, с намеренными разрывами. Unit base отдельно от corridors и lobby.</li>
 <li>Составь список дверей и cased openings по этажам, потом casing
    формулой от списка.</li>
-<li>Trim не указан: пиши <code>not specified</code>, а не угадывай продукт.</li>
+<li>Trim не указан: в B <code>TBD Base</code>, <code>TBD Casing</code>, <code>TBD Crowns</code> и нота, а не
+   угаданный продукт.</li>
 </ol>
 <h2 id="_3">Основные правила<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
@@ -7329,25 +7330,25 @@ garage, tile base).</p>
 <td><code>trims/baseboard 1st</code></td>
 <td><code>Baseboard</code></td>
 <td>LFT</td>
-<td>периметр комнат с отделкой, формула с видимыми слагаемыми</td>
+<td>периметр комнат с отделкой: в G сумма с видимыми слагаемыми, <code>=CEILING(G*1.1,10)</code></td>
 </tr>
 <tr>
 <td><code>trims/crown 1st</code></td>
 <td><code>Crowns</code></td>
 <td>LFT</td>
-<td>только комнаты с crown по schedule</td>
+<td>только комнаты с crown по schedule, <code>=CEILING(G*1.1,10)</code></td>
 </tr>
 <tr>
 <td><code>openings</code>-список</td>
 <td><code>Int. Doors</code>, <code>Cased Openings</code></td>
-<td>pcs</td>
-<td>по этажам, с обозначением размера</td>
+<td>unit</td>
+<td>по этажам, код размера в B</td>
 </tr>
 <tr>
 <td></td>
 <td><code>Casing for Int. Doors</code></td>
 <td>LFT</td>
-<td>формула от списка дверей</td>
+<td><code>=CEILING(2*SUM(perimeters)/12*1.1,10)</code>: периметры дверей, две стороны, waste 1.1</td>
 </tr>
 </tbody>
 </table>

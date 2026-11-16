@@ -7213,10 +7213,11 @@
 
 
 <h1 id="preview">Preview страницы<a class="headerlink" href="#preview" title="Прямая ссылка на раздел">&para;</a></h1>
-<p>Эта страница нужна как быстрый visual check: открыть локально, посмотреть
+<p>Эта страница нужна редактору как быстрый visual check: открыть локально, посмотреть
 читабельность, карточки с картинками, таблицы и связи между правилами. Она не
-заменяет рабочие разделы wiki, а показывает, как должна выглядеть хорошая
-topic page.</p>
+заменяет рабочие разделы, а показывает, как должна выглядеть хорошая предметная
+страница. Шаблон один для читателя и редактора: он же описан в
+<a href="../how-to-use/">Как пользоваться</a>.</p>
 <h2 id="_1">Быстрый маршрут<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <div class="grid cards">
 <ul>
@@ -7251,6 +7252,7 @@ client-specific rules.</p>
 </ul>
 </div>
 <h2 id="topic-page">Как должна читаться topic page<a class="headerlink" href="#topic-page" title="Прямая ссылка на раздел">&para;</a></h2>
+<p>Предметная страница раздела "Работа" идёт в таком порядке:</p>
 <table>
 <thead>
 <tr>
@@ -7261,32 +7263,48 @@ client-specific rules.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>Что считать</code></td>
-<td>Конкретные элементы takeoff</td>
-<td>Чтобы не спорить, входит ли item в scope</td>
+<td>Картинка сверху</td>
+<td>Разрез или план самого элемента; у каждой детали номер, номер = строка DFL с единицей</td>
+<td>Чтобы работник узнал элемент на чертеже и сразу видел, в какую строку он идёт</td>
 </tr>
 <tr>
-<td><code>Правила</code></td>
-<td>Короткие estimating rules</td>
-<td>Чтобы быстро применять правило в PlanSwift/Excel</td>
+<td><code>Что это</code></td>
+<td>Чем элемент отличается от соседнего</td>
+<td>Чтобы не спутать Sill Plate с Btm Plate</td>
 </tr>
 <tr>
-<td><code>Где смотреть</code></td>
-<td>Plan, schedule, notes, details</td>
-<td>Чтобы estimator не искал источник наугад</td>
+<td><code>Где искать на чертежах</code></td>
+<td>Лист, schedule, notes, details</td>
+<td>Чтобы не искать источник наугад</td>
 </tr>
 <tr>
-<td><code>Визуальная проверка</code></td>
-<td>Картинка + правило + action note</td>
-<td>Чтобы картинка не была отдельной галереей без смысла</td>
+<td><code>Как мерить в OurPlanCore</code></td>
+<td>Инструмент (Line, Area, Count, J Area, Beam, Openings), что обводить, на листе с какой точкой W/F/S/U; скрин замера именно этого элемента</td>
+<td>Чтобы замер у всех был одинаковым</td>
 </tr>
 <tr>
-<td><code>Проверить</code></td>
-<td>Финальный QA list</td>
-<td>Чтобы поймать ошибки перед output</td>
+<td><code>Как назвать в дереве и строка DFL</code></td>
+<td>Имя позиции, подпись строки, колонка D, формула и фактор</td>
+<td>Чтобы имя прочитали макросы, а число сошлось</td>
+</tr>
+<tr>
+<td><code>Частые ошибки</code></td>
+<td>Что находили на проверках, с реальными числами</td>
+<td>Чтобы поймать ошибку до сдачи</td>
+</tr>
+<tr>
+<td><code>Пример</code></td>
+<td>3-6 строк дерева или DFL; арифметика сходится и совпадает с соседними страницами</td>
+<td>Чтобы было с чем сверить свою книгу</td>
+</tr>
+<tr>
+<td><code>См. также</code></td>
+<td>Соседние страницы</td>
+<td>Чтобы правило не дублировалось</td>
 </tr>
 </tbody>
 </table>
+<p>Одно правило живёт на одной странице. Если число или единица нужны в другом месте, там стоит короткая версия и ссылка, а не вторая формулировка: две формулировки рано или поздно разойдутся.</p>
 <div class="admonition note">
 <p class="admonition-title">Главное правило</p>
 <p>Картинка должна быть связана с действием: что проверить на drawings и как
@@ -7355,7 +7373,9 @@ client-specific rules.</p>
 
 <h2 id="-">Мини-чеклист перед сдачей<a class="headerlink" href="#-" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Rule написан коротко и применимо.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Rule написан коротко и применимо; единица как в колонке D (<code>LFT</code>, <code>SQ FT</code>, <code>4x8</code>, <code>pcs</code>).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Формула и пример пересчитаны руками; число совпадает с соседними страницами и с <a href="../../reference/formulas/">Формулами</a>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Подпись под картинкой описывает то, что на картинке на самом деле.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Technical terms оставлены на английском: <code>Joist</code>, <code>Rim Board</code>, <code>FRT</code>,
   <code>Sheathing</code>, <code>Hangers</code>.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Объяснения на русском.</li>

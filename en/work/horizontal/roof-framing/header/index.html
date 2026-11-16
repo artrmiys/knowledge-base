@@ -7269,7 +7269,7 @@
 
 <h1 id="roof-header">Roof Header<a class="headerlink" href="#roof-header" title="Link to this section">&para;</a></h1>
 <figure>
-<p><img alt="Roof header between reinforced rafters" src="../../../../../assets/images/confluence/confluence-138.png" />
+<p><img alt="Roof header between reinforced rafters" src="../../../../../assets/images/confluence/confluence-139.png" />
   </p>
 <figcaption>Archive 3D view: the roof opening header is highlighted in yellow, the reinforced rafters at the sides it bears on in green. The header length runs between those rafters.</figcaption>
 </figure>
@@ -7303,19 +7303,20 @@
 </tbody>
 </table>
 <h2 id="how-to-measure-in-ourplancore">How to measure in OurPlanCore<a class="headerlink" href="#how-to-measure-in-ourplancore" title="Link to this section">&para;</a></h2>
-<p>Beam tool (B) between the reinforced rafters on the roof framing sheet with the F dot. One header = one point with <code>(n)</code> plies in the name; the app rounds the length (up to 8' to the foot, longer to an even number).</p>
+<p>Beam tool (B) between the reinforced rafters on the roof framing sheet with the F dot. One header = one point with <code>(n)</code> plies in the name; the app rounds the length (up to 8' to the foot, longer to an even number). In the DFL column C counts every board: points x plies.</p>
 <ol>
 <li>Headers on both sides of the same opening (top and bottom of a skylight) are two points.</li>
 <li>The reinforced rafters at the sides are their own takeoff, see <a href="../dbl-trpl-rafters/">Dbl / Trpl Rafters</a>.</li>
-<li>Hangers: header to rafters and cut rafters to header, by built-up width and skew/slope condition.</li>
+<li>Hangers: header to rafters and cut rafters to header, by built-up width and skew/slope condition. Roof hangers are written with no <code>Z</code> and no <code>Zmax</code> (<code>LSSR210</code>); the exception is the <code>LRU...Z</code> models.</li>
 </ol>
 <figure>
 <p><img alt="Beam tool" src="../../../../../assets/images/ourplancore/v3/measure-beam.png" />
   </p>
-<figcaption>Beam tool: two points along the member, the app rounds the length and puts it into the takeoff name.</figcaption>
+<figcaption>Beam tool (example on a floor beam of the demo project): two points along the member, the ruler shows the length 49,11 ft, the app rounds it to the order length and creates a Count takeoff with the length in the name, here <code>FB1 50</code>.</figcaption>
 </figure>
 <h2 id="takeoff-name-and-dfl-row">Takeoff name and DFL row<a class="headerlink" href="#takeoff-name-and-dfl-row" title="Link to this section">&para;</a></h2>
 <p>Path: <code>framing/roof framing/beams/&lt;header size length&gt;</code>. Do not put them in <code>headers</code>: the HD button on the XL strip would move them into the wall block of the floor below.</p>
+<p>In the DFL a roof header is a <code>Beam (n)</code> row in the Roof Frame list, by the same rule as the roof beams; the template row <code>Headers (n)</code> is not used. E holds the mark or the place (<code>skylight</code>).</p>
 <table>
 <thead>
 <tr>
@@ -7330,17 +7331,17 @@
 <tbody>
 <tr>
 <td><code>beams/rf header (2) 2x12 10</code></td>
-<td><code>Header (2)</code></td>
+<td><code>Beam (2)</code></td>
 <td><code>2x12</code></td>
-<td>points</td>
+<td>points x 2</td>
 <td><code>10</code></td>
 <td><code>S201 skylight</code></td>
 </tr>
 <tr>
 <td><code>beams/rf header (3) 1 3/4 x 11 7/8 LVL 12</code></td>
-<td><code>Header (3)</code></td>
+<td><code>Beam (3)</code></td>
 <td><code>1 3/4 x 11 7/8 LVL</code></td>
-<td>points</td>
+<td>points x 3</td>
 <td><code>12</code></td>
 <td>detail</td>
 </tr>
@@ -7376,37 +7377,38 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Header (2)</code></td>
+<td><code>Beam (2)</code></td>
 <td><code>2x12</code></td>
-<td>2</td>
+<td>4</td>
 <td>10</td>
 <td><code>skylight per S201</code></td>
 </tr>
 <tr>
 <td><code>Dbl Rafters</code></td>
 <td><code>2x12</code></td>
-<td>2</td>
+<td>4</td>
 <td>18</td>
 <td><code>S201</code></td>
 </tr>
 <tr>
 <td><code>Hangers</code></td>
 <td><code>LUS210-2</code></td>
-<td>2</td>
+<td>4</td>
 <td>pcs</td>
 <td><code>9/S501</code></td>
 </tr>
 <tr>
 <td><code>Hangers</code></td>
-<td><code>LSSR210Z</code></td>
+<td><code>LSSR210</code></td>
 <td>6</td>
 <td>pcs</td>
 <td><code>rafters to header</code></td>
 </tr>
 </tbody>
 </table>
+<p>One skylight: 2 headers (top and bottom of the opening) x 2 plies = 4 boards; reinforced rafters on both sides of the opening, 2 places x 2 = 4. <code>LUS210-2</code>: 2 headers x 2 ends = 4. <code>LSSR210</code>: 6 cut rafters, one hanger per end at a header.</p>
 <figure>
-<p><img alt="Second view of the roof header" src="../../../../../assets/images/confluence/confluence-139.png" />
+<p><img alt="Second view of the roof header" src="../../../../../assets/images/confluence/confluence-138.png" />
   </p>
 <figcaption>The same connection up close: the header sits between two reinforced rafters, the cut rafters frame into the header on hangers.</figcaption>
 </figure>

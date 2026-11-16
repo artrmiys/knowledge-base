@@ -7269,16 +7269,16 @@
 
 <h1 id="corridor-walls">Corridor Walls (коридорные стены)<a class="headerlink" href="#corridor-walls" title="Прямая ссылка на раздел">&para;</a></h1>
 <figure>
-<p><img alt="Staggered stud wall: два ряда стоек 2x4 на plates 2x6" src="../../../../assets/images/confluence/confluence-062.png" />
+<p><img alt="Разрез коридорной стены: staggered studs 2x4 на plates 2x6, ledger и corridor joists" src="../../../../assets/images/walls/corridor-wall-section.svg" />
   </p>
-<figcaption>Staggered stud wall: стойки 2x4 двумя рядами вразбежку на одной plate 2x6, утеплитель змейкой. В DFL это plates 2x6 и два ряда studs 2x4.</figcaption>
+<figcaption>Разрез коридорной стены: plates 2x6, два ряда стоек 2x4 по 16" вразбежку, временная распорка, ledger и corridor joists на hangers. Номера = строки DFL справа. В плане стена - одна Line по оси <code>corr 2x6 9.09</code>.</figcaption>
 </figure>
 <!-- TODO-PHOTO: staggered stud wall framing photo, EN query "staggered stud wall framing" -->
 
 <h2 id="_1">Что это<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Corridor wall - стена между квартирой и общей зоной: коридор, лестница,
 гараж, вестибюль. Она fire-rated, часто на 2x6 plates со staggered 2x4
-стойками, и над ней идёт ledger или drywall bracing, когда перекрытие
+стойками, и над ней идёт ledger или <code>Blocking for Drywall</code>, когда перекрытие
 параллельно. Стена между двумя квартирами - это уже <a href="../demising/">Demising</a>,
 а стена шахты - <a href="../shaft/">Shaft</a>.</p>
 <h2 id="_2">Где искать на чертежах<a class="headerlink" href="#_2" title="Прямая ссылка на раздел">&para;</a></h2>
@@ -7322,7 +7322,7 @@
 <li>Staggered стена - одна линия: plates по имени <code>2x6</code>, два ряда стоек
    учитываются в DFL.</li>
 <li>Новая позиция при смене высоты или сечения. Высота - по разрезу своего
-   дома, не floor-to-floor (<a href="../exterior/#stud-height">Exterior: высота стойки</a>).</li>
+   дома, не floor-to-floor (<a href="../exterior/#stud-height">Exterior: высота стены</a>).</li>
 <li>Если тип стены несущий, та же стена отдельно обводится в <code>BW/&lt;этаж&gt;</code>.</li>
 </ol>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
@@ -7350,36 +7350,37 @@
 </tr>
 <tr>
 <td>то же</td>
-<td><code>Studs Corr</code> 2x4 staggered</td>
-<td>pcs</td>
+<td><code>Studs Corridor</code> 2x4 staggered</td>
+<td>штуки, в D длина стойки</td>
 <td><code>LFT x 1.1 x 2</code> (два ряда по 16")</td>
 </tr>
 <tr>
 <td>то же</td>
 <td><code>Bracing Corridor</code> 2x4</td>
-<td>LFT</td>
-<td>по высоте стены</td>
+<td>штуки, в D длина доски: до 10' = 14, до 12' = 16, до 16' = 18, выше = 20</td>
+<td><code>LFT / 8 x 1.1</code>: одна доска на 8 LFT стены; только стены от 7'</td>
 </tr>
 <tr>
 <td>то же</td>
 <td><code>Blocking</code></td>
 <td>LFT</td>
-<td>по типу стены</td>
-</tr>
-<tr>
-<td>то же</td>
-<td><code>Bracing for Drywall</code> 2x4</td>
-<td>LFT</td>
-<td>где перекрытие параллельно стене</td>
+<td>по матрице шаблона, до чётного</td>
 </tr>
 <tr>
 <td><code>corr (2) 2x6 11.7</code></td>
 <td>те же строки на два каркаса</td>
 <td></td>
-<td><code>x 2</code></td>
+<td>длина линии <code>x 2</code></td>
 </tr>
 </tbody>
 </table>
+<p><code>Bracing Corridor</code> - временные раскосы стены, считаются в <strong>штуках</strong>, не в LFT:
+стена 161 LFT высотой 9.09' даёт <code>161 / 8 x 1.1 = 22.1</code> (формула шаблона не
+округляет), к заказу это 23 доски по 14': стена ниже 10'.</p>
+<p>Опора гипса там, где перекрытие параллельно стене, - другая строка и другой
+блок: <code>Blocking for Drywall</code>, <code>2x4</code>, <code>=ОКРВВЕРХ(G/D;1)</code>, D <code>16</code>, в Floor Framing
+List этажа. Строки <code>Bracing for Drywall</code> в DFL нет. Подробно:
+<a href="../../../horizontal/floor-framing/details/bracingdrywall/">Bracing стен и Blocking for Drywall</a>.</p>
 <p>Hangers над коридорной стеной - обычные <code>ITS</code>, если gypsum заканчивается
 ниже перекрытия. <code>DHU</code> / <code>DGU</code> только там, где joists заходят над настоящей
 fire wall по детали (лестница, лифт, шахта): <a href="../../../../reference/hangers/">Hangers</a>.
@@ -7387,12 +7388,13 @@ Corridor joists на кровле без детали - нота с причин
 объяснения (<a href="../../../../reference/standard-notes/">Standard notes</a>).</p>
 <h2 id="_3">Частые ошибки<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
-<li>Corridor и demising перепутаны группой: в проверке 241 LF коридора стали 161, а demising выросла с 577 до 648.</li>
+<li>Corridor и demising перепутаны группой: в проверке 241 LFT коридора стали 161, а demising выросла с 577 до 648.</li>
 <li>Кусок коридорной стены у лестницы записан как <code>ext</code>.</li>
 <li><code>DHU</code> поставлены только потому, что стена коридорная.</li>
 <li>Staggered стена посчитана одним рядом стоек.</li>
 <li>Plates 2x6 забыты: студы 2x4, и plates записаны 2x4.</li>
 <li>Ledger и крепёж коридорных joists не выписаны отдельными строками по детали.</li>
+<li><code>Bracing Corridor</code> записан в LFT, или опора гипса записана строкой <code>Bracing for Drywall</code>.</li>
 </ul>
 <p>Разбор с примерами: <a href="../../../../start/common-mistakes/#walls">все ошибки по стенам</a>.</p>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
@@ -7405,7 +7407,7 @@ Corridor joists на кровле без детали - нота с причин
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li><a href="../demising/">Demising Walls</a>, <a href="../unit/">Unit Walls</a>, <a href="../shaft/">Shaft Walls</a></li>
-<li><a href="../../../horizontal/floor-framing/details/bracingdrywall/">Bracing for Drywall</a></li>
+<li><a href="../../../horizontal/floor-framing/details/bracingdrywall/">Bracing стен и Blocking for Drywall</a></li>
 <li><a href="../../../../reference/hangers/">Hangers</a>: ITS против DHU</li>
 <li><a href="../../../../reference/boss-feedback-rules/#dhu-dgu-vs-its">Советы и важные вещи</a></li>
 </ul>

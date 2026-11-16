@@ -56,15 +56,15 @@
     <text x="333" y="350" font-size="16" font-weight="600">Площади joists, J Area</text>
 
     <!-- legend -->
-    <rect x="628" y="272" width="110" height="60" rx="3" fill="#fff" stroke="#6b7378" stroke-width="1.5"/>
-    <g font-size="11" fill="#183323">
-      <rect x="636" y="281" width="14" height="6" fill="#c62828"/><text x="656" y="288">ext 2x6</text>
-      <rect x="636" y="298" width="14" height="6" fill="#1565c0"/><text x="656" y="305">1st</text>
-      <circle cx="643" cy="319" r="4" fill="#1565c0"/><text x="656" y="323">post</text>
+    <rect x="614" y="266" width="122" height="68" rx="3" fill="#fff" stroke="#6b7378" stroke-width="1.5"/>
+    <g font-size="13.5" fill="#183323">
+      <rect x="623" y="277" width="16" height="7" fill="#c62828"/><text x="646" y="285">ext 2x6</text>
+      <rect x="623" y="297" width="16" height="7" fill="#1565c0"/><text x="646" y="305">1st</text>
+      <circle cx="631" cy="320" r="4.5" fill="#1565c0"/><text x="646" y="325">post</text>
     </g>
-    <text x="748" y="290" font-size="14">Тот же тип,</text>
-    <text x="748" y="310" font-size="14">что у Count,</text>
-    <text x="748" y="330" font-size="14">не пробовали</text>
+    <text x="748" y="290" font-size="14.5">Тот же тип,</text>
+    <text x="748" y="310" font-size="14.5">что у Count,</text>
+    <text x="748" y="330" font-size="14.5">не пробовали</text>
     <text x="618" y="350" font-size="16" font-weight="600">Легенда</text>
 
     <rect x="30" y="384" width="840" height="66" rx="8" fill="#fff4dc" stroke="#d6ae5c"/>

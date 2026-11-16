@@ -7385,8 +7385,8 @@ go through the <a href="../quality-checklist/">checklist</a>: it follows the sam
 </tr>
 <tr>
 <td>Stud height taken as floor-to-floor or the ceiling elevation.</td>
-<td>Studs are longer than real by the depth of the floor framing and plates; the whole floor is overstated.</td>
-<td>Stud height = floor-to-floor minus subfloor minus floor framing depth minus plates; check against the section of each building. The wall name carries the height in decimal feet (<code>ext 2x6 9.09</code>). <a href="../../work/vertical/walls/exterior/">Exterior, Wall Sizing section</a>, <a href="../../reference/boss-feedback-rules/#studs">Tips: Studs</a></td>
+<td>Studs are longer than real by the depth of the floor framing; the template picks the wrong stud and the whole floor is overstated.</td>
+<td>Wall height = floor-to-floor minus subfloor minus floor framing depth; check against the section of each building. Plates are not deducted: the name and the stud row carry the height of the assembled wall (stud plus one bottom and two top plates), and the template picks precut or full height from it. The wall name carries the height in decimal feet (<code>ext 2x6 9.09</code>). <a href="../../work/vertical/walls/exterior/#stud-height">Exterior, wall height</a>, <a href="../../reference/boss-feedback-rules/#studs">Tips: Studs</a></td>
 </tr>
 <tr>
 <td>P.T. bottom plate on a wood floor.</td>
@@ -7405,6 +7405,11 @@ go through the <a href="../quality-checklist/">checklist</a>: it follows the sam
 </tr>
 </tbody>
 </table>
+<figure>
+<p><img alt="Wall height: right and wrong" src="../../../assets/images/process/mistake-stud-height.svg" />
+  </p>
+<figcaption>Height in the wall name: floor to floor minus the subfloor and the floor depth, plates stay inside the height. Floor to floor as is overstates the studs of the whole floor.</figcaption>
+</figure>
 <h2 id="openings">Openings<a class="headerlink" href="#openings" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
@@ -7432,6 +7437,16 @@ go through the <a href="../quality-checklist/">checklist</a>: it follows the sam
 </tr>
 </tbody>
 </table>
+<figure>
+<p><img alt="Window height: unit size, not head height" src="../../../assets/images/process/mistake-window-height.svg" />
+  </p>
+<figcaption>The opening height in the name is the size of the window itself from the schedule, not the head height mark from the floor.</figcaption>
+</figure>
+<figure>
+<p><img alt="Opening deducted once and twice" src="../../../assets/images/process/mistake-double-deduction.svg" />
+  </p>
+<figcaption>An opening wider than 4' is deducted once on its own floor; a window narrower than 4' is not deducted. Deducting from both the plan and the elevation understates the sheathing.</figcaption>
+</figure>
 <h2 id="floor">Floor framing and beams<a class="headerlink" href="#floor" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
@@ -7453,9 +7468,9 @@ go through the <a href="../quality-checklist/">checklist</a>: it follows the sam
 <td>Hangers by assembly, both ends of each joist, model per detail, whole pieces only. Outside and on P.T. use Zmax; ties to trusses under sheathing without Zmax. <a href="../../reference/hangers/">Hangers</a></td>
 </tr>
 <tr>
-<td>Rim recorded as <code>1-3/4 LVL Rim</code> with no such callout on the drawing; rim broken into 16' pieces.</td>
+<td>Rim recorded as <code>1-3/4 LVL Rim</code> with no such callout on the drawing; the rim line in the tree broken into 16' pieces.</td>
 <td>Made-up product, wrong length.</td>
-<td>By default <code>11-7/8" Rim</code> or <code>LSL Rim</code> per the specification, in LF with a factor. LVL rim only when a deck or a corridor attaches to it. <a href="../../work/horizontal/floor-framing/details/rim/">Rim Board</a>, <a href="../../reference/boss-feedback-rules/#rim-board">Tips: Rim</a></td>
+<td>By default <code>11-7/8" Rim</code> or <code>LSL Rim</code> per the specification. In the tree one line for the whole detail; in the workbook <code>Rim Board</code> goes in 16' boards (<code>=CEILING(G/D,1)</code>), and in LFT with the <code>1.05</code> factor only on an EWP-only job. LVL rim only when a deck or a corridor attaches to it. <a href="../../work/horizontal/floor-framing/details/rim/">Rim Board</a>, <a href="../../reference/boss-feedback-rules/#rim-board">Tips: Rim</a></td>
 </tr>
 <tr>
 <td>A stair counted once when there are eight stairs; stringers from the <code>(4) LVL</code> template when there are two 2x12 flights.</td>
@@ -7647,10 +7662,15 @@ go through the <a href="../quality-checklist/">checklist</a>: it follows the sam
 <tr>
 <td>Unit <code>FT</code> instead of <code>LFT</code>; the label does not match the calculation (<code>Plate (2)</code> for a single plate, <code>Posts (3)</code> for two).</td>
 <td>Format not per template, the client reads it wrong.</td>
-<td>In D: <code>LFT</code> for lumber, <code>pcs</code> for hardware, SF for panels; the label = what the formula calculates. <a href="../../reference/takeoff-items/">Takeoff item labels</a></td>
+<td>In D: <code>LFT</code> for linear items, <code>pcs</code> for hardware, <code>4x8</code> for panels, <code>SQ FT</code> for areas; lumber by the piece has the board length in feet in D. The label = what the formula calculates. <a href="../../reference/takeoff-items/">Takeoff item labels</a></td>
 </tr>
 </tbody>
 </table>
+<figure>
+<p><img alt="Note under its own section header" src="../../../assets/images/reference/dfl-note-placement.svg" />
+  </p>
+<figcaption>A note sits under its own section header, with a prefix and a yellow fill. A note above the header falls into the previous block.</figcaption>
+</figure>
 <h2 id="pages">Sheets and tree in OurPlanCore<a class="headerlink" href="#pages" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
@@ -7678,6 +7698,11 @@ go through the <a href="../quality-checklist/">checklist</a>: it follows the sam
 </tr>
 </tbody>
 </table>
+<figure>
+<p><img alt="Own colour and symbol for every item" src="../../../assets/images/process/mistake-tree-colors.svg" />
+  </p>
+<figcaption>Every item has its own Color, count items also their own CountSymbol. With one colour the legend and the PDF cannot be read.</figcaption>
+</figure>
 <h2 id="delivery">Delivery<a class="headerlink" href="#delivery" title="Link to this section">&para;</a></h2>
 <table>
 <thead>

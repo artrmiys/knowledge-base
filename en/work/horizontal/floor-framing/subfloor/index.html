@@ -7274,7 +7274,7 @@
 <figcaption>Subfloor by default is 3/4" T&amp;G glued to the joists. The FRT strip at the exterior wall, underlayment, and subfloor over an existing floor are separate rows.</figcaption>
 </figure>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Link to this section">&para;</a></h2>
-<p>Subfloor is the panel decking over the joists: <code>3/4" T&amp;G OSB</code> or <code>AdvanTech</code>, on panel adhesive. Counted separately: the FRT strip around the perimeter, underlayment under the finish, decking under tubs, and decking over an existing floor. The vertical sheathing strip at floor level is the <a href="../../../vertical/sheathing/floor/">Floor-height Sheathing</a> page, not subfloor.</p>
+<p>Subfloor is the panel decking over the joists: <code>3/4" T&amp;G OSB</code> or <code>AdvanTech</code>, on panel adhesive. Counted separately: the FRT strip around the perimeter, underlayment under the finish, decking under tubs, and decking over an existing floor. The vertical strip of wall sheathing at floor level is <a href="../../../vertical/sheathing/box-sheathing/">Box Sheathing</a>, not subfloor.</p>
 <h2 id="where-to-find-it-on-the-plans">Where to find it on the plans<a class="headerlink" href="#where-to-find-it-on-the-plans" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
@@ -7311,7 +7311,8 @@
 <ul>
 <li>Sheets = SQ FT / 32 x 1.1, rounded up to a whole sheet (<code>4x8</code>).</li>
 <li>FRT strip: floor perimeter x strip width (2' or 4'), on its own floor. A 4' strip written as 10 sheets instead of 54 is a typical undercount.</li>
-<li>Panel adhesive: the <code>Panel Adheasive</code> <code>29OZ</code> row per the template rate; this row is often forgotten.</li>
+<li>The main <code>Subfloor</code> row is counted from the full floor area, as in the DFL template: the FRT strip area is not deducted from it.</li>
+<li>Panel adhesive: the <code>Panel Adheasive</code> <code>29OZ</code> row, one tube per 3 sheets of the <code>Subfloor</code> row. That row already covers the whole floor area including the strip, so the FRT strip sheets do not go into the adhesive a second time. This row is often forgotten. <code>Adheasive</code> is the template spelling, do not correct it.</li>
 </ul>
 <h2 id="tree-name-and-dfl-row">Tree name and DFL row<a class="headerlink" href="#tree-name-and-dfl-row" title="Link to this section">&para;</a></h2>
 <p>There are usually no takeoffs in <code>framing</code>: the rows take the area from the SQFT worksheet. The SF button on the XL strip moves the areas to <code>A2_SQFT_calc</code>; the subfloor is calculated in each <code>Floor Framing List</code>.</p>
@@ -7336,15 +7337,15 @@
 <tr>
 <td><code>Subfloor FRT 4'</code></td>
 <td><code>3/4" T&amp;G FRT</code></td>
-<td>perimeter x 4 / 32 x 1.1</td>
+<td><code>=CEILING(G*4/32*1.1,1)</code>, G - floor perimeter in LFT</td>
 <td><code>4x8</code></td>
 <td>FRT note</td>
 </tr>
 <tr>
 <td><code>Panel Adheasive</code></td>
 <td><code>29OZ</code></td>
-<td>per template rate</td>
-<td><code>pcs</code></td>
+<td><code>=CEILING(C&lt;subfloor&gt;/3,1)</code></td>
+<td><code>tubes</code></td>
 <td></td>
 </tr>
 <tr>
@@ -7364,18 +7365,19 @@
 <tr>
 <td><code>Blocking</code></td>
 <td><code>2x</code></td>
-<td>FRT strip perimeter</td>
-<td><code>LFT</code></td>
+<td><code>=CEILING(G/D,1)</code>, G - length of the FRT strip edge in LFT</td>
+<td><code>16</code></td>
 <td>under the FRT edge</td>
 </tr>
 </tbody>
 </table>
+<p><code>C&lt;subfloor&gt;</code> is cell C of the <code>Subfloor</code> row (that row only, not the FRT strip row).</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>The FRT strip not counted from the perimeter of its own floor, or missed entirely.</li>
 <li>Underlayment over the whole area, though the detail gives 3/4" ply only under tubs, not under showers.</li>
 <li>New subfloor over the existing floor not included, though the reconstruction detail calls for it.</li>
-<li>No panel adhesive row.</li>
+<li>No panel adhesive row, or one tube per sheet: the rate is one tube per 3 sheets.</li>
 <li>Balcony and terrace decking counted as house subfloor: they have their own material per the section.</li>
 <li><a href="../../../../start/common-mistakes/#floor">All floor framing mistakes</a></li>
 </ul>
@@ -7388,6 +7390,7 @@
 <th>C</th>
 <th>D</th>
 <th>E</th>
+<th>G</th>
 </tr>
 </thead>
 <tbody>
@@ -7397,6 +7400,7 @@
 <td>60</td>
 <td>4x8</td>
 <td><code>A501</code></td>
+<td>1740</td>
 </tr>
 <tr>
 <td><code>Subfloor FRT 4'</code></td>
@@ -7404,24 +7408,27 @@
 <td>24</td>
 <td>4x8</td>
 <td><code>S001 note 12</code></td>
+<td>174</td>
 </tr>
 <tr>
 <td><code>Panel Adheasive</code></td>
 <td><code>29OZ</code></td>
-<td>84</td>
-<td>pcs</td>
+<td>20</td>
+<td>tubes</td>
+<td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
+<p>Check: 1740 SQ FT / 32 x 1.1 = 59.8, so 60 sheets. Perimeter 174 LFT x 4' / 32 x 1.1 = 23.9, so 24 FRT sheets. Adhesive: 60 / 3 = 20 tubes, from the <code>Subfloor</code> row.</p>
 <figure>
-<p><img alt="AdvanTech subfloor nailing" src="../../../../../assets/images/confluence/confluence-154.png" />
+<p><img alt="AdvanTech subfloor nailing" src="../../../../../assets/images/confluence/confluence-154.jpg" />
   </p>
 <figcaption>Archived photo: an AdvanTech sheet being nailed to the joists. Write the product as in the spec (<code>AdvanTech</code>, <code>3/4" T&amp;G OSB</code>), not generically.</figcaption>
 </figure>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>
-<li><a href="../joist/">Joist</a>, <a href="../../../sqfts/1st2nd/">Floor SQFT</a>, <a href="../../../vertical/sheathing/floor/">Floor-height Sheathing</a></li>
+<li><a href="../joist/">Joist</a>, <a href="../../../sqfts/1st2nd/">Floor SQFT</a>, <a href="../../../vertical/sheathing/floor/">Floor Sheathing</a>, <a href="../../../vertical/sheathing/box-sheathing/">Box Sheathing</a></li>
 <li><a href="../details/blocking/">Blocking</a>, <a href="../../../../work-types/reconstruction/">Reconstruction</a></li>
 </ul>
 

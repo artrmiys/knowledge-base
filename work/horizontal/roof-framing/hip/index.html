@@ -7350,7 +7350,7 @@
 <figure>
 <p><img alt="Инструмент Beam" src="../../../../assets/images/ourplancore/v3/measure-beam.png" />
   </p>
-<figcaption>Инструмент Beam: две точки по элементу, длина округляется программой и попадает в имя позиции.</figcaption>
+<figcaption>Инструмент Beam (пример на балке перекрытия демо-проекта): две точки по элементу, линейка показывает длину 49,11 ft, программа округляет её до заказной и создаёт Count-позицию с длиной в имени, здесь <code>FB1 50</code>.</figcaption>
 </figure>
 <figure>
 <p><img alt="Длина hip и valley" src="../../../../assets/images/roof/hip-valley-length.svg" />
@@ -7358,7 +7358,7 @@
 <figcaption>Длина по плану умножается на коэффициент уклона: так получается длина доски. При разных уклонах скатов длину брать с разреза.</figcaption>
 </figure>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Путь: <code>framing/roof framing/beams/hip &lt;сечение&gt; &lt;длина&gt;</code>. Если шаблон проекта считает hip, valley и ridge одной строкой, Label <code>Ridge / Valley / Hip</code> в LFT.</p>
+<p>Путь: <code>framing/roof framing/beams/hip &lt;сечение&gt; &lt;длина&gt;</code>. В DFL hip идёт строкой <code>Hip plates</code>: C - число досок, D - чётная заказная длина. Двойной hip - <code>Hip plates (2)</code>, C = точки x 2.</p>
 <table>
 <thead>
 <tr>
@@ -7373,7 +7373,7 @@
 <tbody>
 <tr>
 <td><code>beams/hip 2x12 18</code></td>
-<td><code>Hip Rafters</code></td>
+<td><code>Hip plates</code></td>
 <td><code>2x12</code></td>
 <td>точки</td>
 <td><code>18</code></td>
@@ -7381,19 +7381,11 @@
 </tr>
 <tr>
 <td><code>beams/hip (2) 1 3/4 x 11 7/8 LVL 22</code></td>
-<td><code>Hip Rafters (2)</code></td>
+<td><code>Hip plates (2)</code></td>
 <td><code>1 3/4 x 11 7/8 LVL</code></td>
-<td>точки</td>
+<td>точки x 2</td>
 <td><code>22</code></td>
 <td><code>HB1</code></td>
-</tr>
-<tr>
-<td>Line по ridge, hip и valley</td>
-<td><code>Ridge / Valley / Hip</code></td>
-<td><code>2x12</code></td>
-<td><code>=ОКРВВЕРХ(G*1.1/D;1)</code></td>
-<td><code>16</code></td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -7419,7 +7411,7 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Hip Rafters</code></td>
+<td><code>Hip plates</code></td>
 <td><code>2x12</code></td>
 <td>4</td>
 <td>18</td>

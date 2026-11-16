@@ -7382,12 +7382,18 @@ CH/H-профилей - отдельная тема: <a href="../shaft/">Shaft W
 <td>то же</td>
 <td><code>Deflection Tracks (1) top</code></td>
 <td>LFT</td>
-<td><code>LFT x 1.1</code>; только у стен до перекрытия</td>
+<td><code>LFT x 1.1</code>; у стен, которые идут до конструкции сверху</td>
+</tr>
+<tr>
+<td>то же</td>
+<td><code>Tracks (1) top</code></td>
+<td>LFT</td>
+<td><code>LFT x 1.1</code>; обычный верхний трек у стен, которые до конструкции не доходят (под dropped soffit, неполной высоты)</td>
 </tr>
 <tr>
 <td>то же</td>
 <td><code>Mtl Studs 16" o.c.</code> <code>6" 18ga mtl</code></td>
-<td>pcs</td>
+<td>штуки, в D высота стойки</td>
 <td><code>LFT x 1.1</code> (16") или <code>x 0.625</code> (24")</td>
 </tr>
 <tr>
@@ -7398,18 +7404,21 @@ CH/H-профилей - отдельная тема: <a href="../shaft/">Shaft W
 </tr>
 <tr>
 <td>то же</td>
-<td><code>Wall Sheathing</code>, <code>Air / Water Barrier</code>, <code>Insulation</code>, <code>Gypsum 5/8" Type X</code>, <code>Bracing</code>, <code>Blocking</code></td>
+<td><code>Wall Sheathing</code> (в том числе gypsum <code>5/8" Type X</code>), <code>Vapor Barrier</code> (в B продукт барьера), <code>Insulation</code> (только continuous), <code>Bracing Ext Walls</code> (штуки), <code>Blocking</code></td>
 <td></td>
 <td>как у дерева</td>
 </tr>
 <tr>
 <td><code>2x4</code> jamb в металлической стене</td>
-<td><code>Window Jamb</code> <code>2x4</code></td>
+<td><code>Jambs (2)</code> <code>2x4</code> (в скобках - досок на сторону по детали)</td>
 <td>LFT</td>
-<td>дерево в металле - норма</td>
+<td><code>(W + 2H) x число дверей x 2 x 1.1</code>; дерево в металле - норма. Jambs окон и storefront - строка <code>Jambs</code> в Wall Materials</td>
 </tr>
 </tbody>
 </table>
+<p>У каждой стены один верхний трек: либо <code>Deflection Tracks (1) top</code>, либо
+<code>Tracks (1) top</code>. Проверка: LFT верхнего трека = LFT нижнего. Порядок строк в
+блоке: <code>Tracks (1) btm</code>, верхний трек, <code>Mtl Studs</code>.</p>
 <p>Для CFS-корпуса крепёж металлический. Группируй по сечению профиля, этажу и
 типу стены (ext, int, dem, corr). Если gauge задан на чертеже, он идёт в
 спецификацию позиции; не задан - нота и сверка со структурой.</p>
@@ -7427,7 +7436,7 @@ CH/H-профилей - отдельная тема: <a href="../shaft/">Shaft W
 track, по краям extra studs. Box header опирается на сдвоенные jamb-студы.</p>
 </details>
 <figure>
-<p><img alt="Деталь deflection head у стальной балки" src="../../../../assets/images/walls/metal-deflection-head.png" />
+<p><img alt="Деталь deflection head у стальной балки" src="../../../../assets/images/walls/metal-deflection-head.png" width="600" />
   </p>
 <figcaption>Deflection head на стыке стены со стальной балкой: fireproofing, fire sealant, два слоя 5/8" Type X. Deflection track - отдельная строка от bottom track.</figcaption>
 </figure>
@@ -7435,7 +7444,8 @@ track, по краям extra studs. Box header опирается на сдво�
 <ul>
 <li>У металлической стены посчитаны только треки и студы, без sheathing, WRB, insulation, gypsum.</li>
 <li>Металл by others, а ноты <code>Metal Studs by others</code> нет: ни строки, ни ноты.</li>
-<li>Deflection track поставлен у стены, которая не доходит до перекрытия.</li>
+<li>Deflection track поставлен у стены, которая не доходит до перекрытия: там обычный <code>Tracks (1) top</code>.</li>
+<li>Верхний трек не записан вовсе: есть только <code>Tracks (1) btm</code>.</li>
 <li>Gauge придуман или <code>24" o.c.</code> скопирован при spec <code>16"</code>.</li>
 <li>Высота под стальной балкой не разделена на 6" и 3 1/2" куски.</li>
 <li>Деревянный jamb в металлической стене пропущен.</li>

@@ -34,7 +34,7 @@
   <text class="c" x="21" y="107" fill="#1f2328">Soffits at Eves</text>
   <text class="c" x="257.0" y="107" fill="#1f2328" text-anchor="middle">Wood Soffit</text>
   <text class="c" x="340.0" y="107" fill="#1f2328" text-anchor="middle">180</text>
-  <text class="c" x="382.0" y="107" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <text class="c" x="382.0" y="107" fill="#1f2328" text-anchor="middle">SQ FT</text>
   <path d="M532,89 L526,89 L526,79.5 L518,79.5" fill="none" stroke="#2e7d32" stroke-width="1.2"/>
   <path d="M514,79.5 L522,75.5 L522,83.5 z" fill="#2e7d32"/>
   <text class="n" x="538" y="85" fill="#2e7d32">Жирный текст, цветной фон, название</text>
@@ -71,7 +71,7 @@
   <text class="c" x="21" y="211" fill="#1f2328">Soffits at Eves</text>
   <text class="c" x="257.0" y="211" fill="#1f2328" text-anchor="middle">Wood Soffit</text>
   <text class="c" x="340.0" y="211" fill="#1f2328" text-anchor="middle">180</text>
-  <text class="c" x="382.0" y="211" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <text class="c" x="382.0" y="211" fill="#1f2328" text-anchor="middle">SQ FT</text>
   <path d="M532,209 L526,209 L526,183.5 L518,183.5" fill="none" stroke="#c62828" stroke-width="1.2"/>
   <path d="M514,183.5 L522,179.5 L522,187.5 z" fill="#c62828"/>
   <text class="n" x="538" y="189" fill="#c62828">Это уже не заголовок: материалы</text>

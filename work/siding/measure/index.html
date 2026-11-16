@@ -7291,7 +7291,7 @@
 <figure>
 <p><img alt="Siding take-off by elevation area" src="../../../assets/images/siding/measure.svg" />
   </p>
-<figcaption>SQ FT по фасаду: поле стены Area, gable и accent отдельными площадями, крупные проёмы вычтены один раз.</figcaption>
+<figcaption>SQ FT по фасаду: поле стены Area, gable с другим материалом отдельной площадью, проём шире 4' вырезан один раз, окна уже 4' не вычитаются, trim считается отдельно.</figcaption>
 </figure>
 <!-- TODO-SCREEN: measure-area-siding.png (Area по фасаду в OurPlanCore с вычетом проёма, итем siding/6" vertical) -->
 
@@ -7318,7 +7318,7 @@ siding они не входят.</p>
 </tr>
 <tr>
 <td>Планы и схема проёмов</td>
-<td>Крупные проёмы для вычета (ворота, витражи)</td>
+<td>Проёмы для вычета: окна, двери, ворота, витражи; стены, которых нет на фасадах</td>
 </tr>
 <tr>
 <td>Notes</td>
@@ -7335,13 +7335,19 @@ siding они не входят.</p>
    нескольких фасадах можно собирать несколькими полигонами в одном итеме.</li>
 <li>Gables, dormers, bays, return walls отдельными полигонами или итемами,
    особенно при другом материале.</li>
-<li>Крупные проёмы вырезай отверстием в Area; окна меньше 4' не вычитаем,
-   они уходят в waste. Один и тот же проём не вычитать дважды (siding и
-   WRB берут вычет каждый от своей площади).</li>
+<li>Каждое окно и каждую дверь вырезай отверстием в Area по раме (внутри
+   casing): siding заходит под casing, corner boards и band и идёт сплошным
+   за постами и колоннами. Правило обшивки стен "окна уже 4' не вычитаем"
+   на siding не действует: в siding вырезаются все проёмы, в DFL идёт
+   чистая площадь. Один и тот же проём не вычитать дважды.</li>
+<li>Пустое место на фасаде, которое на деле разрез или открытая ниша
+   балкона, siding не получает. Стены, которых нет ни на одном фасаде
+   (двор, стена над крышей, щёки dormer, бока ниш), считай по плану: длина
+   x высота, в имени <code>assumed</code>, материал как у соседней стены.</li>
 <li>Масштаб фасада проверь по известному размеру (высота этажа, ширина
    ворот): фасады часто в другом масштабе, чем планы.</li>
-<li>Перенеси площадь в DFL формулой с видимыми слагаемыми и обновляй после
-   правок замера.</li>
+<li>Перенеси чистую площадь в G строки DFL суммой с видимыми слагаемыми и
+   обновляй после правок замера; запас считает формула в C.</li>
 </ol>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
@@ -7356,21 +7362,21 @@ siding они не входят.</p>
 <tbody>
 <tr>
 <td><code>siding/6" vertical</code></td>
-<td><code>Siding Vertical 1x6 Cedar</code></td>
+<td><code>Siding Vertical</code>, в B <code>1x6 Cedar</code></td>
 <td>SQ FT</td>
-<td><code>=Front+Rear+Left+Right</code></td>
+<td><code>=CEILING(G*1.1,10)</code>; в G чистая площадь <code>=Front+Rear+Left+Right</code>; exposure в E</td>
 </tr>
 <tr>
 <td><code>siding/panel grey</code></td>
-<td><code>Siding Fiber Cement Panel grey</code></td>
+<td><code>Panels</code>, в B <code>Fiber Cement Panels</code></td>
 <td>SQ FT</td>
-<td>отдельно по цвету</td>
+<td>та же формула; отдельно по цвету, цвет или тег в E</td>
 </tr>
 <tr>
 <td><code>siding/shingle gable</code></td>
-<td><code>Siding Gable front Vinyl Shingles</code></td>
+<td><code>Siding</code>, в B <code>Vinyl Shingles</code></td>
 <td>SQ FT</td>
-<td>accent отдельно</td>
+<td>та же формула; accent отдельно</td>
 </tr>
 <tr>
 <td></td>
@@ -7380,20 +7386,22 @@ siding они не входят.</p>
 </tr>
 <tr>
 <td></td>
-<td><code>Siding Per customer TBD</code></td>
+<td><code>Siding</code>, в B <code>TBD Siding</code></td>
 <td>SQ FT</td>
-<td><code>0</code> плюс нота</td>
+<td>G <code>0</code> плюс нота <code>Note: Siding is not specified; verify</code></td>
 </tr>
 </tbody>
 </table>
-<p>Waste: lap умеренный, shingle и shake выше, диагональ и мелкие gables
-больше обрезков. Фактор держи видимым множителем по
-<a href="../../../reference/formulas/">Формулам и факторам</a>.</p>
+<p>Waste у siding один для любого типа: 1.1. Он стоит в формуле шаблона
+<code>=CEILING(G*1.1,10)</code> (итог меньше 50 округляется до 2), поэтому в G пишется
+чистая площадь без запаса. Exposure (<code>6" Exp.</code>) пишется в E рядом с листом
+или keynote; на количество он не влияет. Горизонтальный и вертикальный
+siding одного продукта в одну строку не сводить.</p>
 <h2 id="by-others-tbd">By others и TBD<a class="headerlink" href="#by-others-tbd" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li>Siding by others: строка с <code>0</code> и нота <code>by others</code> или <code>by customer</code>.</li>
-<li>Материал не указан: <code>Per customer TBD</code> или <code>verify material</code>, продукт
-  не подставлять.</li>
+<li>Материал не указан: в B <code>TBD Siding</code>, G <code>0</code> и нота <code>Note: Siding is not
+  specified; verify</code>; продукт не подставлять.</li>
 <li>EIFS, stucco, stone, brick: не считаем, но WRB, sheathing, furring и
   trim рядом проверяем: <a href="../eifs-stucco-veneer/">EIFS / Stucco / Veneer</a>.</li>
 </ul>
@@ -7402,16 +7410,21 @@ siding они не входят.</p>
 <li>Площадь по плану (периметр x высота) без вычета фронтонов и разной
   высоты стен по фасадам.</li>
 <li>Проём вычтен дважды или не вычтен вовсе (ворота гаража).</li>
+<li>Мелкие окна не вырезаны по привычке от обшивки стен: в siding вырезаются все проёмы.</li>
+<li>В G вписана площадь уже с запасом: waste посчитан дважды.</li>
 <li>Масштаб фасада не проверен.</li>
 <li>Площадь измерена, но в Excel не перенесена или не обновлена.</li>
 <li>Все ошибки по площадям и обшивке: <a href="../../../start/common-mistakes/#sqft">Площади SQFT</a>, <a href="../../../start/common-mistakes/#sheathing">Обшивка</a>.</li>
 </ul>
 <h2 id="_4">Пример<a class="headerlink" href="#_4" title="Прямая ссылка на раздел">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/siding/6&quot; vertical     Area   4 polygons   3 180 SF
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Takeoffs/Main/siding/shingle gable   Area   2 polygons     420 SF
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Takeoffs/Main/siding/6&quot; vertical     Area   4 polygons   3180 SQ FT
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Takeoffs/Main/siding/shingle gable   Area   2 polygons    420 SQ FT
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Siding Vertical      1x6 Cedar              3 180  SQ FT   =1120+940+560+560   A201 A202
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Siding Gable front   Cedar Shingles 5-1/2&quot;    420  SQ FT   =210+210            A201
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Siding Vertical   1x6 Cedar        3500  SQ FT   =CEILING(G*1.1,10)   G =1120+940+560+560   6&quot; Exp. A201 A202
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Siding            Cedar Shingles    470  SQ FT   =CEILING(G*1.1,10)   G =210+210            5-1/2&quot; Exp. A201
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Vertical: G = 3180; 3180 x 1.1 = 3498, вверх до 10 = 3500
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Shingles: G = 420; 420 x 1.1 = 462, вверх до 10 = 470
 </span></code></pre></div>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>

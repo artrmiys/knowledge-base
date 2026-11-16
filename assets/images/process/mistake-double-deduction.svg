@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480" role="img" aria-labelledby="t d">
+  <title id="t">Opening deducted once, not twice</title>
+  <desc id="d">Two elevations of a wall 40 by 9 feet with a 6 foot door and a 3 foot window. Right: the wide opening is deducted once and the narrow window is not deducted. Wrong: the same opening is deducted from the plan and again from the elevation.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
+    <style>
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
+    </style>
+  </defs>
+<rect x="0.5" y="0.5" width="879" height="479" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<rect x="48" y="120" width="360" height="200" fill="url(#hatchGreen)" stroke="#3a3f44" stroke-width="1.4"/>
+<line x1="34" y1="320" x2="422" y2="320" stroke="#3a3f44" stroke-width="1.6"/>
+<rect x="108" y="170" width="110" height="150" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+<rect x="288" y="190" width="54" height="72" fill="none" stroke="#3a3f44" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="48" y1="100" x2="408" y2="100" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="dimt" x="228.0" y="93.0" text-anchor="middle">40'</text>
+<line x1="420" y1="120" x2="420" y2="320" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="dimt" x="412" y="344" text-anchor="middle">9'</text>
+<text class="inkb" x="163" y="250" text-anchor="middle">6.0x6.8 d</text>
+<text class="note" x="315" y="282" text-anchor="middle">3.0x4.0</text>
+<rect x="468" y="120" width="360" height="200" fill="url(#hatchGreen)" stroke="#3a3f44" stroke-width="1.4"/>
+<line x1="454" y1="320" x2="842" y2="320" stroke="#3a3f44" stroke-width="1.6"/>
+<rect x="528" y="170" width="110" height="150" fill="url(#hatchRed)" stroke="#c62828" stroke-width="2"/>
+<rect x="708" y="190" width="54" height="72" fill="none" stroke="#3a3f44" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="468" y1="100" x2="828" y2="100" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="dimt" x="648.0" y="93.0" text-anchor="middle">40'</text>
+<line x1="840" y1="120" x2="840" y2="320" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="dimt" x="832" y="344" text-anchor="middle">9'</text>
+<text class="inkb" x="583" y="250" text-anchor="middle">6.0x6.8 d</text>
+<text class="note" x="735" y="282" text-anchor="middle">3.0x4.0</text>
+<circle cx="52" cy="50" r="10" fill="#2e7d32"/><path d="M47.5,50 L51,53.5 L57,46" fill="none" stroke="#fff" stroke-width="2.2"/>
+<text class="green" x="70" y="55">Так: проём вычтен один раз</text>
+<text class="mono" x="48" y="376">40 x 9 - 6 x 6.8 = 319 SQ FT</text>
+<text class="ink" x="48" y="400">Проём шире 4' вычитаем один раз, по своему этажу.</text>
+<text class="ink" x="48" y="419">Окно уже 4' не вычитаем.</text>
+<circle cx="472" cy="50" r="10" fill="#c62828"/><path d="M468,46 L476,54 M476,46 L468,54" fill="none" stroke="#fff" stroke-width="2.2"/>
+<text class="red" x="490" y="55">Не так: вычтен с плана и с фасада</text>
+<text class="mono" x="468" y="376" style="fill:#c62828">360 - 40.8 - 40.8 = 278 SQ FT</text>
+<text class="ink" x="468" y="400">Тот же проём снят дважды:</text>
+<text class="ink" x="468" y="419">обшивка и WRB занижены.</text>
+<text class="h" x="583" y="276" text-anchor="middle" style="fill:#c62828">x 2</text>
+<line x1="440" y1="40" x2="440" y2="460" stroke="#dfe3e8" stroke-width="1.2"/>
+</svg>

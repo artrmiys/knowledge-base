@@ -7269,9 +7269,9 @@
 
 <h1 id="gable-walls">Gable Walls<a class="headerlink" href="#gable-walls" title="Link to this section">&para;</a></h1>
 <div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../../../../assets/images/confluence/confluence-083.png">
-    <img src="../../../../../assets/images/confluence/confluence-083.png" alt="Gable truss on site" loading="lazy">
-    <div class="kb-gallery__caption">Gable truss: a truss with vertical studs. Framing is by others, we count only the sheathing and the layers.</div>
+  <a class="kb-gallery__item" href="../../../../../assets/images/confluence/confluence-083.jpg">
+    <img src="../../../../../assets/images/confluence/confluence-083.jpg" alt="A common W truss on site" loading="lazy">
+    <div class="kb-gallery__caption">A common W truss on site, for comparison: a gable-end truss has vertical studs for the sheathing instead of diagonals. Framing is by others, we count only the sheathing and the layers.</div>
   </a>
   <a class="kb-gallery__item" href="../../../../../assets/images/confluence/confluence-084.png">
     <img src="../../../../../assets/images/confluence/confluence-084.png" alt="Stick gable: wall studs carried up to the ridge" loading="lazy">
@@ -7305,7 +7305,7 @@ trusses</strong> (a truss, by others, only the sheathing package is ours) and <s
 </tr>
 <tr>
 <td>Sections <code>sec</code></td>
-<td>Where the wall ends and the gable starts; wall stud height</td>
+<td>Where the wall ends and the gable starts; wall height</td>
 </tr>
 <tr>
 <td>Draftstops plan (<code>a1-00</code> and the like)</td>
@@ -7316,8 +7316,8 @@ trusses</strong> (a truss, by others, only the sheathing package is ours) and <s
 <td>Span and rise for the draft stop triangle</td>
 </tr>
 <tr>
-<td>Wall notes</td>
-<td>2x4 or 2x6 size, FRT, sheathing material</td>
+<td>Wall notes, roof plan legend</td>
+<td>2x4 or 2x6 size, FRT, sheathing material; draft stop material</td>
 </tr>
 </tbody>
 </table>
@@ -7347,12 +7347,14 @@ trusses</strong> (a truss, by others, only the sheathing package is ours) and <s
 <h2 id="takeoff-name-and-dfl-row">Takeoff name and DFL row<a class="headerlink" href="#takeoff-name-and-dfl-row" title="Link to this section">&para;</a></h2>
 <p>The <code>GB</code> button on the XL strip puts gables into the <code>Gable Walls</code> block; the
 <code>a2_sqft_gable_trussheel</code> macro reads the areas and lengths.</p>
+<p><code>BTM</code> and <code>TOP</code> are the lengths of the <code>btm</code> and <code>top</code> lines in LFT, <code>area</code> is the gable
+Area in SQ FT.</p>
 <table>
 <thead>
 <tr>
 <th>Takeoff name</th>
 <th>DFL row</th>
-<th>Unit</th>
+<th>Unit (column D)</th>
 <th>Formula / factor</th>
 </tr>
 </thead>
@@ -7366,55 +7368,68 @@ trusses</strong> (a truss, by others, only the sheathing package is ours) and <s
 <tr>
 <td>same</td>
 <td><code>Studs for Gables</code> 2x6</td>
-<td>pcs</td>
-<td><code>SQFT / stud height</code>, to an even number</td>
+<td>pieces, D = <code>12</code></td>
+<td><code>=EVEN(G/D)</code>: gable stick area / 12, to an even number</td>
 </tr>
 <tr>
 <td>same</td>
 <td><code>Blocking</code> 2x6</td>
 <td>LFT</td>
-<td><code>BTM / 2</code></td>
+<td><code>BTM / 2</code>, to an even number</td>
 </tr>
 <tr>
 <td>same</td>
-<td><code>Bracing Ext Walls</code> 2x4 (14')</td>
-<td>pcs</td>
-<td><code>BTM / 8 x 1.1</code></td>
+<td><code>Bracing Ext Walls</code> 2x4</td>
+<td>pieces, D = <code>14</code></td>
+<td><code>BTM / 8 x 1.1</code>; a gable under 7' at the peak gets no row</td>
 </tr>
 <tr>
 <td>both types</td>
 <td><code>Wall Sheathing</code> <code>7/16" Zip</code> or <code>1/2" Ply</code></td>
 <td>4x8</td>
-<td><code>SQFT x 1.1 / 32</code>, round up</td>
+<td><code>area x 1.1 / 32</code>, round up</td>
 </tr>
 <tr>
-<td>both types</td>
-<td><code>Vapor Barrier</code> (WRB material per spec)</td>
+<td>both types, no Zip</td>
+<td><code>Vapor Barrier</code> (B = the WRB per spec)</td>
 <td>SQ FT</td>
-<td><code>SQFT x 1.1</code>, to 10</td>
+<td><code>area x 1.1</code></td>
 </tr>
 <tr>
-<td>both types</td>
+<td>both types, no Zip</td>
 <td><code>Insulation</code></td>
 <td>SQ FT</td>
-<td><code>SQFT x 1.1</code>, to 10</td>
+<td><code>area x 1.1</code>; only continuous insulation outside the sheathing</td>
 </tr>
 <tr>
-<td>both types</td>
+<td>both types, Zip</td>
 <td><code>Tape</code> <code>Zip Tape</code></td>
 <td>LFT</td>
-<td><code>SQFT x 0.4 x 1.1</code>, to 10</td>
+<td><code>area x 0.4 x 1.1</code>, to 10</td>
 </tr>
 <tr>
 <td><code>gable trusses/draft stop</code></td>
-<td><code>Draft Stop</code> <code>1/2" OSB</code></td>
+<td><code>Draft Stop</code></td>
 <td>SQ FT</td>
-<td>sum of the triangles, thickness per detail</td>
+<td><code>sum of the triangles x 1.1</code></td>
 </tr>
 </tbody>
 </table>
-<p>Gable trusses have no plates and studs rows. Sheathing material and FRT follow the
-exterior wall notes (<a href="../../sheathing/wall-sheathing/">Wall Sheathing</a>).</p>
+<p>Rounding of SQ FT and LFT rows: a result under 50 goes to 2, otherwise to 10.</p>
+<p><strong>Studs for Gables.</strong> Gable studs are not counted by spacing: in a triangle every
+stud has its own length. The template uses the area: G = gable stick area in
+SQ FT, D = <code>12</code> (a 12' stock stud, the short ones are cut from it), C = <code>=EVEN(G/D)</code>,
+that is one 12' stud per 12 SQ FT of gable, rounded to even. A 556 SQ FT gable:
+<code>556 / 12 = 46.3</code>, the book gets 48 studs of 12'.</p>
+<p><strong>Draft Stop.</strong> The unit is <code>SQ FT</code>, not <code>4x8</code> sheets. The material in B comes from the
+roof plan legend or the section: the default is <code>1/2" WR Gyp</code>; <code>7/16" OSB</code>, <code>1/2" Gyp</code>
+or <code>5/8" Type X</code> when the drawing says so; no draft stop sheet at all means
+<code>TBD</code>. Sheathed on both sides: label <code>Draft Stop 2 sides</code>, G x 2. The row
+sits in the Gable Walls block after a blank row.</p>
+<p>With Zip there are no <code>Vapor Barrier</code> and <code>Insulation</code> rows: the barrier is built into the
+sheet, only <code>Tape</code> is needed. Insulation between studs is by others in any case. Gable
+trusses have no plates and studs rows. Sheathing material and FRT follow the exterior
+wall notes (<a href="../../sheathing/wall-sheathing/">Wall Sheathing</a>).</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Attic draft stop missed or copied from the shear wall total: the most frequent miss.</li>
@@ -7423,6 +7438,7 @@ exterior wall notes (<a href="../../sheathing/wall-sheathing/">Wall Sheathing</a
 <li>Plates and studs listed for gable trusses.</li>
 <li>Gable confused with truss heel or box sheathing: the geometry is different.</li>
 <li>Area measured, but the old number stayed in Excel.</li>
+<li><code>Draft Stop</code> written in <code>4x8</code> sheets, or with a material out of habit instead of the roof plan legend.</li>
 </ul>
 <p>Walkthrough with examples: <a href="../../../../start/common-mistakes/#walls">all wall mistakes</a>.</p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Link to this section">&para;</a></h2>
@@ -7435,6 +7451,21 @@ exterior wall notes (<a href="../../sheathing/wall-sheathing/">Wall Sheathing</a
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    gable stick    Area, 556 SQ FT
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    btm            Line, 52.4 LFT
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    top            Line, 70.3 LFT
+</span></code></pre></div>
+<p>DFL rows from these takeoffs (a Zip wall):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Gable trusses
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Wall Sheathing                  7/16&quot; Zip      28   4x8     812 x 1.1 / 32 = 27.9
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Tape                            Zip Tape      360   LFT     812 x 0.4 x 1.1 = 357.3
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Draft Stop                      1/2&quot; WR Gyp   430   SQ FT   390 x 1.1 = 429
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Gable stick (Grge)
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Plates Ext (3) btm and dbl top  2x6           214   LFT     (52.4 + 2 x 70.3) x 1.1 = 212.3
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Studs for Gables                2x6            48   12      556 / 12 = 46.3
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>Blocking                        2x6            28   LFT     52.4 / 2 = 26.2
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>Bracing Ext Walls               2x4           7.2   14      52.4 / 8 x 1.1
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>Wall Sheathing                  7/16&quot; Zip      20   4x8     556 x 1.1 / 32 = 19.1
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>Tape                            Zip Tape      250   LFT     556 x 0.4 x 1.1 = 244.6
 </span></code></pre></div>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
 <ul>

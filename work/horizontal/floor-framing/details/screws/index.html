@@ -7312,7 +7312,15 @@
 <h2 id="ourplancore">Как мерить в OurPlanCore<a class="headerlink" href="#ourplancore" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Длина из Line детали (<code>details/2x10 ledger + screws</code>, <code>details/12/S401</code>), количество узлов из Count. Отдельную позицию для screws создавать не нужно, если они идут вместе с деталью ledger.</p>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Строка screws стоит рядом со своим соединением. Формула в pcs: <code>G</code> - LFT ledger, <code>H</code> - шаг, множитель - число screws на узел, значимость округления = число на узел (3 на торец фермы дают <code>;3</code>); результат меньше 50 округлять до чётного.</p>
+<p>Строка screws стоит сразу под своим соединением, в B - screw точно как на детали: <code>SDWS22600DB Screws</code>, без кода <code>1/4" x 4 1/2" SDS Screws</code>.</p>
+<p>Screws ledger - строка <code>Screws (n) at Ledger</code>:</p>
+<ul>
+<li><code>n</code> - screws в одной точке (на стойку или на торец фермы), шаг точек <code>sp</code> - с детали;</li>
+<li><code>G</code> - LFT ledger, те же линии, что у строки <code>Ledger</code>;</li>
+<li>число screws <code>x = G*12/sp*n</code>, отдельного запаса нет;</li>
+<li>округление одно, как у всех счётных строк: меньше 50 - вверх до чётного, от 50 - вверх до 10: <code>=ЕСЛИ(x&lt;50;ОКРВВЕРХ(x;2);ОКРВВЕРХ(x;10))</code>.</li>
+</ul>
+<p>В прошлых книгах встречается старый вид <code>Screws 16" o.c. (3)</code>: шаг в H, запас <code>1.05</code> / <code>1.1</code> и округление <code>;3</code>. Новые строки ledger так не пишем.</p>
 <table>
 <thead>
 <tr>
@@ -7325,15 +7333,15 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Screws 16" o.c. (3)</code></td>
-<td><code>SDWS 0.22 x 6"</code></td>
-<td><code>=ОКРВВЕРХ(G*12/H*3*1.1;3)</code></td>
+<td><code>Screws (3) at Ledger</code></td>
+<td><code>SDWS22600DB Screws</code></td>
+<td><code>=ЕСЛИ(G*12/16*3&lt;50;ОКРВВЕРХ(G*12/16*3;2);ОКРВВЕРХ(G*12/16*3;10))</code></td>
 <td><code>pcs</code></td>
-<td><code>ledger per 4/S401</code></td>
+<td><code>4/S401</code></td>
 </tr>
 <tr>
 <td><code>Screws (2)</code></td>
-<td><code>SDS 1/4 x 4 1/2</code></td>
+<td><code>1/4" x 4 1/2" SDS Screws</code></td>
 <td>узлов x 2</td>
 <td><code>pcs</code></td>
 <td>деталь балка-пост</td>
@@ -7358,6 +7366,7 @@
 <ul>
 <li>Screws ledger не по детали: 1 на торец вместо 3 (84 стало 132).</li>
 <li>Screws взяты с другого этажа, не со своего ledger.</li>
+<li>У строки ledger оставлены запас <code>1.05</code> / <code>1.1</code> и округление <code>;3</code> старого вида: округление одно, до чётного или до 10.</li>
 <li>Детали 1 и 3 похожи на картинке, но крепёж разный.</li>
 <li>Clips H2.5A и SDWC посчитаны оба, когда деталь даёт "in lieu of".</li>
 <li>Гвозди посчитаны штуками.</li>
@@ -7373,30 +7382,28 @@
 <th>D</th>
 <th>E</th>
 <th>G</th>
-<th>H</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Ledger</code></td>
 <td><code>2x10</code></td>
-<td><code>=ОКРВВЕРХ(G*1.1/D;1)</code></td>
+<td><code>=ОКРВВЕРХ(G/D;1)</code></td>
 <td>16</td>
 <td><code>4/S401</code></td>
 <td>44</td>
-<td></td>
 </tr>
 <tr>
-<td><code>Screws 16" o.c. (3)</code></td>
-<td><code>SDWS 0.22 x 6"</code></td>
-<td><code>=ОКРВВЕРХ(G*12/H*3*1.1;3)</code></td>
+<td><code>Screws (3) at Ledger</code></td>
+<td><code>SDWS22600DB Screws</code></td>
+<td><code>=ЕСЛИ(G*12/16*3&lt;50;ОКРВВЕРХ(G*12/16*3;2);ОКРВВЕРХ(G*12/16*3;10))</code></td>
 <td>pcs</td>
 <td><code>4/S401</code></td>
 <td>44</td>
-<td>16</td>
 </tr>
 </tbody>
 </table>
+<p>Ledger: 44 / 16 = 2.75, значит 3 доски по 16'. Screws: 3 на стойку через 16", 44 x 12 / 16 = 33 точки, x 3 = 99; это не меньше 50, значит вверх до 10 = 100 pcs.</p>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li><a href="../bolts/">Bolts</a>, <a href="../steelbeams/">Steel Beam Web Fillers</a>, <a href="../../../../../reference/hardware-catalog/">Hardware catalog</a></li>

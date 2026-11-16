@@ -7342,7 +7342,7 @@
 <li>Одинаковые лестницы - один блок с множителем; разные - отдельные блоки.</li>
 </ol>
 <h2 id="dfl">Как назвать в дереве и строка DFL<a class="headerlink" href="#dfl" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Экспорт: кнопка ST полосы XL ставит лестничные позиции перед Subfloor. Блок в DFL начинается строкой <code>Note: 2 Stairs</code>, где G = число лестниц, и все количества умножаются на G.</p>
+<p>Экспорт: кнопка ST полосы XL ставит лестничные позиции перед Subfloor. Блок в DFL начинается строкой <code>Note: 2 Stairs</code>, где G = число лестниц, и все количества умножаются на G. Это строка-нота: жирная на жёлтом A:F, B:F пустые, G и H остаются; детали лестницы пишутся в E строк материалов.</p>
 <table>
 <thead>
 <tr>
@@ -7357,9 +7357,9 @@
 <tr>
 <td><code>Stringers (4)</code></td>
 <td><code>2x12</code>, по таблице <code>1 3/4 x 11 7/8 LVL</code>, <code>1 3/4 x 14 LVL</code></td>
-<td><code>=4*G</code> на марш</td>
+<td><code>=4*G</code> на марш; два одинаковых марша <code>=4*2*G</code></td>
 <td><code>10</code>, <code>12</code>, <code>14</code></td>
-<td>4 stringers на марш; 2x12 по умолчанию, LVL по таблице детали</td>
+<td><code>(4)</code> - stringers на один марш; 2x12 по умолчанию, LVL по таблице детали</td>
 </tr>
 <tr>
 <td><code>Treads</code></td>
@@ -7401,7 +7401,7 @@
 <td><code>LSC</code>, <code>LUS210</code>, <code>HUCQ210-3</code></td>
 <td>по узлам x G</td>
 <td><code>pcs</code></td>
-<td>LSC один на верхний конец stringer</td>
+<td>LSC один на верхний конец каждого stringer: stringers на марш x число маршей x G</td>
 </tr>
 <tr>
 <td><code>Screws</code></td>
@@ -7426,8 +7426,8 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>framing/
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  2nd floor framing/
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    stairs/
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      box str            Line, 24 LF
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      ledger str         Line, 12 LF
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      box str            Line, 24 LFT
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      ledger str         Line, 12 LFT
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      Stair 2x10 16&quot;     J Area площадки
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>      Str FB5 10         2 точки
 </span></code></pre></div>
@@ -7447,12 +7447,12 @@
 <td></td>
 <td></td>
 <td></td>
-<td><code>2/S603</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>Stringers (4)</code></td>
 <td><code>2x12</code></td>
-<td><code>=4*G</code></td>
+<td><code>=4*2*G</code></td>
 <td>12</td>
 <td><code>2/S603</code></td>
 </tr>
@@ -7466,7 +7466,7 @@
 <tr>
 <td><code>Risers</code></td>
 <td><code>1x8 Risers</code></td>
-<td><code>=6*G</code></td>
+<td><code>=7*G</code></td>
 <td>12</td>
 <td></td>
 </tr>
@@ -7486,6 +7486,7 @@
 </tr>
 </tbody>
 </table>
+<p>Каждая лестница - два марша по 10 risers. Stringers: 4 на марш x 2 марша = 8 на лестницу, столько же LSC (один на верхний конец каждого stringer). Treads: 20 risers минус 2 марша = 18, по 3 на доску 12' = 6 досок. Risers: 20 / 3 = 6.7, значит 7 досок. Всё умножается на G = 2 лестницы.</p>
 <h2 id="_5">См. также<a class="headerlink" href="#_5" title="Прямая ссылка на раздел">&para;</a></h2>
 <ul>
 <li><a href="../beam/">Beam</a>, <a href="../joist/">Joist</a>, <a href="../post/">Post</a></li>
