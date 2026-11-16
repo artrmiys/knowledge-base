@@ -7,7 +7,7 @@
 
 <figure markdown>
   ![Зоны листа Detailed Frame List](../assets/images/reference/dfl-layout.svg)
-  <figcaption markdown="span">Лист Detailed Frame List: слева сдаваемая таблица A:H, справа рабочие зоны (экспорт из программы, матрица стен, спек-ячейки, калькулятор высот, справочники). Строки вставляются только в A:H.</figcaption>
+  <figcaption markdown="span">Лист Detailed Frame List: сдаваемая таблица A:H и рабочие зоны правее H (экспорт из программы, матрица стен, спек-ячейки, калькулятор высот, справочники). G берёт число из K экспорта или из матрицы. Строки вставляются только в A:H.</figcaption>
 </figure>
 
 ## Что где на этой странице { #map }
