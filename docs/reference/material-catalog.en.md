@@ -18,7 +18,7 @@ Here: what materials are called in the workbook (the `Mat List` tab) and in colu
 | **FRT** | any size marked `FRT` in B | | per construction type (Type III: everything in the exterior wall plane); `FRT` and `FRTW` on a drawing are different labels for the same requirement |
 
 - P.T. bottom plate only on concrete and masonry; on wood floor framing, regular.
-- Outdoor posts (porch, balcony, railings) are always P.T.; under a roof, regular.
+- Outdoor lumber (porch, balcony, deck, canopy, railings: posts, beams, joists, ledger) is always P.T., roofed or not; plain lumber only inside the building envelope.
 
 ## Engineered lumber (EWP)
 
@@ -56,7 +56,7 @@ A conflict between arch and S on sheathing is resolved with a note: [Notes in DF
 | --- | --- |
 | Sill sealer | `1/2 x 4`, `x 6`, `x 8`, 50' rolls |
 | Termite shield | `Copper` |
-| Panel adhesive | `29 oz` tubes: `=C<subfloor>/3` |
+| Panel adhesive | `29 oz` tubes: `=CEILING(C<subfloor>/3,1)`, one tube per 3 sheets |
 | H-clips | by decking thickness and support spacing ([H-clips](../work/horizontal/roof-framing/h-clips.md)) |
 
 ## Trim, decking, railings

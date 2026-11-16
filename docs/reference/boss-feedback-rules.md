@@ -6,7 +6,7 @@
 
 ## Стены и стойки { #studs }
 
-- Высота стойки = floor-to-floor минус subfloor, минус глубина перекрытия, минус plates. Floor-to-floor и отметка потолка высотой стойки не являются; проверять по разрезу каждого дома. Пример: `11'1" wall - 22" truss - 3/4" subfloor = 9'2" stud`. На COM точная высота до 1/8" в E строки студов.
+- Высота стены в имени и в строке студов = floor-to-floor минус subfloor, минус глубина перекрытия. Plates (одна нижняя и две верхние) **не вычитаются**: это высота стены в сборе, по ней шаблон выбирает стойку. Вычитаются только лишние доски сверх этих трёх, если их показывает разрез. Floor-to-floor и отметка потолка этой высотой не являются; проверять по разрезу каждого дома. Пример: `11'-1" floor-to-floor - 22" truss - 3/4" subfloor = 9'-2 1/4"`. На COM точная высота до 1/8" в E строки студов. [Exterior Walls, высота](../work/vertical/walls/exterior.md#stud-height).
 - Тип стены (ext, corr, dem, party) определяется по участкам wall schedule, не группой: кусок demising внутри наружной линии остаётся demising.
 - Нижняя plate P.T. только на бетоне и кладке. Двойная нижняя plate только там, где показывает деталь.
 - Факторы studs: [Stud spacing factors](formulas.md#stud-spacing-factors), `12 / 16 / 24 = 1.4667 / 1.1 / 0.625`. Joists считаются по другой таблице (`12 / spacing`). Здесь числа не дублируются.
@@ -35,7 +35,7 @@ FRT задаёт тип конструкции из Code Compliance Summary, а 
 ## Обшивка и WRB { #sheathing }
 
 - `19/32" = 5/8"`, не `1/2"`. Относится к plywood и OSB.
-- Структурный лист главнее по толщине; Zip по арх превалирует над структурной нотой, но с нотой. `7/16" Zip` на S и `Zip R-3` на A - один продукт, не расхождение.
+- Кто главнее. Продукт наружной обшивки и барьера (Zip, OSB, Ply, Densglass, WRB) берётся из типов стен на Arch. Толщина, класс панели, какие стены обшиваются и с каких сторон - со Structural (general notes, shear wall schedule). Структурная толщина главнее архитектурной; Zip по арх превалирует над структурной нотой, но с нотой. Любое расхождение = нота в шапке с обоими листами. `7/16" Zip` на S и `Zip R-3` на A - один продукт, не расхождение.
 - Название обшивки проектное: `LP FlameBlock 2-sided` не равно `7/16 OSB FRT`; `5/8 EXT. SHEATHING` не превращать в Ply без основания; `CDX` только если так в спецификации.
 - Наружный барьер называется WRB или Air Barrier, не Vapor Barrier; продукт по спецификации (fluid-applied - не Tyvek).
 - Таблицы спецификации читать до конца: WS-1 (стены) и WRS-1 (кровля) - разные таблицы.
@@ -61,11 +61,11 @@ FRT задаёт тип конструкции из Code Compliance Summary, а 
 | Ошибка | Как правильно |
 | --- | --- |
 | `1-3/4 LVL Rim`, когда LVL не указан | `11-7/8" Rim`; LSL назван - `11-7/8" LSL Rim` |
-| Rim разбит на куски по 16' | rim в LFT с фактором `1.05` (EWP) или `1.1` |
+| Линия rim в дереве разбита на куски по 16' | одна линия на весь узел. В книге `Rim Board` досками по 16' (`=CEILING(G/D,1)`, D `16`): на доски делит формула. На EWP-only заказе rim остаётся в LFT с фактором `1.05` |
 | Ribbon board при top chord bearing trusses | blocking между фермами, часто `(2) 2x6` |
 
 - `1-3/4 LVL Rim` только когда к rim крепится deck или corridor frame. С I-joists только engineered rim. Rim нужен и у roof TJI.
-- Стены 10' и выше - два ряда blocking. Blocking, drywall blocking, ribbon, ledger - LFT с 10% waste один раз ([Rim, ribbon, blocking](formulas.md#blocking-formulas)).
+- Стены 10' и выше - два ряда blocking. Blocking, drywall blocking, ribbon, ledger в framing list - досками по 16' (`=CEILING(G/D,1)`); blocking в стенах - в LFT. Запас в формуле один раз ([Rim, ribbon, blocking](formulas.md#rim-ribbon-blocking-ledger)).
 - Ledger и его крепёж отдельными строками по детали (3 SDWS на торец фермы на 16"), вход по своему этажу.
 - Piggyback trusses: sleepers `2x6` между верхними частями ферм.
 
@@ -83,7 +83,7 @@ FRT задаёт тип конструкции из Code Compliance Summary, а 
 - Roof-to-wall ties по всем линиям опирания, шаг = шаг ферм, `H3` с обеих сторон фермы и base ties у каждой стойки, если деталь так даёт.
 - Holdowns: к бетону один, через деревянное перекрытие два; над балкой transfer holdown не нужен (указание клиента); явно показанный инженером крепёж не удалять. Блок в конце секции стен этажа: [Блоки](dfl-blocks.md#holdowns).
 - `A35 / LTP4` на shear walls по SW schedule и деталям: если schedule их называет, считать по шагу.
-- Анкеры shear walls разносить по шагу, в E марка SW, в B тип и размер из anchorage schedule; wedge anchor на Titen HD не менять без основания; plate washers по таблице, не универсальные 3x3.
+- Анкеры shear walls разносить по шагу, в E марка SW, в B тип и размер из anchorage schedule; wedge anchor на Titen HD не менять без основания; plate washers по таблице: если schedule называет модель (`BP 5/8-3`, `BPS 1/2-3`), пишется она, а `3x3 Square` только когда модель не названа.
 
 <figure markdown>
   ![Holdown detail at foundation](../assets/images/confluence/confluence-028.png)
@@ -94,7 +94,7 @@ FRT задаёт тип конструкции из Code Compliance Summary, а 
 
 - Уклон с листа, применяется один раз; у каждого корпуса свой. Overframe не добавлять автоматом.
 - Eaves все участки; canopy не входит в eve и rake. Frame for Eave по разрезу: алюминиевый карниз не считается.
-- Truss bracing на всю площадь под крышей, включая гараж.
+- `Truss Bracing` ферм крыши - на всю площадь в плане под фермами, включая гараж; stick-кровля строку не получает. `Bracing for Trusses` ферм перекрытия - по линиям примерно каждые 10', не над несущими стенами и не там, где joists stick или TJI. Формулы: [Truss bracing](formulas.md#truss-bracing).
 - Kickers только там, где они есть на детали; firewall и gable kickers по шагу детали.
 - Soffit: деревянный каркас считаем, алюминиевый soffit нет; 5/8" exterior gypsum на canopies и porch; обе площади soffit идут в обшивку и WRB.
 - Draft stop чердака отдельно от fireblock, по зонам roof plan, строка в `Gable Walls`; не копировать из суммы shear.
@@ -112,7 +112,7 @@ FRT задаёт тип конструкции из Code Compliance Summary, а 
 
 ## Балконы и porch { #deck }
 
-- Posts на улице всегда P.T.; под крышей обычные. Railing composite как система, wood painted поэлементно; два поста на балкон.
+- Лес porch, балкона и deck на улице всегда P.T., под крышей он или нет; обычный только внутри тёплого контура. Railing composite как система, wood painted поэлементно; два поста на балкон.
 - Porch считается отдельно от балконов; porch SQFT на Front Page заполнять даже при porch над балконом.
 - Ceiling joists porch + ledger + hangers обязательны; каркас не показан - нота. Полный состав: [Блоки балконов, porch и holdowns](dfl-blocks.md).
 
