@@ -10,6 +10,11 @@
   <figcaption markdown="span">Flush beam из LVL в уровне joists: joists с обеих сторон висят на face-mount hangers. Балка идёт одной Count-позицией с длиной в имени, hangers считаются по числу концов joists на ней. Фото: plasticinehouse.com, [источник](https://plasticinehouse.com/how-far-can-a-lvl-beam-span-without-support/), найдено через Pinterest.</figcaption>
 </figure>
 
+<figure markdown>
+  ![Flush и dropped балка в разрезе](../../../assets/images/framing/beam-flush-dropped.svg)
+  <figcaption markdown="span">Flush и dropped в разрезе поперёк балки. Flush стоит в уровне joists: joists висят на hangers, потолок ровный, строки `Beam (3) Flush` и Hangers. Dropped стоит под joists: hangers на балке нет, балка выступает ниже потолка, строка обычная `Beam (3)`. C = точки x plies.</figcaption>
+</figure>
+
 ## Что это
 
 Beam - балка перекрытия или крыши, на которую опираются joists, rafters или посты: `(2) 2x10`, `(3) 1 3/4 x 11 7/8 LVL`, `5 1/4 x 11 7/8 PSL`, `5 1/2 x 14 GL`. Стальная балка by others, но деревянный nailer на ней наш: [Steel Beam Web Fillers](details/steelbeams.md). Перемычка над проёмом - [Headers](../../vertical/openings/headers.md); балка между усиленными rafters в крыше - [Roof Header](../roof-framing/header.md). Flush (в уровне joists, на hangers) и Dropped (ниже joists) пишутся в Label.

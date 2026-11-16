@@ -1,8 +1,8 @@
 # Corridor Walls
 
 <figure markdown>
-  ![Staggered stud wall: two rows of 2x4 studs on 2x6 plates](../../../assets/images/confluence/confluence-062.png)
-  <figcaption markdown="span">Staggered stud wall: 2x4 studs in two staggered rows on one 2x6 plate, insulation woven between them. In the DFL these are 2x6 plates and two rows of 2x4 studs.</figcaption>
+  ![Corridor wall section: staggered 2x4 studs on 2x6 plates, ledger and corridor joists](../../../assets/images/walls/corridor-wall-section.svg)
+  <figcaption markdown="span">Corridor wall section: 2x6 plates, two staggered rows of 2x4 studs at 16" o.c., temporary bracing, a ledger and corridor joists on hangers. Numbers match the DFL rows on the right. In plan the wall is one Line along its axis, `corr 2x6 9.09`.</figcaption>
 </figure>
 
 <!-- TODO-PHOTO: staggered stud wall framing photo, EN query "staggered stud wall framing" -->

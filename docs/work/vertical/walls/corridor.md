@@ -1,8 +1,8 @@
 # Corridor Walls (коридорные стены)
 
 <figure markdown>
-  ![Staggered stud wall: два ряда стоек 2x4 на plates 2x6](../../../assets/images/confluence/confluence-062.png)
-  <figcaption markdown="span">Staggered stud wall: стойки 2x4 двумя рядами вразбежку на одной plate 2x6, утеплитель змейкой. В DFL это plates 2x6 и два ряда studs 2x4.</figcaption>
+  ![Разрез коридорной стены: staggered studs 2x4 на plates 2x6, ledger и corridor joists](../../../assets/images/walls/corridor-wall-section.svg)
+  <figcaption markdown="span">Разрез коридорной стены: plates 2x6, два ряда стоек 2x4 по 16" вразбежку, временная распорка, ledger и corridor joists на hangers. Номера = строки DFL справа. В плане стена - одна Line по оси `corr 2x6 9.09`.</figcaption>
 </figure>
 
 <!-- TODO-PHOTO: staggered stud wall framing photo, EN query "staggered stud wall framing" -->
