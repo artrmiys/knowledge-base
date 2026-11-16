@@ -1,8 +1,8 @@
 # Managers: Sheet Manager, Takeoff Manager, Report Builder, Materials, AI Manager, Job Tracker
 
-Here: the mode bar tabs that are off by default in `Settings > Modules`, and the Job Tracker button. You need them when there are dozens of sheets and editing them in a table is easier, when you need a material list or prices, when AI works through AI Inbox, and when you want to switch the job card in the tracker from the app. Everyday measuring does without these tabs.
+Here: the mode bar tabs that are off by default in `Settings > Modules`, and the Job Tracker button. You need them when there are dozens of sheets and editing them in a table is easier, when you need a material list or prices, when AI works through AI Inbox, and when you want to switch the job card in the tracker from the app. Everyday measuring does without these tabs. Materials, AI Manager and 3D are in the full version only; Lite does not have them ([Lite vs full version](ourplancore-lite.md)).
 
-Turning on: `Settings > Modules`, check the module, `Apply` or `Save global default` ([how to turn on](ourplancore-extras.md#enable)). The tab appears in the mode bar next to `Main View` and `Settings`. From the command palette (++ctrl+shift+p++) the tabs open with the commands `Show Sheet Manager`, `Show Takeoff Manager`, `Show Report Builder`, `Show Materials`, `Show AI Manager` and `Show 3D Viewer` ([3D](ourplancore-3d.md)); for a disabled module the command does not fire.
+Turning on: `Settings > Modules`, check the module, `Apply` or `Save global default` ([how to turn on](ourplancore-extras.md#enable)). The tab appears in the mode bar next to `Main View` and `Settings`. From the command palette (++ctrl+shift+p++) the tabs open with the commands `Show Sheet Manager`, `Show Takeoff Manager`, `Show Report Builder`, and in the full version also `Show Materials`, `Show AI Manager` and `Show 3D Viewer` ([3D](ourplancore-3d.md)); for a disabled module the command does not fire.
 
 ## Sheet Manager { #sheet-manager }
 
@@ -11,7 +11,7 @@ Turning on: `Settings > Modules`, check the module, `Apply` or `Save global defa
   <figcaption markdown="span">The sheet table with proposed names, scale, source and confidence. The `Rename` and `Scale Action` checkboxes pick what to apply.</figcaption>
 </figure>
 
-A table of all sheets for bulk operations. Turning the module on also adds the `Name`, `Scale`, `Name+Scale` buttons to the Main ribbon, and together with the AI module, `AI Fill` and `Crop Hints`.
+A table of all sheets for bulk operations. Turning the module on also adds the `Name`, `Scale`, `Name+Scale` buttons to the Main ribbon, and in the full version, together with the AI module, `AI Fill` and `Crop Hints` (Lite does not have these two buttons).
 
 | Group | Buttons |
 | --- | --- |
@@ -37,7 +37,7 @@ Result: the `Raster` column is filled, the sheet opens from the raster.
 ### How to set title block regions: Crop Hints { #crop-hints }
 
 What for: a plan set with an unreadable title block gets names and scale from regions drawn once.
-Needed: the Sheet Manager and AI modules.
+Needed: the Sheet Manager and AI modules, that is, the full version.
 
 1. Press **Crop Hints** (Main ribbon or the **Metadata** group): the app opens a typical sheet of the plan set with the status `show Sheet title / number, then Scale on the middle <profile> sheet`.
 2. Draw three regions with the left button: **Sheet #**, **Sheet Title**, **Scale**; the right or middle button moves the sheet, **Clear Current** and **Clear All** erase.
@@ -65,11 +65,11 @@ The Takeoffs tree as a table: `Item`, `Type`, `Sections`, `Total`, `Unit`, `Pric
   <figcaption markdown="span">Report Builder reads `TemplateCom.xlsm` and shows the wall table.</figcaption>
 </figure>
 
-`Reload` reads the `TemplateCom.xlsm` template, `Refresh` updates the table, `Apply Walls` writes the walls into the workbook. This is the old path into Excel; today walls, areas and framing are written by the XL strip with per-section buttons and `ALL` ([Excel export](ourplancore-excel.md)). The tab stays for checking how old workbooks got their wall block.
+`Reload` reads the `TemplateCom.xlsm` template, `Refresh` updates the table, `Apply Walls` writes the walls into the workbook. This is the old path into Excel; today, in the full version, walls, areas and framing are written by the XL strip with per-section buttons and `ALL`; in Lite the numbers go through the `Excel`, `Value` and `Link to Excel` buttons ([Excel export](ourplancore-excel.md)). The tab stays for checking how old workbooks got their wall block.
 
 ## Materials { #materials }
 
-The tab reads materials from the drawings themselves, not from the Takeoffs tree: material mentions and schedule tables in the text of the job's source PDFs.
+Full version only: Lite has no Materials module. The tab reads materials from the drawings themselves, not from the Takeoffs tree: material mentions and schedule tables in the text of the job's source PDFs.
 
 ### How to collect materials from the job PDFs { #materials-extract }
 
@@ -88,16 +88,7 @@ This is a reference from the drawings, not quantities: the E-Wood delivery is th
 
 ## AI Inbox and AI Manager { #ai-manager }
 
-AI Inbox is a panel at the bottom of Main View (AI module): requests, responses, observations, markers. AI Manager is a separate tab with a table `Type`, `Page`, `Observation`, `Quality`, `Time`:
-
-| Group | Buttons |
-| --- | --- |
-| Setup | `AI Settings`, `+ Add`, `Refresh` |
-| Review | `Open Details`, `Go to Page`, `Run AI` |
-| Batch | `Run New` (all new requests from bookmarks), `Retry Failed` |
-| Markers | `Create Set`, `Marker Sets`, `Export Markers` |
-
-What goes into Inbox: crops `AI crop here -> note` and `AI quick box here -> note`, observations `Save observation here`, `Add as pending check`, `Suggest takeoff item here`, trace requests `Trace wall from this point`, `Trace closed area`, `Check missed takeoffs on this page` ([tracing](ourplancore-snap-trace.md#ai-trace)), crops from the AI console `AI Crop +` ([console](ourplancore-ai-console.md#crop)). A marker is a verified symbol sample; `Find Similar From Marker` works from it. AI output in Inbox is a draft, not measurements: it gets into the tree only after confirmation. The key and model are set in the `AI Settings` dialog; the format of notes from crops in `Settings > AI Crop Notes` ([AI in the app](ourplancore-ai.md#crop-notes)).
+Full version only, together with the AI module. The AI Manager tab buttons, what goes into AI Inbox and how to review AI drafts are in the AI block: [AI in the app, AI Inbox and AI Manager](ourplancore-ai.md#ai-manager).
 
 ## Job Tracker: the In Progress button { #job-tracker }
 
@@ -118,6 +109,6 @@ The command is edited in `Settings > Modules`: `Executable`, `Arguments (one per
 ## See also
 
 - [Extra features](ourplancore-extras.md): a table of all moved-out features
-- [Workspace and modules](ourplancore-workspace.md#modules): the module list with groups
+- [Settings, Modules](ourplancore-settings.md#modules): the module list with groups
 - [Sheets (Pages)](ourplancore-pages.md), [Excel export](ourplancore-excel.md)
-- [AI in the app](ourplancore-ai.md), [AI console](ourplancore-ai-console.md)
+- [AI in the app](ourplancore-ai.md), [AI console](ourplancore-ai-console.md): full version only

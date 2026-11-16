@@ -1,5 +1,8 @@
 # 3D roof
 
+!!! info "Full version only"
+    OurPlanCore Lite has no 3D module: no 3D tab and no `Roof Base`. In Lite, the roof is measured with roof plane areas with the pitch in the name ([Roof](../work/sqfts/roof.md)) and edges with lines ([Ridge / Valley / Hip](../work/sheathing-and-misc/ridgevalleyhip.md)). How the versions differ: [Lite vs full version](ourplancore-lite.md).
+
 Here: how to turn roof plane and eave areas into a 3D roof on the 3D tab, set the pitch of edges, add overhangs and rafters, and pull ridge, hip, valley and eave lengths from the model into the Takeoffs tree. You need it on a complex roof (L, U, several pitches, dormer) when the plan does not show where hips and valleys run, and when the client asks for edge lengths. A simple gable roof is measured without 3D: an Area per roof plane with the pitch in the name ([Roof](../work/sqfts/roof.md)). Walls in 3D, the general viewer and the archived Massing: [3D and Massing](ourplancore-3d.md).
 
 <figure markdown>

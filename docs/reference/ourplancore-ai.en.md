@@ -1,5 +1,10 @@
 # AI in OurPlanCore
 
+!!! info "Full version only"
+    This page opens the "AI, terminal and 3D (full version)" block. OurPlanCore Lite, which estimators run, has no AI module, terminal, Workspace or 3D; `Settings > Agent Bridge` is in Lite. How the versions differ: [Lite vs full version](ourplancore-lite.md).
+
+    Pages of the block: [AI in the app](ourplancore-ai.md) (this one), [AI console and terminal](ourplancore-ai-console.md), [Workspace, second computer](ourplancore-workspace.md), [3D roof](ourplancore-3d-roof.md), [3D and Massing](ourplancore-3d.md).
+
 Here: every place where OurPlanCore 3.0 calls a model or an external agent: notes from crops and their format (AI Crop Notes), reading sheet title blocks, AI Inbox and AI Manager in short, Agent Bridge. You need it when you want to speed up routine work while every AI result stays under the estimator's review. The Claude and Codex terminals in the app window, with all their buttons, context and scenarios, are described separately: [AI console](ourplancore-ai-console.md).
 
 ## What there is and what it needs
@@ -10,10 +15,10 @@ Here: every place where OurPlanCore 3.0 calls a model or an external agent: note
 | AI Crop Notes | the format of Tag/Size lines in such notes | no | `Settings > AI Crop Notes` |
 | AI Inbox and AI Manager | request queue, responses, observations, markers | yes | AI module |
 | Similar with AI double-check | advice on which symbol was picked | yes | AI module, checkbox in the Similar dialog |
-| OCR on Name | reading the sheet number without a text layer (Tesseract) | no | always works |
+| OCR on Name | reading the sheet number without a text layer (Tesseract) | no | always works; Lite has no OCR |
 | AI from the title block image | a sheet name that text and OCR could not read | yes | checkbox in `Settings > Auto Rename / Scale` |
 | `>_` terminals ([AI console](ourplancore-ai-console.md)) | Claude or Codex in the right panel with live plan context | yes | Git Bash and the assistant CLI, log in once |
-| Agent Bridge | an agent edits the open job through the app | no (local) | `Settings > Agent Bridge` |
+| Agent Bridge | an agent edits the open job through the app | no (local) | `Settings > Agent Bridge`; also in Lite |
 
 The OpenAI key is set in the `AI Settings` dialog (a button on the tool strip, in AI Manager or the `OpenAI Settings` palette command); it is saved to the Windows user environment variables and is not written into the job. The default model is `gpt-5-mini`, the model list is in the same place. Everything marked "yes" goes to the network as sheet crops: keep that in mind with other people's drawings.
 
@@ -41,7 +46,7 @@ The other items of the same **AI Assist** submenu: `Save AI crop here`, `Save AI
 
 ## AI Inbox and AI Manager { #inbox }
 
-AI Inbox is a panel at the bottom of Main View (AI module): the job's observations, crops, model requests, responses and markers, newest on top; a request has a status at the start of the line: `[pending]`, `[running]`, `[done]`, `[failed]`. AI Manager is the same feed as a separate tab with the `Run AI`, `Run New`, `Retry Failed` buttons and marker sets ([Managers](ourplancore-managers.md#ai-manager)). AI output is a draft, not measurements: it gets into the tree only after review ([below](#action-draft)). Everything is stored in the job, in the `AI_Context` folder.
+AI Inbox is a panel at the bottom of Main View (AI module): the job's observations, crops, model requests, responses and markers, newest on top; a request has a status at the start of the line: `[pending]`, `[running]`, `[done]`, `[failed]`. AI Manager is the same feed as a separate tab with the `Run AI`, `Run New`, `Retry Failed` buttons and marker sets ([below](#ai-manager)). AI output is a draft, not measurements: it gets into the tree only after review ([below](#action-draft)). Everything is stored in the job, in the `AI_Context` folder.
 
 <figure markdown>
   ![AI Inbox panel](../assets/images/ourplancore/v3/ai-inbox.png)
@@ -58,6 +63,19 @@ AI Inbox is a panel at the bottom of Main View (AI module): the job's observatio
 | `More` | header | `Run New Bookmarks`, `Retry Failed Bookmarks` ([batch](#batch)), `Create Marker Set`, `Manage Marker Sets...`, `Export Marker Context` ([entry menu](#inbox-menu)) |
 | `+ Add` | header | your own observation note for the current sheet |
 | ++enter++ | the selected entry | the Observation Details window |
+
+### The AI Manager tab { #ai-manager }
+
+AI Manager is the same feed as a separate mode bar tab, with a table `Type`, `Page`, `Observation`, `Quality`, `Time`. It opens with the palette command `Show AI Manager` when the AI module is on.
+
+| Group | Buttons |
+| --- | --- |
+| Setup | `AI Settings`, `+ Add`, `Refresh` |
+| Review | `Open Details`, `Go to Page`, `Run AI` |
+| Batch | `Run New` (all new requests from bookmarks), `Retry Failed` |
+| Markers | `Create Set`, `Marker Sets`, `Export Markers` |
+
+What goes into Inbox: crops `AI crop here -> note` and `AI quick box here -> note`, observations `Save observation here`, `Add as pending check`, `Suggest takeoff item here`, trace requests `Trace wall from this point`, `Trace closed area`, `Check missed takeoffs on this page` ([tracing](ourplancore-snap-trace.md#ai-trace)), crops from the AI console `AI Crop +` ([console](ourplancore-ai-console.md#crop)). A marker is a verified symbol sample; `Find Similar From Marker` works from it. AI output in Inbox is a draft, not measurements: it gets into the tree only after confirmation. The key and model are set in the `AI Settings` dialog; the format of notes from crops in `Settings > AI Crop Notes` ([above](#crop-notes)).
 
 ### How to send a request to the model { #run-request }
 
@@ -188,7 +206,8 @@ The rules for how the agent works with the tree (names, `move` instead of create
 ## See also
 
 - [AI console](ourplancore-ai-console.md) - Claude and Codex terminals in the window
-- [Managers](ourplancore-managers.md) - AI Manager, Sheet Manager
+- [Lite vs full version](ourplancore-lite.md) - what Lite does not have
+- [Managers](ourplancore-managers.md) - Sheet Manager
 - [Settings: all categories](ourplancore-settings.md)
 - [Workspace and a second computer](ourplancore-workspace.md)
 - [Sheets (Pages)](ourplancore-pages.md) - Name, Scale
