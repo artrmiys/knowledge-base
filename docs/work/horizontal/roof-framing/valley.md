@@ -38,13 +38,14 @@ Valley - наклонное внутреннее ребро, где два ск�
 
 ## Как назвать в дереве и строка DFL
 
-Путь: `framing/roof framing/beams/valley <сечение> <длина>`. Общая строка шаблона `Ridge / Valley / Hip` в LFT, когда проект не делит их.
+Путь: `framing/roof framing/beams/valley <сечение> <длина>`. В DFL valley идёт строкой `Valley plates`: C - число досок, D - чётная заказная длина. Valley, который на плане помечен маркой балки (`RB1`), пишется `Valley Beam (n)`.
 
 | Имя в дереве | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- | --- |
-| `beams/valley 2x12 16` | `Valley Rafters` | `2x12` | точки | `16` | `S201` |
-| `beams/valley (2) 2x12 14` | `Valley Rafters (2)` | `2x12` | точки | `14` | dormer |
-| `details/sleepers` | `Sleepers` | `2x6` | LFT / 16 | `16` | overframe |
+| `beams/valley 2x12 16` | `Valley plates` | `2x12` | точки | `16` | `S201` |
+| `beams/valley (2) 2x12 14` | `Valley plates (2)` | `2x12` | точки x 2 | `14` | dormer |
+| `beams/RB1 (2) 1 3/4 x 16 LVL 20` | `Valley Beam (2)` | `1 3/4 x 16 LVL` | точки x 2 | `20` | `RB1` |
+| `details/sleepers` | `Sleepers` | `2x6` | `=ОКРВВЕРХ(G/D;1)` | `16` | overframe |
 
 ## Частые ошибки
 
@@ -59,7 +60,7 @@ Valley - наклонное внутреннее ребро, где два ск�
 
 | A | B | C | D | E |
 | --- | --- | --- | --- | --- |
-| `Valley Rafters` | `2x12` | 2 | 16 | `S201, pitch 8:12` |
+| `Valley plates` | `2x12` | 2 | 16 | `S201, pitch 8:12` |
 | `Rafters 16" o.c.` | `2x10` | 18 | 12 | `jack rafters at valley` |
 
 ## См. также

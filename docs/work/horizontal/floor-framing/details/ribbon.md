@@ -12,7 +12,7 @@
 
 ## Что это
 
-Ribbon (ribband, let-in ledger) - горизонтальная доска, врезанная в стойки, на которую опираются joists или фермы при balloon framing и у top chord bearing. Не путать с [Rim](rim.md) (торцы joists) и [Blocking](blocking.md) (между joists). Drywall ledger на стене параллельно joists - страница [Bracing for Drywall](bracingdrywall.md).
+Ribbon (ribband, let-in ledger) - горизонтальная доска, врезанная в стойки, на которую опираются joists или фермы при balloon framing и у top chord bearing. Не путать с [Rim](rim.md) (торцы joists) и [Blocking](blocking.md) (между joists). Drywall ledger на стене параллельно joists - строка `Blocking for Drywall`, страница [Wall Bracing и Blocking for Drywall](bracingdrywall.md).
 
 ## Где искать на чертежах
 
@@ -24,7 +24,7 @@ Ribbon (ribband, let-in ledger) - горизонтальная доска, вр�
 
 ## Как мерить в OurPlanCore
 
-Line (L) по стене, где деталь показывает ribbon, на листе framing с точкой F. Позиция `framing/<этаж> framing/details/ribbon` или `details/rb`. Длина = длина применения детали, не длина выноски.
+Line (L) по стене, где деталь показывает ribbon, на листе framing с точкой F. Позиция `framing/<этаж> framing/details/ribbon` или `details/rb`. Длина = длина применения детали, не длина выноски. Одна Line на весь участок: на куски по 16' её не режем, доски считает формула.
 
 <figure markdown>
   ![Line по узлу на плане](../../../../assets/images/ourplancore/v3/measure-line-detail.png)
@@ -37,11 +37,11 @@ Line (L) по стене, где деталь показывает ribbon, на 
 
 | Имя в дереве | A (Label) | B (материал) | C | D | E |
 | --- | --- | --- | --- | --- | --- |
-| `details/ribbon` | `Ribbon Board` | по детали: `2x4` у ферм, сечение joists (`2x10`) под joists | `=ОКРВВЕРХ(G*1.1/D;1)` | `16` | деталь |
-| `details/ribbon int` | `Ribbon Board interior` | | | `16` | |
-| `details/ribbon + bd` | `Ribbon Board interior + drywall` | `2x4` | | `16` | деталь + drywall ledger |
+| `details/ribbon` | `Ribbon Board` | по детали: `2x4` или `2x6` у ферм, сечение joists (`2x10`) под joists | `=ОКРВВЕРХ(G/D;1)` | `16` | деталь |
+| `details/ribbon int` | `Ribbon Board` | по детали | `=ОКРВВЕРХ(G/D;1)` | `16` | деталь внутренних стен |
+| `details/ribbon + bd` | две строки: `Ribbon Board` и `Blocking for Drywall` | по детали; `2x4` | `=ОКРВВЕРХ(G/D;1)` в каждой | `16` | деталь + drywall ledger |
 
-Фактор 1.1 один раз в формуле, как у blocking и ledger: [Формулы](../../../../reference/formulas.md#rim-ribbon-blocking-ledger). Правило: top chord bearing trusses не требуют `2x4 ribbon`. Там считается blocking между фермами, часто `(2) 2x6` над стеной 2x6. Ribbon снаружи FRT, если наружная стена FRT.
+`G` - длина линии в LFT, `D` - длина доски (16). Ribbon в framing-книге - доски по 16': отдельного waste в формуле нет, запас даёт округление до целой доски. Одна строка на сечение, детали перечислены в E. Сводка: [Формулы](../../../../reference/formulas.md#rim-ribbon-blocking-ledger). Правило: top chord bearing trusses не требуют `2x4 ribbon`. Там считается blocking между фермами, часто `(2) 2x6` над стеной 2x6. Ribbon снаружи FRT, если наружная стена FRT.
 
 ## Частые ошибки
 
@@ -53,12 +53,14 @@ Line (L) по стене, где деталь показывает ribbon, на 
 
 ## Пример
 
-| A | B | C | D | E |
-| --- | --- | --- | --- | --- |
-| `Ribbon Board` | `2x4` | `=ОКРВВЕРХ(G*1.1/D;1)` | 16 | `11/S400` |
-| `Blocking` | `(2) 2x6` | `=ОКРВВЕРХ(G*2*1.1/D;1)` | 16 | `top chord bearing per 13/S400` |
+| A | B | C | D | E | G |
+| --- | --- | --- | --- | --- | --- |
+| `Ribbon Board` | `2x4` | `=ОКРВВЕРХ(G/D;1)` | 16 | `11/S400` | 186 |
+| `Blocking (2)` | `2x6` | `=ОКРВВЕРХ(G*2/D;1)` | 16 | `top chord bearing per 13/S400` | 120 |
+
+186 / 16 = 11.6, значит 12 досок; 120 x 2 / 16 = 15 досок.
 
 ## См. также
 
-- [Rim Board](rim.md), [Blocking](blocking.md), [Bracing for Drywall](bracingdrywall.md), [Joist](../joist.md)
+- [Rim Board](rim.md), [Blocking](blocking.md), [Wall Bracing и Blocking for Drywall](bracingdrywall.md), [Joist](../joist.md)
 - [Советы: Blocking](../../../../reference/boss-feedback-rules.md#rim-board)

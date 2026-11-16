@@ -31,7 +31,8 @@ Count tool (P), one point at the center of the post, on the framing sheet with t
 1. A continuous post is counted once: on the top floor it supports. Remove duplicates on the lower floors. Height = sum of the floors it runs through.
 2. Do not merge separate story posts on one axis into one without a continuity detail. A doubtful splice goes into the takeoff Notes as "verify".
 3. Height is from the actual base to the bottom of the supported beam, by the section datums. Floor-to-floor is not the post height: under an 11 7/8" beam the post is taller than under an 18" beam.
-4. Cap and base per the detail: a separate Count takeoff `CCQ66 S2.1` in `details`, or the model in the post Notes. One cap and one base per post.
+4. Cap and base per the detail: a separate Count takeoff `CCQ66 S2.1` in `details`, or the model in the post Notes. A post on concrete always gets a base; a cap goes in when the post-to-beam detail shows it. The quantity equals the number of posts at that connection.
+5. A built-up post `(3) 2x6` is one point with `(3)` in the name, not three points. In the DFL column C counts every board: points x 3.
 
 <figure markdown>
   ![Count: post points on the plan](../../../assets/images/ourplancore/v3/measure-count.png)
@@ -50,21 +51,22 @@ Path: `framing/<supported floor> framing/posts/<mark size height>`. Height in th
 | Tree name | A (Label) | B (material) | C (qty) | D | E |
 | --- | --- | --- | --- | --- | --- |
 | `posts/C53 - 5 1/4 x 7 PSL + 2x6` | `Posts` | `5 1/4 x 7 PSL` | points | order length, ft | `C53`, schedule sheet |
-| `posts/6x6 SYP#1 P.T. 8.2` | `Posts` | `6x6 SYP#1 P.T.` | points | `10` | detail |
+| `posts/6x6 SYP#1 P.T. 8.2` | `Posts` | `6x6 P.T.` (the lumber grade is not written in B) | points | `10` | detail |
 | `posts/C4 20` | `Posts` | per schedule | points | `20` | `C4` |
 | `posts/(3) 2x6 9.1` | `Posts (3)` | `2x6` | points x 3 | `10` | |
 | `details/ABU66 Zmax S2.1` | `Post Bases` | `ABU66 Zmax` | points | `pcs` | `5/S501` |
 | in the post Notes | `Post Caps` | `CCQ66`, `BC46 Zmax` | = posts | `pcs` | `6/S501` |
 
-Export to Excel: the PS button on the XL strip puts the posts into the worksheet of their floor. The size for a code (`C4 - 6x6`) comes from the LG legend: without a legend row, B gets the code instead of the size. The `C_PostsSort` macro lays out the rows. The order length in D is a standard board (8, 10, 12, 14, 16...).
+Export to Excel: the PS button on the XL strip puts the posts into the worksheet of their floor. The size for a code (`C4 - 6x6`) comes from the LG legend: without a legend row, B gets the code instead of the size. The `C_PostsSort` macro lays out the rows. The order length in D is a standard board (8, 10, 12, 14, 16...). `(n)` at the end of the Label is the number of boards in one built-up member, and C = points x n: two `(3) 2x6` posts give `Posts (3)` with C = 6. Same as for [Beam](beam.md).
 
 ## Common mistakes
 
 - A post drawn on every floor it runs through and counted twice.
 - Height taken as floor-to-floor, without the beam depth.
-- Cap and base not on every post: 8 posts give 8 caps and 8 bases; 4 P1 posts are 4 sets, not 3.
+- Cap and base not on every post of the connection: 8 posts with a cap and base per the detail give 8 caps and 8 bases; 4 P1 posts are 4 sets, not 3.
+- `Posts (3)` with C holding the points without x 3, or three points placed for one built-up post.
 - Posts and Post Caps created under every built-up beam. End studs are part of the wall; a post is counted when an explicit material is named: `4x4`, `6x6`, PSL, steel.
-- Exterior posts (porch, balcony, railing) without P.T. Under a porch roof P.T. is not needed.
+- Exterior posts (porch, balcony, deck, canopy, railing) without P.T. Under a porch roof P.T. is still needed: outdoor lumber is always P.T.
 - An exterior base without `Zmax`. It is written as a separate word after the model: `ABU66 Zmax`, not `ABU66Z` ([hardware format in the DFL](../../../reference/hangers.md#dfl-format)).
 - The post is not specified on the plan and the DFL has a made-up size. A note is needed: "post size not specified, assumed 6x6; verify".
 - [All floor framing mistakes](../../../start/common-mistakes.md#floor)

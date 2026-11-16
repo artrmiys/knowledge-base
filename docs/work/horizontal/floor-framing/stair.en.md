@@ -40,17 +40,17 @@ Path `framing/<floor> framing/stairs/<element>`. The tool type follows the physi
 
 ## Tree name and DFL row
 
-Export: the ST button on the XL strip puts the stair takeoffs before Subfloor. The block in the DFL starts with a `Note: 2 Stairs` row, where G = number of stairs, and all quantities are multiplied by G.
+Export: the ST button on the XL strip puts the stair takeoffs before Subfloor. The block in the DFL starts with a `Note: 2 Stairs` row, where G = number of stairs, and all quantities are multiplied by G. It is a note row: bold on yellow A:F, B:F blank, G and H stay; the stair details go in E of the material rows.
 
 | A (Label) | B (material) | C | D | Rule |
 | --- | --- | --- | --- | --- |
-| `Stringers (4)` | `2x12`, per table `1 3/4 x 11 7/8 LVL`, `1 3/4 x 14 LVL` | `=4*G` per flight | `10`, `12`, `14` | 4 stringers per flight; 2x12 by default, LVL per the detail table |
+| `Stringers (4)` | `2x12`, per table `1 3/4 x 11 7/8 LVL`, `1 3/4 x 14 LVL` | `=4*G` per flight; two identical flights `=4*2*G` | `10`, `12`, `14` | `(4)` is the stringers of one flight; 2x12 by default, LVL per the detail table |
 | `Treads` | `2x12 Treads` | number of treads / 3 per 12' board | `12` | treads = risers minus number of flights |
 | `Risers` | `1x8 Risers` | number of risers / 3 | `12` | risers from the A plan |
 | `Platform Beam (2)` | `2x12`, `(2) 1 3/4 x 11 1/4 LVL` | `=2*G` | `10` | size per the stringer end detail |
 | `Platform Joists` | `2x10` | `=9*G` | `10` | from the landing J Area |
 | `Platform Ledger` | `2x10`, at CMU `2x10 P.T.` | `=4*G` | `14` | |
-| `Hangers` | `LSC`, `LUS210`, `HUCQ210-3` | by connections x G | `pcs` | one LSC per stringer top end |
+| `Hangers` | `LSC`, `LUS210`, `HUCQ210-3` | by connections x G | `pcs` | one LSC on the top end of every stringer: stringers per flight x number of flights x G |
 | `Screws` | `SDWS 1/4 x 4 1/4` | `=4*4*G` | `pcs` | attachment of the stringer bottom board |
 
 ## Common mistakes
@@ -69,20 +69,22 @@ Export: the ST button on the XL strip puts the stair takeoffs before Subfloor. T
 framing/
   2nd floor framing/
     stairs/
-      box str            Line, 24 LF
-      ledger str         Line, 12 LF
+      box str            Line, 24 LFT
+      ledger str         Line, 12 LFT
       Stair 2x10 16"     landing J Area
       Str FB5 10         2 points
 ```
 
 | A | B | C | D | E |
 | --- | --- | --- | --- | --- |
-| `Note: 2 Stairs` | | | | `2/S603` |
-| `Stringers (4)` | `2x12` | `=4*G` | 12 | `2/S603` |
+| `Note: 2 Stairs` | | | | |
+| `Stringers (4)` | `2x12` | `=4*2*G` | 12 | `2/S603` |
 | `Treads` | `2x12 Treads` | `=6*G` | 12 | |
-| `Risers` | `1x8 Risers` | `=6*G` | 12 | |
+| `Risers` | `1x8 Risers` | `=7*G` | 12 | |
 | `Platform Beam (2)` | `2x12` | `=2*G` | 10 | `Str FB5` |
 | `Hangers` | `LSC` | `=8*G` | pcs | `2/S603` |
+
+Each stair has two flights of 10 risers. Stringers: 4 per flight x 2 flights = 8 per stair, and the same number of LSC (one on the top end of every stringer). Treads: 20 risers minus 2 flights = 18, 3 per 12' board = 6 boards. Risers: 20 / 3 = 6.7, so 7 boards. Everything is multiplied by G = 2 stairs.
 
 ## See also
 

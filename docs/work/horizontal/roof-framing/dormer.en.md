@@ -47,12 +47,14 @@ Dormer rows go in their own DFL sections (walls, roof sheathing, framing) with d
 
 | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- |
-| `Studs 16" o.c.` | `2x6` | LFT x 1.1 | by height | `dormer walls per A301` |
-| `Header (2)` | `2x12` | points | `8` | `dormer opening per S201` |
-| `Dbl Rafters` | `2x12` | points | `18` | |
+| `Studs 16" o.c.` | `2x6` | per the wall rule: [Exterior Walls](../../vertical/walls/exterior.md) | by height | `dormer walls per A301` |
+| `Beam (2)` (roof header) | `2x12` | points x 2 | `8` | `dormer opening per S201` |
+| `Dbl Rafters` | `2x12` | points x 2 | `18` | |
 | `Rafters 16" o.c.` | `2x8` | from J Area | `10` | `dormer` |
-| `Valley Rafters` | `2x12` | points | `12` | |
-| `Fascia at Eves (dormer)` | `1x8` | LFT | `LFT` | |
+| `Valley plates` | `2x12` | points | `12` | |
+| `Fascia at Eves` | `1x6` | `G x 1.1`, rounded up to even | `LFT` | `dormer` |
+
+`(n)` in the Label is the number of plies; C = points x plies. `Dbl Rafters` has no brackets, but the rule is the same: places x 2.
 
 ## Common mistakes
 
@@ -71,9 +73,20 @@ walls/2nd floor walls/ext 2x6 6.5 dormer      Line, 2 dormers
 gables/gable stick/dormer                     Area, 2 triangles
 sqfts/rf 8 dormer                             Area
 framing/roof framing/beams/rf header (2) 2x12 8     2 points
+framing/roof framing/beams/dbl rafters 2x12 18      4 points
 framing/roof framing/beams/valley 2x12 12           4 points
 eves rakes/rakes/rake 12 dormer               Line
 ```
+
+Roof framing rows for these two dormers:
+
+| A | B | C | D | E |
+| --- | --- | --- | --- | --- |
+| `Beam (2)` | `2x12` | 4 | 8 | `dormer opening per S201` |
+| `Dbl Rafters` | `2x12` | 8 | 18 | `S201` |
+| `Valley plates` | `2x12` | 4 | 12 | `dormer` |
+
+`Beam (2)` (roof header): 2 points x 2 = 4. `Dbl Rafters`: 4 places (two per dormer) x 2 = 8. `Valley plates`: 4 points, one board each.
 
 ## See also
 

@@ -7,7 +7,7 @@
 
 ## What it is
 
-Subfloor is the panel decking over the joists: `3/4" T&G OSB` or `AdvanTech`, on panel adhesive. Counted separately: the FRT strip around the perimeter, underlayment under the finish, decking under tubs, and decking over an existing floor. The vertical sheathing strip at floor level is the [Floor-height Sheathing](../../vertical/sheathing/floor.md) page, not subfloor.
+Subfloor is the panel decking over the joists: `3/4" T&G OSB` or `AdvanTech`, on panel adhesive. Counted separately: the FRT strip around the perimeter, underlayment under the finish, decking under tubs, and decking over an existing floor. The vertical strip of wall sheathing at floor level is [Box Sheathing](../../vertical/sheathing/box-sheathing.md), not subfloor.
 
 ## Where to find it on the plans
 
@@ -25,7 +25,8 @@ The area comes from `sqfts/<floor>` (the floor Area); no separate measurement is
 
 - Sheets = SQ FT / 32 x 1.1, rounded up to a whole sheet (`4x8`).
 - FRT strip: floor perimeter x strip width (2' or 4'), on its own floor. A 4' strip written as 10 sheets instead of 54 is a typical undercount.
-- Panel adhesive: the `Panel Adheasive` `29OZ` row per the template rate; this row is often forgotten.
+- The main `Subfloor` row is counted from the full floor area, as in the DFL template: the FRT strip area is not deducted from it.
+- Panel adhesive: the `Panel Adheasive` `29OZ` row, one tube per 3 sheets of the `Subfloor` row. That row already covers the whole floor area including the strip, so the FRT strip sheets do not go into the adhesive a second time. This row is often forgotten. `Adheasive` is the template spelling, do not correct it.
 
 ## Tree name and DFL row
 
@@ -34,28 +35,32 @@ There are usually no takeoffs in `framing`: the rows take the area from the SQFT
 | A (Label) | B (material) | C | D | E |
 | --- | --- | --- | --- | --- |
 | `Subfloor` | `3/4" T&G OSB` | `=CEILING(G/32*1.1,1)` | `4x8` | assembly sheet |
-| `Subfloor FRT 4'` | `3/4" T&G FRT` | perimeter x 4 / 32 x 1.1 | `4x8` | FRT note |
-| `Panel Adheasive` | `29OZ` | per template rate | `pcs` | |
+| `Subfloor FRT 4'` | `3/4" T&G FRT` | `=CEILING(G*4/32*1.1,1)`, G - floor perimeter in LFT | `4x8` | FRT note |
+| `Panel Adheasive` | `29OZ` | `=CEILING(C<subfloor>/3,1)` | `tubes` | |
 | `Underlayment` | `1/2" Ply` | area / 32 x 1.1 | `4x8` | finish schedule |
 | `Plywood at Tubs` | `3/4" Ply` | by number of tubs | `4x8` | `Addendum A` |
-| `Blocking` | `2x` | FRT strip perimeter | `LFT` | under the FRT edge |
+| `Blocking` | `2x` | `=CEILING(G/D,1)`, G - length of the FRT strip edge in LFT | `16` | under the FRT edge |
+
+`C<subfloor>` is cell C of the `Subfloor` row (that row only, not the FRT strip row).
 
 ## Common mistakes
 
 - The FRT strip not counted from the perimeter of its own floor, or missed entirely.
 - Underlayment over the whole area, though the detail gives 3/4" ply only under tubs, not under showers.
 - New subfloor over the existing floor not included, though the reconstruction detail calls for it.
-- No panel adhesive row.
+- No panel adhesive row, or one tube per sheet: the rate is one tube per 3 sheets.
 - Balcony and terrace decking counted as house subfloor: they have their own material per the section.
 - [All floor framing mistakes](../../../start/common-mistakes.md#floor)
 
 ## Example
 
-| A | B | C | D | E |
-| --- | --- | --- | --- | --- |
-| `Subfloor` | `3/4" T&G OSB` | 60 | 4x8 | `A501` |
-| `Subfloor FRT 4'` | `3/4" T&G FRT` | 24 | 4x8 | `S001 note 12` |
-| `Panel Adheasive` | `29OZ` | 84 | pcs | |
+| A | B | C | D | E | G |
+| --- | --- | --- | --- | --- | --- |
+| `Subfloor` | `3/4" T&G OSB` | 60 | 4x8 | `A501` | 1740 |
+| `Subfloor FRT 4'` | `3/4" T&G FRT` | 24 | 4x8 | `S001 note 12` | 174 |
+| `Panel Adheasive` | `29OZ` | 20 | tubes | | |
+
+Check: 1740 SQ FT / 32 x 1.1 = 59.8, so 60 sheets. Perimeter 174 LFT x 4' / 32 x 1.1 = 23.9, so 24 FRT sheets. Adhesive: 60 / 3 = 20 tubes, from the `Subfloor` row.
 
 <figure markdown>
   ![AdvanTech subfloor nailing](../../../assets/images/confluence/confluence-154.png)
@@ -64,5 +69,5 @@ There are usually no takeoffs in `framing`: the rows take the area from the SQFT
 
 ## See also
 
-- [Joist](joist.md), [Floor SQFT](../../sqfts/1st2nd.md), [Floor-height Sheathing](../../vertical/sheathing/floor.md)
+- [Joist](joist.md), [Floor SQFT](../../sqfts/1st2nd.md), [Floor Sheathing](../../vertical/sheathing/floor.md), [Box Sheathing](../../vertical/sheathing/box-sheathing.md)
 - [Blocking](details/blocking.md), [Reconstruction](../../../work-types/reconstruction.md)

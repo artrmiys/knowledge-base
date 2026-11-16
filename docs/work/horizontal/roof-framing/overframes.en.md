@@ -43,7 +43,7 @@ The `overframe 4` area is counted separately from `rf 6` and goes into roof shea
 
 | Takeoff name | A (Label) | B | C | D | E |
 | --- | --- | --- | --- | --- | --- |
-| `sqfts/overframe 4` | `Roof Sheathing (overframes)` | per roof spec | SQ FT x slope / 32 x 1.1 | `4x8` | sheet |
+| `sqfts/overframe 4` | `Roof Sheathing (overframes)` | per roof spec | SQ FT x slope / 32 x 1.1, rounded up to a sheet | `4x8` | sheet |
 | `details/sleepers` | `Sleepers` | `2x6` | `=CEILING(G/D,1)` | `16` | detail |
 | `joists/overframe 2x8 24"` | `Rafters 24" o.c.` | `2x8` | from J Area | lengths | |
 | piggyback | `Sleepers` or `Bearing Plates` | `2x6` per detail | per truss detail: spacing (often 4' o.c.) over the area of the upper trusses | `16` | truss detail |
@@ -63,9 +63,11 @@ Piggyback is one assembly with two write-ups of the same thing: in [Tips](../../
 
 | A | B | C | D | E |
 | --- | --- | --- | --- | --- |
-| `Roof Sheathing (overframes)` | `19/32" OSB` | 14 | 4x8 | `overframe 4, 410 SF` |
+| `Roof Sheathing (overframes)` | `19/32" OSB` | 15 | 4x8 | `overframe 4, 410 SQ FT` |
 | `Sleepers` | `2x6` | 12 | 16 | `4/S301` |
 | `Rafters 24" o.c.` | `2x8` | 22 | 12 | `S201` |
+
+Sheathing: 410 SQ FT in plan at a 4:12 pitch, 410 x 1.054 / 32 x 1.1 = 14.9, so 15 sheets.
 
 <figure markdown>
   ![Overframe view 02](../../../assets/images/confluence/confluence-145.png)
