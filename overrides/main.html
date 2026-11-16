@@ -1,5 +1,14 @@
 {% extends "base.html" %}
 
+{#- The English home (en/) is not page.is_homepage for Material: give it the same bare title -#}
+{% block htmltitle %}
+  {% if page and page.url in ("", "en/") %}
+    <title>{{ config.site_name }}</title>
+  {% else %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}
+
 {% block extrahead %}
   {{ super() }}
   {% set kb_home = page and page.url in ("", "en/") %}

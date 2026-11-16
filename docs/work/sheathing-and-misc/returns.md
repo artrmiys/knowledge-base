@@ -14,12 +14,12 @@ cornice return (soffit + fascia + crown) и pork-chop (простой треуг
 в eave, ни в rake: другой каркас и другой набор строк.
 
 <div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../assets/images/trims/ext-pork-chop.png">
-    <img src="../../assets/images/trims/ext-pork-chop.png" alt="Pork-chop return">
+  <a class="kb-gallery__item" href="../../../assets/images/trims/ext-pork-chop.png">
+    <img src="../../../assets/images/trims/ext-pork-chop.png" alt="Pork-chop return">
     <div class="kb-gallery__caption">Pork-chop return: треугольник, fascia и soffit считаем</div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/trims/ext-eave-return.png">
-    <img src="../../assets/images/trims/ext-eave-return.png" alt="Cornice return">
+  <a class="kb-gallery__item" href="../../../assets/images/trims/ext-eave-return.png">
+    <img src="../../../assets/images/trims/ext-eave-return.png" alt="Cornice return">
     <div class="kb-gallery__caption">Cornice return: soffit, fascia, crown отдельным набором</div>
   </a>
 </div>

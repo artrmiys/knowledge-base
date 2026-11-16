@@ -14,12 +14,12 @@ stub, but it still has fascia and a small soffit). A return is part of neither
 the eave nor the rake: different framing and a different set of rows.
 
 <div class="kb-gallery">
-  <a class="kb-gallery__item" href="../../assets/images/trims/ext-pork-chop.png">
-    <img src="../../assets/images/trims/ext-pork-chop.png" alt="Pork-chop return">
+  <a class="kb-gallery__item" href="../../../assets/images/trims/ext-pork-chop.png">
+    <img src="../../../assets/images/trims/ext-pork-chop.png" alt="Pork-chop return">
     <div class="kb-gallery__caption">Pork-chop return: a triangle, we count fascia and soffit</div>
   </a>
-  <a class="kb-gallery__item" href="../../assets/images/trims/ext-eave-return.png">
-    <img src="../../assets/images/trims/ext-eave-return.png" alt="Cornice return">
+  <a class="kb-gallery__item" href="../../../assets/images/trims/ext-eave-return.png">
+    <img src="../../../assets/images/trims/ext-eave-return.png" alt="Cornice return">
     <div class="kb-gallery__caption">Cornice return: soffit, fascia, crown as a separate set</div>
   </a>
 </div>
