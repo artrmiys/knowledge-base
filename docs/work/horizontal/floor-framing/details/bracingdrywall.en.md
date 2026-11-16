@@ -1,8 +1,8 @@
 # Bracing for Drywall
 
 <figure markdown>
-  ![2x4 drywall bracing and ledger](../../../../assets/images/framing/drywall-bracing.svg)
-  <figcaption markdown="span">The wall runs parallel to the joists: there is no joist above the top plate to hold the ceiling drywall. A 2x4 bracing or ledger along the top of the wall gives that backing. The board length depends on the wall height.</figcaption>
+  ![Wall bracing and drywall backing: two different rows](../../../../assets/images/framing/drywall-bracing.svg)
+  <figcaption markdown="span">Two different rows. (a) Wall bracing: 2x4 by the piece, one board per 8 LFT of wall, board length by wall height. (b) Backing for the ceiling drywall at a wall parallel to the joists: a board along the top of the wall, row `Blocking for Drywall`.</figcaption>
 </figure>
 
 <!-- TODO-PHOTO: 2x4 drywall backing / ledger on top plate of a wall parallel to joists, EN query "drywall backing blocking top plate parallel joists" -->

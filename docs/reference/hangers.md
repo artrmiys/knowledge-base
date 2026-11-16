@@ -13,7 +13,7 @@
 
 <figure markdown>
   ![Hanger selection flow for common estimating decisions](../assets/images/hangers/hanger-selection-flow.svg)
-  <figcaption markdown="span">Схема выбора: сначала mount condition, потом depth, skew и special conditions.</figcaption>
+  <figcaption markdown="span">Схема выбора: что несём, mount, skew, потом особые условия (concealed flange, firewall, Zmax).</figcaption>
 </figure>
 
 </div>

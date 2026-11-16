@@ -72,29 +72,29 @@
 <circle class="numc" cx="656" cy="97" r="11"/><text class="numt" x="656" y="101.5">8</text>
 <line class="dim" x1="200" y1="505" x2="300" y2="505"/>
 <text class="dimt" x="250" y="519" text-anchor="middle" >16" o.c.</text>
-<text class="note" x="60" y="560" >Frame отдельно от trim: decking, railing finish, soffit, fascia в Exterior Trims. Railing posts structural: страница Railing.</text>
+<text class="note" x="60" y="560" >У досок в D длина доски (ft), в C штуки; hangers, screws, bases, caps в pcs. Decking, railing, soffit, fascia: Exterior Trims.</text>
 <circle class="numc" cx="711" cy="65" r="11"/><text class="numt" x="711" y="69.5">1</text>
 <text class="lab2" x="732" y="70" >Ledger к house wall</text>
-<text class="mono" x="732" y="88" >Ledger | 2x10 P.T. | LFT</text>
+<text class="mono" x="732" y="88" >Ledger | 2x10 P.T. | D 16</text>
 <circle class="numc" cx="711" cy="123" r="11"/><text class="numt" x="711" y="127.5">2</text>
 <text class="lab2" x="732" y="128" >Hangers под joist</text>
-<text class="mono" x="732" y="146" >Hangers | LUS28 | pcs</text>
+<text class="mono" x="732" y="146" >Hangers | LUS210 Zmax | pcs</text>
 <circle class="numc" cx="711" cy="181" r="11"/><text class="numt" x="711" y="185.5">3</text>
 <text class="lab2" x="732" y="186" >Joists @ 16" o.c.</text>
-<text class="mono" x="732" y="204" >Joists | 2x10 P.T. | LFT / pcs</text>
+<text class="mono" x="732" y="204" >Joists | 2x10 P.T. | D 12</text>
 <circle class="numc" cx="711" cy="239" r="11"/><text class="numt" x="711" y="243.5">4</text>
 <text class="lab2" x="732" y="244" >Blocking между joists</text>
-<text class="mono" x="732" y="262" >Blocking | 2x | LFT</text>
+<text class="mono" x="732" y="262" >Blocking | 2x10 P.T. | D 16</text>
 <circle class="numc" cx="711" cy="297" r="11"/><text class="numt" x="711" y="301.5">5</text>
 <text class="lab2" x="732" y="302" >Beam multi-ply, drop</text>
-<text class="mono" x="732" y="320" >Beam | (2) 2x10 P.T. | LFT</text>
+<text class="mono" x="732" y="320" >Beam (2) | 2x10 P.T. | D 16</text>
 <circle class="numc" cx="711" cy="355" r="11"/><text class="numt" x="711" y="359.5">6</text>
 <text class="lab2" x="732" y="360" >Posts + base + cap</text>
-<text class="mono" x="732" y="378" >Posts 6x6 P.T. | pcs + высота</text>
+<text class="mono" x="732" y="378" >Posts | 6x6 P.T. | D 10</text>
 <circle class="numc" cx="711" cy="413" r="11"/><text class="numt" x="711" y="417.5">7</text>
 <text class="lab2" x="732" y="418" >Rim / Box по периметру</text>
-<text class="mono" x="732" y="436" >Rim | 2x10 P.T. | LFT</text>
+<text class="mono" x="732" y="436" >Rim | 2x10 P.T. | D 16</text>
 <circle class="numc" cx="711" cy="471" r="11"/><text class="numt" x="711" y="475.5">8</text>
-<text class="lab2" x="732" y="476" >Ledger bolts</text>
-<text class="mono" x="732" y="494" >Titen HD 5/8" | pcs</text>
+<text class="lab2" x="732" y="476" >Ledger screws</text>
+<text class="mono" x="732" y="494" >Screws | SDWS22400DB | pcs</text>
 </svg>

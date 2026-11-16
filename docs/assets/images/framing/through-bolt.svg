@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 706" role="img" aria-labelledby="t d">
+  <title id="t">Through bolts: beam to post and nailer on a steel beam</title>
+  <desc id="d">Left: beam of two plies seated in a notched post, two through bolts with a washer on each side and a nut. Right: wood nailer bolted to the top flange of a steel beam, bolts staggered at 24 inches on center, with a plan strip below.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
+    <style>
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
+    </style>
+  </defs>
+<rect x="0.5" y="0.5" width="879" height="705" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="h" x="40" y="44">Through bolt: балка к посту</text>
+<text class="note" x="40" y="66">узел из детали post-to-beam</text>
+<polygon points="120,430 120,120 152,120 152,260 196,260 196,430" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M120,430 l8,-6 l8,6 l8,-6 l8,6 l8,-6 l8,6 l8,-6 l8,6 l8,-6 l4,3" fill="none" stroke="#6c4b2a" stroke-width="1.2" stroke-linejoin="round"/>
+<rect x="152" y="130" width="22" height="130" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.5"/>
+<rect x="174" y="130" width="22" height="130" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.5"/>
+<line x1="104" y1="170" x2="216" y2="170" stroke="#4d5861" stroke-width="4"/>
+<rect x="100" y="163" width="7" height="14" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/>
+<rect x="107" y="160" width="4" height="20" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/>
+<rect x="196" y="160" width="4" height="20" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/>
+<rect x="200" y="163" width="9" height="14" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/>
+<line x1="104" y1="225" x2="216" y2="225" stroke="#4d5861" stroke-width="4"/>
+<rect x="100" y="218" width="7" height="14" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/>
+<rect x="107" y="215" width="4" height="20" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/>
+<rect x="196" y="215" width="4" height="20" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/>
+<rect x="200" y="218" width="9" height="14" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/>
+<circle cx="136" cy="330" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="136" y="334.5">4</text>
+<circle cx="174" cy="110" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="174" y="114.5">5</text>
+<circle cx="66" cy="170" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="66" y="174.5">1</text>
+<line x1="78" y1="170" x2="99" y2="170" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="66" cy="225" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="66" y="229.5">2</text>
+<line x1="78" y1="222" x2="106" y2="214" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="246" cy="225" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="246" y="229.5">3</text>
+<line x1="234" y1="225" x2="210" y2="225" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="246" y1="190" x2="201" y2="180" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="258" cy="190" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="258" y="194.5">2</text>
+<circle cx="300" cy="118" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="300" y="122.5">1</text>
+<text class="lab2" x="320" y="123">Through bolt</text>
+<text class="mono2" x="320" y="141">Bolts | 1/2" Ø x 8" through | pcs</text>
+<text class="mono2" x="320" y="158">узлов x болтов на узел</text>
+<circle cx="300" cy="184" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="300" y="188.5">2</text>
+<text class="lab2" x="320" y="189">Washers</text>
+<text class="mono2" x="320" y="207">Washers | pcs</text>
+<text class="mono2" x="320" y="224">две на болт: дерево с двух сторон</text>
+<circle cx="300" cy="250" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="300" y="254.5">3</text>
+<text class="lab2" x="320" y="255">Nuts</text>
+<text class="mono2" x="320" y="273">Nuts | pcs</text>
+<text class="mono2" x="320" y="290">одна на болт</text>
+<circle cx="300" cy="316" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="300" y="320.5">4</text>
+<text class="lab2" x="320" y="321">Post</text>
+<text class="note" x="320" y="339">строка Posts, страница Post</text>
+<circle cx="300" cy="382" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="300" y="386.5">5</text>
+<text class="lab2" x="320" y="387">Beam (2)</text>
+<text class="note" x="320" y="405">строка Beam, страница Beam</text>
+<line x1="40" y1="452" x2="840" y2="452" stroke="#dfe3e8" stroke-width="1.2"/>
+<text class="h" x="40" y="488">Болты nailer на стальной балке</text>
+<text class="note" x="40" y="510">нота general framing notes: 3/8" bolts staggered @ 24" o.c.</text>
+<rect x="80" y="526" width="120" height="22" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.5"/>
+<path d="M80,548 h120 v10 h-54 v44 h54 v10 h-120 v-10 h54 v-44 h-54 z" fill="#9aa5b1" stroke="#4d5861" stroke-width="1.5"/>
+<line x1="102" y1="520" x2="102" y2="566" stroke="#4d5861" stroke-width="3.5"/>
+<rect x="96" y="515" width="12" height="6" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/>
+<rect x="93" y="521" width="18" height="4" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/>
+<rect x="93" y="558" width="18" height="4" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/>
+<rect x="96" y="562" width="12" height="7" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/>
+<line x1="178" y1="520" x2="178" y2="566" stroke="#4d5861" stroke-width="3.5"/>
+<rect x="172" y="515" width="12" height="6" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/>
+<rect x="169" y="521" width="18" height="4" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/>
+<rect x="169" y="558" width="18" height="4" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/>
+<rect x="172" y="562" width="12" height="7" fill="#9aa5b1" stroke="#4d5861" stroke-width="1"/>
+<circle cx="140" cy="537" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="140" y="541.5">6</text>
+<line x1="246" y1="576" x2="150" y2="580" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<text class="side" x="70" y="640">сечение</text>
+<rect x="330" y="518" width="420" height="44" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.5"/>
+<circle cx="360" cy="528" r="4.5" fill="#4d5861" stroke="#4d5861" stroke-width="1"/>
+<circle cx="420" cy="552" r="4.5" fill="#4d5861" stroke="#4d5861" stroke-width="1"/>
+<circle cx="480" cy="528" r="4.5" fill="#4d5861" stroke="#4d5861" stroke-width="1"/>
+<circle cx="540" cy="552" r="4.5" fill="#4d5861" stroke="#4d5861" stroke-width="1"/>
+<circle cx="600" cy="528" r="4.5" fill="#4d5861" stroke="#4d5861" stroke-width="1"/>
+<circle cx="660" cy="552" r="4.5" fill="#4d5861" stroke="#4d5861" stroke-width="1"/>
+<circle cx="720" cy="528" r="4.5" fill="#4d5861" stroke="#4d5861" stroke-width="1"/>
+<line x1="360" y1="582" x2="420" y2="582" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="dimt" x="390" y="602" text-anchor="middle">24"</text>
+<line x1="330" y1="618" x2="750" y2="618" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="dimt" x="540" y="638" text-anchor="middle">G = LFT nailer</text>
+<text class="side" x="770" y="546">план</text>
+<circle cx="52" cy="666" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="52" y="670.5">6</text>
+<text class="mono2" x="72" y="671">Anchor Bolts 24" o.c. (2) | 3/8" Ø x 6" | pcs</text>
+<text class="mono" x="480" y="671">=ОКРВВЕРХ(G*12/H*2*1.1;2)</text>
+<text class="note" x="72" y="691">Washers 24" o.c. (2) и Nuts 24" o.c. (2): та же формула; (2) в подписи = x2 в формуле</text>
+<text class="note" x="250" y="580">steel beam</text>
+</svg>

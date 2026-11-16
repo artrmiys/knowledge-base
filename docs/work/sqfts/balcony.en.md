@@ -1,8 +1,8 @@
 # Balcony SQFT
 
 <figure markdown>
-  ![Balcony layers: frame, sleepers, membrane, decking](../../assets/images/sqfts/balcony.svg)
-  <figcaption markdown="span">Balcony: frame, sleepers, membrane, decking. The area is an Area `blcny`; typical balconies are marked as blocks with a point for every instance.</figcaption>
+  ![Plan: each balcony is its own polygon and its own point](../../assets/images/sqfts/balcony.svg)
+  <figcaption markdown="span">Each balcony is traced as its own polygon; balconies are never joined by a bridge. The area is an Area `blcny`; typical balconies are marked as blocks with a point for every instance.</figcaption>
 </figure>
 
 ## What it is

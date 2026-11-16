@@ -2,7 +2,7 @@
 
 <figure markdown>
   ![Blocking between joists](../../../../assets/images/framing/blocking.svg)
-  <figcaption markdown="span">Blocking - short boards between joists or trusses. A solid row is counted in LFT by the row length; rows at 48" o.c. are counted with the formula from the Blocking o.c. page.</figcaption>
+  <figcaption markdown="span">Blocking - short boards between joists or trusses. A solid row is measured as a Line along the row and goes into the DFL as 16' boards; rows at 48" o.c. are counted with the formula from the Blocking o.c. page.</figcaption>
 </figure>
 
 <figure markdown>

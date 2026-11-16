@@ -1,32 +1,116 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" role="img" aria-labelledby="t">
-  <title id="t">Stair stringer, treads and risers</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" role="img" aria-labelledby="t d">
+  <title id="t">Stair flight and landing in section</title>
+  <desc id="d">Section of one stair flight: sawtooth stringer, treads and risers, landing with platform beam, platform joists and ledger, LSC hanger at the top end of the stringer, rise and run dimensions.</desc>
   <defs>
-    <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
+    <style>
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
+    </style>
   </defs>
-  <rect width="760" height="320" fill="#fff"/>
-  <text class="t" x="32" y="40">Stair - stringers - treads - risers</text>
-  <text class="s" x="32" y="62">2x12 stringers (LVL по structural); 2x12 Treads + 1x8 Riser, режут из 12' stock.</text>
-  <!-- stringer (zigzag) -->
-  <polyline points="120,270 120,230 180,230 180,190 240,190 240,150 300,150 300,110 360,110" fill="none" stroke="#6c4b2a" stroke-width="3"/>
-  <polygon points="120,290 120,270 360,130 360,110 420,110 420,290" fill="url(#w)" stroke="#6c4b2a" stroke-width="2" opacity="0.55"/>
-  <!-- treads (horizontal) -->
-  <g fill="#caa27b" stroke="#6c4b2a" stroke-width="1.5">
-    <rect x="120" y="222" width="64" height="10"/>
-    <rect x="180" y="182" width="64" height="10"/>
-    <rect x="240" y="142" width="64" height="10"/>
-    <rect x="300" y="102" width="64" height="10"/>
-  </g>
-  <!-- risers (vertical faces) -->
-  <g fill="#eef3f7" stroke="#8aa0b0" stroke-width="1.4">
-    <rect x="176" y="192" width="8" height="30"/>
-    <rect x="236" y="152" width="8" height="30"/>
-    <rect x="296" y="112" width="8" height="30"/>
-  </g>
-  <line x1="150" y1="250" x2="520" y2="240" stroke="#2e7d32" stroke-width="1.4"/>
-  <text class="l" x="528" y="243">Stringer (2x12 / LVL)</text>
-  <line x1="270" y1="147" x2="520" y2="150" stroke="#2e7d32" stroke-width="1.4"/>
-  <text class="l" x="528" y="153">Tread (2x12, 12')</text>
-  <line x1="300" y1="125" x2="520" y2="110" stroke="#2e7d32" stroke-width="1.4"/>
-  <text class="l" x="528" y="113">Riser (1x8, 12')</text>
+<rect x="0.5" y="0.5" width="879" height="559" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<rect x="540" y="60" width="30" height="380" fill="url(#batt)" stroke="#caa64a" stroke-width="1"/>
+<rect x="540" y="60" width="30" height="380" fill="none" stroke="#3a3f44" stroke-width="1.4"/>
+<rect x="40" y="440" width="530" height="12" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.2"/>
+<polygon points="100,440 100,412 140,412 140,384 180,384 180,356 220,356 220,328 260,328 260,300 300,300 300,272 340,272 340,244 380,244 380,274 143,440" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="95" y="406" width="45" height="6" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="96" y="412" width="4" height="28" fill="#d7c3a6" stroke="#8a6a3f" stroke-width="1.1"/>
+<rect x="135" y="378" width="45" height="6" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="136" y="384" width="4" height="22" fill="#d7c3a6" stroke="#8a6a3f" stroke-width="1.1"/>
+<rect x="175" y="350" width="45" height="6" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="176" y="356" width="4" height="22" fill="#d7c3a6" stroke="#8a6a3f" stroke-width="1.1"/>
+<rect x="215" y="322" width="45" height="6" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="216" y="328" width="4" height="22" fill="#d7c3a6" stroke="#8a6a3f" stroke-width="1.1"/>
+<rect x="255" y="294" width="45" height="6" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="256" y="300" width="4" height="22" fill="#d7c3a6" stroke="#8a6a3f" stroke-width="1.1"/>
+<rect x="295" y="266" width="45" height="6" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="296" y="272" width="4" height="22" fill="#d7c3a6" stroke="#8a6a3f" stroke-width="1.1"/>
+<rect x="335" y="238" width="45" height="6" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="336" y="244" width="4" height="22" fill="#d7c3a6" stroke="#8a6a3f" stroke-width="1.1"/>
+<rect x="376" y="216" width="4" height="22" fill="#d7c3a6" stroke="#8a6a3f" stroke-width="1.1"/>
+<rect x="380" y="216" width="12" height="62" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.5"/>
+<rect x="392" y="216" width="12" height="62" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.5"/>
+<rect x="404" y="216" width="122" height="50" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.5"/>
+<rect x="526" y="216" width="14" height="50" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.5"/>
+<rect x="375" y="210" width="165" height="6" fill="#eedec3" stroke="#8a6a3f" stroke-width="1.2"/>
+<path d="M364,256 L380,245 V274 L364,285" fill="#c5ccd3" stroke="#4d5861" stroke-width="2" stroke-linejoin="round"/>
+<rect x="104" y="428" width="30" height="12" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.2"/>
+<line x1="112" y1="422" x2="112" y2="446" stroke="#4d5861" stroke-width="2.4"/>
+<line x1="126" y1="422" x2="126" y2="446" stroke="#4d5861" stroke-width="2.4"/>
+<line x1="100" y1="500" x2="380" y2="500" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="dimt" x="240.0" y="493.0" text-anchor="middle">run (по плану лестницы)</text>
+<line x1="64" y1="440" x2="64" y2="210" stroke="#3a3f44" stroke-width="1.1" marker-start="url(#tick)" marker-end="url(#tick)"/>
+<text class="dimt" transform="translate(52,348.0) rotate(-90)">rise</text>
+<line x1="170" y1="458" x2="394" y2="306" stroke="#2e7d32" stroke-width="2" stroke-dasharray="9 5"/>
+<text class="green" x="300" y="388">длина stringer</text>
+<text class="green" x="300" y="406">по наклонной</text>
+<text class="side" x="50" y="76">LANDING</text>
+<text class="note" x="420" y="196">площадка</text>
+<circle cx="232" cy="356" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="232" y="360.5">1</text>
+<circle cx="160" cy="362" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="160" y="366.5">2</text>
+<line x1="160" y1="373" x2="160" y2="378" stroke="#3a3f44" stroke-width="1.1"/>
+<circle cx="232" cy="300" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="232" y="304.5">3</text>
+<line x1="241" y1="306" x2="255" y2="314" stroke="#3a3f44" stroke-width="1.1"/>
+<circle cx="392" cy="248" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="392" y="252.5">4</text>
+<circle cx="460" cy="241" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="460" y="245.5">5</text>
+<circle cx="533" cy="292" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="533" y="296.5">6</text>
+<line x1="533" y1="281" x2="533" y2="266" stroke="#3a3f44" stroke-width="1.1"/>
+<circle cx="350" cy="330" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="350" y="334.5">7</text>
+<line x1="356" y1="321" x2="374" y2="278" stroke="#3a3f44" stroke-width="1.1"/>
+<circle cx="118" cy="474" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="118" y="478.5">8</text>
+<line x1="118" y1="463" x2="118" y2="448" stroke="#3a3f44" stroke-width="1.1"/>
+<circle cx="604" cy="50" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="604" y="54.5">1</text>
+<text class="lab2" x="624" y="55">Stringers (4)</text>
+<text class="mono2" x="624" y="73">Stringers (4) | 2x12 | D 12</text>
+<circle cx="604" cy="102" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="604" y="106.5">2</text>
+<text class="lab2" x="624" y="107">Treads</text>
+<text class="mono2" x="624" y="125">Treads | 2x12 Treads | D 12</text>
+<circle cx="604" cy="154" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="604" y="158.5">3</text>
+<text class="lab2" x="624" y="159">Risers</text>
+<text class="mono2" x="624" y="177">Risers | 1x8 Risers | D 12</text>
+<circle cx="604" cy="206" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="604" y="210.5">4</text>
+<text class="lab2" x="624" y="211">Platform beam</text>
+<text class="mono2" x="624" y="229">Platform Beam (2) | 2x12</text>
+<circle cx="604" cy="258" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="604" y="262.5">5</text>
+<text class="lab2" x="624" y="263">Platform joists</text>
+<text class="mono2" x="624" y="281">Platform Joists | 2x10</text>
+<circle cx="604" cy="310" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="604" y="314.5">6</text>
+<text class="lab2" x="624" y="315">Ledger у стены</text>
+<text class="mono2" x="624" y="333">Platform Ledger | 2x10</text>
+<circle cx="604" cy="362" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="604" y="366.5">7</text>
+<text class="lab2" x="624" y="367">Hanger на верхнем конце</text>
+<text class="mono2" x="624" y="385">Hangers | LSC | pcs</text>
+<circle cx="604" cy="414" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="604" y="418.5">8</text>
+<text class="lab2" x="624" y="419">Screws нижней доски</text>
+<text class="mono2" x="624" y="437">Screws | SDWS | pcs</text>
+<text class="note" x="40" y="530">Заказная длина = наклонная + опирание, вверх до доски: run 8'-3", rise 5'-8" дают 10.0', заказ 12'.</text>
 </svg>

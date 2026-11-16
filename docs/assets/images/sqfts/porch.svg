@@ -1,23 +1,117 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
-  <title id="t">Porch section: post, beam, soffit, decking</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 640" role="img" aria-labelledby="t d">
+  <title id="t">Porch section: floor area, ceiling joists and ceiling</title>
+  <desc id="d">Section of a covered porch at a house wall: floor with decking, post and beam at the front, roof rafters above, ceiling joists hung from a ledger at the wall to the beam, two layers of exterior gypsum on the ceiling. Legend lists DFL rows.</desc>
   <defs>
-    <pattern id="w" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2d6a8"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c89b5a" stroke-width="1"/></pattern>
-    <style>.t{font:700 19px "Segoe UI",Arial,sans-serif;fill:#1f2a1f}.s{font:400 13px "Segoe UI",Arial,sans-serif;fill:#5a6a5a}.l{font:600 13px "Segoe UI",Arial,sans-serif;fill:#2e7d32}</style>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
+    <style>
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
+    </style>
   </defs>
-  <rect width="760" height="300" fill="#fff"/>
-  <text class="t" x="32" y="40">Porch - крытая площадка (framing + soffit + decking)</text>
-  <text class="s" x="32" y="62">Soffit часто 5/8" exterior gypsum / Densglass. Крыша - по Roof SQFT.</text>
-  <!-- roof slope -->
-  <polygon points="150,110 470,110 470,128 150,150" fill="#dfe7ee" stroke="#3a3a3a" stroke-width="1.5"/>
-  <!-- soffit under roof -->
-  <rect x="200" y="150" width="270" height="12" fill="#eef3f7" stroke="#8aa0b0" stroke-width="1.4"/>
-  <!-- beam -->
-  <rect x="200" y="128" width="270" height="16" fill="#caa27b" stroke="#6c4b2a" stroke-width="1.5"/>
-  <!-- post -->
-  <rect x="220" y="162" width="20" height="90" fill="url(#w)" stroke="#3a3a3a" stroke-width="1.4"/>
-  <!-- decking -->
-  <rect x="180" y="252" width="300" height="14" fill="url(#w)" stroke="#3a3a3a" stroke-width="1.4"/>
-  <line x1="350" y1="156" x2="560" y2="145" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="148">Soffit (exterior gypsum)</text>
-  <line x1="230" y1="200" x2="560" y2="195" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="198">Post + beam</text>
-  <line x1="300" y1="259" x2="560" y2="245" stroke="#2e7d32" stroke-width="1.4"/><text class="l" x="568" y="248">Decking (SQFT)</text>
+<rect x="0.5" y="0.5" width="879" height="639" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<rect x="40" y="50" width="34" height="520" fill="url(#batt)" stroke="#caa64a" stroke-width="1"/>
+<rect x="40" y="50" width="34" height="520" fill="none" stroke="#3a3f44" stroke-width="1.4"/>
+<rect x="74" y="50" width="9" height="520" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.2"/>
+<text class="side" x="40" y="596">HOUSE</text>
+<rect x="83" y="476" width="380" height="50" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.4"/>
+<rect x="83" y="462" width="42" height="14" fill="#c8b79b" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="129" y="462" width="42" height="14" fill="#c8b79b" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="175" y="462" width="42" height="14" fill="#c8b79b" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="221" y="462" width="42" height="14" fill="#c8b79b" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="267" y="462" width="42" height="14" fill="#c8b79b" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="313" y="462" width="42" height="14" fill="#c8b79b" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="359" y="462" width="42" height="14" fill="#c8b79b" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="405" y="462" width="42" height="14" fill="#c8b79b" stroke="#8a6a3f" stroke-width="1.2"/>
+<rect x="400" y="526" width="90" height="30" fill="url(#conc)" stroke="#6b7378" stroke-width="1.3"/>
+<line x1="83" y1="454" x2="467" y2="454" stroke="#2e7d32" stroke-width="3" stroke-dasharray="10 6"/>
+<rect x="424" y="300" width="30" height="162" fill="url(#pt)" stroke="#6c4b2a" stroke-width="1.6"/>
+<rect x="419" y="232" width="20" height="68" fill="url(#endgrain)" stroke="#6c4b2a" stroke-width="1.5"/>
+<rect x="439" y="232" width="20" height="68" fill="url(#endgrain)" stroke="#6c4b2a" stroke-width="1.5"/>
+<path d="M418,300 V288 H460 V300" fill="none" stroke="#4d5861" stroke-width="3" stroke-linejoin="round"/>
+<rect x="83" y="248" width="16" height="52" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.5"/>
+<rect x="99" y="248" width="320" height="52" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.4"/>
+<path d="M99,254 V298 H117 V254" fill="none" stroke="#4d5861" stroke-width="3" stroke-linejoin="round"/>
+<path d="M419,254 V298 H401 V254" fill="none" stroke="#4d5861" stroke-width="3" stroke-linejoin="round"/>
+<rect x="99" y="300" width="320" height="5" fill="#eef0f2" stroke="#6b7378" stroke-width="1"/>
+<rect x="99" y="305" width="320" height="5" fill="#eef0f2" stroke="#6b7378" stroke-width="1"/>
+<polygon points="83,122 500,220 500,244 83,146" fill="url(#wood)" stroke="#8a6a3f" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="83,114 504,213 504,221 83,122" fill="url(#sheath)" stroke="#7a6a3c" stroke-width="1.1" stroke-linejoin="round"/>
+<text class="note" x="200" y="96">roof над porch: своя Area</text>
+<text class="mono" x="200" y="76">rf 4</text>
+<circle cx="270" cy="440" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="270" y="444.5">1</text>
+<circle cx="160" cy="469" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="160" y="473.5">2</text>
+<circle cx="220" cy="340" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="220" y="344.5">3</text>
+<line x1="220" y1="328" x2="220" y2="312" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="270" cy="274" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="270" y="278.5">4</text>
+<circle cx="60" cy="274" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="60" y="278.5">5</text>
+<line x1="71" y1="274" x2="84" y2="274" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="140" cy="220" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="140" y="224.5">6</text>
+<line x1="134" y1="230" x2="112" y2="256" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="380" cy="220" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="380" y="224.5">6</text>
+<line x1="386" y1="230" x2="408" y2="256" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="439" cy="380" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="439" y="384.5">7</text>
+<circle cx="486" cy="266" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="486" y="270.5">8</text>
+<line x1="475" y1="266" x2="461" y2="266" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="550" cy="48" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="550" y="52.5">1</text>
+<text class="lab2" x="570" y="53">Площадь пола porch</text>
+<text class="mono2" x="570" y="71">sqfts/porch</text>
+<text class="note" x="570" y="88">Area; Front Page: Porches, SQ FT</text>
+<circle cx="550" cy="115" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="550" y="119.5">2</text>
+<text class="lab2" x="570" y="120">Decking или Subfloor</text>
+<text class="mono2" x="570" y="138">по детали | SQ FT или 4x8</text>
+<text class="note" x="570" y="155">SQFT x 1.1</text>
+<circle cx="550" cy="182" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="550" y="186.5">3</text>
+<text class="lab2" x="570" y="187">Ceiling: два слоя ext. gypsum</text>
+<text class="mono2" x="570" y="205">Soffit Gypsum (2) | 5/8" Gyp</text>
+<text class="mono2" x="570" y="222">SQ FT  =CEILING(area*2*1.1,2)</text>
+<text class="note" x="570" y="239">x units; слои в подписи и в формуле</text>
+<circle cx="550" cy="266" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="550" y="270.5">4</text>
+<text class="lab2" x="570" y="271">Ceiling Joists 16" o.c.</text>
+<text class="mono2" x="570" y="289">по детали | D = длина доски</text>
+<text class="note" x="570" y="306">отдельно от rafters, обязательно</text>
+<circle cx="550" cy="333" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="550" y="337.5">5</text>
+<text class="lab2" x="570" y="338">Ledger</text>
+<text class="mono2" x="570" y="356">по детали | D 16</text>
+<circle cx="550" cy="383" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="550" y="387.5">6</text>
+<text class="lab2" x="570" y="388">Hangers</text>
+<text class="mono2" x="570" y="406">по детали | pcs</text>
+<text class="note" x="570" y="423">на оба конца ceiling joist</text>
+<circle cx="550" cy="450" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="550" y="454.5">7</text>
+<text class="lab2" x="570" y="455">Posts</text>
+<text class="mono2" x="570" y="473">P.T. на улице | D = длина</text>
+<text class="note" x="570" y="490">под крышей без P.T.</text>
+<circle cx="550" cy="517" r="11" fill="#2e7d32" stroke="#fff" stroke-width="1.5"/><text class="numt" x="550" y="521.5">8</text>
+<text class="lab2" x="570" y="522">Beam</text>
+<text class="note" x="570" y="540">страница Deck / Porch Frame</text>
+<text class="note" x="110" y="590">Каркас не показан: Note: Porch framing is not</text>
+<text class="note" x="110" y="610">specified; all framing assumed; verify.</text>
 </svg>

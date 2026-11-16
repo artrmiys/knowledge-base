@@ -82,31 +82,31 @@
 <circle class="numc" cx="729" cy="130" r="11"/><text class="numt" x="729" y="134.5">8</text>
 </g><circle class="numc" cx="751" cy="57" r="11"/><text class="numt" x="751" y="61.5">1</text>
 <text class="lab2" x="770" y="62" >Ledger со screws</text>
-<text class="mono2" x="770" y="79" >Ledger | 2x12 P.T. | LFT</text>
+<text class="mono2" x="770" y="79" >Ledger | 2x12 P.T. | D 16</text>
 <text class="mono2" x="770" y="95" >Screws | pcs по шагу</text>
 <circle class="numc" cx="751" cy="121" r="11"/><text class="numt" x="751" y="125.5">2</text>
 <text class="lab2" x="770" y="126" >Hangers у ledger</text>
 <text class="mono2" x="770" y="143" >Hangers | LUS210 Zmax | pcs</text>
 <circle class="numc" cx="751" cy="185" r="11"/><text class="numt" x="751" y="189.5">3</text>
 <text class="lab2" x="770" y="190" >Joists</text>
-<text class="mono2" x="770" y="207" >Joists | 2x12 P.T. 16" | LFT</text>
+<text class="mono2" x="770" y="207" >Joists | 2x12 P.T. | D 14</text>
 <circle class="numc" cx="751" cy="249" r="11"/><text class="numt" x="751" y="253.5">4</text>
 <text class="lab2" x="770" y="254" >End Joist + hanger</text>
-<text class="mono2" x="770" y="271" >End Joist | 2x12 P.T. | LFT</text>
-<text class="mono2" x="770" y="287" >Hangers | LUC210 | pcs</text>
+<text class="mono2" x="770" y="271" >End Joists | 2x12 | D 14</text>
+<text class="mono2" x="770" y="287" >Hangers | LUC210 Zmax | pcs</text>
 <circle class="numc" cx="751" cy="313" r="11"/><text class="numt" x="751" y="317.5">5</text>
 <text class="lab2" x="770" y="318" >Beam по фронту</text>
-<text class="mono2" x="770" y="335" >Beam | (3) 2x12 P.T. | LFT</text>
+<text class="mono2" x="770" y="335" >Beam (3) | 2x12 P.T. | D 16</text>
 <circle class="numc" cx="751" cy="377" r="11"/><text class="numt" x="751" y="381.5">6</text>
 <text class="lab2" x="770" y="382" >Post + cap</text>
-<text class="mono2" x="770" y="399" >Posts | 6x6 P.T. | pcs</text>
-<text class="mono2" x="770" y="415" >Post Caps | BCS2-3/6 | pcs</text>
+<text class="mono2" x="770" y="399" >Posts | 6x6 P.T. | D 10</text>
+<text class="mono2" x="770" y="415" >Caps | BCS2-3/6 Zmax | pcs</text>
 <circle class="numc" cx="751" cy="441" r="11"/><text class="numt" x="751" y="445.5">7</text>
 <text class="lab2" x="770" y="446" >Decking</text>
 <text class="mono2" x="770" y="463" >Decking | 2x6 DuxxBak | SQ FT</text>
 <circle class="numc" cx="751" cy="505" r="11"/><text class="numt" x="751" y="509.5">8</text>
 <text class="lab2" x="770" y="510" >Railing 36" на 2 постах</text>
 <text class="mono2" x="770" y="527" >Posts at Rails | 4x4 P.T. | 2</text>
-<text class="mono2" x="770" y="543" >Rails | LFT (страница Rails)</text>
+<text class="mono2" x="770" y="543" >перила: страница Railing</text>
 <text class="note" x="40" y="600" >Блок балкона в DFL: один блок на тип балкона, количество экземпляров в шапке блока. Порядок строк как на схеме.</text>
 </svg>

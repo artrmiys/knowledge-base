@@ -13,7 +13,7 @@ Here: how to pick a hanger by condition (what it carries, what it sits on, which
 
 <figure markdown>
   ![Hanger selection flow for common estimating decisions](../assets/images/hangers/hanger-selection-flow.svg)
-  <figcaption markdown="span">Selection flow: mount condition first, then depth, skew and special conditions.</figcaption>
+  <figcaption markdown="span">Selection flow: what is carried, mount, skew, then special conditions (concealed flange, firewall, Zmax).</figcaption>
 </figure>
 
 </div>

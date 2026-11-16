@@ -2,7 +2,7 @@
 
 <figure markdown>
   ![Blocking at 48 inch on center](../../../../assets/images/framing/blocking-oc.svg)
-  <figcaption markdown="span">Blocking rows at 48" across the joists: the number of pieces is counted from the zone length and the spacing, not as a solid row.</figcaption>
+  <figcaption markdown="span">Blocking at 48" o.c.: a Line along the zone, one piece at every point of the line; the count comes from the line length and the spacing, not as a solid row.</figcaption>
 </figure>
 
 ## What it is

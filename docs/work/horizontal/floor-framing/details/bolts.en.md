@@ -1,8 +1,8 @@
 # Bolts
 
 <figure markdown>
-  ![Anchor bolt through sill plate](../../../../assets/images/framing/anchor-bolt.svg)
-  <figcaption markdown="span">Bolt with washer and nut: three rows in the DFL. Spacing and diameter per the detail; one washer per bolt, two when there is wood on both sides.</figcaption>
+  ![Through bolts beam to post and nailer bolts on a steel beam](../../../../assets/images/framing/through-bolt.svg)
+  <figcaption markdown="span">Top: through bolt beam to post, rows `Bolts`, `Washers` (two per bolt, wood on both sides) and `Nuts`. Bottom: nailer bolts on a steel beam staggered at 24" o.c.: three template rows with one formula.</figcaption>
 </figure>
 
 <!-- TODO-PHOTO: Simpson Titen HD anchor with plate washer in sill plate, EN query "Titen HD anchor washer sill plate" -->

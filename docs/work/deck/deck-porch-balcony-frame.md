@@ -7,7 +7,7 @@
 
 <figure markdown>
   ![Deck framing plan](../../assets/images/framing/deck-frame-plan.svg)
-  <figcaption markdown="span">План каркаса: ledger к зданию, joists и hangers, beam на posts, rim и blocking. Единицы: posts pcs, beam и joists LFT, hangers pcs.</figcaption>
+  <figcaption markdown="span">План каркаса: ledger к зданию, joists и hangers, beam на posts, rim и blocking. У досок в D длина доски, в C штуки; hangers и screws ledger в pcs.</figcaption>
 </figure>
 
 ## Что это

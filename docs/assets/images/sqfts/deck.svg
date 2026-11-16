@@ -82,30 +82,30 @@
 <circle class="numc" cx="104" cy="232" r="11"/><text class="numt" x="104" y="236.5">9</text>
 <circle class="numc" cx="793" cy="57" r="11"/><text class="numt" x="793" y="61.5">1</text>
 <text class="lab2" x="812" y="62" >Ledger + flashing</text>
-<text class="mono2" x="812" y="79" >Ledger | 2x10 P.T. | LFT</text>
+<text class="mono2" x="812" y="79" >Ledger | 2x10 P.T. | D 16</text>
 <circle class="numc" cx="793" cy="109" r="11"/><text class="numt" x="793" y="113.5">2</text>
 <text class="lab2" x="812" y="114" >Hanger у ledger</text>
-<text class="mono2" x="812" y="131" >Hangers | LUS28 | pcs</text>
+<text class="mono2" x="812" y="131" >Hangers | LUS210 Zmax</text>
 <circle class="numc" cx="793" cy="161" r="11"/><text class="numt" x="793" y="165.5">3</text>
 <text class="lab2" x="812" y="166" >Joists @ 16" o.c.</text>
-<text class="mono2" x="812" y="183" >Joists | 2x10 P.T. | LFT</text>
+<text class="mono2" x="812" y="183" >Joists | 2x10 P.T. | D 12</text>
 <circle class="numc" cx="793" cy="213" r="11"/><text class="numt" x="793" y="217.5">4</text>
 <text class="lab2" x="812" y="218" >Decking</text>
-<text class="mono2" x="812" y="235" >Decking | SQ FT -&gt; pcs</text>
+<text class="mono2" x="812" y="235" >Decking | SQ FT, x 1.1</text>
 <circle class="numc" cx="793" cy="265" r="11"/><text class="numt" x="793" y="269.5">5</text>
 <text class="lab2" x="812" y="270" >Beam (2) ply</text>
-<text class="mono2" x="812" y="287" >Beam | (2)2x10 P.T. | LFT</text>
+<text class="mono2" x="812" y="287" >Beam (2) | 2x10 | D 16</text>
 <circle class="numc" cx="793" cy="317" r="11"/><text class="numt" x="793" y="321.5">6</text>
 <text class="lab2" x="812" y="322" >Post + cap + base</text>
-<text class="mono2" x="812" y="339" >Posts | 6x6 P.T. | pcs</text>
+<text class="mono2" x="812" y="339" >Posts | 6x6 P.T. | D 10</text>
 <circle class="numc" cx="793" cy="369" r="11"/><text class="numt" x="793" y="373.5">7</text>
 <text class="lab2" x="812" y="374" >Rim joist</text>
-<text class="mono2" x="812" y="391" >Rim | 2x10 P.T. | LFT</text>
+<text class="mono2" x="812" y="391" >Rim | 2x10 P.T. | D 16</text>
 <circle class="numc" cx="793" cy="421" r="11"/><text class="numt" x="793" y="425.5">8</text>
 <text class="lab2" x="812" y="426" >Railing post + cap</text>
-<text class="mono2" x="812" y="443" >Railing | LFT (стр. Rails)</text>
+<text class="mono2" x="812" y="443" >Posts at Rails | pcs</text>
 <circle class="numc" cx="793" cy="473" r="11"/><text class="numt" x="793" y="477.5">9</text>
-<text class="lab2" x="812" y="478" >Ledger bolts</text>
-<text class="mono2" x="812" y="495" >Titen HD | pcs</text>
-<text class="note" x="80" y="566" >Deck SQFT = площадь настила: тянет decking (area x 1.1), framing (страница Deck frame), railing, attachment.</text>
+<text class="lab2" x="812" y="478" >Ledger screws</text>
+<text class="mono2" x="812" y="495" >Screws | SDWS22400DB</text>
+<text class="note" x="80" y="566" >Deck SQFT = площадь настила: decking = area x 1.1. У досок в D длина доски (ft), в C штуки; крепёж в pcs.</text>
 </svg>

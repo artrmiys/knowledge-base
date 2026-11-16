@@ -64,9 +64,9 @@
 <text class="lab2" x="236" y="226" text-anchor="start" >Joists на ribbon, прибиты к стойке</text>
 <line class="lead" x1="300" y1="420" x2="300" y2="372"/>
 <rect x="232" y="426" width="382.1" height="22" rx="4" fill="#fff" fill-opacity="0.92" stroke="none"/>
-<text class="lab2" x="236" y="440" text-anchor="start" >Ribbon 1x4 / 1x6: врезана (let-in) в стойки</text>
+<text class="lab2" x="236" y="440" text-anchor="start" >Ribbon Board: врезана (let-in) в стойки</text>
 <rect x="232" y="446" width="154.16" height="21" rx="4" fill="#fff" fill-opacity="0.92" stroke="none"/>
-<text class="mono" x="236" y="459" text-anchor="start" >Ribbon | 1x6 | LFT</text>
+<text class="mono" x="236" y="459" text-anchor="start" >Ribbon Board | 2x4 | D 16</text>
 <rect x="232" y="466.5" width="167.5" height="19.5" rx="4" fill="#fff" fill-opacity="0.92" stroke="none"/>
 <text class="small" x="236" y="478" text-anchor="start" >пунктир = паз в стойке</text>
 <text class="lab" x="615" y="48" >Сечение поперёк стены</text>
@@ -93,7 +93,7 @@
 <rect x="743" y="452" width="14" height="83" fill="url(#endgrain)" stroke="#8a6a3f" stroke-width="1.5" />
 <text class="lab2" x="770" y="477" >Blocking: между joists</text>
 <text class="note" x="770" y="497" >короткие куски в пролёте;</text>
-<text class="note" x="770" y="515" >строка Blocking, LFT</text>
+<text class="note" x="770" y="515" >строка Blocking, доски по 16'</text>
 <line class="lead" x1="765" y1="537" x2="675" y2="527"/>
 <text class="note" x="70" y="578" >Top chord bearing trusses ribbon не требуют: там blocking между trusses, часто (2) 2x6 над 2x6 bearing wall.</text>
 </svg>

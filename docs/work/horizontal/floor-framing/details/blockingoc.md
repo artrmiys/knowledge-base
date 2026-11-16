@@ -2,7 +2,7 @@
 
 <figure markdown>
   ![Blocking at 48 inch on center](../../../../assets/images/framing/blocking-oc.svg)
-  <figcaption markdown="span">Ряды blocking с шагом 48" поперёк joists: количество кусков считается по длине зоны и шагу, не как сплошной ряд.</figcaption>
+  <figcaption markdown="span">Blocking с шагом 48": Line вдоль зоны, кусок на каждой точке линии; количество считается по длине линии и шагу, не как сплошной ряд.</figcaption>
 </figure>
 
 ## Что это
