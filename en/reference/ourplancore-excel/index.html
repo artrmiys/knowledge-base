@@ -1,0 +1,8477 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Estimating wiki for wood framing: takeoff workflow, COM/EWP rules, QA checklists">
+      
+      
+        <meta name="author" content="Estimating Team">
+      
+      
+      
+        <link rel="prev" href="../takeoff-naming/">
+      
+      
+        <link rel="next" href="../ourplancore-pdf/">
+      
+      
+        
+          <link rel="alternate" href="../../../reference/ourplancore-excel/" hreflang="ru">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/brand/icon-kb-new-256.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+  
+    
+      
+        <title>Export to Excel - Estimating Knowledge Base</title>
+      
+    
+  
+
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/tokens.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  
+  
+  
+  
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Knowledge Base" />
+  <meta property="og:title" content="Export to Excel | Knowledge Base" />
+  <meta property="og:description" content="Estimating guides, construction details and quality checklists in one place." />
+  <meta property="og:url" content="https://artrmiys.github.io/knowledge-base/en/reference/ourplancore-excel/" />
+  <meta property="og:image" content="https://artrmiys.github.io/knowledge-base/assets/images/brand/knowledge-base-social-v2.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Knowledge Base - guides, details and checklists" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Export to Excel | Knowledge Base" />
+  <meta name="twitter:description" content="Estimating guides, construction details and quality checklists in one place." />
+  <meta name="twitter:image" content="https://artrmiys.github.io/knowledge-base/assets/images/brand/knowledge-base-social-v2.png" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#export-to-excel" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Estimating Knowledge Base" class="md-header__button md-logo" aria-label="Estimating Knowledge Base" data-md-component="logo">
+      
+  <img src="../../../assets/images/brand/icon-kb-new-256.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Estimating Knowledge Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Export to Excel
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../reference/ourplancore-excel/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start/how-to-use/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Start
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../ourplanecore/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  OurPlanCore
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ourpdf/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  OurPDF
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../work-types/residential/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Work
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../dfl-overview/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Excel and DFL
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../boss-feedback-rules/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Estimating Knowledge Base" class="md-nav__button md-logo" aria-label="Estimating Knowledge Base" data-md-component="logo">
+      
+  <img src="../../../assets/images/brand/icon-kb-new-256.png" alt="logo">
+
+    </a>
+    Estimating Knowledge Base
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Start
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/how-to-use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to use the KB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/takeoff-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Takeoff tree and sheet names
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/quality-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pre-delivery check
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/common-mistakes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Common mistakes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/client-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Client and job type rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/suggest-change/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suggest a correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OurPlanCore
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OurPlanCore
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplanecore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OurPlanCore 3.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-lite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lite vs full version
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-course/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First steps, 10 lessons
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Every day
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Every day
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../job-creation-storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jobs and saving
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-pages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sheets (Pages)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-split-by-sheets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Split by sheets and routing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measuring tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-takeoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Takeoffs tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-buildings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multiple buildings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../takeoff-naming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Names and auto-routing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Export to Excel
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Export to Excel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Excel in Lite
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to put one takeoff into a cell: Value and Excel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to put one takeoff into a cell: Value and Excel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to add a comment to a measurement and send it to Excel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to keep a number in a cell: Link to Excel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to keep a number in a cell: Link to Excel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#link-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What happens next
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        States: the icon on the takeoff
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-joist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Joists: which number
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All job links: All Excel Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to link the whole DFL in one click: Auto Link
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to remove all job links: Reset All Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings: Settings &gt; Excel Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TemplateCom template
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XL strip: full version only
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="XL strip: full version only">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-you-need-before-pressing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you need before pressing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to export a building with one button: ALL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XL strip buttons: reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#framing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Framing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rerun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repeat export
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to change what an XL button does: Settings &gt; Excel Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common mistakes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-pdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PDF and delivery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-editing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editing and snaps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-edit-takeoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Merge, Split, Break step by step
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-routing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Routing and rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-sheets-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crops, mask, overlays, legend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings and modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extra features
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extra features
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-extras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What is included
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-snap-trace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snap and tracing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-managers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-extras-other/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Other
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI, terminal and 3D (full version)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI, terminal and 3D (full version)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI in the app
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-ai-console/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI console and terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-workspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace, second computer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-3d-roof/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3D roof
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-3d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3D and Massing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-ideas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideas and plans
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-shortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keyboard shortcuts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What's new
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-all-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    All app functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ourpdf/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OurPDF
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OurPDF
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ourpdf/how-to-measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to measure, step by step
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ourpdf/window/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Program window
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ourpdf/measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measurements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ourpdf/excel-link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Excel link
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ourpdf/comments-save/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comments and saving
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ourpdf/pages-edit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pages, editing, layers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ourpdf/overlay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sheet overlay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ourpdf/crop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crop and new sheets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ourpdf/view-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    View and settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ourpdf/shortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keyboard shortcuts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ourpdf/ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Work
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Job types
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Job types
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work-types/residential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Residential
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work-types/reconstruction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reconstruction / Remodel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work-types/com/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    COM Commercial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work-types/ewp-capital/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EWP / Capital
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vertical work
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Vertical work
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Walls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Walls
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/wall-panels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wall Panels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/sill-plates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sill Plates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/basement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/unit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unit / Interior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/exterior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exterior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/bearing-walls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bearing Walls (BW)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/metal-tracks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metal Tracks / CFMF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/corridor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Corridor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/demising/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demising
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/gable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gable
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/parapet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parapet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/shaft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shaft
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/furring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Furring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/walls/corners/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Corners
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_2" id="__nav_5_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Openings
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Openings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/openings/windows-doors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows and Doors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/openings/window-flashing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Window Flashing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/openings/headers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Headers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Horizontal work
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Horizontal work
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Floor Framing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Floor Framing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/post/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/beam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beam
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/joist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Joist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/stair/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stair
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/subfloor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Subfloor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_1_6" id="__nav_5_3_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Details / small items
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_3_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Details / small items
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/details/rim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rim Board
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/details/ribbon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ribbon Board
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/details/blocking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/details/blockingoc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocking OC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/details/bracingdrywall/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bracing for Drywall
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/details/bolts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bolts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/details/screws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Screws
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/floor-framing/details/steelbeams/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Steel Beam Web Fillers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_2" id="__nav_5_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roof Framing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Roof Framing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/ridge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ridge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/header/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Header (roof)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/hip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hip
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/valley/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Valley
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/dormer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dormer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/overframes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overframes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/dbl-trpl-rafters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dbl / Trpl Rafters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/canopy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Canopy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/ceiling-soffit-framing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ceiling / Soffit Framing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sheathing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sheathing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/sheathing/wall-sheathing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wall Sheathing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/sheathing/exterior-materials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exterior Wall Materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/sheathing/floor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Floor Sheathing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/roof-sheathing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roof Sheathing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/horizontal/roof-framing/h-clips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    H-clips
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/sheathing/gable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gable Sheathing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/sheathing/box-sheathing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Box Sheathing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/sheathing/truss-heel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Truss Heel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/sheathing/shear-wall/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shear Wall
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/vertical/sheathing/holdowns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Holdowns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roof Misc / other
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Roof Misc / other
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sheathing-and-misc/eve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eve
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sheathing-and-misc/rake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sheathing-and-misc/returns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Returns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sheathing-and-misc/rooftype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roof Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sheathing-and-misc/ridgevalleyhip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ridge / Valley / Hip
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sheathing-and-misc/flashing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flashing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQFTs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SQFTs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sqfts/basement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sqfts/1st2nd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1st-5th Floors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sqfts/loft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loft
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sqfts/roof/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roof
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sqfts/deck/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deck
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sqfts/porch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Porch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sqfts/balcony/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balcony
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/sqfts/cantilevered/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cantilevered
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deck / Porch / Balcony
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Deck / Porch / Balcony
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/deck/deck-porch-balcony-frame/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frame (deck/porch/balcony)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/deck/railing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Railing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/deck/balcony-trims/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balcony Trims
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/deck/anchor-bolts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anchor Bolts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interior Trims
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Interior Trims
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/interior-trims/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/interior-trims/base/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/interior-trims/casing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/interior-trims/crown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crown
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/interior-trims/door-window-trim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Door and Window Trim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/interior-trims/room-schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Room Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exterior Trims
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Exterior Trims
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/exclusions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exclusions and J-Channel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/casing-corner-band/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casing, Corner & Band
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/furring-and-jambs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Furring & Window Jambs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/soffit-fascia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soffit & Fascia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/porch-deck-balcony/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Porch / Deck / Balcony
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/rails-decking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rails & Decking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/balcony-buildup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balcony build-up
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/shower-pergola/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outdoor Shower & Pergola
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/exterior-trims/macros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trim macros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_10" id="__nav_5_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Siding
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Siding
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/siding/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/siding/types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Siding types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/siding/underlayment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Underlayment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/siding/eifs-stucco-veneer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EIFS / Stucco / Veneer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../work/siding/measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measuring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Excel and DFL
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Excel and DFL
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dfl-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How the DFL workbook works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../takeoff-items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Row labels and format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standard-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes in the DFL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dfl-blocks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balcony, porch and holdown blocks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ewood-tab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E-Wood tab in Excel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../excel-hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Excel macros and hotkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formulas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulas and factors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../boss-feedback-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tips and key rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hangers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hangers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware-catalog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware catalog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../material-catalog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Material catalog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../industry-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terms and specs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quantity-benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quantity benchmarks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-assist-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI help for the estimator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_8" id="__nav_7_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For KB editors
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    For KB editors
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/maintenance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Updating the KB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/images-and-schemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Images and diagrams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/site-preview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layout check
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Excel in Lite
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to put one takeoff into a cell: Value and Excel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to put one takeoff into a cell: Value and Excel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to add a comment to a measurement and send it to Excel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to keep a number in a cell: Link to Excel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to keep a number in a cell: Link to Excel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#link-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What happens next
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        States: the icon on the takeoff
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-joist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Joists: which number
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All job links: All Excel Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to link the whole DFL in one click: Auto Link
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to remove all job links: Reset All Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings: Settings &gt; Excel Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TemplateCom template
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XL strip: full version only
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="XL strip: full version only">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-you-need-before-pressing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you need before pressing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to export a building with one button: ALL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XL strip buttons: reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#framing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Framing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rerun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repeat export
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to change what an XL button does: Settings &gt; Excel Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common mistakes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+
+<h1 id="export-to-excel">Export to Excel<a class="headerlink" href="#export-to-excel" title="Link to this section">&para;</a></h1>
+<p>This page covers how to move numbers from the Takeoffs tree into the DFL workbook. In Lite these are the <code>Excel</code> and <code>Value</code> buttons at the bottom left, a permanent link from a takeoff to a cell with <code>Link to Excel</code>, <code>Auto Link</code> for the whole DFL, resetting links, and <code>Export &gt; Export Excel</code> to a file. The XL strip to the right of the sheet, which writes sections into <code>TemplateCom.xlsm</code> and runs the workbook macros by itself, exists only in the full version: it is described at the end of the page (<a href="#xl">XL strip</a>). You need it after measuring, before working in the DFL.</p>
+<h2 id="lite">Excel in Lite<a class="headerlink" href="#lite" title="Link to this section">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Where</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Excel</code></td>
+<td>bottom left</td>
+<td>rows of the selected folder or takeoff (name, number, unit) from the active cell of the open workbook (<a href="#value">below</a>)</td>
+</tr>
+<tr>
+<td><code>Value</code></td>
+<td>next to <code>Excel</code></td>
+<td>only the numbers of the same selection in one column (<a href="#value">below</a>)</td>
+</tr>
+<tr>
+<td><code>Link to Excel</code></td>
+<td>next to <code>Value</code></td>
+<td>the number of one takeoff into a cell; after that the cell updates by itself (<a href="#link">below</a>)</td>
+</tr>
+<tr>
+<td><code>Auto Link</code></td>
+<td>next to <code>Link to Excel</code></td>
+<td>link takeoffs to the <code>J:L</code> list of a DFL workbook in one click (<a href="#auto-link">below</a>)</td>
+</tr>
+<tr>
+<td><code>Export &gt; Export Excel</code></td>
+<td>the <code>Export</code> menu of the Takeoffs panel</td>
+<td>export of the tree to an <code>.xlsx</code> file, columns J/K/L from row 10</td>
+</tr>
+</tbody>
+</table>
+<p>Lite does not run the workbook macros: it has no XL strip. Run the calculation on the exported <code>J:L</code> list (areas, walls, openings, eaves) in Excel with the E-Wood tab buttons (<a href="../ewood-tab/#calculate">Calculation from takeoffs</a>). Make the building workbook from the template in the <code>templates</code> folder of the shared Dropbox folder (<a href="#template">TemplateCom template</a>).</p>
+<h2 id="value">How to put one takeoff into a cell: Value and Excel<a class="headerlink" href="#value" title="Link to this section">&para;</a></h2>
+<p>Why: drop a number or several rows into a finished workbook without macros.</p>
+<ol>
+<li>In Excel click the target cell in the open workbook.</li>
+<li>Select a takeoff or folder in Takeoffs.</li>
+<li>Press <code>Excel</code> at the bottom left: the rows (name, number, unit) are written from the active cell. Or press <code>Value</code>: only the numbers of the same selection in one column, to quickly fill <code>G</code> in existing rows.</li>
+</ol>
+<p>Result: the data is in the workbook from the selected cell. The message <code>Open Excel, open a workbook, click the destination cell</code> means there is no active cell.</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Excel</code> (bottom left)</td>
+<td>writes the selected folder or takeoff as rows (name, number, unit) from the active cell of the open workbook; no macros</td>
+</tr>
+<tr>
+<td>the dot on the <code>Excel</code> button (<code>Include takeoff comments in Excel export</code>)</td>
+<td>filled - the takeoff and measurement comments (notes) go into the export; off by default. Applies to <code>Excel</code> and <code>Export &gt; Export Excel</code>; <code>Value</code> and the XL strip do not write comments, CSV and TXT always do</td>
+</tr>
+<tr>
+<td><code>Value</code></td>
+<td>writes only the numbers of the same selection in one column from the active cell</td>
+</tr>
+<tr>
+<td><code>Link to Excel</code></td>
+<td>writes the number of one takeoff into the active cell and keeps it there: <a href="#link">below</a></td>
+</tr>
+<tr>
+<td><code>Auto Link</code></td>
+<td>DFL only: links all takeoffs whose numbers are already in the <code>J:L</code> list, at once: <a href="#auto-link">below</a></td>
+</tr>
+<tr>
+<td><code>Export &gt; Export CSV / TXT / Excel</code></td>
+<td>export of the tree to a file</td>
+</tr>
+<tr>
+<td><code>Export &gt; Export to Current Excel</code></td>
+<td>same as the <code>Excel</code> button</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">How to add a comment to a measurement and send it to Excel<a class="headerlink" href="#notes" title="Link to this section">&para;</a></h3>
+<p>Why: a note for the DFL next to the number (<code>verify on site</code>, <code>per S2.1</code>) that travels to the workbook with the takeoff.</p>
+<ol>
+<li>Right-click the measurement (section) row under the takeoff in Takeoffs and choose <strong>Set Notes...</strong>; for several selected rows the item is called <code>Set Notes for N Rows...</code>.</li>
+<li>Type the text, each line is a separate comment, press OK. A comment for the whole takeoff goes into the <code>Notes:</code> field of the takeoff's <strong>Properties...</strong> window.</li>
+<li>Click the dot on the <code>Excel</code> button at the bottom left so it is filled: status <code>Excel comments are on: include takeoff and measurement comments.</code></li>
+<li>Click the target cell in Excel and press <code>Excel</code>.</li>
+</ol>
+<p>Result: under the takeoff row come the comment rows (first the takeoff's, then the measurements'; duplicates are not repeated) and an empty row after them.</p>
+<h2 id="link">How to keep a number in a cell: Link to Excel<a class="headerlink" href="#link" title="Link to this section">&para;</a></h2>
+<p><code>Value</code> writes the number once. <strong>Link to Excel</strong> writes the number into the cell and remembers the link: change the measurement and the cell updates by itself. One takeoff, one number, one cell.</p>
+<div class="admonition warning">
+<p class="admonition-title">One way only, from OurPlanCore to Excel</p>
+<p>Editing the cell does not change the measurement. The app does not save the open workbook; you do. Until you press Link, the app does not touch Excel: a job without links leaves Excel alone.</p>
+</div>
+<figure>
+<p><img alt="How Link to Excel works" src="../../../assets/images/ourplanecore/excel-link-states.svg" />
+  </p>
+<figcaption>The number goes from the takeoff to the cell. The icon color on the takeoff row shows the link state. Names in the diagram are examples.</figcaption>
+</figure>
+<p>Why: the number in the workbook follows the measurement by itself; no need to repeat <code>Value</code> after every edit.
+You need: version 3.0.28 or newer, the workbook open in Excel and saved as a file, the job not opened read-only.</p>
+<ol>
+<li>Select one takeoff in Takeoffs. A measurement row under a takeoff counts as that takeoff; a folder does not work, nor does an annotation takeoff with no quantity.</li>
+<li>In Excel click the cell you need.</li>
+<li>In OurPlanCore press <strong>Link to Excel</strong> at the bottom right, next to <code>Value</code> and <code>Excel</code>. The same command: right-click on the takeoff, <strong>Excel Link &gt; Link to Excel</strong>, or the <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-p">P</kbd></span> palette. No default key.</li>
+<li>If the cell already has text, another number, a formula or another link, the app asks: <strong>Replace</strong> or <strong>Cancel</strong>.</li>
+<li>Read the status at the bottom: <code>Linked &lt;takeoff&gt; to &lt;workbook&gt; &lt;sheet!cell&gt;: &lt;number&gt;</code>. A chain icon appears on the takeoff row.</li>
+<li>Change the measurement and look at the cell: the number updates after a short pause.</li>
+<li>Save the workbook in Excel yourself.</li>
+</ol>
+<p>Result: the takeoff number sits in the cell and follows the measurement. The value is the same one <code>Value</code> writes: same units and rounding.</p>
+<p>The feature is new. On the first workbook, compare the cell with <code>Total</code> in the tree with your own eyes.</p>
+<h3 id="link-update">What happens next<a class="headerlink" href="#link-update" title="Link to this section">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>What happened</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>the workbook is open</td>
+<td>the cell updates after a short pause. The active worksheet, selection and calculation mode in Excel stay as they were. A write from the app clears Excel's own undo (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>): a formula replaced with <strong>Replace</strong> cannot be brought back with undo</td>
+</tr>
+<tr>
+<td>Excel is busy or a cell is being edited</td>
+<td>the link waits (<code>Pending</code>), the app retries by itself</td>
+</tr>
+<tr>
+<td>the workbook is closed</td>
+<td>the link waits (<code>Pending</code>). The number is written when the job is saved (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>; autosave does not count) or by <strong>Update Links</strong>: in a hidden Excel with macros off, with a copy of the workbook made before writing; then the write is read back from disk</td>
+</tr>
+<tr>
+<td>rows were inserted above the cell</td>
+<td>the link holds on to a hidden name <code>_OPLink_...</code> in the workbook, which follows the cell. The app does not guess the address</td>
+</tr>
+<tr>
+<td>the row with the cell was deleted, by hand or by a macro</td>
+<td>the link is <code>Broken</code>, nothing is written</td>
+</tr>
+<tr>
+<td>the takeoff was renamed or moved to another folder</td>
+<td>the link follows it. A copy of the takeoff has no link</td>
+</tr>
+<tr>
+<td>the takeoff was deleted</td>
+<td>the link is <code>Broken</code>, the cell stays as it is; <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> in the app restores the link</td>
+</tr>
+</tbody>
+</table>
+<p>Link and Unlink themselves cannot be undone with <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>. The workbook copies are in the app profile: for Lite in <code>%LOCALAPPDATA%\OurPlanCore Lite\local\excel-link-backups</code>, for the full version in <code>%LOCALAPPDATA%\OurPlanCore\excel-link-backups</code>; there are none next to the workbook.</p>
+<h3 id="link-states">States: the icon on the takeoff<a class="headerlink" href="#link-states" title="Link to this section">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Icon</th>
+<th>What it means</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Linked</code></td>
+<td>gray</td>
+<td>the cell has this takeoff's number</td>
+<td>nothing</td>
+</tr>
+<tr>
+<td><code>Pending</code></td>
+<td>yellow</td>
+<td>the new number is not written yet: the workbook is closed, Excel is busy, the workbook or file is read-only, the file is locked by another program or missing, the cell is protected, the joists have no direction set</td>
+<td>closed workbook: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> or <strong>Update Links</strong>. The icon tooltip gives the reason</td>
+</tr>
+<tr>
+<td><code>Conflict</code></td>
+<td>orange</td>
+<td>the cell was changed by hand or a formula was typed into it. The app does not write over it</td>
+<td><strong>Overwrite the Cell</strong> (the app's number on top) or <strong>Keep the Cell and Unlink</strong> (the cell stays, there is no link any more)</td>
+</tr>
+<tr>
+<td><code>Broken</code></td>
+<td>red</td>
+<td>the takeoff was deleted, the row or cell was deleted (<code>#REF!</code>), the hidden name disappeared from the workbook, the joists got a different number of lengths. Nothing is written</td>
+<td>a deleted takeoff comes back with <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>. Otherwise <strong>Unlink</strong> and link again</td>
+</tr>
+</tbody>
+</table>
+<p>The icon tooltip: state, workbook, worksheet and cell, last number written, reason.</p>
+<h3 id="link-joist">Joists: which number<a class="headerlink" href="#link-joist" title="Link to this section">&para;</a></h3>
+<p>A <code>J Area</code> takeoff has no single number (<code>Value</code> writes a line of text there), so Link asks which number goes into this cell:</p>
+<table>
+<thead>
+<tr>
+<th>Option in the window</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Count of the 16 length: 45</code></td>
+<td>pieces of this order length</td>
+</tr>
+<tr>
+<td><code>Length 16</code></td>
+<td>the order length itself</td>
+</tr>
+<tr>
+<td><code>Total count, all lengths: ...</code></td>
+<td>all pieces, if there are several lengths</td>
+</tr>
+<tr>
+<td><code>Total length, all lengths: ...</code></td>
+<td>total length, if there are several lengths</td>
+</tr>
+</tbody>
+</table>
+<p>For a second number, click another cell and press Link again. The link holds on to "length number N of M": if the number of lengths in the takeoff changed, the link becomes <code>Broken</code> and asks to be linked again; a wrong number will not get into the cell. The totals survive any such edit. Without a joist direction set, the app will not link: <code>Set the joist direction before linking this takeoff.</code></p>
+<h3 id="link-list">All job links: All Excel Links<a class="headerlink" href="#link-list" title="Link to this section">&para;</a></h3>
+<p>To open it: right-click on a takeoff, <strong>Excel Link &gt; All Excel Links...</strong>, or the <code>Excel Links...</code> command in the palette. The <code>Excel Links</code> window has the columns <code>Takeoff</code>, <code>Workbook</code>, <code>Cell</code>, <code>Last value</code>, <code>State</code>, <code>Why</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Go to Cell</strong></td>
+<td>shows the cell in Excel, opening a closed workbook first</td>
+</tr>
+<tr>
+<td><strong>Overwrite the Cell</strong>, <strong>Keep the Cell and Unlink</strong></td>
+<td>visible when a link in <code>Conflict</code> is selected</td>
+</tr>
+<tr>
+<td><code>Unlink</code></td>
+<td>there is no link any more, the number stays in the cell. If the workbook is closed, its hidden name goes away when the workbook is opened while this job is open</td>
+</tr>
+<tr>
+<td><strong>Update Links</strong></td>
+<td>writes everything that is waiting, including to closed workbooks, and rechecks the hidden names of broken links. This button works with any settings. The same: <strong>Excel Link &gt; Update Links</strong> or <code>Update Excel Links</code> in the palette</td>
+</tr>
+<tr>
+<td><strong>Point to New Path...</strong></td>
+<td>the workbook was moved or renamed. No new workbook is created</td>
+</tr>
+<tr>
+<td><strong>Remove All Links from This Workbook...</strong></td>
+<td>see below</td>
+</tr>
+<tr>
+<td><strong>Reset All Links...</strong></td>
+<td>removes all links of this job: <a href="#reset-links">see below</a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Before delivering the workbook to the client</p>
+<p><strong>All Excel Links...</strong>, select a link to this workbook, <strong>Remove All Links from This Workbook...</strong>. The numbers stay in the cells, the hidden names leave the workbook. All of them go, including those made by other jobs and OurPDF.</p>
+</div>
+<h3 id="auto-link">How to link the whole DFL in one click: Auto Link<a class="headerlink" href="#auto-link" title="Link to this section">&para;</a></h3>
+<p>Why: the numbers are already exported to the <code>J:L</code> list, and linking each takeoff by hand takes long.
+You need: version 3.0.29 or newer (the same in Lite), a saved DFL workbook active in Excel, the job not opened read-only. <a href="../../ourpdf/excel-link/#auto-link">OurPDF</a> has the same button since 0.9.27.</p>
+<div class="admonition warning">
+<p class="admonition-title">Look at the result window right after pressing</p>
+<p>There is no question before linking; the result window is the check. A <code>Probable</code> link can land on someone else's row with the same number, and the next measurement edit will write the new number there. Once you close the window, <strong>Undo This Auto Link</strong> is gone.</p>
+</div>
+<ol>
+<li>In a job with several buildings, put the <a href="../ourplancore-buildings/#root">green dot</a> on the building you need: Auto Link takes only its takeoffs. With no active building, all takeoffs of the job are taken.</li>
+<li>Press <strong>Auto Link</strong> at the bottom, next to <code>Link to Excel</code>. The same command: right-click on a takeoff, <strong>Excel Link &gt; Auto Link (DFL)</strong>, or <code>Auto Link</code> in the <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-p">P</kbd></span> palette. No default key.</li>
+<li>The links appear at once; the <code>Auto Link</code> window shows the result for each takeoff: <code>Group</code>, <code>Takeoff</code>, <code>Number</code>, <code>Cell</code>, <code>Label in column J</code>, <code>Result</code>, <code>Why</code>.</li>
+<li>Check every <code>Probable</code> row: the label in column J must be about this takeoff.</li>
+<li>Save the workbook in Excel yourself. Auto Link does not change cell values and does not save the workbook; it only adds hidden names. Close the workbook without saving and the names disappear, the links become <code>Broken</code>.</li>
+</ol>
+<p>Result: the <code>Sure</code> and <code>Probable</code> takeoffs are linked; the rest are described in the window with a reason.</p>
+<p><strong>DFL only</strong>: an <code>.xlsm</code>, <code>.xlsb</code> or <code>.xls</code> workbook with a <code>Detailed Frame List</code> worksheet whose column A has the word <code>Description</code> in the first 150 rows. Another workbook: status <code>Auto Link works only with a DFL</code>, nothing else happens. <code>Link to Excel</code> works on any workbook.</p>
+<p><strong>What gets linked.</strong> There is only one target: constant numbers in column K of this worksheet, from row 2; the label is taken from column J. Formulas never count. Columns <code>A:H</code>, the blocks <code>O:AB</code>, <code>O135:W147</code>, <code>O105:AL129</code>, <code>Z158</code> and beyond (the macros fill them from <code>J:L</code>), spec cells and other worksheets are never targets, even if the number matches.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>When</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Sure</code></td>
+<td>the label in J equals the takeoff name (case and spaces do not matter), the number matches, there is one such row</td>
+<td>linked at once</td>
+</tr>
+<tr>
+<td><code>Probable</code></td>
+<td>the label does not equal the name, but the number is one to one: it sits in exactly one K cell and no other participating takeoff has it (openings, joists and already linked ones do not count). The label of that row is not the name of another takeoff</td>
+<td>linked at once, check it by eye</td>
+</tr>
+<tr>
+<td><code>Ambiguous</code></td>
+<td>this number is in several cells or belongs to several takeoffs, the name does not decide it</td>
+<td>not linked: select the row in the window, pick the cell in the <code>Cell</code> column, press <strong>Link This Row</strong></td>
+</tr>
+<tr>
+<td><code>Skipped</code></td>
+<td>the list below; the reason is written in the window row</td>
+<td>not linked</td>
+</tr>
+</tbody>
+</table>
+<p>The number is compared at the rounding <code>Value</code> shows, and no looser. A cell with <code>162.504</code> matches <code>162.5</code> and keeps its value until the takeoff number changes. If you changed the measurement after exporting, the number is not in the list and the takeoff will be skipped.</p>
+<p><strong>What is skipped:</strong></p>
+<ul>
+<li>windows, doors and other openings: an <code>openings</code> folder above the takeoff, or the name <code>window</code>, <code>windows</code>, <code>wind</code>, <code>wnd</code>, <code>door</code>, <code>doors</code>, <code>opening</code>, <code>openings</code>, <code>storefront</code>, <code>gd</code>, <code>lv</code>, <code>louver</code>, words starting with <code>окн</code>, <code>двер</code>, <code>проём</code> (Russian for window, door, opening), an opening size with a dot like <code>3.0x6.7 d</code>. A J row with such a label is not a target either. Manual <code>Link to Excel</code> works on them;</li>
+<li><code>J Area</code> takeoffs: they have more than one number; link them by hand with the question, <a href="#link-joist">as usual</a>;</li>
+<li>points (Count) without their own name in J: points are linked only by name, whatever the number. 240 without a name stays unlinked;</li>
+<li>a small whole number without a name: a line or area with a whole number under 10 (threshold in the <a href="#link-settings">settings</a>). With a name it gets linked;</li>
+<li>zero and a takeoff with no number;</li>
+<li>an already linked takeoff, a cell with another link, a formula in the cell, a list row with the name of another takeoff, the number not in the list.</li>
+</ul>
+<p><strong>When <code>Probable</code> gets it wrong:</strong></p>
+<ul>
+<li>a hand-typed J row with a different name and the same number, while the takeoff itself is not exported to the list yet;</li>
+<li>a sum row (two takeoffs in one number) happens to equal a third one;</li>
+<li>a takeoff of another building, when no active building is set and its number equals a row in this workbook;</li>
+<li>two floors with the same area: one row is exported, and the second floor is not measured yet;</li>
+<li>harmless: the takeoff was renamed after exporting, or the label was edited. The row is right, it is just <code>Probable</code> instead of <code>Sure</code>.</li>
+</ul>
+<p><strong>What to do.</strong> <strong>Undo This Auto Link</strong> removes all links of this window, including those linked in it by hand. <code>Unlink</code> removes one takeoff. The numbers in the cells stay, including those written after linking. A closed workbook loses the names the next time it is opened. <strong>Go to Cell</strong> shows the cell of the selected row in Excel.</p>
+<p>What Auto Link does on a real workbook has not been checked yet: only on generated rows in template copies. On the first workbook, look through the whole window.</p>
+<h3 id="reset-links">How to remove all job links: Reset All Links<a class="headerlink" href="#reset-links" title="Link to this section">&para;</a></h3>
+<p><strong>Reset All Links...</strong> removes all links of this job. The button is in the <code>Excel Links</code> window, <strong>Excel Link &gt; Reset All Links...</strong>, or <code>Reset All Excel Links</code> in the palette. First a question with the number of links. <strong>It cannot be undone.</strong> The values in the cells stay.</p>
+<ul>
+<li>Open workbooks lose this job's hidden names at once. The workbook is not saved; you save it.</li>
+<li>Closed workbooks lose the names when the workbook is opened while this job is open. Without saving.</li>
+<li>A second button, <strong>Remove Them and Clean the Closed Workbooks Now</strong>, appears if some workbook is closed. It cleans the closed workbooks at once, with a hidden Excel and a copy of the workbook, and removes all names from them, including those of other jobs and OurPDF.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Reset All Links</th>
+<th>Remove All Links from This Workbook</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scope</td>
+<td>this job, all its workbooks</td>
+<td>one workbook</td>
+</tr>
+<tr>
+<td>Which names</td>
+<td>only this job's, except with the second button</td>
+<td>all, including other jobs and OurPDF</td>
+</tr>
+<tr>
+<td>Closed workbook</td>
+<td>at the next opening or with the second button</td>
+<td>at once, with a hidden Excel and a copy</td>
+</tr>
+<tr>
+<td>When</td>
+<td>to link the job again</td>
+<td>before delivering the workbook to the client</td>
+</tr>
+</tbody>
+</table>
+<h3 id="link-settings">Settings: Settings &gt; Excel Links<a class="headerlink" href="#link-settings" title="Link to this section">&para;</a></h3>
+<p>Section header <code>Link to Excel behaviour</code>. There are <strong>Apply</strong>, <strong>Reset</strong>, <strong>Save global default</strong>, <strong>Save as this job</strong>, <strong>Clear job override</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Update an open workbook at once</code></td>
+<td>on; off: only <strong>Update Links</strong> writes to an open workbook</td>
+</tr>
+<tr>
+<td><code>Update a closed workbook when the job is saved</code></td>
+<td>on; off: waits for <strong>Update Links</strong></td>
+</tr>
+<tr>
+<td><code>Backups kept per workbook</code></td>
+<td>5, from 1 to 50</td>
+</tr>
+<tr>
+<td><code>Delay before an open workbook is updated, ms</code></td>
+<td>800, from 100 to 10000</td>
+</tr>
+<tr>
+<td><code>Time limit for a closed workbook, seconds</code></td>
+<td>180, from 15 to 1800; after it the app stops its hidden Excel, the links stay <code>Pending</code></td>
+</tr>
+<tr>
+<td><code>Lines and areas: a whole number below this needs its name</code></td>
+<td><code>Auto Link</code> section, 10, from 0 to 1000; points always need a name</td>
+</tr>
+</tbody>
+</table>
+<p>OurPlanCore Lite has the same button, menu, window and Settings section. Lite has no XL strip. <a href="../../ourpdf/excel-link/">OurPDF</a> has the same link.</p>
+<h2 id="template">TemplateCom template<a class="headerlink" href="#template" title="Link to this section">&para;</a></h2>
+<p><code>TemplateCom.xlsm</code> for Lite is in the shared Dropbox folder <code>Office Folder\programs\templates</code>; for the full version it is also in the update folder next to <code>ourplancore.exe</code>. Each building gets a copy (<code>Bldng#A.xlsm</code>); the workbook name equals the Job Name on the Front Page. Worksheets: <code>Front Page</code> (areas, Total SQFT), <code>Detailed Frame List</code> (the delivered columns <code>A:H</code> and work zones to the right: <code>J:N</code> export, <code>O:AB</code> wall matrix, spec cells <code>O:S</code>, height calculator), <code>Standarts</code> (notes library), <code>Mat List</code>. The A-series macros are run by the XL strip in the full version and by the E-Wood tab buttons in Lite (<a href="../ewood-tab/#calculate">Calculation from takeoffs</a>); the B, C, X, Y series by hotkeys in Excel. Details: <a href="../dfl-overview/">DFL: how the workbook works</a>, <a href="../excel-hotkeys/">Excel macros and hotkeys</a>, <a href="../standard-notes/">Standard notes</a>.</p>
+<h2 id="xl">XL strip: full version only<a class="headerlink" href="#xl" title="Link to this section">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Full version only</p>
+<p>OurPlanCore Lite has no XL strip, nor the <code>Settings &gt; Excel Actions</code> and <code>Excel Rules</code> sections or the <code>Create Project Excel Workbook</code> command. In Lite numbers go through the buttons <a href="#lite">above</a>, and the workbook macros are run in Excel. How the versions differ: <a href="../ourplancore-lite/">Lite vs full version</a>.</p>
+</div>
+<p>The XL strip is a vertical strip of buttons to the right of the sheet. In the full version it is turned on and off in the settings: <code>Settings &gt; Modules</code>, the <code>Excel Integration</code> module (on by default). The same module shows the <code>Excel</code>, <code>Value</code>, <code>Link to Excel</code> and <code>Auto Link</code> buttons; if the strip is not visible, check this checkbox first. In Lite the <code>Excel Integration</code> checkbox controls only these buttons; it does not bring back the XL strip.</p>
+<!-- DEMO: d-excel-xl -->
+
+<figure>
+<p><img alt="XL strip" src="../../../assets/images/ourplancore/v3/excel-strip.png" />
+  </p>
+<figcaption>Top of the strip: <code>ALL</code> and <code>LG</code>, below them the wall and area buttons, then framing starts (<code>FR</code>). In a short window the strip scrolls with the mouse wheel down to the lower framing buttons. Each button's tooltip says what it does.</figcaption>
+</figure>
+<figure>
+<video class="kb-demo" loop="loop" muted="muted" playsinline="playsinline" poster="../../../assets/images/ourplancore/demo/d-xl-scroll.png" preload="none"><source src="../../../assets/images/ourplancore/demo/d-xl-scroll.mp4" type="video/mp4"></video>
+<figcaption>Demo: the AI Inbox is open and the XL strip got short; the mouse wheel over the strip scrolls it down to <code>FR</code>, <code>PS</code>, <code>BM</code>, <code>HD</code> and back.</figcaption>
+</figure>
+<h3 id="what-you-need-before-pressing">What you need before pressing<a class="headerlink" href="#what-you-need-before-pressing" title="Link to this section">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Excel has the building workbook open, made from <code>TemplateCom.xlsm</code> (a copy of the template from the app update folder), macros enabled. The app looks for an open <code>TemplateCom.xlsm</code> workbook; if there is none, it takes the active macro-enabled workbook (<code>.xlsm</code>) that has a <code>Detailed Frame List</code> worksheet.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> The <code>Excel Integration</code> module is on (<code>Settings &gt; Modules</code>, on by default).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>One</strong> building (a folder with roots) or one export folder (<code>walls</code>, <code>sqfts</code>...) is selected in the Takeoffs tree. For <code>ALL</code> a selection from two buildings is not accepted (<a href="../ourplancore-buildings/#excel">multiple buildings</a>).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> The <code>LG</code> legend is filled with the job's beam, post and header codes (otherwise the workbook keeps codes instead of sizes).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> The job is saved, <code>Total</code> checked on the large takeoffs.</li>
+</ul>
+<h3 id="steps">How to export a building with one button: ALL<a class="headerlink" href="#steps" title="Link to this section">&para;</a></h3>
+<p>Why: the whole building workbook in one run, steps in the right order.
+You need: the list above.</p>
+<ol>
+<li>Open the building workbook in Excel and activate the <code>Detailed Frame List</code> worksheet.</li>
+<li>In OurPlanCore select the building folder in Takeoffs (or the root for a single building).</li>
+<li>Press <code>LG</code>, type rows like <code>H5 - (2) 1 3/4 x 11 7/8 LVL</code>, <code>C4 - 6x6</code>; the <strong>Add missing codes</strong> button adds empty rows for all job codes without a size; press <strong>Save for job</strong>.</li>
+<li>Press <code>ALL</code>. Read what the app will skip (takeoffs without a number, names not in the format) and press <strong>Continue</strong>.</li>
+<li>Watch the step label <code>Excel ALL 3/12: Walls...</code> and wait for the summary <code>Completed: ...</code> with the list of what was skipped. A step that could not run is listed and does not stop the rest (except the A-series macros: they stop the chain).</li>
+<li>Check the workbook: the wall matrix, Front Page, framing lists.</li>
+<li>Save the workbook in Excel yourself: the app does not save it.</li>
+</ol>
+<p>Result: the building workbook is filled; if you fix a measurement in the app, repeat the relevant button, not the whole <code>ALL</code>.</p>
+<p><code>ALL</code> in order: <code>UN</code>, <code>SF</code>, <code>WL</code> (right after it <code>SH</code> and <code>SW</code>), <code>GB</code>, <code>TH</code>, <code>PP</code>, <code>E/R</code>, <code>OP</code>, <code>SHF</code>, then all of framing (<code>FR</code>), and at the end <code>BL</code> (off in <code>ALL</code> by default). What goes into <code>ALL</code> is set in <code>Settings &gt; Excel Actions</code>.</p>
+<h3 id="buttons">XL strip buttons: reference<a class="headerlink" href="#buttons" title="Link to this section">&para;</a></h3>
+<p>The general scheme: the branch takeoffs are written to the <code>J:L</code> work zone of the worksheet (name, number, unit; first free spot from row 10), the app selects what it wrote and runs the workbook macro, and the macro lays the rows out into the delivered columns <code>A:H</code>. How the workbook works: <a href="../dfl-overview/">DFL: how the workbook works</a>; what each macro does: <a href="../excel-hotkeys/">Excel macros and hotkeys</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>Takes from the tree</th>
+<th>Writes in the workbook</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ALL</code></td>
+<td>the whole selected building</td>
+<td>all steps in the order above</td>
+</tr>
+<tr>
+<td><code>LG</code></td>
+<td>-</td>
+<td>opens the job legend for <code>PS</code>, <code>BM</code>, <code>HD</code>; the row <code>wall sheathing = 7/16" Zip no insulation</code> is needed by <code>SH</code>. The cross in the panel header (<code>Hide the Excel legend panel</code>) or pressing <code>LG</code> again closes it without saving: first <strong>Save for job</strong>, otherwise the edit is lost; <strong>Clear</strong> empties and saves an empty legend</td>
+</tr>
+<tr>
+<td><code>SF</code></td>
+<td><code>sqfts</code> (<code>sqft</code>)</td>
+<td><code>J:L</code>, macro <code>A2_SQFT_calc</code>: floor areas, Front Page, roof by pitch</td>
+</tr>
+<tr>
+<td><code>WL</code></td>
+<td><code>walls</code></td>
+<td><code>J:L</code> with floor headers, strict order, macro <code>A3_Walls_Calc_AllGroup</code>: the <code>O:AB</code> wall matrix and the Floor Walls rows; then zero rows are deleted in <code>A:H</code> of the wall block (the template rows Flashing, Headers, Wall Sheathing, Insulation, Box Sheathing, Tape, Shear Walls, Holdowns stay)</td>
+</tr>
+<tr>
+<td><code>GB</code></td>
+<td><code>gables</code></td>
+<td><code>J:L</code>, <code>A2_SQFT_calc</code></td>
+</tr>
+<tr>
+<td><code>TH</code></td>
+<td><code>trussheel</code></td>
+<td><code>J:L</code>, <code>A2_SQFT_calc</code></td>
+</tr>
+<tr>
+<td><code>PP</code></td>
+<td><code>parapets</code></td>
+<td><code>J:L</code>, <code>A4_Parapet</code>: three numbers from the tail of the name <code>prpt 6.4 5.3 0.5</code></td>
+</tr>
+<tr>
+<td><code>E/R</code></td>
+<td><code>eves rakes</code></td>
+<td><code>J:L</code>: eaves by descending LF, then rakes; <code>A6_Eve_Rakes</code></td>
+</tr>
+<tr>
+<td><code>OP</code></td>
+<td><code>openings/&lt;floor&gt;</code></td>
+<td>the zone from <code>Z158</code> by floor; for each floor <code>C_SumNearWindowValues</code>, then <code>A5_Openings</code>: headers by width buckets and flashing. The name must start with the size <code>WxH</code>, otherwise the takeoff is skipped with a warning</td>
+</tr>
+<tr>
+<td><code>SH</code></td>
+<td>the sheathing text from column J or the <code>wall sheathing = ...</code> row from <code>LG</code></td>
+<td><code>A7_walls_sheathing</code>: keeps one sheathing system (Zip, Ply, OSB), removes the extra rows; in <code>ALL</code> it runs right after <code>WL</code></td>
+</tr>
+<tr>
+<td><code>SW</code></td>
+<td><code>shear walls/&lt;floor&gt;/shear</code> and <code>.../holdowns</code></td>
+<td><code>J:L</code>; a Shear Walls row (interior; exterior ones take wall sheathing) and one Holdowns row for each holdown in the floor's wall block</td>
+</tr>
+<tr>
+<td><code>SHF</code></td>
+<td>walls whose name starts with <code>shaft</code></td>
+<td>the Shaft walls block above the first framing list: panels, CH and J channels from LF times wall height</td>
+</tr>
+<tr>
+<td><code>UN</code></td>
+<td><code>units/&lt;mark size&gt;</code> (Line) and <code>units/&lt;floor&gt;/&lt;mark&gt;</code> (Count)</td>
+<td>units table from cell <code>AM3</code> (Settings): mark on <code>2x4</code> / <code>2x6</code> / half, count by floor, SUMPRODUCT totals</td>
+</tr>
+<tr>
+<td><code>BL</code></td>
+<td><code>sqfts</code> areas named <code>blcny</code>, <code>balcony</code>, <code>terrace</code>, <code>porch</code></td>
+<td>blocks <code>#n Upper Balcony/Terrace List W' x L' N units</code> and <code>#n Porch Framing List</code> for each size, as a copy of the template's <code>#1</code> block</td>
+</tr>
+</tbody>
+</table>
+<details class="note">
+<summary>BL separate from ALL</summary>
+<p>The balcony block macro writes formulas in localized notation and is built for the Russian-language Excel interface; that is why it is off in <code>ALL</code> and is run with the <code>BL</code> button. It is turned on in <code>Settings &gt; Excel Actions</code>. What the blocks look like: <a href="../dfl-blocks/">Balcony, porch and holdown blocks</a>.</p>
+</details>
+<h3 id="framing">Framing<a class="headerlink" href="#framing" title="Link to this section">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>Takes</th>
+<th>Writes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FR</code></td>
+<td>all of the building's <code>framing</code></td>
+<td>all the steps below for each floor; a missing framing list (<code>6th Floor Framing List</code>, <code>Balcony Framing List</code>) is added from the nearest one</td>
+</tr>
+<tr>
+<td><code>PS</code></td>
+<td><code>framing/&lt;floor&gt; framing/posts</code></td>
+<td>Posts rows in the floor's framing list; size by code from <code>LG</code> (<code>C_PostsSort</code>)</td>
+</tr>
+<tr>
+<td><code>BM</code></td>
+<td><code>.../beams</code></td>
+<td>Beam rows; size by code from <code>LG</code></td>
+</tr>
+<tr>
+<td><code>HD</code></td>
+<td><code>.../headers/ext</code>, <code>.../headers/int</code></td>
+<td>header rows in the wall block <strong>one floor down</strong> (the 2nd floor framing sits on the 1st floor walls); Wall Sheathing and the rows after it are not touched</td>
+</tr>
+<tr>
+<td><code>JS</code></td>
+<td><code>.../joists</code></td>
+<td>Joists rows; Extra joists of the same length are added into the row; joists up to 7' go on doubled stock (<code>45 x 12'</code> with the note <code>90 pcs 6'</code>)</td>
+</tr>
+<tr>
+<td><code>DT</code></td>
+<td><code>.../details</code></td>
+<td>detail rows in <code>J:L</code> under a label row, once; a flag in M by name (<code>bft</code>, <code>bd</code>, ledger gives <code>l</code>, ribbon <code>rb</code>, rim <code>r</code>, or <code>name = flags</code> from <code>LG</code>), then <code>C_RimBoardBlockingHangers</code></td>
+</tr>
+<tr>
+<td><code>ST</code></td>
+<td><code>.../stairs</code></td>
+<td>stair rows before Subfloor; a repeat export replaces them</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Tree folder</th>
+<th>Framing list in the workbook</th>
+<th>Headers go to the block</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>framing/1st floor framing</code></td>
+<td><code>1st Floor Framing List</code></td>
+<td><code>Basement Floor Walls</code></td>
+</tr>
+<tr>
+<td><code>framing/2nd floor framing</code></td>
+<td><code>2nd Floor Framing List</code></td>
+<td><code>1st Floor Walls</code></td>
+</tr>
+<tr>
+<td><code>framing/3rd floor framing</code> ... <code>8th</code></td>
+<td><code>3rd ... 8th Floor Framing List</code></td>
+<td>the floor below</td>
+</tr>
+<tr>
+<td><code>framing/roof framing</code>, <code>loft framing</code></td>
+<td><code>Roof Frame list</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>framing/balcony</code>, <code>porch</code>, <code>canopy</code></td>
+<td><code>Balcony / Porch / Canopy Framing List</code></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>Posts, beams and joists <strong>replace</strong> their rows in the list; the other template rows (Blocking, Rim, Hangers, Subfloor) stay; a second run does not break the worksheet. Flag codes and material overrides: <a href="../../start/takeoff-structure/">Takeoff tree, detail codes</a>.</p>
+<h3 id="rerun">Repeat export<a class="headerlink" href="#rerun" title="Link to this section">&para;</a></h3>
+<ul>
+<li>Framing (<code>FR</code>, <code>PS</code>, <code>BM</code>, <code>HD</code>, <code>JS</code>, <code>ST</code>) replaces its rows: repeat as often as needed. <code>DT</code> writes a group once; a group that is already exported is not touched.</li>
+<li>The A series (<code>SF</code>, <code>WL</code>, <code>GB</code>, <code>TH</code>, <code>PP</code>, <code>E/R</code>, <code>OP</code>) appends a new block in <code>J:L</code> at the first free spot and runs the macro on it. The old block stays in the work zone; the <code>A:H</code> rows with a formula like <code>=K37</code> point to their own block.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">To be confirmed</p>
+<p>How to cleanly remove the previous <code>J:L</code> block before repeating <code>WL</code> or <code>SF</code> (by hand or with a macro) will be checked on the next delivery.</p>
+</div>
+<h3 id="settings">How to change what an XL button does: Settings &gt; Excel Actions<a class="headerlink" href="#settings" title="Link to this section">&para;</a></h3>
+<figure>
+<p><img alt="Settings, Excel Actions section" src="../../../assets/images/ourplancore/v3/settings-excel-actions.png" />
+  </p>
+<figcaption>The <code>Action</code> list (XL strip button), its fields, the <code>ALL sequence</code> order and the floor, framing and walls extras blocks.</figcaption>
+</figure>
+<p>Why: a different workbook, different tree folders or a different <code>ALL</code> set without changing the app. By default the <code>TemplateCom.xlsm</code> rules described above are in place.</p>
+<ol>
+<li>Open <strong>Settings &gt; Excel Actions</strong> and pick the button in the <strong>Action</strong> list.</li>
+<li>Edit the fields (table below) and the step order in <strong>ALL sequence</strong> (ids separated by commas).</li>
+<li>Press <strong>Apply / Run selected</strong> (or <strong>Apply / Run ALL</strong>) to test on the open workbook.</li>
+<li>Press <strong>Save as this job</strong> (this job only) or <strong>Save global default</strong> (all jobs).</li>
+</ol>
+<p>Result: the XL strip buttons work by the new rules. <strong>Use global for this job</strong> removes the job rules; <strong>Reset built-in</strong> loads the built-in rules as a draft (saved with the buttons in step 4).</p>
+<p>The section has four blocks: <code>Excel macro actions</code>, <code>Floor folder matching</code>, <code>Framing folders - Excel blocks</code>, <code>Walls extras: sheathing, shear walls, shaft, units, balconies</code>.</p>
+<details class="note">
+<summary>Fields of all four blocks</summary>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>What is in it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Excel macro actions</code></td>
+<td>for the selected button: <code>Workbook</code>, <code>Worksheet</code>, <code>Takeoffs folder aliases</code> (which tree folders it reads), <code>VBA macro</code>, the columns <code>Scan start column</code>, <code>Scan end column</code>, <code>Write start column</code>, <code>First scan row</code>, <code>Blank rows between blocks</code>, <code>Output units</code>, <code>Per-floor VBA first</code>, <code>Row order</code>, the cleanup macro <code>After VBA</code> with the range <code>After range</code> (for example <code>B_DeleteZeroRowsOnlyIn_AtoH</code>), <code>Always keep rows</code> (rows the cleanup does not touch), <code>Cleanup stops at</code>, the checkbox <code>Insert numeric floor group rows (0-5) before the takeoff rows</code></td>
+</tr>
+<tr>
+<td><code>Floor folder matching</code></td>
+<td>floor folder words for <code>Floor 0</code> ... <code>Floor 5</code>: by default <code>0, basement, bsmt</code>, <code>1, 1st, first</code>, <code>2, 2nd, second</code> and so on up to <code>5, 5th, fifth</code></td>
+</tr>
+<tr>
+<td><code>Framing folders - Excel blocks</code> (in the app the words are separated by an arrow)</td>
+<td><code>Include framing export in ALL</code>, <code>Framing root aliases</code>, <code>Pair joists up to (ft)</code> (default 7, 0 turns doubled stock off), <code>Add Extra joists of the same size and length to the regular joist row</code>, <code>Add a framing list the workbook lacks (6th floor, balcony) from the nearest floor list</code>, the floor and category rule tables, the checkbox for running the details macro</td>
+</tr>
+<tr>
+<td><code>Walls extras: sheathing, shear walls, shaft, units, balconies</code></td>
+<td>checkboxes <code>Units in ALL</code>, <code>Sheathing in ALL</code>, <code>Shear walls in ALL</code>, <code>Shaft block in ALL</code>, <code>Balconies in ALL</code>; fields <code>Sheathing VBA</code>, <code>Units table at</code> (the units table cell, default <code>AM3</code>), <code>Shear root folders</code>, <code>Holdown folders</code>, <code>Balcony area names</code>, <code>Porch area names</code></td>
+</tr>
+</tbody>
+</table>
+</details>
+<p>Overview of all Settings sections: <a href="../ourplancore-settings/">Settings</a>.</p>
+<h2 id="errors">Common mistakes<a class="headerlink" href="#errors" title="Link to this section">&para;</a></h2>
+<p>The first rows of the table are XL strip messages (full version), then come the <code>Link to Excel</code> and <code>Auto Link</code> messages, which Lite has too.</p>
+<table>
+<thead>
+<tr>
+<th>Message or symptom</th>
+<th>Cause and what to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Select one Takeoffs folder or item for Walls, then press the button again</code></td>
+<td>nothing is selected in the tree</td>
+</tr>
+<tr>
+<td><code>Excel ALL found more than one building/root in the selection</code></td>
+<td>folders of two buildings are selected; keep one</td>
+</tr>
+<tr>
+<td><code>Configured workbook 'TemplateCom.xlsm' is not open ...</code></td>
+<td>no open macro-enabled workbook with a <code>Detailed Frame List</code> worksheet</td>
+</tr>
+<tr>
+<td><code>Workbook ... is not macro-enabled</code></td>
+<td>the workbook is saved as <code>.xlsx</code>; <code>.xlsm</code> is needed</td>
+</tr>
+<tr>
+<td><code>No configured export folders with measured rows were found</code></td>
+<td>the selected building has no <code>sqfts</code>, <code>walls</code>... folders with numbers</td>
+</tr>
+<tr>
+<td>The workbook has the code <code>H5</code> instead of a size</td>
+<td>the <code>LG</code> legend is not filled</td>
+</tr>
+<tr>
+<td>An opening is skipped with a warning</td>
+<td>the name does not start with <code>WxH</code> (<code>4.3x7.8 d</code>)</td>
+</tr>
+<tr>
+<td><code>Skipped ...: floor folder ...</code></td>
+<td>the floor folder was not recognized: <code>openings/1</code>, <code>1st</code>, <code>first</code> are valid</td>
+</tr>
+<tr>
+<td>Headers landed on the wrong floor</td>
+<td>that is normal: the headers of a framing floor go to the wall block one floor down</td>
+</tr>
+<tr>
+<td>The workbook did not change</td>
+<td>macros are disabled in Excel; check the Trust Center</td>
+</tr>
+<tr>
+<td><code>Select one takeoff before pressing Link to Excel.</code></td>
+<td>nothing or several takeoffs are selected in Takeoffs</td>
+</tr>
+<tr>
+<td><code>Link to Excel takes one takeoff, not a folder: one number goes to one cell.</code></td>
+<td>a folder is selected; select one takeoff</td>
+</tr>
+<tr>
+<td><code>Open Excel, open a workbook, click the destination cell, then press Link to Excel again.</code></td>
+<td>Excel not found; open the workbook, click a cell</td>
+</tr>
+<tr>
+<td><code>Save the workbook first: a link needs its file path.</code></td>
+<td>the workbook is new and has no file; save it</td>
+</tr>
+<tr>
+<td><code>Excel is busy or a cell is being edited. Finish it and try again.</code></td>
+<td>Excel is busy or a cell is being edited in it; finish and press again</td>
+</tr>
+<tr>
+<td><code>An annotation takeoff has no quantity to link.</code></td>
+<td>the annotation takeoff has no quantity</td>
+</tr>
+<tr>
+<td><code>The workbook is open read-only.</code>, <code>The cell is protected.</code></td>
+<td>remove read-only or the worksheet protection</td>
+</tr>
+<tr>
+<td><code>Auto Link works only with a DFL...</code></td>
+<td>the active workbook is not a DFL: no <code>Detailed Frame List</code> worksheet, no word <code>Description</code> in column A, or the workbook has no macros. <code>Link to Excel</code> works on any workbook</td>
+</tr>
+</tbody>
+</table>
+<p>All workbook mistakes: <a href="../../start/common-mistakes/#excel">Common mistakes, Excel DFL and notes</a>.</p>
+<h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>
+<ul>
+<li><a href="../dfl-overview/">DFL: how the workbook works</a>, <a href="../excel-hotkeys/">Excel macros and hotkeys</a>, <a href="../dfl-blocks/">Balcony, porch and holdown blocks</a></li>
+<li><a href="../../start/takeoff-structure/">Takeoff tree and sheet names</a>: numbers in the name and detail codes</li>
+<li><a href="../ourplancore-buildings/#excel">Multiple buildings</a>: a workbook per building</li>
+<li><a href="../../start/workflow/">Workflow: Excel DFL and notes</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+  
+  
+    
+    <p class="kb-suggest"><a href="../../start/suggest-change/?page=https%3A//artrmiys.github.io/knowledge-base/en/reference/ourplancore-excel/">Suggest a correction to this page</a></p>
+  
+
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../takeoff-naming/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Names and auto-routing">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Names and auto-routing
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ourplancore-pdf/" class="md-footer__link md-footer__link--next" aria-label="Next: PDF and delivery">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                PDF and delivery
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../assets/js/zoom.js"></script>
+      
+        <script src="../../../assets/js/demo-video.js"></script>
+      
+        <script src="../../../assets/js/suggest.js"></script>
+      
+    
+  </body>
+</html>

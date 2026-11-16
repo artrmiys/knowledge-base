@@ -7,8 +7,9 @@
     if (overlay) return overlay;
     overlay = document.createElement("div");
     overlay.className = "kb-lightbox";
+    var closeLabel = document.documentElement.lang === "en" ? "Close" : "Закрыть";
     overlay.innerHTML =
-      '<button class="kb-lightbox__close" aria-label="Закрыть">&times;</button>' +
+      '<button class="kb-lightbox__close" aria-label="' + closeLabel + '">&times;</button>' +
       '<img alt="">' +
       '<div class="kb-lightbox__cap"></div>';
     overlay.addEventListener("click", close);

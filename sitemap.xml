@@ -1,3 +1,2257 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>None./</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="None"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
+    </url>
+    <url>
+        <loc>Noneourpdf/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/"/>
+    </url>
+    <url>
+        <loc>Noneourpdf/ai/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/ai/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/ai/"/>
+    </url>
+    <url>
+        <loc>Noneourpdf/comments-save/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/comments-save/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/comments-save/"/>
+    </url>
+    <url>
+        <loc>Noneourpdf/crop/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/crop/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/crop/"/>
+    </url>
+    <url>
+        <loc>Noneourpdf/excel-link/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/excel-link/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/excel-link/"/>
+    </url>
+    <url>
+        <loc>Noneourpdf/how-to-measure/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/how-to-measure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/how-to-measure/"/>
+    </url>
+    <url>
+        <loc>Noneourpdf/measure/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/measure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/measure/"/>
+    </url>
+    <url>
+        <loc>Noneourpdf/overlay/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/overlay/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/overlay/"/>
+    </url>
+    <url>
+        <loc>Noneourpdf/pages-edit/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/pages-edit/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/pages-edit/"/>
+    </url>
+    <url>
+        <loc>Noneourpdf/shortcuts/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/shortcuts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/shortcuts/"/>
+    </url>
+    <url>
+        <loc>Noneourpdf/view-settings/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/view-settings/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/view-settings/"/>
+    </url>
+    <url>
+        <loc>Noneourpdf/window/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/window/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/window/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ai-assist-system/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ai-assist-system/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ai-assist-system/"/>
+    </url>
+    <url>
+        <loc>Nonereference/boss-feedback-rules/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/boss-feedback-rules/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/boss-feedback-rules/"/>
+    </url>
+    <url>
+        <loc>Nonereference/dfl-blocks/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/dfl-blocks/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/dfl-blocks/"/>
+    </url>
+    <url>
+        <loc>Nonereference/dfl-overview/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/dfl-overview/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/dfl-overview/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ewood-tab/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ewood-tab/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ewood-tab/"/>
+    </url>
+    <url>
+        <loc>Nonereference/excel-hotkeys/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/excel-hotkeys/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/excel-hotkeys/"/>
+    </url>
+    <url>
+        <loc>Nonereference/formulas/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/formulas/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/formulas/"/>
+    </url>
+    <url>
+        <loc>Nonereference/hangers/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/hangers/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/hangers/"/>
+    </url>
+    <url>
+        <loc>Nonereference/hardware-catalog/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/hardware-catalog/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/hardware-catalog/"/>
+    </url>
+    <url>
+        <loc>Nonereference/industry-standards/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/industry-standards/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/industry-standards/"/>
+    </url>
+    <url>
+        <loc>Nonereference/job-creation-storage/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/job-creation-storage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/job-creation-storage/"/>
+    </url>
+    <url>
+        <loc>Nonereference/material-catalog/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/material-catalog/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/material-catalog/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-3d-roof/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-3d-roof/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-3d-roof/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-3d/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-3d/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-3d/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-ai-console/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-ai-console/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-ai-console/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-ai/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-ai/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-ai/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-all-functions/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-all-functions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-all-functions/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-buildings/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-buildings/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-buildings/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-changelog/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-changelog/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-changelog/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-course/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-course/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-course/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-edit-takeoffs/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-edit-takeoffs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-edit-takeoffs/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-editing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-editing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-editing/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-excel/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-excel/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-excel/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-extras-other/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-extras-other/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-extras-other/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-extras/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-extras/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-extras/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-ideas/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-ideas/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-ideas/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-lite/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-lite/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-lite/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-managers/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-managers/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-managers/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-pages/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-pages/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-pages/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-pdf/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-pdf/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-pdf/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-routing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-routing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-routing/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-settings/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-settings/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-settings/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-sheets-advanced/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-sheets-advanced/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-sheets-advanced/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-shortcuts/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-shortcuts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-shortcuts/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-snap-trace/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-snap-trace/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-snap-trace/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-split-by-sheets/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-split-by-sheets/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-split-by-sheets/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-start/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-start/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-start/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-takeoffs/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-takeoffs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-takeoffs/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-tools/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-tools/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-tools/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-troubleshooting/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-troubleshooting/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-troubleshooting/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplancore-workspace/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-workspace/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-workspace/"/>
+    </url>
+    <url>
+        <loc>Nonereference/ourplanecore/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplanecore/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplanecore/"/>
+    </url>
+    <url>
+        <loc>Nonereference/quantity-benchmarks/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/quantity-benchmarks/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/quantity-benchmarks/"/>
+    </url>
+    <url>
+        <loc>Nonereference/standard-notes/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/standard-notes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/standard-notes/"/>
+    </url>
+    <url>
+        <loc>Nonereference/takeoff-items/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/takeoff-items/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/takeoff-items/"/>
+    </url>
+    <url>
+        <loc>Nonereference/takeoff-naming/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/takeoff-naming/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/takeoff-naming/"/>
+    </url>
+    <url>
+        <loc>Nonestart/client-rules/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/client-rules/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/client-rules/"/>
+    </url>
+    <url>
+        <loc>Nonestart/common-mistakes/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/common-mistakes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/common-mistakes/"/>
+    </url>
+    <url>
+        <loc>Nonestart/how-to-use/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/how-to-use/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/how-to-use/"/>
+    </url>
+    <url>
+        <loc>Nonestart/images-and-schemas/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/images-and-schemas/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/images-and-schemas/"/>
+    </url>
+    <url>
+        <loc>Nonestart/maintenance/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/maintenance/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/maintenance/"/>
+    </url>
+    <url>
+        <loc>Nonestart/quality-checklist/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/quality-checklist/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/quality-checklist/"/>
+    </url>
+    <url>
+        <loc>Nonestart/site-preview/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/site-preview/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/site-preview/"/>
+    </url>
+    <url>
+        <loc>Nonestart/suggest-change/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/suggest-change/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/suggest-change/"/>
+    </url>
+    <url>
+        <loc>Nonestart/takeoff-structure/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/takeoff-structure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/takeoff-structure/"/>
+    </url>
+    <url>
+        <loc>Nonestart/workflow/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/workflow/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/workflow/"/>
+    </url>
+    <url>
+        <loc>Nonework/deck/anchor-bolts/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/deck/anchor-bolts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/deck/anchor-bolts/"/>
+    </url>
+    <url>
+        <loc>Nonework/deck/balcony-trims/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/deck/balcony-trims/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/deck/balcony-trims/"/>
+    </url>
+    <url>
+        <loc>Nonework/deck/deck-porch-balcony-frame/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/deck/deck-porch-balcony-frame/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/deck/deck-porch-balcony-frame/"/>
+    </url>
+    <url>
+        <loc>Nonework/deck/railing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/deck/railing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/deck/railing/"/>
+    </url>
+    <url>
+        <loc>Nonework/exterior-trims/balcony-buildup/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/balcony-buildup/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/balcony-buildup/"/>
+    </url>
+    <url>
+        <loc>Nonework/exterior-trims/casing-corner-band/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/casing-corner-band/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/casing-corner-band/"/>
+    </url>
+    <url>
+        <loc>Nonework/exterior-trims/exclusions/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/exclusions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/exclusions/"/>
+    </url>
+    <url>
+        <loc>Nonework/exterior-trims/furring-and-jambs/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/furring-and-jambs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/furring-and-jambs/"/>
+    </url>
+    <url>
+        <loc>Nonework/exterior-trims/macros/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/macros/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/macros/"/>
+    </url>
+    <url>
+        <loc>Nonework/exterior-trims/overview/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/overview/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/overview/"/>
+    </url>
+    <url>
+        <loc>Nonework/exterior-trims/porch-deck-balcony/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/porch-deck-balcony/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/porch-deck-balcony/"/>
+    </url>
+    <url>
+        <loc>Nonework/exterior-trims/rails-decking/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/rails-decking/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/rails-decking/"/>
+    </url>
+    <url>
+        <loc>Nonework/exterior-trims/shower-pergola/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/shower-pergola/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/shower-pergola/"/>
+    </url>
+    <url>
+        <loc>Nonework/exterior-trims/soffit-fascia/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/soffit-fascia/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/soffit-fascia/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/ceiling-soffit-framing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/ceiling-soffit-framing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/ceiling-soffit-framing/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/floor-framing/beam/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/beam/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/beam/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/floor-framing/joist/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/joist/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/joist/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/floor-framing/post/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/post/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/post/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/floor-framing/stair/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/stair/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/stair/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/floor-framing/subfloor/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/subfloor/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/subfloor/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/floor-framing/details/blocking/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/details/blocking/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/details/blocking/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/floor-framing/details/blockingoc/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/details/blockingoc/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/details/blockingoc/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/floor-framing/details/bolts/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/details/bolts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/details/bolts/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/floor-framing/details/bracingdrywall/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/details/bracingdrywall/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/details/bracingdrywall/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/floor-framing/details/ribbon/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/details/ribbon/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/details/ribbon/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/floor-framing/details/rim/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/details/rim/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/details/rim/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/floor-framing/details/screws/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/details/screws/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/details/screws/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/floor-framing/details/steelbeams/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/details/steelbeams/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/details/steelbeams/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/roof-framing/canopy/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/canopy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/canopy/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/roof-framing/dbl-trpl-rafters/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/dbl-trpl-rafters/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/dbl-trpl-rafters/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/roof-framing/dormer/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/dormer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/dormer/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/roof-framing/h-clips/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/h-clips/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/h-clips/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/roof-framing/header/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/header/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/header/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/roof-framing/hip/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/hip/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/hip/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/roof-framing/overframes/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/overframes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/overframes/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/roof-framing/ridge/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/ridge/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/ridge/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/roof-framing/roof-sheathing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/roof-sheathing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/roof-sheathing/"/>
+    </url>
+    <url>
+        <loc>Nonework/horizontal/roof-framing/valley/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/valley/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/valley/"/>
+    </url>
+    <url>
+        <loc>Nonework/interior-trims/base/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/interior-trims/base/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/interior-trims/base/"/>
+    </url>
+    <url>
+        <loc>Nonework/interior-trims/casing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/interior-trims/casing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/interior-trims/casing/"/>
+    </url>
+    <url>
+        <loc>Nonework/interior-trims/crown/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/interior-trims/crown/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/interior-trims/crown/"/>
+    </url>
+    <url>
+        <loc>Nonework/interior-trims/door-window-trim/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/interior-trims/door-window-trim/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/interior-trims/door-window-trim/"/>
+    </url>
+    <url>
+        <loc>Nonework/interior-trims/overview/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/interior-trims/overview/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/interior-trims/overview/"/>
+    </url>
+    <url>
+        <loc>Nonework/interior-trims/room-schedule/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/interior-trims/room-schedule/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/interior-trims/room-schedule/"/>
+    </url>
+    <url>
+        <loc>Nonework/sheathing-and-misc/eve/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sheathing-and-misc/eve/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sheathing-and-misc/eve/"/>
+    </url>
+    <url>
+        <loc>Nonework/sheathing-and-misc/flashing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sheathing-and-misc/flashing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sheathing-and-misc/flashing/"/>
+    </url>
+    <url>
+        <loc>Nonework/sheathing-and-misc/rake/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sheathing-and-misc/rake/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sheathing-and-misc/rake/"/>
+    </url>
+    <url>
+        <loc>Nonework/sheathing-and-misc/returns/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sheathing-and-misc/returns/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sheathing-and-misc/returns/"/>
+    </url>
+    <url>
+        <loc>Nonework/sheathing-and-misc/ridgevalleyhip/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sheathing-and-misc/ridgevalleyhip/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sheathing-and-misc/ridgevalleyhip/"/>
+    </url>
+    <url>
+        <loc>Nonework/sheathing-and-misc/rooftype/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sheathing-and-misc/rooftype/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sheathing-and-misc/rooftype/"/>
+    </url>
+    <url>
+        <loc>Nonework/siding/eifs-stucco-veneer/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/siding/eifs-stucco-veneer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/siding/eifs-stucco-veneer/"/>
+    </url>
+    <url>
+        <loc>Nonework/siding/measure/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/siding/measure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/siding/measure/"/>
+    </url>
+    <url>
+        <loc>Nonework/siding/overview/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/siding/overview/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/siding/overview/"/>
+    </url>
+    <url>
+        <loc>Nonework/siding/types/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/siding/types/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/siding/types/"/>
+    </url>
+    <url>
+        <loc>Nonework/siding/underlayment/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/siding/underlayment/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/siding/underlayment/"/>
+    </url>
+    <url>
+        <loc>Nonework/sqfts/1st2nd/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sqfts/1st2nd/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sqfts/1st2nd/"/>
+    </url>
+    <url>
+        <loc>Nonework/sqfts/balcony/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sqfts/balcony/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sqfts/balcony/"/>
+    </url>
+    <url>
+        <loc>Nonework/sqfts/basement/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sqfts/basement/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sqfts/basement/"/>
+    </url>
+    <url>
+        <loc>Nonework/sqfts/cantilevered/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sqfts/cantilevered/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sqfts/cantilevered/"/>
+    </url>
+    <url>
+        <loc>Nonework/sqfts/deck/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sqfts/deck/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sqfts/deck/"/>
+    </url>
+    <url>
+        <loc>Nonework/sqfts/loft/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sqfts/loft/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sqfts/loft/"/>
+    </url>
+    <url>
+        <loc>Nonework/sqfts/porch/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sqfts/porch/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sqfts/porch/"/>
+    </url>
+    <url>
+        <loc>Nonework/sqfts/roof/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sqfts/roof/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sqfts/roof/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/openings/headers/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/openings/headers/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/openings/headers/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/openings/window-flashing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/openings/window-flashing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/openings/window-flashing/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/openings/windows-doors/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/openings/windows-doors/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/openings/windows-doors/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/sheathing/box-sheathing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/sheathing/box-sheathing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/sheathing/box-sheathing/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/sheathing/exterior-materials/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/sheathing/exterior-materials/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/sheathing/exterior-materials/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/sheathing/floor/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/sheathing/floor/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/sheathing/floor/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/sheathing/gable/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/sheathing/gable/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/sheathing/gable/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/sheathing/holdowns/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/sheathing/holdowns/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/sheathing/holdowns/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/sheathing/shear-wall/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/sheathing/shear-wall/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/sheathing/shear-wall/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/sheathing/truss-heel/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/sheathing/truss-heel/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/sheathing/truss-heel/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/sheathing/wall-sheathing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/sheathing/wall-sheathing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/sheathing/wall-sheathing/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/walls/basement/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/basement/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/basement/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/walls/bearing-walls/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/bearing-walls/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/bearing-walls/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/walls/corners/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/corners/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/corners/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/walls/corridor/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/corridor/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/corridor/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/walls/demising/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/demising/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/demising/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/walls/exterior/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/exterior/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/exterior/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/walls/furring/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/furring/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/furring/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/walls/gable/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/gable/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/gable/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/walls/metal-tracks/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/metal-tracks/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/metal-tracks/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/walls/parapet/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/parapet/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/parapet/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/walls/shaft/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/shaft/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/shaft/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/walls/sill-plates/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/sill-plates/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/sill-plates/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/walls/unit/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/unit/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/unit/"/>
+    </url>
+    <url>
+        <loc>Nonework/vertical/walls/wall-panels/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/wall-panels/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/wall-panels/"/>
+    </url>
+    <url>
+        <loc>Nonework-types/com/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework-types/com/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work-types/com/"/>
+    </url>
+    <url>
+        <loc>Nonework-types/ewp-capital/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework-types/ewp-capital/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work-types/ewp-capital/"/>
+    </url>
+    <url>
+        <loc>Nonework-types/reconstruction/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework-types/reconstruction/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work-types/reconstruction/"/>
+    </url>
+    <url>
+        <loc>Nonework-types/residential/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework-types/residential/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work-types/residential/"/>
+    </url>
+    <url>
+        <loc>Noneen/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="None"/>
+    </url>
+    <url>
+        <loc>Noneen/ourpdf/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/"/>
+    </url>
+    <url>
+        <loc>Noneen/ourpdf/ai/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/ai/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/ai/"/>
+    </url>
+    <url>
+        <loc>Noneen/ourpdf/comments-save/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/comments-save/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/comments-save/"/>
+    </url>
+    <url>
+        <loc>Noneen/ourpdf/crop/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/crop/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/crop/"/>
+    </url>
+    <url>
+        <loc>Noneen/ourpdf/excel-link/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/excel-link/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/excel-link/"/>
+    </url>
+    <url>
+        <loc>Noneen/ourpdf/how-to-measure/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/how-to-measure/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/how-to-measure/"/>
+    </url>
+    <url>
+        <loc>Noneen/ourpdf/measure/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/measure/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/measure/"/>
+    </url>
+    <url>
+        <loc>Noneen/ourpdf/overlay/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/overlay/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/overlay/"/>
+    </url>
+    <url>
+        <loc>Noneen/ourpdf/pages-edit/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/pages-edit/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/pages-edit/"/>
+    </url>
+    <url>
+        <loc>Noneen/ourpdf/shortcuts/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/shortcuts/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/shortcuts/"/>
+    </url>
+    <url>
+        <loc>Noneen/ourpdf/view-settings/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/view-settings/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/view-settings/"/>
+    </url>
+    <url>
+        <loc>Noneen/ourpdf/window/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/ourpdf/window/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneourpdf/window/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ai-assist-system/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ai-assist-system/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ai-assist-system/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/boss-feedback-rules/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/boss-feedback-rules/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/boss-feedback-rules/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/dfl-blocks/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/dfl-blocks/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/dfl-blocks/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/dfl-overview/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/dfl-overview/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/dfl-overview/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ewood-tab/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ewood-tab/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ewood-tab/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/excel-hotkeys/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/excel-hotkeys/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/excel-hotkeys/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/formulas/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/formulas/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/formulas/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/hangers/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/hangers/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/hangers/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/hardware-catalog/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/hardware-catalog/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/hardware-catalog/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/industry-standards/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/industry-standards/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/industry-standards/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/job-creation-storage/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/job-creation-storage/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/job-creation-storage/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/material-catalog/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/material-catalog/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/material-catalog/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-3d-roof/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-3d-roof/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-3d-roof/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-3d/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-3d/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-3d/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-ai-console/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-ai-console/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-ai-console/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-ai/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-ai/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-ai/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-all-functions/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-all-functions/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-all-functions/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-buildings/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-buildings/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-buildings/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-changelog/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-changelog/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-changelog/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-course/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-course/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-course/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-edit-takeoffs/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-edit-takeoffs/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-edit-takeoffs/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-editing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-editing/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-editing/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-excel/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-excel/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-excel/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-extras-other/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-extras-other/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-extras-other/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-extras/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-extras/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-extras/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-ideas/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-ideas/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-ideas/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-lite/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-lite/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-lite/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-managers/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-managers/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-managers/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-pages/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-pages/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-pages/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-pdf/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-pdf/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-pdf/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-routing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-routing/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-routing/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-settings/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-settings/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-settings/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-sheets-advanced/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-sheets-advanced/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-sheets-advanced/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-shortcuts/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-shortcuts/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-shortcuts/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-snap-trace/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-snap-trace/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-snap-trace/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-split-by-sheets/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-split-by-sheets/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-split-by-sheets/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-start/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-start/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-start/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-takeoffs/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-takeoffs/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-takeoffs/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-tools/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-tools/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-tools/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-troubleshooting/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-troubleshooting/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-troubleshooting/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplancore-workspace/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplancore-workspace/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplancore-workspace/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/ourplanecore/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/ourplanecore/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/ourplanecore/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/quantity-benchmarks/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/quantity-benchmarks/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/quantity-benchmarks/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/standard-notes/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/standard-notes/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/standard-notes/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/takeoff-items/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/takeoff-items/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/takeoff-items/"/>
+    </url>
+    <url>
+        <loc>Noneen/reference/takeoff-naming/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/reference/takeoff-naming/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonereference/takeoff-naming/"/>
+    </url>
+    <url>
+        <loc>Noneen/start/client-rules/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/client-rules/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/client-rules/"/>
+    </url>
+    <url>
+        <loc>Noneen/start/common-mistakes/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/common-mistakes/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/common-mistakes/"/>
+    </url>
+    <url>
+        <loc>Noneen/start/how-to-use/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/how-to-use/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/how-to-use/"/>
+    </url>
+    <url>
+        <loc>Noneen/start/images-and-schemas/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/images-and-schemas/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/images-and-schemas/"/>
+    </url>
+    <url>
+        <loc>Noneen/start/maintenance/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/maintenance/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/maintenance/"/>
+    </url>
+    <url>
+        <loc>Noneen/start/quality-checklist/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/quality-checklist/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/quality-checklist/"/>
+    </url>
+    <url>
+        <loc>Noneen/start/site-preview/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/site-preview/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/site-preview/"/>
+    </url>
+    <url>
+        <loc>Noneen/start/suggest-change/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/suggest-change/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/suggest-change/"/>
+    </url>
+    <url>
+        <loc>Noneen/start/takeoff-structure/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/takeoff-structure/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/takeoff-structure/"/>
+    </url>
+    <url>
+        <loc>Noneen/start/workflow/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/start/workflow/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonestart/workflow/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/deck/anchor-bolts/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/deck/anchor-bolts/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/deck/anchor-bolts/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/deck/balcony-trims/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/deck/balcony-trims/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/deck/balcony-trims/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/deck/deck-porch-balcony-frame/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/deck/deck-porch-balcony-frame/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/deck/deck-porch-balcony-frame/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/deck/railing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/deck/railing/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/deck/railing/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/exterior-trims/balcony-buildup/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/balcony-buildup/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/balcony-buildup/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/exterior-trims/casing-corner-band/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/casing-corner-band/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/casing-corner-band/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/exterior-trims/exclusions/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/exclusions/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/exclusions/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/exterior-trims/furring-and-jambs/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/furring-and-jambs/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/furring-and-jambs/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/exterior-trims/macros/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/macros/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/macros/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/exterior-trims/overview/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/overview/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/overview/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/exterior-trims/porch-deck-balcony/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/porch-deck-balcony/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/porch-deck-balcony/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/exterior-trims/rails-decking/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/rails-decking/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/rails-decking/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/exterior-trims/shower-pergola/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/shower-pergola/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/shower-pergola/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/exterior-trims/soffit-fascia/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/exterior-trims/soffit-fascia/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/exterior-trims/soffit-fascia/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/ceiling-soffit-framing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/ceiling-soffit-framing/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/ceiling-soffit-framing/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/floor-framing/beam/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/beam/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/beam/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/floor-framing/joist/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/joist/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/joist/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/floor-framing/post/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/post/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/post/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/floor-framing/stair/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/stair/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/stair/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/floor-framing/subfloor/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/subfloor/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/subfloor/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/floor-framing/details/blocking/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/details/blocking/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/details/blocking/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/floor-framing/details/blockingoc/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/details/blockingoc/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/details/blockingoc/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/floor-framing/details/bolts/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/details/bolts/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/details/bolts/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/floor-framing/details/bracingdrywall/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/details/bracingdrywall/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/details/bracingdrywall/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/floor-framing/details/ribbon/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/details/ribbon/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/details/ribbon/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/floor-framing/details/rim/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/details/rim/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/details/rim/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/floor-framing/details/screws/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/details/screws/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/details/screws/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/floor-framing/details/steelbeams/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/floor-framing/details/steelbeams/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/floor-framing/details/steelbeams/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/roof-framing/canopy/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/canopy/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/canopy/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/roof-framing/dbl-trpl-rafters/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/dbl-trpl-rafters/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/dbl-trpl-rafters/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/roof-framing/dormer/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/dormer/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/dormer/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/roof-framing/h-clips/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/h-clips/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/h-clips/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/roof-framing/header/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/header/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/header/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/roof-framing/hip/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/hip/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/hip/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/roof-framing/overframes/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/overframes/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/overframes/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/roof-framing/ridge/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/ridge/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/ridge/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/roof-framing/roof-sheathing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/roof-sheathing/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/roof-sheathing/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/horizontal/roof-framing/valley/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/horizontal/roof-framing/valley/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/horizontal/roof-framing/valley/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/interior-trims/base/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/interior-trims/base/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/interior-trims/base/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/interior-trims/casing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/interior-trims/casing/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/interior-trims/casing/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/interior-trims/crown/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/interior-trims/crown/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/interior-trims/crown/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/interior-trims/door-window-trim/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/interior-trims/door-window-trim/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/interior-trims/door-window-trim/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/interior-trims/overview/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/interior-trims/overview/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/interior-trims/overview/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/interior-trims/room-schedule/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/interior-trims/room-schedule/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/interior-trims/room-schedule/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/sheathing-and-misc/eve/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sheathing-and-misc/eve/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sheathing-and-misc/eve/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/sheathing-and-misc/flashing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sheathing-and-misc/flashing/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sheathing-and-misc/flashing/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/sheathing-and-misc/rake/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sheathing-and-misc/rake/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sheathing-and-misc/rake/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/sheathing-and-misc/returns/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sheathing-and-misc/returns/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sheathing-and-misc/returns/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/sheathing-and-misc/ridgevalleyhip/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sheathing-and-misc/ridgevalleyhip/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sheathing-and-misc/ridgevalleyhip/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/sheathing-and-misc/rooftype/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sheathing-and-misc/rooftype/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sheathing-and-misc/rooftype/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/siding/eifs-stucco-veneer/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/siding/eifs-stucco-veneer/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/siding/eifs-stucco-veneer/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/siding/measure/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/siding/measure/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/siding/measure/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/siding/overview/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/siding/overview/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/siding/overview/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/siding/types/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/siding/types/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/siding/types/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/siding/underlayment/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/siding/underlayment/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/siding/underlayment/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/sqfts/1st2nd/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sqfts/1st2nd/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sqfts/1st2nd/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/sqfts/balcony/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sqfts/balcony/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sqfts/balcony/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/sqfts/basement/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sqfts/basement/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sqfts/basement/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/sqfts/cantilevered/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sqfts/cantilevered/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sqfts/cantilevered/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/sqfts/deck/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sqfts/deck/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sqfts/deck/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/sqfts/loft/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sqfts/loft/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sqfts/loft/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/sqfts/porch/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sqfts/porch/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sqfts/porch/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/sqfts/roof/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/sqfts/roof/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/sqfts/roof/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/openings/headers/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/openings/headers/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/openings/headers/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/openings/window-flashing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/openings/window-flashing/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/openings/window-flashing/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/openings/windows-doors/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/openings/windows-doors/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/openings/windows-doors/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/sheathing/box-sheathing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/sheathing/box-sheathing/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/sheathing/box-sheathing/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/sheathing/exterior-materials/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/sheathing/exterior-materials/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/sheathing/exterior-materials/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/sheathing/floor/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/sheathing/floor/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/sheathing/floor/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/sheathing/gable/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/sheathing/gable/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/sheathing/gable/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/sheathing/holdowns/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/sheathing/holdowns/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/sheathing/holdowns/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/sheathing/shear-wall/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/sheathing/shear-wall/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/sheathing/shear-wall/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/sheathing/truss-heel/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/sheathing/truss-heel/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/sheathing/truss-heel/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/sheathing/wall-sheathing/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/sheathing/wall-sheathing/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/sheathing/wall-sheathing/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/walls/basement/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/basement/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/basement/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/walls/bearing-walls/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/bearing-walls/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/bearing-walls/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/walls/corners/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/corners/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/corners/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/walls/corridor/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/corridor/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/corridor/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/walls/demising/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/demising/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/demising/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/walls/exterior/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/exterior/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/exterior/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/walls/furring/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/furring/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/furring/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/walls/gable/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/gable/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/gable/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/walls/metal-tracks/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/metal-tracks/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/metal-tracks/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/walls/parapet/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/parapet/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/parapet/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/walls/shaft/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/shaft/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/shaft/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/walls/sill-plates/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/sill-plates/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/sill-plates/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/walls/unit/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/unit/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/unit/"/>
+    </url>
+    <url>
+        <loc>Noneen/work/vertical/walls/wall-panels/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work/vertical/walls/wall-panels/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework/vertical/walls/wall-panels/"/>
+    </url>
+    <url>
+        <loc>Noneen/work-types/com/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work-types/com/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework-types/com/"/>
+    </url>
+    <url>
+        <loc>Noneen/work-types/ewp-capital/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work-types/ewp-capital/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework-types/ewp-capital/"/>
+    </url>
+    <url>
+        <loc>Noneen/work-types/reconstruction/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work-types/reconstruction/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework-types/reconstruction/"/>
+    </url>
+    <url>
+        <loc>Noneen/work-types/residential/</loc>
+        <lastmod>2026-11-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work-types/residential/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Nonework-types/residential/"/>
+    </url>
 </urlset>
