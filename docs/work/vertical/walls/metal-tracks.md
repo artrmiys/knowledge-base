@@ -52,11 +52,16 @@ CH/H-профилей - отдельная тема: [Shaft Walls](shaft.md).
 | Имя в дереве | Строка DFL | Unit | Формула / фактор |
 | --- | --- | --- | --- |
 | `ext 6" 18ga mtl 11.7` | `Tracks (1) btm` `6" 18ga` | LFT | `LFT x 1.1` |
-| то же | `Deflection Tracks (1) top` | LFT | `LFT x 1.1`; только у стен до перекрытия |
-| то же | `Mtl Studs 16" o.c.` `6" 18ga mtl` | pcs | `LFT x 1.1` (16") или `x 0.625` (24") |
+| то же | `Deflection Tracks (1) top` | LFT | `LFT x 1.1`; у стен, которые идут до конструкции сверху |
+| то же | `Tracks (1) top` | LFT | `LFT x 1.1`; обычный верхний трек у стен, которые до конструкции не доходят (под dropped soffit, неполной высоты) |
+| то же | `Mtl Studs 16" o.c.` `6" 18ga mtl` | штуки, в D высота стойки | `LFT x 1.1` (16") или `x 0.625` (24") |
 | то же | extra studs, double jambs, `Head Track` у проёмов | pcs, LFT | по проёмам |
-| то же | `Wall Sheathing`, `Air / Water Barrier`, `Insulation`, `Gypsum 5/8" Type X`, `Bracing`, `Blocking` | | как у дерева |
-| `2x4` jamb в металлической стене | `Window Jamb` `2x4` | LFT | дерево в металле - норма |
+| то же | `Wall Sheathing` (в том числе gypsum `5/8" Type X`), `Vapor Barrier` (в B продукт барьера), `Insulation` (только continuous), `Bracing Ext Walls` (штуки), `Blocking` | | как у дерева |
+| `2x4` jamb в металлической стене | `Jambs (2)` `2x4` (в скобках - досок на сторону по детали) | LFT | `(W + 2H) x число дверей x 2 x 1.1`; дерево в металле - норма. Jambs окон и storefront - строка `Jambs` в Wall Materials |
+
+У каждой стены один верхний трек: либо `Deflection Tracks (1) top`, либо
+`Tracks (1) top`. Проверка: LFT верхнего трека = LFT нижнего. Порядок строк в
+блоке: `Tracks (1) btm`, верхний трек, `Mtl Studs`.
 
 Для CFS-корпуса крепёж металлический. Группируй по сечению профиля, этажу и
 типу стены (ext, int, dem, corr). Если gauge задан на чертеже, он идёт в
@@ -85,7 +90,8 @@ CH/H-профилей - отдельная тема: [Shaft Walls](shaft.md).
 
 - У металлической стены посчитаны только треки и студы, без sheathing, WRB, insulation, gypsum.
 - Металл by others, а ноты `Metal Studs by others` нет: ни строки, ни ноты.
-- Deflection track поставлен у стены, которая не доходит до перекрытия.
+- Deflection track поставлен у стены, которая не доходит до перекрытия: там обычный `Tracks (1) top`.
+- Верхний трек не записан вовсе: есть только `Tracks (1) btm`.
 - Gauge придуман или `24" o.c.` скопирован при spec `16"`.
 - Высота под стальной балкой не разделена на 6" и 3 1/2" куски.
 - Деревянный jamb в металлической стене пропущен.

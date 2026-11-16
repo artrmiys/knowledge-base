@@ -69,15 +69,16 @@ plies - из header schedule, не из ширины окна. На panel-job he
 
 Кнопка `HD` полосы XL кладёт headers в блок стен этажа **ниже**; сторона
 `ext` / `int` берётся из имени. В легенде `LG` строка `HP2 - (2) 2x10`
-даёт размер по коду, иначе в B попадёт код.
+даёт размер по коду, иначе в B попадёт код. Число plies стоит в конце подписи
+в скобках: `(2)`, `(3)`; C считает каждую доску.
 
-| Имя в дереве | Строка DFL | Unit | Формула / фактор |
+| Имя в дереве | Строка DFL | Unit (колонка D) | Формула / фактор |
 | --- | --- | --- | --- |
-| `ext H228 4` | `Ext. Headers (2) up to 48"` `2x8` | pcs | штук x plies, длина из имени |
-| `ext H228 7` | `Ext. Headers (2) up to 72"` | pcs | |
-| `ext (3) 2x10 8` | `Ext. Headers (3) over 72"` `2x10` | pcs | три доски на header |
-| `int H228 4` | `Int. Headers (2)` | pcs | |
-| `9.0x6.8 gd` ворота | `Garage headers (3)` | pcs | по schedule |
+| `ext H228 4` | `Ext. Headers up to 48" (2)` `2x8` | штуки, D = `8` | `точки x plies / 2`: два header режутся из одной доски |
+| `ext H228 7` | `Ext. Headers up to 72" (2)` | штуки, D = `14` (до 60" D = `12`) | `точки x plies / 2` |
+| `ext (3) 2x10 8` | `Ext. Headers over 72" (3)` `2x10` | штуки, D = ширина проёма + 1', до чётного | `точки x plies`: один header из одной доски |
+| `int H228 4` | `Int. Headers (2)` | штуки, D = `8` | `точки x plies / 2`; пролёт больше 4' - `точки x plies`, D по длине |
+| `9.0x6.8 gd` ворота | `Ext. Grge Headers (3)` | штуки, D = ширина ворот + 1', до чётного | `ворота x plies`, размер по schedule |
 | нет на плане | нота `The headers indicated on the plan...` | | чёрный жирный текст без заливки |
 
 Если наружная стена FRT, headers в её плоскости тоже FRT; LVL/PSL в
@@ -104,6 +105,14 @@ framing/2nd floor framing/headers/
     ext (3) 2x10 8    Count, 2 ea     Notes: 4/S501, FRT per A001
   int/
     int H228 4        Count, 9 ea
+```
+
+Строки DFL в блоке стен 1-го этажа (`H228` = `(2) 2x8`):
+
+```text
+Ext. Headers up to 48" (2)    2x8     14   8    14 x 2 / 2
+Ext. Headers over 72" (3)     2x10     6   8    2 x 3
+Int. Headers (2)              2x8      9   8    9 x 2 / 2
 ```
 
 ## См. также

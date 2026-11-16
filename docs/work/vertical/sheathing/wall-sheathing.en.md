@@ -36,8 +36,9 @@ interior insulation and sound batts are not counted in the frame scope. Narrow s
 
 Take the product name from this plan set: `LP FlameBlock 2-sided` is not
 `7/16" OSB FRT`, do not turn `5/8" EXT. SHEATHING` into Ply without a reason,
-write `CDX` only if the set says so. Call the exterior barrier WRB / Weather
-Barrier per the spec (fluid-applied is not Tyvek), not "Vapor Barrier".
+write `CDX` only if the set says so. The exterior barrier row in the DFL is always
+labeled `Vapor Barrier` (the template label), and B gets the product from the
+spec: a fluid-applied WRB stays fluid-applied, not Tyvek out of habit.
 
 ## How to measure in OurPlanCore
 
@@ -61,11 +62,27 @@ by the height.
 
 | Takeoff name | DFL row | Material | Unit | Formula |
 | --- | --- | --- | --- | --- |
-| `walls/1st floor walls/ext 2x6 9.09` | `Wall Sheathing` | `7/16" Zip` or `1/2" OSB` | `4x8` | `=CEILING(SQFT/32*1.1,1)` |
-| same takeoff | `Tape` | `Zip Tape` (only with Zip) | `LFT` | `=CEILING(SQFT*0.4*1.1,10)` |
-| same takeoff | `Vapor Barrier` (in the template) | WRB per spec | `SQ FT` | `=CEILING(SQFT*1.1,10)` |
-| same takeoff | `Insulation` | exterior `1" Insulation` or Zip R | `SQ FT` | as WRB |
+| `walls/1st floor walls/ext 2x6 9.09` | `Wall Sheathing` | `7/16" Zip` or `1/2" OSB` | `4x8` | `=CEILING(G/32*1.1,1)` |
+| same takeoff, Zip only | `Tape` | `Zip Tape` | `LFT` | `=CEILING((G*0.4+window perimeter of the floor)*1.1,10)` |
+| same takeoff, no Zip only | `Vapor Barrier` | WRB per spec | `SQ FT` | `=CEILING(G*1.1,10)` |
+| same takeoff | `Insulation` | continuous insulation outside the sheathing, for example `2" XPS Insulation` | `SQ FT` | `=CEILING(G*1.1,10)` |
 | `walls/1st floor walls/ext ...` | `Wall Sheathing` as a second row | `5/8" Type X` (exterior gypsum) | `SQ FT` | [Exterior Wall Materials](exterior-materials.md) |
+
+G is the exterior wall area of the floor less openings, in SQ FT. What matters in
+these rows:
+
+- **One system per section.** Zip: `Wall Sheathing` + `Tape`. A plain sheet
+  (OSB, Ply): `Wall Sheathing` + `Vapor Barrier`. Zip has the barrier built into the sheet,
+  so Zip walls get no `Vapor Barrier` (WRB) row: only `Tape` and the
+  opening flashing.
+- **Tape** is counted in `LFT`, not rolls: `0.4` LFT of tape per SQ FT of
+  sheathing plus the window perimeter of the floor (the casing line of the openings table),
+  all `x 1.1`. Box, Gable and Truss Heel have no window perimeter: `G x 0.4 x 1.1`.
+- **Insulation** is only continuous insulation outside the sheathing or on CMU and
+  concrete. Insulation between studs (batt, mineral wool, spray foam, sound) is
+  by others: no row. Zip R carries the insulation in the sheet itself: the product
+  goes into `Wall Sheathing`, with no separate `Insulation` row.
+- Rounding of SQ FT and LFT rows: a result under 50 goes to 2, otherwise to 10.
 
 The spec lives in the template cells: O3 sheathing, O4 WRB, O5 Zip, O6 Zip Tape,
 and P holds a bare sheet reference (`S3.0`, `8/S3.0`, without the word "per"). It is filled in when
@@ -75,7 +92,9 @@ the job is created. The Box Sheathing and Holdowns rows sit at the end of the fl
 
 - Openings not subtracted (garage doors) or subtracted twice (doors on two floors).
 - Thickness and product inherited from the previous building instead of read from this set.
-- `Vapor Barrier` and `Tyvek` with a fluid-applied barrier in the spec.
+- B of the `Vapor Barrier` row says Tyvek with a fluid-applied barrier in the spec.
+- A `Vapor Barrier` row left on Zip walls, or `Tape` counted in rolls and without the window perimeter.
+- An `Insulation` row created for insulation between studs or for Zip R.
 - Arch vs structural conflict resolved silently, without a Note citing both sheets.
 - Interior gypsum, interior insulation or sound batts counted.
 - Area measured in the app, but the old number stayed in Excel.
@@ -85,15 +104,22 @@ All sheathing mistakes: [common-mistakes](../../../start/common-mistakes.md#shea
 
 ## Example
 
+Wall area of the floor 6220 SQ FT, window perimeter of the floor 310 LFT, box area
+600 SQ FT:
+
 ```text
 1st Floor Walls
-Wall Sheathing      7/16" Zip        214   4x8     8/S3.0
-Tape                Zip Tape        2740   LFT
-Insulation          Zip R-3         6850   SQ FT   A2-00
+Wall Sheathing      Zip R-3          214   4x8     8/S3.0 A2-00
+Tape                Zip Tape        3080   LFT
 Note: Wall Sheathing 7/16" Zip R3 per 8/S3.0 A2-00.
 Box Sheathing       7/16" Zip         21   4x8
 Tape                Zip Tape         270   LFT
 ```
+
+Check: sheets `6220 / 32 x 1.1 = 213.8`, the book gets 214. Wall Tape
+`(6220 x 0.4 + 310) x 1.1 = 3077.8`, to 10 = 3080. Box `600 / 32 x 1.1 = 20.6`,
+the book gets 21; its Tape `600 x 0.4 x 1.1 = 264`, to 10 = 270. There are no `Vapor Barrier`
+and `Insulation` rows: the walls are Zip R.
 
 <figure markdown>
   ![House sheathed with Zip System](../../../assets/images/confluence/confluence-093.jpg)

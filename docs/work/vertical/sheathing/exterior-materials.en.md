@@ -56,7 +56,12 @@ ours. Interior drywall, interior insulation and sound batts are not counted.
   only outside, over the sheathing.
 - `Insulation at CMU`: continuous insulation on CMU walls, a separate
   row, the area is usually larger. Z metal furring goes under it.
-- Zip R is written together with the insulation (`Zip R-3` = sheathing plus insulation).
+- Zip R carries the insulation in the sheet itself: the product goes into `Wall Sheathing`
+  (`Zip R-3`), with no separate `Insulation` row.
+- Insulation between studs (batt, mineral wool, spray foam, sound) is by others:
+  no row. Rigid insulation above the roof deck is also continuous and has
+  its own row in the roof.
+- In B the word `Insulation` is written in full: `2" XPS Insulation`.
 - Unit `SQ FT`, opening deductions are the same as for the sheathing.
 
 <figure markdown>
@@ -71,7 +76,7 @@ ours. Interior drywall, interior insulation and sound batts are not counted.
 | Row | Material | Unit | When |
 | --- | --- | --- | --- |
 | `Wall Sheathing` | `5/8" Type X` | `SQ FT` | Gypsum on metal walls, even if the studs are by others |
-| `Bracing Ext Walls` / `Bracing Corridor` / `Bracing Demising` | `2x4` | `LFT` | Bracing on metal walls |
+| `Bracing Ext Walls` / `Bracing Corridor` / `Bracing Demising` | `2x4` | pieces, D = board length (up to 10' = 14, up to 12' = 16, up to 16' = 18, above = 20) | Bracing on metal walls: `=G/8*1.1`, one board per 8 LFT of wall; only walls 7' and taller |
 | `Window Flashing at Mtl Walls`, `Sill Flashing at Mtl Walls` | Flashing Tape / Sill Flashing | `LFT` | By wall type, see [Window Flashing](../openings/window-flashing.md) |
 | `Window Flashing at CMU Walls` | Flashing Tape | `LFT` | The same for CMU |
 | Window jambs | `2x4` / `2x8` by wall depth | `LFT` | If openings in metal walls are packed out with lumber; otherwise the Note `Assumed window jambs 2x4 are not used per A8.53; verify` |
@@ -87,7 +92,9 @@ Do not add furring at CMU as optional without a detail. Details: [Furring](../wa
 - Gypsum layers not split: 1 layer, (2) layers, over FRT.
 - `Insulation` and `Insulation at CMU` merged into one row.
 - Interior gypsum, insulation between the studs or sound batts counted.
-- "Vapor Barrier / Tyvek" written although the spec calls for a fluid-applied WRB.
+- B of the `Vapor Barrier` row says Tyvek although the spec calls for a fluid-applied WRB.
+- A `Vapor Barrier` row added with Zip: Zip has the barrier built in, only `Tape` and the opening flashing are needed.
+- `Bracing` written in LFT: it is a count of boards.
 - Assembly not read to the end: a third `5/8"` layer, Z-girt, overbuild missed.
 
 All sheathing mistakes: [common-mistakes](../../../start/common-mistakes.md#sheathing).
@@ -102,7 +109,7 @@ Wall Sheathing               1/2" Ply FRT            298   4x8
 Box Sheathing                1/2" Ply FRT             75   4x8
 Insulation                   1.5" Cont. Insulation  6670   SQ FT
 Insulation at CMU            1.5" Cont. Insulation 13350   SQ FT
-Bracing Ext Walls            2x4                     ...   LFT
+Bracing Ext Walls            2x4                      57   16      412 LFT / 8 x 1.1 = 56.7
 Window Flashing at Mtl Walls Flashing Tape          1650   LFT
 Sill Flashing at Mtl Walls   Sill Flashing           670   LFT
 Note: Assumed window jambs 2x4 are not used per A8.53; verify.

@@ -53,14 +53,19 @@ moves the openings into the workbook, where the `F_Openings` macro figures the f
 
 | Takeoff name | DFL row | Unit | Formula / factor |
 | --- | --- | --- | --- |
-| `openings/1/3.0x5.0` | `Window Flashing` + `Sill Flashing` | LFT | `(2H + W) x qty`, `W x qty` |
-| `openings/1/3.3x6.5 d` | `Ext. Doors` `3070 1 unit MARK FIRE LABEL`; flashing on 3 sides | ea, LFT | no sill flashing |
-| `openings/1/9.0x6.8 gd` | `Garage headers (3)`, flashing on 3 sides | ea, LFT | no sill |
-| `openings/1/2.0x2.0 lv` | louver, deduction from the sheathing | ea | |
-| interior doors | `Int. Doors` `2670 ...`, jambs by the size of the adjacent wall | ea | a door wider than 4' is a double `(2)2670` |
+| `openings/1/3.0x5.0` | `Window Flashing` + `Sill Flashing` | LFT | `(2H + W) x qty x 1.1`, `W x qty x 1.1` |
+| `openings/1/3.3x6.5 d` | `Ext. Doors` `3070 1 unit MARK FIRE LABEL`; three-side flashing goes into the `Window Flashing` row | unit, LFT | no sill flashing; there is no `Door Flashing` row |
+| `openings/1/9.0x6.8 gd` | `Ext. Grge Headers (3)`; three-side flashing goes into the `Window Flashing` row | pieces, LFT | no sill |
+| `openings/1/2.0x2.0 lv` | louver, deduction from the sheathing | | |
+| interior doors | `Int. Doors` `2670 ...`, grouped by the size of the wall the door stands in | unit | a door wider than 3'-6" is written as a pair: `5070` = `(2)2670`, `4070` = `(2)2070` |
 
-- Door casing on 3 sides in LFT; interior door jambs are counted
-  as points per unit and grouped by wall size (a point at `2x6` = 2x6 jamb).
+- **Interior door jambs** are not counted on a separate LFT row. Doors are placed as
+  points per unit and grouped by the size of the wall they stand in: a point at a
+  `2x6` wall = a door with a 2x6 jamb, a point at `2x4` = a 2x4 jamb.
+  That way every door carries both its size and its jamb depth.
+- Interior door casing is in LFT on three sides:
+  `=CEILING(2*SUM(perimeters)/12*1.1,10)`, door perimeter = W + 2H in inches,
+  `2` = both faces of the wall. Details: [Casing](../../interior-trims/casing.md).
 - Hardware numbers are not needed in the DFL; material and fire rating are.
 - Openings are subtracted from the sheathing, WRB, insulation and foundation line **once**
   and on their own floor. Windows smaller than 4' are not subtracted from the sheathing:
@@ -72,7 +77,8 @@ moves the openings into the workbook, where the `F_Openings` macro figures the f
 - Opening counted twice: on the plan and the elevation, from two views, the storefront door separately.
 - The ` d` tag missing: the door got Sill Flashing.
 - Openings not subtracted from the sheathing and WRB (garage doors) or subtracted twice.
-- A door wider than 4' written as a single leaf.
+- A door wider than 3'-6" written as a single leaf instead of a pair (`4070` instead of `(2)2070`).
+- Interior door jambs written on an LFT row instead of sorting the doors by wall size.
 - Size eyeballed from the elevation instead of taken from the schedule; R.O. confused with the unit size.
 
 Walkthrough with examples: [all opening mistakes](../../../start/common-mistakes.md#openings).

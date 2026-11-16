@@ -14,7 +14,9 @@
 
 Flashing вокруг окон и дверей - наш scope, даже когда каркас стены by
 others. Две разные строки: **Window Flashing** (лента по head и двум jambs)
-и **Sill Flashing** (pan по низу окна). У дверей sill flashing нет. Roof,
+и **Sill Flashing** (pan по низу окна). Двери и ворота идут в ту же строку
+`Window Flashing` тремя сторонами, sill flashing у них нет; отдельной строки
+`Door Flashing` в DFL не существует. Roof,
 wall и deck flashing - другая страница: [Flashing](../../sheathing-and-misc/flashing.md).
 
 ## Где искать на чертежах
@@ -38,13 +40,14 @@ schedule. Длины руками не набивай.
 
 | Строка DFL | Материал | Unit | Формула |
 | --- | --- | --- | --- |
-| `Window Flashing` | `Flashing Tape` | LFT | `(2 x H + W) x qty` |
-| `Sill Flashing` | `Sill Flashing` | LFT | `W x qty` |
-| `Door Flashing` (3 стороны) | `Flashing Tape` | LFT | `(2 x H + W) x qty`; sill не считаем |
+| `Window Flashing` | `Flashing Tape` | LFT | `(2 x H + W) x qty x 1.1`; окна, двери ` d` и ворота ` gd` вместе, по три стороны |
+| `Sill Flashing` | `Sill Flashing` | LFT | `W x qty x 1.1`; только окна, у дверей и ворот sill нет |
 | `Window Flashing at Mtl Walls`, `Sill Flashing at Mtl Walls` | то же | LFT | отдельные строки по metal стенам |
 | `Window Flashing at CMU Walls`, `Sill Flashing at CMU Walls` | то же | LFT | отдельные строки по CMU и concrete |
 | `Window Jamb at CMU/Concrete` | `1x4 P.T.` или `2x4 P.T.` | LFT | по детали; flashing считается и без jamb |
 
+- Запас `x 1.1` есть всегда. Округление: результат меньше 50 - до 2, иначе
+  до 10.
 - Wood walls - базовая строка всегда. Mtl и CMU стены добавляются отдельными
   строками, даже если геометрия детали та же: у клиента это разные
   подрядчики и разные WRB.
@@ -56,6 +59,7 @@ schedule. Длины руками не набивай.
 ## Частые ошибки
 
 - У двери появился `Sill Flashing`: не поставлена пометка ` d` или ` gd`.
+- Двери вынесены в придуманную строку `Door Flashing` или flashing посчитан без `x 1.1`.
 - Wood, Mtl и CMU стены слиты в одну строку.
 - Размер взят с фасада, а не из schedule.
 - На CMU не проверен wood jamb P.T.
@@ -65,12 +69,22 @@ schedule. Длины руками не набивай.
 
 ## Пример
 
+12 окон `3.0x5.0` и 2 двери `3.3x6.5 d` в деревянных стенах, 6 окон `4.3x7.8`
+в metal стенах, 4 окна `2.9x4.0` в CMU:
+
 ```text
-Window Flashing            Flashing Tape     LFT   =(2*5.0+3.0)*12
-Sill Flashing              Sill Flashing     LFT   =3.0*12
-Window Flashing at Mtl Walls   Flashing Tape   LFT   =(2*7.8+4.3)*6
-Window Jamb at CMU         2x4 P.T.          LFT   =(2*4.0+2.9)*4
+Window Flashing                Flashing Tape    210   LFT   =ОКРВВЕРХ(((2*5.0+3.0)*12+(2*6.5+3.3)*2)*1.1;10)
+Sill Flashing                  Sill Flashing     40   LFT   =ОКРВВЕРХ(3.0*12*1.1;2)
+Window Flashing at Mtl Walls   Flashing Tape    140   LFT   =ОКРВВЕРХ((2*7.8+4.3)*6*1.1;10)
+Sill Flashing at Mtl Walls     Sill Flashing     30   LFT   =ОКРВВЕРХ(4.3*6*1.1;2)
+Window Flashing at CMU Walls   Flashing Tape     48   LFT   =ОКРВВЕРХ((2*4.0+2.9)*4*1.1;2)
+Sill Flashing at CMU Walls     Sill Flashing     14   LFT   =ОКРВВЕРХ(2.9*4*1.1;2)
+Window Jamb at CMU/Concrete    2x4 P.T.          по детали  LFT   G = (2*4.0+2.9)*4 = 43.6
 ```
+
+Проверка первой строки: окна `13 x 12 = 156`, двери `16.3 x 2 = 32.6`, вместе
+`188.6 x 1.1 = 207.5`, до 10 = 210. Двери в `Sill Flashing` не входят:
+`3.0 x 12 x 1.1 = 39.6`, до 2 = 40.
 
 ## См. также
 

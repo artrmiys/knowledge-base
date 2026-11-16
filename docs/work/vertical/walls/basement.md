@@ -19,7 +19,7 @@ Basement walls - деревянные стены уровня `base`: наруж
 | --- | --- |
 | План подвала `a100 base` | Какие стены деревянные, какие бетон или CMU |
 | Foundation plan `s101 f` | Плита, фундаментные стены, sill plates |
-| Wall section у плиты | Высота стойки: на подвале часто три разные высоты |
+| Wall section у плиты | Высота стены: на подвале часто три разные высоты |
 | Wall type schedule | Сечение, P.T., furring у бетона |
 | Code summary | FRT ниже podium при Type III |
 
@@ -44,20 +44,26 @@ Basement walls - деревянные стены уровня `base`: наруж
 | --- | --- | --- | --- | --- |
 | `ext 2x6 9.24` | `Plates Ext (1) btm` | `2x6 P.T.` (на бетоне всегда) | LFT | `LFT x 1.1` |
 | то же | `Plates Ext (2) dbl top` | `2x6` | LFT | `LFT x 2 x 1.1` |
-| то же | `Studs Ext` | размер по высоте | pcs | `LFT x 1.1` (16") |
-| то же | `Blocking` `2x`, `Bracing` `2x4` | | LFT | по типу стены |
-| то же | `Box Sheathing` OSB, `Vapor Barrier` (WRB по спецификации) | | 4x8, SQ FT | [Box Sheathing](../sheathing/box-sheathing.md) |
-| `corr 2x6 9.24` | `Plates Corr btm` `2x6 P.T.` или `LSL P.T.` | | LFT | по детали |
+| то же | `Studs Ext` | размер по высоте | штуки, в D длина стойки | `LFT x 1.1` (16") |
+| то же | `Blocking` | `2x6` (по сечению стены) | LFT | по матрице шаблона, до чётного |
+| то же | `Bracing Ext Walls` | `2x4` | штуки, в D длина доски: до 10' = 14, до 12' = 16, до 16' = 18, выше = 20 | `LFT / 8 x 1.1`: одна доска на 8 LFT стены; только стены от 7' |
+| то же | `Wall Sheathing` | как у стен дома (`7/16" Zip`, `1/2" OSB`) | 4x8 | `площадь стены x 1.1 / 32`, [Wall Sheathing](../sheathing/wall-sheathing.md) |
+| то же | `Vapor Barrier` | WRB по спецификации; при Zip строки нет, только `Tape` | SQ FT | `площадь x 1.1` |
+| то же | `Insulation` | только continuous insulation снаружи обшивки или на бетоне | SQ FT | `площадь x 1.1`; утеплитель между стойками не считаем |
+| то же | `Box Sheathing` | как у стены | 4x8 | [Box Sheathing](../sheathing/box-sheathing.md) |
+| `corr 2x6 9.24` | `Plates Corr (1) btm` | `2x6 P.T.` или `LSL P.T.` по детали | LFT | `LFT x 1.1` |
+| то же | `Bracing Corridor` | `2x4` | штуки, D как у `Bracing Ext Walls` | `LFT / 8 x 1.1` |
 | проёмы подвала | `Window Flashing`, `Sill Flashing` | | LFT | [Window Flashing](../openings/window-flashing.md) |
-| `2x4 9.24` (под podium) | `Studs Interior` FRT при Type III | | pcs | нота с источником |
+| `2x4 9.24` (под podium) | `Studs Interior` FRT при Type III | | штуки, в D длина стойки | нота с источником |
 
 ## Частые ошибки
 
-- Одна высота стойки на весь подвал при трёх разных высотах по разрезу.
+- Одна высота стены на весь подвал при трёх разных высотах по разрезу.
 - Высота взята как floor-to-floor без вычета subfloor и перекрытия.
 - Стены ниже podium выброшены как "panels by others".
 - Бетонная стена обведена как деревянная.
 - Treated furring подвала не выделен в отдельную P.T.-сборку.
+- `Bracing` записан в LFT: это штуки досок, длина доски стоит в D.
 - В строке `Vapor Barrier` записан Tyvek, хотя спецификация даёт другой WRB.
 
 Разбор с примерами: [все ошибки по стенам](../../../start/common-mistakes.md#walls).

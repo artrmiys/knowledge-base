@@ -7,12 +7,14 @@
 
 ## What it is
 
-Floor sheathing is everything that lies on the joists over the floor area: subfloor,
-underlayment, a second layer under tile or tubs, FRT strips around the perimeter,
-sound mat. The base `3/4" T&G` subfloor is covered in [Subfloor](../../horizontal/floor-framing/subfloor.md);
-this page covers the extra layers from the floor assembly that get lost most often.
-The exterior strip at the floor framing level is [Box Sheathing](box-sheathing.md),
-not this page.
+Floor sheathing is the **horizontal** sheets that lie on the joists over the floor
+area: subfloor, underlayment, a second layer under tile or tubs, FRT strips around
+the perimeter, sound mat. How the material is split between pages:
+
+- the base `3/4" T&G` subfloor and the adhesive are in [Subfloor](../../horizontal/floor-framing/subfloor.md);
+- this page covers the extra layers from the floor assembly that get lost most often;
+- the vertical strip of sheathing at the floor framing level (over the rim) is
+  [Box Sheathing](box-sheathing.md), not this page.
 
 ## Where to find it on the plans
 
@@ -41,9 +43,9 @@ clear name (`tubs`, `tile`).
 | Source | DFL row | Material | Unit | Formula |
 | --- | --- | --- | --- | --- |
 | `sqfts/1st` | `Subfloor` | `3/4" T&G` | `4x8` | `=CEILING(SQFT/32*1.1,1)` |
-| same area | `Panel Adheasive` | `29OZ` | `pcs` | per template |
+| the `Subfloor` row | `Panel Adheasive` | `29OZ` | `tubes` | `=CEILING(C<subfloor>/3,1)`: one tube per 3 subfloor sheets |
 | same area | `Underlayment` | `1/2" Ply` per assembly | `4x8` | `=CEILING(SQFT/32*1.1,1)` |
-| ext perimeter x `2'` or `4'` | `Subfloor FRT` | `3/4" T&G FRT` | `4x8` | `=CEILING(LFT*4/32*1.1,1)` |
+| ext perimeter x `2'` or `4'` | `Subfloor FRT` | `3/4" T&G FRT` | `4x8` | `=CEILING(LFT*4/32*1.1,1)` for a 4' strip (multiplier `2` for a 2' strip) |
 | `sqfts/tubs` | `Plywood` | `3/4" Ply` (under tubs) | `4x8` | `=CEILING(SQFT/32*1.1,1)` |
 
 ## Common mistakes
@@ -61,10 +63,13 @@ All mistakes: [common-mistakes](../../../start/common-mistakes.md#floor).
 ```text
 2nd Floor Framing List
 Subfloor            3/4" T&G            128   4x8    S201
+Panel Adheasive     29OZ                 43   tubes
 Subfloor FRT        3/4" T&G FRT         54   4x8    4' perimeter per S001
-Panel Adheasive     29OZ                 16   pcs
 Underlayment        1/2" Ply            128   4x8    A6-01 floor type F2
 ```
+
+`Panel Adheasive` sits right under `Subfloor` and is figured from its sheets:
+`128 / 3 = 42.7`, the book gets 43 tubes.
 
 <figure markdown>
   ![Installing subfloor on joists](../../../assets/images/confluence/confluence-172.png)

@@ -22,7 +22,7 @@ Gable sheathing - обшивка треугольника фронтона по�
 | Elevations (`el`) | Контур треугольника, dormer gables, где кончается стена и начинается gable |
 | Sections (`sec`) | Высота top plate, уклон, пятка |
 | Draftstops plan (например A1-00) и разрез A4 | Линии draft stop и профиль чердака (пролёт x подъём) |
-| Wall notes / fire rating | Толщина draft stop (`1/2" Ply`, `5/8" Type X`), материал фронтона |
+| Roof plan legend, wall sections, fire rating | Материал draft stop (`1/2" WR Gyp`, `7/16" OSB`, `5/8" Type X`), материал фронтона |
 
 ## Как мерить в OurPlanCore
 
@@ -41,12 +41,23 @@ Gable sheathing - обшивка треугольника фронтона по�
 
 ## Как назвать в дереве и строка DFL
 
+G - площадь из дерева в SQ FT.
+
 | Имя в дереве | Строка DFL (блок Gable Walls) | Материал | Unit | Формула |
 | --- | --- | --- | --- | --- |
-| `gables/gable trusses/gable` (Area) | `Wall Sheathing` | `7/16" Zip` / `1/2" OSB` | `4x8` | `=ОКРВВЕРХ(SQFT/32*1.1;1)` |
-| та же площадь | `Vapor Barrier` (WRB), `Tape` при Zip | по спецификации | `SQ FT` / `LFT` | как у стены |
-| `gables/gable stick/gable stick` (Area) + `btm`, `top` (Line) | `Studs for Gables`, `Plates Ext (3)`, `Blocking` | по [Gable Wall](../walls/gable.md) | | |
-| `gables/gable trusses/draft stop` (Area) | `Draft Stop` | `1/2" Ply` или `5/8" Type X` по детали | `4x8` | `=ОКРВВЕРХ(SQFT/32*1.1;1)` |
+| `gables/gable trusses/gable` (Area) | `Wall Sheathing` | `7/16" Zip` / `1/2" OSB` | `4x8` | `=ОКРВВЕРХ(G/32*1.1;1)` |
+| та же площадь, без Zip | `Vapor Barrier` | WRB по спецификации | `SQ FT` | `G x 1.1` |
+| та же площадь, Zip | `Tape` | `Zip Tape` | `LFT` | `=ОКРВВЕРХ(G*0.4*1.1;10)` |
+| `gables/gable stick/gable stick` (Area) + `btm`, `top` (Line) | `Plates Ext (3) btm and dbl top`, `Studs for Gables`, `Blocking`, `Bracing Ext Walls` | по [Gable Wall](../walls/gable.md) | | |
+| `gables/gable trusses/draft stop` (Area) | `Draft Stop` | из легенды roof plan или разреза; по умолчанию `1/2" WR Gyp` | `SQ FT` | `G x 1.1` |
+
+- Округление строк в SQ FT: результат меньше 50 - до 2, иначе до 10.
+- При Zip строки `Vapor Barrier` нет: барьер уже в листе, нужен только `Tape`.
+  `Insulation` появляется только при continuous insulation снаружи обшивки.
+- `Draft Stop` считается в `SQ FT`, не в листах `4x8`. Материал: `1/2" WR Gyp`
+  по умолчанию; `7/16" OSB`, `1/2" Gyp`, `5/8" Type X`, когда так на чертеже;
+  листа нет - `TBD`. С двух сторон: `Draft Stop 2 sides`, G x 2. Полное
+  правило - [Gable Wall](../walls/gable.md).
 
 Полоса XL, кнопка GB, переносит ветку `gables` в блок Gable Walls.
 
@@ -56,7 +67,7 @@ Gable sheathing - обшивка треугольника фронтона по�
 - Площадь измерена, а в Excel осталось старое число.
 - Фронтон посчитан дважды (два фасада, или gable плюс стена).
 - Пятка фермы включена и в gable, и в trussheel.
-- Толщина draft stop не сверена (`7/16"` против `1/2"`).
+- Материал и толщина draft stop не сверены с легендой (`7/16" OSB` против `1/2" WR Gyp`), или строка записана в листах `4x8`.
 - Для gable trusses посчитаны plates и studs, которые уже в ферме.
 
 Все ошибки: [common-mistakes](../../../start/common-mistakes.md#sheathing).
@@ -65,12 +76,18 @@ Gable sheathing - обшивка треугольника фронтона по�
 
 ```text
 Takeoffs/Main/gables/gable trusses/
-  gable            Area   412 SF   (4 полигона, фасады север и юг)
-  draft stop       Area   318 SF   (3 линии с A1-00, профиль с A4-01)
+  gable            Area   412 SQ FT   (4 полигона, фасады север и юг)
+  draft stop       Area   318 SQ FT   (3 линии с A1-00, профиль с A4-01)
 Takeoffs/Main/gables/gable stick/
-  gable stick      Area   96 SF
+  gable stick      Area   96 SQ FT
   btm              Line   24 LFT
   top              Line   27 LFT
+
+Gable Walls
+Wall Sheathing      1/2" OSB          15   4x8     412 / 32 x 1.1 = 14.2
+Vapor Barrier       WRB по спеке     460   SQ FT   412 x 1.1 = 453.2
+
+Draft Stop          1/2" WR Gyp      350   SQ FT   318 x 1.1 = 349.8
 ```
 
 <figure markdown>

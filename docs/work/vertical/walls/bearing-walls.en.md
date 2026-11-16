@@ -9,8 +9,9 @@
 
 BW (bearing wall) is a wall that carries floor framing or the roof.
 The engineer beefs it up: more plies per stud, different spacing, sometimes MSR. For the
-takeoff, BW is a **separate branch** of the tree: `walls` keeps only regular
-walls, `shear walls` keeps SW. One physical wall can be in `walls`,
+takeoff, BW is a **separate branch** of the tree. You measure the wall itself in `walls`
+once, as a regular wall (`ext`, `corr`, `dem`, partition), then trace the bearing wall
+band again in `BW` and the SW segment in `shear walls`. One physical wall can be in `walls`,
 in `BW` and in `shear walls` at once: these are three different purposes, their lengths are not
 added together.
 
@@ -50,7 +51,7 @@ Excel applies the plies and spacing from the schedule.
 | Takeoff name | DFL row | Unit | Formula / factor |
 | --- | --- | --- | --- |
 | `BW/3rd/BW4-5-24` | `Studs Interior` (base, 24" spacing) | pcs | `LFT x 0.625` |
-| same | `Extra Dbl Studs Interior` | pcs | `LFT x 0.5 x (plies - 1)` |
+| same | `Extra Studs Interior 24" o.c.` | pcs | `LFT x 0.5 x (plies - 1)` |
 | `BW/3rd/BW6-3-24` | `Studs Demising` (base) + `Extra` | pcs | base + extra by plies |
 | `BW/4th/BW typical - per stud schedule` | the same rows, type from the `interior unit bearing walls` row | pcs | per the floor's schedule |
 
@@ -69,7 +70,7 @@ extra and dbl studs on COM: [COM Commercial](../../../work-types/com.md#studs-sp
 
 ## Common mistakes
 
-- BW drawn in `walls` and added to the regular walls: the length is counted twice.
+- The BW band drawn in `walls` as a second line over the regular wall and added to it: the length is counted twice.
 - Floor taken from the sheet number although the plan shows the walls below the floor.
 - Plies and spacing made up: with no mark, write `typical - per stud schedule` and the source.
 - Extra24 factor set to 0.625 instead of 0.5.

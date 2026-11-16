@@ -29,7 +29,7 @@ and [Beam](../work/horizontal/floor-framing/beam.md).
 
 ## EWP only (Capital-type)
 
-**Count:** I-joists, LVL / PSL / GL beams, engineered rim and blocking in LF,
+**Count:** I-joists, LVL / PSL / GL beams, engineered rim and blocking in LFT,
 hangers for them; possibly columns and stair stringers.
 
 **Do not count:** regular 2x, trusses, ties (CS, MST and similar), nails,
@@ -44,7 +44,12 @@ Rules:
 - Rim: if LVL is not specified anywhere, do not assume `1-3/4 LVL Rim`; by default use
   `Rim` or the product marked assumed. Rim thicknesses: 1-1/8" OSB, 1-1/2" LSL,
   1-3/4" LVL - [Rim Board](../work/horizontal/floor-framing/details/rim.md).
-- Rim factor 1.05; blocking continuous in LF, factor per [Formulas](../reference/formulas.md).
+- Rim and continuous blocking stay in `LFT` on this kind of job: rim `x 1.05`,
+  blocking with no factor; rim is not cut into 16' boards. The `1.05` factor is
+  **for EWP-only jobs**. In a regular framing book (Frame, COM, residential)
+  `Rim Board` is 16' boards through `=CEILING(G/D,1)` with no separate
+  waste factor: [Rim Board](../work/horizontal/floor-framing/details/rim.md),
+  [Formulas](../reference/formulas.md).
 - Identical floor: note `4th floor frame is identical to 3rd floor`, but
   still list the materials.
 
@@ -59,6 +64,15 @@ EWP beams), 2x headers, roofing, eaves, truss heel, hardware.
 **Do not count:** I-joists, LVL / PSL / LSL beams and headers, engineered rim.
 Remove the EWP rows, do not leave them at zero.
 
+**Exceptions (checklist):**
+
+- **Assumed LVL is always included.** If we assigned the LVL ourselves because the
+  drawings give no mark (a long window header with no mark, a ridge), it stays in the
+  book with `assumed`: the client's EWP package does not have it.
+- **`EWP Floors by others`** is narrower than `EWP by others`: by others is only what
+  is drawn on the floor framing layouts (I-joists, beams and rim of those
+  floors). Attic, roof and stick porch with their LVL stay ours.
+
 Rules:
 
 - Header note `All EWP products are by others`. The template note
@@ -71,6 +85,8 @@ Rules:
 ## Common mistakes
 
 - EWP counted with `EWP by others`, or not counted with EWP only.
+- With `EWP Floors by others` the roof, attic and porch LVL thrown out, or an assumed LVL removed.
+- Rim `x 1.05` in LFT carried over into a regular framing book.
 - Rim recorded as LVL with no callout.
 - Hangers counted from the purchased boards, not by assembly.
 - All floor framing mistakes: [Common mistakes](../start/common-mistakes.md#floor).

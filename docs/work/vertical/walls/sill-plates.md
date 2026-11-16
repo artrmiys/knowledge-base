@@ -24,7 +24,7 @@ Sill plate - самая нижняя деревянная доска, лежит
 | --- | --- |
 | Foundation plan `s101 f` | Длина стен на фундаменте и плите; гараж отдельно |
 | Typical sill detail, wall section at foundation | Сечение и число досок, P.T., sill sealer, termite shield |
-| Anchor bolt schedule, SW schedule, general notes | Диаметр, embed и шаг анкеров, размер washers |
+| Sill anchorage schedule, SW schedule, S general notes | Диаметр, embed и шаг анкеров, модель washers |
 | Планы 1-го этажа | Проёмы (ворота, двери), которые вычитаются из линии sill один раз |
 | Specs (COM) | Species sill plate (DF, SYP), правила plates часто спрятаны здесь |
 
@@ -39,7 +39,7 @@ Sill plate - самая нижняя деревянная доска, лежит
    разных сечений.
 2. Длина линии = длина применения узла, не длина лидера на детали.
 3. Из той же длины считаются sill sealer, termite shield, anchor bolts и
-   washers: эти три позиции на плане **не показаны**, их легко забыть.
+   washers: эти позиции на плане **не показаны**, их легко забыть.
 4. Проёмы (гаражные ворота) вычитай один раз, по своему этажу.
 
 <div class="kb-gallery">
@@ -62,16 +62,33 @@ Sill plate - самая нижняя деревянная доска, лежит
 | Имя в дереве | Строка DFL | Материал | Unit | Формула / фактор |
 | --- | --- | --- | --- | --- |
 | `2x6 P.T. sill` | `PT Sill Plates at ext. found` | `2x6 P.T.` | LFT | `LFT x 1.1`; двойная `x 2` |
-| то же | `Sill Sealer` | `6"` (реже 4", 8") | LFT | `LFT` |
-| то же | `Termite Shield` | `Copper` | LFT | `LFT x 1.1` (нахлёст 1 ft) |
-| то же | `Anchor Bolts 48" o.c.` | по detail / SW schedule | pcs | `LFT / шаг`, до чётного |
-| то же | `Washers`, `Nuts` | размер по detail | pcs | одна на болт |
+| то же | `Sill Sealer at ext. found` | `6"` по ширине sill (2x4 = `4"`, шире 2x6 = `10"`) | `50' rolls` | `=ОКРВВЕРХ(LFT/50;1)` |
+| то же | `Termite shield` | `Copper`, в E `optional` | LFT | `=ОКРВВЕРХ(LFT;50)` |
+| то же | `Anchor Bolts 48" o.c.` (шаг печатается из H) | размер и embed из S notes или anchorage schedule | pcs | `=ОКРВВЕРХ(LFT*12/H*1.1;2)` |
+| то же | `Washer 48" o.c.` | `3x3 Square` или модель из schedule (`BP 5/8-3`, `BPS 1/2-3`) | pcs | то же число, что у анкеров |
 | `4x10 P.T. Sill grge` | `PT Sill Plates` гараж | `4x10 P.T.` | LFT | отдельной строкой |
 
-Размер анкера, embed и washers - по своей детали, а не по шаблону:
-[Anchor Bolts](../../deck/anchor-bolts.md). Шаг анкеров разносится по
-участкам (SW 1-го этажа к бетону имеют свой шаг), а не одним шагом на всё
-здание. Species sill plate неясен - видимая нота, а не тихий выбор SPF.
+Анкеры:
+
+- **Шаг, размер и embed берутся из S notes или sill anchorage schedule
+  каждого проекта.** Шаг стоит в H и сам печатается в подписи строки:
+  H = 48 даёт `Anchor Bolts 48" o.c.`, H = 32 даёт `Anchor Bolts 32" o.c.`.
+  `48"` в таблице выше - пример, не правило.
+- **На чертежах ничего нет:** B `1/2" Ø emb.`, шаг `36" o.c.`, в E `assumed`
+  и нота `Note: Anchor Bolts 1/2" Ø @ 36" o.c. assumed; verify`. Строка
+  шаблона `5/8" Ø x 6" emb. Titen HD` с шагом 48" - заготовка, а не дефолт:
+  не оставляй её без проверки.
+- Формула всегда с `x 1.1`: 318 LFT при шаге 48" = `318 x 12 / 48 x 1.1 = 87.5`,
+  в книге 88.
+- Обычно две строки: `for Ext Walls` и `for Corr and Demising` (слово в E).
+- Shear walls с более частым шагом получают свои строки
+  `SW Anchor Bolts 16" o.c.` по SW schedule; их длина вычитается из общей
+  строки, а шайбы идут одной строкой `Washers` суммой по группе.
+- Titen HD - винтовой анкер, гайки у него нет; строки `Nuts` в блоке
+  Foundation Walls нет.
+
+Подробности и дефолт: [Anchor Bolts](../../deck/anchor-bolts.md). Species sill
+plate неясен - видимая нота, а не тихий выбор SPF.
 
 ## Частые ошибки
 
@@ -79,8 +96,9 @@ Sill plate - самая нижняя деревянная доска, лежит
 - P.T. plate на деревянном перекрытии: P.T. только на бетоне и кладке.
 - Двойная sill или двойная btm plate везде, хотя деталь даёт её на части этажей.
 - Один шаг анкеров на всё здание; wedge anchor заменён на Titen HD без основания.
+- Шаг 48" оставлен из шаблона, хотя S notes дают другой, или шага на чертежах нет (тогда 36" и `assumed`).
 - Ворота гаража не вычтены из sill, sill sealer и анкеров, или вычтены дважды.
-- Washers записаны универсальными 3x3 без проверки таблицы.
+- Washers записаны `3x3 Square`, хотя schedule называет модель plate washer.
 
 Разбор с примерами: [все ошибки по стенам](../../../start/common-mistakes.md#walls).
 
@@ -90,6 +108,15 @@ Sill plate - самая нижняя деревянная доска, лежит
 framing/1st floor framing/details/
   2x6 P.T. sill          Line, 318.0 LFT    Notes: 2/S501, dbl sill at stair
   4x10 P.T. Sill grge    Line, 64.5 LFT     Notes: 5/S501
+```
+
+Строки DFL для 318 LFT, по S notes анкеры `5/8" Ø Titen HD 4" emb.` через 48":
+
+```text
+Sill Sealer at ext. found   6"                           7   50' rolls   318 / 50 = 6.4
+Termite shield              Copper                     350   LFT         optional
+Anchor Bolts 48" o.c.       5/8" Ø Titen HD 4" emb.     88   pcs         318 x 12 / 48 x 1.1 = 87.5
+Washer 48" o.c.             3x3 Square                  88   pcs
 ```
 
 ## См. также

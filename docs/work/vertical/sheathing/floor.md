@@ -7,12 +7,14 @@
 
 ## Что это
 
-Floor sheathing - всё, что лежит на joists по площади этажа: subfloor,
-underlayment, второй слой под плитку или ванны, FRT-полосы по периметру,
-sound mat. Базовый subfloor `3/4" T&G` описан в [Subfloor](../../horizontal/floor-framing/subfloor.md);
-здесь - дополнительные слои по floor assembly, которые чаще всего теряют.
-Наружная полоса на высоте перекрытия - это [Box Sheathing](box-sheathing.md),
-не эта страница.
+Floor sheathing - **горизонтальные** листы, которые лежат на joists по площади
+этажа: subfloor, underlayment, второй слой под плитку или ванны, FRT-полосы
+по периметру, sound mat. Как делится материал между страницами:
+
+- базовый subfloor `3/4" T&G` и клей - [Subfloor](../../horizontal/floor-framing/subfloor.md);
+- здесь - дополнительные слои по floor assembly, которые чаще всего теряют;
+- вертикальная полоса обшивки на высоте перекрытия (по торцу rim) - это
+  [Box Sheathing](box-sheathing.md), не эта страница.
 
 ## Где искать на чертежах
 
@@ -41,9 +43,9 @@ sound mat. Базовый subfloor `3/4" T&G` описан в [Subfloor](../../h
 | Источник | Строка DFL | Материал | Unit | Формула |
 | --- | --- | --- | --- | --- |
 | `sqfts/1st` | `Subfloor` | `3/4" T&G` | `4x8` | `=ОКРВВЕРХ(SQFT/32*1.1;1)` |
-| та же площадь | `Panel Adheasive` | `29OZ` | `pcs` | по шаблону |
+| строка `Subfloor` | `Panel Adheasive` | `29OZ` | `tubes` | `=ОКРВВЕРХ(C<subfloor>/3;1)`: одна туба на 3 листа subfloor |
 | та же площадь | `Underlayment` | `1/2" Ply` по assembly | `4x8` | `=ОКРВВЕРХ(SQFT/32*1.1;1)` |
-| периметр ext x `2'` или `4'` | `Subfloor FRT` | `3/4" T&G FRT` | `4x8` | `=ОКРВВЕРХ(LFT*4/32*1.1;1)` |
+| периметр ext x `2'` или `4'` | `Subfloor FRT` | `3/4" T&G FRT` | `4x8` | `=ОКРВВЕРХ(LFT*4/32*1.1;1)` для полосы 4' (для 2' множитель `2`) |
 | `sqfts/tubs` | `Plywood` | `3/4" Ply` (под ваннами) | `4x8` | `=ОКРВВЕРХ(SQFT/32*1.1;1)` |
 
 ## Частые ошибки
@@ -61,10 +63,13 @@ sound mat. Базовый subfloor `3/4" T&G` описан в [Subfloor](../../h
 ```text
 2nd Floor Framing List
 Subfloor            3/4" T&G            128   4x8    S201
+Panel Adheasive     29OZ                 43   tubes
 Subfloor FRT        3/4" T&G FRT         54   4x8    4' perimeter per S001
-Panel Adheasive     29OZ                 16   pcs
 Underlayment        1/2" Ply            128   4x8    A6-01 floor type F2
 ```
+
+`Panel Adheasive` стоит сразу под `Subfloor` и считается от его листов:
+`128 / 3 = 42.7`, в книге 43 тубы.
 
 <figure markdown>
   ![Монтаж subfloor на joists](../../../assets/images/confluence/confluence-172.png)

@@ -36,8 +36,9 @@ plywood или Zip. Это не то же самое, что Exterior Gypsum (`T
 
 Название продукта берём из этого комплекта: `LP FlameBlock 2-sided` не равно
 `7/16" OSB FRT`, `5/8" EXT. SHEATHING` не превращаем в Ply без основания,
-`CDX` пишем только если так в сете. Наружный барьер называем WRB / Weather
-Barrier по спецификации (fluid-applied не Tyvek), не "Vapor Barrier".
+`CDX` пишем только если так в сете. Строка наружного барьера в DFL всегда
+подписана `Vapor Barrier` (подпись шаблона), а в B пишется продукт из
+спецификации: fluid-applied WRB остаётся fluid-applied, не Tyvek по привычке.
 
 ## Как мерить в OurPlanCore
 
@@ -61,11 +62,27 @@ Barrier по спецификации (fluid-applied не Tyvek), не "Vapor Ba
 
 | Имя в дереве | Строка DFL | Материал | Unit | Формула |
 | --- | --- | --- | --- | --- |
-| `walls/1st floor walls/ext 2x6 9.09` | `Wall Sheathing` | `7/16" Zip` или `1/2" OSB` | `4x8` | `=ОКРВВЕРХ(SQFT/32*1.1;1)` |
-| тот же замер | `Tape` | `Zip Tape` (только с Zip) | `LFT` | `=ОКРВВЕРХ(SQFT*0.4*1.1;10)` |
-| тот же замер | `Vapor Barrier` (в шаблоне) | WRB по спецификации | `SQ FT` | `=ОКРВВЕРХ(SQFT*1.1;10)` |
-| тот же замер | `Insulation` | наружный `1" Insulation` или Zip R | `SQ FT` | как WRB |
+| `walls/1st floor walls/ext 2x6 9.09` | `Wall Sheathing` | `7/16" Zip` или `1/2" OSB` | `4x8` | `=ОКРВВЕРХ(G/32*1.1;1)` |
+| тот же замер, только Zip | `Tape` | `Zip Tape` | `LFT` | `=ОКРВВЕРХ((G*0.4+периметр окон этажа)*1.1;10)` |
+| тот же замер, только без Zip | `Vapor Barrier` | WRB по спецификации | `SQ FT` | `=ОКРВВЕРХ(G*1.1;10)` |
+| тот же замер | `Insulation` | continuous insulation снаружи обшивки, например `2" XPS Insulation` | `SQ FT` | `=ОКРВВЕРХ(G*1.1;10)` |
 | `walls/1st floor walls/ext ...` | `Wall Sheathing` второй строкой | `5/8" Type X` (наружный гипс) | `SQ FT` | [Exterior Wall Materials](exterior-materials.md) |
+
+G - площадь наружных стен этажа за вычетом проёмов, в SQ FT. Что важно в
+этих строках:
+
+- **Одна система на секцию.** Zip: `Wall Sheathing` + `Tape`. Обычный лист
+  (OSB, Ply): `Wall Sheathing` + `Vapor Barrier`. У Zip барьер встроен в лист,
+  поэтому строки `Vapor Barrier` (WRB) на Zip-стенах нет: только `Tape` и
+  flashing проёмов.
+- **Tape** считается в `LFT`, не в рулонах: `0.4` LFT ленты на каждый SQ FT
+  листа плюс периметр окон этажа (линия casing из таблицы проёмов), всё
+  `x 1.1`. У Box, Gable и Truss Heel периметра окон нет: `G x 0.4 x 1.1`.
+- **Insulation** - только continuous insulation снаружи обшивки или на CMU и
+  бетоне. Утеплитель между стойками (batt, mineral wool, spray foam, sound)
+  by others: строки нет. Zip R несёт утеплитель в самом листе: продукт
+  пишется в `Wall Sheathing`, отдельной строки `Insulation` нет.
+- Округление строк в SQ FT и LFT: результат меньше 50 - до 2, иначе до 10.
 
 Спека живёт в ячейках шаблона: O3 обшивка, O4 WRB, O5 Zip, O6 Zip Tape,
 в P голая ссылка на лист (`S3.0`, `8/S3.0`, без слова "per"). Заполняется при
@@ -75,7 +92,9 @@ Barrier по спецификации (fluid-applied не Tyvek), не "Vapor Ba
 
 - Проёмы не вычтены (ворота гаража) или вычтены дважды (двери на двух этажах).
 - Толщина и продукт унаследованы от прошлого дома, а не прочитаны в этом сете.
-- `Vapor Barrier` и `Tyvek` при fluid-applied барьере в спецификации.
+- В B строки `Vapor Barrier` записан Tyvek при fluid-applied барьере в спецификации.
+- На Zip-стенах оставлена строка `Vapor Barrier`, или `Tape` посчитан в рулонах и без периметра окон.
+- Строка `Insulation` заведена под утеплитель между стойками или под Zip R.
 - Конфликт арх и структуры решён молча, без Note с двумя листами.
 - Посчитан внутренний гипс, внутренний утеплитель или sound batt.
 - Площадь измерена в программе, но в Excel осталось старое число.
@@ -85,15 +104,22 @@ Barrier по спецификации (fluid-applied не Tyvek), не "Vapor Ba
 
 ## Пример
 
+Площадь стен этажа 6220 SQ FT, периметр окон этажа 310 LFT, площадь box
+600 SQ FT:
+
 ```text
 1st Floor Walls
-Wall Sheathing      7/16" Zip        214   4x8     8/S3.0
-Tape                Zip Tape        2740   LFT
-Insulation          Zip R-3         6850   SQ FT   A2-00
+Wall Sheathing      Zip R-3          214   4x8     8/S3.0 A2-00
+Tape                Zip Tape        3080   LFT
 Note: Wall Sheathing 7/16" Zip R3 per 8/S3.0 A2-00.
 Box Sheathing       7/16" Zip         21   4x8
 Tape                Zip Tape         270   LFT
 ```
+
+Проверка: листы `6220 / 32 x 1.1 = 213.8`, в книге 214. Tape стен
+`(6220 x 0.4 + 310) x 1.1 = 3077.8`, до 10 = 3080. Box `600 / 32 x 1.1 = 20.6`,
+в книге 21; его Tape `600 x 0.4 x 1.1 = 264`, до 10 = 270. Строк `Vapor Barrier`
+и `Insulation` нет: стены на Zip R.
 
 <figure markdown>
   ![Дом в обшивке Zip System](../../../assets/images/confluence/confluence-093.jpg)

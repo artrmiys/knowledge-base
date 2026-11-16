@@ -52,11 +52,16 @@ CH/H studs are a separate topic: [Shaft Walls](shaft.md).
 | Takeoff name | DFL row | Unit | Formula / factor |
 | --- | --- | --- | --- |
 | `ext 6" 18ga mtl 11.7` | `Tracks (1) btm` `6" 18ga` | LFT | `LFT x 1.1` |
-| same | `Deflection Tracks (1) top` | LFT | `LFT x 1.1`; only on walls that go up to the floor framing |
-| same | `Mtl Studs 16" o.c.` `6" 18ga mtl` | pcs | `LFT x 1.1` (16") or `x 0.625` (24") |
+| same | `Deflection Tracks (1) top` | LFT | `LFT x 1.1`; on walls that run up to the structure above |
+| same | `Tracks (1) top` | LFT | `LFT x 1.1`; plain top track on walls that stop short of the structure (under a dropped soffit, partial height) |
+| same | `Mtl Studs 16" o.c.` `6" 18ga mtl` | pieces, D = stud height | `LFT x 1.1` (16") or `x 0.625` (24") |
 | same | extra studs, double jambs, `Head Track` at openings | pcs, LFT | per opening |
-| same | `Wall Sheathing`, `Air / Water Barrier`, `Insulation`, `Gypsum 5/8" Type X`, `Bracing`, `Blocking` | | as for wood |
-| `2x4` jamb in a metal wall | `Window Jamb` `2x4` | LFT | wood in a metal wall is normal |
+| same | `Wall Sheathing` (including `5/8" Type X` gypsum), `Vapor Barrier` (B = the barrier product), `Insulation` (continuous only), `Bracing Ext Walls` (pieces), `Blocking` | | as for wood |
+| `2x4` jamb in a metal wall | `Jambs (2)` `2x4` (the number in brackets = boards per side per the detail) | LFT | `(W + 2H) x number of doors x 2 x 1.1`; wood in a metal wall is normal. Window and storefront jambs go on a `Jambs` row in Wall Materials |
+
+Every wall has one top track: either `Deflection Tracks (1) top` or
+`Tracks (1) top`. Check: top track LFT = bottom track LFT. Row order in the
+block: `Tracks (1) btm`, the top track, `Mtl Studs`.
 
 For a CFS building the fasteners are metal. Group by stud size, floor and
 wall type (ext, int, dem, corr). If the gauge is given on the plans, it goes into the
@@ -85,7 +90,8 @@ takeoff spec; if not, add a note and check against the structural sheets.
 
 - Only tracks and studs counted for a metal wall, without sheathing, WRB, insulation, gypsum.
 - Metal by others, but no `Metal Studs by others` note: neither a row nor a note.
-- Deflection track used on a wall that does not reach the floor framing.
+- Deflection track used on a wall that does not reach the floor framing: that wall gets a plain `Tracks (1) top`.
+- No top track written at all: only `Tracks (1) btm` is there.
 - Gauge made up, or `24" o.c.` copied when the spec says `16"`.
 - Height under a steel beam not split into 6" and 3 1/2" pieces.
 - Wood jamb in a metal wall missed.

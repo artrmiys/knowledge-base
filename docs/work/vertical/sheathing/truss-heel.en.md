@@ -47,22 +47,36 @@ deck. Its height is set by the truss heel (heel height), typically 0.66 to
 
 ## Takeoff name and DFL row
 
+The strip has its own section in the DFL template: **Truss Heel**. G is the strip area in
+SQ FT: the sum of `length x heel height` over all `trussheel` takeoffs of the building.
+
 | Takeoff name | DFL row | Material | Unit | Formula |
 | --- | --- | --- | --- | --- |
-| `trussheel/trussheel 1.25` | `Truss Heel Sheathing` (in the Gable Walls block or the template's roof block) | same as the wall, for example `7/16" Zip` | `4x8` | `=CEILING(LFT*1.25/32*1.1,1)` |
-| same area | `Vapor Barrier` (WRB) | per spec | `SQ FT` | `=CEILING(SQFT*1.1,10)` |
-| same length | `Blocking at Eves` | `2x6` | `LFT` | per detail, see [Roof Sheathing](../../horizontal/roof-framing/roof-sheathing.md) |
+| `trussheel/trussheel 1.25` | `Truss Heel Sheathing` | same as the wall, for example `7/16" Zip` | `4x8` | `=CEILING(G/32*1.1,1)` |
+| same area, Zip | `Tape` | `Zip Tape` | `LFT` | `=CEILING(G*0.4*1.1,10)` |
+| same area, no Zip | `Vapor Barrier` | WRB per spec | `SQ FT` | `G x 1.1`; under 50 to 2, otherwise to 10 |
+| same area | `Insulation` | product from the wall type | `SQ FT` | `G x 1.1`; a row only with continuous insulation outside the sheathing |
+| eave length `eves rakes/eve ...` | `Blocking at Eves` (roof section, only with trusses by others) | `2x6` or per the eave detail | pieces, D = `16` | `=CEILING(G/D*1.1,1)`, see [Roof Sheathing](../../horizontal/roof-framing/roof-sheathing.md) |
 
-!!! warning "To be confirmed"
-    Check the exact Label of the heel row in the current TemplateCom (block and name) against a
-    delivered workbook; a descriptive name is given here.
+- Zip or a plain sheet follows the exterior wall. With Zip the pair is
+  `Truss Heel Sheathing` + `Tape`, with no `Vapor Barrier` and no `Insulation` row:
+  the barrier is built into the sheet. Without Zip there is a `Vapor Barrier` and no `Tape`.
+- `Insulation` is written only if the exterior wall type carries continuous
+  insulation outside the sheathing. Insulation between studs and in the attic is by
+  others, no row.
+- The box strip of the top floor under trusses is counted here, not as a
+  `Box Sheathing` row in the top floor walls. The walls keep the note
+  `Note: Box sheathing is included in Truss Heel section`.
+- Stick roof (rafters): there is no heel, the Truss Heel section is deleted. Flat roof
+  with a parapet: the strip moves to Parapet Walls ([Parapet](../walls/parapet.md)).
 
 ## Common mistakes
 
 - The strip on the eave sides not counted at all (gable sides are there, eave sides are not).
 - The same strip counted both in gable and in trussheel.
 - Height taken from another building or read as an overhang in inches.
-- "Vapor Barrier / Tyvek" written although the spec calls for a different barrier.
+- B of the `Vapor Barrier` row says Tyvek although the spec calls for a different barrier; or `Vapor Barrier` left in with Zip.
+- The `Tape` row forgotten with Zip.
 - With top chord bearing, blocking between the trusses forgotten instead of a ribbon.
 
 All mistakes: [common-mistakes](../../../start/common-mistakes.md#sheathing).
@@ -74,6 +88,10 @@ Takeoffs/Main/trussheel/
   trussheel 1.25     Line  236 LFT   (eave sides of main)
 Takeoffs/Grge/trussheel/
   trussheel 0.66     Line   84 LFT
+
+Truss Heel (Main, Zip walls): G = 236 x 1.25 = 295 SQ FT
+Truss Heel Sheathing   7/16" Zip     11   4x8    295 / 32 x 1.1 = 10.1
+Tape                   Zip Tape     130   LFT    295 x 0.4 x 1.1 = 129.8
 ```
 
 ## See also

@@ -50,11 +50,14 @@ are still marked up, but the DFL gets `0` and a scope note
 
 | Takeoff name | DFL row | Unit | Formula / factor |
 | --- | --- | --- | --- |
-| `units/A 2x4` | `Studs Interior 2x4` | pcs | `LFT x repeats x 1.1` (16") |
-| `units/A 2x6` | `Studs Interior 2x6` | pcs | the same, 24" = 0.625 |
-| same | `Plates Interior (1) btm`, `(2) dbl top` | LFT | `LFT x repeats x 1.1`; btm P.T. only on concrete |
-| same | `Blocking`, `Bracing` | LFT | by wall type |
+| `units/A 2x4` | `Studs Interior` `2x4` | pieces, D = stud length | `LFT x repeats x 1.1` (16") |
+| `units/A 2x6` | `Studs Interior` `2x6` | pieces, D = stud length | the same, 24" = 0.625 |
+| same | `Plates Interior (1) btm`, `(2) dbl top` | LFT | `LFT x repeats x 1.1`, dbl top also `x 2`; btm P.T. only on concrete |
+| same | `Blocking` | LFT | from the template matrix, rounded to even |
 | `B1` (Count on the floor plan) | repeat multiplier | ea | number of units of that type on the floor |
+
+Unit partitions get no bracing row: the template has `Bracing` only for
+ext, corridor and demising walls (in pieces, see [Corridor](corridor.md)).
 
 The `UN` button on the XL strip puts the unit table into the workbook (AM3) with totals by
 floor; the `C_UnitTable` macro multiplies the unit lengths by the number of repeats.

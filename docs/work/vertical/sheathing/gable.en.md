@@ -22,7 +22,7 @@ an interior attic partition, not exterior sheathing.
 | Elevations (`el`) | Triangle outline, dormer gables, where the wall ends and the gable starts |
 | Sections (`sec`) | Top plate height, pitch, heel |
 | Draftstops plan (for example A1-00) and section A4 | Draft stop lines and the attic profile (span x rise) |
-| Wall notes / fire rating | Draft stop thickness (`1/2" Ply`, `5/8" Type X`), gable material |
+| Roof plan legend, wall sections, fire rating | Draft stop material (`1/2" WR Gyp`, `7/16" OSB`, `5/8" Type X`), gable material |
 
 ## How to measure in OurPlanCore
 
@@ -41,12 +41,23 @@ an interior attic partition, not exterior sheathing.
 
 ## Takeoff name and DFL row
 
+G is the area from the tree in SQ FT.
+
 | Takeoff name | DFL row (Gable Walls block) | Material | Unit | Formula |
 | --- | --- | --- | --- | --- |
-| `gables/gable trusses/gable` (Area) | `Wall Sheathing` | `7/16" Zip` / `1/2" OSB` | `4x8` | `=CEILING(SQFT/32*1.1,1)` |
-| same area | `Vapor Barrier` (WRB), `Tape` with Zip | per spec | `SQ FT` / `LFT` | as for the wall |
-| `gables/gable stick/gable stick` (Area) + `btm`, `top` (Line) | `Studs for Gables`, `Plates Ext (3)`, `Blocking` | per [Gable Wall](../walls/gable.md) | | |
-| `gables/gable trusses/draft stop` (Area) | `Draft Stop` | `1/2" Ply` or `5/8" Type X` per detail | `4x8` | `=CEILING(SQFT/32*1.1,1)` |
+| `gables/gable trusses/gable` (Area) | `Wall Sheathing` | `7/16" Zip` / `1/2" OSB` | `4x8` | `=CEILING(G/32*1.1,1)` |
+| same area, no Zip | `Vapor Barrier` | WRB per spec | `SQ FT` | `G x 1.1` |
+| same area, Zip | `Tape` | `Zip Tape` | `LFT` | `=CEILING(G*0.4*1.1,10)` |
+| `gables/gable stick/gable stick` (Area) + `btm`, `top` (Line) | `Plates Ext (3) btm and dbl top`, `Studs for Gables`, `Blocking`, `Bracing Ext Walls` | per [Gable Wall](../walls/gable.md) | | |
+| `gables/gable trusses/draft stop` (Area) | `Draft Stop` | from the roof plan legend or the section; default `1/2" WR Gyp` | `SQ FT` | `G x 1.1` |
+
+- Rounding of SQ FT rows: a result under 50 goes to 2, otherwise to 10.
+- With Zip there is no `Vapor Barrier` row: the barrier is built into the sheet, only `Tape` is needed.
+  `Insulation` appears only with continuous insulation outside the sheathing.
+- `Draft Stop` is counted in `SQ FT`, not in `4x8` sheets. Material: `1/2" WR Gyp`
+  by default; `7/16" OSB`, `1/2" Gyp`, `5/8" Type X` when the drawing says so;
+  no sheet means `TBD`. Both sides: `Draft Stop 2 sides`, G x 2. The full
+  rule is on [Gable Wall](../walls/gable.md).
 
 The GB button on the XL strip moves the `gables` branch into the Gable Walls block.
 
@@ -56,7 +67,7 @@ The GB button on the XL strip moves the `gables` branch into the Gable Walls blo
 - Area measured, but the old number stayed in Excel.
 - Gable counted twice (two elevations, or gable plus wall).
 - Truss heel included both in gable and in trussheel.
-- Draft stop thickness not checked (`7/16"` vs `1/2"`).
+- Draft stop material and thickness not checked against the legend (`7/16" OSB` vs `1/2" WR Gyp`), or the row written in `4x8` sheets.
 - Plates and studs counted for gable trusses although they are already in the truss.
 
 All mistakes: [common-mistakes](../../../start/common-mistakes.md#sheathing).
@@ -65,12 +76,18 @@ All mistakes: [common-mistakes](../../../start/common-mistakes.md#sheathing).
 
 ```text
 Takeoffs/Main/gables/gable trusses/
-  gable            Area   412 SF   (4 polygons, north and south elevations)
-  draft stop       Area   318 SF   (3 lines from A1-00, profile from A4-01)
+  gable            Area   412 SQ FT   (4 polygons, north and south elevations)
+  draft stop       Area   318 SQ FT   (3 lines from A1-00, profile from A4-01)
 Takeoffs/Main/gables/gable stick/
-  gable stick      Area   96 SF
+  gable stick      Area   96 SQ FT
   btm              Line   24 LFT
   top              Line   27 LFT
+
+Gable Walls
+Wall Sheathing      1/2" OSB          15   4x8     412 / 32 x 1.1 = 14.2
+Vapor Barrier       WRB per spec     460   SQ FT   412 x 1.1 = 453.2
+
+Draft Stop          1/2" WR Gyp      350   SQ FT   318 x 1.1 = 349.8
 ```
 
 <figure markdown>

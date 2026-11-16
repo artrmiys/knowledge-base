@@ -50,11 +50,14 @@ demising стены в юнит не входят: они считаются н�
 
 | Имя в дереве | Строка DFL | Unit | Формула / фактор |
 | --- | --- | --- | --- |
-| `units/A 2x4` | `Studs Interior 2x4` | pcs | `LFT x повторы x 1.1` (16") |
-| `units/A 2x6` | `Studs Interior 2x6` | pcs | то же, 24" = 0.625 |
-| то же | `Plates Interior (1) btm`, `(2) dbl top` | LFT | `LFT x повторы x 1.1`; btm P.T. только на бетоне |
-| то же | `Blocking`, `Bracing` | LFT | по типу стены |
+| `units/A 2x4` | `Studs Interior` `2x4` | штуки, в D длина стойки | `LFT x повторы x 1.1` (16") |
+| `units/A 2x6` | `Studs Interior` `2x6` | штуки, в D длина стойки | то же, 24" = 0.625 |
+| то же | `Plates Interior (1) btm`, `(2) dbl top` | LFT | `LFT x повторы x 1.1`, dbl top ещё `x 2`; btm P.T. только на бетоне |
+| то же | `Blocking` | LFT | по матрице шаблона, до чётного |
 | `B1` (Count на плане этажа) | множитель повторов | ea | число квартир типа на этаже |
+
+Строки bracing у перегородок юнита нет: `Bracing` в шаблоне есть только для
+ext, corridor и demising стен (в штуках, см. [Corridor](corridor.md)).
 
 Кнопка `UN` полосы XL ставит таблицу юнитов в книгу (AM3) с итогами по
 этажам; макрос `C_UnitTable` умножает длины юнита на число повторов.

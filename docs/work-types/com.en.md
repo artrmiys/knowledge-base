@@ -62,7 +62,7 @@ Wall framing is not just field studs at spacing. We count three groups:
 | Group | Where | How to count |
 | --- | --- | --- |
 | Field studs | Across the wall | By spacing factor (base16 = 1.1, base24 = 0.625) - [Formulas](../reference/formulas.md#stud-spacing-factors) |
-| Extra studs | Corners, T-intersections, king/jack/cripple at openings | The 1.1 factor partly covers them; corners as a separate row on stick |
+| Extra studs | Corners, T-intersections, king/jack/cripple at openings | The 1.1 factor partly covers them; on stick the corners are `corners` points, and the template adds their studs to `Studs Ext` ([Corners](../work/vertical/walls/corners.md)) |
 | Dbl / extra on bearing walls | Lower floors, demising per structural | A separate Extra row (Extra16 = 0.75, Extra24 = 0.5); plies and spacing from the stud schedule of each floor |
 
 Bearing walls sit in their own branch in the tree, `BW/<floor>` (Line along the wall strip),
@@ -78,8 +78,10 @@ and go to Excel as Extra after the regular studs.
   ([detail](../work/vertical/walls/corridor.md)).
 - Shafts always: elevator, stair, trash chute; material per the wall type
   ([Shaft](../work/vertical/walls/shaft.md)).
-- Bracing for drywall by wall height: table on the
-  [Bracing for Drywall](../work/horizontal/floor-framing/details/bracingdrywall.md) page.
+- Wall bracing (`Bracing Ext Walls`, `Bracing Corridor`, `Bracing Demising`)
+  is counted in pieces, board length by wall height: see the table on the
+  [Wall bracing and Blocking for Drywall](../work/horizontal/floor-framing/details/bracingdrywall.md) page.
+  Drywall backing is a different row, `Blocking for Drywall` in the Floor Framing List.
   Blocking flat and diagonal 48" o.c.: formulas in [Formulas](../reference/formulas.md#blocking-formulas).
 
 <figure markdown>
@@ -109,7 +111,8 @@ a conditional note.
 | Any | If the exterior wall is FRT, then exterior blocking and parapets are FRT too; FRT subfloor strips 2' or 4' around the perimeter of their own floor |
 
 The note `all wood materials at exterior to be FRT` means all loose plywood is
-FRT with `verify`. FRT and FRTW are different designations, write them as in the project.
+FRT with `verify`. FRT and FRTW are one requirement (fire-retardant-treated wood);
+in the DFL use the designation the project uses.
 Table: [Tips: FRT](../reference/boss-feedback-rules.md#frt).
 
 <figure markdown>
@@ -135,7 +138,7 @@ Here only what you read in a COM specification:
 
 ## Common mistakes
 
-- Wall type assigned as a group, stud height = floor-to-floor.
+- Wall type assigned as a group, wall height taken as floor-to-floor.
 - Shaft walls dropped as "panels by others".
 - Draft stop missed or copied from the shear total.
 - Headers inside panels counted separately.

@@ -51,16 +51,30 @@ Post caps, bases и hangers сюда не относятся: они в `framing
 | Holdown стоит над балкой | transfer holdown под балкой не добавляем (указание клиента, 22.09) | как показано |
 | Threaded rod | только если показан | своя строка |
 
-Страпы (`MSTC40`, `CS16`) считаем отдельными позициями, не смешиваем с анкерами.
+Страпы (`MSTC40`, `CS16`) считаем отдельными позициями, не смешиваем с
+анкерами. В DFL это строка `Ties`: штучный страп (`MSTC40`) в `pcs`, рулонный
+(`CS16`) в `LFT`.
+
+Два разных `(2)`, которые нельзя путать:
+
+- `(2)` в подписи строки `Holdowns (2) btm top` - два **уровня**: изделие
+  снизу и сверху перекрытия. C = точки x 2.
+- `(2)` в марке на плане (`HD1 (2) DTT2Z`) - два **изделия в одном узле**. В
+  дереве одна точка на узел, в DFL строка `Holdowns (2)` (число изделий в
+  одном месте стоит в скобках, как у `Beam (2)`), C = точки x 2, в E марка
+  `HD1`.
+
+Каждое удвоение делается один раз и только в C.
 
 ## Как назвать в дереве и строка DFL
 
 | Имя в дереве | Строка DFL | B (модель) | Unit | E |
 | --- | --- | --- | --- | --- |
 | `shear walls/1st floor/holdowns/HDU11 SB1x30 S2.2` | `Holdowns (1) btm` | `HDU11` | `pcs` | `SW-2` |
-| `shear walls/2nd floor/holdowns/HD1 (2) DTT2Z` | `Holdowns (2) btm top` | `DTT2Z` | `pcs` | марка SW |
+| `shear walls/1st floor/holdowns/HD1 (2) DTT2Z` | `Holdowns (2)`, C = точки x 2 (два изделия в узле) | `DTT2Z` | `pcs` | `HD1` |
+| `shear walls/2nd floor/holdowns/HDU5 S2.2` | `Holdowns (2) btm top`, C = точки x 2 (снизу и сверху перекрытия) | `HDU5` | `pcs` | марка SW |
 | `shear walls/1st floor/holdowns/DTT2Z at WSW-B` | `Holdowns (1) btm` | `DTT2Z` | `pcs` | `WSW-B` |
-| `shear walls/2nd floor/holdowns/MSTC40 type C S2.3` | `Straps` | `MSTC40` | `pcs` | `S2.3` |
+| `shear walls/2nd floor/holdowns/MSTC40 type C S2.3` | `Ties` | `MSTC40` | `pcs` | `S2.3` |
 
 Место в DFL: секция стен того этажа, чьи SW держит holdown, блок в конце
 секции после последней `Tape` (под Box Sheathing). G = число точек из
@@ -88,9 +102,9 @@ Takeoffs/Main/shear walls/2nd floor/holdowns/
 
 1st Floor Walls ... Tape
 Holdowns (1) btm        HDU11     14    pcs   SW-2
-Holdowns (1) btm        DTT2Z     12    pcs   HD1
+Holdowns (2)            DTT2Z     12    pcs   HD1     (6 точек x 2 изделия в узле)
 2nd Floor Walls ... Tape
-Holdowns (2) btm top    HDU5      20    pcs   SW-3
+Holdowns (2) btm top    HDU5      20    pcs   SW-3    (10 точек x 2 уровня)
 ```
 
 ## См. также
