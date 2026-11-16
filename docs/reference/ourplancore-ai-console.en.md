@@ -1,5 +1,8 @@
 # AI console: Claude, Codex and DeepSeek terminals
 
+!!! info "Full version only"
+    OurPlanCore Lite has no terminal: no `>_` button, no palette command, no `Settings > Terminals`. How the versions differ: [Lite vs full version](ourplancore-lite.md). The rest of the full version block: [AI in the app](ourplancore-ai.md).
+
 Here: the `>_` panel with Claude, Codex and DeepSeek terminals inside the app window, what they know about the job (the `ctx` line, the context file), how to send the assistant a sheet crop, how it edits the open job through Agent Bridge and how to continue a conversation on a second computer. You need it when you want to ask the assistant about the current sheet, get notes from a schedule table or hand it routine work in the tree without leaving the app. The other AI features (AI Crop Notes, AI Manager, title block reading, Agent Bridge settings) are on [AI in the app](ourplancore-ai.md).
 
 <figure markdown>
@@ -163,6 +166,6 @@ Everything else: [Troubleshooting, terminal and Agent Bridge](ourplancore-troubl
 ## See also
 
 - [AI in the app](ourplancore-ai.md): AI Crop Notes, title block reading, Agent Bridge
-- [Managers: AI Inbox and AI Manager](ourplancore-managers.md#ai-manager)
+- [AI Inbox and AI Manager](ourplancore-ai.md#inbox)
 - [Workspace and a second computer](ourplancore-workspace.md)
 - [Settings and modules](ourplancore-settings.md)

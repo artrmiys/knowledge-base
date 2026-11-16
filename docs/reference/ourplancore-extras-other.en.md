@@ -14,7 +14,7 @@ The Bookmarks module (on). A bookmark remembers the sheet and the view position,
 | Delete | `Delete` |
 | Dock under Pages | the button in the tab header; back - `Return Bookmarks to the tab list` |
 
-Bookmarks are stored in the job (`bookmarks.json`). Crop bookmarks with a PNG are created by the AI module (`Save AI crop here`, `AI Crop +` in the AI console); the selected bookmark goes into the AI terminal context ([console](ourplancore-ai-console.md#context)). In everyday work, the tabs of open sheets and `F` (fit the sheet) play the role of bookmarks.
+Bookmarks are stored in the job (`bookmarks.json`). Crop bookmarks with a PNG are created by the AI module (`Save AI crop here`, `AI Crop +` in the AI console), and the selected bookmark goes into the AI terminal context ([console](ourplancore-ai-console.md#context)); this is full version only. In everyday work, the tabs of open sheets and `F` (fit the sheet) play the role of bookmarks.
 
 ## Quick Calculator { #calculator }
 

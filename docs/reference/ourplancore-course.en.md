@@ -2,13 +2,13 @@
 
 A course on the OurPlanCore 3.0 demo job: from opening the app to PDF and Excel. Each lesson is one task from start to a visible result, 5-10 minutes. Lessons follow the estimator's order of work; details on each topic are on the pages of this section, linked at the end of each lesson. You can break the demo job: a new one is created with the `Open sample job` tile ([demo tour](ourplancore-start.md#demo)).
 
-What you need before you start: the app is installed and launches from the desktop shortcut ([getting started](ourplancore-start.md)); for lesson 9, Excel and a copy of `TemplateCom.xlsm` from the app's updates folder.
+What you need before you start: the app is installed and launches from the desktop shortcut ([getting started](ourplancore-start.md)); for lesson 9, Excel and a copy of `TemplateCom.xlsm` from the `templates` folder of the shared Dropbox folder ([where the app is](ourplancore-start.md)).
 
 ## Lesson 1. Open the demo job and look around { #lesson-1 }
 
 <figure markdown>
   <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-open-sample.png"><source src="../../assets/images/ourplancore/demo/d-open-sample.mp4" type="video/mp4"></video>
-  <figcaption markdown="span">Demo: `Open sample job` on the start card creates the demo job; then the W, F, S and U sheets with their legends and the 3D tab.</figcaption>
+  <figcaption markdown="span">Demo: `Open sample job` on the start card creates the demo job; then the W, F, S and U sheets with their legends and the 3D tab (it exists only in the full version).</figcaption>
 </figure>
 
 Goal: open the training job and learn where things are in the window.
@@ -182,22 +182,22 @@ Check yourself: the legend is readable, each takeoff has its own color, Estimati
 
 Details: [Takeoffs tree](ourplancore-takeoffs.md#hide), [PDF and delivery, legend](ourplancore-pdf.md#legend).
 
-## Lesson 9. Excel: the XL strip { #lesson-9 }
+## Lesson 9. Excel: the Excel, Value and Link to Excel buttons { #lesson-9 }
 
-<!-- DEMO: d-excel-xl -->
+Goal: send takeoff numbers into the DFL workbook and link one number to a measurement.
 
-Goal: export walls and areas into the DFL workbook with one button.
-
-1. Copy `TemplateCom.xlsm` from the app's updates folder into the job folder under the building's name, open the copy in Excel, enable macros, activate the `Detailed Frame List` worksheet.
-2. In OurPlanCore, select the job root in Takeoffs (one building) or the building folder.
-3. Press `LG` on the XL strip on the right, enter the project's beam and post codes (`FB1 - (2) 1 3/4 x 11 7/8 LVL`, `C4 - 6x6`), **Save for job**.
-4. Press `ALL`, read the warning about skipped takeoffs, **Continue**.
-5. Wait for `Completed: ...` in the status bar and look at the workbook: wall matrix, Front Page, framing list.
+1. Copy `TemplateCom.xlsm` from the `templates` folder of the shared Dropbox folder into the job folder under the building's name, open the copy in Excel, enable macros, activate the `Detailed Frame List` worksheet.
+2. In Excel, click the first free cell of the `J:L` list (from row 10).
+3. In OurPlanCore, select the `walls/1st floor walls` folder in Takeoffs and press `Excel` at the bottom left: the rows (name, number, unit) land starting from that cell. `Value` writes only the numbers of the same selection into one column.
+4. Click another cell in Excel, select the floor area takeoff in `sqfts` (for example `1st`) and press **Link to Excel** at the bottom. Status: `Linked <takeoff> to <workbook> <sheet!cell>: <number>`, the takeoff row shows a chain icon.
+5. Select that takeoff, press `Space` and trace one more room: after a short pause the number in the linked cell goes up.
 6. Save the workbook in Excel yourself: the app does not save it.
 
-Check yourself: `Detailed Frame List` has wall rows with height `9.09`, the `1st` area on the Front Page, beam `FB1` in the framing list with the size from the legend.
+Check yourself: `J:L` has wall rows with numbers in LF, the linked cell shows the same number as the takeoff's `Total` in the tree.
 
-Details: [Export to Excel](ourplancore-excel.md), [How the DFL workbook works](dfl-overview.md).
+In Lite, the calculation from the `J:L` list (wall matrix, areas, openings) is run with the E-Wood tab buttons in Excel ([Calculation from takeoffs](ewood-tab.md#calculate)). In the full version the XL strip does it: `LG`, then `ALL` exports the whole building and runs the workbook macros itself ([XL strip](ourplancore-excel.md#steps)).
+
+Details: [Export to Excel](ourplancore-excel.md#lite), [How the DFL workbook works](dfl-overview.md).
 
 ## Lesson 10. PDF and delivery { #lesson-10 }
 
@@ -230,5 +230,5 @@ Details: [PDF and delivery](ourplancore-pdf.md), [Workflow, delivery](../start/w
 - Several buildings in a job: [Multiple buildings](ourplancore-buildings.md).
 - Editing finished measurements, Merge and Split, snaps: [Editing and snaps](ourplancore-editing.md).
 - Details on a separate sheet and the mask: [Sheets: crops, mask, overlays, legend](ourplancore-sheets-advanced.md).
-- An assistant in the window: [AI console](ourplancore-ai-console.md).
+- AI models and the terminal, full version only: [AI in the app](ourplancore-ai.md), [AI console](ourplancore-ai-console.md); how Lite differs: [Lite vs full version](ourplancore-lite.md).
 - Takeoff order on a real project: [Workflow](../start/workflow.md), [Common mistakes](../start/common-mistakes.md).

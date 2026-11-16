@@ -1,16 +1,16 @@
 # Extra features
 
-This section collects what OurPlanCore 3.0 has but everyday E-Wood measuring almost never needs: snapping and tracing, manager tabs, 3D, bookmarks, the calculator, importing old jobs. The "Every day" and "Advanced" level pages give these features one line with a link here, so they do not distract from walls, areas and framing. If you need one of these features, everything is described on the pages of this level.
+This section collects what OurPlanCore 3.0 has but everyday E-Wood measuring almost never needs: snapping and tracing, manager tabs, bookmarks, the calculator, importing old jobs. 3D and AI are in the full version only and are described in its block. The "Every day" and "Advanced" level pages give these features one line with a link here, so they do not distract from walls, areas and framing. If you need one of these features, everything is described on the pages of this level.
 
 ## What is here and why
 
 Selection criteria (owner's decision, 10/17/2026):
 
-1. **The module is off by default** in `Settings > Modules`: Sheet Manager, Takeoff Manager, Report Builder, Materials, AI, 3D, Job Tracker. Without turning the module on, there are no buttons or tabs.
-2. **The feature is not in the measuring work rules.** None of the skills for walls, openings, framing, roofing, shear walls and units mentions Snap, Ortho, Box, Layer Trace, Wall Trace, bookmarks, the calculator, detached windows, tree templates or PlanSwift import. The measuring canon rests on Line, Area, Count, J Area, Beam, Openings, Record, sheet dots, the XL strip and Export PDF.
-3. **A newer path replaced the feature.** Report Builder gave way to the XL strip, AI 3D Massing was replaced by the deterministic roof from edges, inserting PDF Takeoffs and PlanSwift is needed only for old jobs.
+1. **The module is off by default** in `Settings > Modules`: Sheet Manager, Takeoff Manager, Report Builder, Materials, AI, 3D, Job Tracker. Without turning the module on, there are no buttons or tabs. Materials, AI and 3D are in the full version only, Lite does not have them at all ([Lite vs full version](ourplancore-lite.md)).
+2. **The feature is not in the measuring work rules.** None of the skills for walls, openings, framing, roofing, shear walls and units mentions Snap, Ortho, Box, Layer Trace, Wall Trace, bookmarks, the calculator, detached windows, tree templates or PlanSwift import. The measuring canon rests on Line, Area, Count, J Area, Beam, Openings, Record, sheet dots, the export to Excel (in the full version, the XL strip) and Export PDF.
+3. **A newer path replaced the feature.** Report Builder gave way to the XL strip and the `Excel` and `Link to Excel` buttons, AI 3D Massing was replaced by the deterministic roof from edges, inserting PDF Takeoffs and PlanSwift is needed only for old jobs.
 
-What stays on its own levels: the Line, Area, Count, J Area, Beam, Openings, Pitch, Ruler, Record tools and copying; W/F/S/U dots; the XL strip; Export PDF and Preview; editing and snapping as one set (Cut, Merge, Split, Break, Ends, Combine, Similar, P Line, Snap, Ortho, Box) on the [Editing and snapping](ourplancore-editing.md) page; Crop to Sheet, the Hide mask, Overlay, legend groups; the 3D roof; Settings; the AI console and Agent Bridge; Workspace.
+What stays on its own levels: the Line, Area, Count, J Area, Beam, Openings, Pitch, Ruler, Record tools and copying; W/F/S/U dots; export to Excel; Export PDF and Preview; editing and snapping as one set (Cut, Merge, Split, Break, Ends, Combine, Similar, P Line, Snap, Ortho, Box) on the [Editing and snapping](ourplancore-editing.md) page; Crop to Sheet, the Hide mask, Overlay, legend groups; Settings. The 3D roof, the AI console, Agent Bridge and Workspace are described in the full version block, starting with [AI in the app](ourplancore-ai.md).
 
 ## Feature table
 
@@ -19,15 +19,15 @@ What stays on its own levels: the Line, Area, Count, J Area, Beam, Openings, Pit
 | Snap, PDF Snap, Ortho, Box | no module, the buttons are always on the strip | a precise outline on a vector drawing, right angles, a rectangle in two clicks | [Editing and snapping](ourplancore-editing.md) |
 | PDF Layers, Layer Trace | PDF Layers, on | walls or an outline sit on a separate PDF layer | [Snap and tracing](ourplancore-snap-trace.md#layers) |
 | Trace Walls Inside Area | Advanced Takeoff Tools, on | a vector plan: wall centerlines inside an area in one action | [Snap and tracing](ourplancore-snap-trace.md#wall-trace) |
-| Trace wall from this point, Trace closed area, Check missed takeoffs | AI, off | requests in AI Inbox for a trace or a check | [Snap and tracing](ourplancore-snap-trace.md#ai-trace) |
-| Sheet Manager | Sheet Manager, off | bulk editing of names, scale and raster in a table; `Crop Hints`, `AI Fill` | [Managers](ourplancore-managers.md#sheet-manager) |
+| Trace wall from this point, Trace closed area, Check missed takeoffs | AI, off; full version only | requests in AI Inbox for a trace or a check | [Snap and tracing](ourplancore-snap-trace.md#ai-trace) |
+| Sheet Manager | Sheet Manager, off | bulk editing of names, scale and raster in a table; `Crop Hints` and `AI Fill` in the full version | [Managers](ourplancore-managers.md#sheet-manager) |
 | Takeoff Manager | Takeoff Manager, off | the Takeoffs tree as a table with prices | [Managers](ourplancore-managers.md#takeoff-manager) |
 | Report Builder | Report Builder, off | the old wall path into `TemplateCom.xlsm` | [Managers](ourplancore-managers.md#report-builder) |
-| Materials | Materials, off | a material list from the tree to CSV | [Managers](ourplancore-managers.md#materials) |
-| AI Inbox, AI Manager, markers | AI, off | a queue of model requests, symbol samples | [Managers](ourplancore-managers.md#ai-manager) |
+| Materials | Materials, off; full version only | a material list from the tree to CSV | [Managers](ourplancore-managers.md#materials) |
+| AI Inbox, AI Manager, markers | AI, off; full version only | a queue of model requests, symbol samples | [AI in the app](ourplancore-ai.md#inbox) |
 | Job Tracker, the `In Progress` button | Job Tracker, off | the job card in the tracker from the app | [Managers](ourplancore-managers.md#job-tracker) |
-| 3D: walls and roof, Roof Qty | 3D, off | see the edges of a complex roof in 3D | [3D and Massing](ourplancore-3d.md) |
-| AI 3D Massing | turned off in code | no, archive | [3D and Massing](ourplancore-3d.md#massing) |
+| 3D: walls and roof, Roof Qty | 3D, off; full version only | see the edges of a complex roof in 3D | [3D and Massing](ourplancore-3d.md) |
+| AI 3D Massing | turned off in code, full version only | no, archive | [3D and Massing](ourplancore-3d.md#massing) |
 | Bookmarks | Bookmarks, on | come back to a spot on a large sheet | [Other](ourplancore-extras-other.md#bookmarks) |
 | Quick Calculator | Quick Calculator, on | add feet, inches and fractions without leaving the app | [Other](ourplancore-extras-other.md#calculator) |
 | Detached Sheets, `Tile M2` | Detached Sheets, on | a second monitor, two sheets side by side | [Other](ourplancore-extras-other.md#detached) |
@@ -39,15 +39,15 @@ What stays on its own levels: the Line, Area, Count, J Area, Beam, Openings, Pit
 
 1. `Settings > Modules`: check the module, `Apply` (until restart) or `Save global default`; `Save as this job` turns the module on only in the open job.
 2. The presets `Current default`, `All modules on`, `Takeoff Only`, `Minimal` set the whole set at once; `Reset` restores the built-in one.
-3. A module that is on adds its tab to the mode bar (Sheet Manager, Takeoff Manager, Report Builder, Materials, AI Manager, 3D) or buttons to the ribbon (`Name`, `Scale`, `Name+Scale`, `In Progress`).
+3. A module that is on adds its tab to the mode bar (Sheet Manager, Takeoff Manager, Report Builder; in the full version also Materials, AI Manager, 3D) or buttons to the ribbon (`Name`, `Scale`, `Name+Scale`, `In Progress`).
 4. A disabled module hides its buttons and tab; a key for a hidden command does not fire.
 
 <figure markdown>
   <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-settings.png"><source src="../../assets/images/ourplancore/demo/d-settings.mp4" type="video/mp4"></video>
-  <figcaption markdown="span">Demo: `Settings`, the routing and color sections, then `Modules`: the AI and 3D checkboxes, `Apply` and `Save global default`; the AI Manager and 3D tabs appeared in the mode bar.</figcaption>
+  <figcaption markdown="span">Demo in the full version: `Settings`, the routing and color sections, then `Modules`: the AI and 3D checkboxes, `Apply` and `Save global default`; the AI Manager and 3D tabs appeared in the mode bar. Lite does not have these checkboxes.</figcaption>
 </figure>
 
-The full module list with groups: [Workspace and modules](ourplancore-workspace.md#modules).
+The full module list with groups: [Settings, Modules](ourplancore-settings.md#modules).
 
 ## Rare items of the measurement menu on the sheet { #measurement-menu }
 
@@ -70,19 +70,19 @@ The joist items show on an Area with the Advanced Takeoff Tools module on (on by
 
     ---
 
-    The PDF Layers tab and Layer Trace; Trace Walls Inside Area; trace requests through AI Inbox. The snaps themselves (Snap, PDF Snap, Ortho, Box) together with measurement editing: [Editing and snapping](ourplancore-editing.md).
+    The PDF Layers tab and Layer Trace; Trace Walls Inside Area; trace requests through AI Inbox (full version). The snaps themselves (Snap, PDF Snap, Ortho, Box) together with measurement editing: [Editing and snapping](ourplancore-editing.md).
 
 -   **[Managers](ourplancore-managers.md)**
 
     ---
 
-    Sheet Manager, Takeoff Manager, Report Builder, Materials, AI Inbox and AI Manager, Job Tracker: tabs turned on in `Settings > Modules`.
+    Sheet Manager, Takeoff Manager, Report Builder, Job Tracker: tabs turned on in `Settings > Modules`; Materials and AI Manager in the full version.
 
--   **[3D and Massing](ourplancore-3d.md)**
+-   **AI, terminal and 3D (full version)**
 
     ---
 
-    Walls and roof from measurements, Roof Qty and Roof Takeoff, what is turned off and why.
+    [AI in the app](ourplancore-ai.md), [AI console](ourplancore-ai-console.md), [3D roof](ourplancore-3d-roof.md), [3D and Massing](ourplancore-3d.md): Lite does not have these.
 
 -   **[Other](ourplancore-extras-other.md)**
 
@@ -95,5 +95,5 @@ The joist items show on an Area with the Advanced Takeoff Tools module on (on by
 ## See also
 
 - [OurPlanCore 3.0: section hub](ourplanecore.md)
-- [Settings and modules](ourplancore-settings.md), [Workspace and modules](ourplancore-workspace.md#modules)
+- [Settings and modules](ourplancore-settings.md#modules), [Lite vs full version](ourplancore-lite.md)
 - [Ideas and plans](ourplancore-ideas.md): which extras are still in development

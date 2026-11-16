@@ -19,7 +19,7 @@ Almost every category has five buttons at the bottom:
 | `Save as this job` | write it only for the open job (override) |
 | `Clear job override` | remove the job copy, the global one applies again |
 
-Job copies live inside the job in `AI_Context/settings/*.json`, global ones in the app profile (`%LOCALAPPDATA%\OurPlanCore\presets`). The rule: changing it for one job - `Save as this job`; changing it for good - `Save global default`; broke something - `Reset` and Save.
+Job copies live inside the job in `AI_Context/settings/*.json`, global ones in the app profile (for Lite `%LOCALAPPDATA%\OurPlanCore Lite\local\presets`, for the full version `%LOCALAPPDATA%\OurPlanCore\presets`). The profiles are separate: global settings of the full version are not visible in Lite. The rule: changing it for one job - `Save as this job`; changing it for good - `Save global default`; broke something - `Reset` and Save.
 
 ### How to change a rule for one job only { #job-override }
 
@@ -36,12 +36,12 @@ Result: the category status says `Using this job's override`; other jobs follow 
 
 <figure markdown>
   ![Settings tab, category list on the left](../assets/images/ourplancore/v3/settings-modules.png)
-  <figcaption markdown="span">Category list on the left, the panel of the selected category on the right. The first category is Modules.</figcaption>
+  <figcaption markdown="span">Category list on the left, the panel of the selected category on the right. The first category is Modules. Taken in the full version: Lite has no AI, 3D and Materials modules and no categories for their sections.</figcaption>
 </figure>
 
 | Category | What it sets | When to touch it | Details |
 | --- | --- | --- | --- |
-| Modules | 19 modules and the Job Tracker command | a tab or button is missing; turn on Sheet Manager, 3D, AI | [Modules](ourplancore-workspace.md#modules), [Extra features](ourplancore-extras.md) |
+| Modules | modules (16 in Lite, 19 in the full version) and the Job Tracker command | a tab or button is missing; turn on Sheet Manager | [Modules](#modules), [Extra features](ourplancore-extras.md) |
 | Page Folders | standard Pages folders for the Auto / COM / EWP templates | a different set of `00. imported` folders | [Pages](ourplancore-pages.md) |
 | Blank Sheets | default size and paper presets | you often need a different blank sheet size | [Blank sheets](ourplancore-sheets-advanced.md#blank) |
 | Auto Tree | the Takeoffs tree that `More > Auto Tree` builds | your own folder canon | [Takeoffs tree](ourplancore-takeoffs.md) |
@@ -52,25 +52,49 @@ Result: the category status says `Using this job's override`; other jobs follow 
 | Sheet Legend | names and order of the automatic blocks by Takeoffs folders | change the order of Walls, Posts, Beams, Details, SQFTs | [Sheet legend](ourplancore-sheets-advanced.md#legend) |
 | PDF Editable Export | which measurements are written to the PDF as objects editable in Adobe Acrobat | turn that export off for everyone or for a job | [PDF and delivery](ourplancore-pdf.md#adobe-off) |
 | Takeoff Colors | a fixed color for an exact name (`bft`) | you need one more fixed color | [Routing](ourplancore-routing.md#colors) |
-| AI Crop Notes | the format of Tag/Size lines in notes from an AI crop | notes from a schedule read badly | [AI](ourplancore-ai.md#crop-notes) |
+| AI Crop Notes | the format of Tag/Size lines in notes from an AI crop; full version only | notes from a schedule read badly | [AI](ourplancore-ai.md#crop-notes) |
 | Sort A/S | the `Sort: A - Arch / S - Struct` rules, sheets ending in `-` go to `--------others` | non-standard sheet prefixes | [Pages](ourplancore-pages.md) |
 | Sort D/Sec/WT | sheet name suffix, then the folder (`sections`, `details`, `rcp`) | new sheet types | [Pages](ourplancore-pages.md) |
-| Auto Rename / Scale | the name and scale engine, suffix rules, the Kept column, AI from the title block | Name gives bad names | [Pages](ourplancore-pages.md), [AI](ourplancore-ai.md#sheet-names) |
-| Excel Actions | XL strip buttons and the ALL sequence | your own order of export steps | [Excel](ourplancore-excel.md) |
+| Auto Rename / Scale | the name and scale engine, suffix rules, the Kept column, AI from the title block (AI in the full version only) | Name gives bad names | [Pages](ourplancore-pages.md), [AI](ourplancore-ai.md#sheet-names) |
+| Excel Actions | XL strip buttons and the ALL sequence; full version only | your own order of export steps | [Excel](ourplancore-excel.md#settings) |
 | Excel Links | how `Link to Excel` writes to an open and a closed workbook, workbook backups, the small-number threshold for `Auto Link` | do not write to the open workbook right away, a different number of backups | [Excel export](ourplancore-excel.md#link-settings) |
 | Project Storage | job size, `Preview safe compact`, `Compact snap.json` | the job file got bloated | [Jobs and saving](job-creation-storage.md) |
 | Autosave Recovery | retry intervals after an autosave error | you need to change the wait before the next attempt | [Autosave](job-creation-storage.md#autosave) |
 | Agent Bridge | access of a local assistant to the open job | working with an agent | [AI](ourplancore-ai.md#bridge) |
-| Terminals | Claude or Codex profile, width, effort, context | the `>_` panel | [AI console](ourplancore-ai-console.md#settings) |
-| Workspace | server, device, sync, second computer | working from two PCs | [Workspace](ourplancore-workspace.md#workspace) |
+| Terminals | Claude or Codex profile, width, effort, context; full version only | the `>_` panel | [AI console](ourplancore-ai-console.md#settings) |
+| Workspace | server, device, sync, second computer; full version only | working from two PCs | [Workspace](ourplancore-workspace.md#workspace) |
 | Keyboard Shortcuts | the `Open Keyboard Shortcuts...` button | reassign a key | [Keyboard shortcuts](ourplancore-shortcuts.md#remap) |
 | Defaults | wheel zoom, background warm-up, raster cache, Sheet Manager DPI buttons, section rows in the tree, Beam line, jump to the view ribbons | general personal setup | [below](#defaults), [on-screen view](#display) |
 
 ## Each one in short
 
-### Modules
+### Modules { #modules }
 
-Checkboxes for 19 modules in the groups Documents, Takeoff, Output, Assistance, Productivity, Integrations; presets `Current default`, `All modules on`, `Takeoff Only`, `Minimal`. The Job Tracker module command is here too: `Executable`, `Arguments (one per line)`, `Save`, `Reset`. A disabled module hides its buttons and tab; a key for a hidden command does not fire. The module list is in [Workspace and modules](ourplancore-workspace.md#modules).
+Module checkboxes in the groups Documents, Takeoff, Output, Assistance, Productivity, Integrations: 16 in Lite, 19 in the full version. Presets `Current default`, `All modules on`, `Takeoff Only`, `Minimal`; Apply, Save global, Save for this job, Clear job override, Reset. The Job Tracker module command is here too: `Executable`, `Arguments (one per line)`, `Save`, `Reset`.
+
+| Module | Group | Default | What it turns on |
+| --- | --- | --- | --- |
+| Annotations | Productivity | on | Annotation ribbon: Highlight, Draw Line, Arrow, Box, Cloud, Area, Hide, Note; crops and masks in the PDF |
+| PDF Layers | Documents | on | the PDF Layers sub-tab, layer highlight, Layer Trace |
+| Sheet Overlay | Documents | on | the Overlay sub-tab, Batch Overlay |
+| Sheet Manager | Documents | off | the Sheet Manager tab; the Name, Scale, Name+Scale buttons on the Main ribbon |
+| Takeoff Manager | Takeoff | off | the Takeoff Manager tab |
+| Advanced Takeoff Tools | Takeoff | on | Similar, P Line, Combine, Beam, Openings, Break, Ends |
+| Takeoff Automation | Takeoff | on | Auto Tree, From Pages, auto-creation |
+| Takeoff Templates | Takeoff | on | the Templates tab |
+| Estimating | Takeoff | on | the Estimating tab and the Estimating window |
+| Report Builder | Output | off | the Report Builder tab |
+| Materials | Output | off | the Materials tab; full version only |
+| AI | Assistance | off | AI Inbox, AI Manager, AI crop, markers, AI from the title block; full version only |
+| 3D | Assistance | off | the 3D tab and the 3D sub-tab in Takeoffs; full version only |
+| Bookmarks | Productivity | on | the Bkm sub-tab, bookmarks and bookmark crops |
+| Quick Calculator | Productivity | on | feet and inches calculator |
+| PDF Output | Output | on | the PDF Output ribbon, Preview, export |
+| Detached Sheets | Documents | on | detached sheet windows, Tile M2 |
+| Excel Integration | Output | on | `Excel`, `Value`, `Link to Excel`, `Auto Link`; in the full version also the XL strip |
+| Job Tracker | Integrations | off | the In Progress button |
+
+A disabled module hides its buttons and tab; a key for its command does not fire. The job copy of modules beats the global one. Lite has no AI, 3D and Materials modules at all, and neither a preset nor a job can turn them on ([Lite vs full version](ourplancore-lite.md)). What the modules that are off by default do and when to turn them on: [Extra features](ourplancore-extras.md).
 
 ### Page Folders, Auto Tree, From Pages, Takeoff Templates
 
@@ -96,7 +120,7 @@ The first two categories set the folder of a new takeoff; Takeoff Colors sets it
 
 ### AI Crop Notes
 
-Formats the AI answer for a schedule table crop into lines like `HP1  (2) 2x8`. Fields `Tag/size separator`, a preview (`paste the recognized text on the left`), a checkbox for the original tables. The raw answer stays in AI Inbox.
+Full version only. Formats the AI answer for a schedule table crop into lines like `HP1  (2) 2x8`. Fields `Tag/size separator`, a preview (`paste the recognized text on the left`), a checkbox for the original tables. The raw answer stays in AI Inbox.
 
 ### Sort A/S and Sort D/Sec/WT
 
@@ -131,7 +155,7 @@ Engine: `Ideal v3` (current), `Precise v2`, `Legacy`. A tag rule table with a `K
   <figcaption markdown="span">XL strip buttons and the order of steps for ALL.</figcaption>
 </figure>
 
-The list of XL strip buttons (`Action`), the sequence for `ALL`, the checkbox `Insert numeric floor group rows (0-5) before the takeoff rows`, floor folder words (`1, 1st, first`). How to use the strip: [Excel export](ourplancore-excel.md).
+Full version only: Lite has no XL strip and no Excel Actions and Excel Rules sections. The list of XL strip buttons (`Action`), the sequence for `ALL`, the checkbox `Insert numeric floor group rows (0-5) before the takeoff rows`, floor folder words (`1, 1st, first`). How to use the strip: [Excel export](ourplancore-excel.md).
 
 ### Project Storage
 
@@ -144,7 +168,7 @@ An analysis of where the job takes up space; `Preview safe compact` shows what c
 
 ### Agent Bridge, Terminals, Workspace
 
-Three categories about AI and a second computer: [AI in the app](ourplancore-ai.md) and [Workspace](ourplancore-workspace.md). Workspace settings are stored on each device separately and have no job copy.
+Three categories about AI and a second computer: [AI in the app](ourplancore-ai.md) and [Workspace](ourplancore-workspace.md). Terminals and Workspace are in the full version only (as is Voice Input), Agent Bridge is in Lite too. Workspace settings are stored on each device separately and have no job copy.
 
 ### Keyboard Shortcuts
 

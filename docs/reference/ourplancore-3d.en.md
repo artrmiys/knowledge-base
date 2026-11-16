@@ -1,5 +1,8 @@
 # 3D and Massing
 
+!!! info "Full version only"
+    OurPlanCore Lite has no 3D module, and it cannot be turned on. How the versions differ: [Lite vs full version](ourplancore-lite.md).
+
 Here: the 3D tab, which is off by default: walls and slabs from measurements, the general viewer, and the honest status of the old AI Massing. You need it when you want to see a building in 3D or when someone asks "what about 3D". The roof in 3D is described separately: [3D roof](ourplancore-3d-roof.md). The Sheet Manager, Takeoff Manager, Report Builder and Materials tabs: [Managers](ourplancore-managers.md).
 
 <figure markdown>

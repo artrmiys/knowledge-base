@@ -4,17 +4,21 @@ Here: where the app is and how it updates, what you see on first launch, how to 
 
 ## Where the app is and how it updates
 
+Estimators run OurPlanCore Lite: no AI models and no terminal, lighter than the full version. How they differ: [Lite vs full version](ourplancore-lite.md).
+
 | What | Where |
 | --- | --- |
-| Launch | the OurPlanCore shortcut on the desktop |
-| The app itself | a single file `ourplancore.exe` in the `Desktop\updates\OurPlanCore` folder |
-| Update | a new `ourplancore.exe` goes into the same folder; the previous one stays next to it as `.bak` for rollback |
-| Excel templates | in the same folder: `TemplateCom.xlsm`, `TemplateResidential.xlsm` |
-| Version | in the window title: `OurPlanCore 3.0.0 - <job>`; the same in the file properties and in the first `Version ...` line of the log `%APPDATA%\OurPlanCore\logs\app-<date>.log`; what changed: [What's new](ourplancore-changelog.md) |
+| The app itself | a single file `ourplancore.exe` in the shared Dropbox folder `Office Folder\programs` |
+| Launch | this file or a desktop shortcut to it |
+| Update | a new file arrives in the same folder through Dropbox and replaces the old one; no previous version is kept next to it. What changed: the `changes` folder in the same place and [What's new](ourplancore-changelog.md) |
+| Excel templates | the `templates` folder in the same place: `TemplateCom.xlsm`, `TemplateResidential.xlsm` |
+| Version | in the window title: `OurPlanCore 3.0.x-lite - <job>`; the same in the first `Version ...` line of the log `%LOCALAPPDATA%\OurPlanCore Lite\roaming\logs\app-<date>.log` |
 
 Jobs, settings and templates do not depend on the update: they are stored separately (see [Where settings live](#settings)).
 
-!!! warning "Rolling back to .bak"
+The full version is installed separately: the file `ourplancore.exe` in the `Desktop\updates\OurPlanCore` folder, with the Excel templates next to it; the window title shows the number without `-lite`, the log is in `%APPDATA%\OurPlanCore\logs`. When it is updated, the previous file stays next to it as `.bak` for rollback.
+
+!!! warning "Rolling back to .bak (full version)"
     An older build reads crops (Crop to Sheet) and Hide masks as regular markup and loses their fields on save. If you rolled back, do not save a job with crops until you are back on a fresh build.
 
 ## First launch and the start screen
@@ -37,7 +41,7 @@ After that, work happens in `Main View`: Pages on the left, the sheet in the cen
 
 <figure markdown>
   <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-open-sample.png"><source src="../../assets/images/ourplancore/demo/d-open-sample.mp4" type="video/mp4"></video>
-  <figcaption markdown="span">Demo: `Open sample job` on the start card creates the demo job; then the W, F, S and U sheets with their legends and the 3D tab.</figcaption>
+  <figcaption markdown="span">Demo: `Open sample job` on the start card creates the demo job; then the W, F, S and U sheets with their legends and the 3D tab (it exists only in the full version).</figcaption>
 </figure>
 
 The demo job is a training job with no client data. Try every button on it without worrying about breaking anything: it can be created again at any time. The [First steps: 10 lessons](ourplancore-course.md) course uses it too.
@@ -62,8 +66,8 @@ Result: the window title shows `OurPlanCore 3.0.x - OurPlanCore Guide Sample`, s
 | `00. Guide` hint cards | image sheets at the top of the Pages folder | a map of the window, ribbons and panels right in the app |
 | A plan with the W dot, a structural plan with the F dot, a copy for shear walls with the S dot, a unit plan with the U dot | sheets in `00. Guide`, dots under the Scale header | how a sheet set is split up ([split by sheets](ourplancore-split-by-sheets.md)) |
 | A canonical tree: `sqfts`, `walls/1st floor walls`, `framing/1st floor framing/...`, `openings`, `shear walls`, `eves rakes` | Takeoffs panel | takeoff names with numbers for Excel, folders by floor |
-| Roof outline `rf 6` with eaves | roof plan and `sqfts`, `eves rakes` | a starting point for the 3D roof ([3D roof](ourplancore-3d-roof.md)) |
-| A `Start here...` note and observations in the AI Inbox | plan sheet, Inbox panel with the AI module | an example of markup and AI entries |
+| Roof outline `rf 6` with eaves | roof plan and `sqfts`, `eves rakes` | roof area with the pitch in the name; in the full version, a starting point for the [3D roof](ourplancore-3d-roof.md) |
+| A `Start here...` note and observations in the AI Inbox | plan sheet; Inbox panel with the AI module (full version only) | an example of markup and AI entries |
 
 The exact contents of the demo after the 3.0.1 release should be checked against the job itself: takeoff and sheet names in the table are approximate.
 
@@ -74,8 +78,8 @@ The exact contents of the demo after the 3.0.1 release should be checked against
 3. **Tools.** On the same plan `O` on a door, `A` on a room, `X` to cut an area; on a structural sheet `J` for a joist area and `B` for a beam from support to support. [Tools](ourplancore-tools.md)
 4. **Legend.** `Display > Legend Show`, then right-click the sheet, `Organize > Sort Sheet Legend by Key`; `H` on a takeoff hides it from the sheet, the dot next to the takeoff under the sheet in Pages brings it back. [Takeoffs tree](ourplancore-takeoffs.md#hide)
 5. **Crops and mask.** `Page > Blank Sheet`, then `Page > Crop to Sheet` from the plan onto the blank sheet; `Annotation > Hide` with a box over what is not needed. [Sheets: advanced](ourplancore-sheets-advanced.md)
-6. **3D.** Turn on the 3D module, select `rf 6`, the 3D tab, `Roof Base`, `Auto`, `Iso`. [3D roof](ourplancore-3d-roof.md)
-7. **Export.** `PDF Output > Preview`, `Main > Export` of one sheet; with a copy of `TemplateCom.xlsm` open, the XL strip, the `WL` button. [PDF and delivery](ourplancore-pdf.md), [Export to Excel](ourplancore-excel.md)
+6. **3D (full version only).** Turn on the 3D module, select `rf 6`, the 3D tab, `Roof Base`, `Auto`, `Iso`. In Lite, skip this step. [3D roof](ourplancore-3d-roof.md)
+7. **Export.** `PDF Output > Preview`, `Main > Export` of one sheet; in an open copy of `TemplateCom.xlsm` click a cell, select a takeoff and press `Excel` at the bottom (in the full version also the XL strip, the `WL` button). [PDF and delivery](ourplancore-pdf.md), [Export to Excel](ourplancore-excel.md)
 
 ### Broke the demo, what next
 
@@ -91,7 +95,7 @@ Anything goes: delete takeoffs, move sheets, change dots, clean the tree with `D
 | Key | What it opens |
 | --- | --- |
 | `F1` | a shortcut cheat sheet over the window; closes with `Esc` |
-| `Ctrl+Shift+P` | command palette: categories File, View, Workspace, Tools, Edit, Pages, Sheets, Takeoffs, AI; type part of the name and `Enter` |
+| `Ctrl+Shift+P` | command palette: categories File, View, Workspace, Tools, Edit, Pages, Sheets, Takeoffs and, in the full version, AI; type part of the name and `Enter` |
 | `Ctrl+O` | `Open / Import`; `Ctrl+Shift+O` - recent jobs |
 
 A command without a shortcut (for example `Ends`, `Toggle Dark Theme`, `Hide / Show All Takeoffs`) is run from the palette or gets a shortcut in `Settings > Keyboard Shortcuts`. Shortcuts work by physical keys in both the English and the Russian keyboard layout. Full list: [Keyboard shortcuts](ourplancore-shortcuts.md).
@@ -149,15 +153,16 @@ Result: a takeoff with two sections in `walls/1st floor walls`, `Total` in LFT, 
 
 | What | Where |
 | --- | --- |
-| General settings, shortcuts, logs | `%APPDATA%\OurPlanCore` (`settings.json`, `logs` folder) |
-| Rule presets (routing, shortcuts), caches, terminals | `%LOCALAPPDATA%\OurPlanCore` |
+| General settings, shortcuts, logs | Lite: `%LOCALAPPDATA%\OurPlanCore Lite\roaming` (`settings.json`, `logs` folder); full version: `%APPDATA%\OurPlanCore` |
+| Rule presets (routing, shortcuts), caches | Lite: `%LOCALAPPDATA%\OurPlanCore Lite\local`; full version: `%LOCALAPPDATA%\OurPlanCore`, terminal files there too |
 | Settings of a specific job | inside the job in `AI_Context/settings` |
 | Jobs | the jobs folder shown by `Open project...` (`Manage job folders...` adds folders) |
 
-Each `Settings` section has `Reset`, `Save global default` and `Save as this job`: a rule can be overridden for one job without touching the global one. Which sections exist: [Settings and modules](ourplancore-settings.md). Some tabs (Sheet Manager, Takeoff Manager, Report Builder, Materials, AI, 3D, Job Tracker) are off by default and are turned on in `Settings > Modules`; what they do and when they are needed: [Extra features](ourplancore-extras.md).
+Lite has its own profile: its settings start from the built-in defaults and do not mix with the full version's settings. Each `Settings` section has `Reset`, `Save global default` and `Save as this job`: a rule can be overridden for one job without touching the global one. Which sections exist: [Settings and modules](ourplancore-settings.md). Some tabs (Sheet Manager, Takeoff Manager, Report Builder, Job Tracker) are off by default and are turned on in `Settings > Modules`; Materials, AI and 3D exist only in the full version. What they do and when they are needed: [Extra features](ourplancore-extras.md).
 
 ## See also
 
 - [OurPlanCore 3.0: section hub](ourplanecore.md)
+- [Lite vs full version](ourplancore-lite.md)
 - [Workflow](../start/workflow.md)
 - [Troubleshooting](ourplancore-troubleshooting.md)

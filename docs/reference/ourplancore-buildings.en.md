@@ -79,16 +79,17 @@ You need: copies of `TemplateCom.xlsm` per building, Excel open with macros enab
 
 1. Each building gets its own copy of `TemplateCom.xlsm`: workbook names by building (`Bldng A.xlsm`, `Bldng B.xlsm`), workbook name equals the Job Name on the Front Page.
 2. Open the building workbook, activate `Detailed Frame List`.
-3. In Takeoffs select **one** building folder and press `ALL`. A selection from two buildings is not accepted: `Excel ALL found more than one building/root in the selection`.
-4. The `LG` legend is per workbook: the beam and post codes of that building. Repeat for the next building with its workbook.
+3. In Lite: click a cell, select a folder or takeoff of **this** building in Takeoffs and press `Excel`, `Value` or `Link to Excel`. For `Auto Link` put the [green dot](#root) on the building: it takes only that building's takeoffs.
+4. In the full version, instead of step 3: select **one** building folder and press `ALL` on the XL strip. A selection from two buildings is not accepted: `Excel ALL found more than one building/root in the selection`. The `LG` legend is per workbook: the beam and post codes of that building.
+5. Repeat for the next building with its workbook.
 
-Result: the building workbook is filled, status `Completed`. The XL strip and the buttons step by step: [Export to Excel](ourplancore-excel.md).
+Result: the building workbook is filled with the numbers of this building only. The Lite buttons and the XL strip: [Export to Excel](ourplancore-excel.md).
 
 ## How to get a PDF per building { #pdf }
 
 From the window: the building has its own sheet folder in Pages; in `Export PDF` tick it with one checkbox; on a shared sheet hide the other building's takeoffs (`H` on the building folder in Takeoffs), export, name it `<job> Bldg A.pdf`, restore visibility and repeat ([PDF and delivery](ourplancore-pdf.md#buildings)).
 
-With the pipeline: `OurPlanCoreCli export-pdf --grouping auto` splits the PDF by building on its own: it takes the saved green dot choice, exports each sibling building branch as a separate file, and on a shared sheet prints only that branch's measurements. With no root selected (red dot) you get one file; `--grouping single` forces one file; measurements outside the building folders stop the export with a message. Before delivery: `Ctrl+S`, green dot on the building, save again ([pipeline](ourplancore-workspace.md#cli)).
+With the pipeline: `OurPlanCoreCli export-pdf --grouping auto` splits the PDF by building on its own: it takes the saved green dot choice, exports each sibling building branch as a separate file, and on a shared sheet prints only that branch's measurements. With no root selected (red dot) you get one file; `--grouping single` forces one file; measurements outside the building folders stop the export with a message. Before delivery: `Ctrl+S`, green dot on the building, save again ([pipeline](job-creation-storage.md#cli)).
 
 ## Example: a job with three buildings A, B, C
 

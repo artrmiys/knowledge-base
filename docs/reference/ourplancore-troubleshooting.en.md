@@ -43,7 +43,7 @@ The rules explained: [Takeoff routing](ourplancore-routing.md); which sheet carr
 | Message or situation | Cause | What to do |
 | --- | --- | --- |
 | `Saved in local recovery` | the `.ourplan` package is not updated yet | click `Save` and wait for `Save: Saved hh:mm:ss` before copying the file |
-| `Job Is Already Open` / `This job is owned by another OurPlanCore instance` | the job is open in a second window or on another computer (Workspace) | close the second window; in Workspace wait for the sync, do not open it at the same time |
+| `Job Is Already Open` / `This job is owned by another OurPlanCore instance` | the job is open in a second window or on another computer (Workspace, full version) | close the second window; in Workspace wait for the sync, do not open it at the same time |
 | Save failed after a sheet was moved to another folder | fixed in 2.2.16 | update |
 | The job sits in a cloud sync folder, Save or opening fights with it | the sync client swaps or locks the file | keep the working job in `Desktop\OurPlanCore Jobs`, copy it to the cloud after Save; on a message about an external change, save your version with `Save As` |
 | Corrupted metadata JSON | | `Open / Import > Project Data Recovery...`: an entry from the list, `Retry reading` or `Restore from copy...` |
@@ -53,9 +53,20 @@ The rules explained: [Takeoff routing](ourplancore-routing.md); which sheet carr
 
 ### Which version is running {#version}
 
-The version is in the window title: `OurPlanCore 3.0.0 - <job>`, and in the `Version ...` line of the app log. There is one install: the updates folder `Desktop\updates\OurPlanCore`, the rollback is the `.bak` file next to the EXE (the file name carries the version, for example `ourplancore.exe.2.2.42-....bak`). The old separate Preview is no longer used. If a feature from [What's new](ourplancore-changelog.md) does not work, check the version in the title first.
+The version is in the window title and in the `Version ...` line of the app log. Lite has a `-lite` tail on the number: `OurPlanCore 3.0.x-lite - <job>`; Lite sits in the shared Dropbox folder `Office Folder\programs`, with no previous version kept there. The full version is installed in the updates folder `Desktop\updates\OurPlanCore`, and its rollback is the `.bak` file next to the EXE (the file name carries the version, for example `ourplancore.exe.2.2.42-....bak`). The old separate Preview is no longer used. If a feature from [What's new](ourplancore-changelog.md) does not work, check the version in the title first: Lite is built separately, and its number can lag behind the full version.
+
+## Lite: what is missing { #lite }
+
+| Symptom | Cause | What to do |
+| --- | --- | --- |
+| No `>_` button, no XL strip, no AI Manager, 3D, Materials tabs | Lite is open: it does not have these | this is by design; the list: [Lite and the full version](ourplancore-lite.md#missing) |
+| A double click on an `.ourplan` does not open Lite | Lite does not register itself as the app for `.ourplan` | ++ctrl+o++ and `Open project...` or `Open project file...`, or drag the file into the window |
+| After switching to Lite the settings look brand new | Lite has its own profile `%LOCALAPPDATA%\OurPlanCore Lite` | set up what you need again in `Settings` and click `Save global default` |
+| `Name` does not name a scanned sheet | Lite has no OCR: the name is read only from the PDF text | name the sheet by hand (++f2++) |
 
 ## Terminal, Agent Bridge, Workspace {#terminal}
+
+The terminal and Workspace exist only in the full version; Agent Bridge is in Lite too ([Lite and the full version](ourplancore-lite.md)).
 
 | Symptom | Cause | What to do |
 | --- | --- | --- |

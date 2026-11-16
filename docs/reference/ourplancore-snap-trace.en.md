@@ -1,6 +1,6 @@
 # Snap and tracing
 
-This page covers the toggles on the bottom strip (`Snap`, `PDF`, `Ortho`, `Box`), the PDF Layers tab and Layer Trace, wall tracing inside an area, and tracing requests through the AI Inbox. In everyday measuring an outline is traced with clicks using `Ortho` and `Snap`; tracing is needed rarely, when the drawing is vector and there are many walls. How these techniques combine with editing: [Editing measurements and snaps](ourplancore-editing.md).
+This page covers the toggles on the bottom strip (`Snap`, `PDF`, `Ortho`, `Box`), the PDF Layers tab and Layer Trace, wall tracing inside an area, and tracing requests through the AI Inbox (full version only). In everyday measuring an outline is traced with clicks using `Ortho` and `Snap`; tracing is needed rarely, when the drawing is vector and there are many walls. How these techniques combine with editing: [Editing measurements and snaps](ourplancore-editing.md).
 
 ## Snaps on the tool strip { #snap }
 
@@ -119,7 +119,7 @@ A right-click on a layer row opens a menu with the layer name in the header. The
 | `Show Layer` / `Hide Layer` | turn the layer on or off, like the checkbox in the row |
 | `Highlight Layer` / `Clear Highlight` | highlight the layer on the sheet or remove the highlight, like the `Hi` checkbox |
 
-With the AI module on there are two more items at the top, `Save Layer Info for AI` and `Queue AI Request for This Layer`: they write the layer details into the AI Inbox ([AI in the app](ourplancore-ai.md)).
+In the full version, with the AI module on, there are two more items at the top, `Save Layer Info for AI` and `Queue AI Request for This Layer`: they write the layer details into the AI Inbox ([AI in the app](ourplancore-ai.md)).
 
 ## Trace Walls Inside Area { #wall-trace }
 
@@ -147,7 +147,7 @@ Result: a Line takeoff with centerlines. Short fragments, text and leaders are f
 
 ## Tracing requests through the AI Inbox { #ai-trace }
 
-With the AI module on, the sheet context menu has the items `Trace wall from this point`, `Trace closed area` and `Check missed takeoffs on this page`. They do not draw right away: they create an AI Inbox entry with the text `Pending SmartTrace request` or `Pending SmartCheck request`, which is then run and checked through AI Manager or the AI terminal ([AI console](ourplancore-ai-console.md), [AI Manager](ourplancore-managers.md#ai-manager)). The result reaches the tree only after confirmation.
+Full version only: Lite has no AI module, while Layer Trace and Trace Walls Inside Area above do work. With the AI module on, the sheet context menu has the items `Trace wall from this point`, `Trace closed area` and `Check missed takeoffs on this page`. They do not draw right away: they create an AI Inbox entry with the text `Pending SmartTrace request` or `Pending SmartCheck request`, which is then run and checked through AI Manager or the AI terminal ([AI console](ourplancore-ai-console.md), [AI Manager](ourplancore-ai.md#ai-manager)). The result reaches the tree only after confirmation.
 
 ## Traps { #traps }
 

@@ -230,7 +230,7 @@ You need: a sheet open; an active Count or readiness to create a new one.
 4. Check the marks: blue ones are added right away, orange weak ones are for review, gray check marks are already counted. `Include candidates` takes the weak ones too, `Strong only` takes only the reliable ones.
 5. Click `Add N to <name>`.
 
-Result: marks in the active Count or in a new `Similar Count`. The `Ask AI to identify the symbol` checkbox works online and only suggests a name (needs the AI module and a key). More on searching across sheets: [Similar across all sheets](ourplancore-extras-other.md#similar).
+Result: marks in the active Count or in a new `Similar Count`. The `Ask AI to identify the symbol` checkbox works online and only suggests a name (needs the AI module and a key, that is, the full version; in Lite the checkbox is visible but disabled). More on searching across sheets: [Similar across all sheets](ourplancore-extras-other.md#similar).
 
 <figure markdown>
   <video class="kb-demo" loop muted playsinline preload="none" poster="../../assets/images/ourplancore/demo/d-similar.png"><source src="../../assets/images/ourplancore/demo/d-similar.mp4" type="video/mp4"></video>
