@@ -1,12 +1,15 @@
 """Static inventory of every user-facing function of OurPlanCore.
 
 Reads the program sources (no build, no run) and writes tools/opc_inventory.json.
-With --page it also renders docs/reference/ourplancore-all-functions.md.
+With --page it also renders docs/reference/ourplancore-all-functions.md and its
+English twin ourplancore-all-functions.en.md (descriptions from
+tools/opc_descriptions_en.json, else the English tooltip from the code).
 
 Usage (from the KB repo root, standard library only):
   python tools/opc_inventory.py                       # JSON only
-  python tools/opc_inventory.py --page                # JSON + generated page
+  python tools/opc_inventory.py --page                # JSON + generated pages
   python tools/opc_inventory.py --src E:\\path\\to\\ourplanecore
+  python tools/opc_inventory.py --page --from-json    # pages from the saved JSON, no source
 
 Surfaces collected (field "surface"):
   palette       Command Palette entries (MainWindow.CommandPalette.cs)
@@ -47,7 +50,9 @@ ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_SRC = Path(r"E:\---\OurPlanCore\ourplanecore")
 JSON_OUT = ROOT / "tools" / "opc_inventory.json"
 PAGE_OUT = ROOT / "docs" / "reference" / "ourplancore-all-functions.md"
+PAGE_OUT_EN = ROOT / "docs" / "reference" / "ourplancore-all-functions.en.md"
 RU_TEXT = ROOT / "tools" / "opc_descriptions_ru.json"
+EN_TEXT = ROOT / "tools" / "opc_descriptions_en.json"
 
 # ---------------------------------------------------------------- helpers
 
@@ -1334,8 +1339,94 @@ SURFACE_RU = {
     "settings": ("Settings: категории и разделы", "Settings"),
     "dialog": ("Окна и диалоги", "окно"),
 }
+SURFACE_EN = {
+    "toolstrip": ("Bottom tool strip", "bottom tool strip"),
+    "ribbon": ("Ribbon: top tabs Main, Page, Annotation, Viewport, Display", "ribbon"),
+    "xl": ("XL (Excel) strip right of the sheet", "XL strip"),
+    "strip": ("Icon strips left and right of the sheet (default set)", "icon strip"),
+    "workspace": ("Workspace panels and tabs", "panel"),
+    "context-menu": ("Context menus and button menus", "menu"),
+    "panel": ("Panel and window buttons built in code", "panel"),
+    "palette": ("Command palette (Ctrl+Shift+P)", "command palette"),
+    "f1": ("Shortcut guide (F1)", "F1"),
+    "defaults": ("Default keys that are not in the palette", "key"),
+    "settings": ("Settings: categories and sections", "Settings"),
+    "dialog": ("Windows and dialogs", "window"),
+}
 SURFACE_ORDER = ["toolstrip", "ribbon", "xl", "strip", "workspace", "context-menu", "panel",
                  "palette", "f1", "defaults", "settings", "dialog"]
+
+# Group labels are built in Russian above; the English page rewrites them phrase by phrase.
+# Order matters: specific phrases first, then the generic "<word> X" patterns.
+GROUP_EN = [
+    ("меню кнопки символа Count по умолчанию", "default Count symbol button menu"),
+    ("меню пресетов размера точек", "point size presets menu"),
+    ("меню пресетов толщины линий", "line weight presets menu"),
+    ("меню More активной позиции", "active takeoff More menu"),
+    ("меню Sheet активной позиции", "active takeoff Sheet menu"),
+    ("меню вьюпорта в отдельном окне листа", "viewport menu in a separate sheet window"),
+    ("меню вьюпорта (правый клик по листу)", "viewport menu (right-click on the sheet)"),
+    ("меню вьюпорта", "viewport menu"),
+    ("меню вкладки листа", "sheet tab menu"),
+    ("меню записи AI Inbox", "AI Inbox entry menu"),
+    ("меню корня Takeoffs", "Takeoffs root menu"),
+    ("меню легенды листа", "sheet legend menu"),
+    ("меню листа в Pages", "sheet menu in Pages"),
+    ("меню папки в Pages", "folder menu in Pages"),
+    ("меню папки в Takeoffs", "folder menu in Takeoffs"),
+    ("меню позиции в Takeoffs", "takeoff menu in Takeoffs"),
+    ("меню секции (замера) в Takeoffs", "section (measurement) menu in Takeoffs"),
+    ("меню слоя PDF", "PDF layer menu"),
+    ("меню слоя наложения", "overlay layer menu"),
+    ("меню строки Estimating", "Estimating row menu"),
+    ("меню панели Templates", "Templates panel menu"),
+    ("панель терминала Codex / Claude", "Codex / Claude terminal panel"),
+    ("окно (строится в коде главного окна)", "window (built in the main window code)"),
+    ("стартовая карточка (проект не открыт)", "start card (no job open)"),
+    ("строка активной позиции", "active takeoff row"),
+    ("быстрая строка", "quick row"),
+    ("левая полоса значков", "left icon strip"),
+    ("правая полоса значков", "right icon strip"),
+    ("легенда XL (кнопка LG)", "XL legend (LG button)"),
+    ("полоса XL", "XL strip"),
+    ("нижняя полоса", "bottom tool strip"),
+    ("символ метки Count", "Count marker symbol"),
+    ("ребро крыши", "roof edge"),
+    ("точка листа", "sheet point"),
+    ("размер легенды / шапки", "legend / header size"),
+    ("буфер замеров", "measurement clipboard"),
+    ("выбранный замер", "selected measurement"),
+    ("легенда и подписи", "legend and labels"),
+    ("наложение листа", "sheet overlay"),
+    ("разметка", "markup"),
+    ("позиция под листом в Pages", "item under the sheet in Pages"),
+    ("под листом в Pages", "under the sheet in Pages"),
+    ("(терминал)", "(terminal)"),
+    ("(замер)", "(measurement)"),
+    ("(предпросмотр)", "(preview)"),
+    ("кроп", "crop"),
+    ("дерево", "tree"),
+]
+GROUP_EN_RE = [
+    (re.compile(r"меню кнопки ([^,()>]+?)(?=\s*[,(>]|$)"), r"\1 button menu"),
+    (re.compile(r"меню ([A-Z][^,()>]*?)(?=\s*[,(>]|$)"), r"\1 menu"),
+    (re.compile(r"панель ([A-Z0-9][^,()]*?)(?=\s*[,()]|$)"), r"\1 panel"),
+    (re.compile(r"группа (\S+)"), r"\1 group"),
+    (re.compile(r"лента (\S+?)(?=[,)]|$|\s)"), r"\1 ribbon"),
+    (re.compile(r"вкладка (\S+)"), r"\1 tab"),
+    (re.compile(r"строка (\d+)"), r"row \1"),
+    (re.compile(r"строка ([A-Z][^,()]*?)(?=\s*[,(]|$)"), r"\1 row"),
+    (re.compile(r"^окно ([A-Z].*)$"), r"\1 window"),
+    (re.compile(r"^окно$"), "window"),
+]
+
+
+def group_en(text: str) -> str:
+    for ru, en in GROUP_EN:
+        text = text.replace(ru, en)
+    for rx, en in GROUP_EN_RE:
+        text = rx.sub(en, text)
+    return text
 
 
 def clean(text: str) -> str:
@@ -1366,9 +1457,28 @@ PAGE_LABELS = {
 }
 
 
-def page_label(page: str) -> str:
+PAGE_LABELS_EN = {
+    "ourplanecore.md": "OurPlanCore hub", "ourplancore-start.md": "Getting started",
+    "job-creation-storage.md": "Jobs and saving", "ourplancore-pages.md": "Sheets (Pages)",
+    "ourplancore-tools.md": "Measuring tools", "ourplancore-takeoffs.md": "Takeoffs tree",
+    "takeoff-naming.md": "Names and auto-routing", "ourplancore-excel.md": "Export to Excel",
+    "ourplancore-pdf.md": "PDF and delivery", "ourplancore-routing.md": "Routing and rules",
+    "ourplancore-edit-takeoffs.md": "Merge, Split, Break", "ourplancore-sheets-advanced.md": "Crops, mask, overlays, legend",
+    "ourplancore-settings.md": "Settings and modules", "ourplancore-ai.md": "AI and terminals",
+    "ourplancore-ai-console.md": "AI console", "ourplancore-workspace.md": "Workspace, Job Tracker, CLI",
+    "ourplancore-3d.md": "3D and managers", "ourplancore-3d-roof.md": "3D roof", "ourplancore-shortcuts.md": "Keyboard shortcuts",
+    "ourplancore-troubleshooting.md": "Troubleshooting", "ourplancore-changelog.md": "What's new",
+    "ourplancore-buildings.md": "Buildings", "ourplancore-extras.md": "Extras", "ourplancore-extras-other.md": "Other",
+    "ourplancore-managers.md": "Managers", "ourplancore-snap-trace.md": "Snap and tracing",
+    "ourplancore-split-by-sheets.md": "Split by sheets", "ourplancore-editing.md": "Editing and snaps",
+    "ourplancore-ideas.md": "Ideas and plans",
+}
+
+
+def page_label(page: str, lang: str = "ru") -> str:
     name = page.split("#")[0]
-    return PAGE_LABELS.get(name, name.replace(".md", ""))
+    labels = PAGE_LABELS_EN if lang == "en" else PAGE_LABELS
+    return labels.get(name, name.replace(".md", ""))
 
 
 def ru_text(ru: dict, it: dict) -> str:
@@ -1378,7 +1488,9 @@ def ru_text(ru: dict, it: dict) -> str:
     return ""
 
 
-def render_page(inv: dict, coverage: dict, ru: dict) -> str:
+def render_page(inv: dict, coverage: dict, ru: dict, lang: str = "ru") -> str:
+    if lang == "en":
+        return render_page_en(inv, coverage, ru)
     lines = [
         "# Все функции программы",
         "",
@@ -1429,6 +1541,58 @@ def render_page(inv: dict, coverage: dict, ru: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
+def render_page_en(inv: dict, coverage: dict, en: dict) -> str:
+    """English twin of the page (docs/reference/ourplancore-all-functions.en.md), same rows."""
+    lines = [
+        "# All app functions",
+        "",
+        "This page is generated from the app source code by tools/opc_inventory.py; do not edit it by hand.",
+        "",
+        "It lists every button, menu item, key, Settings category and window of OurPlanCore 3.0, "
+        "by where it sits in the interface. The \"Details\" column links to the section page that "
+        "describes the function; an empty cell means the KB has no detailed description yet "
+        "(check: `python tools/opc_coverage.py`). The same function is often available from several "
+        "places (ribbon, menu, palette, key), so repeats here are normal.",
+        "",
+        f"Total entries: {inv['total']}. With a detail page: {coverage.get('described', 0)}. "
+        f"No page yet: {coverage.get('missing', 0)}. Internal entries and repeats excluded from the check: {coverage.get('ignored', 0)}.",
+        "",
+    ]
+    by_source = coverage.get("items", {})
+    items = inv["items"]
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from opc_coverage import item_uids  # noqa: E402
+
+    for it, uid in zip(items, item_uids(items)):
+        it["_uid"] = uid
+    for surface in SURFACE_ORDER:
+        rows = [i for i in items if i["surface"] == surface]
+        if not rows:
+            continue
+        title, where = SURFACE_EN[surface]
+        lines.append(f"## {title} ({len(rows)})")
+        lines.append("")
+        groups: dict[str, list[dict]] = {}
+        for it in rows:
+            groups.setdefault(it["group"] or "-", []).append(it)
+        for group, grows in groups.items():
+            lines.append(f'??? note "{clean(group_en(group))} ({len(grows)})"')
+            lines.append("")
+            lines.append("    | Function | Key | Where in the interface | What it does | Details |")
+            lines.append("    | --- | --- | --- | --- | --- |")
+            for it in grows:
+                cov = by_source.get(it["_uid"], {})
+                page = cov.get("page", "")
+                link = f"[{page_label(page, 'en')}]({page})" if page else ""
+                desc = ru_text(en, it) or clean(it["description"])
+                sc = f"`{clean(it['shortcut'])}`" if it.get("shortcut") else ""
+                where_text = f"{where}: {group_en(it['group'])}" if it["group"] else where
+                lines.append(
+                    f"    | `{clean(it['title'])}` | {sc} | {clean(where_text)} | {clean(desc)} | {link} |")
+            lines.append("")
+    return "\n".join(lines) + "\n"
+
+
 # ---------------------------------------------------------------- main
 
 
@@ -1437,16 +1601,23 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--src", default=str(DEFAULT_SRC), help="OurPlanCore source folder")
     ap.add_argument("--out", default=str(JSON_OUT), help="inventory JSON path")
-    ap.add_argument("--page", action="store_true", help="also render docs/reference/ourplancore-all-functions.md")
+    ap.add_argument("--page", action="store_true",
+                    help="also render docs/reference/ourplancore-all-functions.md and .en.md")
+    ap.add_argument("--from-json", action="store_true",
+                    help="do not read the source: take the inventory saved in --out (for --page)")
     args = ap.parse_args()
-    src = Path(args.src)
-    if not (src / "MainWindow.xaml").exists():
-        print(f"source folder not found or not OurPlanCore: {src}")
-        return 2
-    inv = build_inventory(src)
     out = Path(args.out)
-    out.write_text(json.dumps(inv, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"inventory: {inv['total']} items -> {out}")
+    if args.from_json:
+        inv = json.loads(out.read_text(encoding="utf-8"))
+        print(f"inventory: {inv['total']} items <- {out}")
+    else:
+        src = Path(args.src)
+        if not (src / "MainWindow.xaml").exists():
+            print(f"source folder not found or not OurPlanCore: {src}")
+            return 2
+        inv = build_inventory(src)
+        out.write_text(json.dumps(inv, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"inventory: {inv['total']} items -> {out}")
     for k in SURFACE_ORDER:
         if k in inv["counts"]:
             print(f"  {k:13} {inv['counts'][k]}")
@@ -1459,6 +1630,13 @@ def main() -> int:
         PAGE_OUT.write_text(render_page(inv, coverage, ru), encoding="utf-8", newline="\n")
         missing_ru = sum(1 for it in inv["items"] if not ru_text(ru, it))
         print(f"page: {PAGE_OUT} (записей без русского описания: {missing_ru})")
+        en = json.loads(EN_TEXT.read_text(encoding="utf-8")) if EN_TEXT.exists() else {}
+        PAGE_OUT_EN.write_text(render_page(inv, coverage, en, "en"), encoding="utf-8", newline="\n")
+        missing_en = sum(1 for it in inv["items"] if not ru_text(en, it))
+        left_ru = sorted({group_en(it["group"]) for it in inv["items"] if re.search("[А-Яа-яЁё]", group_en(it["group"]))})
+        print(f"page: {PAGE_OUT_EN} (no English description, code tooltip used: {missing_en})")
+        if left_ru:
+            print("  group labels still in Russian, add them to GROUP_EN:", "; ".join(left_ru))
     return 0
 
 

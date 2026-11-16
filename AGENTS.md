@@ -77,6 +77,8 @@ py -m venv .venv
 `reference/ourplancore-all-functions.md`) и `python tools/opc_coverage.py`
 (код выхода 0 = всё описано). Не найденное дописывай на страницу по теме;
 служебное и дубли - в `tools/opc_coverage_ignore.txt` с причиной.
+The same run writes the English twin `ourplancore-all-functions.en.md`: a new description goes into both
+`tools/opc_descriptions_ru.json` and `opc_descriptions_en.json`; `--from-json` re-renders without the app source.
 
 ### Правила нейминга в `nav`
 

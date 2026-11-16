@@ -78,7 +78,8 @@ class Page:
 
 def load_pages() -> list[Page]:
     names = {"ourplanecore.md", "job-creation-storage.md", "takeoff-naming.md"}
-    names |= {p.name for p in DOCS.glob("ourplancore-*.md")}
+    # English twins (page.en.md, mkdocs-static-i18n) repeat the Russian pages: skip them
+    names |= {p.name for p in DOCS.glob("ourplancore-*.md") if not re.search(r"\.[a-z]{2}\.md$", p.name)}
     names.discard(GENERATED_PAGE)
     return [Page(DOCS / n) for n in sorted(names) if (DOCS / n).exists()]
 
