@@ -7226,7 +7226,7 @@
 
 <h1 id="ourplancore-30">OurPlanCore 3.0<a class="headerlink" href="#ourplancore-30" title="Прямая ссылка на раздел">&para;</a></h1>
 <p>OurPlanCore - программа для замеров по PDF-чертежам: лист, масштаб, замер, дерево Takeoffs, потом экспорт в Excel DFL и PDF. Здесь карта окна, устройство раздела и путь от открытого проекта до сдачи.</p>
-<p>Раздел описывает <strong>OurPlanCore Lite</strong> - версию, которая стоит у эстиматоров: без нейронок и терминала, проще и легче. Нейронки, терминал, 3D и полоса XL есть только в полной версии; они собраны в отдельном блоке меню "Нейронки, терминал и 3D (полная версия)" или помечены на странице. Разница по пунктам: <a href="../ourplancore-lite/">Lite и полная версия</a>.</p>
+<p>Раздел описывает <strong>OurPlanCore Lite</strong> - версию, которая стоит у эстиматоров: без нейронок и терминала, проще и легче. Нейронки, терминал и 3D есть только в полной версии; они собраны в отдельном блоке меню "Нейронки, терминал и 3D (полная версия)" или помечены на странице. Полоса XL есть и в Lite: её включает галка <code>Excel Strip (XL)</code> в <code>Settings &gt; Modules</code>. Разница по пунктам: <a href="../ourplancore-lite/">Lite и полная версия</a>.</p>
 <div class="grid cards">
 <ul>
 <li>
@@ -7249,7 +7249,7 @@
 <figure>
 <p><img alt="Окно OurPlanCore с открытым листом" src="../../assets/images/ourplancore/v3/window-map.png" />
   </p>
-<figcaption>Окно целиком, зоны пронумерованы: 1 ленты, 2 Pages, 3 лист, 4 Takeoffs, 5 полоса инструментов, 6 полоса XL, 7 строка статуса. Снято в полной версии: в Lite зоны 6 нет. Подробно в таблице ниже.</figcaption>
+<figcaption>Окно целиком, зоны пронумерованы: 1 ленты, 2 Pages, 3 лист, 4 Takeoffs, 5 полоса инструментов, 6 полоса XL, 7 строка статуса. Снято в полной версии: в Lite зона 6 появляется после галки <code>Excel Strip (XL)</code> в <code>Settings &gt; Modules</code>. Подробно в таблице ниже.</figcaption>
 </figure>
 <h2 id="window-map">Карта окна<a class="headerlink" href="#window-map" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
@@ -7294,9 +7294,9 @@
 </tr>
 <tr>
 <td>6</td>
-<td>Полоса XL (только полная версия)</td>
-<td>кнопки экспорта в Excel: <code>ALL</code>, <code>LG</code>, <code>SF</code>, <code>WL</code> ... <code>ST</code>; рядом кнопка <code>&gt;_</code> консоли ИИ. В Lite этой полосы и кнопки нет, Excel идёт кнопками внизу (<code>Excel</code>, <code>Value</code>, <code>Link to Excel</code>)</td>
-<td><a href="../ourplancore-excel/#lite">Экспорт в Excel</a>, <a href="../ourplancore-ai-console/">Консоль ИИ</a></td>
+<td>Полоса XL</td>
+<td>кнопки экспорта в Excel: <code>ALL</code>, <code>LG</code>, <code>SF</code>, <code>WL</code> ... <code>ST</code>; рядом кнопка <code>&gt;_</code> консоли ИИ (только полная версия). В Lite полоса выключена, пока не поставлена галка <code>Excel Strip (XL)</code> в <code>Settings &gt; Modules</code>; без неё Excel идёт кнопками внизу (<code>Excel</code>, <code>Value</code>, <code>Link to Excel</code>)</td>
+<td><a href="../ourplancore-excel/#lite">Экспорт в Excel</a>, <a href="../ourplancore-excel/#xl">Полоса XL</a>, <a href="../ourplancore-ai-console/">Консоль ИИ</a></td>
 </tr>
 <tr>
 <td>7</td>
@@ -7324,7 +7324,7 @@
 <li><a href="../ourplancore-takeoffs/">Дерево Takeoffs</a>: новая позиция, Record, копирование, поиск</li>
 <li><a href="../ourplancore-buildings/">Несколько зданий</a>: папка на корпус, зелёная и красная точки, книга и PDF на корпус</li>
 <li><a href="../takeoff-naming/">Имена и автомаршрут</a>: почему позиция легла в эту папку</li>
-<li><a href="../ourplancore-excel/">Экспорт в Excel</a>: Excel и Value, Link to Excel, Auto Link, шаблон TemplateCom; полоса XL в полной версии</li>
+<li><a href="../ourplancore-excel/">Экспорт в Excel</a>: Excel и Value, Link to Excel, Auto Link, шаблон TemplateCom; полоса XL (в Lite включается в Settings)</li>
 <li><a href="../ourplancore-pdf/">PDF и сдача</a>: Export PDF, PDF Output, Preview, правка в Adobe</li>
 </ul>
 </li>
@@ -7386,7 +7386,7 @@
 <li><strong>Замеры по scope.</strong> Один scope на проход листа: стены <code>L</code>, проёмы <code>O</code>, площади <code>A</code>, joists <code>J</code>, балки <code>B</code>, посты и holdowns <code>P</code>. <code>Space</code> продолжает выбранную позицию. <a href="../ourplancore-tools/">Инструменты</a>, порядок замеров в <a href="../../start/workflow/">процессе работы</a></li>
 <li><strong>Имена позиций.</strong> Имя несёт числа для Excel: <code>ext 2x6 9.09</code>, <code>4.3x7.8 d</code>, <code>rf 6</code>, <code>eve 24 main</code>. Новая позиция сама ложится в папку по точке листа и имени. <a href="../takeoff-naming/">Имена и автомаршрут</a>, <a href="../../start/takeoff-structure/">форматы имён</a></li>
 <li><strong>Проверка.</strong> Вкладка <code>Estimating</code>, <code>Total</code> у позиции, легенда листа (<code>Organize &gt; Sort Sheet Legend by Key</code>), <code>H</code> скрывает готовое, <code>Delete Empty</code> убирает пустые позиции. <a href="../ourplancore-takeoffs/">Дерево</a></li>
-<li><strong>Excel.</strong> Открыть книгу корпуса из <code>TemplateCom.xlsm</code> (папка <code>templates</code> в Dropbox), щёлкнуть ячейку, выделить позицию или папку в Takeoffs и нажать <code>Excel</code> или <code>Value</code> внизу; число, которое должно идти за замером, ставить кнопкой <code>Link to Excel</code>; расчёт по списку <code>J:L</code> запускать кнопками вкладки E-Wood в Excel. В полной версии то же по секциям делает полоса XL (<code>ALL</code>, легенда <code>LG</code>). <a href="../ourplancore-excel/#lite">Экспорт в Excel</a>, <a href="../dfl-overview/">книга DFL</a>, <a href="../ewood-tab/#calculate">вкладка E-Wood</a></li>
+<li><strong>Excel.</strong> Открыть книгу корпуса из <code>TemplateCom.xlsm</code> (папка <code>templates</code> в Dropbox), щёлкнуть ячейку, выделить позицию или папку в Takeoffs и нажать <code>Excel</code> или <code>Value</code> внизу; число, которое должно идти за замером, ставить кнопкой <code>Link to Excel</code>; расчёт по списку <code>J:L</code> запускать кнопками вкладки E-Wood в Excel. То же по секциям делает полоса XL (<code>ALL</code>, легенда <code>LG</code>); в Lite её сначала включают галкой <code>Excel Strip (XL)</code> в <code>Settings &gt; Modules</code>. <a href="../ourplancore-excel/#lite">Экспорт в Excel</a>, <a href="../dfl-overview/">книга DFL</a>, <a href="../ewood-tab/#calculate">вкладка E-Wood</a></li>
 <li><strong>PDF и сдача.</strong> <code>Ctrl+S</code>, спрятать лишнее (<code>H</code>, маска Hide), <code>PDF Output &gt; Preview</code>, затем <code>Main &gt; Export</code>: только листы с замерами, отдельный PDF на корпус. Дальше processed xlsx и <code>Changes.txt</code> для ревизии. <a href="../ourplancore-pdf/">PDF и сдача</a>, <a href="../../start/workflow/">сдача</a></li>
 </ol>
 <h2 id="whats-new">Что появилось за два месяца<a class="headerlink" href="#whats-new" title="Прямая ссылка на раздел">&para;</a></h2>
@@ -7432,7 +7432,7 @@
 </tr>
 <tr>
 <td>Excel руками по кускам</td>
-<td>полоса XL: <code>ALL</code> и кнопки по секциям, framing, легенда <code>LG</code> (только полная версия); точка "комментарии" на кнопке <code>Excel</code></td>
+<td>полоса XL: <code>ALL</code> и кнопки по секциям, framing, легенда <code>LG</code> (в Lite по галке <code>Excel Strip (XL)</code>); точка "комментарии" на кнопке <code>Excel</code></td>
 <td><a href="../ourplancore-excel/">Экспорт в Excel</a></td>
 </tr>
 <tr>

@@ -1437,12 +1437,12 @@
   <a href="#xl" class="md-nav__link">
     <span class="md-ellipsis">
       
-        XL strip: full version only
+        XL strip: the Excel Strip (XL) module
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="XL strip: full version only">
+    <nav class="md-nav" aria-label="XL strip: the Excel Strip (XL) module">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7473,12 +7473,12 @@
   <a href="#xl" class="md-nav__link">
     <span class="md-ellipsis">
       
-        XL strip: full version only
+        XL strip: the Excel Strip (XL) module
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="XL strip: full version only">
+    <nav class="md-nav" aria-label="XL strip: the Excel Strip (XL) module">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7593,7 +7593,7 @@
 
 
 <h1 id="export-to-excel">Export to Excel<a class="headerlink" href="#export-to-excel" title="Link to this section">&para;</a></h1>
-<p>This page covers how to move numbers from the Takeoffs tree into the DFL workbook. In Lite these are the <code>Excel</code> and <code>Value</code> buttons at the bottom left, a permanent link from a takeoff to a cell with <code>Link to Excel</code>, <code>Auto Link</code> for the whole DFL, resetting links, and <code>Export &gt; Export Excel</code> to a file. The XL strip to the right of the sheet, which writes sections into <code>TemplateCom.xlsm</code> and runs the workbook macros by itself, exists only in the full version: it is described at the end of the page (<a href="#xl">XL strip</a>). You need it after measuring, before working in the DFL.</p>
+<p>This page covers how to move numbers from the Takeoffs tree into the DFL workbook. In Lite these are the <code>Excel</code> and <code>Value</code> buttons at the bottom left, a permanent link from a takeoff to a cell with <code>Link to Excel</code>, <code>Auto Link</code> for the whole DFL, resetting links, and <code>Export &gt; Export Excel</code> to a file. The XL strip to the right of the sheet, which writes sections into <code>TemplateCom.xlsm</code> and runs the workbook macros by itself, is off by default in Lite and is turned on with a checkbox in <code>Settings &gt; Modules</code>; it is described at the end of the page (<a href="#xl">XL strip</a>). You need it after measuring, before working in the DFL.</p>
 <h2 id="lite">Excel in Lite<a class="headerlink" href="#lite" title="Link to this section">&para;</a></h2>
 <table>
 <thead>
@@ -7631,7 +7631,7 @@
 </tr>
 </tbody>
 </table>
-<p>Lite does not run the workbook macros: it has no XL strip. Run the calculation on the exported <code>J:L</code> list (areas, walls, openings, eaves) in Excel with the E-Wood tab buttons (<a href="../ewood-tab/#calculate">Calculation from takeoffs</a>). Make the building workbook from the template in the <code>templates</code> folder of the shared Dropbox folder (<a href="#template">TemplateCom template</a>).</p>
+<p>These buttons do not run the workbook macros. Run the calculation on the exported <code>J:L</code> list (areas, walls, openings, eaves) in Excel with the E-Wood tab buttons (<a href="../ewood-tab/#calculate">Calculation from takeoffs</a>), or turn on the XL strip: it runs the macros itself (<a href="#xl">XL strip</a>). Make the building workbook from the template in the <code>templates</code> folder of the shared Dropbox folder (<a href="#template">TemplateCom template</a>).</p>
 <h2 id="value">How to put one takeoff into a cell: Value and Excel<a class="headerlink" href="#value" title="Link to this section">&para;</a></h2>
 <p>Why: drop a number or several rows into a finished workbook without macros.</p>
 <ol>
@@ -8004,15 +8004,15 @@ You need: version 3.0.29 or newer (the same in Lite), a saved DFL workbook activ
 </tr>
 </tbody>
 </table>
-<p>OurPlanCore Lite has the same button, menu, window and Settings section. Lite has no XL strip. <a href="../../ourpdf/excel-link/">OurPDF</a> has the same link.</p>
+<p>OurPlanCore Lite has the same button, menu, window and Settings section. <a href="../../ourpdf/excel-link/">OurPDF</a> has the same link.</p>
 <h2 id="template">TemplateCom template<a class="headerlink" href="#template" title="Link to this section">&para;</a></h2>
-<p><code>TemplateCom.xlsm</code> for Lite is in the shared Dropbox folder <code>Office Folder\programs\templates</code>; for the full version it is also in the update folder next to <code>ourplancore.exe</code>. Each building gets a copy (<code>Bldng#A.xlsm</code>); the workbook name equals the Job Name on the Front Page. Worksheets: <code>Front Page</code> (areas, Total SQFT), <code>Detailed Frame List</code> (the delivered columns <code>A:H</code> and work zones to the right: <code>J:N</code> export, <code>O:AB</code> wall matrix, spec cells <code>O:S</code>, height calculator), <code>Standarts</code> (notes library), <code>Mat List</code>. The A-series macros are run by the XL strip in the full version and by the E-Wood tab buttons in Lite (<a href="../ewood-tab/#calculate">Calculation from takeoffs</a>); the B, C, X, Y series by hotkeys in Excel. Details: <a href="../dfl-overview/">DFL: how the workbook works</a>, <a href="../excel-hotkeys/">Excel macros and hotkeys</a>, <a href="../standard-notes/">Standard notes</a>.</p>
-<h2 id="xl">XL strip: full version only<a class="headerlink" href="#xl" title="Link to this section">&para;</a></h2>
+<p><code>TemplateCom.xlsm</code> for Lite is in the shared Dropbox folder <code>Office Folder\programs\templates</code>; for the full version it is also in the update folder next to <code>ourplancore.exe</code>. Each building gets a copy (<code>Bldng#A.xlsm</code>); the workbook name equals the Job Name on the Front Page. Worksheets: <code>Front Page</code> (areas, Total SQFT), <code>Detailed Frame List</code> (the delivered columns <code>A:H</code> and work zones to the right: <code>J:N</code> export, <code>O:AB</code> wall matrix, spec cells <code>O:S</code>, height calculator), <code>Standarts</code> (notes library), <code>Mat List</code>. The A-series macros are run by the XL strip, and without it (the Lite default) by the E-Wood tab buttons (<a href="../ewood-tab/#calculate">Calculation from takeoffs</a>); the B, C, X, Y series by hotkeys in Excel. Details: <a href="../dfl-overview/">DFL: how the workbook works</a>, <a href="../excel-hotkeys/">Excel macros and hotkeys</a>, <a href="../standard-notes/">Standard notes</a>.</p>
+<h2 id="xl">XL strip: the Excel Strip (XL) module<a class="headerlink" href="#xl" title="Link to this section">&para;</a></h2>
 <div class="admonition info">
-<p class="admonition-title">Full version only</p>
-<p>OurPlanCore Lite has no XL strip, nor the <code>Settings &gt; Excel Actions</code> and <code>Excel Rules</code> sections or the <code>Create Project Excel Workbook</code> command. In Lite numbers go through the buttons <a href="#lite">above</a>, and the workbook macros are run in Excel. How the versions differ: <a href="../ourplancore-lite/">Lite vs full version</a>.</p>
+<p class="admonition-title">In Lite the strip is turned on with a checkbox</p>
+<p>In OurPlanCore Lite the XL strip is off by default. To turn it on: <code>Settings &gt; Modules</code>, check <code>Excel Strip (XL)</code> (the <code>Excel Integration</code> checkbox is needed too; it is on by default), then <code>Apply</code> or <code>Save global default</code>. You get the XL strip to the right of the sheet, the <code>XLS</code> button on the right command strip and the <code>Settings &gt; Excel Actions</code> and <code>Excel Rules</code> sections. Uncheck it and all of that hides again. Lite has no <code>Create Project Excel Workbook</code> command: take the template from the <code>templates</code> folder in Dropbox (<a href="#template">TemplateCom template</a>). How the versions differ: <a href="../ourplancore-lite/">Lite vs full version</a>.</p>
 </div>
-<p>The XL strip is a vertical strip of buttons to the right of the sheet. In the full version it is turned on and off in the settings: <code>Settings &gt; Modules</code>, the <code>Excel Integration</code> module (on by default). The same module shows the <code>Excel</code>, <code>Value</code>, <code>Link to Excel</code> and <code>Auto Link</code> buttons; if the strip is not visible, check this checkbox first. In Lite the <code>Excel Integration</code> checkbox controls only these buttons; it does not bring back the XL strip.</p>
+<p>The XL strip is a vertical strip of buttons to the right of the sheet. It is shown by the <code>Excel Strip (XL)</code> module in <code>Settings &gt; Modules</code>: on by default in the full version, off in Lite. The strip also needs the <code>Excel Integration</code> module (on in both versions), which shows the <code>Excel</code>, <code>Value</code>, <code>Link to Excel</code> and <code>Auto Link</code> buttons. If the strip is not visible, check both checkboxes first.</p>
 <!-- DEMO: d-excel-xl -->
 
 <figure>
@@ -8026,8 +8026,8 @@ You need: version 3.0.29 or newer (the same in Lite), a saved DFL workbook activ
 </figure>
 <h3 id="what-you-need-before-pressing">What you need before pressing<a class="headerlink" href="#what-you-need-before-pressing" title="Link to this section">&para;</a></h3>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Excel has the building workbook open, made from <code>TemplateCom.xlsm</code> (a copy of the template from the app update folder), macros enabled. The app looks for an open <code>TemplateCom.xlsm</code> workbook; if there is none, it takes the active macro-enabled workbook (<code>.xlsm</code>) that has a <code>Detailed Frame List</code> worksheet.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> The <code>Excel Integration</code> module is on (<code>Settings &gt; Modules</code>, on by default).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Excel has the building workbook open, made from <code>TemplateCom.xlsm</code> (a copy of the template from the <code>templates</code> folder in Dropbox), macros enabled. The app looks for an open <code>TemplateCom.xlsm</code> workbook; if there is none, it takes the active macro-enabled workbook (<code>.xlsm</code>) that has a <code>Detailed Frame List</code> worksheet.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> The <code>Excel Integration</code> and <code>Excel Strip (XL)</code> modules are on (<code>Settings &gt; Modules</code>; in Lite <code>Excel Strip (XL)</code> is off by default).</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>One</strong> building (a folder with roots) or one export folder (<code>walls</code>, <code>sqfts</code>...) is selected in the Takeoffs tree. For <code>ALL</code> a selection from two buildings is not accepted (<a href="../ourplancore-buildings/#excel">multiple buildings</a>).</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> The <code>LG</code> legend is filled with the job's beam, post and header codes (otherwise the workbook keeps codes instead of sizes).</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> The job is saved, <code>Total</code> checked on the large takeoffs.</li>
@@ -8272,7 +8272,7 @@ You need: the list above.</p>
 </details>
 <p>Overview of all Settings sections: <a href="../ourplancore-settings/">Settings</a>.</p>
 <h2 id="errors">Common mistakes<a class="headerlink" href="#errors" title="Link to this section">&para;</a></h2>
-<p>The first rows of the table are XL strip messages (full version), then come the <code>Link to Excel</code> and <code>Auto Link</code> messages, which Lite has too.</p>
+<p>The first rows of the table are XL strip messages (in Lite, once the strip is turned on), then come the <code>Link to Excel</code> and <code>Auto Link</code> messages.</p>
 <table>
 <thead>
 <tr>

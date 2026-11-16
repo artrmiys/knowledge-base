@@ -7581,7 +7581,7 @@
 <tbody>
 <tr>
 <td>Modules</td>
-<td>модули (16 в Lite, 19 в полной версии) и команда Job Tracker</td>
+<td>модули (17 в Lite, 20 в полной версии) и команда Job Tracker</td>
 <td>нет вкладки или кнопки; включить Sheet Manager</td>
 <td><a href="#modules">Модули</a>, <a href="../ourplancore-extras/">Дополнительные возможности</a></td>
 </tr>
@@ -7671,7 +7671,7 @@
 </tr>
 <tr>
 <td>Excel Actions</td>
-<td>кнопки полосы XL и последовательность ALL; только полная версия</td>
+<td>кнопки полосы XL и последовательность ALL; виден, пока включён модуль Excel Strip (XL)</td>
 <td>свой порядок шагов экспорта</td>
 <td><a href="../ourplancore-excel/#settings">Excel</a></td>
 </tr>
@@ -7727,7 +7727,7 @@
 </table>
 <h2 id="_3">Коротко о каждой<a class="headerlink" href="#_3" title="Прямая ссылка на раздел">&para;</a></h2>
 <h3 id="modules">Modules<a class="headerlink" href="#modules" title="Прямая ссылка на раздел">&para;</a></h3>
-<p>Галки по модулям в группах Documents, Takeoff, Output, Assistance, Productivity, Integrations: в Lite их 16, в полной версии 19. Пресеты <code>Current default</code>, <code>All modules on</code>, <code>Takeoff Only</code>, <code>Minimal</code>; Apply, Save global, Save for this job, Clear job override, Reset. Здесь же команда модуля Job Tracker: <code>Executable</code>, <code>Arguments (one per line)</code>, <code>Save</code>, <code>Reset</code>.</p>
+<p>Галки по модулям в группах Documents, Takeoff, Output, Assistance, Productivity, Integrations: в Lite их 17, в полной версии 20. Пресеты <code>Current default</code>, <code>All modules on</code>, <code>Takeoff Only</code>, <code>Minimal</code>; Apply, Save global, Save for this job, Clear job override, Reset. Здесь же команда модуля Job Tracker: <code>Executable</code>, <code>Arguments (one per line)</code>, <code>Save</code>, <code>Reset</code>.</p>
 <table>
 <thead>
 <tr>
@@ -7844,7 +7844,13 @@
 <td>Excel Integration</td>
 <td>Output</td>
 <td>вкл</td>
-<td><code>Excel</code>, <code>Value</code>, <code>Link to Excel</code>, <code>Auto Link</code>; в полной версии ещё полоса XL</td>
+<td><code>Excel</code>, <code>Value</code>, <code>Link to Excel</code>, <code>Auto Link</code>; без него не работает и полоса XL</td>
+</tr>
+<tr>
+<td>Excel Strip (XL)</td>
+<td>Output</td>
+<td>вкл в полной версии, выкл в Lite</td>
+<td>полоса XL справа от листа, разделы Excel Actions и Excel Rules, в Lite ещё кнопка <code>XLS</code> на правой полосе команд; нужен Excel Integration</td>
 </tr>
 <tr>
 <td>Job Tracker</td>
@@ -7922,7 +7928,7 @@
   </p>
 <figcaption>Кнопки полосы XL и порядок шагов для ALL.</figcaption>
 </figure>
-<p>Только в полной версии: в Lite нет полосы XL и разделов Excel Actions и Excel Rules. Список кнопок полосы XL (<code>Action</code>), последовательность для <code>ALL</code>, галка <code>Insert numeric floor group rows (0-5) before the takeoff rows</code>, слова папок этажей (<code>1, 1st, first</code>). Как пользоваться полосой - <a href="../ourplancore-excel/">Экспорт в Excel</a>.</p>
+<p>Раздел виден, пока включён модуль <code>Excel Strip (XL)</code>: в полной версии он включён по умолчанию, в Lite его включают в Modules. Так же показывается соседний раздел Excel Rules. Список кнопок полосы XL (<code>Action</code>), последовательность для <code>ALL</code>, галка <code>Insert numeric floor group rows (0-5) before the takeoff rows</code>, слова папок этажей (<code>1, 1st, first</code>). Как пользоваться полосой - <a href="../ourplancore-excel/">Экспорт в Excel</a>.</p>
 <h3 id="project-storage">Project Storage<a class="headerlink" href="#project-storage" title="Прямая ссылка на раздел">&para;</a></h3>
 <figure>
 <p><img alt="Settings, раздел Project Storage" src="../../assets/images/ourplancore/v3/settings-project-storage.png" />

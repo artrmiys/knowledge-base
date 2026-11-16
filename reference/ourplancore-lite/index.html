@@ -7273,7 +7273,7 @@
 <figure>
 <p><img alt="Lite и полная версия" src="../../assets/images/ourplanecore/lite-vs-full.svg" />
   </p>
-<figcaption>Полная версия умеет всё, что Lite, и сверх того терминал, модуль AI, 3D, полосу XL, Workspace и Materials. Внизу размер файла программы.</figcaption>
+<figcaption>Полная версия умеет всё, что Lite, и сверх того терминал, модуль AI, 3D, Workspace и Materials. Полоса XL есть в обеих, в Lite её включают в <code>Settings &gt; Modules</code>. Внизу размер файла программы.</figcaption>
 </figure>
 <h2 id="who">Кому какая версия<a class="headerlink" href="#who" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
@@ -7288,12 +7288,12 @@
 <tr>
 <td>Lite</td>
 <td>эстиматоры, которые не пользуются нейронками</td>
-<td>всё для замера и сдачи: листы, инструменты, дерево Takeoffs, PDF, Excel и <code>Link to Excel</code></td>
+<td>всё для замера и сдачи: листы, инструменты, дерево Takeoffs, PDF, Excel и <code>Link to Excel</code>; полоса XL по галке в <code>Settings &gt; Modules</code></td>
 </tr>
 <tr>
 <td>Полная</td>
 <td>кто работает с ИИ</td>
-<td>то же плюс терминал Claude, Codex и DeepSeek в окне, модуль AI, 3D-крыша, полоса XL, Workspace на два компьютера</td>
+<td>то же плюс терминал Claude, Codex и DeepSeek в окне, модуль AI, 3D-крыша, Workspace на два компьютера</td>
 </tr>
 </tbody>
 </table>
@@ -7339,11 +7339,11 @@
 </thead>
 <tbody>
 <tr>
-<td>Lite (сборка 11.11.2026)</td>
-<td>около 92 MB</td>
+<td>Lite 3.0.36-lite (сборка 16.11.2026)</td>
+<td>92,4 MB</td>
 </tr>
 <tr>
-<td>Полная версия (сборка 14.11.2026)</td>
+<td>Полная версия (3.0.35, сборка 16.11.2026)</td>
 <td>около 254 MB</td>
 </tr>
 </tbody>
@@ -7390,11 +7390,6 @@
 <td><a href="../ourplancore-managers/#materials">Менеджеры</a></td>
 </tr>
 <tr>
-<td>Полоса XL</td>
-<td>полоса <code>ALL</code>, <code>LG</code>, <code>SF</code>, <code>WL</code> ... <code>ST</code> справа от листа, которая пишет в книгу и запускает её макросы; разделы <code>Settings &gt; Excel Actions</code> и <code>Excel Rules</code>; Excel-кнопки на боковых полосах команд</td>
-<td><a href="../ourplancore-excel/#xl">Экспорт в Excel, полоса XL</a></td>
-</tr>
-<tr>
 <td><code>Create Project Excel Workbook</code></td>
 <td>команда, которая копирует встроенный <code>TemplateCom.xlsm</code> в папку проекта</td>
 <td>шаблон берите из папки <code>templates</code> в Dropbox</td>
@@ -7438,6 +7433,10 @@
 <td>OCR нет: имя и масштаб читаются только из текста PDF, лист-скан назовите руками (<span class="keys"><kbd class="key-f2">F2</kbd></span>)</td>
 </tr>
 <tr>
+<td>Полоса XL</td>
+<td>по умолчанию выключена. Включите: <code>Settings &gt; Modules</code>, галка <code>Excel Strip (XL)</code> (вместе с <code>Excel Integration</code>, она стоит сразу). Появятся полоса <code>ALL</code>, <code>LG</code>, <code>SF</code>, <code>WL</code> ... <code>ST</code> справа от листа, кнопка <code>XLS</code> на правой полосе команд, разделы <code>Settings &gt; Excel Actions</code> и <code>Excel Rules</code>; снимете галку, и они спрячутся. <a href="../ourplancore-excel/#xl">Полоса XL</a></td>
+</tr>
+<tr>
 <td>Обе версии на одном компьютере</td>
 <td>могут стоять рядом: профили и настройки у них раздельные</td>
 </tr>
@@ -7446,7 +7445,7 @@
 <h2 id="which">Как понять, какая версия открыта<a class="headerlink" href="#which" title="Прямая ссылка на раздел">&para;</a></h2>
 <ol>
 <li>Посмотрите на заголовок окна: <code>OurPlanCore 3.0.x-lite - &lt;проект&gt;</code> значит Lite.</li>
-<li>Посмотрите на правую полосу у листа: у Lite нет кнопки <code>&gt;_</code> и полосы XL с кнопками <code>ALL</code>, <code>LG</code>, <code>SF</code>.</li>
+<li>Посмотрите на правую полосу команд у листа: у Lite нет кнопки <code>&gt;_</code>. Полоса XL с кнопками <code>ALL</code>, <code>LG</code>, <code>SF</code> версию не выдаёт: в Lite её можно включить.</li>
 </ol>
 <p>Нужны нейронки, терминал или 3D: это полная версия, всё про неё в блоке меню "Нейронки, терминал и 3D (полная версия)", начало - <a href="../ourplancore-ai/">ИИ в программе</a>.</p>
 <h2 id="_1">См. также<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h2>

@@ -7273,7 +7273,7 @@
 <figure>
 <p><img alt="Lite and the full version" src="../../../assets/images/ourplanecore/lite-vs-full.svg" />
   </p>
-<figcaption>The full version does everything Lite does, plus the terminal, the AI module, 3D, the XL strip, Workspace and Materials. The app file size is at the bottom.</figcaption>
+<figcaption>The full version does everything Lite does, plus the terminal, the AI module, 3D, Workspace and Materials. Both have the XL strip; in Lite it is turned on in <code>Settings &gt; Modules</code>. The app file size is at the bottom.</figcaption>
 </figure>
 <h2 id="who">Which version for whom<a class="headerlink" href="#who" title="Link to this section">&para;</a></h2>
 <table>
@@ -7288,12 +7288,12 @@
 <tr>
 <td>Lite</td>
 <td>estimators who do not use AI models</td>
-<td>everything for takeoff and delivery: sheets, tools, the Takeoffs tree, PDF, Excel and <code>Link to Excel</code></td>
+<td>everything for takeoff and delivery: sheets, tools, the Takeoffs tree, PDF, Excel and <code>Link to Excel</code>; the XL strip with a checkbox in <code>Settings &gt; Modules</code></td>
 </tr>
 <tr>
 <td>Full</td>
 <td>those who work with AI</td>
-<td>the same plus the Claude, Codex and DeepSeek terminal in the window, the AI module, the 3D roof, the XL strip, Workspace for two computers</td>
+<td>the same plus the Claude, Codex and DeepSeek terminal in the window, the AI module, the 3D roof, Workspace for two computers</td>
 </tr>
 </tbody>
 </table>
@@ -7339,11 +7339,11 @@
 </thead>
 <tbody>
 <tr>
-<td>Lite (build of 11/11/2026)</td>
-<td>about 92 MB</td>
+<td>Lite 3.0.36-lite (build of 11/16/2026)</td>
+<td>92.4 MB</td>
 </tr>
 <tr>
-<td>Full version (build of 11/14/2026)</td>
+<td>Full version (3.0.35, build of 11/16/2026)</td>
 <td>about 254 MB</td>
 </tr>
 </tbody>
@@ -7390,11 +7390,6 @@
 <td><a href="../ourplancore-managers/#materials">Managers</a></td>
 </tr>
 <tr>
-<td>The XL strip</td>
-<td>the <code>ALL</code>, <code>LG</code>, <code>SF</code>, <code>WL</code> ... <code>ST</code> strip to the right of the sheet that writes into the workbook and runs its macros; the <code>Settings &gt; Excel Actions</code> and <code>Excel Rules</code> sections; the Excel buttons on the side command strips</td>
-<td><a href="../ourplancore-excel/#xl">Export to Excel, XL strip</a></td>
-</tr>
-<tr>
 <td><code>Create Project Excel Workbook</code></td>
 <td>the command that copies the built-in <code>TemplateCom.xlsm</code> into the job folder</td>
 <td>take the template from the <code>templates</code> folder in Dropbox</td>
@@ -7438,6 +7433,10 @@
 <td>no OCR: the name and scale are read only from the PDF text, name a scanned sheet by hand (<span class="keys"><kbd class="key-f2">F2</kbd></span>)</td>
 </tr>
 <tr>
+<td>The XL strip</td>
+<td>off by default. To turn it on: <code>Settings &gt; Modules</code>, check <code>Excel Strip (XL)</code> (together with <code>Excel Integration</code>, which is on from the start). You get the <code>ALL</code>, <code>LG</code>, <code>SF</code>, <code>WL</code> ... <code>ST</code> strip to the right of the sheet, the <code>XLS</code> button on the right command strip, the <code>Settings &gt; Excel Actions</code> and <code>Excel Rules</code> sections; uncheck it and they hide. <a href="../ourplancore-excel/#xl">XL strip</a></td>
+</tr>
+<tr>
 <td>Both versions on one computer</td>
 <td>they can be installed side by side: their profiles and settings are separate</td>
 </tr>
@@ -7446,7 +7445,7 @@
 <h2 id="which">How to tell which version is open<a class="headerlink" href="#which" title="Link to this section">&para;</a></h2>
 <ol>
 <li>Look at the window title: <code>OurPlanCore 3.0.x-lite - &lt;job&gt;</code> means Lite.</li>
-<li>Look at the right strip next to the sheet: Lite has no <code>&gt;_</code> button and no XL strip with the <code>ALL</code>, <code>LG</code>, <code>SF</code> buttons.</li>
+<li>Look at the right command strip next to the sheet: Lite has no <code>&gt;_</code> button. The XL strip with the <code>ALL</code>, <code>LG</code>, <code>SF</code> buttons does not tell the versions apart: Lite can have it turned on.</li>
 </ol>
 <p>If you need AI models, the terminal or 3D: that is the full version, everything about it is in the menu block "AI, terminal and 3D (full version)", starting with <a href="../ourplancore-ai/">AI in the app</a>.</p>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Link to this section">&para;</a></h2>

@@ -1437,12 +1437,12 @@
   <a href="#xl" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Полоса XL: только полная версия
+        Полоса XL: модуль Excel Strip (XL)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Полоса XL: только полная версия">
+    <nav class="md-nav" aria-label="Полоса XL: модуль Excel Strip (XL)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7473,12 +7473,12 @@
   <a href="#xl" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Полоса XL: только полная версия
+        Полоса XL: модуль Excel Strip (XL)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Полоса XL: только полная версия">
+    <nav class="md-nav" aria-label="Полоса XL: модуль Excel Strip (XL)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7593,7 +7593,7 @@
 
 
 <h1 id="excel">Экспорт в Excel<a class="headerlink" href="#excel" title="Прямая ссылка на раздел">&para;</a></h1>
-<p>Здесь: как перенести числа из дерева Takeoffs в книгу DFL. В Lite это кнопки <code>Excel</code> и <code>Value</code> внизу слева, постоянная связь позиции с ячейкой <code>Link to Excel</code>, <code>Auto Link</code> на весь DFL, сброс связей и <code>Export &gt; Export Excel</code> в файл. Полоса XL справа от листа, которая пишет секции в <code>TemplateCom.xlsm</code> и сама запускает макросы книги, есть только в полной версии: она описана в конце страницы (<a href="#xl">Полоса XL</a>). Нужно после замеров, перед работой в DFL.</p>
+<p>Здесь: как перенести числа из дерева Takeoffs в книгу DFL. В Lite это кнопки <code>Excel</code> и <code>Value</code> внизу слева, постоянная связь позиции с ячейкой <code>Link to Excel</code>, <code>Auto Link</code> на весь DFL, сброс связей и <code>Export &gt; Export Excel</code> в файл. Полоса XL справа от листа, которая пишет секции в <code>TemplateCom.xlsm</code> и сама запускает макросы книги, в Lite по умолчанию выключена и включается галкой в <code>Settings &gt; Modules</code>; она описана в конце страницы (<a href="#xl">Полоса XL</a>). Нужно после замеров, перед работой в DFL.</p>
 <h2 id="lite">Excel в Lite<a class="headerlink" href="#lite" title="Прямая ссылка на раздел">&para;</a></h2>
 <table>
 <thead>
@@ -7631,7 +7631,7 @@
 </tr>
 </tbody>
 </table>
-<p>Макросы книги Lite не запускает: полосы XL в ней нет. Расчёт по выгруженному списку <code>J:L</code> (площади, стены, проёмы, карнизы) запускайте в Excel кнопками вкладки E-Wood (<a href="../ewood-tab/#calculate">Расчёт по замерам</a>). Книгу корпуса делайте из шаблона в папке <code>templates</code> общей папки Dropbox (<a href="#template">Шаблон TemplateCom</a>).</p>
+<p>Эти кнопки макросы книги не запускают. Расчёт по выгруженному списку <code>J:L</code> (площади, стены, проёмы, карнизы) запускайте в Excel кнопками вкладки E-Wood (<a href="../ewood-tab/#calculate">Расчёт по замерам</a>) или включите полосу XL: она сама запускает макросы (<a href="#xl">Полоса XL</a>). Книгу корпуса делайте из шаблона в папке <code>templates</code> общей папки Dropbox (<a href="#template">Шаблон TemplateCom</a>).</p>
 <h2 id="value">Как вписать одну позицию в ячейку: Value и Excel<a class="headerlink" href="#value" title="Прямая ссылка на раздел">&para;</a></h2>
 <p>Зачем: подставить число или несколько строк в готовую книгу без макросов.</p>
 <ol>
@@ -8004,15 +8004,15 @@
 </tr>
 </tbody>
 </table>
-<p>В OurPlanCore Lite кнопка, меню, окно и этот раздел Settings те же. Полосы XL в Lite нет. Такая же связь есть в <a href="../../ourpdf/excel-link/">OurPDF</a>.</p>
+<p>В OurPlanCore Lite кнопка, меню, окно и этот раздел Settings те же. Такая же связь есть в <a href="../../ourpdf/excel-link/">OurPDF</a>.</p>
 <h2 id="template">Шаблон TemplateCom<a class="headerlink" href="#template" title="Прямая ссылка на раздел">&para;</a></h2>
-<p><code>TemplateCom.xlsm</code> для Lite лежит в общей папке Dropbox <code>Office Folder\programs\templates</code>, у полной версии ещё и в папке обновлений рядом с <code>ourplancore.exe</code>. На каждый корпус делается копия (<code>Bldng#A.xlsm</code>), имя книги равно Job Name на Front Page. Листы: <code>Front Page</code> (площади, Total SQFT), <code>Detailed Frame List</code> (сдаваемые колонки <code>A:H</code> и рабочие зоны справа: <code>J:N</code> экспорт, <code>O:AB</code> матрица стен, спек-ячейки <code>O:S</code>, калькулятор высот), <code>Standarts</code> (библиотека нот), <code>Mat List</code>. Макросы серии A в полной версии запускает полоса XL, в Lite - кнопки вкладки E-Wood (<a href="../ewood-tab/#calculate">Расчёт по замерам</a>); серии B, C, X, Y - клавиши в Excel. Подробно: <a href="../dfl-overview/">DFL: как устроена книга</a>, <a href="../excel-hotkeys/">Макросы и клавиши Excel</a>, <a href="../standard-notes/">Стандартные notes</a>.</p>
-<h2 id="xl">Полоса XL: только полная версия<a class="headerlink" href="#xl" title="Прямая ссылка на раздел">&para;</a></h2>
+<p><code>TemplateCom.xlsm</code> для Lite лежит в общей папке Dropbox <code>Office Folder\programs\templates</code>, у полной версии ещё и в папке обновлений рядом с <code>ourplancore.exe</code>. На каждый корпус делается копия (<code>Bldng#A.xlsm</code>), имя книги равно Job Name на Front Page. Листы: <code>Front Page</code> (площади, Total SQFT), <code>Detailed Frame List</code> (сдаваемые колонки <code>A:H</code> и рабочие зоны справа: <code>J:N</code> экспорт, <code>O:AB</code> матрица стен, спек-ячейки <code>O:S</code>, калькулятор высот), <code>Standarts</code> (библиотека нот), <code>Mat List</code>. Макросы серии A запускает полоса XL, а без неё (так в Lite по умолчанию) - кнопки вкладки E-Wood (<a href="../ewood-tab/#calculate">Расчёт по замерам</a>); серии B, C, X, Y - клавиши в Excel. Подробно: <a href="../dfl-overview/">DFL: как устроена книга</a>, <a href="../excel-hotkeys/">Макросы и клавиши Excel</a>, <a href="../standard-notes/">Стандартные notes</a>.</p>
+<h2 id="xl">Полоса XL: модуль Excel Strip (XL)<a class="headerlink" href="#xl" title="Прямая ссылка на раздел">&para;</a></h2>
 <div class="admonition info">
-<p class="admonition-title">Только в полной версии</p>
-<p>В OurPlanCore Lite полосы XL нет, как и разделов <code>Settings &gt; Excel Actions</code> и <code>Excel Rules</code> и команды <code>Create Project Excel Workbook</code>. В Lite числа идут кнопками <a href="#lite">выше</a>, а макросы книги запускаются в Excel. Чем версии отличаются: <a href="../ourplancore-lite/">Lite и полная версия</a>.</p>
+<p class="admonition-title">В Lite полоса включается галкой</p>
+<p>В OurPlanCore Lite полоса XL по умолчанию выключена. Чтобы включить: <code>Settings &gt; Modules</code>, галка <code>Excel Strip (XL)</code> (галка <code>Excel Integration</code> тоже нужна, она стоит по умолчанию), затем <code>Apply</code> или <code>Save global default</code>. Появятся полоса XL справа от листа, кнопка <code>XLS</code> на правой полосе команд и разделы <code>Settings &gt; Excel Actions</code> и <code>Excel Rules</code>. Снимите галку, и всё это снова спрячется. Команды <code>Create Project Excel Workbook</code> в Lite нет: шаблон берите из папки <code>templates</code> в Dropbox (<a href="#template">Шаблон TemplateCom</a>). Чем версии отличаются: <a href="../ourplancore-lite/">Lite и полная версия</a>.</p>
 </div>
-<p>Полоса XL - вертикальная полоса кнопок справа от листа. В полной версии она включается и выключается в настройках: <code>Settings &gt; Modules</code>, модуль <code>Excel Integration</code> (по умолчанию включён). Тот же модуль показывает кнопки <code>Excel</code>, <code>Value</code>, <code>Link to Excel</code> и <code>Auto Link</code>; если полосы не видно, первым делом проверьте эту галку. В Lite галка <code>Excel Integration</code> управляет только этими кнопками, полосу XL она не возвращает.</p>
+<p>Полоса XL - вертикальная полоса кнопок справа от листа. Её показывает модуль <code>Excel Strip (XL)</code> в <code>Settings &gt; Modules</code>: в полной версии он включён по умолчанию, в Lite выключен. Полосе нужен и модуль <code>Excel Integration</code> (включён в обеих версиях), который показывает кнопки <code>Excel</code>, <code>Value</code>, <code>Link to Excel</code> и <code>Auto Link</code>. Если полосы не видно, первым делом проверьте обе галки.</p>
 <!-- DEMO: d-excel-xl -->
 
 <figure>
@@ -8026,8 +8026,8 @@
 </figure>
 <h3 id="_1">Что нужно до нажатия<a class="headerlink" href="#_1" title="Прямая ссылка на раздел">&para;</a></h3>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> В Excel открыта книга корпуса, сделанная из <code>TemplateCom.xlsm</code> (копия шаблона из папки обновлений программы), макросы разрешены. Программа ищет открытую книгу <code>TemplateCom.xlsm</code>; если её нет, берёт активную книгу с макросами (<code>.xlsm</code>), в которой есть лист <code>Detailed Frame List</code>.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Модуль <code>Excel Integration</code> включён (<code>Settings &gt; Modules</code>, по умолчанию включён).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> В Excel открыта книга корпуса, сделанная из <code>TemplateCom.xlsm</code> (копия шаблона из папки <code>templates</code> в Dropbox), макросы разрешены. Программа ищет открытую книгу <code>TemplateCom.xlsm</code>; если её нет, берёт активную книгу с макросами (<code>.xlsm</code>), в которой есть лист <code>Detailed Frame List</code>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Модули <code>Excel Integration</code> и <code>Excel Strip (XL)</code> включены (<code>Settings &gt; Modules</code>; в Lite <code>Excel Strip (XL)</code> по умолчанию выключен).</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> В дереве Takeoffs выделен <strong>один</strong> корпус (папка с корнями) или одна папка экспорта (<code>walls</code>, <code>sqfts</code>...). Для <code>ALL</code> выделение из двух корпусов не принимается (<a href="../ourplancore-buildings/#excel">несколько зданий</a>).</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Легенда <code>LG</code> заполнена кодами балок, постов и headers проекта (иначе в книге останутся коды вместо размеров).</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Проект сохранён, <code>Total</code> у крупных позиций проверен.</li>
@@ -8272,7 +8272,7 @@
 </details>
 <p>Обзор всех разделов Settings: <a href="../ourplancore-settings/">Settings</a>.</p>
 <h2 id="errors">Частые ошибки<a class="headerlink" href="#errors" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Первые строки таблицы - сообщения полосы XL (полная версия), дальше сообщения <code>Link to Excel</code> и <code>Auto Link</code>, они есть и в Lite.</p>
+<p>Первые строки таблицы - сообщения полосы XL (в Lite, когда полоса включена), дальше сообщения <code>Link to Excel</code> и <code>Auto Link</code>.</p>
 <table>
 <thead>
 <tr>

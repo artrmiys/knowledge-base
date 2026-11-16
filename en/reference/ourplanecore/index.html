@@ -7226,7 +7226,7 @@
 
 <h1 id="ourplancore-30">OurPlanCore 3.0<a class="headerlink" href="#ourplancore-30" title="Link to this section">&para;</a></h1>
 <p>OurPlanCore is an app for taking off quantities from PDF drawings: sheet, scale, measurement, Takeoffs tree, then export to the Excel DFL and PDF. Here: the window map, how this section is organized, and the path from an open job to delivery.</p>
-<p>This section describes <strong>OurPlanCore Lite</strong>, the build estimators have: no AI models and no terminal, simpler and lighter. AI models, the terminal, 3D and the XL strip exist only in the full version; they are grouped in a separate menu block "AI, terminal and 3D (full version)" or marked on the page. Item-by-item differences: <a href="../ourplancore-lite/">Lite vs full version</a>.</p>
+<p>This section describes <strong>OurPlanCore Lite</strong>, the build estimators have: no AI models and no terminal, simpler and lighter. AI models, the terminal and 3D exist only in the full version; they are grouped in a separate menu block "AI, terminal and 3D (full version)" or marked on the page. Lite has the XL strip too: the <code>Excel Strip (XL)</code> checkbox in <code>Settings &gt; Modules</code> turns it on. Item-by-item differences: <a href="../ourplancore-lite/">Lite vs full version</a>.</p>
 <div class="grid cards">
 <ul>
 <li>
@@ -7249,7 +7249,7 @@
 <figure>
 <p><img alt="OurPlanCore window with an open sheet" src="../../../assets/images/ourplancore/v3/window-map.png" />
   </p>
-<figcaption>The whole window, areas numbered: 1 ribbons, 2 Pages, 3 sheet, 4 Takeoffs, 5 tool strip, 6 XL strip, 7 status bar. Captured in the full version: Lite has no area 6. Details in the table below.</figcaption>
+<figcaption>The whole window, areas numbered: 1 ribbons, 2 Pages, 3 sheet, 4 Takeoffs, 5 tool strip, 6 XL strip, 7 status bar. Captured in the full version: in Lite area 6 appears after checking <code>Excel Strip (XL)</code> in <code>Settings &gt; Modules</code>. Details in the table below.</figcaption>
 </figure>
 <h2 id="window-map">Window map<a class="headerlink" href="#window-map" title="Link to this section">&para;</a></h2>
 <table>
@@ -7294,9 +7294,9 @@
 </tr>
 <tr>
 <td>6</td>
-<td>XL strip (full version only)</td>
-<td>Excel export buttons: <code>ALL</code>, <code>LG</code>, <code>SF</code>, <code>WL</code> ... <code>ST</code>; next to them the <code>&gt;_</code> button of the AI console. Lite has neither this strip nor the button; Excel goes through the buttons at the bottom (<code>Excel</code>, <code>Value</code>, <code>Link to Excel</code>)</td>
-<td><a href="../ourplancore-excel/#lite">Export to Excel</a>, <a href="../ourplancore-ai-console/">AI console</a></td>
+<td>XL strip</td>
+<td>Excel export buttons: <code>ALL</code>, <code>LG</code>, <code>SF</code>, <code>WL</code> ... <code>ST</code>; next to them the <code>&gt;_</code> button of the AI console (full version only). In Lite the strip is off until <code>Excel Strip (XL)</code> is checked in <code>Settings &gt; Modules</code>; without it Excel goes through the buttons at the bottom (<code>Excel</code>, <code>Value</code>, <code>Link to Excel</code>)</td>
+<td><a href="../ourplancore-excel/#lite">Export to Excel</a>, <a href="../ourplancore-excel/#xl">XL strip</a>, <a href="../ourplancore-ai-console/">AI console</a></td>
 </tr>
 <tr>
 <td>7</td>
@@ -7324,7 +7324,7 @@
 <li><a href="../ourplancore-takeoffs/">Takeoffs tree</a>: new takeoff, Record, copying, search</li>
 <li><a href="../ourplancore-buildings/">Multiple buildings</a>: a folder per building, green and red dots, a workbook and PDF per building</li>
 <li><a href="../takeoff-naming/">Names and auto-routing</a>: why a takeoff landed in this folder</li>
-<li><a href="../ourplancore-excel/">Export to Excel</a>: Excel and Value, Link to Excel, Auto Link, TemplateCom template; XL strip in the full version</li>
+<li><a href="../ourplancore-excel/">Export to Excel</a>: Excel and Value, Link to Excel, Auto Link, TemplateCom template; the XL strip (turned on in Settings in Lite)</li>
 <li><a href="../ourplancore-pdf/">PDF and delivery</a>: Export PDF, PDF Output, Preview, editing in Adobe</li>
 </ul>
 </li>
@@ -7386,7 +7386,7 @@
 <li><strong>Measurements by scope.</strong> One scope per pass over the sheet: walls <code>L</code>, openings <code>O</code>, areas <code>A</code>, joists <code>J</code>, beams <code>B</code>, posts and holdowns <code>P</code>. <code>Space</code> continues the selected takeoff. <a href="../ourplancore-tools/">Tools</a>, takeoff order in the <a href="../../start/workflow/">workflow</a></li>
 <li><strong>Takeoff names.</strong> The name carries the numbers for Excel: <code>ext 2x6 9.09</code>, <code>4.3x7.8 d</code>, <code>rf 6</code>, <code>eve 24 main</code>. A new takeoff goes into a folder by itself, based on the sheet dot and the name. <a href="../takeoff-naming/">Names and auto-routing</a>, <a href="../../start/takeoff-structure/">name formats</a></li>
 <li><strong>Check.</strong> The <code>Estimating</code> tab, <code>Total</code> on a takeoff, the sheet legend (<code>Organize &gt; Sort Sheet Legend by Key</code>), <code>H</code> hides finished work, <code>Delete Empty</code> removes empty takeoffs. <a href="../ourplancore-takeoffs/">Tree</a></li>
-<li><strong>Excel.</strong> Open the building's workbook made from <code>TemplateCom.xlsm</code> (the <code>templates</code> folder in Dropbox), click a cell, select a takeoff or folder in Takeoffs and press <code>Excel</code> or <code>Value</code> at the bottom; a number that should follow the measurement goes in with the <code>Link to Excel</code> button; run the calculation from the <code>J:L</code> list with the E-Wood tab buttons in Excel. In the full version the XL strip does the same section by section (<code>ALL</code>, the <code>LG</code> legend). <a href="../ourplancore-excel/#lite">Export to Excel</a>, <a href="../dfl-overview/">DFL workbook</a>, <a href="../ewood-tab/#calculate">E-Wood tab</a></li>
+<li><strong>Excel.</strong> Open the building's workbook made from <code>TemplateCom.xlsm</code> (the <code>templates</code> folder in Dropbox), click a cell, select a takeoff or folder in Takeoffs and press <code>Excel</code> or <code>Value</code> at the bottom; a number that should follow the measurement goes in with the <code>Link to Excel</code> button; run the calculation from the <code>J:L</code> list with the E-Wood tab buttons in Excel. The XL strip does the same section by section (<code>ALL</code>, the <code>LG</code> legend); in Lite turn it on first with the <code>Excel Strip (XL)</code> checkbox in <code>Settings &gt; Modules</code>. <a href="../ourplancore-excel/#lite">Export to Excel</a>, <a href="../dfl-overview/">DFL workbook</a>, <a href="../ewood-tab/#calculate">E-Wood tab</a></li>
 <li><strong>PDF and delivery.</strong> <code>Ctrl+S</code>, hide what is not needed (<code>H</code>, Hide mask), <code>PDF Output &gt; Preview</code>, then <code>Main &gt; Export</code>: only sheets with measurements, a separate PDF per building. Then the processed xlsx and <code>Changes.txt</code> for a revision. <a href="../ourplancore-pdf/">PDF and delivery</a>, <a href="../../start/workflow/">delivery</a></li>
 </ol>
 <h2 id="whats-new">What appeared in two months<a class="headerlink" href="#whats-new" title="Link to this section">&para;</a></h2>
@@ -7432,7 +7432,7 @@
 </tr>
 <tr>
 <td>Excel by hand, piece by piece</td>
-<td>XL strip: <code>ALL</code> and buttons by section, framing, <code>LG</code> legend (full version only); the "comments" dot on the <code>Excel</code> button</td>
+<td>XL strip: <code>ALL</code> and buttons by section, framing, <code>LG</code> legend (in Lite with the <code>Excel Strip (XL)</code> checkbox); the "comments" dot on the <code>Excel</code> button</td>
 <td><a href="../ourplancore-excel/">Export to Excel</a></td>
 </tr>
 <tr>

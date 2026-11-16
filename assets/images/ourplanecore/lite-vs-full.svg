@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 486" role="img" aria-labelledby="t d">
   <title id="t">OurPlanCore Lite и полная версия</title>
-  <desc id="d">Полная версия содержит всё, что есть в Lite, и сверх того терминал, модуль AI, 3D, полосу XL, Workspace, Materials, голосовой ввод и OCR сканов. Внизу размер файла: Lite около 92 MB, полная версия около 254 MB.</desc>
-  <rect width="900" height="460" rx="12" fill="#f5f7f5"/>
+  <desc id="d">Полная версия содержит всё, что есть в Lite, и сверх того терминал, модуль AI, 3D, Workspace, Materials, голосовой ввод, OCR сканов и встроенный шаблон TemplateCom. Полоса XL есть в обеих, в Lite её включают в Settings, Modules. Внизу размер файла: Lite около 92 MB, полная версия около 254 MB.</desc>
+  <rect width="900" height="486" rx="12" fill="#f5f7f5"/>
   <g font-family="Inter, Segoe UI, Arial, sans-serif">
     <text x="24" y="38" font-size="21" font-weight="600" fill="#183323">Одна программа, два набора функций</text>
 
-    <rect x="20" y="58" width="860" height="294" rx="10" fill="#ffffff" stroke="#8a98a5" stroke-width="1.5"/>
+    <rect x="20" y="58" width="860" height="320" rx="10" fill="#ffffff" stroke="#8a98a5" stroke-width="1.5"/>
     <text x="40" y="86" font-size="17" font-weight="700" fill="#3a3f44">Полная версия</text>
     <text x="40" y="106" font-size="13" fill="#4b5563">всё из Lite и то, что справа</text>
 
-    <rect x="40" y="122" width="430" height="212" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+    <rect x="40" y="122" width="430" height="238" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
     <text x="60" y="152" font-size="18" font-weight="700" fill="#2e7d32">Lite</text>
     <text x="108" y="152" font-size="13" fill="#4b5563">стоит у эстиматоров, её описывает база</text>
     <g font-size="14.5" fill="#1f2a1f">
@@ -18,7 +18,8 @@
       <text x="60" y="238">Правка, привязки, кропы, наложения</text>
       <text x="60" y="264">PDF и сдача, правка PDF в Adobe</text>
       <text x="60" y="290">Excel, Value, Link to Excel, Auto Link</text>
-      <text x="60" y="316">Agent Bridge (для внешнего агента)</text>
+      <text x="60" y="316">Полоса XL: галка в Settings &gt; Modules</text>
+      <text x="60" y="342">Agent Bridge (для внешнего агента)</text>
     </g>
 
     <text x="500" y="152" font-size="15" font-weight="700" fill="#3a3f44">Только в полной версии</text>
@@ -26,16 +27,16 @@
       <text x="500" y="186">Терминал &gt;_ (Claude, Codex, DeepSeek)</text>
       <text x="500" y="212">Модуль AI: AI Inbox, AI crop, AI Fill</text>
       <text x="500" y="238">3D-крыша и 3D-стены</text>
-      <text x="500" y="264">Полоса XL с макросами книги</text>
-      <text x="500" y="290">Workspace на два компьютера</text>
-      <text x="500" y="316">Materials, голосовой ввод, OCR сканов</text>
+      <text x="500" y="264">Workspace на два компьютера</text>
+      <text x="500" y="290">Materials, голосовой ввод, OCR сканов</text>
+      <text x="500" y="316">Встроенный шаблон TemplateCom</text>
     </g>
-    <line x1="484" y1="130" x2="484" y2="330" stroke="#c9d1cb" stroke-width="1.2"/>
+    <line x1="484" y1="130" x2="484" y2="356" stroke="#c9d1cb" stroke-width="1.2"/>
 
-    <text x="24" y="386" font-size="13" fill="#4b5563">Размер файла ourplancore.exe, сборки ноября 2026</text>
-    <rect x="20" y="398" width="294" height="20" rx="4" fill="#2e7d32"/>
-    <text x="326" y="413" font-size="14" font-weight="600" fill="#2e7d32">Lite, около 92 MB</text>
-    <rect x="20" y="426" width="813" height="20" rx="4" fill="#8a98a5"/>
-    <text x="32" y="441" font-size="14" font-weight="600" fill="#ffffff">Полная версия, около 254 MB</text>
+    <text x="24" y="412" font-size="13" fill="#4b5563">Размер файла ourplancore.exe, сборки ноября 2026</text>
+    <rect x="20" y="424" width="294" height="20" rx="4" fill="#2e7d32"/>
+    <text x="326" y="439" font-size="14" font-weight="600" fill="#2e7d32">Lite, около 92 MB</text>
+    <rect x="20" y="452" width="813" height="20" rx="4" fill="#8a98a5"/>
+    <text x="32" y="467" font-size="14" font-weight="600" fill="#ffffff">Полная версия, около 254 MB</text>
   </g>
 </svg>
