@@ -273,7 +273,7 @@ They work on the open workbook. First they save it and put a copy in `_ewood_bac
 - blocks go right after the framing list of their floor, trims after their block, `Roof Deck` and `Side Roof` before the roof;
 - construction order: 1st Floor Framing List, 1st Floor Walls, 2nd Floor Framing List and so on;
 - `Decking` and `Railing` get their own header, deck framing gets the `Ground` level; no location: that goes into the report;
-- washers in `Foundation Walls` go under their anchors, microgroups start after a blank row, one blank row at a time, none under a header.
+- washers in `Foundation Walls` go under their anchors, [microgroups](dfl-overview.md#microgroups) start after a blank row, one blank row at a time, none under a header.
 
 **Notes + Look**, formatting:
 
@@ -403,7 +403,7 @@ Tested on an Excel that behaves like an English one. A real English Excel has no
 
 ## Hotkeys { #keys }
 
-They work only in DFL workbooks. In old templates only the hotkeys of suitable macros; in other workbooks the hotkeys belong to Excel.
+They work only in DFL workbooks. In old templates only the hotkeys of suitable macros; in other workbooks the hotkeys belong to Excel. This table lists the keys by tab button; the full table with macro names and what each one does: [Excel macros and hotkeys](excel-hotkeys.md).
 
 | Hotkey | Button | Hotkey | Button |
 | --- | --- | --- | --- |

@@ -82,11 +82,11 @@ DFL (Detailed Frame List) - книга Excel, в которой лежит ве�
 | **A** | Description: подпись строки, как в шаблоне ([Labels](takeoff-items.md)) | `Studs Ext 16" o.c.`, `Box Sheathing`, `Holdowns (2) btm top` |
 | **B** | Size / spec: сечение, продукт, модель крепежа | `2x6 P.T.`, `(2) 1 3/4 x 11 7/8 LVL`, `7/16" Zip`, `HHUS410 Zmax SK30 R` |
 | **C** | Quantity: всегда формула от G и H, не число руками | `=CEILING(G41/32*1.1,1)` |
-| **D** | Единица: `LFT`, `SQ FT`, `4x8`, `pcs`, `50' rolls`. Пиши `LFT`, не `FT` | `LFT` |
+| **D** | Единица: `LFT`, `SQ FT`, `4x8`, `pcs`, `unit`, `tubes`, `50' rolls`. Пиши `LFT`, не `FT`, и `SQ FT`, не `SF`. У леса, который заказывают штуками (studs, joists, beams, posts, headers, rim, ribbon, blocking в framing list, ledger, bracing), в D стоит длина доски в футах, а C - число досок; формула тогда делит на D | `LFT`; `16` у `Rim Board`, `14` у `Bracing Ext Walls` |
 | **E** | Источник или пояснение: лист и деталь, марка стены, высота стойки, назначение | `8/S3.0`, `SW-2`, `11' 8 3/8"`, `for Ext Walls` |
 | **F** | Метка типа двери или cased opening, тип материала трима; цвет в F программа игнорирует, поэтому им отмечают строку ([Формат файла](#rows)). Также теги марок стен | `Type A`, `IL326`, `IW2` |
 | **G** | Замер из OurPlanCore: LFT, SQ FT или число точек | `=K37` |
-| **H** | Параметр формулы: шаг в дюймах, число plies, высота | `16`, `2` |
+| **H** | Параметр формулы: шаг в дюймах, число plies, высота. Что именно стоит в H у каждой строки: [Формулы](formulas.md#legend) | `16`, `2` |
 
 Высота стены живёт в E строки студов (до 1/8"), в именах стен в программе - десятичные футы. Марка SW и лист-источник тоже идут в E, а не в ноту: факт в строке означает, что нота не нужна ([Ноты в DFL](standard-notes.md)).
 
@@ -132,8 +132,8 @@ DFL (Detailed Frame List) - книга Excel, в которой лежит ве�
 | Заметка под заголовком | сразу под заголовком, жёлтый фон на A:F | `Note: Floor Trusses are by others` |
 | Строки материала | A подпись, B размер или продукт, C количество, D единица, E лист или деталь | `Bracing Ext Walls`, `2x4`, `76`, `14` |
 | Группа строк | строки одного узла идут подряд, между группами одна пустая строка | hangers сразу за своими joists |
-| Заметка внутри секции | над строками, к которым относится, жирная без заливки, над ней пустая строка | `Note: Optional garage headers added; verify` |
-| Счёт лестниц | жирная строка без заливки, число в G, окончание в H | `Note: 2 Stairs`, G `2`, H `s` |
+| Заметка внутри секции | над строками, к которым относится, жирная на жёлтом A:F, над ней пустая строка | `Note: Optional garage headers added; verify` |
+| Счёт лестниц | жирная строка на жёлтом A:F, число в G, окончание в H | `Note: 2 Stairs`, G `2`, H `s` |
 
 Цвет заголовка подсказывает вид секции:
 
@@ -174,17 +174,27 @@ DFL (Detailed Frame List) - книга Excel, в которой лежит ве�
 
 ### Шаблон и готовый файл { #section-template }
 
-В шаблоне всё лежит по видам работ: сначала все стены, потом все перекрытия, блоки в самом конце. В готовом файле то же самое лежит по этажам.
+В шаблоне всё лежит по видам работ: сначала все стены, потом все перекрытия, блоки в самом конце. В готовом файле то же самое лежит по этажам. Ниже два независимых списка сверху вниз: строки одного списка не соответствуют строкам другого по номеру.
 
-| Шаблон, где вы заполняете | Готовый файл после Process Excels |
-| --- | --- |
-| `Foundation Walls`, `Basement Floor Walls` | то же |
-| `1st`, `2nd`, `3rd Floor Walls` подряд | `1st Floor Framing List`, группы 1-го этажа, `1st Floor Walls` |
-| `Gable Walls`, `Truss Heel`, `Parapet Walls`, `Shaft walls`, `Wall Materials` | `2nd Floor Framing List`, группы 2-го этажа, `2nd Floor Walls` |
-| `1st`, `2nd`, `3rd Floor Framing List` подряд, `Loft Framing List` | `3rd Floor Framing List`, группы, `3rd Floor Walls`, `Loft Framing List` |
-| `Roof Frame list`, `Roof System Misc` | `Gable Walls`, `Truss Heel`, `Parapet Walls`, `Shaft walls`, `Wall Materials` |
-| блоки балконов, порчей, деков, навесов | `Roof Frame list`, `Roof System Misc` |
-| `Roof Products` и отделка | то же |
+**Шаблон, где вы заполняете:**
+
+1. `Foundation Walls`, `Basement Floor Walls`
+2. `1st`, `2nd`, `3rd Floor Walls` подряд
+3. `Gable Walls`, `Truss Heel`, `Parapet Walls`, `Shaft walls`, `Wall Materials`
+4. `1st`, `2nd`, `3rd Floor Framing List` подряд, `Loft Framing List`
+5. `Roof Frame list`, `Roof System Misc`
+6. блоки балконов, порчей, деков, навесов
+7. `Roof Products` и отделка
+
+**Готовый файл после Process Excels:**
+
+1. `Foundation Walls`, `Basement Floor Walls`
+2. `1st Floor Framing List`, группы 1-го этажа, `1st Floor Walls`
+3. `2nd Floor Framing List`, группы 2-го этажа, `2nd Floor Walls`
+4. `3rd Floor Framing List`, группы, `3rd Floor Walls`, `Loft Framing List`
+5. `Gable Walls`, `Truss Heel`, `Parapet Walls`, `Shaft walls`, `Wall Materials`
+6. `Roof Frame list`, `Roof System Misc`
+7. `Roof Products` и отделка
 
 !!! warning "Руками секции не переставляйте"
     Формулы и зоны справа привязаны к строкам шаблона. Process Excels переносит только столбцы A:H и только в готовой копии, рабочая книга остаётся как есть.
@@ -270,16 +280,10 @@ DFL (Detailed Frame List) - книга Excel, в которой лежит ве�
 
 <figure markdown>
   ![Заголовок секции: правильно и неправильно](../assets/images/reference/dfl-headers.svg)
-  <figcaption markdown="span">Заголовок правильный, с текстом в B и без цвета.</figcaption>
+  <figcaption markdown="span">Верно: жирный текст в A и фон, B-F пустые. Неверно: текст в B. Неверно: нет цвета.</figcaption>
 </figure>
 
-Цвета в эталонах (конкретный цвет руководство не задаёт, обязателен сам фон):
-
-| Цвет | Где в эталонах |
-| --- | --- |
-| Жёлтый `FFFF00`, только A | `Foundation Walls`, `Shaft Walls`, `1st Floor Walls`, `Interior Doors&Trims` |
-| Зелёный `99CC00`, A или A:B | framing lists, каркас групп (`Porch Framing List 4pcs`, `Ground Deck Framing List (left)`, `Pergola 4 pcs`), `Roof Frame list`, `Roof System Misc` |
-| Светло-зелёный `CCFFCC`, только A | `Decking`, `Decking and Railing`, `Porch Trims`, `Pergola Trims`, `Soffits and Fascias`, `Exterior Trims`, `Siding` |
+Конкретный цвет руководство не задаёт, обязателен сам фон. Наши три цвета и какие секции каким красятся: [таблица цветов заголовка](#section-anatomy). В эталонах так же: каркас групп (`Porch Framing List 4pcs`, `Ground Deck Framing List (left)`, `Pergola 4 pcs`) зелёный `99CC00`, их `Decking`, `Decking and Railing`, `Porch Trims`, `Pergola Trims` светло-зелёные `CCFFCC`.
 
 ### Группы: deck, porch, балконы, canopy { #groups }
 
@@ -314,7 +318,7 @@ Decking, Posts at Rails, Post Sleeve, Post cap, Rail sections, Post Wrap, Deck F
 
 - **В шапке листа** (выше `Description`): `Important:` красный жирный на жёлтом, обычная `Note:` красная жирная без заливки.
 - **Сразу под заголовком секции:** жёлтый фон на A:F.
-- **Внутри секции над своими строками** и строка счёта `Note: 2 Stairs`: жирная без заливки, как раньше.
+- **Внутри секции над своими строками** и строка счёта `Note: 2 Stairs`: жирная на жёлтом A:F, над ней одна пустая строка. `Important:` красный, `Note:` и `Comment:` чёрные.
 
 | Префикс | Когда | Вид | Примеры |
 | --- | --- | --- | --- |
@@ -409,7 +413,7 @@ Post wrap, panels, corner boards и похожие узлы часто зака�
 | Что | Правило | Верно | Неверно |
 | --- | --- | --- | --- |
 | Hardware | конкретное название в A; расположение, если критично, после названия | `Hangers`, `Bolts`, `Washers`, `Ties`, `Post Caps`, `Anchor Bolts` | `Beam-to-Post`, `Opening`, `Stud`, `Hardware`, `Metal`, `Misc.` |
-| Insulation | слово целиком в столбце B, иначе чужая группа | `Batt Insulation R-21`, `1-1/2 Rigid Insulation` | `Batt R-21`, `1-1/2 Rigid`, `Insul.` |
+| Insulation | слово целиком в столбце B, иначе чужая группа. Строка нужна, только если insulation в scope: у нас это continuous insulation снаружи обшивки, на бетоне или кладке и жёсткий утеплитель над настилом кровли. Утеплитель между стойками, в перекрытии и в кровле by others, строки нет | `2" XPS Insulation`, `1-1/2 Rigid Insulation` | `2" XPS`, `1-1/2 Rigid`, `Insul.`; `Batt Insulation R-21` в книге Frame |
 | Flitch beam | стальная пластина отдельной строкой сразу после деревянной балки (в эталоне также под Ridge) | `Beam (4) Dropped` + `Steel plate (1)`, B `1/4x14` | пластина в конце списка |
 | Деталь с картинкой | картинки по порядку (`Detail 1` или `Det. 1`), в строке материала ссылка в B | `22x42x6, det. 2`, `3" Crown, det.1` | картинка без номера, ссылка только в E |
 | Двери, cased openings | разные типы: метка в F со слова `Type`; физический вид и рейтинг остаются в B | F `Type A`; B `21080 pocket`, `2880 FR s/cl` | `A` без слова Type |
