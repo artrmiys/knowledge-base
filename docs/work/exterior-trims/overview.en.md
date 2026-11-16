@@ -112,7 +112,7 @@ The `trims` root in the building tree. The physical object sets the takeoff type
 casing, band, corner and fascia are Lines, one item per profile (`2" casing`,
 `8" horizontal trim`); soffit and the porch ceiling are Areas along the real
 outline; shutters, columns, brackets are Counts. Each takeoff has its own color
-and its own point symbol. Elevations and RCPs have no sheet point, so check
+and its own point symbol. Elevations and RCPs have no sheet dot, so check
 where the item landed. Eave and rake lengths come from `eves rakes`, the siding area
 from `siding`.
 

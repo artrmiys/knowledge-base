@@ -29,7 +29,7 @@ linear stock; siding and cladding are not part of it.
 ## How to measure in OurPlanCore
 
 Casing, corner and band are Lines in the `trims` root, one item per profile:
-`2" casing`, `8" horizontal trim`, `corner 5/4x6`. Elevations have no sheet point,
+`2" casing`, `8" horizontal trim`, `corner 5/4x6`. Elevations have no sheet dot,
 so check that the item landed in `trims`. Casing is easier to count
 with a formula from the opening list (perimeter of one window x quantity); use a Line
 only where the profile follows a complex outline. Shutters, louvers and

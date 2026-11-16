@@ -84,4 +84,4 @@ Takeoffs/Main/sqfts/
 
 - [Basement](basement.md), [Loft](loft.md), [Roof](roof.md), [Deck](deck.md), [Porch](porch.md), [Balcony](balcony.md), [Cantilevered](cantilevered.md)
 - [Subfloor](../horizontal/floor-framing/subfloor.md), [Floor Sheathing](../vertical/sheathing/floor.md)
-- [Takeoff names and sheet points](../../reference/takeoff-naming.md), [Formulas](../../reference/formulas.md)
+- [Takeoff names and sheet dots](../../reference/takeoff-naming.md), [Formulas](../../reference/formulas.md)

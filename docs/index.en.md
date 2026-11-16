@@ -53,7 +53,7 @@ client rules and common mistakes. Search (Ctrl+K) works best with the framing te
     - [Interface and tools](reference/ourplanecore.md)
     - [Getting started: your first job](reference/ourplancore-start.md)
     - [Keyboard shortcuts](reference/ourplancore-shortcuts.md)
-    - [Takeoff names and sheet points](reference/takeoff-naming.md)
+    - [Takeoff names and sheet dots](reference/takeoff-naming.md)
     - [When something doesn't work](reference/ourplancore-troubleshooting.md)
 
 -   :material-file-pdf-box:{ .lg .middle .kb-mk--orange } **The OurPDF app**

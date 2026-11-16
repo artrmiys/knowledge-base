@@ -61,7 +61,7 @@ Excel is in the [Reference](../reference/takeoff-items.md).
    U on unit plans. The point decides which building folder a new takeoff goes into.
    It is set automatically from the sheet name; for an older job use
    `Settings > Sheet Takeoff Routing > Route sheets without a dot now`.
-   How it works: [Takeoff names and sheet points](../reference/takeoff-naming.md#sheet-dots).
+   How it works: [Takeoff names and sheet dots](../reference/takeoff-naming.md#sheet-dots).
 4. **Takeoffs tree.** `More > Auto Tree` creates the COM template roots (`walls`,
    `sqfts`, `framing`, `openings`, `shear walls`, `units`...). Several buildings:
    one folder per building (`Main`, `Grge`); the active building is marked with a green dot.

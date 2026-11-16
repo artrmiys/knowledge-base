@@ -14,7 +14,7 @@ organized and how to read its pages.
 | Tab | What is there | When to open it |
 | --- | --- | --- |
 | **Start** | Workflow, takeoff tree and sheet names, pre-delivery check, client rules, common mistakes | On day one and before every delivery |
-| **OurPlanCore** | The app: getting started, interface and tools, takeoff names and sheet points, shortcuts, troubleshooting, what's new | When you are not sure which button or key does something |
+| **OurPlanCore** | The app: getting started, interface and tools, takeoff names and sheet dots, shortcuts, troubleshooting, what's new | When you are not sure which button or key does something |
 | **Work** | Topic pages for each framing element, in the order you take them off: job types, walls, openings, floor framing, roof, sheathing, areas, deck, trim | During takeoff: open the element, check how to count it and how to name it |
 | **Reference** | Tips and key rules, hangers, hardware, formulas and factors, standard notes, DFL row names | When filling the Excel workbook and when you are unsure about a rule |
 

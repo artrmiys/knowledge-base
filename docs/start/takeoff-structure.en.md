@@ -98,7 +98,7 @@ from a U sheet into `units` with any tool. Names with `eve`, `rake`, `gable`, `p
 </figure>
 
 How points work, name rules and settings:
-[Takeoff names and sheet points](../reference/takeoff-naming.md#sheet-dots).
+[Takeoff names and sheet dots](../reference/takeoff-naming.md#sheet-dots).
 
 ## Sheet names (Pages)
 
@@ -181,6 +181,6 @@ Several buildings: a building folder with the same name as in Takeoffs. Revision
 
 ## See also
 
-- [Takeoff names and sheet points](../reference/takeoff-naming.md)
+- [Takeoff names and sheet dots](../reference/takeoff-naming.md)
 - [Workflow](workflow.md)
 - [Common mistakes: sheets and tree](common-mistakes.md#pages)

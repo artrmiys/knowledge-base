@@ -24,7 +24,7 @@ siding area.
 
 ## How to measure in OurPlanCore
 
-1. Open the elevation sheet. Elevations have no sheet point, so the item is created
+1. Open the elevation sheet. Elevations have no sheet dot, so the item is created
    in the `siding` root manually or by a name rule.
 2. Area along the wall field of each elevation: one item per material and color
    (`6" vertical`, `panel grey`, `shingle gable`). One material on
