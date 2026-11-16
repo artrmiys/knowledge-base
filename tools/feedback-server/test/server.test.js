@@ -1,6 +1,7 @@
 'use strict';
 const assert = require('node:assert');
 const fs = require('node:fs');
+const http = require('node:http');
 const os = require('node:os');
 const path = require('node:path');
 const { after, before, test } = require('node:test');
@@ -9,8 +10,27 @@ const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'kb-feedback-'));
 const KEY = 'a'.repeat(48);
 const ORIGIN = 'https://artrmiys.github.io';
 const PAGE = 'https://artrmiys.github.io/knowledge-base/work/walls/';
+const PNG = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==';
+const JPG = Buffer.from([0xff, 0xd8, 0xff, 0xe0, 0, 16, 0x4a, 0x46, 0x49, 0x46, 0, 1]).toString('base64');
+
+// A stand-in for api.telegram.org that records what it receives.
+const tgCalls = [];
+const tg = http.createServer((req, res) => {
+  const parts = [];
+  req.on('data', (c) => parts.push(c));
+  req.on('end', () => {
+    tgCalls.push({ url: req.url, body: Buffer.concat(parts).toString('latin1') });
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end('{"ok":true}');
+  });
+});
+tg.listen(0); // no host: binds synchronously, so the port is known before the server loads
+
 fs.writeFileSync(path.join(dir, 'inbox.key'), KEY);
 process.env.DATA_DIR = dir;
+process.env.TG_BOT_TOKEN = 'TESTTOKEN';
+process.env.TG_CHAT_ID = '42';
+process.env.TG_API = `http://127.0.0.1:${tg.address().port}`;
 const { server } = require('../server.js');
 
 let base;
@@ -21,8 +41,15 @@ before(() => new Promise((resolve) => server.listen(0, '127.0.0.1', () => {
 after(() => {
   server.closeAllConnections();
   server.close();
+  tg.closeAllConnections();
+  tg.close();
   fs.rmSync(dir, { recursive: true, force: true });
 });
+
+async function waitCalls(n) {
+  for (let i = 0; i < 100 && tgCalls.length < n; i += 1) await new Promise((r) => setTimeout(r, 20));
+  return tgCalls.slice(0, n);
+}
 
 const send = (body, headers = { Origin: ORIGIN }) => fetch(`${base}/submit`, {
   method: 'POST',
@@ -67,7 +94,50 @@ test('bad requests are refused', async () => {
   assert.strictEqual((await send({ what: '' })).status, 400);
   assert.strictEqual((await send('not json')).status, 400);
   assert.strictEqual((await send({ what: 'С чужого сайта' }, { Origin: 'https://evil.example' })).status, 403);
-  assert.strictEqual((await send({ what: 'x'.repeat(20000) })).status, 413);
+  assert.strictEqual((await send({ what: 'x'.repeat(10 * 1024 * 1024) })).status, 413);
+});
+
+test('a screenshot is stored, shown on the private page and served only with the key', async () => {
+  const r = await send({ what: 'Со скрином', images: [`data:image/png;base64,${PNG}`] });
+  assert.strictEqual(r.status, 200);
+  const html = await inbox();
+  const name = html.match(/file\/([a-f0-9]{16}-1\.png)/)[1];
+  const img = await fetch(`${base}/inbox/${KEY}/file/${name}`);
+  assert.strictEqual(img.status, 200);
+  assert.strictEqual(img.headers.get('content-type'), 'image/png');
+  assert.strictEqual(Buffer.from(await img.arrayBuffer()).toString('base64'), PNG);
+  assert.strictEqual((await fetch(`${base}/inbox/${'b'.repeat(48)}/file/${name}`)).status, 404);
+  assert.strictEqual((await fetch(`${base}/inbox/${KEY}/file/..%2Finbox.key`)).status, 404);
+  assert.strictEqual((await fetch(`${base}/inbox/${KEY}/file/inbox.jsonl`)).status, 404);
+});
+
+test('bad screenshots are refused and nothing is stored', async () => {
+  const fake = Buffer.from('<svg onload=alert(1)>').toString('base64');
+  const four = Array(4).fill(`data:image/png;base64,${PNG}`);
+  assert.strictEqual((await send({ what: 'Не картинка', images: [`data:image/png;base64,${fake}`] })).status, 400);
+  assert.strictEqual((await send({ what: 'SVG', images: [`data:image/svg+xml;base64,${fake}`] })).status, 400);
+  assert.strictEqual((await send({ what: 'Четыре', images: four })).status, 400);
+  assert.strictEqual((await send({ what: 'Не список', images: 'x' })).status, 400);
+  const html = await inbox();
+  for (const t of ['Не картинка', 'SVG', 'Четыре', 'Не список']) assert.ok(!html.includes(`<p>${t}</p>`));
+});
+
+test('a new correction goes to Telegram with its screenshots', async () => {
+  tgCalls.length = 0;
+  await send({ page: PAGE, what: 'В телегу', name: 'Максим', images: [`data:image/png;base64,${PNG}`] });
+  const [msg, photo] = await waitCalls(2);
+  assert.strictEqual(msg.url, '/botTESTTOKEN/sendMessage');
+  assert.ok(Buffer.from(msg.body, 'latin1').toString('utf8').includes('В телегу'));
+  assert.ok(Buffer.from(msg.body, 'latin1').toString('utf8').includes('Максим'));
+  assert.ok(msg.body.includes(`/inbox/${KEY}`));
+  assert.strictEqual(photo.url, '/botTESTTOKEN/sendPhoto');
+  assert.ok(photo.body.includes(Buffer.from(PNG, 'base64').toString('latin1')));
+
+  tgCalls.length = 0;
+  await send({ what: 'Два скрина', images: [`data:image/png;base64,${PNG}`, `data:image/jpeg;base64,${JPG}`] });
+  const [, group] = await waitCalls(2);
+  assert.strictEqual(group.url, '/botTESTTOKEN/sendMediaGroup');
+  assert.ok(group.body.includes('attach://f1'));
 });
 
 test('the hidden field gets ok and stores nothing', async () => {

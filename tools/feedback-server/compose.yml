@@ -10,6 +10,10 @@ services:
     environment:
       PORT: "8080"
       DATA_DIR: /data
+      # Telegram notices: the token comes from the .env next to this file, a symlink to the
+      # feedback voice bot's .env, so the secret is never copied. Empty token = no notices.
+      TG_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}
+      TG_CHAT_ID: "824988257"
     volumes:
       - ./app:/app:ro
       - ./data:/data

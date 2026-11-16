@@ -521,5 +521,45 @@
 .md-typeset .kb-form__page { margin: 0 0 0.9rem; opacity: 0.75; overflow-wrap: anywhere; }
 .md-typeset .kb-form__status { min-height: 1.4em; margin: 0.8rem 0 0; font-weight: 600; }
 .md-typeset .kb-form__status--error { color: var(--ds-err, #c62828); }
+/* Screenshots: drop zone with the file input inside, previews with a remove button. */
+.md-typeset .kb-form__shots { margin-bottom: 0.9rem; }
+.md-typeset .kb-form__label { margin: 0 0 0.3rem; font-weight: 600; }
+.md-typeset .kb-form label.kb-form__drop {
+  position: relative;
+  margin: 0;
+  padding: 0.9rem 0.8rem;
+  font-weight: 400;
+  text-align: center;
+  color: var(--md-default-fg-color--light);
+  border: 2px dashed var(--md-default-fg-color--lighter);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.md-typeset .kb-form label.kb-form__drop[hidden] { display: none; }
+.md-typeset .kb-form__drop:hover,
+.md-typeset .kb-form--drag .kb-form__drop { border-color: var(--md-accent-fg-color); color: var(--md-default-fg-color); }
+.md-typeset .kb-form__drop:focus-within { outline: 2px solid var(--md-accent-fg-color); outline-offset: 1px; }
+.md-typeset .kb-form__drop input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+.md-typeset .kb-form__previews { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.6rem; }
+.md-typeset .kb-form__previews:empty { display: none; }
+.md-typeset .kb-form__shot { position: relative; }
+.md-typeset .kb-form__shot img {
+  display: block;
+  max-width: 9rem;
+  max-height: 7rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 6px;
+}
+.md-typeset .kb-form button.kb-form__shot-remove {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: 0;
+  line-height: 1;
+  border-width: 1px;
+  border-radius: 50%;
+}
 /* Hidden from people, bots fill it in. */
 .md-typeset .kb-form__trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
