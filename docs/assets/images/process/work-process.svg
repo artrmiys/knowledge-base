@@ -49,11 +49,11 @@
 <rect x="325" y="70" width="290" height="175" rx="10" fill="#e9ecef" stroke="#6b7378" stroke-width="2"/><circle cx="351" cy="98" r="16" fill="#6b7378"/><text x="351" y="104" text-anchor="middle" style="font:700 17px Inter, 'Segoe UI', Arial, sans-serif;fill:#fff">2</text><text class="lab" x="375" y="104" style="font-size:18px">Анализ PDF</text>
 <text class="note" x="341" y="136" style="font-size:18px">листы, обшивка, масштабы,</text>
 <text class="note" x="341" y="159" style="font-size:18px">противоречия</text>
-<rect x="630" y="70" width="290" height="175" rx="10" fill="#dff2df" stroke="#2e7d32" stroke-width="2"/><path d="M630,80 a10,10 0 0 1 10,-10 h270 a10,10 0 0 1 10,10 v76 h-290 z" fill="#e9ecef" stroke="#6b7378" stroke-width="2"/><rect x="630" y="70" width="290" height="175" rx="10" fill="none" stroke="#2e7d32" stroke-width="2"/><circle cx="656" cy="98" r="16" fill="#6b7378"/><text x="656" y="104" text-anchor="middle" style="font:700 17px Inter, 'Segoe UI', Arial, sans-serif;fill:#fff">3</text><text class="lab" x="680" y="104" style="font-size:18px">Проект в OurPlanCore</text>
+<rect x="630" y="70" width="290" height="175" rx="10" fill="#dff2df" stroke="#2e7d32" stroke-width="2"/><path d="M630,80 a10,10 0 0 1 10,-10 h270 a10,10 0 0 1 10,10 v91 h-290 z" fill="#e9ecef" stroke="none"/><rect x="630" y="70" width="290" height="175" rx="10" fill="none" stroke="#2e7d32" stroke-width="2"/><circle cx="656" cy="98" r="16" fill="#6b7378"/><text x="656" y="104" text-anchor="middle" style="font:700 17px Inter, 'Segoe UI', Arial, sans-serif;fill:#fff">3</text><text class="lab" x="680" y="104" style="font-size:18px">Проект в OurPlanCore</text>
 <text class="note" x="646" y="136" style="font-size:18px">авто: имена листов, масштаб,</text>
 <text class="note" x="646" y="159" style="font-size:18px">точки W/F/S/U</text>
-<text class="note" x="646" y="182" style="font-size:18px">эстиматор: Auto Tree,</text>
-<text class="note" x="646" y="205" style="font-size:18px">Excel по корпусам</text>
+<text class="note" x="646" y="196" style="font-size:18px">эстиматор: Auto Tree,</text>
+<text class="note" x="646" y="219" style="font-size:18px">Excel по корпусам</text>
 <rect x="935" y="70" width="290" height="175" rx="10" fill="#dff2df" stroke="#2e7d32" stroke-width="2"/><circle cx="961" cy="98" r="16" fill="#2e7d32"/><text x="961" y="104" text-anchor="middle" style="font:700 17px Inter, 'Segoe UI', Arial, sans-serif;fill:#fff">4</text><text class="lab" x="985" y="104" style="font-size:18px">Замеры по меню Работа</text>
 <text class="note" x="951" y="136" style="font-size:18px">walls, openings, sheathing,</text>
 <text class="note" x="951" y="159" style="font-size:18px">sqfts, framing, shear,</text>

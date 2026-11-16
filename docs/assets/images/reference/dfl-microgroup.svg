@@ -34,7 +34,7 @@
   <text class="c" x="21" y="107" fill="#1f2328">Panel</text>
   <text class="c" x="257.0" y="107" fill="#1f2328" text-anchor="middle">1" Panel</text>
   <text class="c" x="340.0" y="107" fill="#1f2328" text-anchor="middle">36</text>
-  <text class="c" x="382.0" y="107" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <text class="c" x="382.0" y="107" fill="#1f2328" text-anchor="middle">SQ FT</text>
   <rect x="16" y="114" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="194" y="114" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="320" y="114" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
@@ -134,7 +134,7 @@
   <text class="c" x="21" y="368" fill="#1f2328">Panel</text>
   <text class="c" x="257.0" y="368" fill="#1f2328" text-anchor="middle">Cement Panel</text>
   <text class="c" x="340.0" y="368" fill="#1f2328" text-anchor="middle">120</text>
-  <text class="c" x="382.0" y="368" fill="#1f2328" text-anchor="middle">SQFT</text>
+  <text class="c" x="382.0" y="368" fill="#1f2328" text-anchor="middle">SQ FT</text>
   <rect x="16" y="375" width="178" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="194" y="375" width="126" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>
   <rect x="320" y="375" width="40" height="23" fill="#ffffff" stroke="#3a3f44" stroke-width="0.7"/>

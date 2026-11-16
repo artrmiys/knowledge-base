@@ -34,6 +34,11 @@ Here: how to lay out a balcony block, a porch block and a holdown block in the w
 
 ## Balcony block
 
+<figure markdown>
+  ![A filled balcony block in Excel](../assets/images/reference/dfl-balcony-block.svg)
+  <figcaption markdown="span">A filled block: framing header with size and units, the note under it, framing rows, then `Decking and Railing` under its own header. On the right the column C formula, G = units from the header. Callouts on the picture are in Russian.</figcaption>
+</figure>
+
 | Row | How to count | Source |
 | --- | --- | --- |
 | `Posts` | `P.T.`, per the plan: usually 2, a corner or recessed balcony may carry 1 | plan, S detail |

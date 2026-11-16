@@ -15,6 +15,11 @@
 | 16" o.c. | **1.1** | 1:1 плюс 10% waste |
 | 24" o.c. | **0.625** | 0.5 плюс 25% waste |
 
+<figure markdown>
+  ![Почему на 16 o.c. считается 1.1 стойки на фут](../assets/images/reference/studs-16oc.svg)
+  <figcaption markdown="span">Светлые стойки - рядовые по шагу, геометрически 0.75 на фут. Зелёные добавляют углы, T-пересечения, king, jack и cripples у проёмов: поэтому считаем стойку на фут плюс 10%.</figcaption>
+</figure>
+
 - `pcs = wall LFT x фактор`; высота стойки в E строки, до 1/8" (floor-to-floor минус subfloor, минус перекрытие, минус plates).
 - Bearing walls как Extra: основная линия с обычным фактором, лишние plies отдельной строкой `double extra`, базу вычесть из обычных studs. Факторы Extra: `16" o.c.` 0.75, `24" o.c.` 0.5 (без waste базовой строки).
 - Double стена = два каркаса только если на плане два каркаса; staggered corridor 2x4 = два ряда на 16" o.c., plates 2x6.
@@ -62,6 +67,11 @@ T blocking at gables   = EVEN(G / D)
 | Flat | `2` |
 | Diagonal | `2.5` |
 | Vertical | `1.5` ... `2` |
+
+<figure markdown>
+  ![Blocking по шагу: flat, diagonal, vertical и формула кусков](../assets/images/reference/blocking-pieces.svg)
+  <figcaption markdown="span">Кусок blocking между двумя элементами берёт 2, 2.5 или 1.5-2 ft доски. Линия в дереве одна: формула считает точки по шагу и переводит их в доски по 16'.</figcaption>
+</figure>
 
 Стены 10' и выше - два ряда blocking. Kitchen: `2x6`, 4 штуки по 14' на кухню; bath: 1 штука по 14' на ванную. Kickers только там, где они есть на детали.
 

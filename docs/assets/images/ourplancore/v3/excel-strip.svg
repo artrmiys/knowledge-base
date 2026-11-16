@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 610" role="img" aria-labelledby="t d">
+  <title id="t">XL strip buttons in OurPlanCore</title>
+  <desc id="d">The vertical XL strip drawn in two parts: top buttons XL, ALL, LG, then the section buttons SF to BL, then the framing buttons FR to ST. Each button is labelled with the takeoff tree branch it reads and what it writes into the workbook.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#2e7d32"/></marker>
+    <marker id="arrInk" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#3a3f44"/></marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#c62828"/></marker>
+    <marker id="arrGrey" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L0,9 L10,5 z" fill="#8a98a5"/></marker>
+    <marker id="tick" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M4,0 L4,8" stroke="#3a3f44" stroke-width="1.4"/></marker>
+    <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#e9d3b0"/><line x1="0" y1="0" x2="0" y2="12" stroke="#8a6a3f" stroke-width="0.9" opacity="0.55"/></pattern>
+    <pattern id="pt" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#cfa26a"/><line x1="0" y1="0" x2="0" y2="12" stroke="#6c4b2a" stroke-width="1" opacity="0.6"/></pattern>
+    <pattern id="conc" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#cfd4d8"/><circle cx="2.5" cy="2.5" r="1" fill="#6b7378" opacity="0.7"/><circle cx="7" cy="6.5" r="1" fill="#6b7378" opacity="0.7"/></pattern>
+    <pattern id="sheath" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#c9b27c"/><circle cx="2" cy="2" r="0.8" fill="#7a6a3c" opacity="0.6"/><circle cx="5" cy="5" r="0.8" fill="#7a6a3c" opacity="0.6"/></pattern>
+    <pattern id="batt" width="20" height="16" patternUnits="userSpaceOnUse"><rect width="20" height="16" fill="#fdf6e3"/><path d="M0,8 Q5,0 10,8 T20,8" fill="none" stroke="#caa64a" stroke-width="1.2"/></pattern>
+    <pattern id="rigid" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fbe9c6"/><path d="M0,8 L8,0" stroke="#d9a441" stroke-width="0.8"/></pattern>
+    <pattern id="cmu" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#cfd4d8"/><path d="M0,10 H40 M20,0 V10 M0,10 V20 M40,10 V20" stroke="#6b7378" stroke-width="1" fill="none"/></pattern>
+    <pattern id="endgrain" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#e9d3b0"/><path d="M0,3 H6" stroke="#8a6a3f" stroke-width="0.7" opacity="0.5"/></pattern>
+    <pattern id="hatchRed" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c62828" stroke-width="1.2" opacity="0.6"/></pattern>
+    <pattern id="hatchGrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3f4f6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa4ad" stroke-width="1" opacity="0.8"/></pattern>
+    <pattern id="hatchGreen" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eaf5ea"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2e7d32" stroke-width="1.1" opacity="0.55"/></pattern>
+    <style>
+      .lab{font:600 16px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .lab2{font:600 15px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .h{font:700 17px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .note{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#4b5563}
+      .ink{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .inkb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .mono{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#2e7d32}
+      .mono2{font:500 14px "JetBrains Mono", Consolas, monospace;fill:#1f2a1f}
+      .side{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#8a98a5;letter-spacing:1px}
+      .red{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#c62828}
+      .green{font:600 14px Inter, "Segoe UI", Arial, sans-serif;fill:#2e7d32}
+      .dimt{font:500 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2a1f}
+      .numt{font:700 13px Inter, "Segoe UI", Arial, sans-serif;fill:#fff;text-anchor:middle}
+      .xl{font:400 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlb{font:700 14px Inter, "Segoe UI", Arial, sans-serif;fill:#1f2328}
+      .xlh{font:400 13px Inter, "Segoe UI", Arial, sans-serif;fill:#5a6168}
+    </style>
+  </defs>
+<rect x="0.5" y="0.5" width="879" height="609" rx="12" fill="#ffffff" stroke="#dfe3e8"/>
+<text class="side" x="30" y="36">ВЕРХ ПОЛОСЫ И СЕКЦИИ</text>
+<text class="green" x="98" y="62">ветка дерева</text>
+<text class="green" x="214" y="62">что пишет в книгу</text>
+<rect x="30" y="72" width="56" height="506" fill="#22272e" stroke="#11151a" stroke-width="1.2" rx="6"/>
+<rect x="35" y="80" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="52" y="98" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#8a98a5">XL</text>
+<text class="mono2" x="98" y="98">точки</text>
+<text class="note" x="214" y="98">показать или скрыть точки ALL</text>
+<rect x="35" y="112" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="52" y="130" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">ALL</text>
+<text class="mono2" x="98" y="130">корпус</text>
+<text class="note" x="214" y="130">все шаги по порядку, один прогон</text>
+<rect x="35" y="144" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="52" y="162" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">LG</text>
+<text class="mono2" x="98" y="162">легенда</text>
+<text class="note" x="214" y="162">коды балок, постов, headers</text>
+<line x1="40" y1="181" x2="76" y2="181" stroke="#55606c" stroke-width="1.2"/>
+<rect x="35" y="190" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="52" y="208" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">SF</text>
+<circle cx="77" cy="203" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="98" y="208">sqfts</text>
+<text class="note" x="214" y="208">площади, Front Page, кровля</text>
+<rect x="35" y="222" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="52" y="240" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">WL</text>
+<circle cx="77" cy="235" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="98" y="240">walls</text>
+<text class="note" x="214" y="240">матрица стен, строки Floor Walls</text>
+<rect x="35" y="254" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="52" y="272" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">GB</text>
+<circle cx="77" cy="267" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="98" y="272">gables</text>
+<text class="note" x="214" y="272">площади gable walls</text>
+<rect x="35" y="286" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="52" y="304" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">TH</text>
+<circle cx="77" cy="299" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="98" y="304">trussheel</text>
+<text class="note" x="214" y="304">полоса truss heel</text>
+<rect x="35" y="318" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="52" y="336" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">PP</text>
+<circle cx="77" cy="331" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="98" y="336">parapets</text>
+<text class="note" x="214" y="336">парапеты, три числа в имени</text>
+<rect x="35" y="350" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="52" y="368" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">E/R</text>
+<circle cx="77" cy="363" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="98" y="368">eves rakes</text>
+<text class="note" x="214" y="368">свесы eve, потом rake</text>
+<rect x="35" y="382" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="52" y="400" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">OP</text>
+<circle cx="77" cy="395" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="98" y="400">openings</text>
+<text class="note" x="214" y="400">headers по ширине и flashing</text>
+<rect x="35" y="414" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="52" y="432" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">SH</text>
+<circle cx="77" cy="427" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="98" y="432">sheathing</text>
+<text class="note" x="214" y="432">одна система: Zip, Ply или OSB</text>
+<rect x="35" y="446" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="52" y="464" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">SW</text>
+<circle cx="77" cy="459" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="98" y="464">shear walls</text>
+<text class="note" x="214" y="464">Shear Walls и Holdowns по этажам</text>
+<rect x="35" y="478" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="52" y="496" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">SHF</text>
+<circle cx="77" cy="491" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="98" y="496">shaft ...</text>
+<text class="note" x="214" y="496">блок Shaft walls: панели, CH, J</text>
+<rect x="35" y="510" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="52" y="528" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">UN</text>
+<circle cx="77" cy="523" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="98" y="528">units</text>
+<text class="note" x="214" y="528">таблица units от ячейки AM3</text>
+<rect x="35" y="542" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="52" y="560" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">BL</text>
+<circle cx="77" cy="555" r="3.6" fill="#22272e" stroke="#8a98a5" stroke-width="1.3"/>
+<text class="mono2" x="98" y="560">blcny, porch</text>
+<text class="note" x="214" y="560">блоки #n Balcony / Porch List</text>
+<text class="side" x="486" y="36">НИЗ ПОЛОСЫ: FRAMING</text>
+<text class="green" x="554" y="62">ветка</text>
+<text class="green" x="640" y="62">что пишет в книгу</text>
+<rect x="486" y="72" width="56" height="236" fill="#22272e" stroke="#11151a" stroke-width="1.2" rx="6"/>
+<rect x="491" y="80" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="508" y="98" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">FR</text>
+<circle cx="533" cy="93" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="554" y="98">framing</text>
+<text class="note" x="640" y="98">все шаги ниже, каждый этаж</text>
+<rect x="491" y="112" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="508" y="130" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">PS</text>
+<circle cx="533" cy="125" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="554" y="130">posts</text>
+<text class="note" x="640" y="130">строки Posts, размер из LG</text>
+<rect x="491" y="144" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="508" y="162" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">BM</text>
+<circle cx="533" cy="157" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="554" y="162">beams</text>
+<text class="note" x="640" y="162">строки Beam, размер из LG</text>
+<rect x="491" y="176" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="508" y="194" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">HD</text>
+<circle cx="533" cy="189" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="554" y="194">headers</text>
+<text class="note" x="640" y="194">в блок стен этажом ниже</text>
+<rect x="491" y="208" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="508" y="226" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">JS</text>
+<circle cx="533" cy="221" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="554" y="226">joists</text>
+<text class="note" x="640" y="226">строки Joists</text>
+<rect x="491" y="240" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="508" y="258" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">DT</text>
+<circle cx="533" cy="253" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="554" y="258">details</text>
+<text class="note" x="640" y="258">в J:L под подписью, один раз</text>
+<rect x="491" y="272" width="34" height="26" fill="#2f3640" stroke="#55606c" stroke-width="1" rx="4"/>
+<text x="508" y="290" text-anchor="middle" style="font:700 14px Inter, Segoe UI, Arial, sans-serif" fill="#e6edf3">ST</text>
+<circle cx="533" cy="285" r="3.6" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.3"/>
+<text class="mono2" x="554" y="290">stairs</text>
+<text class="note" x="640" y="290">строки лестниц до Subfloor</text>
+<line x1="458" y1="30" x2="458" y2="580" stroke="#dfe3e8" stroke-width="1.2"/>
+<rect x="486" y="338" width="366" height="250" fill="#f6f8f6" stroke="#cfd8cf" stroke-width="1.2" rx="8"/>
+<text class="lab2" x="500" y="362">Как читать</text>
+<circle cx="506" cy="388" r="4.5" fill="#2ad24b" stroke="#2ad24b" stroke-width="1.4"/>
+<text class="ink" x="522" y="393">точка горит: шаг входит в ALL</text>
+<circle cx="506" cy="414" r="4.5" fill="#fff" stroke="#8a98a5" stroke-width="1.4"/>
+<text class="ink" x="522" y="419">пустая: ALL его пропустит (BL)</text>
+<text class="note" x="500" y="450">Щелчок по точке меняет состав ALL.</text>
+<text class="note" x="500" y="470">Кнопка берёт ветку выделенного корпуса</text>
+<text class="note" x="500" y="490">и пишет в открытую книгу из TemplateCom.</text>
+<text class="note" x="500" y="510">Секции идут через рабочую зону J:L</text>
+<text class="note" x="500" y="530">и макрос книги, framing заменяет свои</text>
+<text class="note" x="500" y="550">строки в framing list этажа.</text>
+<text class="note" x="500" y="570">В программе полоса одна, сверху вниз.</text>
+</svg>

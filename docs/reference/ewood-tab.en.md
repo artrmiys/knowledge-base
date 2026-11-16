@@ -24,10 +24,15 @@ The tab is installed on the computer once and works with any DFL workbook. The w
 
 ## Installation { #install }
 
-<figure markdown>
-  ![One file installs the tab, the tools, the rules and the instructions. Only Excel 2010 or newer is needed, no admin rights and no Python.](../assets/images/reference/ewood-tab/install-steps.svg)
-  <figcaption markdown="span">One file installs the tab, the tools, the rules and the instructions. Only Excel 2010 or newer is needed, no admin rights and no Python.</figcaption>
-</figure>
+How to install:
+
+1. Copy `EWoodTools-Setup.exe` to the computer: one file, everything is inside.
+2. Close Excel: the installer does not run while any Excel is open.
+3. Run the file and press `Install`. Windows may ask: "More info", then "Run anyway".
+4. Open a DFL workbook: the E-Wood tab is on the ribbon, with the workbook template on its left.
+5. The DeepSeek key is entered separately and is needed only for the English check and `Improve Note`.
+
+One file installs the tab, the tools, the rules and the instructions. Only Excel 2010 or newer is needed, no admin rights and no Python.
 
 - **Update:** the same steps with the new file. **Remove:** the same file, `Uninstall` button.
 - **The DeepSeek key** is stored for the Windows user and does not go into the installer. Without it everything works except the English check in `Fix` and `Improve Note`.
@@ -126,10 +131,16 @@ A second balcony, porch or canopy almost always repeats the first one: a copy fr
 | --- | --- | --- | --- |
 | ![](../assets/images/reference/ewood-tab/icons/B_DuplicateBlock.png){ width="22" } | **Duplicate Block** |  | Copies the block under the cursor right below it: next number, its own units, links to takeoffs cleared. |
 
-<figure markdown>
-  ![Six steps. At the end, Check shows anything that still uses someone else's units.](../assets/images/reference/ewood-tab/duplicate-steps.svg)
-  <figcaption markdown="span">Six steps. At the end, Check shows anything that still uses someone else's units.</figcaption>
-</figure>
+How to copy a block:
+
+1. Put the cursor in the block: on the header or any row under it.
+2. Press `Duplicate Block`: the copy lands right under the block, the cursor is on its header.
+3. Fix the header: the size in the text and the units in G.
+4. Link the cleared G cells to your own takeoffs.
+5. Remove extra rows, fix the counts in the C formulas.
+6. Press `Delete Zeros`: rows with C = 0 go away.
+
+At the end, `Check` shows anything that still uses someone else's units.
 
 === "Before: block #1"
 
@@ -289,10 +300,13 @@ They work on the open workbook. First they save it and put a copy in `_ewood_bac
 
 Changes nothing. Each line of the report: worksheet row number, code, and what is wrong. These are candidates: a person decides, from the drawing. A row you checked and kept will keep showing up: an empty list is not required.
 
-<figure markdown>
-  ![First what changes numbers, then the rest.](../assets/images/reference/ewood-tab/check-steps.svg)
-  <figcaption markdown="span">First what changes numbers, then the rest.</figcaption>
-</figure>
+How to work through the list: first what changes numbers, then the rest.
+
+1. Press `Check`: the list opens by itself, the file is in `_ewood_backups`.
+2. Go top to bottom: `ERR-CELL` and `BLOCK-REF` first, they change numbers.
+3. Compare the row with the drawing: the list only shows, you decide.
+4. Fix it; `Notes + Look` and `Delete Zeros` clear some codes by themselves.
+5. Press `Check` again: what is left is what you kept on purpose.
 
 This is what report lines look like (example):
 

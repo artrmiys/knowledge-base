@@ -34,6 +34,11 @@
 | Ledger, box, stringer, tread, riser | доска к стене, обвязка, косоур, проступь, подступёнок |
 | Sleeper, overframe, piggyback | лежень под настил; надстройка кровли; вторая ферма поверх первой |
 
+<figure markdown>
+  ![Анатомия каркасной стены с проёмом](../assets/images/reference/wall-anatomy.svg)
+  <figcaption markdown="span">Стена с окном: plates, studs, king и jack у проёма, header, cripples, sill, R.O. Высота стены считается вместе с plates.</figcaption>
+</figure>
+
 ## Материалы и обозначения
 
 | Обозначение | Значение |

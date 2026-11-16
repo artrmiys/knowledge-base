@@ -34,6 +34,11 @@ The section together with the details wins over the plan: stud height, layers, F
 | Ledger, box, stringer, tread, riser | board on the wall, band, stair stringer, tread, riser |
 | Sleeper, overframe, piggyback | sleeper under decking; roof overframing; a second truss on top of the first |
 
+<figure markdown>
+  ![Anatomy of a framed wall with an opening](../assets/images/reference/wall-anatomy.svg)
+  <figcaption markdown="span">A wall with a window: plates, studs, king and jack at the opening, header, cripples, sill, R.O. Wall height is taken together with the plates.</figcaption>
+</figure>
+
 ## Materials and labels
 
 | Label | Meaning |
