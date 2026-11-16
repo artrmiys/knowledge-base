@@ -10,6 +10,11 @@ Readers send corrections through the [suggestion page](suggest-change.md), no si
 ## Where to update the app description
 
 - Overview, window map and the path to delivery: [OurPlanCore 3.0](../reference/ourplanecore.md).
+- The section describes OurPlanCore Lite, the build estimators have. What Lite
+  lacks (AI models, terminal, 3D, Workspace) lives in the menu block "AI, terminal
+  and 3D (full version)"; small things inside regular pages are marked with the words
+  "full version only". List of differences: [Lite vs full version](../reference/ourplancore-lite.md);
+  check it against `docs/LITE_BUILD.md` and `Models/AppEdition.cs` in the app source.
 - Each feature is described on one page of its level: "Every day"
   (jobs, sheets, tools, tree, Excel, PDF) or "Advanced".
 - Shortcuts: [one canon](../reference/ourplancore-shortcuts.md).

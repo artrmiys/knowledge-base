@@ -49,7 +49,7 @@ Hotkeys checked against the macro source code. Macros without a hotkey are run t
 
 ### 1. Calculation after export (A series, run by the XL strip)
 
-They work on the selected range in the right-hand `J:N` area. The XL strip in OurPlanCore runs them itself; by hand they are needed only to recalculate one group.
+They work on the selected range in the right-hand `J:N` area. In the full version of OurPlanCore the XL strip runs them itself; OurPlanCore Lite has no XL strip, so the macros are run by hand, with the [E-Wood tab](ewood-tab.md#calculate) buttons.
 
 | Macro | What it does | When |
 | --- | --- | --- |

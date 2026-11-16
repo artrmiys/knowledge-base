@@ -52,6 +52,8 @@ Why: to continue working on a job from the jobs folder or from a file.
 
 Result: the job name in the window title and the status bar, the sheet folders expand in Pages, the status shows `Save: Saved`.
 
+In Lite, double-clicking an `.ourplan` file does not launch the app: Lite does not register itself as the program for these files. Open the job as described above, or drag the file into the window ([Lite vs full version](ourplancore-lite.md#differences)).
+
 ## How to create a job from PDFs { #new-from-pdf }
 
 Why: a new job from the client's drawing folder.
@@ -79,6 +81,8 @@ You need: the right job open (its name in the window title): the import goes int
 
 ### How to bring in another OurPlanCore job { #import-project }
 
+Why: to combine buildings from different jobs or bring an old job into a revision.
+
 1. Press **Main > Open / Import > Import into the current job > OurPlanCore project...**: the **Import OurPlanCore into Current Job** window opens, the `Destination` line shows the open job's name.
 2. Choose **Choose .ourplan file...** or **Choose project folder...** (a folder with `Data.xml`, `Pages`, `Takeoffs`).
 3. Read the number of sheets, takeoffs and measurements in the dialog and type the name for the new branches in the **Folder name in Pages and Takeoffs** field (for example `REV 2`).
@@ -91,7 +95,7 @@ Result: everything is added as separate folders in Pages and Takeoffs; existing 
 - A job is stored as one `.ourplan` file. On opening, the app unpacks it into a working copy and works with that; `Save` packs the file back.
 - The job name is shown in the window title, the status bar and the recent list. If the file was renamed in File Explorer, the new file name is shown; nothing is written inside the package.
 - `Save As...` (`Ctrl+Shift+S`, the `Save As` button on the Main ribbon or the `Export` menu in Takeoffs) creates a new `.ourplan` in the chosen location and keeps the format of the open job. Do not change the extension or format by hand.
-- Moving to another computer: copy a successfully saved `.ourplan`. Through a shared Workspace the job opens without copying: [Workspace](ourplancore-workspace.md).
+- Moving to another computer: copy a successfully saved `.ourplan`. In the full version, through a shared Workspace the job opens without copying: [Workspace](ourplancore-workspace.md).
 
 ## Autosave and the Save status { #autosave }
 
@@ -210,7 +214,21 @@ This is not a cleanup of recovery data and caches on the computer. Unused raster
     3D_Context/walls_model.json  3D model
     bookmarks.json, import_reports/
     ```
-    The folder on disk may have a technical name; the visible name is stored in `Data.xml`. Do not edit job files by hand while the app is running. The exception is `AI_Context/project.md`, the log of AI observations and answers for the job: with the AI module, right-click a sheet, **Open Project Context** opens it in Notepad. The app only appends to the end, so your own notes there are kept.
+    The folder on disk may have a technical name; the visible name is stored in `Data.xml`. Do not edit job files by hand while the app is running. The exception is `AI_Context/project.md`, the log of AI observations and answers for the job: with the AI module (full version), right-click a sheet, **Open Project Context** opens it in Notepad. The app only appends to the end, so your own notes there are kept.
+
+## OurPlanCoreCli: the pipeline console { #cli }
+
+A separate program with no window, used by the intake and delivery pipeline; the estimator does not run it but sees the result: the job arrives already with sheet names, folders and W/F/S/U dots, and at delivery the PDF is assembled by building. It is not related to the full version's AI terminal.
+
+| Command | What it does | Options |
+| --- | --- | --- |
+| `create` | a new `.ourplan` from PDFs; with `--base-project`, a revision package on top of the original job | `--name`, `--package`, `--pdf` (several), `--raster-dpi` (150), `--no-raster`, `--base-project`, `--import-folder REV`, `--report` |
+| `inspect` | a report on the package's sheets, folders and measurements | `--package`, `--report` |
+| `apply-sheets` | apply sheet names, folders, scale and dots from JSON; makes a backup of the package | `--package`, `--sheets`, `--dry-run`, `--report` |
+| `export-pdf` | a PDF with only the sheets that have measurements; `--grouping auto` splits by building based on the green dot, `--grouping single` makes one file | `--package`, `--out`, `--grouping`, `--dry-run`, `--overwrite`, `--report` |
+| `excel-plan` | an Excel export plan based on the tree | `--package`, `--scope <path under Takeoffs>`, `--report` |
+
+Each command prints one JSON; exit codes: 0 success, 1 command error, 2 invocation error. Commands that change the package refuse to run while the app is open: `Refused to ...: OurPlanCore is running. Close it first.` The export takes the PDF Output settings from the job: Opac, the legend and its groups, overlays, crops and masks.
 
 ## See also
 
