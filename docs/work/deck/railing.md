@@ -45,14 +45,29 @@ wood, cable, metal), decking и hardware постов полностью раз�
 
 | Тип | Строка DFL | Unit | Формула |
 | --- | --- | --- | --- |
-| Любой | `Note: Railing is composite; verify product` | | нота о системе сразу под строками перил |
-| Любой | `Posts at Rails 4x4 P.T.` | pcs | 2 на балкон, `=2*G`; высота 4' в E |
-| Composite (система) | `Post Sleeve` `Sleeve for 4x4`, `Post Cap` `Cap for 4x4` | pcs | по постам |
-| Composite (система) | `Rail sections` `6' Rail section` | unit | фронт и бока отдельными строками |
-| Wood painted (поэлементно) | `Balustrades 2x2` | pcs | `=EVEN(G*2.2)`, G = LFT перил x units |
-| Wood painted (поэлементно) | `Rails (top & bottom) 2x4` | LFT | `=EVEN(G*2.2)` (две нитки) |
-| Wood painted (поэлементно) | `Cap Rail 2x6` | LFT | `=EVEN(G*1.1)` |
+| Любой | `Note: Railing called composite per A501; decking assumed; verify` | | одна жёлтая нота о перилах и decking сразу под заголовком блока; чертёж молчит - `assumed` и `verify` |
+| Любой | `Posts at Rails` `4x4 P.T.` | `4` (длина поста 4') | 2 на балкон, `=2*G`, в E `assumed`; длинные перила deck: `=CEILING(LFT/6,1)+1` |
+| Composite (система) | `Post Sleeve` `Sleeve for 4x4`, `Post Cap` `Cap for 4x4` | pcs | по постам: `=C<posts>` |
+| Composite (система) | `Rail sections` `8' Rail section` | unit | одна строка на каждую длину секции, правило ниже |
+| Wood painted (поэлементно) | `Balustrades` `2x2 balusters` | pcs | `=EVEN(L*2.2)*G` |
+| Wood painted (поэлементно) | `Rails (top & bottom)` `2x4 rails` | LFT | `=EVEN(L*2.2)*G` (две нитки x 1.1) |
+| Wood painted (поэлементно) | `Cap Rail` `2x6 cap rail` | LFT | `=EVEN(L*1.1)*G` |
 | Aluminum / metal | только нота `Note: Aluminum railing materials are by others; verify components` | | материал не считаем |
+
+В формулах L - LFT перил одного балкона (фронт плюс открытые бока), G -
+число экземпляров. `Balustrades` считаются штуками (`pcs`), не `LFT`: одна на
+каждые 5.5" с запасом.
+
+Секции composite-системы (`Rail sections`):
+
+- Систему покупают секциями: одна секция на пролёт между постами.
+- B - ближайшая заводская длина не короче стороны: фронт 7'-4" это
+  `8' Rail section`, бок 6' это `6' Rail section`.
+- Одна строка на каждую длину. C = секций этой длины на один балкон x G, D
+  `unit`, в E сторона и её настоящая длина (`front 7'-4"`, `sides 6'`).
+- Сторона длиннее самой длинной секции системы: добавь промежуточный пост,
+  секций столько, сколько пролётов, а пост допиши в `Posts at Rails`.
+- Cap rail входит в секцию: строки `Cap Rail` у composite нет.
 
 Посты перил на улице всегда `P.T.`. Blocking и bolts под посты, если деталь
 их показывает, идут строками каркаса с деталью в E.
@@ -63,17 +78,20 @@ wood, cable, metal), decking и hardware постов полностью раз�
 - Система и поэлементный счёт смешаны на одном участке.
 - Aluminum или vinyl перила посчитаны как материал, а не нотой.
 - Posts at Rails без `P.T.`.
+- Секции посчитаны одной строкой по общей длине (`LFT / 6`), а не по сторонам.
+- Balustrades записаны в `LFT`.
 - Все ошибки раздела: [Deck, porch, балконы](../../start/common-mistakes.md#deck).
 
 ## Пример
 
 ```text
-Note: Railing called composite; Decking assumed Composite
-Posts at Rails   4x4 P.T.          12  pcs    =2*G      4'
+Note: Railing called composite per A501; decking assumed; verify
+Balcony 7'-4" x 6', 6 unit (G = 6)
+Posts at Rails   4x4 P.T.          12  4      =2*G        assumed
 Post Sleeve      Sleeve for 4x4    12  pcs    =C<posts>
 Post Cap         Cap for 4x4       12  pcs    =C<posts>
-Rail sections    6' Rail section   12  unit   front 12'
-Rail sections    6' Rail section   16  unit   sides 2x8'
+Rail sections    8' Rail section    6  unit   =1*G        front 7'-4"
+Rail sections    6' Rail section   12  unit   =2*G        sides 6'
 ```
 
 ## См. также

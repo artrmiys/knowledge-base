@@ -24,6 +24,10 @@ rules: [Floor SQFT, rules section](1st2nd.md#rules).
 ## How to measure in OurPlanCore
 
 1. Area along the plan projection of every roof plane on the roof plan (W point).
+   The outline follows the roof edge (the fascia line) with the eave and rake
+   overhangs included: the sheathing covers the overhang too. Do not trace the roof to
+   the outside face of the walls. The overhang rule for all areas:
+   [Floor SQFT, rule 8](1st2nd.md#rules).
    One pitch and one material = one takeoff; planes of the same pitch can be
    collected as polygons in one takeoff.
 2. Name `rf <pitch>`: `rf 6` = 6:12, `rf mtl 4` (under metal), `overframe 4`,
@@ -43,8 +47,16 @@ rules: [Floor SQFT, rules section](1st2nd.md#rules).
 | `sqfts/rf 6` | Front Page, `Roof` | | `SQ FT` | as measured |
 | `sqfts/rf 6` | `Roof Sheathing` | `19/32" Ply or OSB` | `4x8` | `=CEILING(SQFT*1.118/32*1.1,1)` |
 | `sqfts/rf 6` | `Clips` | `PSCL 19/32` | `pcs` | [H-clips](../horizontal/roof-framing/h-clips.md) |
-| `sqfts/flat` | `Rigid Insulation`, `Densdeck`, `EPDM` | per assembly | `SQ FT` | same area |
+| `sqfts/flat` | `Roof Sheathing at Flat Roofs`, `Cover Board` | per assembly | `4x8` | `=CEILING(SQFT/32*1.1,1)` |
+| `sqfts/flat` | `Insulation` (rigid, tapered) | per assembly | `SQ FT` | SQFT x layers x 1.1 |
+| `sqfts/flat`, only when roofing products are in scope | `EPDM at flat roofs` in Roof Products | `EPDM` | `SQ FT` | `=CEILING(SQFT*1.1,10)` |
 | `sqfts/rf mtl 4` | `Roof Sheathing (metal)` | `1/2" Ply` | `4x8` | with 1.054 |
+
+The flat roof membrane (EPDM, TPO) is a roofing product. The
+`EPDM at flat roofs` row exists only when roofing products are in scope
+(`+ roof`). On a regular job the membrane is by others: no row; the layers we
+count and the membrane by others go into a header Note:
+`Note: Roof R1 per A501: 5/8" gypsum, tapered polyiso; EPDM by others`.
 
 ## Common mistakes
 
@@ -53,6 +65,7 @@ rules: [Floor SQFT, rules section](1st2nd.md#rules).
 - All roof planes in one polygon with no split by pitch and material.
 - Flat roof layers (Densdeck, XPS) missed, piggy sleepers forgotten.
 - The soffit underneath taken as the sheathing area.
+- Roof plane traced to the walls without the overhangs: not enough sheathing for the eaves.
 
 All area mistakes: [common-mistakes](../../start/common-mistakes.md#sqft).
 

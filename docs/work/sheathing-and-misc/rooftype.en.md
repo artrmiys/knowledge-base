@@ -18,7 +18,7 @@ This page is about not losing a layer that only this type has.
 | Sheet | What to take |
 | --- | --- |
 | Arch roof plan (`a105 rf`) | Zones by type: shingles, metal, flat, canopy; pitches |
-| Roof assemblies (`ft`), specs | Flat roof layers: cover board, rigid, tapered, XPS, EPDM; alternates |
+| Roof assemblies (`ft`), specs | Flat roof layers: cover board, insulation (rigid, tapered, XPS), EPDM; alternates |
 | Sections (`sec`) | Canopy and stair lid: second deck layer, tapered, DensGlass underneath |
 | Structural notes | Deck for each type: `19/32"`, `1/2" Ply` under metal, `3/4"` flat |
 
@@ -26,11 +26,11 @@ This page is about not losing a layer that only this type has.
 
 | Type | Takeoff name | What it brings into the DFL | Unit |
 | --- | --- | --- | --- |
-| Pitched under shingles | `sqfts/rf 6` | `Roof Sheathing`, `Clips`, `Felt for Roof`, `Ice and Water (eves&valleys)` if in scope | `4x8`, `pcs`, `SQ FT` |
+| Pitched under shingles | `sqfts/rf 6` | `Roof Sheathing`, `Clips`; `Felt for Roof` and `Ice and Water (eves&valleys)` only when roofing products are in scope | `4x8`, `pcs`, `SQ FT`, `rolls` |
 | Pitched under metal | `sqfts/rf mtl 4` | `Roof Sheathing (metal)` `1/2" Ply`; the metal itself is by others, `Metal Roofs` only if in scope | `4x8` |
-| Overframe | `sqfts/overframe 4` | `Roof Sheathing (overframes)`, sleepers per detail | `4x8`, `LFT` |
-| Flat | `sqfts/flat`, `sqfts/ply flat` | `Roof Sheathing at Flat Roofs` `3/4"`, `Densdeck` / cover board, `Rigid Insulation`, XPS, `EPDM at flat roofs` | `4x8`, `SQ FT` |
-| Canopy, upper porch | `sqfts/flat canopy` or per the canopy block | `3/4" T&G`, tapered insulation, `5/8" Ext Gyp` or DensGlass underneath (two soffit rows) | `4x8`, `SQ FT` |
+| Overframe | `sqfts/overframe 4` | `Roof Sheathing (overframes)`, sleepers per detail ([Overframes](../horizontal/roof-framing/overframes.md)) | `4x8`, sleepers per their own page |
+| Flat | `sqfts/flat`, `sqfts/ply flat` | `Roof Sheathing at Flat Roofs` `3/4"` and `Cover Board` in sheets; `Insulation` (rigid, tapered, XPS: area x number of layers x 1.1) by area; `EPDM at flat roofs` only when roofing products are in scope, otherwise the membrane is by others with a Note | `4x8`, `SQ FT` |
+| Canopy, upper porch | `sqfts/flat canopy` or per the canopy block | `3/4" T&G`, tapered insulation, `Soffit Gypsum` underneath (`5/8" Ext Gyp`, DensGlass); two layers = one row `Soffit Gypsum (2)` with x 2 in the formula | `4x8`, `SQ FT` |
 | Stair lid, mech screen | its own Area | two deck layers (`1/2" Ply` + `3/4" OSB`), kickers per detail | `4x8` |
 
 Each type has its own outline and its own pitch; the pitch of the neighboring roof is not inherited.
@@ -39,8 +39,8 @@ was counted, or count both as alternates.
 
 ## Common mistakes
 
-- On a flat roof, Densdeck / cover board and the second XPS layer over the same area missed.
-- Canopy counted as a piece of the main roof, without tapered insulation and without the gypsum underneath.
+- On a flat roof, `Cover Board` (Densdeck) and the second XPS layer over the same area missed.
+- Canopy counted as a piece of the main roof, without tapered insulation and without the gypsum underneath, or two gypsum layers written as two rows.
 - Piggyback trusses without sleepers.
 - Metal by others, but the ply under it not counted.
 - Shingles and metal on the same plan, one chosen without a Note.

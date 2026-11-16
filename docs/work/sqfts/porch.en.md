@@ -8,8 +8,8 @@
 ## What it is
 
 A porch is a covered platform at an entry, on its own frame. Its area gives the floor
-(decking or subfloor) and the ceiling (`5/8" Gyp` exterior, two surfaces in
-one row with x2). The roof over the porch is a separate area per
+(decking or subfloor) and the ceiling (exterior gypsum; two layers are one row,
+`Soffit Gypsum (2)`, with x 2 in the formula). The roof over the porch is a separate area per
 [Roof SQFT](roof.md); the porch eave is a separate takeoff `eve 12 porch`.
 A porch is counted on its own, separately from balconies, even if it looks similar. General
 measuring rules: [Floor SQFT, rules section](1st2nd.md#rules).
@@ -37,10 +37,10 @@ measuring rules: [Floor SQFT, rules section](1st2nd.md#rules).
 | Tree name | DFL row (Porch block) | Material | Unit | Formula |
 | --- | --- | --- | --- | --- |
 | `sqfts/porch` | Front Page, `Porches` | | `SQ FT` | as measured |
-| `sqfts/porch` | `Decking` or `Subfloor` | per detail | `SQ FT` / `4x8` | `SQFT x 1.1` or `/32` |
-| `sqfts/porch` | `Ceiling` | `5/8" Gyp` exterior | `SQ FT` | `SQFT x 2 x 1.1` |
-| same area | `Ceiling Joists 16" o.c.` + `Ledger` + `Hangers` | per detail | `LFT`, `pcs` | separate from rafters |
-| posts | `Posts` | P.T. outdoors; under the roof no P.T. | `pcs` | |
+| `sqfts/porch` | `Decking` or `Subfloor` | per detail | `SQ FT` / `4x8` | `=CEILING(W*D*units*1.1,10)` or `=CEILING(SQFT/32*1.1,1)` |
+| `sqfts/porch` | `Soffit Gypsum (2)` | `5/8" Ext Gyp` or the board type per the assembly | `SQ FT` | `=CEILING(W*D*2*1.1,2)*units`; one layer: `Soffit Gypsum` without x 2 |
+| same area | `Ceiling Joists 16" o.c.` + `Ledger` + `Hangers` | per detail, `2x4 P.T.`; not shown: `2x6 P.T.`, `assumed` | board length; hangers `pcs` | number of joists = `CEILING(W*12/16,1)+1` per porch x units; separate from rafters |
+| posts | `Posts` | always `P.T.`, under the porch roof too | post length in feet | posts of one porch x units |
 
 Framing not shown: `Note: Porch framing is not specified; all framing
 assumed; verify` right under the block header.
@@ -50,6 +50,7 @@ assumed; verify` right under the block header.
 - Porch SQFT empty on the Front Page (the house total did not add up).
 - Porch mirrored from the balconies instead of counted separately.
 - Porch ceiling counted as regular interior gypsum, not exterior.
+- Two gypsum layers written as two rows, or x 2 in the label and once more in the area.
 - Porch roof ended up in the main `rf 6` with the wrong pitch.
 - Porch eave counted again inside `eve 24 main`.
 
@@ -59,12 +60,12 @@ All area mistakes: [common-mistakes](../../start/common-mistakes.md#sqft).
 
 ```text
 Takeoffs/Main/sqfts/
-  porch       Area   96 SF
+  porch       Area   96 SF   (12' x 8')
   rf 4        Area  118 SF   (porch roof)
 Covered Front Porch Framing List
 Note: Porch framing is not specified; all framing assumed; verify.
-Ceiling Joists 16" o.c.   2x8          ...   LFT
-Ceiling                   5/8" Gyp     212   SQ FT   x2
+Ceiling Joists 16" o.c.   2x6 P.T.        10   8       assumed   12 x 12/16 = 9, plus 1; depth 8'
+Soffit Gypsum (2)         5/8" Ext Gyp   212   SQ FT             96 x 2 x 1.1 = 211.2, round up to 2
 ```
 
 ## See also

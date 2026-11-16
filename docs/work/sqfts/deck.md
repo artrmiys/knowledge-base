@@ -36,9 +36,10 @@ joists, beams, posts) считается на странице
 | Имя в дереве | Строка DFL | Материал | Unit | Формула |
 | --- | --- | --- | --- | --- |
 | `sqfts/deck` | Front Page, `Deck` | | `SQ FT` | как измерено |
-| `sqfts/deck` | `Decking` | composite / `5/4x6 P.T.` по spec | `SQ FT` или `LFT` | `SQFT x 1.1` |
+| `sqfts/deck` | `Decking` | composite / `5/4x6 P.T.` по spec | `SQ FT` | `=ОКРВВЕРХ(W*D*units*1.1;10)`: площадь одной деки x units x 1.1; меньше 50 - вверх до 2 |
 | `sqfts/deck` | `Underlayment` | `1/2"` по детали | `4x8` | `=ОКРВВЕРХ(SQFT/32*1.1;1)` |
-| Line по краю | `Railing`, `Posts at Rails 4x4 P.T.` | по детали | `LFT`, `pcs` | [Railing](../deck/railing.md) |
+| Line по краю | `Posts at Rails` | `4x4 P.T.`, посты 4' | `4` (длина поста) | длинные перила: `=ОКРВВЕРХ(LFT/6;1)+1` |
+| та же линия | строки перил по типу | по детали | `LFT`, `pcs`, `unit` | [Railing](../deck/railing.md) |
 
 ## Частые ошибки
 
@@ -46,6 +47,7 @@ joists, beams, posts) считается на странице
 - LVL rim поставлен по умолчанию: только когда к нему крепится deck.
 - Railing и stairs забыты; guards отдельной строкой.
 - Площадь deck приписана к этажу дома.
+- Decking без запаса 1.1 или в `LFT` вместо `SQ FT`.
 
 Все ошибки по площадям: [common-mistakes](../../start/common-mistakes.md#sqft).
 
@@ -53,10 +55,10 @@ joists, beams, posts) считается на странице
 
 ```text
 Takeoffs/Main/sqfts/
-  deck       Area   240 SF
+  deck       Area   240 SF   (20' x 12', перила по трём сторонам 44 LFT)
 Ground Decks Framing List
-Decking         5/4x6 P.T.      264   SQ FT
-Posts at Rails  4x4 P.T.          8   pcs
+Decking         5/4x6 P.T.      270   SQ FT   240 x 1.1 = 264, вверх до 10
+Posts at Rails  4x4 P.T.          9   4       44 / 6 = 7.3, вверх 8, плюс 1
 ```
 
 ## См. также

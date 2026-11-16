@@ -45,14 +45,29 @@ is always a system; by components only for painted wood. Do not mix.
 
 | Type | DFL row | Unit | Formula |
 | --- | --- | --- | --- |
-| Any | `Note: Railing is composite; verify product` | | a note about the system right under the railing rows |
-| Any | `Posts at Rails 4x4 P.T.` | pcs | 2 per balcony, `=2*G`; height 4' in E |
-| Composite (system) | `Post Sleeve` `Sleeve for 4x4`, `Post Cap` `Cap for 4x4` | pcs | by posts |
-| Composite (system) | `Rail sections` `6' Rail section` | unit | front and sides as separate rows |
-| Wood painted (by components) | `Balustrades 2x2` | pcs | `=EVEN(G*2.2)`, G = railing LFT x units |
-| Wood painted (by components) | `Rails (top & bottom) 2x4` | LFT | `=EVEN(G*2.2)` (two runs) |
-| Wood painted (by components) | `Cap Rail 2x6` | LFT | `=EVEN(G*1.1)` |
+| Any | `Note: Railing called composite per A501; decking assumed; verify` | | one yellow note about the railing and decking right under the block header; drawings silent - `assumed` and `verify` |
+| Any | `Posts at Rails` `4x4 P.T.` | `4` (4' post length) | 2 per balcony, `=2*G`, E `assumed`; long deck rails: `=CEILING(LFT/6,1)+1` |
+| Composite (system) | `Post Sleeve` `Sleeve for 4x4`, `Post Cap` `Cap for 4x4` | pcs | by posts: `=C<posts>` |
+| Composite (system) | `Rail sections` `8' Rail section` | unit | one row per section length, rule below |
+| Wood painted (by components) | `Balustrades` `2x2 balusters` | pcs | `=EVEN(L*2.2)*G` |
+| Wood painted (by components) | `Rails (top & bottom)` `2x4 rails` | LFT | `=EVEN(L*2.2)*G` (two runs x 1.1) |
+| Wood painted (by components) | `Cap Rail` `2x6 cap rail` | LFT | `=EVEN(L*1.1)*G` |
 | Aluminum / metal | only the note `Note: Aluminum railing materials are by others; verify components` | | material not counted |
+
+In the formulas L is the railing LFT of one balcony (front plus open sides) and G is
+the number of instances. `Balustrades` are counted in pieces (`pcs`), not `LFT`: one
+every 5.5" with waste.
+
+Composite system sections (`Rail sections`):
+
+- The system is bought in sections: one section per span between posts.
+- B is the nearest factory length not shorter than the side: a 7'-4" front is an
+  `8' Rail section`, a 6' side is a `6' Rail section`.
+- One row per length. C = sections of that length on one balcony x G, D
+  `unit`, E holds the side and its real length (`front 7'-4"`, `sides 6'`).
+- A side longer than the longest section of the system: add an intermediate post,
+  count as many sections as there are spans, and add the post to `Posts at Rails`.
+- The cap rail is part of the section: a composite railing has no `Cap Rail` row.
 
 Outdoor railing posts are always `P.T.`. Blocking and bolts for the posts, if the detail
 shows them, go in the frame rows with the detail in E.
@@ -63,17 +78,20 @@ shows them, go in the frame rows with the detail in E.
 - System and component counting mixed on one run.
 - Aluminum or vinyl railing counted as material instead of a note.
 - Posts at Rails without `P.T.`.
+- Sections counted in one row from the total length (`LFT / 6`) instead of side by side.
+- Balustrades written in `LFT`.
 - All mistakes for the section: [Deck, porch, balconies](../../start/common-mistakes.md#deck).
 
 ## Example
 
 ```text
-Note: Railing called composite; Decking assumed Composite
-Posts at Rails   4x4 P.T.          12  pcs    =2*G      4'
+Note: Railing called composite per A501; decking assumed; verify
+Balcony 7'-4" x 6', 6 unit (G = 6)
+Posts at Rails   4x4 P.T.          12  4      =2*G        assumed
 Post Sleeve      Sleeve for 4x4    12  pcs    =C<posts>
 Post Cap         Cap for 4x4       12  pcs    =C<posts>
-Rail sections    6' Rail section   12  unit   front 12'
-Rail sections    6' Rail section   16  unit   sides 2x8'
+Rail sections    8' Rail section    6  unit   =1*G        front 7'-4"
+Rail sections    6' Rail section   12  unit   =2*G        sides 6'
 ```
 
 ## See also

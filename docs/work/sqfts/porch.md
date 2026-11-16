@@ -8,8 +8,8 @@
 ## Что это
 
 Porch - крытая площадка у входа на своём каркасе. Его площадь даёт пол
-(decking или subfloor) и потолок (`5/8" Gyp` exterior, две поверхности в
-одной строке с x2). Крыша над porch - отдельная площадь по
+(decking или subfloor) и потолок (наружный гипс; два слоя - это одна строка
+`Soffit Gypsum (2)` с x 2 в формуле). Крыша над porch - отдельная площадь по
 [Roof SQFT](roof.md), карниз porch - отдельная позиция `eve 12 porch`.
 Porch считается независимо от балконов, даже если похож. Общие правила
 замера - [Floor SQFT, раздел правил](1st2nd.md#rules).
@@ -37,10 +37,10 @@ Porch считается независимо от балконов, даже е
 | Имя в дереве | Строка DFL (блок Porch) | Материал | Unit | Формула |
 | --- | --- | --- | --- | --- |
 | `sqfts/porch` | Front Page, `Porches` | | `SQ FT` | как измерено |
-| `sqfts/porch` | `Decking` или `Subfloor` | по детали | `SQ FT` / `4x8` | `SQFT x 1.1` или `/32` |
-| `sqfts/porch` | `Ceiling` | `5/8" Gyp` exterior | `SQ FT` | `SQFT x 2 x 1.1` |
-| та же площадь | `Ceiling Joists 16" o.c.` + `Ledger` + `Hangers` | по детали | `LFT`, `pcs` | отдельно от rafters |
-| posts | `Posts` | P.T. на улице; под крышей без P.T. | `pcs` | |
+| `sqfts/porch` | `Decking` или `Subfloor` | по детали | `SQ FT` / `4x8` | `=ОКРВВЕРХ(W*D*units*1.1;10)` или `=ОКРВВЕРХ(SQFT/32*1.1;1)` |
+| `sqfts/porch` | `Soffit Gypsum (2)` | `5/8" Ext Gyp` или тип плиты по assembly | `SQ FT` | `=ОКРВВЕРХ(W*D*2*1.1;2)*units`; один слой: `Soffit Gypsum` без x 2 |
+| та же площадь | `Ceiling Joists 16" o.c.` + `Ledger` + `Hangers` | по детали, `2x4 P.T.`; не показано: `2x6 P.T.`, `assumed` | длина доски; hangers `pcs` | число joists = `ОКРВВЕРХ(W*12/16;1)+1` на porch x units; отдельно от rafters |
+| posts | `Posts` | всегда `P.T.`, и под крышей porch | длина поста в футах | число постов одного porch x units |
 
 Каркас не показан: `Note: Porch framing is not specified; all framing
 assumed; verify` сразу под заголовком блока.
@@ -50,6 +50,7 @@ assumed; verify` сразу под заголовком блока.
 - Porch SQFT на Front Page пустой (итог дома не сошёлся).
 - Porch зеркален с балконов вместо отдельного счёта.
 - Потолок porch посчитан как обычный interior gypsum, а не exterior.
+- Два слоя гипса записаны двумя строками, или x 2 стоит и в подписи, и ещё раз в площади.
 - Крыша porch попала в main `rf 6` с чужим уклоном.
 - Карниз porch посчитан ещё раз внутри `eve 24 main`.
 
@@ -59,12 +60,12 @@ assumed; verify` сразу под заголовком блока.
 
 ```text
 Takeoffs/Main/sqfts/
-  porch       Area   96 SF
+  porch       Area   96 SF   (12' x 8')
   rf 4        Area  118 SF   (крыша porch)
 Covered Front Porch Framing List
 Note: Porch framing is not specified; all framing assumed; verify.
-Ceiling Joists 16" o.c.   2x8          ...   LFT
-Ceiling                   5/8" Gyp     212   SQ FT   x2
+Ceiling Joists 16" o.c.   2x6 P.T.        10   8       assumed   12 x 12/16 = 9, плюс 1; глубина 8'
+Soffit Gypsum (2)         5/8" Ext Gyp   212   SQ FT             96 x 2 x 1.1 = 211.2, вверх до 2
 ```
 
 ## См. также

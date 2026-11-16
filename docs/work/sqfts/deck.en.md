@@ -36,9 +36,10 @@ measuring rules: [Floor SQFT, rules section](1st2nd.md#rules).
 | Tree name | DFL row | Material | Unit | Formula |
 | --- | --- | --- | --- | --- |
 | `sqfts/deck` | Front Page, `Deck` | | `SQ FT` | as measured |
-| `sqfts/deck` | `Decking` | composite / `5/4x6 P.T.` per spec | `SQ FT` or `LFT` | `SQFT x 1.1` |
+| `sqfts/deck` | `Decking` | composite / `5/4x6 P.T.` per spec | `SQ FT` | `=CEILING(W*D*units*1.1,10)`: area of one deck x units x 1.1; under 50 round up to 2 |
 | `sqfts/deck` | `Underlayment` | `1/2"` per detail | `4x8` | `=CEILING(SQFT/32*1.1,1)` |
-| Line along the edge | `Railing`, `Posts at Rails 4x4 P.T.` | per detail | `LFT`, `pcs` | [Railing](../deck/railing.md) |
+| Line along the edge | `Posts at Rails` | `4x4 P.T.`, 4' posts | `4` (post length) | long rails: `=CEILING(LFT/6,1)+1` |
+| same line | railing rows by type | per detail | `LFT`, `pcs`, `unit` | [Railing](../deck/railing.md) |
 
 ## Common mistakes
 
@@ -46,6 +47,7 @@ measuring rules: [Floor SQFT, rules section](1st2nd.md#rules).
 - LVL rim used by default: only when a deck attaches to it.
 - Railing and stairs forgotten; guards as a separate row.
 - Deck area assigned to a house floor.
+- Decking without the 1.1 waste or in `LFT` instead of `SQ FT`.
 
 All area mistakes: [common-mistakes](../../start/common-mistakes.md#sqft).
 
@@ -53,10 +55,10 @@ All area mistakes: [common-mistakes](../../start/common-mistakes.md#sqft).
 
 ```text
 Takeoffs/Main/sqfts/
-  deck       Area   240 SF
+  deck       Area   240 SF   (20' x 12', railing on three sides 44 LFT)
 Ground Decks Framing List
-Decking         5/4x6 P.T.      264   SQ FT
-Posts at Rails  4x4 P.T.          8   pcs
+Decking         5/4x6 P.T.      270   SQ FT   240 x 1.1 = 264, round up to 10
+Posts at Rails  4x4 P.T.          9   4       44 / 6 = 7.3, up to 8, plus 1
 ```
 
 ## See also

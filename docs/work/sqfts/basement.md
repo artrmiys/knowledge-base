@@ -36,13 +36,14 @@ underlayment, rigid) только когда assembly их показывает.
 | Имя в дереве | Строка DFL | Материал | Unit | Формула |
 | --- | --- | --- | --- | --- |
 | `sqfts/base` | Front Page, `Basement` | | `SQ FT` | как измерено |
-| `sqfts/base` | `Sleepers` | `2x4 P.T.` по детали | `LFT` | по шагу |
+| `sqfts/base` | `Sleepers 16" o.c.` | `2x4 P.T.` по детали | `LFT` | `=ОКРВВЕРХ(SQFT*12/16*1.1;10)`: на 1 SQ FT при шаге 16" идёт 12/16 = 0.75 LFT; шаг 24": 12/24 = 0.5 |
 | `sqfts/base` | `Plywood` / `Underlayment` over slab | по assembly | `4x8` | `=ОКРВВЕРХ(SQFT/32*1.1;1)` |
-| `sqfts/base` | `Rigid Insulation` over slab | по assembly | `SQ FT` | как измерено |
+| `sqfts/base` | `Insulation` over slab | `2" XPS Insulation` по assembly | `SQ FT` | SQFT x 1.1: до 50 вверх до 2, от 50 вверх до 10 |
 
 ## Частые ошибки
 
 - Plywood и sleepers на плите пропущены, потому что "там бетон".
+- Sleepers посчитаны по периметру или "на глаз": длина идёт от площади и шага.
 - Имя `bsmt` вместо `base`: площадь не ушла в `sqfts`.
 - Подвал посчитан по контуру 1st floor, а не по плите.
 
@@ -54,8 +55,8 @@ underlayment, rigid) только когда assembly их показывает.
 Takeoffs/Main/sqfts/
   base      Area   1620 SF   (a100 base)
 Basement
-Sleepers        2x4 P.T. 16" o.c.    1340   LFT   8/A500
-Plywood         3/4" T&G              56   4x8   over sleepers
+Sleepers 16" o.c.   2x4 P.T.    1340   LFT   8/A500          1620 x 12/16 x 1.1 = 1336.5, вверх до 10
+Plywood             3/4" T&G      56   4x8   over sleepers   1620 / 32 x 1.1 = 55.7
 ```
 
 ## См. также

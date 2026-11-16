@@ -37,13 +37,14 @@ mix them with a porch: they are different blocks with different multipliers. Gen
 | Tree name | DFL row (Balcony block) | Material | Unit | Formula |
 | --- | --- | --- | --- | --- |
 | `sqfts/blcny` | Front Page, `Balconies` | | `SQ FT` | as measured x units |
-| `sqfts/blcny` | `Decking` | `2x6 DuxxBak` per spec | `SQ FT` | `SQFT x 1.1 x units` |
-| Line along the edge | `Posts at Rails 4x4 P.T.` | 2 per balcony | `pcs` | `=2*G` |
-| same line | `Rails (top & bottom)`, `Balustrades`, `Cap Rail` or a composite system | per detail | `LFT`, `pcs` | [Railing](../deck/railing.md) |
+| `sqfts/blcny` | `Decking` | `2x6 DuxxBak` per spec | `SQ FT` | `=CEILING(W*D*units*1.1,10)`: area of one balcony x units x 1.1; under 50 round up to 2 |
+| `Balcony blocks/#4 Balcony ...`, one point per balcony | `Posts at Rails` | `4x4 P.T.`, 2 per balcony | `4` (post length) | `=2*units` |
+| Line along the balcony edge | `Rails (top & bottom)`, `Balustrades`, `Cap Rail` or a composite system (`Rail sections`) | per detail | `LFT`, `pcs`, `unit` | [Railing](../deck/railing.md) |
 
 ## Common mistakes
 
 - A balcony block without its own units multiplier (900 SF instead of 60).
+- Decking without the 1.1 waste (`W*D*G`).
 - Balconies joined with a bridge into one polygon.
 - Sheathing added where the detail gives decking with no sheathing.
 - Railing counted by components and as a system at the same time.
@@ -55,12 +56,12 @@ All area mistakes: [common-mistakes](../../start/common-mistakes.md#sqft).
 
 ```text
 Takeoffs/Main/sqfts/
-  blcny               Area   58 SF
+  blcny               Area   707 SF   (7 polygons at 101 SF)
 Takeoffs/Main/Balcony blocks/
   #4 Balcony 12.9x7.83 (2GZO x7)   Count 7
 Balcony #4
-Decking        2x6 DuxxBak     447   SQ FT   58 x 7 x 1.1
-Posts at Rails 4x4 P.T.         14   pcs
+Decking        2x6 DuxxBak     780   SQ FT   12.9 x 7.83 x 7 x 1.1 = 777.8, round up to 10
+Posts at Rails 4x4 P.T.         14   4       2 x 7 = 14
 ```
 
 ## See also

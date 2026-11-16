@@ -37,13 +37,14 @@ Balcony - приподнятая наружная площадка на конс
 | Имя в дереве | Строка DFL (блок Balcony) | Материал | Unit | Формула |
 | --- | --- | --- | --- | --- |
 | `sqfts/blcny` | Front Page, `Balconies` | | `SQ FT` | как измерено x units |
-| `sqfts/blcny` | `Decking` | `2x6 DuxxBak` по spec | `SQ FT` | `SQFT x 1.1 x units` |
-| Line по краю | `Posts at Rails 4x4 P.T.` | 2 на балкон | `pcs` | `=2*G` |
-| та же линия | `Rails (top & bottom)`, `Balustrades`, `Cap Rail` или composite система | по детали | `LFT`, `pcs` | [Railing](../deck/railing.md) |
+| `sqfts/blcny` | `Decking` | `2x6 DuxxBak` по spec | `SQ FT` | `=ОКРВВЕРХ(W*D*units*1.1;10)`: площадь одного балкона x units x 1.1; меньше 50 - вверх до 2 |
+| `Balcony blocks/#4 Balcony ...`, точка на балкон | `Posts at Rails` | `4x4 P.T.`, 2 на балкон | `4` (длина поста) | `=2*units` |
+| Line по краю балкона | `Rails (top & bottom)`, `Balustrades`, `Cap Rail` или composite система (`Rail sections`) | по детали | `LFT`, `pcs`, `unit` | [Railing](../deck/railing.md) |
 
 ## Частые ошибки
 
 - Блок балкона без своего множителя units (900 SF вместо 60).
+- Decking без запаса 1.1 (`W*D*G`).
 - Балконы соединены перемычкой в один полигон.
 - Sheathing добавлен там, где деталь даёт decking без листа.
 - Railing по элементам и как система одновременно.
@@ -55,12 +56,12 @@ Balcony - приподнятая наружная площадка на конс
 
 ```text
 Takeoffs/Main/sqfts/
-  blcny               Area   58 SF
+  blcny               Area   707 SF   (7 полигонов по 101 SF)
 Takeoffs/Main/Balcony blocks/
   #4 Balcony 12.9x7.83 (2GZO x7)   Count 7
 Balcony #4
-Decking        2x6 DuxxBak     447   SQ FT   58 x 7 x 1.1
-Posts at Rails 4x4 P.T.         14   pcs
+Decking        2x6 DuxxBak     780   SQ FT   12.9 x 7.83 x 7 x 1.1 = 777.8, вверх до 10
+Posts at Rails 4x4 P.T.         14   4       2 x 7 = 14
 ```
 
 ## См. также

@@ -30,10 +30,13 @@ subfloor, свои joists и ограждение по открытому кра
 3. Уточни тип каркаса: floor joists, roof-type или by others; от этого зависит,
    куда идут joists ([Joist](../horizontal/floor-framing/joist.md)).
 
-!!! warning "Уточняется"
-    Токен `loft` в автомаршруте имён не подтверждён: проверь, что позиция
-    легла в `sqfts`, иначе перенеси через move или добавь правило в
-    Settings > Takeoff Name Routing.
+!!! note "Имя `loft` и папка `sqfts`"
+    Слова `loft` нет среди имён, которые программа сама отправляет в `sqfts`
+    (туда уходят этажи `1st`...`8th`, `base`, `porch`, `deck`, `blcny`, `cant`,
+    `flat`, `rf`). После создания проверь, что позиция лежит в `sqfts`; если
+    нет, перенеси её туда или добавь правило в Settings > Takeoff Name
+    Routing. Экспорт SF имя `loft` понимает и кладёт площадь в ячейку пятого
+    этажа: строка `Subfloor` loft должна ссылаться на неё.
 
 ## Как назвать в дереве и строка DFL
 
@@ -41,13 +44,15 @@ subfloor, свои joists и ограждение по открытому кра
 | --- | --- | --- | --- | --- |
 | `sqfts/loft` | Front Page, `Loft` | | `SQ FT` | как измерено |
 | `sqfts/loft` | `Subfloor` в `Loft Framing List` | `3/4" T&G` | `4x8` | `=ОКРВВЕРХ(SQFT/32*1.1;1)` |
-| Line по открытому краю | `Railing` / guard | по детали | `LFT` | |
+| J Area зоны joists loft | `Joists 16" o.c.` в `Loft Framing List` | по S-плану | длина доски в футах | C = число joists: [Joist](../horizontal/floor-framing/joist.md) |
+| Line по открытому краю | `Railing` / guard | по детали | `LFT` | [Railing](../deck/railing.md) |
 
 ## Частые ошибки
 
 - Loft не найден: он на архитектурных листах, каркас на structural.
 - Guard по открытому периметру забыт.
 - Loft записан как `5th` вместо `Loft` на Front Page.
+- Joists записаны в `LFT`: в C число досок, в D длина доски.
 
 Все ошибки по площадям: [common-mistakes](../../start/common-mistakes.md#sqft).
 
@@ -55,10 +60,10 @@ subfloor, свои joists и ограждение по открытому кра
 
 ```text
 Takeoffs/Main/sqfts/
-  loft      Area   340 SF
+  loft      Area   340 SF   (20' x 17')
 Loft Framing List
-Joists 16" o.c.    2x10     ...   LFT   S203
-Subfloor           3/4" T&G  12   4x8
+Joists 16" o.c.    2x10       16   18    S203   20 x 12/16 = 15, плюс 1; пролёт 17' = доска 18'
+Subfloor           3/4" T&G   12   4x8          340 / 32 x 1.1 = 11.7
 ```
 
 ## См. также
