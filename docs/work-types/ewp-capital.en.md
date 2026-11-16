@@ -11,7 +11,7 @@ job types: "EWP only" (Capital-type) and "everything except EWP" (`Frame. EWP by
 
 <figure markdown>
   ![Floor I-joists bearing on a beam over a post](../assets/images/photos/work-types/ijoists-on-beam-post.jpg){ width="520" }
-  <figcaption markdown="span">EWP on site: I-joists sit on a glued beam, the beam sits on a post with a metal post cap. In an "EWP only" job we count the I-joists, the beam and the hangers for them; not the 2x post or the trusses in the background. Photo: redbuilt.com, [source](http://www.redbuilt.com/commercial-systems/i-joists), found via Pinterest.</figcaption>
+  <figcaption markdown="span">EWP on site: I-joists sit on a glued beam, the beam sits on an engineered post with a metal post cap, steel open web joists in the background. In an "EWP only" job we count the I-joists, the beam and the hangers for them; not the steel joists, the post as the drawings say. Photo: redbuilt.com, [source](http://www.redbuilt.com/commercial-systems/i-joists), found via Pinterest.</figcaption>
 </figure>
 
 ## What these materials are

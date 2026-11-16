@@ -7,7 +7,7 @@
 
 <figure markdown>
   ![Крестовые распорки bridging между joists перекрытия](../../../../assets/images/photos/framing/joist-cross-bridging.jpg){ width="480" }
-  <figcaption markdown="span">Bridging из 2x2 крестом между двумя joists под subfloor. Это та же позиция, что и blocking: один ряд поперёк пролёта считается LFT по длине ряда, материал и шаг рядов берём с framing plan или деталей. Фото: gotknowhow.com, [источник](http://gotknowhow.com/articles/how-to-cut-herringbone-joist-struts-for-14-half-spaced-2x10-joists), найдено через Pinterest.</figcaption>
+  <figcaption markdown="span">Деревянный bridging 2x2 крестом между joists под subfloor: ряд поперёк пролёта метится линией, как blocking, материал и шаг рядов берём с framing plan или деталей. Металлический cross bridging `TB27` у I-joists считается штуками (строка ниже). Фото: gotknowhow.com, [источник](http://gotknowhow.com/articles/how-to-cut-herringbone-joist-struts-for-14-half-spaced-2x10-joists), найдено через Pinterest.</figcaption>
 </figure>
 
 ## Что это

@@ -91,7 +91,7 @@ Cap и base на каждую стойку, модель по детали; ба
 
 <figure markdown>
   ![Фермы на верхней доске стены со страпами-ties](../assets/images/photos/hardware/truss-strap-tie-top-plate.jpg){ width="520" }
-  <figcaption markdown="span">Ties от стены к каждой ферме: штука на ферму на каждой опоре, модель из truss schedule или деталей (H2.5A, страп), под обшивкой без `Zmax`. Фото: greenbuildingadvisor.com, [источник](http://greenbuildingadvisor.com/), найдено через Pinterest.</figcaption>
+  <figcaption markdown="span">Фермы на верхней доске стены; фото мягкое, металл в узлах - пластины самих ферм, ties у top plate тут почти не видны. Ties от стены к каждой ферме: штука на ферму на каждой опоре, модель из truss schedule или деталей (H2.5A, страп), под обшивкой без `Zmax`. Фото: greenbuildingadvisor.com, [источник](http://greenbuildingadvisor.com/), найдено через Pinterest.</figcaption>
 </figure>
 
 ## См. также

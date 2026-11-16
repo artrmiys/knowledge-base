@@ -91,7 +91,7 @@ Holdown count: to concrete one, through wood floor framing two ([Blocks](dfl-blo
 
 <figure markdown>
   ![Trusses on the wall top plate with strap ties](../assets/images/photos/hardware/truss-strap-tie-top-plate.jpg){ width="520" }
-  <figcaption markdown="span">Ties from the wall to every truss: one per truss at each bearing, model from the truss schedule or details (H2.5A, strap), under sheathing without `Zmax`. Photo: greenbuildingadvisor.com, [source](http://greenbuildingadvisor.com/), found via Pinterest.</figcaption>
+  <figcaption markdown="span">Trusses on the wall top plate; the photo is soft, the metal at the joints is the trusses' own plates, the ties at the top plate are hardly visible here. Ties from the wall to every truss: one per truss at each bearing, model from the truss schedule or details (H2.5A, strap), under sheathing without `Zmax`. Photo: greenbuildingadvisor.com, [source](http://greenbuildingadvisor.com/), found via Pinterest.</figcaption>
 </figure>
 
 ## See also

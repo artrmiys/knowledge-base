@@ -140,7 +140,7 @@ First count on the plan how many go left and how many go right, then write the r
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">CBH for Glulam</div>
       <div class="kb-figure-row__rule"><code>CBH2.37X9.75C-KT</code> - a special connection for glulam.</div>
-      <div class="kb-figure-row__note">Only when a detail or schedule shows a glulam or Cedar-style connection.</div>
+      <div class="kb-figure-row__note">Only when a detail or schedule shows a glulam or Cedar-style connection. Picture: Simpson Strong-Tie catalog, <a href="https://www.strongtie.com/">strongtie.com</a>.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../assets/images/confluence/confluence-030.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-030.png" alt="CBH hanger for glulam condition" loading="lazy"></a>
   </figure>
@@ -148,7 +148,7 @@ First count on the plan how many go left and how many go right, then write the r
     <figcaption class="kb-figure-row__text">
       <div class="kb-figure-row__title">CJTZ for Cedar</div>
       <div class="kb-figure-row__rule"><code>CJTZ</code> - a separate item for Cedar beams and posts.</div>
-      <div class="kb-figure-row__note">Do not mix with regular beam hangers; it is a separate row in the workbook.</div>
+      <div class="kb-figure-row__note">Do not mix with regular beam hangers; it is a separate row in the workbook. Picture: CJTZ installation guide, Simpson Strong-Tie, <a href="https://www.strongtie.com/">strongtie.com</a>.</div>
     </figcaption>
     <a class="kb-figure-row__image" href="../../assets/images/confluence/confluence-031.png" target="_blank" rel="noopener"><img src="../../assets/images/confluence/confluence-031.png" alt="CJTZ installation for Cedar beam and post" loading="lazy"></a>
   </figure>

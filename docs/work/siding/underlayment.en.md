@@ -1,8 +1,8 @@
 # Underlayment
 
 <figure markdown>
-  ![Wall corner: furring strips over the sheathing before siding](../../assets/images/photos/siding/furring-strips-over-sheathing-corner.jpg)
-  <figcaption markdown="span">House corner before siding: vertical furring strips (rainscreen) nailed over sheathing that doubles as the WRB, tape at the joint with the foundation at the bottom. Furring is counted in LFT by spacing over the wall area, WRB in SQ FT by the wall area. Photo: greenbuildingadvisor.com, [source](http://www.greenbuildingadvisor.com/blogs/dept/musings/all-about-rainscreens), found via Pinterest.</figcaption>
+  ![Wall corner: furring strips over rigid foam before siding](../../assets/images/photos/siding/furring-strips-over-sheathing-corner.jpg)
+  <figcaption markdown="span">House corner before siding: vertical furring strips (rainscreen) nailed over rigid foam insulation with taped seams, tape at the joint with the foundation at the bottom. Furring is counted in LFT by spacing over the wall area, WRB in SQ FT by the wall area. Photo: greenbuildingadvisor.com, [source](http://www.greenbuildingadvisor.com/blogs/dept/musings/all-about-rainscreens), found via Pinterest.</figcaption>
 </figure>
 
 ## What it is
