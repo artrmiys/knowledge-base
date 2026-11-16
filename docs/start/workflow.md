@@ -47,8 +47,8 @@ Excel - в [Справочнике](../reference/takeoff-items.md).
 ## 3. Проект в OurPlanCore
 
 <figure markdown>
-  ![Панель Pages с папками листов](../assets/images/ourplancore/v3/pages-panel.png)
-  <figcaption markdown="span">Листы разложены по папкам `00. imported/Arch`, `Struct`, `sections`, `details ...`; ненужное в `--------others`. Имя листа `a101 1st`.</figcaption>
+  ![Панель Pages с папками листов](../assets/images/ourplancore/v3/pages-tree.png)
+  <figcaption markdown="span">Демо-проект в Lite: листы разложены по папкам `00. imported/Arch`, `Struct`, `units`, ненужное идёт в `--------others`; на работе к ним добавляются `sections`, `details ...`. Под листом `a101 1st` его позиции.</figcaption>
 </figure>
 
 1. **Листы.** Имя `<номер листа> <тег>` строчными: `a101 1st`, `s201 2nd`, `s101 f`,
@@ -134,8 +134,8 @@ joists только J Area, балки только Beam, проёмы толь�
 ## 7. Экспорт
 
 <figure markdown>
-  ![Диалог экспорта PDF](../assets/images/ourplancore/v3/export-pdf.png)
-  <figcaption markdown="span">PDF Output: Preview, потом Export. В файл идут только листы, на которых есть видимые замеры.</figcaption>
+  ![Окно Export PDF: галки замеров и легенды](../assets/images/ourplancore/v3/export-pdf-options.png)
+  <figcaption markdown="span">PDF Output: Preview, потом Export. В окне Export PDF галки Measurements и Legend включены, Markups выключена, ниже листы галками. В файл идут только листы, на которых есть видимые замеры.</figcaption>
 </figure>
 
 1. **PDF.** Сохранить проект (Ctrl+S). Лишнее спрятать (H), узлы собрать

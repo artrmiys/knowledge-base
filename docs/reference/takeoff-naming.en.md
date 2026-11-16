@@ -24,7 +24,7 @@ A new takeoff is created by a tool, `New Item`, or by pasting `New takeoffs`. Th
 
 <figure markdown>
   ![W/F/S/U dots under the Scale header](../assets/images/ourplancore/v3/sheet-dots.png)
-  <figcaption markdown="span">The selected dot is shown in the status: `Route: W 2nd`, `Route: F 1st`, `Route: U all floors`.</figcaption>
+  <figcaption markdown="span">The selected dot is shown in the status: `Route: W 1st floor` on the picture, `Route: W 2nd floor`, `Route: F 1st floor`, `Route: U all floors` on other sheets.</figcaption>
 </figure>
 
 Where a new takeoff from a 2nd floor sheet goes, paths from the building root:

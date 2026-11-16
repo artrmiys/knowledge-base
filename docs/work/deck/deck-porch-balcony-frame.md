@@ -55,11 +55,6 @@ stringers. **Balcony** стоит у стены верхнего этажа на
    [Framing details](../horizontal/floor-framing/details/rim.md).
 
 <figure markdown>
-  ![Count points for balcony blocks](../../assets/images/ourplancore/v3/measure-count.png)
-  <figcaption markdown="span">Count точками: одна точка на каждый экземпляр балкона, имя итема несёт тип, размер и число экземпляров.</figcaption>
-</figure>
-
-<figure markdown>
   ![Разрез балкона у стены](../../assets/images/framing/balcony-block-section.svg)
   <figcaption markdown="span">Балкон у стены: ledger со screws, joists P.T. на hangers Zmax, end joist, beam на посту с cap, decking и перила. Каждая выноска это строка блока в DFL.</figcaption>
 </figure>

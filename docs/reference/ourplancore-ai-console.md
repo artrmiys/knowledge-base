@@ -109,7 +109,7 @@
 
 <figure markdown>
   ![Settings, раздел Terminals](../assets/images/ourplancore/v3/settings-terminals.png)
-  <figcaption markdown="span">Ярлыки, профиль, ширина, усилие, четыре галки контекста и текст сообщения подключения.</figcaption>
+  <figcaption markdown="span">Ярлыки, профиль, ширина, усилие, четыре галки контекста и текст сообщения подключения. Пути к ярлыкам на кадре стёрты.</figcaption>
 </figure>
 
 | Поле | Что задаёт |

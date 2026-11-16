@@ -1,7 +1,7 @@
 # Dbl / Trpl Rafters (усиленные стропила)
 
 <figure markdown>
-  ![Двойные rafters выделены зелёным](../../../assets/images/confluence/confluence-140.png)
+  ![Двойные rafters выделены зелёным](../../../assets/images/confluence/confluence-141.png)
   <figcaption markdown="span">Архивный 3D-вид: зелёным выделены сдвоенные rafters по бокам проёма и под нагрузкой. Они идут параллельно обычным rafters от конька до стены и считаются как балка с plies.</figcaption>
 </figure>
 
@@ -26,7 +26,7 @@ Hangers нужны только когда rafters опираются на не�
 
 <figure markdown>
   ![Инструмент Beam](../../../assets/images/ourplancore/v3/measure-beam.png)
-  <figcaption markdown="span">Инструмент Beam: две точки по элементу, длина округляется программой и попадает в имя позиции.</figcaption>
+  <figcaption markdown="span">Инструмент Beam (пример на балке перекрытия демо-проекта): две точки по элементу, линейка показывает длину 49,11 ft, программа округляет её до заказной и создаёт Count-позицию с длиной в имени, здесь `FB1 50`.</figcaption>
 </figure>
 
 ## Как назвать в дереве и строка DFL
@@ -57,7 +57,7 @@ Hangers нужны только когда rafters опираются на не�
 | `Hangers` | `LSSR2.56Z` | 2 | pcs | `rafters to ridge beam 7/S501` |
 
 <figure markdown>
-  ![Второй вид dbl rafters](../../../assets/images/confluence/confluence-141.png)
+  ![Второй вид dbl rafters](../../../assets/images/confluence/confluence-140.png)
   <figcaption markdown="span">Сдвоенные rafters ближе: пакет из двух досок по краю проёма, обычные rafters между ними обрезаны на header.</figcaption>
 </figure>
 

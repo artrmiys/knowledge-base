@@ -1,8 +1,8 @@
 # Windows and Doors
 
 <figure markdown>
-  ![Openings tool: a box on a window and a point named 3.0x5.0](../../../assets/images/ourplancore/v3/measure-openings.png)
-  <figcaption markdown="span">The Openings tool on an elevation: a box around the opening, the app writes the size name `3.0x5.0` itself and places a point in the center. One point is one physical opening.</figcaption>
+  ![Window takeoff 3.0x4.0: a point on every window](../../../assets/images/ourplancore/v3/measure-openings.png)
+  <figcaption markdown="span">Window Count takeoff `3.0x4.0` on the demo plan: one point per window, total 4 ea. The Openings tool makes such a takeoff from a box around the opening on an elevation: it writes the size name (width x height) itself and puts the point in the center. One point is one physical opening.</figcaption>
 </figure>
 
 ## What it is

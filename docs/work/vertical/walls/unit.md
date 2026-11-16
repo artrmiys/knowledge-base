@@ -1,8 +1,8 @@
 # Unit Walls (стены типовых квартир)
 
 <figure markdown>
-  ![Лист юнита с точкой U и линиями A 2x4 и A 2x6](../../../assets/images/ourplancore/v3/sheet-unit.png)
-  <figcaption markdown="span">Лист типа юнита с точкой U: все новые takeoff с него ложатся в `units`. Линии только по внутренним перегородкам квартиры, по одной позиции на сечение.</figcaption>
+  ![Лист юнита a3011 u с точкой U и линиями A 2x4](../../../assets/images/ourplancore/v3/sheet-unit.png)
+  <figcaption markdown="span">Лист типа юнита `a3011 u` в демо-проекте: горит точка U, в статусе `Route: U all floors`, все новые takeoff с листа ложатся в `units`. Линии `A 2x4` только по внутренним перегородкам квартиры, одна позиция на сечение; легенда `Units` даёт 101,56 ft.</figcaption>
 </figure>
 
 ## Что это

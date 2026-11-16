@@ -47,8 +47,8 @@ Excel is in the [Reference](../reference/takeoff-items.md).
 ## 3. The job in OurPlanCore
 
 <figure markdown>
-  ![Pages panel with sheet folders](../assets/images/ourplancore/v3/pages-panel.png)
-  <figcaption markdown="span">Sheets are sorted into folders `00. imported/Arch`, `Struct`, `sections`, `details ...`; unused ones go to `--------others`. Sheet name `a101 1st`.</figcaption>
+  ![Pages panel with sheet folders](../assets/images/ourplancore/v3/pages-tree.png)
+  <figcaption markdown="span">The demo project in Lite: sheets sorted into folders `00. imported/Arch`, `Struct`, `units`, unused ones go to `--------others`; on a real job `sections`, `details ...` are added. Under sheet `a101 1st` are its takeoffs.</figcaption>
 </figure>
 
 1. **Sheets.** Name is `<sheet number> <tag>` in lowercase: `a101 1st`, `s201 2nd`, `s101 f`,
@@ -133,8 +133,8 @@ In OurPlanCore: Estimating, `Total`, sheet legend (`Organize > Sort Sheet Legend
 ## 7. Export
 
 <figure markdown>
-  ![PDF export dialog](../assets/images/ourplancore/v3/export-pdf.png)
-  <figcaption markdown="span">PDF Output: Preview, then Export. Only sheets with visible takeoffs go into the file.</figcaption>
+  ![Export PDF window: measurement and legend checkboxes](../assets/images/ourplancore/v3/export-pdf-options.png)
+  <figcaption markdown="span">PDF Output: Preview, then Export. In the Export PDF window Measurements and Legend are ticked, Markups is not, the sheets are ticked below. Only sheets with visible takeoffs go into the file.</figcaption>
 </figure>
 
 1. **PDF.** Save the job (Ctrl+S). Hide what is not needed (H), collect details

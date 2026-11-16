@@ -41,7 +41,7 @@ OurPlanCore - программа для замеров по PDF-чертежам
 | 4 | Панель Takeoffs | зелёная и красная точки корня, строка активной позиции с `Record`, `Total`, `New Item`, вкладки `Takeoffs`, `Estimating`, `Templates` | [Дерево Takeoffs](ourplancore-takeoffs.md), [Несколько зданий](ourplancore-buildings.md) |
 | 5 | Нижняя полоса инструментов | строка 1: `Pan`, `Select`, `Scale`, `Ruler`, `Count`, `Line`, `Area`, `J Area`, `Beam`, `Open`, `Cut`, `Snap`, `Ortho`, `Box`; строка 2: `Transform`, `Scale: 1:N`, `Presets`, `Fit` | [Инструменты](ourplancore-tools.md), [Правка и привязки](ourplancore-editing.md) |
 | 6 | Полоса XL | кнопки экспорта в Excel: `ALL`, `LG`, `SF`, `WL` ... `ST`; рядом кнопка `>_` консоли ИИ (только полная версия). В Lite полоса выключена, пока не поставлена галка `Excel Strip (XL)` в `Settings > Modules`; без неё Excel идёт кнопками внизу (`Excel`, `Value`, `Link to Excel`) | [Экспорт в Excel](ourplancore-excel.md#lite), [Полоса XL](ourplancore-excel.md#xl), [Консоль ИИ](ourplancore-ai-console.md) |
-| 7 | Строка статуса | `<лист>`, `Scale:`, `Zoom:`, `Mode:`, `Takeoff: ... (Route: W 1st)`, `Save: Saved hh:mm:ss`, сообщение последней команды | [Проекты и сохранение](job-creation-storage.md) |
+| 7 | Строка статуса | `<лист>`, `Scale:`, `Zoom:`, `Mode:`, `Takeoff: ...`, `Route: W 1st floor`, `Save: Saved hh:mm:ss`, сообщение последней команды | [Проекты и сохранение](job-creation-storage.md) |
 
 Строка `Takeoff:` показывает, куда пойдёт следующий замер, `Save:` - сохранён ли проект. Эти две подписи стоит проверять чаще других.
 
@@ -110,14 +110,14 @@ OurPlanCore - программа для замеров по PDF-чертежам
 
     - [Горячие клавиши](ourplancore-shortcuts.md)
     - [Решение проблем](ourplancore-troubleshooting.md)
-    - [Что нового](ourplancore-changelog.md): два месяца изменений, 15.08-17.10
+    - [Что нового](ourplancore-changelog.md): выпуски 3.0 по сборкам, ниже сборки 2.2
 
 </div>
 
 ## Путь: открыл проект, сдал работу
 
 1. **Открыть проект.** `Main > Open / Import > Open project...` или плитка `Open a recent job` на стартовом экране. Проект приходит уже с именами листов и точками W/F/S/U. [Проекты](job-creation-storage.md)
-2. **Проверить листы.** Раскрыть `00. imported/Arch`, открыть план этажа, сверить `Scale:` в статусе и точку под заголовком Scale (`Route: W 1st`). Листы без имён (`Page N`) назвать руками и поставить масштаб `S`. Копии под shear walls получают точку S руками. [Листы](ourplancore-pages.md), [Раскладка по листам](ourplancore-split-by-sheets.md)
+2. **Проверить листы.** Раскрыть `00. imported/Arch`, открыть план этажа, сверить `Scale:` в статусе и точку под заголовком Scale (`Route: W 1st floor`). Листы без имён (`Page N`) назвать руками и поставить масштаб `S`. Копии под shear walls получают точку S руками. [Листы](ourplancore-pages.md), [Раскладка по листам](ourplancore-split-by-sheets.md)
 3. **Дерево Takeoffs.** `More > Auto Tree` даёт корни COM-шаблона; несколько корпусов - папка на каждый, зелёная точка на текущем. [Дерево](ourplancore-takeoffs.md), [Несколько зданий](ourplancore-buildings.md), [канон дерева](../start/takeoff-structure.md)
 4. **Замеры по scope.** Один scope на проход листа: стены `L`, проёмы `O`, площади `A`, joists `J`, балки `B`, посты и holdowns `P`. `Space` продолжает выбранную позицию. [Инструменты](ourplancore-tools.md), порядок замеров в [процессе работы](../start/workflow.md)
 5. **Имена позиций.** Имя несёт числа для Excel: `ext 2x6 9.09`, `4.3x7.8 d`, `rf 6`, `eve 24 main`. Новая позиция сама ложится в папку по точке листа и имени. [Имена и автомаршрут](takeoff-naming.md), [форматы имён](../start/takeoff-structure.md)
@@ -125,7 +125,7 @@ OurPlanCore - программа для замеров по PDF-чертежам
 7. **Excel.** Открыть книгу корпуса из `TemplateCom.xlsm` (папка `templates` в Dropbox), щёлкнуть ячейку, выделить позицию или папку в Takeoffs и нажать `Excel` или `Value` внизу; число, которое должно идти за замером, ставить кнопкой `Link to Excel`; расчёт по списку `J:L` запускать кнопками вкладки E-Wood в Excel. То же по секциям делает полоса XL (`ALL`, легенда `LG`); в Lite её сначала включают галкой `Excel Strip (XL)` в `Settings > Modules`. [Экспорт в Excel](ourplancore-excel.md#lite), [книга DFL](dfl-overview.md), [вкладка E-Wood](ewood-tab.md#calculate)
 8. **PDF и сдача.** `Ctrl+S`, спрятать лишнее (`H`, маска Hide), `PDF Output > Preview`, затем `Main > Export`: только листы с замерами, отдельный PDF на корпус. Дальше processed xlsx и `Changes.txt` для ревизии. [PDF и сдача](ourplancore-pdf.md), [сдача](../start/workflow.md)
 
-## Что появилось за два месяца { #whats-new }
+## Что изменилось с середины августа 2026 { #whats-new }
 
 Если работал в версии до середины августа, вот что изменилось в повседневных действиях. Полный список по сборкам - [Что нового](ourplancore-changelog.md).
 

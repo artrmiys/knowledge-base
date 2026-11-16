@@ -73,7 +73,7 @@ The exact contents of the demo after the 3.0.1 release should be checked against
 
 ### What to try, step by step
 
-1. **Sheets and dots.** Open a plan, read `Route: W 1st` in the status bar; press `F2` and enter the same name again: the dot does not change. Make a copy of the sheet (`Ctrl+D`), rename it to `... sw`, click the S dot. [Split by sheets](ourplancore-split-by-sheets.md#copy-dot)
+1. **Sheets and dots.** Open a plan, read `Route: W 1st floor` in the status bar; press `F2` and enter the same name again: the dot does not change. Make a copy of the sheet (`Ctrl+D`), rename it to `... sw`, click the S dot. [Split by sheets](ourplancore-split-by-sheets.md#copy-dot)
 2. **Routing.** Press `L`, type the name `ext 2x6 9.09`, look at the destination line in the New Item dialog, make two clicks and `C`: the takeoff sits in `walls/1st floor walls`. [Names and auto-routing](takeoff-naming.md)
 3. **Tools.** On the same plan `O` on a door, `A` on a room, `X` to cut an area; on a structural sheet `J` for a joist area and `B` for a beam from support to support. [Tools](ourplancore-tools.md)
 4. **Legend.** `Display > Legend Show`, then right-click the sheet, `Organize > Sort Sheet Legend by Key`; `H` on a takeoff hides it from the sheet, the dot next to the takeoff under the sheet in Pages brings it back. [Takeoffs tree](ourplancore-takeoffs.md#hide)

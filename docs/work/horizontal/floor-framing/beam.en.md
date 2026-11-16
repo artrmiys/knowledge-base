@@ -2,7 +2,7 @@
 
 <figure markdown>
   ![Beam tool: beam length in the name](../../../assets/images/ourplancore/v3/measure-beam.png)
-  <figcaption markdown="span">Beam tool: two points along the beam from bearing to bearing; the app rounds the length and creates a Count takeoff `FB1 8` with the first mark. A second beam of the same mark and length goes into the same takeoff as a second point.</figcaption>
+  <figcaption markdown="span">Beam tool in the demo project: two points along the beam from post to post, the ruler shows 49,11 ft, the app rounds the length to the order length and creates a Count takeoff with the first mark; the mark was typed over `Beam` in the window, giving `FB1 50`. A second beam of the same mark and length goes into the same takeoff as a second point.</figcaption>
 </figure>
 
 <figure markdown>

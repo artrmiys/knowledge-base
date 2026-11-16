@@ -1,7 +1,7 @@
 # Dbl / Trpl Rafters
 
 <figure markdown>
-  ![Double rafters highlighted in green](../../../assets/images/confluence/confluence-140.png)
+  ![Double rafters highlighted in green](../../../assets/images/confluence/confluence-141.png)
   <figcaption markdown="span">Archive 3D view: doubled rafters at the sides of an opening and under a load are highlighted in green. They run parallel to the regular rafters from the ridge to the wall and are counted like a beam with plies.</figcaption>
 </figure>
 
@@ -26,7 +26,7 @@ Hangers are needed only when the rafters bear on a bearing ridge beam or the det
 
 <figure markdown>
   ![Beam tool](../../../assets/images/ourplancore/v3/measure-beam.png)
-  <figcaption markdown="span">Beam tool: two points along the member, the app rounds the length and puts it into the takeoff name.</figcaption>
+  <figcaption markdown="span">Beam tool (example on a floor beam of the demo project): two points along the member, the ruler shows the length 49,11 ft, the app rounds it to the order length and creates a Count takeoff with the length in the name, here `FB1 50`.</figcaption>
 </figure>
 
 ## Takeoff name and DFL row
@@ -57,7 +57,7 @@ Path: `framing/roof framing/beams/dbl rafters <size> <length>`.
 | `Hangers` | `LSSR2.56Z` | 2 | pcs | `rafters to ridge beam 7/S501` |
 
 <figure markdown>
-  ![Second view of dbl rafters](../../../assets/images/confluence/confluence-141.png)
+  ![Second view of dbl rafters](../../../assets/images/confluence/confluence-140.png)
   <figcaption markdown="span">Doubled rafters up close: a two-board pack at the edge of the opening, the regular rafters between them are cut to the header.</figcaption>
 </figure>
 

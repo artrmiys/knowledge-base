@@ -24,7 +24,7 @@
 - Перенос позиции - только операцией move: сохраняются замеры, цвет, значок и порядок легенды.
 
 <figure markdown>
-  ![Зелёная и красная точки корня корпуса](../assets/images/ourplancore/v3/takeoffs-root.png)
+  ![Корпуса в дереве Takeoffs, зелёная точка у активного](../assets/images/ourplancore/v3/buildings-tree.png)
   <figcaption markdown="span">Зелёная точка - активный корпус: новые замеры ложатся в его папки. Переключить - щёлкнуть точку у другого корпуса.</figcaption>
 </figure>
 
@@ -94,7 +94,7 @@ S (shear walls) по этажам и строка U (units). Новый заме
 
 <figure markdown>
   ![Точки W/F/S/U под заголовком Scale](../assets/images/ourplancore/v3/sheet-dots.png)
-  <figcaption markdown="span">Точка ставится сама по имени листа. Статус `Route: W 2nd` показывает, куда пойдёт новый замер.</figcaption>
+  <figcaption markdown="span">Точка ставится сама по имени листа: у `a101 1st` горит W/1. Статус `Route: W 1st floor` показывает, куда пойдёт новый замер.</figcaption>
 </figure>
 
 Механика точек, правила по имени и настройки -

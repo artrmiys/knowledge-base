@@ -41,7 +41,7 @@ This section describes **OurPlanCore Lite**, the build estimators have: no AI mo
 | 4 | Takeoffs panel | green and red root dots, the active takeoff row with `Record`, `Total`, `New Item`, tabs `Takeoffs`, `Estimating`, `Templates` | [Takeoffs tree](ourplancore-takeoffs.md), [Multiple buildings](ourplancore-buildings.md) |
 | 5 | Bottom tool strip | row 1: `Pan`, `Select`, `Scale`, `Ruler`, `Count`, `Line`, `Area`, `J Area`, `Beam`, `Open`, `Cut`, `Snap`, `Ortho`, `Box`; row 2: `Transform`, `Scale: 1:N`, `Presets`, `Fit` | [Tools](ourplancore-tools.md), [Editing and snaps](ourplancore-editing.md) |
 | 6 | XL strip | Excel export buttons: `ALL`, `LG`, `SF`, `WL` ... `ST`; next to them the `>_` button of the AI console (full version only). In Lite the strip is off until `Excel Strip (XL)` is checked in `Settings > Modules`; without it Excel goes through the buttons at the bottom (`Excel`, `Value`, `Link to Excel`) | [Export to Excel](ourplancore-excel.md#lite), [XL strip](ourplancore-excel.md#xl), [AI console](ourplancore-ai-console.md) |
-| 7 | Status bar | `<sheet>`, `Scale:`, `Zoom:`, `Mode:`, `Takeoff: ... (Route: W 1st)`, `Save: Saved hh:mm:ss`, the last command's message | [Jobs and saving](job-creation-storage.md) |
+| 7 | Status bar | `<sheet>`, `Scale:`, `Zoom:`, `Mode:`, `Takeoff: ...`, `Route: W 1st floor`, `Save: Saved hh:mm:ss`, the last command's message | [Jobs and saving](job-creation-storage.md) |
 
 The `Takeoff:` field shows where the next measurement will go, `Save:` shows whether the job is saved. These two are worth checking more often than the rest.
 
@@ -110,14 +110,14 @@ Pages in this section have short clips, 10-20 seconds each, recorded in the app.
 
     - [Keyboard shortcuts](ourplancore-shortcuts.md)
     - [Troubleshooting](ourplancore-troubleshooting.md)
-    - [What's new](ourplancore-changelog.md): two months of changes, 08/15-10/17
+    - [What's new](ourplancore-changelog.md): the 3.0 releases build by build, the 2.2 builds below
 
 </div>
 
 ## Path: open a job, deliver the work
 
 1. **Open the job.** `Main > Open / Import > Open project...` or the `Open a recent job` tile on the start screen. The job already comes with sheet names and W/F/S/U dots. [Jobs](job-creation-storage.md)
-2. **Check the sheets.** Expand `00. imported/Arch`, open a floor plan, check `Scale:` in the status bar and the dot under the Scale header (`Route: W 1st`). Name unnamed sheets (`Page N`) by hand and set the scale with `S`. Copies for shear walls get the S dot by hand. [Sheets](ourplancore-pages.md), [Split by sheets](ourplancore-split-by-sheets.md)
+2. **Check the sheets.** Expand `00. imported/Arch`, open a floor plan, check `Scale:` in the status bar and the dot under the Scale header (`Route: W 1st floor`). Name unnamed sheets (`Page N`) by hand and set the scale with `S`. Copies for shear walls get the S dot by hand. [Sheets](ourplancore-pages.md), [Split by sheets](ourplancore-split-by-sheets.md)
 3. **Takeoffs tree.** `More > Auto Tree` creates the COM template roots; several buildings: a folder for each, the green dot on the current one. [Tree](ourplancore-takeoffs.md), [Multiple buildings](ourplancore-buildings.md), [tree canon](../start/takeoff-structure.md)
 4. **Measurements by scope.** One scope per pass over the sheet: walls `L`, openings `O`, areas `A`, joists `J`, beams `B`, posts and holdowns `P`. `Space` continues the selected takeoff. [Tools](ourplancore-tools.md), takeoff order in the [workflow](../start/workflow.md)
 5. **Takeoff names.** The name carries the numbers for Excel: `ext 2x6 9.09`, `4.3x7.8 d`, `rf 6`, `eve 24 main`. A new takeoff goes into a folder by itself, based on the sheet dot and the name. [Names and auto-routing](takeoff-naming.md), [name formats](../start/takeoff-structure.md)
@@ -125,7 +125,7 @@ Pages in this section have short clips, 10-20 seconds each, recorded in the app.
 7. **Excel.** Open the building's workbook made from `TemplateCom.xlsm` (the `templates` folder in Dropbox), click a cell, select a takeoff or folder in Takeoffs and press `Excel` or `Value` at the bottom; a number that should follow the measurement goes in with the `Link to Excel` button; run the calculation from the `J:L` list with the E-Wood tab buttons in Excel. The XL strip does the same section by section (`ALL`, the `LG` legend); in Lite turn it on first with the `Excel Strip (XL)` checkbox in `Settings > Modules`. [Export to Excel](ourplancore-excel.md#lite), [DFL workbook](dfl-overview.md), [E-Wood tab](ewood-tab.md#calculate)
 8. **PDF and delivery.** `Ctrl+S`, hide what is not needed (`H`, Hide mask), `PDF Output > Preview`, then `Main > Export`: only sheets with measurements, a separate PDF per building. Then the processed xlsx and `Changes.txt` for a revision. [PDF and delivery](ourplancore-pdf.md), [delivery](../start/workflow.md)
 
-## What appeared in two months { #whats-new }
+## What changed since mid-August 2026 { #whats-new }
 
 If you worked in a version from before mid-August, here is what changed in everyday actions. Full list by build: [What's new](ourplancore-changelog.md).
 
