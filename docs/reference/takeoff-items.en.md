@@ -78,7 +78,7 @@ Formatting: bold, colored fill, columns B-F empty. Group subsections: `Rear Grou
 
 ### Trim and other
 
-`Ext Casing`, `Casing for Int. Doors`, `Corner Boards`, `Crowns`, `Frieze Board`, `Fascia at Eves`, `Fascia at Rakes`, `Over Fascia Trims`, `Furring`, `Baseboard`, `Head Trim Flashing`, `Flashings at Wall`, `Int. Doors` (`3070 1 unit MARK FIRE LABEL`, doors wider than 4' as double `(2)2670`), `Cased Openings`, `Drywall at Walls`, `Drywall at Ceiling`, `Insulation at 6" Ext. Walls` (drywall and insulation between studs only when they are explicitly in scope; usually by others), `Lath Horiz 4" o.c.`, `Lath Vert 16" o.c.`.
+`Ext Casing`, `Casing for Int. Doors`, `Corner Boards`, `Crowns`, `Frieze Board`, `Fascia at Eves`, `Fascia at Rakes`, `Over Fascia Trims`, `Furring`, `Baseboard`, `Head Trim Flashing`, `Flashings at Wall`, `Int. Doors` (`3070 1 unit MARK FIRE LABEL`, doors wider than 3'-6" as double `(2)2670`), `Cased Openings`, `Drywall at Walls`, `Drywall at Ceiling`, `Insulation at 6" Ext. Walls` (drywall and insulation between studs only when they are explicitly in scope; usually by others), `Lath Horiz 4" o.c.`, `Lath Vert 16" o.c.`.
 
 ## Common mistakes
 

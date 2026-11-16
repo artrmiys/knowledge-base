@@ -119,7 +119,7 @@ FRT задаёт тип конструкции из Code Compliance Summary, а 
 ## Двери { #doors }
 
 - Unit entry doors из коридора обычно fire rated: `3070 Entry`, `2670 FCW`, `3070 HM C-lbl`; формат строки `3070 1 unit MARK FIRE LABEL`.
-- Двери шире 4' как двойные: `5070` = `(2)2670`. Hardware numbers в takeoff не идут.
+- Двери шире 3'-6" как двойные: `5070` = `(2)2670`, `4070` = `(2)2070`. Hardware numbers в takeoff не идут.
 - Casing в LFT по трём сторонам двери; jambs межкомнатных дверей считать точками по юнитам, группа по сечению соседней стены (точка у `2x6` = jamb 2x6).
 
 ## Interior trims { #trims }

@@ -119,7 +119,7 @@ Full breakdown, scope table and exceptions under concrete and in reconstruction:
 ## Doors { #doors }
 
 - Unit entry doors from the corridor are usually fire rated: `3070 Entry`, `2670 FCW`, `3070 HM C-lbl`; row format `3070 1 unit MARK FIRE LABEL`.
-- Doors wider than 4' as double: `5070` = `(2)2670`. Hardware numbers do not go into the takeoff.
+- Doors wider than 3'-6" as double: `5070` = `(2)2670`, `4070` = `(2)2070`. Hardware numbers do not go into the takeoff.
 - Casing in LFT on three sides of the door; interior door jambs are counted as points by unit, grouped by the adjacent wall section (a point at `2x6` = 2x6 jamb).
 
 ## Interior trims { #trims }

@@ -31,7 +31,7 @@ numbers. What exactly has been found in reviews and what it looks like:
 - [ ] One point per physical opening, size = the product from the schedule (not the head elevation).
 - [ ] Storefront once; a window and a door under one header = one opening.
 - [ ] Openings deducted from sheathing, WRB, insulation and the anchor line once, on their own floor; windows under 4' are not deducted.
-- [ ] Doors wider than 4' recorded as double; material and fire label stated.
+- [ ] Doors wider than 3'-6" recorded as double; material and fire label stated.
 - [ ] Jamb blocking at windows and interior doors; blocking around windows with Zip R or insulation.
 
 ## Sheathing {#sheathing}

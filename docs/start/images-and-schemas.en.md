@@ -89,6 +89,11 @@ Text part: rules, bullets, tables.
 ## Formatting rules
 
 - Every diagram gets a short caption (what it is, where to look, which project).
+- The caption describes what the picture actually shows: the same elements, names,
+  sizes and numbers. If the frame shows something else (another sheet, another size,
+  no promised frame or detail), change the picture or the caption instead of leaving it.
+- A diagram never contradicts the text of its page: its row labels and units are the
+  same as in the DFL table of that page (`LFT`, `SQ FT`, `4x8`, board length).
 - If the diagram is from a specific project, add the project number to the caption and do not
   publish private parts (client names, prices, personal data).
 - Do not insert screenshots with an "Email/UID/Password" field - crop to the content.
