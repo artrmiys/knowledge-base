@@ -13,7 +13,7 @@
       
       
       
-        <link rel="prev" href="../ourplancore-edit-takeoffs/">
+        <link rel="prev" href="../ourplancore-groups/">
       
       
         <link rel="next" href="../ourplancore-sheets-advanced/">
@@ -1306,6 +1306,8 @@
       
         
       
+        
+      
     
     
     
@@ -1414,6 +1416,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Группы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1498,6 +1528,17 @@
   
     <nav class="md-nav" aria-label="Sheet Takeoff Routing: точки листа">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#routing-top" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Точки в верхней ленте: Routing top
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#takeoff-2-" class="md-nav__link">
@@ -7244,6 +7285,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#routing-top" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Точки в верхней ленте: Routing top
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#takeoff-2-" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7430,6 +7482,11 @@
 <td>показать или скрыть матрицу</td>
 </tr>
 <tr>
+<td>Галка <code>Routing top</code></td>
+<td>лента Viewport</td>
+<td>перенести матрицу из-под Scale в верхнюю ленту (<a href="#routing-top">ниже</a>)</td>
+</tr>
+<tr>
 <td><code>Routing settings</code></td>
 <td>лента Viewport</td>
 <td>открывает <code>Settings &gt; Sheet Takeoff Routing</code></td>
@@ -7442,6 +7499,14 @@
 </tbody>
 </table>
 <p>Точка хранится в папке листа (<code>takeoff_routing.json</code>) и переживает закрытие проекта.</p>
+<h3 id="routing-top">Точки в верхней ленте: Routing top<a class="headerlink" href="#routing-top" title="Прямая ссылка на раздел">&para;</a></h3>
+<p>Зачем: точки под рукой на любой вкладке ленты и не занимают место на листе. Так можно с версии 3.1.</p>
+<ol>
+<li>Откройте ленту Viewport и поставьте галку <code>Routing top</code>.</li>
+<li>Матрица W/F/S/U переедет в правый верхний угол ленты и будет видна на всех вкладках ленты. Её левый край идёт по краю панели Takeoffs, в том числе когда ширину панели меняют. Место запоминается.</li>
+<li>Точки работают так же: щелчок ставит точку открытого листа, повторный снимает, U значит все этажи.</li>
+</ol>
+<p>Результат: на листе под Scale матрицы нет, она в ленте. Снимите галку, и точки вернутся на лист под Scale. Показывать матрицу или нет, по-прежнему решает галка <code>Sheet routing</code>. У откреплённых окон листов своя матрица на листе. То же в палитре: <code>Toggle Routing Top</code>, клавиши по умолчанию нет (<a href="../ourplancore-shortcuts/#remap">назначить</a>).</p>
 <h3 id="takeoff-2-">Куда идут новые takeoff (значения по умолчанию, пример для 2-го этажа)<a class="headerlink" href="#takeoff-2-" title="Прямая ссылка на раздел">&para;</a></h3>
 <table>
 <thead>
@@ -7817,7 +7882,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
         
           
-          <a href="../ourplancore-edit-takeoffs/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Merge, Split, Break пошагово">
+          <a href="../ourplancore-groups/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Группы">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -7827,7 +7892,7 @@
                 Назад
               </span>
               <div class="md-ellipsis">
-                Merge, Split, Break пошагово
+                Группы
               </div>
             </div>
           </a>

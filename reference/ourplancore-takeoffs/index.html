@@ -1518,6 +1518,8 @@
       
         
       
+        
+      
     
     
     
@@ -1609,6 +1611,34 @@
     
   
     Merge, Split, Break пошагово
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Группы
   
 
     
@@ -7449,6 +7479,10 @@
 <td>строка активной позиции: продолжить запись, свойства, показать в дереве, выбрать позицию с этого листа, следующая и предыдущая</td>
 </tr>
 <tr>
+<td>Цветной значок позиции</td>
+<td>двойной щелчок по значку в дереве или в строке активной позиции открывает окно свойств позиции, как <code>Properties...</code></td>
+</tr>
+<tr>
 <td><code>&gt;</code> (<code>Switch to next takeoff item</code>), <code>&lt;</code> (<code>Switch to previous takeoff item</code>)</td>
 <td>сделать активной следующую или предыдущую позицию из списка всех позиций проекта, по кругу; статус <code>Active takeoff target 3/12: &lt;имя&gt;</code>. Во время Record не переключают</td>
 </tr>
@@ -7747,7 +7781,7 @@
 </table>
 <p>Значения действуют и в подпапках: берётся ближайшая папка вверх по дереву, где поле заполнено. Подсказка над папкой показывает их строкой <code>Default: ...</code>.</p>
 <h2 id="colors">Цвета позиций<a class="headerlink" href="#colors" title="Прямая ссылка на раздел">&para;</a></h2>
-<p>Новая позиция получает случайный цвет без серого, чёрного и белого; <code>Split</code> даёт отделённой части новый цвет; имя <code>bft</code> всегда серое (<code>Settings &gt; Takeoff Colors</code>). Одинаковые цвета соседних позиций делают легенду нечитаемой: менять в <code>Props</code> или ПКМ <code>Properties...</code>, у многих сразу через <a href="#bulk">Bulk Properties</a>. ПКМ по папке &gt; <code>Random Colors for Items</code> даёт всем позициям папки и подпапок разные цвета из палитры за одно нажатие.</p>
+<p>Новая позиция получает случайный цвет без серого, чёрного и белого; <code>Split</code> даёт отделённой части новый цвет; имя <code>bft</code> всегда серое (<code>Settings &gt; Takeoff Colors</code>). Одинаковые цвета соседних позиций делают легенду нечитаемой: менять в <code>Props</code> или ПКМ <code>Properties...</code>, у многих сразу через <a href="#bulk">Bulk Properties</a>. ПКМ по папке &gt; <code>Random Colors for Items</code> (с числом позиций в скобках) даёт всем позициям папки и подпапок разные цвета из палитры за одно нажатие. С версии 3.1 эта команда перекрашивает и позиции со стартовым цветом по имени (<code>ext</code>, <code>2x4</code>, <code>2x6</code>, площади этажей): раз команду дали папке явно, стартовый цвет её не останавливает. Остаются только фиксированные правила <code>Settings &gt; Takeoff Colors</code> (<code>bft</code> серый). Новый цвет каждой позиции отличается от прежнего, сегменты берут цвет своей позиции. Жёлтая точка в шапке Takeoffs (<code>Random colors for all takeoffs</code>) красит весь проект и стартовые цвета по имени по-прежнему не трогает.</p>
 <p>Размер значков Count и толщину линий на экране задаёт лента <strong>Viewport</strong>, группа LINES &amp; AREA: <code>Point</code> (подсказка <code>Count marker size</code>, 0.25-4, по умолчанию 1) и <code>Line</code> (0.25-4); число можно вписать в поле рядом и нажать <span class="keys"><kbd class="key-enter">Enter</kbd></span>. Это только вид на экране и в отдельных окнах листов, в PDF свои значения: <code>PDF Output &gt; LINES &amp; AREA</code> (<a href="../ourplancore-pdf/">PDF</a>).</p>
 <h2 id="menus">Меню дерева: справка<a class="headerlink" href="#menus" title="Прямая ссылка на раздел">&para;</a></h2>
 <figure>

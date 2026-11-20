@@ -1518,6 +1518,8 @@
       
         
       
+        
+      
     
     
     
@@ -1609,6 +1611,34 @@
     
   
     Merge, Split, Break step by step
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ourplancore-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Groups
   
 
     
@@ -7449,6 +7479,10 @@
 <td>the active takeoff line: continue recording, properties, show in the tree, pick a takeoff from this sheet, next and previous</td>
 </tr>
 <tr>
+<td>Colored takeoff glyph</td>
+<td>a double-click on the glyph in the tree or on the active takeoff line opens the takeoff properties window, like <code>Properties...</code></td>
+</tr>
+<tr>
 <td><code>&gt;</code> (<code>Switch to next takeoff item</code>), <code>&lt;</code> (<code>Switch to previous takeoff item</code>)</td>
 <td>make the next or previous takeoff from the list of all job takeoffs active, wrapping around; status <code>Active takeoff target 3/12: &lt;name&gt;</code>. They do not switch during Record</td>
 </tr>
@@ -7747,7 +7781,7 @@ You need: the job open; for several buildings, the building folders created.</p>
 </table>
 <p>The values apply in subfolders too: the nearest folder up the tree with the field filled in wins. The tooltip over the folder shows them as a <code>Default: ...</code> line.</p>
 <h2 id="colors">Takeoff colors<a class="headerlink" href="#colors" title="Link to this section">&para;</a></h2>
-<p>A new takeoff gets a random color without gray, black and white; <code>Split</code> gives the split-off part a new color; the name <code>bft</code> is always gray (<code>Settings &gt; Takeoff Colors</code>). Identical colors on neighboring takeoffs make the legend unreadable: change them in <code>Props</code> or right-click <code>Properties...</code>, many at once through <a href="#bulk">Bulk Properties</a>. Right-click on a folder &gt; <code>Random Colors for Items</code> gives all takeoffs of the folder and subfolders different palette colors in one click.</p>
+<p>A new takeoff gets a random color without gray, black and white; <code>Split</code> gives the split-off part a new color; the name <code>bft</code> is always gray (<code>Settings &gt; Takeoff Colors</code>). Identical colors on neighboring takeoffs make the legend unreadable: change them in <code>Props</code> or right-click <code>Properties...</code>, many at once through <a href="#bulk">Bulk Properties</a>. Right-click on a folder &gt; <code>Random Colors for Items</code> (with the number of takeoffs in brackets) gives all takeoffs of the folder and subfolders different palette colors in one click. Since version 3.1 this command also recolors takeoffs that got a starting color from their name (<code>ext</code>, <code>2x4</code>, <code>2x6</code>, floor areas): the command was given to the folder on purpose, so a starting color does not stop it. Only the fixed rules of <code>Settings &gt; Takeoff Colors</code> stay (<code>bft</code> gray). Each takeoff's new color differs from its previous one, and the segments take the color of their takeoff. The yellow dot in the Takeoffs header (<code>Random colors for all takeoffs</code>) colors the whole job and still leaves the starting colors by name alone.</p>
 <p>The size of Count symbols and the line weight on screen are set on the <strong>Viewport</strong> ribbon, LINES &amp; AREA group: <code>Point</code> (tooltip <code>Count marker size</code>, 0.25-4, default 1) and <code>Line</code> (0.25-4); you can type a number in the field next to it and press <span class="keys"><kbd class="key-enter">Enter</kbd></span>. This is only the look on screen and in separate sheet windows; the PDF has its own values: <code>PDF Output &gt; LINES &amp; AREA</code> (<a href="../ourplancore-pdf/">PDF</a>).</p>
 <h2 id="menus">Tree menus: reference<a class="headerlink" href="#menus" title="Link to this section">&para;</a></h2>
 <figure>

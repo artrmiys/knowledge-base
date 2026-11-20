@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 900 520" role="img" aria-labelledby="t d">
+  <title id="t">OurPlanCore group: linked copies on two sheets</title>
+  <desc id="d">On the left copy 1 of the group on the 2nd floor sheet, on the right the mirrored copy 2 on the 3rd floor sheet. The copies are linked: Edit Group and Apply to all change the contents of both. Each copy has its own destination takeoffs: framing 2nd floor and framing 3rd floor. Route Instance by Sheet moves the takeoffs of one copy, Make Unique and Ungroup Instance split a copy off. The group adds no quantity of its own.</desc>
+  <defs>
+    <g id="grp">
+      <path d="M0 22 H160 V140 H0 Z" fill="#b2dfdb" fill-opacity="0.75" stroke="#00897b" stroke-width="2"/>
+      <path d="M0 10 H220" stroke="#e53935" stroke-width="5" stroke-linecap="round"/>
+      <path d="M190 28 V140" stroke="#fb8c00" stroke-width="7" stroke-linecap="round"/>
+      <rect x="168" y="62" width="14" height="40" fill="#ffffff" stroke="#8e24aa" stroke-width="2.5"/>
+      <circle cx="40" cy="62" r="8" fill="#1e88e5"/>
+      <circle cx="82" cy="104" r="8" fill="#1e88e5"/>
+      <circle cx="124" cy="62" r="8" fill="#1e88e5"/>
+    </g>
+  </defs>
+  <rect width="900" height="520" rx="12" fill="#f5f7f5"/>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <text x="24" y="38" font-size="21" font-weight="600" fill="#183323">One group, two linked copies</text>
+
+    <rect x="20" y="58" width="400" height="262" rx="10" fill="#ffffff" stroke="#8a98a5" stroke-width="1.5"/>
+    <text x="40" y="86" font-size="16" font-weight="700" fill="#3a3f44">Sheet a201 2nd: copy 1</text>
+    <use xlink:href="#grp" href="#grp" transform="translate(110 104)"/>
+    <text x="40" y="276" font-size="13.5" fill="#4b5563">takeoffs of this copy:</text>
+    <text x="40" y="298" font-size="13.5" font-weight="600" fill="#2e7d32">framing/2nd floor framing/...</text>
+
+    <rect x="480" y="58" width="400" height="262" rx="10" fill="#ffffff" stroke="#8a98a5" stroke-width="1.5"/>
+    <text x="500" y="86" font-size="16" font-weight="700" fill="#3a3f44">Sheet a301 3rd: copy 2, mirrored</text>
+    <use xlink:href="#grp" href="#grp" transform="translate(790 104) scale(-1 1)"/>
+    <text x="500" y="276" font-size="13.5" fill="#4b5563">takeoffs of this copy:</text>
+    <text x="500" y="298" font-size="13.5" font-weight="600" fill="#2e7d32">framing/3rd floor framing/...</text>
+
+    <path d="M420 178 H480" stroke="#2e7d32" stroke-width="2.5" stroke-dasharray="6 5"/>
+    <circle cx="420" cy="178" r="5" fill="#2e7d32"/>
+    <circle cx="480" cy="178" r="5" fill="#2e7d32"/>
+    <text x="450" y="166" font-size="13" font-weight="600" fill="#2e7d32" text-anchor="middle">link</text>
+
+    <rect x="20" y="340" width="860" height="162" rx="10" fill="#ffffff" stroke="#8a98a5" stroke-width="1.5"/>
+    <g font-size="14.5" fill="#1f2a1f">
+      <text x="40" y="372"><tspan font-weight="700">Edit Group &gt; Apply to all</tspan>: a change of the contents reaches both copies</text>
+      <text x="40" y="402"><tspan font-weight="700">Route Instance by Sheet</tspan>: the takeoffs move for one copy only</text>
+      <text x="40" y="432"><tspan font-weight="700">Make Unique, Ungroup Instance</tspan>: the copy splits off, the measurements stay</text>
+      <text x="40" y="462"><tspan font-weight="700">Counting</tspan>: the group adds no quantity, the ordinary takeoffs count</text>
+    </g>
+    <g font-size="12.5" fill="#4b5563">
+      <rect x="40" y="478" width="14" height="10" fill="#b2dfdb" stroke="#00897b"/><text x="60" y="488">Area</text>
+      <rect x="110" y="482" width="22" height="4" fill="#e53935"/><text x="138" y="488">Line</text>
+      <circle cx="194" cy="484" r="5" fill="#1e88e5"/><text x="204" y="488">Count</text>
+      <rect x="262" y="481" width="22" height="6" fill="#fb8c00"/><text x="290" y="488">Beam</text>
+      <rect x="342" y="478" width="8" height="12" fill="#ffffff" stroke="#8e24aa" stroke-width="2"/><text x="358" y="488">Openings</text>
+    </g>
+  </g>
+</svg>
