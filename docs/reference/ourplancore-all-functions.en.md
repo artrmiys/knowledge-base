@@ -4,11 +4,11 @@ This page is generated from the app source code by tools/opc_inventory.py; do no
 
 It lists every button, menu item, key, Settings category and window of OurPlanCore 3.0, by where it sits in the interface. The "Details" column links to the section page that describes the function; an empty cell means the KB has no detailed description yet (check: `python tools/opc_coverage.py`). The same function is often available from several places (ribbon, menu, palette, key), so repeats here are normal.
 
-Total entries: 1136. With a detail page: 997. No page yet: 24. Internal entries and repeats excluded from the check: 115.
+Total entries: 1139. With a detail page: 1001. No page yet: 24. Internal entries and repeats excluded from the check: 114.
 
-## Bottom tool strip (42)
+## Bottom tool strip (43)
 
-??? note "bottom tool strip, row 1 (33)"
+??? note "bottom tool strip, row 1 (34)"
 
     | Function | Key | Where in the interface | What it does | Details |
     | --- | --- | --- | --- | --- |
@@ -38,6 +38,7 @@ Total entries: 1136. With a detail page: 997. No page yet: 24. Internal entries 
     | `Repeat Beam` |  | bottom tool strip: bottom tool strip, row 1 | Measures beams one after another, each gets its own takeoff; `Esc` stops. | [Editing and snaps](ourplancore-editing.md) |
     | `Open` | `O` | bottom tool strip: bottom tool strip, row 1 | Measures the opening box, creates a Count takeoff and places a point in the center. | [Measuring tools](ourplancore-tools.md) |
     | `Cut` | `X` | bottom tool strip: bottom tool strip, row 1 | Cuts holes in areas or erases pieces of lines; `F9` turns on the box. | [Editing and snaps](ourplancore-editing.md) |
+    | `Groups` |  | bottom tool strip: bottom tool strip, row 1 | Create and edit linked groups, make unique, or ungroup one instance | [ourplancore-groups](ourplancore-groups.md) |
     | `Merge` | `Ctrl+M` | bottom tool strip: bottom tool strip, row 1 | Merges the selected takeoffs from all sheets or the selected measurement segments. | [Editing and snaps](ourplancore-editing.md) |
     | `Split` | `Ctrl+Shift+M` | bottom tool strip: bottom tool strip, row 1 | Splits takeoffs across all sheets or moves the selected measurements and points out separately. | [Editing and snaps](ourplancore-editing.md) |
     | `Combine` |  | bottom tool strip: bottom tool strip, row 1 | Combines two or more areas: union, subtraction, intersection, overlap removal, division. | [Editing and snaps](ourplancore-editing.md) |
@@ -657,7 +658,7 @@ Total entries: 1136. With a detail page: 997. No page yet: 24. Internal entries 
     | `Send ↵` |  | panel: Codex / Claude terminal panel |  |  |
     | `Reference Close Button` |  | panel: Codex / Claude terminal panel | Keep the draft and return to the terminal |  |
 
-## Context menus and button menus (386)
+## Context menus and button menus (387)
 
 ??? note "Combine button menu, bottom tool strip, row 1 (5)"
 
@@ -861,6 +862,12 @@ Total entries: 1136. With a detail page: 997. No page yet: 24. Internal entries 
     | `Export TXT` |  | menu: Export button menu (Takeoffs panel) | Exports the selected or all measurements to the PlanSwift text format. | [Takeoffs tree](ourplancore-takeoffs.md) |
     | `Export Excel` |  | menu: Export button menu (Takeoffs panel) | Exports the selected or all measurements to `.xlsx`, columns J, K, L starting at J10. | [Export to Excel](ourplancore-excel.md) |
     | `Export to Current Excel` |  | menu: Export button menu (Takeoffs panel) | Writes the selected folder or takeoff into the active cell of the open Excel workbook. | [Export to Excel](ourplancore-excel.md) |
+
+??? note "MainWindow.LinkedGroups.cs:AddLinkedGroupContextMenu (1)"
+
+    | Function | Key | Where in the interface | What it does | Details |
+    | --- | --- | --- | --- | --- |
+    | `Groups` |  | menu: MainWindow.LinkedGroups.cs:AddLinkedGroupContextMenu |  | [ourplancore-groups](ourplancore-groups.md) |
 
 ??? note "Open / Import button menu > Open A Project (1)"
 
@@ -1449,7 +1456,7 @@ Total entries: 1136. With a detail page: 997. No page yet: 24. Internal entries 
     | --- | --- | --- | --- | --- |
     | `More colors...` |  | panel: Takeoff Item Properties window |  |  |
 
-## Command palette (Ctrl+Shift+P) (138)
+## Command palette (Ctrl+Shift+P) (139)
 
 ??? note "File (34)"
 
@@ -1490,7 +1497,7 @@ Total entries: 1136. With a detail page: 997. No page yet: 24. Internal entries 
     | `Excel Macro: Eve / Rakes` |  | command palette: File | Adds the Eves and Rakes rows in descending length order and runs `A6_Eve_Rakes`. | [Export to Excel](ourplancore-excel.md) |
     | `Excel Macro: ALL` |  | command palette: File | Runs the whole configured chain of Excel macros for one selected building. | [Export to Excel](ourplancore-excel.md) |
 
-??? note "View (14)"
+??? note "View (15)"
 
     | Function | Key | Where in the interface | What it does | Details |
     | --- | --- | --- | --- | --- |
@@ -1501,6 +1508,7 @@ Total entries: 1136. With a detail page: 997. No page yet: 24. Internal entries 
     | `Hide / Show All Takeoffs` |  | command palette: View | Hides or shows all measurements on the active sheet; new measurements stay visible. | [Takeoffs tree](ourplancore-takeoffs.md) |
     | `Hide Selected Takeoffs Only` | `H` | command palette: View | Hides on the sheet the whole takeoff of each selected measurement; the visibility toggle brings it back. | [Takeoffs tree](ourplancore-takeoffs.md) |
     | `Toggle Dark Theme` |  | command palette: View | Switches between the light and dark interface theme. | [Getting started](ourplancore-start.md) |
+    | `Toggle Routing Top` |  | command palette: View | Move sheet routing between the sheet and the upper-right ribbon. | [Routing and rules](ourplancore-routing.md) |
     | `Page Background` |  | command palette: View | Opens the preset background colors under the sheet. | [Settings and modules](ourplancore-settings.md) |
     | `Toggle AI Inbox` |  | command palette: View | Collapses or expands the `AI Inbox` panel. | [AI and terminals](ourplancore-ai.md) |
     | `Quick Calculator` |  | command palette: View | Shows or hides the slide-out calculator that works in feet and inches. | [Other](ourplancore-extras-other.md) |
@@ -2079,7 +2087,7 @@ Total entries: 1136. With a detail page: 997. No page yet: 24. Internal entries 
     | `Marker Sets` |  | window: window | Lists AI marker sets: apply the filter, rename, delete, open the JSON. | [AI and terminals](ourplancore-ai.md) |
     | `Rename Marker Set` |  | window: window | Renames the selected AI marker set in the set list. |  |
     | `Review Opening Projections` |  | window: window | Reviews the projected openings for 3D: keep, reject, save the reviewed ones. |  |
-    | `Paste Measurements` |  | window: window | Asks whether to paste the measurements into the same takeoffs or into new ones. | [Editing and snaps](ourplancore-editing.md) |
+    | `Route Instance:` |  | window: window | Buttons: Apply to this instance. | [ourplancore-groups](ourplancore-groups.md) |
     | `OpenAI Settings` |  | window: window | Saves or clears the OpenAI key in the user environment variables. | [AI and terminals](ourplancore-ai.md) |
     | `Import OurPlanCore into Current Job` |  | window: window | Imports another OurPlanCore job, an `.ourplan` file or a folder, into the current job. | [Jobs and saving](job-creation-storage.md) |
     | `Page Setup` |  | window: window | Opens a floating window for the sheet name and scale, with stepping through the job's sheets. | [Sheets (Pages)](ourplancore-pages.md) |

@@ -95,6 +95,7 @@ Not undone by Undo: renaming, moving a takeoff between folders, legend order and
 | add, subtract, trim overlapping areas | `Combine` | none | `Combine` list | [Combine](ourplancore-edit-takeoffs.md#combine) |
 | find identical symbols | `Similar` | none | tool strip | [Similar](ourplancore-edit-takeoffs.md#similar) |
 | mirror, rotate, scale the selection | `Transform` | none (`Mirror` can be bound) | row 2 of the strip | [Transform](ourplancore-edit-takeoffs.md#transform) |
+| linked copies of an assembly on several sheets | `Groups` | none | bottom strip after `Cut`, right-click on the sheet > `Groups` | [Groups](ourplancore-groups.md) |
 | repeat segments or beams without a dialog | `Repeat Line`, `Repeat Beam` | none | arrow buttons next to `Line` and `Beam` | [Repeat](ourplancore-edit-takeoffs.md#repeat) |
 | right angle, rectangle, snap to your own points | `Ortho`, `Box`, `Snap` | ++f8++, ++f9++, ++f3++ | tool strip | [Snap](ourplancore-snap-trace.md#snap) |
 | take walls off a vector PDF | `Trace Walls Inside Area`, `Layer Trace` | none | right-click an Area, PDF Layers tab | [tracing](ourplancore-snap-trace.md#wall-trace) |

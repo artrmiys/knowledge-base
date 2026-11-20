@@ -2,6 +2,44 @@
 
 This page lists what went into OurPlanCore 3.0: the new 3.0 releases first, below them what accumulated in builds 2.2.6-2.2.42. You need it to see which feature was missing in an older version and where to read about it. Releases 3.0.4-3.0.26 are not written up here yet.
 
+## 3.1 (11/17/2026)
+
+- **Groups**: measurements of one sheet are collected into a group (`Groups` > `Create Group...` on the bottom strip), and its linked copies are pasted onto other sheets with ++ctrl+v++, choosing `By sheet router` or `Source takeoffs`. `Edit Group` and `Apply to all` change the contents of every copy, `Route Instance by Sheet` moves the takeoffs of one copy, and there are `Make Unique` and `Ungroup Instance`. A group adds no quantity of its own. Do not save a job with groups in a version before 3.1. Also in Lite. [Groups](ourplancore-groups.md)
+- **Routing top**: a checkbox on the Viewport ribbon moves the W/F/S/U dots from under Scale to the upper-right corner of the ribbon, visible on every tab. [Routing top](ourplancore-routing.md#routing-top)
+- **Random Colors for Items** on a folder also recolors takeoffs with a starting color from their name, except the fixed rules (`bft`); the new color differs from the previous one. [Takeoff colors](ourplancore-takeoffs.md#colors)
+- The version number is short now: `3.1`. Lite no longer shows the `-lite` tail in the window title ([how to tell Lite](ourplancore-lite.md#which)).
+
+## 3.0.37 (11/16/2026)
+
+- Sheet pictures in the disk cache carry a render version. Pictures made by earlier versions (for example, a filled form without its fields at low zoom) are no longer used, and the sheet is rendered again. That is why the first opening of a sheet after the update can take a second longer; after that it is as usual. [Troubleshooting](ourplancore-troubleshooting.md#speed)
+
+## 3.0.36 (11/16/2026, Lite only)
+
+- The XL strip can be turned on in Lite: `Settings > Modules`, the `Excel Strip (XL)` checkbox, off by default. In the full version the same checkbox can hide the strip. [Lite and full version](ourplancore-lite.md#differences)
+
+## 3.0.35 (11/16/2026)
+
+- **Filled PDF forms**: typed values and check marks of form fields are visible on the sheet, in thumbnails and in the exported PDF, as in Acrobat. Before, a filled form looked empty. Ordinary drawings without forms did not change.
+
+## 3.0.34 (11/14/2026)
+
+- A blank sheet after `Change Sheet Size...` no longer shows the old picture of the previous size. [Blank sheets](ourplancore-sheets-advanced.md#blank)
+- A sheet with crops picked as an overlay shows its crops in their frames and with their opacity, with the tint, opacity and offset of the overlay layer. [Overlay](ourplancore-sheets-advanced.md#overlay)
+
+## 3.0.33 (11/12/2026)
+
+- A sheet overlay is drawn above `Crop to Sheet` crops, on screen and in PDF. The Hide mask, measurements and markups stay above the overlay.
+
+## 3.0.32 (11/12/2026)
+
+- A job opens faster, moving sheets and takeoffs in the trees is faster.
+- A double-click on the colored takeoff glyph in the tree or on the active takeoff line opens its properties. [Takeoffs tree](ourplancore-takeoffs.md)
+
+## 3.0.31 (11/06 and 11/11/2026)
+
+- Dragging and ordering sheets in the Pages tree is faster; undo of a move saves only the affected sheets.
+- Full version only: DeepSeek in the terminal finds rules and lessons with the same context search as Claude and Codex. [AI console](ourplancore-ai-console.md)
+
 ## 3.0.30 (11/05/2026)
 
 - **`TemplateCom.xlsm` template:** the formula for the balcony and porch block size now reads the same on a Russian and an English computer ([Two languages](ewood-tab.md#languages)). The numbers in the template did not change.

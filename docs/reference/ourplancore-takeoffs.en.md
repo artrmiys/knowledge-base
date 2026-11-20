@@ -13,6 +13,7 @@ This page covers the Takeoffs panel, a new takeoff and Record, copying between s
 | --- | --- |
 | Green and red dots | root for new takeoffs: the selected building or all of Takeoffs ([multiple buildings](ourplancore-buildings.md#root)) |
 | `Record` (`Space`), `More`, `Props`, `Find`, `Sheet`, `>`, `<` | the active takeoff line: continue recording, properties, show in the tree, pick a takeoff from this sheet, next and previous |
+| Colored takeoff glyph | a double-click on the glyph in the tree or on the active takeoff line opens the takeoff properties window, like `Properties...` |
 | `>` (`Switch to next takeoff item`), `<` (`Switch to previous takeoff item`) | make the next or previous takeoff from the list of all job takeoffs active, wrapping around; status `Active takeoff target 3/12: <name>`. They do not switch during Record |
 | `More` on the active takeoff line | `Properties...`, `Find in Tree`, `Sheet Targets...` (same as `Sheet`), `Previous Target`, `Next Target` (same as `<` and `>`) |
 | `Sheet` | list of takeoffs measured on the open sheet, with quantities; the active one is marked `*`; at the top `Next Sheet Target` - the next takeoff of this sheet |
@@ -200,7 +201,7 @@ The values apply in subfolders too: the nearest folder up the tree with the fiel
 
 ## Takeoff colors { #colors }
 
-A new takeoff gets a random color without gray, black and white; `Split` gives the split-off part a new color; the name `bft` is always gray (`Settings > Takeoff Colors`). Identical colors on neighboring takeoffs make the legend unreadable: change them in `Props` or right-click `Properties...`, many at once through [Bulk Properties](#bulk). Right-click on a folder > `Random Colors for Items` gives all takeoffs of the folder and subfolders different palette colors in one click.
+A new takeoff gets a random color without gray, black and white; `Split` gives the split-off part a new color; the name `bft` is always gray (`Settings > Takeoff Colors`). Identical colors on neighboring takeoffs make the legend unreadable: change them in `Props` or right-click `Properties...`, many at once through [Bulk Properties](#bulk). Right-click on a folder > `Random Colors for Items` (with the number of takeoffs in brackets) gives all takeoffs of the folder and subfolders different palette colors in one click. Since version 3.1 this command also recolors takeoffs that got a starting color from their name (`ext`, `2x4`, `2x6`, floor areas): the command was given to the folder on purpose, so a starting color does not stop it. Only the fixed rules of `Settings > Takeoff Colors` stay (`bft` gray). Each takeoff's new color differs from its previous one, and the segments take the color of their takeoff. The yellow dot in the Takeoffs header (`Random colors for all takeoffs`) colors the whole job and still leaves the starting colors by name alone.
 
 The size of Count symbols and the line weight on screen are set on the **Viewport** ribbon, LINES & AREA group: `Point` (tooltip `Count marker size`, 0.25-4, default 1) and `Line` (0.25-4); you can type a number in the field next to it and press ++enter++. This is only the look on screen and in separate sheet windows; the PDF has its own values: `PDF Output > LINES & AREA` ([PDF](ourplancore-pdf.md)).
 

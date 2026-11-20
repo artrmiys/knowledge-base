@@ -12,11 +12,11 @@ Estimators run OurPlanCore Lite: no AI models and no terminal, lighter than the 
 | Launch | this file or a desktop shortcut to it |
 | Update | a new file arrives in the same folder through Dropbox and replaces the old one; no previous version is kept next to it. What changed: the `changes` folder in the same place and [What's new](ourplancore-changelog.md) |
 | Excel templates | the `templates` folder in the same place: `TemplateCom.xlsm`, `TemplateResidential.xlsm` |
-| Version | in the window title: `OurPlanCore 3.0.x-lite - <job>`; the same in the first `Version ...` line of the log `%LOCALAPPDATA%\OurPlanCore Lite\roaming\logs\app-<date>.log` |
+| Version | in the window title: `OurPlanCore 3.1 - <job>` (before 3.1 Lite had a `-lite` tail); the same in the first `Version ...` line of the log `%LOCALAPPDATA%\OurPlanCore Lite\roaming\logs\app-<date>.log` |
 
 Jobs, settings and templates do not depend on the update: they are stored separately (see [Where settings live](#settings)).
 
-The full version is installed separately: the file `ourplancore.exe` in the `Desktop\updates\OurPlanCore` folder, with the Excel templates next to it; the window title shows the number without `-lite`, the log is in `%APPDATA%\OurPlanCore\logs`. When it is updated, the previous file stays next to it as `.bak` for rollback.
+The full version is installed separately: the file `ourplancore.exe` in the `Desktop\updates\OurPlanCore` folder, with the Excel templates next to it; there is a `>_` button right of the sheet, the log is in `%APPDATA%\OurPlanCore\logs`. When it is updated, the previous file stays next to it as `.bak` for rollback.
 
 !!! warning "Rolling back to .bak (full version)"
     An older build reads crops (Crop to Sheet) and Hide masks as regular markup and loses their fields on save. If you rolled back, do not save a job with crops until you are back on a fresh build.

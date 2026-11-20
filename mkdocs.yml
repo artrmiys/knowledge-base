@@ -77,6 +77,7 @@ nav:
       - Продвинутое:
           - Правка и привязки: reference/ourplancore-editing.md
           - Merge, Split, Break пошагово: reference/ourplancore-edit-takeoffs.md
+          - Группы: reference/ourplancore-groups.md
           - Маршрутизация и правила: reference/ourplancore-routing.md
           - Кропы, маска, наложения, легенда: reference/ourplancore-sheets-advanced.md
           - Settings и модули: reference/ourplancore-settings.md
@@ -299,6 +300,7 @@ plugins:
             Продвинутое: Advanced
             Правка и привязки: Editing and snaps
             Merge, Split, Break пошагово: Merge, Split, Break step by step
+            Группы: Groups
             Маршрутизация и правила: Routing and rules
             Кропы, маска, наложения, легенда: Crops, mask, overlays, legend
             Settings и модули: Settings and modules

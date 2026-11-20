@@ -36,6 +36,7 @@ The rules explained: [Takeoff routing](ourplancore-routing.md); which sheet carr
 | A heavy PDF sheet takes long to open | the raster is not prepared | Sheet Manager: select, PNG and DPI, `Prepare`, then `First On`; or `Display > Static image` |
 | Slow after opening a job | background page warm-up | turn off `Settings > Defaults > Warm all job pages in background` (off by default) |
 | Switching sheets, the tree or Save lags | various causes | note exactly which operation and the version; the app log has `Viewport slow frame` lines with timings for slow frames |
+| The first opening of a sheet after updating to 3.0.37 or newer takes a bit longer | sheet pictures from earlier versions in the cache are not used, the sheet is rendered again once | this is normal; after that the sheet opens as usual |
 | Name over a whole set takes long | one sheet in a 127-page set takes about 12 s to read | this is normal; run it on a folder, not sheet by sheet |
 
 ## Saving, opening, version {#save}
@@ -53,7 +54,7 @@ The rules explained: [Takeoff routing](ourplancore-routing.md); which sheet carr
 
 ### Which version is running {#version}
 
-The version is in the window title and in the `Version ...` line of the app log. Lite has a `-lite` tail on the number: `OurPlanCore 3.0.x-lite - <job>`; Lite sits in the shared Dropbox folder `Office Folder\programs`, with no previous version kept there. The full version is installed in the updates folder `Desktop\updates\OurPlanCore`, and its rollback is the `.bak` file next to the EXE (the file name carries the version, for example `ourplancore.exe.2.2.42-....bak`). The old separate Preview is no longer used. If a feature from [What's new](ourplancore-changelog.md) does not work, check the version in the title first: Lite is built separately, and its number can lag behind the full version.
+The version is in the window title and in the `Version ...` line of the app log. Before 3.1 Lite had a `-lite` tail on the number (`OurPlanCore 3.0.37-lite - <job>`); since 3.1 both versions show the same number, `OurPlanCore 3.1 - <job>`, and Lite is recognized by the missing `>_` button ([how to tell](ourplancore-lite.md#which)). Lite sits in the shared Dropbox folder `Office Folder\programs`, with no previous version kept there. The full version is installed in the updates folder `Desktop\updates\OurPlanCore`, and its rollback is the `.bak` file next to the EXE (the file name carries the version, for example `ourplancore.exe.2.2.42-....bak`). The old separate Preview is no longer used. If a feature from [What's new](ourplancore-changelog.md) does not work, check the version in the title first: Lite is built separately, and its number can lag behind the full version.
 
 ## Lite: what is missing { #lite }
 
@@ -93,6 +94,7 @@ All terminal panel messages and what to do with them: [AI console, if the termin
 
 | Symptom | Cause | What to do |
 | --- | --- | --- |
+| A filled PDF form (a customer request) looks empty, while Acrobat shows the fields | versions before 3.0.35 did not draw form fields | update; since 3.0.37 old cached pictures of such sheets are redrawn by themselves |
 | A crop is missing in the PDF, the log says `Crop skipped on '<sheet>'` | the crop's source sheet was deleted | delete the crop or bring back the sheet; find the crop with the red cross on the sheet |
 | The Hide mask or crops do not print | the Annotations module is off | turn the module on; Markups can stay off |
 | Lines in the PDF cover the drawing | | `PDF Output > Opac` below 100 |

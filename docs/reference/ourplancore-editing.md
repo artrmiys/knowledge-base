@@ -95,6 +95,7 @@
 | сложить, вычесть, срезать наложение площадей | `Combine` | нет | список `Combine` | [Combine](ourplancore-edit-takeoffs.md#combine) |
 | найти такие же символы | `Similar` | нет | полоса инструментов | [Similar](ourplancore-edit-takeoffs.md#similar) |
 | отразить, повернуть, масштабировать выбранное | `Transform` | нет (`Mirror` назначается) | строка 2 полосы | [Transform](ourplancore-edit-takeoffs.md#transform) |
+| связанные копии узла на разных листах | `Groups` | нет | нижняя полоса после `Cut`, ПКМ по листу > `Groups` | [Группы](ourplancore-groups.md) |
 | повторять отрезки или балки без диалога | `Repeat Line`, `Repeat Beam` | нет | кнопки со стрелкой у `Line` и `Beam` | [Repeat](ourplancore-edit-takeoffs.md#repeat) |
 | прямой угол, прямоугольник, привязка к своим точкам | `Ortho`, `Box`, `Snap` | ++f8++, ++f9++, ++f3++ | полоса инструментов | [Snap](ourplancore-snap-trace.md#snap) |
 | снять стены с векторного PDF | `Trace Walls Inside Area`, `Layer Trace` | нет | ПКМ по Area, вкладка PDF Layers | [трассировка](ourplancore-snap-trace.md#wall-trace) |

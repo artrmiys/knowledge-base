@@ -22,7 +22,7 @@ OurPlanCore comes in two versions built from the same code. Estimators run **Lit
 | Excel templates | in the same place, the `templates` folder: `TemplateCom.xlsm`, `TemplateResidential.xlsm` |
 | What changed | in the same place, the `changes` folder: files `Изменения программ <date>.txt` ("program changes") |
 | Update | the new file arrives in the same folder through Dropbox and replaces the old one; the previous version is not kept next to it. If you keep your own copy, copy the new file over it after the update |
-| Version | in the window title, with a `-lite` tail: `OurPlanCore 3.0.x-lite - <job>`; the full version has no such tail |
+| Version | in the window title: `OurPlanCore 3.1 - <job>`. Since version 3.1 Lite and the full version show the same number, without a `-lite` tail (before 3.1 it was `3.0.x-lite`); how to tell them apart, [below](#which) |
 
 Lite is built from the same code as the full version, but separately and not with every release. So the Lite number can lag behind, and a new feature from [What's new](ourplancore-changelog.md) reaches Lite with the next Lite build (except what is cut out, see below).
 
@@ -30,8 +30,8 @@ Lite is built from the same code as the full version, but separately and not wit
 
 | `ourplancore.exe` file | Size |
 | --- | --- |
-| Lite 3.0.37-lite (build of 11/16/2026) | 92.4 MB |
-| Full version (3.0.37, build of 11/16/2026) | about 254 MB |
+| Lite 3.1 (build of 11/17/2026) | 92.4 MB |
+| Full version (3.1, build of 11/17/2026) | about 254 MB |
 
 Lite is smaller because its file leaves out the DeepSeek and OpenCode engine, the copy of the knowledge base for the assistant, voice input, Tesseract OCR, the Python libraries for parsing PDFs and images, the `TemplateCom.xlsm` template, window snapshots for the sample job cards and the .NET language files other than English.
 
@@ -71,8 +71,9 @@ This cannot be turned on: the AI, 3D and Materials modules are not in `Settings 
 
 ## How to tell which version is open { #which }
 
-1. Look at the window title: `OurPlanCore 3.0.x-lite - <job>` means Lite.
-2. Look at the right command strip next to the sheet: Lite has no `>_` button. The XL strip with the `ALL`, `LG`, `SF` buttons does not tell the versions apart: Lite can have it turned on.
+1. Look at the right command strip next to the sheet: Lite has no `>_` button. The XL strip with the `ALL`, `LG`, `SF` buttons does not tell the versions apart: Lite can have it turned on.
+2. The window title gives Lite away only before version 3.1: it had a `-lite` tail (`OurPlanCore 3.0.37-lite - <job>`). Since 3.1 both versions show just `OurPlanCore 3.1 - <job>`.
+3. The Lite log is in `%LOCALAPPDATA%\OurPlanCore Lite\roaming\logs`, the full version log in `%APPDATA%\OurPlanCore\logs`. The Lite file is about 92 MB, the full version about 254 MB.
 
 If you need AI models, the terminal or 3D: that is the full version, everything about it is in the menu block "AI, terminal and 3D (full version)", starting with [AI in the app](ourplancore-ai.md).
 

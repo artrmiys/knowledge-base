@@ -121,6 +121,8 @@ The `Overlay` sub-tab in the Pages panel works with the open sheet:
 | Transform | `X (pt)`, `Y (pt)`, `Scale` (0.05-20), `Rotation`; the sliders give a live preview, ++esc++ restores the saved values |
 | Color, Opacity | tint color (Red, Blue, Green, Orange, Magenta, Gray, custom) and opacity |
 
+The overlay is drawn above the `Crop to Sheet` crops of this sheet, on screen and in PDF; the Hide mask, measurements and markups stay above the overlay (since 3.0.33). If you overlay a sheet that holds crops, it shows its crops in their frames and with their opacity, with the tint and offset of the layer (since 3.0.34). A blank sheet with crops cannot be the source for `Auto Fit` or for picking a sheet by geometry.
+
 ### How to overlay one sheet on another and align them { #overlay-steps }
 
 Why: check whether the walls and framing of the A plan and the S plan of the same floor line up.

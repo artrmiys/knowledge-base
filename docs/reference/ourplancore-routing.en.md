@@ -31,10 +31,21 @@ Checked from top to bottom, the first rule that fires wins:
 | Dot matrix | under the Scale label on the sheet | one click sets a dot, a second click removes it; one dot per sheet |
 | `Route: W 2nd floor` | status bar, after `Takeoff:` | shows the row and floor; for U it is `Route: U all floors` |
 | `Sheet routing` checkbox | Viewport ribbon | shows or hides the matrix |
+| `Routing top` checkbox | Viewport ribbon | moves the matrix from under Scale to the top ribbon ([below](#routing-top)) |
 | `Routing settings` | Viewport ribbon | opens `Settings > Sheet Takeoff Routing` |
 | Destination preview | New Item dialog | the path where the takeoff will go is visible before it is created |
 
 The dot is stored in the sheet folder (`takeoff_routing.json`) and survives closing the job.
+
+### Dots in the top ribbon: Routing top { #routing-top }
+
+Why: the dots are at hand on every ribbon tab and take no room on the sheet. Available since version 3.1.
+
+1. Open the Viewport ribbon and tick `Routing top`.
+2. The W/F/S/U matrix moves to the upper-right corner of the ribbon and is visible on every ribbon tab. Its left edge follows the edge of the Takeoffs panel, also when the panel width changes. The position is remembered.
+3. The dots work the same: a click sets the dot of the open sheet, a second click removes it, U means all floors.
+
+Result: there is no matrix under Scale on the sheet, it is in the ribbon. Untick the checkbox and the dots return to the sheet under Scale. The `Sheet routing` checkbox still decides whether the matrix is shown at all. Detached sheet windows keep their own matrix on the sheet. The same in the palette: `Toggle Routing Top`, no default key ([assign one](ourplancore-shortcuts.md#remap)).
 
 ### Where new takeoffs go (defaults, 2nd floor example)
 
